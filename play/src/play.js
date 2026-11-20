@@ -51,7 +51,7 @@
   // While the menu is open the game hears nothing: every held key is let go first, then the gamepad drives the menu.
   function setPaused(p) {
     if (!runner || !started || p === paused) return;
-    if (p) { hub.releaseAll(); runner.rewind(false); paused = true; runner.pause(); autosave(); stayAwake(false); }
+    if (p) { hub.releaseAll(); letGoMouse(); runner.rewind(false); paused = true; runner.pause(); autosave(); stayAwake(false); }
     else { paused = false; runner.resume(); runner.wakeSound(); stayAwake(true); }
     $('menu').hidden = !p; $('b-pause').textContent = p ? 'Resume' : 'Pause';
     if (p) $('m-resume').focus({ preventScroll: true }); else $('canvas').focus({ preventScroll: true });
@@ -136,7 +136,7 @@
   function poll() {
     const pads = navigator.getGamepads ? [...navigator.getGamepads()] : [];
     if (hub) {
-      hub.pollPads(pads); if (paused) menuPads(pads); else menuWas.clear();
+      hub.pollPads(pads); if (paused) menuPads(pads); else { menuWas.clear(); padMouse(pads); }
       // A game started straight from the shelf (audit S6) has had no tap here yet: the first gamepad press wakes the sound.
       if (runner && pads.some((p) => p && p.buttons && p.buttons.some((b) => b.pressed))) runner.wakeSound();
     }
@@ -200,6 +200,66 @@
       toast(two ? 'Player ' + seat + '’s controller dropped. Its place is kept' : 'Controller dropped. Paused');
     } else if (what === 'back') toast(two ? 'Player ' + seat + ' is back' : 'Controller back');
     else if (two && seat > 1) toast('Player ' + seat + ' joined');
+  }
+
+  // A DOS game's mouse (plan T21b; Bryan, 20 Nov 2026: "lets solve these problems"), on a card with controls.mouse.
+  // On a computer a click on the picture hands the mouse to the game (pointer lock) and Esc lets it go. On a touch
+  // screen the picture is a trackpad: drag moves, a tap is the left button, a two-finger tap the right. On a gamepad
+  // the right stick moves, R3 is the left button and L3 the right. Nothing reaches the game while it is paused.
+  const TOUCH_SPEED = 1.5, STICK_SPEED = 14, STICK_DEAD = 0.15;
+  const wantsMouse = () => !!(card && card.controls && card.controls.mouse && !PlayCards.isPad(card));
+  let ptrButtons = 0, padButtons = 0;
+  const cv = $('canvas');
+  function sendMouse(dx, dy) { if (runner && started && !paused && wantsMouse()) runner.mouse(dx, dy, ptrButtons | padButtons); }
+  function letGoMouse() {
+    ptrButtons = 0; padButtons = 0;
+    if (runner && wantsMouse()) runner.mouse(0, 0, 0);
+    if (document.pointerLockElement === cv && document.exitPointerLock) document.exitPointerLock();
+  }
+  cv.addEventListener('click', () => {
+    if (!wantsMouse() || !started || paused || document.pointerLockElement === cv || !cv.requestPointerLock) return;
+    try { const r = cv.requestPointerLock(); if (r && r.catch) r.catch(() => {}); } catch (e) { /* the browser said no */ }
+  });
+  document.addEventListener('pointerlockchange', () => {
+    if (document.pointerLockElement === cv) toast('The mouse is in the game. Esc lets it go');
+    else { ptrButtons = 0; sendMouse(0, 0); }
+  });
+  addEventListener('mousemove', (e) => { if (document.pointerLockElement === cv) sendMouse(e.movementX, e.movementY); });
+  addEventListener('mousedown', (e) => { if (document.pointerLockElement === cv) { e.preventDefault(); ptrButtons = e.buttons & 7; sendMouse(0, 0); } });
+  addEventListener('mouseup', (e) => { if (document.pointerLockElement === cv) { ptrButtons = e.buttons & 7; sendMouse(0, 0); } });
+  cv.addEventListener('contextmenu', (e) => { if (wantsMouse()) e.preventDefault(); });
+  const fingers = new Map();
+  let tapAt = 0, travel = 0, most = 0;
+  function tapClick(b) { ptrButtons = b; sendMouse(0, 0); setTimeout(() => { ptrButtons = 0; sendMouse(0, 0); }, 90); }
+  cv.addEventListener('pointerdown', (e) => {
+    if (e.pointerType !== 'touch' || !wantsMouse() || !started) return;
+    e.preventDefault();
+    if (!fingers.size) { tapAt = Date.now(); travel = 0; most = 0; }
+    fingers.set(e.pointerId, [e.clientX, e.clientY]); most = Math.max(most, fingers.size);
+    try { cv.setPointerCapture(e.pointerId); } catch (x) { /* synthetic pointers */ }
+  });
+  cv.addEventListener('pointermove', (e) => {
+    const f = fingers.get(e.pointerId);
+    if (!f) return;
+    const dx = e.clientX - f[0], dy = e.clientY - f[1];
+    fingers.set(e.pointerId, [e.clientX, e.clientY]);
+    if (fingers.size === 1) { travel += Math.abs(dx) + Math.abs(dy); sendMouse(dx * TOUCH_SPEED, dy * TOUCH_SPEED); }
+  });
+  const lift = (e) => {
+    if (!fingers.delete(e.pointerId) || fingers.size) return;
+    if (Date.now() - tapAt < 300 && travel < 12) tapClick(most >= 2 ? 2 : 1);
+  };
+  cv.addEventListener('pointerup', lift);
+  cv.addEventListener('pointercancel', lift);
+  function padMouse(pads) {
+    if (!wantsMouse()) return;
+    const p = pads.find((x) => x && x.mapping === 'standard');
+    if (!p) return;
+    const lean = (v) => (Math.abs(v || 0) < STICK_DEAD ? 0 : Math.sign(v) * v * v * STICK_SPEED);
+    const dx = lean(p.axes[2]), dy = lean(p.axes[3]);
+    const b = (i) => !!(p.buttons[i] && p.buttons[i].pressed);
+    const now = (b(11) ? 1 : 0) | (b(10) ? 2 : 0);
+    if (dx || dy || now !== padButtons) { padButtons = now; sendMouse(dx, dy); }
   }
 
   // Ends the game for good: the engine stops, nothing it sent late reaches the page, the menu closes.
@@ -268,6 +328,11 @@
     if (PlayCards.isPad(c) && (c.players || 1) > 1) {
       const li = document.createElement('li'); const b = document.createElement('b'); b.textContent = 'Two players';
       li.append(b, ': a second gamepad plays as player 2, and each pad keeps its player all game'); ul.appendChild(li);
+    }
+    if (c.controls && c.controls.mouse && !PlayCards.isPad(c)) {
+      const li = document.createElement('li'); const b = document.createElement('b'); b.textContent = 'Mouse';
+      li.append(b, ': click the picture to use your mouse (Esc lets it go); on a touch screen drag on the picture, tap to click, two-finger tap for the right button; on a gamepad the right stick moves, R3 clicks, L3 right-clicks'); ul.appendChild(li);
+      $('canvas').style.touchAction = 'none';
     }
     const esc = PlayCards.isPad(c) ? ', Esc on the keyboard' : '';
     $('pause-how').textContent = 'Pause: Back and Start together on a gamepad' + esc + ', or the Pause button.';

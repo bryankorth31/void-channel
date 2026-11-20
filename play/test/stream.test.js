@@ -144,3 +144,17 @@ test('audit T21a: a save refused while DOS runs a start menu says so; saving wor
   assert.ok(w.includes("why: saveRefusedAtDos ? 'dos' : ''"));
   assert.ok(fs.readFileSync(path.join(__dirname, '..', 'src', 'play.js'), 'utf8').includes("'This game can be saved once it is past its DOS start menu'"));
 });
+
+test('T21b: a DOS game\'s mouse: host.c answers the engine\'s mouse, a quick click is held for one frame, and the page gives a mouse on a computer, a touch screen and a gamepad', () => {
+  const fs = require('fs');
+  const host = fs.readFileSync(path.join(__dirname, '..', 'core', 'host.c'), 'utf8');
+  for (const bit of ['if (device == RETRO_DEVICE_MOUSE && port == 0) {', 'mouse_pressed |= buttons & ~mouse_buttons;',
+    'retro_run(); mouse_dx = mouse_dy = 0; mouse_pressed = 0;']) assert.ok(host.includes(bit), bit);
+  assert.ok(fs.readFileSync(path.join(__dirname, '..', 'engine', 'dosbox-pure.js'), 'utf8').includes('host_mouse'), 'the built engine carries it');
+  const js = fs.readFileSync(path.join(__dirname, '..', 'src', 'play.js'), 'utf8');
+  for (const bit of ['const wantsMouse = () => !!(card && card.controls && card.controls.mouse && !PlayCards.isPad(card));',
+    'cv.requestPointerLock()', "if (Date.now() - tapAt < 300 && travel < 12) tapClick(most >= 2 ? 2 : 1);",
+    'const now = (b(11) ? 1 : 0) | (b(10) ? 2 : 0);', 'hub.releaseAll(); letGoMouse();']) assert.ok(js.includes(bit), bit);
+  assert.match(fs.readFileSync(path.join(__dirname, '..', 'src', 'runner.js'), 'utf8'), /mouse: \(dx, dy, buttons\) => post\(\{ type: 'mouse'/);
+  assert.match(fs.readFileSync(path.join(__dirname, '..', 'src', 'core-worker.js'), 'utf8'), /else if \(m\.type === 'mouse'\) \{ if \(M\._host_mouse\)/);
+});

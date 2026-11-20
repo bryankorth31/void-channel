@@ -31,6 +31,9 @@ static struct retro_system_av_info av;
 static retro_keyboard_event_t key_event;
 static uint8_t keys[RETROK_LAST];
 static uint16_t pads[4];              /* one bit per RETRO_DEVICE_ID_JOYPAD_* */
+static int mouse_dx, mouse_dy;        /* movement since the last frame (a DOS game's mouse, plan T21b) */
+static unsigned mouse_buttons;        /* 1 left, 2 right, 4 middle */
+static unsigned mouse_pressed;        /* pressed since the last frame: a quick click is seen even if let go before it */
 static char var_key[MAX_VARS][64], var_val[MAX_VARS][64];
 static int var_count, var_changed;
 static void *game_data;
@@ -116,6 +119,15 @@ static int16_t input_state(unsigned port, unsigned device, unsigned index, unsig
     if (id == RETRO_DEVICE_ID_JOYPAD_MASK) return (int16_t)pads[port];
     return id < 16 ? (pads[port] >> id) & 1 : 0;
   }
+  if (device == RETRO_DEVICE_MOUSE && port == 0) {
+    switch (id) {
+      case RETRO_DEVICE_ID_MOUSE_X: return (int16_t)mouse_dx;
+      case RETRO_DEVICE_ID_MOUSE_Y: return (int16_t)mouse_dy;
+      case RETRO_DEVICE_ID_MOUSE_LEFT: return (mouse_buttons | mouse_pressed) & 1 ? 1 : 0;
+      case RETRO_DEVICE_ID_MOUSE_RIGHT: return (mouse_buttons | mouse_pressed) & 2 ? 1 : 0;
+      case RETRO_DEVICE_ID_MOUSE_MIDDLE: return (mouse_buttons | mouse_pressed) & 4 ? 1 : 0;
+    }
+  }
   return 0;
 }
 
@@ -151,7 +163,8 @@ EMSCRIPTEN_KEEPALIVE int host_load(const char *path) {
   return 1;
 }
 
-EMSCRIPTEN_KEEPALIVE void host_run(void) { retro_run(); }
+/* A frame reads the movement gathered since the last one, then it starts again from nothing. */
+EMSCRIPTEN_KEEPALIVE void host_run(void) { retro_run(); mouse_dx = mouse_dy = 0; mouse_pressed = 0; }
 EMSCRIPTEN_KEEPALIVE void host_reset(void) { retro_reset(); }
 EMSCRIPTEN_KEEPALIVE void host_unload(void) { retro_unload_game(); retro_deinit(); free(game_data); game_data = NULL; }
 
@@ -172,6 +185,12 @@ EMSCRIPTEN_KEEPALIVE double host_aspect(void) {
 EMSCRIPTEN_KEEPALIVE void host_key(int down, unsigned keycode, unsigned character, unsigned mods) {
   if (keycode < RETROK_LAST) keys[keycode] = down ? 1 : 0;
   if (key_event) key_event(down != 0, keycode, character, (uint16_t)mods);
+}
+/* The mouse (plan T21b): movement adds up until the next frame reads it; the buttons are as they are now. */
+EMSCRIPTEN_KEEPALIVE void host_mouse(int dx, int dy, unsigned buttons) {
+  mouse_dx += dx; mouse_dy += dy; mouse_pressed |= buttons & ~mouse_buttons; mouse_buttons = buttons;
+  if (mouse_dx > 32767) mouse_dx = 32767; if (mouse_dx < -32768) mouse_dx = -32768;
+  if (mouse_dy > 32767) mouse_dy = 32767; if (mouse_dy < -32768) mouse_dy = -32768;
 }
 EMSCRIPTEN_KEEPALIVE void host_pad(unsigned port, unsigned bits) { if (port < 4) pads[port] = (uint16_t)bits; }
 /* Plug a controller into a port, as a console frontend does at start: many cores read no buttons until told. */

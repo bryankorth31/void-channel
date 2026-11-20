@@ -15,15 +15,31 @@
   },
   "controls": {
     "kind": "dos-keys",
-    "keys": ["Enter", "Escape", "Space"],
+    "keys": [
+      "Enter",
+      "Escape",
+      "Space"
+    ],
     "dpad": true,
-    "keyboard": true
+    "keyboard": true,
+    "mouse": true
   },
-  "help": "A space strategy game of 425 files, read from the Internet Archive a file at a time. Staged to test streaming (plan T21): it is played with a mouse, which PLAY does not pass to DOS games yet.",
-  "vars": { "dosbox_pure_aspect_correction": "true" },
+  "help": "A space strategy game of 425 files, read from the Internet Archive a file at a time. Played with the mouse: click the picture on a computer, drag on it on a touch screen, or use the right stick.",
+  "vars": {
+    "dosbox_pure_aspect_correction": "true"
+  },
   "actions": [
-    { "do": "Go on", "press": "Enter" },
-    { "do": "Back out", "press": "Escape" },
-    { "do": "Skip", "press": "Space" }
+    {
+      "do": "Go on",
+      "press": "Enter"
+    },
+    {
+      "do": "Back out",
+      "press": "Escape"
+    },
+    {
+      "do": "Skip",
+      "press": "Space"
+    }
   ]
 }

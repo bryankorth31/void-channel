@@ -112,6 +112,8 @@
       start, stop, prepareSound,
       key: (code, down) => post({ type: 'key', code, down }),
       pad: (port, bits) => post({ type: 'pad', port, bits }),
+      // A DOS game's mouse (plan T21b): movement since the last call, and the buttons held (1 left, 2 right, 4 middle).
+      mouse: (dx, dy, buttons) => post({ type: 'mouse', dx: Math.round(dx), dy: Math.round(dy), buttons }),
       pause: () => { post({ type: 'pause' }); if (audio) audio.suspend(); },
       resume: () => { post({ type: 'resume' }); if (audio) audio.resume(); },
       save: () => ask({ type: 'save' }),

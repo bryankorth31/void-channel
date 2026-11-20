@@ -246,6 +246,7 @@ onmessage = (e) => {
     else if (!M) return;
     else if (m.type === 'key') key(m.down, m.code);
     else if (m.type === 'pad') M._host_pad(m.port, m.bits);
+    else if (m.type === 'mouse') { if (M._host_mouse) M._host_mouse(m.dx | 0, m.dy | 0, m.buttons | 0); }
     else if (m.type === 'pause') paused = true;
     else if (m.type === 'resume') paused = false;
     else if (m.type === 'save') save();
