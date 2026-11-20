@@ -64,3 +64,10 @@ test('G3 (audit, 20 Nov 2026): a maker field that holds a piece of the descripti
   assert.equal(D.makerOf({ creator: ['a long sentence that is not a name at all'], publisher: 'Microsoft' }), 'Microsoft');
   assert.equal(D.makerOf({}), '');
 });
+
+test('G3 (audit, 20 Nov 2026): a drafted DOS game has the mouse on, and the Archive spelling Bro/derbund reads Brøderbund', () => {
+  const c = D.draft({ identifier: 'x', title: 'X', year: 1991 }, { name: 'x.zip', size: 1 }, 'dos', 'softwarelibrary_kids');
+  assert.equal(c.controls.mouse, true);
+  assert.match(c.help, /mouse/);
+  assert.equal(D.makerOf({ creator: 'Bro/derbund Software, Inc.' }), 'Brøderbund Software, Inc.');
+});

@@ -2,7 +2,7 @@
   "id": "where-in-the-world-is-carmen-sandiego-enhanced-1989",
   "title": "Where in the World is Carmen Sandiego Enhanced",
   "year": 1989,
-  "publisher": "Bro/derbund Software, Inc.",
+  "publisher": "Brøderbund Software, Inc.",
   "system": "dos",
   "core": "dosbox-pure",
   "players": 1,
@@ -20,7 +20,8 @@
       "Space"
     ],
     "dpad": true,
-    "keyboard": true
+    "keyboard": true,
+    "mouse": true
   },
   "actions": [
     {
@@ -52,6 +53,6 @@
   "genre": [
     "educational video game"
   ],
-  "help": "Arrows move, Enter picks, Esc backs out. Type answers on the keyboard.",
+  "help": "Point and click with the mouse, drag on a touch screen, or use the right stick. Enter picks, Esc backs out.",
   "kids": true
 }

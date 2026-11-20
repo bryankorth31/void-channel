@@ -55,7 +55,7 @@ const cleanTitle = (t) => String(t).replace(/\s*\((?:[^)]*collection|\d{4}[^)]*)
 // characters and 8 words, starting with a capital or a digit, with no sentence in it. Anything else comes out blank.
 function makerOf(rec) {
   for (const v of [].concat(rec.creator || [], rec.publisher || [])) {
-    const s = String(v).trim();
+    const s = String(v).trim().replace(/Bro\/derbund/g, 'Brøderbund');   // the Archive writes ø as "o/"
     if (s && s.length <= 60 && s.split(/\s+/).length <= 8 && /^[A-Z0-9]/.test(s) && !/[.!?]\s+[a-z]|,\s+[a-z]+\s+(is|are|was|lets|allows)\b/.test(s)) return s;
   }
   return '';
@@ -74,13 +74,15 @@ function draft(rec, file, sys, collection) {
   if (sys === 'dos') {
     const start = String([].concat(rec.emulator_start || '')[0] || '');
     if (start) card.archive.start = start; else needs.push('start program');
-    card.controls = { kind: 'dos-keys', keys: ['Enter', 'Escape', 'Space'], dpad: true, keyboard: true };
+    // The mouse is on by default (audit, 20 Nov 2026): many DOS games are mouse-led, and without it a tablet cannot click
+    // at all. A keyboard game loses nothing: the right stick and a touch drag become the mouse.
+    card.controls = { kind: 'dos-keys', keys: ['Enter', 'Escape', 'Space'], dpad: true, keyboard: true, mouse: true };
     card.actions = [{ do: 'Confirm', press: 'Enter' }, { do: 'Back out', press: 'Escape' }, { do: 'Go on', press: 'Space' }];
     card.vars = { dosbox_pure_aspect_correction: 'true' };
     // Default seats for a DOS game, as on the hand-made DOS cards: A confirms, B backs out, X goes on, Y opens the
     // on-screen keyboard, the pad's arrows are the arrow keys.
     card.gamepad = { A: 'Enter', B: 'Escape', X: 'Space', Y: '@keyboard', Up: 'ArrowUp', Down: 'ArrowDown', Left: 'ArrowLeft', Right: 'ArrowRight' };
-    card.help = 'Arrows move, Enter picks, Esc backs out. Type answers on the keyboard.';
+    card.help = 'Point and click with the mouse, drag on a touch screen, or use the right stick. Enter picks, Esc backs out.';
     needs.push('keys and mouse');
   } else {
     card.controls = { kind: 'pad', dpad: true, keys: ['P1:B', 'P1:A', 'P1:Select', 'P1:Start'] };
