@@ -508,6 +508,13 @@
   $('m-resume').onclick = () => setPaused(false);
   $('m-reset').onclick = restart;
 
+  // iPhone Safari zooms on two fast taps even where touch-action says not to (Bryan, a private tab: "It's going to keep
+  // happening as you tap the buttons"). Cancelling the touch itself stops the zoom; the keys run on pointer events,
+  // which still come first. The two buttons that work by click (the keyboard toggle and Hide keyboard) are left alone,
+  // and so is pinch zoom on the rest of the page.
+  const noZoom = (e) => { if (!e.target.closest('.pkbd, .pkclose')) e.preventDefault(); };
+  for (const id of ['z-left', 'z-right', 'z-pad', 'canvas']) for (const ev of ['touchstart', 'touchend']) $(id).addEventListener(ev, noZoom, { passive: false });
+
   // Cheats (Bryan, 20 Nov 2026: "add toggle for cheats"): a console game whose engine takes cheats lists them in the pause
   // menu, each a switch; the ones switched on are kept for the game in this browser and set again when it starts. The
   // codes come from libretro-database (CC BY-SA 4.0; play/tools/cheats.js), credited under the list.

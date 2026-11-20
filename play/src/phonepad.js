@@ -129,6 +129,8 @@
       setTimeout(connect, Math.min(8000, 500 * 2 ** tries++));
     };
   }
+  // iPhone Safari zooms on fast taps regardless of touch-action; the buttons run on pointer events, so the touches go.
+  for (const id of ['pad', 'shoulders']) for (const ev of ['touchstart', 'touchend']) $(id).addEventListener(ev, (e) => e.preventDefault(), { passive: false });
   setInterval(() => send({ type: 'ping', t: performance.now() }), 2000);
   addEventListener('pointerdown', stayAwake, { once: true });
   connect();
