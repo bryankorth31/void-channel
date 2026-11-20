@@ -16,7 +16,11 @@ when you press Play. Each core is built from its own published source, unchanged
 | Stella 2014 | Atari 2600 | GNU GPL version 2 | https://github.com/libretro/stella2014-libretro | `7d1361e407e63f29e52892655069e5fb4096e691` |
 
 The commits for the last five also live in [cores.js](cores.js), which is the one place the build reads them from.
-Every core was built with the Emscripten SDK at commit `708dcbcc9ee23bc7d2dad44fc90db377e38b771c`.
+Every core was built with Emscripten 7.0.0 (emcc `777e6e5db7b4990bcaeb1b9998ed642cc84e6629`), installed by the
+Emscripten SDK at commit `708dcbcc9ee23bc7d2dad44fc90db377e38b771c`.
+
+Each engine file, `play/engine/<core>.js`, opens with a one-line notice naming the core, its licence and its exact
+source. The build scripts write that line, so every served copy says what it is and where its source is.
 
 Each core's full licence is in its own source, at the commit above (`LICENSE.txt` for Genesis Plus GX, `LICENSE` for
 Snes9x, `Copying` for FCEUmm, `COPYING` for Gambatte, `stella/license.txt` for Stella 2014, `LICENSE` for DOSBox
@@ -42,7 +46,7 @@ If a link ever stops working, ask through voidtv.net and we will send the source
 You need Git, Node.js and about 2 GB of disk space (Bash too, for DOSBox Pure; Git Bash works on Windows).
 
 1. Get Emscripten: `git clone https://github.com/emscripten-core/emsdk`, then in that folder
-   `./emsdk install latest` and `./emsdk activate latest`.
+   `./emsdk install 7.0.0` and `./emsdk activate 7.0.0` (the version we built with).
 2. Get the core's source at our commit (step 1 above).
 3. From the void-channel folder:
    - DOSBox Pure: `EMSDK=<your emsdk folder> DBP=<your dosbox-pure folder> bash play/core/build.sh`
