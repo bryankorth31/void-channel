@@ -33,7 +33,23 @@
       try { r = await fetch(url, { credentials: 'omit' }); } catch (e) { throw new Error('The Internet Archive is not answering right now. Check the connection and press Play to try again.'); }
       if ([403, 404, 410].includes(r.status)) throw new Error("This game's file is no longer on the Internet Archive, so it cannot play here.");
       if (!r.ok) throw new Error('The Internet Archive is busy right now (it answered ' + r.status + '). Try again in a little while.');
-      const b = new Uint8Array(await r.arrayBuffer());
+      // A big game (SF Alpha 2 is 22 MB) says how far its download has come, as the DOS games do, so a wait never looks
+      // like a hang (audit, 20 Nov 2026).
+      let b;
+      if (size > 2e6 && r.body && on.status) {
+        b = new Uint8Array(size);
+        let got = 0, said = -1;
+        const reader = r.body.getReader();
+        for (;;) {
+          const { done, value } = await reader.read();
+          if (done) break;
+          if (got + value.length > b.length) { const bigger = new Uint8Array(got + value.length); bigger.set(b.subarray(0, got)); b = bigger; }
+          b.set(value, got); got += value.length;
+          const mb = Math.floor(got / 1e6);
+          if (mb !== said) { said = mb; on.status('Fetching the game: ' + mb + ' of ' + Math.round(size / 1e6) + ' MB'); }
+        }
+        b = b.subarray(0, got);
+      } else b = new Uint8Array(await r.arrayBuffer());
       try { if (root.caches) await (await caches.open(KEPT)).put(url, new Response(b)); } catch (e) { /* no room */ }
       return b;
     }
@@ -107,7 +123,8 @@
       on.status && on.status('Fetching the game from the Internet Archive');
       const zips = [{ name: a.file.split('/').pop(), bytes: await bytesOf(url, a.size) }];
       // A clone runs on its parent's chips too: the card names the parent's zip, fetched the same way.
-      for (const p of a.parents || []) zips.push({ name: p.file.split('/').pop(), bytes: await bytesOf('https://archive.org/cors/' + p.item + '/' + p.file, p.size) });
+      // A parent may be saved under the name MAME looks for (Q*Bert's speech chip is votrax.zip; MAME wants votrsc01a.zip).
+      for (const p of a.parents || []) zips.push({ name: p.as || p.file.split('/').pop(), bytes: await bytesOf('https://archive.org/cors/' + p.item + '/' + p.file, p.size) });
       on.status && on.status('Starting the game');
       const engine = new URL(PlayCards.engineOf(card), location.href).href;
       const vertical = (card.aspect || 4 / 3) < 1;
@@ -125,17 +142,34 @@
       // operator's reset button) goes on to the game. It is timed on the game's own clock, not the page's, so a slow
       // computer still lets the memory test finish first; after the reset the script runs again and does nothing.
       const reset = card.firstBoot && +card.firstBoot.resetAt;
-      const lua = reset > 0 ? ['local AT = ' + reset,
-        'if manager.machine.time:as_double() < AT then',
-        '  sub = emu.add_machine_frame_notifier(function()',
-        '    if manager.machine.time:as_double() >= AT then sub = nil; manager.machine:soft_reset() end',
-        '  end)',
-        'end', ''].join('\n') : '';
-      if (lua) args.push('-autoboot_script', '/lua/firstboot.lua');
+      // A few machines wait on an operator screen instead (Slither, Victory): the card names the presses, in MAME's own
+      // input names, at a time on the game's clock; each is held a third of a second.
+      const presses = ((card.firstBoot && card.firstBoot.press) || []).filter((p) => +p.at > 0 && /^[A-Za-z0-9 ]{1,40}$/.test(p.input || ''));
+      const lua = [
+        reset > 0 ? ['local AT = ' + reset,
+          'if manager.machine.time:as_double() < AT then',
+          '  sub = emu.add_machine_frame_notifier(function()',
+          '    if manager.machine.time:as_double() >= AT then sub = nil; manager.machine:soft_reset() end',
+          '  end)',
+          'end'].join('\n') : '',
+        presses.length ? ['local PRESS = {' + presses.map((p) => '{' + +p.at + ', "' + p.input + '"}').join(', ') + '}',
+          'local function field(name) for _, port in pairs(manager.machine.ioport.ports) do local f = port.fields[name]; if f then return f end end end',
+          'local i, held, upto = 1, nil, 0',
+          'if manager.machine.time:as_double() < PRESS[1][1] then',
+          '  presser = emu.add_machine_frame_notifier(function()',
+          '    local t = manager.machine.time:as_double()',
+          '    if held and t >= upto then held:clear_value(); held = nil end',
+          '    if not held and PRESS[i] and t >= PRESS[i][1] then local f = field(PRESS[i][2]); if f then f:set_value(1); held = f; upto = t + 0.33 end; i = i + 1 end',
+          '    if not held and not PRESS[i] then presser = nil end',
+          '  end)',
+          'end'].join('\n') : '',
+      ].filter(Boolean).join('\n') + '\n';
+      const hasLua = reset > 0 || presses.length > 0;
+      if (hasLua) args.push('-autoboot_script', '/lua/firstboot.lua');
       root.Module = {
         canvas, arguments: args,
         preRun: [() => { const fs = root.Module.FS || root.FS; fs.mkdir('/roms'); for (const z of zips) fs.writeFile('/roms/' + z.name, z.bytes);
-          if (lua) { fs.mkdir('/lua'); fs.writeFile('/lua/firstboot.lua', lua); } }],
+          if (hasLua) { fs.mkdir('/lua'); fs.writeFile('/lua/firstboot.lua', lua); } }],
         print: (t) => console.log('[mame]', t),
         printErr: (t) => console.warn('[mame]', t),
         // One plain sentence; the engine's own words go to the console for whoever looks.
@@ -158,9 +192,9 @@
           // MAME 0.289's build skips wasmBinary and always fetches its plain .wasm, but it asks instantiateWasm first,
           // so the unpacked engine is handed over there.
           if (buf[0] === 0 && buf[1] === 0x61 && buf[2] === 0x73 && buf[3] === 0x6d) {
-            root.Module.wasmBinary = buf;
+            // Once it runs, the unpacked bytes are let go (31 MiB for the 68000 engine, which matters on a phone; audit).
             root.Module.instantiateWasm = (imports, done) => {
-              WebAssembly.instantiate(buf, imports).then((r) => done(r.instance, r.module), (e) => {
+              WebAssembly.instantiate(buf, imports).then((r) => { buf = null; done(r.instance, r.module); }, (e) => {
                 console.warn('[mame] engine start:', e);
                 if (on.error) on.error('The arcade engine did not load. Try again in a moment.');
               });

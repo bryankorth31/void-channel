@@ -130,7 +130,7 @@ test('arcade (B, 20 Nov 2026: "Current MAME", "No line"): MAME runs from its own
     "addEventListener('keydown', arcadeEsc, true);", "runner = (isArcade() ? PlayArcade : PlayRunner).createRunner("]) assert.ok(js.includes(bit), bit);
   const ar = fs.readFileSync(path.join(PLAY, 'src', 'arcade-runner.js'), 'utf8');
   assert.ok(ar.includes("ctx[fn] = function () { frames++;"), 'the first picture is MAME\'s first draw');
-  assert.ok(ar.includes("fetch(engine.replace(/\\.js$/, '.wasm.gz') + '?v=' + ENGINE_V)") && ar.includes('WebAssembly.instantiate(buf, imports).then((r) => done(r.instance, r.module)'), 'a gzipped engine is unpacked by the page');
+  assert.ok(ar.includes("fetch(engine.replace(/\\.js$/, '.wasm.gz') + '?v=' + ENGINE_V)") && ar.includes('WebAssembly.instantiate(buf, imports).then((r) => { buf = null; done(r.instance, r.module); }'), 'a gzipped engine is unpacked by the page');
   assert.ok(ar.includes('if (document.title !== mine) document.title = mine;'));
   assert.equal(joust.firstBoot.resetAt, 12, 'a Williams first boot goes on with one soft reset');
   assert.ok(ar.includes("manager.machine:soft_reset()") && ar.includes("args.push('-autoboot_script', '/lua/firstboot.lua')"));
@@ -146,4 +146,11 @@ test('arcade (B, 20 Nov 2026: "Current MAME", "No line"): MAME runs from its own
   assert.ok(Math.abs(runs - 600) <= 2, 'about 600 turns in 10 s at 75 Hz, got ' + runs);
   assert.ok(ar.includes('root._emscripten_set_main_loop_timing(0, STEP); if (root.MainLoop && root.MainLoop.scheduler) root.MainLoop.scheduler();'), 'a page with no frames falls back to a timer');
   assert.ok(ar.includes("'-nojoystick'"), 'audit AR4: the pad reaches MAME through the hub only');
+  // The 244-game batch (20 Nov 2026): a parent zip under MAME's name, timed presses past an operator screen, the engine's bytes
+  // let go once it runs, and a big game's download counted out.
+  assert.ok(ar.includes("name: p.as || p.file.split('/').pop()"));
+  assert.ok(ar.includes('f:set_value(1); held = f; upto = t + 0.33') && ar.includes('held:clear_value()'));
+  assert.ok(ar.includes("/^[A-Za-z0-9 ]{1,40}$/.test(p.input || '')"), 'only plain input names reach the Lua');
+  assert.ok(ar.includes("on.status('Fetching the game: ' + mb + ' of ' + Math.round(size / 1e6) + ' MB')"));
+  assert.ok(!ar.includes('root.Module.wasmBinary = buf;'), 'no second reference to the engine bytes');
 });
