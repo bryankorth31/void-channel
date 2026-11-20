@@ -33,9 +33,13 @@
     const L = PlayLayout.layout(innerWidth, innerHeight, aspect, touch, card ? PlayTouch.minCols(card) : 2);
     document.body.dataset.mode = L.mode;
     const set = (el, r) => { if (!r) { el.hidden = true; return; } el.hidden = false; Object.assign(el.style, { left: r.x + 'px', top: r.y + 'px', width: r.w + 'px', height: r.h + 'px' }); };
-    set($('screen'), L.screen); set($('z-left'), L.left); set($('z-right'), L.right); set($('z-pad'), L.pad);
+    // A console pad floats in one layer: the whole stage sideways, the room under the picture upright.
+    const floating = touch && card && PlayCards.isPad(card);
+    set($('screen'), L.screen); set($('z-left'), floating ? null : L.left); set($('z-right'), floating ? null : L.right);
+    set($('z-pad'), floating ? null : L.pad);
+    set($('z-over'), floating && L.mode !== 'plain' ? (L.pad || { x: 0, y: PlayLayout.HEADER, w: innerWidth, h: innerHeight - PlayLayout.HEADER }) : null);
     if (touch && hub && card) {
-      const zones = L.pad ? { pad: $('z-pad') } : { left: $('z-left'), right: $('z-right') };
+      const zones = floating ? { over: $('z-over'), mode: L.mode } : L.pad ? { pad: $('z-pad') } : { left: $('z-left'), right: $('z-right') };
       const sig = L.mode;
       if (place.sig !== sig) { pad = PlayTouch.build(zones, card, hub); place.sig = sig; }
     } else place.sig = '';
