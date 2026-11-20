@@ -20,10 +20,23 @@ const SECURITY = [
   ['Permissions-Policy', 'camera=(), microphone=(), geolocation=()'],
   ['Content-Security-Policy-Report-Only', "default-src 'self'; script-src 'self' 'unsafe-inline' https://js.sentry-cdn.com https://browser.sentry-cdn.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://image.tmdb.org https://archive.org https://*.archive.org; media-src 'self' blob: https://archive.org https://*.archive.org; connect-src 'self' https://archive.org https://*.archive.org https://*.ingest.sentry.io https://*.ingest.us.sentry.io; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'self'"],
 ];
+// PLAY (play/): the game player and the files it loads are cross-origin isolated (its engine runs on threads) and carry
+// a report-only policy that allows WebAssembly and its audio worklet. Keep in step with PLAY_ISOLATED and PLAY_CSP in
+// scripts/lib/siteguards.js; tests/play-door.test.js fails when the two differ. The shelf (/play/) is not isolated.
+const PLAY_ISOLATED = ['/play/game.html', '/play/game', '/play/src/*', '/play/engine/*', '/play/cards/*'];
+const PLAY_CSP = "default-src 'self'; script-src 'self' 'wasm-unsafe-eval' blob: 'unsafe-inline' https://js.sentry-cdn.com https://browser.sentry-cdn.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://image.tmdb.org https://archive.org https://*.archive.org; media-src 'self' blob: https://archive.org https://*.archive.org; connect-src 'self' https://archive.org https://*.archive.org https://*.ingest.sentry.io https://*.ingest.us.sentry.io; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; worker-src 'self' blob:";
+const isPlayIsolated = (p) => PLAY_ISOLATED.some((r) => (r.endsWith('*') ? p.startsWith(r.slice(0, -1)) : p === r));
+function playHeaders(out, path) {
+  if (!path || !isPlayIsolated(path)) return;
+  out.headers.set('Cross-Origin-Opener-Policy', 'same-origin');
+  out.headers.set('Cross-Origin-Embedder-Policy', 'require-corp');
+  out.headers.set('Content-Security-Policy-Report-Only', PLAY_CSP);
+}
 // A response from next() is normally mutable; one that is not (a redirect or a cached asset) is copied first.
-function withSecurity(res) {
+function withSecurity(res, path) {
   let out = res;
   try { for (const [k, v] of SECURITY) out.headers.set(k, v); } catch (e) { out = new Response(res.body, res); for (const [k, v] of SECURITY) out.headers.set(k, v); }
+  playHeaders(out, path);
   if (out.status === 401) out.headers.set('Cache-Control', 'no-store'); // the password page is never cached
   return out;
 }
@@ -61,7 +74,7 @@ const safePath = (u) => { const x = new URL(u); const p = x.pathname.replace(/^\
 export async function onRequest(ctx) {
   const url = new URL(ctx.request.url);
   if (url.hostname === 'www.voidtv.net') return withSecurity(new Response(null, { status: 301, headers: { Location: 'https://voidtv.net' + url.pathname + url.search, 'Cache-Control': 'public, max-age=3600' } }));
-  return withSecurity(await gate(ctx));
+  return withSecurity(await gate(ctx), url.pathname);
 }
 
 async function gate({ request, env, next }) {
