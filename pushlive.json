@@ -1,0 +1,17 @@
+{
+ "id": "voidtv",
+ "name": "Void TV (voidtv.net)",
+ "branch": "master",
+ "remote": "origin",
+ "goesLive": "push",
+ "notes": "A push to master is the deploy: Cloudflare Pages (voidtvsite, CASH account) builds voidtv.net from it. Kids (branch kids) is not part of this.",
+ "tests": [
+  { "name": "Site, HQ and PLAY tests", "cmd": ["node", "--test", "tests/*.test.js", "play/test/*.test.js"], "timeoutMin": 15 }
+ ],
+ "live": { "url": "https://voidtv.net/version.txt", "expect": "commit", "waitMinutes": 15 },
+ "hold": [
+  { "re": "(^|/)profiles/kids/", "why": "Kids (Bryan's call: it lands on master only as one squashed commit)" },
+  { "re": "(^|/)backend/", "why": "the backend (its settings and keys)" }
+ ],
+ "chatsPushOnTheirOwn": true
+}

@@ -22,6 +22,7 @@ const ROOT = path.join(__dirname, '..');
 const PROFILE = require('./lib/profile');
 const PORT = +(process.argv[process.argv.indexOf('--port') + 1] || 0) || PROFILE.port;
 const { createTasks } = require('./lib/tasks');
+const PUSHLIVE = process.env.PUSHLIVE_HOME || 'C:\\Users\\bryan\\chief-of-staff\\tools\\pushlive'; // the shared Push live block, one copy for every HQ
 // Jobs run under plain node. Inside the desktop app process.execPath is the app itself, so find node.
 function nodeBin() {
   if (!process.versions.electron) return { bin: process.execPath, env: process.env };
@@ -384,6 +385,9 @@ const server = http.createServer(async (req, res) => {
   try {
     if (p === '/' || p === '/index.html') return send(res, 200, fs.readFileSync(path.join(__dirname, 'hq', 'index.html'), 'utf8').replace('__HQ_TOKEN__', TOKEN), MIME['.html']);
     if (p === '/api/ping' && req.method === 'POST') return send(res, 200, { ok: true }); // does nothing; the doctor and the tests use it to see whether the guards above let a call through
+    // Push live (Bryan, 20 Nov 2026): the shared desk that shows the code commits waiting for GitHub (a push to master is the
+    // deploy), their tests on a clean copy, and one button. HQ only starts it; the desk has its own guards and token.
+    if (p === '/api/pushlive/open' && req.method === 'POST') return execFile(nodeBin().bin, [path.join(PUSHLIVE, 'open-desk.js'), 'voidtv'], { env: nodeBin().env, windowsHide: true, timeout: 20000 }, (err, out) => { let j = null; try { j = JSON.parse(String(out).trim().split(/\r?\n/).pop()); } catch (e) { /* below */ } send(res, j && j.url ? 200 : 500, j && j.url ? j : { error: (j && j.error) || 'The Push live desk did not start (' + PUSHLIVE + ').' }); });
     if (p.startsWith('/brand/')) { const f = path.join(ROOT, 'assets', 'brand', p.slice(7)); if (!f.startsWith(path.join(ROOT, 'assets', 'brand')) || !fs.existsSync(f)) return send(res, 404, 'no', 'text/plain'); return send(res, 200, fs.readFileSync(f), MIME[path.extname(f)] || 'application/octet-stream'); }
     // Whether a job is running, with no key: Studio Tools reads it before it offers Stop, so HQ is never stopped mid-job.
     if (p === '/api/busy') return send(res, 200, { queue: jobList().filter((j) => j.running).length });
