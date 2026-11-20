@@ -7,14 +7,15 @@
   // the rest) from the exact source named there.
   const CORES = {
     // name, licence and source are what the player page shows under every game; terms is the licence text that must
-    // travel with a non-GPL core (served beside its engine).
+    // travel with a non-GPL core (served beside its engine). noDonation: the core's licence forbids commercial use, so
+    // its games carry no donation line anywhere (B, 19 Nov 2026: "Leave it off those").
     'dosbox-pure': { engine: 'engine/dosbox-pure.js', systems: ['dos'], name: 'DOSBox Pure', licence: 'GPL-2.0',
       source: 'https://github.com/libretro/dosbox-pure/tree/e39497e7c2a32c67c26e6598dd14f6d58c384bfd' },
     'genesis-plus-gx': { engine: 'engine/genesis-plus-gx.js', systems: ['genesis', 'sms', 'gamegear'], name: 'Genesis Plus GX',
       licence: 'non-commercial licence', source: 'https://github.com/libretro/Genesis-Plus-GX/tree/b9c2316441978d4015ba30e9a95d9b0e6f8ee981',
-      terms: 'engine/genesis-plus-gx.LICENSE.txt' },
+      terms: 'engine/genesis-plus-gx.LICENSE.txt', noDonation: true },
     snes9x: { engine: 'engine/snes9x.js', systems: ['snes'], name: 'Snes9x', licence: 'non-commercial licence',
-      source: 'https://github.com/libretro/snes9x/tree/204ea1c0b851f960cbf223075eb1c25641cb483c', terms: 'engine/snes9x.LICENSE.txt' },
+      source: 'https://github.com/libretro/snes9x/tree/204ea1c0b851f960cbf223075eb1c25641cb483c', terms: 'engine/snes9x.LICENSE.txt', noDonation: true },
     fceumm: { engine: 'engine/fceumm.js', systems: ['nes'], name: 'FCEUmm', licence: 'GPL-2.0',
       source: 'https://github.com/libretro/libretro-fceumm/tree/77468e568d9fe9c48d684ca911f1a3fe7259fdf7' },
     gambatte: { engine: 'engine/gambatte.js', systems: ['gameboy', 'gbcolor'], name: 'Gambatte', licence: 'GPL-2.0',
