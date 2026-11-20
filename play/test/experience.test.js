@@ -157,5 +157,6 @@ test('audit K5 and S7: a played game is kept in the viewer\'s own browser for a 
   const w = fs.readFileSync(path.join(PLAY, 'src', 'core-worker.js'), 'utf8');
   for (const bit of ["const KEEP_GAMES = 8, KEEP_MAX = 64 * 1024 * 1024, KEPT = 'voidtv-play-games';", 'return !known || b.length === known ? b : null;',
     'const game = await gameBytes(msg.gameUrl, msg.gameSize);']) assert.ok(w.includes(bit), bit);
-  assert.ok(fs.readFileSync(path.join(PLAY, 'shelf.css'), 'utf8').includes('object-fit:cover;object-position:top;'));
+  // Bryan, 20 Nov 2026 ("the card dimension aspect ratio doesn't fit the artwork"): the back's strip shows the whole picture now.
+  assert.ok(fs.readFileSync(path.join(PLAY, 'shelf.css'), 'utf8').includes('.held .back .strip img{width:100%;height:100%;object-fit:contain;'));
 });

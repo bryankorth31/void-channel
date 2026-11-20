@@ -129,3 +129,12 @@ test('G2: plain genres, filters that only offer what exists, and the choice kept
   assert.match(html, /<input id="f-q" class="flt" type="search"/);
   assert.ok(fs.readFileSync(path.join(PLAY, 'src', 'shelf.js'), 'utf8').includes("p.append('No games match these choices. ', b);"));
 });
+
+test('Bryan, 20 Nov 2026 ("the card dimension aspect ratio doesn\'t fit the artwork"): every box shows its whole picture at the screenshot\'s own shape', () => {
+  const css = fs.readFileSync(path.join(PLAY, 'shelf.css'), 'utf8');
+  assert.ok(css.includes('.box .art{aspect-ratio:4/3}'));
+  assert.ok(!/\.box\.(bigbox|cart|handheld) \.art\{aspect-ratio/.test(css), 'no tall or square frames');
+  assert.ok(css.includes('.box img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;'));
+  assert.ok(css.includes('.held .front img{width:100%;height:100%;object-fit:contain;'));
+  assert.ok(!/\.box img\{[^}]*object-fit:cover/.test(css));
+});
