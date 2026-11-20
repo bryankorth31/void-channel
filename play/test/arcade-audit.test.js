@@ -58,3 +58,9 @@ test('a key press wakes an arcade game\'s sound before the page hands the key to
   const wake = body.indexOf('runner.wakeSound()'), arcade = body.indexOf('if (isArcade()) return;');
   assert.ok(wake > 0 && arcade > 0 && wake < arcade);
 });
+
+test('no double-tap zoom on the game page or the shelf; the game area still takes every touch (Bryan, 20 Nov 2026)', () => {
+  const fs = require('node:fs'), path = require('node:path'), P = path.join(__dirname, '..');
+  for (const f of ['play.css', 'shelf.css']) assert.match(fs.readFileSync(path.join(P, f), 'utf8'), /\nhtml\{touch-action:manipulation\}\r?\n/, f);
+  assert.match(fs.readFileSync(path.join(P, 'play.css'), 'utf8'), /\.stage\{[^}]*touch-action:none/);
+});
