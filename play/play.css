@@ -187,7 +187,7 @@ html,body{height:100%;overflow:hidden;overscroll-behavior:none}
 .cover .credits{font-size:12px;color:var(--dim);max-width:520px;margin:14px auto 0}.cover .credits a{color:var(--dim)}
 .menu .credits{font-size:12px;color:var(--dim);margin-top:12px}.menu .credits a{color:var(--dim)}
 /* The donation: a small cross at the bottom of the game picture, outside every touch key's area; dim while playing. */
-.give{position:absolute;left:50%;bottom:4px;transform:translateX(-50%);z-index:4;width:44px;height:44px;border:0;border-radius:50%;
+.give{position:fixed;left:50%;bottom:4px;transform:translateX(-50%);z-index:4;width:44px;height:44px;border:0;border-radius:50%;
   background:transparent;opacity:.55;display:grid;place-items:center;cursor:pointer;padding:0}
 .give img{width:28px;height:auto;filter:drop-shadow(0 1px 3px rgba(0,0,0,.8))}
 .give:hover,.give:focus-visible{opacity:1;outline:none;border-color:var(--pink)}
@@ -198,3 +198,6 @@ html,body{height:100%;overflow:hidden;overscroll-behavior:none}
 /* Controller mode: the bar steps away while a gamepad plays; a tap brings it back for a few seconds. */
 body.padmode .bar{transform:translateY(-100%);transition:transform .2s}
 body.padmode.showbar .bar,body.padmode .bar:focus-within{transform:none}
+/* The cross is never on the picture (it covered Tetris's own text): place() puts it in free room off the picture. */
+body.padmode:not(.showbar) .give{display:none}
+.stage:has(.pkeyboard.open) .give{display:none}

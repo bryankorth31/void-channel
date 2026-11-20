@@ -135,3 +135,11 @@ test('controller mode (Bryan, 20 Nov 2026): with a gamepad in hand the picture f
   assert.ok(js.includes("p.index < PlayPhones.BASE && p.mapping === 'standard' && p.buttons.some((b) => b.pressed))) controllerMode(true);"), 'a real pad, not a Phones phone');
   assert.ok(js.includes("addEventListener('orientationchange', () => { if (hub) hub.releaseAll(); });"), 'turning the phone lets go of every key');
 });
+
+test('the donation cross is never on the picture or a key: after the keys are laid out it takes the first free spot for the layout', () => {
+  const js = read(ROOT, 'src', 'play.js');
+  assert.ok(js.includes('    placeGive();\n  }'), 'placed after the keys');
+  assert.ok(js.includes('const [x, y] = spots.find(free) || spots[0];'));
+  assert.ok(!/<div id="screen"[\s\S]{0,200}id="give"/.test(read(ROOT, 'game.html')), 'not inside the picture any more');
+  assert.ok(read(ROOT, 'play.css').includes('.stage:has(.pkeyboard.open) .give{display:none}'), 'out of the way of the DOS keyboard');
+});

@@ -34,6 +34,10 @@
   function place() {
     const L = PlayLayout.layout(innerWidth, innerHeight, aspect, touch, card ? PlayTouch.minCols(card) : 2, padMode);
     document.body.classList.toggle('padmode', padMode);
+    // The donation cross, never on the picture (audit: it covered Tetris's text): upright, the bottom centre of the keys'
+    // room (between the arrows and the buttons); sideways, the top of the left column, above its keys; on a computer,
+    // beside the picture's lower right; in controller mode, just under the bar while the bar shows.
+    placeGive.L = L;
     document.body.dataset.mode = L.mode;
     const set = (el, r) => { if (!r) { el.hidden = true; return; } el.hidden = false; Object.assign(el.style, { left: r.x + 'px', top: r.y + 'px', width: r.w + 'px', height: r.h + 'px' }); };
     // A console pad floats in one layer: the whole stage sideways, the room under the picture upright.
@@ -47,6 +51,26 @@
       if (place.sig !== sig) { pad = PlayTouch.build(zones, card, hub); place.sig = sig; }
     } else place.sig = '';
     $('b-touch').setAttribute('aria-pressed', String(touch));
+    placeGive();
+  }
+
+  // The donation cross never sits on the picture or a key (audit: it covered Tetris's own text). After the keys are laid
+  // out, it takes the first free spot of a short list for the layout: upright, along the bottom of the keys' room;
+  // sideways, the tops and bottoms of the side columns; on a computer, beside the picture; in controller mode, under
+  // the bar while the bar shows.
+  function placeGive() {
+    const give = $('give'), L = placeGive.L;
+    if (!give || !L) return;
+    const S = 44, W = innerWidth, H = innerHeight, T = PlayLayout.HEADER, sc = L.screen;
+    const spots = L.mode === 'portrait' ? [[(W - S) / 2, H - S - 6], [(W - S) / 2, sc.y + sc.h + 6], [8, H - S - 6], [W - S - 8, H - S - 6], [8, sc.y + sc.h + 6], [W - S - 8, sc.y + sc.h + 6]]
+      : L.mode === 'bare' ? [[(W - S) / 2, T + 4]]
+      : L.mode === 'plain' ? [[sc.x + sc.w + 10, sc.y + sc.h - S], [sc.x - S - 10, sc.y + sc.h - S], [(W - S) / 2, H - S - 4]]
+      : [[(sc.x - S) / 2, T + 6], [sc.x + sc.w + (W - sc.x - sc.w - S) / 2, T + 6], [(sc.x - S) / 2, H - S - 6], [sc.x + sc.w + (W - sc.x - sc.w - S) / 2, H - S - 6]];
+    const keys = [...document.querySelectorAll('.pk, .pdpad')].filter((k) => k.offsetParent).map((k) => k.getBoundingClientRect()).filter((r) => r.width > 0);
+    const free = ([x, y]) => x >= 0 && y >= 0 && x + S <= W && y + S <= H
+      && ![...keys, { left: sc.x, top: sc.y, right: sc.x + sc.w, bottom: sc.y + sc.h }].some((r) => x < r.right && r.left < x + S && y < r.bottom && r.top < y + S);
+    const [x, y] = spots.find(free) || spots[0];
+    Object.assign(give.style, { left: Math.round(x) + 'px', top: Math.round(y) + 'px', bottom: 'auto', transform: 'none' });
   }
 
   // While the menu is open the game hears nothing: every held key is let go first, then the gamepad drives the menu.
