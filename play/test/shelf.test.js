@@ -120,7 +120,7 @@ test('G2: plain genres, filters that only offer what exists, and the choice kept
   assert.deepEqual(f, { m: 'snes', g: 'Platform', p: '2', d: '1990', q: 'mario' });
   assert.equal(Shelf.writeFilter(f), '?m=snes&g=Platform&p=2&d=1990&q=mario');
   const games = JSON.parse(fs.readFileSync(path.join(PLAY, 'shelf', 'index.json'), 'utf8')).games;
-  assert.deepEqual(games.filter((g) => Shelf.matches(g, f)).map((g) => g.id), ['super-mario-world']);
+  assert.deepEqual(games.filter((g) => Shelf.matches(g, f)).map((g) => g.id).sort(), ['super-mario-world', 'super-mario-all-stars-snes'].sort()); // All-Stars: two players since the audit's two-player check
   assert.deepEqual(games.filter((g) => Shelf.matches(g, { q: 'golden' })).map((g) => g.id).sort(), ['golden-axe-genesis', 'golden-axe-sms']);
   for (const k of ['m', 'g', 'p', 'd']) for (const [v] of Shelf.choices(games, k).slice(1)) {
     assert.ok(games.some((g) => Shelf.matches(g, { [k]: v })), k + '=' + v + ' leads to at least one game');

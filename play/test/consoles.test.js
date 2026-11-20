@@ -198,3 +198,19 @@ test('a console game kept inside a .zip: the core gets the one file with the mac
   const w = fs.readFileSync(path.join(PLAY, 'src', 'core-worker.js'), 'utf8');
   assert.ok(w.includes('path = await romFromZip(game, msg.rom, path);') && w.includes('async function romFromZip('));
 });
+
+test('two-player console games seat a second controller (Bryan: "Can two players play this with controllers"; the PLAY audit)', () => {
+  const { TWO_PLAYER } = require('../tools/console-cards.js');
+  const HOME = ['nes', 'snes', 'genesis', 'sms', 'a2600'];
+  for (const id of TWO_PLAYER) {
+    const c = JSON.parse(fs.readFileSync(path.join(PLAY, 'cards', id + '.json'), 'utf8'));
+    assert.equal(c.players, 2, id);
+    assert.ok(HOME.includes(c.system), id + ' is on a machine with two controller ports');
+  }
+  for (const id of ['streets-of-rage-2-genesis', 'mario-bros-nes', 'mortal-kombat-ii-genesis', 'zombies-ate-my-neighbors-genesis']) assert.ok(TWO_PLAYER.has(id), id);
+  // A handheld's second player needed a link cable: one seat.
+  for (const f of fs.readdirSync(path.join(PLAY, 'cards'))) {
+    const c = JSON.parse(fs.readFileSync(path.join(PLAY, 'cards', f), 'utf8'));
+    if (['gameboy', 'gbcolor', 'gamegear', 'gba', 'lynx'].includes(c.system)) assert.ok((c.players || 1) === 1, c.id);
+  }
+});

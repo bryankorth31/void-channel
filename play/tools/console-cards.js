@@ -60,13 +60,19 @@ function cleanTitle(t) {
   return TITLES[s.toLowerCase()] || s;
 }
 
+// Games that use a second controller (Bryan, 20 Nov 2026: "Can two players play this with controllers"; the PLAY audit).
+// Only the home machines with two controller ports; a handheld's second player needed a link cable. Checked by hand,
+// since Wikidata gives a player count for almost none of them. Turns taken in a row (Mario, Paperboy) count: the second
+// player plays on the second controller.
+const TWO_PLAYER = new Set(['altered-beast-genesis', 'contra-hard-corps-genesis', 'golden-axe-genesis', 'kid-chameleon-genesis', 'mortal-kombat-genesis', 'mortal-kombat-ii-genesis', 'ultimate-mortal-kombat-3-genesis', 'paperboy-genesis', 'road-rash-genesis', 'sonic-classics-genesis', 'sonic-the-hedgehog-3-and-knuckles-genesis', 'streets-of-rage-genesis', 'streets-of-rage-2-genesis', 'sunset-riders-genesis', 'tetris-genesis', 'toejam-and-earl-genesis', 'toejam-and-earl-in-panic-on-funkotron-genesis', 'wiz-n-liz-genesis', 'x-men-genesis', 'zombies-ate-my-neighbors-genesis', 'teenage-mutant-ninja-turtles-return-of-the-shredder-genesis', 'teenage-mutant-ninja-turtles-the-hyperstone-heist-genesis', 'donkey-kong-country-snes', 'kirby-super-star-snes', 'super-mario-all-stars-snes', 'super-mario-kart-snes', 'super-mario-world', 'mario-bros-nes', 'super-mario-bros-3-nes', 'bubble-bobble-sms', 'double-dragon-sms', 'ms-pac-man-sms']);
+
 // Pure (tested): the card for one item.
 function card(row, file, meta) {
   const m = MACHINES[row.system];
   const year = +String(meta.year || meta.date || '').slice(0, 4) || +((/\b(19[789]\d|200\d)\b/.exec(row.title) || [])[1]) || null;
   const title = cleanTitle(row.title);
   const c = { id: slug(title) + '-' + m.end, title, year, publisher: String([].concat(meta.creator || meta.publisher || '')[0] || '').split(/[;,]/)[0].trim(),
-    system: row.system, core: m.core, players: 1,
+    system: row.system, core: m.core, players: TWO_PLAYER.has(slug(title) + '-' + m.end) ? 2 : 1,
     archive: Object.assign({ item: row.item, file: file.name }, file.start ? { start: file.start } : m.as ? { as: slug(title) + m.as } : {}, { size: +file.size }),
     controls: Object.assign({ kind: 'pad', dpad: true, keys: m.keys }, m.labels ? { labels: m.labels } : {}),
     help: m.how + (row.source === 'personal' ? ' This copy is a personal upload on the Internet Archive and may not stay there.' : ''),
@@ -111,4 +117,4 @@ async function main() {
 }
 
 if (require.main === module) main().catch((e) => { console.error(e.message); process.exit(1); });
-module.exports = { MACHINES, pickFile, card, slug, cleanTitle };
+module.exports = { TWO_PLAYER, MACHINES, pickFile, card, slug, cleanTitle };
