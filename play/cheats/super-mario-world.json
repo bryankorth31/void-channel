@@ -12,84 +12,12 @@
       "code": "7E001900"
     },
     {
-      "name": "In-level music mod",
-      "code": "7E0DDA00"
-    },
-    {
-      "name": "Spare Item Type(In-Level)",
-      "code": "7E0DC200"
-    },
-    {
-      "name": "Spare Item Type(On Map)",
-      "code": "7E0DBC00"
-    },
-    {
       "name": "Infinite 99 Lives",
       "code": "7E0DBE63"
     },
     {
       "name": "Always 999 Time",
       "code": "7E0F3109+7E0F3209+7E0F3309"
-    },
-    {
-      "name": "Always 100 Bonus Points",
-      "code": "7E0F4864"
-    },
-    {
-      "name": "Exit Level, Second Exit",
-      "code": "7E143401"
-    },
-    {
-      "name": "Exit Level, Normal Exit",
-      "code": "7E149301"
-    },
-    {
-      "name": "Disable Mosaic Effect",
-      "code": "7E0DB000"
-    },
-    {
-      "name": "Activates Green Blocks",
-      "code": "7E1F2701"
-    },
-    {
-      "name": "Activates Yellow Blocks",
-      "code": "7E1F2801"
-    },
-    {
-      "name": "Activates Blue Blocks",
-      "code": "7E1F2901"
-    },
-    {
-      "name": "Activates Red Blocks",
-      "code": "7E1F2A01"
-    },
-    {
-      "name": "Deactivates Green Blocks",
-      "code": "7E1F2700"
-    },
-    {
-      "name": "Deactivates Yellow Blocks",
-      "code": "7E1F2800"
-    },
-    {
-      "name": "Deactivates Blue Blocks",
-      "code": "7E1F2900"
-    },
-    {
-      "name": "Deactivates Red Blocks",
-      "code": "7E1F2A00"
-    },
-    {
-      "name": "Mario On Ice",
-      "code": "EDA5-0F6F+61A5-040F+61A6-0D6F"
-    },
-    {
-      "name": "Waterworld Mario",
-      "code": "EDA5-0F6F+69A5-040F+69A6-0D6F"
-    },
-    {
-      "name": "Reverse Switch Palace Blocks",
-      "code": "2D80-0DE1+ED8B-0D89"
     },
     {
       "name": "Yoshi is Invincible",
@@ -108,60 +36,132 @@
       "code": "B9E5-A4AD+F8E5-A7DD"
     },
     {
-      "name": "Multi-Jump and Low Gravity",
-      "code": "336B-D4D0"
-    },
-    {
-      "name": "Shoot Fireballs Straight",
-      "code": "DDEA-6F07+DDB2-AFD8"
-    },
-    {
       "name": "Power-up Select",
       "code": "EDA5-0F6F"
     },
     {
-      "name": "Warp to Star World",
-      "code": "EDB7-0FBD"
+      "name": "Start with 1 life instead of 5",
+      "code": "DDB4-6F07"
     },
     {
-      "name": "Rapid-Fire Fireballs (Facing Right Only)",
-      "code": "D5EB-6F07"
+      "name": "Start with 9 lives",
+      "code": "D6B4-6F07"
     },
     {
-      "name": "Stomp 8 Enemies And Get 1-Ups",
-      "code": "C23B-AF07"
+      "name": "Start with 15 lives",
+      "code": "D3B4-6F07"
     },
     {
-      "name": "Nintendo Debug #2",
-      "code": "DDA6-DF07"
+      "name": "Start with 25 lives",
+      "code": "F6B4-6F07"
     },
     {
-      "name": "Blocks That Produce A Mushroom When Small & ! Boxes",
-      "code": "7E0DB4DD"
+      "name": "Start with 50 lives",
+      "code": "7FB4-6F07"
     },
     {
-      "name": "Blocks That Produce A Flower",
-      "code": "7E0DB4DD"
+      "name": "Start with 99 lives",
+      "code": "14B4-6F07"
     },
     {
-      "name": "Blocks That Produce A Feather",
-      "code": "7E0DB4DD"
+      "name": "Infinite lives",
+      "code": "C222-D4DD"
     },
     {
-      "name": "Turn Blocks That Produce A Star",
-      "code": "7E0DB400"
+      "name": "Extra life at 5 coins instead of 100",
+      "code": "D964-A7D7+D967-AFA7"
     },
     {
-      "name": "Turn Blocks That Produce A 1-Up Mushroom",
-      "code": "7E0DB400"
+      "name": "Extra life at 10 coins",
+      "code": "DC64-A7D7+DC67-AFA7"
     },
     {
-      "name": "Turn Blocks That Produce A Vine",
-      "code": "7E0DB400"
+      "name": "Extra life at 20 coins",
+      "code": "F064-A7D7+F067-AFA7"
     },
     {
-      "name": "Lakitu's Ammo Modifier",
-      "code": "7E0DB4DD"
+      "name": "Extra life at 50 coins",
+      "code": "7464-A7D7+7467-AFA7"
+    },
+    {
+      "name": "Start and stay invincible most of the time",
+      "code": "DD32-6DAD"
+    },
+    {
+      "name": "Infinite time",
+      "code": "C264-64D7"
+    },
+    {
+      "name": "Extra life with every dragon coin instead of 5",
+      "code": "D2E5-A7AD"
+    },
+    {
+      "name": "Coins Rack Up All The Time",
+      "code": "4064-ADD7"
+    },
+    {
+      "name": "Get Yoshi Coin Must Of The Time",
+      "code": "40ED-A4AD"
+    },
+    {
+      "name": "Get Coins Must Of The Time",
+      "code": "6DED-A7AD"
+    },
+    {
+      "name": "Invincible Pits/Lava/Enemies",
+      "code": "CBED-646F+6DED-64AF+69ED-67DF+52ED-670F+18ED-676F+CECF-0FA1"
+    },
+    {
+      "name": "Fireballs Turn Most Enemies Into Lives",
+      "code": "56C4-0466"
+    },
+    {
+      "name": "Fake Invincibility",
+      "code": "D032-6DAD"
+    },
+    {
+      "name": "Extra Life After Each Coin, Even Yoshi Coins",
+      "code": "DD64-A7D7+DD67-AFA7"
+    },
+    {
+      "name": "Switch F/X On To Activate Infinite P-Switch Time",
+      "code": "7E14ADFF"
+    },
+    {
+      "name": "Timer Always 999 Seconds",
+      "code": "7E0F3009+7E0F3109+7E0F3209+7E0F3309"
+    },
+    {
+      "name": "Timer Goes Real Fast",
+      "code": "7E0F3099"
+    },
+    {
+      "name": "Infinite P-Balloon Time",
+      "code": "7E1891FF"
+    },
+    {
+      "name": "Collect 1 Yoshi Coin For 1-UP",
+      "code": "7E142005"
+    },
+    {
+      "name": "Infinite Jumps",
+      "code": "7E147101"
+    },
+    {
+      "name": "FAKE Infinite Time",
+      "code": "7E0F2509+7E0F2609+7E0F2709"
+    },
+    {
+      "name": "Yoshi Coin Modifier",
+      "code": "7E142200"
+    },
+    {
+      "name": "Invincible (Star Effect)",
+      "code": "7E1490FF"
+    },
+    {
+      "name": "Invincibility (Uneffected)",
+      "code": "7E1497FF"
     }
   ]
 }

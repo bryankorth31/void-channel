@@ -119,7 +119,11 @@
   // game. Each acts when the button is let go, so nothing still held reaches the game afterwards.
   const menuWas = new Map();
   function menuPads(pads) {
-    const items = [...$('menu').querySelectorAll('button, a')].filter((x) => x.offsetParent);
+    // The menu in order; while the Cheats list is open its switches come right after the Cheats button (audit: a pad
+    // could not reach them, and Down landed on Back to the games).
+    let items = [...$('menu').querySelectorAll('.menu-row button, .menu-row a')].filter((x) => x.offsetParent);
+    const cheatsOpen = !$('cheats').hidden;
+    if (cheatsOpen) { const at = items.indexOf($('m-cheats')) + 1; items.splice(at, 0, ...$('cheat-list').querySelectorAll('input')); }
     for (const p of pads) {
       if (!p || p.mapping !== 'standard') continue;
       const b = (i) => !!(p.buttons[i] && p.buttons[i].pressed);
@@ -128,10 +132,11 @@
       const was = menuWas.get(p.index) || {};
       const released = (k) => was[k] && !now[k];
       const i = items.indexOf(document.activeElement);
-      if (now.prev && !was.prev) items[(i <= 0 ? items.length : i) - 1].focus();
-      if (now.next && !was.next) items[(i + 1) % items.length].focus();
+      const go = (el) => { el.focus(); el.scrollIntoView({ block: 'nearest' }); };
+      if (now.prev && !was.prev) go(items[(i <= 0 ? items.length : i) - 1]);
+      if (now.next && !was.next) go(items[(i + 1) % items.length]);
       if (released('a') && i >= 0) items[i].click();
-      else if (released('back')) setPaused(false);
+      else if (released('back')) { if (cheatsOpen) { showCheats(false); go($('m-cheats')); } else setPaused(false); }
       menuWas.set(p.index, now);
     }
   }
@@ -515,10 +520,11 @@
     cheatList.forEach((ch, i) => {
       const li = document.createElement('li'), box = document.createElement('input'), lab = document.createElement('label');
       box.type = 'checkbox'; box.id = 'cheat-' + i; box.checked = cheatsOn.has(i);
-      lab.htmlFor = box.id; lab.textContent = ch.name;
+      lab.htmlFor = box.id; lab.textContent = ch.name + (ch.risky ? ' (can break the game)' : '');
       box.onchange = () => {
         if (box.checked) cheatsOn.add(i); else cheatsOn.delete(i);
-        try { localStorage.setItem(cheatKey(), JSON.stringify([...cheatsOn])); } catch (e) { /* kept for this visit only */ }
+        // Kept by code, not by place in the list, so a list pulled again in another order switches on the same cheats (audit).
+        try { localStorage.setItem(cheatKey(), JSON.stringify([...cheatsOn].map((n) => cheatList[n].code))); } catch (e) { /* kept for this visit only */ }
         if (started) applyCheats();
       };
       li.append(box, lab); ul.appendChild(li);
@@ -531,12 +537,16 @@
       if (!j || !Array.isArray(j.cheats) || !j.cheats.length) return;
       cheatList = j.cheats.filter((x) => x && typeof x.name === 'string' && typeof x.code === 'string');
       if (/^https:\/\/github\.com\/libretro\/libretro-database\//.test(j.source || '')) $('cheat-src').href = j.source;
-      try { cheatsOn = new Set((JSON.parse(localStorage.getItem(cheatKey()) || '[]') || []).filter((i) => Number.isInteger(i) && i >= 0 && i < cheatList.length)); } catch (e) { cheatsOn = new Set(); }
+      try { const kept = JSON.parse(localStorage.getItem(cheatKey()) || '[]') || []; cheatsOn = new Set(cheatList.map((ch, n) => (kept.includes(ch.code) ? n : -1)).filter((n) => n >= 0)); } catch (e) { cheatsOn = new Set(); }
       drawCheats();
       $('m-cheats').hidden = false;
     }).catch(() => {});
   }
-  $('m-cheats').onclick = () => { const open = $('cheats').hidden; $('cheats').hidden = !open; $('m-cheats').setAttribute('aria-expanded', String(open)); };
+  function showCheats(open) {
+    $('cheats').hidden = !open; $('m-cheats').setAttribute('aria-expanded', String(open));
+    if (open) $('cheats').scrollIntoView({ block: 'start', behavior: 'smooth' });   // on a phone the list opens below the fold
+  }
+  $('m-cheats').onclick = () => showCheats($('cheats').hidden);
   $('b-save').onclick = save;
   $('b-load').onclick = load;
   $('b-touch').onclick = () => { touch = !touch; place.sig = ''; place(); };

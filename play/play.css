@@ -168,8 +168,9 @@ a.tool{display:inline-flex;align-items:center;text-decoration:none;color:var(--f
 .cheats[hidden]{display:none}
 .cheats h3{margin:0 0 8px;font-size:15px}
 .cheat-list{list-style:none;margin:0;padding:0;max-height:min(40vh,320px);overflow:auto}
-.cheat-list li{display:flex;align-items:center;gap:10px;padding:5px 2px}
-.cheat-list input{width:22px;height:22px;accent-color:var(--pink);flex:none}
+.cheat-list li{display:flex;align-items:center;gap:12px;min-height:44px;padding:2px}
+.cheat-list input{width:26px;height:26px;accent-color:var(--pink);flex:none}
+.cheat-list input:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
 .cheat-list label{cursor:pointer;font-size:15px}
 .cheat-src{font-size:12px;color:var(--dim);margin:8px 0 0}
 .cheat-src a{color:var(--acc)}

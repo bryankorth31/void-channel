@@ -20,7 +20,9 @@ const FOLDER = { nes: 'Nintendo - Nintendo Entertainment System', snes: 'Nintend
 const MAX = 40;   // a list longer than this is mostly one-level codes; the first forty are the useful ones
 
 // Pure (tested): the title as the .cht names it, without our "(Game Gear)" and the like.
-const norm = (t) => String(t).replace(/\s*\([^)]*\)/g, '').toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '');
+// Accents fold ("Pokémon" is "Pokemon"), and a trailing "Version" or "Edition" is the same game ("Pokemon - FireRed Version").
+const norm = (t) => String(t).normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/\s*\([^)]*\)|\s*\[[^\]]*\]/g, '').toLowerCase()
+  .replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '').replace(/(version|edition)$/, '');
 // Pure (tested): the best file for a title among a folder's names.
 function pickFile(title, names) {
   const want = norm(title);
@@ -32,13 +34,24 @@ function pickFile(title, names) {
 function parse(text) {
   const v = {};
   for (const line of String(text).split(/\r?\n/)) { const m = /^\s*([A-Za-z0-9_]+)\s*=\s*"?(.*?)"?\s*$/.exec(line); if (m) v[m[1]] = m[2]; }
-  const out = [];
+  const all = [];
   for (let i = 0; i < (+v.cheats || 0); i++) {
     const name = (v['cheat' + i + '_desc'] || '').trim(), code = (v['cheat' + i + '_code'] || '').trim();
-    if (name && code && code.length <= 200) out.push({ name: name.slice(0, 60), code });
+    if (name && code && code.length <= 200) all.push({ name: name.slice(0, 60), code });
   }
-  return out.slice(0, MAX);
+  // A code listed under different names is a slip in the file (Super Mario World gives one code for a mushroom, a flower
+  // and a feather; the audit): it goes, under every name.
+  const names = new Map();
+  for (const c of all) { if (!names.has(c.code)) names.set(c.code, new Set()); names.get(c.code).add(c.name.toLowerCase()); }
+  const sound = all.filter((c) => names.get(c.code).size === 1).filter((c, i, list) => list.findIndex((o) => o.code === c.code) === i);
+  // The ones people look for come first; a game's list is cut at forty.
+  const rank = (c) => (USEFUL.test(c.name) ? 0 : 1) + (RISKY.test(c.name) ? 2 : 0);
+  return sound.map((c, i) => ({ c, i })).sort((a, b) => rank(a.c) - rank(b.c) || a.i - b.i).slice(0, MAX)
+    .map(({ c }) => (RISKY.test(c.name) ? Object.assign({}, c, { risky: true }) : c));
 }
+const USEFUL = /infinite|unlimited|invinc|invulner|never|lives|health|energy|time|ammo|max|money|coins?\b|rupee|power|start with|have all|all (items|weapons|levels)/i;
+// Cheats that jump about or open developer modes can spoil a run (and Continue keeps it): kept, marked for the player.
+const RISKY = /debug|exit level|warp|level select|stage select|skip|walk through|moon ?jump|crash/i;
 
 async function get(url, json) {
   const r = await fetch(url, { headers: { 'User-Agent': UA, Accept: json ? 'application/vnd.github+json' : '*/*' } });
