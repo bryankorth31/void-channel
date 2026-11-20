@@ -25,5 +25,32 @@
       "P1:A": "C"
     }
   },
-  "help": "A is magic, B attacks, C jumps. A second gamepad joins as player 2."
+  "help": "A is magic, B attacks, C jumps. A second gamepad joins as player 2.",
+  "actions": [
+    {
+      "do": "Move",
+      "press": [
+        "P1:Up",
+        "P1:Down",
+        "P1:Left",
+        "P1:Right"
+      ]
+    },
+    {
+      "do": "Attack",
+      "press": "P1:B"
+    },
+    {
+      "do": "Jump",
+      "press": "P1:A"
+    },
+    {
+      "do": "Magic",
+      "press": "P1:Y"
+    },
+    {
+      "do": "Start",
+      "press": "P1:Start"
+    }
+  ]
 }

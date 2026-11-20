@@ -20,5 +20,30 @@
       "P1:Start"
     ]
   },
-  "help": "B is a left punch, A a right; Up with a punch goes to the face. Start throws a star punch when you have one."
+  "help": "B is a left punch, A a right; Up with a punch goes to the face. Start throws a star punch when you have one.",
+  "actions": [
+    {
+      "do": "Left punch",
+      "press": "P1:B"
+    },
+    {
+      "do": "Right punch",
+      "press": "P1:A"
+    },
+    {
+      "do": "Dodge",
+      "press": [
+        "P1:Left",
+        "P1:Right"
+      ]
+    },
+    {
+      "do": "Aim at the face",
+      "press": "P1:Up"
+    },
+    {
+      "do": "Star punch",
+      "press": "P1:Start"
+    }
+  ]
 }

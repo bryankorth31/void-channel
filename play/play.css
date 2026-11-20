@@ -84,3 +84,19 @@ a.tool{display:inline-flex;align-items:center;text-decoration:none;color:var(--f
 .toast .undo{margin-left:8px;padding:4px 12px;border-radius:999px;border:1px solid var(--acc);background:transparent;color:var(--acc);font-weight:700;cursor:pointer}
 .toast.has-undo{pointer-events:auto}
 .menu .tool:focus-visible,.menu a.tool:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.controls-title{margin:12px 0 4px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+.keys-help li{margin:3px 0}
+.keys-help b{color:var(--fg)}
+.pause-how{color:var(--dim);font-size:13px;margin:6px 0 14px}
+.menu{max-height:calc(100% - 24px);overflow:auto}
+/* The start screen (block B): the game's own Archive picture behind its name, maker and first three actions. */
+.screen{container-type:size}
+.cover-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.32;filter:saturate(1.2);image-rendering:pixelated}
+.cover-in{position:relative;display:flex;flex-direction:column;align-items:center;gap:8px;max-width:560px;width:100%}
+.cover-title{margin:0;font-family:'Unbounded',sans-serif;font-size:clamp(18px,5cqw,34px);line-height:1.15;color:#fff;text-shadow:0 2px 12px #000}
+.cover-meta{margin:0;color:var(--dim);font-size:14px}
+.cover-actions{list-style:none;margin:6px 0 4px;padding:0;display:flex;flex-direction:column;gap:4px;font-size:14px;color:var(--fg);text-shadow:0 1px 6px #000}
+.cover-actions b{color:var(--acc)}
+.cover-go{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:4px}
+.play.second{background:transparent;color:var(--fg);border:1px solid var(--line);box-shadow:none;font-size:16px;padding:12px 24px}
+@container (max-height:300px){.cover-actions,.cover-meta{display:none}.cover-title{font-size:18px}}

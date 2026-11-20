@@ -25,8 +25,17 @@
   <div id="screen" class="screen">
     <canvas id="canvas" width="640" height="400" aria-label="The game"></canvas>
     <div id="cover" class="cover">
-      <p id="status" class="status">Getting the game ready</p>
-      <button type="button" id="b-play" class="play" hidden>Play</button>
+      <img id="cover-art" class="cover-art" alt="" crossorigin="anonymous" hidden>
+      <div class="cover-in">
+        <h2 id="cover-title" class="cover-title"></h2>
+        <p id="cover-meta" class="cover-meta"></p>
+        <ul id="cover-actions" class="cover-actions"></ul>
+        <p id="status" class="status">Getting the game ready</p>
+        <div class="cover-go">
+          <button type="button" id="b-continue" class="play" hidden>Continue</button>
+          <button type="button" id="b-play" class="play" hidden>Play</button>
+        </div>
+      </div>
     </div>
   </div>
   <div id="z-left" class="zone left"></div>
@@ -36,11 +45,9 @@
   <div id="menu" class="menu" hidden role="dialog" aria-label="Paused">
     <h2>Paused</h2>
     <p id="help" class="help"></p>
-    <ul class="keys-help">
-      <li><b>Keyboard</b>: <span id="kb-help"></span></li>
-      <li><b>Gamepad</b>: <span id="pad-help"></span></li>
-      <li><b>Touch</b>: <span id="touch-help"></span></li>
-    </ul>
+    <h3 class="controls-title">Controls</h3>
+    <ul id="controls" class="keys-help"></ul>
+    <p id="pause-how" class="pause-how"></p>
     <div class="menu-row">
       <button type="button" id="m-resume" class="tool big">Keep playing</button>
       <button type="button" id="b-save" class="tool" title="Save your spot in this browser">Save</button>
