@@ -64,7 +64,9 @@ function cleanTitle(t) {
   const s = String(t).replace(/\(\s*[^)]*\)/g, ' ').replace(/\s+SNES(\s+ROM)?\b.*$/i, '').replace(/\s+Rev\s*\d+\b.*$/i, '')
     .replace(/\s+(19|20)\d\d\b.*$/, '').replace(/\s+/g, ' ').trim()
     // The Atari 2600 library's names: "Atari 2600: Adventure" and "A-Team, The" read as a box would print them ("Halo 2600" is its own name).
-    .replace(/^Atari 2600:\s*/i, '').replace(/^(.+), (The|A|An)$/i, '$2 $1');
+    .replace(/^Atari 2600:\s*/i, '').replace(/^(.+), (The|A|An)$/i, '$2 $1')
+    // Dump tags ("[!]", "[h3C]") and a machine's name at the end ("Punch Out!! NES") are not part of a game's name.
+    .replace(/\s*\[[^\]]*\]/g, '').replace(/\s+(NES|SNES|GBA|GBC|GB|Genesis|Mega Drive|Sega Genesis|Game Boy|Lynx)$/i, '').trim();
   return TITLES[s.toLowerCase()] || s;
 }
 

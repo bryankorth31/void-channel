@@ -148,8 +148,9 @@ test('audit S6 and S5: the back of a shelf box starts the game itself (not on a 
   assert.ok(js.includes('if (runner && pads.some((p) => p && p.buttons && p.buttons.some((b) => b.pressed))) runner.wakeSound();'));
   const shelf = fs.readFileSync(path.join(PLAY, 'src', 'shelf.js'), 'utf8');
   for (const bit of ["play.href = from.href + (direct ? '&go=new' : '');", "root.PlaySaves.get(g.id + ':auto')", "cont.hidden = false; play.textContent = 'New game';"]) assert.ok(shelf.includes(bit), bit);
-  const games = JSON.parse(fs.readFileSync(path.join(PLAY, 'shelf', 'index.json'), 'utf8')).games;
-  for (const g of games) for (const d of ['pad', 'keyboard', 'touch']) assert.ok(g.how[d].length >= 1 && g.how[d].length <= 3, g.id + ' ' + d);
+  const index = JSON.parse(fs.readFileSync(path.join(PLAY, 'shelf', 'index.json'), 'utf8'));
+  // A whole collection's game plays as its machine does (plan C4: libHow, once per machine).
+  for (const g of index.games) { const how = g.how || (g.b && index.libHow[g.system].how); for (const d of ['pad', 'keyboard', 'touch']) assert.ok(how[d].length >= 1 && how[d].length <= 3, g.id + ' ' + d); }
   assert.ok(fs.readFileSync(path.join(PLAY, 'index.html'), 'utf8').includes('<script src="src/saves.js"></script>\n<script src="src/shelf.js"></script>'));
 });
 

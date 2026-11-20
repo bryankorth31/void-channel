@@ -75,7 +75,8 @@ test('T25: a box picked up turns over to what a shop box says on its back', () =
   assert.deepEqual(Shelf.backLines({ system: 'genesis', year: 1989, publisher: 'Sega', players: 2 }), [
     ['Machine', 'Sega Genesis'], ['Year', '1989'], ['Made by', 'Sega'], ['Players', '1 or 2, a gamepad each'],
     ['Plays with', 'a gamepad, the keyboard or touch']]);
-  for (const g of JSON.parse(fs.readFileSync(path.join(PLAY, 'shelf', 'index.json'), 'utf8')).games) assert.ok(g.help, g.id + ' has a line for the back');
+  const index = JSON.parse(fs.readFileSync(path.join(PLAY, 'shelf', 'index.json'), 'utf8'));
+  for (const g of index.games) assert.ok(g.help || (g.b && index.libHow[g.system].help), g.id + ' has a line for the back');
   const src = fs.readFileSync(path.join(PLAY, 'src', 'shelf.js'), 'utf8');
   for (const bit of ["e.preventDefault(); pickUp(g, a);", "if (e.ctrlKey || e.metaKey || e.shiftKey || e.button) return;",
     "if (now.a && !before.a) play();", "else if (now.b && !before.b) putBack();", "if (e.key === 'Escape' || e.key === 'Backspace')"]) assert.ok(src.includes(bit), bit);
@@ -110,7 +111,8 @@ test('G1: Wikidata facts match by the same title on the same machine; a near tit
   assert.equal(F.pick({ title: 'Galaga', system: 'arcade', year: 1995 }, arcade), null, 'a far year is another game');
   const src = fs.readFileSync(path.join(PLAY, 'tools', 'facts.js'), 'utf8');
   assert.ok(!/mobygames\.com|igdb\.com/i.test(src.replace(/MobyGames and IGDB have terms against this/, '')), 'no other game site is read');
-  for (const c of Tool.loadCards()) assert.ok((c.genre && c.genre.length) || (c.facts && c.facts.source), c.id + ' has a genre, by hand or from Wikidata');
+  // Hand-made cards; a whole collection's games get their genres from the facts tool later (plan C2), not by hand.
+  for (const c of Tool.loadCards().filter((x) => !x.__b)) assert.ok((c.genre && c.genre.length) || (c.facts && c.facts.source), c.id + ' has a genre, by hand or from Wikidata');
 });
 
 test('G2: plain genres, filters that only offer what exists, and the choice kept in the address', () => {

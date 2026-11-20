@@ -77,3 +77,10 @@ test('the Atari 2600 library\'s names read as a box prints them', () => {
   assert.equal(C.cleanTitle('Atari 2600: A-Team, The'), 'The A-Team');
   assert.equal(C.cleanTitle('Atari 2600: Halo 2600'), 'Halo 2600', 'a name that ends in 2600 keeps it');
 });
+
+test('dump tags and a trailing machine name leave a game\'s name', () => {
+  const C = require('../tools/console-cards.js');
+  assert.equal(C.cleanTitle('Animaniacs [!]'), 'Animaniacs');
+  assert.equal(C.cleanTitle("Mike Tyson's Punch Out!! NES"), "Mike Tyson's Punch Out!!");
+  assert.equal(C.cleanTitle('Tetris'), 'Tetris');
+});
