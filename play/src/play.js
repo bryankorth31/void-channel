@@ -229,7 +229,12 @@
   });
   document.addEventListener('pointerlockchange', () => {
     if (document.pointerLockElement === cv) toast('The mouse is in the game. Esc lets it go');
-    else { ptrButtons = 0; sendMouse(0, 0); }
+    else {
+      ptrButtons = 0; sendMouse(0, 0);
+      // Audit M1: Esc lets the mouse go (the browser keeps that key while the pointer is locked), so letting go during
+      // play pauses, as browser PC games do; a click on the picture after Resume takes the mouse again.
+      if (started && !paused && wantsMouse()) { setPaused(true); toast('Paused. Resume, then click the picture to play'); }
+    }
   });
   addEventListener('mousemove', (e) => { if (document.pointerLockElement === cv) sendMouse(e.movementX, e.movementY); });
   addEventListener('mousedown', (e) => { if (document.pointerLockElement === cv) { e.preventDefault(); ptrButtons = e.buttons & 7; sendMouse(0, 0); } });
