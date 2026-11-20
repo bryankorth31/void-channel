@@ -17,6 +17,28 @@
   const $ = (id) => document.getElementById(id);
   for (const e of document.querySelectorAll('.donate-line')) e.textContent = DONATE_LINE;
   for (const e of document.querySelectorAll('.donate-link')) e.href = DONATE_URL;
+  // The donation mark (B, 20 Nov 2026: "The winged cross"; shared pattern DONATION-CROSS-pattern-2026-11-20.md): one setting.
+  const CROSS = '/assets/brand/cash-cross.png';
+  for (const e of document.querySelectorAll('.donate-cross')) e.src = CROSS;
+
+  // Is voidtv.net's room service on? Phones need it (the rooms Worker is Bryan's one-time Cloudflare step). Asking for a room
+  // that is not there gets the service's own answer, {"error":"No room by that code"} (or {kind} if the code is in use); anything
+  // else (503 "not set up", a plain page, no answer) means it is off. When it is off the game starts on "Out loud" and the phones
+  // choice says so, instead of failing at Start (audit A20).
+  fetch('/api/room/2222', { cache: 'no-store' })
+    .then((r) => r.json().then((j) => (r.status === 200 && !!j.kind) || (r.status === 404 && /no room/i.test(j.error || ''))))
+    .catch(() => false).then((on) => {
+    const phonesIn = document.querySelector('input[name="mode"][value="phones"]');
+    $('phones-off').hidden = on;
+    $('phones-l').classList.toggle('disabled', !on);
+    phonesIn.disabled = !on;
+    if (!on) {
+      $('phones-l').title = 'Phone answering is not switched on on this site yet. Play out loud for now.';
+      const loud = document.querySelector('input[name="mode"][value="loud"]');
+      if (phonesIn.checked) loud.checked = true;
+    }
+    showAvailable();
+  });
 
   // A link may preset the settings (the home page's Trivia row does): ?crowd=family|after-dark&topics=tv,movies,games&mode=phones|loud
   (function preset() {
@@ -68,6 +90,10 @@
     if (!index) return;
     const o = opts();
     const files = index.files.filter((f) => o.categories.includes(f.category));
+    // The opening words follow the mode (audit A21).
+    $('lede').textContent = o.phones
+      ? 'Put this screen on the TV or projector. Everyone scans a code with their phone and taps an answer; the screen keeps score. Every answer comes from a record we can point to, and the source shows with it.'
+      : 'Put this screen on the TV or projector. Read each question out, let the room shout or write down answers, then show the answer. Every answer comes from a record we can point to, and the source shows with it.';
     const noMedia = !o.clips || (o.publicNight && !o.publicClips);
     // The public-night clips switch only means something on a public night.
     $('pubclips-l').hidden = !o.publicNight;

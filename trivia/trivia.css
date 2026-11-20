@@ -115,6 +115,12 @@ body.finished .foot .give{display:none}
 .foot{flex:none;padding:10px clamp(16px,3vw,48px) 14px;border-top:1px solid var(--line);color:var(--dim);font-size:12.5px}
 .foot p{margin:2px 0;max-width:1600px}
 .give a{font-weight:600;color:var(--gold)}
+/* The CASH cross is the donation mark (B, 20 Nov 2026: "The winged cross"): beside the line, at 28 px or more, in a 44 px tap area */
+.donate-cross{width:28px;height:auto;display:block}
+.cross-link{display:inline-flex!important;align-items:center;justify-content:center;min-width:44px;min-height:44px;margin:-8px 2px -8px -8px;vertical-align:middle}
+.give-big .donate-cross{width:40px}
+.choices label small.off{color:var(--dim);font-weight:400}
+.choices label.disabled{opacity:.5;cursor:not-allowed}
 
 /* Short windows (a laptop with the browser not full screen): tighter, so the four answers still fit */
 @media (max-height:620px){

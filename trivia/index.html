@@ -22,13 +22,13 @@
 <main>
   <section class="setup" id="setup">
     <h1>Trivia Night</h1>
-    <p class="lede">Put this screen on the TV or projector. Read each question out, let the room shout or write down answers, then show the answer.
+    <p class="lede" id="lede">Put this screen on the TV or projector. Everyone scans a code with their phone and taps an answer; the screen keeps score.
       Every answer comes from a record we can point to, and the source shows with it.</p>
 
     <div class="field">
       <span class="label">Answers</span>
       <div class="choices" role="radiogroup" aria-label="How people answer">
-        <label title="Everyone scans a code with their phone and taps an answer; the screen keeps score"><input type="radio" name="mode" value="phones" checked> On phones</label>
+        <label id="phones-l" title="Everyone scans a code with their phone and taps an answer; the screen keeps score"><input type="radio" name="mode" value="phones" checked> On phones<small class="off" id="phones-off" hidden> (not switched on yet)</small></label>
         <label title="No phones: the room shouts or writes answers, you show the answer"><input type="radio" name="mode" value="loud"> Out loud</label>
       </div>
     </div>
@@ -130,12 +130,12 @@
       <button type="button" class="go" id="again" title="Same settings, new questions (Enter)">Play again</button>
       <button type="button" class="ghost" id="change" title="Back to the settings">Change settings</button>
     </div>
-    <p class="give-big"><span class="donate-line"></span> <a class="donate-link" href="#" target="_blank" rel="noopener" title="Donate to CASH">Donate to CASH</a></p>
+    <p class="give-big"><a class="donate-link cross-link" href="#" target="_blank" rel="noopener" title="Donate to CASH" aria-label="Donate to CASH"><img class="donate-cross" src="" alt="" width="28" height="27"></a> <span class="donate-line"></span> <a class="donate-link" href="#" target="_blank" rel="noopener" title="Donate to CASH">Donate to CASH</a></p>
   </section>
 </main>
 
 <footer class="foot">
-  <p class="give"><span class="donate-line"></span> <a class="donate-link" href="#" target="_blank" rel="noopener" title="Donate to CASH">Donate</a></p>
+  <p class="give"><a class="donate-link cross-link" href="#" target="_blank" rel="noopener" title="Donate to CASH" aria-label="Donate to CASH"><img class="donate-cross" src="" alt="" width="28" height="27"></a> <span class="donate-line"></span> <a class="donate-link" href="#" target="_blank" rel="noopener" title="Donate to CASH">Donate</a></p>
   <p class="credit" id="credit">Facts from TVmaze, TMDB, Wikidata and the Internet Archive. This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
 </footer>
 

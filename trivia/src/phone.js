@@ -13,6 +13,9 @@
   const $ = (id) => document.getElementById(id);
   for (const e of document.querySelectorAll('.donate-line')) e.textContent = DONATE_LINE;
   for (const e of document.querySelectorAll('.donate-link')) e.href = DONATE_URL;
+  // The donation mark (the winged CASH cross): one setting.
+  const CROSS = '/assets/brand/cash-cross.png';
+  for (const e of document.querySelectorAll('.donate-cross')) e.src = CROSS;
 
   const code = (new URLSearchParams(location.search).get('r') || '').toUpperCase();
   let ws = null, ended = false, tries = 0, current = null, asked = false;

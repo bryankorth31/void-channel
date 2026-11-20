@@ -174,3 +174,30 @@ test('the host plays clips from archive.org itself, waits for them before the cl
   assert.match(html, /name="clips" value="on" checked/);
   assert.match(html, /id="pubclips-l" hidden title="[^"]+"><input type="checkbox" name="pubclips" value="on">/, 'off by default and shown only for a public night');
 });
+
+// ---- Audit round (20 Nov 2026): A20, A21 and the cross mark ----
+test('A20: the host asks whether the room service is on and starts on Out loud when it is not', () => {
+  const host = read('trivia/src/host.js');
+  assert.match(host, /fetch\('\/api\/room\/2222'/);
+  assert.match(host, /\/no room\/i\.test\(j\.error/, 'only the service\'s own answer counts as on, not any 404');
+  assert.match(host, /if \(phonesIn\.checked\) loud\.checked = true;/);
+  assert.match(read('trivia/index.html'), /id="phones-off" hidden> \(not switched on yet\)/);
+});
+
+test('A21: the opening words follow the mode', () => {
+  const host = read('trivia/src/host.js');
+  assert.match(host, /Everyone scans a code with their phone and taps an answer/);
+  assert.match(host, /Read each question out, let the room shout or write down answers/);
+});
+
+test('the CASH cross sits beside every donation line, from one setting, in a 44 px tap area with a tip', () => {
+  for (const f of ['trivia/index.html', 'trivia/phone.html']) {
+    const html = read(f);
+    const lines = (html.match(/<span class="donate-line"><\/span>/g) || []).length;
+    const crosses = (html.match(/<a class="donate-link cross-link"[^>]*title="Donate to CASH"[^>]*><img class="donate-cross"/g) || []).length;
+    assert.ok(lines > 0 && crosses === lines, f + ': ' + crosses + ' crosses for ' + lines + ' lines');
+  }
+  for (const f of ['trivia/src/host.js', 'trivia/src/phone.js']) assert.match(read(f), /const CROSS = '\/assets\/brand\/cash-cross\.png';/, f);
+  assert.match(read('trivia/trivia.css'), /\.cross-link\{[^}]*min-width:44px;min-height:44px/);
+  assert.ok(fs.existsSync(path.join(ROOT, 'assets', 'brand', 'cash-cross.png')));
+});

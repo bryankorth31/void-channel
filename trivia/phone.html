@@ -42,6 +42,8 @@ input{width:100%;font:600 22px/1 system-ui,sans-serif;background:var(--panel);co
 .result.right{color:var(--green)} .result.wrong{color:var(--pink)}
 .give{margin-top:auto;padding-top:20px;font-size:14px;color:var(--dim)}
 .give a{color:var(--gold);font-weight:700}
+.donate-cross{width:28px;height:auto;vertical-align:middle;margin-right:6px}
+.cross-link{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;vertical-align:middle}
 .err{color:var(--gold)}
 </style>
 </head>
@@ -88,7 +90,7 @@ input{width:100%;font:600 22px/1 system-ui,sans-serif;background:var(--panel);co
   <section id="end" hidden>
     <h1>That's the game</h1>
     <p class="big" id="end-p"></p>
-    <p class="give"><span class="donate-line"></span> <a class="donate-link" href="#" target="_blank" rel="noopener" title="Donate to CASH">Donate to CASH</a></p>
+    <p class="give"><a class="donate-link cross-link" href="#" target="_blank" rel="noopener" title="Donate to CASH" aria-label="Donate to CASH"><img class="donate-cross" src="" alt="" width="28" height="27"></a> <span class="donate-line"></span> <a class="donate-link" href="#" target="_blank" rel="noopener" title="Donate to CASH">Donate to CASH</a></p>
   </section>
 </main>
 <script src="src/game.js"></script>
