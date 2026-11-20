@@ -131,3 +131,11 @@ test('T24: a TV never draws the touch pad; Back opens the menu first and leaves 
   for (const bit of ["const isTV = /SMART-TV|SmartTV|Tizen|Web0S|webOS|BRAVIA|Android TV|GoogleTV|CrKey|AFT[A-Z]|Roku|HbbTV/i.test(navigator.userAgent);", "!isTV && matchMedia('(pointer: coarse)')", "history.pushState({ play: 1 }, '')", "if (started && !paused) { setPaused(true); armBack(); }", "const BACK_CODES = new Set([461, 10009]);", "e.key === 'MediaPlayPause'", 'stayAwake(true); armBack();', "function toShelf() { autosave().then(() => location.assign($('b-games').href)); }", 'else toShelf();']) assert.ok(js.includes(bit), bit);
   assert.ok(!js.includes('history.back()'), 'audit B2: Back never steps out of voidtv.net');
 });
+
+test('audit K3: a big game says how far its download has come, and the 256 MB cap holds with no announced size', () => {
+  const w = fs.readFileSync(path.join(PLAY, 'src', 'core-worker.js'), 'utf8');
+  for (const bit of ["const reader = r.body.getReader(), parts = [];", "if (got > MAX_DOWNLOAD) { reader.cancel();",
+    "if (size >= 2 * 1048576 && now - told > 250) { told = now; say(fetchLine(got, size)); }",
+    "const game = await fetchBytes(msg.gameUrl, msg.gameSize);"]) assert.ok(w.includes(bit), bit);
+  assert.match(fs.readFileSync(path.join(PLAY, 'src', 'runner.js'), 'utf8'), /gameSize: card\.archive\.size \|\| 0,/);
+});

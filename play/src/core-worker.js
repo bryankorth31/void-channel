@@ -50,17 +50,35 @@ const say = (text) => postMessage({ type: 'status', text });
 
 // The game file, in one plain sentence when it cannot come: gone from the Archive, the Archive busy, or too big.
 const MAX_DOWNLOAD = 256 * 1024 * 1024;
-async function fetchBytes(url) {
+async function fetchBytes(url, known) {
   let r;
   try { r = await fetch(url, { credentials: 'omit' }); } catch (e) {
     throw new Error('The Internet Archive is not answering right now. Check the connection and press Play to try again.');
   }
   if (r.status === 404 || r.status === 410 || r.status === 403) throw new Error("This game's file is no longer on the Internet Archive, so it cannot play here.");
   if (!r.ok) throw new Error('The Internet Archive is busy right now (it answered ' + r.status + '). Try again in a little while.');
-  const size = +r.headers.get('content-length') || 0;
+  // A packed answer's length is not the file's, so the card's recorded size is the total when the Archive packs it.
+  const size = (!r.headers.get('content-encoding') && +r.headers.get('content-length')) || known || 0;
   if (size > MAX_DOWNLOAD) throw new Error('This game is ' + Math.round(size / 1048576) + ' MB, more than PLAY can hold in a browser yet.');
-  return new Uint8Array(await r.arrayBuffer());
+  // Audit K3: read it as it arrives and say how far along it is ("Fetching the game: 6 of 16 MB"), so a big game
+  // never sits on one still sentence. Small games (under 2 MB) arrive before a line would help.
+  if (!r.body || !r.body.getReader) return new Uint8Array(await r.arrayBuffer());
+  const reader = r.body.getReader(), parts = [];
+  let got = 0, told = 0;
+  for (;;) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    parts.push(value); got += value.length;
+    if (got > MAX_DOWNLOAD) { reader.cancel(); throw new Error('This game is more than ' + MAX_DOWNLOAD / 1048576 + ' MB, more than PLAY can hold in a browser yet.'); }
+    const now = Date.now();
+    if (size >= 2 * 1048576 && now - told > 250) { told = now; say(fetchLine(got, size)); }
+  }
+  const out = new Uint8Array(got);
+  let at = 0;
+  for (const p of parts) { out.set(p, at); at += p.length; }
+  return out;
 }
+const fetchLine = (got, size) => 'Fetching the game: ' + Math.min(Math.round(got / 1048576), Math.round(size / 1048576)) + ' of ' + Math.round(size / 1048576) + ' MB';
 
 function callStr(fn, ...strs) {
   const ptrs = strs.map((s) => { const n = M.lengthBytesUTF8(s) + 1; const p = M._malloc(n); M.stringToUTF8(s, p, n); return p; });
@@ -98,7 +116,7 @@ async function start(msg) {
     printErr: (t) => console.warn('[core]', t),
   });
   say('Fetching the game from the Internet Archive');
-  const game = await fetchBytes(msg.gameUrl);
+  const game = await fetchBytes(msg.gameUrl, msg.gameSize);
   for (const d of ['/game', '/save', '/sys']) M.FS.mkdir(d);
   let path = '/game/' + msg.gameFile;
   if (msg.start && /\.zip$/i.test(msg.gameFile)) path = await unpack(game, msg.start);

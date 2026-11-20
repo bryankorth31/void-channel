@@ -89,7 +89,7 @@
       };
       worker.onerror = (e) => { if (!stopped && on.error) on.error(e.message || 'The engine stopped'); };
       worker.postMessage({ type: 'start', gameUrl: PlayCards.gameUrl(card), gameFile: PlayCards.gameFile(card),
-        start: card.archive.start || '', vars: card.vars || {},
+        start: card.archive.start || '', vars: card.vars || {}, gameSize: card.archive.size || 0,
         pads: PlayCards.isPad(card) ? Math.max(1, card.players || 1) : 0,
         rewind: PlayCards.isPad(card) });
     }
