@@ -99,5 +99,57 @@
       "live": false
     }
   ],
-  "_types": "The 15 areas are the front page rows (Bryan, 15 Nov 2026: \"I like those rows\"). A row shows each whole course as one card. A course with \"shelf\": \"supplement\" (the mind's mechanisms) shows its units as small cards instead, and any unit anywhere can point to them with \"mechanisms\": [unit numbers]."
+  "_types": "The 15 areas are the front page rows (Bryan, 15 Nov 2026: \"I like those rows\"). A row shows each whole course as one card. A course with \"shelf\": \"supplement\" (the mind's mechanisms) shows its units as small cards instead, and any unit anywhere can point to them with \"mechanisms\": [unit numbers].",
+  "practice": [
+    {
+      "name": "Mind Gym",
+      "area": "Mind",
+      "url": "https://mind-gym.bryankorth31.workers.dev/",
+      "what": "Short rooms that train the fast, gut part of your thinking: small words, base rates, hidden assumptions, causes and tricks in posts.",
+      "live": true,
+      "rooms": [
+        {
+          "id": "hinge-words",
+          "name": "Hinge Words",
+          "trains": "Catching the small words that decide what a sentence means."
+        },
+        {
+          "id": "flag-rooms",
+          "name": "Flag Rooms",
+          "trains": "Knowing what a flag from an alarm, a test, a dog or a camera really means."
+        },
+        {
+          "id": "sure-o-meter",
+          "name": "Sure-o-meter",
+          "trains": "Feeling the right amount of sure."
+        },
+        {
+          "id": "chunk-it",
+          "name": "Chunk It",
+          "trains": "Holding a whole real system in a few rooms you can see at once."
+        },
+        {
+          "id": "hole-finder",
+          "name": "Hole Finder",
+          "trains": "Seeing the hole in an argument at a glance."
+        },
+        {
+          "id": "cause-detective",
+          "name": "Cause Detective",
+          "trains": "The snap check on \"X causes Y\": what else could make the two move together?"
+        },
+        {
+          "id": "spot-the-trick",
+          "name": "Spot the Trick",
+          "trains": "Seeing the move a post is making on you before you believe it or share it."
+        },
+        {
+          "id": "your-channels",
+          "name": "Your Channels",
+          "trains": "Knowing how your own inner pictures, voices and feelings work, so each room can start the way that fits you."
+        }
+      ]
+    }
+  ],
+  "_practice": "Practice sites the University links to, not copies (Bryan, 20 Nov 2026: \"Yes, link it\"). Each shows as one card in its area's row; a unit companion { \"role\": \"train\", \"room\": \"<id>\" } is a Train it piece that opens that room. Room names and lines are copied from the site's own rooms.json; rerun the link script when rooms change."
 }

@@ -746,3 +746,10 @@ B asked why the Void TV sites could not be put on an iPhone ("the whole pwa"), t
 - **Install button** in the header: Chrome and Edge show their own install offer through it; on iPhone and iPad (which have no install prompt) it opens a short note: tap Share, then Add to Home Screen. Hidden once the site runs as an installed app. Newer iPads, which say they are a Mac, are caught by their touch screen.
 - Checked in the page: manifest, icons and button load, no console errors, no sideways scroll at 821 and 390 wide. Not checked on a real iPhone. The service worker registers only on https, so on the 127.0.0.1 preview it stays off.
 - On the live site after B deploys from his terminal (`npx.cmd --yes wrangler@4.151.0 deploy --config profiles/university/wrangler.jsonc`). The public copy in `site/` is rebuilt and carries this along with the work since the last deploy (the Bright night look, the two live labs, the boundary course).
+
+### 20 Nov 2026: Mind Gym linked in
+
+B asked whether Mind Gym could go on the University, then "Yes, link it". It stays on its own site (people keep their saved records), and the University links to it in two places:
+- **Front page:** a Mind Gym card at the end of the Mind row ("Mind, practice, 8 rooms"), shown for every level, opening the gym in a new tab.
+- **Train it pieces:** a fourth piece kind beside Watch, Listen and Read, behind each unit's More. Matched by hand: Critical thinking 1 Hole Finder, 2 Spot the Trick, 3 Flag Rooms, 4 Cause Detective, 5 Sure-o-meter, 6 Hinge Words; mechanisms 7 Availability Flag Rooms, 12 Authority Spot the Trick, 15 Dunning-Kruger Sure-o-meter; Your money 8 Spot the Trick.
+- The address and room list live once, in list.json `practice` (copied from the gym's rooms.json). A unit adds `{ "role": "train", "room": "<id>" }`; a room id the list does not know stops the build.

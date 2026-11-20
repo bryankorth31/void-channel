@@ -19,9 +19,21 @@ const pageUrl = (p) => p.item ? 'https://archive.org/details/' + encodeURICompon
 // In-copyright books (Bryan, 15 Nov 2026: "keep the books"): we send people to a library copy, never an upload.
 const libraryUrl = (p) => 'https://search.worldcat.org/search?q=' + encodeURIComponent(p.title + ' ' + String(p.by || '').replace(/\s*\(.*\)\s*$/, ''));
 const mins =(s) => s ? Math.round(s / 60) + ' min' : '';
-const ROLE = { watch: 'Watch', listen: 'Listen', read: 'Read', do: 'Do' };
+const ROLE = { watch: 'Watch', listen: 'Listen', read: 'Read', do: 'Do', train: 'Train it' };
+// Practice sites (Bryan, 20 Nov 2026: "Yes, link it"): Mind Gym stays on its own site, so people keep the records
+// their browser saved there; the University links to it. list.json "practice" holds the address and the rooms in one
+// place. A unit companion { "role": "train", "room": "<room id>" } becomes a "Train it" piece that opens that room.
+const PRACTICE = JSON.parse(fs.readFileSync(path.join(DIR, 'list.json'), 'utf8')).practice || [];
+function trainPiece(p) {
+  for (const g of PRACTICE) {
+    const r = (g.rooms || []).find((x) => x.id === p.room);
+    if (r) return { ...p, title: r.name, by: g.name, note: r.trains, url: g.url + 'rooms/' + r.id + '/', licence: 'Free on ' + g.name + ', no account; your record stays in your own browser.' };
+  }
+  throw new Error('train piece names a room no practice site has: ' + p.room);
+}
 
 function piece(p, main) {
+  if (p.role === 'train') p = trainPiece(p);
   const url = fileUrl(p);
   const meta = [p.by, mins(p.seconds)].filter(Boolean).join(', ');
   const held = !!p.hold;
@@ -30,6 +42,7 @@ function piece(p, main) {
   else if (!held && url && p.role === 'listen') media = '<audio controls preload="none" src="' + esc(url) + '"></audio>';
   else if (!held && p.pointer) media = '<a class="btn" href="' + esc(libraryUrl(p)) + '" target="_blank" rel="noopener">Find it at a library</a>';
   else if (!held && p.role === 'read' && p.url) media = '<a class="btn" href="' + esc(p.url) + '" target="_blank" rel="noopener">Open it</a>';
+  else if (!held && p.role === 'train') media = '<a class="btn" href="' + esc(p.url) + '" target="_blank" rel="noopener">Open the room</a>';
   else if (!held && p.role === 'read' && pageUrl(p)) media = '<a class="btn" href="' + esc(pageUrl(p)) + '" target="_blank" rel="noopener">Open the book</a>';
   return '<div class="piece ' + (main ? 'main' : 'comp') + (held ? ' held' : '') + '">'
     + '<div class="ph"><span class="role r-' + esc(p.role) + '">' + esc(ROLE[p.role] || p.role) + '</span>'
@@ -670,6 +683,8 @@ function home(all, list) {
   const card = (c) => '<a class="card course" data-slug="' + esc(c.slug) + '" data-units="' + c.units.length + '" data-lv="' + esc((c.levels || []).join('|')) + '" href="' + esc(c.slug) + '.html"><div class="ph"><img src="' + (img('c-' + c.slug) || img('a-' + c.domain.toLowerCase().replace(/[^a-z0-9]+/g, '-'))) + '" alt=""></div><div class="t"><small>' + esc(c.domain) + ', ' + (c.planned > c.units.length ? c.units.length + ' of ' + c.planned + ' units' : c.units.length + (c.units.length === 1 ? ' unit' : ' units')) + '</small><b>' + esc(c.name) + '</b><span>' + esc(String(c.why).split('. ')[0].replace(/\.$/, '')) + '.</span></div></a>';
   const mini = (c, u) => '<a class="card mini" href="' + esc(c.slug) + '.html#u' + u.n + '"><div class="ph"><img loading="lazy" src="' + img('m' + u.n) + '" alt=""></div><div class="t"><b>' + esc(u.title) + '</b><span>' + esc(u.scene ? u.scene.analogy : '') + '</span></div></a>';
   const row = (title, note, cards, id) => '<section class="row"' + (id ? ' id="' + id + '"' : '') + '><h2><span>' + esc(title) + '</span>' + (note ? '<small>' + esc(note) + '</small>' : '') + '</h2><div class="rowwrap"><button class="arrow l" aria-label="Back">&#8249;</button><div class="track">' + cards + '</div><button class="arrow r" aria-label="More">&#8250;</button></div></section>';
+  // A practice site sits in its area's row as one more card, for every level, and opens in a new tab.
+  const gymCard = (g) => '<a class="card course" data-lv="high school|young adults|everyday" href="' + esc(g.url) + '" target="_blank" rel="noopener"><div class="ph"><img src="' + img('a-' + g.area.toLowerCase().replace(/[^a-z0-9]+/g, '-')) + '" alt=""></div><div class="t"><small>' + esc(g.area) + ', practice, ' + g.rooms.length + ' rooms</small><b>' + esc(g.name) + '</b><span>' + esc(g.what) + '</span></div></a>';
   const areaId = (t) => 'area-' + t.toLowerCase().replace(/[^a-z0-9]+/g, '-');
   const seen = new Set();
   const chans = (cs) => cs.flatMap((c) => c.channels || []).filter((x) => !seen.has(x.url) && seen.add(x.url));
@@ -678,7 +693,8 @@ function home(all, list) {
     if (!cs.length) return '';
     const ss = t === 'Mind' ? sup : [];
     const ch = chans(cs.concat(ss));
-    return row(t, cs.length + (cs.length === 1 ? ' course' : ' courses'), cs.map(card).join(''), areaId(t))
+    const gyms = PRACTICE.filter((g) => g.live && g.area === t);
+    return row(t, cs.length + (cs.length === 1 ? ' course' : ' courses'), cs.map(card).join('') + gyms.map(gymCard).join(''), areaId(t))
       + ss.map((c) => row(c.name, 'short pieces any course can use', c.units.map((u) => mini(c, u)).join(''))).join('')
       + (ch.length ? row('Channels for ' + t, 'whole series on the Internet Archive that go with these courses', ch.map(chan).join('')) : '');
   }).join('');
