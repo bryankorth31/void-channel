@@ -60,6 +60,8 @@ button{font:inherit;color:inherit}
 .pblock{grid-template-columns:minmax(0,1fr)}
 .pblock.with-dpad{grid-template-columns:auto minmax(0,1fr)}
 .pblock .pdpad{height:100%;aspect-ratio:1;align-self:center;max-width:40cqw;max-height:40cqw;justify-self:center}
+/* The smallest phones: the arrows a little narrower so three buttons still fit beside them at full size. */
+@container (max-width:300px){.pblock .pdpad{max-width:34cqw;max-height:34cqw}.pblock,.prest{gap:8px}}
 .prest{display:grid;grid-template-columns:repeat(var(--nc),minmax(0,1fr));grid-auto-rows:minmax(0,1fr);gap:10px;min-width:0}
 /* The arrow pad: one round target; the finger slides between directions. Its marks scale with it. */
 .pdpad{position:relative;border-radius:50%;background:#10131d;border:1px solid #2a3046;touch-action:none;min-width:56px;min-height:56px}
@@ -144,6 +146,8 @@ a.tool{display:inline-flex;align-items:center;text-decoration:none;color:var(--f
 .cpad .cdpad{left:var(--e);bottom:var(--e);width:var(--d);height:var(--d)}
 .cpad .cdpad .pdpad{width:100%;height:100%}
 .cpad .cface{right:var(--e);bottom:var(--e);width:calc(var(--cols) * var(--b) + (var(--cols) - 1) * 8px);height:calc(var(--rows) * var(--b) + (var(--rows) - 1) * 8px);aspect-ratio:auto;display:grid;grid-template-columns:repeat(var(--cols),var(--b));grid-template-rows:repeat(var(--rows),var(--b));gap:8px}
+.cpad .cface.tri{width:calc(2 * var(--b) + 8px);grid-template-columns:repeat(3,calc(var(--b) / 2 + 4px));justify-items:center}
+.cpad .cface.tri .pk{width:var(--b);height:var(--b)}
 .cpad .cface.one{width:calc(var(--b) * 1.5);height:calc(var(--b) * 1.5);grid-template-columns:1fr;grid-template-rows:1fr}
 .cpad .csl{left:var(--e);top:var(--e);width:min(120px,30cqw)}
 .cpad .csr{right:var(--e);top:var(--e);width:min(120px,30cqw)}
@@ -155,10 +159,14 @@ a.tool{display:inline-flex;align-items:center;text-decoration:none;color:var(--f
 .cpad.side .cselect{left:var(--e);top:calc(var(--e) + 58px)}
 .cpad.side .crewind{left:var(--e);top:calc(var(--e) + 112px)}
 .cpad.side .cstart{right:var(--e);top:calc(var(--e) + 58px)}
-.cpad.up .cselect{left:calc(50% - 84px);top:var(--e)}
-.cpad.up .cstart{left:calc(50% + 8px);top:var(--e)}
-.cpad.up .crewind{left:calc(50% - 38px);top:calc(var(--e) + 54px)}
-.cpad.up .csl,.cpad.up .csr{top:auto;bottom:calc(var(--e) + max(var(--d), var(--rows) * var(--b) + (var(--rows) - 1) * 8px) + 12px)}
+/* Upright: Select, Rewind and Start in one row at the top; L and R under that row, over the d-pad and the face buttons;
+   the d-pad gives up size before anything overlaps (the spacing audit, the smallest iPhones). */
+.cpad .cpills{display:contents}
+.cpad.side .cpills>*{position:absolute;pointer-events:auto}
+.cpad.up .cpills{display:flex;position:absolute;left:0;right:0;top:var(--e);justify-content:center;gap:8px;pointer-events:none}
+.cpad.up .cpills>*{position:static;pointer-events:auto}
+.cpad.up{--d:max(110px,min(300px,58cqh,42cqw,calc(100cqh - 2 * var(--e) - 44px - 48px - 24px)))}
+.cpad.up .csl,.cpad.up .csr{top:max(calc(var(--e) + 52px),calc(100cqh - var(--e) - max(var(--d), var(--rows) * var(--b) + (var(--rows) - 1) * 8px) - 12px - 48px))}
 .cpad.side .pk,.cpad.side .pdpad{background:rgba(16,19,30,.42);border-color:rgba(255,255,255,.22);-webkit-backdrop-filter:none}
 .cpad.side .pk[data-down]{background:rgba(95,212,255,.75)}
 .cpad.side .pdir{color:rgba(232,232,238,.8)}
@@ -255,3 +263,9 @@ body.shell .pdpad .pdir{position:absolute;z-index:1;color:#1a1825}
 .tool.cp{display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px;font-size:12px;width:96px}
 .tool.cp img{width:84px;height:auto;border-radius:4px;image-rendering:pixelated;background:#000}
 .cps[hidden]{display:none}
+/* A very short key area (the smallest iPhones, a DOS game with 16 keys): tighter gaps and 50 px keys, still well over
+   a thumb's 44, so every key stays on the screen and off the picture (the spacing audit, The Oregon Trail at 320x568). */
+@container (max-height:330px){
+  .pp{gap:6px}.psec,.prest{gap:6px}.pp .pk{min-height:50px}
+  .psec{min-height:calc(var(--r) * 50px + (var(--r) - 1) * 6px)}
+}

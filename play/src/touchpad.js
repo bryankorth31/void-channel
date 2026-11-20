@@ -155,6 +155,9 @@
     const face = el('div', 'cface');
     face.style.setProperty('--cols', shape.cols); face.style.setProperty('--rows', shape.rows);
     if (shape === SHAPES.one) face.classList.add('one');
+    // A three-wide shape (the Super Nintendo diamond, Genesis A B C) is drawn compact, as on the real pads: neighbours
+    // sit half a button apart sideways, so the shape is two buttons wide, not three (the spacing audit).
+    if (shape.cols === 3) face.classList.add('tri');
     for (const [code, r, col] of shape.face) {
       if (!keys.includes(code)) continue;
       const k = consoleKey(code, hub, card); k.style.gridRow = r; k.style.gridColumn = col; face.appendChild(k);
@@ -163,7 +166,10 @@
     layer.append(pad, face);
     const put = (code, cls) => { if (code[0] === '@' || keys.includes(code)) layer.appendChild(consoleKey(code, hub, card, cls)); };
     put('P1:L', 'cshoulder csl'); put('P1:R', 'cshoulder csr');
-    put('P1:Select', 'pill cselect'); put('P1:Start', 'pill cstart'); put('@rewind', 'pill crewind');
+    // Select, Rewind and Start: one row upright; sideways each goes to its own margin (play.css, display:contents).
+    const pills = el('div', 'cpills'); layer.appendChild(pills);
+    const pill = (code, cls) => { if (code[0] === '@' || keys.includes(code)) pills.appendChild(consoleKey(code, hub, card, cls)); };
+    pill('P1:Select', 'pill cselect'); pill('@rewind', 'pill crewind'); pill('P1:Start', 'pill cstart');
     zones.over.appendChild(layer);
     return { keyboard: el('div'), openKeyboard: () => {} };
   }
@@ -207,7 +213,7 @@
         const rows = Math.max(p.dpad ? 2 : 1, Math.ceil(rest.length / perRow));
         // A console pad with many buttons: on a narrow phone the d-pad takes its own row (play.css), or it would push
         // the buttons off the screen.
-        const s = section('pblock' + (p.dpad ? ' with-dpad' : '') + (p.dpad && rest.length > 6 ? ' many' : ''), rows, 1);
+        const s = section('pblock' + (p.dpad ? ' with-dpad' : '') + '', rows, 1);
         if (p.dpad) s.appendChild(dpad(hub, dirs));
         if (rest.length) {
           const g = el('div', 'prest'); g.style.setProperty('--nc', Math.min(perRow, rest.length));

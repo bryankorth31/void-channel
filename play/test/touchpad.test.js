@@ -60,7 +60,7 @@ test('the spacing audit (Bryan: "buttons aren\'t overlapping. Words inside of bu
   assert.deepEqual(p.go, [], 'Space is "Button 3" here, so it gets no row of its own');
   assert.ok(p.rest.includes('Space'));
   const src = fs.readFileSync(path.join(ROOT, 'src', 'touchpad.js'), 'utf8');
-  assert.ok(src.includes('const perRow = p.dpad ? 3 : 5;') && src.includes("(p.dpad && rest.length > 6 ? ' many' : '')"));
+  assert.ok(src.includes('const perRow = p.dpad ? 3 : 5;') && !src.includes("' many'"));
   assert.ok(src.includes('function fit(scope) {') && /const api = \{ build, releaseAll, fit,/.test(src));
   const css = fs.readFileSync(path.join(ROOT, 'play.css'), 'utf8');
   assert.ok(css.includes('overflow-wrap:normal;word-break:normal;hyphens:none;'), 'a word is never split inside');
@@ -69,4 +69,14 @@ test('the spacing audit (Bryan: "buttons aren\'t overlapping. Words inside of bu
   assert.ok(css.includes('.cpad.side .crewind{left:var(--e);top:calc(var(--e) + 112px)}'));
   const js = fs.readFileSync(path.join(ROOT, 'src', 'play.js'), 'utf8');
   assert.ok(js.includes('if (touch) PlayTouch.fit($(\'stage\'));') && js.includes('const overTop = (shell ? 0 : PlayLayout.HEADER) + ins.t;'));
+});
+
+test('the spacing audit, second round: compact face shapes, one row of small keys upright, the d-pad gives way, short key areas tighten', () => {
+  const src = fs.readFileSync(path.join(ROOT, 'src', 'touchpad.js'), 'utf8');
+  assert.ok(src.includes("if (shape.cols === 3) face.classList.add('tri');") && src.includes("const pills = el('div', 'cpills');"));
+  const css = fs.readFileSync(path.join(ROOT, 'play.css'), 'utf8');
+  assert.ok(css.includes('.cpad .cface.tri{width:calc(2 * var(--b) + 8px);'), 'the diamond is two buttons wide, keys still full size');
+  assert.ok(css.includes('.cpad.up{--d:max(110px,min(300px,58cqh,42cqw,calc(100cqh - 2 * var(--e) - 44px - 48px - 24px)))}'));
+  assert.ok(css.includes('.cpad.side .cpills>*{position:absolute;pointer-events:auto}'));
+  assert.ok(css.includes('@container (max-height:330px){') && css.includes('.pp .pk{min-height:50px}'), 'never under 50 px');
 });
