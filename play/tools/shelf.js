@@ -34,7 +34,7 @@ function buildIndex(cards, status) {
   const games = cards.filter((c) => !Cards.check(c).length)
     .filter((c) => !(status.games[c.id] && status.games[c.id].gone))
     .map((c) => ({ id: c.id, title: c.title, year: c.year || null, publisher: c.publisher || '', system: c.system,
-      players: c.players || 1, item: c.archive.item }))
+      players: c.players || 1, item: c.archive.item, help: c.help || '' }))
     .sort((a, b) => (a.year || 9999) - (b.year || 9999) || a.title.localeCompare(b.title));
   return { built: status.checked, games };
 }

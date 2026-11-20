@@ -70,3 +70,22 @@ test('the game page links back to the shelf', () => {
   const html = fs.readFileSync(path.join(PLAY, 'game.html'), 'utf8');
   assert.match(html, /id="b-games" class="tool" href="\.\/"/);
 });
+
+test('T25: a box picked up turns over to what a shop box says on its back', () => {
+  assert.deepEqual(Shelf.backLines({ system: 'genesis', year: 1989, publisher: 'Sega', players: 2 }), [
+    ['Machine', 'Sega Genesis'], ['Year', '1989'], ['Made by', 'Sega'], ['Players', '1 or 2, a gamepad each'],
+    ['Plays with', 'a gamepad, the keyboard or touch']]);
+  for (const g of JSON.parse(fs.readFileSync(path.join(PLAY, 'shelf', 'index.json'), 'utf8')).games) assert.ok(g.help, g.id + ' has a line for the back');
+  const src = fs.readFileSync(path.join(PLAY, 'src', 'shelf.js'), 'utf8');
+  for (const bit of ["e.preventDefault(); pickUp(g, a);", "if (e.ctrlKey || e.metaKey || e.shiftKey || e.button) return;",
+    "if (now.a && !before.a) play();", "else if (now.b && !before.b) putBack();", "if (e.key === 'Escape' || e.key === 'Backspace')"]) assert.ok(src.includes(bit), bit);
+});
+
+test('T25: the idle tour waits a minute, runs only on a couch screen, and any input stops it', () => {
+  assert.equal(Shelf.IDLE_MS, 60000);
+  const src = fs.readFileSync(path.join(PLAY, 'src', 'shelf.js'), 'utf8');
+  assert.ok(src.includes("const couch = () => (padSeen || TV.test(navigator.userAgent)) && !matchMedia('(pointer: coarse)').matches;"));
+  assert.ok(src.includes("for (const ev of ['pointerdown', 'pointermove', 'wheel', 'touchstart']) addEventListener(ev, woke, { passive: true });"));
+  const css = fs.readFileSync(path.join(PLAY, 'shelf.css'), 'utf8');
+  assert.ok(css.includes('@media (prefers-reduced-motion:reduce){.held .turn{transition:none}'));
+});

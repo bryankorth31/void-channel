@@ -34,3 +34,30 @@ a{color:var(--acc)} a:hover{color:#fff}
 .foot{max-width:1400px;margin:24px auto 0;padding:18px 16px 30px;border-top:1px solid var(--line);color:var(--dim);font-size:13px}
 @media (max-width:520px){.boxes{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.shelf{padding-top:16px}}
 @media (prefers-reduced-motion:reduce){.box{transition:none}.box:hover,.box:focus-visible{transform:none}}
+/* Plan T25: the box in hand. It lifts off the shelf into the middle and turns over to its back. */
+.held{position:fixed;inset:0;z-index:20;display:flex;align-items:center;justify-content:center;perspective:1400px}
+.held[hidden]{display:none}
+.held .scrim{position:absolute;inset:0;background:rgba(4,5,8,.78);backdrop-filter:blur(4px);animation:fade .2s ease}
+.held .turn{position:relative;width:min(340px,86vw);height:min(470px,82vh);transform-style:preserve-3d;transition:transform .55s cubic-bezier(.2,.8,.2,1)}
+.held .lift{transform-style:preserve-3d;animation:lift .3s cubic-bezier(.2,.8,.2,1)}
+.held.flipped .turn{transform:rotateY(180deg)}
+.held .face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border:1px solid #2a3044;border-top:8px solid var(--sys);border-radius:12px;background:#0d0f17;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 40px color-mix(in srgb,var(--sys) 30%,transparent);overflow:hidden}
+.held .turn.cart .face{border-radius:12px 12px 22px 22px}
+.held .turn.handheld .face{border-radius:22px}
+.held .front .art{position:absolute;inset:0;display:block}
+.held .front img{width:100%;height:100%;object-fit:cover;image-rendering:pixelated}
+.held .back{transform:rotateY(180deg);display:flex;flex-direction:column;padding:18px 18px 14px;overflow:auto}
+.held .back h3{font-family:'Unbounded',sans-serif;font-size:19px;line-height:1.2;margin:0 0 12px;letter-spacing:-.01em}
+.held .back dl{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;margin:0 0 12px;font-size:14px}
+.held .back dt{color:var(--dim)} .held .back dd{margin:0}
+.held .back .help{margin:0 0 14px;color:#cfd2dd;font-size:14px}
+.held .acts{display:flex;gap:10px;margin-top:auto}
+.held .play,.held .put{flex:1;display:flex;align-items:center;justify-content:center;min-height:48px;border-radius:10px;font:700 16px system-ui,sans-serif;text-decoration:none;cursor:pointer;outline:none}
+.held .play{background:var(--sys);color:#07080c;border:0}
+.held .put{background:transparent;color:var(--fg);border:1px solid #3a4157}
+.held .play:focus-visible,.held .put:focus-visible{box-shadow:0 0 0 3px #fff}
+.held .hint{margin:10px 0 0;color:var(--dim);font-size:12px;text-align:center}
+@keyframes lift{from{transform:translateY(40px) scale(.6);opacity:0}}
+@keyframes fade{from{opacity:0}}
+@media (pointer:coarse){.held .hint{display:none}}
+@media (prefers-reduced-motion:reduce){.held .turn{transition:none}.held .lift{animation:none}.held .scrim{animation:none}}
