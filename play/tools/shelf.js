@@ -44,8 +44,15 @@ async function ask(card) {
   const ctl = new AbortController();
   const timer = setTimeout(() => ctl.abort(), 30000);
   try {
-    const r = await fetch(Cards.gameUrl(card), { headers: { Range: 'bytes=0-15', Origin: 'https://voidtv.net' }, signal: ctl.signal });
+    const r = await fetch(Cards.gameUrl(card), { headers: { Range: 'bytes=0-15', 'Accept-Encoding': 'identity', Origin: 'https://voidtv.net' }, signal: ctl.signal });
     if (r.body) await r.body.cancel();
+    // The same file, not just a file: the Archive's /cors/ address ignores the range and answers 200 with the whole
+    // file's length when asked for it uncompressed (a 206 would carry it as bytes 0-15/<size>). A card that records its
+    // file's size (archive.size) and gets a different one has been replaced at the Archive: it leaves the shelf until
+    // someone looks. A packed or missing length proves nothing, so that counts as ok.
+    const range = /\/(\d+)\s*$/.exec(r.headers.get('content-range') || '');
+    const total = range ? +range[1] : (r.status === 200 && !r.headers.get('content-encoding') ? +r.headers.get('content-length') || 0 : 0);
+    if (card.archive.size && total && total !== card.archive.size) return { state: 'changed', code: total };
     if (r.status === 200 || r.status === 206) return { state: 'ok', code: r.status };
     if ([403, 404, 410].includes(r.status)) return { state: 'gone', code: r.status };
     return { state: 'unsure', code: r.status };
@@ -59,7 +66,8 @@ async function check(cards, status) {
   for (const c of cards) {
     const a = await ask(c);
     const before = status.games[c.id] || {};
-    const gone = a.state === 'gone' ? true : a.state === 'ok' ? false : !!before.gone;
+    // A replaced file ('changed') leaves the shelf like a gone one; it comes back when the card's size is updated.
+    const gone = a.state === 'gone' || a.state === 'changed' ? true : a.state === 'ok' ? false : !!before.gone;
     status.games[c.id] = { gone, last: a.state, code: a.code, at: now };
     console.log((gone ? 'GONE  ' : 'ok    ') + c.id + '  (' + a.state + ' ' + a.code + ')');
     await new Promise((r) => setTimeout(r, PAUSE_MS));

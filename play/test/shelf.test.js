@@ -44,7 +44,10 @@ test('a game the Archive says is gone leaves the shelf; the rest stay', () => {
 test('the nightly check: a hard answer decides, a hiccup keeps the last state', () => {
   const src = fs.readFileSync(path.join(PLAY, 'tools', 'shelf.js'), 'utf8');
   assert.match(src, /\[403, 404, 410\]\.includes\(r\.status\)\) return \{ state: 'gone'/);
-  assert.match(src, /a\.state === 'gone' \? true : a\.state === 'ok' \? false : !!before\.gone/);
+  assert.ok(src.includes("a.state === 'gone' || a.state === 'changed' ? true : a.state === 'ok' ? false : !!before.gone"));
+  // S4: the same file, not just a file: a different size than the card records takes the game off the shelf.
+  assert.ok(src.includes("if (card.archive.size && total && total !== card.archive.size) return { state: 'changed', code: total };"));
+  for (const c of Tool.loadCards()) assert.ok(c.archive.size > 0, c.id + ' records its file size');
   assert.match(src, /Range: 'bytes=0-15'/);
   assert.match(src, /PAUSE_MS = \d{4}/);
 });

@@ -70,6 +70,10 @@
   </p>
 </footer>
 
+<script>
+/* If a PLAY script fails to load, the page would say "Getting the game ready" forever: after 15 seconds with no game set up, say so plainly. */
+setTimeout(function () { var s = document.getElementById('status'), p = document.getElementById('b-play'); if (s && p && p.hidden && /^Getting the game ready$/.test(s.textContent)) s.textContent = 'PLAY did not finish loading. Check the connection and reload the page.'; }, 15000);
+</script>
 <script src="src/keys.js"></script>
 <script src="src/cards.js"></script>
 <script src="src/hub.js"></script>
