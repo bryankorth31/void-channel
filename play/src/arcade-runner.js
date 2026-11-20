@@ -17,7 +17,7 @@
   // whenever an engine file changes under the same name, as brand files bump ?v= (20 Nov 2026: williams.wasm.gz was
   // answered with the home page for a day after the push that added it).
   // Per engine, so a rebuild of one does not set aside the high scores kept on the others (m68000: 4, Mercs and CPS1).
-  const ENGINE_VS = { williams: '3', atari: '3', classics: '3', m68000: '4' };
+  const ENGINE_VS = { atari: '3', classics: '3', m68000: '4' };   // williams retired (audit A10: Joust is on classics)
 
   function createRunner(opts) {
     const canvas = opts.canvas, on = opts.on || {};

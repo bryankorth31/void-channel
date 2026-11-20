@@ -28,7 +28,7 @@
     handy: { engine: 'engine/handy.js', systems: ['lynx'], name: 'Handy', licence: 'zlib licence',
       source: 'https://github.com/libretro/libretro-handy/tree/bc55d462f0b2d6b073ea93dc552ebd73cec60fd1', terms: 'engine/handy.LICENSE.txt' },
     // Arcade (B, 20 Nov 2026: "Current MAME", "No line"): MAME's own web build, one engine per MAME source family
-    // (williams plays Joust, Defender, Robotron...; audit AR5), run by
+    // (classics plays Joust and the other early machines; audit AR5, A10), run by
     // arcade-runner.js (kind 'mame'). Its licence would allow the donation line; Bryan chose none on arcade games.
     mame: { kind: 'mame', engine: 'engine/mame/{engine}.js', systems: ['arcade'], name: 'MAME 0.289', licence: 'GPL-2.0',
       source: 'https://github.com/mamedev/mame/tree/f09e0805da149cb15bd1cd777fbbcc65640d7866', terms: 'engine/mame/COPYING', noDonation: true },
