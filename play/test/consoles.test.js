@@ -24,7 +24,8 @@ test('every core a card names has both engine files on disk', () => {
   for (const c of cards) {
     const engine = path.join(PLAY, Cards.engineOf(c));
     assert.ok(fs.existsSync(engine), engine);
-    assert.ok(fs.existsSync(engine.replace(/\.js$/, '.wasm')), engine);
+    // An arcade engine may be kept gzipped (.wasm.gz) to stay under Cloudflare's 25 MiB file cap.
+    assert.ok(fs.existsSync(engine.replace(/\.js$/, '.wasm')) || fs.existsSync(engine.replace(/\.js$/, '.wasm.gz')), engine);
   }
 });
 
@@ -115,8 +116,10 @@ test('arcade (B, 20 Nov 2026: "Current MAME", "No line"): MAME runs from its own
   const Cards2 = require('../src/cards.js');
   const joust = JSON.parse(fs.readFileSync(path.join(PLAY, 'cards', 'joust-arcade.json'), 'utf8'));
   assert.equal(Cards2.engineOf(joust), 'engine/mame/williams.js');
-  assert.ok(fs.existsSync(path.join(PLAY, 'engine', 'mame', 'williams.js')) && fs.existsSync(path.join(PLAY, 'engine', 'mame', 'williams.wasm')));
-  assert.ok(fs.statSync(path.join(PLAY, 'engine', 'mame', 'williams.wasm')).size < 25 * 1024 * 1024, 'under Cloudflare\'s 25 MiB file cap');
+  const W = path.join(PLAY, 'engine', 'mame', 'williams');
+  const wasm = fs.existsSync(W + '.wasm.gz') ? W + '.wasm.gz' : W + '.wasm';
+  assert.ok(fs.existsSync(W + '.js') && fs.existsSync(wasm));
+  assert.ok(fs.statSync(wasm).size < 25 * 1024 * 1024, 'under Cloudflare\'s 25 MiB file cap');
   assert.deepEqual(Cards2.check(joust), []);
   assert.ok(Cards2.check(Object.assign({}, joust, { archive: Object.assign({}, joust.archive, { driver: '../x' }) })).includes('archive.driver'));
   const R = require('../src/arcade-runner.js');
@@ -127,6 +130,7 @@ test('arcade (B, 20 Nov 2026: "Current MAME", "No line"): MAME runs from its own
     "addEventListener('keydown', arcadeEsc, true);", "runner = (isArcade() ? PlayArcade : PlayRunner).createRunner("]) assert.ok(js.includes(bit), bit);
   const ar = fs.readFileSync(path.join(PLAY, 'src', 'arcade-runner.js'), 'utf8');
   assert.ok(ar.includes("ctx[fn] = function () { frames++;"), 'the first picture is MAME\'s first draw');
+  assert.ok(ar.includes("fetch(engine.replace(/\\.js$/, '.wasm.gz'))") && ar.includes('WebAssembly.instantiate(buf, imports).then((r) => done(r.instance, r.module)'), 'a gzipped engine is unpacked by the page');
   assert.ok(ar.includes('if (document.title !== mine) document.title = mine;'));
   assert.equal(joust.firstBoot.resetAt, 12, 'a Williams first boot goes on with one soft reset');
   assert.ok(ar.includes("manager.machine:soft_reset()") && ar.includes("args.push('-autoboot_script', '/lua/firstboot.lua')"));

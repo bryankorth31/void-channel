@@ -138,6 +138,36 @@
         onRuntimeInitialized: () => { started = true; on.ready && on.ready({}); },
       };
       if (on.aspect) on.aspect(card.aspect || 4 / 3);
+      // A big engine is kept gzipped (Cloudflare serves no file over 25 MiB, and a 68000 engine is 26 to 31 MiB plain).
+      // The page unpacks it and hands it to Emscripten as Module.wasmBinary. With no .wasm.gz the engine fetches its
+      // own plain .wasm, as before. The magic-byte check covers a server that already unpacked it on the way.
+      try {
+        const res = await fetch(engine.replace(/\.js$/, '.wasm.gz'));
+        if (res.ok) {
+          let buf = new Uint8Array(await res.arrayBuffer());
+          if (buf[0] === 0x1f && buf[1] === 0x8b) {
+            if (!root.DecompressionStream) throw new Error('no DecompressionStream');
+            buf = new Uint8Array(await new Response(new Blob([buf]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer());
+          }
+          // Only real wasm is used (it starts "\0asm"): a missing file can come back as the site's own page with a 200.
+          // MAME 0.289's build skips wasmBinary and always fetches its plain .wasm, but it asks instantiateWasm first,
+          // so the unpacked engine is handed over there.
+          if (buf[0] === 0 && buf[1] === 0x61 && buf[2] === 0x73 && buf[3] === 0x6d) {
+            root.Module.wasmBinary = buf;
+            root.Module.instantiateWasm = (imports, done) => {
+              WebAssembly.instantiate(buf, imports).then((r) => done(r.instance, r.module), (e) => {
+                console.warn('[mame] engine start:', e);
+                if (on.error) on.error('The arcade engine did not load. Try again in a moment.');
+              });
+              return {};
+            };
+          }
+        }
+      } catch (e) {
+        console.warn('[mame] engine unpack:', e);
+        if (on.error) on.error('The arcade engine did not load. Try again in a moment, or use a newer browser.');
+        return;
+      }
       watchFrames(); keepTitle();
       const s = document.createElement('script');
       s.src = engine;
