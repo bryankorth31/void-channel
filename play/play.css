@@ -360,3 +360,10 @@ body.shell .cpad .pill:not(.crewind) .small{display:none}
 body.shell .cpad .crewind .small{font-size:11px;padding:1px 5px}
 body.shell .cpad .cface .pk .small{transform:rotate(-2deg)}   /* tape stuck on a round button, a little askew */
 body.shell .cpad .crewind .big{background:none;box-shadow:none;color:#e6e9f5;font-size:12px;transform:none;padding:0}
+/* Fullscreen during play (Bryan, 20 Nov 2026: "a simple fullscreen to the gameplay"): the game is all there is. The bar
+   steps away (back while the mouse is at the top, after a tap, while paused); a still mouse pointer hides. */
+body.full:not(.paused):not(.showbar) .bar{transform:translateY(-100%)}
+body.full .bar{transition:transform .2s}
+body.full .bar:focus-within{transform:none}
+body.full:not(.shell):not(.paused) .stage{background:#000}
+body.full.idle:not(.paused) .stage,body.full.idle:not(.paused) .stage *{cursor:none}

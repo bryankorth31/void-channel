@@ -16,7 +16,7 @@
   const isTV = /SMART-TV|SmartTV|Tizen|Web0S|webOS|BRAVIA|Android TV|GoogleTV|CrKey|AFT[A-Z]|Roku|HbbTV/i.test(navigator.userAgent);
   const touchWanted = q.get('touch') === '1' || (q.get('touch') !== '0' && !isTV && matchMedia('(pointer: coarse)').matches);
   let sramKept = null;
-  let card = null, build = null, runner = null, hub = null, pad = null, aspect = 4 / 3, touch = touchWanted, paused = false, started = false, padMode = false;
+  let card = null, build = null, runner = null, hub = null, pad = null, aspect = 4 / 3, touch = touchWanted, paused = false, started = false, padMode = false, fullMode = false;
 
   for (const e of document.querySelectorAll('#donate-line, .donate-line')) e.textContent = DONATE_LINE;
   for (const e of document.querySelectorAll('#donate, .donate-link')) e.href = DONATE_URL;
@@ -53,13 +53,17 @@
     const sideFloat = touch && card && PlayCards.isPad(card) && innerWidth > innerHeight;
     const layIns = padMode ? null : sideFloat ? { t: ins.t, r: 0, b: 0, l: 0 } : ins;
     // In the shell a console pad floats over the side margins, so it needs no third key column: the picture gets the room.
-    const L = PlayLayout.layout(innerWidth, innerHeight, aspect, touch, card ? (shell && PlayCards.isPad(card) ? 2 : PlayTouch.minCols(card)) : 2, padMode, shell, layIns);
+    // Fullscreen during play (Bryan, 20 Nov 2026: "a simple fullscreen to the gameplay"): the bar steps away; with no
+    // touch keys the picture fills the screen at its own shape, with them the keys keep their room as in the handheld.
+    const full = fullMode && started;
+    const L = PlayLayout.layout(innerWidth, innerHeight, aspect, touch, card ? (shell && PlayCards.isPad(card) ? 2 : PlayTouch.minCols(card)) : 2, padMode || (full && !touch), shell || (full && touch), layIns);
     L.inset = ins;
     // Upright on a phone, the start screen says a sideways phone gives a bigger picture (audit: as a note during play it
     // covered the d-pad).
     if ($('cover-turn')) $('cover-turn').hidden = !(card && isPhone() && innerHeight > innerWidth && PlayCards.isPad(card));
     document.body.classList.toggle('padmode', padMode);
     document.body.classList.toggle('shell', shell);
+    document.body.classList.toggle('full', full);
     document.body.dataset.mode = L.mode;
     const set = (el, r) => { if (!r) { el.hidden = true; return; } el.hidden = false; Object.assign(el.style, { left: r.x + 'px', top: r.y + 'px', width: r.w + 'px', height: r.h + 'px' }); };
     // A console pad floats in one layer: the whole stage sideways, the room under the picture upright.
@@ -692,7 +696,7 @@
   }
   let barTimer = 0;
   $('stage').addEventListener('pointerdown', (e) => {
-    if (!(padMode || document.body.classList.contains('shell')) || e.target.closest('.menu, .give, .give-card, .phones, .pk, .pdpad, .zone')) return;
+    if (!(padMode || document.body.classList.contains('shell') || document.body.classList.contains('full')) || e.target.closest('.menu, .give, .give-card, .phones, .pk, .pdpad, .zone')) return;
     document.body.classList.add('showbar'); clearTimeout(barTimer); barTimer = setTimeout(() => document.body.classList.remove('showbar'), 3000);
   });
 
@@ -775,6 +779,21 @@
   // iPhone has no fullscreen for a web page: the button shows only where the browser can do it.
   if (!document.fullscreenEnabled) $('b-full').hidden = true;
   $('b-full').onclick = () => { if (document.fullscreenElement) document.exitFullscreen(); else document.documentElement.requestFullscreen().catch(() => {}); };
+  // In fullscreen the game is all there is: the layout follows the change (Esc or Full to leave), the bar comes back
+  // while the mouse is at the top of the screen or for 3 seconds after a tap, and a still mouse pointer hides.
+  document.addEventListener('fullscreenchange', () => {
+    fullMode = !!document.fullscreenElement;
+    if (!fullMode) { document.body.classList.remove('idle'); clearTimeout(idleTimer); }
+    $('b-full').setAttribute('aria-pressed', String(fullMode)); $('b-full').title = fullMode ? 'Leave fullscreen (Esc)' : 'Fullscreen';
+    place.sig = ''; place();
+  });
+  let idleTimer = 0;
+  addEventListener('mousemove', (e) => {
+    if (!fullMode) return;
+    document.body.classList.remove('idle'); clearTimeout(idleTimer);
+    idleTimer = setTimeout(() => document.body.classList.add('idle'), 2500);
+    if (e.clientY < 48) { document.body.classList.add('showbar'); clearTimeout(barTimer); barTimer = setTimeout(() => document.body.classList.remove('showbar'), 3000); }
+  });
   $('b-play').onclick = () => { resumeState = null; begin(); };
   $('b-continue').onclick = continueGame;
   // Leaving keeps your place: Games saves first, then goes; a hidden tab or a closing page saves as it can.

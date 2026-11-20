@@ -213,3 +213,11 @@ test('the handheld wears Bryan\'s own parts (20 Nov 2026: "Yes, build it"): his 
   // The words stay inside their keys, on a strip of tape.
   assert.ok(css.includes('body.shell .cpad .pk .small,body.shell .cpad .pill .big,body.shell .cpad .cshoulder .big{background:url(skin/label.webp)'));
 });
+
+test('fullscreen during play (Bryan, 20 Nov 2026: "a simple fullscreen to the gameplay"): the game alone, edge to edge, the bar away until wanted', () => {
+  const js = read(ROOT, 'src', 'play.js'), css = read(ROOT, 'play.css');
+  assert.ok(js.includes("document.addEventListener('fullscreenchange', () => {") && js.includes('fullMode = !!document.fullscreenElement;'));
+  assert.ok(js.includes('padMode || (full && !touch), shell || (full && touch), layIns);'), 'no touch keys: the picture fills the screen; with them the keys keep their room');
+  assert.ok(js.includes("if (e.clientY < 48) { document.body.classList.add('showbar');"), 'the mouse at the top brings the bar');
+  assert.ok(css.includes('body.full:not(.paused):not(.showbar) .bar{transform:translateY(-100%)}') && css.includes('body.full.idle:not(.paused) .stage,body.full.idle:not(.paused) .stage *{cursor:none}'));
+});
