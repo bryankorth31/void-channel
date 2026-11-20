@@ -54,7 +54,8 @@
       };
       worker.onerror = (e) => on.error && on.error(e.message || 'The engine stopped');
       worker.postMessage({ type: 'start', gameUrl: PlayCards.gameUrl(card), gameFile: PlayCards.gameFile(card),
-        start: card.archive.start || '', vars: card.vars || {} });
+        start: card.archive.start || '', vars: card.vars || {},
+        pads: PlayCards.isPad(card) ? Math.max(1, card.players || 1) : 0 });
     }
 
     const post = (m) => worker && worker.postMessage(m);
@@ -62,6 +63,7 @@
     return {
       start,
       key: (code, down) => post({ type: 'key', code, down }),
+      pad: (port, bits) => post({ type: 'pad', port, bits }),
       pause: () => { post({ type: 'pause' }); if (audio) audio.suspend(); },
       resume: () => { post({ type: 'resume' }); if (audio) audio.resume(); },
       save: () => ask({ type: 'save' }),

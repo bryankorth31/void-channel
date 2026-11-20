@@ -1,0 +1,28 @@
+{
+  "id": "pac-man-game-gear",
+  "title": "Pac-Man (Game Gear)",
+  "year": 1990,
+  "publisher": "Namco",
+  "system": "gamegear",
+  "core": "genesis-plus-gx",
+  "players": 1,
+  "archive": {
+    "item": "gg_Pac-Man_1990Namco",
+    "file": "Pac-Man_1990Namco.bin",
+    "as": "pac-man.gg"
+  },
+  "controls": {
+    "kind": "pad",
+    "dpad": true,
+    "keys": [
+      "P1:B",
+      "P1:A",
+      "P1:Start"
+    ],
+    "labels": {
+      "P1:B": "1",
+      "P1:A": "2"
+    }
+  },
+  "help": "Steer with the d-pad; Start begins."
+}

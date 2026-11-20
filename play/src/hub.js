@@ -27,21 +27,25 @@
       if (now !== was) send(code, now);
     }
 
-    function setCard(card) { map = Object.assign({ Start: '@menu' }, (card && card.gamepad) || {}); }
+    // full: the whole map from PlayCards.gamepadMap(card) (console cards get their usual seats); else the card's own.
+    function setCard(card, full) { map = Object.assign({ Start: '@menu' }, full || (card && card.gamepad) || {}); }
 
     // What one gamepad holds right now, as key codes, from its buttons and its left stick.
-    function padCodes(pad) {
+    // A console button for player 1 (P1:A) becomes the same button for whichever player holds this pad: the first
+    // pad is player 1, the second player 2, so two people on the couch each get their own seat.
+    function padCodes(pad, player) {
       const codes = new Set();
+      const seat = (c) => (player > 1 ? c.replace(/^P1:/, 'P' + player + ':') : c);
       for (const [name, idx] of Object.entries(BUTTONS)) {
         const b = pad.buttons && pad.buttons[idx];
-        if (b && (b.pressed || b.value > 0.5) && map[name]) codes.add(map[name]);
+        if (b && (b.pressed || b.value > 0.5) && map[name]) codes.add(seat(map[name]));
       }
       const ax = (pad.axes && pad.axes[0]) || 0, ay = (pad.axes && pad.axes[1]) || 0;
       if (map.Stick !== 'none') {
-        if (ax < -STICK && map.Left) codes.add(map.Left);
-        if (ax > STICK && map.Right) codes.add(map.Right);
-        if (ay < -STICK && map.Up) codes.add(map.Up);
-        if (ay > STICK && map.Down) codes.add(map.Down);
+        if (ax < -STICK && map.Left) codes.add(seat(map.Left));
+        if (ax > STICK && map.Right) codes.add(seat(map.Right));
+        if (ay < -STICK && map.Up) codes.add(seat(map.Up));
+        if (ay > STICK && map.Down) codes.add(seat(map.Down));
       }
       return codes;
     }
@@ -49,10 +53,11 @@
     // Called once a frame with navigator.getGamepads(); only "standard" pads are read.
     function pollPads(pads) {
       const seen = new Set();
+      const order = (pads || []).filter((p) => p && p.mapping === 'standard').map((p) => p.index).sort((a, b) => a - b);
       for (const pad of pads || []) {
         if (!pad || pad.mapping !== 'standard') continue;
         seen.add(pad.index);
-        const now = padCodes(pad), before = padHeld.get(pad.index) || new Set();
+        const now = padCodes(pad, Math.min(4, order.indexOf(pad.index) + 1)), before = padHeld.get(pad.index) || new Set();
         const actNow = new Set([...now].filter((c) => c[0] === '@')), actBefore = padActions.get(pad.index) || new Set();
         for (const a of actNow) if (!actBefore.has(a)) hold('pad' + pad.index, a, true);
         padActions.set(pad.index, actNow);

@@ -6,7 +6,9 @@
 (function (root) {
   const LABELS = { Enter: 'Enter', Space: 'Space', Escape: 'Esc', Backspace: '⌫', ShiftLeft: 'Shift',
     ArrowUp: '▲', ArrowDown: '▼', ArrowLeft: '◀', ArrowRight: '▶', Tab: 'Tab' };
-  const label = (code) => LABELS[code] || code.replace(/^Key|^Digit/, '');
+  // A console button (P1:A) shows its own letter; a card can rename any key (Genesis A B C, the 2600's Fire and Reset).
+  let names = {};
+  const label = (code) => names[code] || LABELS[code] || code.replace(/^P[1-4]:/, '').replace(/^Key|^Digit/, '');
   const QWERTY = [['Digit1', 'Digit2', 'Digit3', 'Digit4', 'Digit5', 'Digit6', 'Digit7', 'Digit8', 'Digit9', 'Digit0'],
     'QWERTYUIOP'.split('').map((c) => 'Key' + c), 'ASDFGHJKL'.split('').map((c) => 'Key' + c),
     ['ShiftLeft', ...'ZXCVBNM'.split('').map((c) => 'Key' + c), 'Backspace'], ['Space', 'Enter']];
@@ -34,7 +36,11 @@
   }
 
   // The arrow pad: one round pad, the finger can slide between directions (and diagonals) without lifting.
-  function dpad(hub) {
+  // codes: what each direction presses: the arrow keys for a PC game, the console's own d-pad for a console game.
+  const ARROWS = { ArrowUp: 'ArrowUp', ArrowDown: 'ArrowDown', ArrowLeft: 'ArrowLeft', ArrowRight: 'ArrowRight' };
+  const PAD_DIRS = { ArrowUp: 'P1:Up', ArrowDown: 'P1:Down', ArrowLeft: 'P1:Left', ArrowRight: 'P1:Right' };
+  function dpad(hub, codes) {
+    codes = codes || ARROWS;
     const pad = el('div', 'pdpad'); pad.setAttribute('aria-label', 'Arrow keys');
     for (const c of ['ArrowUp', 'ArrowLeft', 'ArrowRight', 'ArrowDown']) pad.appendChild(el('span', 'pdir ' + c, label(c)));
     const held = new Map(); // pointerId -> Set of codes
@@ -44,16 +50,16 @@
       const now = new Set();
       if (Math.hypot(dx, dy) > 0.12) {
         const a = Math.atan2(dy, dx) * 180 / Math.PI; // 0 = right, 90 = down
-        if (a > -67.5 && a < 67.5) now.add('ArrowRight');
-        if (a > 22.5 && a < 157.5) now.add('ArrowDown');
-        if (a > 112.5 || a < -112.5) now.add('ArrowLeft');
-        if (a > -157.5 && a < -22.5) now.add('ArrowUp');
+        if (a > -67.5 && a < 67.5) now.add(codes.ArrowRight);
+        if (a > 22.5 && a < 157.5) now.add(codes.ArrowDown);
+        if (a > 112.5 || a < -112.5) now.add(codes.ArrowLeft);
+        if (a > -157.5 && a < -22.5) now.add(codes.ArrowUp);
       }
       const before = held.get(e.pointerId) || new Set();
       for (const c of before) if (!now.has(c)) hub.touch(c, false, e.pointerId);
       for (const c of now) if (!before.has(c)) { hub.touch(c, true, e.pointerId); tick(); }
       held.set(e.pointerId, now);
-      for (const s of pad.children) s.classList.toggle('on', [...held.values()].some((set) => set.has(s.classList[1])));
+      for (const s of pad.children) s.classList.toggle('on', [...held.values()].some((set) => set.has(codes[s.classList[1]])));
     }
     function lift(e) { for (const c of held.get(e.pointerId) || []) hub.touch(c, false, e.pointerId); held.delete(e.pointerId); for (const s of pad.children) s.classList.remove('on'); }
     pad.addEventListener('pointerdown', (e) => { e.preventDefault(); capture(pad, e); aim(e); });
@@ -96,6 +102,8 @@
   function build(zones, card, hub) {
     const c = (card && card.controls) || {};
     const p = plan(c);
+    names = c.labels || {};
+    const dirs = c.kind === 'pad' ? PAD_DIRS : ARROWS;
     for (const z of Object.values(zones)) z.textContent = '';
     const kb = keyboard(hub, () => kb.classList.remove('open'));
     const kbButton = (text) => {
@@ -121,8 +129,10 @@
       if (p.dpad || rest.length) {
         const perRow = p.dpad ? 2 : 5;
         const rows = Math.max(p.dpad ? 2 : 1, Math.ceil(rest.length / perRow));
-        const s = section('pblock' + (p.dpad ? ' with-dpad' : ''), rows, 1);
-        if (p.dpad) s.appendChild(dpad(hub));
+        // A console pad with many buttons: on a narrow phone the d-pad takes its own row (play.css), or it would push
+        // the buttons off the screen.
+        const s = section('pblock' + (p.dpad ? ' with-dpad' : '') + (p.dpad && rest.length > 4 ? ' many' : ''), rows, 1);
+        if (p.dpad) s.appendChild(dpad(hub, dirs));
         if (rest.length) {
           const g = el('div', 'prest'); g.style.setProperty('--nc', Math.min(perRow, rest.length));
           for (const b of rest) g.appendChild(b);
@@ -134,7 +144,7 @@
       const left = el('div', 'pcol'), right = el('div', 'pcol');
       for (const code of p.sideways.left) left.appendChild(key(code, code === 'Space' ? 'span' : ''));
       if (p.keyboard) left.appendChild(kbButton('ABC'));
-      if (p.dpad) { const w = el('div', 'pdwrap'); w.appendChild(dpad(hub)); left.appendChild(w); }   // the wrap keeps the pad round
+      if (p.dpad) { const w = el('div', 'pdwrap'); w.appendChild(dpad(hub, dirs)); left.appendChild(w); }   // the wrap keeps the pad round
       for (const code of p.sideways.right) right.appendChild(key(code));
       zones.left.appendChild(sizer(left)); zones.right.appendChild(sizer(right)); zones.right.appendChild(kb);
     }

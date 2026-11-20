@@ -1,0 +1,24 @@
+{
+  "id": "tetris-game-boy",
+  "title": "Tetris (Game Boy)",
+  "year": 1989,
+  "publisher": "Nintendo",
+  "system": "gameboy",
+  "core": "gambatte",
+  "players": 1,
+  "archive": {
+    "item": "tetris_gb",
+    "file": "tetris.gb"
+  },
+  "controls": {
+    "kind": "pad",
+    "dpad": true,
+    "keys": [
+      "P1:B",
+      "P1:A",
+      "P1:Select",
+      "P1:Start"
+    ]
+  },
+  "help": "Left and right move, Down drops faster, A and B turn the piece."
+}

@@ -5,21 +5,33 @@ No code was copied from anything on the "studied" list. This file keeps the reco
 
 ## Licence of PLAY
 
-Everything in `play/` that we wrote is under the GNU General Public License, version 2 or (at your option) any
-later version. The full text is in [LICENSE](LICENSE). The player page loads our code and the DOSBox Pure core into
-one page and calls the core directly every frame, so we treat the player as one GPL work and publish all of it.
-The games are not part of it: each one is fetched from the Internet Archive when you press Play and is never kept
-or served by voidtv.net.
+Everything in `play/` that we wrote stays under the GNU General Public License, version 2 or (at your option) any
+later version. The full text is in [LICENSE](LICENSE). The games are not part of it: each one is fetched from the
+Internet Archive when you press Play and is never kept or served by voidtv.net.
+
+The emulator cores are not ours. Each core is a separate program under its own licence, which it keeps: we serve it
+unchanged, built from its published source, with a link to the exact commit we built. A game page runs one core.
+
+- DOSBox Pure, FCEUmm, Gambatte and Stella 2014 are under the GPL, version 2. A page with one of these loads our code
+  and the core together and calls the core every frame, so we treat that page as one GPL work and publish all of it.
+- Genesis Plus GX and Snes9x are not GPL. Their own licences let anyone copy and share them free of charge, never
+  for sale or for commercial use, as long as their copyright notice and terms travel with every copy. They are
+  served under those terms, not under the GPL, and nothing in PLAY changes them.
 
 ## Built in (part of what voidtv.net serves)
 
 | Part | What it is | Licence | Source |
 |---|---|---|---|
-| DOSBox Pure | the DOS PC core, built to WebAssembly by us, unchanged | GPL-2.0 | https://github.com/libretro/dosbox-pure (the exact commit is in [core/dosbox-pure.txt](core/dosbox-pure.txt)) |
-| libretro.h | the libretro core contract, read by our host (`core/host.c`) | MIT | https://github.com/libretro/libretro-common (inside DOSBox Pure's source) |
-| Emscripten | the compiler that builds the core and adds its small runtime to `engine/dosbox-pure.js` | MIT or University of Illinois/NCSA | https://github.com/emscripten-core/emscripten |
+| DOSBox Pure | the DOS PC core | GPL-2.0 | https://github.com/libretro/dosbox-pure |
+| Genesis Plus GX | the Sega Genesis, Master System and Game Gear core | its own licence: free, non-commercial only (not GPL); parts under LGPL-2.1+, CC0, zlib | https://github.com/libretro/Genesis-Plus-GX |
+| Snes9x | the Super Nintendo core | its own licence: free, non-commercial only (not GPL); parts under LGPL-2.1+ | https://github.com/libretro/snes9x |
+| FCEUmm | the Nintendo (NES) core | GPL-2.0 | https://github.com/libretro/libretro-fceumm |
+| Gambatte | the Game Boy and Game Boy Color core | GPL-2.0 | https://github.com/libretro/gambatte-libretro |
+| Stella 2014 | the Atari 2600 core | GPL-2.0 | https://github.com/libretro/stella2014-libretro |
+| libretro.h and libretro common code | the core contract our host (`core/host.c`) speaks, and small helpers inside each core | MIT | https://github.com/libretro/libretro-common (inside each core's source) |
+| Emscripten | the compiler that builds each core and adds its small runtime to `engine/<core>.js` | MIT or University of Illinois/NCSA | https://github.com/emscripten-core/emscripten |
 
-How to rebuild the core yourself: [core/README.md](core/README.md).
+The exact commit of each core, its licence file and how to rebuild it yourself: [core/README.md](core/README.md).
 
 ## Our own work it grows from
 
