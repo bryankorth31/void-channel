@@ -38,7 +38,9 @@ function buildIndex(cards, status) {
     .map((c) => ({ id: c.id, title: c.title, year: c.year || null, publisher: c.publisher || '', system: c.system,
       players: c.players || 1, item: c.archive.item, help: c.help || '',
       // Plan G1 and G2: the card's own genre wins over Wikidata's facts; the shelf files both under its plain genres.
-      genres: Shelf.genresOf(c.genre || (c.facts && c.facts.genre)) }))
+      genres: Shelf.genresOf(c.genre || (c.facts && c.facts.genre)),
+      // Audit S5: the back of the box teaches the game: its first three actions on each input.
+      how: Object.fromEntries(['pad', 'keyboard', 'touch'].map((d) => [d, Cards.actionLines(c, d).filter((l) => l.how).slice(0, 3).map((l) => [l.do, l.how])])) }))
     .sort((a, b) => (a.year || 9999) - (b.year || 9999) || a.title.localeCompare(b.title));
   return { built: status.checked, games };
 }

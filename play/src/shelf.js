@@ -47,6 +47,10 @@
     return best;
   }
 
+  const phone = () => matchMedia('(pointer: coarse)').matches && Math.min(screen.width, screen.height) < 600;
+  // Which input to speak of: a gamepad once one is seen, touch on a touch screen, else the keyboard.
+  let padEver = false;
+  const inputNow = () => (padEver ? 'pad' : matchMedia('(pointer: coarse)').matches ? 'touch' : 'keyboard');
   const sysOf = (g) => SYSTEMS[g.system] || { name: g.system, shape: 'cart', color: '#8a8fa3' };
 
   // The back of a box (plan T25): what a player turns a box over in a shop to read (pure: tested in shelf.test.js).
@@ -69,8 +73,8 @@
     el = document.createElement('div'); el.id = 'held'; el.className = 'held'; el.hidden = true;
     el.setAttribute('role', 'dialog'); el.setAttribute('aria-modal', 'true');
     el.innerHTML = '<div class="scrim"></div><div class="lift"><div class="turn"><div class="face front"><span class="art"><img alt="" decoding="async"></span></div>'
-      + '<div class="face back"><h3></h3><dl></dl><p class="help"></p><div class="acts"><a class="play">Play</a>'
-      + '<button type="button" class="put">Put back</button></div><p class="hint">Turn it over: left or right</p></div></div></div>';
+      + '<div class="face back"><span class="strip"><img alt="" decoding="async"></span><h3></h3><ul class="how"></ul><dl></dl><p class="help"></p>'
+      + '<div class="acts"><a class="cont" hidden>Continue</a><a class="play">Play</a><button type="button" class="put">Put back</button></div><p class="hint">Turn it over: left or right</p></div></div></div>';
     document.body.appendChild(el);
     el.querySelector('.scrim').onclick = putBack;
     el.querySelector('.put').onclick = putBack;
@@ -83,12 +87,27 @@
     el.style.setProperty('--sys', sys.color);
     el.querySelector('.turn').className = 'turn ' + sys.shape;
     el.setAttribute('aria-label', g.title);
-    const img = el.querySelector('img'); img.src = from.querySelector('img') ? from.querySelector('img').src : '';
+    const pic = from.querySelector('img') ? from.querySelector('img').src : '';
+    for (const img of el.querySelectorAll('img')) { img.src = pic; img.hidden = !pic; }
     el.querySelector('h3').textContent = g.title;
     const dl = el.querySelector('dl'); dl.textContent = '';
     for (const [k, v] of backLines(g)) { const dt = document.createElement('dt'), dd = document.createElement('dd'); dt.textContent = k; dd.textContent = v; dl.append(dt, dd); }
-    el.querySelector('.help').textContent = g.help || '';
-    el.querySelector('.play').href = from.href;
+    // Audit S5: the first three things to do, said for the input in hand; the help line only when there are none.
+    const ul = el.querySelector('.how'); ul.textContent = '';
+    for (const [d, h] of (g.how && g.how[inputNow()]) || []) {
+      const li = document.createElement('li'), b = document.createElement('b'); b.textContent = d; li.append(b, ' ' + h); ul.appendChild(li);
+    }
+    el.querySelector('.help').textContent = ul.children.length ? '' : (g.help || '');
+    // Audit S6: Play starts the game itself (a phone keeps its start screen, which allows fullscreen); a game with an
+    // automatic save offers Continue first and calls Play "New game".
+    const cont = el.querySelector('.cont'), play = el.querySelector('.play');
+    const direct = !phone();
+    play.href = from.href + (direct ? '&go=new' : ''); play.textContent = 'Play';
+    cont.hidden = true; cont.href = from.href + (direct ? '&go=continue' : '');
+    if (root.PlaySaves) root.PlaySaves.get(g.id + ':auto').then((rec) => {
+      if (!rec || !held || held.g !== g) return;
+      cont.hidden = false; play.textContent = 'New game'; cont.focus({ preventScroll: true });
+    }).catch(() => {});
     el.hidden = false;
     el.classList.remove('flipped');
     void el.offsetWidth;                       // lay the front out first, so the turn to the back is seen
@@ -266,7 +285,11 @@
       const next = cur ? nearest(cur, all, dir) : (boxes()[0] || all[0]);
       if (next) { next.focus(); next.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'smooth' }); }
     };
-    const play = () => { if (held) location.href = heldLayer().querySelector('.play').href; };
+    const play = () => {
+      if (!held) return;
+      const l = heldLayer(), c = l.querySelector('.cont');
+      location.href = (document.activeElement === c && !c.hidden ? c : l.querySelector('.play')).href;
+    };
     addEventListener('keydown', (e) => {
       woke();
       if (held) {
@@ -274,8 +297,8 @@
         else if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') { e.preventDefault(); turnOver(); }
         else if (e.key === 'Tab') {             // the focus stays on the box in hand
           e.preventDefault();
-          const l = heldLayer(), p = l.querySelector('.play'), q = l.querySelector('.put');
-          (document.activeElement === p ? q : p).focus();
+          const l = heldLayer(), stops = [...l.querySelectorAll('.acts a:not([hidden]), .acts button')];
+          stops[(stops.indexOf(document.activeElement) + (e.shiftKey ? stops.length - 1 : 1)) % stops.length].focus();
         }
         return;
       }
@@ -289,7 +312,7 @@
     const AXIS = 0.6;
     (function poll() {
       const pads = navigator.getGamepads ? [...navigator.getGamepads()].filter((p) => p && p.mapping === 'standard') : [];
-      if (pads.length) { document.getElementById('pad-hint').hidden = false; padSeen = true; }
+      if (pads.length) { document.getElementById('pad-hint').hidden = false; padSeen = true; padEver = true; }
       for (const p of pads) {
         const b = (i) => !!(p.buttons[i] && p.buttons[i].pressed);
         const now = { up: b(12) || p.axes[1] < -AXIS, down: b(13) || p.axes[1] > AXIS, left: b(14) || p.axes[0] < -AXIS, right: b(15) || p.axes[0] > AXIS, a: b(0) || b(9), b: b(1) };

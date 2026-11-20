@@ -66,7 +66,7 @@
   async function autosave() {
     if (!started || !runner || autoBusy) return;
     autoBusy = true;
-    try { const s = await runner.save(); if (s) await PlaySaves.put(AUTO(card), s, build); } catch (e) { /* best effort */ }
+    try { const s = await runner.save(); if (s) { await PlaySaves.put(AUTO(card), s, build); autosave.at = Date.now(); } } catch (e) { /* best effort */ }
     autoBusy = false;
   }
   function continueGame() {
@@ -135,7 +135,11 @@
   let padWasDown = true;
   function poll() {
     const pads = navigator.getGamepads ? [...navigator.getGamepads()] : [];
-    if (hub) { hub.pollPads(pads); if (paused) menuPads(pads); else menuWas.clear(); }
+    if (hub) {
+      hub.pollPads(pads); if (paused) menuPads(pads); else menuWas.clear();
+      // A game started straight from the shelf (audit S6) has had no tap here yet: the first gamepad press wakes the sound.
+      if (runner && pads.some((p) => p && p.buttons && p.buttons.some((b) => b.pressed))) runner.wakeSound();
+    }
     else {
       const down = pads.some((p) => p && p.mapping === 'standard' && ((p.buttons[0] && p.buttons[0].pressed) || (p.buttons[9] && p.buttons[9].pressed)));
       if (down && !padWasDown && !$('b-play').hidden) (document.activeElement === $('b-continue') ? continueGame() : begin());
@@ -284,7 +288,13 @@
   });
   // Audit B2: from the menu, Back goes to the shelf by its address. Stepping history back could skip the shelf and
   // leave voidtv.net (on a TV, the app) when the shelf was not the page before.
-  function toShelf() { autosave().then(() => location.assign($('b-games').href)); }
+  // Audit B3: the menu saved as it opened, so a save from the last 5 seconds is enough and Back goes at once; an older
+  // one is made first, and says so.
+  function toShelf() {
+    const go = () => location.assign($('b-games').href);
+    if (Date.now() - (autosave.at || 0) < 5000) return go();
+    toast('Saving your spot'); autosave().then(go);
+  }
   function remoteKey(e) {
     if (!started) return false;
     if (BACK_KEYS.has(e.key) || BACK_CODES.has(e.keyCode)) { e.preventDefault(); if (!paused) setPaused(true); else toShelf(); return true; }
@@ -355,6 +365,16 @@
     if (typeof SharedArrayBuffer === 'undefined' || typeof WebAssembly !== 'object') throw new Error('This browser cannot run PLAY games yet. A current Chrome, Edge, Firefox or Safari can.');
     if (!self.crossOriginIsolated) throw new Error('PLAY cannot start here: this page was served without the settings the engine needs. That is our side, not your browser.');
     status(''); $('b-play').hidden = false; $('b-play').focus({ preventScroll: true });
+    // Audit S6: the Play or Continue on the back of a shelf box starts the game itself (?go=new or ?go=continue), so
+    // shelf to game is two presses. A phone keeps its start screen: that tap is what lets the game go fullscreen.
+    const go = q.get('go');
+    if ((go === 'new' || go === 'continue') && !isPhone()) {
+      if (go === 'new') { begin(); place(); return; }
+      PlaySaves.get(AUTO(c)).then((rec) => {
+        if (PlaySaves.fits(rec, build)) { continueGame.rec = rec; continueGame(); } else begin();
+      }).catch(() => begin());
+      place(); return;
+    }
     // An automatic save from this same build: offer Continue first (focused) and the fresh start as New game.
     PlaySaves.get(AUTO(c)).then((rec) => {
       if (!PlaySaves.fits(rec, build) || started) return;

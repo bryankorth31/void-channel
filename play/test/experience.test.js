@@ -128,7 +128,7 @@ test('T22: on a phone, Play goes fullscreen and sideways where it can, the scree
 
 test('T24: a TV never draws the touch pad; Back opens the menu first and leaves on the second; the play/pause key pauses', () => {
   const js = fs.readFileSync(path.join(PLAY, 'src', 'play.js'), 'utf8');
-  for (const bit of ["const isTV = /SMART-TV|SmartTV|Tizen|Web0S|webOS|BRAVIA|Android TV|GoogleTV|CrKey|AFT[A-Z]|Roku|HbbTV/i.test(navigator.userAgent);", "!isTV && matchMedia('(pointer: coarse)')", "history.pushState({ play: 1 }, '')", "if (started && !paused) { setPaused(true); armBack(); }", "const BACK_CODES = new Set([461, 10009]);", "e.key === 'MediaPlayPause'", 'stayAwake(true); armBack();', "function toShelf() { autosave().then(() => location.assign($('b-games').href)); }", 'else toShelf();']) assert.ok(js.includes(bit), bit);
+  for (const bit of ["const isTV = /SMART-TV|SmartTV|Tizen|Web0S|webOS|BRAVIA|Android TV|GoogleTV|CrKey|AFT[A-Z]|Roku|HbbTV/i.test(navigator.userAgent);", "!isTV && matchMedia('(pointer: coarse)')", "history.pushState({ play: 1 }, '')", "if (started && !paused) { setPaused(true); armBack(); }", "const BACK_CODES = new Set([461, 10009]);", "e.key === 'MediaPlayPause'", 'stayAwake(true); armBack();', "const go = () => location.assign($('b-games').href);", "if (Date.now() - (autosave.at || 0) < 5000) return go();", 'else toShelf();']) assert.ok(js.includes(bit), bit);
   assert.ok(!js.includes('history.back()'), 'audit B2: Back never steps out of voidtv.net');
 });
 
@@ -138,4 +138,15 @@ test('audit K3: a big game says how far its download has come, and the 256 MB ca
     "if (size >= 2 * 1048576 && now - told > 250) { told = now; say(fetchLine(got, size)); }",
     "const game = await fetchBytes(msg.gameUrl, msg.gameSize);"]) assert.ok(w.includes(bit), bit);
   assert.match(fs.readFileSync(path.join(PLAY, 'src', 'runner.js'), 'utf8'), /gameSize: card\.archive\.size \|\| 0,/);
+});
+
+test('audit S6 and S5: the back of a shelf box starts the game itself (not on a phone), offers Continue when there is a save, and teaches the first three actions', () => {
+  const js = fs.readFileSync(path.join(PLAY, 'src', 'play.js'), 'utf8');
+  assert.ok(js.includes("if ((go === 'new' || go === 'continue') && !isPhone()) {"));
+  assert.ok(js.includes('if (runner && pads.some((p) => p && p.buttons && p.buttons.some((b) => b.pressed))) runner.wakeSound();'));
+  const shelf = fs.readFileSync(path.join(PLAY, 'src', 'shelf.js'), 'utf8');
+  for (const bit of ["play.href = from.href + (direct ? '&go=new' : '');", "root.PlaySaves.get(g.id + ':auto')", "cont.hidden = false; play.textContent = 'New game';"]) assert.ok(shelf.includes(bit), bit);
+  const games = JSON.parse(fs.readFileSync(path.join(PLAY, 'shelf', 'index.json'), 'utf8')).games;
+  for (const g of games) for (const d of ['pad', 'keyboard', 'touch']) assert.ok(g.how[d].length >= 1 && g.how[d].length <= 3, g.id + ' ' + d);
+  assert.ok(fs.readFileSync(path.join(PLAY, 'index.html'), 'utf8').includes('<script src="src/saves.js"></script>\n<script src="src/shelf.js"></script>'));
 });

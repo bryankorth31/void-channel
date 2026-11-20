@@ -12,7 +12,51 @@
       "help": "The stick runs and climbs; Fire jumps. Reset starts a new game.",
       "genres": [
         "Platform"
-      ]
+      ],
+      "how": {
+        "pad": [
+          [
+            "Run",
+            "d-pad Left or Right"
+          ],
+          [
+            "Jump",
+            "the bottom button (A)"
+          ],
+          [
+            "Climb",
+            "d-pad Up or Down"
+          ]
+        ],
+        "keyboard": [
+          [
+            "Run",
+            "Left or Right arrow"
+          ],
+          [
+            "Jump",
+            "Z"
+          ],
+          [
+            "Climb",
+            "Up or Down arrow"
+          ]
+        ],
+        "touch": [
+          [
+            "Run",
+            "d-pad Left or Right"
+          ],
+          [
+            "Jump",
+            "Fire"
+          ],
+          [
+            "Climb",
+            "d-pad Up or Down"
+          ]
+        ]
+      }
     },
     {
       "id": "punch-out-nes",
@@ -26,7 +70,51 @@
       "genres": [
         "Action",
         "Sports and racing"
-      ]
+      ],
+      "how": {
+        "pad": [
+          [
+            "Left punch",
+            "the bottom button (A)"
+          ],
+          [
+            "Right punch",
+            "the right button (B)"
+          ],
+          [
+            "Dodge",
+            "d-pad Left or Right"
+          ]
+        ],
+        "keyboard": [
+          [
+            "Left punch",
+            "Z"
+          ],
+          [
+            "Right punch",
+            "X"
+          ],
+          [
+            "Dodge",
+            "Left or Right arrow"
+          ]
+        ],
+        "touch": [
+          [
+            "Left punch",
+            "B"
+          ],
+          [
+            "Right punch",
+            "A"
+          ],
+          [
+            "Dodge",
+            "d-pad Left or Right"
+          ]
+        ]
+      }
     },
     {
       "id": "golden-axe-genesis",
@@ -39,7 +127,51 @@
       "help": "A is magic, B attacks, C jumps. A second gamepad joins as player 2.",
       "genres": [
         "Action"
-      ]
+      ],
+      "how": {
+        "pad": [
+          [
+            "Move",
+            "the d-pad"
+          ],
+          [
+            "Attack",
+            "the bottom button (A)"
+          ],
+          [
+            "Jump",
+            "the right button (B)"
+          ]
+        ],
+        "keyboard": [
+          [
+            "Move",
+            "the arrow keys"
+          ],
+          [
+            "Attack",
+            "Z"
+          ],
+          [
+            "Jump",
+            "X"
+          ]
+        ],
+        "touch": [
+          [
+            "Move",
+            "the d-pad"
+          ],
+          [
+            "Attack",
+            "B"
+          ],
+          [
+            "Jump",
+            "C"
+          ]
+        ]
+      }
     },
     {
       "id": "golden-axe-sms",
@@ -52,7 +184,51 @@
       "help": "Button 1 attacks, button 2 jumps; both together use magic.",
       "genres": [
         "Action"
-      ]
+      ],
+      "how": {
+        "pad": [
+          [
+            "Move",
+            "the d-pad"
+          ],
+          [
+            "Attack",
+            "the bottom button (A)"
+          ],
+          [
+            "Jump",
+            "the right button (B)"
+          ]
+        ],
+        "keyboard": [
+          [
+            "Move",
+            "the arrow keys"
+          ],
+          [
+            "Attack",
+            "Z"
+          ],
+          [
+            "Jump",
+            "X"
+          ]
+        ],
+        "touch": [
+          [
+            "Move",
+            "the d-pad"
+          ],
+          [
+            "Attack",
+            "1"
+          ],
+          [
+            "Jump",
+            "2"
+          ]
+        ]
+      }
     },
     {
       "id": "tetris-game-boy",
@@ -65,7 +241,51 @@
       "help": "Left and right move, Down drops faster, A and B turn the piece.",
       "genres": [
         "Puzzle and maze"
-      ]
+      ],
+      "how": {
+        "pad": [
+          [
+            "Move the piece",
+            "d-pad Left or Right"
+          ],
+          [
+            "Drop faster",
+            "d-pad Down"
+          ],
+          [
+            "Turn",
+            "the bottom button (A) or the right button (B)"
+          ]
+        ],
+        "keyboard": [
+          [
+            "Move the piece",
+            "Left or Right arrow"
+          ],
+          [
+            "Drop faster",
+            "Down arrow"
+          ],
+          [
+            "Turn",
+            "Z or X"
+          ]
+        ],
+        "touch": [
+          [
+            "Move the piece",
+            "d-pad Left or Right"
+          ],
+          [
+            "Drop faster",
+            "d-pad Down"
+          ],
+          [
+            "Turn",
+            "A or B"
+          ]
+        ]
+      }
     },
     {
       "id": "ms-pac-man-lynx",
@@ -78,7 +298,51 @@
       "help": "Steer Ms. Pac-Man through the maze, eat every dot and stay away from the ghosts.",
       "genres": [
         "Puzzle and maze"
-      ]
+      ],
+      "how": {
+        "pad": [
+          [
+            "Steer",
+            "the d-pad"
+          ],
+          [
+            "Start a game",
+            "the right button (B)"
+          ],
+          [
+            "Pause",
+            "Start"
+          ]
+        ],
+        "keyboard": [
+          [
+            "Steer",
+            "the arrow keys"
+          ],
+          [
+            "Start a game",
+            "X"
+          ],
+          [
+            "Pause",
+            "Enter"
+          ]
+        ],
+        "touch": [
+          [
+            "Steer",
+            "the d-pad"
+          ],
+          [
+            "Start a game",
+            "A"
+          ],
+          [
+            "Pause",
+            "Pause"
+          ]
+        ]
+      }
     },
     {
       "id": "pac-man-game-gear",
@@ -91,7 +355,51 @@
       "help": "Steer with the d-pad; Start begins.",
       "genres": [
         "Puzzle and maze"
-      ]
+      ],
+      "how": {
+        "pad": [
+          [
+            "Steer",
+            "the d-pad"
+          ],
+          [
+            "Start",
+            "Start"
+          ],
+          [
+            "Choose in the menus",
+            "the bottom button (A)"
+          ]
+        ],
+        "keyboard": [
+          [
+            "Steer",
+            "the arrow keys"
+          ],
+          [
+            "Start",
+            "Enter"
+          ],
+          [
+            "Choose in the menus",
+            "Z"
+          ]
+        ],
+        "touch": [
+          [
+            "Steer",
+            "the d-pad"
+          ],
+          [
+            "Start",
+            "Start"
+          ],
+          [
+            "Choose in the menus",
+            "1"
+          ]
+        ]
+      }
     },
     {
       "id": "prince-of-persia-1990",
@@ -104,7 +412,51 @@
       "help": "Arrows run, climb and crouch; Up jumps. Hold Shift to grab a ledge, step carefully or swing the sword.",
       "genres": [
         "Adventure"
-      ]
+      ],
+      "how": {
+        "pad": [
+          [
+            "Run",
+            "d-pad Left or Right"
+          ],
+          [
+            "Jump",
+            "d-pad Up or the right button (B)"
+          ],
+          [
+            "Crouch",
+            "d-pad Down"
+          ]
+        ],
+        "keyboard": [
+          [
+            "Run",
+            "Left or Right arrow"
+          ],
+          [
+            "Jump",
+            "Up arrow"
+          ],
+          [
+            "Crouch",
+            "Down arrow"
+          ]
+        ],
+        "touch": [
+          [
+            "Run",
+            "d-pad Left or Right"
+          ],
+          [
+            "Jump",
+            "d-pad Up"
+          ],
+          [
+            "Crouch",
+            "d-pad Down"
+          ]
+        ]
+      }
     },
     {
       "id": "oregon-trail-1990",
@@ -118,7 +470,51 @@
       "genres": [
         "Adventure",
         "Strategy and simulation"
-      ]
+      ],
+      "how": {
+        "pad": [
+          [
+            "Pick from a list",
+            "LB, RB or RT (1 to 3); hold LT with the d-pad, LB or RB (4 to 9)"
+          ],
+          [
+            "Confirm",
+            "the bottom button (A)"
+          ],
+          [
+            "Go on",
+            "the left button (X)"
+          ]
+        ],
+        "keyboard": [
+          [
+            "Pick from a list",
+            "1 to 9"
+          ],
+          [
+            "Confirm",
+            "Enter"
+          ],
+          [
+            "Go on",
+            "Space"
+          ]
+        ],
+        "touch": [
+          [
+            "Pick from a list",
+            "1 to 9"
+          ],
+          [
+            "Confirm",
+            "Enter"
+          ],
+          [
+            "Go on",
+            "Space"
+          ]
+        ]
+      }
     },
     {
       "id": "super-mario-world",
@@ -131,7 +527,108 @@
       "help": "B jumps, A spin-jumps, hold Y to run and carry.",
       "genres": [
         "Platform"
-      ]
+      ],
+      "how": {
+        "pad": [
+          [
+            "Move",
+            "d-pad Left or Right"
+          ],
+          [
+            "Jump",
+            "the bottom button (A)"
+          ],
+          [
+            "Spin jump",
+            "the right button (B)"
+          ]
+        ],
+        "keyboard": [
+          [
+            "Move",
+            "Left or Right arrow"
+          ],
+          [
+            "Jump",
+            "Z"
+          ],
+          [
+            "Spin jump",
+            "X"
+          ]
+        ],
+        "touch": [
+          [
+            "Move",
+            "d-pad Left or Right"
+          ],
+          [
+            "Jump",
+            "B"
+          ],
+          [
+            "Spin jump",
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "varooom-3d-gba",
+      "title": "Varooom 3D",
+      "year": 2021,
+      "publisher": "Gustavo Valiente (homebrew, GBA Jam 2021 winner)",
+      "system": "gba",
+      "players": 1,
+      "item": "pouet_89400",
+      "help": "A racing game made for the Game Boy Advance in 2021 and given away free. Steer, speed up and win the race.",
+      "genres": [
+        "Sports and racing"
+      ],
+      "how": {
+        "pad": [
+          [
+            "Steer",
+            "d-pad Left or Right"
+          ],
+          [
+            "Speed up",
+            "the right button (B)"
+          ],
+          [
+            "Brake",
+            "the bottom button (A)"
+          ]
+        ],
+        "keyboard": [
+          [
+            "Steer",
+            "Left or Right arrow"
+          ],
+          [
+            "Speed up",
+            "X"
+          ],
+          [
+            "Brake",
+            "Z"
+          ]
+        ],
+        "touch": [
+          [
+            "Steer",
+            "d-pad Left or Right"
+          ],
+          [
+            "Speed up",
+            "A"
+          ],
+          [
+            "Brake",
+            "B"
+          ]
+        ]
+      }
     }
   ]
 }
