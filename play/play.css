@@ -428,3 +428,12 @@ body.shell .cpad.side .cface .pk .small{display:none}
 body.shell .cpad.side .cface .pk .big{font-size:20px}
 body.shell.arcade .pk[data-n]{background-position:center;background-size:auto min(72%,64px)}
 body.shell.arcade .pk[data-n]::before{top:50%}
+/* Touch areas bigger than the drawings (Bryan, 20 Nov 2026: "the areas for touching are too small and you have to be
+   more exact during gameplay with where you touch, fix this right away"). Every key takes a touch 4 px past its
+   drawing all round; the d-pad takes its whole circle and 14% more. A tap in a gap goes to the nearest key (touchpad.js). */
+.over .pk,.zone .pk{position:relative}
+.over .pk::after,.zone .pk::after{content:'';position:absolute;inset:-4px;border-radius:inherit}   /* the rest of a gap goes to the nearest key, halfway */
+.over .pdpad::after,.zone .pdpad::after{content:'';position:absolute;inset:-14%;border-radius:50%;pointer-events:auto}
+body.shell .pdpad::after{inset:-14%;pointer-events:auto}
+/* Not on the pop-up keyboard: its keys sit close, and a wider touch there would press the neighbour. */
+.zone .pkeyboard .pk::after,.over .pkeyboard .pk::after{display:none}

@@ -80,3 +80,16 @@ test('the spacing audit, second round: compact face shapes, one row of small key
   assert.ok(css.includes('.cpad.side .cpills>*{position:absolute;pointer-events:auto}'));
   assert.ok(css.includes('@container (max-height:330px){') && css.includes('.pp .pk{min-height:50px}'), 'never under 50 px');
 });
+
+test('Bryan, 20 Nov 2026 ("the areas for touching are too small ... fix this right away"): keys take touches past their drawings, a tap in a gap goes to the nearest key, the d-pad forgives', () => {
+  const fs = require('fs'), path = require('path');
+  const css = fs.readFileSync(path.join(__dirname, '..', 'play.css'), 'utf8');
+  assert.ok(css.includes(".over .pk::after,.zone .pk::after{content:'';position:absolute;inset:-4px;border-radius:inherit}   /* the rest of a gap goes to the nearest key, halfway */"));
+  assert.ok(css.includes(".over .pdpad::after,.zone .pdpad::after{content:'';position:absolute;inset:-14%;border-radius:50%;pointer-events:auto}"));
+  const tp = fs.readFileSync(path.join(__dirname, '..', 'src', 'touchpad.js'), 'utf8');
+  assert.ok(tp.includes('const REACH = 36;') && tp.includes("let best = null, bd = t.closest('#screen') ? 16 : REACH;"));
+  assert.ok(tp.includes('0.16, 0.1, 22) : null;'), 'a small dead centre and wider diagonals on the d-pad');
+  const H = require('../src/hub.js');
+  assert.notEqual(H.steadyDir(0.2, 0, null, 0.16, 0.1, 22), null, 'just off the centre already presses');
+  assert.equal(H.SECTORS[H.steadyDir(1, 0.75, null, 0.16, 0.1, 22)], 'RD', 'a thumb between right and down gets the diagonal');
+});

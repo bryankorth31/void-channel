@@ -17,12 +17,12 @@
   // x, y: -1 to 1 from the centre (y down). prev: the sector held now, or null. Answers a sector (0 right, 1 down-right,
   // 2 down, 3 down-left, 4 left, 5 up-left, 6 up, 7 up-right) or null.
   const SECTORS = ['R', 'RD', 'D', 'LD', 'L', 'LU', 'U', 'RU'];
-  function steadyDir(x, y, prev, dead, release) {
+  function steadyDir(x, y, prev, dead, release, diag) {
     const r = Math.hypot(x, y);
     if (r < (prev == null ? dead : release)) return null;
     const a = Math.atan2(y, x) * 180 / Math.PI;
     const off = (i) => Math.abs(((a - i * 45) % 360 + 540) % 360 - 180);
-    const half = (i) => (i % 2 ? 15 : 30);
+    const half = (i) => (i % 2 ? (diag || 15) : 45 - (diag || 15));   // diagonals diag on each side, straights the rest
     if (prev != null && off(prev) <= half(prev) + 10) return prev;
     let best = 0;
     for (let i = 1; i < 8; i++) if (off(i) - half(i) < off(best) - half(best)) best = i;

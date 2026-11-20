@@ -19,6 +19,28 @@
   // Everything the touch layer holds can be let go at once (the audit, Bryan: "3 of the directional buttons locked down"
   // when Safari took the touch for a zoom and the finger's own lift never came). Each key and pad adds its own here.
   let letGo = [];
+
+  // A tap in a gap between keys goes to the nearest key within reach (Bryan, 20 Nov 2026: "the areas for touching are
+  // too small and you have to be more exact during gameplay with where you touch"). Taps on the picture, the bar, the
+  // menu and the pop-up keyboard are left alone.
+  const REACH = 36;
+  if (typeof document !== 'undefined') document.addEventListener('pointerdown', (e) => {
+    if (e.pointerType !== 'touch' || !e.isTrusted) return;
+    const t = e.target;
+    if (!t || !t.closest || t.closest('.pk, .pdpad, .menu, .bar, .cover, .give-card, .phones, .pkeyboard, button, a, input, label')) return;
+    // On the picture a tap brings the bar back, so there only a tap right beside a key (16 px) goes to the key.
+    let best = null, bd = t.closest('#screen') ? 16 : REACH;
+    for (const k of document.querySelectorAll('.over .pk, .over .pdpad, .zone .pk, .zone .pdpad')) {
+      if (!k.offsetParent || k.closest('.pkeyboard')) continue;
+      const r = k.getBoundingClientRect(); if (!r.width) continue;
+      const d = Math.hypot(Math.max(r.left - e.clientX, 0, e.clientX - r.right), Math.max(r.top - e.clientY, 0, e.clientY - r.bottom));
+      if (d < bd) { bd = d; best = k; }
+    }
+    if (!best) return;
+    e.preventDefault(); e.stopPropagation();
+    best.dispatchEvent(new PointerEvent('pointerdown', { bubbles: true, cancelable: true, pointerId: e.pointerId, pointerType: 'touch',
+      clientX: e.clientX, clientY: e.clientY, isPrimary: e.isPrimary, buttons: e.buttons, width: e.width, height: e.height }));
+  }, true);
   function releaseAll() { for (const f of letGo) { try { f(); } catch (e) { /* a key already gone */ } } }
 
   // Keep a finger's events on the button it started on (never throws, even for a pointer the browser does not track).
@@ -63,7 +85,7 @@
       // Steady directions, one rule with the stick (hub.js steadyDir): wide straight sectors, narrow diagonals, a held
       // direction kept until the thumb is clearly past its border, a dead centre.
       const H = root.PlayHub;
-      const s = H ? H.steadyDir(dx * 2, dy * 2, sector.has(e.pointerId) ? sector.get(e.pointerId) : null, 0.3, 0.22) : null;
+      const s = H ? H.steadyDir(dx * 2, dy * 2, sector.has(e.pointerId) ? sector.get(e.pointerId) : null, 0.16, 0.1, 22) : null;   // Bryan: touches must not need to be exact
       if (s == null) sector.delete(e.pointerId); else sector.set(e.pointerId, s);
       const d = s == null ? '' : H.SECTORS[s];
       if (d.includes('R')) now.add(codes.ArrowRight);
