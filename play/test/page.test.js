@@ -188,3 +188,8 @@ test('whole-site audit 2 and 3 (Bryan: "Yes, pass 2 and 3 to the lead"): the bro
   assert.ok(js.includes('if (spot && PlaySaves.fits(spot, build)) {') && js.includes('const ok = await runner.sramSet(sram);'));
   assert.ok(read(ROOT, 'src', 'core-worker.js').includes("else if (m.type === 'sram-set') {"));
 });
+
+test('the handheld shell: Select and Start are level (Bryan, 20 Nov 2026: "Straighten them"; slanted, Start ran into the screen\'s frame)', () => {
+  const css = read(ROOT, 'play.css');
+  assert.ok(css.includes('body.shell .cpad .pill{height:30px;') && !/body\.shell[^{]*\.pill[^{]*\{[^}]*rotate/.test(css));
+});

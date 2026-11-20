@@ -223,9 +223,9 @@ body.shell .pk small,body.shell .pk .w{color:#a8a3b8}
 body.shell .cface .pk{border-radius:50%;background:radial-gradient(ellipse at 35% 25%,rgba(255,255,255,.25) 0%,transparent 45%),linear-gradient(180deg,#a3315f 0%,#7d2149 55%,#5a1434 100%);
   border-color:#3a0c22;border-bottom-color:#22060f;color:#ffe9f2}
 body.shell .cface .pk[data-down]{background:linear-gradient(180deg,#7d2149,#5a1434)}
-/* Select and Start: slanted pills. */
-body.shell .cpad .pill{transform:rotate(-22deg);height:30px;min-width:64px;border-radius:15px;border-bottom-width:4px}
-body.shell .cpad .pill[data-down]{transform:rotate(-22deg) translateY(3px)}
+/* Select and Start: level pills (Bryan, 20 Nov 2026: "Straighten them"; slanted, Start ran into the screen's frame). */
+body.shell .cpad .pill{height:30px;min-width:64px;border-radius:15px;border-bottom-width:4px}
+body.shell .cpad .pill[data-down]{transform:translateY(3px)}
 /* The d-pad: a raised cross drawn inside the round touch area (the whole circle still takes a thumb, diagonals too). */
 body.shell .pdpad{background:transparent;border-color:transparent;box-shadow:none}
 body.shell .pdpad::before{content:'';position:absolute;inset:6%;pointer-events:none;
