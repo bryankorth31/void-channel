@@ -30,7 +30,7 @@ test('every machine on a card has a name and a box shape on the shelf', () => {
 test('the committed shelf list matches the cards (run node play/tools/shelf.js after adding a card)', () => {
   const committed = JSON.parse(fs.readFileSync(path.join(PLAY, 'shelf', 'index.json'), 'utf8'));
   const status = JSON.parse(fs.readFileSync(path.join(PLAY, 'shelf', 'status.json'), 'utf8'));
-  assert.deepEqual(committed.games, Tool.buildIndex(Tool.loadCards(), status).games);
+  assert.deepEqual(committed.games, Tool.buildIndex(Tool.loadCards().filter((c) => !c.adult), status).games);   // the 18+ shelf has its own list
 });
 
 test('a game the Archive says is gone leaves the shelf; the rest stay', () => {

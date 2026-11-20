@@ -36,6 +36,9 @@ function build(rows, taken, adult) {
     const kind = r.content && r.content.flag ? r.content.kind : null;
     if (kind === 'abusive' || (r.content && r.content.flag && kind !== 'adult')) continue;
     if (adult ? kind !== 'adult' : kind) continue;
+    // Finished games only (Bryan, 20 Nov 2026: "Yes, that rule"): no unfinished homebrew, demos, prototypes, test
+    // builds, hacks or picture cartridges. A doubtful game comes in only when Bryan kept it on his weed-down page.
+    if (!adult && !finished(r)) continue;
     if (!(r.boot ? r.boot.ok : r.ok) || !r.item || !r.file || !Cons.MACHINES[r.system] || items.has(r.item)) continue;
     const c = Cons.card({ system: r.system, title: r.title, item: r.item, source: r.source },
       { name: r.file, size: r.size || 0, start: r.start || '' }, { year: r.year, creator: r.publisher });
@@ -46,6 +49,19 @@ function build(rows, taken, adult) {
     ids.add(c.id); items.add(r.item); out.push(c);
   }
   return out.sort((a, b) => a.title.localeCompare(b.title));
+}
+
+// Pure (tested): whether a row is a finished game the shelf may take. Not: unfinished homebrew (WIP), demos,
+// prototypes, betas, test builds, picture cartridges, hacks (the assistant's hack screen); and, until Bryan says,
+// gambling and horror. Bryan's Keep on his weed-down page (r.weed === 'keep') lets a doubtful game in; Drop never.
+const UNFINISHED = /\b(wip|demo|proto(type)?|beta|test|kernel|sample)\b|point-of-purchase|greeting cart|^image\b|\(hack\)|\bhack\b/i;
+const HELD = /casino|poker|slots?\b|blackjack|black jack|roulette|gambl|halloween|chainsaw/i;   // gambling and horror: Bryan's call
+function finished(r) {
+  const name = (r.title || '') + ' ' + (r.item || '');
+  if (r.weed === 'drop') return false;
+  if (UNFINISHED.test(name) || HELD.test(name)) return false;
+  if (r.likelyHack && r.weed !== 'keep') return false;
+  return true;
 }
 
 // Pure (tested): bundles of PER cards, named <system>/<n>.
@@ -59,10 +75,15 @@ function bundles(system, cards) {
 // one file for every machine. A game there started (it is in rows, not in failed); DOS waits for Bryan's content screen,
 // and a likely hack waits for his weed-down. Pure (tested).
 const TOP = path.join(ROOT, 'audit', 'play-mode', 'consoles', 'console-rows.json');
-function topRows(system, list) {
-  return (list || []).filter((r) => r.system === system && r.system !== 'dos' && !r.likelyHack)
-    .map((r) => Object.assign({}, r, { publisher: r.maker, boot: { ok: true, from: 'top-150 start-up check' } }));
+function topRows(system, list, weed) {
+  const w = weed || { keep: [], drop: [] };
+  return (list || []).filter((r) => r.system === system && r.system !== 'dos')
+    .map((r) => Object.assign({}, r, { publisher: r.maker, boot: { ok: true, from: 'top-150 start-up check' },
+      weed: (w.drop || []).includes(r.item) ? 'drop' : (w.keep || []).includes(r.item) ? 'keep' : undefined }));
 }
+// Bryan's choices from his weed-down page (audit/play-mode/weed/<system>.html, "Copy my choices"), saved as
+// audit/play-mode/weed/choices-<system>.json: { system, keep: [items], drop: [items] }.
+const readWeed = (system) => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'audit', 'play-mode', 'weed', 'choices-' + system + '.json'), 'utf8')); } catch (e) { return null; } };
 const readTop = () => { try { return JSON.parse(fs.readFileSync(process.env.PLAY_TOP || TOP, 'utf8')).rows || []; } catch (e) { return []; } };
 
 function readRows(system) {
@@ -80,10 +101,10 @@ function main() {
   for (const system of [...new Set(collections().map((c) => c.system))]) {
     // A collection's own rows first (the Archive's curated libraries), then the top 150 for the same machine.
     const fromTop = collections().some((c) => c.system === system && c.from === 'top150');
-    const cards = build(readRows(system).concat(fromTop ? topRows(system, top) : []), taken);
+    const cards = build(readRows(system).concat(fromTop ? topRows(system, top, readWeed(system)) : []), taken);
     for (const c of cards) { taken.ids.push(c.id); taken.items.push(c.archive.item); }
     // The 18+ shelf's games for this machine, in their own bundles (adult-<machine>/<n>), never on the main shelf.
-    const adult = build(readRows(system).concat(fromTop ? topRows(system, top) : []), taken, true);
+    const adult = build(readRows(system).concat(fromTop ? topRows(system, top, readWeed(system)) : []), taken, true);
     for (const c of adult) { taken.ids.push(c.id); taken.items.push(c.archive.item); }
     for (const b of bundles(system, cards).concat(bundles('adult-' + system, adult))) {
       const f = path.join(LIB, b.name + '.json');

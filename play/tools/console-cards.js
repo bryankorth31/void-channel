@@ -66,7 +66,7 @@ function cleanTitle(t) {
     // The Atari 2600 library's names: "Atari 2600: Adventure" and "A-Team, The" read as a box would print them ("Halo 2600" is its own name).
     .replace(/^Atari 2600:\s*/i, '').replace(/^(.+), (The|A|An)$/i, '$2 $1')
     // Dump tags ("[!]", "[h3C]") and a machine's name at the end ("Punch Out!! NES") are not part of a game's name.
-    .replace(/\s*\[[^\]]*\]/g, '').replace(/\s+(NES|SNES|GBA|GBC|GB|Genesis|Mega Drive|Sega Genesis|Game Boy|Lynx)$/i, '').trim();
+    .replace(/\s*\[[^\]]*\]/g, '').replace(/\s+(NES|SNES|GBA|GBC)$/, '').trim();   // not "Genesis" or "Lynx": 3-D Genesis is a game's own name
   return TITLES[s.toLowerCase()] || s;
 }
 
