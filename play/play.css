@@ -431,7 +431,7 @@ body.shell.arcade .pk[data-n]::before{top:50%}
 /* Touch areas bigger than the drawings (Bryan, 20 Nov 2026: "the areas for touching are too small and you have to be
    more exact during gameplay with where you touch, fix this right away"). Every key takes a touch 4 px past its
    drawing all round; the d-pad takes its whole circle and 14% more. A tap in a gap goes to the nearest key (touchpad.js). */
-.over .pk,.zone .pk{position:relative}
+:where(.over .pk,.zone .pk){position:relative}   /* never over a key placed on its own (L, R: the audit) */
 .over .pk::after,.zone .pk::after{content:'';position:absolute;inset:-4px;border-radius:inherit}   /* the rest of a gap goes to the nearest key, halfway */
 .over .pdpad::after,.zone .pdpad::after{content:'';position:absolute;inset:-14%;border-radius:50%;pointer-events:auto}
 body.shell .pdpad::after{inset:-14%;pointer-events:auto}
