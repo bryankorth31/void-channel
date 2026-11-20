@@ -21,7 +21,9 @@ Each pack was boot-tested on this PC (node, sound off) with every one of its gam
 arcade items (100,000 plays or more): each booted, drew its attract screen, and with a coin and a start reached play or
 its own start screen; the results are in the PLAY audit folder.
 
-Build command, run in the MAME folder from Git Bash with emsdk active (EMSCRIPTEN pointing at emsdk/upstream/emscripten):
+Build command, run in the MAME folder from Git Bash with emsdk active (EMSCRIPTEN pointing at emsdk/upstream/emscripten),
+with EMCC_CFLAGS set as below:
+EMCC_CFLAGS=-sEXPORTED_FUNCTIONS=@<exports file>
 make -j14 BUILDDIR=build-os OPTIMIZE=s SUBTARGET=<name> SOURCES=<driver .cpp files> NO_USE_PORTAUDIO=1 NO_USE_MIDI=1 \
   PYTHON_EXECUTABLE=<python 3> CLANG_VERSION=24.0.0 CC=$EMSCRIPTEN/emcc CXX=$EMSCRIPTEN/em++ AR=$EMSCRIPTEN/emar \
   NOWERROR=1 REGENIE=1 PRECOMPILE=0 "ARCHOPTS_CXX=-include cstdlib -include cmath -include vector"
@@ -33,3 +35,24 @@ when copying it into play/engine/mame/. The .wasm is stored gzipped, because Clo
 and a 68000 engine is 26 to 31 MiB plain (about 6 MB gzipped); the arcade runner unpacks it in the browser:
 gzip -9 -n -c <name>.wasm > play/engine/mame/<name>.wasm.gz
 (-n leaves out the file name and time, so the same engine always gives the same bytes.)
+
+Battery memory (a game's own high scores and settings): MAME writes it only when it exits, and the web build never exits,
+so the page calls MAME's own running_machine::nvram_save() itself. MAME's web build does not export that function, so the
+exports file adds it to MAME's own export list (scripts/genie.lua, EXPORTED_FUNCTIONS), one name a line:
+_main
+_malloc
+__ZN15running_machine30emscripten_get_running_machineEv
+__ZN15running_machine17emscripten_get_uiEv
+__ZN15running_machine20emscripten_get_soundEv
+__ZN15mame_ui_manager12set_show_fpsEb
+__ZNK15mame_ui_manager8show_fpsEv
+__ZN13sound_manager4muteEbh
+__ZN15running_machine15emscripten_saveEPKc
+__ZN15running_machine15emscripten_loadEPKc
+__ZN15running_machine21emscripten_hard_resetEv
+__ZN15running_machine21emscripten_soft_resetEv
+__ZN15running_machine15emscripten_exitEv
+__ZN15running_machine10nvram_saveEv
+emcc adds EMCC_CFLAGS last to every command, so this list replaces MAME's at the link; MAME's code and build scripts are
+not changed. The page calls Module.__ZN15running_machine10nvram_saveEv(Module.__ZN15running_machine30emscripten_get_running_machineEv())
+and finds the files under /nvram/<machine>/ in Emscripten's file system; written there before start, MAME loads them.

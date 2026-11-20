@@ -74,6 +74,8 @@ button{font:inherit;color:inherit}
 .toast.show{opacity:1}
 .foot{padding:18px 16px 28px;border-top:1px solid var(--line);color:var(--dim);font-size:13px;max-width:960px;margin:0 auto}
 @media (max-width:700px){.tag{display:none}.tool{padding:6px 8px;font-size:13px}.mark{font-size:16px}.title{font-size:13px}}
+/* A phone is the gamepad, not the big screen: no Phones button where there is no room for it (audit, 20 Nov 2026). */
+@media (max-width:600px){#b-phones{display:none}}
 @media (prefers-reduced-motion:reduce){.toast{transition:none}}
 /* A narrow phone upright with a d-pad and many buttons (a Super Nintendo pad): the d-pad gets its own row above them. */
 @container (max-width:649.98px){

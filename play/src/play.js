@@ -66,6 +66,8 @@
   async function autosave() {
     if (!started || !runner || autoBusy) return;
     autoBusy = true;
+    // An arcade game keeps its own high-score table on this device (its battery memory; src/arcade-runner.js).
+    try { if (runner.keepScores) await runner.keepScores(); } catch (e) { /* best effort */ }
     try { const s = await runner.save(); if (s) { await PlaySaves.put(AUTO(card), s, build); autosave.at = Date.now(); } } catch (e) { /* best effort */ }
     autoBusy = false;
   }
@@ -217,6 +219,7 @@
     $('b-play').hidden = true; $('b-continue').hidden = true; status('Starting');
     deadline = setTimeout(() => fail('The game did not arrive from the Internet Archive in time. Check the connection and press Play to try again.'), DEADLINE_MS);
     runner = (isArcade() ? PlayArcade : PlayRunner).createRunner({ canvas: $('canvas'), mute: q.get('mute') === '1', on: {
+      note: (t) => toast(t),
       status, error: (t) => fail(t),
       ready: () => { started = true; },
       firstFrame: () => {

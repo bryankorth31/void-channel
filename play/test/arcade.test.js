@@ -38,6 +38,13 @@ for (const name of engines) {
     assert.ok(!fs.existsSync(path.join(DIR, name + '.wasm')), 'no plain .wasm beside it: the repo carries one copy');
   });
 
+  test(name + ': it exports MAME\'s battery-memory save, so the page can keep a game\'s high scores', () => {
+    const js = fs.readFileSync(path.join(DIR, name + '.js'), 'utf8');
+    assert.ok(js.includes('"__ZN15running_machine10nvram_saveEv"'), 'nvram_save exported');
+    assert.ok(js.includes('"__ZN15running_machine30emscripten_get_running_machineEv"'), 'the running machine exported');
+    assert.match(record, /__ZN15running_machine10nvram_saveEv/, 'the record names the export');
+  });
+
   test(name + ': the script opens with its notice: MAME, the licence, the exact source', () => {
     const first = fs.readFileSync(path.join(DIR, name + '.js'), 'utf8').split('\n')[0];
     assert.ok(first.startsWith('/* MAME '), first.slice(0, 60));

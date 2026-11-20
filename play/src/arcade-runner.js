@@ -16,11 +16,31 @@
   // is cached too. If an engine is asked for while a deploy is still spreading, that wrong answer sticks. Bump ENGINE_V
   // whenever an engine file changes under the same name, as brand files bump ?v= (20 Nov 2026: williams.wasm.gz was
   // answered with the home page for a day after the push that added it).
-  const ENGINE_V = '2';
+  const ENGINE_V = '3';
 
   function createRunner(opts) {
     const canvas = opts.canvas, on = opts.on || {};
     let started = false, paused = false, frames = 0;
+    const nv = { dir: null, key: null, stamp: null, back: null, after: 5 };
+    // The game's own clock: each turn of MAME's main loop is 1/60 s of game time.
+    const gameSeconds = () => (root.MainLoop && Number.isFinite(root.MainLoop.currentFrameNumber) ? root.MainLoop.currentFrameNumber / 60 : 0);
+    // Save the machine's battery memory and keep it on this device. Called by the page's autosave (Pause, Games, leaving,
+    // and every minute while playing).
+    async function keepScores() {
+      if (!started || !nv.dir || gameSeconds() < nv.after) return false;
+      const M = root.Module;
+      const save = M && M.__ZN15running_machine10nvram_saveEv, machine = M && M.__ZN15running_machine30emscripten_get_running_machineEv;
+      if (typeof save !== 'function' || typeof machine !== 'function') return false;
+      const fs = M.FS || root.FS, files = {};
+      try {
+        const m = machine(); if (!m) return false;
+        save(m);
+        const walk = (dir, rel) => { for (const n of fs.readdir(dir)) { if (n === '.' || n === '..') continue; const p = dir + '/' + n; if (fs.isDir(fs.stat(p).mode)) walk(p, rel + n + '/'); else files[rel + n] = fs.readFile(p); } };
+        walk(nv.dir, '');
+      } catch (e) { return false; }
+      if (!Object.keys(files).length || !root.PlaySaves) return false;
+      try { await root.PlaySaves.put(nv.key, files, { stamp: nv.stamp }); return true; } catch (e) { return false; }
+    }
 
     async function bytesOf(url, size) {
       try {
@@ -141,10 +161,20 @@
       // and waits there for ever; our page keeps no battery memory, so every boot is a first boot. One soft reset (the
       // operator's reset button) goes on to the game. It is timed on the game's own clock, not the page's, so a slow
       // computer still lets the memory test finish first; after the reset the script runs again and does nothing.
-      const reset = card.firstBoot && +card.firstBoot.resetAt;
+      // High scores (Bryan, 20 Nov 2026: step 1, kept on this device only): the machine's own battery memory, where an
+      // arcade board keeps its high-score table and settings, is saved by MAME into /nvram/<driver>/ and kept here between
+      // visits, stamped with the engine. With it back, the machine is no longer on its first boot, so firstBoot is skipped.
+      nv.dir = '/nvram/' + a.driver; nv.key = card.id + ':nvram'; nv.stamp = a.engine + '-' + ENGINE_V;
+      try {
+        const rec = root.PlaySaves && await root.PlaySaves.get(nv.key);
+        if (rec && rec.stamp === nv.stamp && rec.state && typeof rec.state === 'object') nv.back = rec.state;
+        else if (rec && on.note) on.note('The high scores here were kept by an older engine; this one starts fresh');
+      } catch (e) { /* no kept memory */ }
+      const firstBoot = nv.back ? null : card.firstBoot;
+      const reset = firstBoot && +firstBoot.resetAt;
       // A few machines wait on an operator screen instead (Slither, Victory): the card names the presses, in MAME's own
       // input names, at a time on the game's clock; each is held a third of a second.
-      const presses = ((card.firstBoot && card.firstBoot.press) || []).filter((p) => +p.at > 0 && /^[A-Za-z0-9 ]{1,40}$/.test(p.input || ''));
+      const presses = ((firstBoot && firstBoot.press) || []).filter((p) => +p.at > 0 && /^[A-Za-z0-9 ]{1,40}$/.test(p.input || ''));
       const lua = [
         reset > 0 ? ['local AT = ' + reset,
           'if manager.machine.time:as_double() < AT then',
@@ -165,11 +195,20 @@
           'end'].join('\n') : '',
       ].filter(Boolean).join('\n') + '\n';
       const hasLua = reset > 0 || presses.length > 0;
+      // Not saved until the first boot's last step is well behind it: memory saved before the reset is the factory state,
+      // and the next visit (which skips firstBoot) would stay stuck on it (the assistant session's warning).
+      nv.after = Math.max(0, reset || 0, ...presses.map((p) => +p.at)) + 5;
       if (hasLua) args.push('-autoboot_script', '/lua/firstboot.lua');
       root.Module = {
         canvas, arguments: args,
         preRun: [() => { const fs = root.Module.FS || root.FS; fs.mkdir('/roms'); for (const z of zips) fs.writeFile('/roms/' + z.name, z.bytes);
-          if (hasLua) { fs.mkdir('/lua'); fs.writeFile('/lua/firstboot.lua', lua); } }],
+          if (hasLua) { fs.mkdir('/lua'); fs.writeFile('/lua/firstboot.lua', lua); }
+          for (const [rel, bytes] of Object.entries(nv.back || {})) {
+            if (!/^[A-Za-z0-9._-]+(\/[A-Za-z0-9._-]+)*$/.test(rel) || rel.split('/').includes('..') || !(bytes instanceof Uint8Array)) continue;
+            const full = nv.dir + '/' + rel;
+            fs.mkdirTree(full.slice(0, full.lastIndexOf('/')));
+            fs.writeFile(full, bytes);
+          } }],
         print: (t) => console.log('[mame]', t),
         printErr: (t) => console.warn('[mame]', t),
         // One plain sentence; the engine's own words go to the console for whoever looks.
@@ -180,14 +219,21 @@
       // A big engine is kept gzipped (Cloudflare serves no file over 25 MiB, and a 68000 engine is 26 to 31 MiB plain).
       // The page unpacks it and hands it to Emscripten as Module.wasmBinary. With no .wasm.gz the engine fetches its
       // own plain .wasm, as before. The magic-byte check covers a server that already unpacked it on the way.
-      try {
+      // One quiet second try: a download broken partway is the usual cause of a failed unpack (audit: Joust live, once).
+      const unpacked = async () => {
         const res = await fetch(engine.replace(/\.js$/, '.wasm.gz') + '?v=' + ENGINE_V);
-        if (res.ok) {
-          let buf = new Uint8Array(await res.arrayBuffer());
-          if (buf[0] === 0x1f && buf[1] === 0x8b) {
-            if (!root.DecompressionStream) throw new Error('no DecompressionStream');
-            buf = new Uint8Array(await new Response(new Blob([buf]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer());
-          }
+        if (!res.ok) return null;
+        let b = new Uint8Array(await res.arrayBuffer());
+        if (b[0] === 0x1f && b[1] === 0x8b) {
+          if (!root.DecompressionStream) throw new Error('no DecompressionStream');
+          b = new Uint8Array(await new Response(new Blob([b]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer());
+        }
+        return b;
+      };
+      try {
+        let buf;
+        try { buf = await unpacked(); } catch (e) { if (!root.DecompressionStream) throw e; console.warn('[mame] engine, second try:', e); buf = await unpacked(); }
+        if (buf) {
           // Only real wasm is used (it starts "\0asm"): a missing file can come back as the site's own page with a 200.
           // MAME 0.289's build skips wasmBinary and always fetches its plain .wasm, but it asks instantiateWasm first,
           // so the unpacked engine is handed over there.
@@ -227,7 +273,7 @@
     }
 
     return {
-      start, key,
+      start, key, keepScores,
       stop: () => { try { if (root.Module && root.Module.pauseMainLoop) root.Module.pauseMainLoop(); } catch (e) { /* not running */ } },
       prepareSound: () => {},
       pad: () => {}, mouse: () => {}, rewind: () => {},
