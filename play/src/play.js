@@ -179,11 +179,23 @@
       aspect: (a) => { if (Math.abs(a - aspect) > 0.01) { aspect = a; place(); } },
     } });
     runner.prepareSound();                     // in the Play tap itself, so iPhone and iPad allow the sound
-    hub = PlayHub.createHub({ send, onAction: action, onRelease: (name) => { if (name === 'rewind' && runner) runner.rewind(false); } });
+    hub = PlayHub.createHub({ send, onAction: action, onSeat: seatNote,
+      onRelease: (name) => { if (name === 'rewind' && runner) runner.rewind(false); } });
     hub.setCard(card, PlayCards.gamepadMap(card));
     runner.start(card, base, build.commit.slice(0, 12));
     autoTimer = setInterval(() => { if (started && !paused && !document.hidden) autosave(); }, AUTO_EVERY_MS);
     place.sig = ''; place();
+  }
+
+  // Couch mode (plan T18): say when a seat changes hands, and pause when a playing pad drops (a flat battery), the way
+  // a console does, so nobody loses a life while they find the cable. The seat stays held for that pad.
+  function seatNote(seat, what) {
+    const two = card && (card.players || 1) > 1;
+    if (what === 'away') {
+      if (started && !paused) setPaused(true);
+      toast(two ? 'Player ' + seat + '’s controller dropped. Its place is kept' : 'Controller dropped. Paused');
+    } else if (what === 'back') toast(two ? 'Player ' + seat + ' is back' : 'Controller back');
+    else if (two && seat > 1) toast('Player ' + seat + ' joined');
   }
 
   // Ends the game for good: the engine stops, nothing it sent late reaches the page, the menu closes.
@@ -248,6 +260,10 @@
     if (PlayCards.isPad(c)) {
       const li = document.createElement('li'); const b = document.createElement('b'); b.textContent = 'Rewind';
       li.append(b, ': hold the left trigger (LT) on a gamepad, R on the keyboard, ◀◀ on screen (up to 20 seconds back)'); ul.appendChild(li);
+    }
+    if (PlayCards.isPad(c) && (c.players || 1) > 1) {
+      const li = document.createElement('li'); const b = document.createElement('b'); b.textContent = 'Two players';
+      li.append(b, ': a second gamepad plays as player 2, and each pad keeps its player all game'); ul.appendChild(li);
     }
     const esc = PlayCards.isPad(c) ? ', Esc on the keyboard' : '';
     $('pause-how').textContent = 'Pause: Back and Start together on a gamepad' + esc + ', or the Pause button.';

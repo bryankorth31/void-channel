@@ -33,9 +33,40 @@
     // shift (plan T23): a card may name a button that, while held, switches the pad to a second set
     // (card.gamepadShift = { on: 'LT', map: { Up: 'Digit4', ... } }), so a pad reaches more keys than it has buttons.
     let shift = null;
+    let players = 1;
     function setCard(card, full) {
       map = Object.assign({ Start: '@menu' }, full || (card && card.gamepad) || {});
       shift = (card && card.gamepadShift && card.gamepadShift.on && card.gamepadShift.map) ? card.gamepadShift : null;
+      players = Math.max(1, Math.min(4, (card && card.players) || 1));
+    }
+
+    // Couch mode (plan T18): each pad keeps its seat. A pad takes the lowest free seat the first time the browser shows
+    // it, and keeps it while it is connected, whatever other pads do. A pad that drops (a flat battery) leaves its seat
+    // held for it; the same kind of pad coming back takes that seat again, even at a new index. When every seat is
+    // taken, an extra pad plays as player 1 alongside (so any pad can play a one-player game).
+    const seatOf = new Map();                  // gamepad index -> seat (1 to 4)
+    const away = new Map();                    // seat -> the id of the pad that dropped from it
+    const onSeat = opts.onSeat || (() => {});  // onSeat(seat, 'joined' | 'back' | 'away')
+    const padId = new Map();                   // gamepad index -> its id, to know the same pad when it comes back
+    function takeSeat(pad) {
+      const used = new Set(seatOf.values());
+      for (const [s, id] of [...away].sort((a, b) => a[0] - b[0])) {
+        if (id === pad.id && !used.has(s)) { away.delete(s); seatOf.set(pad.index, s); onSeat(s, 'back'); return s; }
+      }
+      for (let s = 1; s <= players; s++) {
+        if (!used.has(s) && !away.has(s)) { seatOf.set(pad.index, s); onSeat(s, 'joined'); return s; }
+      }
+      // No free seat, but one held for a pad that dropped: a different pad picked up in its place takes it.
+      const held = [...away.keys()].filter((s) => s <= players && !used.has(s)).sort((a, b) => a - b)[0];
+      if (held) { away.delete(held); seatOf.set(pad.index, held); onSeat(held, 'joined'); return held; }
+      seatOf.set(pad.index, 1);
+      return 1;
+    }
+    function leaveSeat(index, id) {
+      const s = seatOf.get(index);
+      seatOf.delete(index);
+      // Only a pad that had a seat of its own leaves it held; an extra player 1 just goes.
+      if (s && ![...seatOf.values()].includes(s)) { away.set(s, id || ''); onSeat(s, 'away'); }
     }
 
     // What one gamepad holds right now, as key codes, from its buttons and its left stick.
@@ -68,11 +99,13 @@
     // Called once a frame with navigator.getGamepads(); only "standard" pads are read.
     function pollPads(pads) {
       const seen = new Set();
-      const order = (pads || []).filter((p) => p && p.mapping === 'standard').map((p) => p.index).sort((a, b) => a - b);
       for (const pad of pads || []) {
         if (!pad || pad.mapping !== 'standard') continue;
         seen.add(pad.index);
-        const now = padCodes(pad, Math.min(4, order.indexOf(pad.index) + 1)), before = padHeld.get(pad.index) || new Set();
+        if (padId.has(pad.index) && padId.get(pad.index) !== pad.id) { leaveSeat(pad.index, padId.get(pad.index)); }
+        padId.set(pad.index, pad.id);
+        const s = seatOf.get(pad.index) || takeSeat(pad);
+        const now = padCodes(pad, s), before = padHeld.get(pad.index) || new Set();
         const actNow = new Set([...now].filter((c) => c[0] === '@')), actBefore = padActions.get(pad.index) || new Set();
         for (const a of actNow) if (!actBefore.has(a)) hold('pad' + pad.index, a, true);
         for (const a of actBefore) if (!actNow.has(a)) hold('pad' + pad.index, a, false);
@@ -83,6 +116,7 @@
         padHeld.set(pad.index, keysNow);
       }
       for (const [idx, codes] of padHeld) if (!seen.has(idx)) { for (const c of codes) hold('pad' + idx, c, false); padHeld.delete(idx); }
+      for (const idx of [...seatOf.keys()]) if (!seen.has(idx)) { leaveSeat(idx, padId.get(idx)); padId.delete(idx); padActions.delete(idx); }
     }
 
     // Let go of everything (the page lost focus, the game paused): no key is left stuck down.
