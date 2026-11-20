@@ -46,6 +46,7 @@ function build(rows, taken, adult) {
     const c = Cons.card({ system: r.system, title: r.title, item: r.item, source: r.source },
       { name: r.file, size: r.size || 0, start: r.start || '' }, { year: r.year, creator: r.publisher });
     if (!c.archive.size) delete c.archive.size;
+    if (c.year > (LAST[r.system] || 9999)) c.year = null;   // an upload's date, not the game's
     if (ids.has(c.id) || Cards.check(c).length) continue;
     c.added = 'Whole collections (Bryan, 20 Nov 2026: "Pull those shelves in"); started in the PLAY start-up check';
     if (adult) { c.adult = true; c.adultWhy = r.content.reason || 'adult'; }
@@ -60,13 +61,24 @@ function build(rows, taken, adult) {
 const UNFINISHED = /\b(wip|demo|proto(type)?|beta|test|kernel|sample)\b|point-of-purchase|greeting cart|^image\b|\(hack\)|\bhack\b/i;
 const HELD = /casino|poker|slots?\b|blackjack|black jack|roulette|gambl|halloween|chainsaw/i;   // gambling and horror: Bryan's call
 const READ_FIRST = /beat 'em|beat em|philly flasher|knight on the town|x-man|custer|bachelor|harem|porky|cathouse|gigolo|jungle fever|burning desire|lady in wading/i;
+// Each machine's last commercial year: a later date is a homebrew, a hack or an upload date (the audit).
+const LAST = { a2600: 1992, nes: 1995, snes: 1999, gameboy: 2003, gbcolor: 2003, gba: 2008, lynx: 1995, genesis: 1998, sms: 1996, gamegear: 1997 };
+const FAN = /\b(polish|translat\w*|unlocked|pirate|bootleg|among us|fan made|fanmade)\b/i;
 function finished(r) {
-  const name = (r.title || '') + ' ' + (r.item || '');
+  // The title, the Archive item and the file name, with _ - . read as spaces (the audit: "a-team_prototype" slipped by).
+  const name = [r.title, r.item, r.file].join(' ').replace(/[_.\-]+/g, ' ');
   if (r.weed === 'drop') return false;
-  if (UNFINISHED.test(name) || HELD.test(name)) return false;
-  if (r.likelyHack && r.weed !== 'keep') return false;
+  if (r.weed === 'keep') return true;
+  if (UNFINISHED.test(name) || HELD.test(name) || FAN.test(name)) return false;
+  if (r.likelyHack) return false;
+  // Dated after its machine's life: doubtful, unless Wikidata knows it as a game on that machine (then the date is the
+  // upload's, and the card leaves the year empty rather than put the game in the wrong decade).
+  // Wikidata's match is by name ("dk2" matched Donkey Kong 2), so a late date also needs a real dump's region tag.
+  const year = r.year || +(/\b(19[789]\d|20[0-3]\d)\b/.exec(name) || [])[1] || 0;   // or the year in its name
+  if (year > (LAST[r.system] || 9999) && !(r.wikidata === true && REGION.test(String(r.file) + ' ' + String(r.title)))) return false;
   return true;
 }
+const REGION = /\((u|usa|e|eu|europe|j|japan|w|world|ue|ju|jue|us)\)|\(\s*u\s*\)|\[!\]|\(usa, europe\)/i;
 
 // Pure (tested): bundles of PER cards, named <system>/<n>.
 function bundles(system, cards) {

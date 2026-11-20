@@ -109,3 +109,13 @@ test('the audit on the 18+ shelf: the finished-games rule holds there too, and t
     adult({ item: 'w1', title: 'Grown Up Thing (WIP)' }), adult({ item: 'ok1', title: 'Grown Up Game' })], { ids: [], items: [] }, true);
   assert.deepEqual(out.map((c) => c.title), ['Grown Up Game']);
 });
+
+test('the audit on finished games: item and file names count, and a date after the machine\'s life is doubtful', () => {
+  const one = (o) => Lib.build([row(Object.assign({ system: 'a2600', title: 'Atari 2600: A-Team, The', item: 'atari_2600_a-team_prototype_1984', file: 'x.bin', size: 4096, year: 1984 }, o))], { ids: [], items: [] });
+  assert.equal(one().length, 0, 'prototype in the item name');
+  assert.equal(one({ item: 'atari_2600_a-team_1984', year: 2014 }).length, 0, 'dated after the 2600');
+  assert.equal(one({ item: 'atari_2600_a-team_1984', year: 1984 }).length, 1);
+  const snes = Lib.build([row({ system: 'snes', title: 'Animaniacs (U) [!]', item: 'animaniacs-u_202405', file: 'Animaniacs (U) [!].smc', size: 1048576, year: 2024, wikidata: true })], { ids: [], items: [] });
+  assert.equal(snes.length, 1, 'a real game with an upload date stays'); assert.equal(snes[0].year, null, 'and loses the wrong year');
+  assert.equal(Lib.build([row({ system: 'gbcolor', title: 'Pokemon Crystal Version', item: 'pokemon-crystal-polish-version', file: 'p.gbc', size: 2097152, year: 2001 })], { ids: [], items: [] }).length, 0, 'a translation');
+});
