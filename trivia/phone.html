@@ -31,6 +31,12 @@ input{width:100%;font:600 22px/1 system-ui,sans-serif;background:var(--panel);co
 .q{font-size:16px;color:var(--dim);margin:0 0 10px}
 .num{color:var(--gold);font-weight:600;font-size:15px;margin:0 0 6px}
 .answers{flex:1;display:grid;grid-template-rows:repeat(4,1fr);gap:10px;min-height:340px}
+.yearpick{display:flex;flex-direction:column;align-items:stretch;gap:14px}
+.yearbig{font-family:'Unbounded',sans-serif;font-size:64px;text-align:center;color:var(--gold);line-height:1}
+.yearpick input[type=range]{width:100%;height:44px;accent-color:var(--gold)}
+.nudge{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.nudge .plain{margin:0;font-size:18px}
+.yearpick p{margin:0;text-align:center}
 .a{display:flex;align-items:center;gap:12px;width:100%;text-align:left;font:600 19px/1.2 system-ui,sans-serif;color:var(--fg);background:var(--panel);border:3px solid var(--c);border-radius:16px;padding:10px 14px;cursor:pointer}
 .a0{--c:var(--pink)} .a1{--c:var(--blue)} .a2{--c:var(--gold)} .a3{--c:var(--green)}
 .a .s{color:var(--c);font-size:30px;line-height:1;width:34px;text-align:center}

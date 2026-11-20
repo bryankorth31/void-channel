@@ -1,7 +1,7 @@
 {
- "builtAt": "2026-11-20T18:01:58.682Z",
+ "builtAt": "2026-11-20T19:38:26.359Z",
  "fameLine": 100,
- "total": 5077,
+ "total": 5228,
  "rounds": {
   "first-aired": 438,
   "network": 252,
@@ -12,16 +12,25 @@
   "listen": 345,
   "film-year": 103,
   "film-clip": 104,
-  "game-year": 272,
-  "game-maker": 209
+  "game-maker": 276,
+  "game-year": 356
  },
  "files": [
   {
    "file": "games-1.json",
    "category": "games",
-   "count": 481,
-   "family": 481,
-   "kids": 37,
+   "count": 500,
+   "family": 500,
+   "kids": 28,
+   "media": 0,
+   "mediaFamily": 0
+  },
+  {
+   "file": "games-2.json",
+   "category": "games",
+   "count": 132,
+   "family": 132,
+   "kids": 9,
    "media": 0,
    "mediaFamily": 0
   },
@@ -116,5 +125,9 @@
    "mediaFamily": 52
   }
  ],
+ "dates": {
+  "file": "dates.json",
+  "count": 897
+ },
  "credit": "Facts from TVmaze (CC BY-SA), TMDB, Wikidata (CC0) and the Internet Archive. This product uses the TMDB API but is not endorsed or certified by TMDB."
 }

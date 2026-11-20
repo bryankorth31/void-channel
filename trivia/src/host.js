@@ -69,10 +69,18 @@
       categories: [...document.querySelectorAll('input[name="cat"]:checked')].map((e) => e.value),
       count: +val('count') || 20,
       secs: +(val('secs') || 0),
+      hl: !!document.querySelector('input[name="hl"]:checked'),
+      yearGuess: !!document.querySelector('input[name="yg"]:checked'),
       clips: !!document.querySelector('input[name="clips"]:checked'),
       publicNight: val('where') === 'public',
       publicClips: val('where') === 'public' && !!document.querySelector('input[name="pubclips"]:checked'),
     };
+  }
+
+  let datesCache = null;
+  async function datesFile() {
+    if (!datesCache) { const r = await fetch('bank/' + index.dates.file); if (!r.ok) throw new Error(r.status); datesCache = await r.json(); }
+    return datesCache;
   }
 
   async function filesFor(categories) {
@@ -158,7 +166,7 @@
   // What a phone should show right now (for a phone that joins or comes back mid-game).
   function stateFor(p) {
     if (!game || phase === 'lobby') return { type: 't-wait', text: 'You are in. The game starts soon.' };
-    if (phase === 'ask') return questionMsg(p.pick);
+    if (phase === 'ask') return questionMsg(game.qs[game.at].round === 'year-guess' ? p.guess : p.pick);
     if (phase === 'done') return endMsg(p);
     return { type: 't-wait', text: 'Next question coming up.' };
   }
@@ -173,22 +181,33 @@
       return;
     }
     if (phase !== 'ask' || !game) return;
-    const pick = G.answerOf(msg, game.at);
-    if (pick === null || p.pick !== null) return;
-    p.pick = pick;
+    const q = game.qs[game.at];
+    if (answered(p, q)) return;
+    if (q.round === 'year-guess') {
+      const year = G.guessOf(msg, game.at, q);
+      if (year === null) return;
+      p.guess = year;
+      send(seat, { type: 't-got', n: game.at, year });
+    } else {
+      const pick = G.answerOf(msg, game.at);
+      if (pick === null || pick >= q.choices.length) return;
+      p.pick = pick;
+      send(seat, { type: 't-got', n: game.at, pick });
+    }
     p.msLeft = game.opts.secs ? Math.max(0, (paused ? leftMs : endsAt - performance.now())) : 0;
-    send(seat, { type: 't-got', n: game.at, pick });
     showAnswered();
   }
 
   function present() { return [...room.players.values()].filter((p) => !p.gone); }
+  const answered = (p, q) => (q && q.round === 'year-guess' ? p.guess != null : p.pick !== null);
 
   function showAnswered() {
     if (!game || !game.opts.phones) return;
-    const here = present(), n = here.filter((p) => p.pick !== null).length;
+    const q = game.qs[game.at];
+    const here = present(), n = here.filter((p) => answered(p, q)).length;
     $('where').textContent = n + ' of ' + here.length + ' answered';
     // Everyone has answered: no need to wait out the clock.
-    if (phase === 'ask' && here.length && n === here.length && !paused) setTimeout(() => { if (phase === 'ask' && present().every((p) => p.pick !== null)) reveal(); }, 700);
+    if (phase === 'ask' && here.length && n === here.length && !paused) setTimeout(() => { if (phase === 'ask' && present().every((p) => answered(p, q))) reveal(); }, 700);
   }
 
   function showWhere() {
@@ -239,7 +258,18 @@
     let all;
     try { all = await filesFor(o.categories); }
     catch (e) { $('avail').textContent = 'The questions did not load. Check the connection and press Start again.'; $('start').disabled = false; return; }
-    const qs = G.pickGame(all, { ...o, seen: readSeen() });
+    // Our own formats (plan G3, G4): a Higher or Lower run and year guesses, built from the dates every question proved.
+    let run = [], years = [];
+    if ((o.hl || o.yearGuess) && index.dates) {
+      try {
+        const d = await datesFile();
+        const taken = new Set();
+        if (o.hl && o.count >= 10) run = G.hlRun(d, o, 4, Math.random, taken);
+        if (o.yearGuess) years = G.yearQs(d, o, o.count >= 20 ? 2 : 1, Math.random, taken);
+      } catch (e) { run = []; years = []; }
+    }
+    const regular = G.pickGame(all, { ...o, count: o.count - run.length - years.length, seen: readSeen() });
+    const qs = G.compose(regular, run, years);
     if (!qs.length) { showAvailable(); return; }
     game = { qs, at: -1, opts: o };
     writeSeen(qs.map((q) => q.id));
@@ -310,6 +340,7 @@
   // The question as a phone gets it: the answers, and the question too when it fits in the relay's 1 KB.
   function questionMsg(pick) {
     const q = game.qs[game.at];
+    if (q.round === 'year-guess') return { type: 't-q', n: game.at, of: game.qs.length, q: q.q, kind: 'year', min: q.min, max: q.max, secs: game.opts.secs, guess: pick == null ? null : pick };
     const m = { type: 't-q', n: game.at, of: game.qs.length, q: q.q, choices: q.choices, secs: game.opts.secs, pick: pick == null ? null : pick };
     if (JSON.stringify(m).length > 900) delete m.q;
     if (JSON.stringify(m).length > 900) m.choices = q.choices.map((c) => c.slice(0, 80));
@@ -324,6 +355,10 @@
     $('q').textContent = q.q;
     const ol = $('answers');
     ol.textContent = '';
+    ol.classList.toggle('two', q.choices.length === 2);
+    ol.hidden = q.round === 'year-guess';
+    drawRun(q, false);
+    drawYear(q, false);
     q.choices.forEach((c, i) => {
       const li = document.createElement('li');
       li.className = 'a a' + i;
@@ -342,13 +377,45 @@
     $('hint').textContent = (game.opts.phones ? 'Answer on your phone. ' : '') + (secs ? 'Enter shows the answer early. P pauses.' : 'Enter shows the answer.');
     stopClock();
     if (game.opts.phones) {
-      for (const p of room.players.values()) { p.pick = null; p.msLeft = 0; }
+      for (const p of room.players.values()) { p.pick = null; p.guess = null; p.msLeft = 0; }
       send('all', questionMsg(null));
     }
     showWhere();
     if (q.media) showMedia(q.media);
     else if (secs) startClock();
     else $('fill').style.width = '0%';
+  }
+
+  // Higher or Lower: the last title with its date, then the next title, its date shown when the answer is.
+  function shownDate(d, other) {
+    const y = String(d.date).slice(0, 4);
+    if (String(d.date).length === 10 && other && String(other.date).slice(0, 4) === y) return new Date(d.date + 'T12:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    return y;
+  }
+  function drawRun(q, open) {
+    const bar = $('run');
+    bar.hidden = q.round !== 'higher-lower';
+    if (bar.hidden) return;
+    const { prev, next, step, of } = q.hl;
+    bar.textContent = '';
+    const card = (d, show, cls) => {
+      const box = document.createElement('div'); box.className = 'runcard ' + cls;
+      const t = document.createElement('span'); t.className = 'rt'; t.textContent = d.title;
+      const y = document.createElement('b'); y.className = 'ry'; y.textContent = show ? shownDate(d, d === prev ? next : prev) : '?';
+      box.append(t, y);
+      return box;
+    };
+    const arrow = document.createElement('span'); arrow.className = 'rarrow'; arrow.textContent = 'then';
+    const count = document.createElement('small'); count.className = 'rstep'; count.textContent = 'Step ' + step + ' of ' + of;
+    bar.append(card(prev, true, 'was'), arrow, card(next, open, 'now'), count);
+  }
+  // Closest Without Going Over: a big year box; its range before, the year after.
+  function drawYear(q, open, line) {
+    const box = $('yearbox');
+    box.hidden = q.round !== 'year-guess';
+    if (box.hidden) return;
+    $('yearval').textContent = open ? String(q.year) : '?';
+    $('yearnote').textContent = open ? (line || '') : 'Guess the year, from ' + q.min + ' to ' + q.max + '. The closest guess that is not past it wins.';
   }
 
   function tick() {
@@ -372,6 +439,7 @@
     const q = game.qs[game.at];
     const lis = [...$('answers').children];
     lis.forEach((li, i) => li.classList.add(i === q.answer ? 'right' : 'wrong'));
+    drawRun(q, true);
     // A sound question shows its picture with the answer; a clip stops where it is.
     clockWaiting = false;
     if (clip) { $('media').classList.remove('listen'); $('ear').hidden = true; if (clip.kind !== 'still') { try { vid.pause(); } catch (e) { /* fine */ } } }
@@ -382,7 +450,9 @@
     const b = document.createElement('b'); b.textContent = 'Source: ' + s.site;
     const a = document.createElement('a'); a.href = s.url; a.target = '_blank'; a.rel = 'noopener'; a.textContent = s.url.replace(/^https:\/\/(www\.)?/, ''); a.title = 'Open the source';
     src.append(b, ', ' + s.fact + '. ', a);
+    if (q.source2) src.append(' Then: ' + q.source2.site + ', ' + q.source2.fact + '.');
     src.hidden = false;
+    if (q.round === 'year-guess') return revealYear(q);
     if (game.opts.phones) {
       const tally = [0, 0, 0, 0];
       for (const p of room.players.values()) if (p.pick !== null) tally[p.pick]++;
@@ -396,6 +466,28 @@
       }
       $('where').textContent = '';
     }
+    $('hint').textContent = game.at + 1 < game.qs.length ? (game.opts.phones ? 'Enter for the scores.' : 'Enter for the next question.') : (game.opts.phones ? 'Enter for the final scores.' : 'Enter to finish.');
+  }
+
+  // Closest Without Going Over, scored and told: the year, who was closest, and each phone its own result.
+  function revealYear(q) {
+    let line = '';
+    if (game.opts.phones) {
+      const guesses = new Map([...room.players.values()].map((p) => [p.seat, p.guess == null ? null : p.guess]));
+      const gained = G.yearPoints(guesses, q.year);
+      for (const p of room.players.values()) p.score += gained.get(p.seat) || 0;
+      const winners = [...room.players.values()].filter((p) => (gained.get(p.seat) || 0) > 0);
+      line = winners.length
+        ? (winners[0].guess === q.year ? 'Spot on: ' : 'Closest without going over: ') + winners.slice(0, 4).map((p) => nameOf(p) + ' (' + p.guess + ')').join(', ') + (winners.length > 4 ? ' and ' + (winners.length - 4) + ' more' : '')
+        : 'Nobody got under it without going over.';
+      const ranks = G.standings([...room.players.values()]);
+      for (const r of ranks) {
+        const p = room.players.get(r.seat);
+        send(r.seat, { type: 't-res', n: game.at, kind: 'year', guess: p.guess == null ? null : p.guess, year: q.year, right: (gained.get(r.seat) || 0) > 0, points: gained.get(r.seat) || 0, score: p.score, place: r.place, of: ranks.length });
+      }
+      $('where').textContent = '';
+    }
+    drawYear(q, true, line);
     $('hint').textContent = game.at + 1 < game.qs.length ? (game.opts.phones ? 'Enter for the scores.' : 'Enter for the next question.') : (game.opts.phones ? 'Enter for the final scores.' : 'Enter to finish.');
   }
 

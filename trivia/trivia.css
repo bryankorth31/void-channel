@@ -75,6 +75,21 @@ main{flex:1;display:flex;flex-direction:column;width:100%;max-width:1600px;margi
 @keyframes ear{from{opacity:.45;transform:scale(.96)}to{opacity:1;transform:scale(1.04)}}
 .mnote{position:absolute;left:0;right:0;bottom:0;margin:0;padding:8px 12px;background:rgba(7,8,12,.8);color:var(--gold);font-size:clamp(13px,1.2vw,18px)}
 .mnote:empty{display:none}
+/* Higher or Lower: the last title and the next, side by side */
+.run{display:flex;align-items:stretch;gap:clamp(8px,1.4vw,22px);flex-wrap:wrap}
+.runcard{flex:1;min-width:0;display:flex;flex-direction:column;justify-content:center;gap:4px;padding:clamp(8px,1.2vw,18px) clamp(12px,1.6vw,26px);border-radius:14px;background:var(--panel);border:2px solid var(--line)}
+.runcard.was{border-color:var(--dim)}
+.runcard.now{border-color:var(--gold)}
+.rt{font-weight:600;font-size:clamp(16px,2vw,34px);line-height:1.15}
+.ry{font-family:'Unbounded',sans-serif;font-size:clamp(20px,2.8vw,52px);color:var(--gold)}
+.runcard.was .ry{color:var(--fg)}
+.rarrow{align-self:center;color:var(--dim);font-size:clamp(14px,1.4vw,22px)}
+.rstep{flex-basis:100%;color:var(--dim);font-size:clamp(12px,1.1vw,16px)}
+.answers.two{grid-template-columns:1fr 1fr}
+/* Closest without going over: one big year */
+.yearbox{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:10px}
+.yearbox b{font-family:'Unbounded',sans-serif;font-size:clamp(64px,12vw,220px);line-height:1;color:var(--gold)}
+.yearbox p{margin:0;color:var(--fg);font-size:clamp(15px,1.6vw,28px);max-width:900px}
 .tally{margin-left:auto;font-family:'Unbounded',sans-serif;font-weight:700;color:var(--c);font-size:clamp(16px,1.8vw,32px)}
 .where{color:var(--gold);font-weight:600;text-align:center}
 
@@ -129,6 +144,7 @@ body.finished .foot .give{display:none}
   .foot{padding:6px 16px 8px}
   .credit{display:none}
 }
+@media (max-height:620px){ .q{font-size:clamp(20px,3vw,36px)} .a{min-height:40px} .runcard{padding:6px 12px} .ry{font-size:26px} .rt{font-size:18px} .yearbox b{font-size:84px} .stage{gap:8px} }
 @media (max-height:620px){ .media{max-height:44vh} .source{font-size:13px} main{padding-bottom:8px} .stage.with-media .a{min-height:34px;padding:4px 12px} .stage.with-media .q{font-size:clamp(20px,3vw,34px)} }
 @media (max-height:620px){ .qr{width:min(56vh,34vw)} .ranks li{padding:4px 12px;font-size:clamp(14px,1.7vw,24px)} .board h2{font-size:26px;margin-bottom:8px} }
 @media (max-width:700px){ .answers{grid-template-columns:1fr} .label{width:100%} .lobby{grid-template-columns:1fr} }

@@ -42,6 +42,8 @@
     $('q').textContent = m.q || 'Look at the big screen.';
     const box = $('answers');
     box.textContent = '';
+    if (m.kind === 'year') { drawYear(box, m); only('ask'); return; }
+    box.style.gridTemplateRows = 'repeat(' + m.choices.length + ',1fr)';
     box.classList.toggle('locked', m.pick !== null && m.pick !== undefined);
     m.choices.forEach((c, i) => {
       const b = document.createElement('button');
@@ -62,6 +64,39 @@
     only('ask');
   }
 
+  // Closest without going over: a year slider with nudge buttons and a Lock in button. One guess per question.
+  function drawYear(box, m) {
+    box.style.gridTemplateRows = '';
+    const locked = m.guess !== null && m.guess !== undefined;
+    box.classList.toggle('locked', locked);
+    const mid = Math.round((m.min + m.max) / 2);
+    let year = locked ? m.guess : mid;
+    const wrap = document.createElement('div'); wrap.className = 'yearpick';
+    const big = document.createElement('div'); big.className = 'yearbig'; big.textContent = String(year);
+    const slide = document.createElement('input');
+    slide.type = 'range'; slide.min = m.min; slide.max = m.max; slide.step = 1; slide.value = year; slide.disabled = locked;
+    slide.setAttribute('aria-label', 'Your year');
+    const row = document.createElement('div'); row.className = 'nudge';
+    const set = (y) => { year = Math.max(m.min, Math.min(m.max, y)); slide.value = year; big.textContent = String(year); };
+    for (const [label, d] of [['-10', -10], ['-1', -1], ['+1', 1], ['+10', 10]]) {
+      const b = document.createElement('button'); b.type = 'button'; b.className = 'plain'; b.textContent = label; b.title = 'Change the year by ' + d; b.disabled = locked;
+      b.addEventListener('click', () => set(year + d));
+      row.appendChild(b);
+    }
+    slide.addEventListener('input', () => set(+slide.value));
+    const go = document.createElement('button'); go.type = 'button'; go.className = 'go'; go.title = 'Send this year'; go.disabled = locked;
+    go.textContent = locked ? 'Locked in: ' + m.guess : 'Lock in';
+    go.addEventListener('click', () => {
+      if (box.classList.contains('locked')) return;
+      box.classList.add('locked'); go.disabled = true; slide.disabled = true; for (const b of row.children) b.disabled = true;
+      go.textContent = 'Locked in: ' + year; buzz();
+      send({ type: 't-a', n: current, year });
+    });
+    const note = document.createElement('p'); note.textContent = 'The closest guess that is not past the year wins.';
+    wrap.append(big, slide, row, go, note);
+    box.appendChild(wrap);
+  }
+
   function onMessage(m) {
     if (m.type === 'hello') { tries = 0; return; }
     if (m.type === 't-you') {
@@ -73,7 +108,17 @@
     }
     if (m.type === 't-wait') { if ($('name').hidden) { $('wait-h').textContent = 'Waiting'; $('wait-p').textContent = m.text; only('wait'); } return; }
     if (m.type === 't-q') { drawQuestion(m); return; }
-    if (m.type === 't-got') { $('wait-h').textContent = 'Locked in: ' + LETTERS[m.pick]; return; }
+    if (m.type === 't-got') { $('wait-h').textContent = 'Locked in: ' + (m.year != null ? m.year : LETTERS[m.pick]); return; }
+    if (m.type === 't-res' && m.kind === 'year') {
+      $('res-num').textContent = 'Question ' + (m.n + 1);
+      const h = $('res-h');
+      h.className = 'result ' + (m.right ? 'right' : 'wrong');
+      h.textContent = m.points === 1000 ? 'Spot on!' : m.right ? 'Closest!' : m.guess == null ? 'No guess' : 'Not this time';
+      $('res-p').textContent = 'It was ' + m.year + '.' + (m.guess != null ? ' You said ' + m.guess + '.' : '') + (m.points ? ' +' + m.points.toLocaleString() + ' points' : '');
+      $('res-total').textContent = m.score.toLocaleString() + ' points, ' + G.ordinal(m.place) + ' of ' + m.of;
+      only('res');
+      return;
+    }
     if (m.type === 't-res') {
       $('res-num').textContent = 'Question ' + (m.n + 1);
       const h = $('res-h');

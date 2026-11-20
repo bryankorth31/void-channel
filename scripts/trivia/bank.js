@@ -168,7 +168,7 @@ function firstAired(s) {
   const id = 'tv-year-' + s.slug;
   const { choices, answer } = choicesOf(id, String(y), nearYears(y, rng(id)).map(String));
   return [{ id, category: 'tv', round: 'first-aired', band: s.band, q: clean('What year did ' + s.name + ' first air?'), choices, answer,
-    source: { site: 'TVmaze', url: tvmazeUrl(s), fact: 'premiered ' + s.premiered, read: day(s.matchedAt) }, about: { show: s.slug } }];
+    source: { site: 'TVmaze', url: tvmazeUrl(s), fact: 'premiered ' + s.premiered, read: day(s.matchedAt) }, about: { show: s.slug, title: s.name, date: s.premiered } }];
 }
 
 // Network: only when TVmaze's network and the catalog's agree (TVmaze keeps a show's last network, so a show that moved,
@@ -318,7 +318,7 @@ function filmYear(f) {
   const what = f.kind === 'special' ? 'the special ' : 'the TV movie ';
   const { choices, answer } = choicesOf(id, String(y), nearYears(y, rng(id)).map(String));
   return [{ id, category: 'movies', round: 'film-year', band: f.band, q: clean('What year did ' + what + f.title + ' first air?'), choices, answer,
-    source: { site: 'TMDB', url: f.tmdbSource, fact: 'released ' + y, read: f.read }, about: { film: f.tmdbId } }];
+    source: { site: 'TMDB', url: f.tmdbSource, fact: 'released ' + y, read: f.read }, about: { film: f.tmdbId, title: f.title, date: String(y) } }];
 }
 
 // A maker's name as a question may show it: the card's own, with a trailing ", Inc." and the like taken off. A maker
@@ -338,7 +338,7 @@ function gameQs(cards) {
       const id = 'game-year-' + c.id;
       const { choices, answer } = choicesOf(id, String(y), nearYears(y, rng(id)).map(String));
       out.push({ id, category: 'games', round: 'game-year', band, kids: !!c.kids, q: clean('What year did ' + c.title + ' come out?'), choices, answer,
-        source: { site: 'Internet Archive', url: src, fact: 'year ' + y + ' on VoidTV PLAY\'s card for this item' }, about: { card: c.id } });
+        source: { site: 'Internet Archive', url: src, fact: 'year ' + y + ' on VoidTV PLAY\'s card for this item' }, about: { card: c.id, title: c.title, date: String(y) } });
     }
     const maker = makerName(c.publisher);
     if (maker) {
@@ -367,6 +367,16 @@ function makeQuestions(data) {
 
 // ---------- writing ----------
 
+// One entry per proved date: { id, title, date ('YYYY-MM-DD' for shows, 'YYYY' for films and games), category, band, source }.
+function datesOf(qs) {
+  const out = [];
+  for (const q of qs) {
+    if (!['first-aired', 'film-year', 'game-year'].includes(q.round) || !q.about || !q.about.date || !q.about.title) continue;
+    out.push({ id: q.id.replace(/^(tv-year|film-year|game-year)-/, 'd-'), title: q.about.title, date: q.about.date, category: q.category, band: q.band, source: q.source });
+  }
+  return out;
+}
+
 function write(qs, meta) {
   fs.rmSync(OUT, { recursive: true, force: true });
   fs.mkdirSync(OUT, { recursive: true });
@@ -383,7 +393,11 @@ function write(qs, meta) {
   }
   const rounds = {};
   for (const q of qs) rounds[q.round] = (rounds[q.round] || 0) + 1;
-  fs.writeFileSync(path.join(OUT, 'index.json'), JSON.stringify({ ...meta, total: qs.length, rounds, files,
+  // The dates file (plan G3 and G4: Closest Without Going Over, Higher or Lower): every date a first-aired, TV movie or game
+  // year question already proved, with its title, band and source. The host builds those rounds from it at play time.
+  const dates = datesOf(qs);
+  fs.writeFileSync(path.join(OUT, 'dates.json'), JSON.stringify(dates));
+  fs.writeFileSync(path.join(OUT, 'index.json'), JSON.stringify({ ...meta, total: qs.length, rounds, files, dates: { file: 'dates.json', count: dates.length },
     credit: 'Facts from TVmaze (CC BY-SA), TMDB, Wikidata (CC0) and the Internet Archive. This product uses the TMDB API but is not endorsed or certified by TMDB.' }, null, 1));
   return files;
 }
@@ -405,7 +419,7 @@ function main() {
   console.log('Checker: every question passes.');
 }
 
-module.exports = { clipQs, filmClip, archiveMeta, PD_MARK, CLIP_SECS, mmss, screenOk, looksLikeGuests, guestShow, hash, rng, shuffle, norm, sameish, clean, nearYears, usablePart, usableEpisodeName, choicesOf, agreedNetwork, makerName,
+module.exports = { datesOf, clipQs, filmClip, archiveMeta, PD_MARK, CLIP_SECS, mmss, screenOk, looksLikeGuests, guestShow, hash, rng, shuffle, norm, sameish, clean, nearYears, usablePart, usableEpisodeName, choicesOf, agreedNetwork, makerName,
   firstAired, premieredOn, whoPlayed, whichShow, filmYear, gameQs, makeQuestions, gather };
 // Exported before main runs, so the checker (which needs these helpers) can load while main is running.
 if (require.main === module) main();

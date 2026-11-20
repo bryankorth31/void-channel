@@ -49,6 +49,13 @@
       </div>
     </div>
     <div class="field">
+      <span class="label">Extra rounds</span>
+      <div class="choices" aria-label="Extra rounds">
+        <label title="A run of four: was the next show earlier or later than the last? Dates from TVmaze, TMDB and the Archive"><input type="checkbox" name="hl" value="on" checked> Higher or Lower</label>
+        <label title="Guess the year a show first aired; the closest guess that is not past it wins"><input type="checkbox" name="yg" value="on" checked> Closest without going over</label>
+      </div>
+    </div>
+    <div class="field">
       <span class="label">Where</span>
       <div class="choices" role="radiogroup" aria-label="Where the game is played">
         <label title="At home or with friends: clips play as they do on voidtv.net"><input type="radio" name="where" value="home" checked> Home</label>
@@ -109,7 +116,9 @@
       <span class="kind" id="kind"></span>
     </div>
     <h2 class="q" id="q"></h2>
+    <div class="run" id="run" hidden></div>
     <div class="body">
+      <div class="yearbox" id="yearbox" hidden><b id="yearval">?</b><p id="yearnote"></p></div>
       <div class="media" id="media" hidden title="Click or press R to play it again">
         <video id="vid" playsinline preload="auto"></video>
         <div class="ear" id="ear" hidden><span>Listen</span></div>
