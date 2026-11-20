@@ -119,7 +119,8 @@
     const word = code === '@rewind' ? 'Rewind' : (root.PlayCards && root.PlayCards.actionFor(card, code)) || '';
     b.textContent = '';
     b.append(el('span', 'big', label(code)));
-    if (word) b.append(el('span', 'small', word));
+    // D2: no word when it only repeats the letter (Start on Start).
+    if (word && word.toLowerCase() !== label(code).toLowerCase()) b.append(el('span', 'small', word));
     b.setAttribute('aria-label', label(code) + (word ? ', ' + word : ''));
     return b;
   }

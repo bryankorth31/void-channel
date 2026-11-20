@@ -110,7 +110,8 @@ a.tool{display:inline-flex;align-items:center;text-decoration:none;color:var(--f
 .cface.one{width:min(100cqw,150px)}
 .cface.one .pk{background:#2a1530;border-color:var(--pink)}
 .pk .big{font-size:22px;font-weight:800}
-.pk .small{font-size:10.5px;font-weight:600;color:var(--dim);margin-top:3px;max-width:92%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+/* D1: the action word wraps to two short lines under the letter instead of being cut off. */
+.pk .small{font-size:10px;font-weight:600;line-height:1.1;color:var(--dim);margin-top:2px;max-width:94%;text-align:center;white-space:normal;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
 .pk[data-down] .small{color:#07080c}
 .csmall{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
 .csmall .pk{min-width:76px;height:56px;border-radius:28px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 12px}

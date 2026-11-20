@@ -20,14 +20,23 @@ function host() {
 importScripts('keys.js', 'unzip.js');
 
 let M = null, running = false, paused = false, timer = 0, lastFrame = -1, fps = 60, next = 0;
-// Rewind (audit batch 4, block E; console cores only): a snapshot every half second, the last 20 seconds kept. While
-// rewind is held, every sixth frame steps back one snapshot (about five times real speed) and shows it.
-const REWIND_KEEP = 40, REWIND_STEP_FRAMES = 6;
-let rewindOn = false, rewinding = false, ring = [], frameNo = 0;
+// Rewind (audit batch 4, block E; console cores only): the last 20 seconds, in snapshots spaced by a memory budget per
+// core (about 48 MB): a small state (Atari, NES, Game Boy, Master System, Game Gear) is kept every 3 frames and steps back
+// one a frame, so it plays like film backwards; a big one is kept further apart (at most every half second). While held,
+// rewind steps back about five times faster than the snapshots were taken.
+const REWIND_SECONDS = 20, REWIND_BUDGET = 48 * 1024 * 1024, REWIND_MIN_GAP = 3;
+let rewindOn = false, rewinding = false, ring = [], frameNo = 0, rewindGap = 30, rewindKeep = 40, rewindStep = 6;
+function planRewind() {
+  const size = M._host_state_size() || 1;
+  const most = Math.max(1, Math.round(fps / 2));
+  rewindGap = Math.min(most, Math.max(REWIND_MIN_GAP, Math.ceil(size * fps * REWIND_SECONDS / REWIND_BUDGET)));
+  rewindKeep = Math.ceil(fps * REWIND_SECONDS / rewindGap);
+  rewindStep = Math.max(1, Math.round(rewindGap / 5));
+}
 function snapshot() {
   const size = M._host_state_size(); if (!size) return;
   const p = M._malloc(size);
-  if (M._host_state_save(p, size)) { ring.push(M.HEAPU8.slice(p, p + size)); if (ring.length > REWIND_KEEP) ring.shift(); }
+  if (M._host_state_save(p, size)) { ring.push(M.HEAPU8.slice(p, p + size)); if (ring.length > rewindKeep) ring.shift(); }
   M._free(p);
 }
 function stepBack() {
@@ -101,6 +110,7 @@ async function start(msg) {
   for (let port = 0; port < (msg.pads || 0); port++) M._host_plug_pad(port);
   rewindOn = !!msg.rewind;
   fps = M._host_fps() || 60;
+  if (rewindOn) planRewind();
   postMessage({ type: 'ready', fps, rate: M._host_sample_rate() || 44100, aspect: M._host_aspect() });
   running = true; next = performance.now();
   tick();
@@ -115,8 +125,8 @@ function tick() {
     let steps = 0;
     while (next <= now && steps < 4) {
       frameNo++;
-      if (rewinding) { if (frameNo % REWIND_STEP_FRAMES === 0) stepBack(); }
-      else { M._host_run(); if (rewindOn && frameNo % Math.max(1, Math.round(fps / 2)) === 0) snapshot(); }
+      if (rewinding) { if (frameNo % rewindStep === 0) stepBack(); }
+      else { M._host_run(); if (rewindOn && frameNo % rewindGap === 0) snapshot(); }
       next += 1000 / fps; steps++;
     }
     if (next < now - 4000 / fps) next = now;
