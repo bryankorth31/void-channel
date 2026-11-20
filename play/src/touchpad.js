@@ -34,7 +34,9 @@
 
   // A plain key: down while a finger is on it, up when the finger lifts or slides away.
   function keyButton(code, hub, cls) {
-    const b = el('button', 'pk ' + (cls || ''), label(code));
+    const b = el('button', 'pk ' + (cls || ''));
+    b.appendChild(el('span', 'lbl', label(code)));   // its name in a span, so a skin can put it on a label (the handheld)
+    const n = /^Button (\d+)$/.exec(label(code)); if (n) b.dataset.n = n[1];   // an arcade button by number: the skin prints it on the button
     b.type = 'button'; b.dataset.code = code; b.setAttribute('aria-label', code);
     const up = (e) => { if (b.dataset.down) { delete b.dataset.down; hub.touch(code, false, e.pointerId); } };
     b.addEventListener('pointerdown', (e) => { e.preventDefault(); capture(b, e); b.dataset.down = String(e.pointerId); tick(); hub.touch(code, true, e.pointerId); });
@@ -171,6 +173,16 @@
     const pills = el('div', 'cpills'); layer.appendChild(pills);
     const pill = (code, cls) => { if (code[0] === '@' || keys.includes(code)) pills.appendChild(consoleKey(code, hub, card, cls)); };
     pill('P1:Select', 'pill cselect'); pill('@rewind', 'pill crewind'); pill('P1:Start', 'pill cstart');
+    // The face buttons' words on one strip (the handheld skin shows it where there is room, as on Bryan's mock-up: the
+    // letters on the buttons, the words together on a strip of tape). Only words that say more than the letter.
+    const words = el('div', 'cwords'); words.setAttribute('aria-hidden', 'true');
+    for (const [code] of shape.face) {
+      if (!keys.includes(code)) continue;
+      const w = (root.PlayCards && root.PlayCards.actionFor(card, code)) || '';
+      if (!w || w.toLowerCase() === label(code).toLowerCase()) continue;
+      const s = el('span'); s.append(el('b', '', label(code)), ' ' + w); words.appendChild(s);
+    }
+    if (words.children.length) layer.appendChild(words);
     zones.over.appendChild(layer);
     return { keyboard: el('div'), openKeyboard: () => {} };
   }
@@ -178,6 +190,8 @@
   // Build the pad for this card into the zones the layout gave us.
   function build(zones, card, hub) {
     letGo = [];
+    // The handheld skin dresses an arcade machine's buttons as round buttons (play.css, body.arcade).
+    if (typeof document !== 'undefined') document.body.classList.toggle('arcade', !!(card && card.system === 'arcade'));
     const c = (card && card.controls) || {};
     if (c.kind === 'pad') {
       for (const z of Object.values(zones)) z.textContent = '';

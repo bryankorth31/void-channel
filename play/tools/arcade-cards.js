@@ -90,7 +90,7 @@ function card(game, fields) {
   const players = startKey(fields, 2) || Object.keys(p2.map).length ? 2 : 1;
   const gamepad = Object.assign({}, p1.map, coin ? { Back: coin } : {}, start ? { Start: start } : {});
   const dirs = ['Up', 'Down', 'Left', 'Right'].filter((d) => gamepad[d]);
-  const keys = [...new Set([coin, start, ...p1.buttons.slice(0, 4), ...['A', 'B', 'X', 'Y'].map((s) => p1.map[s])].filter(Boolean))].slice(0, 7);
+  const keys = [...new Set([coin, start, ...p1.buttons.slice(0, 6), ...['A', 'B', 'X', 'Y'].map((s) => p1.map[s])].filter(Boolean))].slice(0, 9);   // six-button fighters (the audit: SF Alpha 2's 5 and 6 had no touch key)
   const labels = Object.assign({}, p1.words, coin ? { [coin]: 'Coin' } : {}, start && !p1.words[start] ? { [start]: 'Start' } : {});
   const analog = fields.some((f) => f.player === 1 && f.analog);
   const actions = [];

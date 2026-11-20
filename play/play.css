@@ -367,3 +367,43 @@ body.full .bar{transition:transform .2s}
 body.full .bar:focus-within{transform:none}
 body.full:not(.shell):not(.paused) .stage{background:#000}
 body.full.idle:not(.paused) .stage,body.full.idle:not(.paused) .stage *{cursor:none}
+/* Closer to Bryan's mock-ups (the audit's side by side, 20 Nov 2026). */
+/* Upright with room: the plate first, then Select, Rewind and Start under it; L and R move down to make room. */
+@container (min-height:400px){
+  body.shell .cpad.up::before,body.shell .cpad.up::after{top:var(--e)}
+  body.shell .cpad.up .cpills{top:calc(var(--e) + 52px)}
+  body.shell .cpad.up .csl,body.shell .cpad.up .csr{top:max(calc(var(--e) + 104px),calc(100cqh - var(--e) - max(var(--d), var(--rows) * var(--b) + (var(--rows) - 1) * 8px) - 12px - 48px))}
+}
+/* The face buttons' words together on one strip of tape, the letters on the buttons, where there is room (upright,
+   tall); elsewhere each word stays on its own key. Never a key itself. */
+.cwords{display:none}
+@container (min-height:460px){
+  body.shell .cpad.up .cwords{display:flex;flex-wrap:wrap;justify-content:center;gap:2px 12px;position:absolute;left:50%;top:calc(var(--e) + 106px);
+    transform:translateX(-50%) rotate(-1deg);max-width:min(330px,90cqw);padding:4px 12px;pointer-events:none;
+    background:url(skin/label.webp) center/cover;color:#1d1813;font-weight:700;font-size:12px;line-height:1.35;box-shadow:0 2px 3px rgba(0,0,0,.45)}
+  body.shell .cpad.up .cwords b{font-weight:900;margin-right:3px}
+  body.shell .cpad.up .cface .pk .small{display:none}
+  body.shell .cpad.up .cface .pk .big{font-size:22px}
+}
+/* Words on a key's own tape: never under 11 px. */
+body.shell .cpad .pk .small,body.shell .cpad .pill .big,body.shell .cpad .cshoulder .big{font-size:11.5px;line-height:1.15}
+/* Two screws in the casing at the top corners of the pad. */
+body.shell .cpad.up{background:url(skin/screw.webp) no-repeat 6px 6px/18px,url(skin/screw.webp) no-repeat calc(100% - 6px) 6px/18px}
+/* Arcade machines: their buttons are Bryan's round buttons in colours, Coin and Start his rubber pills, each name on tape. */
+body.shell.arcade .pk{background:url(skin/btn-red.webp) center 30%/auto 62% no-repeat;border:0;box-shadow:none;color:#1d1813;
+  flex-direction:column;justify-content:flex-end;padding:0 2px 3px;filter:drop-shadow(0 4px 4px rgba(0,0,0,.5))}
+body.shell.arcade .pk[data-code="AltLeft"]{background-image:url(skin/btn-yellow.webp)}
+body.shell.arcade .pk[data-code="Space"]{background-image:url(skin/btn-cyan.webp)}
+body.shell.arcade .pk[data-code="ShiftLeft"]{background-image:url(skin/btn-pink.webp)}
+body.shell.arcade .pk[data-code="KeyZ"]{background-image:url(skin/btn-blue.webp)}
+body.shell.arcade .pk[data-code="KeyX"]{background-image:url(skin/btn-green.webp)}
+body.shell.arcade .pk[data-code="Digit5"],body.shell.arcade .pk[data-code="Digit1"]{background:url(skin/pill.webp) center 35%/88% auto no-repeat}
+body.shell.arcade .pk .lbl{background:url(skin/label.webp) center/cover;padding:1px 5px;border-radius:2px;font-size:11.5px;font-weight:700;line-height:1.15;
+  box-shadow:0 1px 2px rgba(0,0,0,.45);max-width:96%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+body.shell.arcade .pk[data-down]{transform:translateY(3px);filter:brightness(.85) drop-shadow(0 1px 2px rgba(0,0,0,.5))}
+body.shell.arcade .pdpad{background:transparent}
+/* An arcade button known only by its number ("Button 1") shows the number on the button, as on the mock-up. */
+body.shell.arcade .pk[data-n]{position:relative}
+body.shell.arcade .pk[data-n] .lbl{display:none}
+body.shell.arcade .pk[data-n]::before{content:attr(data-n);position:absolute;left:50%;top:30%;transform:translate(-50%,-50%);font-size:22px;font-weight:900;
+  color:rgba(25,14,12,.85);text-shadow:0 1px 0 rgba(255,255,255,.35);pointer-events:none}
