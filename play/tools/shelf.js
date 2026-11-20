@@ -78,7 +78,7 @@ function buildIndex(cards, status, plays = loadPlays()) {
     // Plan C4: a collection's game carries only what a box shows, and the bundle that holds its card; how it plays is
     // its machine's (libHow, once per machine), so thousands of games keep the list small.
     .map((c) => c.__b ? { id: c.id, title: c.title, year: c.year || null, publisher: c.publisher || '', system: c.system,
-      players: c.players || 1, item: c.archive.item, plays: plays[c.archive.item] || 0, b: c.__b, genres: Shelf.genresOf(c.genre || (c.facts && c.facts.genre)) }
+      players: c.players || 1, item: c.archive.item, plays: plays[c.archive.item] || c.plays || 0, b: c.__b, genres: Shelf.genresOf(c.genre || (c.facts && c.facts.genre)) }
       : ({ id: c.id, title: c.title, year: c.year || null, publisher: c.publisher || '', system: c.system,
       players: c.players || 1, item: c.archive.item, plays: plays[c.archive.item] || 0, help: c.help || '',
       // Plan G1 and G2: the card's own genre wins over Wikidata's facts; the shelf files both under its plain genres.
