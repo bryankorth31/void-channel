@@ -16,6 +16,8 @@
     gamegear: { name: 'Game Gear', shape: 'handheld', color: '#5fe3ff' },
     gameboy: { name: 'Game Boy', shape: 'handheld', color: '#9bbc0f' },
     gbcolor: { name: 'Game Boy Color', shape: 'handheld', color: '#ff4fc8' },
+    gba: { name: 'Game Boy Advance', shape: 'handheld', color: '#7b6cf6' },
+    lynx: { name: 'Atari Lynx', shape: 'handheld', color: '#ff8a3d' },
   };
   const decadeOf = (y) => (y ? Math.floor(y / 10) * 10 : null);
   const decadeName = (d) => (d === null ? 'More games' : d >= 2000 ? 'The ' + d + 's' : 'The ' + String(d).slice(2) + 's');

@@ -109,7 +109,7 @@
     pair: { cols: 2, rows: 2, face: [['P1:B', 2, 1], ['P1:A', 1, 2]] },
     one: { cols: 1, rows: 1, face: [['P1:B', 1, 1]] },
   };
-  const SYSTEM_SHAPE = { snes: 'diamond', genesis: 'abc', nes: 'pair', gameboy: 'pair', gbcolor: 'pair', sms: 'pair', gamegear: 'pair', a2600: 'one' };
+  const SYSTEM_SHAPE = { snes: 'diamond', genesis: 'abc', nes: 'pair', gameboy: 'pair', gbcolor: 'pair', sms: 'pair', gamegear: 'pair', gba: 'pair', lynx: 'pair', a2600: 'one' };
   const shapeOf = (card) => SHAPES[SYSTEM_SHAPE[card && card.system] || 'pair'];
   // How many key columns a side needs at least: a three-wide shape asks the layout for wider sides.
   // The console pad now floats over the stage (B: "Keep the big picture"), so no shape asks for wider side columns.

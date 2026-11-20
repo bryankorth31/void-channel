@@ -103,7 +103,9 @@ test('no donation line on games run by a non-commercial core (B, 19 Nov 2026: "L
   assert.equal(Cards.CORES['genesis-plus-gx'].noDonation, true);
   assert.equal(Cards.CORES.snes9x.noDonation, true);
   for (const name of ['dosbox-pure', 'fceumm', 'gambatte', 'stella2014']) assert.ok(!Cards.CORES[name].noDonation, name);
-  for (const [name, core] of Object.entries(Cards.CORES)) if (core.licence !== 'GPL-2.0') assert.equal(core.noDonation, true, name);
+  // The rule follows the licence: a core whose licence forbids commercial use drops the line; open licences that allow
+  // any use (GPL, MPL-2.0 for mGBA, zlib for Handy) keep it.
+  for (const [name, core] of Object.entries(Cards.CORES)) assert.equal(!!core.noDonation, /non-commercial/.test(core.licence), name);
   const page = fs.readFileSync(path.join(PLAY, 'src', 'play.js'), 'utf8');
   assert.match(page, /if \(core\.noDonation\) for \(const e of document\.querySelectorAll\('\.donate'\)\) e\.remove\(\);/);
 });

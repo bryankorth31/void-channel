@@ -22,6 +22,11 @@
       source: 'https://github.com/libretro/gambatte-libretro/tree/77f2567d718b8973d02caa2daa8dce4953faf811' },
     stella2014: { engine: 'engine/stella2014.js', systems: ['a2600'], name: 'Stella 2014', licence: 'GPL-2.0',
       source: 'https://github.com/libretro/stella2014-libretro/tree/7d1361e407e63f29e52892655069e5fb4096e691' },
+    // Batch 2: open licences that allow any use, so their games keep the donation line; each licence travels beside it.
+    mgba: { engine: 'engine/mgba.js', systems: ['gba'], name: 'mGBA', licence: 'MPL-2.0',
+      source: 'https://github.com/libretro/mgba/tree/7a12d6d4b9acb14c0ae62c9166b6a2f3d08007f6', terms: 'engine/mgba.LICENSE.txt' },
+    handy: { engine: 'engine/handy.js', systems: ['lynx'], name: 'Handy', licence: 'zlib licence',
+      source: 'https://github.com/libretro/libretro-handy/tree/bc55d462f0b2d6b073ea93dc552ebd73cec60fd1', terms: 'engine/handy.LICENSE.txt' },
   };
 
   // A console card ("controls.kind": "pad") presses the console's own buttons, named P1:A, P1:Start and so on (P2: for
