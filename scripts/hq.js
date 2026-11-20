@@ -11,6 +11,7 @@ const crypto = require('crypto');
 const { spawn, execSync, execFile, execFileSync } = require('child_process');
 const cfa = require('./lib/cfa');
 const hidden = require('./lib/hidden'); // the Hidden tab: guessed episodes and REVIEW TV movies the site keeps off
+const publishline = require('./lib/publishline'); // the words about publishing: the line at the top, and how a press ended
 // One more named query for /api/analytics/<name>: the "Wrong film reports" list on the Reports page (viewers ticking "Not the right
 // film" on a TV movie marked "Unconfirmed match"; the page sends type report with q wrongfilm, x = Archive item, a space, file name).
 // Day buckets, added up by the page, so it uses only what the other queries in lib/cfa.js already use. Read-only; it hides nothing.
@@ -125,11 +126,19 @@ function overview() {
   };
 }
 
+// What waits to be published on this PC, with the line HQ shows at the top (the words are made in scripts/lib/publishline.js).
+// A git command that fails is said as a failure, "could not read git", never as "nothing to publish"; `last` is how the newest
+// run in publish.log ended, so a refused or failed scheduled run shows in the line too (audit 19 Nov 2026, V1 and H5).
 function gitState() {
+  let facts;
   try {
-    const run = (c) => execSync(c, { cwd: ROOT, windowsHide: true, stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim();
-    return { head: run('git log -1 "--format=%h %s"'), dirty: run('git status --porcelain -- catalog docs scripts/show-list.json').split('\n').filter(Boolean).length, ahead: run('git rev-list --count origin/master..master') };
-  } catch (e) { return { head: '?', dirty: 0, ahead: '?' }; }
+    const run = (...a) => execFileSync('git', a, { cwd: ROOT, windowsHide: true, stdio: ['ignore', 'pipe', 'pipe'] }).toString().trim();
+    const w = publishline.waiting(run('log', '--format=%s', 'origin/master..master').split('\n'));
+    facts = { head: run('log', '-1', '--format=%h %s'), dirty: run('status', '--porcelain', '--', 'catalog', 'docs', 'scripts/show-list.json').split('\n').filter(Boolean).length, ahead: w.own + w.others, own: w.own, others: w.others };
+  } catch (e) { facts = { head: '?', dirty: 0, ahead: '?', error: String((e.stderr && e.stderr.toString().trim()) || e.message || e).split('\n')[0].slice(0, 200) }; }
+  facts.last = publishline.outcome(tail(path.join(CACHE, 'publish.log'), 12));
+  facts.line = publishline.line({ ...facts, site: PROFILE.siteName });
+  return facts;
 }
 
 function scheduledTasks() {
@@ -393,6 +402,7 @@ const server = http.createServer(async (req, res) => {
     // Whether a job is running, with no key: Studio Tools reads it before it offers Stop, so HQ is never stopped mid-job.
     if (p === '/api/busy') return send(res, 200, { queue: jobList().filter((j) => j.running).length });
     if (p === '/api/overview') return send(res, 200, overview());
+    if (p === '/api/git') return send(res, 200, gitState()); // the top line alone: asked on every tab change and after a publish
     if (p === '/api/health') return send(res, 200, readJson(path.join(CACHE, 'health.json'), { level: 'none', checks: [] }));
     if (p === '/api/tasks/recreate' && req.method === 'POST') { try { return send(res, 200, { made: createTasks(nodeBin().bin) }); } catch (e) { return send(res, 500, { error: (e.stderr ? e.stderr.toString() : e.message).slice(0, 200) }); } }
     if (p === '/api/shows') return send(res, 200, { types: readJson(FILES.list, { types: [] }).types, rows: showRows() });
@@ -420,7 +430,7 @@ const server = http.createServer(async (req, res) => {
     if (p === '/api/order' && req.method === 'POST') { const b = await body(req); if (!Array.isArray(b.order)) throw new Error('order must be an array'); writeJson(FILES.order, b.order.filter((x) => Array.isArray(x) && x.length === 2)); return send(res, 200, { ok: true }); }
     if (p === '/api/jobs' && req.method === 'GET') return send(res, 200, { jobs: jobList(), processes: nodeProcesses() });
     if (p === '/api/jobs' && req.method === 'POST') { const b = await body(req); return send(res, 200, startJob(b.name, b.args)); }
-    if (p.startsWith('/api/jobs/') && p.endsWith('/log')) { const id = p.split('/')[3]; const j = JOBS.find((x) => x.id === id); if (!j) return send(res, 404, { error: 'no job' }); return send(res, 200, { log: tail(j.log, +url.searchParams.get('tail') || 200), running: j.done ? false : alive(j.pid) }); }
+    if (p.startsWith('/api/jobs/') && p.endsWith('/log')) { const id = p.split('/')[3]; const j = JOBS.find((x) => x.id === id); if (!j) return send(res, 404, { error: 'no job' }); const running = j.done ? false : alive(j.pid); return send(res, 200, { log: tail(j.log, +url.searchParams.get('tail') || 200), running, code: j.code, ...(j.name === 'publish' && !running ? { outcome: publishline.outcome(tail(j.log, 60), j.code == null ? -1 : j.code) } : {}) }); } // a finished publish also says how it ended, in words the page shows as they are
     if (p.startsWith('/api/jobs/') && p.endsWith('/stop') && req.method === 'POST') { const id = p.split('/')[3]; const j = JOBS.find((x) => x.id === id); if (!j) return send(res, 404, { error: 'no such job' }); const r = stopHqJob(j); if (r.changed) saveJobs(); return send(res, r.status, r.body); }
     if (p === '/api/processes/stop' && req.method === 'POST') { // never a bare number: one of HQ's own jobs (checked against the start time HQ stored) or a listed node job (checked against the start time the page showed)
       const b = await body(req); const pid = typeof b.pid === 'number' ? b.pid : NaN; const j = Number.isInteger(pid) ? JOBS.find((x) => !x.done && x.pid === pid) : null;

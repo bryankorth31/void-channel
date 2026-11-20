@@ -479,6 +479,73 @@ test('the HQ page has the two publish buttons, their confirm texts, and the new 
   assert.ok(/async function publish\(flag\)\{[^]*?api\('\/api\/jobs',\{name:'publish',args:flag\?\[flag\]:\[\]\}\)/.test(page), 'publish() goes through api(), the helper that sends the token');
   for (const word of ['<b>unpushed</b> yellow', '<b>unpushed</b> red', '<b>addresses</b> red', '<b>local-servers</b> red', '<b>refused</b> (also red)', '<b>publish</b> yellow, log says <b>held</b>']) assert.ok(page.includes(word), word);});
 
+// ---- the line at the top and the answer to a press on Publish (audit 19 Nov 2026, V1, H5, H10) -----------------
+test('GET /api/git answers with the top line: words, a level and the hover text, made by scripts/lib/publishline.js', async () => {
+  const r = await call(port, 'GET', '/api/git');
+  assert.equal(r.status, 200);
+  const g = r.json;
+  assert.ok(g.line && typeof g.line.text === 'string' && g.line.text.length > 0, 'a line of words');
+  assert.ok(['ok', 'wait', 'bad'].includes(g.line.level), 'level ' + g.line.level);
+  assert.ok(typeof g.line.title === 'string' && g.line.title.length > 0);
+  // The answer is about the real checkout, whose state changes: check that the words agree with the counts beside them.
+  if (g.error) { assert.equal(g.line.level, 'bad'); assert.match(g.line.text, /could not read git/); }
+  else {
+    assert.equal(g.ahead, g.own + g.others);
+    assert.equal(/Publish is holding/.test(g.line.text), g.others > 0, g.line.text);
+    assert.equal(/nothing to publish/.test(g.line.text), !g.others && !g.own && !g.dirty && !(g.last && /refused|failed/.test(g.last.kind)), g.line.text);
+  }
+});
+
+test('the page asks for the top line on every tab change and after a publish; it holds no "nothing to publish" words of its own', async () => {
+  const page = (await call(port, 'GET', '/')).text;
+  assert.ok(page.includes("async function gitLine(){const gl=$('#gitline');try{const g=await api('/api/git');gl.textContent=g.line.text;gl.title=g.line.title;gl.className=g.line.level}"), 'gitLine() shows the line as HQ words it');
+  assert.ok(page.includes("async function render(){nav();gitLine();const m=$('#main');"), 'render() asks for the line first, on every tab');
+  assert.ok(!page.includes("'nothing to publish'"), 'the words live in scripts/lib/publishline.js only');
+  assert.ok(page.includes('#gitline{max-width:340px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}'), 'the line still cannot push the header onto two rows');
+  assert.ok(page.includes('#gitline.wait{color:var(--rev)}#gitline.bad{color:var(--red)}'), 'waiting is amber, not known or refused is red');
+});
+
+test('a press on Publish is answered in words that stay: the page waits for the job to end and shows how it ended until Dismiss', async () => {
+  const page = (await call(port, 'GET', '/')).text;
+  const fn = /async function publish\(flag\)\{[^]*?\n const o=r\.outcome[^\n]*\n/.exec(page);
+  assert.ok(fn, 'publish() found');
+  assert.match(fn[0], /const r=await jobEnd\(j\.id,900\);gitLine\(\);/, 'it waits up to 15 minutes, then asks for the top line again');
+  assert.match(fn[0], /toast\(o\.text,o\.level,'publish'\)/, 'the outcome is shown with its level, so it stays');
+  assert.match(fn[0], /toast\('Publish did not start: '\+e\.message,'bad','publish'\)/, 'a press the engine refuses says so and stays');
+  assert.doesNotMatch(fn[0], /toast\('Publishing… job/, 'the old 4 second note is gone');
+  assert.ok(page.includes("if(level){t.setAttribute('role','status');") && page.includes("b.textContent='Dismiss';b.onclick=()=>t.remove()") && page.includes("else setTimeout(()=>t.remove(),4000)"), 'a note with a level stays until Dismiss; a plain note still leaves after 4 seconds');
+  assert.ok(page.includes('async function waitJob(id){return jobEnd(id,60,1000)}'), 'the older wait uses the same block');
+});
+
+test('a finished publish job says how it ended: held, with what to press; a run that left no ending line is not called a success', async () => {
+  const { start } = require(HQ_FILE);
+  const p = await freePort([port]);
+  const srv = await start({ port: p });
+  try {
+    const tok = /<meta name="hq-token" content="([0-9a-f]{64})">/.exec((await call(p, 'GET', '/')).text)[1];
+    const post = (body) => call(p, 'POST', '/api/jobs', { body, headers: { 'content-type': 'application/json', origin: `http://127.0.0.1:${p}`, 'x-hq-token': tok } });
+    // The launch is stubbed (see the top of this file): nothing runs, and the job's process number is one no process can hold,
+    // so HQ sees the job as ended. Its log is written here as publish.js would have left it.
+    const held = (await post({ name: 'publish', args: [] })).json;
+    assert.ok(held.log.startsWith(STATE), 'the job log is in the temporary state folder');
+    fs.writeFileSync(held.log, '2026-11-19T20:20:02.295Z held: 25 other commits waiting: Void University: Human nature | and 20 more (not pushed; run with --allow-other-commits to push them with the catalog)\n');
+    const a = (await call(p, 'GET', '/api/jobs/' + held.id + '/log?tail=2')).json;
+    assert.equal(a.running, false);
+    assert.equal(a.outcome.kind, 'held');
+    assert.equal(a.outcome.level, 'wait');
+    assert.match(a.outcome.text, /25 other commits wait here\. Press Push live to test and send them, or Push with other commits/);
+    const silent = (await post({ name: 'publish', args: [] })).json;
+    const b = (await call(p, 'GET', '/api/jobs/' + silent.id + '/log?tail=2')).json;
+    assert.equal(b.outcome.kind, 'unknown');
+    assert.equal(b.outcome.level, 'bad', 'no ending line and no clean exit is red');
+    // a job that is not a publish carries no publish outcome
+    const art = (await post({ name: 'art', args: [] })).json;
+    assert.equal((await call(p, 'GET', '/api/jobs/' + art.id + '/log?tail=2')).json.outcome, undefined);
+  } finally {
+    await new Promise((ok) => srv.server.close(ok));
+  }
+});
+
 // ---- the stop logic itself, against sleepers this test starts and ends -----------------------------------------
 
 test('stop: a job whose process is still the one HQ launched is stopped, and only that process', { skip: !WIN && 'Windows only' }, async () => {

@@ -40,7 +40,9 @@ updates HQ without reinstalling.
   setting, not yet a measurement: before trusting a long soak, cover the lab window for 5 to 10 minutes and check that
   the Live panel keeps counting frames and never says hidden. It is Chromium, not Edge: a drift that shows in Edge and
   not here points at Edge's own power features. The server answers only this PC's own names (127.0.0.1, localhost),
-  reads only inside `player/` and never lists folders. Code: `hq-app/lab.js`; tests: `tests/hq-lab.test.js`.
+  reads only inside `player/` and never lists folders. Code: `hq-app/lab.js`; tests: `tests/hq-lab.test.js`. Each side
+  page of the lab ("All card states", "hops and causes") starts with **Back to the lab**, since the lab window has no
+  menu and no Back button (20 Nov 2026; the same test file holds it).
 - The header button needs the 1.1.0 app or LAB.cmd: with only `node scripts/hq.js` or `HQ.cmd` running, nothing serves
   8792, so start `player\LAB.cmd` first.
 - The app's icon is the site's own artwork (`assets/brand`, crops of Bryan's 19 Oct favicon sheet), made by
@@ -67,7 +69,14 @@ updates HQ without reinstalling.
    (B's edits layer; the builder reads it, never writes it).
 3. **Jobs**: start and stop hunts (balanced, by row, by collection, one show), the TV-movie hunt, art,
    people, matcher, scout, network sweep; live log; the two scheduled tasks' last runs.
-4. **Publish**: one button = `publish.js`; shows the commit and a link to the Cloudflare deployment.
+4. **Publish**: one button = `publish.js`. Since 20 Nov 2026 a press is answered in words: a message stays on screen until
+   you press Dismiss and says how the run ended (pushed, nothing new, held, refused or failed) and what to press next. The
+   line beside the buttons says what waits on this PC at any time: unpublished files, commits waiting, and "Publish is
+   holding" (amber) while commits from other work wait; "could not read git" (red) when the check itself fails; "the last
+   Publish was refused" or "failed" (red) after such a run, the scheduler's included. Hover the line for the whole story.
+   The words are made in `scripts/lib/publishline.js` (`GET /api/git`); tests: `tests/publish-line.test.js` and the
+   publish tests in `tests/hq.test.js`. By hand, no HQ: the last dated line of `catalog/cache/publish.log` says the same,
+   and `git log --oneline origin/master..master` lists what waits.
 5. **Reports**: "Wrong file?" reports now arrive as analytics events, so they queue here with the
    show, episode and file; resolve by rejecting the file or dismissing.
 6. **Add shows**: a form (name, row, network, collections) with TMDB / TVmaze lookup, and a paste box

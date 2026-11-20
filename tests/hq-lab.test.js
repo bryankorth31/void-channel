@@ -35,6 +35,15 @@ function get(port, p, method = 'GET', headers = {}) {
   });
 }
 
+// Audit 19 Nov 2026, H1: "All card states" opened a page with no way back, and the lab window has no menu and no Back button.
+test('every lab page other than the lab itself has a visible link back to the lab', () => {
+  const fs = require('fs');
+  const dir = path.join(ROOT, 'lab'); // ROOT here is the player folder
+  const pages = fs.readdirSync(dir).filter((f) => f.endsWith('.html') && f !== 'index.html');
+  assert.ok(pages.includes('states.html') && pages.includes('hop.html'), 'the two side pages are still there: ' + pages.join(', '));
+  for (const f of pages) assert.match(fs.readFileSync(path.join(dir, f), 'utf8'), /<a [^>]*href="index\.html"[^>]*>Back to the lab<\/a>/, f + ' links back to the lab');
+});
+
 test('the lab server answers the lab pages and refuses the rest', async () => {
   const s = http.createServer(lab.handler(ROOT));
   await new Promise((ok) => s.listen(0, '127.0.0.1', ok));
