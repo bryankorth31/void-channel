@@ -636,10 +636,11 @@ function top(current, all) {
   // Backgrounds the way voidtv.net uses its own (B, 19 Nov 2026: "i want these used in the same ways as as vtv. the way
   // the bg moves"). Inner pages: one fixed picture, taller than the window, under a dark veil, that drifts and grows a
   // little as you scroll. The front page: a column of the pictures down the whole page that scrolls slower than the
-  // content and slowly breathes (built in home()). No movement for people who ask for less motion; on touch screens
-  // only the column moves, as on voidtv.net.
+  // content and slowly breathes (built in home()). No movement for people who ask for less motion. The fixed picture
+  // drifts on tablets too (B, 19 Nov 2026: "make the background drift on my tablet too"); voidtv.net keeps it still
+  // on touch screens, and here only a window 700 wide or less keeps it still.
   const atmos = current === 'home' ? '' : '<div class="atmos" aria-hidden="true"><div class="bgimg ' + (all.some((o) => o.slug === current) ? 'desk' : 'archives') + '"></div></div>';
-  const move = '<script>(function(){if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;var light=innerWidth<=700||matchMedia("(pointer: coarse)").matches,bg=document.querySelector(".bgimg"),q=false;'
+  const move = '<script>(function(){if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;var light=innerWidth<=700,bg=document.querySelector(".bgimg"),q=false;'
     + 'function frame(){q=false;var y=scrollY,h=Math.max(1,document.documentElement.scrollHeight-innerHeight),f=Math.min(1,y/h),w=Math.sin(y/700),w2=Math.sin(y/430),col=document.querySelector(".column");'
     + 'if(col)col.style.transform="translate3d(0,"+(y*0.35)+"px,0)";if(light||!bg)return;bg.style.transform="translate3d(0,"+(-f*60+w*22)+"px,0) scale("+(1.06+f*0.05+w2*0.015)+")"}'
     + 'window.__par=frame;addEventListener("scroll",function(){if(!q){q=true;requestAnimationFrame(frame)}},{passive:true});addEventListener("resize",frame);frame()})()</script>';

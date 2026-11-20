@@ -275,5 +275,6 @@ test('backgrounds move the way voidtv.net moves its own: a column behind the fro
     assert.ok(h.includes('y*0.35'), 'the column should move at about a third of the scroll speed');
     assert.ok(h.includes('prefers-reduced-motion: reduce'), 'the movement must stop for people who ask for less motion');
   }
+  assert.ok(!course.includes('pointer: coarse'), 'the fixed picture must drift on a tablet too, so touch screens are not left out');
   assert.ok(read('credits.html').includes('are our own'), 'the credits page does not say whose the backgrounds are');
 });

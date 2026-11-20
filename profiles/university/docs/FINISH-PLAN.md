@@ -210,3 +210,6 @@ the HQ areas chat. Steps 7 to 10 start after the 22 Nov reset.
 - 19 Nov 2026: Bryan, asked whether to mark both 3D stages live: "Yes, mark live". Both scale blocks in Critical
   thinking unit 3 are `"live": true`, so the public copy carries them, with scale.js and three.js beside the page.
   They reach the live site at his next deploy.
+- 19 Nov 2026: Bryan: "make the background drift on my tablet too". The fixed picture behind the inner pages now
+  drifts and grows on touch screens as well (voidtv.net keeps it still there). Only a window 700 wide or less keeps
+  it still, and people who ask their device for less motion still get none. Not checked on the real tablet.
