@@ -15,8 +15,13 @@ const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 
   '.wasm': 'application/wasm', '.png': 'image/png', '.svg': 'image/svg+xml', '.woff2': 'font/woff2', '.ico': 'image/x-icon' };
 const PLAIN = { 'cache-control': 'no-store' };
 const ISOLATE = { 'cross-origin-opener-policy': 'same-origin', 'cross-origin-embedder-policy': 'require-corp', 'cache-control': 'no-store' };
+// Rooms for phone controllers and Trivia Nights (play/rooms/), the same addresses as voidtv.net's.
+const rooms = require('./rooms/local.js').createRooms();
 http.createServer((req, res) => {
   let p = decodeURIComponent(req.url.split('?')[0]);
+  const room = /^\/api\/room\/([^/]+)$/.exec(p);
+  if (room && room[1] !== 'open') return rooms.lookup(req, res, room[1]);
+  if (p === '/join') p = '/play/rooms/join.html';
   if (p === '/api/piece') return piece(req, res);
   if (p === '/api/drafts') return drafts(req, res);
   if (p === '/' || p === '/play') { res.writeHead(302, { location: '/play/' }); return res.end(); }
@@ -33,7 +38,7 @@ http.createServer((req, res) => {
     res.writeHead(200, Object.assign({ 'content-type': TYPES[path.extname(f)] || 'application/octet-stream' }, shelf ? PLAIN : ISOLATE));
     res.end(b);
   });
-}).listen(PORT, '127.0.0.1', () => console.log('VoidTV PLAY: http://127.0.0.1:' + PORT + '/play/'));
+}).on('upgrade', rooms.upgrade).listen(PORT, '127.0.0.1', () => console.log('VoidTV PLAY: http://127.0.0.1:' + PORT + '/play/'));
 
 // The pass-through, as voidtv.net runs it: the Function module and its list of streamed games, read fresh each time.
 async function piece(req, res) {

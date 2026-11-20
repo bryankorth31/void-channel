@@ -83,3 +83,65 @@ test('the room ends with its screen, after 30 idle minutes, or after 4 hours', (
   for (let m = 0; m < 5 * 60; m += 10) { k.advance(10 * 60 * 1000); k.room.message('a', '{}'); if (k.room.tick()) break; }
   assert.equal(k.room.open, false, 'even a busy room ends at 4 hours');
 });
+
+test('R2: the local server runs rooms over real WebSockets: open, join, both ways, lookup, the screen leaving, and no other site', async () => {
+  const { spawn } = require('child_process');
+  const path = require('path');
+  const port = 8795 + Math.floor(Math.random() * 100);
+  const srv = spawn(process.execPath, [path.join(__dirname, '..', 'serve.js'), String(port)], { stdio: ['ignore', 'pipe', 'pipe'] });
+  try {
+    await new Promise((ok) => srv.stdout.once('data', ok));
+    const base = 'ws://127.0.0.1:' + port, origin = 'http://127.0.0.1:' + port;
+    const open = (url, o = origin) => new Promise((ok, no) => {
+      const ws = new WebSocket(url, { headers: { origin: o } });
+      const q = []; let wake = null;
+      ws.onmessage = (e) => { q.push(JSON.parse(e.data)); if (wake) { wake(); wake = null; } };
+      ws.next = async () => { while (!q.length) await new Promise((w) => { wake = w; }); return q.shift(); };
+      ws.onopen = () => ok(ws); ws.onerror = () => no(new Error('refused'));
+      ws.closed = new Promise((c) => { ws.onclose = (e) => c(e.code); });
+    });
+    const tv = await open(base + '/api/room/open?kind=pad');
+    const room = await tv.next();
+    assert.equal(room.type, 'room'); assert.equal(R.normCode(room.code), room.code);
+    assert.equal(room.join, origin + '/join?r=' + room.code);
+    const look = await fetch('http://127.0.0.1:' + port + '/api/room/' + room.code.toLowerCase());
+    assert.deepEqual(await look.json(), { kind: 'pad' });
+    assert.equal((await fetch('http://127.0.0.1:' + port + '/api/room/2222')).status, 404);
+    const phone = await open(base + '/api/room/' + room.code + '/join');
+    assert.deepEqual(await phone.next(), { type: 'hello', seat: 1, kind: 'pad' });
+    assert.deepEqual(await tv.next(), { type: 'join', from: 1 });
+    phone.send(JSON.stringify({ type: 'press', key: 'P1:A', down: true }));
+    assert.deepEqual(await tv.next(), { from: 1, msg: { type: 'press', key: 'P1:A', down: true } });
+    tv.send(JSON.stringify({ to: 1, msg: { type: 'pong', t: 5 } }));
+    assert.deepEqual(await phone.next(), { type: 'pong', t: 5 });
+    await assert.rejects(open(base + '/api/room/' + room.code + '/join', 'https://evil.example'), 'another site cannot join');
+    tv.close();
+    assert.deepEqual(await phone.next(), { type: 'host-gone' });
+    assert.equal(await phone.closed, R.CLOSE.hostGone);
+    const late = await open(base + '/api/room/' + room.code + '/join');
+    assert.equal(await late.closed, R.CLOSE.noRoom, 'the room is gone with its screen');
+  } finally { srv.kill(); }
+});
+
+test('R5: the QR maker writes codes an independent reader (OpenCV) decodes, from a short join address up to version 10', (t) => {
+  const { execFileSync } = require('child_process');
+  const fs = require('fs'), os = require('os'), path = require('path');
+  const Q = require('../rooms/qr.js');
+  const PY = process.env.PLAY_PYTHON || 'C:/Users/bryan/AppData/Local/Programs/Python/Python312/python.exe';
+  try { execFileSync(PY, ['-I', '-c', 'import cv2, numpy'], { stdio: 'ignore' }); } catch (e) { t.skip('no Python with OpenCV here'); return; }
+  const texts = ['https://voidtv.net/join?r=KX7P', 'A', 'https://voidtv.net/join?r=KX7P&x=' + 'x'.repeat(60), 'x'.repeat(150), 'y'.repeat(210), 'https://voidtv.net/join?r=ÆØÅ'];
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'qr-'));
+  const file = path.join(dir, 'codes.json');
+  fs.writeFileSync(file, JSON.stringify(texts.map((x) => ({ t: x, m: Q.encode(x).map((r) => r.map((b) => (b ? 1 : 0))) }))));
+  const out = execFileSync(PY, ['-I', '-c', [
+    'import cv2, sys, json, numpy as np',
+    'd = cv2.QRCodeDetector()',
+    'for c in json.load(open(sys.argv[1], encoding="utf8")):',
+    '    img = np.pad(np.where(np.array(c["m"]) == 1, 0, 255).astype(np.uint8), 4, constant_values=255)',
+    '    img = cv2.resize(img, None, fx=8, fy=8, interpolation=cv2.INTER_NEAREST)',
+    '    print("OK" if d.detectAndDecode(img)[0] == c["t"] else "FAIL")'].join('\n'), file], { encoding: 'utf8' });
+  fs.rmSync(dir, { recursive: true, force: true });
+  assert.deepEqual(out.trim().split(/\r?\n/), texts.map(() => 'OK'));
+  assert.throws(() => Q.encode('z'.repeat(300)), /Too long/);
+  assert.match(Q.svg('A'), /^<svg [^>]*viewBox="0 0 232 232"/);
+});
