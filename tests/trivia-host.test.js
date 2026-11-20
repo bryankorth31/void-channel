@@ -285,3 +285,52 @@ test('the built dates file holds only dates the bank proved, each with a source'
     assert.ok(d.source.fact.includes(d.date.slice(0, 4)), d.id + ': the date is the source fact\'s own');
   }
 });
+
+// ---- The Shelf (plan G1; Bryan, 20 Nov 2026: "Yes, build The Shelf") ----
+function shelfBank() {
+  const qs = [];
+  let n = 0;
+  for (const round of ['cast', 'first-aired', 'network', 'episode', 'game-year', 'film-year']) {
+    for (let i = 0; i < 8; i++) qs.push({ id: 's' + (n++), category: round === 'game-year' ? 'games' : round === 'film-year' ? 'movies' : 'tv', round, band: 'family', fame: (i + 1) * 100, about: { show: round + '-' + i }, choices: ['a', 'b', 'c', 'd'], answer: 0 });
+  }
+  qs.push({ id: 'h1', category: 'tv', round: 'higher-lower', band: 'family', about: { show: 'x' }, choices: ['Before', 'After'], answer: 0 });
+  return qs;
+}
+
+test('The Shelf: five categories of four squares, best known on the cheapest, no subject twice, a final from the rest', () => {
+  const b = G.buildShelf(shelfBank(), { band: 'family', categories: ['tv', 'movies', 'games'] }, G.seeded(3));
+  assert.equal(b.cats.length, 5);
+  const subjects = new Set();
+  for (const c of b.cats) {
+    assert.deepEqual(c.cells.map((x) => x.value), G.SHELF_VALUES);
+    for (let i = 1; i < c.cells.length; i++) assert.ok((c.cells[i - 1].q.fame || 0) >= (c.cells[i].q.fame || 0), 'fame falls as the value rises');
+    for (const x of c.cells) { assert.equal(x.q.round, c.round); assert.ok(!subjects.has(G.subject(x.q))); subjects.add(G.subject(x.q)); }
+    assert.notEqual(c.round, 'higher-lower', 'only plain questions on the board');
+  }
+  assert.ok(b.final && !subjects.has(G.subject(b.final)), 'the final is a question not on the board');
+  assert.ok(!b.final.media, 'never a clip for the final');
+  assert.equal(G.buildShelf(shelfBank(), { band: 'family', categories: ['games'] }, G.seeded(3)), null, 'too few kinds of question: no board');
+});
+
+test('the final bet: 0 up to what you have, never below 0; right wins it, wrong loses it', () => {
+  assert.equal(G.wagerOf({ type: 't-bet', amount: 400 }, 600), 400);
+  assert.equal(G.wagerOf({ type: 't-bet', amount: 700 }, 600), null);
+  assert.equal(G.wagerOf({ type: 't-bet', amount: -5 }, 600), null);
+  assert.equal(G.wagerOf({ type: 't-bet', amount: 0 }, -200), 0, 'a player below 0 can still bet 0');
+  assert.equal(G.wagerOf({ type: 't-bet', amount: '100' }, 600), null);
+  assert.equal(G.settleWager(true, 300), 300);
+  assert.equal(G.settleWager(false, 300), -300);
+});
+
+test('the host page offers The Shelf and the phone page takes a bet', () => {
+  assert.match(read('trivia/index.html'), /name="format" value="shelf"/);
+  assert.match(read('trivia/src/host.js'), /G\.buildShelf\(all/);
+  assert.match(read('trivia/src/phone.js'), /type: 't-bet', amount: bet/);
+});
+
+test('built questions carry their fame (TMDB votes) for the board', () => {
+  const f = path.join(ROOT, 'trivia', 'bank', 'tv-1.json');
+  if (!fs.existsSync(f)) return;
+  const qs = JSON.parse(fs.readFileSync(f, 'utf8'));
+  assert.ok(qs.filter((q) => q.fame > 0).length / qs.length > 0.9);
+});

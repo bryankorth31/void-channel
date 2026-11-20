@@ -362,6 +362,15 @@ function makeQuestions(data) {
   }
   for (const f of data.films) qs.push(...filmYear(f), ...filmClip(f, data.films, data.metaOf || archiveMeta));
   qs.push(...gameQs(data.cards));
+  // How well known a question's title is (its TMDB vote count; games have none): The Shelf puts the best known on its cheapest
+  // squares (plan G1).
+  const fameOfShow = new Map(data.shows.map((s) => [s.slug, s.votes || 0]));
+  const fameOfFilm = new Map(data.films.map((f) => [String(f.tmdbId), f.votes || 0]));
+  for (const q of qs) {
+    const a = q.about || {};
+    const fame = a.show ? fameOfShow.get(a.show) : a.film ? fameOfFilm.get(String(a.film)) : null;
+    if (fame) q.fame = fame;
+  }
   return qs.filter((q) => screenOk(q.band, [q.q, ...q.choices]));
 }
 

@@ -97,7 +97,46 @@
     box.appendChild(wrap);
   }
 
+  // The Shelf's final: bet part of your score with a slider, then lock it in. Right wins the bet; wrong loses it.
+  function drawBet(m) {
+    current = null;
+    $('num').textContent = 'Final question';
+    $('q').textContent = 'The category: ' + (m.cat || 'trivia') + '. How much do you bet?';
+    const box = $('answers');
+    box.textContent = '';
+    box.style.gridTemplateRows = '';
+    box.classList.remove('locked');
+    const wrap = document.createElement('div'); wrap.className = 'yearpick';
+    const big = document.createElement('div'); big.className = 'yearbig';
+    let bet = 0;
+    const slide = document.createElement('input');
+    slide.type = 'range'; slide.min = 0; slide.max = m.max; slide.step = Math.max(1, Math.round(m.max / 50)); slide.value = 0;
+    slide.setAttribute('aria-label', 'Your bet');
+    const set = (v) => { bet = Math.max(0, Math.min(m.max, Math.round(v))); slide.value = bet; big.textContent = bet.toLocaleString(); };
+    set(0);
+    slide.addEventListener('input', () => set(+slide.value));
+    const row = document.createElement('div'); row.className = 'nudge';
+    for (const [label, v] of [['None', 0], ['Half', m.max / 2], ['All in', m.max]]) {
+      const b = document.createElement('button'); b.type = 'button'; b.className = 'plain'; b.textContent = label; b.title = 'Bet ' + label.toLowerCase();
+      b.addEventListener('click', () => set(v));
+      row.appendChild(b);
+    }
+    row.style.gridTemplateColumns = 'repeat(3,1fr)';
+    const go = document.createElement('button'); go.type = 'button'; go.className = 'go'; go.textContent = 'Lock in my bet'; go.title = 'Send this bet';
+    go.addEventListener('click', () => {
+      go.disabled = true; slide.disabled = true; for (const b of row.children) b.disabled = true;
+      go.textContent = 'Bet locked: ' + bet.toLocaleString(); buzz();
+      send({ type: 't-bet', amount: bet });
+    });
+    const note = document.createElement('p'); note.textContent = m.max > 0 ? 'You have ' + m.max.toLocaleString() + ' points to bet.' : 'You have no points to bet this time; lock in 0 and answer for fun.';
+    wrap.append(big, slide, row, go, note);
+    box.appendChild(wrap);
+    only('ask');
+  }
+
   function onMessage(m) {
+    if (m.type === 't-bet-ask') { drawBet(m); return; }
+    if (m.type === 't-bet-got') return;
     if (m.type === 'hello') { tries = 0; return; }
     if (m.type === 't-you') {
       $('me').textContent = m.name;
@@ -124,7 +163,7 @@
       const h = $('res-h');
       h.className = 'result ' + (m.right ? 'right' : 'wrong');
       h.textContent = m.right ? 'Right!' : m.pick === null ? 'No answer' : 'Not this time';
-      $('res-p').textContent = m.right ? '+' + m.points.toLocaleString() + ' points' : 'It was ' + LETTERS[m.answer] + '.';
+      $('res-p').textContent = m.right ? '+' + m.points.toLocaleString() + ' points' : 'It was ' + LETTERS[m.answer] + '.' + (m.points < 0 ? ' You lose ' + (-m.points).toLocaleString() + ' points.' : '');
       $('res-total').textContent = m.score.toLocaleString() + ' points, ' + G.ordinal(m.place) + ' of ' + m.of;
       only('res');
       return;

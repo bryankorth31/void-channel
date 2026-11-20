@@ -26,6 +26,13 @@
       Every answer comes from a record we can point to, and the source shows with it.</p>
 
     <div class="field">
+      <span class="label">Game</span>
+      <div class="choices" role="radiogroup" aria-label="Kind of game">
+        <label title="One question after another, with the extra rounds mixed in"><input type="radio" name="format" value="classic" checked> Question by question</label>
+        <label title="A board of five categories by points; the picker calls a square; a final question everyone bets on"><input type="radio" name="format" value="shelf"> The Shelf</label>
+      </div>
+    </div>
+    <div class="field">
       <span class="label">Answers</span>
       <div class="choices" role="radiogroup" aria-label="How people answer">
         <label id="phones-l" title="Everyone scans a code with their phone and taps an answer; the screen keeps score"><input type="radio" name="mode" value="phones" checked> On phones<small class="off" id="phones-off" hidden> (not switched on yet)</small></label>
@@ -102,6 +109,23 @@
       </div>
       <p class="hint">Click a name to remove that phone.</p>
     </div>
+  </section>
+
+  <section class="shelfboard" id="shelf" hidden>
+    <div class="shelf-top"><h2>The Shelf</h2><p class="shelf-who" id="shelf-who"></p></div>
+    <div class="shelf-body">
+      <div class="grid" id="grid" role="grid" aria-label="The board"></div>
+      <ol class="ranks side" id="shelf-ranks"></ol>
+    </div>
+    <p class="hint" id="shelf-hint">Pick a square: the arrows and Enter, or click it.</p>
+  </section>
+
+  <section class="wager" id="wager" hidden>
+    <h2>Final question</h2>
+    <p class="lede" id="wager-cat"></p>
+    <p class="wager-note" id="wager-note"></p>
+    <p class="joined" id="wager-count"></p>
+    <p class="hint" id="wager-hint">Enter for the final question.</p>
   </section>
 
   <section class="board" id="board" hidden>

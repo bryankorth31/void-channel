@@ -75,6 +75,23 @@ main{flex:1;display:flex;flex-direction:column;width:100%;max-width:1600px;margi
 @keyframes ear{from{opacity:.45;transform:scale(.96)}to{opacity:1;transform:scale(1.04)}}
 .mnote{position:absolute;left:0;right:0;bottom:0;margin:0;padding:8px 12px;background:rgba(7,8,12,.8);color:var(--gold);font-size:clamp(13px,1.2vw,18px)}
 .mnote:empty{display:none}
+/* The Shelf: five categories by four values, the scores beside */
+.shelfboard{flex:1;display:flex;flex-direction:column;gap:clamp(8px,1.4vh,18px)}
+.shelf-top{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap}
+.shelf-top h2{font-family:'Unbounded',sans-serif;font-size:clamp(22px,3vw,48px);margin:0}
+.shelf-who{margin:0;color:var(--gold);font-weight:600;font-size:clamp(16px,1.8vw,30px)}
+.shelf-body{flex:1;display:grid;grid-template-columns:1fr auto;gap:clamp(10px,1.6vw,26px);min-height:0}
+.grid{display:grid;grid-template-columns:repeat(var(--cols,5),minmax(0,1fr));grid-auto-rows:1fr;gap:clamp(6px,.8vw,12px)}
+.grid .cat{display:flex;align-items:center;justify-content:center;text-align:center;padding:6px;border-radius:10px;background:var(--panel);border:1px solid var(--line);color:var(--gold);font-weight:700;font-size:clamp(13px,1.3vw,22px);line-height:1.15}
+.grid .cell{font-family:'Unbounded',sans-serif;font-weight:700;font-size:clamp(20px,2.6vw,48px);color:var(--fg);background:linear-gradient(160deg,rgba(95,227,255,.14),var(--panel) 70%);border:2px solid var(--line);border-radius:12px;cursor:pointer}
+.grid .cell:hover,.grid .cell:focus{border-color:var(--gold);outline:none;transform:scale(1.03);box-shadow:0 0 0 3px rgba(242,169,59,.35)}
+.grid .cell:disabled{opacity:.18;cursor:default;transform:none}
+.ranks.side{min-width:clamp(180px,18vw,320px);margin:0;align-content:start}
+.ranks.side li{font-size:clamp(13px,1.3vw,22px);padding:6px 12px}
+.ranks.side:empty{display:none}
+.wager{flex:1;display:flex;flex-direction:column;justify-content:center}
+.wager h2{font-family:'Unbounded',sans-serif;font-size:clamp(28px,5vw,80px);margin:0 0 10px}
+.wager-note{font-size:clamp(16px,1.8vw,30px);margin:0 0 10px}
 /* Higher or Lower: the last title and the next, side by side */
 .run{display:flex;align-items:stretch;gap:clamp(8px,1.4vw,22px);flex-wrap:wrap}
 .runcard{flex:1;min-width:0;display:flex;flex-direction:column;justify-content:center;gap:4px;padding:clamp(8px,1.2vw,18px) clamp(12px,1.6vw,26px);border-radius:14px;background:var(--panel);border:2px solid var(--line)}

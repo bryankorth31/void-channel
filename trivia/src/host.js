@@ -69,6 +69,7 @@
       categories: [...document.querySelectorAll('input[name="cat"]:checked')].map((e) => e.value),
       count: +val('count') || 20,
       secs: +(val('secs') || 0),
+      format: val('format') === 'shelf' ? 'shelf' : 'classic',
       hl: !!document.querySelector('input[name="hl"]:checked'),
       yearGuess: !!document.querySelector('input[name="yg"]:checked'),
       clips: !!document.querySelector('input[name="clips"]:checked'),
@@ -110,11 +111,11 @@
     $('start').disabled = !o.categories.length || !n;
   }
 
-  const SECTIONS = ['setup', 'lobby', 'stage', 'board', 'done'];
+  const SECTIONS = ['setup', 'lobby', 'stage', 'board', 'shelf', 'wager', 'done'];
   function show(which) {
     for (const id of SECTIONS) $(id).hidden = id !== which;
     $('pause').hidden = which !== 'stage';
-    document.body.classList.toggle('playing', which === 'stage' || which === 'board' || which === 'lobby');
+    document.body.classList.toggle('playing', ['stage', 'board', 'lobby', 'shelf', 'wager'].includes(which));
     document.body.classList.toggle('finished', which === 'done');
     $('back').title = which === 'setup' ? 'Back to voidtv.net' : 'End this game and go back to the settings';
     $('back').setAttribute('aria-label', $('back').title);
@@ -168,6 +169,8 @@
     if (!game || phase === 'lobby') return { type: 't-wait', text: 'You are in. The game starts soon.' };
     if (phase === 'ask') return questionMsg(game.qs[game.at].round === 'year-guess' ? p.guess : p.pick);
     if (phase === 'done') return endMsg(p);
+    if (phase === 'wager') return betAsk(p);
+    if (phase === 'shelf') return { type: 't-wait', text: pickerLine() };
     return { type: 't-wait', text: 'Next question coming up.' };
   }
 
@@ -178,6 +181,14 @@
       p.name = W.cleanName(msg.name, game ? game.opts.band : opts().band);
       send(seat, { type: 't-you', seat, name: nameOf(p), named: !!p.name, refused: !!msg.name && !p.name });
       drawPlayers();
+      return;
+    }
+    if (phase === 'wager' && game) {
+      const bet = G.wagerOf(msg, p.score);
+      if (bet === null || p.bet != null) return;
+      p.bet = bet;
+      send(seat, { type: 't-bet-got', amount: bet });
+      showBets();
       return;
     }
     if (phase !== 'ask' || !game) return;
@@ -258,6 +269,13 @@
     let all;
     try { all = await filesFor(o.categories); }
     catch (e) { $('avail').textContent = 'The questions did not load. Check the connection and press Start again.'; $('start').disabled = false; return; }
+    if (o.format === 'shelf') {
+      const shelf = G.buildShelf(all, { ...o, seen: readSeen() }, Math.random);
+      if (!shelf) { $('avail').textContent = 'Not enough questions for a board with these settings. Add a topic.'; $('start').disabled = false; return; }
+      game = { mode: 'shelf', shelf, qs: [], at: -1, opts: o, total: shelf.cats.reduce((n, c) => n + c.cells.length, 0) + 1, picker: 0, focus: [0, 0] };
+      writeSeen(shelf.cats.flatMap((c) => c.cells.map((x) => x.q.id)).concat([shelf.final.id]));
+      return afterStart(o);
+    }
     // Our own formats (plan G3, G4): a Higher or Lower run and year guesses, built from the dates every question proved.
     let run = [], years = [];
     if ((o.hl || o.yearGuess) && index.dates) {
@@ -271,9 +289,14 @@
     const regular = G.pickGame(all, { ...o, count: o.count - run.length - years.length, seen: readSeen() });
     const qs = G.compose(regular, run, years);
     if (!qs.length) { showAvailable(); return; }
-    game = { qs, at: -1, opts: o };
+    game = { mode: 'classic', qs, at: -1, opts: o };
     writeSeen(qs.map((q) => q.id));
-    if (!o.phones) { show('stage'); next(); return; }
+    return afterStart(o);
+  }
+
+  // After the questions are ready: straight in out loud, or through the phone room's lobby.
+  async function afterStart(o) {
+    if (!o.phones) { firstStep(); return; }
     if (room.code) { for (const p of room.players.values()) { p.score = 0; p.pick = null; } phase = 'lobby'; show('lobby'); drawPlayers(); send('all', { type: 't-wait', text: 'A new game starts soon.' }); $('begin').focus(); return; }
     $('avail').textContent = 'Opening the phone room';
     try { await openRoom(); }
@@ -290,8 +313,101 @@
 
   function begin() {
     if (phase !== 'lobby') return;
+    firstStep();
+  }
+  function firstStep() {
+    if (game.mode === 'shelf') { showShelf(); return; }
     show('stage');
     next();
+  }
+
+  // ---------- The Shelf (plan G1) ----------
+  // Who picks the next square, with phones: the players take turns, in the order they joined.
+  function picker() {
+    const here = present();
+    return here.length ? here[game.picker % here.length] : null;
+  }
+  function pickerLine() { const p = game && game.opts.phones ? picker() : null; return p ? nameOf(p) + ' picks a square.' : 'Pick a square.'; }
+  function showShelf() {
+    phase = 'shelf';
+    const grid = $('grid');
+    const cats = game.shelf.cats;
+    grid.style.setProperty('--cols', cats.length);
+    grid.textContent = '';
+    for (const c of cats) { const h = document.createElement('div'); h.className = 'cat'; h.textContent = c.name; grid.appendChild(h); }
+    for (let r = 0; r < G.SHELF_VALUES.length; r++) {
+      cats.forEach((c, ci) => {
+        const cell = c.cells[r];
+        const b = document.createElement('button');
+        b.type = 'button'; b.className = 'cell'; b.textContent = String(cell.value);
+        b.dataset.c = ci; b.dataset.r = r;
+        b.disabled = cell.used;
+        b.title = c.name + ' for ' + cell.value;
+        b.addEventListener('click', () => openCell(ci, r));
+        grid.appendChild(b);
+      });
+    }
+    $('shelf-who').textContent = pickerLine();
+    if (game.opts.phones) { drawRanks($('shelf-ranks'), 6); send('all', { type: 't-wait', text: pickerLine() }); } else $('shelf-ranks').textContent = '';
+    show('shelf');
+    focusCell(game.focus[0], game.focus[1]);
+  }
+  function cellButton(c, r) { return $('grid').querySelector('.cell[data-c="' + c + '"][data-r="' + r + '"]'); }
+  function focusCell(c, r) {
+    const b = cellButton(c, r);
+    if (b && !b.disabled) { game.focus = [c, r]; b.focus(); return; }
+    const open = $('grid').querySelector('.cell:not(:disabled)');
+    if (open) { game.focus = [+open.dataset.c, +open.dataset.r]; open.focus(); }
+  }
+  // The arrows move between squares that are still open, skipping used ones.
+  function moveFocus(dc, dr) {
+    const cols = game.shelf.cats.length, rows = G.SHELF_VALUES.length;
+    let [c, r] = game.focus;
+    for (let i = 0; i < cols * rows; i++) {
+      c = (c + dc + cols) % cols; r = (r + dr + rows) % rows;
+      const b = cellButton(c, r);
+      if (b && !b.disabled) { game.focus = [c, r]; b.focus(); return; }
+      if (!dc && !dr) return;
+    }
+  }
+  function openCell(c, r) {
+    const cat = game.shelf.cats[c], cell = cat.cells[r];
+    if (!cell || cell.used || phase !== 'shelf') return;
+    cell.used = true;
+    const q = Object.assign({}, cell.q, { shelfValue: cell.value, shelfCat: cat.name });
+    game.qs.push(q);
+    game.at = game.qs.length - 1;
+    show('stage');
+    ask(q);
+  }
+  // The final: everyone with a phone bets part of their score, then one question.
+  function betAsk(p) { return { type: 't-bet-ask', max: Math.max(0, p.score), cat: G.ROUND_NAMES[game.shelf.final.round] || '' }; }
+  function startWager() {
+    phase = 'wager';
+    const f = game.shelf.final;
+    $('wager-cat').textContent = 'The category: ' + (G.ROUND_NAMES[f.round] || 'trivia') + '.';
+    if (game.opts.phones && room.players.size) {
+      for (const p of room.players.values()) { p.bet = null; send(p.seat, betAsk(p)); }
+      $('wager-note').textContent = 'Bet part of your score on your phone. Right, and you win what you bet; wrong, and you lose it.';
+      showBets();
+    } else {
+      $('wager-note').textContent = 'One last question.';
+      $('wager-count').textContent = '';
+    }
+    show('wager');
+  }
+  function showBets() {
+    if (phase !== 'wager') return;
+    const here = present(), n = here.filter((p) => p.bet != null).length;
+    $('wager-count').textContent = n + ' of ' + here.length + ' have bet';
+  }
+  function askFinal() {
+    const q = Object.assign({}, game.shelf.final, { final: true });
+    for (const p of room.players.values()) if (p.bet == null) p.bet = 0;
+    game.qs.push(q);
+    game.at = game.qs.length - 1;
+    show('stage');
+    ask(q);
   }
 
   function stopClock() { if (timer) cancelAnimationFrame(timer); timer = null; }
@@ -340,8 +456,8 @@
   // The question as a phone gets it: the answers, and the question too when it fits in the relay's 1 KB.
   function questionMsg(pick) {
     const q = game.qs[game.at];
-    if (q.round === 'year-guess') return { type: 't-q', n: game.at, of: game.qs.length, q: q.q, kind: 'year', min: q.min, max: q.max, secs: game.opts.secs, guess: pick == null ? null : pick };
-    const m = { type: 't-q', n: game.at, of: game.qs.length, q: q.q, choices: q.choices, secs: game.opts.secs, pick: pick == null ? null : pick };
+    if (q.round === 'year-guess') return { type: 't-q', n: game.at, of: game.total || game.qs.length, q: q.q, kind: 'year', min: q.min, max: q.max, secs: game.opts.secs, guess: pick == null ? null : pick };
+    const m = { type: 't-q', n: game.at, of: game.total || game.qs.length, q: q.q, choices: q.choices, secs: game.opts.secs, pick: pick == null ? null : pick };
     if (JSON.stringify(m).length > 900) delete m.q;
     if (JSON.stringify(m).length > 900) m.choices = q.choices.map((c) => c.slice(0, 80));
     return m;
@@ -350,7 +466,7 @@
   function ask(q) {
     phase = 'ask'; paused = false;
     $('pause').textContent = 'Pause';
-    $('num').textContent = 'Question ' + (game.at + 1) + ' of ' + game.qs.length;
+    $('num').textContent = q.final ? 'Final question' : q.shelfValue ? q.shelfCat + ' for ' + q.shelfValue : 'Question ' + (game.at + 1) + ' of ' + game.qs.length;
     $('kind').textContent = (G.CATEGORY_NAMES[q.category] || '') + ' · ' + (G.ROUND_NAMES[q.round] || '');
     $('q').textContent = q.q;
     const ol = $('answers');
@@ -434,6 +550,7 @@
 
   function reveal() {
     if (phase !== 'ask') return;
+    const shelfQ = game.mode === 'shelf' ? game.qs[game.at] : null;
     stopClock();
     phase = 'reveal';
     const q = game.qs[game.at];
@@ -458,7 +575,7 @@
       for (const p of room.players.values()) if (p.pick !== null) tally[p.pick]++;
       lis.forEach((li, i) => { li.querySelector('.tally').textContent = tally[i] ? String(tally[i]) : ''; });
       const gained = new Map();
-      for (const p of room.players.values()) { const pts = G.points(p.pick === q.answer, p.msLeft, game.opts.secs * 1000); p.score += pts; gained.set(p.seat, pts); }
+      for (const p of room.players.values()) { const pts = pointsFor(p, q); p.score += pts; gained.set(p.seat, pts); }
       const ranks = G.standings([...room.players.values()]);
       for (const r of ranks) {
         const p = room.players.get(r.seat);
@@ -466,7 +583,8 @@
       }
       $('where').textContent = '';
     }
-    $('hint').textContent = game.at + 1 < game.qs.length ? (game.opts.phones ? 'Enter for the scores.' : 'Enter for the next question.') : (game.opts.phones ? 'Enter for the final scores.' : 'Enter to finish.');
+    $('hint').textContent = shelfQ ? (shelfQ.final ? 'Enter to finish.' : 'Enter for the board.')
+      : game.at + 1 < game.qs.length ? (game.opts.phones ? 'Enter for the scores.' : 'Enter for the next question.') : (game.opts.phones ? 'Enter for the final scores.' : 'Enter to finish.');
   }
 
   // Closest Without Going Over, scored and told: the year, who was closest, and each phone its own result.
@@ -489,6 +607,13 @@
     }
     drawYear(q, true, line);
     $('hint').textContent = game.at + 1 < game.qs.length ? (game.opts.phones ? 'Enter for the scores.' : 'Enter for the next question.') : (game.opts.phones ? 'Enter for the final scores.' : 'Enter to finish.');
+  }
+
+  function pointsFor(p, q) {
+    const right = p.pick === q.answer;
+    if (q.final) return G.settleWager(right, p.bet || 0);
+    if (q.shelfValue) return right ? q.shelfValue : 0;
+    return G.points(right, p.msLeft, game.opts.secs * 1000);
   }
 
   function drawRanks(ol, limit) {
@@ -515,6 +640,14 @@
 
   function next() {
     if (phase === 'ask') return reveal();
+    if (game.mode === 'shelf') {
+      if (phase === 'wager') return askFinal();
+      const q = game.qs[game.at];
+      if (q && q.final) return finish();
+      if (game.shelf.cats.every((c) => c.cells.every((x) => x.used))) return startWager();
+      game.picker++;
+      return showShelf();
+    }
     if (phase === 'reveal' && game.opts.phones && room.players.size && game.at + 1 < game.qs.length) return board();
     if (game.at + 1 >= game.qs.length) return finish();
     game.at++;
@@ -564,7 +697,7 @@
     if (phase === 'done' || phase === 'lobby') return backToSetup();
     if (performance.now() - backArmed < 4000) { backArmed = 0; backToSetup(); return; }
     backArmed = performance.now();
-    const h = phase === 'board' ? $('board-hint') : $('hint'), was = h.textContent;
+    const h = phase === 'board' ? $('board-hint') : phase === 'shelf' ? $('shelf-hint') : phase === 'wager' ? $('wager-hint') : $('hint'), was = h.textContent;
     h.textContent = 'Press Back (or Esc) again to end this game.';
     h.classList.add('warn');
     setTimeout(() => { if (h.textContent.startsWith('Press Back')) { h.textContent = was; h.classList.remove('warn'); } }, 4000);
@@ -581,6 +714,15 @@
     if (e.target && /^(INPUT|SELECT|TEXTAREA)$/.test(e.target.tagName) && e.key !== 'Enter') return;
     if (e.key === 'f' || e.key === 'F') { full(); return; }
     if ((e.key === 'r' || e.key === 'R') && clip && phase === 'ask') { playClip(); return; }
+    // On the board the arrows move between open squares and Enter (or a clicker's next) opens one.
+    if (phase === 'shelf') {
+      const mv = { ArrowLeft: [-1, 0], ArrowRight: [1, 0], ArrowUp: [0, -1], ArrowDown: [0, 1] }[e.key];
+      if (mv) { e.preventDefault(); moveFocus(mv[0], mv[1]); return; }
+      const a0 = G.keyAction(e);
+      if (a0 === 'next') { e.preventDefault(); openCell(game.focus[0], game.focus[1]); return; }
+      if (a0 === 'back') { e.preventDefault(); back(); }
+      return;
+    }
     const act = G.keyAction(e);
     if (!act) return;
     if (phase === 'setup') { if (act === 'next' && e.key === 'Enter' && !$('start').disabled && e.target === document.body) { e.preventDefault(); start(); } return; }
@@ -600,6 +742,7 @@
   $('full').addEventListener('click', full);
   $('stage').addEventListener('click', (e) => { if (e.target.closest('#media')) { if (phase === 'ask') playClip(); return; } if (!e.target.closest('a') && !paused) next(); });
   $('board').addEventListener('click', () => next());
+  $('wager').addEventListener('click', () => { if (phase === 'wager') next(); });
   for (const i of document.querySelectorAll('.setup input')) i.addEventListener('change', showAvailable);
   addEventListener('pagehide', closeRoom);
 

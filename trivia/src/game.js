@@ -184,10 +184,54 @@
     return out;
   }
 
+  // ---------- The Shelf (plan G1; Bryan, 20 Nov 2026: "Yes, build The Shelf") ----------
+  // A board of categories by point value. A category is a kind of question; within one, the best-known titles (their TMDB vote
+  // count) sit on the cheapest squares. After the board, one final question everyone bets on.
+  const SHELF_VALUES = [200, 400, 600, 800];
+  const SHELF_ROUNDS = ['cast', 'first-aired', 'network', 'episode', 'film-year', 'game-year', 'game-maker', 'clip', 'still', 'listen', 'film-clip'];
+
+  function buildShelf(questions, opts, rand, cols) {
+    rand = rand || Math.random;
+    cols = cols || 5;
+    const rows = SHELF_VALUES.length;
+    const seen = opts.seen || new Set();
+    const pool = allowed(questions, opts).filter((q) => SHELF_ROUNDS.includes(q.round));
+    const fresh = pool.filter((q) => !seen.has(q.id));
+    const source = fresh.length >= cols * rows + 1 ? fresh : pool;
+    const byRound = new Map();
+    for (const q of shuffle(source, rand)) { if (!byRound.has(q.round)) byRound.set(q.round, []); byRound.get(q.round).push(q); }
+    const used = new Set();
+    const cats = [];
+    for (const r of shuffle([...byRound.keys()], rand)) {
+      if (cats.length >= cols) break;
+      const picked = [];
+      for (const q of byRound.get(r)) { if (picked.length >= rows * 3) break; if (!used.has(subject(q))) picked.push(q); }
+      if (picked.length < rows) continue;
+      // A spread of fame: the best known of a wide pick on the cheap squares, the least known on the dear ones.
+      const chosen = shuffle(picked, rand).slice(0, rows).sort((a, b) => (b.fame || 0) - (a.fame || 0));
+      for (const q of chosen) used.add(subject(q));
+      cats.push({ round: r, name: ROUND_NAMES[r] || r, cells: chosen.map((q, i) => ({ value: SHELF_VALUES[i], q, used: false })) });
+    }
+    if (cats.length < Math.min(cols, 3)) return null;
+    // The final: a question from what is left, the least known one (hard on purpose).
+    const left = source.filter((q) => !used.has(subject(q)) && !q.media).sort((a, b) => (a.fame || 0) - (b.fame || 0));
+    const final = left.find((q) => q.fame) || left[0];
+    if (!final) return null;
+    return { cats, final };
+  }
+
+  // A phone's bet on the final: a whole number from 0 to what it has (never below 0); anything else is dropped.
+  function wagerOf(msg, max) {
+    if (!msg || msg.type !== 't-bet' || !Number.isInteger(msg.amount)) return null;
+    const top = Math.max(0, max);
+    return msg.amount >= 0 && msg.amount <= top ? msg.amount : null;
+  }
+  const settleWager = (right, bet) => (right ? bet : -bet);
+
   // "1st", "2nd", "3rd", "11th", "22nd".
   function ordinal(n) { const t = n % 100, o = n % 10; return n + (t >= 11 && t <= 13 ? 'th' : o === 1 ? 'st' : o === 2 ? 'nd' : o === 3 ? 'rd' : 'th'); }
 
   const api = { ROUND_NAMES, CATEGORY_NAMES, seeded, shuffle, subject, allowed, pickGame, keyAction, points, standings, answerOf, ordinal,
-    order, datesFor, hlRun, yearQs, guessOf, yearPoints, compose };
+    order, datesFor, hlRun, yearQs, guessOf, yearPoints, compose, SHELF_VALUES, buildShelf, wagerOf, settleWager };
   if (typeof module !== 'undefined' && module.exports) module.exports = api; else root.TriviaGame = api;
 })(this);
