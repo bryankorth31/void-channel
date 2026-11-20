@@ -151,17 +151,20 @@ test('HQ\'s page cannot be framed by another site: X-Frame-Options SAMEORIGIN an
   assert.equal(typeof busy.json.queue, 'number');
 });
 
-test('HQ has three areas behind a switcher; University and Kids are not Void TV tabs (docs/PLAN-hq-areas.md, H1)', async () => {
+test('HQ has four areas behind a switcher; University and Kids are not Void TV tabs (docs/PLAN-hq-areas.md, H1; Void Cast added 19 Nov 2026)', async () => {
   const page = (await call(port, 'GET', '/')).text;
   assert.ok(page.includes('<nav id="areas"'), 'the area switcher is in the header');
   const src = page.match(/const AREAS=(\[.*?\]);\r?\n/);
   assert.ok(src, 'AREAS is defined');
   const areas = Function('return ' + src[1])();
-  assert.deepEqual(areas.map((a) => a.n), ['Void TV', 'Kids', 'University']);
+  // Void Cast: Bryan, 19 Nov 2026, "A Void Cast area in HQ" (his private film viewer, its own folder and server; this
+  // area only shows Void Cast's own control page).
+  assert.deepEqual(areas.map((a) => a.n), ['Void TV', 'Kids', 'University', 'Void Cast']);
   const keys = (k) => areas.find((a) => a.k === k).tabs.map((t) => t[0]);
   assert.ok(!keys('tv').includes('university'), 'University left the Void TV tabs');
   assert.deepEqual(keys('uni'), ['university', 'uni-courses', 'uni-areas', 'uni-check', 'uni-help']);
-  for (const k of [...keys('uni'), ...keys('kids')]) assert.ok(page.includes("'" + k + "'"), k + ' has a page');
+  assert.deepEqual(keys('cast'), ['cast', 'cast-check', 'cast-family']);
+  for (const k of [...keys('uni'), ...keys('kids'), ...keys('cast')]) assert.ok(page.includes("'" + k + "'"), k + ' has a page');
   // every University button has its by-hand line (hq-manual-mode)
   for (const b of ['Check sources', 'Build preview', 'Build public copy', 'Deploy', 'Scaffold', 'Copy brief', 'Rewrite brief', 'Listen', 'Set times', 'Live']) assert.ok(page.includes("['" + b + "','"), b + ' is in University help');
   assert.ok(page.includes('id="tvbtns"'), 'Publish now sits in the Void TV-only group');
