@@ -162,7 +162,8 @@
     ['Learning', /educational|learning/i],
   ];
   const genresOf = (labels) => GENRES.filter(([, re]) => (labels || []).some((l) => re.test(l))).map(([n]) => n);
-  const fold = (t) => String(t || '').toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, ' ').trim();
+  // Accents fold away on both sides (audit: "pokemon" found nothing; the titles say Pokémon).
+  const fold = (t) => String(t || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, ' ').trim();
 
   // The filter lives in the address (?m=snes&g=Platform&p=2&d=1990&q=mario), so a link shares what it shows.
   const KEYS = { m: 'Machine', g: 'Genre', p: 'Players', d: 'Decade' };

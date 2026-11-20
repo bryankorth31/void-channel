@@ -138,3 +138,10 @@ test('Bryan, 20 Nov 2026 ("the card dimension aspect ratio doesn\'t fit the artw
   assert.ok(css.includes('.held .front img{width:100%;height:100%;object-fit:contain;'));
   assert.ok(!/\.box img\{[^}]*object-fit:cover/.test(css));
 });
+
+test('the audit: search folds accents, so "pokemon" finds the Pokémon games', () => {
+  const games = JSON.parse(fs.readFileSync(path.join(PLAY, 'shelf', 'index.json'), 'utf8')).games;
+  const hits = (q) => games.filter((g) => Shelf.matches(g, { q })).length;
+  assert.ok(hits('pokemon') >= 5);
+  assert.equal(hits('pokemon'), hits('pokémon'));
+});
