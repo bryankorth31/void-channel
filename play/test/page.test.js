@@ -139,7 +139,10 @@ test('controller mode (Bryan, 20 Nov 2026): with a gamepad in hand the picture f
 test('the donation cross is never on the picture or a key: after the keys are laid out it takes the first free spot for the layout', () => {
   const js = read(ROOT, 'src', 'play.js');
   assert.ok(js.includes('    placeGive();\n  }'), 'placed after the keys');
-  assert.ok(js.includes('const [x, y] = spots.find(free) || spots[0];'));
+  // Audit, Oregon Trail: no free spot means no cross over the keys (the pause menu has the donation line); none on the start screen.
+  assert.ok(js.includes("const spot = L.mode === 'bare' ? spots[0] : spots.find(free);") && js.includes('give.hidden = !spot;'));
+  assert.ok(js.includes('if (!started) { give.hidden = true; return; }'));
+  assert.ok(read(ROOT, 'game.html').includes('<p class="donate"><span id="donate-line"></span>'), 'the pause menu keeps the donation line');
   assert.ok(!/<div id="screen"[\s\S]{0,200}id="give"/.test(read(ROOT, 'game.html')), 'not inside the picture any more');
   assert.ok(read(ROOT, 'play.css').includes('.stage:has(.pkeyboard.open) .give{display:none}'), 'out of the way of the DOS keyboard');
 });

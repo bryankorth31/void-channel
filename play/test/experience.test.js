@@ -123,7 +123,9 @@ test('T23: holding LT gives the gamepad a second set, so all nine Oregon Trail n
 
 test('T22: on a phone, Play goes fullscreen and sideways where it can, the screen stays awake while playing, and an upright phone is told it plays bigger sideways', () => {
   const js = fs.readFileSync(path.join(PLAY, 'src', 'play.js'), 'utf8');
-  for (const bit of ['function phoneScreen()', "screen.orientation.lock('landscape')", "navigator.wakeLock.request('screen')", 'stayAwake(true);', 'stayAwake(false);', "'Turn your phone sideways for a bigger picture'", 'stopGame();\n    phoneScreen();']) assert.ok(js.includes(bit), bit);
+  for (const bit of ['function phoneScreen()', "screen.orientation.lock('landscape')", "navigator.wakeLock.request('screen')", 'stayAwake(true);', 'stayAwake(false);', "$('cover-turn').hidden", 'stopGame();\n    phoneScreen();']) assert.ok(js.includes(bit), bit);
+  // The audit: as a note during play it covered the d-pad, so the start screen says it instead.
+  assert.ok(fs.readFileSync(path.join(PLAY, 'game.html'), 'utf8').includes('Turn your phone sideways for a bigger picture'));
 });
 
 test('T24: a TV never draws the touch pad; Back opens the menu first and leaves on the second; the play/pause key pauses', () => {

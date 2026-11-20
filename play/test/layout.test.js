@@ -115,3 +115,19 @@ test('a bad aspect falls back to 4:3', () => {
     assert.ok(Math.abs(L.screen.w / L.screen.h - 4 / 3) < 0.02, String(bad));
   }
 });
+
+test('whole-site audit D: with the phone\'s safe-area edges, nothing is laid out in the home-bar strip or the side corners', () => {
+  // An iPhone: upright the home bar (34 px), sideways the rounded corners (47 px) and the home bar (21 px).
+  for (const [vw, vh, ins] of [[390, 844, { t: 0, r: 0, b: 34, l: 0 }], [844, 390, { t: 0, r: 47, b: 21, l: 47 }]]) {
+    for (const shell of [false, true]) {
+      const L = Layout.layout(vw, vh, 4 / 3, true, 2, false, shell, ins);
+      for (const k of ['screen', 'left', 'right', 'pad']) {
+        const r = L[k]; if (!r) continue;
+        assert.ok(r.x >= ins.l && r.x + r.w <= vw - ins.r, `${vw}x${vh} ${k} x`);
+        assert.ok(r.y >= ins.t && r.y + r.h <= vh - ins.b, `${vw}x${vh} ${k} y`);
+      }
+    }
+  }
+  // No insets (a computer) gives the same answer as before.
+  assert.deepEqual(Layout.layout(844, 390, 4 / 3, true, 2, false, true, { t: 0, r: 0, b: 0, l: 0 }), Layout.layout(844, 390, 4 / 3, true, 2, false, true));
+});

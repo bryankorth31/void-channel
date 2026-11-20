@@ -26,7 +26,17 @@
   }
 
   // minCols: a console pad three buttons wide (Super Nintendo diamond, Genesis A B C) asks for three key columns a side.
-  function layout(vw, vh, aspect, touch, minCols, bare, shell) {
+  // inset: the phone's own safe-area edges ({ t, r, b, l }, the iPhone's home bar and rounded corners, from
+  // env(safe-area-inset-*)). Everything is laid out in the room inside them, so no key or picture sits in that strip.
+  function layout(vw, vh, aspect, touch, minCols, bare, shell, inset) {
+    const i = inset || {}, it = i.t | 0, ir = i.r | 0, ib = i.b | 0, il = i.l | 0;
+    if (!(it || ir || ib || il)) return inside(vw, vh, aspect, touch, minCols, bare, shell);
+    const L = inside(Math.max(1, vw - il - ir), Math.max(1, vh - it - ib), aspect, touch, minCols, bare, shell);
+    for (const k of ['screen', 'left', 'right', 'pad']) if (L[k]) { L[k].x += il; L[k].y += it; }
+    return L;
+  }
+
+  function inside(vw, vh, aspect, touch, minCols, bare, shell) {
     aspect = aspect > 0 ? aspect : 4 / 3;
     // Controller mode (Bryan, 20 Nov 2026: 'the screen becomes the entire game screen'): a gamepad in hand on a phone or
     // tablet, so no keys and no bar; the picture fills the whole screen, kept to its shape.

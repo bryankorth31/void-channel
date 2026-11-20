@@ -32,11 +32,32 @@
   }
   const status = (t) => { $('status').textContent = t; };
 
+  // The phone's own safe-area edges (the iPhone's home bar, rounded corners and notch), read from the phone through
+  // env(safe-area-inset-*) on a hidden probe. ?inset=t,r,b,l stands in for a phone in tests.
+  function insets() {
+    const o = (q.get('inset') || '').split(',').map(Number);
+    if (o.length === 4 && o.every((n) => n >= 0 && n < 200)) return { t: o[0], r: o[1], b: o[2], l: o[3] };
+    let p = insets.probe;
+    if (!p) { p = insets.probe = document.createElement('div'); p.className = 'inset-probe'; p.setAttribute('aria-hidden', 'true'); document.body.appendChild(p); }
+    const s = getComputedStyle(p), n = (v) => Math.round(parseFloat(v) || 0);
+    return { t: n(s.paddingTop), r: n(s.paddingRight), b: n(s.paddingBottom), l: n(s.paddingLeft) };
+  }
+
   function place() {
     // The handheld shell: a phone (its short side up to 540 px) with the touch keys on, while a game plays.
     const shell = touch && !padMode && started && Math.min(innerWidth, innerHeight) <= 540;
+    const ins = insets();
+    // The picture may run under the edges (a game's picture under the home bar is fine); keys and the cross may not. Key
+    // columns and the room under an upright picture are laid out inside the edges. A console pad sideways floats in its
+    // own layer, which keeps inside them by itself, so the picture keeps its full size; controller mode has no keys.
+    const sideFloat = touch && card && PlayCards.isPad(card) && innerWidth > innerHeight;
+    const layIns = padMode ? null : sideFloat ? { t: ins.t, r: 0, b: 0, l: 0 } : ins;
     // In the shell a console pad floats over the side margins, so it needs no third key column: the picture gets the room.
-    const L = PlayLayout.layout(innerWidth, innerHeight, aspect, touch, card ? (shell && PlayCards.isPad(card) ? 2 : PlayTouch.minCols(card)) : 2, padMode, shell);
+    const L = PlayLayout.layout(innerWidth, innerHeight, aspect, touch, card ? (shell && PlayCards.isPad(card) ? 2 : PlayTouch.minCols(card)) : 2, padMode, shell, layIns);
+    L.inset = ins;
+    // Upright on a phone, the start screen says a sideways phone gives a bigger picture (audit: as a note during play it
+    // covered the d-pad).
+    if ($('cover-turn')) $('cover-turn').hidden = !(card && isPhone() && innerHeight > innerWidth && PlayCards.isPad(card));
     document.body.classList.toggle('padmode', padMode);
     document.body.classList.toggle('shell', shell);
     // The donation cross, never on the picture (audit: it covered Tetris's text): upright, the bottom centre of the keys'
@@ -49,7 +70,7 @@
     const floating = touch && card && PlayCards.isPad(card);
     set($('screen'), L.screen); set($('z-left'), floating ? null : L.left); set($('z-right'), floating ? null : L.right);
     set($('z-pad'), floating ? null : L.pad);
-    set($('z-over'), floating && L.mode !== 'plain' ? (L.pad || { x: 0, y: PlayLayout.HEADER, w: innerWidth, h: innerHeight - PlayLayout.HEADER }) : null);
+    set($('z-over'), floating && L.mode !== 'plain' ? (L.pad || { x: ins.l, y: PlayLayout.HEADER + ins.t, w: innerWidth - ins.l - ins.r, h: innerHeight - PlayLayout.HEADER - ins.t - ins.b }) : null);
     if (touch && hub && card) {
       const zones = floating ? { over: $('z-over'), mode: L.mode } : L.pad ? { pad: $('z-pad') } : { left: $('z-left'), right: $('z-right') };
       const sig = L.mode;
@@ -63,19 +84,27 @@
   // out, it takes the first free spot of a short list for the layout: upright, along the bottom of the keys' room;
   // sideways, the tops and bottoms of the side columns; on a computer, beside the picture; in controller mode, under
   // the bar while the bar shows.
+  // Not on the start screen (audit: sideways it lay over the credits; the start screen has its own donation line), and
+  // when no spot is free (a DOS game's full key set), not at all: the pause menu carries the donation line instead.
+  // Every spot keeps out of the phone's safe-area edges with a 10 px margin.
   function placeGive() {
     const give = $('give'), L = placeGive.L;
     if (!give || !L) return;
-    const S = 44, W = innerWidth, H = innerHeight, T = PlayLayout.HEADER, sc = L.screen;
-    const spots = L.mode === 'portrait' ? [[(W - S) / 2, H - S - 6], [(W - S) / 2, sc.y + sc.h + 6], [8, H - S - 6], [W - S - 8, H - S - 6], [8, sc.y + sc.h + 6], [W - S - 8, sc.y + sc.h + 6]]
-      : L.mode === 'bare' ? [[(W - S) / 2, T + 4]]
-      : L.mode === 'plain' ? [[sc.x + sc.w + 10, sc.y + sc.h - S], [sc.x - S - 10, sc.y + sc.h - S], [(W - S) / 2, H - S - 4]]
-      : [[(sc.x - S) / 2, T + 6], [sc.x + sc.w + (W - sc.x - sc.w - S) / 2, T + 6], [(sc.x - S) / 2, H - S - 6], [sc.x + sc.w + (W - sc.x - sc.w - S) / 2, H - S - 6]];
+    if (!started) { give.hidden = true; return; }
+    const S = 44, M = 10, I = L.inset || { t: 0, r: 0, b: 0, l: 0 }, sc = L.screen;
+    const x0 = I.l + M, x1 = innerWidth - I.r - M, y0 = I.t, y1 = innerHeight - I.b - M, W = x1 - x0, T = PlayLayout.HEADER + I.t;
+    const mid = x0 + (W - S) / 2, under = sc.y + sc.h + 6;
+    const spots = L.mode === 'portrait' ? [[mid, y1 - S], [mid, under], [x0, y1 - S], [x1 - S, y1 - S], [x0, under], [x1 - S, under]]
+      : L.mode === 'bare' ? [[mid, T + 4]]
+      : L.mode === 'plain' ? [[sc.x + sc.w + 10, sc.y + sc.h - S], [sc.x - S - 10, sc.y + sc.h - S], [mid, y1 - S]]
+      : [[(x0 + sc.x - S) / 2, T + 6], [(sc.x + sc.w + x1 - S) / 2, T + 6], [(x0 + sc.x - S) / 2, y1 - S], [(sc.x + sc.w + x1 - S) / 2, y1 - S]];
     const keys = [...document.querySelectorAll('.pk, .pdpad')].filter((k) => k.offsetParent).map((k) => k.getBoundingClientRect()).filter((r) => r.width > 0);
-    const free = ([x, y]) => x >= 0 && y >= 0 && x + S <= W && y + S <= H
+    const free = ([x, y]) => x >= x0 - M && y >= y0 && x + S <= x1 + M && y + S <= y1 + M
       && ![...keys, { left: sc.x, top: sc.y, right: sc.x + sc.w, bottom: sc.y + sc.h }].some((r) => x < r.right && r.left < x + S && y < r.bottom && r.top < y + S);
-    const [x, y] = spots.find(free) || spots[0];
-    Object.assign(give.style, { left: Math.round(x) + 'px', top: Math.round(y) + 'px', bottom: 'auto', transform: 'none' });
+    const spot = L.mode === 'bare' ? spots[0] : spots.find(free);
+    give.hidden = !spot;
+    if (!spot) { if (!$('give-card').hidden) showGive(false); return; }
+    Object.assign(give.style, { left: Math.round(spot[0]) + 'px', top: Math.round(spot[1]) + 'px', bottom: 'auto', transform: 'none' });
   }
 
   // While the menu is open the game hears nothing: every held key is let go first, then the gamepad drives the menu.
@@ -278,7 +307,6 @@
       cheats: (m) => { if (!m.ok) toast('This game\'s engine cannot take cheats'); else if (m.on) toast(m.on === 1 ? 'One cheat on' : m.on + ' cheats on'); },
       firstFrame: () => {
         clearTimeout(deadline); $('cover').hidden = true; $('canvas').focus({ preventScroll: true }); stayAwake(true); armBack();
-        if (isPhone() && innerHeight > innerWidth && PlayCards.isPad(card)) toast('Turn your phone sideways for a bigger picture');
         if (!PlayCards.isPad(card)) blankWatch();
         if (resumeState) { const s = resumeState; resumeState = null; runner.load(s).then((ok) => toast(ok ? 'Back where you left off' : 'That spot would not load; starting fresh')); }
       },
@@ -596,6 +624,11 @@
   // links that work by click (Play, the menu, the cross and its card, the keyboard toggle) keep their taps.
   const noZoom = (e) => { if (!e.target.closest('.pkbd, .pkclose, button:not(.pk), a, input, label, .menu, .give-card, .phones')) e.preventDefault(); };
   for (const ev of ['touchstart', 'touchend']) $('stage').addEventListener(ev, noZoom, { passive: false });
+  // The bar and the cross keep their taps, so a second tap within 350 ms there is cancelled instead (audit C): one tap
+  // still works, two fast ones cannot zoom.
+  let lastEnd = 0;
+  const guard = (e) => { const now = e.timeStamp || Date.now(); if (now - lastEnd < 350) e.preventDefault(); lastEnd = now; };
+  for (const el of [document.querySelector('.bar'), $('give')]) if (el) el.addEventListener('touchend', guard, { passive: false });
 
   // Cheats (Bryan, 20 Nov 2026: "add toggle for cheats"): a console game whose engine takes cheats lists them in the pause
   // menu, each a switch; the ones switched on are kept for the game in this browser and set again when it starts. The

@@ -233,3 +233,16 @@ body.shell .pdpad::before{content:'';position:absolute;inset:6%;pointer-events:n
   clip-path:polygon(35% 0,65% 0,65% 35%,100% 35%,100% 65%,65% 65%,65% 100%,35% 100%,35% 65%,0 65%,0 35%,35% 35%);
   filter:drop-shadow(0 5px 0 #12101a)}
 body.shell .pdpad .pdir{position:absolute;z-index:1;color:#1a1825}
+/* ---- Phone edges and taps (whole-site audit, 20 Nov 2026, points B to E). ---- */
+/* The phone's safe-area edges, read by place() from this hidden probe (the home bar, rounded corners, the notch). */
+.inset-probe{position:fixed;left:0;top:0;width:0;height:0;visibility:hidden;pointer-events:none;
+  padding:env(safe-area-inset-top,0px) env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px)}
+.bar{padding-left:calc(12px + env(safe-area-inset-left,0px));padding-right:calc(12px + env(safe-area-inset-right,0px))}
+.give[hidden]{display:none}
+/* Nothing inside the game area pans or zooms; the controls that work by a plain click, and the panels that scroll,
+   keep the usual taps. */
+.stage,.stage *{touch-action:none}
+.stage button:not(.pk),.stage a,.stage input,.stage label,.stage .menu,.stage .menu *,.stage .give-card,.stage .give-card *,
+.stage .phones,.stage .phones *,.stage .cover,.stage .cover *{touch-action:manipulation}
+.cover-turn{margin:4px 0 0;font-size:14px;color:var(--acc);text-shadow:0 1px 6px #000}
+.cover-turn[hidden]{display:none}
