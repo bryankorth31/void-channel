@@ -33,7 +33,7 @@ test('a console action speaks the game\'s words on every input', () => {
 
 test('a DOS range reads as a range, and the gamepad says which part it reaches', () => {
   const pick = Cards.actionLines(byId('oregon-trail-1990')).find((l) => l.do === 'Pick from a list').how;
-  assert.equal(pick, 'LB, RB, LT or RT (1 to 4) on a gamepad, 1 to 9 on the keyboard, 1 to 9 on screen');
+  assert.equal(pick, 'LB, RB or RT (1 to 3); hold LT with the d-pad, LB or RB (4 to 9) on a gamepad, 1 to 9 on the keyboard, 1 to 9 on screen');
 });
 
 test('one input at a time, for the start screen', () => {
@@ -105,4 +105,18 @@ test('B, 20 Nov 2026 "Yes, build as drawn": the console pad floats in one layer,
   const js = fs.readFileSync(path.join(PLAY, 'src', 'play.js'), 'utf8');
   assert.ok(js.includes("const floating = touch && card && PlayCards.isPad(card);"));
   assert.ok(js.includes("set($('z-over'), floating && L.mode !== 'plain' ? (L.pad ||"), 'upright the layer is the room under the picture');
+});
+
+test('T23: holding LT gives the gamepad a second set, so all nine Oregon Trail numbers are reachable', () => {
+  const Hub = require('../src/hub.js');
+  const c = byId('oregon-trail-1990');
+  const sent = [];
+  const hub = Hub.createHub({ send: (k, d) => sent.push(k + (d ? ' down' : ' up')) });
+  hub.setCard(c, Cards.gamepadMap(c));
+  const pad = (b) => ({ index: 0, mapping: 'standard', axes: [0, 0], buttons: Array.from({ length: 17 }, (_, i) => ({ pressed: b.includes(i), value: b.includes(i) ? 1 : 0 })) });
+  const B = Hub.BUTTONS;
+  for (const step of [[B.LB], [], [B.LT], [B.LT, B.Right], [B.LT], [B.LT, B.RB], []]) hub.pollPads([pad(step)]);
+  assert.deepEqual(sent, ['Digit1 down', 'Digit1 up', 'Digit5 down', 'Digit5 up', 'Digit9 down', 'Digit9 up']);
+  const reach = new Set([...Object.values(c.gamepad), ...Object.values(c.gamepadShift.map)].filter((v) => /^Digit[1-9]$/.test(v)));
+  assert.equal(reach.size, 9);
 });

@@ -114,8 +114,20 @@
     const padReach = range && pad.length ? ' (' + keyName(map[pad[0]]) + ' to ' + keyName(map[pad[pad.length - 1]]) + ')' : '';
     // On screen: the d-pad's own directions, named the same way.
     const screenDirs = new Set(codes.map((c) => (/^(?:P[1-4]:)?(Up|Down|Left|Right)$/.exec(c) || /^Arrow(Up|Down|Left|Right)$/.exec(c) || [])[1]).filter(Boolean));
+    // The second set (plan T23): "hold LT with the d-pad, LB or RB (4 to 9)".
+    let shiftWords = '';
+    const sh = card.gamepadShift;
+    if (sh && sh.map) {
+      const sp = [], sd = new Set();
+      for (const [b, c] of Object.entries(sh.map)) if (codes.includes(c)) (DIRS.includes(b) ? sd.add(b) : sp.push(b));
+      if (sp.length || sd.size) {
+        const vals = codes.filter((c) => Object.values(sh.map).includes(c));
+        const reach = range ? ' (' + keyName(vals[0]) + ' to ' + keyName(vals[vals.length - 1]) + ')' : '';
+        shiftWords = 'hold ' + sh.on + ' with ' + join([...(sd.size ? [sd.size >= 4 ? 'the d-pad' : dirWords(sd)] : []), ...sp.map((b) => PLACES[b] || b)]) + reach;
+      }
+    }
     return {
-      pad: padWords.length ? join(padWords) + padReach : '',
+      pad: [padWords.length ? join(padWords) + padReach : '', shiftWords].filter(Boolean).join('; '),
       keyboard: range && !keys ? range : kbWords.length === 1 ? kbWords[0] : join(kbWords),
       touch: range ? range : dpadOnScreen && !onScreen.length ? dirWords(screenDirs) : join(onScreen),
     };

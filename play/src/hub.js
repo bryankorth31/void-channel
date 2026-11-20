@@ -30,7 +30,13 @@
     }
 
     // full: the whole map from PlayCards.gamepadMap(card) (console cards get their usual seats); else the card's own.
-    function setCard(card, full) { map = Object.assign({ Start: '@menu' }, full || (card && card.gamepad) || {}); }
+    // shift (plan T23): a card may name a button that, while held, switches the pad to a second set
+    // (card.gamepadShift = { on: 'LT', map: { Up: 'Digit4', ... } }), so a pad reaches more keys than it has buttons.
+    let shift = null;
+    function setCard(card, full) {
+      map = Object.assign({ Start: '@menu' }, full || (card && card.gamepad) || {});
+      shift = (card && card.gamepadShift && card.gamepadShift.on && card.gamepadShift.map) ? card.gamepadShift : null;
+    }
 
     // What one gamepad holds right now, as key codes, from its buttons and its left stick.
     // A console button for player 1 (P1:A) becomes the same button for whichever player holds this pad: the first
@@ -42,16 +48,19 @@
       // and many pads never report their Home button to a browser). While held, neither reaches the game.
       const on = (i) => !!(pad.buttons && pad.buttons[i] && (pad.buttons[i].pressed || pad.buttons[i].value > 0.5));
       if (on(BUTTONS.Back) && on(BUTTONS.Start)) { codes.add('@menu'); return codes; }
+      // While the shift button is held, the second set answers and the shift button itself sends nothing.
+      const m = shift && on(BUTTONS[shift.on]) ? shift.map : map;
       for (const [name, idx] of Object.entries(BUTTONS)) {
+        if (shift && name === shift.on) continue;
         const b = pad.buttons && pad.buttons[idx];
-        if (b && (b.pressed || b.value > 0.5) && map[name]) codes.add(seat(map[name]));
+        if (b && (b.pressed || b.value > 0.5) && m[name]) codes.add(seat(m[name]));
       }
       const ax = (pad.axes && pad.axes[0]) || 0, ay = (pad.axes && pad.axes[1]) || 0;
-      if (map.Stick !== 'none') {
-        if (ax < -STICK && map.Left) codes.add(seat(map.Left));
-        if (ax > STICK && map.Right) codes.add(seat(map.Right));
-        if (ay < -STICK && map.Up) codes.add(seat(map.Up));
-        if (ay > STICK && map.Down) codes.add(seat(map.Down));
+      if (m.Stick !== 'none') {
+        if (ax < -STICK && m.Left) codes.add(seat(m.Left));
+        if (ax > STICK && m.Right) codes.add(seat(m.Right));
+        if (ay < -STICK && m.Up) codes.add(seat(m.Up));
+        if (ay > STICK && m.Down) codes.add(seat(m.Down));
       }
       return codes;
     }

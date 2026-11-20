@@ -46,8 +46,7 @@
     "Right": "ArrowRight",
     "LB": "Digit1",
     "RB": "Digit2",
-    "LT": "Digit3",
-    "RT": "Digit4"
+    "RT": "Digit3"
   },
   "help": "Pick from a list with its number, then Enter. Space goes on when the game asks you to press it. Type names and answers on the keyboard.",
   "vars": {
@@ -82,5 +81,16 @@
       "do": "Back out",
       "press": "Escape"
     }
-  ]
+  ],
+  "gamepadShift": {
+    "on": "LT",
+    "map": {
+      "Up": "Digit4",
+      "Right": "Digit5",
+      "Down": "Digit6",
+      "Left": "Digit7",
+      "LB": "Digit8",
+      "RB": "Digit9"
+    }
+  }
 }
