@@ -16,11 +16,12 @@
   // is cached too. If an engine is asked for while a deploy is still spreading, that wrong answer sticks. Bump ENGINE_V
   // whenever an engine file changes under the same name, as brand files bump ?v= (20 Nov 2026: williams.wasm.gz was
   // answered with the home page for a day after the push that added it).
-  const ENGINE_V = '3';
+  // Per engine, so a rebuild of one does not set aside the high scores kept on the others (m68000: 4, Mercs and CPS1).
+  const ENGINE_VS = { williams: '3', atari: '3', classics: '3', m68000: '4' };
 
   function createRunner(opts) {
     const canvas = opts.canvas, on = opts.on || {};
-    let started = false, paused = false, frames = 0;
+    let started = false, paused = false, frames = 0, ENGINE_V = '3';
     const nv = { dir: null, key: null, stamp: null, back: null, after: 5 };
     // The game's own clock: each turn MAME runs is 1/60 s of game time. Counted after each turn that ran (postMainLoop), not
     // by the loop's frame number, which also counts the frames the AR6 pace gate skips (2.4 times too fast at 144 Hz; the
@@ -143,6 +144,7 @@
     }
 
     async function start(card) {
+      ENGINE_V = ENGINE_VS[card.archive.engine] || '3';
       const a = card.archive, url = 'https://archive.org/cors/' + a.item + '/' + a.file;
       on.status && on.status('Fetching the game from the Internet Archive');
       const zips = [{ name: a.file.split('/').pop(), bytes: await bytesOf(url, a.size) }];
