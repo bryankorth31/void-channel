@@ -165,7 +165,8 @@ test('HQ has four areas behind a switcher; University and Kids are not Void TV t
   const keys = (k) => areas.find((a) => a.k === k).tabs.map((t) => t[0]);
   assert.ok(!keys('tv').includes('university'), 'University left the Void TV tabs');
   assert.deepEqual(keys('uni'), ['university', 'uni-courses', 'uni-areas', 'uni-check', 'uni-help']);
-  assert.deepEqual(keys('cast'), ['cast', 'cast-check', 'cast-family']);
+  // Void Cast's 18+ door: Bryan, 20 Nov 2026, "put that gate in the headquarters for me to see".
+  assert.deepEqual(keys('cast'), ['cast', 'cast-check', 'cast-door', 'cast-family']);
   for (const k of [...keys('uni'), ...keys('kids'), ...keys('cast')]) assert.ok(page.includes("'" + k + "'"), k + ' has a page');
   // every University button has its by-hand line (hq-manual-mode)
   for (const b of ['Check sources', 'Build preview', 'Build public copy', 'Deploy', 'Scaffold', 'Copy brief', 'Rewrite brief', 'Listen', 'Set times', 'Live']) assert.ok(page.includes("['" + b + "','"), b + ' is in University help');
