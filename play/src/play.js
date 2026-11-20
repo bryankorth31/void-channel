@@ -83,24 +83,18 @@
       if (place.sig !== sig) { pad = PlayTouch.build(zones, card, hub); place.sig = sig; }
     } else place.sig = '';
     // Sideways in the handheld the d-pad takes the whole margin beside the picture (Bryan, 20 Nov 2026: "the arrow
-    // touchpad needs to be bigger, especially in landscape"). The face buttons need less room than their margin gives,
-    // so the picture moves toward them, at most 48 px and never onto them; it keeps its size and shape. play.css sizes
-    // the d-pad from --side.
+    // touchpad needs to be bigger, especially in landscape"); play.css sizes it from --side. The picture stays in the
+    // middle (Bryan: "the screen is not centered but heavy to the right"). A margin wide enough for two small keys side
+    // by side (.wide) puts Select and Rewind in a row under L, Start and Cheats in a row under R, so a short screen (a
+    // phone sideways with its address bar showing) keeps its height for the d-pad and the face buttons.
     if (shell && floating && innerWidth > innerHeight && L.screen && L.mode !== 'plain') {
-      const over = $('z-over'), ox = parseFloat(over.style.left) || 0, ow = parseFloat(over.style.width) || innerWidth;
-      // What the right side needs: from the leftmost of its keys as drawn (a three-button shape's outer buttons reach
-      // past their box) to the edge.
-      const right = over.getBoundingClientRect().right;
-      let need = 0;
-      for (const k of over.querySelectorAll('.cface .pk, .cstart, .csr, .ccheats')) if (k.offsetParent) need = Math.max(need, right - k.getBoundingClientRect().left);
-      const room = ox + ow - (L.screen.x + L.screen.w);
-      const shift = need ? Math.max(0, Math.min(48, Math.floor(room - need - 8))) : 0;
-      if (shift) set($('screen'), Object.assign({}, L.screen, { x: L.screen.x + shift }));
-      const side = Math.max(0, L.screen.x + shift - ox);
+      const over = $('z-over'), ox = parseFloat(over.style.left) || 0;
+      const side = Math.max(0, L.screen.x - ox);
       over.style.setProperty('--side', side + 'px');
+      over.classList.toggle('wide', side >= 150);
       // A phone whose margin is narrower than the smallest d-pad: the d-pad crosses the picture's edge, see-through.
       const dp = over.querySelector('.cdpad');
-      over.classList.toggle('crossing', !!dp && dp.getBoundingClientRect().right > L.screen.x + shift - ox + over.getBoundingClientRect().left + 1);
+      over.classList.toggle('crossing', !!dp && dp.getBoundingClientRect().right > L.screen.x - ox + over.getBoundingClientRect().left + 1);
     }
     $('b-touch').setAttribute('aria-pressed', String(touch));
     if (touch) PlayTouch.fit($('stage'));
@@ -426,6 +420,14 @@
     document.documentElement.requestFullscreen({ navigationUI: 'hide' }).catch(() => {});
   }, { passive: true });
   const iPhoneSafari = () => /iPhone|iPod/.test(navigator.userAgent) && !navigator.standalone && !document.fullscreenEnabled;
+  // A short tip, once a visit, the first time an iPhone in Safari is sideways during play (Bryan, 20 Nov 2026: "then a
+  // short tip of how to do it"): a page cannot press Hide Toolbar itself; the player can, in Safari's page menu.
+  function toolbarTip() {
+    if (!started || !iPhoneSafari() || innerWidth <= innerHeight) return;
+    try { if (sessionStorage.getItem('voidtv-toolbar-tip')) return; sessionStorage.setItem('voidtv-toolbar-tip', '1'); } catch (e) { /* shown this once */ }
+    toast('Tip: for full screen, tap the menu beside the address, then Hide Toolbar');
+  }
+  addEventListener('resize', () => setTimeout(toolbarTip, 400));
   let wake = null;
   function stayAwake(on) {
     if (on && !wake && navigator.wakeLock && !document.hidden) navigator.wakeLock.request('screen').then((w) => { wake = w; w.addEventListener('release', () => { wake = null; }); }).catch(() => {});
@@ -466,7 +468,7 @@
     runner = (isArcade() ? PlayArcade : PlayRunner).createRunner({ canvas: $('canvas'), mute: q.get('mute') === '1', volume: gainOf(vol), on: {
       note: (t) => toast(t),
       status, error: (t) => fail(t),
-      ready: () => { started = true; applyCheats(); place.sig = ''; place(); },
+      ready: () => { started = true; applyCheats(); place.sig = ''; place(); setTimeout(toolbarTip, 1500); },
       cheats: (m) => { if (!m.ok) toast('This game\'s engine cannot take cheats'); else if (m.on) toast(m.on === 1 ? 'One cheat on' : m.on + ' cheats on'); },
       firstFrame: () => {
         clearTimeout(deadline); $('cover').hidden = true; $('canvas').focus({ preventScroll: true }); stayAwake(true); armBack();

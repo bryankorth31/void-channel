@@ -104,8 +104,9 @@ test('Bryan, 20 Nov 2026: the d-pad from Lexrom, bigger without overlapping; a C
     assert.ok(svg.startsWith('<svg') && svg.includes('Lexrom') && !/<script|href="http/i.test(svg), f + ': a plain drawing, nothing loaded from elsewhere');
     assert.ok(css.includes('url(skin/' + f + ')'));
   }
-  assert.ok(css.includes('.cpad.side{--e:10px;--d:max(150px,min(300px,40cqw,calc(var(--side,171px) - var(--e) - 4px),calc(100cqh - 2 * var(--e) - 164px)))}'),
-    'sideways: the margin beside the picture and the height under L, Select and Rewind');
+  assert.ok(css.includes('.over.wide .cpad.side{--stackL:102px;--d:max(110px,min(300px,40cqw,calc(var(--side,171px) - var(--e) - 4px),calc(100cqh - 2 * var(--e) - var(--stackL) - 8px)))}'),
+    'sideways: the margin beside the picture and the height under L and the row of Select and Rewind');
+  assert.ok(css.includes('calc((100cqh - 2 * var(--e) - var(--stackR) - 12px - (var(--rows) - 1) * 8px) / var(--rows))'), 'face buttons take only the height left under R, Start and Cheats');
   assert.ok(css.includes('body:not(.has-cheats) .cpad .ccheats{display:none}') && css.includes('.cpad.side .ccheats{right:calc(var(--e) + 72px);top:calc(var(--e) + 72px)}') && css.includes('@container (max-height:340px){.cpad.up .ccheats{display:none !important}}') && css.includes('.cpad .pill::after{display:none}'));
   const tp = fs.readFileSync(path.join(__dirname, '..', 'src', 'touchpad.js'), 'utf8');
   assert.ok(tp.includes("pill('@cheats', 'pill ccheats');") && tp.includes("k.classList.contains('pill') || k.classList.contains('ccheats')) continue;"), 'only a tap right on Select, Start, Rewind or Cheats presses it');
@@ -114,7 +115,7 @@ test('Bryan, 20 Nov 2026: the d-pad from Lexrom, bigger without overlapping; a C
   const play = fs.readFileSync(path.join(__dirname, '..', 'src', 'play.js'), 'utf8');
   assert.ok(play.includes("else if (name === 'cheats') { if (cheatList && runner && started) { setPaused(true); showCheats(true); } }"));
   assert.ok(play.includes("document.body.classList.add('has-cheats');"));
-  assert.ok(play.includes('Math.min(48, Math.floor(room - need - 8))'), 'the picture moves at most 48 px, never onto the face buttons');
+  assert.ok(play.includes("over.classList.toggle('wide', side >= 150);") && !play.includes('room - need'), 'the picture stays in the middle (Bryan)');
   assert.ok(play.includes("if (!started || leftFull || !isPhone() || !document.fullscreenEnabled || document.fullscreenElement) return;"));
   const html = fs.readFileSync(path.join(__dirname, '..', 'game.html'), 'utf8');
   assert.ok(html.includes('id="cover-full"') && html.includes('<link rel="manifest" href="manifest.webmanifest">'));
@@ -148,4 +149,17 @@ test('Bryan, 20 Nov 2026 ("add a volume control on the emulator"): one volume fo
   assert.ok(play.includes("const VOL_KEY = 'voidtv-play-volume';") && play.includes('volume: gainOf(vol), on: {'));
   const html = fs.readFileSync(path.join(__dirname, '..', 'game.html'), 'utf8');
   assert.ok(html.includes('id="vol"') && html.includes('id="m-vol"') && html.includes('id="b-mute"'), 'in the bar and in the pause menu');
+});
+
+test('Bryan, 20 Nov 2026, sideways with the address bar showing ("the start and the cheat button go behind the x, the rewind overlaps with the up arrow ... not centered but heavy to the right"); and the iPhone toolbar tip', () => {
+  const fs = require('fs'), path = require('path');
+  const css = fs.readFileSync(path.join(__dirname, '..', 'play.css'), 'utf8');
+  assert.ok(css.includes('.over.wide .cpad.side .crewind{left:calc(var(--e) + 72px);top:calc(var(--e) + 58px)}'), 'Select and Rewind in a row under L where there is room');
+  assert.ok(css.includes('.over:not(.wide) .cpad.side .crewind{left:calc(var(--e) + 72px);top:calc(var(--e) + 58px)}'), 'and on a short narrow screen too');
+  assert.ok(css.includes('.cpad .cface .pk{min-width:0;min-height:0}'), 'face buttons take the size the height gives');
+  const play = fs.readFileSync(path.join(__dirname, '..', 'src', 'play.js'), 'utf8');
+  assert.ok(!/L\.screen\.x \+ shift/.test(play), 'the picture stays in the middle');
+  assert.ok(play.includes("toast('Tip: for full screen, tap the menu beside the address, then Hide Toolbar');"));
+  const html = fs.readFileSync(path.join(__dirname, '..', 'game.html'), 'utf8');
+  assert.ok(html.includes('Full screen on iPhone: tap the menu beside the address, then Hide Toolbar'));
 });

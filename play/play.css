@@ -458,7 +458,13 @@ body.shell .pdpad .pdir.ArrowLeft{left:6%}body.shell .pdpad .pdir.ArrowRight{rig
    not to lose aspect and have it overlap"). Sideways it takes the whole margin beside the picture (--side, from
    play.js, which also moves the picture toward the face buttons as far as their room allows) and the height under L,
    Select and Rewind; upright, up to 48% of the width, still clear of the face buttons and of L and R above it. */
-.cpad.side{--e:10px;--d:max(150px,min(300px,40cqw,calc(var(--side,171px) - var(--e) - 4px),calc(100cqh - 2 * var(--e) - 164px)))}
+.cpad.side{--e:10px;--stackL:156px;--stackR:102px;--d:max(110px,min(150px,calc(100cqh - 2 * var(--e) - var(--stackL) - 8px)))}
+/* A margin wide enough (.wide, from play.js): Select and Rewind in a row under L, Start and Cheats in a row under R, so the
+   height goes to the d-pad and the face buttons (Bryan, 20 Nov 2026, sideways with the address bar showing: "the start
+   and the cheat button go behind the x, the rewind overlaps with the up arrow"). Each takes the height left, never more. */
+.over.wide .cpad.side{--stackL:102px;--d:max(110px,min(300px,40cqw,calc(var(--side,171px) - var(--e) - 4px),calc(100cqh - 2 * var(--e) - var(--stackL) - 8px)))}
+body.has-cheats .over.wide .cpad.side{--stackR:116px}
+.over.wide .cpad.side .crewind{left:calc(var(--e) + 72px);top:calc(var(--e) + 58px)}
 @container (min-height:400px){.cpad.up{--d:max(110px,min(300px,58cqh,48cqw,calc(100cqh - 2 * var(--e) - 104px - 48px - 12px)))}}
 /* The Cheats key (Bryan, 20 Nov 2026: "a cheat button near the start/mode buttons for turning on/off cheats with a list
    of cheats to toggle"): beside Start, only on a game that has cheats; it pauses the game and opens the switches. */
@@ -466,7 +472,9 @@ body:not(.has-cheats) .cpad .ccheats{display:none}
 /* Sideways beside Start, at the top, far from the face buttons (the auditor: under Start it sat 3 px above X). */
 .cpad.side .ccheats{right:calc(var(--e) + 72px);top:calc(var(--e) + 72px)}
 /* Start drops with it, both 24 px under R. */
-body.has-cheats .cpad.side .cstart{top:calc(var(--e) + 72px)}
+body.has-cheats .over.wide .cpad.side .cstart{top:calc(var(--e) + 72px)}
+/* A narrow margin has no room for Cheats beside Start: there it is in the pause menu only. */
+.over:not(.wide) .cpad.side .ccheats{display:none !important}
 /* Sideways the d-pad no longer reaches the picture, so it keeps its well (the see-through look was for crossing it). */
 body.shell .cpad.side .pdpad{background:url(skin/dpad-well.svg) center/100% 100% no-repeat;border:0}
 /* Bryan, 20 Nov 2026, on the handheld upright: "the control buttons need to be bigger and up slightly higher. the L and R
@@ -485,7 +493,7 @@ body.shell .cpad.side .pdpad{background:url(skin/dpad-well.svg) center/100% 100%
 .cpad.up .csl{left:max(var(--e),calc(var(--e) + var(--d) / 2 - min(120px,30cqw) / 2))}
 .cpad.up .csr{right:max(var(--e),calc(var(--e) + var(--cw,120px) / 2 - min(120px,30cqw) / 2))}
 .cpad.up .pill,body.shell .cpad.up .pill{height:50px;min-width:min(76px,calc((100cqw - 2 * var(--e) - 24px) / 4))}
-.cpad.side{--b:max(56px,min(92px,16cqh,13cqw))}
+.cpad.side{--b:max(40px,min(92px,16cqh,13cqw,calc((100cqh - 2 * var(--e) - var(--stackR) - 12px - (var(--rows) - 1) * 8px) / var(--rows))))}
 /* The phone controller, easy to find (Bryan, 20 Nov 2026: "im not able to find the qr code area"): on the start screen
    of a big screen, in the pause menu, and in the bar as "Phone controller" (just "Phone" where the bar is short). */
 .cover-phone{display:inline-flex;align-items:center;gap:8px;margin-top:8px;background:rgba(7,8,12,.55);border:1px solid var(--line);
@@ -518,3 +526,16 @@ body.muted .spk .off{display:inline}body.muted .spk .on{display:none}
 /* Select, Start, Rewind and Cheats keep to their drawing: no touch pad past it (the auditor). */
 .cpad .pill::after{display:none}
 @container (max-height:340px){.cpad.up .ccheats{display:none !important}}
+/* A short screen sideways (under 340 px tall, the address bar showing): Cheats steps into the pause menu so the face
+   buttons keep a full row of height, and the face buttons take the size the height gives (not a 56 px minimum that made
+   them run into each other). */
+@container (max-height:339px){
+  /* Short and narrow too (a Game Boy Advance picture is wide): Select and Rewind still go in a row; the row may cross
+     the picture's edge see-through, as the d-pad does on such phones, rather than sit on the d-pad. */
+  .over:not(.wide) .cpad.side{--stackL:102px}
+  .over:not(.wide) .cpad.side .crewind{left:calc(var(--e) + 72px);top:calc(var(--e) + 58px)}
+  .cpad.side .ccheats{display:none !important}
+  body.has-cheats .over.wide .cpad.side{--stackR:102px}
+  body.has-cheats .over.wide .cpad.side .cstart{top:calc(var(--e) + 58px)}
+}
+.cpad .cface .pk{min-width:0;min-height:0}
