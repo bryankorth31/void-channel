@@ -333,7 +333,11 @@ answers 404, not the home page the edge would cache: about 2 Function requests e
 and the engine; a kept copy in the browser saves the engine). `/api/piece` serves streamed DOS games (off while
 stream.js is empty). Phone rooms (`/api/room/*`, the voidtv-rooms Durable Object) count each phone's messages: a phone
 sends only when a button changes, plus one ping every 2 seconds. Durable Objects are billed with Workers Paid
-(1 million requests a month included); incoming WebSocket messages count at 20 to 1.
+(1 million requests a month included); incoming WebSocket messages count at 20 to 1. A room's Durable Object stays awake
+while its screen is connected (it accepts sockets the plain way, not the hibernation way), so it is billed for duration the
+whole night: about 1,800 GB-seconds for a 4-hour room against 400,000 included a month, so about 200 such nights a month
+before any charge. Rate-limit `/api/room/*` by address in the dashboard, as `/api/e` is, so room codes cannot be guessed
+in bulk.
 
 ## Vercel (current host of the old app)
 
