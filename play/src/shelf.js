@@ -363,5 +363,7 @@
   root.PlayShelf = api;
   fetch('shelf/index.json', { cache: 'no-store' }).then((r) => r.json()).then(render)
     .catch(() => { document.getElementById('rows').innerHTML = '<p class="loading">The shelf did not load. Try again in a moment.</p>'; });
+  // Back goes where the visitor came from on this site; from outside (or nothing), to the home page.
+  try { const back = document.getElementById('back'); if (back && document.referrer && new URL(document.referrer).origin === location.origin) back.addEventListener('click', (e) => { e.preventDefault(); history.back(); }); } catch (e) { /* the link still goes home */ }
   steer();
 })(typeof self !== 'undefined' ? self : this);

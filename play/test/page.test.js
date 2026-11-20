@@ -82,3 +82,13 @@ test('no em dash in any file in play/ (Bryan\'s rule)', () => {
 test('the page plays nothing aloud in tests: the runner has a mute switch', () => {
   assert.match(read(ROOT, 'src', 'runner.js'), /opts\.mute/);
 });
+
+test('whole-site audit A24 and A25: the shelf has a visible way back and to TV, Mine, Trivia and the donation; a short window shows the first row of games', () => {
+  const shelf = read(ROOT, 'index.html');
+  for (const bit of ['&larr; Back', 'href="/me"', 'href="/trivia/"', 'Donate to CASH']) assert.ok(shelf.includes(bit), bit);
+  const site = read(ROOT, '..', 'scripts', 'lib', 'app.js').match(/const DONATE_URL = '([^']+)'/)[1];
+  assert.ok(shelf.includes('href="' + site + '"'), 'the shelf gives the same donation link as the site');
+  assert.ok(read(ROOT, 'game.html').includes('&larr; Games'));
+  const css = read(ROOT, 'shelf.css');
+  assert.ok(css.includes('@media (max-height:640px){') && css.includes('.intro p:not(.pad-hint){display:none}'), 'a short window folds the intro away');
+});
