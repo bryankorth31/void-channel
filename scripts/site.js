@@ -131,6 +131,9 @@ const brandSrc = path.join(ROOT, 'assets', 'brand');
   if (fs.existsSync(P)) {
     fs.mkdirSync(dst, { recursive: true });
     for (const f of ['index.html', 'game.html', 'play.css', 'shelf.css']) fs.copyFileSync(path.join(P, f), path.join(dst, f));
+    // "Our player's source" names the exact commit this build came from (the GPL source offer points at what is served).
+    { let sha = process.env.CF_PAGES_COMMIT_SHA || ''; if (!sha) { try { sha = require('child_process').execSync('git rev-parse HEAD', { cwd: ROOT, stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim(); } catch (e) { sha = ''; } }
+      if (/^[0-9a-f]{40}$/.test(sha)) { const g = path.join(dst, 'game.html'); fs.writeFileSync(g, fs.readFileSync(g, 'utf8').replace('/void-channel/tree/master/play', '/void-channel/tree/' + sha + '/play')); } }
     fs.copyFileSync(path.join(P, 'LICENSE'), path.join(dst, 'LICENSE.txt'));
     for (const d of ['src', 'cards', 'engine']) fs.cpSync(path.join(P, d), path.join(dst, d), { recursive: true });
     fs.mkdirSync(path.join(dst, 'shelf'), { recursive: true });

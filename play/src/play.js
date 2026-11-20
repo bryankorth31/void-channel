@@ -2,7 +2,7 @@
 // Wires the blocks together: the card says what to load and which controls to draw, the hub turns every input into
 // keys, the runner runs the core, the layout places the picture and the pad. ?game=<card id>, ?touch=1 to force the
 // touch pad on, ?mute=1 for silent tests (nothing plays aloud on B's PC).
-/* global PlayCards, PlayHub, PlayLayout, PlayTouch, PlaySaves, PlayRunner */
+/* global PlayCards, PlayHub, PlayLayout, PlayTouch, PlaySaves, PlayRunner, PlayKeys */
 (function () {
   'use strict';
   // The project's donation setting (scripts/lib/app.js DONATE_URL); play/test/page.test.js keeps the two the same.
@@ -13,12 +13,20 @@
   const $ = (id) => document.getElementById(id);
   const base = new URL('./', location.href);
   const touchWanted = q.get('touch') === '1' || (q.get('touch') !== '0' && matchMedia('(pointer: coarse)').matches);
-  let card = null, runner = null, hub = null, pad = null, aspect = 4 / 3, touch = touchWanted, paused = false, started = false;
+  let card = null, build = null, runner = null, hub = null, pad = null, aspect = 4 / 3, touch = touchWanted, paused = false, started = false;
 
   for (const e of document.querySelectorAll('#donate-line, .donate-line')) e.textContent = DONATE_LINE;
   for (const e of document.querySelectorAll('#donate, .donate-link')) e.href = DONATE_URL;
 
-  const toast = (t) => { const e = $('toast'); e.textContent = t; e.classList.add('show'); clearTimeout(toast.t); toast.t = setTimeout(() => e.classList.remove('show'), 2200); };
+  // A short note at the bottom of the picture; with undo, an Undo button for a few seconds.
+  function toast(text, undo) {
+    const e = $('toast'), b = $('toast-undo');
+    $('toast-text').textContent = text;
+    b.hidden = !undo; e.classList.toggle('has-undo', !!undo);
+    b.onclick = undo ? () => { b.hidden = true; e.classList.remove('show', 'has-undo'); undo(); } : null;
+    e.classList.add('show');
+    clearTimeout(toast.t); toast.t = setTimeout(() => { e.classList.remove('show', 'has-undo'); b.hidden = true; }, undo ? 6000 : 2200);
+  }
   const status = (t) => { $('status').textContent = t; };
 
   function place() {
@@ -34,38 +42,73 @@
     $('b-touch').setAttribute('aria-pressed', String(touch));
   }
 
+  // While the menu is open the game hears nothing: every held key is let go first, then the gamepad drives the menu.
   function setPaused(p) {
-    if (!runner || !started) return;
-    paused = p; $('menu').hidden = !p; $('b-pause').textContent = p ? 'Resume' : 'Pause';
-    if (p) { hub.releaseAll(); runner.pause(); } else { runner.resume(); runner.wakeSound(); $('canvas').focus({ preventScroll: true }); }
+    if (!runner || !started || p === paused) return;
+    if (p) { hub.releaseAll(); paused = true; runner.pause(); }
+    else { paused = false; runner.resume(); runner.wakeSound(); }
+    $('menu').hidden = !p; $('b-pause').textContent = p ? 'Resume' : 'Pause';
+    if (p) $('m-resume').focus({ preventScroll: true }); else $('canvas').focus({ preventScroll: true });
   }
 
   async function save() {
     if (!started) return;
     const state = await runner.save();
-    if (!state) return;
-    try { await PlaySaves.put(card.id, state); toast('Saved in this browser'); } catch (e) { toast('This browser would not keep the save'); }
+    if (!state) return toast('The game could not be saved just now');
+    try { await PlaySaves.put(card.id, state, build); toast('Saved in this browser'); } catch (e) { toast('This browser would not keep the save'); }
   }
+  // Load and Restart first keep where you are, so one wrong tap is undone with one tap.
+  async function keepHere() { const s = await runner.save(); return s ? () => runner.load(s).then((ok) => toast(ok ? 'Back where you were' : 'That could not be undone')) : null; }
   async function load() {
     if (!started) return;
     let rec = null;
     try { rec = await PlaySaves.get(card.id); } catch (e) { /* no storage here */ }
     if (!rec) return toast('Nothing saved for this game yet');
-    toast((await runner.load(rec.state)) ? 'Back to your saved spot' : 'That save would not load');
+    if (!PlaySaves.fits(rec, build)) return toast('That save was made with an older build of this game\'s engine, so it cannot load. Save again to start a new one.');
+    const undo = await keepHere();
+    const ok = await runner.load(rec.state);
+    toast(ok ? 'Back to your saved spot' : 'That save would not load', ok ? undo : null);
+    if (ok) setPaused(false);
+  }
+  async function restart() {
+    if (!started) return;
+    const undo = await keepHere();
+    runner.reset(); setPaused(false);
+    toast('The game started over', undo);
   }
 
   function action(name) {
     if (name === 'menu') setPaused(!paused);
-    else if (name === 'keyboard' && pad) pad.keyboard.classList.toggle('open');
+    else if (name === 'keyboard' && pad && !paused) pad.keyboard.classList.toggle('open');
   }
 
-  // Gamepads are read once a frame; the hub decides what each button means for this card.
-  // Before the game starts, a gamepad's A or Start presses Play, so a controller goes from the shelf into the game with
-  // nothing else to touch.
+  // The menu with a gamepad: the d-pad or stick moves between its buttons, A presses one, B or Start goes back to the
+  // game. Each acts when the button is let go, so nothing still held reaches the game afterwards.
+  const menuWas = new Map();
+  function menuPads(pads) {
+    const items = [...$('menu').querySelectorAll('button, a')].filter((x) => x.offsetParent);
+    for (const p of pads) {
+      if (!p || p.mapping !== 'standard') continue;
+      const b = (i) => !!(p.buttons[i] && p.buttons[i].pressed);
+      const now = { prev: b(12) || b(14) || p.axes[1] < -0.6 || p.axes[0] < -0.6, next: b(13) || b(15) || p.axes[1] > 0.6 || p.axes[0] > 0.6,
+        a: b(0), back: b(1) || (b(9) && !b(8)) };
+      const was = menuWas.get(p.index) || {};
+      const released = (k) => was[k] && !now[k];
+      const i = items.indexOf(document.activeElement);
+      if (now.prev && !was.prev) items[(i <= 0 ? items.length : i) - 1].focus();
+      if (now.next && !was.next) items[(i + 1) % items.length].focus();
+      if (released('a') && i >= 0) items[i].click();
+      else if (released('back')) setPaused(false);
+      menuWas.set(p.index, now);
+    }
+  }
+
+  // Gamepads are read once a frame. Before the game starts, a gamepad's A or Start presses Play, so a controller goes
+  // from the shelf into the game with nothing else to touch.
   let padWasDown = true;
   function poll() {
     const pads = navigator.getGamepads ? [...navigator.getGamepads()] : [];
-    if (hub) hub.pollPads(pads);
+    if (hub) { hub.pollPads(pads); if (paused) menuPads(pads); else menuWas.clear(); }
     else {
       const down = pads.some((p) => p && p.mapping === 'standard' && ((p.buttons[0] && p.buttons[0].pressed) || (p.buttons[9] && p.buttons[9].pressed)));
       if (down && !padWasDown && !$('b-play').hidden) begin();
@@ -79,9 +122,8 @@
   let deadline = 0;
 
   function begin() {
-    if (runner) { runner.stop(); runner = null; started = false; }
+    stopGame();
     $('b-play').hidden = true; status('Starting');
-    clearTimeout(deadline);
     deadline = setTimeout(() => fail('The game did not arrive from the Internet Archive in time. Check the connection and press Play to try again.'), DEADLINE_MS);
     runner = PlayRunner.createRunner({ canvas: $('canvas'), mute: q.get('mute') === '1', on: {
       status, error: (t) => fail(t),
@@ -89,16 +131,27 @@
       firstFrame: () => { clearTimeout(deadline); $('cover').hidden = true; $('canvas').focus({ preventScroll: true }); },
       aspect: (a) => { if (Math.abs(a - aspect) > 0.01) { aspect = a; place(); } },
     } });
+    runner.prepareSound();                     // in the Play tap itself, so iPhone and iPad allow the sound
     hub = PlayHub.createHub({ send, onAction: action });
     hub.setCard(card, PlayCards.gamepadMap(card));
-    runner.start(card, base);
+    runner.start(card, base, build.commit.slice(0, 12));
     place.sig = ''; place();
   }
 
-  // A console button (P1:A, P2:Start) goes to that player's pad as one bit; anything else is a PC key.
+  // Ends the game for good: the engine stops, nothing it sent late reaches the page, the menu closes.
+  function stopGame() {
+    clearTimeout(deadline);
+    if (runner) runner.stop();
+    runner = null; hub = null; started = false; paused = false;
+    padState.fill(0); $('menu').hidden = true; $('b-pause').textContent = 'Pause';
+  }
+
+  // A console button (P1:A, P2:Start) goes to that player's pad as one bit; anything else is a PC key. While the menu
+  // is open nothing new goes down (letting go still goes through, so nothing is left stuck).
   const PAD_BITS = { B: 0, Y: 1, Select: 2, Start: 3, Up: 4, Down: 5, Left: 6, Right: 7, A: 8, X: 9, L: 10, R: 11 };
   const padState = [0, 0, 0, 0];
   function send(code, down) {
+    if (!runner || (paused && down)) return;
     const m = /^P([1-4]):([A-Za-z]+)$/.exec(code);
     if (!m) return runner.key(code, down);
     const port = +m[1] - 1, bit = 1 << PAD_BITS[m[2]];
@@ -107,23 +160,48 @@
   }
 
   function fail(text) {
-    clearTimeout(deadline);
+    stopGame();
     status(text); $('cover').hidden = false;
     $('b-play').textContent = 'Play again'; $('b-play').hidden = false;
   }
 
-  // The gamepad line in the pause menu, drawn from the card, so it always says what the buttons really do.
+  // The three help lines, drawn from the card, so they always say what the keys and buttons really do.
+  const nameOf = (c, code) => (c.controls.labels && c.controls.labels[code]) || PlayTouch.label(code);
+  const SEATS = { A: 'the bottom button', B: 'the right button', X: 'the left button', Y: 'the top button', LB: 'the left shoulder',
+    RB: 'the right shoulder', LT: 'the left trigger', RT: 'the right trigger', Back: 'Back', Start: 'Start', Home: 'the Home button' };
   function padHelp(c) {
-    const say = (v) => v === '@keyboard' ? 'opens the keyboard' : v === '@menu' ? 'pauses' : 'is ' + PlayTouch.label(v);
     const map = Object.assign({ Start: '@menu' }, PlayCards.gamepadMap(c));
+    const say = (v) => (v === '@keyboard' ? 'opens the keyboard' : v === '@menu' ? 'pauses' : 'is ' + nameOf(c, v));
     const order = ['A', 'B', 'X', 'Y', 'LB', 'RB', 'LT', 'RT', 'Back', 'Start', 'Home'];
-    const parts = order.filter((b) => map[b]).map((b) => b + ' ' + say(map[b]));
+    // A console game names only the buttons that machine has (a Game Boy has no X, Y, L or R).
+    const has = (v) => v[0] === '@' || !PlayCards.isPad(c) || (c.controls.keys || []).includes(v);
+    const parts = order.filter((b) => map[b] && has(map[b])).map((b) => SEATS[b] + ' ' + say(map[b]));
     if (map.Up) parts.push(PlayCards.isPad(c) ? 'the d-pad and stick move' : 'the d-pad and stick are the arrows');
+    parts.push('Back and Start together pause');
+    const s = parts.join(', ') + '.';
+    return s[0].toUpperCase() + s.slice(1);
+  }
+  function keyboardHelp(c) {
+    const keys = PlayCards.keyMap(c);
+    if (!keys) return 'plays it as the PC did.';
+    const NAMES = { ArrowUp: 'Up', ArrowDown: 'Down', ArrowLeft: 'Left', ArrowRight: 'Right', ShiftRight: 'right Shift', Escape: 'Esc' };
+    const key = (k) => NAMES[k] || k.replace(/^Key/, '');
+    const parts = ['the arrows move'];
+    for (const [k, v] of Object.entries(keys)) {
+      if (/^Arrow/.test(k)) continue;
+      if (v === '@menu') parts.push(key(k) + ' pauses');
+      else if ([...(c.controls.keys || [])].includes(v)) parts.push(key(k) + ' is ' + nameOf(c, v));
+    }
     return parts.join(', ') + '.';
+  }
+  function touchHelp(c) {
+    if (c.controls.keyboard) return 'the keys this game needs sit beside the picture; Keyboard opens the full keyboard for typing.';
+    return 'the d-pad and the game\'s own buttons sit beside the picture.';
   }
 
   // The PC keyboard: every key the PC knew goes to the game; our own shortcuts stay out of its way.
   function keyEvent(e, down) {
+    if (runner) runner.wakeSound();
     // Keys go to the game unless the pause menu is open and has the focus. A hidden panel never keeps them.
     if (!hub || !started || (!$('menu').hidden && e.target.closest('.menu'))) return;
     if (e.code === 'F11') return;
@@ -136,32 +214,40 @@
   }
   addEventListener('keydown', (e) => keyEvent(e, true));
   addEventListener('keyup', (e) => keyEvent(e, false));
+  addEventListener('pointerdown', () => runner && runner.wakeSound(), { passive: true });
   addEventListener('blur', () => hub && hub.releaseAll());
   document.addEventListener('visibilitychange', () => { if (document.hidden && started && !paused) setPaused(true); });
   addEventListener('resize', place);
 
   $('b-pause').onclick = () => setPaused(!paused);
   $('m-resume').onclick = () => setPaused(false);
-  $('m-reset').onclick = () => { runner.reset(); setPaused(false); };
+  $('m-reset').onclick = restart;
   $('b-save').onclick = save;
   $('b-load').onclick = load;
   $('b-touch').onclick = () => { touch = !touch; place.sig = ''; place(); };
+  // iPhone has no fullscreen for a web page: the button shows only where the browser can do it.
+  if (!document.fullscreenEnabled) $('b-full').hidden = true;
   $('b-full').onclick = () => { if (document.fullscreenElement) document.exitFullscreen(); else document.documentElement.requestFullscreen().catch(() => {}); };
   $('b-play').onclick = begin;
 
-  fetch('cards/' + encodeURIComponent(q.get('game') || 'oregon-trail-1990') + '.json').then((r) => {
-    if (!r.ok) throw new Error('There is no game by that name here');
-    return r.json();
-  }).then((c) => {
+  const id = q.get('game') || 'oregon-trail-1990';
+  Promise.all([
+    fetch('cards/' + encodeURIComponent(id) + '.json').then((r) => { if (!r.ok) throw new Error('There is no game by that name here. Pick one from the Games shelf.'); return r.json(); }),
+    // The nightly check's answer: a game whose file the Archive no longer has is off the shelf, and an old link says so.
+    fetch('shelf/status.json', { cache: 'no-store' }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
+  ]).then(([c, shelf]) => {
     const bad = PlayCards.check(c);
     if (bad.length) throw new Error('This game card is not right yet (' + bad.join(', ') + ')');
     card = c;
+    const core = PlayCards.CORES[c.core];
+    build = { core: c.core, commit: core.source.split('/').pop() };
     document.title = c.title + ' | PLAY | voidtv.net';
     $('title').textContent = c.title + (c.year ? ' (' + c.year + ')' : '');
     $('help').textContent = c.help || '';
+    $('kb-help').textContent = keyboardHelp(c);
     $('pad-help').textContent = padHelp(c);
+    $('touch-help').textContent = touchHelp(c);
     // The footer names this game's own engine, its licence and its exact source (and its licence text when not GPL).
-    const core = PlayCards.CORES[c.core];
     $('core-name').textContent = core.name; $('core-licence').textContent = core.licence; $('src-core').href = core.source;
     $('core-terms').hidden = !core.terms; if (core.terms) $('core-terms-link').href = core.terms;
     // A core whose licence is non-commercial: no donation line on its games, in the pause menu or the footer.
@@ -169,6 +255,7 @@
     $('from').innerHTML = '';
     const a = document.createElement('a'); a.href = PlayCards.itemPage(c); a.target = '_blank'; a.rel = 'noopener'; a.textContent = 'the Internet Archive';
     $('from').append('The game plays straight from ', a, '.');
+    if (shelf && shelf.games && shelf.games[c.id] && shelf.games[c.id].gone) throw new Error("This game's file is no longer on the Internet Archive, so it is off the shelf. Pick another from Games.");
     if (typeof SharedArrayBuffer === 'undefined' || typeof WebAssembly !== 'object') throw new Error('This browser cannot run PLAY games yet. A current Chrome, Edge, Firefox or Safari can.');
     if (!self.crossOriginIsolated) throw new Error('PLAY cannot start here: this page was served without the settings the engine needs. That is our side, not your browser.');
     status(c.title + ' is ready'); $('b-play').hidden = false; $('b-play').focus({ preventScroll: true });

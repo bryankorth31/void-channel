@@ -1,6 +1,6 @@
 // Builds one PLAY core from its recipe in play/core/cores.js into play/engine/<name>.js and .wasm.
 // Licence: GPL-2.0-or-later (play/LICENSE). Anyone can repeat it from the published sources:
-//   1. Emscripten:  git clone https://github.com/emscripten-core/emsdk ; emsdk install latest ; emsdk activate latest
+//   1. Emscripten:  git clone https://github.com/emscripten-core/emsdk ; emsdk install 7.0.0 ; emsdk activate 7.0.0
 //   2. The core:    git clone <repo in cores.js> ; git checkout <commit in cores.js>
 //   3. node play/core/build-core.js <name>      (EMSDK and SRC point at the two folders; defaults are Bryan's PC)
 // No change is made to any core's own files. Our side is play/core/host.c. These cores run on one thread, so the
@@ -76,6 +76,9 @@ async function main() {
     '-sMODULARIZE=1', '-sEXPORT_NAME=PlayCore', '-sENVIRONMENT=worker', '-sALLOW_MEMORY_GROWTH=1',
     '-sINITIAL_MEMORY=67108864', '-sSTACK_SIZE=1048576', '-sFORCE_FILESYSTEM=1', '-sEXIT_RUNTIME=0',
     '-sEXPORTED_RUNTIME_METHODS=FS,HEAPU8,HEAP16,HEAPU32,stringToUTF8,lengthBytesUTF8', '-sEXPORTED_FUNCTIONS=_malloc,_free']);
+  // Each engine script opens with one line saying what it is, its licence and its exact source (the licence's notice).
+  const js = path.join(OUT, name + '.js');
+  fs.writeFileSync(js, '/* ' + core.title + ', a libretro core built unchanged by voidtv.net with Emscripten 7.0.0. Licence: ' + core.licence + '. Source: ' + core.repo + '/tree/' + core.commit + ' . Our host: play/core/host.c, GPL-2.0-or-later. */\n' + fs.readFileSync(js, 'utf8'));
   for (const ext of ['.js', '.wasm']) console.log('  ' + name + ext + ' ' + fs.statSync(path.join(OUT, name + ext)).size + ' bytes');
 }
 main().catch((e) => { console.error(String(e.message || e)); process.exit(1); });

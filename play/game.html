@@ -15,9 +15,7 @@
   <h1 id="title" class="title">Loading</h1>
   <nav class="tools" aria-label="Game controls">
     <a id="b-games" class="tool" href="./" title="Back to the shelf of games">Games</a>
-    <button type="button" id="b-pause" class="tool" title="Pause (Start on a gamepad)">Pause</button>
-    <button type="button" id="b-save" class="tool" title="Save your spot in this browser">Save</button>
-    <button type="button" id="b-load" class="tool" title="Go back to your saved spot">Load</button>
+    <button type="button" id="b-pause" class="tool" title="Pause, save and load (Back and Start together on a gamepad)">Pause</button>
     <button type="button" id="b-touch" class="tool" aria-pressed="false" title="Show or hide the touch controls">Touch</button>
     <button type="button" id="b-full" class="tool" title="Fullscreen">Full</button>
   </nav>
@@ -39,18 +37,20 @@
     <h2>Paused</h2>
     <p id="help" class="help"></p>
     <ul class="keys-help">
-      <li><b>Keyboard</b> plays it as the PC did.</li>
+      <li><b>Keyboard</b>: <span id="kb-help"></span></li>
       <li><b>Gamepad</b>: <span id="pad-help"></span></li>
-      <li><b>Touch</b>: the keys this game needs at the side; Keyboard for typing names.</li>
+      <li><b>Touch</b>: <span id="touch-help"></span></li>
     </ul>
     <div class="menu-row">
       <button type="button" id="m-resume" class="tool big">Keep playing</button>
+      <button type="button" id="b-save" class="tool" title="Save your spot in this browser">Save</button>
+      <button type="button" id="b-load" class="tool" title="Go back to your saved spot">Load</button>
       <button type="button" id="m-reset" class="tool">Restart the game</button>
       <a class="tool" href="./">Back to the games</a>
     </div>
     <p class="donate"><span id="donate-line"></span> <a id="donate" href="#" target="_blank" rel="noopener">Donate</a></p>
   </div>
-  <p id="toast" class="toast" role="status" aria-live="polite"></p>
+  <p id="toast" class="toast" role="status" aria-live="polite"><span id="toast-text"></span> <button type="button" id="toast-undo" class="undo" hidden>Undo</button></p>
 </main>
 
 <footer class="foot">

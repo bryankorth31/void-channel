@@ -3,11 +3,12 @@
 // the host unpacks the zip into the core's memory disk first. Reads the zip's own table of contents (the central
 // directory at the end), then each file: stored as is, or deflated (the browser's own DecompressionStream inflates).
 // Big zips: ZIP64 tables (over 65535 files, or sizes and places past 4 GB) are read too. Limits that keep a phone safe:
-// at most MAX_FILES files and MAX_BYTES unpacked in all (the core's memory disk lives in the page's memory); a bigger
-// game is refused with a plain sentence before anything is unpacked.
+// at most MAX_FILES files and MAX_BYTES unpacked in all (the core's memory disk lives in the page's memory, beside the
+// engine's own); a bigger game is refused with a plain sentence before anything is unpacked, and a file that inflates
+// past the size the zip states for it is stopped there (a zip can lie about its sizes).
 (function (root) {
   const MAX_FILES = 20000;
-  const MAX_BYTES = 512 * 1024 * 1024;
+  const MAX_BYTES = 256 * 1024 * 1024; // until big games stream in pieces (plan T21)
   const u16 = (b, o) => b[o] | (b[o + 1] << 8);
   const u32 = (b, o) => (b[o] | (b[o + 1] << 8) | (b[o + 2] << 16) | (b[o + 3] << 24)) >>> 0;
   const u64 = (b, o) => u32(b, o) + u32(b, o + 4) * 4294967296; // exact up to 2^53, far past any game
@@ -64,8 +65,16 @@
     const raw = bytes.subarray(at, at + e.size);
     if (e.method === 0) return raw.slice();
     if (e.method !== 8) throw new Error('This zip packs ' + e.name + ' in a way we do not read yet');
-    const stream = new Blob([raw]).stream().pipeThrough(new DecompressionStream('deflate-raw'));
-    return new Uint8Array(await new Response(stream).arrayBuffer());
+    const reader = new Blob([raw]).stream().pipeThrough(new DecompressionStream('deflate-raw')).getReader();
+    const out = new Uint8Array(e.usize);
+    let got = 0;
+    for (;;) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      if (got + value.length > e.usize) { reader.cancel(); throw new Error('The game zip is damaged (' + e.name + ' is bigger than it says)'); }
+      out.set(value, got); got += value.length;
+    }
+    return got === e.usize ? out : out.slice(0, got);
   }
 
   // A safe path inside the target folder: no "..", no drive letters, no leading slash.

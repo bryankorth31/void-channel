@@ -36,6 +36,10 @@
     function padCodes(pad, player) {
       const codes = new Set();
       const seat = (c) => (player > 1 ? c.replace(/^P1:/, 'P' + player + ':') : c);
+      // Back and Start held together open the menu on every pad, on every game (a console game keeps Start for itself,
+      // and many pads never report their Home button to a browser). While held, neither reaches the game.
+      const on = (i) => !!(pad.buttons && pad.buttons[i] && (pad.buttons[i].pressed || pad.buttons[i].value > 0.5));
+      if (on(BUTTONS.Back) && on(BUTTONS.Start)) { codes.add('@menu'); return codes; }
       for (const [name, idx] of Object.entries(BUTTONS)) {
         const b = pad.buttons && pad.buttons[idx];
         if (b && (b.pressed || b.value > 0.5) && map[name]) codes.add(seat(map[name]));

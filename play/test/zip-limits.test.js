@@ -56,7 +56,7 @@ test('a game that unpacks past the cap is refused in a plain sentence, before an
   assert.throws(() => Unzip.entries(big), /unpacks to \d+ MB, more than PLAY can hold in a browser/);
 });
 
-test('the cap is half a gigabyte and twenty thousand files', () => {
-  assert.equal(Unzip.MAX_BYTES, 512 * 1024 * 1024);
+test('the cap is a quarter gigabyte and twenty thousand files', () => {
+  assert.equal(Unzip.MAX_BYTES, 256 * 1024 * 1024);
   assert.equal(Unzip.MAX_FILES, 20000);
 });
