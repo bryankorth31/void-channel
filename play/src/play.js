@@ -152,6 +152,8 @@
     const core = PlayCards.CORES[c.core];
     $('core-name').textContent = core.name; $('core-licence').textContent = core.licence; $('src-core').href = core.source;
     $('core-terms').hidden = !core.terms; if (core.terms) $('core-terms-link').href = core.terms;
+    // A core whose licence is non-commercial: no donation line on its games, in the pause menu or the footer.
+    if (core.noDonation) for (const e of document.querySelectorAll('.donate')) e.remove();
     $('from').innerHTML = '';
     const a = document.createElement('a'); a.href = PlayCards.itemPage(c); a.target = '_blank'; a.rel = 'noopener'; a.textContent = 'the Internet Archive';
     $('from').append('The game plays straight from ', a, '.');
