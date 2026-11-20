@@ -17,7 +17,9 @@
   // whenever an engine file changes under the same name, as brand files bump ?v= (20 Nov 2026: williams.wasm.gz was
   // answered with the home page for a day after the push that added it).
   // Per engine, so a rebuild of one does not set aside the high scores kept on the others (m68000: 4, Mercs and CPS1).
-  const ENGINE_VS = { atari: '3', classics: '3', m68000: '4' };   // williams retired (audit A10: Joust is on classics)
+  // A trackball or dial machine: its card says it rolls or turns (play/tools/arcade-cards.js, moveWord).
+  const mouseGame = (card) => (card.actions || []).some((x) => x.do === 'Roll' || x.do === 'Turn');
+  const ENGINE_VS ={ atari: '3', classics: '3', m68000: '4' };   // williams retired (audit A10: Joust is on classics)
 
   function createRunner(opts) {
     const canvas = opts.canvas, on = opts.on || {};
@@ -167,6 +169,10 @@
         // sample path is the same folder as the games. Without it Zaxxon plays silent (audit, 20 Nov 2026).
         '-samplepath', '/roms'];
       if (opts.mute) args.push('-sound', 'none');
+      // Audit A11: a trackball or dial machine (Missile Command, Crystal Castles, Sprint 2) takes the computer's mouse as
+      // its trackball or dial, as the cabinet's own; a click on the picture hands the mouse to the game and Esc lets it
+      // go. The keys still work. Not on a touch screen, where a finger on the picture shows the bar.
+      if (mouseGame(card) && typeof matchMedia === 'function' && matchMedia('(pointer: fine)').matches) args.push('-mouse');
       // A machine that keeps its settings in battery memory (Williams) shows "FACTORY SETTINGS RESTORED" on a first boot
       // and waits there for ever; our page keeps no battery memory, so every boot is a first boot. One soft reset (the
       // operator's reset button) goes on to the game. It is timed on the game's own clock, not the page's, so a slow
@@ -320,7 +326,7 @@
     };
   }
 
-  const api = { createRunner };
+  const api = { createRunner, mouseGame };
   if (typeof module === 'object' && module.exports) module.exports = api;
   else root.PlayArcade = api;
 })(typeof self !== 'undefined' ? self : this);

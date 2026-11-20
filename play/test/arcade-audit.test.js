@@ -64,3 +64,14 @@ test('no double-tap zoom on the game page or the shelf; the game area still take
   for (const f of ['play.css', 'shelf.css']) assert.match(fs.readFileSync(path.join(P, f), 'utf8'), /\nhtml,\*\{touch-action:manipulation\}\r?\n/, f);   // every element since the iPhone report
   assert.match(fs.readFileSync(path.join(P, 'play.css'), 'utf8'), /\.stage\{[^}]*touch-action:none/);
 });
+
+test('audit A11: trackball and dial machines take the computer mouse (-mouse), on computers only', () => {
+  const fs = require('fs'), path = require('path');
+  const A = require('../src/arcade-runner.js');
+  const card = (id) => JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'cards', id + '.json'), 'utf8'));
+  assert.ok(A.mouseGame(card('missile-command-arcade')), 'a trackball rolls');
+  assert.ok(A.mouseGame(card('sprint-2-arcade')), 'a wheel or dial turns');
+  assert.ok(!A.mouseGame(card('1941-counter-attack-arcade')), 'a stick does not');
+  const src = fs.readFileSync(path.join(__dirname, '..', 'src', 'arcade-runner.js'), 'utf8');
+  assert.ok(src.includes("if (mouseGame(card) && typeof matchMedia === 'function' && matchMedia('(pointer: fine)').matches) args.push('-mouse');"));
+});
