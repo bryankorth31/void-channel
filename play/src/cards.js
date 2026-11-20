@@ -161,8 +161,15 @@
     return a ? a.do : '';
   }
 
+  // A console game the Archive keeps inside a .zip (the assistant, 20 Nov 2026: Pokemon FireRed's zip was refused by
+  // mGBA): the player unpacks it and hands the core the one file with the machine's own ending.
+  const ROM_EXTS = { nes: ['nes', 'unf', 'fds'], snes: ['sfc', 'smc', 'fig', 'swc'], genesis: ['md', 'gen', 'bin', 'smd'],
+    sms: ['sms'], gamegear: ['gg'], gameboy: ['gb', 'gbc'], gbcolor: ['gbc', 'gb'], gba: ['gba'], a2600: ['a26', 'bin'],
+    lynx: ['lnx', 'o'] };
+  const romExts = (card) => (card && !(card.archive || {}).start && ROM_EXTS[card.system]) || [];
+
   const api = { check, warnings, gameUrl, itemPage, gameFile, engineOf, CORES, isPad, gamepadMap, keyMap, PAD_GAMEPAD, PAD_KEYBOARD,
-    codesOf, seatsOf, actionLines, actionFor };
+    codesOf, seatsOf, actionLines, actionFor, ROM_EXTS, romExts };
   if (typeof module === 'object' && module.exports) module.exports = api;
   else root.PlayCards = api;
 })(typeof self !== 'undefined' ? self : this);

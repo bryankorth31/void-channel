@@ -96,7 +96,7 @@
       };
       worker.onerror = (e) => { if (!stopped && on.error) on.error(e.message || 'The engine stopped'); };
       worker.postMessage({ type: 'start', gameUrl: PlayCards.gameUrl(card), gameFile: PlayCards.gameFile(card),
-        start: card.archive.start || '', vars: card.vars || {}, gameSize: card.archive.size || 0,
+        start: card.archive.start || '', rom: PlayCards.romExts ? PlayCards.romExts(card) : [], vars: card.vars || {}, gameSize: card.archive.size || 0,
         // Plan T21: a big many-file game reads in pieces through voidtv.net's pass-through, by game id only.
         stream: card.archive.stream ? { url: new URL('/api/piece?game=' + encodeURIComponent(card.id), location.href).href, size: card.archive.size } : null,
         pads: PlayCards.isPad(card) ? Math.max(1, card.players || 1) : 0,

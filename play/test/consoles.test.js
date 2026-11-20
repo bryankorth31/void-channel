@@ -186,3 +186,15 @@ test('arcade cards (Bryan picked the 245 most-played; the assistant read each in
   assert.notEqual(tron.gamepad.A, tron.gamepadSeats[2].A);
 });
 
+
+test('a console game kept inside a .zip: the core gets the one file with the machine\'s own ending (the assistant: FireRed\'s zip was refused)', () => {
+  for (const [name, core] of Object.entries(Cards.CORES)) {
+    if (core.kind === 'mame' || name === 'dosbox-pure') continue;
+    for (const s of core.systems) assert.ok((Cards.ROM_EXTS[s] || []).length, s + ' has its file endings');
+  }
+  assert.deepEqual(Cards.romExts({ system: 'gba', archive: { file: 'x.zip' } }), ['gba']);
+  assert.deepEqual(Cards.romExts({ system: 'dos', archive: { file: 'x.zip', start: 'A.EXE' } }), [], 'a DOS game unpacks whole');
+  assert.ok(fs.readFileSync(path.join(PLAY, 'src', 'runner.js'), 'utf8').includes('rom: PlayCards.romExts ? PlayCards.romExts(card) : []'));
+  const w = fs.readFileSync(path.join(PLAY, 'src', 'core-worker.js'), 'utf8');
+  assert.ok(w.includes('path = await romFromZip(game, msg.rom, path);') && w.includes('async function romFromZip('));
+});

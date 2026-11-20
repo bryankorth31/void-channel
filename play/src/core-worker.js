@@ -137,6 +137,20 @@ async function unpack(bytes, start) {
   return program;
 }
 
+// A console game kept inside a .zip: the core gets the one file with the machine's own ending (the largest, if there
+// are several: a zip with a readme or a second region). A zip without one goes to the core as it is.
+async function romFromZip(bytes, exts, fallback) {
+  const ok = new Set(exts.map((x) => '.' + String(x).toLowerCase()));
+  const roms = PlayUnzip.entries(bytes).filter((e) => !e.dir && PlayUnzip.safe(e.name)
+    && ok.has((e.name.match(/\.[^./]+$/) || [''])[0].toLowerCase()));
+  if (!roms.length) { M.FS.writeFile(fallback, bytes); return fallback; }
+  const e = roms.reduce((a, b) => ((b.usize || 0) > (a.usize || 0) ? b : a));
+  const name = PlayUnzip.safe(e.name).split('/').pop();
+  const path = '/game/' + name;
+  M.FS.writeFile(path, await PlayUnzip.read(bytes, e));
+  return path;
+}
+
 // Plan T21: a big many-file game, read in 8 MB pieces through the voidtv.net pass-through and unpacked file by file as
 // the game opens them. Pieces come by synchronous requests (allowed in a worker): the engine's reads wait for them.
 function piecesFrom(url) {
@@ -186,6 +200,7 @@ async function start(msg) {
     say('Fetching the game from the Internet Archive');
     const game = await gameBytes(msg.gameUrl, msg.gameSize);
     if (msg.start && /\.zip$/i.test(msg.gameFile)) path = await unpack(game, msg.start);
+    else if (/\.zip$/i.test(msg.gameFile) && msg.rom && msg.rom.length) path = await romFromZip(game, msg.rom, path);
     else M.FS.writeFile(path, game);
   }
   M._host_init();
