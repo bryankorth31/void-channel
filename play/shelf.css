@@ -109,3 +109,8 @@ a{color:var(--acc)} a:hover{color:#fff}
 /* Plan C4: "More" at the end of a long shelf adds the next page of boxes in place. */
 .box.more{align-items:center;justify-content:center;aspect-ratio:4/3;border:1px dashed #2a3044;border-radius:8px;background:#0d0f17;color:var(--acc);font:600 15px system-ui,sans-serif;cursor:pointer}
 .box.more[hidden]{display:none}
+/* The 18+ shelf's question (Bryan, 20 Nov 2026: adult-themed games behind a gate). */
+.gate18{max-width:560px;margin:30px auto;padding:22px;border:1px solid var(--line);border-radius:14px;background:#0d0f17}
+.gate18 h2{font-family:'Unbounded',sans-serif;margin:0 0 10px}
+.gate18 .gate-acts{display:flex;gap:10px;flex-wrap:wrap}
+.r18-link{color:var(--dim)}

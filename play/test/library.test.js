@@ -84,3 +84,21 @@ test('dump tags and a trailing machine name leave a game\'s name', () => {
   assert.equal(C.cleanTitle("Mike Tyson's Punch Out!! NES"), "Mike Tyson's Punch Out!!");
   assert.equal(C.cleanTitle('Tetris'), 'Tetris');
 });
+
+test('the 18+ shelf: adult games in their own bundles and list, behind the age question; abusive games nowhere', () => {
+  const adultRow = row({ item: 'a1', title: 'Grown Up Game', content: { flag: true, kind: 'adult', reason: 'sexual: x' } });
+  const abusive = row({ item: 'b1', title: 'Bad Game', content: { flag: true, kind: 'abusive', reason: 'abusive' } });
+  const clean = row({ item: 'c1', title: 'Clean Game' });
+  const main = Lib.build([adultRow, abusive, clean], { ids: [], items: [] });
+  const adult = Lib.build([adultRow, abusive, clean], { ids: [], items: [] }, true);
+  assert.deepEqual(main.map((c) => c.title), ['Clean Game']);
+  assert.deepEqual(adult.map((c) => c.title), ['Grown Up Game']); assert.equal(adult[0].adult, true);
+  const tool = fs.readFileSync(path.join(__dirname, '..', 'tools', 'shelf.js'), 'utf8');
+  assert.ok(tool.includes('const index = buildIndex(cards.filter((c) => !c.adult), status);'), 'never on the main list');
+  const shelf = fs.readFileSync(path.join(__dirname, '..', 'src', 'shelf.js'), 'utf8');
+  assert.ok(shelf.includes("if (adultOk()) adultShelf();") && shelf.includes('Are you 18 or older?'));
+  assert.ok(shelf.includes("for (const e of document.querySelectorAll('header .give')) e.remove();"), 'no donation link on the 18+ shelf');
+  const play = fs.readFileSync(path.join(__dirname, '..', 'src', 'play.js'), 'utf8');
+  assert.ok(play.includes("if (c.adult && (() => { try { return localStorage.getItem('voidtv-play-18') !== 'yes'; }"));
+  assert.ok(play.includes('if (core.noDonation || c.kids || c.adult) for'), 'no donation on an adult game');
+});

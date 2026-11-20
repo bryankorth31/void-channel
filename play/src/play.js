@@ -790,8 +790,8 @@
     // Plan G4: the approve page's Try it opens a draft card (play/drafts, on this PC only; voidtv.net has none).
     // Plan C4: a whole collection's game has no card file of its own; its card sits in a bundle (play/library), named by
     // the shelf's link (&b=genesis/2) or, for an old link without it, found in the shelf list.
-    (/^[a-z0-9]+\/\d+$/.test(q.get('b') || '') ? fromBundle(id, q.get('b')) : fetch((/^[A-Za-z0-9._-]+$/.test(q.get('draft') || '') ? 'drafts/' + q.get('draft') + '/' : 'cards/') + encodeURIComponent(id) + '.json').then((r) => {
-      if (r.status === 404 && !q.get('draft')) return fetch('shelf/index.json').then((x) => x.json()).then((ix) => { const g = (ix.games || []).find((x) => x.id === id && x.b); if (!g) throw new Error('There is no game by that name here. Pick one from the Games shelf.'); return fromBundle(id, g.b); });
+    (/^[a-z0-9-]+\/\d+$/.test(q.get('b') || '') ? fromBundle(id, q.get('b')) : fetch((/^[A-Za-z0-9._-]+$/.test(q.get('draft') || '') ? 'drafts/' + q.get('draft') + '/' : 'cards/') + encodeURIComponent(id) + '.json').then((r) => {
+      if (r.status === 404 && !q.get('draft')) return Promise.all(['shelf/index.json', 'shelf/index-18.json'].map((f) => fetch(f).then((x) => (x.ok ? x.json() : { games: [] })).catch(() => ({ games: [] })))).then((ixs) => { const g = ixs.flatMap((ix) => ix.games || []).find((x) => x.id === id && x.b); if (!g) throw new Error('There is no game by that name here. Pick one from the Games shelf.'); return fromBundle(id, g.b); });
       if (!r.ok) throw new Error('There is no game by that name here. Pick one from the Games shelf.');
       // A card asked for while a deploy is spreading can come back as the site's home page (cached a few minutes).
       return r.text().then((t) => { try { return JSON.parse(t); } catch (e) { throw new Error('This game did not load. Try again in a few minutes, or pick another game.'); } });
@@ -817,13 +817,23 @@
     $('core-terms').hidden = !core.terms; if (core.terms) $('core-terms-link').href = core.terms;
     // A core whose licence is non-commercial (and Bryan's arcade 'No line'): no donation on its games. A Kids game keeps the
     // CASH donation behind the grown-up check (Bryan, 17 Nov 2026), so none here either.
-    if (core.noDonation || c.kids) for (const e of document.querySelectorAll('.donate')) e.remove();
+    if (core.noDonation || c.kids || c.adult) for (const e of document.querySelectorAll('.donate')) e.remove();
     $('from').innerHTML = '';
     const a = document.createElement('a'); a.href = PlayCards.itemPage(c); a.target = '_blank'; a.rel = 'noopener'; a.textContent = 'the Internet Archive';
     $('from').append('The game plays straight from ', a, '.');
     if (shelf && shelf.games && shelf.games[c.id] && shelf.games[c.id].gone) throw new Error("This game's file is no longer on the Internet Archive, so it is off the shelf. Pick another from Games.");
     if (typeof SharedArrayBuffer === 'undefined' || typeof WebAssembly !== 'object') throw new Error('This browser cannot run PLAY games yet. A current Chrome, Edge, Firefox or Safari can.');
     if (!self.crossOriginIsolated) throw new Error('PLAY cannot start here: this page was served without the settings the engine needs. That is our side, not your browser.');
+    // An adult game (the 18+ shelf, Bryan, 20 Nov 2026) asks the age question before Play, wherever its link came from.
+    if (c.adult && (() => { try { return localStorage.getItem('voidtv-play-18') !== 'yes'; } catch (e) { return true; } })()) {
+      status('');
+      const g = document.createElement('div'); g.className = 'gate18';
+      g.innerHTML = '<p><b>This game was made for grown-ups.</b> Are you 18 or older?</p><p class="gate-acts"><button type="button" class="play" id="r18-yes">Yes, I am 18 or older</button> <a class="tool" href="./">No, back to the games</a></p>';
+      $('b-play').parentElement.after(g);
+      $('r18-yes').onclick = () => { try { localStorage.setItem('voidtv-play-18', 'yes'); } catch (e) { /* asked again next time */ } location.reload(); };
+      $('r18-yes').focus({ preventScroll: true });
+      return;
+    }
     status(''); $('b-play').hidden = false; $('b-play').focus({ preventScroll: true });
     // Audit S6: the Play or Continue on the back of a shelf box starts the game itself (?go=new or ?go=continue), so
     // shelf to game is two presses. A phone keeps its start screen: that tap is what lets the game go fullscreen.

@@ -151,7 +151,7 @@ const brandSrc = path.join(ROOT, 'assets', 'brand');
     fs.copyFileSync(path.join(P, 'LICENSE'), path.join(dst, 'LICENSE.txt'));
     for (const d of ['src', 'cards', 'engine', 'cheats', 'library'].filter((x) => fs.existsSync(path.join(P, x)))) fs.cpSync(path.join(P, d), path.join(dst, d), { recursive: true });
     fs.mkdirSync(path.join(dst, 'shelf'), { recursive: true });
-    for (const f of ['index.json', 'status.json']) fs.copyFileSync(path.join(P, 'shelf', f), path.join(dst, 'shelf', f));
+    for (const f of ['index.json', 'status.json', 'index-18.json'].filter((x) => fs.existsSync(path.join(P, 'shelf', x)))) fs.copyFileSync(path.join(P, 'shelf', f), path.join(dst, 'shelf', f));
   } }
 // Trivia Night (trivia/, B, 20 Nov 2026: "Yes, a Trivia row"): the host screen at /trivia/, the phone page at /trivia/phone, their
 // style and scripts, and the question bank (its files are written by scripts/trivia/bank.js). voidtv.net only, and only when the

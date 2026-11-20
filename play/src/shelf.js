@@ -201,7 +201,9 @@
   }
 
   let shelfGames = [], filter = {}, libHow = {};
+  let shelfIndexSeen = null;
   function render(index) {
+    shelfIndexSeen = index;
     shelfGames = index.games; libHow = index.libHow || {};
     filter = readFilter(location.search);
     filterRow();
@@ -377,8 +379,36 @@
   const api = { PAGE_FIRST, PAGE_MORE, shelves, SYSTEMS, decadeName, backLines, IDLE_MS, TOUR_MS, GENRES, genresOf, readFilter, writeFilter, matches, choices };
   if (typeof module === 'object' && module.exports) { module.exports = api; return; }
   root.PlayShelf = api;
-  fetch('shelf/index.json', { cache: 'no-store' }).then((r) => r.json()).then(render)
-    .catch(() => { document.getElementById('rows').innerHTML = '<p class="loading">The shelf did not load. Try again in a moment.</p>'; });
+  // The 18+ shelf (Bryan, 20 Nov 2026: adult-themed games kept behind a gate): ?r=18 asks the age question first, then
+  // shows its own list; the main shelf never lists those games, and a link to them shows only when there are some.
+  const R18 = 'voidtv-play-18';
+  const adultOk = () => { try { return localStorage.getItem(R18) === 'yes'; } catch (e) { return false; } };
+  const failed = () => { document.getElementById('rows').innerHTML = '<p class="loading">The shelf did not load. Try again in a moment.</p>'; };
+  const load = (file) => fetch(file, { cache: 'no-store' }).then((r) => r.json()).then(render).catch(failed);
+  function adultShelf() {
+    document.body.classList.add('r18');
+    document.querySelector('.intro h1').textContent = 'Games for adults';
+    document.querySelector('.intro p').textContent = 'Made for grown-ups: some have sexual content, gore or gambling. Kept apart from the rest of PLAY, and never on Kids.';
+    for (const e of document.querySelectorAll('header .give')) e.remove();
+    load('shelf/index-18.json');
+  }
+  if (new URLSearchParams(location.search).get('r') === '18') {
+    for (const e of document.querySelectorAll('header .give')) e.remove();   // no donation beside the 18+ question either
+    if (adultOk()) adultShelf();
+    else {
+      const rows = document.getElementById('rows');
+      rows.innerHTML = '<section class="gate18" role="dialog" aria-label="Games for adults"><h2>Games for adults</h2>'
+        + '<p>These games were made for grown-ups. Some have sexual content, gore or gambling. They are kept apart from the rest of PLAY and are never on Kids.</p>'
+        + '<p><b>Are you 18 or older?</b></p><p class="gate-acts"><button type="button" class="flt" id="r18-yes">Yes, I am 18 or older</button> <a class="flt" href="./">No, back to the games</a></p></section>';
+      document.getElementById('r18-yes').onclick = () => { try { localStorage.setItem(R18, 'yes'); } catch (e) { /* asked again next time */ } adultShelf(); };
+      document.getElementById('r18-yes').focus();
+    }
+  } else load('shelf/index.json').then(() => {
+    const ix = shelfIndexSeen; if (!ix || !ix.adultShelf) return;
+    const foot = document.querySelector('.foot p'); if (!foot) return;
+    const a = document.createElement('a'); a.href = '?r=18'; a.textContent = '18+ games'; a.className = 'r18-link';
+    foot.append(' · ', a);
+  });
   // Back goes where the visitor came from on this site; from outside (or nothing), to the home page.
   try { const back = document.getElementById('back'); if (back && document.referrer && new URL(document.referrer).origin === location.origin) back.addEventListener('click', (e) => { e.preventDefault(); history.back(); }); } catch (e) { /* the link still goes home */ }
   steer();

@@ -24,20 +24,25 @@ const PER = 500;
 
 const collections = () => JSON.parse(fs.readFileSync(path.join(PLAY, 'collections.json'), 'utf8')).collections;
 
-// Pure (tested): the cards for one system's rows, given the ids and items the hand-made cards already hold.
-function build(rows, taken) {
+// Pure (tested): the cards for one system's rows, given the ids and items the hand-made cards already hold. adult: the
+// 18+ shelf's cards instead (Bryan, 20 Nov 2026: adult-themed games behind a gate; the abusive ones "are bad": never).
+function build(rows, taken, adult) {
   const ids = new Set(taken.ids), items = new Set(taken.items), out = [];
   for (const r of rows) {
     // The start-up check's answer: the assistant's rows carry it as boot: { ok, why, at }; a plain ok is read too.
     // The content screen (the assistant's content-screen.js; adult and abusive titles were found in the 2600 library):
     // a flagged game never reaches the shelf, and neither does a row the screen has not read.
-    if (!r || !('content' in r) || (r.content && r.content.flag)) continue;
+    if (!r || !('content' in r)) continue;
+    const kind = r.content && r.content.flag ? r.content.kind : null;
+    if (kind === 'abusive' || (r.content && r.content.flag && kind !== 'adult')) continue;
+    if (adult ? kind !== 'adult' : kind) continue;
     if (!(r.boot ? r.boot.ok : r.ok) || !r.item || !r.file || !Cons.MACHINES[r.system] || items.has(r.item)) continue;
     const c = Cons.card({ system: r.system, title: r.title, item: r.item, source: r.source },
       { name: r.file, size: r.size || 0, start: r.start || '' }, { year: r.year, creator: r.publisher });
     if (!c.archive.size) delete c.archive.size;
     if (ids.has(c.id) || Cards.check(c).length) continue;
     c.added = 'Whole collections (Bryan, 20 Nov 2026: "Pull those shelves in"); started in the PLAY start-up check';
+    if (adult) { c.adult = true; c.adultWhy = r.content.reason || 'adult'; }
     ids.add(c.id); items.add(r.item); out.push(c);
   }
   return out.sort((a, b) => a.title.localeCompare(b.title));
@@ -77,13 +82,16 @@ function main() {
     const fromTop = collections().some((c) => c.system === system && c.from === 'top150');
     const cards = build(readRows(system).concat(fromTop ? topRows(system, top) : []), taken);
     for (const c of cards) { taken.ids.push(c.id); taken.items.push(c.archive.item); }
-    for (const b of bundles(system, cards)) {
+    // The 18+ shelf's games for this machine, in their own bundles (adult-<machine>/<n>), never on the main shelf.
+    const adult = build(readRows(system).concat(fromTop ? topRows(system, top) : []), taken, true);
+    for (const c of adult) { taken.ids.push(c.id); taken.items.push(c.archive.item); }
+    for (const b of bundles(system, cards).concat(bundles('adult-' + system, adult))) {
       const f = path.join(LIB, b.name + '.json');
       fs.mkdirSync(path.dirname(f), { recursive: true });
       fs.writeFileSync(f, JSON.stringify({ bundle: b.name, cards: b.cards }) + '\n');
     }
     total += cards.length;
-    console.log('library  ' + system + '  ' + cards.length + ' games');
+    console.log('library  ' + system + '  ' + cards.length + ' games' + (adult.length ? ', ' + adult.length + ' on the 18+ shelf' : ''));
   }
   console.log('Library: ' + total + ' games. Now run: node play/tools/shelf.js');
 }
