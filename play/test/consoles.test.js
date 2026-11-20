@@ -128,4 +128,5 @@ test('arcade (B, 20 Nov 2026: "Current MAME", "No line"): MAME runs from its own
   const ar = fs.readFileSync(path.join(PLAY, 'src', 'arcade-runner.js'), 'utf8');
   assert.ok(ar.includes("ctx[fn] = function () { frames++;"), 'the first picture is MAME\'s first draw');
   assert.ok(ar.includes('if (document.title !== mine) document.title = mine;'));
+  assert.ok(ar.includes("'-nojoystick'"), 'audit AR4: the pad reaches MAME through the hub only');
 });

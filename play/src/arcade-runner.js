@@ -68,14 +68,17 @@
       const engine = new URL(PlayCards.CORES[card.core].engine.replace('{driver}', a.driver), location.href).href;
       const vertical = (card.aspect || 4 / 3) < 1;
       const args = [a.driver, '-rompath', '/roms', '-window', '-nomaximize', '-skip_gameinfo', '-nokeepaspect',
-        '-resolution', vertical ? '480x640' : '640x480', '-video', 'accel'];
+        '-resolution', vertical ? '480x640' : '640x480', '-video', 'accel',
+        // Audit AR4: the gamepad reaches the game through PLAY's own controls only; MAME reading it too would press twice.
+        '-nojoystick'];
       if (opts.mute) args.push('-sound', 'none');
       root.Module = {
         canvas, arguments: args,
         preRun: [() => { const fs = root.Module.FS || root.FS; fs.mkdir('/roms'); for (const z of zips) fs.writeFile('/roms/' + z.name, z.bytes); }],
         print: (t) => console.log('[mame]', t),
         printErr: (t) => console.warn('[mame]', t),
-        onAbort: (why) => { if (on.error) on.error('The arcade engine stopped (' + why + ')'); },
+        // One plain sentence; the engine's own words go to the console for whoever looks.
+        onAbort: (why) => { console.warn('[mame] stopped:', why); if (on.error) on.error('This arcade game stopped. Press Play to try again, or pick another game.'); },
         onRuntimeInitialized: () => { started = true; on.ready && on.ready({}); },
       };
       if (on.aspect) on.aspect(card.aspect || 4 / 3);
