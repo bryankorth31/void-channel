@@ -207,3 +207,6 @@ the HQ areas chat. Steps 7 to 10 start after the 22 Nov reset.
   backgrounds are our own. Checked at 1920x1080, 1316x821, 821x1316 and 1278x513: no sideways scroll, no console
   errors. Known: the sign says "UNIVERSITY ARCHIVES", and at some widths it sits behind the headline's second
   line; the old library photo in the headline band is no longer shown in this look. Nothing deployed.
+- 19 Nov 2026: Bryan, asked whether to mark both 3D stages live: "Yes, mark live". Both scale blocks in Critical
+  thinking unit 3 are `"live": true`, so the public copy carries them, with scale.js and three.js beside the page.
+  They reach the live site at his next deploy.

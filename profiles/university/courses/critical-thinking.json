@@ -918,7 +918,7 @@
       "needIt": "Loan rates, medical risks and \"50% off\" are all numbers someone chose to show you; three quick questions tell you whether they mean what they seem to.",
       "scale": [
         {
-          "live": false,
+          "live": true,
           "kind": "amount",
           "title": "The weight of everything alive",
           "ask": "Each block is one group of living things, and its volume is that group's real share of all life on Earth. Guess first, then turn it, zoom in, and walk down the row until you find the people.",
@@ -1131,7 +1131,7 @@
           }
         },
         {
-          "live": false,
+          "live": true,
           "kind": "size",
           "title": "From a blood cell to the next galaxy",
           "ask": "Each thing is drawn as wide as it really is. No screen can hold them all at once, so walk from one to the next with Bigger and Smaller and watch each one turn into a speck beside its neighbour.",
