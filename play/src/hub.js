@@ -9,6 +9,26 @@
     Up: 12, Down: 13, Left: 14, Right: 15, Home: 16 };
   const STICK = 0.5;   // how far a stick must lean to count as a direction
 
+  // Steady directions (Bryan, 20 Nov 2026, Golden Axe: "really kind of touchy ... I just can't hold that"; the assistant
+  // measured the game's speed right, so the feel was the input). One rule for the touch d-pad and the stick: eight
+  // sectors, the four straight ones wide (60 degrees) and the diagonals narrow (30), so a thumb aiming right stays right;
+  // a direction already held stays until the thumb is 10 degrees past its border; and the centre is a dead zone, a
+  // little smaller for letting go than for pressing, so a thumb resting near it does not flicker.
+  // x, y: -1 to 1 from the centre (y down). prev: the sector held now, or null. Answers a sector (0 right, 1 down-right,
+  // 2 down, 3 down-left, 4 left, 5 up-left, 6 up, 7 up-right) or null.
+  const SECTORS = ['R', 'RD', 'D', 'LD', 'L', 'LU', 'U', 'RU'];
+  function steadyDir(x, y, prev, dead, release) {
+    const r = Math.hypot(x, y);
+    if (r < (prev == null ? dead : release)) return null;
+    const a = Math.atan2(y, x) * 180 / Math.PI;
+    const off = (i) => Math.abs(((a - i * 45) % 360 + 540) % 360 - 180);
+    const half = (i) => (i % 2 ? 15 : 30);
+    if (prev != null && off(prev) <= half(prev) + 10) return prev;
+    let best = 0;
+    for (let i = 1; i < 8; i++) if (off(i) - half(i) < off(best) - half(best)) best = i;
+    return best;
+  }
+
   function createHub(opts) {
     const send = opts.send;                    // send(code, down): to the game
     const onAction = opts.onAction || (() => {}); // our own buttons: 'menu' (the same on every pad), 'keyboard', 'rewind'
@@ -77,6 +97,7 @@
     // What one gamepad holds right now, as key codes, from its buttons and its left stick.
     // A console button for player 1 (P1:A) becomes the same button for whichever player holds this pad: the first
     // pad is player 1, the second player 2, so two people on the couch each get their own seat.
+    const stickWas = new Map();   // each stick's held sector (steadyDir)
     function padCodes(pad, player) {
       const codes = new Set();
       const seat = (c) => (player > 1 ? c.replace(/^P1:/, 'P' + player + ':') : c);
@@ -93,10 +114,14 @@
       }
       const ax = (pad.axes && pad.axes[0]) || 0, ay = (pad.axes && pad.axes[1]) || 0;
       if (m.Stick !== 'none') {
-        if (ax < -STICK && m.Left) codes.add(seat(m.Left));
-        if (ax > STICK && m.Right) codes.add(seat(m.Right));
-        if (ay < -STICK && m.Up) codes.add(seat(m.Up));
-        if (ay > STICK && m.Down) codes.add(seat(m.Down));
+        const key = pad.index == null ? player : pad.index;
+        const s = steadyDir(ax, ay, stickWas.has(key) ? stickWas.get(key) : null, STICK, STICK * 0.75);
+        if (s == null) stickWas.delete(key); else stickWas.set(key, s);
+        const dirs = s == null ? '' : SECTORS[s];
+        if (dirs.includes('L') && m.Left) codes.add(seat(m.Left));
+        if (dirs.includes('R') && m.Right) codes.add(seat(m.Right));
+        if (dirs.includes('U') && m.Up) codes.add(seat(m.Up));
+        if (dirs.includes('D') && m.Down) codes.add(seat(m.Down));
       }
       return codes;
     }
@@ -139,7 +164,7 @@
     };
   }
 
-  const api = { createHub, BUTTONS };
+  const api = { createHub, BUTTONS, steadyDir, SECTORS };
   if (typeof module === 'object' && module.exports) module.exports = api;
   else root.PlayHub = api;
 })(typeof self !== 'undefined' ? self : this);

@@ -188,5 +188,5 @@ test('whole-site audit 2 and 3 (Bryan: "Yes, pass 2 and 3 to the lead"): the bro
 
 test('the handheld shell: Select and Start are level (Bryan, 20 Nov 2026: "Straighten them"; slanted, Start ran into the screen\'s frame)', () => {
   const css = read(ROOT, 'play.css');
-  assert.ok(css.includes('body.shell .cpad .pill{height:30px;') && !/body\.shell[^{]*\.pill[^{]*\{[^}]*rotate/.test(css));
+  assert.ok(css.includes('body.shell .cpad .pill{min-width:64px;') && !/body\.shell[^{]*\.pill[^{]*\{[^}]*rotate/.test(css));
 });

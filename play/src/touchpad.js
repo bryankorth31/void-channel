@@ -53,17 +53,21 @@
     const pad = el('div', 'pdpad'); pad.setAttribute('aria-label', 'Arrow keys');
     for (const c of ['ArrowUp', 'ArrowLeft', 'ArrowRight', 'ArrowDown']) pad.appendChild(el('span', 'pdir ' + c, label(c)));
     const held = new Map(); // pointerId -> Set of codes
+    const sector = new Map(); // pointerId -> the sector held (steady directions)
     function aim(e) {
       const r = pad.getBoundingClientRect();
       const dx = (e.clientX - r.left) / r.width - 0.5, dy = (e.clientY - r.top) / r.height - 0.5;
       const now = new Set();
-      if (Math.hypot(dx, dy) > 0.12) {
-        const a = Math.atan2(dy, dx) * 180 / Math.PI; // 0 = right, 90 = down
-        if (a > -67.5 && a < 67.5) now.add(codes.ArrowRight);
-        if (a > 22.5 && a < 157.5) now.add(codes.ArrowDown);
-        if (a > 112.5 || a < -112.5) now.add(codes.ArrowLeft);
-        if (a > -157.5 && a < -22.5) now.add(codes.ArrowUp);
-      }
+      // Steady directions, one rule with the stick (hub.js steadyDir): wide straight sectors, narrow diagonals, a held
+      // direction kept until the thumb is clearly past its border, a dead centre.
+      const H = root.PlayHub;
+      const s = H ? H.steadyDir(dx * 2, dy * 2, sector.has(e.pointerId) ? sector.get(e.pointerId) : null, 0.3, 0.22) : null;
+      if (s == null) sector.delete(e.pointerId); else sector.set(e.pointerId, s);
+      const d = s == null ? '' : H.SECTORS[s];
+      if (d.includes('R')) now.add(codes.ArrowRight);
+      if (d.includes('D')) now.add(codes.ArrowDown);
+      if (d.includes('L')) now.add(codes.ArrowLeft);
+      if (d.includes('U')) now.add(codes.ArrowUp);
       const before = held.get(e.pointerId) || new Set();
       for (const c of before) if (!now.has(c)) hub.touch(c, false, e.pointerId);
       for (const c of now) if (!before.has(c)) { hub.touch(c, true, e.pointerId); tick(); }
@@ -71,7 +75,7 @@
       for (const s of pad.children) s.classList.toggle('on', [...held.values()].some((set) => set.has(codes[s.classList[1]])));
     }
     // A finger lifting (or the browser taking it away) lets go of only its own directions; the others stay lit.
-    function lift(e) { for (const c of held.get(e.pointerId) || []) hub.touch(c, false, e.pointerId); held.delete(e.pointerId); for (const s of pad.children) s.classList.toggle('on', [...held.values()].some((set) => set.has(codes[s.classList[1]]))); }
+    function lift(e) { for (const c of held.get(e.pointerId) || []) hub.touch(c, false, e.pointerId); held.delete(e.pointerId); sector.delete(e.pointerId); for (const s of pad.children) s.classList.toggle('on', [...held.values()].some((set) => set.has(codes[s.classList[1]]))); }
     pad.addEventListener('pointerdown', (e) => { e.preventDefault(); capture(pad, e); aim(e); });
     pad.addEventListener('pointermove', (e) => { if (held.has(e.pointerId)) aim(e); });
     pad.addEventListener('pointerup', lift); pad.addEventListener('pointercancel', lift); pad.addEventListener('lostpointercapture', lift);
@@ -99,7 +103,10 @@
   // Upright: the numbers in one row (two on a narrow phone), then Space and Enter, then the arrows beside the rest.
   function plan(c) {
     const numbers = c.numbers || [], keys = (c.keys || []).concat(c.mouse ? ['@click', '@rclick'] : []);
-    const go = ['Space', 'Enter'].filter((k) => keys.includes(k));
+    // Space and Enter get their own wide row only as themselves; an arcade card that names Space ("Button 3") keeps it
+    // with its other buttons (the spacing audit: a row for it pushed Chinese Hero's Button 4 off an upright phone).
+    const named = c.labels || {};
+    const go = ['Space', 'Enter'].filter((k) => keys.includes(k) && !named[k]);
     const rest = keys.filter((k) => !go.includes(k));
     const sideways = numbers.length
       ? { right: [...numbers, ...(keys.includes('Enter') ? ['Enter'] : [])], left: keys.filter((k) => k !== 'Enter') }
@@ -196,11 +203,11 @@
       const rest = p.rest.map((code) => key(code));
       if (p.keyboard) rest.push(kbButton('Keyboard'));
       if (p.dpad || rest.length) {
-        const perRow = p.dpad ? 2 : 5;
+        const perRow = p.dpad ? 3 : 5;   // three beside the arrows: the pad stays two rows tall for up to six keys
         const rows = Math.max(p.dpad ? 2 : 1, Math.ceil(rest.length / perRow));
         // A console pad with many buttons: on a narrow phone the d-pad takes its own row (play.css), or it would push
         // the buttons off the screen.
-        const s = section('pblock' + (p.dpad ? ' with-dpad' : '') + (p.dpad && rest.length > 4 ? ' many' : ''), rows, 1);
+        const s = section('pblock' + (p.dpad ? ' with-dpad' : '') + (p.dpad && rest.length > 6 ? ' many' : ''), rows, 1);
         if (p.dpad) s.appendChild(dpad(hub, dirs));
         if (rest.length) {
           const g = el('div', 'prest'); g.style.setProperty('--nc', Math.min(perRow, rest.length));
@@ -220,7 +227,22 @@
     return { keyboard: kb, openKeyboard: () => kb.classList.add('open') };
   }
 
-  const api = { build, releaseAll, plan, label, QWERTY, SHAPES, SYSTEM_SHAPE, shapeOf, minCols };
+  // Words stay inside their key (Bryan: "Words inside of buttons don't fall outside of it"): after the keys are laid
+  // out, a key whose words do not fit (a long arcade name, "Button 1" in a narrow column) has its words made smaller,
+  // step by step, down to about half size. Words are never split inside (play.css), so a long one shrinks instead.
+  function fit(scope) {
+    for (const k of (scope || document).querySelectorAll('.pk')) {
+      if (!k.offsetParent) continue;
+      const parts = [k, ...k.querySelectorAll('span')];
+      for (const e of parts) e.style.fontSize = '';
+      const base = parts.map((e) => parseFloat(getComputedStyle(e).fontSize) || 14);
+      const over = () => k.scrollWidth > k.clientWidth + 1 || k.scrollHeight > k.clientHeight + 1
+        || parts.some((e) => e !== k && (e.scrollWidth > e.clientWidth + 1 || e.scrollHeight > e.clientHeight + 1));
+      for (let f = 0.92; f >= 0.45 && over(); f -= 0.07) parts.forEach((e, i) => { e.style.fontSize = Math.max(8, Math.round(base[i] * f)) + 'px'; });
+    }
+  }
+
+  const api = { build, releaseAll, fit, plan, label, QWERTY, SHAPES, SYSTEM_SHAPE, shapeOf, minCols };
   if (typeof module === 'object' && module.exports) module.exports = api;
   else root.PlayTouch = api;
 })(typeof self !== 'undefined' ? self : this);

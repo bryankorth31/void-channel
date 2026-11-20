@@ -66,13 +66,17 @@
     const floating = touch && card && PlayCards.isPad(card);
     set($('screen'), L.screen); set($('z-left'), floating ? null : L.left); set($('z-right'), floating ? null : L.right);
     set($('z-pad'), floating ? null : L.pad);
-    set($('z-over'), floating && L.mode !== 'plain' ? (L.pad || { x: ins.l, y: PlayLayout.HEADER + ins.t, w: innerWidth - ins.l - ins.r, h: innerHeight - PlayLayout.HEADER - ins.t - ins.b }) : null);
+    // Sideways in the handheld shell the bar is away during play, so the pad layer takes the full height (the spacing
+    // audit: with the bar's room kept, Start sat on the X button).
+    const overTop = (shell ? 0 : PlayLayout.HEADER) + ins.t;
+    set($('z-over'), floating && L.mode !== 'plain' ? (L.pad || { x: ins.l, y: overTop, w: innerWidth - ins.l - ins.r, h: innerHeight - overTop - ins.b }) : null);
     if (touch && hub && card) {
       const zones = floating ? { over: $('z-over'), mode: L.mode } : L.pad ? { pad: $('z-pad') } : { left: $('z-left'), right: $('z-right') };
       const sig = L.mode;
       if (place.sig !== sig) { pad = PlayTouch.build(zones, card, hub); place.sig = sig; }
     } else place.sig = '';
     $('b-touch').setAttribute('aria-pressed', String(touch));
+    if (touch) PlayTouch.fit($('stage'));
   }
 
   // While the menu is open the game hears nothing: every held key is let go first, then the gamepad drives the menu.

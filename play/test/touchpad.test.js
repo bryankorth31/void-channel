@@ -53,3 +53,20 @@ test('the audit (Bryan: "3 of the directional buttons locked down"): when the br
   assert.ok(js.includes("visualViewport.addEventListener('resize', () => PlayTouch.releaseAll());"));
   assert.ok(js.includes('hub.releaseAll(); PlayTouch.releaseAll(); letGoMouse();'), 'Pause lets go of the touch layer too');
 });
+
+test('the spacing audit (Bryan: "buttons aren\'t overlapping. Words inside of buttons don\'t fall outside"): an arcade card that names Space keeps it with its buttons, three beside the arrows, and words shrink to fit', () => {
+  const hero = JSON.parse(fs.readFileSync(path.join(ROOT, 'cards', 'chinese-hero-arcade.json'), 'utf8'));
+  const p = Touch.plan(hero.controls);
+  assert.deepEqual(p.go, [], 'Space is "Button 3" here, so it gets no row of its own');
+  assert.ok(p.rest.includes('Space'));
+  const src = fs.readFileSync(path.join(ROOT, 'src', 'touchpad.js'), 'utf8');
+  assert.ok(src.includes('const perRow = p.dpad ? 3 : 5;') && src.includes("(p.dpad && rest.length > 6 ? ' many' : '')"));
+  assert.ok(src.includes('function fit(scope) {') && /const api = \{ build, releaseAll, fit,/.test(src));
+  const css = fs.readFileSync(path.join(ROOT, 'play.css'), 'utf8');
+  assert.ok(css.includes('overflow-wrap:normal;word-break:normal;hyphens:none;'), 'a word is never split inside');
+  assert.ok(css.includes('.pblock .pdpad{height:100%;aspect-ratio:1;align-self:center;max-width:40cqw;max-height:40cqw;'), 'the arrows leave the buttons room');
+  // Console pads sideways: each side stacks in its own margin, nothing on the face buttons.
+  assert.ok(css.includes('.cpad.side .crewind{left:var(--e);top:calc(var(--e) + 112px)}'));
+  const js = fs.readFileSync(path.join(ROOT, 'src', 'play.js'), 'utf8');
+  assert.ok(js.includes('if (touch) PlayTouch.fit($(\'stage\'));') && js.includes('const overTop = (shell ? 0 : PlayLayout.HEADER) + ins.t;'));
+});

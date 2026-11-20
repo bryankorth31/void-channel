@@ -153,3 +153,15 @@ test('a new card replaces the old gamepad map', () => {
   hub.pollPads([pad(0, ['A'])]);
   assert.deepEqual(sent, [['Space', true]]);
 });
+
+test('steady directions (Bryan, Golden Axe: "really kind of touchy"): wide straight sectors, narrow diagonals, a held direction kept past its border, a dead centre', () => {
+  const { steadyDir, SECTORS } = require('../src/hub.js');
+  const at = (deg, r = 1, prev = null) => { const s = steadyDir(r * Math.cos(deg * Math.PI / 180), r * Math.sin(deg * Math.PI / 180), prev, 0.3, 0.22); return s == null ? '' : SECTORS[s]; };
+  assert.equal(at(0), 'R'); assert.equal(at(25), 'R', 'a thumb a little low of right is still right');
+  assert.equal(at(35), 'RD'); assert.equal(at(45), 'RD'); assert.equal(at(-90), 'U');
+  assert.equal(at(38, 1, 0), 'R', 'right held: kept until 10 degrees past its border (30)');
+  assert.equal(at(41, 1, 0), 'RD');
+  assert.equal(at(0, 0.25), '', 'the dead centre');
+  assert.equal(at(0, 0.25, 0), 'R', 'letting go needs the thumb nearer the centre than pressing');
+  assert.equal(at(0, 0.2, 0), '');
+});
