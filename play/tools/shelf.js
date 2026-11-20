@@ -19,6 +19,7 @@ const STATUS = path.join(SHELF, 'status.json');
 const INDEX = path.join(SHELF, 'index.json');
 const STREAM = path.join(SHELF, 'stream.js');
 const Cards = require('../src/cards.js');
+const Shelf = require('../src/shelf.js');
 const PAUSE_MS = 1500;
 
 function loadCards() {
@@ -35,7 +36,9 @@ function buildIndex(cards, status) {
   const games = cards.filter((c) => !Cards.check(c).length)
     .filter((c) => !(status.games[c.id] && status.games[c.id].gone))
     .map((c) => ({ id: c.id, title: c.title, year: c.year || null, publisher: c.publisher || '', system: c.system,
-      players: c.players || 1, item: c.archive.item, help: c.help || '' }))
+      players: c.players || 1, item: c.archive.item, help: c.help || '',
+      // Plan G1 and G2: the card's own genre wins over Wikidata's facts; the shelf files both under its plain genres.
+      genres: Shelf.genresOf(c.genre || (c.facts && c.facts.genre)) }))
     .sort((a, b) => (a.year || 9999) - (b.year || 9999) || a.title.localeCompare(b.title));
   return { built: status.checked, games };
 }

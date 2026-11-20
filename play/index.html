@@ -21,6 +21,14 @@
     <p>Old games, straight from the Internet Archive. Play with a gamepad, the keyboard or touch. Free, no account.</p>
     <p class="pad-hint" id="pad-hint" hidden>Gamepad found: move with the d-pad, A to pick a game up, A again to play.</p>
   </section>
+  <div class="filters" id="filters" hidden>
+    <input id="f-q" class="flt" type="search" placeholder="Find a game" aria-label="Find a game" autocomplete="off" spellcheck="false">
+    <button type="button" class="flt chip" data-f="m">Machine: All</button>
+    <button type="button" class="flt chip" data-f="g">Genre: All</button>
+    <button type="button" class="flt chip" data-f="p">Players: Any number</button>
+    <button type="button" class="flt chip" data-f="d">Decade: All</button>
+    <div class="pick" id="pick" role="listbox" hidden></div>
+  </div>
   <div id="rows"><p class="loading">Getting the shelf ready</p></div>
 </main>
 

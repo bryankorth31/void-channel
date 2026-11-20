@@ -54,6 +54,7 @@
     const lines = [['Machine', sysOf(g).name]];
     if (g.year) lines.push(['Year', String(g.year)]);
     if (g.publisher) lines.push(['Made by', g.publisher]);
+    if (g.genres && g.genres.length) lines.push(['Kind', g.genres.join(', ')]);
     lines.push(['Players', g.players > 1 ? '1 or ' + g.players + ', a gamepad each' : '1']);
     lines.push(['Plays with', 'a gamepad, the keyboard or touch']);
     return lines;
@@ -127,27 +128,142 @@
     return a;
   }
 
+  // Plan G2: Wikidata's genres are fine-grained ("side-scrolling beat 'em up"), so the shelf files them under a few plain
+  // ones. A game can sit under two (boxing is Action and Sports). Pure: tested in play/test/shelf.test.js.
+  const GENRES = [
+    ['Action', /beat 'em up|hack and slash|fighting|boxing|shoot|run and gun|action game/i],
+    ['Platform', /platform/i],
+    ['Puzzle and maze', /puzzle|maze/i],
+    ['Adventure', /adventure|role-playing|text-based|interactive fiction/i],
+    ['Strategy and simulation', /strateg|simulation|management/i],
+    ['Sports and racing', /sport|boxing|racing|football|soccer|golf|tennis/i],
+    ['Learning', /educational|learning/i],
+  ];
+  const genresOf = (labels) => GENRES.filter(([, re]) => (labels || []).some((l) => re.test(l))).map(([n]) => n);
+  const fold = (t) => String(t || '').toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, ' ').trim();
+
+  // The filter lives in the address (?m=snes&g=Platform&p=2&d=1990&q=mario), so a link shares what it shows.
+  const KEYS = { m: 'Machine', g: 'Genre', p: 'Players', d: 'Decade' };
+  function readFilter(search) {
+    const q = new URLSearchParams(search || '');
+    const f = {};
+    for (const k of [...Object.keys(KEYS), 'q']) if (q.get(k)) f[k] = q.get(k).slice(0, 60);
+    return f;
+  }
+  function writeFilter(f) {
+    const q = new URLSearchParams();
+    for (const k of [...Object.keys(KEYS), 'q']) if (f[k]) q.set(k, f[k]);
+    const s = q.toString();
+    return s ? '?' + s : '';
+  }
+  function matches(g, f) {
+    if (f.m && g.system !== f.m) return false;
+    if (f.g && !(g.genres || []).includes(f.g)) return false;
+    if (f.p === '2' && !((g.players || 1) >= 2)) return false;
+    if (f.d && String(decadeOf(g.year)) !== f.d) return false;
+    if (f.q && !fold(g.title + ' ' + (g.publisher || '')).includes(fold(f.q))) return false;
+    return true;
+  }
+  // What each filter can be set to: only what some game on the shelf has, so no choice ever leads to nothing.
+  function choices(games, key) {
+    const seen = new Map();
+    for (const g of games) {
+      if (key === 'm') seen.set(g.system, sysOf(g).name);
+      else if (key === 'g') for (const x of g.genres || []) seen.set(x, x);
+      else if (key === 'p' && (g.players || 1) >= 2) seen.set('2', 'Two at once');
+      else if (key === 'd' && g.year) seen.set(String(decadeOf(g.year)), decadeName(decadeOf(g.year)));
+    }
+    const list = [...seen].sort((a, b) => (key === 'd' ? a[0] - b[0] : a[1].localeCompare(b[1])));
+    return [['', key === 'p' ? 'Any number' : 'All']].concat(list);
+  }
+
+  let shelfGames = [], filter = {};
   function render(index) {
+    shelfGames = index.games;
+    filter = readFilter(location.search);
+    filterRow();
+    show();
+  }
+
+  // The filter row: a search box and one button per filter; a button opens its list of choices. Gamepad and arrows walk
+  // it like the boxes.
+  function filterRow() {
+    const row = document.getElementById('filters');
+    if (!row || !shelfGames.length) return;
+    row.hidden = false;
+    const q = document.getElementById('f-q');
+    q.value = filter.q || '';
+    q.oninput = () => { filter.q = q.value.trim(); changed(); };
+    for (const b of row.querySelectorAll('.chip')) b.onclick = () => openPick(b);
+    chipLabels();
+  }
+  function chipLabels() {
+    for (const b of document.querySelectorAll('#filters .chip')) {
+      const k = b.dataset.f, c = choices(shelfGames, k).find(([v]) => v === (filter[k] || ''));
+      b.textContent = KEYS[k] + ': ' + (c ? c[1] : 'All');
+      b.classList.toggle('on', !!filter[k]);
+    }
+  }
+  function changed() {
+    history.replaceState(null, '', location.pathname + writeFilter(filter));
+    chipLabels(); show();
+  }
+  function openPick(chip) {
+    const pick = document.getElementById('pick'), k = chip.dataset.f;
+    pick.textContent = '';
+    for (const [v, label] of choices(shelfGames, k)) {
+      const o = document.createElement('button'); o.type = 'button'; o.className = 'opt' + (v === (filter[k] || '') ? ' on' : '');
+      o.textContent = label;
+      o.onclick = () => { if (v) filter[k] = v; else delete filter[k]; closePick(); changed(); };
+      pick.appendChild(o);
+    }
+    pick.style.left = chip.offsetLeft + 'px'; pick.style.top = (chip.offsetTop + chip.offsetHeight + 6) + 'px';
+    pick.hidden = false; pick.dataset.for = k;
+    (pick.querySelector('.opt.on') || pick.querySelector('.opt')).focus();
+  }
+  function closePick() {
+    const pick = document.getElementById('pick');
+    if (!pick || pick.hidden) return false;
+    pick.hidden = true;
+    const chip = document.querySelector('#filters .chip[data-f="' + pick.dataset.for + '"]');
+    if (chip) chip.focus();
+    return true;
+  }
+  const pickOpen = () => { const p = document.getElementById('pick'); return !!(p && !p.hidden); };
+
+  function show() {
     const rows = document.getElementById('rows');
     rows.textContent = '';
-    for (const s of shelves(index.games)) {
+    const games = shelfGames.filter((g) => matches(g, filter));
+    if (shelfGames.length && !games.length) {
+      const p = document.createElement('p'); p.className = 'loading none';
+      const b = document.createElement('button'); b.type = 'button'; b.className = 'flt all'; b.textContent = 'Show all';
+      b.onclick = () => { filter = {}; document.getElementById('f-q').value = ''; changed(); };
+      p.append('No games match these choices. ', b);
+      rows.appendChild(p);
+      return;
+    }
+    for (const s of shelves(games)) {
       const sec = document.createElement('section'); sec.className = 'row';
       const h = document.createElement('h2'); h.textContent = s.title;
       const list = document.createElement('div'); list.className = 'boxes';
       for (const g of s.games) list.appendChild(box(g));
       sec.append(h, list); rows.appendChild(sec);
     }
-    if (!index.games.length) rows.innerHTML = '<p class="loading">No games on the shelf right now.</p>';
+    if (!shelfGames.length) rows.innerHTML = '<p class="loading">No games on the shelf right now.</p>';
   }
 
   // Arrow keys and the gamepad walk the boxes; A or Enter opens one. The first box gets the focus when a pad wakes up.
   function steer() {
     let padSeen = false, idleTimer = 0, tourTimer = 0;   // the idle tour, below
     const boxes = () => [...document.querySelectorAll('.box')];
+    // What the arrows and the d-pad walk: the filter row and the boxes, or only the open list of choices.
+    const stops = () => [...document.querySelectorAll(pickOpen() ? '#pick .opt' : '#filters:not([hidden]) .flt, .flt.all, .box')];
+    const onStop = () => { const a = document.activeElement; return a && a.matches && a.matches('.box, .flt, .opt') ? a : null; };
     const move = (dir) => {
-      const all = boxes(); if (!all.length) return;
-      const cur = document.activeElement && document.activeElement.classList.contains('box') ? document.activeElement : null;
-      const next = cur ? nearest(cur, all, dir) : all[0];
+      const all = stops(); if (!all.length) return;
+      const cur = onStop();
+      const next = cur ? nearest(cur, all, dir) : (boxes()[0] || all[0]);
       if (next) { next.focus(); next.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'smooth' }); }
     };
     const play = () => { if (held) location.href = heldLayer().querySelector('.play').href; };
@@ -163,7 +279,10 @@
         }
         return;
       }
+      if (e.key === 'Escape' && closePick()) { e.preventDefault(); return; }
       const dir = { ArrowRight: 'right', ArrowLeft: 'left', ArrowDown: 'down', ArrowUp: 'up' }[e.key];
+      // In the search box, left and right move the cursor; up and down leave it.
+      if (dir && e.target && e.target.id === 'f-q' && (dir === 'left' || dir === 'right')) return;
       if (dir) { e.preventDefault(); move(dir); }
     });
     const was = new Map();
@@ -183,9 +302,10 @@
         } else {
           for (const dir of ['up', 'down', 'left', 'right']) if (now[dir] && !before[dir]) move(dir);
           if (now.a && !before.a) {
-            const cur = document.activeElement && document.activeElement.classList.contains('box') ? document.activeElement : null;
-            if (cur) cur.click(); else move('right');
+            const cur = onStop();
+            if (cur && cur.id === 'f-q') cur.focus(); else if (cur) cur.click(); else move('right');
           }
+          if (now.b && !before.b) closePick();
         }
         was.set(p.index, now);
       }
@@ -214,7 +334,7 @@
   const IDLE_MS = 60000, TOUR_MS = 4000;
   const TV = /SMART-TV|SmartTV|Tizen|Web0S|webOS|BRAVIA|Android TV|GoogleTV|CrKey|AFT[A-Z]|Roku|HbbTV/i;
 
-  const api = { shelves, SYSTEMS, decadeName, backLines, IDLE_MS, TOUR_MS };
+  const api = { shelves, SYSTEMS, decadeName, backLines, IDLE_MS, TOUR_MS, GENRES, genresOf, readFilter, writeFilter, matches, choices };
   if (typeof module === 'object' && module.exports) { module.exports = api; return; }
   root.PlayShelf = api;
   fetch('shelf/index.json', { cache: 'no-store' }).then((r) => r.json()).then(render)

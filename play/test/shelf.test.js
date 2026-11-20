@@ -89,3 +89,39 @@ test('T25: the idle tour waits a minute, runs only on a couch screen, and any in
   const css = fs.readFileSync(path.join(PLAY, 'shelf.css'), 'utf8');
   assert.ok(css.includes('@media (prefers-reduced-motion:reduce){.held .turn{transition:none}'));
 });
+
+test('G1: Wikidata facts match by the same title on the same machine; a near title or another machine does not', () => {
+  const F = require('../tools/facts.js');
+  const cand = (id, labels, inst, platforms, genres, year) => ({ id, labels, inst, platforms, genres, players: null, year });
+  const found = [
+    cand('Q1', ['Golden Axe Warrior'], ['Q7889'], ['Q209868'], ['role-playing video game'], 1991),
+    cand('Q2', ['Golden Axe'], ['Q7058673'], ['Q209868', 'Q10676'], ["side-scrolling beat 'em up"], 1989),
+  ];
+  const sms = F.pick({ title: 'Golden Axe', system: 'sms', year: 1989 }, found);
+  assert.equal(sms.source, 'https://www.wikidata.org/wiki/Q2', 'not Golden Axe Warrior');
+  assert.match(sms.note, /series item/);
+  assert.equal(F.pick({ title: 'Golden Axe', system: 'nes', year: 1989 }, found), null, 'not on that machine');
+  assert.equal(F.norm('Kirby & The Amazing Mirror'), F.norm('Kirby and the Amazing Mirror'));
+  assert.equal(F.searchTitle('Ms. Pac-Man (Lynx)'), 'Ms. Pac-Man');
+  assert.equal(F.PLATFORM.lynx[0], 'Q753657', 'the Lynx, not the Atari 7800 (Q753600)');
+  const src = fs.readFileSync(path.join(PLAY, 'tools', 'facts.js'), 'utf8');
+  assert.ok(!/mobygames\.com|igdb\.com/i.test(src.replace(/MobyGames and IGDB have terms against this/, '')), 'no other game site is read');
+  for (const c of Tool.loadCards()) assert.ok((c.genre && c.genre.length) || (c.facts && c.facts.source), c.id + ' has a genre, by hand or from Wikidata');
+});
+
+test('G2: plain genres, filters that only offer what exists, and the choice kept in the address', () => {
+  assert.deepEqual(Shelf.genresOf(['boxing video game']), ['Action', 'Sports and racing']);
+  assert.deepEqual(Shelf.genresOf(['2D platform game']), ['Platform']);
+  const f = Shelf.readFilter('?m=snes&g=Platform&p=2&d=1990&q=mario&evil=1');
+  assert.deepEqual(f, { m: 'snes', g: 'Platform', p: '2', d: '1990', q: 'mario' });
+  assert.equal(Shelf.writeFilter(f), '?m=snes&g=Platform&p=2&d=1990&q=mario');
+  const games = JSON.parse(fs.readFileSync(path.join(PLAY, 'shelf', 'index.json'), 'utf8')).games;
+  assert.deepEqual(games.filter((g) => Shelf.matches(g, f)).map((g) => g.id), ['super-mario-world']);
+  assert.deepEqual(games.filter((g) => Shelf.matches(g, { q: 'golden' })).map((g) => g.id).sort(), ['golden-axe-genesis', 'golden-axe-sms']);
+  for (const k of ['m', 'g', 'p', 'd']) for (const [v] of Shelf.choices(games, k).slice(1)) {
+    assert.ok(games.some((g) => Shelf.matches(g, { [k]: v })), k + '=' + v + ' leads to at least one game');
+  }
+  const html = fs.readFileSync(path.join(PLAY, 'index.html'), 'utf8');
+  assert.match(html, /<input id="f-q" class="flt" type="search"/);
+  assert.ok(fs.readFileSync(path.join(PLAY, 'src', 'shelf.js'), 'utf8').includes("p.append('No games match these choices. ', b);"));
+});
