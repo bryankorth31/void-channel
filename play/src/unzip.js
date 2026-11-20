@@ -14,24 +14,26 @@
   const u64 = (b, o) => u32(b, o) + u32(b, o + 4) * 4294967296; // exact up to 2^53, far past any game
   const FULL16 = 0xffff, FULL32 = 0xffffffff;
 
-  function entries(bytes) {
+  // opts.base: where bytes start in the zip (T21 reads only the zip's end); opts.maxBytes: the unpacked total allowed.
+  function entries(bytes, opts) {
+    const B = (opts && opts.base) || 0, MAXB = (opts && opts.maxBytes) || MAX_BYTES;
     let end = -1;
     for (let i = bytes.length - 22; i >= Math.max(0, bytes.length - 65557); i--) if (u32(bytes, i) === 0x06054b50) { end = i; break; }
     if (end < 0) throw new Error('This file is not a zip');
     let count = u16(bytes, end + 10);
-    let at = u32(bytes, end + 16);
+    let at = u32(bytes, end + 16) - B;
     // A ZIP64 zip keeps its real count and table place in a second record, pointed to just before the first one.
     if ((count === FULL16 || at === FULL32) && end >= 20 && u32(bytes, end - 20) === 0x07064b50) {
-      const z = u64(bytes, end - 20 + 8);
+      const z = u64(bytes, end - 20 + 8) - B;
       if (u32(bytes, z) !== 0x06064b50) throw new Error('The zip table of contents is damaged');
       count = u64(bytes, z + 32);
-      at = u64(bytes, z + 48);
+      at = u64(bytes, z + 48) - B;
     }
     if (count > MAX_FILES) throw new Error('This game has more files (' + count + ') than PLAY can unpack in a browser');
     const out = [];
     let total = 0;
     for (let n = 0; n < count; n++) {
-      if (u32(bytes, at) !== 0x02014b50) throw new Error('The zip table of contents is damaged');
+      if (at < 0 || at + 46 > bytes.length || u32(bytes, at) !== 0x02014b50) throw new Error('The zip table of contents is damaged');
       const method = u16(bytes, at + 10);
       let size = u32(bytes, at + 20), usize = u32(bytes, at + 24);
       const nameLen = u16(bytes, at + 28), extraLen = u16(bytes, at + 30), commentLen = u16(bytes, at + 32);
@@ -55,7 +57,7 @@
       out.push({ name, method, size, usize, local, dir: name.endsWith('/') });
       at += 46 + nameLen + extraLen + commentLen;
     }
-    if (total > MAX_BYTES) throw new Error('This game unpacks to ' + Math.round(total / 1048576) + ' MB, more than PLAY can hold in a browser');
+    if (total > MAXB) throw new Error('This game unpacks to ' + Math.round(total / 1048576) + ' MB, more than PLAY can hold in a browser');
     return out;
   }
 

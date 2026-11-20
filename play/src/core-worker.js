@@ -17,7 +17,7 @@ if (self.name === 'em-pthread') importScripts(ENGINE);
 else host();
 
 function host() {
-importScripts('keys.js', 'unzip.js');
+importScripts('keys.js', 'unzip.js', 'inflate.js', 'lazyzip.js');
 
 let M = null, running = false, paused = false, timer = 0, lastFrame = -1, fps = 60, next = 0;
 // Rewind (audit batch 4, block E; console cores only): the last 20 seconds, in snapshots spaced by a memory budget per
@@ -104,6 +104,34 @@ async function unpack(bytes, start) {
   return program;
 }
 
+// Plan T21: a big many-file game, read in 8 MB pieces through the voidtv.net pass-through and unpacked file by file as
+// the game opens them. Pieces come by synchronous requests (allowed in a worker): the engine's reads wait for them.
+function piecesFrom(url) {
+  return (n) => {
+    const x = new XMLHttpRequest();
+    x.open('GET', url + '&piece=' + n, false);
+    x.responseType = 'arraybuffer';
+    try { x.send(); } catch (e) { throw new Error('The Internet Archive is not answering right now. Check the connection and press Play to try again.'); }
+    if (x.status === 404) throw new Error("This game's file is no longer on the Internet Archive, so it cannot play here.");
+    if (x.status === 409) throw new Error('This game changed at the Internet Archive since it was added, so it is off until someone looks.');
+    if (x.status !== 200) throw new Error('The Internet Archive is busy right now (it answered ' + x.status + '). Try again in a little while.');
+    return new Uint8Array(x.response);
+  };
+}
+function mountStreamed(msg) {
+  const deps = { entries: PlayUnzip.entries, safe: PlayUnzip.safe, inflateRaw: PlayInflate.inflateRaw };
+  const zip = PlayLazyZip.open(msg.stream.size, piecesFrom(msg.stream.url), deps);
+  let shown = 0;
+  PlayLazyZip.mount(M.FS, zip, '/game/disk', deps, (rel, n) => {
+    // Say what is arriving while the game waits on a big file; small ones pass without a word.
+    if (n > 2 * 1048576 && Date.now() - shown > 500) { shown = Date.now(); say('Loading ' + rel.split('/').pop() + ' (' + Math.round(n / 1048576) + ' MB)'); }
+  });
+  const want = msg.start.replace(/\\/g, '/').toLowerCase();
+  const hit = zip.entries.find((e) => (PlayUnzip.safe(e.name) || '').toLowerCase() === want);
+  if (!hit) throw new Error('The game zip has no ' + msg.start);
+  return '/game/disk/' + PlayUnzip.safe(hit.name);
+}
+
 async function start(msg) {
   say('Loading the engine');
   importScripts(ENGINE);
@@ -115,12 +143,17 @@ async function start(msg) {
     print: (t) => console.log('[core]', t),
     printErr: (t) => console.warn('[core]', t),
   });
-  say('Fetching the game from the Internet Archive');
-  const game = await fetchBytes(msg.gameUrl, msg.gameSize);
   for (const d of ['/game', '/save', '/sys']) M.FS.mkdir(d);
   let path = '/game/' + msg.gameFile;
-  if (msg.start && /\.zip$/i.test(msg.gameFile)) path = await unpack(game, msg.start);
-  else M.FS.writeFile(path, game);
+  if (msg.stream && msg.start) {
+    say("Reading the game's list of files");
+    path = mountStreamed(msg);
+  } else {
+    say('Fetching the game from the Internet Archive');
+    const game = await fetchBytes(msg.gameUrl, msg.gameSize);
+    if (msg.start && /\.zip$/i.test(msg.gameFile)) path = await unpack(game, msg.start);
+    else M.FS.writeFile(path, game);
+  }
   M._host_init();
   for (const [k, v] of Object.entries(msg.vars || {})) callStr('host_set_var', k, String(v));
   say('Starting the game');

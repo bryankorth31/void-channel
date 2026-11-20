@@ -1,0 +1,29 @@
+{
+  "id": "master-of-orion-2-1996",
+  "title": "Master of Orion II: Battle at Antares",
+  "year": 1996,
+  "publisher": "MicroProse",
+  "system": "dos",
+  "core": "dosbox-pure",
+  "players": 1,
+  "archive": {
+    "item": "msdos_Master_of_Orion_II_-_Battle_at_Antares_1996",
+    "file": "Master_of_Orion_II_-_Battle_at_Antares_1996.zip",
+    "start": "mastori2/RUN.BAT",
+    "size": 178795692,
+    "stream": true
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": ["Enter", "Escape", "Space"],
+    "dpad": true,
+    "keyboard": true
+  },
+  "help": "A space strategy game of 425 files, read from the Internet Archive a file at a time. Staged to test streaming (plan T21): it is played with a mouse, which PLAY does not pass to DOS games yet.",
+  "vars": { "dosbox_pure_aspect_correction": "true" },
+  "actions": [
+    { "do": "Go on", "press": "Enter" },
+    { "do": "Back out", "press": "Escape" },
+    { "do": "Skip", "press": "Space" }
+  ]
+}
