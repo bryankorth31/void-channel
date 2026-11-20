@@ -70,7 +70,7 @@ test('the game always comes from the Archive through /cors/, never from voidtv.n
 
 test('every core a card can name has its engine file in engine/', () => {
   for (const [name, core] of Object.entries(Cards.CORES)) {
-    if (core.engine.includes('{driver}')) continue;   // one engine per arcade machine: checked per card in consoles.test.js
+    if (core.engine.includes('{engine}')) continue;   // one engine per arcade machine: checked per card in consoles.test.js
     assert.ok(fs.existsSync(path.join(ROOT, core.engine)), name + ': ' + core.engine);
     assert.ok(fs.existsSync(path.join(ROOT, core.engine.replace(/\.js$/, '.wasm'))), name + ': its .wasm');
   }

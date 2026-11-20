@@ -128,5 +128,9 @@ test('arcade (B, 20 Nov 2026: "Current MAME", "No line"): MAME runs from its own
   const ar = fs.readFileSync(path.join(PLAY, 'src', 'arcade-runner.js'), 'utf8');
   assert.ok(ar.includes("ctx[fn] = function () { frames++;"), 'the first picture is MAME\'s first draw');
   assert.ok(ar.includes('if (document.title !== mine) document.title = mine;'));
+  assert.equal(joust.firstBoot.resetAt, 12, 'a Williams first boot goes on with one soft reset');
+  assert.ok(ar.includes("manager.machine:soft_reset()") && ar.includes("args.push('-autoboot_script', '/lua/firstboot.lua')"));
+  assert.ok(ar.includes("'-nothrottle', '-nosleep'"), 'the browser frames alone pace MAME');
+  assert.ok(ar.includes('root._emscripten_set_main_loop_timing(1, Math.max(1, Math.round(rate / 60)))'), 'a 120 Hz screen does not double the speed');
   assert.ok(ar.includes("'-nojoystick'"), 'audit AR4: the pad reaches MAME through the hub only');
 });

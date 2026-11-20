@@ -27,9 +27,10 @@
       source: 'https://github.com/libretro/mgba/tree/7a12d6d4b9acb14c0ae62c9166b6a2f3d08007f6', terms: 'engine/mgba.LICENSE.txt' },
     handy: { engine: 'engine/handy.js', systems: ['lynx'], name: 'Handy', licence: 'zlib licence',
       source: 'https://github.com/libretro/libretro-handy/tree/bc55d462f0b2d6b073ea93dc552ebd73cec60fd1', terms: 'engine/handy.LICENSE.txt' },
-    // Arcade (B, 20 Nov 2026: "Current MAME", "No line"): MAME's own web build, one engine per driver, run by
+    // Arcade (B, 20 Nov 2026: "Current MAME", "No line"): MAME's own web build, one engine per MAME source family
+    // (williams plays Joust, Defender, Robotron...; audit AR5), run by
     // arcade-runner.js (kind 'mame'). Its licence would allow the donation line; Bryan chose none on arcade games.
-    mame: { kind: 'mame', engine: 'engine/mame/{driver}.js', systems: ['arcade'], name: 'MAME 0.289', licence: 'GPL-2.0',
+    mame: { kind: 'mame', engine: 'engine/mame/{engine}.js', systems: ['arcade'], name: 'MAME 0.289', licence: 'GPL-2.0',
       source: 'https://github.com/mamedev/mame/tree/f09e0805da149cb15bd1cd777fbbcc65640d7866', terms: 'engine/mame/COPYING', noDonation: true },
   };
 
@@ -56,6 +57,7 @@
     const core = CORES[card.core];
     if (!core) bad.push('core');
     else if (core.kind === 'mame' && !/^[a-z0-9_]+$/.test(a.driver || '')) bad.push('archive.driver');
+    else if (core.kind === 'mame' && !/^[a-z0-9_]+$/.test(a.engine || '')) bad.push('archive.engine');
     else if (!core.systems.includes(card.system)) bad.push('system');
     if (!card.controls || !card.controls.kind) bad.push('controls');
     return bad;
@@ -69,8 +71,8 @@
   // archive.as: the name the core sees (Sega's Master System and Game Gear files on the Archive end in .bin, and the
   // core tells the machines apart by the ending).
   const gameFile = (card) => card.archive.as || card.archive.file.split('/').pop();
-  // MAME has one engine per arcade machine (driver): engine/mame/{driver}.js.
-  const engineOf = (card) => CORES[card.core].engine.replace('{driver}', (card.archive && card.archive.driver) || '');
+  // MAME has one engine per family of arcade machines: engine/mame/{engine}.js; the card names its family and its driver.
+  const engineOf = (card) => CORES[card.core].engine.replace('{engine}', (card.archive && card.archive.engine) || '');
 
   // Actions (audit batch 4, block A): what the game's buttons DO, in the game's own words. A card lists three to six,
   // the ones a newcomer needs first: { do: 'Jump', press: 'P1:B' }, press may be a list (any of them: the arrows) or a

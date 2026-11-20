@@ -44,11 +44,21 @@
           ctx.__playCounted = true;
           for (const fn of ['drawArrays', 'drawElements']) {
             const real = ctx[fn].bind(ctx);
-            ctx[fn] = function () { frames++; if (!shown) { shown = true; if (on.firstFrame) on.firstFrame(); } return real.apply(null, arguments); };
+            ctx[fn] = function () { frames++; if (!shown) { shown = true; pace(); if (on.firstFrame) on.firstFrame(); } return real.apply(null, arguments); };
           }
         }
         return ctx;
       };
+    }
+
+    // A screen faster than 60 Hz would run the game fast (one 1/60 s step per browser frame): measure the browser's frame
+    // rate for a second, then let MAME's loop run every n-th frame (1 on 60 Hz, 2 on 120 Hz).
+    function pace() {
+      let n = 0;
+      const t0 = performance.now();
+      const count = () => { n++; if (performance.now() - t0 < 1000) requestAnimationFrame(count); else set(n * 1000 / (performance.now() - t0)); };
+      const set = (rate) => { try { if (root._emscripten_set_main_loop_timing) root._emscripten_set_main_loop_timing(1, Math.max(1, Math.round(rate / 60))); } catch (e) { /* keep the default */ } };
+      requestAnimationFrame(count);
     }
 
     // MAME names the window after the game and its own version; the tab keeps PLAY's title.
@@ -65,16 +75,33 @@
       // A clone runs on its parent's chips too: the card names the parent's zip, fetched the same way.
       for (const p of a.parents || []) zips.push({ name: p.file.split('/').pop(), bytes: await bytesOf('https://archive.org/cors/' + p.item + '/' + p.file, p.size) });
       on.status && on.status('Starting the game');
-      const engine = new URL(PlayCards.CORES[card.core].engine.replace('{driver}', a.driver), location.href).href;
+      const engine = new URL(PlayCards.engineOf(card), location.href).href;
       const vertical = (card.aspect || 4 / 3) < 1;
       const args = [a.driver, '-rompath', '/roms', '-window', '-nomaximize', '-skip_gameinfo', '-nokeepaspect',
         '-resolution', vertical ? '480x640' : '640x480', '-video', 'accel',
         // Audit AR4: the gamepad reaches the game through PLAY's own controls only; MAME reading it too would press twice.
-        '-nojoystick'];
+        '-nojoystick',
+        // MAME's web build emulates 1/60 s per main-loop call, so the browser's frames are the clock; MAME's own throttle on
+        // top of that busy-waits on the page and the two clocks fight (the game ran below 15% speed). The assistant
+        // session measured the engine alone at about 20 times real speed.
+        '-nothrottle', '-nosleep'];
       if (opts.mute) args.push('-sound', 'none');
+      // A machine that keeps its settings in battery memory (Williams) shows "FACTORY SETTINGS RESTORED" on a first boot
+      // and waits there for ever; our page keeps no battery memory, so every boot is a first boot. One soft reset (the
+      // operator's reset button) goes on to the game. It is timed on the game's own clock, not the page's, so a slow
+      // computer still lets the memory test finish first; after the reset the script runs again and does nothing.
+      const reset = card.firstBoot && +card.firstBoot.resetAt;
+      const lua = reset > 0 ? ['local AT = ' + reset,
+        'if manager.machine.time:as_double() < AT then',
+        '  sub = emu.add_machine_frame_notifier(function()',
+        '    if manager.machine.time:as_double() >= AT then sub = nil; manager.machine:soft_reset() end',
+        '  end)',
+        'end', ''].join('\n') : '';
+      if (lua) args.push('-autoboot_script', '/lua/firstboot.lua');
       root.Module = {
         canvas, arguments: args,
-        preRun: [() => { const fs = root.Module.FS || root.FS; fs.mkdir('/roms'); for (const z of zips) fs.writeFile('/roms/' + z.name, z.bytes); }],
+        preRun: [() => { const fs = root.Module.FS || root.FS; fs.mkdir('/roms'); for (const z of zips) fs.writeFile('/roms/' + z.name, z.bytes);
+          if (lua) { fs.mkdir('/lua'); fs.writeFile('/lua/firstboot.lua', lua); } }],
         print: (t) => console.log('[mame]', t),
         printErr: (t) => console.warn('[mame]', t),
         // One plain sentence; the engine's own words go to the console for whoever looks.
