@@ -30,7 +30,7 @@
   const status = (t) => { $('status').textContent = t; };
 
   function place() {
-    const L = PlayLayout.layout(innerWidth, innerHeight, aspect, touch);
+    const L = PlayLayout.layout(innerWidth, innerHeight, aspect, touch, card ? PlayTouch.minCols(card) : 2);
     document.body.dataset.mode = L.mode;
     const set = (el, r) => { if (!r) { el.hidden = true; return; } el.hidden = false; Object.assign(el.style, { left: r.x + 'px', top: r.y + 'px', width: r.w + 'px', height: r.h + 'px' }); };
     set($('screen'), L.screen); set($('z-left'), L.left); set($('z-right'), L.right); set($('z-pad'), L.pad);

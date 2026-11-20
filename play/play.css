@@ -100,3 +100,25 @@ a.tool{display:inline-flex;align-items:center;text-decoration:none;color:var(--f
 .cover-go{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:4px}
 .play.second{background:transparent;color:var(--fg);border:1px solid var(--line);box-shadow:none;font-size:16px;padding:12px 24px}
 @container (max-height:300px){.cover-actions,.cover-meta{display:none}.cover-title{font-size:18px}}
+/* Console pads shaped like the machine (block D): the d-pad on one side; the face buttons in the machine's own shape on
+   the other, letter big and action word small; L and R at the top; Select and Start small pills underneath. */
+.cbox{height:100%;width:100%;container-type:size;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px}
+.cdpad{display:flex;align-items:center;justify-content:center}
+.cbox:not(.port) .cdpad .pdpad{width:min(100cqw,60cqh);height:min(100cqw,60cqh)}
+.cface{display:grid;grid-template-columns:repeat(var(--cols),minmax(56px,1fr));grid-template-rows:repeat(var(--rows),minmax(56px,1fr));gap:8px;width:min(100cqw,calc(var(--cols) * 96px + (var(--cols) - 1) * 8px));aspect-ratio:var(--cols)/var(--rows)}
+.cface .pk{border-radius:50%;width:100%;height:100%;padding:0;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.05;background:#1a1530;border-color:#3a3160}
+.cface.one{width:min(100cqw,150px)}
+.cface.one .pk{background:#2a1530;border-color:var(--pink)}
+.pk .big{font-size:22px;font-weight:800}
+.pk .small{font-size:10.5px;font-weight:600;color:var(--dim);margin-top:3px;max-width:92%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pk[data-down] .small{color:#07080c}
+.csmall{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.csmall .pk{min-width:76px;height:56px;border-radius:28px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 12px}
+.csmall .pk .big{font-size:14px}
+.cshoulder{width:min(100%,150px);min-height:56px;border-radius:14px 14px 24px 24px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.cbox.port{justify-content:space-evenly;padding:6px 10px}
+.ctop{display:flex;justify-content:space-between;width:100%;gap:12px}
+.ctop .cshoulder{width:min(40%,160px)}
+.cmain{display:flex;align-items:center;justify-content:space-around;width:100%;gap:16px;flex:1;min-height:0}
+.cmain .cdpad .pdpad{width:min(44cqw,55cqh);height:min(44cqw,55cqh)}
+.cmain .cface{width:min(48cqw,calc(55cqh * var(--cols) / var(--rows)))}
