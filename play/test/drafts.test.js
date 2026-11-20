@@ -56,3 +56,11 @@ test('audit D-1, D-2 and the boot results: the approve API answers this computer
   assert.ok(js.includes("if (!PlayCards.isPad(card)) blankWatch();"));
   assert.ok(js.includes("toast('Older games can take half a minute to start')"));
 });
+
+test('G3 (audit, 20 Nov 2026): a maker field that holds a piece of the description comes out blank', () => {
+  assert.equal(D.makerOf({ creator: 'games, SS is a painstakingly detailed spaceflight simulator that allows' }), '');
+  assert.equal(D.makerOf({ creator: 'MECC' }), 'MECC');
+  assert.equal(D.makerOf({ creator: 'Sierra On-Line, Inc.' }), 'Sierra On-Line, Inc.');
+  assert.equal(D.makerOf({ creator: ['a long sentence that is not a name at all'], publisher: 'Microsoft' }), 'Microsoft');
+  assert.equal(D.makerOf({}), '');
+});

@@ -1,0 +1,57 @@
+{
+  "id": "bobby-fischer-teaches-chess-1994",
+  "title": "Bobby Fischer Teaches Chess",
+  "year": 1994,
+  "publisher": "Mission Studios",
+  "system": "dos",
+  "core": "dosbox-pure",
+  "players": 1,
+  "archive": {
+    "item": "msdos_Bobby_Fischer_Teaches_Chess_1994",
+    "file": "Bobby_Fischer_Teaches_Chess_1994.zip",
+    "size": 2760368,
+    "start": "BobbyFis/BFTC.EXE"
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Enter",
+      "Escape",
+      "Space"
+    ],
+    "dpad": true,
+    "keyboard": true
+  },
+  "actions": [
+    {
+      "do": "Confirm",
+      "press": "Enter"
+    },
+    {
+      "do": "Back out",
+      "press": "Escape"
+    },
+    {
+      "do": "Go on",
+      "press": "Space"
+    }
+  ],
+  "vars": {
+    "dosbox_pure_aspect_correction": "true"
+  },
+  "gamepad": {
+    "A": "Enter",
+    "B": "Escape",
+    "X": "Space",
+    "Y": "@keyboard",
+    "Up": "ArrowUp",
+    "Down": "ArrowDown",
+    "Left": "ArrowLeft",
+    "Right": "ArrowRight"
+  },
+  "genre": [
+    "educational video game"
+  ],
+  "help": "Arrows move, Enter picks, Esc backs out. Type answers on the keyboard.",
+  "kids": true
+}

@@ -1,16 +1,16 @@
 {
-  "id": "bobby-fischer-teaches-chess-1994",
-  "title": "Bobby Fischer Teaches Chess",
-  "year": 1994,
-  "publisher": "Mission Studios",
+  "id": "reader-rabbit-3-1993",
+  "title": "Reader Rabbit 3",
+  "year": 1993,
+  "publisher": "",
   "system": "dos",
   "core": "dosbox-pure",
   "players": 1,
   "archive": {
-    "item": "msdos_Bobby_Fischer_Teaches_Chess_1994",
-    "file": "Bobby_Fischer_Teaches_Chess_1994.zip",
-    "size": 2760368,
-    "start": "BobbyFis/BFTC.EXE"
+    "item": "msdos_Reader_Rabbit_3_1993",
+    "file": "Reader_Rabbit_3_1993.zip",
+    "size": 2598973,
+    "start": "ReadRab3/RR3.BAT"
   },
   "controls": {
     "kind": "dos-keys",
@@ -39,15 +39,19 @@
   "vars": {
     "dosbox_pure_aspect_correction": "true"
   },
+  "gamepad": {
+    "A": "Enter",
+    "B": "Escape",
+    "X": "Space",
+    "Y": "@keyboard",
+    "Up": "ArrowUp",
+    "Down": "ArrowDown",
+    "Left": "ArrowLeft",
+    "Right": "ArrowRight"
+  },
   "genre": [
     "educational video game"
   ],
-  "help": "",
-  "draft": {
-    "from": "softwarelibrary_kids",
-    "needs": [
-      "keys and mouse"
-    ],
-    "item": "https://archive.org/details/msdos_Bobby_Fischer_Teaches_Chess_1994"
-  }
+  "help": "Arrows move, Enter picks, Esc backs out. Type answers on the keyboard.",
+  "kids": true
 }

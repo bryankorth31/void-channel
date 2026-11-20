@@ -42,12 +42,22 @@
   "genre": [
     "educational video game"
   ],
-  "help": "",
+  "help": "Arrows move, Enter picks, Esc backs out. Type answers on the keyboard.",
   "draft": {
     "from": "softwarelibrary_kids",
     "needs": [
       "keys and mouse"
     ],
     "item": "https://archive.org/details/msdos_Quarky_and_Quaysoos_Turbo_Science_1992"
+  },
+  "gamepad": {
+    "A": "Enter",
+    "B": "Escape",
+    "X": "Space",
+    "Y": "@keyboard",
+    "Up": "ArrowUp",
+    "Down": "ArrowDown",
+    "Left": "ArrowLeft",
+    "Right": "ArrowRight"
   }
 }

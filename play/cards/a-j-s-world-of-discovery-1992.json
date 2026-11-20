@@ -1,0 +1,57 @@
+{
+  "id": "a-j-s-world-of-discovery-1992",
+  "title": "A.J.'s World of Discovery",
+  "year": 1992,
+  "publisher": "Coktel Vision",
+  "system": "dos",
+  "core": "dosbox-pure",
+  "players": 1,
+  "archive": {
+    "item": "msdos_A.J.s_World_of_Discovery_1992",
+    "file": "A.J.s_World_of_Discovery_1992.zip",
+    "size": 3716922,
+    "start": "AJsWorld/GO.EXE"
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Enter",
+      "Escape",
+      "Space"
+    ],
+    "dpad": true,
+    "keyboard": true
+  },
+  "actions": [
+    {
+      "do": "Confirm",
+      "press": "Enter"
+    },
+    {
+      "do": "Back out",
+      "press": "Escape"
+    },
+    {
+      "do": "Go on",
+      "press": "Space"
+    }
+  ],
+  "vars": {
+    "dosbox_pure_aspect_correction": "true"
+  },
+  "gamepad": {
+    "A": "Enter",
+    "B": "Escape",
+    "X": "Space",
+    "Y": "@keyboard",
+    "Up": "ArrowUp",
+    "Down": "ArrowDown",
+    "Left": "ArrowLeft",
+    "Right": "ArrowRight"
+  },
+  "genre": [
+    "educational video game"
+  ],
+  "help": "Arrows move, Enter picks, Esc backs out. Type answers on the keyboard.",
+  "kids": true
+}

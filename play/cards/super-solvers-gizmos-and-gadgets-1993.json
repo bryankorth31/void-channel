@@ -1,0 +1,57 @@
+{
+  "id": "super-solvers-gizmos-and-gadgets-1993",
+  "title": "Super Solvers Gizmos and Gadgets",
+  "year": 1993,
+  "publisher": "The Learning Co.",
+  "system": "dos",
+  "core": "dosbox-pure",
+  "players": 1,
+  "archive": {
+    "item": "msdos_Super_Solvers_Gizmos_and_Gadgets_1993",
+    "file": "Super_Solvers_Gizmos_and_Gadgets_1993.zip",
+    "size": 1215034,
+    "start": "SSGG/ssg.bat"
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Enter",
+      "Escape",
+      "Space"
+    ],
+    "dpad": true,
+    "keyboard": true
+  },
+  "actions": [
+    {
+      "do": "Confirm",
+      "press": "Enter"
+    },
+    {
+      "do": "Back out",
+      "press": "Escape"
+    },
+    {
+      "do": "Go on",
+      "press": "Space"
+    }
+  ],
+  "vars": {
+    "dosbox_pure_aspect_correction": "true"
+  },
+  "gamepad": {
+    "A": "Enter",
+    "B": "Escape",
+    "X": "Space",
+    "Y": "@keyboard",
+    "Up": "ArrowUp",
+    "Down": "ArrowDown",
+    "Left": "ArrowLeft",
+    "Right": "ArrowRight"
+  },
+  "genre": [
+    "educational video game"
+  ],
+  "help": "Arrows move, Enter picks, Esc backs out. Type answers on the keyboard.",
+  "kids": true
+}

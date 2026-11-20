@@ -2,7 +2,7 @@
   "id": "microsoft-space-simulator-1994",
   "title": "Microsoft Space Simulator",
   "year": 1994,
-  "publisher": "games, SS is a painstakingly detailed spaceflight simulator that allows",
+  "publisher": "",
   "system": "dos",
   "core": "dosbox-pure",
   "players": 1,
@@ -39,15 +39,26 @@
   "vars": {
     "dosbox_pure_aspect_correction": "true"
   },
+  "gamepad": {
+    "A": "Enter",
+    "B": "Escape",
+    "X": "Space",
+    "Y": "@keyboard",
+    "Up": "ArrowUp",
+    "Down": "ArrowDown",
+    "Left": "ArrowLeft",
+    "Right": "ArrowRight"
+  },
   "genre": [
     "educational video game"
   ],
-  "help": "",
-  "draft": {
-    "from": "softwarelibrary_kids",
-    "needs": [
-      "keys and mouse"
+  "help": "Arrows move, Enter picks, Esc backs out. Type answers on the keyboard.",
+  "kids": true,
+  "facts": {
+    "genre": [
+      "space flight simulation game"
     ],
-    "item": "https://archive.org/details/msdos_Microsoft_Space_Simulator_1994"
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q1931622"
   }
 }

@@ -1,0 +1,57 @@
+{
+  "id": "super-munchers-the-challenge-continues-1991",
+  "title": "Super Munchers - The Challenge Continues...",
+  "year": 1991,
+  "publisher": "MECC",
+  "system": "dos",
+  "core": "dosbox-pure",
+  "players": 1,
+  "archive": {
+    "item": "msdos_Super_Munchers_-_The_Challenge_Continues..._1991",
+    "file": "Super_Munchers_-_The_Challenge_Continues..._1991.zip",
+    "size": 281813,
+    "start": "SuperMun/SM.EXE"
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Enter",
+      "Escape",
+      "Space"
+    ],
+    "dpad": true,
+    "keyboard": true
+  },
+  "actions": [
+    {
+      "do": "Confirm",
+      "press": "Enter"
+    },
+    {
+      "do": "Back out",
+      "press": "Escape"
+    },
+    {
+      "do": "Go on",
+      "press": "Space"
+    }
+  ],
+  "vars": {
+    "dosbox_pure_aspect_correction": "true"
+  },
+  "gamepad": {
+    "A": "Enter",
+    "B": "Escape",
+    "X": "Space",
+    "Y": "@keyboard",
+    "Up": "ArrowUp",
+    "Down": "ArrowDown",
+    "Left": "ArrowLeft",
+    "Right": "ArrowRight"
+  },
+  "genre": [
+    "educational video game"
+  ],
+  "help": "Arrows move, Enter picks, Esc backs out. Type answers on the keyboard.",
+  "kids": true
+}

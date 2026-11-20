@@ -50,12 +50,23 @@ const slug = (title, year) => (String(title).toLowerCase().replace(/&/g, ' and '
 // "Oregon Trail, The" reads "The Oregon Trail"; the Archive's "(woz-a-day collection)" and the like go.
 const cleanTitle = (t) => String(t).replace(/\s*\((?:[^)]*collection|\d{4}[^)]*)\)\s*/gi, ' ').replace(/^(.*), (The|A|An)$/, '$2 $1').trim();
 
+// The maker, from the record's creator or publisher. Some records hold a piece of the description there ("games, SS is a
+// painstakingly detailed spaceflight simulator that allows"), so only a value that reads like a name is taken: up to 60
+// characters and 8 words, starting with a capital or a digit, with no sentence in it. Anything else comes out blank.
+function makerOf(rec) {
+  for (const v of [].concat(rec.creator || [], rec.publisher || [])) {
+    const s = String(v).trim();
+    if (s && s.length <= 60 && s.split(/\s+/).length <= 8 && /^[A-Z0-9]/.test(s) && !/[.!?]\s+[a-z]|,\s+[a-z]+\s+(is|are|was|lets|allows)\b/.test(s)) return s;
+  }
+  return '';
+}
+
 // Pure (tested): a draft card from the Archive's record and its chosen file. needs: what a person must still look at.
 function draft(rec, file, sys, collection) {
   const year = +String(rec.year || rec.date || '').slice(0, 4) || null;
   const title = cleanTitle(rec.title || rec.identifier);
   const card = {
-    id: slug(title, year), title, year, publisher: String([].concat(rec.creator || rec.publisher || '')[0] || ''),
+    id: slug(title, year), title, year, publisher: makerOf(rec),
     system: sys, core: CORE_FOR[sys], players: 1,
     archive: { item: rec.identifier, file: file.name, size: +file.size || 0 },
   };
@@ -66,18 +77,22 @@ function draft(rec, file, sys, collection) {
     card.controls = { kind: 'dos-keys', keys: ['Enter', 'Escape', 'Space'], dpad: true, keyboard: true };
     card.actions = [{ do: 'Confirm', press: 'Enter' }, { do: 'Back out', press: 'Escape' }, { do: 'Go on', press: 'Space' }];
     card.vars = { dosbox_pure_aspect_correction: 'true' };
+    // Default seats for a DOS game, as on the hand-made DOS cards: A confirms, B backs out, X goes on, Y opens the
+    // on-screen keyboard, the pad's arrows are the arrow keys.
+    card.gamepad = { A: 'Enter', B: 'Escape', X: 'Space', Y: '@keyboard', Up: 'ArrowUp', Down: 'ArrowDown', Left: 'ArrowLeft', Right: 'ArrowRight' };
+    card.help = 'Arrows move, Enter picks, Esc backs out. Type answers on the keyboard.';
     needs.push('keys and mouse');
   } else {
     card.controls = { kind: 'pad', dpad: true, keys: ['P1:B', 'P1:A', 'P1:Select', 'P1:Start'] };
     card.actions = [{ do: 'Move', press: ['P1:Left', 'P1:Right', 'P1:Up', 'P1:Down'] }, { do: 'Start', press: 'P1:Start' }, { do: 'Main button', press: 'P1:A' }];
+    card.help = 'Start begins the game; the pad moves and A is the main button.';
     needs.push('button words');
   }
   if (!year) needs.push('year');
   // A learning collection says what kind the games are (the Kids list is learning games, T16); elsewhere the facts
   // tool (G1) looks the genre up when the draft is approved, and the draft says to check it.
   if (/kids|edu/i.test(collection)) card.genre = ['educational video game']; else needs.push('genre');
-  card.help = '';
-  card.draft = { from: collection, needs, item: 'https://archive.org/details/' + rec.identifier };
+  card.draft ={ from: collection, needs, item: 'https://archive.org/details/' + rec.identifier };
   return card;
 }
 
@@ -120,5 +135,5 @@ async function main() {
   console.log(list.filter((x) => x.id).length + ' drafts in play/drafts/' + collection + '/; not drafted (no engine yet): ' + JSON.stringify(skipped));
 }
 
-module.exports = { machineOf, draft, slug, cleanTitle, MACHINES };
+module.exports = { machineOf, draft, slug, cleanTitle, makerOf, MACHINES };
 if (require.main === module) main().catch((e) => { console.error(String(e.message || e)); process.exit(1); });
