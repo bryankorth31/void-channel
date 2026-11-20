@@ -372,6 +372,17 @@
   $('m-phones').onclick = () => showPhones(true);
   $('phones-lock').onclick = () => { if (phones) phones.lock(!phones.locked); };
   addEventListener('pagehide', () => { if (phones) phones.close(); });
+  // A phone connected on the shelf, or in the game before, stays connected (Bryan, 20 Nov 2026: "connect the phone as the
+  // controller prior to being in a game"): this page quietly takes back the room this tab holds, phones in their seats.
+  if (PlayPhones.kept()) {
+    phones = PlayPhones.create({ card: phoneCard, change: phonesList });
+    phones.open(true).then((r) => {
+      if (!r) return;
+      $('phones-code').textContent = r.code; $('phones-site').textContent = location.host + '/join';
+      $('phones-qr').innerHTML = PlayQR.svg(r.join, 8);
+      setTimeout(() => { const n = phones.list().length; if (n) toast(n === 1 ? 'Your phone is connected' : n + ' phones are connected'); }, 600);
+    }).catch(() => {});
+  }
 
   // Gamepads are read once a frame. Before the game starts, a gamepad's A or Start presses Play, so a controller goes
   // from the shelf into the game with nothing else to touch.

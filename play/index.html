@@ -20,12 +20,27 @@
   <nav class="site" aria-label="voidtv.net">
     <a id="back" class="back" href="/" aria-label="Back">&larr; Back</a>
     <a href="/">TV</a><a href="/me">Mine</a><a href="/trivia/">Trivia</a>
+    <!-- Bryan, 20 Nov 2026: connect the phone before a game, and use it as a remote here (src/shelf-phones.js). -->
+    <button type="button" id="b-phones" class="phone-btn" aria-expanded="false" title="Use your phone as a controller: scan the code on this screen"><svg class="ph-ico" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="18" r="1.3" fill="currentColor"/></svg> Phone controller</button>
     <a class="give" href="https://square.link/u/bJl9PGAC" target="_blank" rel="noopener" title="Every donation goes to CASH (cashvalues.org)">Donate to CASH</a>
   </nav>
 </header>
 
 <!-- The hero (VoidTV's home page): the most played games and the machines, one at a time. Built by src/shelf.js. -->
 <section class="hero-home" id="hero" hidden aria-roledescription="carousel" aria-label="Most played games and machines"></section>
+
+<section id="phones" class="phones" hidden aria-label="Phone controller">
+  <div id="phones-qr" class="phones-qr"></div>
+  <div class="phones-in">
+    <h2>Use your phone as a controller</h2>
+    <p>Scan the code with the phone's camera. Or go to <b id="phones-site"></b> and type</p>
+    <p id="phones-code" class="phones-code">....</p>
+    <p class="phones-how">Here the phone steers the shelf: the arrows move, A picks a game up and plays it, B goes back. In the game it is your controller.</p>
+    <p id="phones-err" class="phones-err"></p>
+    <ul id="phones-list" class="phones-list"></ul>
+    <button type="button" id="phones-close" class="phones-done">Done</button>
+  </div>
+</section>
 
 <main class="shelf" id="shelf">
   <section class="intro" id="intro">
@@ -51,5 +66,8 @@
 
 <script src="src/saves.js"></script>
 <script src="src/shelf.js"></script>
+<script src="src/qr.js"></script>
+<script src="src/phones.js"></script>
+<script src="src/shelf-phones.js"></script>
 </body>
 </html>

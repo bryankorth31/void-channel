@@ -86,6 +86,32 @@ test('the room ends with its screen, after 30 idle minutes, or after 4 hours', (
   assert.equal(k.room.open, false, 'even a busy room ends at 4 hours');
 });
 
+test('Bryan, 20 Nov 2026 ("connect the phone as the controller prior to being in a game"): a pad room waits 45 seconds for the next page of its screen, which takes it back with the key; then it ends', () => {
+  let clock = 1000000;
+  const sent = new Map(), closed = new Map();
+  const room = R.createRoom({ code: 'KX7P', kind: 'pad', key: 'k'.repeat(32), now: () => clock,
+    send: (s, t) => { if (!sent.has(s)) sent.set(s, []); sent.get(s).push(JSON.parse(t)); }, close: (s, code) => closed.set(s, code) });
+  const got = (s) => sent.get(s) || [];
+  room.addHost('shelf', ''); room.addPhone('a');
+  assert.equal(got('shelf')[0].key, 'k'.repeat(32));
+  assert.equal(room.drop('shelf'), 'away');
+  assert.deepEqual(got('a').at(-1), { type: 'host-away' });
+  assert.ok(room.open && room.waiting, 'the code stays taken while the room waits');
+  room.message('a', JSON.stringify({ type: 'pad', b: 1 }));   // goes nowhere, breaks nothing
+  assert.equal(room.reclaim('thief', 'x'.repeat(32)), false); assert.equal(closed.get('thief'), R.CLOSE.noRoom);
+  assert.ok(room.reclaim('game', 'k'.repeat(32)));
+  assert.deepEqual(got('game'), [{ type: 'room', code: 'KX7P', kind: 'pad', join: '/join?r=KX7P', key: 'k'.repeat(32), back: true }, { type: 'join', from: 1, back: true }]);
+  assert.deepEqual(got('a').at(-1), { type: 'host-back' });
+  // The game page closes and nobody comes back: after the wait the room ends and lets its phones go.
+  room.drop('game'); clock += 30 * 1000; assert.equal(room.tick(), null);
+  clock += 16 * 1000; assert.equal(room.tick(), 'ended');
+  assert.deepEqual(got('a').at(-1), { type: 'host-gone' }); assert.equal(closed.get('a'), R.CLOSE.hostGone);
+  assert.equal(room.reclaim('late', 'k'.repeat(32)), false);
+  // A trivia room, and any room with no key, ends with its screen as before.
+  const tr = R.createRoom({ code: 'KX7Q', kind: 'trivia', key: 'k'.repeat(32), send: () => {}, close: () => {} });
+  tr.addHost('tv'); assert.equal(tr.drop('tv'), 'ended');
+});
+
 test('R2: the local server runs rooms over real WebSockets: open, join, both ways, lookup, the screen leaving, and no other site', async () => {
   const { spawn } = require('child_process');
   const path = require('path');
@@ -117,11 +143,18 @@ test('R2: the local server runs rooms over real WebSockets: open, join, both way
     tv.send(JSON.stringify({ to: 1, msg: { type: 'pong', t: 5 } }));
     assert.deepEqual(await phone.next(), { type: 'pong', t: 5 });
     await assert.rejects(open(base + '/api/room/' + room.code + '/join', 'https://evil.example'), 'another site cannot join');
+    // The screen's page closes (the shelf opening a game): the room waits; the phone stays, told the screen is changing.
+    assert.ok(/^[A-Za-z0-9_-]{20,64}$/.test(room.key), 'the screen gets the room key');
     tv.close();
-    assert.deepEqual(await phone.next(), { type: 'host-gone' });
-    assert.equal(await phone.closed, R.CLOSE.hostGone);
-    const late = await open(base + '/api/room/' + room.code + '/join');
-    assert.equal(await late.closed, R.CLOSE.noRoom, 'the room is gone with its screen');
+    assert.deepEqual(await phone.next(), { type: 'host-away' });
+    const wrong = await open(base + '/api/room/open?kind=pad&code=' + room.code + '&key=' + 'x'.repeat(32));
+    assert.equal(await wrong.closed, R.CLOSE.noRoom, 'only the key takes the room back');
+    const tv2 = await open(base + '/api/room/open?kind=pad&code=' + room.code + '&key=' + room.key);
+    assert.deepEqual(await tv2.next(), { type: 'room', code: room.code, kind: 'pad', join: room.join, key: room.key, back: true });
+    assert.deepEqual(await tv2.next(), { type: 'join', from: 1, back: true }, 'the next page hears of the phone in its seat');
+    assert.deepEqual(await phone.next(), { type: 'host-back' });
+    phone.send(JSON.stringify({ type: 'pad', b: 1 }));
+    assert.deepEqual(await tv2.next(), { from: 1, msg: { type: 'pad', b: 1 } });
   } finally { srv.kill(); }
 });
 

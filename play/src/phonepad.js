@@ -115,6 +115,9 @@
       else if (m.type === 'seat') $('who').textContent = 'Player ' + m.seat;
       else if (m.type === 'pong') { const d = delayText(performance.now() - m.t); $('delay').textContent = d.text + (d.slow ? ': presses will feel late' : ''); $('delay').classList.toggle('slow', d.slow); send({ type: 'delay', ms: Math.round((performance.now() - m.t) / 2) }); }
       else if (m.type === 'host-gone') { ended = true; note('The game screen closed', 'Scan the new code on the big screen to join again.', true); }
+      // The big screen is changing pages (the shelf opening a game): the phone stays connected and waits a moment.
+      else if (m.type === 'host-away') { $('game').textContent = 'The screen is opening the game...'; }
+      else if (m.type === 'host-back') { /* the new page sends its own buttons */ }
     };
     ws.onclose = (e) => {
       ws = null;

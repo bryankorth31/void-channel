@@ -215,3 +215,25 @@ body.home .shelf{padding-top:6px}
 /* Plan C4: "More" at the end of a long shelf adds the next page of boxes in place. */
 .box.more{align-items:center;justify-content:center;aspect-ratio:4/3;border:1px dashed #2a3044;border-radius:8px;background:#0d0f17;color:var(--acc);font:600 15px system-ui,sans-serif;cursor:pointer}
 .box.more[hidden]{display:none}
+/* The phone controller on the shelf (Bryan, 20 Nov 2026: connect the phone before a game; the phone as a remote here).
+   Offered on a big screen; a phone cannot be the big screen, so a phone-sized screen does not show it. */
+.phone-btn{display:inline-flex;align-items:center;gap:6px;white-space:nowrap;font:inherit;font-size:14px;color:var(--fg);background:transparent;
+  border:1px solid var(--line);border-radius:999px;padding:6px 12px;cursor:pointer}
+.phone-btn:hover,.phone-btn:focus-visible{border-color:var(--acc);outline:none}
+.phone-btn.on{border-color:var(--acc);color:var(--acc)}
+.ph-ico{vertical-align:-3px;flex:none}
+@media (max-width:640px),(pointer:coarse) and (max-width:900px){.phone-btn{display:none}}
+.phones{position:fixed;inset:64px 16px 16px;display:flex;align-items:center;justify-content:center;gap:clamp(16px,4vw,48px);flex-wrap:wrap;
+  background:rgba(7,8,12,.96);border:1px solid var(--line);border-radius:16px;padding:20px;z-index:20;overflow:auto}
+.phones[hidden]{display:none}
+.phones-qr{background:#fff;border-radius:12px;padding:8px;line-height:0}
+.phones-qr svg{width:min(52vh,42vw,480px);height:auto}
+.phones-in{max-width:440px}
+.phones-in h2{margin:0 0 8px;font-size:clamp(22px,3vw,32px)}
+.phones-in p{margin:0 0 8px;color:var(--dim);font-size:clamp(15px,1.5vw,19px)}
+.phones-in .phones-code{font:800 clamp(44px,7vw,90px)/1 ui-monospace,Consolas,monospace;letter-spacing:.18em;color:var(--fg);margin:6px 0 14px}
+.phones-err{color:var(--gold)!important}
+.phones-err:empty{display:none}
+.phones-list{list-style:none;margin:0 0 14px;padding:0;font-size:clamp(15px,1.5vw,19px)}
+.phones-list li{padding:3px 0}
+.phones-done{font:inherit;font-size:16px;font-weight:700;color:#07080c;background:var(--acc);border:0;border-radius:999px;padding:10px 26px;cursor:pointer}

@@ -640,7 +640,8 @@
     const was = new Map();
     const AXIS = 0.6;
     (function poll() {
-      const pads = navigator.getGamepads ? [...navigator.getGamepads()].filter((p) => p && p.mapping === 'standard') : [];
+      // A phone connected as a controller steers the shelf too, as one more gamepad (src/shelf-phones.js).
+      const pads = (navigator.getGamepads ? [...navigator.getGamepads()] : []).concat(root.PlayShelfPads ? root.PlayShelfPads() : []).filter((p) => p && p.mapping === 'standard');
       if (pads.length) { document.getElementById('pad-hint').hidden = false; padSeen = true; padEver = true; }
       for (const p of pads) {
         const b = (i) => !!(p.buttons[i] && p.buttons[i].pressed);

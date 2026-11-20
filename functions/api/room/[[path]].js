@@ -28,6 +28,13 @@ export async function onRequest({ request, env, params }) {
   if (parts.length === 1 && parts[0] === 'open') {
     const kind = new URL(request.url).searchParams.get('kind');
     if (!R.KINDS.includes(kind)) return json(400, { error: 'Unknown kind' });
+    // The same screen's next page takes its waiting room back: its code and the room's key (Bryan, 20 Nov 2026: the phone
+    // connected on the shelf stays connected in the game).
+    const back = R.normCode(new URL(request.url).searchParams.get('code')), key = new URL(request.url).searchParams.get('key') || '';
+    if (back && /^[A-Za-z0-9_-]{20,64}$/.test(key)) {
+      const u = 'https://room/open?code=' + back + '&kind=' + kind + '&key=' + key;
+      return stub(back).fetch(new Request(u, request));
+    }
     // A fresh code: one that has no open room now (a clash is rare; a few tries settle it).
     for (let i = 0; i < 6; i++) {
       const code = randomCode();

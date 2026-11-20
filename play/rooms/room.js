@@ -11,19 +11,24 @@
   // Per kind (audit review, 20 Nov 2026): a gamepad sends only when a button changes, so 30 a second is past any hand;
   // trivia sends an answer now and then, but a movie night can bring 200 phones.
   const LIMITS = { bytes: 1024, idleMs: 30 * 60 * 1000, lifeMs: 4 * 60 * 60 * 1000, holdMs: 60 * 1000,
-    pad: { phones: 16, perSecond: 30 }, trivia: { phones: 200, perSecond: 5 } };
+    pad: { phones: 16, perSecond: 30, screenHoldMs: 45 * 1000 }, trivia: { phones: 200, perSecond: 5, screenHoldMs: 0 } };
   const CLOSE = { noRoom: 4404, full: 4409, hostGone: 4410, tooBig: 4413, ended: 4408, locked: 4423, removed: 4403 };
   // A phone's own seat token: random, kept in that phone's tab only, so a phone that drops gets its seat back.
   const goodToken = (t) => typeof t === 'string' && /^[A-Za-z0-9_-]{16,64}$/.test(t);
+  const goodKey = (k) => typeof k === 'string' && /^[A-Za-z0-9_-]{20,64}$/.test(k);
 
   // A room code from a random source (rand() gives 0 <= x < 1). Four characters is about 600,000 codes.
   const makeCode = (rand) => Array.from({ length: 4 }, () => ALPHABET[Math.floor(rand() * ALPHABET.length)]).join('');
   // What a person typed or a QR carried: upper case, and only a real code passes.
   const normCode = (s) => { const c = String(s || '').trim().toUpperCase(); return c.length === 4 && [...c].every((x) => ALPHABET.includes(x)) ? c : null; };
 
-  function createRoom({ code, kind, send, close, now = () => Date.now() }) {
+  // key: the screen's own secret for this room (Bryan, 20 Nov 2026: "i want to able to connect the phone as the controller
+  // prior to being in a game"). When the screen's page closes (the shelf opening a game), a game-pad room waits a little
+  // for it; the next page that brings the key takes the room back, with its phones still in their seats.
+  function createRoom({ code, kind, send, close, key, now = () => Date.now() }) {
     if (!KINDS.includes(kind)) throw new Error('kind');
-    let host = null, locked = false;
+    let host = null, locked = false, away = 0, joinAt = '';   // away: until when the room waits for its screen
+    const hostKey = goodKey(key) ? key : null;
     const lim = LIMITS[kind];
     const phones = new Map();   // sock -> { seat, token, window, count }
     const held = new Map();     // token -> { seat, until }: a dropped phone's seat, kept a minute
@@ -40,16 +45,27 @@
 
     return {
       code, kind,
-      get open() { return !!host; },
+      get open() { return !!host || (away > 0 && away >= now()); },
+      get waiting() { return !host && away > 0; },
       get phones() { return phones.size; },
       addHost(sock, joinBase) {
         if (host) { close(sock, CLOSE.full, 'This room already has a screen'); return false; }
-        host = sock; last = now();
-        json(sock, { type: 'room', code, kind, join: (joinBase || '') + '/join?r=' + code });
+        host = sock; last = now(); joinAt = (joinBase || '') + '/join?r=' + code;
+        json(sock, hostKey ? { type: 'room', code, kind, join: joinAt, key: hostKey } : { type: 'room', code, kind, join: joinAt });
+        return true;
+      },
+      // The next page of the same screen, with the room's key, while the room waits: the room is its again, and it hears
+      // of every phone still in it; the phones hear the screen is back.
+      reclaim(sock, k) {
+        if (host || !hostKey || k !== hostKey || !(away >= now())) { close(sock, CLOSE.noRoom, 'No room by that code'); return false; }
+        host = sock; away = 0; last = now();
+        json(sock, { type: 'room', code, kind, join: joinAt, key: hostKey, back: true });
+        if (locked) json(sock, { type: 'locked', on: true });
+        for (const [p, info] of phones) { json(sock, { type: 'join', from: info.seat, back: true }); json(p, { type: 'host-back' }); }
         return true;
       },
       addPhone(sock, token) {
-        if (!host) { close(sock, CLOSE.noRoom, 'No room by that code'); return null; }
+        if (!this.open) { close(sock, CLOSE.noRoom, 'No room by that code'); return null; }
         const tok = goodToken(token) ? token : null;
         const back = tok && held.get(tok);
         if (back && back.until >= now()) held.delete(tok);
@@ -59,7 +75,8 @@
         phones.set(sock, { seat, token: tok, window: 0, count: 0 });
         last = now();
         json(sock, { type: 'hello', seat, kind });
-        json(host, back ? { type: 'join', from: seat, back: true } : { type: 'join', from: seat });
+        if (host) json(host, back ? { type: 'join', from: seat, back: true } : { type: 'join', from: seat });
+        else json(sock, { type: 'host-away' });
         return seat;
       },
       // A text frame from either side. The relay looks only at the envelope, never inside msg.
@@ -84,14 +101,18 @@
         const sec = Math.floor(t / 1000);
         if (p.window !== sec) { p.window = sec; p.count = 0; }
         if (++p.count > lim.perSecond) return;   // past the rate a hand can press: dropped, not answered
-        json(host, { from: p.seat, msg: m });
+        if (host) json(host, { from: p.seat, msg: m });   // while the screen changes pages, presses go nowhere
       },
       drop(sock) {
         if (sock === host) {
           host = null;
-          for (const p of phones.keys()) { json(p, { type: 'host-gone' }); close(p, CLOSE.hostGone, 'The screen left'); }
-          phones.clear();
-          return 'ended';
+          // A game-pad room with a key waits for its screen's next page; the phones stay, told the screen is changing.
+          if (hostKey && lim.screenHoldMs && !this.ending) {
+            away = now() + lim.screenHoldMs;
+            for (const p of phones.keys()) json(p, { type: 'host-away' });
+            return 'away';
+          }
+          return this.end();
         }
         const p = phones.get(sock);
         if (!p) return null;
@@ -100,10 +121,18 @@
         if (host) json(host, { type: 'leave', from: p.seat });
         return 'left';
       },
-      // Called now and then: a room left idle, or open too long, ends.
+      // The room ends: every phone is told and let go.
+      end() {
+        host = null; away = 0;
+        for (const p of phones.keys()) { json(p, { type: 'host-gone' }); close(p, CLOSE.hostGone, 'The screen left'); }
+        phones.clear();
+        return 'ended';
+      },
+      // Called now and then: a room left idle, or open too long, ends; so does one whose screen did not come back.
       tick() {
         const t = now();
-        if (host && (t - last > LIMITS.idleMs || t - born > LIMITS.lifeMs)) { const h = host; this.drop(h); close(h, CLOSE.ended, 'The room timed out'); return 'ended'; }
+        if (!host && away && away < t) return this.end();
+        if (host && (t - last > LIMITS.idleMs || t - born > LIMITS.lifeMs)) { const h = host; this.ending = true; this.drop(h); close(h, CLOSE.ended, 'The room timed out'); return 'ended'; }
         return null;
       },
     };

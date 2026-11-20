@@ -9,7 +9,7 @@ function createRooms() {
   const rooms = new Map();
   const rand = () => crypto.randomInt(0, 1 << 30) / (1 << 30);
   const fresh = () => { for (;;) { const c = R.makeCode(rand); if (!rooms.has(c)) return c; } };
-  setInterval(() => { for (const [c, r] of rooms) if (r.tick() === 'ended' || !r.open) rooms.delete(c); }, 60 * 1000).unref();
+  setInterval(() => { for (const [c, r] of rooms) if (r.tick() === 'ended' || !r.open) rooms.delete(c); }, 15 * 1000).unref();
 
   // Only a page from this same site may open or join a room: another web page cannot use it as a free relay.
   const sameSite = (req) => { try { return new URL(req.headers.origin).host === req.headers.host; } catch (e) { return false; } };
@@ -31,12 +31,20 @@ function createRooms() {
     if (!m[1]) {
       const kind = u.searchParams.get('kind');
       if (!R.KINDS.includes(kind)) { conn.close(4400, 'Unknown kind'); return; }
+      // The same screen's next page takes its waiting room back with the room's key.
+      const back = rooms.get(R.normCode(u.searchParams.get('code')));
+      if (u.searchParams.get('key')) {
+        if (!back || !back.reclaim(conn, u.searchParams.get('key'))) { if (!back) conn.close(R.CLOSE.noRoom, 'No room by that code'); return; }
+        conn.onmessage = (t) => back.message(conn, t);
+        conn.onclose = () => { if (back.drop(conn) === 'ended') rooms.delete(back.code); };
+        return;
+      }
       const code = fresh();
-      const room = R.createRoom({ code, kind, send, close });
+      const room = R.createRoom({ code, kind, send, close, key: crypto.randomBytes(24).toString('base64url') });
       rooms.set(code, room);
       room.addHost(conn, req.headers.origin);
       conn.onmessage = (t) => room.message(conn, t);
-      conn.onclose = () => { room.drop(conn); rooms.delete(code); };
+      conn.onclose = () => { if (room.drop(conn) === 'ended') rooms.delete(code); };
       return;
     }
     const room = rooms.get(R.normCode(m[1]));

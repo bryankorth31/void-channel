@@ -27,6 +27,12 @@
     return { type: 'card', title: (card && card.title) || '', buttons, dpad };
   }
 
+  // The room this tab holds, kept for the tab only (Bryan, 20 Nov 2026: "i want to able to connect the phone as the
+  // controller prior to being in a game"): the shelf opens it, the game page takes it back, the phones stay in their seats.
+  const KEEP = 'voidtv-play-room';
+  const kept = () => { try { const k = JSON.parse(sessionStorage.getItem(KEEP) || 'null'); return k && /^[2-9A-Z]{4}$/.test(k.code) && k.key ? k : null; } catch (e) { return null; } };
+  const keep = (k) => { try { if (k) sessionStorage.setItem(KEEP, JSON.stringify(k)); else sessionStorage.removeItem(KEEP); } catch (e) { /* this page only */ } };
+
   function create(opts) {
     const on = opts || {};
     let ws = null, room = null, locked = false;
@@ -35,13 +41,27 @@
     const send = (to, msg) => { if (ws && ws.readyState === 1) ws.send(JSON.stringify({ to, msg })); };
     const list = () => [...phones].map(([seat, p]) => ({ seat, player: p.player, delay: p.delay })).sort((a, b) => a.seat - b.seat);
 
-    function open() {
-      if (ws) return Promise.resolve(room);
+    // open(): the room this tab already holds if it is still waiting, else a new one. resumeOnly: only take a held room
+    // back (a page opening with a phone already connected), never open a new one.
+    let opening = null;
+    function open(resumeOnly) {
+      if (ws && room) return Promise.resolve(room);
+      if (opening) return opening;
+      const k = kept();
+      if (resumeOnly && !k) return Promise.resolve(null);
+      opening = connect(k).catch((e) => {
+        if (k) { keep(null); return resumeOnly ? null : connect(null); }   // the room did not wait: a new one
+        throw e;
+      }).finally(() => { opening = null; });
+      return opening;
+    }
+    function connect(k) {
       return new Promise((ok, no) => {
-        ws = new WebSocket((location.protocol === 'https:' ? 'wss://' : 'ws://') + location.host + '/api/room/open?kind=pad');
+        const q = k ? '&code=' + k.code + '&key=' + encodeURIComponent(k.key) : '';
+        ws = new WebSocket((location.protocol === 'https:' ? 'wss://' : 'ws://') + location.host + '/api/room/open?kind=pad' + q);
         ws.onmessage = (e) => {
           let m; try { m = JSON.parse(e.data); } catch (x) { return; }
-          if (m.type === 'room') { room = { code: m.code, join: m.join }; ok(room); changed(); return; }
+          if (m.type === 'room') { room = { code: m.code, join: m.join, back: !!m.back }; if (m.key) keep({ code: m.code, key: m.key }); ok(room); changed(); return; }
           if (m.type === 'join') { phones.set(m.from, { b: 0, delay: null, player: null }); if (on.card) send(m.from, on.card()); changed(); return; }
           if (m.type === 'leave') { phones.delete(m.from); changed(); return; }
           if (m.type === 'locked') { locked = !!m.on; changed(); return; }
@@ -73,11 +93,15 @@
       },
       // The game changed (or loaded): every phone redraws its buttons.
       card: (c) => send('all', c),
+      // The page is going (another page of PLAY may take the room back): the socket closes, the room waits.
       close() { if (ws) ws.close(); },
+      // The player is done with phones here: the room ends now, nothing is kept.
+      end() { keep(null); if (ws) ws.close(); },
+      get held() { return !!kept(); },
     };
   }
 
-  const api = { create, padOf, cardFor, BASE, ON_PHONE };
+  const api = { create, padOf, cardFor, BASE, ON_PHONE, kept };
   if (typeof module === 'object' && module.exports) module.exports = api;
   else root.PlayPhones = api;
 })(typeof self !== 'undefined' ? self : this);

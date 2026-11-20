@@ -20,14 +20,23 @@ export class Room {
     server.accept();
     const send = (s, t) => { try { s.send(t); } catch (e) { /* gone */ } };
     const close = (s, code, why) => { try { s.close(code, why); } catch (e) { /* gone */ } };
-    if (url.pathname === '/open') {
+    if (url.pathname === '/open' && url.searchParams.get('key')) {
+      // The same screen's next page (the shelf opening a game) takes its waiting room back with the room's key.
+      const room = this.room;
+      if (room && room.reclaim(server, url.searchParams.get('key'))) {
+        server.addEventListener('message', (e) => room.message(server, typeof e.data === 'string' ? e.data : ''));
+        server.addEventListener('close', () => { this.left(room, server); });
+        server.addEventListener('error', () => { this.left(room, server); });
+      } else if (!room) close(server, R.CLOSE.noRoom, 'No room by that code');
+    } else if (url.pathname === '/open') {
       if (this.room && this.room.open) { close(server, R.CLOSE.full, 'This room already has a screen'); return new Response(null, { status: 101, webSocket: client }); }
-      const room = R.createRoom({ code: url.searchParams.get('code'), kind: url.searchParams.get('kind'), send, close });
+      const key = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(24)))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+      const room = R.createRoom({ code: url.searchParams.get('code'), kind: url.searchParams.get('kind'), send, close, key });
       this.room = room;
       room.addHost(server, url.searchParams.get('origin') || '');
       server.addEventListener('message', (e) => room.message(server, typeof e.data === 'string' ? e.data : ''));
-      server.addEventListener('close', () => { room.drop(server); });
-      server.addEventListener('error', () => { room.drop(server); });
+      server.addEventListener('close', () => { this.left(room, server); });
+      server.addEventListener('error', () => { this.left(room, server); });
       await this.state.storage.setAlarm(Date.now() + 60 * 1000);
     } else if (url.pathname === '/join') {
       const room = this.room;
@@ -41,11 +50,15 @@ export class Room {
     return new Response(null, { status: 101, webSocket: client });
   }
 
+  // The screen's page closed: a room that now waits for it is looked at again just after its wait.
+  left(room, sock) { if (room.drop(sock) === 'away') this.state.storage.setAlarm(Date.now() + 46 * 1000); }
+
   // Once a minute while the room is open: end it if it has been idle 30 minutes or open 4 hours.
   async alarm() {
     if (!this.room || !this.room.open) { this.room = null; return; }
     if (this.room.tick() === 'ended') { this.room = null; return; }
-    await this.state.storage.setAlarm(Date.now() + 60 * 1000);
+    // While a room waits for its screen, look again soon, so a screen that never comes back lets its phones go.
+    await this.state.storage.setAlarm(Date.now() + (this.room.waiting ? 15 : 60) * 1000);
   }
 }
 
