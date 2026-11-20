@@ -73,7 +73,7 @@ function titles() {
   }
   for (const m of films) {
     const r = readJson(P('catalog', 'movies', slug(m.title) + '-' + (m.year || 'x') + '.json'), null), f = r && r.file, o = ov['movie-' + m.tmdbId] || {};
-    rows.push({ key: 'film:' + m.tmdbId, kind: 'film', name: m.title, hindi: m.hindi || '', language: m.language, made: LANG[m.language] || m.language, year: m.year, row: 'Films',
+    rows.push({ key: 'film:' + m.tmdbId, kind: 'film', name: m.title, hindi: m.hindi || '', language: m.language, made: LANG[m.language] || m.language, year: m.year, row: m.source === 'shelf' ? 'More films' : 'Films', source: m.source || 'lineup',
       plays: r && plays(f) && (r.state === 'LIVE' || o.approved === true) && !o.rejected ? 1 : 0, sure: r && r.state === 'LIVE' && plays(f) ? 1 : 0, toCheck: r && r.state === 'REVIEW' && plays(f) ? 1 : 0,
       state: !r ? 'not hunted' : r.state === 'LIVE' ? 'plays' : r.state === 'REVIEW' ? 'needs a listen' : 'not found',
       sample: plays(f) ? f.item : null, sampleTitle: plays(f) ? f.itemTitle : null, decision: o.rejected ? 'drop' : o.approved ? 'keep' : null, friends: tl['film:' + m.tmdbId] || null });
@@ -126,6 +126,7 @@ const JOBS_DEF = {
   list: { script: 'profiles/hindi/make-list.js', what: 'Rebuild the list from its lineup (TVmaze and TMDB, no Archive calls)' },
   shelf: { script: 'profiles/hindi/shelf.js', what: 'Read the Archive\'s Hindi shelf again (a few Archive calls)' },
   hunt: { script: 'profiles/hindi/hindi-hunt.js', what: 'Hunt the list\'s shows and films, then match (one polite Archive job, can take an hour)' },
+  grow: { script: 'profiles/hindi/grow-films.js', what: 'Grow the films from the shelf: the next 200 most watched names looked up on TMDB, then their own uploads judged (at most 400 polite Archive calls, about half an hour)' },
   review: { script: 'profiles/hindi/review.js', what: 'Rebuild the friends\' review sheet and the what-plays report' },
 };
 const JOBS_FILE = () => path.join(STATE(), 'hq-hindi-jobs.json');
