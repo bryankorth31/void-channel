@@ -22,8 +22,11 @@
     const canvas = opts.canvas, on = opts.on || {};
     let started = false, paused = false, frames = 0;
     const nv = { dir: null, key: null, stamp: null, back: null, after: 5 };
-    // The game's own clock: each turn of MAME's main loop is 1/60 s of game time.
-    const gameSeconds = () => (root.MainLoop && Number.isFinite(root.MainLoop.currentFrameNumber) ? root.MainLoop.currentFrameNumber / 60 : 0);
+    // The game's own clock: each turn MAME runs is 1/60 s of game time. Counted after each turn that ran (postMainLoop), not
+    // by the loop's frame number, which also counts the frames the AR6 pace gate skips (2.4 times too fast at 144 Hz; the
+    // assistant session's catch). Counting starts at the first picture, so it can only run late, which is the safe side.
+    let turns = 0;
+    const gameSeconds = () => turns / 60;
     // Save the machine's battery memory and keep it on this device. Called by the page's autosave (Pause, Games, leaving,
     // and every minute while playing).
     async function keepScores() {
@@ -110,6 +113,7 @@
       };
     }
     function pace() {
+      try { if (root.MainLoop && Array.isArray(root.MainLoop.postMainLoop)) root.MainLoop.postMainLoop.push(() => { turns++; }); } catch (e) { /* no clock: nothing is saved */ }
       let n = 0, first = 0, decided = false;
       const decide = (rate) => {
         if (decided) return;
