@@ -128,5 +128,6 @@ test('T22: on a phone, Play goes fullscreen and sideways where it can, the scree
 
 test('T24: a TV never draws the touch pad; Back opens the menu first and leaves on the second; the play/pause key pauses', () => {
   const js = fs.readFileSync(path.join(PLAY, 'src', 'play.js'), 'utf8');
-  for (const bit of ["const isTV = /SMART-TV|SmartTV|Tizen|Web0S|webOS|BRAVIA|Android TV|GoogleTV|CrKey|AFT[A-Z]|Roku|HbbTV/i.test(navigator.userAgent);", "!isTV && matchMedia('(pointer: coarse)')", "history.pushState({ play: 1 }, '')", "if (started && !paused) { setPaused(true); armBack(); }", "const BACK_CODES = new Set([461, 10009]);", "e.key === 'MediaPlayPause'", 'stayAwake(true); armBack();']) assert.ok(js.includes(bit), bit);
+  for (const bit of ["const isTV = /SMART-TV|SmartTV|Tizen|Web0S|webOS|BRAVIA|Android TV|GoogleTV|CrKey|AFT[A-Z]|Roku|HbbTV/i.test(navigator.userAgent);", "!isTV && matchMedia('(pointer: coarse)')", "history.pushState({ play: 1 }, '')", "if (started && !paused) { setPaused(true); armBack(); }", "const BACK_CODES = new Set([461, 10009]);", "e.key === 'MediaPlayPause'", 'stayAwake(true); armBack();', "function toShelf() { autosave().then(() => location.assign($('b-games').href)); }", 'else toShelf();']) assert.ok(js.includes(bit), bit);
+  assert.ok(!js.includes('history.back()'), 'audit B2: Back never steps out of voidtv.net');
 });

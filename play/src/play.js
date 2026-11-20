@@ -280,11 +280,14 @@
     if (!backArmed) return;
     backArmed = false;
     if (started && !paused) { setPaused(true); armBack(); } // first Back: the menu; the next one leaves
-    else history.back();
+    else toShelf();
   });
+  // Audit B2: from the menu, Back goes to the shelf by its address. Stepping history back could skip the shelf and
+  // leave voidtv.net (on a TV, the app) when the shelf was not the page before.
+  function toShelf() { autosave().then(() => location.assign($('b-games').href)); }
   function remoteKey(e) {
     if (!started) return false;
-    if (BACK_KEYS.has(e.key) || BACK_CODES.has(e.keyCode)) { e.preventDefault(); if (!paused) setPaused(true); else history.back(); return true; }
+    if (BACK_KEYS.has(e.key) || BACK_CODES.has(e.keyCode)) { e.preventDefault(); if (!paused) setPaused(true); else toShelf(); return true; }
     if (e.key === 'MediaPlayPause' || e.key === 'MediaPause' || e.key === 'MediaPlay') { e.preventDefault(); setPaused(e.key === 'MediaPlay' ? false : e.key === 'MediaPause' ? true : !paused); return true; }
     return false;
   }
