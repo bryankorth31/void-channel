@@ -31,7 +31,8 @@ test('the site build copies the PLAY pages, scripts, cards, shelf list and engin
   const src = read('scripts/site.js');
   assert.match(src, /for \(const f of \['index\.html', 'game\.html', 'play\.css', 'shelf\.css'\]\)/);
   assert.match(src, /for \(const d of \['src', 'cards', 'engine'\]\)/);
-  assert.match(src, /path\.join\(P, 'shelf', 'index\.json'\)/);
+  // The shelf list and the nightly check's results (an old link to a game off the shelf reads them to say so).
+  assert.match(src, /for \(const f of \['index\.json', 'status\.json'\]\) fs\.copyFileSync\(path\.join\(P, 'shelf', f\)/);
   for (const never of ["'test'", "'tools'", "'core'", "'serve.js'"]) assert.ok(!src.includes('fs.cpSync(path.join(P, ' + never), never);
 });
 
