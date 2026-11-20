@@ -28,6 +28,8 @@
     const canvas = opts.canvas, ctx = canvas.getContext('2d', { alpha: false });
     const on = opts.on || {};
     let worker = null, audio = null, node = null, rate = 0, frames = 0, stopped = false;
+    // The volume (Bryan, 20 Nov 2026: "add a volume control on the emulator"): a gain between the sound and the speakers.
+    let gain = null, level = opts.volume == null ? 1 : opts.volume;
     let sramWait = null, sramSetWait = null;
     let why = '';                           // why the last save failed, when the engine said ('dos': still at DOS)
     let asking = null;                      // the one save or load waiting for its answer: { done, timer }
@@ -43,7 +45,8 @@
         audio.audioWorklet.addModule(url).then(() => {
           if (stopped || !audio) return;
           node = new AudioWorkletNode(audio, 'play-sound', { outputChannelCount: [2] });
-          node.connect(audio.destination);
+          gain = audio.createGain(); gain.gain.value = level;
+          node.connect(gain); gain.connect(audio.destination);
           if (rate) node.port.postMessage({ rate });
         }).catch(() => { node = null; on.status && on.status('Sound is off on this device'); });
       } catch (e) { audio = null; node = null; }
@@ -137,6 +140,7 @@
       frames: () => frames,
       saveWhy: () => why,
       wakeSound: () => { if (audio && audio.state === 'suspended') audio.resume(); },
+      volume: (v) => { level = v; if (gain) gain.gain.value = v; },
     };
   }
   root.PlayRunner = { createRunner };

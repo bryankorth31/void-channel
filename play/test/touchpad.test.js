@@ -136,3 +136,16 @@ test('Bryan, 20 Nov 2026 ("all buttons should be bigger and easier to play with 
   const html = fs.readFileSync(path.join(__dirname, '..', 'game.html'), 'utf8');
   assert.ok(html.includes('id="cover-phone"') && html.includes('id="m-phones"') && html.includes('Phone<span class="w2"> controller</span>'), 'the phone controller is easy to find');
 });
+
+test('Bryan, 20 Nov 2026 ("add a volume control on the emulator"): one volume for every engine, kept in this browser', () => {
+  const fs = require('fs'), path = require('path');
+  const runner = fs.readFileSync(path.join(__dirname, '..', 'src', 'runner.js'), 'utf8');
+  assert.ok(runner.includes('node.connect(gain); gain.connect(audio.destination);') && runner.includes('volume: (v) => { level = v; if (gain) gain.gain.value = v; },'));
+  assert.ok(!runner.includes('node.connect(audio.destination)'), 'console sound always passes the volume');
+  const arcade = fs.readFileSync(path.join(__dirname, '..', 'src', 'arcade-runner.js'), 'utf8');
+  assert.ok(arcade.includes('if (dest instanceof D && !this.playOwn) {') && arcade.includes('catchSound();'), "MAME's sound passes through our gain on its way to the speakers");
+  const play = fs.readFileSync(path.join(__dirname, '..', 'src', 'play.js'), 'utf8');
+  assert.ok(play.includes("const VOL_KEY = 'voidtv-play-volume';") && play.includes('volume: gainOf(vol), on: {'));
+  const html = fs.readFileSync(path.join(__dirname, '..', 'game.html'), 'utf8');
+  assert.ok(html.includes('id="vol"') && html.includes('id="m-vol"') && html.includes('id="b-mute"'), 'in the bar and in the pause menu');
+});

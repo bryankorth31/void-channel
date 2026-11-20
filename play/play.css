@@ -499,3 +499,14 @@ body.shell.arcade .pk .lbl{white-space:normal;text-overflow:clip;text-align:cent
 @container (max-height:340px){.cpad.up{--top:52px;--sh:48px}.cpad.up .pill,body.shell .cpad.up .pill{height:44px}}
 /* Sideways where the margin is narrower than the d-pad, it crosses the picture's edge see-through, as before. */
 body.shell .over.crossing .cpad.side .pdpad{background:rgba(16,19,30,.42)}
+/* The volume (Bryan, 20 Nov 2026: "add a volume control on the emulator"): a speaker that mutes and a slider, in the bar
+   where it has room and always in the pause menu (a phone's bar is short, and its own buttons set the volume too). */
+.vol{display:inline-flex;align-items:center;gap:2px}
+.vol-btn{display:inline-flex;align-items:center;justify-content:center;padding:6px 8px}
+#vol{width:84px;accent-color:var(--acc);cursor:pointer}
+.spk .off{display:none}
+body.muted .spk .off{display:inline}body.muted .spk .on{display:none}
+@media (max-width:760px){#vol{display:none}}
+@media (max-width:600px){.bar .vol{display:none}}
+.menu-vol{display:flex;align-items:center;gap:10px;margin:0 0 14px;color:var(--fg);font-size:15px}
+.menu-vol input{flex:1;max-width:280px;min-height:32px;accent-color:var(--acc);cursor:pointer}

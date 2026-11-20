@@ -270,13 +270,35 @@
           : 'This browser cannot open the arcade engine. A newer browser can.');
         return;
       }
-      watchFrames(); keepTitle();
+      watchFrames(); keepTitle(); catchSound();
       const s = document.createElement('script');
       // The script carries the same version as its .wasm.gz: an engine's .js and .wasm are one build, and the edge kept an
       // old williams.js beside the new wasm for a day ("memory access out of bounds", Joust live, 20 Nov 2026; audit).
       s.src = engine + '?v=' + ENGINE_V;
       s.onerror = () => on.error && on.error('The arcade engine did not load. Try again in a moment.');
       document.body.appendChild(s);
+    }
+
+    // The volume (Bryan, 20 Nov 2026: "add a volume control on the emulator"). MAME makes its own sound context, seconds
+    // after Play, and keeps its own gain to itself; so whatever connects to the speakers goes through ours first, made
+    // when the first sound does and set to the level chosen by then. The engine is not rebuilt for it (arcade audit).
+    let level = opts.volume == null ? 1 : opts.volume;
+    const ours = [];
+    function catchSound() {
+      const N = root.AudioNode && root.AudioNode.prototype, D = root.AudioDestinationNode;
+      if (!N || !D || N.connect.playVolume) return;
+      const connect = N.connect;
+      const wrapped = function (dest) {
+        if (dest instanceof D && !this.playOwn) {
+          let g = ours.find((x) => x.context === dest.context);
+          if (!g) { g = dest.context.createGain(); g.playOwn = true; g.gain.value = level; connect.call(g, dest); ours.push(g); }
+          connect.apply(this, [g].concat([].slice.call(arguments, 1)));
+          return dest;
+        }
+        return connect.apply(this, arguments);
+      };
+      wrapped.playVolume = true;
+      N.connect = wrapped;
     }
 
     // A key from the gamepad or the touch pad, sent the way the PC keyboard's would be. isTrusted is false on these,
@@ -322,6 +344,7 @@
           if (c && c.state === 'suspended') c.resume();
         } catch (e) { /* no sound yet */ }
       },
+      volume: (v) => { level = v; for (const g of ours) g.gain.value = v; },
       isArcade: true,
     };
   }

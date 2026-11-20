@@ -422,6 +422,26 @@
   }
 
   const isArcade = () => !!(card && PlayCards.CORES[card.core] && PlayCards.CORES[card.core].kind === 'mame');
+
+  // The volume (Bryan, 20 Nov 2026: "add a volume control on the emulator"): 0 to 100, kept in this browser; the speaker
+  // mutes and brings back the level before. Squared on the way to the engine, so each step sounds like the same step.
+  const VOL_KEY = 'voidtv-play-volume';
+  let vol = 100, volBefore = 100;
+  try { const s = localStorage.getItem(VOL_KEY); if (s !== null && s !== '' && !isNaN(+s)) vol = Math.max(0, Math.min(100, Math.round(+s))); } catch (e) { /* the full level */ }
+  const gainOf = (v) => (v / 100) * (v / 100);
+  function setVolume(v, keep) {
+    vol = Math.max(0, Math.min(100, Math.round(v)));
+    if (vol) volBefore = vol;
+    $('vol').value = $('m-vol').value = String(vol);
+    document.body.classList.toggle('muted', vol === 0);
+    $('b-mute').setAttribute('aria-pressed', String(vol === 0));
+    $('b-mute').title = vol ? 'Mute' : 'Sound on'; $('b-mute').setAttribute('aria-label', $('b-mute').title);
+    if (runner && runner.volume) runner.volume(gainOf(vol));
+    if (keep !== false) { try { localStorage.setItem(VOL_KEY, String(vol)); } catch (e) { /* for this visit only */ } }
+  }
+  $('vol').oninput = $('m-vol').oninput = (e) => setVolume(+e.target.value);
+  $('b-mute').onclick = () => setVolume(vol ? 0 : volBefore || 100);
+  setVolume(vol, false);
   function begin() {
     keepStorage();
     window.scrollTo(0, 0);
@@ -432,7 +452,7 @@
     phoneScreen();
     $('b-play').hidden = true; $('b-continue').hidden = true; status('Starting');
     deadline = setTimeout(() => fail('The game did not arrive from the Internet Archive in time. Check the connection and press Play to try again.'), DEADLINE_MS);
-    runner = (isArcade() ? PlayArcade : PlayRunner).createRunner({ canvas: $('canvas'), mute: q.get('mute') === '1', on: {
+    runner = (isArcade() ? PlayArcade : PlayRunner).createRunner({ canvas: $('canvas'), mute: q.get('mute') === '1', volume: gainOf(vol), on: {
       note: (t) => toast(t),
       status, error: (t) => fail(t),
       ready: () => { started = true; applyCheats(); place.sig = ''; place(); },
