@@ -132,13 +132,44 @@
     }
   }
 
+  // Phones as gamepads (Bryan, 20 Nov 2026: "Yes, phone controllers"): a phone that scans the code on this screen joins
+  // as one more standard gamepad, so it takes a seat, keeps it and drops like a real one (src/phones.js, play/rooms/).
+  let phones = null;
+  const allPads = () => [...(navigator.getGamepads ? [...navigator.getGamepads()] : []), ...(phones ? phones.pads() : [])];
+  const phoneWord = (code) => PlayCards.actionFor(card, code) || (window.PlayTouch && PlayTouch.label ? PlayTouch.label(code) : code);
+  const phoneCard = () => PlayPhones.cardFor(card, card ? PlayCards.gamepadMap(card) : {}, phoneWord);
+  function phonesList(list) {
+    const ul = $('phones-list'); ul.textContent = '';
+    for (const p of list) {
+      const li = document.createElement('li');
+      li.textContent = (p.player ? 'Player ' + p.player : 'Phone ' + p.seat) + (p.delay === null ? '' : ', delay ' + p.delay + ' ms' + (p.delay > 120 ? ': presses will feel late' : ''));
+      if (p.delay > 120) li.className = 'slow';
+      ul.appendChild(li);
+    }
+    if (!list.length) { const li = document.createElement('li'); li.textContent = 'No phones yet'; ul.appendChild(li); }
+  }
+  function showPhones(open) {
+    $('phones').hidden = !open; $('b-phones').setAttribute('aria-expanded', String(open));
+    if (!open) return;
+    if (!phones) phones = PlayPhones.create({ card: phoneCard, change: phonesList });
+    $('phones-code').textContent = '....'; $('phones-site').textContent = location.host + '/join';
+    phones.open().then((room) => {
+      $('phones-code').textContent = room.code;
+      $('phones-qr').innerHTML = PlayQR.svg(room.join, 8);
+      phonesList(phones.list());
+    }).catch((e) => { $('phones-code').textContent = ''; toast(e.message); });
+  }
+  $('b-phones').onclick = () => showPhones($('phones').hidden);
+  $('phones-close').onclick = () => showPhones(false);
+  addEventListener('pagehide', () => { if (phones) phones.close(); });
+
   // Gamepads are read once a frame. Before the game starts, a gamepad's A or Start presses Play, so a controller goes
   // from the shelf into the game with nothing else to touch.
   let padWasDown = true;
   function poll() {
-    const pads = navigator.getGamepads ? [...navigator.getGamepads()] : [];
+    const pads = allPads();
     if (hub) {
-      hub.pollPads(pads); if (paused) menuPads(pads); else { menuWas.clear(); padMouse(pads); }
+      hub.pollPads(pads); if (phones) phones.seats((i) => hub.seat(i)); if (paused) menuPads(pads); else { menuWas.clear(); padMouse(pads); }
       // A game started straight from the shelf (audit S6) has had no tap here yet: the first gamepad press wakes the sound.
       if (runner && pads.some((p) => p && p.buttons && p.buttons.some((b) => b.pressed))) runner.wakeSound();
     }
@@ -171,6 +202,7 @@
 
   const isArcade = () => !!(card && PlayCards.CORES[card.core] && PlayCards.CORES[card.core].kind === 'mame');
   function begin() {
+    if (!$('phones').hidden) showPhones(false);   // the code steps aside for the game; the Phones button brings it back
     // MAME's classic module cannot start over in place: once one has run, a new start is the page loaded again.
     if (isArcade() && runner) return runner.reset();
     stopGame();
@@ -335,7 +367,7 @@
   // load), the title, year, maker and machine, and the first three actions for the input in hand.
   const SYSTEM_NAMES = { dos: 'PC (DOS)', a2600: 'Atari 2600', nes: 'NES', snes: 'Super Nintendo', genesis: 'Sega Genesis', sms: 'Master System', gamegear: 'Game Gear', gameboy: 'Game Boy', gbcolor: 'Game Boy Color', gba: 'Game Boy Advance', lynx: 'Atari Lynx', arcade: 'Arcade' };
   function device() {
-    const pads = navigator.getGamepads ? [...navigator.getGamepads()] : [];
+    const pads = allPads();
     if (pads.some((p) => p && p.mapping === 'standard')) return 'pad';
     return touch ? 'touch' : 'keyboard';
   }
@@ -470,7 +502,7 @@
   ]).then(([c, shelf]) => {
     const bad = PlayCards.check(c);
     if (bad.length) throw new Error('This game card is not right yet (' + bad.join(', ') + ')');
-    card = c;
+    card = c; if (phones) phones.card(phoneCard());
     const core = PlayCards.CORES[c.core];
     build = { core: c.core, commit: core.source.split('/').pop() };
     document.title = c.title + ' | PLAY | voidtv.net';

@@ -126,7 +126,7 @@ test('R2: the local server runs rooms over real WebSockets: open, join, both way
 test('R5: the QR maker writes codes an independent reader (OpenCV) decodes, from a short join address up to version 10', (t) => {
   const { execFileSync } = require('child_process');
   const fs = require('fs'), os = require('os'), path = require('path');
-  const Q = require('../rooms/qr.js');
+  const Q = require('../src/qr.js');
   const PY = process.env.PLAY_PYTHON || 'C:/Users/bryan/AppData/Local/Programs/Python/Python312/python.exe';
   try { execFileSync(PY, ['-I', '-c', 'import cv2, numpy'], { stdio: 'ignore' }); } catch (e) { t.skip('no Python with OpenCV here'); return; }
   const texts = ['https://voidtv.net/join?r=KX7P', 'A', 'https://voidtv.net/join?r=KX7P&x=' + 'x'.repeat(60), 'x'.repeat(150), 'y'.repeat(210), 'https://voidtv.net/join?r=ÆØÅ'];
@@ -144,4 +144,52 @@ test('R5: the QR maker writes codes an independent reader (OpenCV) decodes, from
   assert.deepEqual(out.trim().split(/\r?\n/), texts.map(() => 'OK'));
   assert.throws(() => Q.encode('z'.repeat(300)), /Too long/);
   assert.match(Q.svg('A'), /^<svg [^>]*viewBox="0 0 232 232"/);
+});
+
+test('R3 and R4: a phone sends held buttons as a gamepad would; the screen turns them into a gamepad that takes a seat like a real one', () => {
+  const PP = require('../src/phonepad.js'), PH = require('../src/phones.js'), Hub = require('../src/hub.js');
+  const Cards = require('../src/cards.js');
+  const fs = require('fs'), path = require('path');
+  assert.deepEqual(PP.BUTTONS, Hub.BUTTONS, 'the phone numbers buttons as the hub does');
+  assert.equal(PP.bits(new Set(['A', 'Start', 'Left'])), (1 << 0) | (1 << 9) | (1 << 14));
+  assert.deepEqual(PP.dirs(50, 50, 100), [], 'the middle of the pad does nothing');
+  assert.deepEqual(PP.dirs(95, 50, 100), ['Right']);
+  assert.deepEqual(PP.dirs(50, 5, 100), ['Up']);
+  assert.deepEqual(PP.dirs(90, 90, 100).sort(), ['Down', 'Right'], 'a diagonal holds both');
+  assert.deepEqual(PP.delayText(80), { text: 'Delay 40 ms', slow: false });
+  assert.equal(PP.delayText(300).slow, true);
+  const pad = PH.padOf(2, PP.bits(new Set(['A'])));
+  assert.equal(pad.index, 102); assert.equal(pad.mapping, 'standard'); assert.equal(pad.buttons[0].pressed, true); assert.equal(pad.buttons[1].pressed, false);
+  // Joust on two phones: each gets its own seat-free key (arcade keys are not per player), Start opens the menu on the phone too.
+  const joust = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'cards', 'joust-arcade.json'), 'utf8'));
+  const c = PH.cardFor(joust, Cards.gamepadMap(joust), (code) => Cards.actionFor(joust, code));
+  assert.equal(c.type, 'card'); assert.equal(c.title, 'Joust'); assert.equal(c.dpad, true);
+  assert.equal(c.buttons.A, 'Flap'); assert.ok('Back' in c.buttons && 'Start' in c.buttons);
+  // A console game on a phone: a second phone plays as player 2, and a phone that drops leaves its seat held.
+  const sent = [], seats = [];
+  const hub = Hub.createHub({ send: (code, down) => sent.push(code + (down ? ' down' : ' up')), onSeat: (s, w) => seats.push(s + ' ' + w) });
+  const golden = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'cards', 'golden-axe-genesis.json'), 'utf8'));
+  hub.setCard(golden, Cards.gamepadMap(golden));
+  hub.pollPads([PH.padOf(1, PP.bits(new Set(['A']))), PH.padOf(2, PP.bits(new Set(['A'])))]);
+  assert.deepEqual(sent, ['P1:B down', 'P2:B down']);
+  assert.equal(hub.seat(101), 1); assert.equal(hub.seat(102), 2);
+  hub.pollPads([PH.padOf(1, 0)]);
+  assert.ok(seats.includes('2 away'), 'the phone that left keeps its seat held');
+  hub.pollPads([PH.padOf(1, 0), PH.padOf(2, 0)]);
+  assert.ok(seats.includes('2 back'), 'the same phone seat coming back is player 2 again');
+});
+
+test('R3: the pages: the join page sends a phone to the room kind, the pad page and the Phones panel are wired, and the site copies them', () => {
+  const fs = require('fs'), path = require('path');
+  const P = path.join(__dirname, '..');
+  const join = fs.readFileSync(path.join(P, 'join.html'), 'utf8');
+  assert.ok(join.includes("const PAGES = { pad: '/play/pad.html?r=', trivia: '/trivia/phone?r=' };"));
+  assert.ok(join.includes("const ALPHABET = '" + R.ALPHABET + "';"), 'the join page knows the same codes');
+  const game = fs.readFileSync(path.join(P, 'game.html'), 'utf8');
+  for (const bit of ['id="b-phones"', 'id="phones-qr"', '<script src="src/qr.js"></script>\n<script src="src/phones.js"></script>\n<script src="src/play.js"></script>']) assert.ok(game.includes(bit), bit);
+  const js = fs.readFileSync(path.join(P, 'src', 'play.js'), 'utf8');
+  assert.ok(js.includes('hub.pollPads(pads); if (phones) phones.seats((i) => hub.seat(i));'));
+  assert.ok(js.includes("const allPads = () => [...(navigator.getGamepads ? [...navigator.getGamepads()] : []), ...(phones ? phones.pads() : [])];"));
+  const site = fs.readFileSync(path.join(P, '..', 'scripts', 'site.js'), 'utf8');
+  assert.ok(site.includes("'pad.html', 'join.html'"), 'the site build copies the phone pages');
 });

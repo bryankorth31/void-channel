@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Join | voidtv.net</title>
+<!-- VoidTV rooms: the join page (Bryan, 20 Nov 2026: "Yes, phone controllers"). A phone comes here from the QR code on the
+     big screen, or someone types the code. The room says what it is (a game or trivia) and the phone goes to that page.
+     Nothing is asked for and nothing is kept. Licence: GPL-2.0-or-later (play/LICENSE). -->
+<style>
+:root{--bg:#07080c;--fg:#e8e8ee;--dim:#8a8fa3;--acc:#5fd4ff;--line:#1d2130}
+html,body{margin:0;background:var(--bg);color:var(--fg);font:17px system-ui,Segoe UI,Roboto,sans-serif}
+main{max-width:420px;margin:0 auto;padding:48px 16px;text-align:center}
+.mark{font-weight:800;font-size:22px;letter-spacing:.02em;color:var(--fg);text-decoration:none}.mark span{color:#ff4fc8}
+h1{font-size:24px;margin:28px 0 8px}p{color:var(--dim);margin:0 0 22px}
+input{width:8ch;font:700 34px/1 ui-monospace,Consolas,monospace;letter-spacing:.2em;text-transform:uppercase;text-align:center;background:#0f1118;color:var(--fg);border:1px solid var(--line);border-radius:12px;padding:14px 10px}
+button{display:block;margin:18px auto 0;font:inherit;font-weight:700;background:var(--acc);color:#07080c;border:0;border-radius:12px;padding:14px 30px;cursor:pointer}
+.why{color:#f3c969;min-height:1.4em;margin-top:14px}
+</style>
+</head>
+<body>
+<main>
+  <a class="mark" href="/">voidtv<span>.net</span></a>
+  <h1>Join the game</h1>
+  <p>Type the four letters on the big screen.</p>
+  <form id="f"><input id="code" maxlength="4" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Room code" inputmode="text"><button>Join</button></form>
+  <div id="why" class="why" role="status"></div>
+</main>
+<script>
+(function () {
+  'use strict';
+  const ALPHABET = '23456789ACDEFGHJKMNPQRTUVWXY';
+  const norm = (s) => { const c = String(s || '').trim().toUpperCase(); return c.length === 4 && [...c].every((x) => ALPHABET.includes(x)) ? c : null; };
+  const why = document.getElementById('why'), box = document.getElementById('code');
+  // Where each kind of room is played from a phone.
+  const PAGES = { pad: '/play/pad.html?r=', trivia: '/trivia/phone?r=' };
+  async function go(raw) {
+    const code = norm(raw);
+    if (!code) { why.textContent = 'That code is four letters and numbers, like KX7P.'; return; }
+    why.textContent = 'Looking for the room';
+    try {
+      const r = await fetch('/api/room/' + code, { cache: 'no-store' });
+      if (r.status === 404) { why.textContent = 'No room with that code. Check the big screen: the code changes each time.'; return; }
+      const j = await r.json();
+      if (!PAGES[j.kind]) throw new Error('kind');
+      location.replace(PAGES[j.kind] + code);
+    } catch (e) { why.textContent = 'The room did not answer. Check the connection and try again.'; }
+  }
+  document.getElementById('f').addEventListener('submit', (e) => { e.preventDefault(); go(box.value); });
+  const r = new URLSearchParams(location.search).get('r');
+  if (r) { box.value = r; go(r); } else box.focus();
+})();
+</script>
+</body>
+</html>

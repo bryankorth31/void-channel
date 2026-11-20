@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#07080c">
+<title>Gamepad | PLAY | voidtv.net</title>
+<!-- VoidTV PLAY: a phone as the gamepad for a game on the big screen (Bryan, 20 Nov 2026: "Yes, phone controllers").
+     The phone sends which buttons are held; the big screen treats it as one more gamepad, with the same seats as a real one.
+     No app, no sign-up, nothing kept. Licence: GPL-2.0-or-later (play/LICENSE). -->
+<style>
+:root{--bg:#07080c;--panel:#0f1118;--line:#232838;--fg:#e8e8ee;--dim:#8a8fa3;--acc:#5fd4ff;--pink:#ff4fc8;--gold:#f3c969}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--fg);font:16px system-ui,Segoe UI,Roboto,sans-serif;overflow:hidden;
+  user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;touch-action:none;overscroll-behavior:none}
+header{position:fixed;inset:0 0 auto 0;display:flex;align-items:center;gap:10px;padding:8px max(12px,env(safe-area-inset-left));font-size:14px;color:var(--dim);z-index:2}
+header b{color:var(--fg);font-size:16px}#who{color:var(--acc);font-weight:700}#delay{margin-left:auto}#delay.slow{color:var(--gold)}
+#pad{position:fixed;inset:40px 0 0 0;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:8px max(16px,env(safe-area-inset-right)) max(12px,env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left))}
+#pad[hidden],#note[hidden]{display:none}
+.shoulders{position:fixed;top:44px;left:0;right:0;display:flex;justify-content:space-between;padding:0 16px;pointer-events:none}
+.shoulders .b{pointer-events:auto;width:min(30vw,150px);height:52px;border-radius:14px}
+.dpad{justify-self:start;width:min(46vmin,260px);aspect-ratio:1;position:relative;border-radius:50%;background:var(--panel);border:1px solid var(--line)}
+.dpad i{position:absolute;width:30%;height:30%;border-radius:10px;background:#1a1f30}
+.dpad i[data-d=Up]{left:35%;top:6%}.dpad i[data-d=Down]{left:35%;bottom:6%}.dpad i[data-d=Left]{left:6%;top:35%}.dpad i[data-d=Right]{right:6%;top:35%}
+.dpad i.on{background:var(--acc)}
+.mid{display:flex;flex-direction:column;gap:14px;align-items:center}
+.face{justify-self:end;width:min(52vmin,290px);aspect-ratio:1;position:relative}
+.b{display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px solid var(--line);background:#161b2a;color:var(--fg);border-radius:50%;font-weight:800;font-size:20px;line-height:1.05;padding:4px;text-align:center;touch-action:none}
+.b small{display:block;font-weight:600;font-size:11px;color:var(--dim);max-width:9ch;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.b.on{background:var(--acc);color:#07080c;border-color:var(--acc)}.b.on small{color:#07080c}
+.face .b{position:absolute;width:36%;height:36%}
+.face .b[data-n=Y]{left:32%;top:0}.face .b[data-n=A]{left:32%;bottom:0}.face .b[data-n=X]{left:0;top:32%}.face .b[data-n=B]{right:0;top:32%}
+.face .b[data-n=A]{border-color:var(--pink)}
+.mid .b{width:78px;height:40px;border-radius:20px;font-size:13px}
+#note{position:fixed;inset:0;display:grid;place-items:center;text-align:center;padding:24px;background:var(--bg);z-index:3}
+#note h1{font-size:22px;margin:0 0 10px}#note p{color:var(--dim);margin:0 0 18px}
+#note a{color:var(--acc)}
+.turn{display:none}
+@media (orientation:portrait){.turn{display:block;position:fixed;bottom:10px;left:0;right:0;text-align:center;color:var(--dim);font-size:13px}
+  #pad{grid-template-columns:1fr 1fr;grid-template-rows:1fr auto;row-gap:12px}.mid{grid-column:1 / 3;flex-direction:row;justify-content:center}
+  .dpad{width:44vw}.face{width:46vw}}
+</style>
+</head>
+<body>
+<header><b>voidtv<span style="color:var(--pink)">.net</span></b><span id="game"></span><span id="who"></span><span id="delay" role="status"></span></header>
+<div class="shoulders" id="shoulders"></div>
+<main id="pad" hidden aria-label="Gamepad">
+  <div class="dpad" id="dpad" aria-label="Arrows"><i data-d="Up"></i><i data-d="Down"></i><i data-d="Left"></i><i data-d="Right"></i></div>
+  <div class="mid" id="mid"></div>
+  <div class="face" id="face"></div>
+</main>
+<div id="note"><div><h1 id="note-h">Joining the game</h1><p id="note-p">One moment.</p><a id="note-a" href="/join" hidden>Type a code</a></div></div>
+<div class="turn">Turn the phone sideways for bigger buttons.</div>
+<script src="src/phonepad.js"></script>
+</body>
+</html>

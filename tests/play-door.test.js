@@ -29,7 +29,8 @@ test('the player and its files are isolated, the shelf is not', () => {
 
 test('the site build copies the PLAY pages, scripts, cards, shelf list and engines, and no build tools, tests or sources', () => {
   const src = read('scripts/site.js');
-  assert.match(src, /for \(const f of \['index\.html', 'game\.html', 'play\.css', 'shelf\.css'\]\)/);
+  assert.match(src, /for \(const f of \['index\.html', 'game\.html', 'play\.css', 'shelf\.css', 'pad\.html', 'join\.html'\]\)/);
+  assert.ok(src.includes("fs.copyFileSync(path.join(P, 'join.html'), path.join(OUT, 'join.html'));"), 'the join page answers at /join too');
   assert.match(src, /for \(const d of \['src', 'cards', 'engine'\]\)/);
   // The shelf list and the nightly check's results (an old link to a game off the shelf reads them to say so).
   assert.match(src, /for \(const f of \['index\.json', 'status\.json'\]\) fs\.copyFileSync\(path\.join\(P, 'shelf', f\)/);

@@ -1,5 +1,5 @@
-// VoidTV rooms: a QR code maker, written from the QR standard (ISO/IEC 18004) for the join address on the big screen.
-// Licence: GPL-2.0-or-later (play/LICENSE). Byte mode, error correction level M (about 15% of the code can be dirty or
+// VoidTV PLAY: a QR code maker, written from the QR standard (ISO/IEC 18004). Licence: GPL-2.0-or-later (play/LICENSE).
+// For the join address on the big screen. Byte mode, error correction level M (about 15% of the code can be dirty or
 // covered), versions 1 to 10 (up to 213 bytes). Checked against OpenCV's reader in play/test/rooms.test.js.
 (function (root) {
   'use strict';

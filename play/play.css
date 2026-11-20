@@ -149,3 +149,14 @@ a.tool{display:inline-flex;align-items:center;text-decoration:none;color:var(--f
 .cpad.side .pk,.cpad.side .pdpad{background:rgba(16,19,30,.42);border-color:rgba(255,255,255,.22);-webkit-backdrop-filter:none}
 .cpad.side .pk[data-down]{background:rgba(95,212,255,.75)}
 .cpad.side .pdir{color:rgba(232,232,238,.8)}
+/* Phones as gamepads: the code sits over the game until closed; big enough to scan from across a room. */
+.phones{position:absolute;inset:12px;display:flex;align-items:center;justify-content:center;gap:clamp(16px,4vw,48px);flex-wrap:wrap;background:rgba(7,8,12,.94);border:1px solid var(--line);border-radius:16px;padding:20px;z-index:7;overflow:auto}
+.phones[hidden]{display:none}
+.phones-qr{background:#fff;border-radius:12px;padding:8px;line-height:0}
+.phones-qr svg{width:min(56vh,46vw,520px);height:auto}
+.phones-in{max-width:420px}
+.phones-in h2{margin:0 0 8px;font-size:clamp(22px,3vw,34px)}
+.phones-in p{margin:0 0 8px;color:var(--dim);font-size:clamp(15px,1.6vw,20px)}
+.phones-in .phones-code{font:800 clamp(44px,8vw,96px)/1 ui-monospace,Consolas,monospace;letter-spacing:.18em;color:var(--fg) !important;margin:6px 0 16px !important}
+.phones-list{list-style:none;margin:0 0 16px;padding:0;font-size:clamp(15px,1.6vw,20px)}
+.phones-list li{padding:4px 0}.phones-list .slow{color:var(--gold)}

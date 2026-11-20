@@ -130,6 +130,7 @@
       keyboard: (code, down) => hold('keyboard', code, down),
       touch: (code, down, finger) => hold('touch' + (finger === undefined ? '' : finger), code, down),
       held: () => [...holders].filter(([, s]) => s.size).map(([c]) => c).sort(),
+      seat: (index) => seatOf.get(index),        // the seat a pad holds (phone gamepads tell their phone which player it is)
     };
   }
 

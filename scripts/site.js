@@ -130,7 +130,9 @@ const brandSrc = path.join(ROOT, 'assets', 'brand');
 { const P = path.join(ROOT, 'play'); const dst = path.join(OUT, 'play');
   if (fs.existsSync(P)) {
     fs.mkdirSync(dst, { recursive: true });
-    for (const f of ['index.html', 'game.html', 'play.css', 'shelf.css']) fs.copyFileSync(path.join(P, f), path.join(dst, f));
+    for (const f of ['index.html', 'game.html', 'play.css', 'shelf.css', 'pad.html', 'join.html']) fs.copyFileSync(path.join(P, f), path.join(dst, f));
+    // The join page also answers at /join, the short address people type from the big screen (phone controllers, Trivia Nights).
+    fs.copyFileSync(path.join(P, 'join.html'), path.join(OUT, 'join.html'));
     // "Our player's source" names the exact commit this build came from (the GPL source offer points at what is served).
     { let sha = process.env.CF_PAGES_COMMIT_SHA || ''; if (!sha) { try { sha = require('child_process').execSync('git rev-parse HEAD', { cwd: ROOT, stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim(); } catch (e) { sha = ''; } }
       if (/^[0-9a-f]{40}$/.test(sha)) { const g = path.join(dst, 'game.html'); fs.writeFileSync(g, fs.readFileSync(g, 'utf8').replace('/void-channel/tree/master/play', '/void-channel/tree/' + sha + '/play')); } }

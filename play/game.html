@@ -16,12 +16,24 @@
   <nav class="tools" aria-label="Game controls">
     <a id="b-games" class="tool" href="./" title="Back to the shelf of games">Games</a>
     <button type="button" id="b-pause" class="tool" title="Pause, save and load (Back and Start together on a gamepad)">Pause</button>
+    <button type="button" id="b-phones" class="tool" aria-expanded="false" title="Play with phones as gamepads: scan the code on this screen">Phones</button>
     <button type="button" id="b-touch" class="tool" aria-pressed="false" title="Show or hide the touch controls">Touch</button>
     <button type="button" id="b-full" class="tool" title="Fullscreen">Full</button>
   </nav>
 </header>
 
 <main id="stage" class="stage">
+  <!-- Phones as gamepads (Bryan, 20 Nov 2026: "Yes, phone controllers"): scan the code, the phone becomes a gamepad. -->
+  <section id="phones" class="phones" hidden aria-label="Phones as gamepads">
+    <div id="phones-qr" class="phones-qr"></div>
+    <div class="phones-in">
+      <h2>Play with your phone</h2>
+      <p>Scan the code with the phone's camera. Or go to <b id="phones-site"></b> and type</p>
+      <p id="phones-code" class="phones-code">....</p>
+      <ul id="phones-list" class="phones-list"></ul>
+      <button type="button" id="phones-close" class="tool">Close</button>
+    </div>
+  </section>
   <div id="screen" class="screen">
     <canvas id="canvas" width="640" height="400" aria-label="The game"></canvas>
     <div id="cover" class="cover">
@@ -83,6 +95,8 @@ setTimeout(function () { var s = document.getElementById('status'), p = document
 <script src="src/saves.js"></script>
 <script src="src/runner.js"></script>
 <script src="src/arcade-runner.js"></script>
+<script src="src/qr.js"></script>
+<script src="src/phones.js"></script>
 <script src="src/play.js"></script>
 </body>
 </html>

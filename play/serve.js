@@ -21,7 +21,7 @@ http.createServer((req, res) => {
   let p = decodeURIComponent(req.url.split('?')[0]);
   const room = /^\/api\/room\/([^/]+)$/.exec(p);
   if (room && room[1] !== 'open') return rooms.lookup(req, res, room[1]);
-  if (p === '/join') p = '/play/rooms/join.html';
+  if (p === '/join') p = '/play/join.html';
   if (p === '/api/piece') return piece(req, res);
   if (p === '/api/drafts') return drafts(req, res);
   if (p === '/' || p === '/play') { res.writeHead(302, { location: '/play/' }); return res.end(); }
