@@ -2,7 +2,7 @@
 # Builds the DOSBox Pure core into VoidTV PLAY's engine files: play/engine/dosbox-pure.js and .wasm.
 # Licence: GPL-2.0-or-later (see play/LICENSE). Anyone can repeat this build from the published sources.
 #
-#   1. Emscripten (official SDK): git clone https://github.com/emscripten-core/emsdk ; emsdk install latest ; emsdk activate latest
+#   1. Emscripten (official SDK): git clone https://github.com/emscripten-core/emsdk ; emsdk install 7.0.0 ; emsdk activate 7.0.0
 #   2. DOSBox Pure source:        git clone https://github.com/libretro/dosbox-pure ; git checkout <the commit in dosbox-pure.txt>
 #   3. EMSDK=<emsdk folder> DBP=<dosbox-pure folder> bash play/core/build.sh
 #
@@ -44,4 +44,7 @@ echo "$SOURCES" | xargs -P "${JOBS:-12}" -I{} bash -c '
   -sEXPORTED_RUNTIME_METHODS=FS,HEAPU8,HEAP16,HEAPU32,stringToUTF8,lengthBytesUTF8 \
   -sEXPORTED_FUNCTIONS=_malloc,_free \
   -sFORCE_FILESYSTEM=1 -sEXIT_RUNTIME=0
+# One line at the top of the engine script: what it is, its licence and its exact source (the licence's notice).
+printf '/* DOSBox Pure, a libretro core built unchanged by voidtv.net with Emscripten 7.0.0. Licence: GPL-2.0. Source: https://github.com/libretro/dosbox-pure/tree/%s . Our host: play/core/host.c, GPL-2.0-or-later. */
+' "$WANT" | cat - "$OUT/dosbox-pure.js" > "$OUT/dosbox-pure.js.tmp" && mv "$OUT/dosbox-pure.js.tmp" "$OUT/dosbox-pure.js"
 ls -la "$OUT"

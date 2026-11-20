@@ -3,32 +3,48 @@
 // save(), load(state), reset(), stop(). The core itself runs in core-worker.js; this side draws each picture on the
 // canvas at the game's own size (CSS scales it, sharp pixels) and plays the sound through one small audio worklet.
 (function (root) {
-  // The sound side: a ring of stereo samples, drained by the audio thread at the speaker's pace. If it gets more than
-  // a fifth of a second ahead it drops the oldest, so the sound never drifts behind the picture.
+  // The sound side: a ring of stereo samples, drained by the audio thread at the speaker's pace. The core's own sample
+  // rate may differ from the speaker's (the sound is made at the Play tap, before the core says its rate), so the worklet
+  // steps through the ring at the ratio of the two. If it gets more than a fifth of a second ahead it drops the oldest,
+  // so the sound never drifts behind the picture.
   const WORKLET = `
   class PlaySound extends AudioWorkletProcessor {
-    constructor() { super(); this.buf = new Float32Array(32768); this.r = 0; this.w = 0;
-      this.port.onmessage = (e) => { const s = e.data; for (let i = 0; i < s.length; i++) { this.buf[this.w] = s[i] / 32768; this.w = (this.w + 1) & 32767; }
-        const have = (this.w - this.r) & 32767; const max = Math.floor(sampleRate * 0.2) * 2; if (have > max) this.r = (this.w - max) & 32767; }; }
+    constructor() { super(); this.buf = new Float32Array(65536); this.r = 0; this.w = 0; this.step = 1; this.frac = 0;
+      this.port.onmessage = (e) => { const s = e.data;
+        if (s && s.rate) { this.step = s.rate / sampleRate; return; }
+        for (let i = 0; i < s.length; i++) { this.buf[this.w] = s[i] / 32768; this.w = (this.w + 1) & 65535; }
+        const have = (this.w - this.r) & 65535; const max = Math.floor(sampleRate * this.step * 0.2) * 2; if (have > max) this.r = ((this.w - max) & 65535) & ~1; }; }
     process(_, out) { const L = out[0][0], R = out[0][1] || out[0][0];
-      for (let i = 0; i < L.length; i++) { if (this.r === this.w) { L[i] = R[i] = 0; continue; }
-        L[i] = this.buf[this.r]; R[i] = this.buf[(this.r + 1) & 32767]; this.r = (this.r + 2) & 32767; } return true; } }
+      for (let i = 0; i < L.length; i++) {
+        if (((this.w - this.r) & 65535) < 4) { L[i] = R[i] = 0; continue; }
+        L[i] = this.buf[this.r]; R[i] = this.buf[(this.r + 1) & 65535];
+        this.frac += this.step; const whole = Math.floor(this.frac); this.frac -= whole; this.r = (this.r + 2 * whole) & 65535; }
+      return true; } }
   registerProcessor('play-sound', PlaySound);`;
+
+  const ASK_MS = 8000; // a save or load that takes longer than this is treated as failed, never left hanging
 
   function createRunner(opts) {
     const canvas = opts.canvas, ctx = canvas.getContext('2d', { alpha: false });
     const on = opts.on || {};
-    let worker = null, audio = null, node = null, rate = 44100, waiting = null, frames = 0;
+    let worker = null, audio = null, node = null, rate = 0, frames = 0, stopped = false;
+    let asking = null;                      // the one save or load waiting for its answer: { done, timer }
+    const queue = [];                       // the rest, one at a time
 
-    async function startSound() {
+    // Called inside the Play tap itself: iPhone and iPad only let sound start in a tap.
+    function prepareSound() {
       if (opts.mute || audio) return;
       try {
-        audio = new AudioContext({ sampleRate: rate, latencyHint: 'interactive' });
+        audio = new AudioContext({ latencyHint: 'interactive' });
+        audio.resume();
         const url = URL.createObjectURL(new Blob([WORKLET], { type: 'text/javascript' }));
-        await audio.audioWorklet.addModule(url);
-        node = new AudioWorkletNode(audio, 'play-sound', { outputChannelCount: [2] });
-        node.connect(audio.destination);
-      } catch (e) { audio = null; node = null; on.status && on.status('Sound is off on this device'); }
+        audio.audioWorklet.addModule(url).then(() => {
+          if (stopped || !audio) return;
+          node = new AudioWorkletNode(audio, 'play-sound', { outputChannelCount: [2] });
+          node.connect(audio.destination);
+          if (rate) node.port.postMessage({ rate });
+        }).catch(() => { node = null; on.status && on.status('Sound is off on this device'); });
+      } catch (e) { audio = null; node = null; }
     }
 
     function draw(m) {
@@ -39,37 +55,64 @@
       if (on.aspect) on.aspect(m.aspect || m.w / m.h);
     }
 
-    function start(card, base) {
-      const worker_url = new URL('src/core-worker.js', base);
-      worker_url.searchParams.set('engine', '../' + PlayCards.engineOf(card));
-      worker = new Worker(worker_url);
+    function settle(value) {
+      if (!asking) return;
+      clearTimeout(asking.timer);
+      const done = asking.done; asking = null;
+      done(value);
+      next();
+    }
+    function next() {
+      if (asking || !queue.length) return;
+      const job = queue.shift();
+      if (!worker) { job.done(null); return next(); }
+      asking = { done: job.done, timer: setTimeout(() => settle(null), ASK_MS) };
+      worker.postMessage(job.msg, job.transfer || []);
+    }
+    const ask = (msg, transfer) => new Promise((done) => { queue.push({ msg, transfer, done }); next(); });
+
+    function start(card, base, version) {
+      const workerUrl = new URL('src/core-worker.js', base);
+      // ?v= the engine's build: a new engine never meets an old one in the browser's cache (the js and wasm always match).
+      workerUrl.searchParams.set('engine', '../' + PlayCards.engineOf(card) + (version ? '?v=' + version : ''));
+      worker = new Worker(workerUrl);
       worker.onmessage = (e) => {
+        if (stopped) return;
         const m = e.data;
         if (m.type === 'frame') draw(m);
         else if (m.type === 'sound') { if (node) node.port.postMessage(new Int16Array(m.samples), [m.samples]); }
-        else if (m.type === 'ready') { rate = m.rate; startSound(); on.ready && on.ready(m); }
+        else if (m.type === 'ready') { rate = m.rate; if (node) node.port.postMessage({ rate }); on.ready && on.ready(m); }
         else if (m.type === 'status') on.status && on.status(m.text);
         else if (m.type === 'error') on.error && on.error(m.text);
-        else if ((m.type === 'saved' || m.type === 'loaded') && waiting) { const w = waiting; waiting = null; w(m.type === 'saved' ? m.state : m.ok); }
+        else if (m.type === 'saved') settle(m.state || null);
+        else if (m.type === 'loaded') settle(!!m.ok);
       };
-      worker.onerror = (e) => on.error && on.error(e.message || 'The engine stopped');
+      worker.onerror = (e) => { if (!stopped && on.error) on.error(e.message || 'The engine stopped'); };
       worker.postMessage({ type: 'start', gameUrl: PlayCards.gameUrl(card), gameFile: PlayCards.gameFile(card),
         start: card.archive.start || '', vars: card.vars || {},
         pads: PlayCards.isPad(card) ? Math.max(1, card.players || 1) : 0 });
     }
 
-    const post = (m) => worker && worker.postMessage(m);
-    const ask = (m) => new Promise((ok) => { waiting = ok; post(m); });
+    // Stop means stopped: the worker and its helper threads end now, no late picture or sound reaches the page, and a
+    // save or load still waiting is answered "no".
+    function stop() {
+      stopped = true;
+      if (worker) { worker.onmessage = null; worker.onerror = null; worker.terminate(); worker = null; }
+      if (asking) { clearTimeout(asking.timer); const d = asking.done; asking = null; d(null); }
+      while (queue.length) queue.shift().done(null);
+      if (audio) { try { audio.close(); } catch (e) { /* already closed */ } audio = null; node = null; }
+    }
+
+    const post = (m) => { if (worker) worker.postMessage(m); };
     return {
-      start,
+      start, stop, prepareSound,
       key: (code, down) => post({ type: 'key', code, down }),
       pad: (port, bits) => post({ type: 'pad', port, bits }),
       pause: () => { post({ type: 'pause' }); if (audio) audio.suspend(); },
       resume: () => { post({ type: 'resume' }); if (audio) audio.resume(); },
       save: () => ask({ type: 'save' }),
-      load: (state) => ask({ type: 'load', state }),
+      load: (state) => { const copy = state.slice(0); return ask({ type: 'load', state: copy }, [copy]); },
       reset: () => post({ type: 'reset' }),
-      stop: () => { post({ type: 'stop' }); worker = null; if (audio) audio.close(); },
       frames: () => frames,
       wakeSound: () => { if (audio && audio.state === 'suspended') audio.resume(); },
     };

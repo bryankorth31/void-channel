@@ -17,8 +17,11 @@
       t.oncomplete = () => { db.close(); ok(req && req.result); }; t.onerror = () => { db.close(); fail(t.error); };
     });
   }
+  // build: which engine made the save ({ core, commit }); a core's saves only load in the same build of that core.
   const api = {
-    put: (id, state) => run('readwrite', (s) => s.put({ state, when: Date.now() }, id)),
+    put: (id, state, build) => run('readwrite', (s) => s.put(Object.assign({ state, when: Date.now() }, build || {}), id)),
+    // Same core, same build: yes. A save from another build (or from before builds were recorded): no.
+    fits: (rec, build) => !!(rec && build && rec.core === build.core && rec.commit === build.commit),
     get: (id) => run('readonly', (s) => s.get(id)),
   };
   root.PlaySaves = api;

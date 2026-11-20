@@ -23,9 +23,17 @@ let M = null, running = false, paused = false, timer = 0, lastFrame = -1, fps = 
 const held = new Set();
 const say = (text) => postMessage({ type: 'status', text });
 
+// The game file, in one plain sentence when it cannot come: gone from the Archive, the Archive busy, or too big.
+const MAX_DOWNLOAD = 256 * 1024 * 1024;
 async function fetchBytes(url) {
-  const r = await fetch(url, { credentials: 'omit' });
-  if (!r.ok) throw new Error('The Archive answered ' + r.status + ' for ' + url);
+  let r;
+  try { r = await fetch(url, { credentials: 'omit' }); } catch (e) {
+    throw new Error('The Internet Archive is not answering right now. Check the connection and press Play to try again.');
+  }
+  if (r.status === 404 || r.status === 410 || r.status === 403) throw new Error("This game's file is no longer on the Internet Archive, so it cannot play here.");
+  if (!r.ok) throw new Error('The Internet Archive is busy right now (it answered ' + r.status + '). Try again in a little while.');
+  const size = +r.headers.get('content-length') || 0;
+  if (size > MAX_DOWNLOAD) throw new Error('This game is ' + Math.round(size / 1048576) + ' MB, more than PLAY can hold in a browser yet.');
   return new Uint8Array(await r.arrayBuffer());
 }
 
@@ -59,7 +67,8 @@ async function start(msg) {
   // Every engine is built to the same shape: PlayCore (DOSBox Pure, built first, is named DosboxPure).
   const factory = self.PlayCore || self.DosboxPure;
   M = await factory({
-    locateFile: (f) => new URL(f, ENGINE).href,
+    // The wasm file carries the same ?v= as the engine script, so the two always come from one build.
+    locateFile: (f) => { const u = new URL(f, ENGINE); u.search = new URL(ENGINE).search; return u.href; },
     print: (t) => console.log('[core]', t),
     printErr: (t) => console.warn('[core]', t),
   });
@@ -129,7 +138,7 @@ function save() {
   const ok = M._host_state_save(p, size);
   const state = ok ? M.HEAPU8.slice(p, p + size) : null;
   M._free(p);
-  if (!state) return postMessage({ type: 'error', text: 'The game could not be saved just now' });
+  if (!state) return postMessage({ type: 'saved', state: null }); // the page says so in a toast; the game keeps running
   postMessage({ type: 'saved', state: state.buffer }, [state.buffer]);
 }
 
@@ -155,6 +164,11 @@ onmessage = (e) => {
     else if (m.type === 'load') load(m.state);
     else if (m.type === 'reset') M._host_reset();
     else if (m.type === 'stop') { running = false; clearTimeout(timer); close(); }
-  } catch (err) { postMessage({ type: 'error', text: String(err.message || err) }); }
+  } catch (err) {
+    // A save or load that throws is answered "no" (the game keeps running); anything else stops the game with its reason.
+    if (m && m.type === 'save') postMessage({ type: 'saved', state: null });
+    else if (m && m.type === 'load') postMessage({ type: 'loaded', ok: false });
+    else postMessage({ type: 'error', text: String(err.message || err) });
+  }
 };
 }

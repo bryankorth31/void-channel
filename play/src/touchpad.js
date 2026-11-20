@@ -61,10 +61,11 @@
       held.set(e.pointerId, now);
       for (const s of pad.children) s.classList.toggle('on', [...held.values()].some((set) => set.has(codes[s.classList[1]])));
     }
-    function lift(e) { for (const c of held.get(e.pointerId) || []) hub.touch(c, false, e.pointerId); held.delete(e.pointerId); for (const s of pad.children) s.classList.remove('on'); }
+    // A finger lifting (or the browser taking it away) lets go of only its own directions; the others stay lit.
+    function lift(e) { for (const c of held.get(e.pointerId) || []) hub.touch(c, false, e.pointerId); held.delete(e.pointerId); for (const s of pad.children) s.classList.toggle('on', [...held.values()].some((set) => set.has(codes[s.classList[1]]))); }
     pad.addEventListener('pointerdown', (e) => { e.preventDefault(); capture(pad, e); aim(e); });
     pad.addEventListener('pointermove', (e) => { if (held.has(e.pointerId)) aim(e); });
-    pad.addEventListener('pointerup', lift); pad.addEventListener('pointercancel', lift);
+    pad.addEventListener('pointerup', lift); pad.addEventListener('pointercancel', lift); pad.addEventListener('lostpointercapture', lift);
     return pad;
   }
 
