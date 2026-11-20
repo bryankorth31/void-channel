@@ -35,7 +35,7 @@ function norm(s) {
 function sameish(a, b) { const x = norm(a), y = norm(b); return !!x && !!y && (x === y || x.includes(y) || y.includes(x)); }
 
 // Text shown to people never carries an em or en dash (VoidTV's rule); a source's own dash becomes a plain hyphen.
-function clean(s) { return String(s).replace(/[–—]/g, '-').replace(/\s+/g, ' ').trim(); }
+function clean(s) { return String(s).replace(/[\u2013\u2014]/g, '-').replace(/\s+/g, ' ').trim(); }
 
 // Three wrong years near a right one, never the right one, never in the future.
 function nearYears(year, rand) {
@@ -92,7 +92,7 @@ function openDb() {
 // Everything the templates need, in plain objects, so the templates themselves stay pure and testable.
 // foreign: names of shows VoidTV's list marks as not in English. Their decks would ask a US crowd about actors and
 // episode names it has never heard, so they stay out for now (a World TV deck could take them later).
-function gather(db, pool, foreign, overrides) {
+function gather(db, pool, foreign, overrides, metaOf) {
   const line = pool.fameLine;
   if (!line) throw new Error('catalog/trivia-pool.json has no fame line; run node scripts/trivia/pool.js');
   const away = foreign || new Set();
@@ -110,6 +110,9 @@ function gather(db, pool, foreign, overrides) {
   const getCast = db.prepare("select sp.person_id as id, p.name, sp.role, sp.episodes from show_people sp join people p on p.tmdb_id = sp.person_id where sp.show_slug = ? and sp.kind = 'cast' order by sp.episodes desc, p.name");
   // Episode names from TVmaze only: a self-listed show's "names" are its upload file names.
   const getEps = db.prepare("select season, number, name, airdate from episodes where show_slug = ? and name is not null and (why is null or why not like 'self-listed%') order by season, number");
+  // Clips: only episodes VoidTV plays today (LIVE: matched with confidence), as MP4 files a browser plays with sound (match.js has
+  // already swapped a silent original for the Archive's own .ia.mp4 copy), at least five minutes long.
+  const getClips = db.prepare("select season, number, name, item, file, url, seconds from episodes where show_slug = ? and state = 'LIVE' and playable = 1 and seconds >= 300 and format in ('MPEG4', 'h.264', 'h.264 IA') and lower(url) like '%.mp4' order by season, number");
   for (const [slug, p] of showBand) {
     const s = getShow.get(slug);
     if (!s) continue;
@@ -117,13 +120,14 @@ function gather(db, pool, foreign, overrides) {
     s.cast = getCast.all(slug);
     s.castRead = fileDay(path.join(ROOT, 'catalog', 'people', slug + '.json'));
     s.episodes = getEps.all(slug);
+    s.clips = getClips.all(slug);
     shows.push(s);
   }
   // How many shows carry each episode name, over the whole catalog (not just the pool), so "only one show" is true.
   const nameShows = new Map();
   for (const r of db.prepare('select lower(trim(name)) as n, count(distinct show_slug) as c from episodes where name is not null group by lower(trim(name))').iterate()) nameShows.set(r.n, r.c);
   const films = [];
-  const getFilm = db.prepare('select tmdb_id as tmdbId, kind, title, year, hunted_at as huntedAt from movies where tmdb_id = ?');
+  const getFilm = db.prepare('select tmdb_id as tmdbId, kind, title, year, hunted_at as huntedAt, state, playable, item, url, seconds, format from movies where tmdb_id = ?');
   for (const [id, p] of filmBand) {
     const f = getFilm.get(+id);
     if (!f) continue;
@@ -134,7 +138,15 @@ function gather(db, pool, foreign, overrides) {
   // Only games on PLAY's shelf (play/shelf/index.json), read from their full cards.
   const onShelf = new Set(((readJson(path.join(ROOT, 'play', 'shelf', 'index.json'), {}) || {}).games || []).map((g) => g.id));
   const cards = fs.existsSync(cardsDir) ? fs.readdirSync(cardsDir).filter((f) => f.endsWith('.json')).map((f) => readJson(path.join(cardsDir, f), null)).filter((c) => c && onShelf.has(c.id)) : [];
-  return { shows, films, cards, nameShows };
+  return { shows, films, cards, nameShows, metaOf: metaOf || archiveMeta };
+}
+
+// An Archive item's record as the catalog cached it (catalog/cache/meta-<item>.json): its licence mark and when it was read.
+function archiveMeta(item) {
+  const f = path.join(ROOT, 'catalog', 'cache', 'meta-' + item + '.json');
+  const m = readJson(f, null);
+  const md = (m && m.metadata) || {};
+  return { licenseurl: Array.isArray(md.licenseurl) ? md.licenseurl[0] : md.licenseurl || null, read: fileDay(f) };
 }
 
 // ---------- the templates ----------
@@ -195,7 +207,7 @@ function whoPlayed(s, maxPerShow) {
     if ((c.episodes || 0) < 5 || !usablePart(c.role)) continue;
     const voice = /\(voice\)\s*$/i.test(c.role);
     const part = c.role.replace(/\s*\(voice\)\s*$/i, '').trim();
-    if (parts.get(norm(part)) !== 1) continue;
+    if (parts.get(norm(part)) !== 1 || sameish(part, s.name)) continue; // "Who played Punky Brewster on Punky Brewster?" asks nothing
     const id = 'tv-cast-' + s.slug + '-' + c.id;
     const foils = [];
     for (const o of shuffle(s.cast.filter((x) => x.id !== c.id && (x.episodes || 0) >= 3), rng(id))) {
@@ -236,6 +248,67 @@ function whichShow(s, shows, nameShows, maxPerShow) {
       about: { show: s.slug, season: e.season, number: e.number, foils: foils.map((f) => f.slug) } });
   }
   return out;
+}
+
+// ---------- clips, pictures and sound (plan T7) ----------
+// The question names what VoidTV matched an Archive file to (an episode VoidTV plays today, matched with confidence). The clip
+// plays straight from archive.org; nothing is copied. A few seconds from the middle of the file (a quarter to three quarters in,
+// past the titles and before the credits). An item whose own Archive record carries a public domain mark (CC0 or the Public
+// Domain Mark) is flagged pd, for the Public night switch: that mark is the uploader's own statement on the Archive.
+const CLIP_SECS = 10;
+const PD_MARK = /creativecommons\.org\/publicdomain\/(zero|mark)\//i;
+const CLIP_KINDS = [
+  ['clip', 'Which show is this clip from?', 'video'],
+  ['still', 'Which show is this picture from?', 'still'],
+  ['listen', 'Listen. Which show is this?', 'audio'],
+];
+function mmss(t) { const s = Math.max(0, Math.round(t)); return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0'); }
+function clipStart(id, seconds) { return Math.round(seconds * (0.25 + 0.5 * rng(id + '|t')())); }
+
+function clipQs(s, shows, metaOf) {
+  const out = [];
+  const eps = shuffle(s.clips || [], rng('clips-' + s.slug));
+  const usedItems = new Set();
+  let k = 0;
+  for (const e of eps) {
+    if (k >= CLIP_KINDS.length) break;
+    if (usedItems.has(e.item) && eps.some((x) => !usedItems.has(x.item))) continue;
+    usedItems.add(e.item);
+    const [round, ask, kind] = CLIP_KINDS[k++];
+    const id = 'clip-' + round + '-' + s.slug + '-' + e.season + '-' + e.number;
+    const foils = showFoils(s, shows, 3, rng(id)).slice(0, 3);
+    if (foils.length < 3) continue;
+    const start = clipStart(id, e.seconds);
+    const meta = metaOf(e.item) || {};
+    const pd = PD_MARK.test(meta.licenseurl || '');
+    const { choices, answer } = choicesOf(id, s.name, foils.map((f) => f.name));
+    out.push({ id, category: 'tv', round, band: foils.concat([s]).some((x) => x.band === 'after-dark') ? 'after-dark' : 'family', q: ask, choices, answer,
+      media: { kind, url: e.url, start, end: start + CLIP_SECS, item: e.item }, pd,
+      source: { site: 'Internet Archive', url: 'https://archive.org/details/' + e.item,
+        fact: s.name + ', season ' + e.season + ', episode ' + e.number + (e.name ? ' "' + e.name + '"' : '') + ', at ' + mmss(start) + (pd ? '; the item is marked public domain on the Archive' : ''), read: meta.read },
+      about: { show: s.slug, season: e.season, number: e.number, foils: foils.map((f) => f.slug) } });
+  }
+  return out;
+}
+
+// A TV movie from ten seconds of it. Wrong answers are other TV movies of a band this question allows, near in years.
+function filmClip(f, films, metaOf) {
+  if (f.state !== 'LIVE' || !f.playable || !f.url || !/\.mp4$/i.test(f.url) || !(f.seconds >= 600) || !/^(MPEG4|h\.264|h\.264 IA)$/.test(f.format || '')) return [];
+  const id = 'clip-film-' + f.tmdbId;
+  const y = parseInt(f.year, 10) || 2000;
+  const ok = films.filter((o) => o.tmdbId !== f.tmdbId && (f.band === 'after-dark' || o.band === 'family') && !sameish(o.title, f.title));
+  const near = ok.filter((o) => Math.abs((parseInt(o.year, 10) || 0) - y) <= 6);
+  const foils = [];
+  for (const o of shuffle(near.length >= 3 ? near : ok, rng(id))) { if (!foils.some((x) => sameish(x.title, o.title))) foils.push(o); if (foils.length === 3) break; }
+  if (foils.length < 3) return [];
+  const start = clipStart(id, f.seconds);
+  const meta = metaOf(f.item) || {};
+  const pd = PD_MARK.test(meta.licenseurl || '');
+  const { choices, answer } = choicesOf(id, f.title, foils.map((o) => o.title));
+  return [{ id, category: 'movies', round: 'film-clip', band: foils.concat([f]).some((x) => x.band === 'after-dark') ? 'after-dark' : 'family', q: 'Which TV movie is this clip from?', choices, answer,
+    media: { kind: 'video', url: f.url, start, end: start + CLIP_SECS, item: f.item }, pd,
+    source: { site: 'Internet Archive', url: 'https://archive.org/details/' + f.item, fact: f.title + ' (' + f.year + '), at ' + mmss(start) + (pd ? '; the item is marked public domain on the Archive' : ''), read: meta.read },
+    about: { film: f.tmdbId, foils: foils.map((o) => o.tmdbId) } }];
 }
 
 function filmYear(f) {
@@ -285,9 +358,9 @@ function gameQs(cards) {
 function makeQuestions(data) {
   const qs = [];
   for (const s of data.shows) {
-    qs.push(...firstAired(s), ...premieredOn(s, data.shows), ...whoPlayed(s, 4), ...whichShow(s, data.shows, data.nameShows, 3));
+    qs.push(...firstAired(s), ...premieredOn(s, data.shows), ...whoPlayed(s, 4), ...whichShow(s, data.shows, data.nameShows, 3), ...clipQs(s, data.shows, data.metaOf || archiveMeta));
   }
-  for (const f of data.films) qs.push(...filmYear(f));
+  for (const f of data.films) qs.push(...filmYear(f), ...filmClip(f, data.films, data.metaOf || archiveMeta));
   qs.push(...gameQs(data.cards));
   return qs.filter((q) => screenOk(q.band, [q.q, ...q.choices]));
 }
@@ -304,7 +377,8 @@ function write(qs, meta) {
       const part = list.slice(i, i + PER_FILE);
       const name = cat + '-' + (i / PER_FILE + 1) + '.json';
       fs.writeFileSync(path.join(OUT, name), JSON.stringify(part));
-      files.push({ file: name, category: cat, count: part.length, family: part.filter((q) => q.band === 'family').length, kids: part.filter((q) => q.kids).length });
+      files.push({ file: name, category: cat, count: part.length, family: part.filter((q) => q.band === 'family').length, kids: part.filter((q) => q.kids).length,
+        media: part.filter((q) => q.media).length, mediaFamily: part.filter((q) => q.media && q.band === 'family').length });
     }
   }
   const rounds = {};
@@ -325,13 +399,13 @@ function main() {
   const files = write(qs, { builtAt: new Date().toISOString(), fameLine: pool.fameLine });
   console.log('Questions: ' + qs.length + ' in ' + files.length + ' files (' + data.shows.length + ' shows, ' + data.films.length + ' films, ' + data.cards.length + ' games)');
   const { checkAll } = require('./check');
-  const bad = checkAll(qs, db, pool, data.cards);
+  const bad = checkAll(qs, db, pool, data.cards, data.metaOf);
   db.close();
   if (bad.length) { console.error(bad.length + ' questions fail the checker:'); for (const b of bad.slice(0, 30)) console.error('  ' + b.id + ': ' + b.why); process.exit(1); }
   console.log('Checker: every question passes.');
 }
 
-module.exports = { screenOk, looksLikeGuests, guestShow, hash, rng, shuffle, norm, sameish, clean, nearYears, usablePart, usableEpisodeName, choicesOf, agreedNetwork, makerName,
+module.exports = { clipQs, filmClip, archiveMeta, PD_MARK, CLIP_SECS, mmss, screenOk, looksLikeGuests, guestShow, hash, rng, shuffle, norm, sameish, clean, nearYears, usablePart, usableEpisodeName, choicesOf, agreedNetwork, makerName,
   firstAired, premieredOn, whoPlayed, whichShow, filmYear, gameQs, makeQuestions, gather };
 // Exported before main runs, so the checker (which needs these helpers) can load while main is running.
 if (require.main === module) main();

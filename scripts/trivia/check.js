@@ -10,11 +10,11 @@
 'use strict';
 const fs = require('fs');
 const path = require('path');
-const { norm, sameish, agreedNetwork, makerName, screenOk } = require('./bank');
+const { norm, sameish, agreedNetwork, makerName, screenOk, archiveMeta, PD_MARK, CLIP_SECS } = require('./bank');
 
 const ROOT = path.join(__dirname, '..', '..');
 
-function checkAll(qs, db, pool, cards) {
+function checkAll(qs, db, pool, cards, metaOf) {
   const bad = [];
   const fail = (q, why) => bad.push({ id: q.id, why });
   const line = pool.fameLine;
@@ -34,6 +34,17 @@ function checkAll(qs, db, pool, cards) {
   const cardById = new Map((cards || []).map((c) => [c.id, c]));
   const ids = new Set();
   const allowed = (band, slug) => { const b = inPool.get(slug); return b && (band === 'after-dark' || b === 'family'); };
+  const clipAt = db.prepare('select state, url, seconds from episodes where show_slug = ? and season = ? and number = ?');
+  const filmClipAt = db.prepare('select state, url, seconds, title from movies where tmdb_id = ?');
+  const meta = metaOf || archiveMeta;
+  // A clip plays from archive.org only, for CLIP_SECS, inside the file; its public domain flag is what the item's record says.
+  function checkMedia(q, seconds) {
+    const m = q.media || {};
+    if (!/^https:\/\/archive\.org\/download\//.test(m.url || '')) fail(q, 'the clip does not play from archive.org');
+    if (!(m.start >= 0) || m.end - m.start !== CLIP_SECS || m.end > seconds) fail(q, 'the clip is not inside the file');
+    if (!['video', 'still', 'audio'].includes(m.kind)) fail(q, 'unknown clip kind');
+    if (!!q.pd !== PD_MARK.test((meta(m.item) || {}).licenseurl || '')) fail(q, 'the public domain flag does not match the Archive record');
+  }
 
   for (const q of qs) {
     if (ids.has(q.id)) fail(q, 'the same id twice');
@@ -42,7 +53,7 @@ function checkAll(qs, db, pool, cards) {
     if (new Set(q.choices.map((c) => norm(c) || c)).size !== 4) fail(q, 'two choices are the same');
     if (!(q.answer >= 0 && q.answer < 4)) { fail(q, 'answer is not a choice'); continue; }
     if (!q.source || !/^https:\/\//.test(q.source.url || '') || !q.source.site || !q.source.fact) fail(q, 'no source');
-    if (/[–—]/.test(q.q + q.choices.join(''))) fail(q, 'a dash in the text');
+    if (/[\u2013\u2014]/.test(q.q + q.choices.join(''))) fail(q, 'a dash in the text');
     if (!['family', 'after-dark'].includes(q.band)) fail(q, 'no band');
     if (!screenOk(q.band, [q.q, ...q.choices])) fail(q, 'a word this band never shows');
     const right = q.choices[q.answer];
@@ -82,6 +93,33 @@ function checkAll(qs, db, pool, cards) {
           if (!fr || !wrong.includes(fr.name)) fail(q, 'wrong answers do not match their shows');
           if (holders.has(f)) fail(q, 'a wrong-answer show had that episode too');
         }
+      }
+    } else if (q.round === 'clip' || q.round === 'still' || q.round === 'listen') {
+      // The clip is a file VoidTV plays today for that very episode, the right answer is its show, and the wrong answers are
+      // other shows this band allows.
+      if (!allowed(q.band, a.show)) fail(q, 'the show is not in this band of the pool');
+      const s = showRow.get(a.show);
+      const e = clipAt.get(a.show, a.season, a.number);
+      if (!s || !e || e.state !== 'LIVE' || e.url !== (q.media || {}).url) { fail(q, 'the clip is not a file VoidTV plays for that episode'); continue; }
+      if (s.name !== right) fail(q, 'the answer is not the clip\'s show');
+      checkMedia(q, e.seconds);
+      for (const f of a.foils || []) {
+        if (!allowed(q.band, f)) fail(q, 'a wrong-answer show is outside this band of the pool');
+        const fr = showRow.get(f);
+        if (!fr || !wrong.includes(fr.name)) fail(q, 'wrong answers do not match their shows');
+        if (f === a.show) fail(q, 'a wrong answer is the clip\'s own show');
+      }
+    } else if (q.round === 'film-clip') {
+      if (!filmPool.has(String(a.film)) || (q.band === 'family' && filmPool.get(String(a.film)) !== 'family')) fail(q, 'the film is not in this band of the pool');
+      const f = filmClipAt.get(a.film);
+      if (!f || f.state !== 'LIVE' || f.url !== (q.media || {}).url) { fail(q, 'the clip is not the file VoidTV plays for that film'); continue; }
+      if (f.title !== right) fail(q, 'the answer is not the clip\'s film');
+      checkMedia(q, f.seconds);
+      for (const id of a.foils || []) {
+        const o = film.get(id);
+        if (!o || !wrong.includes(o.title)) fail(q, 'wrong answers do not match their films');
+        if (!filmPool.has(String(id)) || (q.band === 'family' && filmPool.get(String(id)) !== 'family')) fail(q, 'a wrong-answer film is outside this band of the pool');
+        if (o && sameish(o.title, f.title)) fail(q, 'a wrong answer is the same title');
       }
     } else if (q.round === 'film-year') {
       if (!filmPool.has(String(a.film)) || (q.band === 'family' && filmPool.get(String(a.film)) !== 'family')) fail(q, 'the film is not in this band of the pool');

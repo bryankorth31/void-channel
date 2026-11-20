@@ -47,6 +47,9 @@
       categories: [...document.querySelectorAll('input[name="cat"]:checked')].map((e) => e.value),
       count: +val('count') || 20,
       secs: +(val('secs') || 0),
+      clips: !!document.querySelector('input[name="clips"]:checked'),
+      publicNight: val('where') === 'public',
+      publicClips: val('where') === 'public' && !!document.querySelector('input[name="pubclips"]:checked'),
     };
   }
 
@@ -65,7 +68,10 @@
     if (!index) return;
     const o = opts();
     const files = index.files.filter((f) => o.categories.includes(f.category));
-    const n = files.reduce((s, f) => s + (o.band === 'family' ? f.family : f.count), 0);
+    const noMedia = !o.clips || (o.publicNight && !o.publicClips);
+    // The public-night clips switch only means something on a public night.
+    $('pubclips-l').hidden = !o.publicNight;
+    const n = files.reduce((s, f) => s + (o.band === 'family' ? f.family - (noMedia ? f.mediaFamily || 0 : 0) : f.count - (noMedia ? f.media || 0 : 0)), 0);
     $('avail').textContent = o.categories.length ? n.toLocaleString() + ' questions to pick from' : 'Pick at least one topic';
     $('start').disabled = !o.categories.length || !n;
   }
@@ -234,6 +240,47 @@
 
   function stopClock() { if (timer) cancelAnimationFrame(timer); timer = null; }
 
+  // ---------- clips, pictures and sound: played straight from archive.org ----------
+  const vid = $('vid');
+  let clip = null;          // the media of the question on screen
+  let clockWaiting = false; // the clock starts when the clip is ready (or after 8 seconds, whatever happens)
+  function stopMedia() {
+    clip = null; clockWaiting = false;
+    vid.onloadeddata = vid.onplaying = vid.onerror = vid.ontimeupdate = null;
+    try { vid.pause(); } catch (e) { /* fine */ }
+    vid.removeAttribute('src'); vid.load();
+    $('media').hidden = true; $('media').classList.remove('listen'); $('ear').hidden = true; $('mnote').textContent = '';
+    $('stage').classList.remove('with-media');
+  }
+  function playClip(fromStart) {
+    if (!clip || clip.kind === 'still') return;
+    try { vid.currentTime = clip.start; } catch (e) { /* fine */ }
+    vid.play().catch(() => { $('mnote').textContent = 'Press R or click the picture to play the clip.'; });
+  }
+  function showMedia(m) {
+    clip = m;
+    const box = $('media');
+    box.hidden = false;
+    box.classList.toggle('listen', m.kind === 'audio');
+    $('ear').hidden = m.kind !== 'audio';
+    $('stage').classList.add('with-media');
+    $('mnote').textContent = 'Loading from the Internet Archive';
+    clockWaiting = true;
+    const ready = () => { $('mnote').textContent = ''; if (clockWaiting) { clockWaiting = false; startClock(); } };
+    setTimeout(() => { if (clip === m && clockWaiting) { clockWaiting = false; startClock(); } }, 8000);
+    vid.onloadeddata = () => { if (clip !== m) return; if (m.kind === 'still') { vid.pause(); ready(); } else playClip(); };
+    vid.onplaying = () => { if (clip === m) ready(); };
+    vid.ontimeupdate = () => { if (clip === m && m.kind !== 'still' && vid.currentTime >= m.end) vid.pause(); };
+    vid.onerror = () => { if (clip !== m) return; $('mnote').textContent = 'This clip did not load from the Internet Archive. Enter shows the answer.'; if (clockWaiting) { clockWaiting = false; startClock(); } };
+    vid.muted = m.kind === 'still';
+    vid.src = m.url + '#t=' + m.start + ',' + m.end;
+    vid.load();
+  }
+  function startClock() {
+    if (phase !== 'ask' || !game || !game.opts.secs) return;
+    leftMs = game.opts.secs * 1000; endsAt = performance.now() + leftMs; tick();
+  }
+
   // The question as a phone gets it: the answers, and the question too when it fits in the relay's 1 KB.
   function questionMsg(pick) {
     const q = game.qs[game.at];
@@ -262,6 +309,8 @@
       ol.appendChild(li);
     });
     $('source').hidden = true;
+    $('hint').classList.remove('warn'); $('board-hint').classList.remove('warn');
+    stopMedia();
     const secs = game.opts.secs;
     $('clock').hidden = !secs;
     $('hint').textContent = (game.opts.phones ? 'Answer on your phone. ' : '') + (secs ? 'Enter shows the answer early. P pauses.' : 'Enter shows the answer.');
@@ -271,7 +320,9 @@
       send('all', questionMsg(null));
     }
     showWhere();
-    if (secs) { leftMs = secs * 1000; endsAt = performance.now() + leftMs; tick(); }
+    if (q.media) showMedia(q.media);
+    else if (secs) startClock();
+    else $('fill').style.width = '0%';
   }
 
   function tick() {
@@ -295,6 +346,9 @@
     const q = game.qs[game.at];
     const lis = [...$('answers').children];
     lis.forEach((li, i) => li.classList.add(i === q.answer ? 'right' : 'wrong'));
+    // A sound question shows its picture with the answer; a clip stops where it is.
+    clockWaiting = false;
+    if (clip) { $('media').classList.remove('listen'); $('ear').hidden = true; if (clip.kind !== 'still') { try { vid.pause(); } catch (e) { /* fine */ } } }
     $('fill').style.width = '0%';
     const s = q.source || {};
     const src = $('source');
@@ -332,6 +386,7 @@
   }
 
   function board() {
+    stopMedia();
     phase = 'board';
     $('board-h').textContent = 'Scores after ' + (game.at + 1) + ' of ' + game.qs.length;
     drawRanks($('ranks'), 10);
@@ -356,6 +411,7 @@
   }
 
   function finish() {
+    stopMedia();
     stopClock();
     phase = 'done';
     const withPhones = game.opts.phones && room.players.size;
@@ -373,6 +429,7 @@
   }
 
   function backToSetup() {
+    stopMedia();
     stopClock();
     if (room.ws) send('all', { type: 't-wait', text: 'The game was stopped. Wait here for the next one.' });
     phase = 'setup'; game = null;
@@ -405,6 +462,7 @@
   document.addEventListener('keydown', (e) => {
     if (e.target && /^(INPUT|SELECT|TEXTAREA)$/.test(e.target.tagName) && e.key !== 'Enter') return;
     if (e.key === 'f' || e.key === 'F') { full(); return; }
+    if ((e.key === 'r' || e.key === 'R') && clip && phase === 'ask') { playClip(); return; }
     const act = G.keyAction(e);
     if (!act) return;
     if (phase === 'setup') { if (act === 'next' && e.key === 'Enter' && !$('start').disabled && e.target === document.body) { e.preventDefault(); start(); } return; }
@@ -422,7 +480,7 @@
   $('change').addEventListener('click', backToSetup);
   $('pause').addEventListener('click', pause);
   $('full').addEventListener('click', full);
-  $('stage').addEventListener('click', (e) => { if (!e.target.closest('a') && !paused) next(); });
+  $('stage').addEventListener('click', (e) => { if (e.target.closest('#media')) { if (phase === 'ask') playClip(); return; } if (!e.target.closest('a') && !paused) next(); });
   $('board').addEventListener('click', () => next());
   for (const i of document.querySelectorAll('.setup input')) i.addEventListener('change', showAvailable);
   addEventListener('pagehide', closeRoom);

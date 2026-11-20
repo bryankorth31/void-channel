@@ -6,6 +6,7 @@
   const ROUND_NAMES = {
     'first-aired': 'First aired', network: 'Network', cast: 'Who played it', episode: 'Name the show',
     'film-year': 'TV movies', 'game-year': 'Game year', 'game-maker': 'Who made it',
+    clip: 'Name the show from a clip', still: 'Name the show from a picture', listen: 'Name the show by ear', 'film-clip': 'Name the TV movie',
   };
   const CATEGORY_NAMES = { tv: 'TV shows', movies: 'TV movies', games: 'Games' };
 
@@ -19,7 +20,11 @@
   // The questions a deck allows: family decks take family questions only; after dark takes every question.
   function allowed(questions, opts) {
     const cats = new Set(opts.categories || []);
-    return questions.filter((q) => cats.has(q.category) && (opts.band === 'after-dark' || q.band === 'family'));
+    // Clips, pictures and sound only when asked for. On a public night only when the host switches them on as their own call
+    // (Bryan, 20 Nov 2026: "i want it as a toggle to choose"): showing someone's show to a crowd is a public performance, and an
+    // Archive item's "public domain" mark is only its uploader's word (many such marks sit on recent shows).
+    return questions.filter((q) => cats.has(q.category) && (opts.band === 'after-dark' || q.band === 'family')
+      && (!q.media || (opts.clips !== false && (!opts.publicNight || opts.publicClips === true))));
   }
 
   // A game: `count` questions, the kinds of question taking turns so ten cast questions never come in a row, no subject
@@ -34,6 +39,9 @@
     for (const q of shuffle(source, rand)) { if (!byRound.has(q.round)) byRound.set(q.round, []); byRound.get(q.round).push(q); }
     const rounds = shuffle([...byRound.keys()], rand);
     const out = [], used = new Set();
+    // Clips and pictures make at most a quarter of a game: they take longer, and a game is mostly talking.
+    const mediaCap = Math.ceil(opts.count / 4);
+    let media = 0;
     let progress = true;
     while (out.length < opts.count && progress) {
       progress = false;
@@ -41,9 +49,11 @@
         if (out.length >= opts.count) break;
         const list = byRound.get(r);
         while (list.length) {
-          const q = list.shift();
+          const q = list[0];
+          if (q.media && media >= mediaCap) break;
+          list.shift();
           if (used.has(subject(q))) continue;
-          used.add(subject(q)); out.push(q); progress = true; break;
+          used.add(subject(q)); out.push(q); if (q.media) media++; progress = true; break;
         }
       }
     }

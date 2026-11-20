@@ -17,7 +17,7 @@ test('the home page carries the Trivia row only when the build hands it question
   const row = src.slice(src.indexOf('function triviaRow()'), src.indexOf('function triviaRow()') + 2000);
   for (const q of ['crowd=family', 'crowd=family&topics=tv', 'crowd=family&topics=games', 'crowd=after-dark', 'mode=loud']) assert.ok(row.includes("'" + q + "'"), q);
   assert.match(row, /href="'\+BASE\+'trivia\/\?'\+q\+'" title="Start /);
-  assert.ok(!/[–—]/.test(row));
+  assert.ok(!/[\u2013\u2014]/.test(row));
 });
 
 test('the host page reads a deck from its address', () => {

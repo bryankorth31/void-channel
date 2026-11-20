@@ -45,6 +45,15 @@
         <label title="Who played whom, first air years, networks, episode names"><input type="checkbox" name="cat" value="tv" checked> TV shows</label>
         <label title="What year a TV movie or special first aired"><input type="checkbox" name="cat" value="movies" checked> TV movies</label>
         <label title="Old games on VoidTV PLAY: who made them and when"><input type="checkbox" name="cat" value="games" checked> Games</label>
+        <label title="Ten seconds of a show or TV movie, a still picture, or just its sound, played from the Internet Archive"><input type="checkbox" name="clips" value="on" checked> Clips and pictures</label>
+      </div>
+    </div>
+    <div class="field">
+      <span class="label">Where</span>
+      <div class="choices" role="radiogroup" aria-label="Where the game is played">
+        <label title="At home or with friends: clips play as they do on voidtv.net"><input type="radio" name="where" value="home" checked> Home</label>
+        <label title="A crowd in a public place: no clips, pictures or sound unless you switch them on"><input type="radio" name="where" value="public"> Public night</label>
+        <label class="pubclips" id="pubclips-l" hidden title="Your call: play the 10-second clips, pictures and sound at this public night too. Showing someone's show to a crowd is a public performance; short quiz clips are the strongest shape for fair use, but no length is automatically safe"><input type="checkbox" name="pubclips" value="on"> Clips at this public night</label>
       </div>
     </div>
     <div class="field">
@@ -100,7 +109,14 @@
       <span class="kind" id="kind"></span>
     </div>
     <h2 class="q" id="q"></h2>
-    <ol class="answers" id="answers"></ol>
+    <div class="body">
+      <div class="media" id="media" hidden title="Click or press R to play it again">
+        <video id="vid" playsinline preload="auto"></video>
+        <div class="ear" id="ear" hidden><span>Listen</span></div>
+        <p class="mnote" id="mnote"></p>
+      </div>
+      <ol class="answers" id="answers"></ol>
+    </div>
     <div class="clock" id="clock"><div class="fill" id="fill"></div></div>
     <p class="source" id="source" hidden></p>
     <p class="hint" id="hint"></p>

@@ -74,7 +74,7 @@ test('the CASH donation link is the project setting, with the standard line', ()
 
 test('the page keeps the house rules: no dashes, a back arrow, a tip on every control, the TMDB credit', () => {
   const html = read('trivia/index.html');
-  for (const f of ['trivia/index.html', 'trivia/src/host.js', 'trivia/src/game.js', 'trivia/trivia.css']) assert.ok(!/[–—]/.test(read(f)), f);
+  for (const f of ['trivia/index.html', 'trivia/src/host.js', 'trivia/src/game.js', 'trivia/trivia.css']) assert.ok(!/[\u2013\u2014]/.test(read(f)), f);
   assert.match(html, /id="back"[^>]*title=/);
   for (const m of html.matchAll(/<(button|label)\b[^>]*>/g)) assert.match(m[0], /title=/, m[0]);
   assert.match(html, /This product uses the TMDB API but is not endorsed or certified by TMDB/);
@@ -148,4 +148,29 @@ test('the host opens a trivia room on the shared relay and loads the shared QR m
   assert.match(host, /\/api\/room\/open\?kind=trivia/);
   assert.match(read('trivia/index.html'), /src="\/play\/src\/qr\.js"/);
   assert.match(read('trivia/src/phone.js'), /\/api\/room\/' \+ code \+ '\/join\?t='/);
+});
+
+// ---- Clips, pictures and sound (plan T7) ----
+test('clips: only when Clips is on, never on a public night, at most a quarter of a game', () => {
+  const qs = bank();
+  for (let i = 0; i < 30; i++) qs.push({ id: 'm' + i, category: 'tv', round: ['clip', 'still', 'listen'][i % 3], band: 'family', about: { show: 'media-' + i }, media: { kind: 'video', url: 'https://archive.org/download/x/y.mp4', start: 100, end: 110 }, pd: i % 2 === 0, choices: ['a', 'b', 'c', 'd'], answer: 0 });
+  const home = G.pickGame(qs, { band: 'family', categories: ['tv'], count: 20, clips: true }, G.seeded(5));
+  const media = home.filter((q) => q.media).length;
+  assert.ok(media >= 1 && media <= 5, media + ' clips in 20');
+  assert.equal(G.pickGame(qs, { band: 'family', categories: ['tv'], count: 20, clips: false }, G.seeded(5)).filter((q) => q.media).length, 0);
+  assert.equal(G.pickGame(qs, { band: 'family', categories: ['tv'], count: 20, clips: true, publicNight: true }, G.seeded(5)).filter((q) => q.media).length, 0, 'not even items the Archive marks public domain');
+  // Bryan, 20 Nov 2026: "i want it as a toggle to choose": the host may switch clips on for a public night.
+  assert.ok(G.pickGame(qs, { band: 'family', categories: ['tv'], count: 20, clips: true, publicNight: true, publicClips: true }, G.seeded(5)).some((q) => q.media));
+  assert.equal(G.pickGame(qs, { band: 'family', categories: ['tv'], count: 20, clips: false, publicNight: true, publicClips: true }, G.seeded(5)).filter((q) => q.media).length, 0, 'Clips off still means off');
+});
+
+test('the host plays clips from archive.org itself, waits for them before the clock, and has the Public night switch', () => {
+  const host = read('trivia/src/host.js');
+  assert.match(host, /vid\.src = m\.url \+ '#t=' \+ m\.start \+ ',' \+ m\.end;/);
+  assert.match(host, /publicNight: val\('where'\) === 'public'/);
+  assert.match(host, /clockWaiting/);
+  const html = read('trivia/index.html');
+  assert.match(html, /name="where" value="public"/);
+  assert.match(html, /name="clips" value="on" checked/);
+  assert.match(html, /id="pubclips-l" hidden title="[^"]+"><input type="checkbox" name="pubclips" value="on">/, 'off by default and shown only for a public night');
 });
