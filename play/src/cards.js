@@ -85,16 +85,22 @@
     Enter: 'Enter', Space: 'Space', Escape: 'Esc', ShiftLeft: 'Shift', ShiftRight: 'right Shift', Backspace: 'Backspace' };
   const keyName = (k) => KEY_NAMES[k] || k.replace(/^Key|^Digit/, '');
   const DIRS = ['Up', 'Down', 'Left', 'Right'];
+  // Buttons by their place on the pad, the letter after it: a Nintendo-style pad has B at the bottom and a PlayStation
+  // pad shows shapes, but every pad has a bottom button.
+  const PLACES = { A: 'the bottom button (A)', B: 'the right button (B)', X: 'the left button (X)', Y: 'the top button (Y)' };
+  // Directions named from what they are: all four is "the d-pad", fewer are named ("d-pad Down", "d-pad Left or Right").
+  const dirWords = (set) => (set.size >= 4 ? 'the d-pad' : 'd-pad ' + DIRS.filter((d) => set.has(d)).join(' or '));
   const join = (xs) => (xs.length < 3 ? xs.join(' or ') : xs.slice(0, -1).join(', ') + ' or ' + xs[xs.length - 1]);
   // How to do one action on each kind of input: { pad, keyboard, touch } in plain words ('' when that input cannot).
   function seatsOf(card, a) {
     const codes = codesOf(a);
     const range = a.to ? keyName(codes[0]) + ' to ' + keyName(codes[codes.length - 1]) : null;
-    if (codes[0] === '@keyboard') return { pad: 'Y', keyboard: 'type', touch: 'Keyboard' };
+    if (codes[0] === '@keyboard') return { pad: PLACES.Y, keyboard: 'type', touch: 'Keyboard' };
     const map = gamepadMap(card), keys = keyMap(card);
     const pad = [], dirs = new Set();
     for (const [btn, code] of Object.entries(map)) if (codes.includes(code)) (DIRS.includes(btn) ? dirs.add(btn) : pad.push(btn));
-    if (dirs.size) pad.unshift('the d-pad');
+    const padWords = pad.map((b) => PLACES[b] || b);
+    if (dirs.size) padWords.unshift(dirWords(dirs));
     const kb = keys ? Object.entries(keys).filter(([, v]) => codes.includes(v)).map(([k]) => keyName(k)) : codes.map(keyName);
     const labels = (card.controls && card.controls.labels) || {};
     const touchKeys = new Set([...(card.controls.keys || []), ...(card.controls.numbers || [])]);
@@ -106,10 +112,12 @@
       : arrows.length === 2 && kb.length === 2 ? [arrows[0].replace(/ arrow$/, '') + ' or ' + arrows[1]] : kb;
     // A gamepad reaches only part of a range (four shoulder buttons for nine numbers): say which part.
     const padReach = range && pad.length ? ' (' + keyName(map[pad[0]]) + ' to ' + keyName(map[pad[pad.length - 1]]) + ')' : '';
+    // On screen: the d-pad's own directions, named the same way.
+    const screenDirs = new Set(codes.map((c) => (/^(?:P[1-4]:)?(Up|Down|Left|Right)$/.exec(c) || /^Arrow(Up|Down|Left|Right)$/.exec(c) || [])[1]).filter(Boolean));
     return {
-      pad: pad.length ? join(pad) + padReach : '',
+      pad: padWords.length ? join(padWords) + padReach : '',
       keyboard: range && !keys ? range : kbWords.length === 1 ? kbWords[0] : join(kbWords),
-      touch: range ? range : dpadOnScreen && !onScreen.length ? 'the d-pad' : join(onScreen),
+      touch: range ? range : dpadOnScreen && !onScreen.length ? dirWords(screenDirs) : join(onScreen),
     };
   }
   // One line per action: "Jump: A on a gamepad, Z on the keyboard, B on screen". device narrows it to one input.
@@ -119,7 +127,7 @@
       const parts = device ? [s[device]].filter(Boolean)
         : [s.pad && s.pad + ' on a gamepad', s.keyboard && s.keyboard + ' on the keyboard', s.touch && s.touch + ' on screen'].filter(Boolean);
       return { do: a.do, how: parts.join(', ') };
-    });
+    }).filter((l) => l.how);
   }
   // The small word under a touch key: the action that key does, if the card names one.
   function actionFor(card, code) {
