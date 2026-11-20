@@ -210,38 +210,80 @@ html,body{height:100%;overflow:hidden;overscroll-behavior:none}
 body.padmode .bar{transform:translateY(-100%);transition:transform .2s}
 body.padmode.showbar .bar,body.padmode .bar:focus-within{transform:none}
 /* The cross is never on the picture (it covered Tetris's own text): place() puts it in free room off the picture. */
-/* ---- The handheld shell (Bryan, 20 Nov 2026: lexROM's original Game Boy look, "Phones, both ways"). ----
-   A phone with the touch keys on, while a game plays (body.shell, set in place()). The look follows lexROM's reader:
-   a plastic body lit from the top left, a deep screen bezel, raised keys with a dark under-edge that press down, a
-   cross d-pad and a teal power light. The bar steps away during play; a tap on the picture brings it back. */
+/* ---- The handheld shell (Bryan, 20 Nov 2026: his University Archives handheld sheets, "more depth and more Void TV
+   esque ness"). A phone with the touch keys on, while a game plays (body.shell, set in place()). The sheets' worn
+   aged-navy plastic over VoidTV's midnight, with grain, faint scratches and a few rust specks; a deep stepped bezel
+   with a neon line under the picture; rubber keys in electrical black; A red and B yellow on a dark slanted base, the
+   other face buttons in VoidTV's pink and cyan; a neon VOIDTV PLAY plate when there is room. The bar steps away during
+   play; a tap on the picture brings it back. ---- */
 body.shell .stage{background:
-  radial-gradient(ellipse at 30% 20%,rgba(60,55,75,.4) 0%,transparent 50%),
-  radial-gradient(ellipse at 70% 80%,rgba(20,18,28,.3) 0%,transparent 40%),
-  linear-gradient(180deg,#454258 0%,#3a3850 4%,#2d2a3a 15%,#2d2a3a 85%,#252334 96%,#18161e 100%)}
+  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .05 0 0 0 0 .05 0 0 0 0 .08 0 0 0 .22 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.012' numOctaves='3' seed='7'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .38 0 0 0 0 .30 0 0 0 -1.6 .48'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E"),
+  radial-gradient(circle at 12% 78%,rgba(136,80,50,.35) 0 2px,transparent 3px),
+  radial-gradient(circle at 86% 64%,rgba(136,80,50,.3) 0 3px,transparent 4px),
+  radial-gradient(circle at 70% 92%,rgba(136,80,50,.28) 0 2px,transparent 3px),
+  repeating-linear-gradient(118deg,transparent 0 41px,rgba(255,255,255,.035) 41px 42px,transparent 42px 97px),
+  repeating-linear-gradient(32deg,transparent 0 73px,rgba(0,0,0,.08) 73px 74px,transparent 74px 151px),
+  radial-gradient(ellipse at 22% 8%,rgba(170,185,230,.22) 0%,transparent 45%),
+  radial-gradient(ellipse at 50% 120%,rgba(255,79,200,.10) 0%,transparent 55%),
+  radial-gradient(ellipse at 50% 50%,transparent 55%,rgba(5,8,18,.55) 100%),
+  linear-gradient(180deg,#56607f 0%,#4a5474 8%,#434c6a 40%,#3a4260 75%,#2c3350 94%,#1b2036 100%)}
 body.shell:not(.paused):not(.showbar) .bar{transform:translateY(-100%);transition:transform .2s}
 body.shell .bar{transition:transform .2s}
-body.shell #screen{border-radius:6px;box-shadow:0 0 0 10px #141220,0 0 0 12px #0a0812,0 10px 18px 10px rgba(0,0,0,.55)}
-body.shell #screen::before{content:'';position:absolute;z-index:3;left:-7px;top:-7px;width:6px;height:6px;border-radius:50%;
-  background:radial-gradient(ellipse at 35% 30%,#90ffee 0%,#4ecdb4 40%,#2a9080 100%);box-shadow:0 0 8px rgba(78,205,180,.6)}
-body.shell .pk{background:radial-gradient(ellipse at 35% 25%,rgba(255,255,255,.18) 0%,transparent 45%),linear-gradient(180deg,#5a5868 0%,#4a4858 30%,#3a3848 70%,#2a2838 100%);
-  border:2px solid #2a2838;border-top-color:rgba(255,255,255,.12);border-bottom:6px solid #12101a;color:#d8d4e6;
-  box-shadow:0 6px 14px rgba(0,0,0,.4),inset 0 2px 0 rgba(255,255,255,.08);transition:transform .05s}
-body.shell .pk[data-down]{transform:translateY(4px);border-bottom-width:2px;background:linear-gradient(180deg,#3a3848,#2a2838);color:#fff}
-body.shell .pk small,body.shell .pk .w{color:#a8a3b8}
-/* A and B: round and deep red, as a handheld's face buttons are. */
-body.shell .cface .pk{border-radius:50%;background:radial-gradient(ellipse at 35% 25%,rgba(255,255,255,.25) 0%,transparent 45%),linear-gradient(180deg,#a3315f 0%,#7d2149 55%,#5a1434 100%);
-  border-color:#3a0c22;border-bottom-color:#22060f;color:#ffe9f2}
-body.shell .cface .pk[data-down]{background:linear-gradient(180deg,#7d2149,#5a1434)}
-/* Select and Start: level pills (Bryan, 20 Nov 2026: "Straighten them"; slanted, Start ran into the screen's frame). */
+/* The screen sits deep: a dark lip, the bezel's own plastic, a lit edge, a shadow under it all; a pink power light. */
+body.shell #screen{border-radius:6px;box-shadow:0 0 0 3px #070a14,0 0 0 11px #1c2238,0 0 0 12px rgba(255,255,255,.10),0 0 0 15px #0b0e1a,0 14px 26px 12px rgba(0,0,0,.55)}
+body.shell #screen::before{content:'';position:absolute;z-index:3;left:-8px;top:-8px;width:6px;height:6px;border-radius:50%;
+  background:radial-gradient(ellipse at 35% 30%,#ffd6f2 0%,#ff4fc8 45%,#a3157a 100%);box-shadow:0 0 8px rgba(255,79,200,.85),0 0 16px rgba(255,79,200,.4)}
+/* A neon line in the bezel under the picture, pink to cyan. */
+body.shell #screen::after{content:'';position:absolute;z-index:3;left:10%;right:10%;bottom:-8px;height:2px;border-radius:2px;pointer-events:none;
+  background:linear-gradient(90deg,transparent,#ff4fc8 18%,#b56cff 50%,#5fe3ff 82%,transparent);box-shadow:0 0 8px rgba(181,108,255,.7)}
+/* Keys: rubber in electrical black, lit from the top left, a thick dark under-edge that presses down; held, a cyan edge. */
+body.shell .pk{background:radial-gradient(ellipse at 32% 22%,rgba(255,255,255,.16) 0%,transparent 48%),linear-gradient(180deg,#4b4c55 0%,#3a3b44 30%,#2c2d35 70%,#202128 100%);
+  border:2px solid #17181e;border-top-color:rgba(255,255,255,.14);border-bottom:6px solid #0a0a0e;color:#dfe3f2;
+  box-shadow:0 6px 14px rgba(0,0,0,.45),inset 0 2px 0 rgba(255,255,255,.07);transition:transform .05s}
+body.shell .pk[data-down]{transform:translateY(4px);border-bottom-width:2px;background:linear-gradient(180deg,#2c2d35,#202128);color:#fff;box-shadow:0 0 0 2px rgba(95,227,255,.55),0 0 14px rgba(95,227,255,.35)}
+body.shell .pk small,body.shell .pk .small,body.shell .pk .w{color:#a6adc6}
+/* Face buttons: round and glossy. B red and A yellow as on the sheet; X cyan and Y pink, VoidTV's own. Genesis by its
+   printed letters: A red, B yellow, C pink. */
+body.shell .cface .pk{border-radius:50%;position:relative;z-index:1;border-color:rgba(0,0,0,.55);border-bottom-color:rgba(0,0,0,.75);color:#fff;
+  background:radial-gradient(ellipse at 34% 24%,rgba(255,255,255,.5) 0%,rgba(255,255,255,.08) 34%,transparent 50%),linear-gradient(180deg,var(--k1,#d23a46) 0%,var(--k2,#a3222f) 60%,var(--k3,#6e141e) 100%)}
+body.shell .cface .pk[data-code="P1:A"],body.shell .cface.s-abc .pk[data-code="P1:B"]{--k1:#f7d046;--k2:#d9a91b;--k3:#9a730c;color:#1b1608}
+body.shell .cface.s-abc .pk[data-code="P1:Y"]{--k1:#d23a46;--k2:#a3222f;--k3:#6e141e;color:#fff}
+body.shell .cface.s-abc .pk[data-code="P1:A"]{--k1:#ff78d6;--k2:#e0389f;--k3:#8f1561;color:#fff}
+body.shell .cface .pk[data-code="P1:X"]{--k1:#7fe9ff;--k2:#2fb8dd;--k3:#14708c;color:#06202a}
+body.shell .cface:not(.s-abc) .pk[data-code="P1:Y"]{--k1:#ff78d6;--k2:#e0389f;--k3:#8f1561}
+body.shell .cface .pk .small{color:inherit;opacity:.8}
+body.shell .cface .pk[data-down]{filter:brightness(.82);transform:translateY(4px);border-bottom-width:2px}
+/* The dark base the face buttons sit in: a slanted pill for two buttons, a dish for the diamond, a slanted bar for
+   Genesis A B C, a round well for one. Drawn behind the buttons; never a key itself. */
+body.shell .cpad .cface::before{content:'';position:absolute;left:50%;top:50%;z-index:0;pointer-events:none;border-radius:999px;
+  background:linear-gradient(180deg,#12141c,#1e212c);box-shadow:inset 0 3px 8px rgba(0,0,0,.7),0 1px 0 rgba(255,255,255,.08);
+  width:calc(1.414 * (var(--b) + 8px) + var(--b) + 16px);height:calc(var(--b) + 16px);transform:translate(-50%,-50%) rotate(-45deg)}
+body.shell .cpad .cface.s-diamond::before{width:calc(100% + 18px);height:calc(100% + 18px);transform:translate(-50%,-50%);border-radius:50%}
+body.shell .cpad .cface.s-abc::before{width:calc(2.236 * (var(--b) + 8px) + var(--b) + 16px);transform:translate(-50%,-50%) rotate(-63deg)}
+body.shell .cpad .cface.one::before{width:calc(var(--b) * 1.5 + 16px);height:calc(var(--b) * 1.5 + 16px);transform:translate(-50%,-50%)}
+/* Select and Start: level pills (Bryan: "Straighten them"), rubber like the keys. */
 body.shell .cpad .pill{min-width:64px;border-radius:22px;border-bottom-width:4px}
 body.shell .cpad .pill[data-down]{transform:translateY(3px)}
-/* The d-pad: a raised cross drawn inside the round touch area (the whole circle still takes a thumb, diagonals too). */
+/* The d-pad: a raised cross in electrical black with a centre dimple, drawn inside the round touch area (the whole circle
+   still takes a thumb, diagonals too); its arrows lit cyan. */
 body.shell .pdpad{background:transparent;border-color:transparent;box-shadow:none}
 body.shell .pdpad::before{content:'';position:absolute;inset:6%;pointer-events:none;
-  background:radial-gradient(ellipse at 35% 25%,rgba(255,255,255,.2) 0%,transparent 45%),linear-gradient(180deg,#5a5868 0%,#4a4858 30%,#3a3848 70%,#2a2838 100%);
+  background:radial-gradient(circle at 50% 50%,rgba(0,0,0,.45) 0 7%,transparent 9%),radial-gradient(ellipse at 35% 25%,rgba(255,255,255,.18) 0%,transparent 45%),linear-gradient(180deg,#4b4c55 0%,#3a3b44 30%,#2c2d35 70%,#202128 100%);
   clip-path:polygon(35% 0,65% 0,65% 35%,100% 35%,100% 65%,65% 65%,65% 100%,35% 100%,35% 65%,0 65%,0 35%,35% 35%);
-  filter:drop-shadow(0 5px 0 #12101a)}
-body.shell .pdpad .pdir{position:absolute;z-index:1;color:#1a1825}
+  filter:drop-shadow(0 5px 0 #0a0a0e) drop-shadow(0 8px 10px rgba(0,0,0,.45))}
+body.shell .pdpad .pdir{position:absolute;z-index:1;color:#5fe3ff;text-shadow:0 0 6px rgba(95,227,255,.6)}
+body.shell .pdpad .pdir.on{color:#fff;text-shadow:0 0 10px #5fe3ff}
+/* The neon plate, upright when the pad has the room: VOIDTV PLAY in the logo's pink and cyan, in a glass frame. */
+body.shell .cpad.up::before,body.shell .cpad.up::after{display:none;position:absolute;left:50%;top:calc(var(--e) + 62px);transform:translateX(-50%);pointer-events:none}
+@container (min-height:400px){
+  body.shell .cpad.up::before{display:block;content:'';width:212px;height:40px;border-radius:9px;background:rgba(7,9,20,.72);
+    border:2px solid rgba(181,108,255,.85);box-shadow:0 0 10px rgba(181,108,255,.55),0 0 22px rgba(95,227,255,.25),inset 0 0 12px rgba(181,108,255,.3)}
+  body.shell .cpad.up::after{display:block;content:'VOIDTV PLAY';width:212px;height:40px;line-height:40px;text-align:center;
+    font-family:'Unbounded',sans-serif;font-weight:700;font-size:17px;letter-spacing:.06em;color:transparent;
+    background:linear-gradient(90deg,#ff4fc8 0%,#ff4fc8 48%,#5fe3ff 58%,#5fe3ff 100%);-webkit-background-clip:text;background-clip:text;
+    filter:drop-shadow(0 0 5px rgba(255,79,200,.55)) drop-shadow(0 0 9px rgba(95,227,255,.35))}
+}
 /* ---- Phone edges and taps (whole-site audit, 20 Nov 2026, points B to E). ---- */
 /* The phone's safe-area edges, read by place() from this hidden probe (the home bar, rounded corners, the notch). */
 .inset-probe{position:fixed;left:0;top:0;width:0;height:0;visibility:hidden;pointer-events:none;

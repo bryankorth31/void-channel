@@ -190,3 +190,12 @@ test('the handheld shell: Select and Start are level (Bryan, 20 Nov 2026: "Strai
   const css = read(ROOT, 'play.css');
   assert.ok(css.includes('body.shell .cpad .pill{min-width:64px;') && !/body\.shell[^{]*\.pill[^{]*\{[^}]*rotate/.test(css));
 });
+
+test('the handheld body from Bryan\'s University Archives sheets ("more depth and more Void TV esque ness"): worn navy, a deep bezel, the neon plate, B red and A yellow', () => {
+  const css = read(ROOT, 'play.css');
+  assert.ok(!css.includes("lexROM's original Game Boy look, \"Phones, both ways\""), 'the earlier grey-purple body is replaced');
+  assert.ok(css.includes("content:'VOIDTV PLAY'") && css.includes('@container (min-height:400px){'), 'the plate shows only where the pad has the room');
+  assert.ok(css.includes('body.shell .cface .pk[data-code="P1:A"],body.shell .cface.s-abc .pk[data-code="P1:B"]{--k1:#f7d046;'));
+  assert.ok(css.includes('body.shell .cpad .cface::before{') && /pointer-events:none;border-radius:999px/.test(css), 'the base is drawing only, never a key');
+  assert.ok(read(ROOT, 'src', 'touchpad.js').includes("face.classList.add('s-' + (SYSTEM_SHAPE[card.system] || 'pair'));"));
+});

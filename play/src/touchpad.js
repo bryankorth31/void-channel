@@ -158,6 +158,7 @@
     // A three-wide shape (the Super Nintendo diamond, Genesis A B C) is drawn compact, as on the real pads: neighbours
     // sit half a button apart sideways, so the shape is two buttons wide, not three (the spacing audit).
     if (shape.cols === 3) face.classList.add('tri');
+    face.classList.add('s-' + (SYSTEM_SHAPE[card.system] || 'pair'));   // the base it sits in (play.css)
     for (const [code, r, col] of shape.face) {
       if (!keys.includes(code)) continue;
       const k = consoleKey(code, hub, card); k.style.gridRow = r; k.style.gridColumn = col; face.appendChild(k);
