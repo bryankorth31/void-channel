@@ -112,23 +112,25 @@
     if (k.at === 'face') { b.style.setProperty('--r', k.r); b.style.setProperty('--c', k.c); }
     into.appendChild(b);
   }
-  // A pad page still open from before the card carried keys: the earlier form, a word for each standard button.
-  function keysOf(c) {
-    if (Array.isArray(c.keys)) return c.keys;
-    const w = c.buttons || {}, at = { Y: [1, 2], X: [2, 1], B: [2, 3], A: [3, 2] }, out = [];
-    for (const n of ['Y', 'X', 'B', 'A']) if (n in w) out.push({ n, t: n, w: w[n], at: 'face', r: at[n][0], c: at[n][1], k: 'red' });
-    for (const n of ['LB', 'RB']) if (n in w) out.push({ n, t: n === 'LB' ? 'L' : 'R', w: w[n], at: n === 'LB' ? 'left' : 'right' });
-    for (const n of ['Back', 'Start']) if (n in w) out.push({ n, t: w[n] === 'Menu' ? 'Menu' : n === 'Back' ? 'Select' : 'Start', w: '', at: 'pill' });
-    return out;
+  // A card in the earlier form (a word for each standard button; the shelf's remote sends one): the same parts, two
+  // buttons as a pair, more as the diamond. The card is brought to today's form once, here.
+  function modern(c) {
+    if (Array.isArray(c.keys)) return c;
+    const w = c.buttons || {}, at = { Y: [1, 2], X: [2, 1], B: [2, 3], A: [3, 2] }, paint = { A: 'red', B: 'yellow', X: 'pink', Y: 'cyan' }, keys = [];
+    const face = ['A', 'B', 'X', 'Y'].filter((n) => n in w), few = face.length <= 2;
+    face.forEach((n, i) => keys.push({ n, t: n, w: w[n], at: 'face', r: few ? 2 - i : at[n][0], c: few ? 1 + i : at[n][1], k: paint[n] }));
+    for (const n of ['LB', 'RB']) if (n in w) keys.push({ n, t: n === 'LB' ? 'L' : 'R', w: w[n], at: n === 'LB' ? 'left' : 'right' });
+    for (const n of ['Back', 'Start']) if (n in w) keys.push({ n, t: w[n] === 'Menu' ? 'Menu' : n === 'Back' ? 'Select' : 'Start', w: '', at: 'pill' });
+    return Object.assign({}, c, { keys, cols: few ? Math.max(1, face.length) : 3, rows: few ? Math.max(1, face.length) : 3 });
   }
   function draw(c) {
-    card = c;
+    c = modern(c); card = c;
     $('game').textContent = c.title || '';
     for (const id of ['face', 'mid', 'left', 'right']) $(id).textContent = '';
     const face = $('face');
     face.className = 'face' + (c.shape ? ' s-' + c.shape : '') + ' g' + (c.cols || 3);
     face.style.setProperty('--cols', c.cols || 3); face.style.setProperty('--rows', c.rows || 3);
-    for (const k of keysOf(c)) button(k, $(k.at === 'face' ? 'face' : k.at === 'pill' ? 'mid' : k.at));
+    for (const k of c.keys) button(k, $(k.at === 'face' ? 'face' : k.at === 'pill' ? 'mid' : k.at));
     $('dpad').style.visibility = c.dpad === false ? 'hidden' : '';
     $('note').hidden = true; $('pad').hidden = false;
     measure(); letGo();
