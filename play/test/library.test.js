@@ -102,3 +102,10 @@ test('the 18+ shelf: adult games in their own bundles and list, behind the age q
   assert.ok(play.includes("if (c.adult && (() => { try { return localStorage.getItem('voidtv-play-18') !== 'yes'; }"));
   assert.ok(play.includes('if (core.noDonation || c.kids || c.adult) for'), 'no donation on an adult game');
 });
+
+test('the audit on the 18+ shelf: the finished-games rule holds there too, and the titles a person must read first stay off', () => {
+  const adult = (o) => row(Object.assign({ content: { flag: true, kind: 'adult', reason: 'sexual' } }, o));
+  const out = Lib.build([adult({ item: 'g1', title: 'Greeting Cart Somebody (2003)' }), adult({ item: 'x1', title: 'Atari 2600: X-man' }),
+    adult({ item: 'w1', title: 'Grown Up Thing (WIP)' }), adult({ item: 'ok1', title: 'Grown Up Game' })], { ids: [], items: [] }, true);
+  assert.deepEqual(out.map((c) => c.title), ['Grown Up Game']);
+});

@@ -38,7 +38,10 @@ function build(rows, taken, adult) {
     if (adult ? kind !== 'adult' : kind) continue;
     // Finished games only (Bryan, 20 Nov 2026: "Yes, that rule"): no unfinished homebrew, demos, prototypes, test
     // builds, hacks or picture cartridges. A doubtful game comes in only when Bryan kept it on his weed-down page.
-    if (!adult && !finished(r)) continue;
+    if (!finished(r)) continue;   // the 18+ shelf too (the audit: picture carts of real named women must go nowhere)
+    // The adult titles whose kind a person must read first (the audit: some "adult" ones are sexual assault in all but
+    // name): none goes on the 18+ shelf until Bryan has read the list.
+    if (adult && READ_FIRST.test((r.title || '') + ' ' + (r.item || ''))) continue;
     if (!(r.boot ? r.boot.ok : r.ok) || !r.item || !r.file || !Cons.MACHINES[r.system] || items.has(r.item)) continue;
     const c = Cons.card({ system: r.system, title: r.title, item: r.item, source: r.source },
       { name: r.file, size: r.size || 0, start: r.start || '' }, { year: r.year, creator: r.publisher });
@@ -56,6 +59,7 @@ function build(rows, taken, adult) {
 // gambling and horror. Bryan's Keep on his weed-down page (r.weed === 'keep') lets a doubtful game in; Drop never.
 const UNFINISHED = /\b(wip|demo|proto(type)?|beta|test|kernel|sample)\b|point-of-purchase|greeting cart|^image\b|\(hack\)|\bhack\b/i;
 const HELD = /casino|poker|slots?\b|blackjack|black jack|roulette|gambl|halloween|chainsaw/i;   // gambling and horror: Bryan's call
+const READ_FIRST = /beat 'em|beat em|philly flasher|knight on the town|x-man|custer|bachelor|harem|porky|cathouse|gigolo|jungle fever|burning desire|lady in wading/i;
 function finished(r) {
   const name = (r.title || '') + ' ' + (r.item || '');
   if (r.weed === 'drop') return false;
