@@ -542,6 +542,18 @@ header.top{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding:
 .instnote{position:absolute;right:16px;top:calc(100% + 8px);z-index:40;width:min(340px,calc(100vw - 32px));padding:16px 18px;background:var(--panel);border:1px solid var(--line);border-radius:10px;box-shadow:0 18px 40px rgba(0,0,0,.5);font-size:15px}.instnote p{margin:8px 0 12px;color:var(--soft)}
 .instnote button{font:inherit;font-size:14px;padding:6px 14px;border-radius:999px;border:1px solid var(--line);background:var(--panel2);color:var(--fg);cursor:pointer}
 .nav a.here{color:var(--gold);font-weight:600}
+.atmos{display:none;position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}html[data-look="bright"] .atmos{display:block}
+.bgimg{position:absolute;inset:-12% 0 -12% 0;background:#07080c center/cover no-repeat;opacity:.55;will-change:transform}
+.bgimg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,8,12,.55) 0%,rgba(7,8,12,.78) 45%,rgba(7,8,12,.96) 100%)}
+.bgimg.desk{background-image:url(img/bg/desk.jpg)}.bgimg.archives{background-image:url(img/bg/archives.jpg)}
+@media (max-width:700px){.bgimg.desk{background-image:url(img/bg/desk-m.jpg)}.bgimg.archives{background-image:url(img/bg/archives-m.jpg)}}
+.atmos~*{position:relative;z-index:1}
+#colhost{position:relative;z-index:1;overflow:clip}
+.column{display:none;position:absolute;left:0;right:0;top:0;z-index:-1;pointer-events:none;overflow:hidden;will-change:transform}html[data-look="bright"] .column{display:block}
+.column i{position:absolute;left:0;width:100%;display:block;background-size:cover;background-position:center;opacity:.7;-webkit-mask:linear-gradient(180deg,transparent,#000 10%,#000 90%,transparent);mask:linear-gradient(180deg,transparent,#000 10%,#000 90%,transparent);transform-origin:center}
+@media (min-width:701px) and (prefers-reduced-motion:no-preference){.column i:nth-child(-n+6){animation:colkb var(--kbd,70s) ease-in-out infinite alternate}}@keyframes colkb{from{transform:scale(1)}to{transform:scale(1.07)}}
+html[data-look="bright"] #colhost .hero{border-bottom:0}html[data-look="bright"] #colhost .hero>img{display:none}html[data-look="bright"] #colhost .hero::after{background:linear-gradient(90deg,rgba(7,8,12,.9) 0%,rgba(7,8,12,.78) 42%,rgba(7,8,12,.2) 78%,rgba(7,8,12,.1) 100%)}
+html[data-look="bright"] #colhost main>h2,html[data-look="bright"] #colhost .row>h2,html[data-look="bright"] #colhost .who{text-shadow:0 1px 10px rgba(7,8,12,.95),0 0 3px rgba(7,8,12,.9)}html[data-look="bright"] #colhost h2 small,html[data-look="bright"] #colhost .who small{color:var(--soft)}
 footer{max-width:1400px;margin:0 auto;padding:30px 32px 44px;color:var(--dim);font-size:14px;border-top:1px solid var(--line)}
 footer a{color:var(--gold)}`;
 const CREST = '<svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2 L36 8 V20 C36 30 28 36 20 38 C12 36 4 30 4 20 V8 Z" fill="#132038" stroke="#d4b06a" stroke-width="1.6"/><path d="M11 15 h18 M11 20 h18 M11 25 h12" stroke="#d4b06a" stroke-width="1.6" stroke-linecap="round"/><circle cx="27" cy="26" r="3" fill="none" stroke="#efe9dc" stroke-width="1.4"/></svg>';
@@ -621,8 +633,18 @@ function top(current, all) {
       + (SHELFBOOKS.length ? '<div><h5>Old books in plain English</h5>' + SHELFBOOKS.map(link).join('') + '</div>' : '');
     links = home + (here ? hereLink(here) : '') + '<details class="navall"><summary>All courses</summary><div class="navlist">' + groups + '</div></details>';
   }
-  return '<header class="top"><a class="crest" href="index.html">' + CREST + '<span><b>Void University</b><small>Learn from people who did it</small></span></a><nav class="nav">' + links + '</nav>' + INSTALL + DRAFT + '</header>'
-    + '<script>(function(){var h=document.querySelector("header.top"),s=function(){document.documentElement.style.setProperty("--hh",h.offsetHeight+"px")};s();addEventListener("load",s);if(window.ResizeObserver)new ResizeObserver(s).observe(h);else addEventListener("resize",s)})()</script>';
+  // Backgrounds the way voidtv.net uses its own (B, 19 Nov 2026: "i want these used in the same ways as as vtv. the way
+  // the bg moves"). Inner pages: one fixed picture, taller than the window, under a dark veil, that drifts and grows a
+  // little as you scroll. The front page: a column of the pictures down the whole page that scrolls slower than the
+  // content and slowly breathes (built in home()). No movement for people who ask for less motion; on touch screens
+  // only the column moves, as on voidtv.net.
+  const atmos = current === 'home' ? '' : '<div class="atmos" aria-hidden="true"><div class="bgimg ' + (all.some((o) => o.slug === current) ? 'desk' : 'archives') + '"></div></div>';
+  const move = '<script>(function(){if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;var light=innerWidth<=700||matchMedia("(pointer: coarse)").matches,bg=document.querySelector(".bgimg"),q=false;'
+    + 'function frame(){q=false;var y=scrollY,h=Math.max(1,document.documentElement.scrollHeight-innerHeight),f=Math.min(1,y/h),w=Math.sin(y/700),w2=Math.sin(y/430),col=document.querySelector(".column");'
+    + 'if(col)col.style.transform="translate3d(0,"+(y*0.35)+"px,0)";if(light||!bg)return;bg.style.transform="translate3d(0,"+(-f*60+w*22)+"px,0) scale("+(1.06+f*0.05+w2*0.015)+")"}'
+    + 'window.__par=frame;addEventListener("scroll",function(){if(!q){q=true;requestAnimationFrame(frame)}},{passive:true});addEventListener("resize",frame);frame()})()</script>';
+  return atmos + '<header class="top"><a class="crest" href="index.html">' + CREST + '<span><b>Void University</b><small>Learn from people who did it</small></span></a><nav class="nav">' + links + '</nav>' + INSTALL + DRAFT + '</header>'
+    + '<script>(function(){var h=document.querySelector("header.top"),s=function(){document.documentElement.style.setProperty("--hh",h.offsetHeight+"px")};s();addEventListener("load",s);if(window.ResizeObserver)new ResizeObserver(s).observe(h);else addEventListener("resize",s)})()</script>' + move;
 }
 const IMG = (() => { try { return JSON.parse(fs.readFileSync(path.join(DIR, 'img', 'images.json'), 'utf8')); } catch (e) { return {}; } })();
 const img = (name) => IMG[name] ? IMG[name].file : '';
@@ -700,12 +722,12 @@ ${CARDCSS}
 @media(max-width:900px){.hero h1{font-size:36px}.course{width:290px}}
 ${LOOKCSS}${TYPECSS}</style></head><body>
 ${top('home', all)}
-<div class="hero"><img src="${img('a-mind')}" alt=""><div><h1>Big ideas, shown with everyday things.</h1><p>Each lesson starts from something you already know, then shows you the bigger idea working the same way. Every course is free, and there is no account to make.</p></div></div>
+<div id="colhost"><div class="hero"><img src="${img('a-mind')}" alt=""><div><h1>Big ideas, shown with everyday things.</h1><p>Each lesson starts from something you already know, then shows you the bigger idea working the same way. Every course is free, and there is no account to make.</p></div></div>
 <main><div class="who"><span>Who is it for?</span><button class="on" data-lv="">Everyone</button><button data-lv="high school">High school</button><button data-lv="young adults">Young adults</button><button data-lv="everyday">Everyday life</button><input type="search" id="find" placeholder="Find a course or a lesson" aria-label="Find a course or a lesson"><small>Everyday life: not for a job in the field, just useful for living, deciding and understanding people.</small></div>
 <div id="found" hidden></div><div id="resume" hidden></div>
 ${rows}
 ${shelfRow}
-<h2><span>Jump to an area</span></h2><div class="areas">${tiles}</div></main>
+<h2><span>Jump to an area</span></h2><div class="areas">${tiles}</div></main></div>
 ${FOOT()}
 <script>
 document.querySelectorAll('.who button').forEach(function (b) {
@@ -724,6 +746,23 @@ document.querySelectorAll('.rowwrap').forEach(function (w) {
   l.onclick = function () { t.scrollLeft -= t.clientWidth * 0.8; }; r.onclick = function () { t.scrollLeft += t.clientWidth * 0.8; };
   t.addEventListener('scroll', upd); window.addEventListener('resize', upd); upd();
 });
+// The column of pictures behind the page: one picture per screen-wide tile, all the way down, rebuilt when the page
+// changes height. The script in the header moves it at a third of the scroll speed.
+(function () {
+  var host = document.getElementById('colhost'); if (!host) return;
+  var pics = ['archives', 'desk'], wait = 0, was = '';
+  function build() {
+    var H = host.scrollHeight, W = host.clientWidth || innerWidth, T = Math.round(W * 0.558), sfx = innerWidth <= 700 ? '-m' : '';
+    if (!(T >= 50) || was === H + 'x' + W) return; was = H + 'x' + W;
+    var old = host.querySelector('.column'); if (old) old.remove();
+    var c = document.createElement('div'), n = Math.min(Math.ceil(H / T) + 1, 60), h = '';
+    c.className = 'column'; c.style.height = H + 'px';
+    for (var i = 0; i < n; i++) h += '<i style="top:' + (i * T) + 'px;height:' + T + 'px;background-image:url(img/bg/' + pics[i % pics.length] + sfx + '.jpg);--kbd:' + (64 + (i % 4) * 11) + 's;animation-delay:-' + ((i * 19) % 64) + 's"></i>';
+    c.innerHTML = h; host.appendChild(c); if (window.__par) window.__par();
+  }
+  build();
+  if (window.ResizeObserver) new ResizeObserver(function () { clearTimeout(wait); wait = setTimeout(build, 250); }).observe(host);
+})();
 // Find a course or a lesson: every word typed must be in the course name, the lesson title or its "why you need this".
 var IDX = ${JSON.stringify(all.flatMap((c) => c.units.map((u) => [c.slug + '.html#u' + u.n, c.name, u.title, (u.needIt || '').toLowerCase()])).concat(SHELFBOOKS.flatMap((b) => b.chapters.map((x) => [b.slug + '.html#c' + x.n, b.title, x.title, (x.why || '').toLowerCase()])))).replace(/</g, '\\u003c')};
 var find = document.getElementById('find'), found = document.getElementById('found');
@@ -759,7 +798,7 @@ function credits(all) {
   const rows = Object.keys(IMG).map((k) => { const x = IMG[k]; return '<tr><td><img src="' + esc(x.file) + '" alt=""></td><td>' + esc(x.title || 'Untitled') + '</td><td>' + esc(x.creator || 'unknown') + '</td><td>' + esc(x.license) + '</td><td><a href="' + esc(x.page) + '" target="_blank" rel="noopener">' + esc(x.source) + '</a></td></tr>'; }).join('');
   return `<!doctype html><html lang="en" data-look="${LOOK}" data-type="${TYPE}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${APPHEAD}<title>Photo credits | Void University</title>${FONTS}<style>${BASE}
 main{max-width:1100px;margin:0 auto;padding:30px 32px}h1{font-family:var(--head)}table{width:100%;border-collapse:collapse;font-size:14px}td{border-bottom:1px solid var(--line);padding:8px;vertical-align:middle}td img{width:96px;height:60px;object-fit:cover;border-radius:4px;display:block}${LOOKCSS}${TYPECSS}</style></head><body>
-${top('credits', all)}<main><h1>Photo credits</h1><p>Every photo here is public domain (CC0), found through Openverse. We list who took each one anyway, with a link to where it came from.</p><table>${rows}</table>${all.some((c) => c.units.some(shipsLab)) ? '<h1>Lab physics</h1><p>Things in the labs fall, roll and bounce using Planck.js by Erin Catto and Ali Shakiba, free to use under the <a href="planck-LICENSE.txt">MIT licence</a>. The labs themselves are our own work.</p>' : ''}${all.some((c) => c.units.some(shipsScale)) ? '<h1>3D stages</h1><p>The 3D scale stages are drawn with three.js by the three.js authors, free to use under the <a href="three-LICENSE.txt">MIT licence</a>. The stages and what they show are our own work; each one names the papers its numbers come from.</p>' : ''}</main>${FOOT()}</body></html>`;
+${top('credits', all)}<main><h1>Photo credits</h1><p>Every photo here is public domain (CC0), found through Openverse. We list who took each one anyway, with a link to where it came from.</p><table>${rows}</table><h1>Backgrounds</h1><p>The pictures of the archive room behind the pages are our own, made for Void University.</p>${all.some((c) => c.units.some(shipsLab)) ? '<h1>Lab physics</h1><p>Things in the labs fall, roll and bounce using Planck.js by Erin Catto and Ali Shakiba, free to use under the <a href="planck-LICENSE.txt">MIT licence</a>. The labs themselves are our own work.</p>' : ''}${all.some((c) => c.units.some(shipsScale)) ? '<h1>3D stages</h1><p>The 3D scale stages are drawn with three.js by the three.js authors, free to use under the <a href="three-LICENSE.txt">MIT licence</a>. The stages and what they show are our own work; each one names the papers its numbers come from.</p>' : ''}</main>${FOOT()}</body></html>`;
 }
 
 // A wrong address: wrangler.jsonc serves 404.html for it. Links start from the site root, since the wrong address can be
@@ -822,6 +861,8 @@ MECH = loaded.find((c) => c.shelf === 'supplement') || null;
 for (const c of loaded) if (c.shelf !== 'supplement') for (const u of c.units) for (const n of u.mechanisms || []) (USED[n] = USED[n] || []).push({ slug: c.slug, course: c.name, n: u.n, title: u.title });
 fs.mkdirSync(path.join(OUT, 'img'), { recursive: true });
 for (const k of Object.keys(IMG)) fs.copyFileSync(path.join(DIR, IMG[k].file), path.join(OUT, IMG[k].file));
+fs.mkdirSync(path.join(OUT, 'img', 'bg'), { recursive: true });
+for (const f of fs.readdirSync(path.join(DIR, 'img', 'bg')).filter((x) => x.endsWith('.jpg'))) fs.copyFileSync(path.join(DIR, 'img', 'bg', f), path.join(OUT, 'img', 'bg', f)); // the moving backgrounds
 for (const f of APPICONS) fs.copyFileSync(path.join(DIR, 'img', f), path.join(OUT, 'img', f)); // home-screen icons (make-icons.js)
 fs.writeFileSync(path.join(OUT, 'manifest.webmanifest'), JSON.stringify(MANIFEST));
 fs.writeFileSync(path.join(OUT, 'sw.js'), SW);

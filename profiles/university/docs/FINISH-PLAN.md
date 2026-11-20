@@ -194,3 +194,16 @@ the HQ areas chat. Steps 7 to 10 start after the 22 Nov reset.
   now run behind what you look at. Checked by hand at 1920x1080, 1316x821, 821x1316 and 1278x513; no sideways
   scroll, no console errors; the amount stage still works beside it. Not checked: a real tablet's pinch. The shapes
   are plain coloured solids, not pictures of the real things. Both stages are `"live": false`.
+- 19 Nov 2026, moving backgrounds (Bryan gave two pictures of an archive room, a wall of old TVs under a neon
+  "UNIVERSITY ARCHIVES" sign; in this chat: "i want these used in the same ways as as vtv. the way the bg moves").
+  Done the way voidtv.net does it (read from scripts/lib/app.js, written again in build.js). Front page: a column of
+  the two pictures, one screen-wide tile after another down the whole page, behind the headline and the rows; it
+  scrolls at about a third of the page's speed and each tile slowly breathes. Course, book, credits and not-found
+  pages: one fixed picture, taller than the window, under a dark veil, that drifts and grows a little as you
+  scroll (the angled picture behind courses, the straight-on one behind the rest). No movement for people who ask
+  their device for less motion; on touch screens only the column moves, as on voidtv.net. The pictures belong to
+  the Bright night look; the other two looks are unchanged. Lighter copies are in img\bg (1920 and 960 wide, about
+  300 KB and 90 KB, the same sizes voidtv.net uses); the originals stay in Downloads. The credits page says the
+  backgrounds are our own. Checked at 1920x1080, 1316x821, 821x1316 and 1278x513: no sideways scroll, no console
+  errors. Known: the sign says "UNIVERSITY ARCHIVES", and at some widths it sits behind the headline's second
+  line; the old library photo in the headline band is no longer shown in this look. Nothing deployed.

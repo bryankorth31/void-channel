@@ -256,3 +256,24 @@ test('scale, sizes: widths are in metres from their sources, said in the unit a 
   const page = fs.readFileSync(path.join(uni.UNI, 'site-preview', 'critical-thinking.html'), 'utf8');
   for (const words of ['8 thousandths of a millimetre across', '1.82 m tall', '490 m across', '3,470 km across', '12,700 km across', '1.39 million km across', '9.03 billion km across', '4.22 light years<', '100,000 light years across', '2.5 million light years<']) assert.ok(page.includes(words), 'the page does not say: ' + words);
 });
+
+test('backgrounds move the way voidtv.net moves its own: a column behind the front page, a fixed picture behind the rest', () => {
+  build('--site');
+  const read = (f) => fs.readFileSync(path.join(SITE, f), 'utf8');
+  for (const f of ['archives.jpg', 'archives-m.jpg', 'desk.jpg', 'desk-m.jpg']) {
+    const p = path.join(SITE, 'img', 'bg', f);
+    assert.ok(fs.existsSync(p), f + ' is not in the public copy');
+    assert.ok(fs.statSync(p).size < 500000, f + ' is too heavy for a page');
+  }
+  const home = read('index.html');
+  assert.ok(home.includes('id="colhost"') && home.includes("c.className = 'column'"), 'the front page has no picture column');
+  assert.ok(!home.includes('class="atmos"'), 'the front page should carry the column only, as on voidtv.net');
+  const course = read('critical-thinking.html');
+  assert.ok(course.includes('class="bgimg desk"'), 'a course page has no fixed picture');
+  assert.ok(read('404.html').includes('class="bgimg archives"'), 'the not-found page has no fixed picture');
+  for (const h of [home, course]) {
+    assert.ok(h.includes('y*0.35'), 'the column should move at about a third of the scroll speed');
+    assert.ok(h.includes('prefers-reduced-motion: reduce'), 'the movement must stop for people who ask for less motion');
+  }
+  assert.ok(read('credits.html').includes('are our own'), 'the credits page does not say whose the backgrounds are');
+});
