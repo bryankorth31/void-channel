@@ -15,7 +15,8 @@
      Licence: GPL-2.0-or-later. MAME's own web build is not a libretro core: it reads a global Module (canvas,
      arguments, preRun) and runs MAME's main(). Served by play/serve.js, e.g.
      http://127.0.0.1:8789/play/test/arcade.html?engine=../engine/mame/williams&item=arcade_joust&zip=joust.zip&driver=joust
-     The engine's wasm is kept gzipped (<engine>.wasm.gz), as the arcade runner loads it; a plain <engine>.wasm also works. -->
+     The engine's wasm is kept gzipped (<engine>.wasm.gz), as the arcade runner loads it; a plain <engine>.wasm also works.
+     More zips: &parents=arcade_sfa2/qsound_hle.zip or &parents=arcade_qbert/votrax.zip:votrsc01a.zip (comma separated). -->
 <pre id="out">starting</pre>
 <canvas id="canvas" tabindex="0"></canvas>
 <script>
@@ -33,6 +34,17 @@
     if (!res.ok) throw new Error('Archive answered ' + res.status);
     const bytes = new Uint8Array(await res.arrayBuffer());
     state.zipBytes = bytes.length;
+    // &parents=item/file[:saveas],... : more zips the machine needs (a device's chips such as qsound_hle.zip, a parent
+    // set), fetched the same way. ":saveas" stores one under the name MAME 0.289 looks for (votrax.zip:votrsc01a.zip).
+    const extra = [];
+    for (const p of (q.get('parents') || '').split(',').filter(Boolean)) {
+      const [where, as] = p.split(':'), cut = where.indexOf('/');
+      const pItem = where.slice(0, cut), pFile = where.slice(cut + 1);
+      const r = await fetch('https://archive.org/cors/' + pItem + '/' + pFile.split('/').map(encodeURIComponent).join('/'));
+      if (!r.ok) throw new Error('Archive answered ' + r.status + ' for ' + where);
+      extra.push({ name: as || pFile.split('/').pop(), bytes: new Uint8Array(await r.arrayBuffer()) });
+    }
+    state.parents = extra.map((e) => e.name + ' ' + e.bytes.length);
     say('Starting MAME');
     const canvas = document.getElementById('canvas');
     window.Module = {
@@ -43,6 +55,7 @@
       // The classic (not modular) build keeps its file system in a page-wide FS.
       preRun: [() => {
         const fs = Module.FS || window.FS; fs.mkdir('/roms'); fs.writeFile('/roms/' + zip, bytes);
+        for (const e of extra) fs.writeFile('/roms/' + e.name, e.bytes);
         // &clock=1: a small Lua script prints MAME's emulated time each emulated second (add
         // -autoboot_script,/s/clock.lua to &args); the page stamps each with the real time to measure speed.
         if (q.get('clock')) {
