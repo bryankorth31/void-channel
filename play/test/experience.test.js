@@ -60,7 +60,7 @@ test('block D: every console card gets its machine\'s pad shape, and every face 
     assert.equal(Touch.SYSTEM_SHAPE[c.system], want[c.system], c.id);
     for (const [code] of Touch.shapeOf(c).face) assert.ok(c.controls.keys.includes(code), c.id + ' lacks ' + code);
   }
-  assert.equal(Touch.minCols(byId('super-mario-world')), 3);
+  assert.equal(Touch.minCols(byId('super-mario-world')), 2, 'the console pad floats over the stage, the picture keeps its size');
   assert.equal(Touch.minCols(byId('tetris-game-boy')), 2);
   assert.equal(Touch.minCols(byId('oregon-trail-1990')), 2);
 });
@@ -97,4 +97,12 @@ test('block E: rewind on console games only, seated on LT, R and a touch key, he
   const pad = (b) => ({ index: 0, mapping: 'standard', axes: [0, 0], buttons: Array.from({ length: 17 }, (_, i) => ({ pressed: i === b, value: i === b ? 1 : 0 })) });
   hub.pollPads([pad(Hub.BUTTONS.LT)]); hub.pollPads([pad(-1)]);
   assert.deepEqual(seen, ['press rewind', 'release rewind']);
+});
+
+test('B, 20 Nov 2026 "Yes, build as drawn": the console pad floats in one layer, thumbs low at the edges', () => {
+  const css = fs.readFileSync(path.join(PLAY, 'play.css'), 'utf8');
+  for (const rule of ['.cpad .cdpad{left:var(--e);bottom:var(--e)', '.cpad .cface{right:var(--e);bottom:var(--e)', '.cpad .csl{left:var(--e);top:var(--e)', '.cpad .csr{right:var(--e);top:var(--e)', '.cpad.side .pk,.cpad.side .pdpad{background:rgba(']) assert.ok(css.includes(rule), rule);
+  const js = fs.readFileSync(path.join(PLAY, 'src', 'play.js'), 'utf8');
+  assert.ok(js.includes("const floating = touch && card && PlayCards.isPad(card);"));
+  assert.ok(js.includes("set($('z-over'), floating && L.mode !== 'plain' ? (L.pad ||"), 'upright the layer is the room under the picture');
 });

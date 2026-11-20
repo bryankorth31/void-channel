@@ -123,3 +123,29 @@ a.tool{display:inline-flex;align-items:center;text-decoration:none;color:var(--f
 .cmain{display:flex;align-items:center;justify-content:space-around;width:100%;gap:16px;flex:1;min-height:0}
 .cmain .cdpad .pdpad{width:min(44cqw,55cqh);height:min(44cqw,55cqh)}
 .cmain .cface{width:min(48cqw,calc(55cqh * var(--cols) / var(--rows)))}
+/* The console pad layer (B, 20 Nov 2026: "Yes, build as drawn"): thumbs low at the edges, big keys, see-through where
+   they cross the picture sideways. Sizes come from the layer's own size (container units). */
+.over{position:absolute;container-type:size;pointer-events:none;z-index:2}
+.over[hidden]{display:none}
+.cpad{position:absolute;inset:0}
+.cpad>*{position:absolute;pointer-events:auto}
+.cpad{--b:max(56px,min(92px,11.5cqh,13cqw));--d:max(150px,min(270px,36cqh,40cqw));--e:14px}
+.cpad.up{--b:max(56px,min(100px,19cqh,13cqw));--d:max(150px,min(300px,58cqh,42cqw))}
+.cpad .cdpad{left:var(--e);bottom:var(--e);width:var(--d);height:var(--d)}
+.cpad .cdpad .pdpad{width:100%;height:100%}
+.cpad .cface{right:var(--e);bottom:var(--e);width:calc(var(--cols) * var(--b) + (var(--cols) - 1) * 8px);height:calc(var(--rows) * var(--b) + (var(--rows) - 1) * 8px);aspect-ratio:auto;display:grid;grid-template-columns:repeat(var(--cols),var(--b));grid-template-rows:repeat(var(--rows),var(--b));gap:8px}
+.cpad .cface.one{width:calc(var(--b) * 1.5);height:calc(var(--b) * 1.5);grid-template-columns:1fr;grid-template-rows:1fr}
+.cpad .csl{left:var(--e);top:var(--e);width:min(140px,30cqw)}
+.cpad .csr{right:var(--e);top:var(--e);width:min(140px,30cqw)}
+.cpad .pill{min-width:76px;height:56px;border-radius:28px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 12px}
+.cpad .pill .big{font-size:14px}
+.cpad.side .cselect{left:var(--e);top:84px}
+.cpad.side .cstart{right:var(--e);top:84px}
+.cpad.side .crewind{right:calc(var(--e) + 116px);top:84px}
+.cpad.up .cselect{left:calc(50% - 84px);top:var(--e)}
+.cpad.up .cstart{left:calc(50% + 8px);top:var(--e)}
+.cpad.up .crewind{left:calc(50% - 38px);top:calc(var(--e) + 64px)}
+.cpad.up .csl,.cpad.up .csr{top:auto;bottom:calc(var(--e) + max(var(--d), var(--rows) * var(--b) + (var(--rows) - 1) * 8px) + 12px)}
+.cpad.side .pk,.cpad.side .pdpad{background:rgba(16,19,30,.42);border-color:rgba(255,255,255,.22);-webkit-backdrop-filter:none}
+.cpad.side .pk[data-down]{background:rgba(95,212,255,.75)}
+.cpad.side .pdir{color:rgba(232,232,238,.8)}

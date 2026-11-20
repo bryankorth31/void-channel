@@ -112,7 +112,8 @@
   const SYSTEM_SHAPE = { snes: 'diamond', genesis: 'abc', nes: 'pair', gameboy: 'pair', gbcolor: 'pair', sms: 'pair', gamegear: 'pair', a2600: 'one' };
   const shapeOf = (card) => SHAPES[SYSTEM_SHAPE[card && card.system] || 'pair'];
   // How many key columns a side needs at least: a three-wide shape asks the layout for wider sides.
-  const minCols = (card) => (card && card.controls && card.controls.kind === 'pad' && shapeOf(card).cols >= 3 ? 3 : 2);
+  // The console pad now floats over the stage (B: "Keep the big picture"), so no shape asks for wider side columns.
+  const minCols = () => 2;
 
   function consoleKey(code, hub, card, cls) {
     const b = keyButton(code, hub, cls);
@@ -125,9 +126,16 @@
     return b;
   }
 
+  // B, 20 Nov 2026: "Keep the big picture" and "larger controls spread to right positions", "Yes, build as drawn".
+  // A console pad is one layer over the stage, with each control where a thumb sits on a real pad: the d-pad big and
+  // low on the left edge, the face buttons big and low on the right edge in the machine's own shape, L and R at the top
+  // corners, Select, Start and rewind small near the top. Sideways the picture keeps its size and the big keys may cross
+  // its edge, see-through; upright the layer is the room under the picture, so nothing covers it.
   function buildConsole(zones, card, hub) {
     const keys = card.controls.keys || [];
     const shape = shapeOf(card);
+    const layer = el('div', 'cpad ' + (zones.mode === 'portrait' ? 'up' : 'side'));
+    layer.style.setProperty('--cols', shape.cols); layer.style.setProperty('--rows', shape.rows); // L and R sit above the taller side
     const face = el('div', 'cface');
     face.style.setProperty('--cols', shape.cols); face.style.setProperty('--rows', shape.rows);
     if (shape === SHAPES.one) face.classList.add('one');
@@ -135,27 +143,12 @@
       if (!keys.includes(code)) continue;
       const k = consoleKey(code, hub, card); k.style.gridRow = r; k.style.gridColumn = col; face.appendChild(k);
     }
-    const small = el('div', 'csmall');
-    for (const code of ['P1:Select', 'P1:Start']) if (keys.includes(code)) small.appendChild(consoleKey(code, hub, card, 'pill'));
-    small.appendChild(consoleKey('@rewind', hub, card, 'pill rewind'));
-    const shoulder = (code) => (keys.includes(code) ? consoleKey(code, hub, card, 'cshoulder') : null);
-    const L = shoulder('P1:L'), R = shoulder('P1:R');
     const pad = el('div', 'cdpad'); if (card.controls.dpad) pad.appendChild(dpad(hub, PAD_DIRS));
-    if (zones.pad) {
-      const box = el('div', 'cbox port');
-      if (L || R) { const top = el('div', 'ctop'); top.append(L || el('span'), R || el('span')); box.appendChild(top); }
-      const main = el('div', 'cmain'); main.append(pad, face); box.append(main);
-      if (small.children.length) box.appendChild(small);
-      zones.pad.appendChild(box);
-    } else {
-      const left = el('div', 'cbox'), right = el('div', 'cbox');
-      if (L) left.appendChild(L);
-      left.appendChild(pad);
-      if (R) right.appendChild(R);
-      right.appendChild(face);
-      if (small.children.length) right.appendChild(small);
-      zones.left.appendChild(left); zones.right.appendChild(right);
-    }
+    layer.append(pad, face);
+    const put = (code, cls) => { if (code[0] === '@' || keys.includes(code)) layer.appendChild(consoleKey(code, hub, card, cls)); };
+    put('P1:L', 'cshoulder csl'); put('P1:R', 'cshoulder csr');
+    put('P1:Select', 'pill cselect'); put('P1:Start', 'pill cstart'); put('@rewind', 'pill crewind');
+    zones.over.appendChild(layer);
     return { keyboard: el('div'), openKeyboard: () => {} };
   }
 
