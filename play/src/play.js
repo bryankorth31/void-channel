@@ -459,8 +459,8 @@
     if (down && remoteKey(e)) return;
     // An arcade game hears the PC keyboard itself (MAME's own key seats); keys our runner sends for the gamepad and the
     // touch pad are not fed back. Esc is caught before MAME sees it (arcadeEsc, below).
+    if (runner) runner.wakeSound();   // first, so a key wakes an arcade game's sound too (audit, 20 Nov 2026)
     if (isArcade()) return;
-    if (runner) runner.wakeSound();
     // Keys go to the game unless the pause menu is open and has the focus. A hidden panel never keeps them.
     if (!hub || !started || (!$('menu').hidden && e.target.closest('.menu'))) return;
     if (e.code === 'F11') return;

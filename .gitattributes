@@ -1,0 +1,9 @@
+# PLAY tests read its source as text with plain line endings; Windows checkouts (core.autocrlf=true) turned them into CRLF
+# and broke those tests (audit A12, 20 Nov 2026). PLAY files stay LF on every checkout; binary engines are left alone.
+play/**/*.js text eol=lf
+play/**/*.html text eol=lf
+play/**/*.css text eol=lf
+play/**/*.json text eol=lf
+play/**/*.md text eol=lf
+play/**/*.wasm binary
+play/**/*.gz binary

@@ -159,7 +159,11 @@
         // MAME's web build emulates 1/60 s per main-loop call, so the browser's frames are the clock; MAME's own throttle on
         // top of that busy-waits on the page and the two clocks fight (the game ran below 15% speed). The assistant
         // session measured the engine alone at about 20 times real speed.
-        '-nothrottle', '-nosleep'];
+        '-nothrottle', '-nosleep',
+        // Sound samples: MAME looks for <machine>.zip in its sample path, by default a folder no page has. Some Archive
+        // zips carry the machine's samples beside its chips (Zaxxon's twelve .wav files are inside zaxxon.zip), so the
+        // sample path is the same folder as the games. Without it Zaxxon plays silent (audit, 20 Nov 2026).
+        '-samplepath', '/roms'];
       if (opts.mute) args.push('-sound', 'none');
       // A machine that keeps its settings in battery memory (Williams) shows "FACTORY SETTINGS RESTORED" on a first boot
       // and waits there for ever; our page keeps no battery memory, so every boot is a first boot. One soft reset (the
@@ -289,7 +293,15 @@
       // A classic module cannot start over in place: a new game is the same page, loaded again.
       reset: () => { const u = new URL(location.href); u.searchParams.set('go', 'new'); location.replace(u.href); },
       frames: () => frames,
-      wakeSound: () => {},
+      // MAME makes its own sound context when the game first makes a sound, seconds after the Play tap, so iPhone and iPad
+      // start it suspended; MAME's own watchdog asks it to resume outside any tap, which they refuse. The page calls
+      // wakeSound on every tap and key, and a resume asked for there is allowed (audit, 20 Nov 2026).
+      wakeSound: () => {
+        try {
+          const c = root.jsmame_web_audio && root.jsmame_web_audio.get_context();
+          if (c && c.state === 'suspended') c.resume();
+        } catch (e) { /* no sound yet */ }
+      },
       isArcade: true,
     };
   }
