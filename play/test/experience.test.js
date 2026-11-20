@@ -120,3 +120,8 @@ test('T23: holding LT gives the gamepad a second set, so all nine Oregon Trail n
   const reach = new Set([...Object.values(c.gamepad), ...Object.values(c.gamepadShift.map)].filter((v) => /^Digit[1-9]$/.test(v)));
   assert.equal(reach.size, 9);
 });
+
+test('T22: on a phone, Play goes fullscreen and sideways where it can, the screen stays awake while playing, and an upright phone is told it plays bigger sideways', () => {
+  const js = fs.readFileSync(path.join(PLAY, 'src', 'play.js'), 'utf8');
+  for (const bit of ['function phoneScreen()', "screen.orientation.lock('landscape')", "navigator.wakeLock.request('screen')", 'stayAwake(true);', 'stayAwake(false);', "'Turn your phone sideways for a bigger picture'", 'stopGame();\n    phoneScreen();']) assert.ok(js.includes(bit), bit);
+});

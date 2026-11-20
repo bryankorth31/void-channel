@@ -49,8 +49,8 @@
   // While the menu is open the game hears nothing: every held key is let go first, then the gamepad drives the menu.
   function setPaused(p) {
     if (!runner || !started || p === paused) return;
-    if (p) { hub.releaseAll(); runner.rewind(false); paused = true; runner.pause(); autosave(); }
-    else { paused = false; runner.resume(); runner.wakeSound(); }
+    if (p) { hub.releaseAll(); runner.rewind(false); paused = true; runner.pause(); autosave(); stayAwake(false); }
+    else { paused = false; runner.resume(); runner.wakeSound(); stayAwake(true); }
     $('menu').hidden = !p; $('b-pause').textContent = p ? 'Resume' : 'Pause';
     if (p) $('m-resume').focus({ preventScroll: true }); else $('canvas').focus({ preventScroll: true });
   }
@@ -146,15 +146,32 @@
   const DEADLINE_MS = 60000;
   let deadline = 0;
 
+  // Phones and tablets (plan T22): on a phone, Play goes fullscreen and turns the screen sideways where the browser
+  // allows it (Android; an iPhone page cannot), and while a game runs the screen stays awake.
+  const isPhone = () => matchMedia('(pointer: coarse)').matches && Math.min(screen.width, screen.height) < 600;
+  function phoneScreen() {
+    if (!isPhone() || !document.fullscreenEnabled || document.fullscreenElement) return;
+    document.documentElement.requestFullscreen({ navigationUI: 'hide' })
+      .then(() => (screen.orientation && screen.orientation.lock ? screen.orientation.lock('landscape') : null))
+      .catch(() => {});
+  }
+  let wake = null;
+  function stayAwake(on) {
+    if (on && !wake && navigator.wakeLock && !document.hidden) navigator.wakeLock.request('screen').then((w) => { wake = w; w.addEventListener('release', () => { wake = null; }); }).catch(() => {});
+    if (!on && wake) { wake.release().catch(() => {}); wake = null; }
+  }
+
   function begin() {
     stopGame();
+    phoneScreen();
     $('b-play').hidden = true; $('b-continue').hidden = true; status('Starting');
     deadline = setTimeout(() => fail('The game did not arrive from the Internet Archive in time. Check the connection and press Play to try again.'), DEADLINE_MS);
     runner = PlayRunner.createRunner({ canvas: $('canvas'), mute: q.get('mute') === '1', on: {
       status, error: (t) => fail(t),
       ready: () => { started = true; },
       firstFrame: () => {
-        clearTimeout(deadline); $('cover').hidden = true; $('canvas').focus({ preventScroll: true });
+        clearTimeout(deadline); $('cover').hidden = true; $('canvas').focus({ preventScroll: true }); stayAwake(true);
+        if (isPhone() && innerHeight > innerWidth && PlayCards.isPad(card)) toast('Turn your phone sideways for a bigger picture');
         if (resumeState) { const s = resumeState; resumeState = null; runner.load(s).then((ok) => toast(ok ? 'Back where you left off' : 'That spot would not load; starting fresh')); }
       },
       aspect: (a) => { if (Math.abs(a - aspect) > 0.01) { aspect = a; place(); } },
@@ -169,7 +186,7 @@
 
   // Ends the game for good: the engine stops, nothing it sent late reaches the page, the menu closes.
   function stopGame() {
-    clearTimeout(deadline); clearInterval(autoTimer);
+    clearTimeout(deadline); clearInterval(autoTimer); stayAwake(false);
     if (runner) runner.stop();
     runner = null; hub = null; started = false; paused = false;
     padState.fill(0); $('menu').hidden = true; $('b-pause').textContent = 'Pause';
