@@ -159,7 +159,9 @@ test('HQ has four areas behind a switcher; University and Kids are not Void TV t
   const areas = Function('return ' + src[1])();
   // Void Cast: Bryan, 19 Nov 2026, "A Void Cast area in HQ" (his private film viewer, its own folder and server; this
   // area only shows Void Cast's own control page).
-  assert.deepEqual(areas.map((a) => a.n), ['Void TV', 'Kids', 'University', 'Void Cast']);
+  // Hindi: Bryan, 20 Nov 2026, "this needs area inside voidtv hq please , a tab" (hindi.voidtv.net; scripts/lib/hindihq.js,
+  // its own tests in tests/hindihq.test.js).
+  assert.deepEqual(areas.map((a) => a.n), ['Void TV', 'Kids', 'Hindi', 'University', 'Void Cast']);
   const keys = (k) => areas.find((a) => a.k === k).tabs.map((t) => t[0]);
   assert.ok(!keys('tv').includes('university'), 'University left the Void TV tabs');
   assert.deepEqual(keys('uni'), ['university', 'uni-courses', 'uni-areas', 'uni-check', 'uni-help']);

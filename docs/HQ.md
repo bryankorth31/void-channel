@@ -144,6 +144,17 @@ day; code scripts/lib/kidshq.js, test tests/kidshq.test.js) and **Help** (each b
 C:Usersryanoid-kids. Next: Hunt more, Build and Deploy, breaks and voice, Analytics (docs/PLAN-hq-areas.md K2 to K5). Old links still work (#shows, #university/<area>).
 Test: tests/hq.test.js, "HQ has three areas".
 
+**Hindi** (Bryan, 20 Nov 2026: "this needs area inside voidtv hq please , a tab"; hindi.voidtv.net, plan audit/drafts/PLAN-hindi.md).
+The site is built on the local branch hindi in C:\Users\bryan\void-hindi (beside this folder; HINDI_ROOT points HQ elsewhere),
+the Kids pattern: HQ reads that folder and runs its jobs there; no Hindi site code is on master. Everything is in English with
+each title's Hindi name beside it. **Overview** (what plays, the Archive's Hindi shelf, the friends' review sheet to send),
+**Shows and films** (Keep, Drop or Clear each title; writes the Hindi catalog/overrides.json with the switches voidtv.net
+reads: a show dropped is "hidden": true, a film kept is "approved": true and dropped "rejected": true; a dated backup
+overrides.before-hq-<date>.json before the first change of a day), **Friends' picks** (add a file a friend sent back from the
+review sheet; counted once; kept in the git-ignored profiles/hindi/reviews), **Hunt and build** (rebuild the list, read the
+shelf, hunt, rebuild the review sheet; one job at a time, inside the Hindi folder; Stop only kills a process that is still
+that job), and **Help** (each button by hand). Code scripts/lib/hindihq.js and scripts/hq/hindi.js; test tests/hindihq.test.js.
+
 ## People enjoying it (18 Nov 2026)
 
 Bryan: "just are you enjoying Void TV", one button ("if you're not enjoying it you're not on the site"). voidtv.net asks "Enjoying

@@ -33,6 +33,7 @@ function nodeBin() {
 // temporary one so that running them never touches catalog/cache.
 const CACHE = process.env.HQ_STATE_DIR ? path.resolve(process.env.HQ_STATE_DIR) : path.join(PROFILE.catalogDir, 'cache');
 const kidshq = require('./lib/kidshq'); // the Kids area: the kids show list (profiles/kids), approve / deny / add
+const hindihq = require('./lib/hindihq'); // the Hindi area: hindi.voidtv.net's list, keep or drop, the friends' picks, jobs in the Hindi folder
 const uni = require('./lib/uni'); // the University tab: Void University's sources, courses and the recipe (profiles/university)
 const promos = require('./lib/promos'); // the Motion and Promos tabs: motion editor, site placements, share copies
 promos.init({ nodeBin, cache: CACHE });
@@ -435,6 +436,16 @@ const server = http.createServer(async (req, res) => {
     if (p === '/api/kids/shows') return send(res, 200, kidshq.shows());
     if (p === '/api/kids/decide' && req.method === 'POST') { const b = await body(req); return send(res, 200, kidshq.decide(String(b.name || ''), String(b.d || ''), b.note)); }
     if (p === '/api/kids/add' && req.method === 'POST') { const b = await body(req); return send(res, 200, kidshq.add({ name: b.name, type: String(b.type || ''), year: b.year, network: b.network, tvmaze: b.tvmaze })); }
+    // ---- Hindi area (scripts/lib/hindihq.js; B, 20 Nov 2026: "this needs area inside voidtv hq please , a tab"). Its page code is scripts/hq/hindi.js. ----
+    if (p === '/hq/hindi.js') return send(res, 200, fs.readFileSync(path.join(__dirname, 'hq', 'hindi.js'), 'utf8'), MIME['.js']);
+    if (p === '/api/hindi') return send(res, 200, hindihq.overview());
+    if (p === '/api/hindi/titles') return send(res, 200, { rows: hindihq.titles(), tally: hindihq.tally() });
+    if (p === '/api/hindi/review') { const f = path.join(hindihq.HDIR(), 'docs', 'REVIEW.html'); if (!fs.existsSync(f)) return send(res, 404, 'No review sheet yet: Hunt and build, Rebuild the review sheet.', 'text/plain; charset=utf-8'); return send(res, 200, fs.readFileSync(f, 'utf8'), MIME['.html']); }
+    if (p === '/api/hindi/decide' && req.method === 'POST') { const b = await body(req); return send(res, 200, hindihq.decide(String(b.key || ''), String(b.d || ''))); }
+    if (p === '/api/hindi/picks' && req.method === 'POST') { const b = await body(req); return send(res, 200, hindihq.addPicks(b.file)); }
+    if (p === '/api/hindi/jobs' && req.method === 'GET') return send(res, 200, hindihq.jobs());
+    if (p === '/api/hindi/jobs' && req.method === 'POST') { const b = await body(req); return send(res, 200, hindihq.run(String(b.name || ''), nodeBin())); }
+    if (/^\/api\/hindi\/jobs\/[a-z0-9]+\/stop$/.test(p) && req.method === 'POST') { const r = await hindihq.stop(p.split('/')[4]); return send(res, r.status, r.body); }
     if (p === '/api/uni') { const c = readJson(path.join(uni.SRC, 'check.json'), { problems: [] }); return send(res, 200, { ...uni.overview(), check: c.problems.slice(0, 300) }); }
     if (p === '/api/uni/sources') { const a = uni.slugify(url.searchParams.get('area') || ''); return send(res, 200, readJson(path.join(uni.SRC, a + '.json'), { sources: [], courses: [] })); }
     if (p === '/api/uni/brief') return send(res, 200, { text: uni.brief(url.searchParams.get('slug') || '', url.searchParams.get('n') || '') });
