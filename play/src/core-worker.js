@@ -193,6 +193,8 @@ async function start(msg) {
   say('Starting the game');
   if (!callStr('host_load', path)) throw new Error('The core could not open ' + path);
   for (let port = 0; port < (msg.pads || 0); port++) M._host_plug_pad(port);
+  // The game's own battery save, kept by the page apart from save states: back in before the first frame.
+  if (msg.sram && M._host_sram_size) { const n = M._host_sram_size(), p = n ? M._host_sram() : 0; if (p && msg.sram.byteLength === n) M.HEAPU8.set(new Uint8Array(msg.sram), p); }
   rewindOn = !!msg.rewind;
   fps = M._host_fps() || 60;
   if (rewindOn) planRewind();
@@ -290,6 +292,7 @@ onmessage = (e) => {
     else if (m.type === 'pause') paused = true;
     else if (m.type === 'resume') paused = false;
     else if (m.type === 'save') save();
+    else if (m.type === 'sram-get') { const n = M._host_sram_size ? M._host_sram_size() : 0, p = n ? M._host_sram() : 0; const b = p ? M.HEAPU8.slice(p, p + n).buffer : null; postMessage({ type: 'sram', bytes: b }, b ? [b] : []); }
     else if (m.type === 'load') load(m.state);
     else if (m.type === 'reset') { M._host_reset(); ring = []; }
     else if (m.type === 'rewind') rewinding = rewindOn && !!m.on;

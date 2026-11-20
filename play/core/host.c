@@ -208,6 +208,12 @@ EMSCRIPTEN_KEEPALIVE void host_set_var(const char *key, const char *value) {
 EMSCRIPTEN_KEEPALIVE void host_cheat_reset(void) { retro_cheat_reset(); }
 EMSCRIPTEN_KEEPALIVE void host_cheat_set(unsigned index, int enabled, const char *code) { retro_cheat_set(index, enabled ? true : false, code); }
 
+/* Battery save (the cartridge's own save RAM: Pokemon's SAVE, Zelda's file select). Kept by the page per game, apart
+   from save states, so it survives a rebuilt engine and a New game (the audit, 20 Nov 2026). The page reads it out
+   after frames and writes it back right after the game loads, before the first frame. */
+EMSCRIPTEN_KEEPALIVE void *host_sram(void) { return retro_get_memory_data(RETRO_MEMORY_SAVE_RAM); }
+EMSCRIPTEN_KEEPALIVE int host_sram_size(void) { return (int)retro_get_memory_size(RETRO_MEMORY_SAVE_RAM); }
+
 /* save states: the core's own snapshot, copied out whole */
 EMSCRIPTEN_KEEPALIVE int host_state_size(void) { return (int)retro_serialize_size(); }
 EMSCRIPTEN_KEEPALIVE int host_state_save(void *buf, int size) { return retro_serialize(buf, (size_t)size) ? 1 : 0; }

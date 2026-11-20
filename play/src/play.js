@@ -15,6 +15,7 @@
   // A TV's browser (plan T24): played with its remote or a gamepad, so it never draws the touch pad.
   const isTV = /SMART-TV|SmartTV|Tizen|Web0S|webOS|BRAVIA|Android TV|GoogleTV|CrKey|AFT[A-Z]|Roku|HbbTV/i.test(navigator.userAgent);
   const touchWanted = q.get('touch') === '1' || (q.get('touch') !== '0' && !isTV && matchMedia('(pointer: coarse)').matches);
+  let sramKept = null;
   let card = null, build = null, runner = null, hub = null, pad = null, aspect = 4 / 3, touch = touchWanted, paused = false, started = false, padMode = false;
 
   for (const e of document.querySelectorAll('#donate-line, .donate-line')) e.textContent = DONATE_LINE;
@@ -92,10 +93,20 @@
   // A page that is closing cannot finish a save, so play also saves itself every 30 seconds (not while paused or hidden).
   const AUTO_EVERY_MS = 30000;
   // Bumped whenever play/core/host.c changes, so a browser fetches the rebuilt engines (2: cheats, 20 Nov 2026).
-  const HOST_V = 'h2';
+  const HOST_V = 'h3';   // 3: the battery save (host_sram), 20 Nov 2026
   async function autosave() {
     if (!started || !runner || autoBusy) return;
     autoBusy = true;
+    // The game's own battery save, kept per game apart from save states, so a rebuilt engine or New game never loses it.
+    try {
+      if (runner.sram) {
+        const b = await runner.sram();
+        if (b && b.length) {
+          const sig = b.length + ':' + b.reduce((s, x, i) => (s + x * (i % 251 + 1)) % 1000000007, 0);
+          if (sig !== autosave.sramSig) { await PlaySaves.put(card.id + ':sram', b, {}); autosave.sramSig = sig; sramKept = b; }
+        }
+      }
+    } catch (e) { /* best effort */ }
     // An arcade game keeps its own high-score table on this device (its battery memory; src/arcade-runner.js).
     try { if (runner.keepScores) await runner.keepScores(); } catch (e) { /* best effort */ }
     try { const s = await runner.save(); if (s) { await PlaySaves.put(AUTO(card), s, build); autosave.at = Date.now(); } } catch (e) { /* best effort */ }
@@ -122,7 +133,7 @@
     let rec = null;
     try { rec = await PlaySaves.get(card.id); } catch (e) { /* no storage here */ }
     if (!rec) return toast('Nothing saved for this game yet');
-    if (!PlaySaves.fits(rec, build)) return toast('That save was made with an older build of this game\'s engine, so it cannot load. Save again to start a new one.');
+    if (!PlaySaves.fits(rec, build)) return toast('That spot was saved with an older build of this game\'s engine, so it cannot load. Your in-game save is kept: load it from the game\'s own menu.');
     const undo = await keepHere();
     const ok = await runner.load(rec.state);
     toast(ok ? 'Back to your saved spot' : 'That save would not load', ok ? undo : null);
@@ -275,7 +286,7 @@
         if (name === 'click' || name === 'rclick') { ptrButtons &= name === 'click' ? ~1 : ~2; sendMouse(0, 0); }
       } });
     hub.setCard(card, PlayCards.gamepadMap(card));
-    runner.start(card, base, build.commit.slice(0, 12) + HOST_V);
+    runner.start(card, base, build.commit.slice(0, 12) + HOST_V, sramKept);
     autoTimer = setInterval(() => { if (started && !paused && !document.hidden) autosave(); }, AUTO_EVERY_MS);
     place.sig = ''; place();
   }
@@ -640,7 +651,10 @@
       .then((t) => { try { return JSON.parse(t); } catch (e) { throw new Error('This game did not load. Try again in a few minutes, or pick another game.'); } }),
     // The nightly check's answer: a game whose file the Archive no longer has is off the shelf, and an old link says so.
     fetch('shelf/status.json', { cache: 'no-store' }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
-  ]).then(([c, shelf]) => {
+    // The game's own battery save, read before anything can start, so even a game started straight away gets it back.
+    PlaySaves.get(id + ':sram').then((rec) => (rec && rec.state) || null).catch(() => null),
+  ]).then(([c, shelf, sram]) => {
+    sramKept = sram;
     const bad = PlayCards.check(c);
     if (bad.length) throw new Error('This game card is not right yet (' + bad.join(', ') + ')');
     card = c; if (phones) phones.card(phoneCard()); loadCheats(c);

@@ -28,6 +28,7 @@
     const canvas = opts.canvas, ctx = canvas.getContext('2d', { alpha: false });
     const on = opts.on || {};
     let worker = null, audio = null, node = null, rate = 0, frames = 0, stopped = false;
+    let sramWait = null;
     let why = '';                           // why the last save failed, when the engine said ('dos': still at DOS)
     let asking = null;                      // the one save or load waiting for its answer: { done, timer }
     const queue = [];                       // the rest, one at a time
@@ -72,7 +73,7 @@
     }
     const ask = (msg, transfer) => new Promise((done) => { queue.push({ msg, transfer, done }); next(); });
 
-    function start(card, base, version) {
+    function start(card, base, version, sram) {
       const workerUrl = new URL('src/core-worker.js', base);
       // ?v= the engine's build: a new engine never meets an old one in the browser's cache (the js and wasm always match).
       workerUrl.searchParams.set('engine', '../' + PlayCards.engineOf(card) + (version ? '?v=' + version : ''));
@@ -91,6 +92,7 @@
         else if (m.type === 'error') on.error && on.error(m.text);
         else if (m.type === 'saved') { why = m.why || ''; settle(m.state || null); }
         else if (m.type === 'loaded') settle(!!m.ok);
+        else if (m.type === 'sram') { const r = sramWait; sramWait = null; if (r) r(m.bytes ? new Uint8Array(m.bytes) : null); }
       };
       worker.onerror = (e) => { if (!stopped && on.error) on.error(e.message || 'The engine stopped'); };
       worker.postMessage({ type: 'start', gameUrl: PlayCards.gameUrl(card), gameFile: PlayCards.gameFile(card),
@@ -98,6 +100,7 @@
         // Plan T21: a big many-file game reads in pieces through voidtv.net's pass-through, by game id only.
         stream: card.archive.stream ? { url: new URL('/api/piece?game=' + encodeURIComponent(card.id), location.href).href, size: card.archive.size } : null,
         pads: PlayCards.isPad(card) ? Math.max(1, card.players || 1) : 0,
+        sram: sram ? new Uint8Array(sram).slice(0).buffer : null,
         rewind: PlayCards.isPad(card) });
     }
 
@@ -123,6 +126,8 @@
       pause: () => { post({ type: 'pause' }); if (audio) audio.suspend(); },
       resume: () => { post({ type: 'resume' }); if (audio) audio.resume(); },
       save: () => ask({ type: 'save' }),
+      // The game's own battery save (Pokemon's SAVE): read out for the page to keep apart from save states.
+      sram: () => new Promise((ok) => { if (!worker || stopped) return ok(null); sramWait = ok; post({ type: 'sram-get' }); setTimeout(() => { if (sramWait === ok) { sramWait = null; ok(null); } }, 2000); }),
       load: (state) => { const copy = state.slice(0); return ask({ type: 'load', state: copy }, [copy]); },
       reset: () => post({ type: 'reset' }),
       rewind: (on) => post({ type: 'rewind', on: !!on }),

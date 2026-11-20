@@ -26,7 +26,7 @@ test('cheats (Bryan, 20 Nov 2026: "add toggle for cheats"): lists from libretro-
   assert.match(fs.readFileSync(path.join(PLAY, 'core', 'host.c'), 'utf8'), /EMSCRIPTEN_KEEPALIVE void host_cheat_set\(unsigned index, int enabled, const char \*code\)/);
   for (const core of ['snes9x', 'fceumm', 'gambatte', 'genesis-plus-gx', 'mgba']) assert.ok(fs.readFileSync(path.join(PLAY, 'engine', core + '.js'), 'utf8').includes('host_cheat_set'), core + ' exports the cheat call');
   const js = fs.readFileSync(path.join(PLAY, 'src', 'play.js'), 'utf8');
-  for (const bit of ["const CHEAT_CORES = ['snes9x', 'fceumm', 'gambatte', 'genesis-plus-gx', 'mgba'];", "runner.start(card, base, build.commit.slice(0, 12) + HOST_V);", "localStorage.setItem(cheatKey()"]) assert.ok(js.includes(bit), bit);
+  for (const bit of ["const CHEAT_CORES = ['snes9x', 'fceumm', 'gambatte', 'genesis-plus-gx', 'mgba'];", "runner.start(card, base, build.commit.slice(0, 12) + HOST_V, sramKept);", "localStorage.setItem(cheatKey()"]) assert.ok(js.includes(bit), bit);
   const page = fs.readFileSync(path.join(PLAY, 'game.html'), 'utf8');
   assert.ok(page.includes('id="m-cheats"') && page.includes('CC BY-SA 4.0'), 'the menu has the switch and the credit');
   assert.ok(fs.readFileSync(path.join(PLAY, '..', 'scripts', 'site.js'), 'utf8').includes("for (const d of ['src', 'cards', 'engine', 'cheats'])"), 'the site build copies the cheat lists');

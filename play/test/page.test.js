@@ -143,3 +143,14 @@ test('the donation cross is never on the picture or a key: after the keys are la
   assert.ok(!/<div id="screen"[\s\S]{0,200}id="give"/.test(read(ROOT, 'game.html')), 'not inside the picture any more');
   assert.ok(read(ROOT, 'play.css').includes('.stage:has(.pkeyboard.open) .give{display:none}'), 'out of the way of the DOS keyboard');
 });
+
+test('battery saves (the audit, 20 Nov 2026): a game\'s own save RAM is kept per game apart from save states, read before the game can start and written back before its first frame', () => {
+  assert.match(read(ROOT, 'core', 'host.c'), /EMSCRIPTEN_KEEPALIVE void \*host_sram\(void\) \{ return retro_get_memory_data\(RETRO_MEMORY_SAVE_RAM\); \}/);
+  for (const core of ['snes9x', 'fceumm', 'gambatte', 'genesis-plus-gx', 'mgba']) assert.ok(read(ROOT, 'engine', core + '.js').includes('host_sram_size'), core);
+  const w = read(ROOT, 'src', 'core-worker.js');
+  assert.ok(w.indexOf("if (msg.sram && M._host_sram_size)") > w.indexOf("M._host_plug_pad(port);") && w.indexOf("if (msg.sram && M._host_sram_size)") < w.indexOf("postMessage({ type: 'ready'"), 'written back after loading, before the first frame');
+  const js = read(ROOT, 'src', 'play.js');
+  assert.ok(js.includes("PlaySaves.get(id + ':sram').then((rec) => (rec && rec.state) || null).catch(() => null),"), 'read before anything can start');
+  assert.ok(js.includes("await PlaySaves.put(card.id + ':sram', b, {});"), 'kept on every autosave when it changed');
+  assert.ok(js.includes("Your in-game save is kept"));
+});
