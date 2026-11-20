@@ -4,7 +4,7 @@
 //   node play/tools/library.js        build play/library/<system>/<n>.json from the gathered, boot-checked rows
 //
 // Plan C2 and C6. The rows come from the PLAY assistant's gathering and start-up check, one row per game:
-// audit/play-mode/collections/<system>.jsonl, each { item, file, system, title, year, publisher, size, source, ok, why }.
+// audit/play-mode/collections/<system>.jsonl, each { item, file, system, title, year, publisher, size, source, boot: { ok, why, at } }.
 // Only a row whose game started (ok) becomes a card; only a system whose collection Bryan approved (play/collections.json,
 // plan C1) is read. Cards are made by console-cards.js's rules (the machine's own default controls and help). A
 // hand-made card wins over a drafted one for the same Archive item or the same id (C6), and two rows that make the same
@@ -28,7 +28,8 @@ const collections = () => JSON.parse(fs.readFileSync(path.join(PLAY, 'collection
 function build(rows, taken) {
   const ids = new Set(taken.ids), items = new Set(taken.items), out = [];
   for (const r of rows) {
-    if (!r || !r.ok || !r.item || !r.file || !Cons.MACHINES[r.system] || items.has(r.item)) continue;
+    // The start-up check's answer: the assistant's rows carry it as boot: { ok, why, at }; a plain ok is read too.
+    if (!r || !(r.boot ? r.boot.ok : r.ok) || !r.item || !r.file || !Cons.MACHINES[r.system] || items.has(r.item)) continue;
     const c = Cons.card({ system: r.system, title: r.title, item: r.item, source: r.source },
       { name: r.file, size: r.size || 0, start: r.start || '' }, { year: r.year, creator: r.publisher });
     if (!c.archive.size) delete c.archive.size;

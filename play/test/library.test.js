@@ -56,3 +56,10 @@ test('C4: the shelf links carry the bundle, shows a page at a time, and the game
   const play = fs.readFileSync(path.join(__dirname, '..', 'src', 'play.js'), 'utf8');
   assert.ok(play.includes("fetch('library/' + b + '.json')") && play.includes("fromBundle(id, q.get('b'))"));
 });
+
+test('C2: the assistant\'s rows carry the start-up check as boot: { ok }', () => {
+  const r = row(); delete r.ok;
+  assert.equal(Lib.build([Object.assign({}, r, { boot: { ok: true, at: '2026-11-20' } })], { ids: [], items: [] }).length, 1);
+  assert.equal(Lib.build([Object.assign({}, r, { boot: { ok: false, why: 'one flat colour' } })], { ids: [], items: [] }).length, 0);
+  assert.equal(Lib.build([r], { ids: [], items: [] }).length, 0, 'not checked: not on the shelf');
+});
