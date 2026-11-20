@@ -3,6 +3,7 @@
 //
 //   node play/tools/shelf.js            rebuild play/shelf/index.json from the cards and the last check
 //   node play/tools/shelf.js --check    ask the Archive for each game's file first (one at a time, a pause between)
+//   node play/tools/shelf.js --plays    ask the Archive how often each game has been played (50 games an ask)
 //
 // Self-pruning like Live TV (DECISIONS L10): a game whose file the Archive says is gone (404, 403, 410) leaves the
 // shelf by itself and comes back by itself when the file answers again. A network hiccup or a busy Archive (5xx,
@@ -18,6 +19,10 @@ const SHELF = path.join(PLAY, 'shelf');
 const STATUS = path.join(SHELF, 'status.json');
 const INDEX = path.join(SHELF, 'index.json');
 const STREAM = path.join(SHELF, 'stream.js');
+// How often each game has been played at the Internet Archive (its item's downloads), item to count. The front page
+// sorts its rows by it (Bryan, 20 Nov 2026: "filter towards the most popular"). --plays refreshes it; a game the ask
+// misses keeps its last count, so one bad night changes nothing.
+const PLAYS = path.join(SHELF, 'plays.json');
 const Cards = require('../src/cards.js');
 const Shelf = require('../src/shelf.js');
 const PAUSE_MS = 1500;
@@ -38,20 +43,44 @@ function loadCards() {
   return hand.concat(lib);
 }
 
+function loadPlays() {
+  try { return JSON.parse(fs.readFileSync(PLAYS, 'utf8')).plays || {}; } catch (e) { return {}; }
+}
+const playsText = (plays) => '{"from":"the Internet Archive\'s download count of each game\'s item (node play/tools/shelf.js --plays)","plays":{\n'
+  + Object.keys(plays).sort().map((k) => JSON.stringify(k) + ':' + plays[k]).join(',\n') + '\n}}\n';
+
+// One ask per 50 games to the Archive's search, which gives each item's downloads. Nothing is downloaded but the counts.
+async function askPlays(items, before) {
+  const plays = Object.assign({}, before);
+  for (let i = 0; i < items.length; i += 50) {
+    const part = items.slice(i, i + 50);
+    const q = 'identifier:(' + part.map((x) => '"' + x.replace(/"/g, '') + '"').join(' OR ') + ')';
+    const url = 'https://archive.org/advancedsearch.php?' + new URLSearchParams([['q', q], ['fl[]', 'identifier'], ['fl[]', 'downloads'], ['rows', '100'], ['output', 'json']]);
+    try {
+      const r = await fetch(url);
+      if (!r.ok) throw new Error('the Archive answered ' + r.status);
+      for (const d of (await r.json()).response.docs) if (part.includes(d.identifier)) plays[d.identifier] = Number(d.downloads) || 0;
+      console.log('plays: ' + Math.min(i + 50, items.length) + ' of ' + items.length);
+    } catch (e) { console.log('plays: ' + (i + 1) + ' to ' + (i + part.length) + ' kept their last count (' + (e.message || e) + ')'); }
+    await new Promise((ok) => setTimeout(ok, PAUSE_MS));
+  }
+  return plays;
+}
+
 function loadStatus() {
   try { return JSON.parse(fs.readFileSync(STATUS, 'utf8')); } catch (e) { return { checked: null, games: {} }; }
 }
 
 // What the shelf needs from each card, in shelf order (oldest first), with the games the Archive no longer has left out.
-function buildIndex(cards, status) {
+function buildIndex(cards, status, plays = loadPlays()) {
   const games = cards.filter((c) => !Cards.check(c).length)
     .filter((c) => !(status.games[c.id] && status.games[c.id].gone))
     // Plan C4: a collection's game carries only what a box shows, and the bundle that holds its card; how it plays is
     // its machine's (libHow, once per machine), so thousands of games keep the list small.
     .map((c) => c.__b ? { id: c.id, title: c.title, year: c.year || null, publisher: c.publisher || '', system: c.system,
-      players: c.players || 1, item: c.archive.item, b: c.__b, genres: Shelf.genresOf(c.genre || (c.facts && c.facts.genre)) }
+      players: c.players || 1, item: c.archive.item, plays: plays[c.archive.item] || 0, b: c.__b, genres: Shelf.genresOf(c.genre || (c.facts && c.facts.genre)) }
       : ({ id: c.id, title: c.title, year: c.year || null, publisher: c.publisher || '', system: c.system,
-      players: c.players || 1, item: c.archive.item, help: c.help || '',
+      players: c.players || 1, item: c.archive.item, plays: plays[c.archive.item] || 0, help: c.help || '',
       // Plan G1 and G2: the card's own genre wins over Wikidata's facts; the shelf files both under its plain genres.
       mouse: !!(c.controls && c.controls.mouse),
       // T16 (B, 20 Nov 2026: "kids learning ames"): a card Bryan approved for the Kids learning list.
@@ -128,6 +157,10 @@ async function main() {
     status = await check(cards, status);
     fs.writeFileSync(STATUS, JSON.stringify(status, null, 2) + '\n');
   }
+  if (process.argv.includes('--plays')) {
+    const items = [...new Set(cards.map((c) => c.archive && c.archive.item).filter(Boolean))];
+    fs.writeFileSync(PLAYS, playsText(await askPlays(items, loadPlays())));
+  }
   const index = buildIndex(cards, status);
   fs.writeFileSync(INDEX, indexText(index));
   fs.writeFileSync(STREAM, streamModule(buildStream(cards, status)));
@@ -139,5 +172,5 @@ async function main() {
 const indexText = (index) => '{' + Object.entries(index).filter(([k]) => k !== 'games').map(([k, v]) => JSON.stringify(k) + ':' + JSON.stringify(v)).join(',')
   + ',"games":[\n' + index.games.map((g) => JSON.stringify(g)).join(',\n') + '\n]}\n';
 
-module.exports = { indexText, buildIndex, buildStream, streamModule, loadCards, ask };
+module.exports = { indexText, buildIndex, buildStream, streamModule, loadCards, ask, loadPlays, playsText };
 if (require.main === module) main().catch((e) => { console.error(String(e.message || e)); process.exit(1); });

@@ -15,44 +15,150 @@ a{color:var(--acc)} a:hover{color:#fff}
 .mark{font-family:'Unbounded',sans-serif;font-weight:700;font-size:19px;text-decoration:none;letter-spacing:-.02em}
 .mark .v{color:var(--pink)} .mark .n{color:var(--blue)}
 .tag{font-family:'Unbounded',sans-serif;font-size:11px;font-weight:600;letter-spacing:.12em;color:var(--gold);border:1px solid var(--gold);border-radius:4px;padding:2px 6px}
-.shelf{max-width:1400px;margin:0 auto;padding:22px 16px 8px}
 .site{margin-left:auto;display:flex;align-items:center;gap:4px;font-size:14px;overflow-x:auto;scrollbar-width:none}
 .site a{color:var(--dim);text-decoration:none;padding:8px 9px;border-radius:8px;white-space:nowrap}
 .site a:hover,.site a:focus-visible{color:var(--fg);background:var(--line);outline:none}
 .site .back{color:var(--fg);font-weight:600;margin-right:4px}
 .site .give{color:var(--pink)}
 @media (max-width:640px){.site a:not(.back):not(.give){display:none}.bar .tag{display:none}}
-/* A short window (Bryan's 1278x513): the first row of games and their names show without scrolling (audit A24). */
-@media (max-height:640px){.shelf{padding-top:10px}.intro h1{font-size:22px;margin:2px 0}.intro p:not(.pad-hint){display:none}
-  .filters{flex-wrap:nowrap;overflow-x:auto;margin:8px 0 0;scrollbar-width:none}.filters .flt{flex:none}
-  .shelf .boxes{grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:12px}.shelf .row h2{margin:10px 0 8px}}
+.shelf{max-width:1800px;margin:0 auto;padding:10px 20px 8px}
 .intro h1{font-family:'Unbounded',sans-serif;font-size:clamp(24px,4vw,40px);margin:6px 0 6px;letter-spacing:-.02em}
 .intro p{margin:0 0 6px;color:var(--dim);max-width:640px}
+/* Once the games are in, the hero or a list's own heading says what the page is: the intro's heading is only for screen
+   readers and its line goes. */
+.intro.quiet h1{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.intro.quiet p:not(.pad-hint){display:none}
 .pad-hint{color:var(--acc)!important}
 .loading{color:var(--dim)}
-.row{margin:26px 0 10px}
-.row h2{font-family:'Unbounded',sans-serif;font-size:18px;font-weight:600;margin:0 0 12px;color:var(--gold);letter-spacing:.02em}
-.boxes{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:18px;align-items:end}
-.box{position:relative;display:flex;flex-direction:column;text-decoration:none;color:var(--fg);border-radius:10px;outline:none;transition:transform .15s ease,box-shadow .15s ease;-webkit-tap-highlight-color:transparent}
-.box .art{position:relative;display:block;overflow:hidden;background:#0d0f17;border:1px solid #232838;border-top:6px solid var(--sys);border-radius:8px;box-shadow:0 10px 24px rgba(0,0,0,.45)}
+body.home .shelf{padding-top:6px}
+
+/* ---- The hero, after VoidTV's .hero-home (site/index.html): a slow push in, a shade, the words bottom left, arrows.
+   The Archive's pictures are small title screens, so a slide shows its picture whole on a screen at the right, over a
+   blurred wash of the same picture; a machine's slide fans three of its games. ---- */
+.hero-home{position:relative;height:min(62vh,540px);min-height:340px;overflow:hidden;background:#000;touch-action:pan-y}
+.hero-home[hidden]{display:none}
+.hero-home .slides{position:absolute;inset:0}
+.hero-home .s{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease;pointer-events:none}
+.hero-home .s.on{opacity:1}
+.hero-home .bg{position:absolute;left:-6%;top:-6%;width:112%;height:112%;object-fit:cover;filter:blur(26px) saturate(1.4) brightness(.5);transform:scale(1.04)}
+.hero-home .s.on .bg{animation:kb 10s linear forwards}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.1)}}
+.hero-home .scr{position:absolute;right:7%;top:46%;width:min(42%,520px);aspect-ratio:4/3;transform:translateY(-50%);overflow:hidden;background:#07080c;border:1px solid #2a3044;border-top:6px solid var(--sys);border-radius:10px;box-shadow:0 30px 80px rgba(0,0,0,.65),0 0 44px color-mix(in srgb,var(--sys) 32%,transparent)}
+.hero-home .scr img{width:100%;height:100%;object-fit:contain;display:block;image-rendering:pixelated}
+.hero-home .s.on .scr{animation:rise 1.1s cubic-bezier(.2,.8,.2,1)}
+@keyframes rise{from{opacity:0;margin-top:18px}}
+.hero-home .scr.f1,.hero-home .scr.f2,.hero-home .scr.f3{width:min(27%,330px)}
+.hero-home .scr.f1{right:27%;top:40%;transform:translateY(-50%) rotate(-5deg);z-index:1}
+.hero-home .scr.f2{right:15%;top:50%;transform:translateY(-50%) rotate(2deg);z-index:3}
+.hero-home .scr.f3{right:4%;top:38%;transform:translateY(-50%) rotate(6deg);z-index:2}
+.hero-home .shade{position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(7,8,12,.1) 0%,rgba(7,8,12,.1) 55%,rgba(7,8,12,.98) 100%),linear-gradient(90deg,rgba(7,8,12,.75) 0%,rgba(7,8,12,.35) 42%,rgba(7,8,12,0) 62%)}
+.hero-home .shade::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(180deg,rgba(0,0,0,0) 0 3px,rgba(0,0,0,.16) 3px 4px);opacity:.5}
+.hero-home .copy{position:absolute;left:76px;bottom:26px;width:min(560px,46%);z-index:4}
+.hero-home .hline{display:block;color:var(--dim);font-size:13px;margin:0 0 8px}
+.hero-home .kicker{display:block;color:var(--gold);font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+.hero-home .ht{font-family:'Unbounded',sans-serif;font-weight:800;font-size:clamp(24px,3.4vw,46px);line-height:1.08;margin:4px 0 10px;letter-spacing:-.01em;text-shadow:0 2px 14px rgba(0,0,0,.75);overflow-wrap:anywhere}
+.hero-home .ov{font-size:15px;line-height:1.45;margin:0;text-shadow:0 1px 8px rgba(0,0,0,.85);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.hero-home .meta{color:var(--dim);font-size:13px;margin-top:8px}
+.hero-home .acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:9px 18px;border-radius:10px;font:600 15px system-ui,sans-serif;text-decoration:none;cursor:pointer;color:var(--fg);background:linear-gradient(180deg,#1a242b 0%,#121a1f 100%);border:1px solid rgba(95,212,255,.55);outline:none;transition:border-color .15s,box-shadow .15s}
+.btn:hover{color:var(--fg);border-color:#7adcf5;box-shadow:0 0 12px rgba(95,212,255,.35)}
+.btn.gold{background:linear-gradient(180deg,#2e2316 0%,#221a11 100%);border-color:rgba(242,169,59,.8);color:#ffd27a;box-shadow:0 0 10px rgba(242,169,59,.25)}
+.btn.gold:hover{border-color:#ffc35c;box-shadow:0 0 16px rgba(242,169,59,.5)}
+.btn.ghost{background:rgba(7,8,12,.4);backdrop-filter:blur(6px)}
+.btn:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.hero-home .harrow{position:absolute;top:50%;margin-top:-22px;width:44px;height:44px;border-radius:50%;border:1px solid rgba(95,212,255,.55);background:linear-gradient(180deg,#1a242b 0%,#121a1f 100%);color:var(--fg);font-size:26px;line-height:1;cursor:pointer;z-index:5;outline:none}
+.hero-home .harrow:hover{border-color:#7adcf5;color:#9fe6ff;box-shadow:0 0 14px rgba(95,212,255,.45)}
+.hero-home .harrow:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.hero-home .harrow.l{left:14px}.hero-home .harrow.r{right:14px}
+.hero-home .hcount{position:absolute;right:18px;bottom:14px;color:var(--dim);font-size:12px;z-index:4}
+@media (hover:none){.hero-home .harrow{width:38px;height:38px;font-size:22px;opacity:.85}.hero-home .copy{left:16px}}
+/* A phone held upright: the screen at the top, the words under it. */
+@media (max-width:700px){.hero-home{height:auto;min-height:0;aspect-ratio:auto;padding:16px 0 0}
+  .hero-home .s{position:absolute}
+  .hero-home .scr{right:auto;left:50%;top:16px;width:min(78%,360px);transform:translateX(-50%)}
+  .hero-home .scr.f1,.hero-home .scr.f2,.hero-home .scr.f3{width:min(46%,220px)}
+  .hero-home .scr.f1{left:30%;top:26px;transform:translateX(-50%) rotate(-5deg)}
+  .hero-home .scr.f2{left:50%;top:40px;transform:translateX(-50%) rotate(2deg)}
+  .hero-home .scr.f3{left:70%;top:22px;transform:translateX(-50%) rotate(6deg)}
+  .hero-home .copy{position:relative;left:auto;bottom:auto;width:auto;margin:calc(min(78vw,360px) * .75 + 26px) 16px 0;padding-bottom:18px}
+  .hero-home .ht{font-size:26px}.hero-home .ov{font-size:14px}
+  .hero-home .harrow{top:calc(16px + min(78vw,360px) * .375)}
+  .hero-home .hcount{bottom:auto;top:10px;right:12px}
+  .hero-home .shade{background:linear-gradient(180deg,rgba(7,8,12,0) 0,rgba(7,8,12,0) calc(16px + min(78vw,360px) * .75),rgba(7,8,12,.7) calc(40px + min(78vw,360px) * .75),rgba(7,8,12,.98) 100%)}}
+
+/* ---- The rows, after VoidTV's: a heading with the count and "See all", then a track that scrolls sideways. ---- */
+.row{margin:18px 0 6px}
+.row h2{display:flex;align-items:baseline;gap:10px;font-family:'Unbounded',sans-serif;font-size:17px;font-weight:500;margin:0 0 8px;color:var(--fg)}
+.row h2 small{color:var(--dim);font:400 13px system-ui,sans-serif}
+.row h2 .see{margin-left:auto;color:var(--acc);font:400 13px system-ui,sans-serif;text-decoration:none;padding:6px 0 6px 10px;white-space:nowrap;outline:none;border-radius:6px}
+.row h2 .see:hover,.row h2 .see:focus-visible{color:#fff;box-shadow:0 0 0 2px var(--gold)}
+.rowwrap{position:relative;margin:0 -20px;padding:0 20px}
+.track{display:flex;gap:14px;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;touch-action:pan-x pan-y;padding:6px 4px 12px;scrollbar-width:none;scroll-padding:0 20px}
+.track::-webkit-scrollbar{display:none}
+.track .box{flex:0 0 clamp(150px,15vw,220px)}
+.arrow{position:absolute;top:50%;transform:translateY(-70%);width:44px;height:44px;border-radius:50%;border:1px solid rgba(95,212,255,.55);background:rgba(18,26,31,.94);color:var(--fg);font-size:28px;line-height:1;padding:0 0 4px;cursor:pointer;z-index:3;opacity:0;transition:opacity .2s}
+.arrow.l{left:4px}.arrow.r{right:4px}
+.rowwrap:hover .arrow{opacity:1}
+.arrow:hover{border-color:#7adcf5;color:#9fe6ff;box-shadow:0 0 14px rgba(95,212,255,.45)}
+@media (hover:none){.arrow{display:none}}
+/* The machines: a tile each, in its colour; a tile opens that machine's games. */
+.track.machines .mtile{flex:0 0 clamp(140px,14vw,184px)}
+.mtile{position:relative;display:flex;flex-direction:column;justify-content:flex-end;height:92px;padding:10px 12px;border-radius:12px;text-decoration:none;color:#fff;background:linear-gradient(150deg,color-mix(in srgb,var(--sys) 50%,#07080c),#0f1118 80%);border:1px solid color-mix(in srgb,var(--sys) 55%,#1d2130);box-shadow:0 8px 20px rgba(0,0,0,.4);outline:2px solid transparent;transition:transform .18s ease,outline-color .18s ease}
+.mtile:hover,.mtile:focus-visible{color:#fff;transform:translateY(-3px);outline-color:var(--acc)}
+.mtile b{font-family:'Unbounded',sans-serif;font-size:14px;font-weight:600;line-height:1.15}
+.mtile span{font-size:12px;color:#cfd2dc}
+/* A list (a filter, a search or a row's "See all"): its name, the way back, then every game a page at a time. */
+.vhead{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin:18px 0 12px}
+.vhead h2{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;margin:0;font-family:'Unbounded',sans-serif;font-size:clamp(18px,2.4vw,26px);font-weight:600}
+.vhead h2 small{color:var(--dim);font:400 13px system-ui,sans-serif}
+.boxes{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px;align-items:start}
+
+/* ---- A game card, after VoidTV's show card: the picture, then the name and a line on the panel, the machine's colour
+   along the top of the words; resting on it lifts it, rings it and shows its info beside it. ---- */
+.box{position:relative;display:flex;flex-direction:column;text-decoration:none;color:var(--fg);background:var(--panel);border-radius:8px;overflow:hidden;outline:2px solid transparent;cursor:pointer;transition:transform .18s ease,outline-color .18s ease;-webkit-tap-highlight-color:transparent}
+.box .art{position:relative;display:block;overflow:hidden;background:#07080c}
 /* Bryan, 20 Nov 2026: "the card dimension aspect ratio doesn't fit the artwork so it's virtually useless". The pictures
    are mostly title screens, about 4:3, so every box's picture area is 4:3 and the picture is shown whole (contain), never
-   cut; a picture of another shape gets plain dark edges. The machine still reads by its colour stripe and corners. */
+   cut; a picture of another shape gets plain dark edges. */
 .box .art{aspect-ratio:4/3}
-.box.cart .art{border-radius:8px 8px 14px 14px}
-.box.handheld .art{border-radius:16px}
 .box img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block;image-rendering:pixelated;background:#07080c}
 .box .fallback{position:absolute;inset:0;display:none;align-items:center;justify-content:center;padding:12px;text-align:center;font-family:'Unbounded',sans-serif;font-weight:700;font-size:15px;color:var(--sys)}
 .box .art.none .fallback{display:flex}
-.box .label{display:flex;flex-direction:column;padding:8px 2px 0}
-.box .title{font-weight:700;font-size:15px;line-height:1.25}
-.box .meta{color:var(--dim);font-size:12.5px}
-.box:hover,.box:focus-visible{transform:translateY(-6px) rotate(-.6deg)}
-.box:hover .art,.box:focus-visible .art{box-shadow:0 0 0 2px var(--sys),0 16px 34px rgba(0,0,0,.55),0 0 28px color-mix(in srgb,var(--sys) 45%,transparent)}
+.box .label{display:flex;flex-direction:column;padding:8px 10px 10px;box-shadow:inset 0 3px 0 var(--sys)}
+.box .title{font-weight:700;font-size:14px;line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.box .meta{color:var(--dim);font-size:12px;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.box::after{content:'';position:absolute;inset:0;pointer-events:none;opacity:0;background:repeating-linear-gradient(180deg,rgba(255,255,255,0) 0 3px,rgba(95,212,255,.09) 3px 4px);transition:opacity .25s}
+.box:hover,.box:focus-visible{transform:translateY(-3px);outline-color:var(--acc)}
+.box:hover::after,.box:focus-visible::after{opacity:1}
 .box:focus-visible .title{color:#fff}
-.foot{max-width:1400px;margin:24px auto 0;padding:18px 16px 30px;border-top:1px solid var(--line);color:var(--dim);font-size:13px}
-@media (max-width:520px){.boxes{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.shelf{padding-top:16px}}
-@media (prefers-reduced-motion:reduce){.box{transition:none}.box:hover,.box:focus-visible{transform:none}}
+.box.endcard{align-items:center;justify-content:center;gap:4px;aspect-ratio:4/3;align-self:flex-start;background:linear-gradient(180deg,#1a242b 0%,#121a1f 100%);color:var(--acc)}
+.box.endcard b{font-size:30px}.box.endcard span{font-size:13px;color:var(--fg)}
+@media (hover:none){.box:hover{transform:none}.box::after{display:none}}
+/* What resting on a card shows (VoidTV's show info): the game, the machine, a line, its first three actions. */
+.peek{position:fixed;z-index:12;width:300px;pointer-events:none;padding:12px 14px 12px;background:rgba(17,20,29,.97);border:1px solid #2a3044;border-top:3px solid var(--sys);border-radius:10px;box-shadow:0 18px 40px rgba(0,0,0,.6);animation:drop .16s ease-out}
+.peek[hidden]{display:none}
+.peek b{display:block;font-family:'Unbounded',sans-serif;font-size:16px;line-height:1.2;margin:0 0 4px}
+.peek .m{display:block;color:var(--dim);font-size:12.5px}
+.peek p{margin:8px 0 0;font-size:13.5px;line-height:1.4;color:#d7dae4}
+.peek .how{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:3px;font-size:13px;color:#d7dae4}
+.peek .how b{display:inline;font:700 13px system-ui,sans-serif;color:#fff;margin:0 4px 0 0}
+.peek .plays{display:block;margin-top:8px;color:var(--gold);font-size:12px}
+.peek .hint{display:block;margin-top:8px;color:var(--acc);font-size:12px}
+@keyframes drop{from{opacity:0;transform:translateY(-6px)}}
+.foot{max-width:1800px;margin:24px auto 0;padding:18px 20px 30px;border-top:1px solid var(--line);color:var(--dim);font-size:13px}
+@media (max-width:520px){.shelf{padding:16px 16px 8px}.rowwrap{margin:0 -16px;padding:0 16px}.track{gap:10px;scroll-padding:0 16px}.track .box{flex-basis:148px}
+  .boxes{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.foot{padding:18px 16px 30px}}
+/* A short window (Bryan's 1278x513): the first row of games and their names show without scrolling (audit A24). */
+@media (max-height:640px){.shelf{padding-top:10px}.intro h1{font-size:22px;margin:2px 0}.intro p:not(.pad-hint){display:none}
+  .filters{flex-wrap:nowrap;overflow-x:auto;margin:8px 0 0;scrollbar-width:none}.filters .flt{flex:none}
+  .track .box{flex-basis:150px}.row{margin-top:12px}.shelf .boxes{grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px}}
+/* A short wide window (a laptop's, a phone on its side): a low hero, so the first row still shows. */
+@media (max-height:640px) and (min-width:701px){.hero-home{height:max(170px,calc(100vh - 350px));min-height:0}.hero-home .ov,.hero-home .hline{display:none}
+  .hero-home .ht{font-size:clamp(20px,2.6vw,30px);margin:2px 0 4px}.hero-home .copy{bottom:14px}.hero-home .acts{margin-top:8px}
+  .hero-home .btn{min-height:38px;padding:6px 14px}.hero-home .scr{top:50%;width:auto;height:78%}
+  .hero-home .scr.f1,.hero-home .scr.f2,.hero-home .scr.f3{width:auto;height:62%}}
+@media (prefers-reduced-motion:reduce){.box,.mtile{transition:none}.box:hover,.box:focus-visible,.mtile:hover,.mtile:focus-visible{transform:none}
+  .hero-home .s{transition:none}.hero-home .s.on .bg,.hero-home .s.on .scr{animation:none}.peek{animation:none}}
 /* Plan T25: the box in hand. It lifts off the shelf into the middle and turns over to its back. */
 .held{position:fixed;inset:0;z-index:20;display:flex;align-items:center;justify-content:center;perspective:1400px}
 .held[hidden]{display:none}

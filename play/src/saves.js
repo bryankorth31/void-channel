@@ -23,6 +23,8 @@
     // Same core, same build: yes. A save from another build (or from before builds were recorded): no.
     fits: (rec, build) => !!(rec && build && rec.core === build.core && rec.commit === build.commit),
     get: (id) => run('readonly', (s) => s.get(id)),
+    // Every save's name (<game id>:auto and the like), without reading the saves: the front page's Continue playing row.
+    keys: () => run('readonly', (s) => s.getAllKeys()),
   };
   root.PlaySaves = api;
 })(typeof self !== 'undefined' ? self : this);

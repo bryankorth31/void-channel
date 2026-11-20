@@ -13,11 +13,63 @@ const PLAY = path.join(__dirname, '..');
 const Shelf = require('../src/shelf.js');
 const Tool = require('../tools/shelf.js');
 
-test('shelves come by decade, oldest first, each in year order', () => {
-  const s = Shelf.shelves([{ id: 'b', title: 'B', year: 1991 }, { id: 'a', title: 'A', year: 1982 }, { id: 'c', title: 'C', year: 1989 },
-    { id: 'd', title: 'D', year: 2003 }]);
-  assert.deepEqual(s.map((x) => x.title), ['The 80s', 'The 90s', 'The 2000s']);
-  assert.deepEqual(s[0].games.map((g) => g.id), ['a', 'c']);
+// Bryan, 20 Nov 2026: "a hero that cycles thru the most popular games/consoles. below the cycling hero it should be the
+// rows like voidtv starting with continue playing, and then genres and filters as rows ... filter towards the most popular".
+test('the front page: rows like VoidTV, each a filter, the most played first (the newer between equals)', () => {
+  const g = (id, o) => Object.assign({ id, title: id.toUpperCase(), system: 'nes', players: 1, plays: 0, genres: [] }, o);
+  const games = [g('a', { plays: 50, year: 1990 }), g('b', { plays: 900, year: 1985, system: 'genesis', genres: ['Action'] }),
+    g('c', { plays: 50, year: 1994, genres: ['Action'] }), g('d', { plays: 10, system: 'arcade', year: 1981, players: 2 })];
+  assert.deepEqual(games.slice().sort(Shelf.byPopular).map((x) => x.id), ['b', 'c', 'a', 'd']);
+  const rows = Shelf.homeRows(games);
+  assert.equal(rows[0].title, 'Most played');
+  assert.deepEqual(rows.map((r) => r.title), ['Most played', '90s consoles', 'Nintendo', 'Sega', 'Action', 'Classic arcade and early games', 'Two at once']);
+  assert.deepEqual(rows.find((r) => r.title === 'Action').games.map((x) => x.id), ['b', 'c']);
+  // A row's "See all" is its filter, kept in the address, and the list it opens is called by the row's name.
+  for (const r of rows) assert.equal(Shelf.viewTitle(Shelf.readFilter(Shelf.writeFilter(r.f))), r.title);
+  assert.deepEqual(Shelf.readFilter('?s=sega&s2=x'), { s: 'sega' });
+  assert.deepEqual(Shelf.readFilter('?s=nonsense'), {}, 'a set the page does not know is dropped');
+  assert.equal(Shelf.viewTitle({ m: 'snes', p: '2' }), 'Super Nintendo, Two at once');
+  // Every set row on the real shelf has games, and Continue playing comes first, from the saves in this browser.
+  const index = JSON.parse(fs.readFileSync(path.join(PLAY, 'shelf', 'index.json'), 'utf8'));
+  for (const k of Object.keys(Shelf.SETS)) assert.ok(index.games.some((x) => Shelf.matches(x, { s: k })), k);
+  const src = fs.readFileSync(path.join(PLAY, 'src', 'shelf.js'), 'utf8');
+  assert.ok(src.includes("const sec = rowSection('Continue playing', list);") && src.includes('if (sec && turn === shown) rows.prepend(sec);'));
+  assert.ok(src.includes(".filter((k) => k.endsWith(':auto'))"));
+  assert.ok(fs.readFileSync(path.join(PLAY, 'src', 'saves.js'), 'utf8').includes("keys: () => run('readonly', (s) => s.getAllKeys()),"));
+});
+
+test("the hero turns through each machine's most played game, a machine between every two", () => {
+  const g = (id, system, plays) => ({ id, title: id, system, plays, year: 1990, players: 1, genres: [] });
+  const s = Shelf.heroSlides([g('n1', 'nes', 30), g('n2', 'nes', 20), g('s1', 'snes', 10), g('a1', 'arcade', 99), g('d1', 'dos', 5)], 8, 2);
+  assert.deepEqual(s.map((x) => (x.g ? x.g.id : '[' + x.system + ']')), ['a1', 'n1', '[arcade]', 's1', 'd1', '[nes]']);
+  assert.deepEqual(s[5].games.map((x) => x.id), ['n1', 'n2']);
+  assert.equal(s[5].count, 2);
+  const index = JSON.parse(fs.readFileSync(path.join(PLAY, 'shelf', 'index.json'), 'utf8'));
+  const real = Shelf.heroSlides(index.games);
+  assert.equal(real.length, 12);
+  assert.equal(new Set(real.filter((x) => x.g).map((x) => x.g.system)).size, 8, 'eight games, eight machines');
+  assert.equal(Shelf.HERO_MS, 8000);
+  const src = fs.readFileSync(path.join(PLAY, 'src', 'shelf.js'), 'utf8');
+  assert.ok(src.includes("if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;"), 'no turning by itself for less motion');
+  assert.ok(src.includes('if (!heroHeld && !document.hidden && isHome()) heroGo(heroAt + 1);'), 'held still while rested on or a box is in hand');
+});
+
+test("a card's info says what the game is, from its card; plays read in plain words", () => {
+  assert.equal(Shelf.aboutLine({ system: 'snes', publisher: 'Nintendo', year: 1991, players: 2, genres: ['Platform'] }),
+    'A platform game for the Super Nintendo, made by Nintendo in 1991. One or two players.');
+  assert.equal(Shelf.aboutLine({ system: 'arcade', year: 1981, players: 1, genres: [] }), 'A game from the arcades in 1981.');
+  assert.equal(Shelf.aboutLine({ system: 'dos', publisher: 'MECC', players: 4, genres: ['Adventure'] }), 'An adventure for the PC, made by MECC. One to four players.');
+  assert.equal(Shelf.playsText(13974767), '14 million plays');
+  assert.equal(Shelf.playsText(2165497), '2.2 million plays');
+  assert.equal(Shelf.playsText(12353), '12,353 plays');
+  assert.equal(Shelf.playsText(0), '');
+  // Every game on the shelf carries its plays (play/shelf/plays.json, refreshed with node play/tools/shelf.js --plays).
+  const index = JSON.parse(fs.readFileSync(path.join(PLAY, 'shelf', 'index.json'), 'utf8'));
+  for (const x of index.games) assert.equal(typeof x.plays, 'number', x.id);
+  assert.ok(index.games.filter((x) => x.plays > 0).length > index.games.length * 0.95);
+  const css = fs.readFileSync(path.join(PLAY, 'shelf.css'), 'utf8');
+  assert.ok(css.includes('.peek{position:fixed;z-index:12;width:300px;pointer-events:none;'));
+  assert.ok(css.includes('.track{display:flex;gap:14px;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;'));
 });
 
 test('every machine on a card has a name and a box shape on the shelf', () => {
