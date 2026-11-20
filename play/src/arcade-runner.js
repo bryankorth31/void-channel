@@ -266,7 +266,9 @@
       }
       watchFrames(); keepTitle();
       const s = document.createElement('script');
-      s.src = engine;
+      // The script carries the same version as its .wasm.gz: an engine's .js and .wasm are one build, and the edge kept an
+      // old williams.js beside the new wasm for a day ("memory access out of bounds", Joust live, 20 Nov 2026; audit).
+      s.src = engine + '?v=' + ENGINE_V;
       s.onerror = () => on.error && on.error('The arcade engine did not load. Try again in a moment.');
       document.body.appendChild(s);
     }
