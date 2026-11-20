@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+<!-- VoidTV PLAY d-pad, from Lexrom's (Bryan's lexROM, 2026-02-05): the cross, its lighting, contour and centre hub. -->
+<defs>
+<path id="x" d="M74.8,21.04 Q74.8,16 79.84,16 L120.16,16 Q125.2,16 125.2,21.04 L125.2,69.76 Q125.2,74.8 130.24,74.8 L178.96,74.8 Q184,74.8 184,79.84 L184,120.16 Q184,125.2 178.96,125.2 L130.24,125.2 Q125.2,125.2 125.2,130.24 L125.2,178.96 Q125.2,184 120.16,184 L79.84,184 Q74.8,184 74.8,178.96 L74.8,130.24 Q74.8,125.2 69.76,125.2 L21.04,125.2 Q16,125.2 16,120.16 L16,79.84 Q16,74.8 21.04,74.8 L69.76,74.8 Q74.8,74.8 74.8,69.76 Z"/>
+<clipPath id="c"><use href="#x"/></clipPath>
+<linearGradient id="base" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5a5868"/><stop offset=".3" stop-color="#4a4858"/><stop offset=".7" stop-color="#3a3848"/><stop offset="1" stop-color="#2a2838"/></linearGradient>
+<radialGradient id="spec" cx=".35" cy=".25" r=".5"><stop offset="0" stop-color="#fff" stop-opacity=".2"/><stop offset=".9" stop-color="#fff" stop-opacity="0"/></radialGradient>
+<radialGradient id="rim" cx=".15" cy=".5" r=".4"><stop offset="0" stop-color="#fff" stop-opacity=".08"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+<radialGradient id="warm" cx=".5" cy=".05" r=".5" gradientTransform="translate(0 .0425) scale(1 .3)"><stop offset="0" stop-color="#d4af55" stop-opacity=".1"/><stop offset="1" stop-color="#d4af55" stop-opacity="0"/></radialGradient>
+<linearGradient id="ct" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".12"/><stop offset=".2" stop-color="#fff" stop-opacity=".04"/><stop offset=".4" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<linearGradient id="cl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity=".08"/><stop offset=".2" stop-color="#fff" stop-opacity=".02"/><stop offset=".4" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<linearGradient id="cb" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#000" stop-opacity=".18"/><stop offset=".25" stop-color="#000" stop-opacity=".06"/><stop offset=".45" stop-color="#000" stop-opacity="0"/></linearGradient>
+<linearGradient id="cr" x1="1" y1="0" x2="0" y2="0"><stop offset="0" stop-color="#000" stop-opacity=".12"/><stop offset=".25" stop-color="#000" stop-opacity=".04"/><stop offset=".45" stop-color="#000" stop-opacity="0"/></linearGradient>
+<linearGradient id="hub" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a2838"/><stop offset=".3" stop-color="#1e1c28"/><stop offset=".7" stop-color="#14121a"/><stop offset="1" stop-color="#0a0810"/></linearGradient>
+<radialGradient id="hspec" cx=".35" cy=".25" r=".5"><stop offset="0" stop-color="#fff" stop-opacity=".08"/><stop offset=".9" stop-color="#fff" stop-opacity="0"/></radialGradient>
+<filter id="blur" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="5"/></filter>
+<filter id="hblur" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4"/></filter>
+<filter id="noise"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .9 0"/></filter>
+</defs>
+<use href="#x" transform="translate(0,9)" fill="#000" opacity=".4" filter="url(#blur)"/>
+<use href="#x" transform="translate(0,6)" fill="#12101a"/>
+<use href="#x" transform="translate(0,3)" fill="#1b1926"/>
+<use href="#x" fill="url(#base)"/>
+<g clip-path="url(#c)">
+<rect x="16" y="16" width="168" height="168" fill="url(#spec)"/>
+<rect x="16" y="16" width="168" height="168" fill="url(#rim)"/>
+<rect x="16" y="16" width="168" height="168" fill="url(#warm)"/>
+<rect x="16" y="16" width="168" height="168" filter="url(#noise)" opacity=".06"/>
+<rect x="16" y="16" width="168" height="168" fill="url(#ct)"/>
+<rect x="16" y="16" width="168" height="168" fill="url(#cl)"/>
+<rect x="16" y="16" width="168" height="168" fill="url(#cb)"/>
+<rect x="16" y="16" width="168" height="168" fill="url(#cr)"/>
+<use href="#x" fill="none" stroke="#fff" stroke-opacity=".1" stroke-width="4" transform="translate(0,2)"/>
+<use href="#x" fill="none" stroke="#000" stroke-opacity=".45" stroke-width="4"/>
+</g>
+<use href="#x" fill="none" stroke="#2a2838" stroke-width="2"/>
+<polygon points="100,37 109,51 91,51" fill="#fff" opacity=".1" transform="translate(0,1)"/><polygon points="100,37 109,51 91,51" fill="#000" opacity=".3" transform="translate(0,-1)"/><polygon points="100,37 109,51 91,51" fill="#1a1825" opacity=".6"/><polygon points="100,163 109,149 91,149" fill="#fff" opacity=".1" transform="translate(0,1)"/><polygon points="100,163 109,149 91,149" fill="#000" opacity=".3" transform="translate(0,-1)"/><polygon points="100,163 109,149 91,149" fill="#1a1825" opacity=".6"/><polygon points="37,100 51,91 51,109" fill="#fff" opacity=".1" transform="translate(0,1)"/><polygon points="37,100 51,91 51,109" fill="#000" opacity=".3" transform="translate(0,-1)"/><polygon points="37,100 51,91 51,109" fill="#1a1825" opacity=".6"/><polygon points="163,100 149,91 149,109" fill="#fff" opacity=".1" transform="translate(0,1)"/><polygon points="163,100 149,91 149,109" fill="#000" opacity=".3" transform="translate(0,-1)"/><polygon points="163,100 149,91 149,109" fill="#1a1825" opacity=".6"/>
+<rect x="71" y="74" width="58" height="58" rx="8" fill="#000" opacity=".5" filter="url(#hblur)"/>
+<rect x="69" y="69" width="62" height="62" rx="10" fill="none" stroke="#000" stroke-opacity=".4" stroke-width="2"/>
+<rect x="72" y="72" width="56" height="58" rx="7" fill="#040306"/>
+<rect x="72" y="72" width="56" height="54" rx="7" fill="url(#hub)" stroke="#1a1820" stroke-width="2"/>
+<rect x="72" y="72" width="56" height="54" rx="7" fill="url(#hspec)"/>
+<path d="M79,73 H121" stroke="#fff" stroke-opacity=".06" stroke-width="2"/>
+</svg>

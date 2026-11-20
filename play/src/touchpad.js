@@ -11,6 +11,7 @@
   let names = {};
   const label = (code) => names[code] || LABELS[code] || code.replace(/^P[1-4]:/, '').replace(/^Key|^Digit/, '');
   LABELS['@rewind'] = '◀◀';
+  LABELS['@cheats'] = 'Cheats';   // opens the game's cheat switches (Bryan, 20 Nov 2026: "a cheat button near the start")
   LABELS['@click'] = 'L click'; LABELS['@rclick'] = 'R click';   // a DOS game's mouse buttons (plan T21b)
   const QWERTY = [['Digit1', 'Digit2', 'Digit3', 'Digit4', 'Digit5', 'Digit6', 'Digit7', 'Digit8', 'Digit9', 'Digit0'],
     'QWERTYUIOP'.split('').map((c) => 'Key' + c), 'ASDFGHJKL'.split('').map((c) => 'Key' + c),
@@ -31,7 +32,8 @@
     // On the picture a tap brings the bar back, so there only a tap right beside a key (16 px) goes to the key.
     let best = null, bd = t.closest('#screen') ? 16 : REACH;
     for (const k of document.querySelectorAll('.over .pk, .over .pdpad, .zone .pk, .zone .pdpad')) {
-      if (!k.offsetParent || k.closest('.pkeyboard')) continue;
+      // The Cheats key pauses the game, so only a tap right on it opens the list; a stray thumb in a gap never does.
+      if (!k.offsetParent || k.closest('.pkeyboard') || k.classList.contains('ccheats')) continue;
       const r = k.getBoundingClientRect(); if (!r.width) continue;
       const d = Math.hypot(Math.max(r.left - e.clientX, 0, e.clientX - r.right), Math.max(r.top - e.clientY, 0, e.clientY - r.bottom));
       if (d < bd) { bd = d; best = k; }
@@ -176,6 +178,10 @@
     const shape = shapeOf(card);
     const layer = el('div', 'cpad ' + (zones.mode === 'portrait' ? 'up' : 'side'));
     layer.style.setProperty('--cols', shape.cols); layer.style.setProperty('--rows', shape.rows); // L and R sit above the taller side
+    // The face buttons' width and height, so L and R can sit over the d-pad and over X (play.css, upright).
+    const one = shape === SHAPES.one;
+    layer.style.setProperty('--cw', one ? 'calc(var(--b) * 1.5)' : 'calc(2 * var(--b) + 8px)');
+    layer.style.setProperty('--ch', one ? 'calc(var(--b) * 1.5)' : 'calc(' + shape.rows + ' * var(--b) + ' + (shape.rows - 1) * 8 + 'px)');
     const face = el('div', 'cface');
     face.style.setProperty('--cols', shape.cols); face.style.setProperty('--rows', shape.rows);
     if (shape === SHAPES.one) face.classList.add('one');
@@ -195,6 +201,8 @@
     const pills = el('div', 'cpills'); layer.appendChild(pills);
     const pill = (code, cls) => { if (code[0] === '@' || keys.includes(code)) pills.appendChild(consoleKey(code, hub, card, cls)); };
     pill('P1:Select', 'pill cselect'); pill('@rewind', 'pill crewind'); pill('P1:Start', 'pill cstart');
+    // Cheats beside Start (Bryan, 20 Nov 2026): it shows only once the game's cheat list has come (play.js, body.has-cheats).
+    pill('@cheats', 'pill ccheats');
     // The face buttons' words on one strip (the handheld skin shows it where there is room, as on Bryan's mock-up: the
     // letters on the buttons, the words together on a strip of tape). Only words that say more than the letter.
     const words = el('div', 'cwords'); words.setAttribute('aria-hidden', 'true');
@@ -279,8 +287,12 @@
       const parts = [k, ...k.querySelectorAll('span')];
       for (const e of parts) e.style.fontSize = '';
       const base = parts.map((e) => parseFloat(getComputedStyle(e).fontSize) || 14);
-      const over = () => k.scrollWidth > k.clientWidth + 1 || k.scrollHeight > k.clientHeight + 1
-        || parts.some((e) => e !== k && (e.scrollWidth > e.clientWidth + 1 || e.scrollHeight > e.clientHeight + 1));
+      // The words themselves against the key's edges, not the key's scroll size: the touch pad around a key (its
+      // ::after, 4 px out) counts as overflow there and made every label shrink to 8 px (the auditor, 20 Nov 2026).
+      const kr = k.getBoundingClientRect();
+      const out = (e) => { const r = e.getBoundingClientRect(); return r.width > 0 && (r.left < kr.left - 1 || r.right > kr.right + 1 || r.top < kr.top - 1 || r.bottom > kr.bottom + 1); };
+      const over = () => parts.some((e) => e !== k && (e.scrollWidth > e.clientWidth + 1 || e.scrollHeight > e.clientHeight + 1 || out(e)))
+        || (parts.length === 1 && (k.scrollWidth > k.clientWidth + 5 || k.scrollHeight > k.clientHeight + 5));
       for (let f = 0.92; f >= 0.45 && over(); f -= 0.07) parts.forEach((e, i) => { e.style.fontSize = Math.max(8, Math.round(base[i] * f)) + 'px'; });
     }
   }

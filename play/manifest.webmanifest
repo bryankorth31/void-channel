@@ -1,0 +1,17 @@
+{
+  "name": "VoidTV PLAY",
+  "short_name": "PLAY",
+  "description": "Old games from the Internet Archive, played in your browser. Free, no account.",
+  "start_url": "/play/",
+  "scope": "/play/",
+  "display": "fullscreen",
+  "display_override": ["fullscreen", "standalone"],
+  "orientation": "any",
+  "background_color": "#07080c",
+  "theme_color": "#07080c",
+  "icons": [
+    { "src": "/assets/brand/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/brand/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/assets/brand/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

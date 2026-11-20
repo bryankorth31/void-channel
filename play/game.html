@@ -4,6 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
 <meta name="theme-color" content="#07080c">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="PLAY">
+<link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
 <title>PLAY | voidtv.net</title>
 <link rel="icon" href="/favicon.ico">
 <link rel="stylesheet" href="play.css">
@@ -16,7 +19,7 @@
   <nav class="tools" aria-label="Game controls">
     <a id="b-games" class="tool" href="./" title="Back to the shelf of games" aria-label="Back to the games">&larr;<span class="w"> Games</span></a>
     <button type="button" id="b-pause" class="tool" title="Pause, save and load (Back and Start together on a gamepad)">Pause</button>
-    <button type="button" id="b-phones" class="tool" aria-expanded="false" title="Play with phones as gamepads: scan the code on this screen">Phones</button>
+    <button type="button" id="b-phones" class="tool" aria-expanded="false" title="Use your phone as a controller: scan the code on this screen"><svg class="ph-ico" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="18" r="1.3" fill="currentColor"/></svg> Phone<span class="w2"> controller</span></button>
     <button type="button" id="b-touch" class="tool" aria-pressed="false" title="Show or hide the touch controls">Touch</button>
     <button type="button" id="b-full" class="tool" title="Fullscreen">Full</button>
     <!-- The donation cross lives in the bar, away from every game key (Bryan, 20 Nov 2026: it was "right by the buttons
@@ -30,7 +33,7 @@
   <section id="phones" class="phones" hidden aria-label="Phones as gamepads">
     <div id="phones-qr" class="phones-qr"></div>
     <div class="phones-in">
-      <h2>Play with your phone</h2>
+      <h2>Use your phone as a controller</h2>
       <p>Scan the code with the phone's camera. Or go to <b id="phones-site"></b> and type</p>
       <p id="phones-code" class="phones-code">....</p>
       <ul id="phones-list" class="phones-list"></ul>
@@ -55,7 +58,11 @@
           <button type="button" id="b-continue" class="play" hidden>Continue</button>
           <button type="button" id="b-play" class="play" hidden>Play</button>
         </div>
+        <!-- Bryan, 20 Nov 2026: "im not able to find the qr code area, can you make it an easier way for me to connect my
+             phone as a controller". On a big screen the start screen offers it before Play: one tap shows the code. -->
+        <button type="button" id="cover-phone" class="cover-phone" hidden><svg class="ph-ico" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="18" r="1.3" fill="currentColor"/></svg> Use your phone as a controller</button>
         <p id="cover-turn" class="cover-turn" hidden>Turn your phone sideways for a bigger picture</p>
+        <p id="cover-full" class="cover-turn" hidden>Full screen on iPhone: tap Share, then Add to Home Screen, and play from there</p>
         <p id="credits" class="credits">
             <span id="from">The game plays straight from the Internet Archive.</span>
             Engine: <span id="core-name">DOSBox Pure</span> (<span id="core-licence">GPL-2.0</span>), built by voidtv.net: <a id="src-core" href="https://github.com/libretro/dosbox-pure/tree/e39497e7c2a32c67c26e6598dd14f6d58c384bfd" target="_blank" rel="noopener">its source</a>,<span id="core-terms" hidden> <a id="core-terms-link" href="#" target="_blank" rel="noopener">its licence</a>,</span>
@@ -87,6 +94,7 @@
       <input type="file" id="file-in" accept=".json,application/json" hidden>
       <button type="button" id="m-reset" class="tool">Restart the game</button>
       <button type="button" id="m-cheats" class="tool" aria-expanded="false" hidden>Cheats</button>
+      <button type="button" id="m-phones" class="tool" hidden>Phone controller</button>
       <a class="tool" href="./">Back to the games</a>
     </div>
     <!-- Picture checkpoints (Bryan, 20 Nov 2026: "Yes, ask the lead"; src/checkpoints.js): back to a minute ago, or twenty. -->

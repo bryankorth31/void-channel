@@ -61,6 +61,9 @@
     // Upright on a phone, the start screen says a sideways phone gives a bigger picture (audit: as a note during play it
     // covered the d-pad).
     if ($('cover-turn')) $('cover-turn').hidden = !(card && isPhone() && innerHeight > innerWidth && PlayCards.isPad(card));
+    if ($('cover-full')) $('cover-full').hidden = !(card && isPhone() && iPhoneSafari());
+    // The phone controller is offered where the game is on the big screen (a phone cannot be the big screen).
+    if ($('cover-phone')) { $('cover-phone').hidden = !card || isPhone(); $('m-phones').hidden = isPhone(); }
     document.body.classList.toggle('padmode', padMode);
     document.body.classList.toggle('shell', shell);
     document.body.classList.toggle('full', full);
@@ -79,6 +82,26 @@
       const sig = L.mode;
       if (place.sig !== sig) { pad = PlayTouch.build(zones, card, hub); place.sig = sig; }
     } else place.sig = '';
+    // Sideways in the handheld the d-pad takes the whole margin beside the picture (Bryan, 20 Nov 2026: "the arrow
+    // touchpad needs to be bigger, especially in landscape"). The face buttons need less room than their margin gives,
+    // so the picture moves toward them, at most 48 px and never onto them; it keeps its size and shape. play.css sizes
+    // the d-pad from --side.
+    if (shell && floating && innerWidth > innerHeight && L.screen && L.mode !== 'plain') {
+      const over = $('z-over'), ox = parseFloat(over.style.left) || 0, ow = parseFloat(over.style.width) || innerWidth;
+      // What the right side needs: from the leftmost of its keys as drawn (a three-button shape's outer buttons reach
+      // past their box) to the edge.
+      const right = over.getBoundingClientRect().right;
+      let need = 0;
+      for (const k of over.querySelectorAll('.cface .pk, .cstart, .csr, .ccheats')) if (k.offsetParent) need = Math.max(need, right - k.getBoundingClientRect().left);
+      const room = ox + ow - (L.screen.x + L.screen.w);
+      const shift = need ? Math.max(0, Math.min(48, Math.floor(room - need - 8))) : 0;
+      if (shift) set($('screen'), Object.assign({}, L.screen, { x: L.screen.x + shift }));
+      const side = Math.max(0, L.screen.x + shift - ox);
+      over.style.setProperty('--side', side + 'px');
+      // A phone whose margin is narrower than the smallest d-pad: the d-pad crosses the picture's edge, see-through.
+      const dp = over.querySelector('.cdpad');
+      over.classList.toggle('crossing', !!dp && dp.getBoundingClientRect().right > L.screen.x + shift - ox + over.getBoundingClientRect().left + 1);
+    }
     $('b-touch').setAttribute('aria-pressed', String(touch));
     if (touch) PlayTouch.fit($('stage'));
   }
@@ -279,6 +302,8 @@
     if (name === 'rewind') { if (runner && !paused) runner.rewind(true); return; }
     if (name === 'click' || name === 'rclick') { ptrButtons |= name === 'click' ? 1 : 2; sendMouse(0, 0); return; }
     if (name === 'menu') setPaused(!paused);
+    // The Cheats key beside Start (Bryan, 20 Nov 2026): the game pauses and its cheat switches open.
+    else if (name === 'cheats') { if (cheatList && runner && started) { setPaused(true); showCheats(true); } }
     else if (name === 'keyboard' && pad && !paused) pad.keyboard.classList.toggle('open');
   }
 
@@ -343,6 +368,8 @@
   }
   $('b-phones').onclick = () => showPhones($('phones').hidden);
   $('phones-close').onclick = () => showPhones(false);
+  $('cover-phone').onclick = () => showPhones(true);
+  $('m-phones').onclick = () => showPhones(true);
   $('phones-lock').onclick = () => { if (phones) phones.lock(!phones.locked); };
   addEventListener('pagehide', () => { if (phones) phones.close(); });
 
@@ -378,6 +405,16 @@
       .then(() => (screen.orientation && screen.orientation.lock ? screen.orientation.lock('landscape') : null))
       .catch(() => {});
   }
+  // Fullscreen is the default on a phone (Bryan, 20 Nov 2026: "it shows the url bar up top, we need a fullscreen default
+  // without this showing"): if the game is not fullscreen (the phone was turned, the browser let go of it), the next tap
+  // on the game puts it back, unless the player left fullscreen with the Full button. An iPhone page cannot go
+  // fullscreen in Safari; there the start screen says how: Add to Home Screen opens PLAY with no address bar.
+  let leftFull = false;
+  $('stage').addEventListener('touchend', () => {
+    if (!started || leftFull || !isPhone() || !document.fullscreenEnabled || document.fullscreenElement) return;
+    document.documentElement.requestFullscreen({ navigationUI: 'hide' }).catch(() => {});
+  }, { passive: true });
+  const iPhoneSafari = () => /iPhone|iPod/.test(navigator.userAgent) && !navigator.standalone && !document.fullscreenEnabled;
   let wake = null;
   function stayAwake(on) {
     if (on && !wake && navigator.wakeLock && !document.hidden) navigator.wakeLock.request('screen').then((w) => { wake = w; w.addEventListener('release', () => { wake = null; }); }).catch(() => {});
@@ -763,6 +800,7 @@
       try { const kept = JSON.parse(localStorage.getItem(cheatKey()) || '[]') || []; cheatsOn = new Set(cheatList.map((ch, n) => (kept.includes(ch.code) ? n : -1)).filter((n) => n >= 0)); } catch (e) { cheatsOn = new Set(); }
       drawCheats();
       $('m-cheats').hidden = false;
+      document.body.classList.add('has-cheats');   // the handheld's Cheats key shows (play.css)
     }).catch(() => {});
   }
   function showCheats(open) {
@@ -778,7 +816,7 @@
   $('b-touch').onclick = () => { if (padMode) { padMode = false; touch = true; } else touch = !touch; place.sig = ''; place(); };
   // iPhone has no fullscreen for a web page: the button shows only where the browser can do it.
   if (!document.fullscreenEnabled) $('b-full').hidden = true;
-  $('b-full').onclick = () => { if (document.fullscreenElement) document.exitFullscreen(); else document.documentElement.requestFullscreen().catch(() => {}); };
+  $('b-full').onclick = () => { leftFull = !!document.fullscreenElement; if (document.fullscreenElement) document.exitFullscreen(); else document.documentElement.requestFullscreen().catch(() => {}); };
   // In fullscreen the game is all there is: the layout follows the change (Esc or Full to leave), the bar comes back
   // while the mouse is at the top of the screen or for 3 seconds after a tap, and a still mouse pointer hides.
   document.addEventListener('fullscreenchange', () => {

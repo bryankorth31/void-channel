@@ -165,8 +165,8 @@ a.tool{display:inline-flex;align-items:center;text-decoration:none;color:var(--f
 .cpad.side .cpills>*{position:absolute;pointer-events:auto}
 .cpad.up .cpills{display:flex;position:absolute;left:0;right:0;top:var(--e);justify-content:center;gap:8px;pointer-events:none}
 .cpad.up .cpills>*{position:static;pointer-events:auto}
-.cpad.up{--d:max(110px,min(300px,58cqh,42cqw,calc(100cqh - 2 * var(--e) - 44px - 48px - 24px)))}
-.cpad.up .csl,.cpad.up .csr{top:max(calc(var(--e) + 52px),calc(100cqh - var(--e) - max(var(--d), var(--rows) * var(--b) + (var(--rows) - 1) * 8px) - 12px - 48px))}
+.cpad.up{--d:max(110px,min(300px,58cqh,48cqw,calc(100cqh - 2 * var(--e) - 44px - 48px - 24px)))}
+.cpad.up .csl,.cpad.up .csr{top:max(calc(var(--e) + var(--top,52px)),calc(100cqh - var(--lift,var(--e)) - max(var(--d), var(--ch,120px)) - 12px - var(--sh,54px)))}
 .cpad.side .pk,.cpad.side .pdpad{background:rgba(16,19,30,.42);border-color:rgba(255,255,255,.22);-webkit-backdrop-filter:none}
 .cpad.side .pk[data-down]{background:rgba(95,212,255,.75)}
 .cpad.side .pdir{color:rgba(232,232,238,.8)}
@@ -372,7 +372,6 @@ body.full.idle:not(.paused) .stage,body.full.idle:not(.paused) .stage *{cursor:n
 @container (min-height:400px){
   body.shell .cpad.up::before,body.shell .cpad.up::after{top:var(--e)}
   body.shell .cpad.up .cpills{top:calc(var(--e) + 52px)}
-  body.shell .cpad.up .csl,body.shell .cpad.up .csr{top:max(calc(var(--e) + 104px),calc(100cqh - var(--e) - max(var(--d), var(--rows) * var(--b) + (var(--rows) - 1) * 8px) - 12px - 48px))}
 }
 /* The face buttons' words together on one strip of tape, the letters on the buttons, where there is room (upright,
    tall); elsewhere each word stays on its own key. Never a key itself. */
@@ -437,3 +436,66 @@ body.shell.arcade .pk[data-n]::before{top:50%}
 body.shell .pdpad::after{inset:-14%;pointer-events:auto}
 /* Not on the pop-up keyboard: its keys sit close, and a wider touch there would press the neighbour. */
 .zone .pkeyboard .pk::after,.over .pkeyboard .pk::after{display:none}
+/* ---- The d-pad from Lexrom (Bryan, 20 Nov 2026: "grab the original from the lexrom that had the shading and whatnot.
+   grab all the textures and stuff from the original lexrom"): Lexrom's recessed well, and its cross with the four-step
+   gradient, specular highlight, rim light, warm top edge, grain, contour shading on each arm, raised edge and centre hub,
+   redrawn as vectors (play/skin/dpad-well.svg, dpad-cross.svg) so they stay sharp at any size. The cross now fills the
+   pad's circle (it was drawn at about three quarters of it), and tips toward the direction pressed. ---- */
+body.shell .pdpad,body.shell.arcade .pdpad{background:url(skin/dpad-well.svg) center/100% 100% no-repeat;border:0;box-shadow:none}
+body.shell .pdpad::before{inset:0;background:url(skin/dpad-cross.svg) center/100% 100% no-repeat;clip-path:none;filter:none;
+  transform:perspective(500px) rotateX(var(--tx,0deg)) rotateY(var(--ty,0deg));transition:transform 50ms}
+body.shell .pdpad::after{background:none;box-shadow:none}
+body.shell .pdpad:has(.ArrowUp.on){--tx:9deg}
+body.shell .pdpad:has(.ArrowDown.on){--tx:-9deg}
+body.shell .pdpad:has(.ArrowLeft.on){--ty:-9deg}
+body.shell .pdpad:has(.ArrowRight.on){--ty:9deg}
+/* Its arrows are pressed into the arms (in the drawing); a held direction lights cyan over its arm. */
+body.shell .pdpad .pdir{color:transparent;text-shadow:none;background:none;font-size:16px}
+body.shell .pdpad .pdir.on{color:var(--blue);text-shadow:0 0 8px var(--blue),0 0 14px rgba(95,227,255,.6);background:radial-gradient(circle,rgba(95,227,255,.28) 0%,transparent 70%)}
+body.shell .pdpad .pdir.ArrowUp{top:6%}body.shell .pdpad .pdir.ArrowDown{bottom:6%}
+body.shell .pdpad .pdir.ArrowLeft{left:6%}body.shell .pdpad .pdir.ArrowRight{right:6%}
+/* Bigger, without crossing anything (Bryan: "the arrow touchpad needs to be bigger, especially in landscape on mobile ...
+   not to lose aspect and have it overlap"). Sideways it takes the whole margin beside the picture (--side, from
+   play.js, which also moves the picture toward the face buttons as far as their room allows) and the height under L,
+   Select and Rewind; upright, up to 48% of the width, still clear of the face buttons and of L and R above it. */
+.cpad.side{--e:10px;--d:max(150px,min(300px,40cqw,calc(var(--side,171px) - var(--e) - 4px),calc(100cqh - 2 * var(--e) - 164px)))}
+@container (min-height:400px){.cpad.up{--d:max(110px,min(300px,58cqh,48cqw,calc(100cqh - 2 * var(--e) - 104px - 48px - 12px)))}}
+/* The Cheats key (Bryan, 20 Nov 2026: "a cheat button near the start/mode buttons for turning on/off cheats with a list
+   of cheats to toggle"): beside Start, only on a game that has cheats; it pauses the game and opens the switches. */
+body:not(.has-cheats) .cpad .ccheats{display:none}
+.cpad.side .ccheats{right:var(--e);top:calc(var(--e) + 112px)}
+/* Sideways the d-pad no longer reaches the picture, so it keeps its well (the see-through look was for crossing it). */
+body.shell .cpad.side .pdpad{background:url(skin/dpad-well.svg) center/100% 100% no-repeat;border:0}
+/* Bryan, 20 Nov 2026, on the handheld upright: "the control buttons need to be bigger and up slightly higher. the L and R
+   buttons should be on the left and right sides, the R button should be above the X button, and the L button above the
+   up arrow control, but all buttons should be bigger and easier to play with". Upright: face buttons up to 96 px (20% of
+   the width), the d-pad shares the width with them; the whole group lifts off the bottom edge; L sits centred over the
+   d-pad, R centred over the face buttons (X on a Super Nintendo), both at one height; L, R and the pills are taller.
+   Sideways the face buttons grow too, as far as the height under R, Start and Cheats allows. */
+.cpad.up{--lift:clamp(14px,5cqh,44px);--b:max(56px,min(96px,17cqh,20cqw));--top:58px;--sh:54px;
+  --d:max(110px,min(300px,58cqh,46cqw,calc(100cqw - 2 * var(--e) - var(--cw,120px) - 20px),calc(100cqh - var(--e) - var(--top) - var(--sh) - 12px - var(--lift))))}
+/* What sits above L and R: the pills (short pads); the plate and the pills (400 px tall); and the words strip (460). */
+@container (min-height:400px){.cpad.up{--top:110px}}
+@container (min-height:460px){.cpad.up{--top:150px}}
+.cpad.up .cdpad,.cpad.up .cface{bottom:var(--lift)}
+.cpad.up .cshoulder{height:var(--sh)}
+.cpad.up .csl{left:max(var(--e),calc(var(--e) + var(--d) / 2 - min(120px,30cqw) / 2))}
+.cpad.up .csr{right:max(var(--e),calc(var(--e) + var(--cw,120px) / 2 - min(120px,30cqw) / 2))}
+.cpad.up .pill,body.shell .cpad.up .pill{height:50px;min-width:min(76px,calc((100cqw - 2 * var(--e) - 24px) / 4))}
+.cpad.side{--b:max(56px,min(92px,16cqh,13cqw))}
+/* The phone controller, easy to find (Bryan, 20 Nov 2026: "im not able to find the qr code area"): on the start screen
+   of a big screen, in the pause menu, and in the bar as "Phone controller" (just "Phone" where the bar is short). */
+.cover-phone{display:inline-flex;align-items:center;gap:8px;margin-top:8px;background:rgba(7,8,12,.55);border:1px solid var(--line);
+  color:var(--fg);border-radius:999px;padding:10px 18px;font:inherit;font-size:15px;cursor:pointer;text-shadow:0 1px 4px #000}
+.cover-phone:hover,.cover-phone:focus-visible{border-color:var(--acc);color:#fff}
+.cover-phone[hidden]{display:none}
+.ph-ico{vertical-align:-3px;flex:none}
+@media (max-width:900px){.bar #b-phones .w2{display:none}}
+/* A long arcade name ("Hiscore Reset", "Smart Bomb", "Yellow Button") wraps to two lines on its tape instead of being
+   cut short or shrunk to 8 px (the auditor, 20 Nov 2026). */
+body.shell.arcade .pk .lbl{white-space:normal;text-overflow:clip;text-align:center;line-height:1.1;
+  display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow-wrap:normal;word-break:normal}
+/* A short pad (the smallest iPhones upright): L, R and the pills keep their earlier heights, so nothing touches. */
+@container (max-height:340px){.cpad.up{--top:52px;--sh:48px}.cpad.up .pill,body.shell .cpad.up .pill{height:44px}}
+/* Sideways where the margin is narrower than the d-pad, it crosses the picture's edge see-through, as before. */
+body.shell .over.crossing .cpad.side .pdpad{background:rgba(16,19,30,.42)}
