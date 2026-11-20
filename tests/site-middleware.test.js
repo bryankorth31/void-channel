@@ -202,3 +202,27 @@ test('analytics intake: the shapes match what app.js really sends', () => {
   assert.ok(app.includes("const epk=se.season+'x'+ep.n") || app.includes("epk=se.season+'x'+ep.n"), 'episodes are season x number');
   assert.ok(app.includes("slug:state.show?state.show.slug:(state.view==='person'?'p'+state.personId:'')"), 'a person is p<id>');
 });
+
+test('PLAY engines and cards: a missing one answers 404 and is never cached; real files and other paths pass untouched (20 Nov 2026)', async () => {
+  const { onRequest } = await load('functions/_middleware.js');
+  const src = fs.readFileSync(path.join(ROOT, 'functions', '_middleware.js'), 'utf8');
+  assert.ok(src.includes('const PLAY_STRICT = ' + JSON.stringify(G.PLAY_STRICT).replace(/"/g, "'").replace(/,/g, ', ') + ';'), 'PLAY_STRICT matches siteguards.js');
+  for (const p of G.PLAY_STRICT) assert.ok(G.routesFor(false).include.includes(p), p + ' runs the Function once the gate is off');
+  const ask = (u, next, env = {}) => onRequest({ request: new Request('https://voidtv.net' + u), env, next });
+  for (const u of ['/play/engine/mame/nothing.wasm.gz?v=2', '/play/cards/nothing.json']) {
+    const res = await ask(u, nextOk('<!doctype html>home'));
+    assert.equal(res.status, 404, u);
+    assert.equal(res.headers.get('cache-control'), 'no-store', u);
+    assert.equal(res.headers.get('strict-transport-security'), 'max-age=31536000', 'the security headers are still on');
+    assert.equal(res.headers.get('cross-origin-embedder-policy'), 'require-corp', 'still isolated');
+  }
+  const gz = new Uint8Array([0x1f, 0x8b, 8, 0]);
+  const real = await ask('/play/engine/mame/williams.wasm.gz?v=2', async () => new Response(gz, { headers: { 'content-type': 'application/gzip' } }));
+  assert.equal(real.status, 200);
+  assert.deepEqual(new Uint8Array(await real.arrayBuffer()), gz);
+  const card = await ask('/play/cards/joust-arcade.json', async () => new Response('{"id":"x"}', { headers: { 'content-type': 'application/json' } }));
+  assert.equal(card.status, 200);
+  for (const u of ['/about', '/play/', '/play/game']) assert.equal((await ask(u, nextOk())).status, 200, u + ' keeps the home-page routing');
+  const gated = await ask('/play/engine/mame/williams.js', nextOk(), { SITE_PASSWORD: 'secret' });
+  assert.equal(gated.status, 401, 'the password page is not turned into a 404');
+});

@@ -46,7 +46,7 @@ test('with the password gate on, the middleware isolates the same PLAY paths wit
   const list = JSON.stringify(guards.PLAY_ISOLATED).replace(/"/g, "'").replace(/,/g, ', ');
   assert.ok(src.includes('const PLAY_ISOLATED = ' + list + ';'), 'PLAY_ISOLATED in _middleware.js must equal siteguards.js');
   assert.ok(src.includes('const PLAY_CSP = ' + JSON.stringify(guards.PLAY_CSP) + ';'), 'PLAY_CSP in _middleware.js must equal siteguards.js');
-  assert.match(src, /return withSecurity\(await gate\(ctx\), url\.pathname\);/);
+  assert.ok(src.includes('return withSecurity(strict(await gate(ctx), url.pathname), url.pathname);'));
   // Run the real middleware with no password set: a game page comes back isolated, the shelf does not.
   const mod = await import('data:text/javascript;base64,' + Buffer.from(src).toString('base64'));
   const run = async (p) => (await mod.onRequest({ request: new Request('https://voidtv.net' + p), env: {}, next: async () => new Response('ok') })).headers;

@@ -43,8 +43,13 @@ function gateDecision(env, { cloudflare, profile }) {
   return { mode, gated: mode === 'on', error: null };
 }
 // Gated: everything but the brand assets runs through the gate Function. Open: pages are plain static files and
-// only the analytics intake and the QR redirects are Functions.
-const routesFor = (gated) => (gated ? { version: 1, include: ['/*'], exclude: ['/assets/*'] } : { version: 1, include: ['/api/*', '/q/*'], exclude: [] });
+// only the analytics intake and the QR redirects are Functions, plus PLAY's engines and cards (below).
+// PLAY_STRICT: a missing engine or card answers 404, not the home page. Without a 404.html Pages answers every missing
+// path with index.html, and the edge kept that for a day under /play/engine/ (20 Nov 2026, williams.wasm.gz). A
+// site-wide 404.html is not possible: the home page routes /me, /about, /tv/... itself. Keep in step with PLAY_STRICT
+// in functions/_middleware.js (tests/site-middleware.test.js checks).
+const PLAY_STRICT = ['/play/engine/*', '/play/cards/*'];
+const routesFor = (gated) => (gated ? { version: 1, include: ['/*'], exclude: ['/assets/*'] } : { version: 1, include: ['/api/*', '/q/*', ...PLAY_STRICT], exclude: [] });
 
 // 2. Security headers (CF-012) ------------------------------------------------------------------------------------
 // Content-Security-Policy-Report-Only first: it reports to the browser console and blocks nothing. Built from what
@@ -287,7 +292,7 @@ async function liveLights({ base, versionTextBody, doFetch, remote, nowMs }) {
 
 module.exports = {
   LIMITS, SECURITY_HEADERS, CSP,
-  PLAY_ISOLATED, PLAY_CSP, isPlayIsolated, gateMode, gateDecision, isGated, routesFor, headersFile, missingSecurityHeaders, versionText, parseVersion,
+  PLAY_ISOLATED, PLAY_STRICT, PLAY_CSP, isPlayIsolated, gateMode, gateDecision, isGated, routesFor, headersFile, missingSecurityHeaders, versionText, parseVersion,
   checkOutput, shrinkVerdict, shrinkBaseline, readLastCounts, countsFromVersion, liveCountsSync, unreadableGrids,
   filesLight, gateLight, wwwLight, headersLight, liveVersionLight, shrinkLight, backupLight, liveLights,
 };

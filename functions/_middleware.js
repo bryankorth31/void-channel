@@ -71,10 +71,19 @@ v.src='/assets/brand/promos/'+encodeURIComponent(s.src);v.addEventListener('play
 
 // After the password: back to the page they asked for, never to //evil.example/… (a protocol-relative open redirect).
 const safePath = (u) => { const x = new URL(u); const p = x.pathname.replace(/^\/+/, '/'); return (/^\/[^\\]*$/.test(p) ? p : '/') + x.search; };
+// PLAY's engines and cards: a missing file answers 404 (never cached), not the home page. Pages has no 404.html here, so it
+// answers every missing path with index.html, and the edge kept that for a day under /play/engine/ (20 Nov 2026). Real
+// engine and card files are never HTML, so they pass untouched. Keep in step with PLAY_STRICT in scripts/lib/siteguards.js.
+const PLAY_STRICT = ['/play/engine/*', '/play/cards/*'];
+const isPlayStrict = (p) => PLAY_STRICT.some((r) => p.startsWith(r.slice(0, -1)));
+function strict(res, path) {
+  if (!isPlayStrict(path) || res.status !== 200 || !/^text\/html/i.test(res.headers.get('content-type') || '')) return res;
+  return new Response('Not found\n', { status: 404, headers: { 'content-type': 'text/plain; charset=utf-8', 'Cache-Control': 'no-store' } });
+}
 export async function onRequest(ctx) {
   const url = new URL(ctx.request.url);
   if (url.hostname === 'www.voidtv.net') return withSecurity(new Response(null, { status: 301, headers: { Location: 'https://voidtv.net' + url.pathname + url.search, 'Cache-Control': 'public, max-age=3600' } }));
-  return withSecurity(await gate(ctx), url.pathname);
+  return withSecurity(strict(await gate(ctx), url.pathname), url.pathname);
 }
 
 async function gate({ request, env, next }) {
