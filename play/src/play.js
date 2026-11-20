@@ -60,7 +60,19 @@
   }
 
   // Gamepads are read once a frame; the hub decides what each button means for this card.
-  function poll() { if (hub && navigator.getGamepads) hub.pollPads([...navigator.getGamepads()]); requestAnimationFrame(poll); }
+  // Before the game starts, a gamepad's A or Start presses Play, so a controller goes from the shelf into the game with
+  // nothing else to touch.
+  let padWasDown = true;
+  function poll() {
+    const pads = navigator.getGamepads ? [...navigator.getGamepads()] : [];
+    if (hub) hub.pollPads(pads);
+    else {
+      const down = pads.some((p) => p && p.mapping === 'standard' && ((p.buttons[0] && p.buttons[0].pressed) || (p.buttons[9] && p.buttons[9].pressed)));
+      if (down && !padWasDown && !$('b-play').hidden) begin();
+      padWasDown = down;
+    }
+    requestAnimationFrame(poll);
+  }
 
   // If the game has not shown a picture by then, say why in one sentence and offer Play again: never "loading" forever.
   const DEADLINE_MS = 60000;

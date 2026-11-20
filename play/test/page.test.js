@@ -7,7 +7,7 @@ const fs = require('node:fs');
 
 const ROOT = path.join(__dirname, '..');
 const read = (...p) => fs.readFileSync(path.join(...p), 'utf8');
-const html = read(ROOT, 'index.html');
+const html = read(ROOT, 'game.html');
 const EM_DASH = String.fromCharCode(0x2014);
 const play = read(ROOT, 'src', 'play.js');
 

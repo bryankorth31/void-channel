@@ -1,7 +1,8 @@
 // Serves VoidTV PLAY on http://127.0.0.1:8789/play/ (this computer only). Set PORT to use another port.
 //   node play/serve.js
 // The engine runs the PC on its own thread, which browsers allow only on a page that is "cross-origin isolated", so
-// every reply carries the two headers that turn that on (the site will send the same ones for /play/).
+// the player and its files carry the two headers that turn that on. The shelf (/play/ itself) does not: it shows box
+// art straight from the Internet Archive, which an isolated page may not load. The site sends the same split.
 // /assets/ is served from the repo's assets folder, as on voidtv.net.
 const http = require('http');
 const fs = require('fs');
@@ -10,6 +11,7 @@ const PORT = +process.env.PORT || 8789;
 const PLAY = __dirname, ASSETS = path.join(__dirname, '..', 'assets');
 const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.json': 'application/json',
   '.wasm': 'application/wasm', '.png': 'image/png', '.svg': 'image/svg+xml', '.woff2': 'font/woff2', '.ico': 'image/x-icon' };
+const PLAIN = { 'cache-control': 'no-store' };
 const ISOLATE = { 'cross-origin-opener-policy': 'same-origin', 'cross-origin-embedder-policy': 'require-corp', 'cache-control': 'no-store' };
 http.createServer((req, res) => {
   let p = decodeURIComponent(req.url.split('?')[0]);
@@ -22,7 +24,8 @@ http.createServer((req, res) => {
   if (!f.startsWith(root)) { res.writeHead(403, ISOLATE); return res.end(); }
   fs.readFile(f, (e, b) => {
     if (e) { res.writeHead(404, ISOLATE); return res.end('not found'); }
-    res.writeHead(200, Object.assign({ 'content-type': TYPES[path.extname(f)] || 'application/octet-stream' }, ISOLATE));
+    const shelf = root === PLAY && f === path.join(PLAY, 'index.html');
+    res.writeHead(200, Object.assign({ 'content-type': TYPES[path.extname(f)] || 'application/octet-stream' }, shelf ? PLAIN : ISOLATE));
     res.end(b);
   });
 }).listen(PORT, '127.0.0.1', () => console.log('VoidTV PLAY: http://127.0.0.1:' + PORT + '/play/'));

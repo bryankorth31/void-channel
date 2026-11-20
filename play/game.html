@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="theme-color" content="#07080c">
+<title>PLAY | voidtv.net</title>
+<link rel="icon" href="/favicon.ico">
+<link rel="stylesheet" href="play.css">
+</head>
+<body>
+<header class="bar">
+  <a class="mark" href="/" aria-label="voidtv.net home"><span class="v">voidtv</span><span class="n">.net</span></a>
+  <span class="tag">PLAY</span>
+  <h1 id="title" class="title">Loading</h1>
+  <nav class="tools" aria-label="Game controls">
+    <a id="b-games" class="tool" href="./" title="Back to the shelf of games">Games</a>
+    <button type="button" id="b-pause" class="tool" title="Pause (Start on a gamepad)">Pause</button>
+    <button type="button" id="b-save" class="tool" title="Save your spot in this browser">Save</button>
+    <button type="button" id="b-load" class="tool" title="Go back to your saved spot">Load</button>
+    <button type="button" id="b-touch" class="tool" aria-pressed="false" title="Show or hide the touch controls">Touch</button>
+    <button type="button" id="b-full" class="tool" title="Fullscreen">Full</button>
+  </nav>
+</header>
+
+<main id="stage" class="stage">
+  <div id="screen" class="screen">
+    <canvas id="canvas" width="640" height="400" aria-label="The game"></canvas>
+    <div id="cover" class="cover">
+      <p id="status" class="status">Getting the game ready</p>
+      <button type="button" id="b-play" class="play" hidden>Play</button>
+    </div>
+  </div>
+  <div id="z-left" class="zone left"></div>
+  <div id="z-right" class="zone right"></div>
+  <div id="z-pad" class="zone pad"></div>
+
+  <div id="menu" class="menu" hidden role="dialog" aria-label="Paused">
+    <h2>Paused</h2>
+    <p id="help" class="help"></p>
+    <ul class="keys-help">
+      <li><b>Keyboard</b> plays it as the PC did.</li>
+      <li><b>Gamepad</b>: <span id="pad-help"></span></li>
+      <li><b>Touch</b>: the keys this game needs at the side; Keyboard for typing names.</li>
+    </ul>
+    <div class="menu-row">
+      <button type="button" id="m-resume" class="tool big">Keep playing</button>
+      <button type="button" id="m-reset" class="tool">Restart the game</button>
+      <a class="tool" href="./">Back to the games</a>
+    </div>
+    <p class="donate"><span id="donate-line"></span> <a id="donate" href="#" target="_blank" rel="noopener">Donate</a></p>
+  </div>
+  <p id="toast" class="toast" role="status" aria-live="polite"></p>
+</main>
+
+<footer class="foot">
+  <p class="donate"><span class="donate-line"></span> <a class="donate-link" href="#" target="_blank" rel="noopener">Donate</a></p>
+  <p class="credits">
+    <span id="from">The game plays straight from the Internet Archive.</span>
+    Engine: <span id="core-name">DOSBox Pure</span> (<span id="core-licence">GPL-2.0</span>), built by voidtv.net: <a id="src-core" href="https://github.com/libretro/dosbox-pure/tree/e39497e7c2a32c67c26e6598dd14f6d58c384bfd" target="_blank" rel="noopener">its source</a>,<span id="core-terms" hidden> <a id="core-terms-link" href="#" target="_blank" rel="noopener">its licence</a>,</span>
+    <a href="https://github.com/bryankorth31/void-channel/tree/master/play" target="_blank" rel="noopener">our player's source</a>.
+    <a href="/takedown">Takedown</a>
+  </p>
+</footer>
+
+<script src="src/keys.js"></script>
+<script src="src/cards.js"></script>
+<script src="src/hub.js"></script>
+<script src="src/layout.js"></script>
+<script src="src/touchpad.js"></script>
+<script src="src/saves.js"></script>
+<script src="src/runner.js"></script>
+<script src="src/play.js"></script>
+</body>
+</html>

@@ -80,3 +80,4 @@ button{font:inherit;color:inherit}
   .pblock.with-dpad.many{--r:6 !important;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,2fr) minmax(0,4fr)}
   .pblock.many .pdpad{height:100%;width:auto;max-width:100%;justify-self:center}
 }
+a.tool{display:inline-flex;align-items:center;text-decoration:none;color:var(--fg)}
