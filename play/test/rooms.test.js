@@ -55,7 +55,7 @@ test('messages: a phone reaches the screen with its seat; the screen reaches one
   assert.equal(h.sent('tv').length, before, 'junk and strangers are ignored');
 });
 
-test('limits: a pad room takes 16 phones at 30 messages a second each, 1 KB a message', () => {
+test('limits: a pad room takes 16 phones at 60 messages a second each, 1 KB a message', () => {
   const h = harness();
   h.room.addHost('tv');
   for (let i = 0; i < 16; i++) assert.ok(h.room.addPhone('p' + i));
@@ -63,9 +63,9 @@ test('limits: a pad room takes 16 phones at 30 messages a second each, 1 KB a me
   assert.equal(h.closed.get('p16'), R.CLOSE.full);
   const before = h.sent('tv').length;
   for (let i = 0; i < 100; i++) h.room.message('p0', '{"type":"press"}');
-  assert.equal(h.sent('tv').length - before, 30);
+  assert.equal(h.sent('tv').length - before, 60);
   h.advance(1000); h.room.message('p0', '{"type":"press"}');
-  assert.equal(h.sent('tv').length - before, 31, 'a new second, a new allowance');
+  assert.equal(h.sent('tv').length - before, 61, 'a new second, a new allowance');
   h.room.message('p1', JSON.stringify({ t: 'x'.repeat(2000) }));
   assert.equal(h.closed.get('p1'), R.CLOSE.tooBig);
 });

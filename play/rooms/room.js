@@ -8,11 +8,14 @@
   'use strict';
   const ALPHABET = '23456789ACDEFGHJKMNPQRTUVWXY';   // no 0, O, 1, I, L, B, S or Z: easy to read off a projector
   const KINDS = ['pad', 'trivia'];
-  // Per kind (audit review, 20 Nov 2026): a gamepad sends only when a button changes, so 30 a second is past any hand;
-  // trivia sends an answer now and then, but a movie night can bring 200 phones.
+  // Per kind. A gamepad (Bryan, 20 Nov 2026, on a phone as the pad: "it seems to just be playing on its own"): 30 a second
+  // was measured too low. A thumb rolling the d-pad while another taps passes it, and a message past the limit is dropped
+  // in silence, so a dropped release left the key held on the screen. The phone now sends at most 50 a second and says
+  // its whole state again on a beat (src/phonepad.js), so 60 is never reached by an honest phone and a lost message heals.
+  // Trivia sends an answer now and then, but a movie night can bring 200 phones.
   const LIMITS = { bytes: 1024, idleMs: 30 * 60 * 1000, lifeMs: 4 * 60 * 60 * 1000, holdMs: 60 * 1000,
-    pad: { phones: 16, perSecond: 30, screenHoldMs: 45 * 1000 }, trivia: { phones: 200, perSecond: 5, screenHoldMs: 0 } };
-  const CLOSE = { noRoom: 4404, full: 4409, hostGone: 4410, tooBig: 4413, ended: 4408, locked: 4423, removed: 4403 };
+    pad: { phones: 16, perSecond: 60, screenHoldMs: 45 * 1000 }, trivia: { phones: 200, perSecond: 5, screenHoldMs: 0 } };
+  const CLOSE = { noRoom: 4404, full: 4409, hostGone: 4410, tooBig: 4413, ended: 4408, locked: 4423, removed: 4403, replaced: 4411 };
   // A phone's own seat token: random, kept in that phone's tab only, so a phone that drops gets its seat back.
   const goodToken = (t) => typeof t === 'string' && /^[A-Za-z0-9_-]{16,64}$/.test(t);
   const goodKey = (k) => typeof k === 'string' && /^[A-Za-z0-9_-]{20,64}$/.test(k);
@@ -67,6 +70,18 @@
       addPhone(sock, token) {
         if (!this.open) { close(sock, CLOSE.noRoom, 'No room by that code'); return null; }
         const tok = goodToken(token) ? token : null;
+        // The same phone on a new socket while its old one still looks open (its Wi-Fi dropped and no close ever came):
+        // the new socket takes the seat and the old one is closed. Before, the dead socket kept its seat and whatever
+        // it last held, and the phone came back as one more player beside its own ghost.
+        if (tok) for (const [old, info] of phones) if (info.token === tok && old !== sock) {
+          phones.delete(old); close(old, CLOSE.replaced, 'This phone joined again');
+          phones.set(sock, { seat: info.seat, token: tok, window: 0, count: 0 });
+          last = now();
+          json(sock, { type: 'hello', seat: info.seat, kind });
+          if (host) json(host, { type: 'join', from: info.seat, back: true });
+          else json(sock, { type: 'host-away' });
+          return info.seat;
+        }
         const back = tok && held.get(tok);
         if (back && back.until >= now()) held.delete(tok);
         else if (locked) { close(sock, CLOSE.locked, 'The screen has locked this room'); return null; }

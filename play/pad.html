@@ -3,54 +3,96 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-<meta name="theme-color" content="#07080c">
+<meta name="theme-color" content="#3a4260">
 <title>Gamepad | PLAY | voidtv.net</title>
 <!-- VoidTV PLAY: a phone as the gamepad for a game on the big screen (Bryan, 20 Nov 2026: "Yes, phone controllers").
      The phone sends which buttons are held; the big screen treats it as one more gamepad, with the same seats as a real one.
-     No app, no sign-up, nothing kept. Licence: GPL-2.0-or-later (play/LICENSE). -->
+     No app, no sign-up, nothing kept. Licence: GPL-2.0-or-later (play/LICENSE).
+     The look (Bryan, 20 Nov 2026: "the design is off on this"): the handheld's own parts (play/skin, as on the game page):
+     its plastic, the d-pad from Lexrom in its well, the painted round buttons and the rubber pills, with the machine's own
+     letters and what each does on a strip of tape. A console game shows only its machine's buttons, in its machine's
+     shape. Sideways the d-pad and the buttons take the full height at each edge; upright they sit low, under the thumbs. -->
 <style>
-:root{--bg:#07080c;--panel:#0f1118;--line:#232838;--fg:#e8e8ee;--dim:#8a8fa3;--acc:#5fd4ff;--pink:#ff4fc8;--gold:#f3c969}
+:root{--fg:#eef1fb;--dim:#c3c9de;--acc:#5fe3ff;--pink:#ff4fc8;--gold:#f3c969;--ink:#1d1813}
 *{box-sizing:border-box}
-html,body{margin:0;height:100%;background:var(--bg);color:var(--fg);font:16px system-ui,Segoe UI,Roboto,sans-serif;overflow:hidden;
-  user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;touch-action:none;overscroll-behavior:none}
-header{position:fixed;inset:0 0 auto 0;display:flex;align-items:center;gap:10px;padding:8px max(12px,env(safe-area-inset-left));font-size:14px;color:var(--dim);z-index:2}
-header b{color:var(--fg);font-size:16px}#who{color:var(--acc);font-weight:700}#delay{margin-left:auto}#delay.slow{color:var(--gold)}
-#pad{position:fixed;inset:40px 0 0 0;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:8px max(16px,env(safe-area-inset-right)) max(12px,env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left))}
+html,body{margin:0;height:100%;color:var(--fg);font:16px system-ui,Segoe UI,Roboto,sans-serif;overflow:hidden;position:fixed;inset:0;
+  user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent;touch-action:none;overscroll-behavior:none}
+body{background:radial-gradient(ellipse at 22% 6%,rgba(205,215,245,.16) 0%,transparent 45%),radial-gradient(ellipse at 50% 50%,transparent 58%,rgba(5,8,18,.5) 100%),
+  url(skin/plastic.webp) center/cover no-repeat,#4a5270}
+/* Sideways: L and R in the top corners, the d-pad and the face buttons as tall as the room under them, the pills between. */
+#pad{position:fixed;inset:0;display:grid;--side:min(40vw,calc(100vh - 86px));--side:min(40vw,calc(100dvh - 86px));
+  grid-template-columns:var(--side) minmax(0,1fr) var(--side);grid-template-rows:auto minmax(0,1fr);grid-template-areas:"left top right" "dpad mid face";gap:6px 10px;
+  padding:max(8px,env(safe-area-inset-top)) max(14px,env(safe-area-inset-right)) max(10px,env(safe-area-inset-bottom)) max(14px,env(safe-area-inset-left))}
 #pad[hidden],#note[hidden]{display:none}
-.shoulders{position:fixed;top:44px;left:0;right:0;display:flex;justify-content:space-between;padding:0 16px;pointer-events:none}
-.shoulders .b{pointer-events:auto;width:min(30vw,150px);height:52px;border-radius:14px}
-.dpad{justify-self:start;width:min(46vmin,260px);aspect-ratio:1;position:relative;border-radius:50%;background:var(--panel);border:1px solid var(--line)}
-.dpad i{position:absolute;width:30%;height:30%;border-radius:10px;background:#1a1f30}
-.dpad i[data-d=Up]{left:35%;top:6%}.dpad i[data-d=Down]{left:35%;bottom:6%}.dpad i[data-d=Left]{left:6%;top:35%}.dpad i[data-d=Right]{right:6%;top:35%}
-.dpad i.on{background:var(--acc)}
-.mid{display:flex;flex-direction:column;gap:14px;align-items:center}
-.face{justify-self:end;width:min(52vmin,290px);aspect-ratio:1;position:relative}
-.b{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none;display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px solid var(--line);background:#161b2a;color:var(--fg);border-radius:50%;font-weight:800;font-size:20px;line-height:1.05;padding:4px;text-align:center;touch-action:none}
-.b small{display:block;font-weight:600;font-size:11px;color:var(--dim);max-width:9ch;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.b.on{background:var(--acc);color:#07080c;border-color:var(--acc)}.b.on small{color:#07080c}
-.face .b{position:absolute;width:36%;height:36%}
-.face .b[data-n=Y]{left:32%;top:0}.face .b[data-n=A]{left:32%;bottom:0}.face .b[data-n=X]{left:0;top:32%}.face .b[data-n=B]{right:0;top:32%}
-.face .b[data-n=A]{border-color:var(--pink)}
-.mid .b{width:78px;height:40px;border-radius:20px;font-size:13px}
-#note{position:fixed;inset:0;display:grid;place-items:center;text-align:center;padding:24px;background:var(--bg);z-index:3}
+#top{grid-area:top;text-align:center;min-width:0;font-size:13px;line-height:1.35;color:var(--dim);text-shadow:0 1px 2px rgba(0,0,0,.6)}
+#top b{display:block;color:var(--fg);font-size:14px;letter-spacing:.02em}#top b span{color:var(--pink)}
+#game{display:block;color:var(--fg);font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#who{color:var(--acc);font-weight:700;margin-right:8px}#who:empty{margin:0}#delay.slow{color:var(--gold)}
+#left{grid-area:left;display:flex;justify-content:flex-start;align-items:flex-start;min-height:50px}
+#right{grid-area:right;display:flex;justify-content:flex-end;align-items:flex-start;min-height:50px}
+#dpad{grid-area:dpad;align-self:center;justify-self:center;width:96%;aspect-ratio:1;position:relative;border-radius:50%;background:url(skin/dpad-well.svg) center/100% 100% no-repeat}
+#dpad::before{content:'';position:absolute;inset:0;background:url(skin/dpad-cross.svg) center/100% 100% no-repeat;
+  transform:perspective(500px) rotateX(var(--tx,0deg)) rotateY(var(--ty,0deg));transition:transform 50ms}
+#dpad.Up{--tx:9deg}#dpad.Down{--tx:-9deg}#dpad.Left{--ty:-9deg}#dpad.Right{--ty:9deg}
+#dpad i{position:absolute;width:24%;height:24%;border-radius:50%;opacity:0;background:radial-gradient(circle,rgba(95,227,255,.55) 0%,transparent 70%)}
+#dpad i[data-d=Up]{left:38%;top:7%}#dpad i[data-d=Down]{left:38%;bottom:7%}#dpad i[data-d=Left]{left:7%;top:38%}#dpad i[data-d=Right]{right:7%;top:38%}
+#dpad.Up i[data-d=Up],#dpad.Down i[data-d=Down],#dpad.Left i[data-d=Left],#dpad.Right i[data-d=Right]{opacity:1}
+#mid{grid-area:mid;display:flex;flex-direction:column;gap:12px;align-items:center;justify-content:center;min-width:0}
+.face{grid-area:face;align-self:center;justify-self:center;width:96%;aspect-ratio:1;position:relative;--s:38%}
+/* The dark rubber the face buttons sit in: a dish for a diamond, a slanted bar for two or three in a line. */
+.face::before{content:"";position:absolute;left:50%;top:50%;width:98%;height:98%;border-radius:999px;transform:translate(-50%,-50%);
+  background:linear-gradient(180deg,#3a3c47 0%,#2a2c35 55%,#1d1f26 100%);box-shadow:inset 0 2px 0 rgba(255,255,255,.12),inset 0 -3px 6px rgba(0,0,0,.5),0 0 0 3px #0e0f14,0 8px 14px rgba(0,0,0,.45)}
+.face.s-abc::before{width:128%;height:46%;transform:translate(-50%,-50%) rotate(-45deg)}
+.face.g2::before{width:112%;height:56%;transform:translate(-50%,-50%) rotate(-45deg)}
+.face.g1::before{width:80%;height:80%}
+.face.g2{--s:46%}.face.g1{--s:64%}
+.face:empty::before{display:none}
+.b{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-weight:800;line-height:1.05;color:var(--ink);cursor:pointer;touch-action:none;transition:transform .05s,filter .05s}
+.b span{display:block;max-width:92%;text-shadow:0 1px 0 rgba(255,255,255,.35)}
+/* What a button does: dark marker on a strip of masking tape, as on the handheld. */
+.b small{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;max-width:92%;margin-top:3px;padding:1px 6px;border-radius:2px;
+  background:url(skin/label.webp) center/cover;color:var(--ink);font-weight:700;font-size:clamp(10px,calc(var(--side) * .042),14px);line-height:1.25;box-shadow:0 1px 2px rgba(0,0,0,.45)}
+.f{position:absolute;width:var(--s);height:var(--s);border-radius:50%;background:url(skin/btn-red.webp) center/100% 100% no-repeat;filter:drop-shadow(0 7px 6px rgba(0,0,0,.5));
+  left:calc(4% + (var(--c) - .5) / var(--cols) * 92% - var(--s) / 2);top:calc(4% + (var(--r) - .5) / var(--rows) * 92% - var(--s) / 2)}
+.f[data-k=yellow]{background-image:url(skin/btn-yellow.webp)}.f[data-k=cyan]{background-image:url(skin/btn-cyan.webp)}.f[data-k=pink]{background-image:url(skin/btn-pink.webp)}
+.f small{transform:rotate(-2deg)}
+.f.s1 span{font-size:calc(var(--side) * .12)}.f.s2 span{font-size:calc(var(--side) * .07)}.f.s3 span{font-size:calc(var(--side) * .052)}
+.f.on{transform:translateY(3px);filter:brightness(.8) drop-shadow(0 2px 3px rgba(0,0,0,.5))}
+.p,.sh{background:url(skin/pill.webp) center/100% 100% no-repeat;filter:drop-shadow(0 4px 4px rgba(0,0,0,.5));border-radius:24px;font-size:14px;padding:0 8px}
+.p{width:100%;max-width:120px;height:46px;flex:none}
+.p small,.sh small{display:none}
+.p.s3 span,.sh.s3 span{font-size:11px}
+.sh{width:72%;height:50px;font-size:18px}
+.p.on,.sh.on{transform:translateY(3px);filter:brightness(.82) drop-shadow(0 1px 2px rgba(0,0,0,.5))}
+#note{position:fixed;inset:0;display:grid;place-items:center;text-align:center;padding:24px;z-index:3;text-shadow:0 1px 2px rgba(0,0,0,.6)}
 #note h1{font-size:22px;margin:0 0 10px}#note p{color:var(--dim);margin:0 0 18px}
 #note a{color:var(--acc)}
 .turn{display:none}
-@media (orientation:portrait){.turn{display:block;position:fixed;bottom:10px;left:0;right:0;text-align:center;color:var(--dim);font-size:13px}
-  #pad{grid-template-columns:1fr 1fr;grid-template-rows:1fr auto;row-gap:12px}.mid{grid-column:1 / 3;flex-direction:row;justify-content:center}
-  .dpad{width:44vw}.face{width:46vw}}
+/* Upright: everything low, under the thumbs: L and R, then Select, Start and Menu, then the d-pad beside the buttons. */
+@media (orientation:portrait){
+  #pad{--side:min(46vw,36vh);--side:min(46vw,36dvh);grid-template-columns:1fr 1fr;grid-template-rows:auto minmax(0,1fr) auto auto auto;
+    grid-template-areas:"top top" "turn turn" "left right" "mid mid" "dpad face";gap:10px 8px;
+    padding:max(10px,env(safe-area-inset-top)) max(10px,env(safe-area-inset-right)) max(22px,env(safe-area-inset-bottom)) max(10px,env(safe-area-inset-left))}
+  #top{font-size:14px}#top b{font-size:18px;margin-bottom:6px}#game{font-size:17px;white-space:normal}
+  #dpad,.face{width:var(--side)}
+  #mid{flex-direction:row;gap:12px}.p{flex:1 1 0;min-width:0;width:auto;max-width:104px}
+  .sh{width:64%}
+  .turn{display:block;grid-area:turn;align-self:center;text-align:center;color:var(--dim);font-size:13px;text-shadow:0 1px 2px rgba(0,0,0,.6)}
+}
 </style>
 </head>
 <body>
-<header><b>voidtv<span style="color:var(--pink)">.net</span></b><span id="game"></span><span id="who"></span><span id="delay" role="status"></span></header>
-<div class="shoulders" id="shoulders"></div>
 <main id="pad" hidden aria-label="Gamepad">
-  <div class="dpad" id="dpad" aria-label="Arrows"><i data-d="Up"></i><i data-d="Down"></i><i data-d="Left"></i><i data-d="Right"></i></div>
-  <div class="mid" id="mid"></div>
+  <header id="top"><b>voidtv<span>.net</span></b><span id="game"></span><span id="who"></span><span id="delay" role="status"></span></header>
+  <div class="turn">Turn the phone sideways for bigger buttons.</div>
+  <div id="left"></div>
+  <div id="right"></div>
+  <div id="dpad" aria-label="Arrows"><i data-d="Up"></i><i data-d="Down"></i><i data-d="Left"></i><i data-d="Right"></i></div>
+  <div id="mid"></div>
   <div class="face" id="face"></div>
 </main>
 <div id="note"><div><h1 id="note-h">Joining the game</h1><p id="note-p">One moment.</p><a id="note-a" href="/join" hidden>Type a code</a></div></div>
-<div class="turn">Turn the phone sideways for bigger buttons.</div>
+<script src="src/hub.js"></script>
 <script src="src/phonepad.js"></script>
 </body>
 </html>

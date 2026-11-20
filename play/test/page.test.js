@@ -120,7 +120,7 @@ test('iPhone: fast taps on the touch keys and the phone pad cancel the touch (Sa
   assert.ok(read(ROOT, 'play.css').includes('.stage{position:fixed;inset:0;'), 'the game area is fixed to the screen: no page under it to pan');
   assert.ok(read(ROOT, 'game.html').includes('<img src="/assets/brand/cash-cross.png" alt="" width="28">'), 'the CASH winged cross, at 28 px');
   assert.ok(js.includes("for (const ev of ['touchstart', 'touchend']) $('stage').addEventListener(ev, noZoom, { passive: false });"));
-  assert.ok(read(ROOT, 'src', 'phonepad.js').includes("addEventListener(ev, (e) => e.preventDefault(), { passive: false });"));
+  assert.ok(read(ROOT, 'src', 'phonepad.js').includes("for (const ev of ['touchstart', 'touchmove', 'touchend']) document.addEventListener(ev, (e) => { if (!e.target.closest('a')) e.preventDefault(); }, { passive: false });"));
   assert.ok(read(ROOT, 'play.css').includes('-webkit-touch-callout:none'));
 });
 
