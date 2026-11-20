@@ -1,0 +1,52 @@
+{
+  "id": "kirby-amazing-mirror-gba",
+  "title": "Kirby & The Amazing Mirror",
+  "year": 2004,
+  "publisher": "Nintendo",
+  "system": "gba",
+  "core": "mgba",
+  "players": 1,
+  "archive": {
+    "item": "KirbyMirror",
+    "file": "Kirby & The Amazing Mirror (USA).gba",
+    "size": 16777216
+  },
+  "controls": {
+    "kind": "pad",
+    "dpad": true,
+    "keys": [
+      "P1:B",
+      "P1:A",
+      "P1:L",
+      "P1:R",
+      "P1:Select",
+      "P1:Start"
+    ]
+  },
+  "help": "Walk, jump and float through the mirror world. Swallow enemies to take their powers.",
+  "actions": [
+    {
+      "do": "Walk",
+      "press": [
+        "P1:Left",
+        "P1:Right"
+      ]
+    },
+    {
+      "do": "Jump and float",
+      "press": "P1:A"
+    },
+    {
+      "do": "Swallow and use a power",
+      "press": "P1:B"
+    },
+    {
+      "do": "Call your friends",
+      "press": "P1:R"
+    },
+    {
+      "do": "Start and pause",
+      "press": "P1:Start"
+    }
+  ]
+}

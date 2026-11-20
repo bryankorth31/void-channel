@@ -1,0 +1,48 @@
+{
+  "id": "varooom-3d-gba",
+  "title": "Varooom 3D",
+  "year": 2021,
+  "publisher": "Gustavo Valiente (homebrew, GBA Jam 2021 winner)",
+  "system": "gba",
+  "core": "mgba",
+  "players": 1,
+  "archive": {
+    "item": "pouet_89400",
+    "file": "varooom-3d.gba",
+    "size": 7957428
+  },
+  "controls": {
+    "kind": "pad",
+    "dpad": true,
+    "keys": [
+      "P1:B",
+      "P1:A",
+      "P1:L",
+      "P1:R",
+      "P1:Select",
+      "P1:Start"
+    ]
+  },
+  "help": "A racing game made for the Game Boy Advance in 2021 and given away free. Steer, speed up and win the race.",
+  "actions": [
+    {
+      "do": "Steer",
+      "press": [
+        "P1:Left",
+        "P1:Right"
+      ]
+    },
+    {
+      "do": "Speed up",
+      "press": "P1:A"
+    },
+    {
+      "do": "Brake",
+      "press": "P1:B"
+    },
+    {
+      "do": "Start and pause",
+      "press": "P1:Start"
+    }
+  ]
+}

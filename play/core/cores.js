@@ -98,4 +98,58 @@ module.exports = {
       'libretro-common/include'],
     defines: ['__LIBRETRO__', 'THUMB_SUPPORT'],
   },
+
+  // Batch 2 (B, 20 Nov 2026: "lets now build it out"), built by the assistant session.
+  mgba: {
+    title: 'mGBA', systems: ['gba'],
+    repo: 'https://github.com/libretro/mgba', commit: '7a12d6d4b9acb14c0ae62c9166b6a2f3d08007f6',
+    licence: 'MPL-2.0 (LICENSE)',
+    // mGBA has no Makefile for libretro: its own CMake build writes two small files first (build/cmake/include/mgba/
+    // flags.h and build/cmake/version.c), then this recipe is the file list and settings that CMake gave its libretro
+    // core (compile_commands.json), threads off. Run once in the mgba folder, with emsdk active:
+    configure: 'emcmake cmake -S . -B build/cmake -G Ninja -DBUILD_LIBRETRO=ON -DLIBRETRO_STATIC=ON -DSKIP_LIBRARY=ON ' +
+      '-DBUILD_QT=OFF -DBUILD_SDL=OFF -DBUILD_GL=OFF -DBUILD_GLES2=OFF -DBUILD_GLES3=OFF -DENABLE_DEBUGGERS=OFF ' +
+      '-DENABLE_GDB_STUB=OFF -DENABLE_SCRIPTING=OFF -DUSE_DISCORD_RPC=OFF -DUSE_SQLITE3=OFF -DUSE_FFMPEG=OFF ' +
+      '-DUSE_LIBZIP=OFF -DUSE_MINIZIP=OFF -DUSE_ZLIB=OFF -DUSE_PNG=OFF -DUSE_LZMA=OFF -DUSE_EPOXY=OFF -DUSE_ELF=OFF ' +
+      '-DUSE_LUA=OFF -DUSE_JSON_C=OFF -DCMAKE_BUILD_TYPE=Release',
+    files: [
+      ...['bitmap-cache', 'cache-set', 'cheats', 'config', 'core', 'directories', 'interface', 'lockstep', 'log',
+        'map-cache', 'serialize', 'sync', 'thread', 'tile-cache', 'timing'].map((n) => 'src/core/' + n + '.c'),
+      ...['decoder', 'isa-sm83', 'sm83'].map((n) => 'src/sm83/' + n + '.c'),
+      ...['audio', 'cheats', 'core', 'gb', 'input', 'io', 'mbc', 'mbc/huc-3', 'mbc/licensed', 'mbc/mbc', 'mbc/pocket-cam',
+        'mbc/tama5', 'mbc/unlicensed', 'memory', 'overrides', 'serialize', 'renderers/cache-set', 'renderers/software',
+        'sio', 'timer', 'video'].map((n) => 'src/gb/' + n + '.c'),
+      ...['arm', 'decoder-arm', 'decoder', 'decoder-thumb', 'isa-arm', 'isa-thumb'].map((n) => 'src/arm/' + n + '.c'),
+      ...['audio', 'bios', 'cart/ereader', 'cart/gpio', 'cart/matrix', 'cart/unlicensed', 'cart/vfame', 'cheats',
+        'cheats/codebreaker', 'cheats/gameshark', 'cheats/parv3', 'core', 'dma', 'gba', 'hle-bios', 'input', 'io', 'memory',
+        'overrides', 'renderers/cache-set', 'renderers/common', 'renderers/gl', 'renderers/software-bg',
+        'renderers/software-mode0', 'renderers/software-obj', 'renderers/video-software', 'savedata', 'serialize',
+        'sharkport', 'sio', 'sio/gbp', 'timer', 'video'].map((n) => 'src/gba/' + n + '.c'),
+      ...['circle-buffer', 'configuration', 'crc32', 'formatting', 'gbk-table', 'hash', 'md5', 'sha1', 'string', 'table',
+        'vector', 'vfs', 'audio-buffer', 'convolve', 'elf-read', 'geometry', 'image', 'image/export', 'image/font',
+        'image/png-io', 'patch', 'patch-fast', 'patch-ips', 'patch-ups', 'ring-fifo', 'sfo', 'text-codec',
+        'vfs/vfs-mem', 'vfs/vfs-fifo', 'vfs/vfs-fd', 'vfs/vfs-dirent'].map((n) => 'src/util/' + n + '.c'),
+      'build/cmake/version.c', 'src/platform/posix/memory.c', 'src/third-party/inih/ini.c',
+      ...['libretro-audio', 'libretro-vfs', 'libretro'].map((n) => 'src/platform/libretro/' + n + '.c')],
+    include: ['build/cmake/include', 'src', 'include', 'src/platform/libretro'],
+    defines: ['__LIBRETRO__', '_GNU_SOURCE', 'MGBA_STANDALONE', 'MINIMAL_CORE=2', 'M_CORE_GB', 'M_CORE_GBA',
+      'DISABLE_THREADING', 'COLOR_16_BIT', 'COLOR_5_6_5', 'ENABLE_VFS', 'ENABLE_VFS_FD', 'ENABLE_DIRECTORIES',
+      'HAVE_FREELOCALE', 'HAVE_FUTIMENS', 'HAVE_LOCALE', 'HAVE_LOCALTIME_R', 'HAVE_NEWLOCALE', 'HAVE_REALPATH',
+      'HAVE_SETLOCALE', 'HAVE_STRDUP', 'HAVE_STRLCPY', 'HAVE_STRNDUP', 'HAVE_STRTOF_L', 'HAVE_USELOCALE', 'HAVE_VASPRINTF',
+      'HAVE_XLOCALE', 'M_PI=3.14159265358979323846', 'PATH_MAX=4096'],
+  },
+  handy: {
+    title: 'Handy', systems: ['lynx'],
+    repo: 'https://github.com/libretro/libretro-handy', commit: 'bc55d462f0b2d6b073ea93dc552ebd73cec60fd1',
+    licence: 'zlib licence (lynx/license.txt)',
+    files: [...['lynxdec', 'cart', 'memmap', 'mikie', 'ram', 'rom', 'susie', 'system', 'eeprom'].map((n) => 'lynx/' + n + '.cpp'),
+      'libretro/libretro.cpp', 'blip/Blip_Buffer.cpp', 'blip/Stereo_Buffer.cpp',
+      ...['compat/compat_posix_string.c', 'compat/compat_snprintf.c', 'compat/compat_strcasestr.c', 'compat/compat_strl.c',
+        'compat/fopen_utf8.c', 'encodings/encoding_utf.c', 'file/file_path.c', 'file/file_path_io.c',
+        'streams/file_stream.c', 'streams/file_stream_transforms.c', 'string/stdstring.c', 'time/rtime.c',
+        'vfs/vfs_implementation.c'].map((f) => 'libretro-common/' + f)],
+    include: ['lynx', 'libretro', '.', 'libretro-common/include'],
+    defines: ['__LIBRETRO__', 'FRONTEND_SUPPORTS_RGB565', 'WANT_CRC32'],
+    cxx: ['-std=gnu++11'],
+  },
 };

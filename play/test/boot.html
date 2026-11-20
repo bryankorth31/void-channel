@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PLAY engine boot check</title>
+<style>
+  body{margin:0;background:#07080c;color:#e8e8ee;font:14px system-ui,sans-serif;padding:16px}
+  canvas{display:block;width:640px;max-width:100%;image-rendering:pixelated;background:#000;margin-top:12px}
+  pre{white-space:pre-wrap}
+</style>
+</head>
+<body>
+<!-- VoidTV PLAY: a test page that boots one card's engine, muted, without the player page. Licence: GPL-2.0-or-later.
+     For engines the player does not list yet: ?card=<id>&core=<name> adds the core to PlayCards.CORES here only;
+     &staged=1 reads the card from play/test/staged-cards/ (cards waiting for their engine to be wired in).
+     Served by play/serve.js: http://127.0.0.1:8789/play/test/boot.html?card=ms-pac-man-lynx&core=handy
+     It presses buttons by name: &press=Start,A (each held &hold= ms, default 100, 2 seconds apart, after the first picture). -->
+<pre id="out">starting</pre>
+<canvas id="canvas" width="320" height="240"></canvas>
+<script src="../src/keys.js"></script>
+<script src="../src/cards.js"></script>
+<script src="../src/runner.js"></script>
+<script>
+(async function () {
+  const q = new URLSearchParams(location.search);
+  const out = document.getElementById('out');
+  const BITS = { B: 0, Y: 1, Select: 2, Start: 3, Up: 4, Down: 5, Left: 6, Right: 7, A: 8, X: 9, L: 10, R: 11 };
+  const state = window.__boot = { frames: 0, firstFrameMs: null, error: null, status: [], pressed: [], size: null };
+  const show = () => { out.textContent = JSON.stringify(state, null, 1); };
+  const t0 = performance.now();
+  try {
+    const card = await (await fetch((q.get('staged') ? 'staged-cards/' : '../cards/') + q.get('card') + '.json')).json();
+    const core = q.get('core');
+    if (core && !PlayCards.CORES[core]) PlayCards.CORES[core] = { engine: 'engine/' + core + '.js', systems: [card.system] };
+    const runner = PlayRunner.createRunner({ canvas: document.getElementById('canvas'), mute: true, on: {
+      firstFrame: () => { state.firstFrameMs = Math.round(performance.now() - t0); show(); pressAll(); },
+      status: (t) => { state.status.push(t); show(); },
+      error: (t) => { state.error = t; show(); },
+      ready: (m) => { state.ready = m; show(); },
+    } });
+    window.__runner = runner;
+    runner.start(card, new URL('../', location.href));
+    setInterval(() => { state.frames = runner.frames(); const c = document.getElementById('canvas'); state.size = c.width + 'x' + c.height; show(); }, 500);
+    async function pressAll() {
+      for (const name of (q.get('press') || '').split(',').filter(Boolean)) {
+        await new Promise((r) => setTimeout(r, 2000));
+        runner.pad(0, 1 << BITS[name]);
+        await new Promise((r) => setTimeout(r, +(q.get("hold") || 100)));
+        runner.pad(0, 0);
+        state.pressed.push(name); show();
+      }
+    }
+  } catch (e) { state.error = String(e.message || e); show(); }
+})();
+</script>
+</body>
+</html>

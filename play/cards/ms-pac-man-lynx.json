@@ -1,0 +1,50 @@
+{
+  "id": "ms-pac-man-lynx",
+  "title": "Ms. Pac-Man (Lynx)",
+  "year": 1990,
+  "publisher": "Atari",
+  "system": "lynx",
+  "core": "handy",
+  "players": 1,
+  "archive": {
+    "item": "Ms._Pac-Man_USA_Europe",
+    "file": "cart.lyx",
+    "size": 131072
+  },
+  "controls": {
+    "kind": "pad",
+    "dpad": true,
+    "keys": [
+      "P1:B",
+      "P1:A",
+      "P1:L",
+      "P1:R",
+      "P1:Start"
+    ],
+    "labels": {
+      "P1:L": "Option 1",
+      "P1:R": "Option 2",
+      "P1:Start": "Pause"
+    }
+  },
+  "help": "Steer Ms. Pac-Man through the maze, eat every dot and stay away from the ghosts.",
+  "actions": [
+    {
+      "do": "Steer",
+      "press": [
+        "P1:Up",
+        "P1:Down",
+        "P1:Left",
+        "P1:Right"
+      ]
+    },
+    {
+      "do": "Start a game",
+      "press": "P1:A"
+    },
+    {
+      "do": "Pause",
+      "press": "P1:Start"
+    }
+  ]
+}

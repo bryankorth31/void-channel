@@ -17,6 +17,9 @@ unchanged, built from its published source, with a link to the exact commit we b
 - Genesis Plus GX and Snes9x are not GPL. Their own licences let anyone copy and share them free of charge, never
   for sale or for commercial use, as long as their copyright notice and terms travel with every copy. They are
   served under those terms, not under the GPL, and nothing in PLAY changes them.
+- mGBA (Mozilla Public License 2.0) and Handy (zlib licence) are open licences that allow any use, sharing included,
+  and sit beside GPL code without trouble. We serve each with its licence beside it and a link to its exact source, as
+  the MPL asks. Both run games without a console start-up chip (BIOS), so none is served.
 
 ## Built in (part of what voidtv.net serves)
 
@@ -28,6 +31,8 @@ unchanged, built from its published source, with a link to the exact commit we b
 | FCEUmm | the Nintendo (NES) core | GPL-2.0 | https://github.com/libretro/libretro-fceumm |
 | Gambatte | the Game Boy and Game Boy Color core | GPL-2.0 | https://github.com/libretro/gambatte-libretro |
 | Stella 2014 | the Atari 2600 core | GPL-2.0 | https://github.com/libretro/stella2014-libretro |
+| mGBA | the Game Boy Advance core | MPL-2.0 | https://github.com/libretro/mgba |
+| Handy | the Atari Lynx core | zlib | https://github.com/libretro/libretro-handy |
 | libretro.h and libretro common code | the core contract our host (`core/host.c`) speaks, and small helpers inside each core | MIT | https://github.com/libretro/libretro-common (inside each core's source) |
 | Emscripten | the compiler that builds each core and adds its small runtime to `engine/<core>.js` | MIT or University of Illinois/NCSA | https://github.com/emscripten-core/emscripten |
 

@@ -14,8 +14,10 @@ when you press Play. Each core is built from its own published source, unchanged
 | FCEUmm | Nintendo (NES) | GNU GPL version 2 | https://github.com/libretro/libretro-fceumm | `77468e568d9fe9c48d684ca911f1a3fe7259fdf7` |
 | Gambatte | Game Boy, Game Boy Color | GNU GPL version 2 | https://github.com/libretro/gambatte-libretro | `77f2567d718b8973d02caa2daa8dce4953faf811` |
 | Stella 2014 | Atari 2600 | GNU GPL version 2 | https://github.com/libretro/stella2014-libretro | `7d1361e407e63f29e52892655069e5fb4096e691` |
+| mGBA | Game Boy Advance | Mozilla Public License 2.0 | https://github.com/libretro/mgba | `7a12d6d4b9acb14c0ae62c9166b6a2f3d08007f6` |
+| Handy | Atari Lynx | zlib licence | https://github.com/libretro/libretro-handy | `bc55d462f0b2d6b073ea93dc552ebd73cec60fd1` |
 
-The commits for the last five also live in [cores.js](cores.js), which is the one place the build reads them from.
+The commits for every core but DOSBox Pure also live in [cores.js](cores.js), which is the one place the build reads them from.
 Every core was built with Emscripten 7.0.0 (emcc `777e6e5db7b4990bcaeb1b9998ed642cc84e6629`), installed by the
 Emscripten SDK at commit `708dcbcc9ee23bc7d2dad44fc90db377e38b771c`.
 
@@ -23,10 +25,13 @@ Each engine file, `play/engine/<core>.js`, opens with a one-line notice naming t
 source. The build scripts write that line, so every served copy says what it is and where its source is.
 
 Each core's full licence is in its own source, at the commit above (`LICENSE.txt` for Genesis Plus GX, `LICENSE` for
-Snes9x, `Copying` for FCEUmm, `COPYING` for Gambatte, `stella/license.txt` for Stella 2014, `LICENSE` for DOSBox
-Pure). The two non-GPL licences ask for their notice to travel with every copy, so each also sits unchanged beside
+Snes9x, `Copying` for FCEUmm, `COPYING` for Gambatte, `stella/license.txt` for Stella 2014, `LICENSE` for mGBA,
+`lynx/license.txt` for Handy, `LICENSE` for DOSBox Pure). Neither mGBA nor Handy needs a console's start-up chip
+(BIOS): both stand in for it themselves, so none is served. The two non-GPL licences ask for their notice to travel with every copy, so each also sits unchanged beside
 its engine: [genesis-plus-gx.LICENSE.txt](../engine/genesis-plus-gx.LICENSE.txt) and
-[snes9x.LICENSE.txt](../engine/snes9x.LICENSE.txt). Parts inside the two non-GPL cores keep their own terms, listed in
+[snes9x.LICENSE.txt](../engine/snes9x.LICENSE.txt). mGBA's licence (MPL 2.0) and Handy's (zlib) sit beside their
+engines the same way: [mgba.LICENSE.txt](../engine/mgba.LICENSE.txt), [handy.LICENSE.txt](../engine/handy.LICENSE.txt).
+Parts inside the two non-GPL cores keep their own terms, listed in
 those files: for example the Nuked OPN2
 sound chip and Shay Green's sound and video filters (GNU LGPL 2.1 or later), minimp3 (CC0), zlib (zlib licence) and
 the libretro common code (MIT).
@@ -43,7 +48,8 @@ If a link ever stops working, ask through voidtv.net and we will send the source
 
 ## Build them yourself
 
-You need Git, Node.js and about 2 GB of disk space (Bash too, for DOSBox Pure; Git Bash works on Windows).
+You need Git, Node.js and about 2 GB of disk space (Bash too, for DOSBox Pure; Git Bash works on Windows; CMake and
+Ninja for mGBA's setup step).
 
 1. Get Emscripten: `git clone https://github.com/emscripten-core/emsdk`, then in that folder
    `./emsdk install 7.0.0` and `./emsdk activate 7.0.0` (the version we built with).
@@ -51,10 +57,13 @@ You need Git, Node.js and about 2 GB of disk space (Bash too, for DOSBox Pure; G
 3. From the void-channel folder:
    - DOSBox Pure: `EMSDK=<your emsdk folder> DBP=<your dosbox-pure folder> bash play/core/build.sh`
    - Any other core: `EMSDK=<your emsdk folder> SRC=<the core's folder> node play/core/build-core.js <name>`,
-     where `<name>` is one of `genesis-plus-gx`, `snes9x`, `fceumm`, `gambatte`, `stella2014`.
+     where `<name>` is one of `genesis-plus-gx`, `snes9x`, `fceumm`, `gambatte`, `stella2014`, `mgba`, `handy`.
+   - mGBA only: its libretro core has no Makefile, so first run mGBA's own CMake setup once in its folder, with
+     emsdk active (the exact command is the `configure` line of its recipe in cores.js). It writes two small files
+     the build needs, `build/cmake/include/mgba/flags.h` and `build/cmake/version.c`; nothing else of CMake is used.
 
 `build-core.js` reads the core's recipe from [cores.js](cores.js): the same files and settings as the core's own
-release Makefile, with no `make` needed. Both scripts stop if the source is not at the commit we name, so a build
+release Makefile (for mGBA, what its CMake build gives its libretro core), with no `make` needed. Both scripts stop if the source is not at the commit we name, so a build
 always matches what we serve. They write `play/engine/<name>.js` and `play/engine/<name>.wasm`.
 
 Our side of every build is [host.c](host.c), the host's C half, which answers the core's questions through the
