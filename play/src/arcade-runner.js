@@ -53,12 +53,27 @@
 
     // A screen faster than 60 Hz would run the game fast (one 1/60 s step per browser frame): measure the browser's frame
     // rate for a second, then let MAME's loop run every n-th frame (1 on 60 Hz, 2 on 120 Hz).
+    // Some panes and covered windows say 'visible' yet fire few or no frames, and the game would crawl or stop. So the
+    // pace is decided once: browser frames when they come at least 30 a second, else a 60 Hz timer, with the loop woken
+    // once (it may be waiting on a frame that never comes). A hidden tab simply waits, as it should.
     function pace() {
-      let n = 0;
-      const t0 = performance.now();
-      const count = () => { n++; if (performance.now() - t0 < 1000) requestAnimationFrame(count); else set(n * 1000 / (performance.now() - t0)); };
-      const set = (rate) => { try { if (root._emscripten_set_main_loop_timing) root._emscripten_set_main_loop_timing(1, Math.max(1, Math.round(rate / 60))); } catch (e) { /* keep the default */ } };
+      let n = 0, first = 0, decided = false;
+      const decide = (rate) => {
+        if (decided) return;
+        decided = true;
+        try {
+          if (rate >= 30) root._emscripten_set_main_loop_timing(1, Math.max(1, Math.round(rate / 60)));
+          else { root._emscripten_set_main_loop_timing(0, 1000 / 60); if (root.MainLoop && root.MainLoop.scheduler) root.MainLoop.scheduler(); }
+        } catch (e) { /* keep the default */ }
+      };
+      const count = (now) => {
+        if (decided) return;
+        if (!first) first = now;
+        n++;
+        if (now - first < 1000) requestAnimationFrame(count); else decide(n * 1000 / (now - first));
+      };
       requestAnimationFrame(count);
+      setTimeout(() => { if (!decided && document.visibilityState === 'visible') decide(n / 2); }, 2000);
     }
 
     // MAME names the window after the game and its own version; the tab keeps PLAY's title.
