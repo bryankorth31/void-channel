@@ -1,0 +1,123 @@
+// VoidTV Trivia Nights: the phone's side (plan T9). Joins the big screen's room on VoidTV's room relay (the PLAY lead's;
+// contract ROOMS-relay-contract-2026-11-20.md), sends a nickname if one is given and one answer per question, and shows
+// what the screen sends back. Nothing is kept but a random seat token for this tab (so a phone that drops keeps its seat
+// for a minute). Licence: GPL-2.0-or-later.
+(function () {
+  'use strict';
+  const G = window.TriviaGame;
+  // The project's donation setting (scripts/lib/app.js DONATE_URL); tests/trivia-host.test.js keeps it the same.
+  const DONATE_URL = 'https://square.link/u/bJl9PGAC';
+  const DONATE_LINE = 'If you found this service helpful, please think of donating to keep it running and to make more services like this possible. Every donation goes to CASH (cashvalues.org) and feeds its mission in the real world.';
+  const SHAPES = ['▲', '◆', '●', '■'];
+  const LETTERS = ['A', 'B', 'C', 'D'];
+  const $ = (id) => document.getElementById(id);
+  for (const e of document.querySelectorAll('.donate-line')) e.textContent = DONATE_LINE;
+  for (const e of document.querySelectorAll('.donate-link')) e.href = DONATE_URL;
+
+  const code = (new URLSearchParams(location.search).get('r') || '').toUpperCase();
+  let ws = null, ended = false, tries = 0, current = null, asked = false;
+
+  function only(id) { for (const s of ['note', 'name', 'wait', 'ask', 'res', 'end']) $(s).hidden = s !== id; }
+  function note(h, p, link) { $('note-h').textContent = h; $('note-p').textContent = p; $('note-a').hidden = !link; only('note'); }
+  const send = (m) => { if (ws && ws.readyState === 1) ws.send(JSON.stringify(m)); };
+  const buzz = () => { try { if (navigator.vibrate) navigator.vibrate(12); } catch (e) { /* not on this phone */ } };
+
+  // A random seat token for this tab only (sessionStorage), sent only to its room.
+  function token() {
+    let t = null;
+    try { t = sessionStorage.getItem('voidtv-seat'); } catch (e) { /* private mode */ }
+    if (!t || !/^[A-Za-z0-9_-]{16,64}$/.test(t)) {
+      t = [...crypto.getRandomValues(new Uint8Array(16))].map((b) => b.toString(16).padStart(2, '0')).join('');
+      try { sessionStorage.setItem('voidtv-seat', t); } catch (e) { /* fine */ }
+    }
+    return t;
+  }
+
+  function drawQuestion(m) {
+    current = m.n;
+    $('num').textContent = 'Question ' + (m.n + 1) + ' of ' + m.of;
+    $('q').textContent = m.q || 'Look at the big screen.';
+    const box = $('answers');
+    box.textContent = '';
+    box.classList.toggle('locked', m.pick !== null && m.pick !== undefined);
+    m.choices.forEach((c, i) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'a a' + i + (m.pick === i ? ' picked' : '');
+      b.title = 'Answer ' + LETTERS[i];
+      const s = document.createElement('span'); s.className = 's'; s.textContent = SHAPES[i]; s.setAttribute('aria-hidden', 'true');
+      const l = document.createElement('span'); l.className = 'l'; l.textContent = LETTERS[i];
+      const t = document.createElement('span'); t.textContent = c;
+      b.append(s, l, t);
+      b.addEventListener('click', () => {
+        if (box.classList.contains('locked')) return;
+        box.classList.add('locked'); b.classList.add('picked'); buzz();
+        send({ type: 't-a', n: current, pick: i });
+      });
+      box.appendChild(b);
+    });
+    only('ask');
+  }
+
+  function onMessage(m) {
+    if (m.type === 'hello') { tries = 0; return; }
+    if (m.type === 't-you') {
+      $('me').textContent = m.name;
+      if (m.refused) { $('name-err').textContent = 'That name cannot go on the big screen. Try another, or just play.'; if (!$('wait').hidden) only('name'); return; }
+      if (!asked && !m.named) { asked = true; only('name'); }
+      else if (!$('name').hidden && m.named) only('wait');
+      return;
+    }
+    if (m.type === 't-wait') { if ($('name').hidden) { $('wait-h').textContent = 'Waiting'; $('wait-p').textContent = m.text; only('wait'); } return; }
+    if (m.type === 't-q') { drawQuestion(m); return; }
+    if (m.type === 't-got') { $('wait-h').textContent = 'Locked in: ' + LETTERS[m.pick]; return; }
+    if (m.type === 't-res') {
+      $('res-num').textContent = 'Question ' + (m.n + 1);
+      const h = $('res-h');
+      h.className = 'result ' + (m.right ? 'right' : 'wrong');
+      h.textContent = m.right ? 'Right!' : m.pick === null ? 'No answer' : 'Not this time';
+      $('res-p').textContent = m.right ? '+' + m.points.toLocaleString() + ' points' : 'It was ' + LETTERS[m.answer] + '.';
+      $('res-total').textContent = m.score.toLocaleString() + ' points, ' + G.ordinal(m.place) + ' of ' + m.of;
+      only('res');
+      return;
+    }
+    if (m.type === 't-end') { $('end-p').textContent = m.score.toLocaleString() + ' points. You came ' + G.ordinal(m.place) + ' of ' + m.of + '.'; only('end'); return; }
+    if (m.type === 'host-gone') { ended = true; note('The big screen closed', 'Scan the new code on the big screen to play again.', true); }
+  }
+
+  function connect() {
+    if (!/^[2-9A-Z]{4}$/.test(code)) { note('No room code', 'Scan the code on the big screen, or type it.', true); return; }
+    ws = new WebSocket((location.protocol === 'https:' ? 'wss://' : 'ws://') + location.host + '/api/room/' + code + '/join?t=' + token());
+    ws.onmessage = (e) => { let m; try { m = JSON.parse(e.data); } catch (x) { return; } onMessage(m); };
+    ws.onclose = (e) => {
+      ws = null;
+      if (ended) return;
+      if (e.code === 4404) { note('No game with that code', 'The code changes each game. Check the big screen.', true); return; }
+      if (e.code === 4409) { note('This game is full', 'Up to 200 phones can join one screen.', false); return; }
+      if (e.code === 4423) { note('This game is locked', 'The big screen is not letting new phones in right now.', false); return; }
+      if (e.code === 4403) { ended = true; note('The big screen removed this phone', 'Ask whoever runs the screen if that was a mistake.', false); return; }
+      if (e.code === 4410 || e.code === 4408) { note('The big screen closed', 'Scan the new code on the big screen to play again.', true); return; }
+      // A dropped connection (walking out of Wi-Fi range): try again, a little slower each time; the seat is kept a minute.
+      note('Reconnecting', 'The connection dropped. Trying again.', false);
+      setTimeout(connect, Math.min(8000, 500 * 2 ** tries++));
+    };
+  }
+
+  $('name-f').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const v = $('name-i').value.trim();
+    if (!v) return;
+    $('name-err').textContent = '';
+    send({ type: 't-hi', name: v.slice(0, 16) });
+    $('wait-h').textContent = 'Waiting'; $('wait-p').textContent = 'The game starts soon.';
+    only('wait');
+  });
+  $('skip').addEventListener('click', () => { $('wait-h').textContent = 'Waiting'; $('wait-p').textContent = 'The game starts soon.'; only('wait'); });
+
+  // Keep the phone's screen on during the game.
+  let lock = null;
+  async function stayAwake() { try { if (navigator.wakeLock && !lock) { lock = await navigator.wakeLock.request('screen'); lock.addEventListener('release', () => { lock = null; }); } } catch (e) { /* not allowed */ } }
+  addEventListener('pointerdown', stayAwake, { once: true });
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) stayAwake(); });
+  connect();
+})();

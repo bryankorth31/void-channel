@@ -141,6 +141,15 @@ const brandSrc = path.join(ROOT, 'assets', 'brand');
     fs.mkdirSync(path.join(dst, 'shelf'), { recursive: true });
     for (const f of ['index.json', 'status.json']) fs.copyFileSync(path.join(P, 'shelf', f), path.join(dst, 'shelf', f));
   } }
+// Trivia Night (trivia/, B, 20 Nov 2026: "Yes, a Trivia row"): the host screen at /trivia/, the phone page at /trivia/phone, their
+// style and scripts, and the question bank (its files are written by scripts/trivia/bank.js). voidtv.net only, and only when the
+// bank is built. The QR maker and the room relay are PLAY's (/play/src/qr.js, /api/room/*); no media is copied.
+{ const T = path.join(ROOT, 'trivia'), dst = path.join(OUT, 'trivia');
+  if (PROFILE.name === 'voidtv' && fs.existsSync(path.join(T, 'bank', 'index.json'))) {
+    fs.mkdirSync(dst, { recursive: true });
+    for (const f of ['index.html', 'phone.html', 'trivia.css']) fs.copyFileSync(path.join(T, f), path.join(dst, f));
+    for (const d of ['src', 'bank']) fs.cpSync(path.join(T, d), path.join(dst, d), { recursive: true });
+  } }
 if (fs.existsSync(brandSrc)) fs.cpSync(brandSrc, path.join(OUT, 'assets', 'brand'), { recursive: true, filter: (p) => { const parts = path.relative(brandSrc, p).split(path.sep); return !parts.includes('src') && !parts.includes('sheets'); } }); // the 2K originals and design sheets stay out of the site
 // Browsers, search engines and feed readers ask for /favicon.ico on their own; without the file they got the home page.
 if (fs.existsSync(path.join(brandSrc, 'favicon.ico'))) fs.copyFileSync(path.join(brandSrc, 'favicon.ico'), path.join(OUT, 'favicon.ico'));

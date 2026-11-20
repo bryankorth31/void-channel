@@ -266,7 +266,19 @@ function assemble() {
   const foreign = new Set(shows.filter((s) => lang[s.show] && lang[s.show] !== 'en').map((s) => s.slug));
   const tvLineup = TW.lineup(buildTv(shows, types, foreign),TW.read(path.join(PROFILE.catalogDir, 'tv-lineup.json')), +process.env.VOID_TV_NOW || Date.now()); // VOID_TV_NOW: tests pin the clock
   const tv = tvLineup.tv;
-  return { shows, people, links, types, bios, channels: tv.channels, tv, tvLineup, homeOrder, colors, spots };
+  // Trivia Night (trivia/, plan PLAN-voidtv-trivia; B, 20 Nov 2026: "Yes, a Trivia row"): a home row when the question bank is
+  // built, on voidtv.net only (never on the kids site). It carries only the question counts per topic, for the cards.
+  const trivia = PROFILE.name === 'voidtv' ? triviaCounts() : null;
+  return { shows, people, links, types, bios, channels: tv.channels, tv, tvLineup, homeOrder, colors, spots, trivia };
+}
+
+// The trivia bank's counts: { tv: { family, all }, movies: {...}, games: {...} }, or null when there is no bank.
+function triviaCounts() {
+  const idx = readJson(path.join(__dirname, '..', '..', 'trivia', 'bank', 'index.json'), null);
+  if (!idx || !Array.isArray(idx.files) || !idx.files.length) return null;
+  const out = {};
+  for (const f of idx.files) { const c = out[f.category] || (out[f.category] = { family: 0, all: 0 }); c.family += f.family || 0; c.all += f.count || 0; }
+  return out;
 }
 
 // The index entry: everything the browse page needs; seasons and cast load per show in split mode.
@@ -659,6 +671,12 @@ function shelf(title,list,key,total){const id='t-'+key.replace(/[^a-z0-9]+/gi,'-
  return '<h2>'+(key==='type:Classic TV'?'<img class="rowmark" src="'+BASE+'assets/brand/ui/doors/classic.png" alt="">':key==='type:Late Night'?'<img class="rowmark" src="'+BASE+'assets/brand/ui/doors/latenight.png" alt="">':'')+esc(title)+'<small>'+(total||list.length)+' shows</small>'+(key.startsWith('type:')?'<span class="all" onclick="state.type=\\''+esc(title)+'\\';render();window.scrollTo(0,0)">See all ›</span>':key.startsWith('tag:')?'<span class="all" onclick="state.tag=\\''+esc(title)+'\\';render();window.scrollTo(0,0)">See all ›</span>':'')+'</h2>'
  +'<div class="rowwrap"><button class="arrow l" onclick="slide(\\''+id+'\\',-1)"><i class="ico chevron-left"></i></button><div class="track'+(full?' filled':'')+'" id="'+id+'" data-key="'+esc(key)+'">'+(full?cards(list,key):'')+'</div><button class="arrow r" onclick="slide(\\''+id+'\\',1)"><i class="ico chevron-right"></i></button></div>'
  +(openHere?detail(list.find(s=>s.slug===state.open)):'')}
+// Trivia Night's row (B, 20 Nov 2026: "Yes, a Trivia row"): one card per deck, drawn like a show card with no poster; each opens
+// /trivia/ with that deck picked. Only when the site carries a question bank (TRIVIA holds its counts per topic).
+function triviaRow(){const n=(cats,band)=>cats.reduce((s,c)=>s+((TRIVIA[c]||{})[band]||0),0);
+ const decks=[['Family trivia','TV shows, TV movies and old games, for everyone','crowd=family',n(['tv','movies','games'],'family')],['TV shows','Who played it, first aired, networks, episode names','crowd=family&topics=tv',n(['tv'],'family')],['Old games','Who made it and what year it came out','crowd=family&topics=games',n(['games'],'family')],['After dark','Every rated show, for grown-up nights','crowd=after-dark',n(['tv','movies','games'],'all')],['Out loud','No phones: the room shouts, you show the answer','mode=loud',n(['tv','movies','games'],'family')]].filter(d=>d[3]>0);
+ if(!decks.length)return '';
+ return '<h2>Trivia Night<small>a big screen and phones as buzzers, free</small></h2><div class="rowwrap"><div class="track filled trivia-row">'+decks.map(([t,sub,q,c])=>'<a class="card" href="'+BASE+'trivia/?'+q+'" title="Start '+esc(t)+' on this screen"><div class="p gen" style="--h:'+hue(t)+'"><b>?</b><span>'+esc(t)+'</span><small>'+c.toLocaleString()+' questions</small></div><div class="t"><b>'+esc(t)+'</b><small>'+esc(sub)+'</small></div></a>').join('')+'</div></div>'}
 const TRACKS={},FILLED=new Set(),SHELF_CAP=36;
 function cards(list,key){const cap=key.indexOf(':')>0?SHELF_CAP:list.length;let h=list.slice(0,cap).map(s=>card(s,key)).join('');if(list.length>cap)h+='<div class="card endcard" tabindex="0" onclick="seeAll(\\''+esc(key)+'\\')"><div class="p"><b>+'+(list.length-cap)+'</b><span>See all '+list.length+'</span></div></div>';return h}
 function seeAll(key){const i=key.indexOf(':');const k=key.slice(0,i),v=key.slice(i+1);if(k==='type')state.type=v;else if(k==='tag')state.tag=v;else return;render();window.scrollTo(0,0)}
@@ -697,6 +715,8 @@ function browse(){let list=filtered();if(!state.q)list=list.filter(s=>!hidden(s)
   for(const t of ['90s Sitcoms','Animated','Adult Swim','Documentary & Geographic'])put('type',t);
   // 4. the donation box, below the first rows
   h+='<div class="support'+(state.supportOpen?' open':'')+'"><img class="cross" src="'+BASE+'assets/brand/cash-cross.png" alt=""><div class="sp"><b>${BRAND} is free and stays free.</b> <span class="l2">Donations fund the real-world work of CASH.</span><div class="more">The shows belong to the Internet Archive; what we add is a better way to find and watch them. That is CASH\\'s work: finding ways for people to have good things that fit a busy life and a budget stretched to the max. No set amount, never required. If that is work worth supporting, give back and be part of it. <a onclick="go(\\'cash\\')">Our work in the community →</a> · <a href="https://cashvalues.org" target="_blank" rel="noopener">cashvalues.org ↗</a></div></div><span class="acts"><a class="btn donate" href="'+DONATE+'" target="_blank" rel="noopener">♥ Donate to CASH</a><a class="btn" href="'+DONATE_MONTHLY+'" target="_blank" rel="noopener">↻ Give monthly</a><button class="btn ghost sm" onclick="state.supportOpen=!state.supportOpen;render()">'+(state.supportOpen?'Less':'More')+'</button></span></div>';
+  // 4b. Trivia Night, right under the donation box
+  if(TRIVIA)h+=triviaRow();
   h+='<div id="promohome"></div>';
   // 5. genres and filters
   h+='<h2>Find something<small>pick a genre, a network, a row or a collection</small></h2>'+bar;
@@ -1216,7 +1236,7 @@ go(slugFromUrl(),true);
 `;
 
 function page({ data, mode = 'embed', routes = 'hash', base = '/', meta = {} }) {
-  const { shows, people, links, types, bios = {}, tv = { channels: [], rt: [], lib: [] }, homeOrder = [], colors = [], spots = null } = data;
+  const { shows, people, links, types, bios = {}, tv = { channels: [], rt: [], lib: [] }, homeOrder = [], colors = [], spots = null, trivia = null } = data;
   // Split mode keeps the browse index in one shared, cacheable file (data/index.js) so the hundreds
   // of per-show share pages stay tiny; embed mode inlines everything for the single-file preview.
   const inline = mode === 'embed'
@@ -1247,6 +1267,7 @@ ${indexScript}
 const SITE=${JSON.stringify(SITE_NAME)};const ENJOY_ON=${PROFILE.name === 'voidtv'};const DONATE=${JSON.stringify(DONATE_URL)};const DONATE_MONTHLY=${JSON.stringify(DONATE_MONTHLY_URL)};const MODE=${JSON.stringify(mode)};const ROUTES=${JSON.stringify(routes)};const BASE=${JSON.stringify(base)};
 const TYPES=${JSON.stringify(types)};
 const HOME_ORDER=${JSON.stringify(homeOrder)};
+const TRIVIA=${JSON.stringify(trivia)};
 ${inline}
 ${JS}
 </script></body></html>`;

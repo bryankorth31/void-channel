@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#07080c">
+<title>Trivia Night | voidtv.net</title>
+<meta name="description" content="Free trivia for a big screen: TV shows, TV movies and old games, every question with its source. No sign-up.">
+<link rel="icon" href="/favicon.ico">
+<link rel="stylesheet" href="trivia.css">
+</head>
+<body>
+<header class="bar">
+  <a class="back" id="back" href="/" title="Back to voidtv.net" aria-label="Back to voidtv.net">&larr;</a>
+  <a class="mark" href="/" title="voidtv.net home"><span class="v">voidtv</span><span class="n">.net</span></a>
+  <span class="tag">TRIVIA</span>
+  <span class="where" id="where"></span>
+  <button type="button" class="ghost" id="pause" title="Pause or go on (P)" hidden>Pause</button>
+  <button type="button" class="ghost" id="full" title="Fill the screen (F)">Full screen</button>
+</header>
+
+<main>
+  <section class="setup" id="setup">
+    <h1>Trivia Night</h1>
+    <p class="lede">Put this screen on the TV or projector. Read each question out, let the room shout or write down answers, then show the answer.
+      Every answer comes from a record we can point to, and the source shows with it.</p>
+
+    <div class="field">
+      <span class="label">Answers</span>
+      <div class="choices" role="radiogroup" aria-label="How people answer">
+        <label title="Everyone scans a code with their phone and taps an answer; the screen keeps score"><input type="radio" name="mode" value="phones" checked> On phones</label>
+        <label title="No phones: the room shouts or writes answers, you show the answer"><input type="radio" name="mode" value="loud"> Out loud</label>
+      </div>
+    </div>
+    <div class="field">
+      <span class="label">Crowd</span>
+      <div class="choices" role="radiogroup" aria-label="Crowd">
+        <label title="Shows and films rated TV-PG or PG and under; no rough words"><input type="radio" name="band" value="family" checked> Family</label>
+        <label title="Any official rating, for grown-up nights"><input type="radio" name="band" value="after-dark"> After dark</label>
+      </div>
+    </div>
+    <div class="field">
+      <span class="label">Topics</span>
+      <div class="choices" id="cats" aria-label="Topics">
+        <label title="Who played whom, first air years, networks, episode names"><input type="checkbox" name="cat" value="tv" checked> TV shows</label>
+        <label title="What year a TV movie or special first aired"><input type="checkbox" name="cat" value="movies" checked> TV movies</label>
+        <label title="Old games on VoidTV PLAY: who made them and when"><input type="checkbox" name="cat" value="games" checked> Games</label>
+      </div>
+    </div>
+    <div class="field">
+      <span class="label">Questions</span>
+      <div class="choices" role="radiogroup" aria-label="How many questions">
+        <label title="About 10 minutes"><input type="radio" name="count" value="10"> 10</label>
+        <label title="About 20 minutes"><input type="radio" name="count" value="20" checked> 20</label>
+        <label title="About 30 minutes"><input type="radio" name="count" value="30"> 30</label>
+      </div>
+    </div>
+    <div class="field">
+      <span class="label">Time to answer</span>
+      <div class="choices" role="radiogroup" aria-label="Seconds per question">
+        <label title="Quick rounds"><input type="radio" name="secs" value="15"> 15 s</label>
+        <label title="The usual"><input type="radio" name="secs" value="20" checked> 20 s</label>
+        <label title="Room to talk it over"><input type="radio" name="secs" value="30"> 30 s</label>
+        <label title="No clock: show the answer when you are ready"><input type="radio" name="secs" value="0"> No clock</label>
+      </div>
+    </div>
+
+    <p class="count" id="avail">Getting the questions ready</p>
+    <button type="button" class="go" id="start" title="Start the game (Enter)" disabled>Start</button>
+    <p class="keys">On the night: <b>Enter</b>, <b>Space</b>, a clicker or the remote's right arrow goes on. <b>P</b> pauses. <b>Esc</b> or Back ends the game.</p>
+  </section>
+
+  <section class="lobby" id="lobby" hidden>
+    <div class="qr-side">
+      <div class="qr" id="qr" role="img" aria-label="QR code to join"></div>
+      <p class="code-line">Or go to <b id="join-host"></b> and type <b class="code" id="code"></b></p>
+    </div>
+    <div class="who-side">
+      <h2>Scan to play</h2>
+      <p class="lede">Point your phone's camera at the code. No app, no sign-up. Pick a nickname or just play.</p>
+      <p class="joined" id="joined">Nobody yet</p>
+      <ul class="players" id="players"></ul>
+      <div class="acts">
+        <button type="button" class="go" id="begin" title="Start the questions (Enter)" disabled>Start the game</button>
+        <button type="button" class="ghost" id="lock" title="Stop new phones from joining, or let them in again">Lock the room</button>
+      </div>
+      <p class="hint">Click a name to remove that phone.</p>
+    </div>
+  </section>
+
+  <section class="board" id="board" hidden>
+    <h2 id="board-h">Scores</h2>
+    <ol class="ranks" id="ranks"></ol>
+    <p class="hint" id="board-hint">Enter for the next question.</p>
+  </section>
+
+  <section class="stage" id="stage" hidden>
+    <div class="top">
+      <span class="num" id="num"></span>
+      <span class="kind" id="kind"></span>
+    </div>
+    <h2 class="q" id="q"></h2>
+    <ol class="answers" id="answers"></ol>
+    <div class="clock" id="clock"><div class="fill" id="fill"></div></div>
+    <p class="source" id="source" hidden></p>
+    <p class="hint" id="hint"></p>
+  </section>
+
+  <section class="done" id="done" hidden>
+    <h2>That's the game</h2>
+    <p class="lede" id="done-line"></p>
+    <ol class="ranks" id="final"></ol>
+    <div class="acts">
+      <button type="button" class="go" id="again" title="Same settings, new questions (Enter)">Play again</button>
+      <button type="button" class="ghost" id="change" title="Back to the settings">Change settings</button>
+    </div>
+    <p class="give-big"><span class="donate-line"></span> <a class="donate-link" href="#" target="_blank" rel="noopener" title="Donate to CASH">Donate to CASH</a></p>
+  </section>
+</main>
+
+<footer class="foot">
+  <p class="give"><span class="donate-line"></span> <a class="donate-link" href="#" target="_blank" rel="noopener" title="Donate to CASH">Donate</a></p>
+  <p class="credit" id="credit">Facts from TVmaze, TMDB, Wikidata and the Internet Archive. This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
+</footer>
+
+<script src="/play/src/qr.js"></script>
+<script src="src/words.js"></script>
+<script src="src/game.js"></script>
+<script src="src/host.js"></script>
+</body>
+</html>

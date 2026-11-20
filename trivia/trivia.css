@@ -1,0 +1,113 @@
+/* VoidTV Trivia Nights host screen. Licence: GPL-2.0-or-later. The site's colours (scripts/lib/app.js) and its own font.
+   Sized for a TV or projector seen from across a room: type grows with the screen. */
+@font-face{font-family:'Unbounded';font-style:normal;font-weight:200 900;font-display:swap;src:url(/assets/brand/fonts/unbounded-latin.woff2) format('woff2')}
+:root{--bg:#07080c;--panel:#0f1118;--line:#1d2130;--fg:#e8e8ee;--dim:#8a8fa3;--acc:#5fd4ff;--pink:#ff4fc8;--blue:#5fe3ff;--gold:#f2a93b;--green:#5ee08a}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.45 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+body{min-height:100vh;display:flex;flex-direction:column;background:radial-gradient(1200px 500px at 15% -10%,rgba(255,79,200,.10),transparent 60%),radial-gradient(900px 500px at 90% 0%,rgba(95,227,255,.09),transparent 60%),var(--bg)}
+a{color:var(--acc)} a:hover{color:#fff}
+[hidden]{display:none!important}
+button{font:inherit;cursor:pointer}
+
+.bar{height:52px;flex:none;display:flex;align-items:center;gap:12px;padding:0 16px;border-bottom:1px solid var(--line);background:rgba(7,8,12,.9)}
+.back{font-size:24px;line-height:1;text-decoration:none;color:var(--fg);padding:4px 10px;border-radius:8px;border:1px solid var(--line)}
+.back:hover,.back:focus-visible{border-color:var(--acc);color:#fff}
+.mark{font-family:'Unbounded',sans-serif;font-weight:700;font-size:19px;text-decoration:none;letter-spacing:-.02em}
+.mark .v{color:var(--pink)} .mark .n{color:var(--blue)}
+.tag{font-family:'Unbounded',sans-serif;font-size:11px;font-weight:600;letter-spacing:.12em;color:var(--gold);border:1px solid var(--gold);border-radius:4px;padding:2px 6px}
+.where{flex:1}
+.ghost{background:transparent;color:var(--fg);border:1px solid var(--line);border-radius:999px;padding:7px 14px}
+.ghost:hover,.ghost:focus-visible{border-color:var(--acc);color:#fff}
+
+main{flex:1;display:flex;flex-direction:column;width:100%;max-width:1600px;margin:0 auto;padding:clamp(14px,2.5vh,32px) clamp(16px,3vw,48px)}
+
+/* Settings */
+.setup h1{font-family:'Unbounded',sans-serif;font-size:clamp(26px,4vw,48px);margin:4px 0 8px;letter-spacing:-.02em}
+.lede{color:var(--dim);max-width:760px;margin:0 0 18px}
+.field{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin:0 0 14px}
+.label{width:150px;color:var(--gold);font-weight:600}
+.choices{display:flex;flex-wrap:wrap;gap:8px}
+.choices label{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border:1px solid var(--line);border-radius:999px;background:var(--panel);cursor:pointer;user-select:none}
+.choices label:hover{border-color:var(--acc)}
+.choices label:has(input:checked){border-color:var(--gold);background:rgba(242,169,59,.12)}
+.choices input{accent-color:var(--gold);margin:0}
+.count{color:var(--dim);margin:18px 0 10px}
+.go{background:var(--gold);color:#07080c;border:0;border-radius:999px;padding:12px 30px;font-weight:700;font-size:18px}
+.go:hover,.go:focus-visible{filter:brightness(1.12);outline:3px solid rgba(242,169,59,.35);outline-offset:2px}
+.go:disabled{opacity:.45;cursor:default;filter:none}
+.keys{color:var(--dim);font-size:13px;margin-top:16px}
+.keys b{color:var(--fg);font-weight:600}
+
+/* The question on the big screen */
+.stage{flex:1;display:flex;flex-direction:column;gap:clamp(10px,2vh,24px);cursor:pointer}
+.top{display:flex;justify-content:space-between;gap:12px;color:var(--dim);font-size:clamp(14px,1.5vw,22px)}
+.num{color:var(--gold);font-weight:600}
+.q{font-family:'Unbounded',sans-serif;font-weight:600;font-size:clamp(22px,3.6vw,64px);line-height:1.18;margin:0;letter-spacing:-.01em}
+.answers{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:clamp(8px,1.4vw,22px);flex:1;align-content:center}
+.a{display:flex;align-items:center;gap:clamp(8px,1vw,18px);min-height:clamp(52px,12vh,150px);padding:clamp(8px,1.2vw,20px) clamp(12px,1.6vw,28px);border-radius:16px;background:var(--panel);border:3px solid var(--c);transition:opacity .3s,transform .3s,background .3s}
+.a0{--c:var(--pink)} .a1{--c:var(--blue)} .a2{--c:var(--gold)} .a3{--c:var(--green)}
+.shape{color:var(--c);font-size:clamp(20px,2.6vw,46px);line-height:1}
+.letter{font-family:'Unbounded',sans-serif;font-weight:700;color:var(--c);font-size:clamp(16px,1.8vw,32px)}
+.text{font-size:clamp(18px,2.4vw,44px);font-weight:600;line-height:1.15}
+.a.right{background:color-mix(in srgb,var(--c) 26%,var(--panel));transform:scale(1.03);box-shadow:0 0 0 4px #fff}
+.a.right .text::after{content:'  \2713';color:#fff}
+.a.wrong{opacity:.28}
+.clock{height:clamp(8px,1.2vh,16px);background:var(--panel);border-radius:999px;overflow:hidden}
+.clock .fill{height:100%;width:100%;background:var(--acc);border-radius:999px}
+.clock.low .fill{background:var(--pink)}
+.source{margin:0;color:var(--fg);font-size:clamp(14px,1.4vw,22px)}
+.source b{color:var(--gold)}
+.source a{color:var(--dim);word-break:break-all}
+.hint{margin:0;color:var(--dim);font-size:clamp(12px,1.1vw,16px)}
+.hint.warn{color:var(--gold);font-weight:600}
+
+.tally{margin-left:auto;font-family:'Unbounded',sans-serif;font-weight:700;color:var(--c);font-size:clamp(16px,1.8vw,32px)}
+.where{color:var(--gold);font-weight:600;text-align:center}
+
+/* The lobby: a QR code big enough to scan from the back of a room */
+.lobby{flex:1;display:grid;grid-template-columns:auto 1fr;gap:clamp(16px,4vw,64px);align-items:center}
+.qr-side{text-align:center}
+.qr{width:min(42vh,36vw);aspect-ratio:1/1;background:#fff;border-radius:14px;padding:6px;margin:0 auto}
+.qr svg{width:100%;height:100%;display:block}
+.code-line{color:var(--dim);font-size:clamp(14px,1.4vw,22px);margin:12px 0 0}
+.code-line b{color:var(--fg)}
+.code{font-family:ui-monospace,Consolas,monospace;font-size:1.5em;letter-spacing:.15em;color:var(--gold)!important}
+.who-side .lede,.who-side .hint{font-size:clamp(14px,1.3vw,22px)}
+.who-side h2{font-family:'Unbounded',sans-serif;font-size:clamp(24px,3.6vw,56px);margin:0 0 8px}
+.joined{color:var(--gold);font-weight:600;font-size:clamp(16px,1.6vw,24px);margin:10px 0}
+.players{list-style:none;margin:0 0 16px;padding:0;display:flex;flex-wrap:wrap;gap:8px;max-height:32vh;overflow:auto}
+.players li{padding:6px 12px;border-radius:999px;background:var(--panel);border:1px solid var(--line);cursor:pointer;font-size:clamp(14px,1.3vw,20px)}
+.players li:hover,.players li:focus-visible{border-color:var(--pink);text-decoration:line-through}
+
+/* Scores between questions and at the end */
+.board{flex:1}
+.board h2{font-family:'Unbounded',sans-serif;font-size:clamp(24px,3.6vw,56px);margin:4px 0 14px}
+.ranks{list-style:none;margin:0 0 12px;padding:0;display:grid;gap:clamp(4px,.8vh,10px);max-width:1100px}
+.ranks li{display:flex;align-items:baseline;gap:clamp(10px,1.5vw,24px);padding:clamp(6px,1vh,12px) clamp(12px,1.4vw,22px);background:var(--panel);border:1px solid var(--line);border-radius:12px;font-size:clamp(16px,2vw,36px)}
+.ranks li:first-child{border-color:var(--gold)}
+.place{width:3.2em;color:var(--gold);font-weight:700}
+.pname{flex:1;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pts{font-family:'Unbounded',sans-serif;font-weight:600}
+
+/* The end */
+.done h2{font-family:'Unbounded',sans-serif;font-size:clamp(28px,5vw,72px);margin:clamp(10px,6vh,80px) 0 10px}
+.acts{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.give-big{margin-top:clamp(18px,6vh,64px);max-width:900px;color:var(--fg);font-size:clamp(15px,1.4vw,22px)}
+.give-big a{display:inline-block;margin-left:6px;font-weight:700;color:var(--gold)}
+body.playing .foot{display:none}
+body.finished .foot .give{display:none}
+.a2 .shape{font-size:clamp(26px,3.4vw,60px)}
+
+.foot{flex:none;padding:10px clamp(16px,3vw,48px) 14px;border-top:1px solid var(--line);color:var(--dim);font-size:12.5px}
+.foot p{margin:2px 0;max-width:1600px}
+.give a{font-weight:600;color:var(--gold)}
+
+/* Short windows (a laptop with the browser not full screen): tighter, so the four answers still fit */
+@media (max-height:620px){
+  .bar{height:42px}
+  .a{min-height:44px;border-width:2px}
+  .foot{padding:6px 16px 8px}
+  .credit{display:none}
+}
+@media (max-height:620px){ .qr{width:min(56vh,34vw)} .ranks li{padding:4px 12px;font-size:clamp(14px,1.7vw,24px)} .board h2{font-size:26px;margin-bottom:8px} }
+@media (max-width:700px){ .answers{grid-template-columns:1fr} .label{width:100%} .lobby{grid-template-columns:1fr} }

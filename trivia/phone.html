@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#07080c">
+<title>Trivia | voidtv.net</title>
+<!-- VoidTV Trivia Nights: the phone (plan T9). A phone comes here from the QR code on the big screen (through /join).
+     It joins the screen's room, may give a nickname, and taps one of four answers. Nothing is asked for and nothing is
+     kept: the nickname lives on the big screen until the room closes. Licence: GPL-2.0-or-later. -->
+<style>
+@font-face{font-family:'Unbounded';font-style:normal;font-weight:200 900;font-display:swap;src:url(/assets/brand/fonts/unbounded-latin.woff2) format('woff2')}
+:root{--bg:#07080c;--panel:#0f1118;--line:#1d2130;--fg:#e8e8ee;--dim:#8a8fa3;--acc:#5fd4ff;--pink:#ff4fc8;--blue:#5fe3ff;--gold:#f2a93b;--green:#5ee08a}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--fg);font:17px/1.4 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;-webkit-tap-highlight-color:transparent}
+body{display:flex;flex-direction:column;min-height:100%}
+[hidden]{display:none!important}
+.bar{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--line)}
+.back{font-size:22px;text-decoration:none;color:var(--fg);padding:2px 10px;border:1px solid var(--line);border-radius:8px}
+.mark{font-family:'Unbounded',sans-serif;font-weight:700;font-size:17px;text-decoration:none}
+.mark .v{color:var(--pink)} .mark .n{color:var(--blue)}
+.me{margin-left:auto;color:var(--gold);font-weight:600;max-width:50%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+main{flex:1;display:flex;flex-direction:column;padding:16px;max-width:560px;width:100%;margin:0 auto}
+h1{font-family:'Unbounded',sans-serif;font-size:24px;margin:10px 0 8px}
+p{color:var(--dim);margin:0 0 14px}
+.big{font-size:20px;color:var(--fg)}
+input{width:100%;font:600 22px/1 system-ui,sans-serif;background:var(--panel);color:var(--fg);border:1px solid var(--line);border-radius:12px;padding:14px}
+.go{display:block;width:100%;margin-top:12px;font:700 19px system-ui,sans-serif;background:var(--gold);color:#07080c;border:0;border-radius:12px;padding:15px}
+.plain{display:block;width:100%;margin-top:10px;font:600 16px system-ui,sans-serif;background:transparent;color:var(--fg);border:1px solid var(--line);border-radius:12px;padding:12px}
+#ask{flex:1;display:flex;flex-direction:column}
+.q{font-size:16px;color:var(--dim);margin:0 0 10px}
+.num{color:var(--gold);font-weight:600;font-size:15px;margin:0 0 6px}
+.answers{flex:1;display:grid;grid-template-rows:repeat(4,1fr);gap:10px;min-height:340px}
+.a{display:flex;align-items:center;gap:12px;width:100%;text-align:left;font:600 19px/1.2 system-ui,sans-serif;color:var(--fg);background:var(--panel);border:3px solid var(--c);border-radius:16px;padding:10px 14px;cursor:pointer}
+.a0{--c:var(--pink)} .a1{--c:var(--blue)} .a2{--c:var(--gold)} .a3{--c:var(--green)}
+.a .s{color:var(--c);font-size:30px;line-height:1;width:34px;text-align:center}
+.a .l{font-family:'Unbounded',sans-serif;color:var(--c);font-size:18px}
+.a:active{transform:scale(.98)}
+.a.picked{background:color-mix(in srgb,var(--c) 30%,var(--panel));box-shadow:0 0 0 3px #fff}
+.answers.locked .a:not(.picked){opacity:.3}
+.result{font-family:'Unbounded',sans-serif;font-size:34px;margin:18px 0 6px}
+.result.right{color:var(--green)} .result.wrong{color:var(--pink)}
+.give{margin-top:auto;padding-top:20px;font-size:14px;color:var(--dim)}
+.give a{color:var(--gold);font-weight:700}
+.err{color:var(--gold)}
+</style>
+</head>
+<body>
+<header class="bar">
+  <a class="back" href="/join" title="Join another game" aria-label="Join another game">&larr;</a>
+  <a class="mark" href="/" title="voidtv.net home"><span class="v">voidtv</span><span class="n">.net</span></a>
+  <span class="me" id="me"></span>
+</header>
+<main>
+  <section id="note">
+    <h1 id="note-h">Joining</h1>
+    <p id="note-p">Finding the big screen.</p>
+    <a class="go" id="note-a" href="/join" hidden title="Type a room code">Type a code</a>
+  </section>
+
+  <section id="name" hidden>
+    <h1>You're in</h1>
+    <p>Pick a nickname for the big screen, or just play.</p>
+    <form id="name-f"><input id="name-i" maxlength="16" autocomplete="off" autocapitalize="words" spellcheck="false" placeholder="Nickname" aria-label="Nickname">
+      <button class="go" title="Show this name on the big screen">Use this name</button></form>
+    <button type="button" class="plain" id="skip" title="Play as a player number">Just play</button>
+    <p class="err" id="name-err"></p>
+  </section>
+
+  <section id="wait" hidden>
+    <h1 id="wait-h">Waiting</h1>
+    <p class="big" id="wait-p">The game starts soon.</p>
+  </section>
+
+  <section id="ask" hidden>
+    <p class="num" id="num"></p>
+    <p class="q" id="q"></p>
+    <div class="answers" id="answers"></div>
+  </section>
+
+  <section id="res" hidden>
+    <p class="num" id="res-num"></p>
+    <div class="result" id="res-h"></div>
+    <p class="big" id="res-p"></p>
+    <p id="res-total"></p>
+  </section>
+
+  <section id="end" hidden>
+    <h1>That's the game</h1>
+    <p class="big" id="end-p"></p>
+    <p class="give"><span class="donate-line"></span> <a class="donate-link" href="#" target="_blank" rel="noopener" title="Donate to CASH">Donate to CASH</a></p>
+  </section>
+</main>
+<script src="src/game.js"></script>
+<script src="src/phone.js"></script>
+</body>
+</html>
