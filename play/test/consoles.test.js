@@ -114,9 +114,9 @@ test('no donation line on games run by a non-commercial core (B, 19 Nov 2026: "L
 test('arcade (B, 20 Nov 2026: "Current MAME", "No line"): MAME runs from its own runner on the page, keyboard keys are not sent twice, Esc never reaches MAME, and the tab keeps its title', () => {
   const Cards2 = require('../src/cards.js');
   const joust = JSON.parse(fs.readFileSync(path.join(PLAY, 'cards', 'joust-arcade.json'), 'utf8'));
-  assert.equal(Cards2.engineOf(joust), 'engine/mame/joust.js');
-  assert.ok(fs.existsSync(path.join(PLAY, 'engine', 'mame', 'joust.js')) && fs.existsSync(path.join(PLAY, 'engine', 'mame', 'joust.wasm')));
-  assert.ok(fs.statSync(path.join(PLAY, 'engine', 'mame', 'joust.wasm')).size < 25 * 1024 * 1024, 'under Cloudflare\'s 25 MiB file cap');
+  assert.equal(Cards2.engineOf(joust), 'engine/mame/williams.js');
+  assert.ok(fs.existsSync(path.join(PLAY, 'engine', 'mame', 'williams.js')) && fs.existsSync(path.join(PLAY, 'engine', 'mame', 'williams.wasm')));
+  assert.ok(fs.statSync(path.join(PLAY, 'engine', 'mame', 'williams.wasm')).size < 25 * 1024 * 1024, 'under Cloudflare\'s 25 MiB file cap');
   assert.deepEqual(Cards2.check(joust), []);
   assert.ok(Cards2.check(Object.assign({}, joust, { archive: Object.assign({}, joust.archive, { driver: '../x' }) })).includes('archive.driver'));
   const R = require('../src/arcade-runner.js');

@@ -58,6 +58,17 @@
       } catch (e) { /* canvas not ready */ }
       show();
     }, 250);
+    // &timing=immediate: run the main loop as fast as the page allows (postMessage, not throttled in a hidden page),
+    // to measure raw speed with -nothrottle -str N; the page notes when MAME prints its exit lines.
+    if (q.get('timing') === 'immediate') {
+      const t = setInterval(() => {
+        if (typeof window._emscripten_set_main_loop_timing === 'function' && (window.MainLoop || {}).func) {
+          window._emscripten_set_main_loop_timing(2, 0); state.unpacedAtMs = Math.round(performance.now() - t0); clearInterval(t);
+        }
+      }, 20);
+      const origPrint = window.Module.print;
+      window.Module.print = (txt) => { origPrint(txt); if (/Average speed|exiting|Exit/i.test(txt)) state.exitAtMs = Math.round(performance.now() - t0); };
+    }
     const s = document.createElement('script');
     s.src = q.get('engine') + '.js';
     s.onerror = () => { state.error = 'engine script did not load'; show(); };

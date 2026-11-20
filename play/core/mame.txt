@@ -7,8 +7,8 @@ built with: Emscripten 7.0.0 (emsdk commit 708dcbcc9ee23bc7d2dad44fc90db377e38b7
 build tools: GNU make 4.4.1 (https://ftp.gnu.org/gnu/make/make-4.4.1.tar.gz, signature checked, built with Visual Studio 2022 build tools by its build_w32.bat); MAME's genie (3rdparty/genie in the MAME source, compiled with Visual Studio's cl from its own C files)
 changes to MAME: none
 
-One engine per arcade machine family, named after the game it was built for, served from play/engine/mame/:
-joust: SOURCES=src/mame/williams/williams.cpp (Joust and the other Williams machines in that file)
+One engine per arcade machine family, named after its MAME source file, served from play/engine/mame/:
+williams: SOURCES=src/mame/williams/williams.cpp (Joust, Defender, Robotron, Stargate and the other Williams machines in that file)
 
 Build command, run in the MAME folder from Git Bash with emsdk active (EMSCRIPTEN pointing at emsdk/upstream/emscripten):
 make -j14 BUILDDIR=build-os OPTIMIZE=s SUBTARGET=<name> SOURCES=<driver .cpp files> NO_USE_PORTAUDIO=1 NO_USE_MIDI=1 \
