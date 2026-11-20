@@ -463,7 +463,10 @@ body.shell .pdpad .pdir.ArrowLeft{left:6%}body.shell .pdpad .pdir.ArrowRight{rig
 /* The Cheats key (Bryan, 20 Nov 2026: "a cheat button near the start/mode buttons for turning on/off cheats with a list
    of cheats to toggle"): beside Start, only on a game that has cheats; it pauses the game and opens the switches. */
 body:not(.has-cheats) .cpad .ccheats{display:none}
-.cpad.side .ccheats{right:var(--e);top:calc(var(--e) + 112px)}
+/* Sideways beside Start, at the top, far from the face buttons (the auditor: under Start it sat 3 px above X). */
+.cpad.side .ccheats{right:calc(var(--e) + 72px);top:calc(var(--e) + 72px)}
+/* Start drops with it, both 24 px under R. */
+body.has-cheats .cpad.side .cstart{top:calc(var(--e) + 72px)}
 /* Sideways the d-pad no longer reaches the picture, so it keeps its well (the see-through look was for crossing it). */
 body.shell .cpad.side .pdpad{background:url(skin/dpad-well.svg) center/100% 100% no-repeat;border:0}
 /* Bryan, 20 Nov 2026, on the handheld upright: "the control buttons need to be bigger and up slightly higher. the L and R
@@ -472,7 +475,7 @@ body.shell .cpad.side .pdpad{background:url(skin/dpad-well.svg) center/100% 100%
    the width), the d-pad shares the width with them; the whole group lifts off the bottom edge; L sits centred over the
    d-pad, R centred over the face buttons (X on a Super Nintendo), both at one height; L, R and the pills are taller.
    Sideways the face buttons grow too, as far as the height under R, Start and Cheats allows. */
-.cpad.up{--lift:clamp(14px,5cqh,44px);--b:max(56px,min(96px,17cqh,20cqw));--top:58px;--sh:54px;
+.cpad.up{--lift:clamp(14px,5cqh,44px);--b:max(56px,min(96px,17cqh,20cqw));--top:74px;--sh:54px;
   --d:max(110px,min(300px,58cqh,46cqw,calc(100cqw - 2 * var(--e) - var(--cw,120px) - 20px),calc(100cqh - var(--e) - var(--top) - var(--sh) - 12px - var(--lift))))}
 /* What sits above L and R: the pills (short pads); the plate and the pills (400 px tall); and the words strip (460). */
 @container (min-height:400px){.cpad.up{--top:110px}}
@@ -493,7 +496,7 @@ body.shell .cpad.side .pdpad{background:url(skin/dpad-well.svg) center/100% 100%
 @media (max-width:900px){.bar #b-phones .w2{display:none}}
 /* A long arcade name ("Hiscore Reset", "Smart Bomb", "Yellow Button") wraps to two lines on its tape instead of being
    cut short or shrunk to 8 px (the auditor, 20 Nov 2026). */
-body.shell.arcade .pk .lbl{white-space:normal;text-overflow:clip;text-align:center;line-height:1.1;
+body.shell.arcade .pk .lbl{white-space:normal;text-overflow:clip;text-align:center;line-height:1.1;hyphens:auto;-webkit-hyphens:auto;
   display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow-wrap:normal;word-break:normal}
 /* A short pad (the smallest iPhones upright): L, R and the pills keep their earlier heights, so nothing touches. */
 @container (max-height:340px){.cpad.up{--top:52px;--sh:48px}.cpad.up .pill,body.shell .cpad.up .pill{height:44px}}
@@ -510,3 +513,8 @@ body.muted .spk .off{display:inline}body.muted .spk .on{display:none}
 @media (max-width:600px){.bar .vol{display:none}}
 .menu-vol{display:flex;align-items:center;gap:10px;margin:0 0 14px;color:var(--fg);font-size:15px}
 .menu-vol input{flex:1;max-width:280px;min-height:32px;accent-color:var(--acc);cursor:pointer}
+/* Not a key you play with, so never handed a tap from a gap, and no touch pad past its drawing (the auditor). Upright it
+   keeps 24 px from L and R; on a pad too short for that it stays in the pause menu only. */
+/* Select, Start, Rewind and Cheats keep to their drawing: no touch pad past it (the auditor). */
+.cpad .pill::after{display:none}
+@container (max-height:340px){.cpad.up .ccheats{display:none !important}}

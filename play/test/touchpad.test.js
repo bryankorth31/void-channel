@@ -106,9 +106,9 @@ test('Bryan, 20 Nov 2026: the d-pad from Lexrom, bigger without overlapping; a C
   }
   assert.ok(css.includes('.cpad.side{--e:10px;--d:max(150px,min(300px,40cqw,calc(var(--side,171px) - var(--e) - 4px),calc(100cqh - 2 * var(--e) - 164px)))}'),
     'sideways: the margin beside the picture and the height under L, Select and Rewind');
-  assert.ok(css.includes('body:not(.has-cheats) .cpad .ccheats{display:none}') && css.includes('.cpad.side .ccheats{right:var(--e);top:calc(var(--e) + 112px)}'));
+  assert.ok(css.includes('body:not(.has-cheats) .cpad .ccheats{display:none}') && css.includes('.cpad.side .ccheats{right:calc(var(--e) + 72px);top:calc(var(--e) + 72px)}') && css.includes('@container (max-height:340px){.cpad.up .ccheats{display:none !important}}') && css.includes('.cpad .pill::after{display:none}'));
   const tp = fs.readFileSync(path.join(__dirname, '..', 'src', 'touchpad.js'), 'utf8');
-  assert.ok(tp.includes("pill('@cheats', 'pill ccheats');") && tp.includes("k.classList.contains('ccheats')) continue;"), 'only a tap right on Cheats opens it');
+  assert.ok(tp.includes("pill('@cheats', 'pill ccheats');") && tp.includes("k.classList.contains('pill') || k.classList.contains('ccheats')) continue;"), 'only a tap right on Select, Start, Rewind or Cheats presses it');
   const T = require('../src/touchpad.js');
   assert.equal(T.label('@cheats'), 'Cheats');
   const play = fs.readFileSync(path.join(__dirname, '..', 'src', 'play.js'), 'utf8');
@@ -125,7 +125,7 @@ test('Bryan, 20 Nov 2026: the d-pad from Lexrom, bigger without overlapping; a C
 test('Bryan, 20 Nov 2026 ("all buttons should be bigger and easier to play with ... L above the up arrow, R above X"): the upright handheld; labels keep their size', () => {
   const fs = require('fs'), path = require('path');
   const css = fs.readFileSync(path.join(__dirname, '..', 'play.css'), 'utf8');
-  assert.ok(css.includes('.cpad.up{--lift:clamp(14px,5cqh,44px);--b:max(56px,min(96px,17cqh,20cqw));--top:58px;'), 'face buttons up to 96 px, the group off the bottom edge');
+  assert.ok(css.includes('.cpad.up{--lift:clamp(14px,5cqh,44px);--b:max(56px,min(96px,17cqh,20cqw));--top:74px;'), 'face buttons up to 96 px, the group off the bottom edge');
   assert.ok(css.includes('.cpad.up .csl{left:max(var(--e),calc(var(--e) + var(--d) / 2 - min(120px,30cqw) / 2))}'), 'L centred over the d-pad');
   assert.ok(css.includes('.cpad.up .csr{right:max(var(--e),calc(var(--e) + var(--cw,120px) / 2 - min(120px,30cqw) / 2))}'), 'R centred over the face buttons');
   assert.ok(css.includes('@container (min-height:460px){.cpad.up{--top:150px}}'), 'L and R stay under the words strip');

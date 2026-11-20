@@ -32,8 +32,9 @@
     // On the picture a tap brings the bar back, so there only a tap right beside a key (16 px) goes to the key.
     let best = null, bd = t.closest('#screen') ? 16 : REACH;
     for (const k of document.querySelectorAll('.over .pk, .over .pdpad, .zone .pk, .zone .pdpad')) {
-      // The Cheats key pauses the game, so only a tap right on it opens the list; a stray thumb in a gap never does.
-      if (!k.offsetParent || k.closest('.pkeyboard') || k.classList.contains('ccheats')) continue;
+      // Select, Start, Rewind and Cheats are not keys a thumb plays on: only a tap right on one presses it, never a
+      // stray tap in a gap (the auditor: a thumb a little high on X opened Cheats mid-play).
+      if (!k.offsetParent || k.closest('.pkeyboard') || k.classList.contains('pill') || k.classList.contains('ccheats')) continue;
       const r = k.getBoundingClientRect(); if (!r.width) continue;
       const d = Math.hypot(Math.max(r.left - e.clientX, 0, e.clientX - r.right), Math.max(r.top - e.clientY, 0, e.clientY - r.bottom));
       if (d < bd) { bd = d; best = k; }
@@ -293,7 +294,9 @@
       const out = (e) => { const r = e.getBoundingClientRect(); return r.width > 0 && (r.left < kr.left - 1 || r.right > kr.right + 1 || r.top < kr.top - 1 || r.bottom > kr.bottom + 1); };
       const over = () => parts.some((e) => e !== k && (e.scrollWidth > e.clientWidth + 1 || e.scrollHeight > e.clientHeight + 1 || out(e)))
         || (parts.length === 1 && (k.scrollWidth > k.clientWidth + 5 || k.scrollHeight > k.clientHeight + 5));
-      for (let f = 0.92; f >= 0.45 && over(); f -= 0.07) parts.forEach((e, i) => { e.style.fontSize = Math.max(8, Math.round(base[i] * f)) + 'px'; });
+      // In the handheld a word never goes under 10 px ("Hyperspace" was 8; the auditor): a long one breaks with a hyphen.
+      const least = document.body.classList.contains('shell') ? 10 : 8;
+      for (let f = 0.92; f >= 0.45 && over(); f -= 0.07) parts.forEach((e, i) => { e.style.fontSize = Math.max(least, Math.round(base[i] * f)) + 'px'; });
     }
   }
 
