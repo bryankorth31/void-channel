@@ -25,8 +25,14 @@
   }
 
   // minCols: a console pad three buttons wide (Super Nintendo diamond, Genesis A B C) asks for three key columns a side.
-  function layout(vw, vh, aspect, touch, minCols) {
+  function layout(vw, vh, aspect, touch, minCols, bare) {
     aspect = aspect > 0 ? aspect : 4 / 3;
+    // Controller mode (Bryan, 20 Nov 2026: 'the screen becomes the entire game screen'): a gamepad in hand on a phone or
+    // tablet, so no keys and no bar; the picture fills the whole screen, kept to its shape.
+    if (bare) {
+      const s = fit(vw, vh, aspect);
+      return { mode: 'bare', screen: { x: Math.floor((vw - s.w) / 2), y: Math.floor((vh - s.h) / 2), w: s.w, h: s.h } };
+    }
     const top = HEADER, stageH = vh - HEADER;
     if (!touch) {
       const s = fit(vw - 32, stageH - 16, aspect);

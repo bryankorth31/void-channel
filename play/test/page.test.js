@@ -123,3 +123,15 @@ test('iPhone: fast taps on the touch keys and the phone pad cancel the touch (Sa
   assert.ok(read(ROOT, 'src', 'phonepad.js').includes("addEventListener(ev, (e) => e.preventDefault(), { passive: false });"));
   assert.ok(read(ROOT, 'play.css').includes('-webkit-touch-callout:none'));
 });
+
+test('controller mode (Bryan, 20 Nov 2026): with a gamepad in hand the picture fills the whole screen, keeping its shape, with no keys', () => {
+  const L = require('../src/layout.js');
+  const side = L.layout(844, 390, 4 / 3, false, 2, true);
+  assert.equal(side.mode, 'bare'); assert.equal(side.screen.h, 390); assert.equal(side.screen.w, 520); assert.equal(side.screen.y, 0);
+  assert.ok(!side.left && !side.right && !side.pad, 'no key zones');
+  const up = L.layout(390, 844, 4 / 3, false, 2, true);
+  assert.equal(up.screen.w, 390);
+  const js = read(ROOT, 'src', 'play.js');
+  assert.ok(js.includes("p.index < PlayPhones.BASE && p.mapping === 'standard' && p.buttons.some((b) => b.pressed))) controllerMode(true);"), 'a real pad, not a Phones phone');
+  assert.ok(js.includes("addEventListener('orientationchange', () => { if (hub) hub.releaseAll(); });"), 'turning the phone lets go of every key');
+});

@@ -15,7 +15,7 @@
   // A TV's browser (plan T24): played with its remote or a gamepad, so it never draws the touch pad.
   const isTV = /SMART-TV|SmartTV|Tizen|Web0S|webOS|BRAVIA|Android TV|GoogleTV|CrKey|AFT[A-Z]|Roku|HbbTV/i.test(navigator.userAgent);
   const touchWanted = q.get('touch') === '1' || (q.get('touch') !== '0' && !isTV && matchMedia('(pointer: coarse)').matches);
-  let card = null, build = null, runner = null, hub = null, pad = null, aspect = 4 / 3, touch = touchWanted, paused = false, started = false;
+  let card = null, build = null, runner = null, hub = null, pad = null, aspect = 4 / 3, touch = touchWanted, paused = false, started = false, padMode = false;
 
   for (const e of document.querySelectorAll('#donate-line, .donate-line')) e.textContent = DONATE_LINE;
   for (const e of document.querySelectorAll('#donate, .donate-link')) e.href = DONATE_URL;
@@ -32,7 +32,8 @@
   const status = (t) => { $('status').textContent = t; };
 
   function place() {
-    const L = PlayLayout.layout(innerWidth, innerHeight, aspect, touch, card ? PlayTouch.minCols(card) : 2);
+    const L = PlayLayout.layout(innerWidth, innerHeight, aspect, touch, card ? PlayTouch.minCols(card) : 2, padMode);
+    document.body.classList.toggle('padmode', padMode);
     document.body.dataset.mode = L.mode;
     const set = (el, r) => { if (!r) { el.hidden = true; return; } el.hidden = false; Object.assign(el.style, { left: r.x + 'px', top: r.y + 'px', width: r.w + 'px', height: r.h + 'px' }); };
     // A console pad floats in one layer: the whole stage sideways, the room under the picture upright.
@@ -188,7 +189,8 @@
   function poll() {
     const pads = allPads();
     if (hub) {
-      hub.pollPads(pads); if (phones) phones.seats((i) => hub.seat(i)); if (paused) menuPads(pads); else { menuWas.clear(); padMouse(pads); }
+      hub.pollPads(pads); if (phones) phones.seats((i) => hub.seat(i));
+      if (!padMode && touchWanted && pads.some((p) => p && p.index < PlayPhones.BASE && p.mapping === 'standard' && p.buttons.some((b) => b.pressed))) controllerMode(true); if (paused) menuPads(pads); else { menuWas.clear(); padMouse(pads); }
       // A game started straight from the shelf (audit S6) has had no tap here yet: the first gamepad press wakes the sound.
       if (runner && pads.some((p) => p && p.buttons && p.buttons.some((b) => b.pressed))) runner.wakeSound();
     }
@@ -275,6 +277,7 @@
   // Couch mode (plan T18): say when a seat changes hands, and pause when a playing pad drops (a flat battery), the way
   // a console does, so nobody loses a life while they find the cable. The seat stays held for that pad.
   function seatNote(seat, what) {
+    if (what === 'away' && padMode && !(navigator.getGamepads ? [...navigator.getGamepads()] : []).some((p) => p && p.connected)) controllerMode(false);
     const two = card && (card.players || 1) > 1;
     if (what === 'away') {
       if (started && !paused) setPaused(true);
@@ -507,6 +510,26 @@
   addEventListener('blur', () => hub && hub.releaseAll());
   document.addEventListener('visibilitychange', () => { if (document.hidden && started) { if (!paused) setPaused(true); else autosave(); } });
   addEventListener('resize', place);
+  // Turning the phone mid-game: nothing stays held down across the change (the keys move under the thumbs).
+  addEventListener('orientationchange', () => { if (hub) hub.releaseAll(); });
+
+  // Controller mode (Bryan, 20 Nov 2026: "people use game controllers on their phone ... the screen becomes the entire game
+  // screen ... and no longer needs the controllers on the screen"). On a touch screen, the first press on a real gamepad
+  // (not a phone joined through Phones: that mode belongs to the big screen) hides the touch keys and the bar, and the
+  // picture fills the screen. A tap shows the bar for a few seconds; Touch brings the keys back; a pad that drops brings
+  // them back too, with the usual pause.
+  function controllerMode(on) {
+    if (padMode === on || !touchWanted) return;
+    padMode = on;
+    touch = on ? false : touchWanted;
+    place.sig = ''; place();
+    if (on) toast('Controller found: the game fills the screen. Tap it for the bar');
+  }
+  let barTimer = 0;
+  $('stage').addEventListener('pointerdown', (e) => {
+    if (!padMode || e.target.closest('.menu, .give, .give-card, .phones')) return;
+    document.body.classList.add('showbar'); clearTimeout(barTimer); barTimer = setTimeout(() => document.body.classList.remove('showbar'), 3000);
+  });
 
   $('b-pause').onclick = () => setPaused(!paused);
   $('m-resume').onclick = () => setPaused(false);
@@ -575,7 +598,7 @@
   $('m-cheats').onclick = () => showCheats($('cheats').hidden);
   $('b-save').onclick = save;
   $('b-load').onclick = load;
-  $('b-touch').onclick = () => { touch = !touch; place.sig = ''; place(); };
+  $('b-touch').onclick = () => { if (padMode) { padMode = false; touch = true; } else touch = !touch; place.sig = ''; place(); };
   // iPhone has no fullscreen for a web page: the button shows only where the browser can do it.
   if (!document.fullscreenEnabled) $('b-full').hidden = true;
   $('b-full').onclick = () => { if (document.fullscreenElement) document.exitFullscreen(); else document.documentElement.requestFullscreen().catch(() => {}); };
