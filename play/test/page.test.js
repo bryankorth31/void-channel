@@ -154,3 +154,16 @@ test('battery saves (the audit, 20 Nov 2026): a game\'s own save RAM is kept per
   assert.ok(js.includes("await PlaySaves.put(card.id + ':sram', b, {});"), 'kept on every autosave when it changed');
   assert.ok(js.includes("Your in-game save is kept"));
 });
+
+test('the handheld shell on a phone (Bryan: "Phones, both ways"): the bar steps away during play and the picture takes its room; sideways it is nearly the full height', () => {
+  const L = require('../src/layout.js');
+  const side = L.layout(844, 390, 4 / 3, true, 2, false, true);   // a console pad in the shell asks for two columns (play.js)
+  assert.ok(side.screen.h >= 0.95 * 390, 'sideways the picture is at least 95% of the height: ' + side.screen.h);
+  const up = L.layout(390, 844, 4 / 3, true, 2, false, true);
+  assert.equal(up.screen.w, 390, 'upright the picture is the full width');
+  assert.ok(up.screen.y < L.HEADER, 'and starts above where the bar was');
+  const js = read(ROOT, 'src', 'play.js');
+  assert.ok(js.includes('const shell = touch && !padMode && started && Math.min(innerWidth, innerHeight) <= 540;'));
+  const css = read(ROOT, 'play.css');
+  assert.ok(css.includes('body.shell:not(.paused):not(.showbar) .bar{transform:translateY(-100%)'), 'the bar is back while paused');
+});

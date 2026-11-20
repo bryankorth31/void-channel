@@ -4,6 +4,8 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const R = require('../rooms/room.js');
+// A port the system says is free right now: a fixed range could land on another program's server and hang the test.
+const freePort = () => new Promise((ok) => { const srv = require('net').createServer(); srv.listen(0, '127.0.0.1', () => { const p = srv.address().port; srv.close(() => ok(p)); }); });
 
 function harness(kind = 'pad') {
   let clock = 1000000;
@@ -87,7 +89,7 @@ test('the room ends with its screen, after 30 idle minutes, or after 4 hours', (
 test('R2: the local server runs rooms over real WebSockets: open, join, both ways, lookup, the screen leaving, and no other site', async () => {
   const { spawn } = require('child_process');
   const path = require('path');
-  const port = 8795 + Math.floor(Math.random() * 100);
+  const port = await freePort();
   const srv = spawn(process.execPath, [path.join(__dirname, '..', 'serve.js'), String(port)], { stdio: ['ignore', 'pipe', 'pipe'] });
   try {
     await new Promise((ok) => srv.stdout.once('data', ok));
@@ -237,7 +239,7 @@ test('audit review: a trivia room takes 200 phones at 5 messages a second; a dro
 test('audit review over real sockets: a phone back with its token keeps its seat; the screen removes and locks', async () => {
   const { spawn } = require('child_process');
   const path = require('path');
-  const port = 8900 + Math.floor(Math.random() * 90);
+  const port = await freePort();
   const srv = spawn(process.execPath, [path.join(__dirname, '..', 'serve.js'), String(port)], { stdio: ['ignore', 'pipe', 'pipe'] });
   try {
     await new Promise((ok) => srv.stdout.once('data', ok));

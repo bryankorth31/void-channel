@@ -33,8 +33,12 @@
   const status = (t) => { $('status').textContent = t; };
 
   function place() {
-    const L = PlayLayout.layout(innerWidth, innerHeight, aspect, touch, card ? PlayTouch.minCols(card) : 2, padMode);
+    // The handheld shell: a phone (its short side up to 540 px) with the touch keys on, while a game plays.
+    const shell = touch && !padMode && started && Math.min(innerWidth, innerHeight) <= 540;
+    // In the shell a console pad floats over the side margins, so it needs no third key column: the picture gets the room.
+    const L = PlayLayout.layout(innerWidth, innerHeight, aspect, touch, card ? (shell && PlayCards.isPad(card) ? 2 : PlayTouch.minCols(card)) : 2, padMode, shell);
     document.body.classList.toggle('padmode', padMode);
+    document.body.classList.toggle('shell', shell);
     // The donation cross, never on the picture (audit: it covered Tetris's text): upright, the bottom centre of the keys'
     // room (between the arrows and the buttons); sideways, the top of the left column, above its keys; on a computer,
     // beside the picture's lower right; in controller mode, just under the bar while the bar shows.
@@ -80,6 +84,7 @@
     if (p) { hub.releaseAll(); letGoMouse(); runner.rewind(false); paused = true; runner.pause(); autosave(); stayAwake(false); }
     else { paused = false; runner.resume(); runner.wakeSound(); stayAwake(true); }
     $('menu').hidden = !p; $('b-pause').textContent = p ? 'Resume' : 'Pause';
+    document.body.classList.toggle('paused', p);
     // The engine credits and source offer move from the start screen into the pause menu once a game is on.
     if (p && $('credits').parentElement !== $('menu')) $('menu').appendChild($('credits'));
     if (!p) window.scrollTo(0, 0);
@@ -269,7 +274,7 @@
     runner = (isArcade() ? PlayArcade : PlayRunner).createRunner({ canvas: $('canvas'), mute: q.get('mute') === '1', on: {
       note: (t) => toast(t),
       status, error: (t) => fail(t),
-      ready: () => { started = true; applyCheats(); },
+      ready: () => { started = true; applyCheats(); place.sig = ''; place(); },
       cheats: (m) => { if (!m.ok) toast('This game\'s engine cannot take cheats'); else if (m.on) toast(m.on === 1 ? 'One cheat on' : m.on + ' cheats on'); },
       firstFrame: () => {
         clearTimeout(deadline); $('cover').hidden = true; $('canvas').focus({ preventScroll: true }); stayAwake(true); armBack();
@@ -562,7 +567,7 @@
   }
   let barTimer = 0;
   $('stage').addEventListener('pointerdown', (e) => {
-    if (!padMode || e.target.closest('.menu, .give, .give-card, .phones')) return;
+    if (!(padMode || document.body.classList.contains('shell')) || e.target.closest('.menu, .give, .give-card, .phones, .pk, .pdpad, .zone')) return;
     document.body.classList.add('showbar'); clearTimeout(barTimer); barTimer = setTimeout(() => document.body.classList.remove('showbar'), 3000);
   });
 

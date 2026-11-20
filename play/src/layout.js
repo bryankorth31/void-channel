@@ -6,6 +6,7 @@
 // Sizes are CSS pixels. The numbers here and the columns in play.css (.pcol) are one rule: keep them the same.
 (function (root) {
   const HEADER = 52;
+  const SHELL = 14;            // the bezel around the picture inside the handheld shell
   const MIN_KEY = 56;          // smallest touch target we draw (a thumb, not a fingertip)
   const PAD = 12;              // a zone's inner margin
   const GAP = 10;              // space between keys
@@ -25,7 +26,7 @@
   }
 
   // minCols: a console pad three buttons wide (Super Nintendo diamond, Genesis A B C) asks for three key columns a side.
-  function layout(vw, vh, aspect, touch, minCols, bare) {
+  function layout(vw, vh, aspect, touch, minCols, bare, shell) {
     aspect = aspect > 0 ? aspect : 4 / 3;
     // Controller mode (Bryan, 20 Nov 2026: 'the screen becomes the entire game screen'): a gamepad in hand on a phone or
     // tablet, so no keys and no bar; the picture fills the whole screen, kept to its shape.
@@ -33,28 +34,30 @@
       const s = fit(vw, vh, aspect);
       return { mode: 'bare', screen: { x: Math.floor((vw - s.w) / 2), y: Math.floor((vh - s.h) / 2), w: s.w, h: s.h } };
     }
-    const top = HEADER, stageH = vh - HEADER;
+    // The handheld shell on a phone (Bryan, 20 Nov 2026: lexROM's Game Boy look, 'Phones, both ways'): the bar steps
+    // away during play, so the picture and the keys share the whole screen, the picture inside a bezel.
+    const top = shell ? (vw > vh ? 0 : SHELL) : HEADER, stageH = vh - top;
     if (!touch) {
       const s = fit(vw - 32, stageH - 16, aspect);
       return { mode: 'plain', screen: { x: Math.floor((vw - s.w) / 2), y: top + Math.floor((stageH - s.h) / 2), w: s.w, h: s.h } };
     }
     if (vw > vh) {
       const cols = Math.max(columns(stageH), minCols || 2);
-      const s = fit(vw - 2 * columnWidth(cols), stageH - 16, aspect);
+      const s = fit(vw - 2 * columnWidth(cols), stageH - (shell ? SHELL : 16), aspect);
       const col = Math.floor((vw - s.w) / 2);
       const screen = { x: col, y: top + Math.floor((stageH - s.h) / 2), w: s.w, h: s.h };
       return { mode: 'landscape', screen,
         left: { x: 0, y: top, w: col, h: stageH, cols },
         right: { x: vw - col, y: top, w: col, h: stageH, cols } };
     }
-    const s = fit(vw, Math.floor(stageH * 0.5), aspect);
+    const s = fit(vw, Math.floor(stageH * (shell ? 0.56 : 0.5)), aspect);   // upright the width is the limit: edge to edge
     const screen = { x: Math.floor((vw - s.w) / 2), y: top, w: s.w, h: s.h };
     return { mode: 'portrait', screen, pad: { x: 0, y: top + s.h, w: vw, h: vh - top - s.h } };
   }
 
   function overlaps(a, b) { return a.x < b.x + b.w && b.x < a.x + a.w && a.y < b.y + b.h && b.y < a.y + a.h; }
 
-  const api = { layout, fit, overlaps, columns, columnWidth, HEADER, MIN_KEY, PAD, GAP, ROWS };
+  const api = { layout, fit, overlaps, columns, columnWidth, HEADER, SHELL, MIN_KEY, PAD, GAP, ROWS };
   if (typeof module === 'object' && module.exports) module.exports = api;
   else root.PlayLayout = api;
 })(typeof self !== 'undefined' ? self : this);
