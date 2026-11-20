@@ -23,26 +23,19 @@ const LIB = path.join(PLAY, 'library');
 const PER = 500;
 
 const collections = () => JSON.parse(fs.readFileSync(path.join(PLAY, 'collections.json'), 'utf8')).collections;
-const adultOn = () => JSON.parse(fs.readFileSync(path.join(PLAY, 'collections.json'), 'utf8')).adultShelf === true;
 
-// Pure (tested): the cards for one system's rows, given the ids and items the hand-made cards already hold. adult: the
-// 18+ shelf's cards instead (Bryan, 20 Nov 2026: adult-themed games behind a gate; the abusive ones "are bad": never).
-function build(rows, taken, adult) {
+// Pure (tested): the cards for one system's rows, given the ids and items the hand-made cards already hold.
+function build(rows, taken) {
   const ids = new Set(taken.ids), items = new Set(taken.items), out = [];
   for (const r of rows) {
     // The start-up check's answer: the assistant's rows carry it as boot: { ok, why, at }; a plain ok is read too.
     // The content screen (the assistant's content-screen.js; adult and abusive titles were found in the 2600 library):
-    // a flagged game never reaches the shelf, and neither does a row the screen has not read.
-    if (!r || !('content' in r)) continue;
-    const kind = r.content && r.content.flag ? r.content.kind : null;
-    if (kind === 'abusive' || (r.content && r.content.flag && kind !== 'adult')) continue;
-    if (adult ? kind !== 'adult' : kind) continue;
+    // a flagged game, adult or abusive, never reaches PLAY (Bryan, 20 Nov 2026: adult-themed games "Kept out entirely";
+    // the abusive ones "are bad"), and neither does a row the screen has not read.
+    if (!r || !('content' in r) || (r.content && r.content.flag)) continue;
     // Finished games only (Bryan, 20 Nov 2026: "Yes, that rule"): no unfinished homebrew, demos, prototypes, test
     // builds, hacks or picture cartridges. A doubtful game comes in only when Bryan kept it on his weed-down page.
-    if (!finished(r)) continue;   // the 18+ shelf too (the audit: picture carts of real named women must go nowhere)
-    // The adult titles whose kind a person must read first (the audit: some "adult" ones are sexual assault in all but
-    // name): none goes on the 18+ shelf until Bryan has read the list.
-    if (adult && READ_FIRST.test((r.title || '') + ' ' + (r.item || ''))) continue;
+    if (!finished(r)) continue;
     if (!(r.boot ? r.boot.ok : r.ok) || !r.item || !r.file || !Cons.MACHINES[r.system] || items.has(r.item)) continue;
     const c = Cons.card({ system: r.system, title: r.title, item: r.item, source: r.source },
       { name: r.file, size: r.size || 0, start: r.start || '' }, { year: r.year, creator: r.publisher });
@@ -50,7 +43,6 @@ function build(rows, taken, adult) {
     if (c.year > (LAST[r.system] || 9999)) c.year = null;   // an upload's date, not the game's
     if (ids.has(c.id) || Cards.check(c).length) continue;
     c.added = 'Whole collections (Bryan, 20 Nov 2026: "Pull those shelves in"); started in the PLAY start-up check';
-    if (adult) { c.adult = true; c.adultWhy = r.content.reason || 'adult'; }
     ids.add(c.id); items.add(r.item); out.push(c);
   }
   return out.sort((a, b) => a.title.localeCompare(b.title));
@@ -61,7 +53,6 @@ function build(rows, taken, adult) {
 // gambling and horror. Bryan's Keep on his weed-down page (r.weed === 'keep') lets a doubtful game in; Drop never.
 const UNFINISHED = /\b(wip|demo|proto(type)?|beta|test|kernel|sample)\b|point-of-purchase|greeting cart|^image\b|\(hack\)|\bhack\b/i;
 const HELD = /casino|poker|slots?\b|blackjack|black jack|roulette|gambl|halloween|chainsaw/i;   // gambling and horror: Bryan's call
-const READ_FIRST = /beat 'em|beat em|philly flasher|knight on the town|x-man|custer|bachelor|harem|porky|cathouse|gigolo|jungle fever|burning desire|lady in wading/i;
 // Each machine's last commercial year: a later date is a homebrew, a hack or an upload date (the audit).
 const LAST = { a2600: 1992, nes: 1995, snes: 1999, gameboy: 2003, gbcolor: 2003, gba: 2008, lynx: 1995, genesis: 1998, sms: 1996, gamegear: 1997 };
 const FAN = /\b(polish|translat\w*|unlocked|pirate|bootleg|among us|fan made|fanmade)\b/i;
@@ -124,17 +115,13 @@ function main() {
     const fromTop = collections().some((c) => c.system === system && c.from === 'top150');
     const cards = build(readRows(system).concat(fromTop ? topRows(system, top, readWeed(system)) : []), taken);
     for (const c of cards) { taken.ids.push(c.id); taken.items.push(c.archive.item); }
-    // The 18+ shelf's games for this machine, in their own bundles (adult-<machine>/<n>), never on the main shelf.
-    // Only when Bryan has turned the 18+ shelf on in play/collections.json ("adultShelf": true); off until he rules.
-    const adult = adultOn() ? build(readRows(system).concat(fromTop ? topRows(system, top, readWeed(system)) : []), taken, true) : [];
-    for (const c of adult) { taken.ids.push(c.id); taken.items.push(c.archive.item); }
-    for (const b of bundles(system, cards).concat(bundles('adult-' + system, adult))) {
+    for (const b of bundles(system, cards)) {
       const f = path.join(LIB, b.name + '.json');
       fs.mkdirSync(path.dirname(f), { recursive: true });
       fs.writeFileSync(f, JSON.stringify({ bundle: b.name, cards: b.cards }) + '\n');
     }
     total += cards.length;
-    console.log('library  ' + system + '  ' + cards.length + ' games' + (adult.length ? ', ' + adult.length + ' on the 18+ shelf' : ''));
+    console.log('library  ' + system + '  ' + cards.length + ' games');
   }
   console.log('Library: ' + total + ' games. Now run: node play/tools/shelf.js');
 }

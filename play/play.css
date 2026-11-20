@@ -311,6 +311,3 @@ body.shell .cpad.up::before,body.shell .cpad.up::after{display:none;position:abs
   .pp{gap:6px}.psec,.prest{gap:6px}.pp .pk{min-height:50px}
   .psec{min-height:calc(var(--r) * 50px + (var(--r) - 1) * 6px)}
 }
-/* An adult game's start screen asks the age question before Play (the 18+ shelf). */
-.cover .gate18{max-width:460px;margin:10px auto 0;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:#0d0f17cc;text-align:center}
-.cover .gate18 .gate-acts{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}

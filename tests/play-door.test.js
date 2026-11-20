@@ -33,7 +33,7 @@ test('the site build copies the PLAY pages, scripts, cards, shelf list and engin
   assert.ok(src.includes("fs.copyFileSync(path.join(P, 'join.html'), path.join(OUT, 'join.html'));"), 'the join page answers at /join too');
   assert.match(src, /for \(const d of \['src', 'cards', 'engine', 'cheats', 'library'\]/);
   // The shelf list and the nightly check's results (an old link to a game off the shelf reads them to say so).
-  assert.match(src, /for \(const f of \['index\.json', 'status\.json', 'index-18\.json'\]\.filter\(\(x\) => fs\.existsSync\(path\.join\(P, 'shelf', x\)\)\)\) fs\.copyFileSync\(path\.join\(P, 'shelf', f\)/);
+  assert.match(src, /for \(const f of \['index\.json', 'status\.json'\]\) fs\.copyFileSync\(path\.join\(P, 'shelf', f\)/);
   for (const never of ["'test'", "'tools'", "'core'", "'serve.js'"]) assert.ok(!src.includes('fs.cpSync(path.join(P, ' + never), never);
 });
 

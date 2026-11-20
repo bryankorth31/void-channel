@@ -50,7 +50,7 @@ test('the page shows the donation where the game is served (the cross at the bot
   const css = read(ROOT, 'play.css');
   assert.ok(css.includes('html,body{height:100%;overflow:hidden;overscroll-behavior:none}'));
   const js = read(ROOT, 'src', 'play.js');
-  for (const bit of ["if (core.noDonation || c.kids || c.adult) for (const e of document.querySelectorAll('.donate')) e.remove();", "if (p && $('credits').parentElement !== $('menu')) $('menu').appendChild($('credits'));"]) assert.ok(js.includes(bit), bit);
+  for (const bit of ["if (core.noDonation || c.kids) for (const e of document.querySelectorAll('.donate')) e.remove();", "if (p && $('credits').parentElement !== $('menu')) $('menu').appendChild($('credits'));"]) assert.ok(js.includes(bit), bit);
 });
 
 test('the page links the takedown page and says the game comes from the Internet Archive', () => {

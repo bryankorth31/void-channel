@@ -128,13 +128,8 @@ async function main() {
     status = await check(cards, status);
     fs.writeFileSync(STATUS, JSON.stringify(status, null, 2) + '\n');
   }
-  // The 18+ shelf (Bryan, 20 Nov 2026: adult-themed games behind a gate) has its own list; the main list never holds them.
-  const index = buildIndex(cards.filter((c) => !c.adult), status);
-  if (cards.some((c) => c.adult)) index.adultShelf = true;   // the shelf offers its 18+ link only when there are games behind it
+  const index = buildIndex(cards, status);
   fs.writeFileSync(INDEX, indexText(index));
-  const adult = cards.filter((c) => c.adult);
-  if (adult.length) fs.writeFileSync(path.join(SHELF, 'index-18.json'), indexText(buildIndex(adult, status)));
-  else fs.rmSync(path.join(SHELF, 'index-18.json'), { force: true });
   fs.writeFileSync(STREAM, streamModule(buildStream(cards, status)));
   const gone = Object.values(status.games).filter((g) => g.gone).length;
   console.log('Shelf: ' + index.games.length + ' games' + (gone ? ', ' + gone + ' left off (the Archive no longer has them)' : ''));
