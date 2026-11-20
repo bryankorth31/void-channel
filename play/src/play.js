@@ -79,6 +79,7 @@
   async function save() {
     if (!started) return;
     const state = await runner.save();
+    if (!state && runner.saveWhy() === 'arcade') return toast('Arcade games cannot be saved yet');
     if (!state) return toast(runner.saveWhy() === 'dos' ? 'This game can be saved once it is past its DOS start menu' : 'The game could not be saved just now');
     try { await PlaySaves.put(card.id, state, build); toast('Saved in this browser'); } catch (e) { toast('This browser would not keep the save'); }
   }
@@ -168,12 +169,15 @@
     if (!on && wake) { wake.release().catch(() => {}); wake = null; }
   }
 
+  const isArcade = () => !!(card && PlayCards.CORES[card.core] && PlayCards.CORES[card.core].kind === 'mame');
   function begin() {
+    // MAME's classic module cannot start over in place: once one has run, a new start is the page loaded again.
+    if (isArcade() && runner) return runner.reset();
     stopGame();
     phoneScreen();
     $('b-play').hidden = true; $('b-continue').hidden = true; status('Starting');
     deadline = setTimeout(() => fail('The game did not arrive from the Internet Archive in time. Check the connection and press Play to try again.'), DEADLINE_MS);
-    runner = PlayRunner.createRunner({ canvas: $('canvas'), mute: q.get('mute') === '1', on: {
+    runner = (isArcade() ? PlayArcade : PlayRunner).createRunner({ canvas: $('canvas'), mute: q.get('mute') === '1', on: {
       status, error: (t) => fail(t),
       ready: () => { started = true; },
       firstFrame: () => {
@@ -329,7 +333,7 @@
 
   // The start screen (block B): the item's own picture from the Archive (through /cors/, which this isolated page may
   // load), the title, year, maker and machine, and the first three actions for the input in hand.
-  const SYSTEM_NAMES = { dos: 'PC (DOS)', a2600: 'Atari 2600', nes: 'NES', snes: 'Super Nintendo', genesis: 'Sega Genesis', sms: 'Master System', gamegear: 'Game Gear', gameboy: 'Game Boy', gbcolor: 'Game Boy Color', gba: 'Game Boy Advance', lynx: 'Atari Lynx' };
+  const SYSTEM_NAMES = { dos: 'PC (DOS)', a2600: 'Atari 2600', nes: 'NES', snes: 'Super Nintendo', genesis: 'Sega Genesis', sms: 'Master System', gamegear: 'Game Gear', gameboy: 'Game Boy', gbcolor: 'Game Boy Color', gba: 'Game Boy Advance', lynx: 'Atari Lynx', arcade: 'Arcade' };
   function device() {
     const pads = navigator.getGamepads ? [...navigator.getGamepads()] : [];
     if (pads.some((p) => p && p.mapping === 'standard')) return 'pad';
@@ -411,6 +415,9 @@
 
   function keyEvent(e, down) {
     if (down && remoteKey(e)) return;
+    // An arcade game hears the PC keyboard itself (MAME's own key seats); keys our runner sends for the gamepad and the
+    // touch pad are not fed back. Esc is caught before MAME sees it (arcadeEsc, below).
+    if (isArcade()) return;
     if (runner) runner.wakeSound();
     // Keys go to the game unless the pause menu is open and has the focus. A hidden panel never keeps them.
     if (!hub || !started || (!$('menu').hidden && e.target.closest('.menu'))) return;
@@ -422,6 +429,14 @@
     e.preventDefault();
     if (!e.repeat) hub.keyboard(code, down);
   }
+  // Arcade: Esc pauses and never reaches MAME, where it quits the game. Caught first, before any other listener.
+  function arcadeEsc(e) {
+    if (!isArcade() || !started || e.code !== 'Escape' || !e.isTrusted) return;
+    e.preventDefault(); e.stopImmediatePropagation();
+    if (e.type === 'keydown' && !e.repeat) setPaused(!paused);
+  }
+  addEventListener('keydown', arcadeEsc, true);
+  addEventListener('keyup', arcadeEsc, true);
   addEventListener('keydown', (e) => keyEvent(e, true));
   addEventListener('keyup', (e) => keyEvent(e, false));
   addEventListener('pointerdown', () => runner && runner.wakeSound(), { passive: true });

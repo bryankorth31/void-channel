@@ -2,6 +2,65 @@
   "built": "2026-11-20T02:00:04.277Z",
   "games": [
     {
+      "id": "joust-arcade",
+      "title": "Joust",
+      "year": 1982,
+      "publisher": "Williams",
+      "system": "arcade",
+      "players": 1,
+      "item": "arcade_joust",
+      "help": "Ride an ostrich and flap to fly. Bump the knights from above to win. Put a coin in, then press Start.",
+      "mouse": false,
+      "kids": false,
+      "genres": [
+        "Action"
+      ],
+      "how": {
+        "pad": [
+          [
+            "Put a coin in",
+            "Back"
+          ],
+          [
+            "Start",
+            "Start"
+          ],
+          [
+            "Flap",
+            "the bottom button (A) or the right button (B)"
+          ]
+        ],
+        "keyboard": [
+          [
+            "Put a coin in",
+            "5"
+          ],
+          [
+            "Start",
+            "1"
+          ],
+          [
+            "Flap",
+            "left Ctrl"
+          ]
+        ],
+        "touch": [
+          [
+            "Put a coin in",
+            "Coin"
+          ],
+          [
+            "Start",
+            "Start"
+          ],
+          [
+            "Flap",
+            "Flap"
+          ]
+        ]
+      }
+    },
+    {
       "id": "pitfall-2600",
       "title": "Pitfall!",
       "year": 1982,

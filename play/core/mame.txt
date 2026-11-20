@@ -1,0 +1,21 @@
+core: MAME (the arcade machine emulator), its own web build (SDL3 display, not a libretro core)
+source: https://github.com/mamedev/mame
+commit: f09e0805da149cb15bd1cd777fbbcc65640d7866
+version: MAME 0.289
+licence: GPL-2.0 for MAME as a whole (COPYING); single files under BSD-3-Clause and other GPL-compatible licences, as their headers say
+built with: Emscripten 7.0.0 (emsdk commit 708dcbcc9ee23bc7d2dad44fc90db377e38b771c, emcc 777e6e5db7b4990bcaeb1b9998ed642cc84e6629); SDL 3.4.2 fetched by Emscripten's own port, checked against its built-in SHA-512
+build tools: GNU make 4.4.1 (https://ftp.gnu.org/gnu/make/make-4.4.1.tar.gz, signature checked, built with Visual Studio 2022 build tools by its build_w32.bat); MAME's genie (3rdparty/genie in the MAME source, compiled with Visual Studio's cl from its own C files)
+changes to MAME: none
+
+One engine per arcade machine family, named after the game it was built for, served from play/engine/mame/:
+joust: SOURCES=src/mame/williams/williams.cpp (Joust and the other Williams machines in that file)
+
+Build command, run in the MAME folder from Git Bash with emsdk active (EMSCRIPTEN pointing at emsdk/upstream/emscripten):
+make -j14 BUILDDIR=build-os OPTIMIZE=s SUBTARGET=<name> SOURCES=<driver .cpp files> NO_USE_PORTAUDIO=1 NO_USE_MIDI=1 \
+  PYTHON_EXECUTABLE=<python 3> CLANG_VERSION=24.0.0 CC=$EMSCRIPTEN/emcc CXX=$EMSCRIPTEN/em++ AR=$EMSCRIPTEN/emar \
+  NOWERROR=1 REGENIE=1 PRECOMPILE=0 "ARCHOPTS_CXX=-include cstdlib -include cmath -include vector"
+Why the extra settings: CLANG_VERSION because MAME's makefile cannot read Emscripten's version on Windows; NOWERROR because
+this compiler is newer than MAME's code and warns more; the three -include flags supply standard headers newer libc++ no
+longer pulls in by itself; PRECOMPILE=0 because a precompiled header must be the first include. None changes MAME's code.
+It writes <name>.js and <name>.wasm in the MAME folder; the notice line at the top of each served .js is added by hand
+when copying it into play/engine/mame/.

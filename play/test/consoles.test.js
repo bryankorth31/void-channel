@@ -29,7 +29,7 @@ test('every core a card names has both engine files on disk', () => {
 });
 
 test('every core but DOSBox Pure has a recipe with an exact commit, a source link and a licence', () => {
-  for (const name of Object.keys(Cards.CORES).filter((n) => n !== 'dosbox-pure')) {
+  for (const name of Object.keys(Cards.CORES).filter((n) => n !== 'dosbox-pure' && Cards.CORES[n].kind !== 'mame')) {
     const r = RECIPES[name];
     assert.ok(r, name);
     assert.match(r.commit, /^[0-9a-f]{40}$/, name);
@@ -88,8 +88,8 @@ test('the second gamepad plays as player 2 on a console card', () => {
 test('the footer data for every core: its name, licence, exact source, and the licence text of a non-GPL core', () => {
   for (const [name, core] of Object.entries(Cards.CORES)) {
     assert.ok(core.name && core.licence, name);
-    const commit = name === 'dosbox-pure'
-      ? fs.readFileSync(path.join(PLAY, 'core', 'dosbox-pure.txt'), 'utf8').match(/commit: *([0-9a-f]{40})/)[1]
+    const commit = name === 'dosbox-pure' || core.kind === 'mame'
+      ? fs.readFileSync(path.join(PLAY, 'core', name === 'dosbox-pure' ? 'dosbox-pure.txt' : 'mame.txt'), 'utf8').match(/commit: *([0-9a-f]{40})/)[1]
       : RECIPES[name].commit;
     assert.ok(core.source.endsWith('/tree/' + commit), name);
     if (core.licence !== 'GPL-2.0') {
@@ -105,7 +105,27 @@ test('no donation line on games run by a non-commercial core (B, 19 Nov 2026: "L
   for (const name of ['dosbox-pure', 'fceumm', 'gambatte', 'stella2014']) assert.ok(!Cards.CORES[name].noDonation, name);
   // The rule follows the licence: a core whose licence forbids commercial use drops the line; open licences that allow
   // any use (GPL, MPL-2.0 for mGBA, zlib for Handy) keep it.
-  for (const [name, core] of Object.entries(Cards.CORES)) assert.equal(!!core.noDonation, /non-commercial/.test(core.licence), name);
+  // Arcade is Bryan's own exception (20 Nov 2026, "No line"): GPL, and still no donation line.
+  for (const [name, core] of Object.entries(Cards.CORES)) assert.equal(!!core.noDonation, /non-commercial/.test(core.licence) || name === 'mame', name);
   const page = fs.readFileSync(path.join(PLAY, 'src', 'play.js'), 'utf8');
   assert.match(page, /if \(core\.noDonation\) for \(const e of document\.querySelectorAll\('\.donate'\)\) e\.remove\(\);/);
+});
+
+test('arcade (B, 20 Nov 2026: "Current MAME", "No line"): MAME runs from its own runner on the page, keyboard keys are not sent twice, Esc never reaches MAME, and the tab keeps its title', () => {
+  const Cards2 = require('../src/cards.js');
+  const joust = JSON.parse(fs.readFileSync(path.join(PLAY, 'cards', 'joust-arcade.json'), 'utf8'));
+  assert.equal(Cards2.engineOf(joust), 'engine/mame/joust.js');
+  assert.ok(fs.existsSync(path.join(PLAY, 'engine', 'mame', 'joust.js')) && fs.existsSync(path.join(PLAY, 'engine', 'mame', 'joust.wasm')));
+  assert.ok(fs.statSync(path.join(PLAY, 'engine', 'mame', 'joust.wasm')).size < 25 * 1024 * 1024, 'under Cloudflare\'s 25 MiB file cap');
+  assert.deepEqual(Cards2.check(joust), []);
+  assert.ok(Cards2.check(Object.assign({}, joust, { archive: Object.assign({}, joust.archive, { driver: '../x' }) })).includes('archive.driver'));
+  const R = require('../src/arcade-runner.js');
+  const surface = Object.keys(R.createRunner({ canvas: {} })).sort();
+  for (const k of ['start', 'stop', 'pause', 'resume', 'save', 'load', 'key', 'pad', 'mouse', 'reset', 'rewind', 'saveWhy', 'wakeSound', 'prepareSound']) assert.ok(surface.includes(k), k);
+  const js = fs.readFileSync(path.join(PLAY, 'src', 'play.js'), 'utf8');
+  for (const bit of ['    if (isArcade()) return;', "if (!isArcade() || !started || e.code !== 'Escape' || !e.isTrusted) return;",
+    "addEventListener('keydown', arcadeEsc, true);", "runner = (isArcade() ? PlayArcade : PlayRunner).createRunner("]) assert.ok(js.includes(bit), bit);
+  const ar = fs.readFileSync(path.join(PLAY, 'src', 'arcade-runner.js'), 'utf8');
+  assert.ok(ar.includes("ctx[fn] = function () { frames++;"), 'the first picture is MAME\'s first draw');
+  assert.ok(ar.includes('if (document.title !== mine) document.title = mine;'));
 });

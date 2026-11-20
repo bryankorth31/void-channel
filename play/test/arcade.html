@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PLAY arcade boot check</title>
+<style>
+  body{margin:0;background:#07080c;color:#e8e8ee;font:14px system-ui,sans-serif;padding:16px}
+  #canvas{display:block;width:448px;height:576px;image-rendering:pixelated;background:#000;margin-top:12px}
+  pre{white-space:pre-wrap;max-height:180px;overflow:auto}
+</style>
+</head>
+<body>
+<!-- VoidTV PLAY: a test page that boots one arcade game on a MAME web build, sound off, outside the player.
+     Licence: GPL-2.0-or-later. MAME's own web build is not a libretro core: it reads a global Module (canvas,
+     arguments, preRun) and runs MAME's main(). Served by play/serve.js, e.g.
+     http://127.0.0.1:8789/play/test/arcade.html?engine=arcade-trial/arcadetest&item=arcade_digdug&zip=digdug.zip&driver=digdug -->
+<pre id="out">starting</pre>
+<canvas id="canvas" tabindex="0"></canvas>
+<script>
+(async function () {
+  const q = new URLSearchParams(location.search);
+  const out = document.getElementById('out');
+  const state = window.__arcade = { status: [], error: null, frames: 0, firstFrameMs: null, log: [] };
+  const show = () => { out.textContent = JSON.stringify(Object.assign({}, state, { log: state.log.slice(-12) }), null, 1); };
+  const t0 = performance.now();
+  const say = (s) => { state.status.push(s); show(); };
+  try {
+    const driver = q.get('driver'), zip = q.get('zip'), item = q.get('item');
+    say('Fetching the game from the Internet Archive');
+    const res = await fetch('https://archive.org/cors/' + item + '/' + encodeURIComponent(zip));
+    if (!res.ok) throw new Error('Archive answered ' + res.status);
+    const bytes = new Uint8Array(await res.arrayBuffer());
+    state.zipBytes = bytes.length;
+    say('Starting MAME');
+    const canvas = document.getElementById('canvas');
+    window.Module = {
+      canvas,
+      // &args= replaces the arguments for a check (comma separated); the default plays the game, sound off.
+      arguments: q.get('args') ? q.get('args').split(',') : [driver, '-rompath', '/roms', '-sound', 'none', '-window',
+        '-nomaximize', '-skip_gameinfo', '-nokeepaspect', '-resolution', '448x576', '-video', q.get('video') || 'accel', '-verbose'],
+      // The classic (not modular) build keeps its file system in a page-wide FS.
+      preRun: [() => { const fs = Module.FS || window.FS; fs.mkdir('/roms'); fs.writeFile('/roms/' + zip, bytes); }],
+      locateFile: (f) => q.get('engine').replace(/[^/]*$/, '') + f,
+      print: (t) => { state.log.push(t); if (state.log.length > 400) state.log.shift(); },
+      printErr: (t) => { state.log.push('! ' + t); if (state.log.length > 400) state.log.shift(); },
+      onAbort: (w) => { state.error = 'abort: ' + w; show(); },
+    };
+    // Count drawn pictures by watching the canvas change.
+    let last = 0;
+    setInterval(() => {
+      try {
+        const c = document.createElement('canvas'); c.width = 32; c.height = 32;
+        c.getContext('2d').drawImage(canvas, 0, 0, 32, 32);
+        const d = c.getContext('2d').getImageData(0, 0, 32, 32).data; let h = 0;
+        for (let i = 0; i < d.length; i += 4) h = (h * 31 + d[i] + d[i + 1] * 3 + d[i + 2] * 7) | 0;
+        if (h !== last) { last = h; state.frames++; if (state.firstFrameMs === null && h !== 0) state.firstFrameMs = Math.round(performance.now() - t0); }
+      } catch (e) { /* canvas not ready */ }
+      show();
+    }, 250);
+    const s = document.createElement('script');
+    s.src = q.get('engine') + '.js';
+    s.onerror = () => { state.error = 'engine script did not load'; show(); };
+    document.body.appendChild(s);
+  } catch (e) { state.error = String(e.message || e); show(); }
+})();
+</script>
+</body>
+</html>

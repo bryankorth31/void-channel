@@ -18,6 +18,7 @@
     gbcolor: { name: 'Game Boy Color', shape: 'handheld', color: '#ff4fc8' },
     gba: { name: 'Game Boy Advance', shape: 'handheld', color: '#7b6cf6' },
     lynx: { name: 'Atari Lynx', shape: 'handheld', color: '#ff8a3d' },
+    arcade: { name: 'Arcade', shape: 'bigbox', color: '#ff4fc8' },
   };
   const decadeOf = (y) => (y ? Math.floor(y / 10) * 10 : null);
   const decadeName = (d) => (d === null ? 'More games' : d >= 2000 ? 'The ' + d + 's' : 'The ' + String(d).slice(2) + 's');

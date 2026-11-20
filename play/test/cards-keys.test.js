@@ -51,6 +51,7 @@ test('every card names a core that plays its system, and each core\'s source com
   const readme = fs.readFileSync(path.join(ROOT, 'core', 'README.md'), 'utf8');
   for (const name of Object.keys(Cards.CORES)) {
     if (name === 'dosbox-pure') continue;   // its commit is in core/dosbox-pure.txt (page.test.js)
+    if (Cards.CORES[name].kind === 'mame') continue;   // MAME's own build: its record is core/mame.txt (arcade.test.js)
     assert.ok(recipes[name], name + ' has a recipe in core/cores.js');
     assert.match(recipes[name].commit, /^[0-9a-f]{40}$/, name + ' names an exact commit');
     assert.ok(readme.includes(recipes[name].commit), name + ': core/README.md names the same commit');
@@ -69,6 +70,7 @@ test('the game always comes from the Archive through /cors/, never from voidtv.n
 
 test('every core a card can name has its engine file in engine/', () => {
   for (const [name, core] of Object.entries(Cards.CORES)) {
+    if (core.engine.includes('{driver}')) continue;   // one engine per arcade machine: checked per card in consoles.test.js
     assert.ok(fs.existsSync(path.join(ROOT, core.engine)), name + ': ' + core.engine);
     assert.ok(fs.existsSync(path.join(ROOT, core.engine.replace(/\.js$/, '.wasm'))), name + ': its .wasm');
   }
@@ -82,7 +84,7 @@ test('a bad card is refused with the reason', () => {
   assert.ok(bad({ archive: { item: '../x', file: 'a.zip' } }).includes('archive.item'));
   assert.ok(bad({ archive: { item: 'ok', file: '../../etc/passwd' } }).includes('archive.file'));
   assert.ok(bad({ archive: { item: 'ok', file: 'a/../b.zip' } }).includes('archive.file'));
-  assert.ok(bad({ core: 'mame' }).includes('core'));
+  assert.ok(bad({ core: 'no-such-core' }).includes('core'));
   assert.ok(bad({ system: 'genesis' }).includes('system'));
   assert.ok(bad({ controls: {} }).includes('controls'));
 });

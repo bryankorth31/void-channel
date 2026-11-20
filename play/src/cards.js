@@ -27,6 +27,10 @@
       source: 'https://github.com/libretro/mgba/tree/7a12d6d4b9acb14c0ae62c9166b6a2f3d08007f6', terms: 'engine/mgba.LICENSE.txt' },
     handy: { engine: 'engine/handy.js', systems: ['lynx'], name: 'Handy', licence: 'zlib licence',
       source: 'https://github.com/libretro/libretro-handy/tree/bc55d462f0b2d6b073ea93dc552ebd73cec60fd1', terms: 'engine/handy.LICENSE.txt' },
+    // Arcade (B, 20 Nov 2026: "Current MAME", "No line"): MAME's own web build, one engine per driver, run by
+    // arcade-runner.js (kind 'mame'). Its licence would allow the donation line; Bryan chose none on arcade games.
+    mame: { kind: 'mame', engine: 'engine/mame/{driver}.js', systems: ['arcade'], name: 'MAME 0.289', licence: 'GPL-2.0',
+      source: 'https://github.com/mamedev/mame/tree/f09e0805da149cb15bd1cd777fbbcc65640d7866', terms: 'engine/mame/COPYING', noDonation: true },
   };
 
   // A console card ("controls.kind": "pad") presses the console's own buttons, named P1:A, P1:Start and so on (P2: for
@@ -51,6 +55,7 @@
     if (!a.file || /(^|\/)\.\.(\/|$)/.test(a.file)) bad.push('archive.file');
     const core = CORES[card.core];
     if (!core) bad.push('core');
+    else if (core.kind === 'mame' && !/^[a-z0-9_]+$/.test(a.driver || '')) bad.push('archive.driver');
     else if (!core.systems.includes(card.system)) bad.push('system');
     if (!card.controls || !card.controls.kind) bad.push('controls');
     return bad;
@@ -64,7 +69,8 @@
   // archive.as: the name the core sees (Sega's Master System and Game Gear files on the Archive end in .bin, and the
   // core tells the machines apart by the ending).
   const gameFile = (card) => card.archive.as || card.archive.file.split('/').pop();
-  const engineOf = (card) => CORES[card.core].engine;
+  // MAME has one engine per arcade machine (driver): engine/mame/{driver}.js.
+  const engineOf = (card) => CORES[card.core].engine.replace('{driver}', (card.archive && card.archive.driver) || '');
 
   // Actions (audit batch 4, block A): what the game's buttons DO, in the game's own words. A card lists three to six,
   // the ones a newcomer needs first: { do: 'Jump', press: 'P1:B' }, press may be a list (any of them: the arrows) or a
@@ -87,7 +93,8 @@
     return list;
   }
   const KEY_NAMES = { ArrowUp: 'Up arrow', ArrowDown: 'Down arrow', ArrowLeft: 'Left arrow', ArrowRight: 'Right arrow',
-    Enter: 'Enter', Space: 'Space', Escape: 'Esc', ShiftLeft: 'Shift', ShiftRight: 'right Shift', Backspace: 'Backspace' };
+    Enter: 'Enter', Space: 'Space', Escape: 'Esc', ShiftLeft: 'Shift', ShiftRight: 'right Shift', Backspace: 'Backspace',
+    ControlLeft: 'left Ctrl', AltLeft: 'left Alt' };
   const keyName = (k) => KEY_NAMES[k] || k.replace(/^Key|^Digit/, '');
   const DIRS = ['Up', 'Down', 'Left', 'Right'];
   // Buttons by their place on the pad, the letter after it: a Nintendo-style pad has B at the bottom and a PlayStation
