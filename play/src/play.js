@@ -79,7 +79,7 @@
   async function save() {
     if (!started) return;
     const state = await runner.save();
-    if (!state) return toast('The game could not be saved just now');
+    if (!state) return toast(runner.saveWhy() === 'dos' ? 'This game can be saved once it is past its DOS start menu' : 'The game could not be saved just now');
     try { await PlaySaves.put(card.id, state, build); toast('Saved in this browser'); } catch (e) { toast('This browser would not keep the save'); }
   }
   // Load and Restart first keep where you are, so one wrong tap is undone with one tap.

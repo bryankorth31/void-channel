@@ -136,3 +136,11 @@ test('T21 player half: the worker streams only a card marked to stream, by game 
   assert.ok(fs.readFileSync(path.join(__dirname, '..', 'src', 'runner.js'), 'utf8').includes("stream: card.archive.stream ? { url: new URL('/api/piece?game=' + encodeURIComponent(card.id), location.href).href, size: card.archive.size } : null,"));
   assert.ok(fs.readFileSync(path.join(__dirname, '..', 'serve.js'), 'utf8').includes("if (p === '/api/piece') return piece(req, res);"));
 });
+
+test('audit T21a: a save refused while DOS runs a start menu says so; saving works once the game runs (checked on Master of Orion II)', () => {
+  const fs = require('fs');
+  const w = fs.readFileSync(path.join(__dirname, '..', 'src', 'core-worker.js'), 'utf8');
+  assert.ok(w.includes("if (/Unable to save state while game is not running/.test(t)) saveRefusedAtDos = true;"));
+  assert.ok(w.includes("why: saveRefusedAtDos ? 'dos' : ''"));
+  assert.ok(fs.readFileSync(path.join(__dirname, '..', 'src', 'play.js'), 'utf8').includes("'This game can be saved once it is past its DOS start menu'"));
+});

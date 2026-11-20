@@ -28,6 +28,7 @@
     const canvas = opts.canvas, ctx = canvas.getContext('2d', { alpha: false });
     const on = opts.on || {};
     let worker = null, audio = null, node = null, rate = 0, frames = 0, stopped = false;
+    let why = '';                           // why the last save failed, when the engine said ('dos': still at DOS)
     let asking = null;                      // the one save or load waiting for its answer: { done, timer }
     const queue = [];                       // the rest, one at a time
 
@@ -84,7 +85,7 @@
         else if (m.type === 'ready') { rate = m.rate; if (node) node.port.postMessage({ rate }); on.ready && on.ready(m); }
         else if (m.type === 'status') on.status && on.status(m.text);
         else if (m.type === 'error') on.error && on.error(m.text);
-        else if (m.type === 'saved') settle(m.state || null);
+        else if (m.type === 'saved') { why = m.why || ''; settle(m.state || null); }
         else if (m.type === 'loaded') settle(!!m.ok);
       };
       worker.onerror = (e) => { if (!stopped && on.error) on.error(e.message || 'The engine stopped'); };
@@ -118,6 +119,7 @@
       reset: () => post({ type: 'reset' }),
       rewind: (on) => post({ type: 'rewind', on: !!on }),
       frames: () => frames,
+      saveWhy: () => why,
       wakeSound: () => { if (audio && audio.state === 'suspended') audio.resume(); },
     };
   }

@@ -140,7 +140,8 @@ async function start(msg) {
   M = await factory({
     // The wasm file carries the same ?v= as the engine script, so the two always come from one build.
     locateFile: (f) => { const u = new URL(f, ENGINE); u.search = new URL(ENGINE).search; return u.href; },
-    print: (t) => console.log('[core]', t),
+    // Audit T21a: DOSBox Pure will not save while DOS itself runs (a start batch file's menu); it says so in its log.
+    print: (t) => { if (/Unable to save state while game is not running/.test(t)) saveRefusedAtDos = true; console.log('[core]', t); },
     printErr: (t) => console.warn('[core]', t),
   });
   for (const d of ['/game', '/save', '/sys']) M.FS.mkdir(d);
@@ -215,13 +216,16 @@ function key(down, code) {
   M._host_key(down ? 1 : 0, id, down ? PlayKeys.charOf(code, held.has('ShiftLeft') || held.has('ShiftRight')) : 0, PlayKeys.modsOf(held));
 }
 
+let saveRefusedAtDos = false;
 function save() {
+  saveRefusedAtDos = false;
   const size = M._host_state_size();
   const p = M._malloc(size);
   const ok = M._host_state_save(p, size);
   const state = ok ? M.HEAPU8.slice(p, p + size) : null;
   M._free(p);
-  if (!state) return postMessage({ type: 'saved', state: null }); // the page says so in a toast; the game keeps running
+  // The page says so in a toast, with the reason when the engine gave one; the game keeps running.
+  if (!state) return postMessage({ type: 'saved', state: null, why: saveRefusedAtDos ? 'dos' : '' });
   postMessage({ type: 'saved', state: state.buffer }, [state.buffer]);
 }
 
