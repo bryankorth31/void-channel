@@ -782,11 +782,20 @@
   addEventListener('pagehide', () => { autosave(); });
 
   const id = q.get('game') || 'oregon-trail-1990';
+  function fromBundle(gameId, b) {
+    return fetch('library/' + b + '.json').then((r) => { if (!r.ok) throw new Error('This game did not load. Try again in a few minutes, or pick another game.'); return r.json(); })
+      .then((bundle) => { const c = (bundle.cards || []).find((x) => x.id === gameId); if (!c) throw new Error('There is no game by that name here. Pick one from the Games shelf.'); return c; });
+  }
   Promise.all([
     // Plan G4: the approve page's Try it opens a draft card (play/drafts, on this PC only; voidtv.net has none).
-    fetch((/^[A-Za-z0-9._-]+$/.test(q.get('draft') || '') ? 'drafts/' + q.get('draft') + '/' : 'cards/') + encodeURIComponent(id) + '.json').then((r) => { if (!r.ok) throw new Error('There is no game by that name here. Pick one from the Games shelf.'); return r.text(); })
+    // Plan C4: a whole collection's game has no card file of its own; its card sits in a bundle (play/library), named by
+    // the shelf's link (&b=genesis/2) or, for an old link without it, found in the shelf list.
+    (/^[a-z0-9]+\/\d+$/.test(q.get('b') || '') ? fromBundle(id, q.get('b')) : fetch((/^[A-Za-z0-9._-]+$/.test(q.get('draft') || '') ? 'drafts/' + q.get('draft') + '/' : 'cards/') + encodeURIComponent(id) + '.json').then((r) => {
+      if (r.status === 404 && !q.get('draft')) return fetch('shelf/index.json').then((x) => x.json()).then((ix) => { const g = (ix.games || []).find((x) => x.id === id && x.b); if (!g) throw new Error('There is no game by that name here. Pick one from the Games shelf.'); return fromBundle(id, g.b); });
+      if (!r.ok) throw new Error('There is no game by that name here. Pick one from the Games shelf.');
       // A card asked for while a deploy is spreading can come back as the site's home page (cached a few minutes).
-      .then((t) => { try { return JSON.parse(t); } catch (e) { throw new Error('This game did not load. Try again in a few minutes, or pick another game.'); } }),
+      return r.text().then((t) => { try { return JSON.parse(t); } catch (e) { throw new Error('This game did not load. Try again in a few minutes, or pick another game.'); } });
+    })),
     // The nightly check's answer: a game whose file the Archive no longer has is off the shelf, and an old link says so.
     fetch('shelf/status.json', { cache: 'no-store' }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
     // The game's own battery save, read before anything can start, so even a game started straight away gets it back.

@@ -20,7 +20,7 @@ test('the switch: SITE_PASSWORD (or a plain GATE=on) turns the gate on, only a p
   assert.equal(G.isGated({ GATE: '1' }), false);
   assert.equal(G.isGated({ SITE_PASSWORD: 'x', GATE: 'off' }), false, 'a conflict is not gated; the build refuses it');
   assert.deepEqual(G.routesFor(true), { version: 1, include: ['/*'], exclude: ['/assets/*'] });
-  assert.deepEqual(G.routesFor(false), { version: 1, include: ['/api/*', '/q/*', '/play/engine/*', '/play/cards/*'], exclude: [] });
+  assert.deepEqual(G.routesFor(false), { version: 1, include: ['/api/*', '/q/*', '/play/engine/*', '/play/cards/*', '/play/library/*'], exclude: [] });
 });
 
 test('gate mode: nothing visible is never "open"; open needs a plain GATE=off, and opposite words are a conflict', () => {

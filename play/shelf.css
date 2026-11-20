@@ -106,3 +106,6 @@ a{color:var(--acc)} a:hover{color:#fff}
 .held .cont[hidden]{display:none}
 .held .cont:not([hidden])~.play{background:transparent;color:var(--fg);border:1px solid #3a4157}
 .held .cont:focus-visible{box-shadow:0 0 0 3px #fff}
+/* Plan C4: "More" at the end of a long shelf adds the next page of boxes in place. */
+.box.more{align-items:center;justify-content:center;aspect-ratio:4/3;border:1px dashed #2a3044;border-radius:8px;background:#0d0f17;color:var(--acc);font:600 15px system-ui,sans-serif;cursor:pointer}
+.box.more[hidden]{display:none}

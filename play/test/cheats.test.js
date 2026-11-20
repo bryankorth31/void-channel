@@ -29,7 +29,7 @@ test('cheats (Bryan, 20 Nov 2026: "add toggle for cheats"): lists from libretro-
   for (const bit of ["const CHEAT_CORES = ['snes9x', 'fceumm', 'gambatte', 'genesis-plus-gx', 'mgba'];", "runner.start(card, base, build.commit.slice(0, 12) + HOST_V, sramKept);", "localStorage.setItem(cheatKey()"]) assert.ok(js.includes(bit), bit);
   const page = fs.readFileSync(path.join(PLAY, 'game.html'), 'utf8');
   assert.ok(page.includes('id="m-cheats"') && page.includes('CC BY-SA 4.0'), 'the menu has the switch and the credit');
-  assert.ok(fs.readFileSync(path.join(PLAY, '..', 'scripts', 'site.js'), 'utf8').includes("for (const d of ['src', 'cards', 'engine', 'cheats'])"), 'the site build copies the cheat lists');
+  assert.ok(fs.readFileSync(path.join(PLAY, '..', 'scripts', 'site.js'), 'utf8').includes("for (const d of ['src', 'cards', 'engine', 'cheats', 'library']"), 'the site build copies the cheat lists');
 });
 
 test('cheats audit: a code under two names goes, the useful ones come first, risky ones are marked; a pad reaches the switches; switches are kept by code', () => {

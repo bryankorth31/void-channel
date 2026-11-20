@@ -59,7 +59,7 @@ test('SITE_PASSWORD not set: only /api and /q run as Functions, version.txt says
   assert.equal(build(a, { env: { SITE_PASSWORD: 'x' } }).status, 0);
   const r = build(b);
   assert.equal(r.status, 0, r.out);
-  assert.deepEqual(JSON.parse(read(b, 'site/_routes.json')), { version: 1, include: ['/api/*', '/q/*', '/play/engine/*', '/play/cards/*'], exclude: [] });
+  assert.deepEqual(JSON.parse(read(b, 'site/_routes.json')), { version: 1, include: ['/api/*', '/q/*', '/play/engine/*', '/play/cards/*', '/play/library/*'], exclude: [] });
   assert.match(read(b, 'site/version.txt'), /\ngate=off files=/);
   assert.match(r.out, /GATE: off/);
   const files = (root) => { const out = []; const walk = (d) => { for (const e of fs.readdirSync(d, { withFileTypes: true })) { const p = path.join(d, e.name); e.isDirectory() ? walk(p) : out.push(path.relative(path.join(root, 'site'), p).split(path.sep).join('/')); } }; walk(path.join(root, 'site')); return out.sort(); };
@@ -89,7 +89,7 @@ test('Cloudflare build of VOIDtv: a plain GATE=off with no password opens the si
   const run = (env) => build(root, { profile: 'voidtv', env: { CF_PAGES: '1', ...env }, args: NOWHERE });
   let r = run({ GATE: 'off' });
   assert.equal(r.status, 0, r.out);
-  assert.deepEqual(JSON.parse(read(root, 'site/_routes.json')), { version: 1, include: ['/api/*', '/q/*', '/play/engine/*', '/play/cards/*'], exclude: [] });
+  assert.deepEqual(JSON.parse(read(root, 'site/_routes.json')), { version: 1, include: ['/api/*', '/q/*', '/play/engine/*', '/play/cards/*', '/play/library/*'], exclude: [] });
   assert.match(read(root, 'site/version.txt'), /\ngate=off files=/);
   assert.match(r.out, /GATE: off \(GATE=off was set on purpose\)/);
   r = run({ SITE_PASSWORD: 'x' });
@@ -117,7 +117,7 @@ test('local builds and other profiles keep working with neither variable (writte
   const a = tree({ shows: 12 });
   const local = build(a);
   assert.equal(local.status, 0, local.out); assert.match(local.out, /neither SITE_PASSWORD nor GATE is set/);
-  assert.deepEqual(JSON.parse(read(a, 'site/_routes.json')).include, ['/api/*', '/q/*', '/play/engine/*', '/play/cards/*']);
+  assert.deepEqual(JSON.parse(read(a, 'site/_routes.json')).include, ['/api/*', '/q/*', '/play/engine/*', '/play/cards/*', '/play/library/*']);
   const b = tree({ shows: 12 });
   assert.equal(build(b, { env: { CF_PAGES: '1' }, args: NOWHERE }).status, 0, 'another profile on Cloudflare (kids, public access) is not refused');
   const c = tree({ shows: 100, profile: 'voidtv' });

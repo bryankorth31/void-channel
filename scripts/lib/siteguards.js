@@ -48,7 +48,7 @@ function gateDecision(env, { cloudflare, profile }) {
 // path with index.html, and the edge kept that for a day under /play/engine/ (20 Nov 2026, williams.wasm.gz). A
 // site-wide 404.html is not possible: the home page routes /me, /about, /tv/... itself. Keep in step with PLAY_STRICT
 // in functions/_middleware.js (tests/site-middleware.test.js checks).
-const PLAY_STRICT = ['/play/engine/*', '/play/cards/*'];
+const PLAY_STRICT = ['/play/engine/*', '/play/cards/*', '/play/library/*'];
 const routesFor = (gated) => (gated ? { version: 1, include: ['/*'], exclude: ['/assets/*'] } : { version: 1, include: ['/api/*', '/q/*', ...PLAY_STRICT], exclude: [] });
 
 // 2. Security headers (CF-012) ------------------------------------------------------------------------------------
@@ -84,7 +84,7 @@ const SECURITY_HEADERS = [
 // that allows them (the site-wide one would flag every game, and break PLAY if it were ever enforced). The same paths and
 // policy are in functions/_middleware.js for when the password gate sends pages through the Function; the test in
 // tests/play-door.test.js fails when the two differ.
-const PLAY_ISOLATED = ['/play/game.html', '/play/game', '/play/src/*', '/play/engine/*', '/play/cards/*'];
+const PLAY_ISOLATED = ['/play/game.html', '/play/game', '/play/src/*', '/play/engine/*', '/play/cards/*', '/play/library/*'];
 const isPlayIsolated = (p) => PLAY_ISOLATED.some((r) => (r.endsWith('*') ? p.startsWith(r.slice(0, -1)) : p === r));
 const PLAY_CSP = CSP.replace("script-src 'self'", "script-src 'self' 'wasm-unsafe-eval' blob:") + "; worker-src 'self' blob:";
 const ISOLATE = '  Cross-Origin-Opener-Policy: same-origin\n  Cross-Origin-Embedder-Policy: require-corp\n'

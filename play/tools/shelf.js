@@ -22,9 +22,20 @@ const Cards = require('../src/cards.js');
 const Shelf = require('../src/shelf.js');
 const PAUSE_MS = 1500;
 
+// The hand-made cards, then the whole collections' cards from their bundles (play/library/<system>/<n>.json, written by
+// play/tools/library.js), each marked with the bundle that holds it.
+const LIBRARY = path.join(PLAY, 'library');
 function loadCards() {
-  return fs.readdirSync(CARDS).filter((f) => f.endsWith('.json')).sort()
+  const hand = fs.readdirSync(CARDS).filter((f) => f.endsWith('.json')).sort()
     .map((f) => JSON.parse(fs.readFileSync(path.join(CARDS, f), 'utf8')));
+  const lib = [];
+  if (fs.existsSync(LIBRARY)) for (const s of fs.readdirSync(LIBRARY).sort()) {
+    for (const f of fs.readdirSync(path.join(LIBRARY, s)).filter((x) => x.endsWith('.json')).sort((a, b) => parseInt(a, 10) - parseInt(b, 10))) {
+      const b = JSON.parse(fs.readFileSync(path.join(LIBRARY, s, f), 'utf8'));
+      for (const c of b.cards) lib.push(Object.assign(c, { __b: b.bundle }));
+    }
+  }
+  return hand.concat(lib);
 }
 
 function loadStatus() {
@@ -35,7 +46,11 @@ function loadStatus() {
 function buildIndex(cards, status) {
   const games = cards.filter((c) => !Cards.check(c).length)
     .filter((c) => !(status.games[c.id] && status.games[c.id].gone))
-    .map((c) => ({ id: c.id, title: c.title, year: c.year || null, publisher: c.publisher || '', system: c.system,
+    // Plan C4: a collection's game carries only what a box shows, and the bundle that holds its card; how it plays is
+    // its machine's (libHow, once per machine), so thousands of games keep the list small.
+    .map((c) => c.__b ? { id: c.id, title: c.title, year: c.year || null, publisher: c.publisher || '', system: c.system,
+      players: c.players || 1, item: c.archive.item, b: c.__b, genres: Shelf.genresOf(c.genre || (c.facts && c.facts.genre)) }
+      : ({ id: c.id, title: c.title, year: c.year || null, publisher: c.publisher || '', system: c.system,
       players: c.players || 1, item: c.archive.item, help: c.help || '',
       // Plan G1 and G2: the card's own genre wins over Wikidata's facts; the shelf files both under its plain genres.
       mouse: !!(c.controls && c.controls.mouse),
@@ -45,7 +60,13 @@ function buildIndex(cards, status) {
       // Audit S5: the back of the box teaches the game: its first three actions on each input.
       how: Object.fromEntries(['pad', 'keyboard', 'touch'].map((d) => [d, Cards.actionLines(c, d).filter((l) => l.how).slice(0, 3).map((l) => [l.do, l.how])])) }))
     .sort((a, b) => (a.year || 9999) - (b.year || 9999) || a.title.localeCompare(b.title));
-  return { built: status.checked, games };
+  // How a collection's games play, once per machine: the first collection card of each machine speaks for all of them.
+  const libHow = {};
+  for (const c of cards) if (c.__b && !libHow[c.system]) {
+    libHow[c.system] = { help: (c.help || '').replace(/ This copy is a personal upload.*$/, ''),
+      how: Object.fromEntries(['pad', 'keyboard', 'touch'].map((d) => [d, Cards.actionLines(c, d).filter((l) => l.how).slice(0, 3).map((l) => [l.do, l.how])])) };
+  }
+  return Object.keys(libHow).length ? { built: status.checked, libHow, games } : { built: status.checked, games };
 }
 
 // The big games the voidtv.net pass-through may read in pieces (plan T21, functions/api/piece.js): a card marks
@@ -108,11 +129,15 @@ async function main() {
     fs.writeFileSync(STATUS, JSON.stringify(status, null, 2) + '\n');
   }
   const index = buildIndex(cards, status);
-  fs.writeFileSync(INDEX, JSON.stringify(index, null, 2) + '\n');
+  fs.writeFileSync(INDEX, indexText(index));
   fs.writeFileSync(STREAM, streamModule(buildStream(cards, status)));
   const gone = Object.values(status.games).filter((g) => g.gone).length;
   console.log('Shelf: ' + index.games.length + ' games' + (gone ? ', ' + gone + ' left off (the Archive no longer has them)' : ''));
 }
 
-module.exports = { buildIndex, buildStream, streamModule, loadCards, ask };
+// One game a line: small enough for thousands, and a change reads as one line in a diff.
+const indexText = (index) => '{' + Object.entries(index).filter(([k]) => k !== 'games').map(([k, v]) => JSON.stringify(k) + ':' + JSON.stringify(v)).join(',')
+  + ',"games":[\n' + index.games.map((g) => JSON.stringify(g)).join(',\n') + '\n]}\n';
+
+module.exports = { indexText, buildIndex, buildStream, streamModule, loadCards, ask };
 if (require.main === module) main().catch((e) => { console.error(String(e.message || e)); process.exit(1); });

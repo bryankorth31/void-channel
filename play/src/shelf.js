@@ -95,10 +95,12 @@
     for (const [k, v] of backLines(g)) { const dt = document.createElement('dt'), dd = document.createElement('dd'); dt.textContent = k; dd.textContent = v; dl.append(dt, dd); }
     // Audit S5: the first three things to do, said for the input in hand; the help line only when there are none.
     const ul = el.querySelector('.how'); ul.textContent = '';
-    for (const [d, h] of (g.how && g.how[inputNow()]) || []) {
+    // A collection's game plays as its machine does (plan C4: libHow, once per machine in the shelf list).
+    const lib = (g.b && libHow[g.system]) || {};
+    for (const [d, h] of ((g.how || lib.how) && (g.how || lib.how)[inputNow()]) || []) {
       const li = document.createElement('li'), b = document.createElement('b'); b.textContent = d; li.append(b, ' ' + h); ul.appendChild(li);
     }
-    el.querySelector('.help').textContent = ul.children.length ? '' : (g.help || '');
+    el.querySelector('.help').textContent = ul.children.length ? '' : (g.help || lib.help || '');
     // Audit S6: Play starts the game itself (a phone keeps its start screen, which allows fullscreen); a game with an
     // automatic save offers Continue first and calls Play "New game".
     const cont = el.querySelector('.cont'), play = el.querySelector('.play');
@@ -126,7 +128,7 @@
   function box(g) {
     const sys = sysOf(g);
     const a = document.createElement('a');
-    a.className = 'box ' + sys.shape; a.href = 'game.html?game=' + encodeURIComponent(g.id);
+    a.className = 'box ' + sys.shape; a.href = 'game.html?game=' + encodeURIComponent(g.id) + (g.b ? '&b=' + encodeURIComponent(g.b) : '');
     a.style.setProperty('--sys', sys.color);
     a.setAttribute('aria-label', g.title + ', ' + sys.name + (g.year ? ', ' + g.year : '') + (g.players > 1 ? ', up to ' + g.players + ' players' : ''));
     const art = document.createElement('span'); art.className = 'art';
@@ -197,9 +199,9 @@
     return [['', key === 'p' ? 'Any number' : 'All']].concat(list);
   }
 
-  let shelfGames = [], filter = {};
+  let shelfGames = [], filter = {}, libHow = {};
   function render(index) {
-    shelfGames = index.games;
+    shelfGames = index.games; libHow = index.libHow || {};
     filter = readFilter(location.search);
     filterRow();
     show();
@@ -267,7 +269,19 @@
       const sec = document.createElement('section'); sec.className = 'row';
       const h = document.createElement('h2'); h.textContent = s.title;
       const list = document.createElement('div'); list.className = 'boxes';
-      for (const g of s.games) list.appendChild(box(g));
+      // Plan C4: a shelf of hundreds shows a page at a time; the last box is "More", which adds the next page in place.
+      let shown = 0;
+      const more = document.createElement('button'); more.type = 'button'; more.className = 'box more';
+      const page = () => {
+        const next = s.games.slice(shown, shown + (shown ? PAGE_MORE : PAGE_FIRST));
+        for (const g of next) list.insertBefore(box(g), more);
+        shown += next.length;
+        const left = s.games.length - shown;
+        more.hidden = left <= 0; more.textContent = 'More (' + left + ')';
+        more.setAttribute('aria-label', left + ' more games from ' + s.title);
+      };
+      more.onclick = () => { const at = shown; page(); const first = list.children[at]; if (first) first.focus({ preventScroll: true }); };
+      list.appendChild(more); page();
       sec.append(h, list); rows.appendChild(sec);
     }
     if (!shelfGames.length) rows.innerHTML = '<p class="loading">No games on the shelf right now.</p>';
@@ -356,9 +370,10 @@
     woke();
   }
   const IDLE_MS = 60000, TOUR_MS = 4000;
+  const PAGE_FIRST = 24, PAGE_MORE = 48;   // plan C4: boxes a shelf shows at first, and per More
   const TV = /SMART-TV|SmartTV|Tizen|Web0S|webOS|BRAVIA|Android TV|GoogleTV|CrKey|AFT[A-Z]|Roku|HbbTV/i;
 
-  const api = { shelves, SYSTEMS, decadeName, backLines, IDLE_MS, TOUR_MS, GENRES, genresOf, readFilter, writeFilter, matches, choices };
+  const api = { PAGE_FIRST, PAGE_MORE, shelves, SYSTEMS, decadeName, backLines, IDLE_MS, TOUR_MS, GENRES, genresOf, readFilter, writeFilter, matches, choices };
   if (typeof module === 'object' && module.exports) { module.exports = api; return; }
   root.PlayShelf = api;
   fetch('shelf/index.json', { cache: 'no-store' }).then((r) => r.json()).then(render)

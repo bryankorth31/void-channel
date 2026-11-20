@@ -1,0 +1,10 @@
+{
+ "about": "Plan C1: the collections whose games go on the PLAY shelf by themselves once they pass the start-up check. Only Bryan adds a line.",
+ "collections": [
+  { "name": "sega_genesis_library", "system": "genesis", "kids": false, "leaveOut": ["genesisvariations", "sonicromhacks"], "approvedBy": "Bryan, 20 Nov 2026: \"Yes that's right ... pull in the Sega libraries\"", "at": "2026-11-20" },
+  { "name": "sega_sms_library", "system": "sms", "kids": false, "approvedBy": "Bryan, 20 Nov 2026: \"Yes that's right ... pull in the Sega libraries\"", "at": "2026-11-20" },
+  { "name": "gamegear_library", "system": "gamegear", "kids": false, "approvedBy": "Bryan, 20 Nov 2026: \"Yes that's right ... pull in the Sega libraries\"", "at": "2026-11-20" },
+  { "name": "atari_2600_library", "system": "a2600", "kids": false, "approvedBy": "Bryan, 20 Nov 2026: \"Yes that's right\" (the Sega libraries plus Atari 2600)", "at": "2026-11-20" },
+  { "name": "NES (built from single uploads; the Archive has no NES library)", "system": "nes", "kids": false, "approvedBy": "Bryan, 20 Nov 2026: \"build the NES libraries as well\"", "at": "2026-11-20" }
+ ]
+}

@@ -23,6 +23,9 @@ const MACHINES = {
   gamegear: { core: 'genesis-plus-gx', ext: /\.(gg|bin)$/i, as: '.gg', end: 'game-gear', keys: ['P1:B', 'P1:A', 'P1:Start'],
     labels: { 'P1:B': '1', 'P1:A': '2' }, buttons: [['P1:B', 'Button 1'], ['P1:A', 'Button 2']],
     how: 'Buttons 1 and 2 are the game\'s two buttons; Start begins and pauses.' },
+  // The 2600's joystick has one button (Fire); Reset and Select are switches on the console (whole collections).
+  a2600: { core: 'stella2014', ext: /\.(bin|a26)$/i, end: '2600', keys: ['P1:B', 'P1:Select', 'P1:Start'], labels: { 'P1:B': 'Fire', 'P1:Start': 'Reset' },
+    buttons: [['P1:B', 'Fire']], startDo: 'New game (Reset)', how: 'The stick moves; Fire is the button. Reset starts a new game; Select picks a game mode.' },
   nes: { core: 'fceumm', ext: /\.nes$/i, end: 'nes', keys: ['P1:B', 'P1:A', 'P1:Select', 'P1:Start'],
     buttons: [['P1:A', 'A button'], ['P1:B', 'B button']], how: 'A and B are the game\'s two buttons; Start begins and pauses.' },
   snes: { core: 'snes9x', ext: /\.(sfc|smc)$/i, end: 'snes', keys: ['P1:Y', 'P1:X', 'P1:B', 'P1:A', 'P1:L', 'P1:R', 'P1:Select', 'P1:Start'],
@@ -76,7 +79,7 @@ function card(row, file, meta) {
     archive: Object.assign({ item: row.item, file: file.name }, file.start ? { start: file.start } : m.as ? { as: slug(title) + m.as } : {}, { size: +file.size }),
     controls: Object.assign({ kind: 'pad', dpad: true, keys: m.keys }, m.labels ? { labels: m.labels } : {}),
     help: m.how + (row.source === 'personal' ? ' This copy is a personal upload on the Internet Archive and may not stay there.' : ''),
-    actions: [{ do: 'Move', press: ['P1:Up', 'P1:Down', 'P1:Left', 'P1:Right'] }, ...m.buttons.map(([press, d]) => ({ do: d, press })), { do: 'Start and pause', press: 'P1:Start' }],
+    actions: [{ do: 'Move', press: ['P1:Up', 'P1:Down', 'P1:Left', 'P1:Right'] }, ...m.buttons.map(([press, d]) => ({ do: d, press })), { do: m.startDo || 'Start and pause', press: 'P1:Start' }],
     added: 'Bryan, 20 Nov 2026: "All of the list"' };
   return c;
 }

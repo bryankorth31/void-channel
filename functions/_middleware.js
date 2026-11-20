@@ -23,7 +23,7 @@ const SECURITY = [
 // PLAY (play/): the game player and the files it loads are cross-origin isolated (its engine runs on threads) and carry
 // a report-only policy that allows WebAssembly and its audio worklet. Keep in step with PLAY_ISOLATED and PLAY_CSP in
 // scripts/lib/siteguards.js; tests/play-door.test.js fails when the two differ. The shelf (/play/) is not isolated.
-const PLAY_ISOLATED = ['/play/game.html', '/play/game', '/play/src/*', '/play/engine/*', '/play/cards/*'];
+const PLAY_ISOLATED = ['/play/game.html', '/play/game', '/play/src/*', '/play/engine/*', '/play/cards/*', '/play/library/*'];
 const PLAY_CSP = "default-src 'self'; script-src 'self' 'wasm-unsafe-eval' blob: 'unsafe-inline' https://js.sentry-cdn.com https://browser.sentry-cdn.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://image.tmdb.org https://archive.org https://*.archive.org; media-src 'self' blob: https://archive.org https://*.archive.org; connect-src 'self' https://archive.org https://*.archive.org https://*.ingest.sentry.io https://*.ingest.us.sentry.io; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; worker-src 'self' blob:";
 const isPlayIsolated = (p) => PLAY_ISOLATED.some((r) => (r.endsWith('*') ? p.startsWith(r.slice(0, -1)) : p === r));
 function playHeaders(out, path) {
@@ -75,11 +75,11 @@ const safePath = (u) => { const x = new URL(u); const p = x.pathname.replace(/^\
 // PLAY's engines and cards: a missing file answers 404 (never cached), not the home page. Pages has no 404.html here, so it
 // answers every missing path with index.html, and the edge kept that for a day under /play/engine/ (20 Nov 2026). Real
 // engine and card files are never HTML, so they pass untouched. Keep in step with PLAY_STRICT in scripts/lib/siteguards.js.
-const PLAY_STRICT = ['/play/engine/*', '/play/cards/*'];
+const PLAY_STRICT = ['/play/engine/*', '/play/cards/*', '/play/library/*'];
 const isPlayStrict = (p) => PLAY_STRICT.some((r) => p.startsWith(r.slice(0, -1)));
 // _headers rules do not reach an answer that comes through a Function, so a real engine or card keeps its cache time here
 // (the same as _headers gives it; tests/site-middleware.test.js keeps the two equal).
-const PLAY_CACHE = { '/play/engine/': 'public, max-age=86400', '/play/cards/': 'public, max-age=300' };
+const PLAY_CACHE = { '/play/engine/': 'public, max-age=86400', '/play/cards/': 'public, max-age=300', '/play/library/': 'public, max-age=300' };
 function strict(res, path) {
   if (!isPlayStrict(path)) return res;
   if (res.status === 200 && /^text\/html/i.test(res.headers.get('content-type') || '')) {
