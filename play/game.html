@@ -89,6 +89,11 @@
       <button type="button" id="m-cheats" class="tool" aria-expanded="false" hidden>Cheats</button>
       <a class="tool" href="./">Back to the games</a>
     </div>
+    <!-- Picture checkpoints (Bryan, 20 Nov 2026: "Yes, ask the lead"; src/checkpoints.js): back to a minute ago, or twenty. -->
+    <section id="cps" class="cps" hidden aria-label="Go back">
+      <h3>Go back</h3>
+      <div id="cp-list" class="menu-row cp-list"></div>
+    </section>
     <!-- Cheats (Bryan, 20 Nov 2026: "add toggle for cheats"): each of the game's cheats is a switch; from libretro-database. -->
     <section id="cheats" class="cheats" hidden aria-label="Cheats">
       <h3>Cheats</h3>
@@ -114,6 +119,7 @@ setTimeout(function () { var s = document.getElementById('status'), p = document
 <script src="src/layout.js"></script>
 <script src="src/touchpad.js"></script>
 <script src="src/saves.js"></script>
+<script src="src/checkpoints.js"></script>
 <script src="src/runner.js"></script>
 <script src="src/arcade-runner.js"></script>
 <script src="src/qr.js"></script>

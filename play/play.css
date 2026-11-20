@@ -249,3 +249,9 @@ body.shell .pdpad .pdir{position:absolute;z-index:1;color:#1a1825}
 .cover-turn[hidden]{display:none}
 /* With the cross in the bar, a narrow phone keeps every tool on one line: "voidtv" without ".net", and Games as its arrow. */
 @media (max-width:430px){.bar .mark .n{display:none}.bar #b-games .w{display:none}.bar{gap:8px;padding-left:calc(8px + env(safe-area-inset-left,0px));padding-right:calc(8px + env(safe-area-inset-right,0px))}.tools{gap:4px}}
+/* Picture checkpoints in the pause menu: small pictures of the game, newest first. */
+.cps h3{margin:12px 0 6px;font-size:15px}
+.cp-list{flex-wrap:wrap}
+.tool.cp{display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px;font-size:12px;width:96px}
+.tool.cp img{width:84px;height:auto;border-radius:4px;image-rendering:pixelated;background:#000}
+.cps[hidden]{display:none}

@@ -84,6 +84,7 @@
     if (!runner || !started || p === paused) return;
     if (p) { hub.releaseAll(); PlayTouch.releaseAll(); letGoMouse(); runner.rewind(false); paused = true; runner.pause(); autosave(); stayAwake(false); }
     else { paused = false; runner.resume(); runner.wakeSound(); stayAwake(true); }
+    if (p) drawCps();
     $('menu').hidden = !p; $('b-pause').textContent = p ? 'Resume' : 'Pause';
     document.body.classList.toggle('paused', p);
     // The engine credits and source offer move from the start screen into the pause menu once a game is on.
@@ -217,6 +218,49 @@
       localStorage.setItem('voidtv-play-keep', '1');
       navigator.storage.persisted().then((yes) => (yes ? true : navigator.storage.persist())).catch(() => {});
     } catch (e) { /* storage off */ }
+  }
+
+  // Picture checkpoints (src/checkpoints.js; Bryan, 20 Nov 2026, for Caitlin, sent back to level 1 after losing her last
+  // life on level 2): a console game takes a save point with a small picture every minute of play (paused or hidden time
+  // does not count); the pause menu shows the ones nearest 1, 2, 4, 7, 12 and 20 minutes back, and a tap goes back
+  // there, with Undo. Held while the game is open; Continue and Save are for coming back later.
+  let cps = [], playS = 0, cpTimer = 0, cpBusy = false;
+  function cpStart() {
+    clearInterval(cpTimer); cps = []; playS = 0;
+    if (!PlayCards.isPad(card) || !window.PlayCheckpoints) return;
+    cpTimer = setInterval(async () => {
+      if (!started || paused || document.hidden || !runner) return;
+      playS++;
+      if (playS % PlayCheckpoints.EVERY_S || cpBusy) return;
+      cpBusy = true;
+      try {
+        const at = playS, picture = PlayCheckpoints.thumb($('canvas')), state = await runner.save();
+        if (state) cps = PlayCheckpoints.hold([...cps, { at, state, picture }], playS);
+      } catch (e) { /* the next minute tries again */ }
+      cpBusy = false;
+    }, 1000);
+  }
+  function drawCps() {
+    const list = window.PlayCheckpoints ? PlayCheckpoints.pick(cps, playS) : [];
+    $('cps').hidden = !list.length;
+    const box = $('cp-list'); box.textContent = '';
+    for (const c of list) {
+      const b = document.createElement('button'); b.type = 'button'; b.className = 'tool cp';
+      const words = PlayCheckpoints.label(playS - c.at);
+      b.title = 'Go back to ' + words.replace(' back', ' ago');
+      if (c.picture) { const i = document.createElement('img'); i.src = c.picture; i.alt = ''; b.appendChild(i); }
+      const s = document.createElement('span'); s.textContent = words; b.appendChild(s);
+      b.onclick = () => goBack(c, words);
+      box.appendChild(b);
+    }
+  }
+  async function goBack(c, words) {
+    if (!started || !runner) return;
+    const undo = await keepHere();
+    const ok = await runner.load(c.state.slice(0));
+    if (ok) { cps = cps.filter((x) => x.at <= c.at); playS = c.at; }   // the play clock goes back with the game
+    toast(ok ? 'Back ' + words.replace(' back', '') : 'That checkpoint would not load', ok ? undo : null);
+    if (ok) setPaused(false);
   }
 
   async function restart() {
@@ -368,6 +412,7 @@
     hub.setCard(card, PlayCards.gamepadMap(card));
     runner.start(card, base, build.commit.slice(0, 12) + HOST_V, sramKept);
     autoTimer = setInterval(() => { if (started && !paused && !document.hidden) autosave(); }, AUTO_EVERY_MS);
+    cpStart();
     place.sig = ''; place();
   }
 
@@ -478,7 +523,7 @@
 
   // Ends the game for good: the engine stops, nothing it sent late reaches the page, the menu closes.
   function stopGame() {
-    clearTimeout(deadline); clearInterval(autoTimer); stayAwake(false);
+    clearTimeout(deadline); clearInterval(autoTimer); clearInterval(cpTimer); stayAwake(false);
     if (runner) runner.stop();
     runner = null; hub = null; started = false; paused = false;
     padState.fill(0); $('menu').hidden = true; $('b-pause').textContent = 'Pause';
