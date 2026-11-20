@@ -182,3 +182,15 @@ a.tool{display:inline-flex;align-items:center;text-decoration:none;color:var(--f
 .cheat-list label{cursor:pointer;font-size:15px}
 .cheat-src{font-size:12px;color:var(--dim);margin:8px 0 0}
 .cheat-src a{color:var(--acc)}
+/* One screen: the game page never scrolls (an iPhone scrolled past the game and could not scroll back, 20 Nov 2026). */
+html,body{height:100%;overflow:hidden;overscroll-behavior:none}
+.cover .credits{font-size:12px;color:var(--dim);max-width:520px;margin:14px auto 0}.cover .credits a{color:var(--dim)}
+.menu .credits{font-size:12px;color:var(--dim);margin-top:12px}.menu .credits a{color:var(--dim)}
+/* The donation: a small cross at the bottom of the game picture, outside every touch key's area; dim while playing. */
+.give{position:absolute;left:50%;bottom:8px;transform:translateX(-50%);z-index:4;width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.18);
+  background:rgba(7,8,12,.55);color:#fff;opacity:.45;display:grid;place-items:center;cursor:pointer;padding:0}
+.give:hover,.give:focus-visible{opacity:1;outline:none;border-color:var(--pink)}
+.give-card{position:absolute;left:50%;bottom:50px;transform:translateX(-50%);z-index:6;width:min(420px,calc(100% - 24px));background:var(--panel);
+  border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-size:14px}
+.give-card[hidden]{display:none}
+.give-card p{margin:0 0 10px}.give-card p:last-child{margin:0;display:flex;gap:8px;flex-wrap:wrap}

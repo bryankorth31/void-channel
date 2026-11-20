@@ -37,6 +37,11 @@
   </section>
   <div id="screen" class="screen">
     <canvas id="canvas" width="640" height="400" aria-label="The game"></canvas>
+    <button type="button" id="give" class="give donate" aria-label="Donate to CASH" title="Donate to CASH"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M10.5 2h3v6h6v3h-6v11h-3V11h-6V8h6z" fill="currentColor"/></svg></button>
+    <div id="give-card" class="give-card donate" role="dialog" aria-label="Donate to CASH" hidden>
+      <p class="donate-line"></p>
+      <p><a class="donate-link tool big" href="#" target="_blank" rel="noopener">Donate to CASH</a> <button type="button" id="give-close" class="tool">Back to the game</button></p>
+    </div>
     <div id="cover" class="cover">
       <img id="cover-art" class="cover-art" alt="" crossorigin="anonymous" hidden>
       <div class="cover-in">
@@ -48,6 +53,12 @@
           <button type="button" id="b-continue" class="play" hidden>Continue</button>
           <button type="button" id="b-play" class="play" hidden>Play</button>
         </div>
+        <p id="credits" class="credits">
+            <span id="from">The game plays straight from the Internet Archive.</span>
+            Engine: <span id="core-name">DOSBox Pure</span> (<span id="core-licence">GPL-2.0</span>), built by voidtv.net: <a id="src-core" href="https://github.com/libretro/dosbox-pure/tree/e39497e7c2a32c67c26e6598dd14f6d58c384bfd" target="_blank" rel="noopener">its source</a>,<span id="core-terms" hidden> <a id="core-terms-link" href="#" target="_blank" rel="noopener">its licence</a>,</span>
+            <a href="https://github.com/bryankorth31/void-channel/tree/master/play" target="_blank" rel="noopener">our player's source</a>.
+            <a href="/takedown">Takedown</a>
+          </p>
       </div>
     </div>
   </div>
@@ -81,15 +92,9 @@
   <p id="toast" class="toast" role="status" aria-live="polite"><span id="toast-text"></span> <button type="button" id="toast-undo" class="undo" hidden>Undo</button></p>
 </main>
 
-<footer class="foot">
-  <p class="donate"><span class="donate-line"></span> <a class="donate-link" href="#" target="_blank" rel="noopener">Donate</a></p>
-  <p class="credits">
-    <span id="from">The game plays straight from the Internet Archive.</span>
-    Engine: <span id="core-name">DOSBox Pure</span> (<span id="core-licence">GPL-2.0</span>), built by voidtv.net: <a id="src-core" href="https://github.com/libretro/dosbox-pure/tree/e39497e7c2a32c67c26e6598dd14f6d58c384bfd" target="_blank" rel="noopener">its source</a>,<span id="core-terms" hidden> <a id="core-terms-link" href="#" target="_blank" rel="noopener">its licence</a>,</span>
-    <a href="https://github.com/bryankorth31/void-channel/tree/master/play" target="_blank" rel="noopener">our player's source</a>.
-    <a href="/takedown">Takedown</a>
-  </p>
-</footer>
+<!-- The game page is one screen: no footer under the game (an iPhone scrolled past the game and could not scroll back,
+     20 Nov 2026). The engine credits and source offer live on the start screen and in the pause menu; the donation is
+     the small cross at the bottom of the picture (Bryan: "a little cross icon someplace on the bottom"). -->
 
 <script>
 /* If a PLAY script fails to load, the page would say "Getting the game ready" forever: after 15 seconds with no game set up, say so plainly. */

@@ -54,6 +54,9 @@
     if (p) { hub.releaseAll(); letGoMouse(); runner.rewind(false); paused = true; runner.pause(); autosave(); stayAwake(false); }
     else { paused = false; runner.resume(); runner.wakeSound(); stayAwake(true); }
     $('menu').hidden = !p; $('b-pause').textContent = p ? 'Resume' : 'Pause';
+    // The engine credits and source offer move from the start screen into the pause menu once a game is on.
+    if (p && $('credits').parentElement !== $('menu')) $('menu').appendChild($('credits'));
+    if (!p) window.scrollTo(0, 0);
     if (p) $('m-resume').focus({ preventScroll: true }); else $('canvas').focus({ preventScroll: true });
   }
 
@@ -218,6 +221,7 @@
 
   const isArcade = () => !!(card && PlayCards.CORES[card.core] && PlayCards.CORES[card.core].kind === 'mame');
   function begin() {
+    window.scrollTo(0, 0);
     if (!$('phones').hidden) showPhones(false);   // the code steps aside for the game; the Phones button brings it back
     // MAME's classic module cannot start over in place: once one has run, a new start is the page loaded again.
     if (isArcade() && runner) return runner.reset();
@@ -508,6 +512,19 @@
   $('m-resume').onclick = () => setPaused(false);
   $('m-reset').onclick = restart;
 
+  // The donation (Bryan, 20 Nov 2026: "a little cross icon someplace on the bottom"): a tap pauses the game and opens a
+  // small card with the line and the link; closing it goes back to the game as it was.
+  let giveResume = false;
+  function showGive(open) {
+    if (!$('give-card')) return;
+    if (open) { giveResume = started && !paused; if (giveResume) setPaused(true); $('menu').hidden = true; }
+    $('give-card').hidden = !open;
+    if (!open) { if (giveResume) setPaused(false); else if (paused) $('menu').hidden = false; giveResume = false; }
+  }
+  if ($('give')) { $('give').onclick = () => showGive($('give-card').hidden); $('give-close').onclick = () => showGive(false); }
+  // A phone that scrolled before (or turned sideways) goes back to the top: the page is one screen.
+  for (const ev of ['resize', 'orientationchange']) addEventListener(ev, () => window.scrollTo(0, 0));
+
   // iPhone Safari zooms on two fast taps even where touch-action says not to (Bryan, a private tab: "It's going to keep
   // happening as you tap the buttons"). Cancelling the touch itself stops the zoom; the keys run on pointer events,
   // which still come first. The two buttons that work by click (the keyboard toggle and Hide keyboard) are left alone,
@@ -588,8 +605,9 @@
     // The footer names this game's own engine, its licence and its exact source (and its licence text when not GPL).
     $('core-name').textContent = core.name; $('core-licence').textContent = core.licence; $('src-core').href = core.source;
     $('core-terms').hidden = !core.terms; if (core.terms) $('core-terms-link').href = core.terms;
-    // A core whose licence is non-commercial: no donation line on its games, in the pause menu or the footer.
-    if (core.noDonation) for (const e of document.querySelectorAll('.donate')) e.remove();
+    // A core whose licence is non-commercial (and Bryan's arcade 'No line'): no donation on its games. A Kids game keeps the
+    // CASH donation behind the grown-up check (Bryan, 17 Nov 2026), so none here either.
+    if (core.noDonation || c.kids) for (const e of document.querySelectorAll('.donate')) e.remove();
     $('from').innerHTML = '';
     const a = document.createElement('a'); a.href = PlayCards.itemPage(c); a.target = '_blank'; a.rel = 'noopener'; a.textContent = 'the Internet Archive';
     $('from').append('The game plays straight from ', a, '.');

@@ -40,10 +40,17 @@ test('the donation line says donation, CASH and cashvalues.org, and never gift (
   assert.doesNotMatch(line[1], /tax/i, 'no tax-deduction promise (C1)');
 });
 
-test('the page shows the donation line where the game is served, and in the pause menu', () => {
-  assert.match(html, /class="donate-line"/);
+test('the page shows the donation where the game is served (the cross at the bottom of the picture, a card with the line), and in the pause menu', () => {
+  assert.match(html, /id="give" class="give donate" aria-label="Donate to CASH"/);
+  assert.match(html, /id="give-card" class="give-card donate"[^>]*hidden>\s*<p class="donate-line">/);
   assert.match(html, /id="donate-line"/);
-  assert.match(html, /class="donate-link"/);
+  assert.match(html, /class="donate-link/);
+  assert.ok(!/<footer/.test(html), 'no footer under the game: the page is one screen');
+  assert.match(html, /id="credits" class="credits"/);
+  const css = read(ROOT, 'play.css');
+  assert.ok(css.includes('html,body{height:100%;overflow:hidden;overscroll-behavior:none}'));
+  const js = read(ROOT, 'src', 'play.js');
+  for (const bit of ["if (core.noDonation || c.kids) for (const e of document.querySelectorAll('.donate')) e.remove();", "if (p && $('credits').parentElement !== $('menu')) $('menu').appendChild($('credits'));"]) assert.ok(js.includes(bit), bit);
 });
 
 test('the page links the takedown page and says the game comes from the Internet Archive', () => {

@@ -109,7 +109,7 @@ test('no donation line on games run by a non-commercial core (B, 19 Nov 2026: "L
   // Arcade is Bryan's own exception (20 Nov 2026, "No line"): GPL, and still no donation line.
   for (const [name, core] of Object.entries(Cards.CORES)) assert.equal(!!core.noDonation, /non-commercial/.test(core.licence) || name === 'mame', name);
   const page = fs.readFileSync(path.join(PLAY, 'src', 'play.js'), 'utf8');
-  assert.match(page, /if \(core\.noDonation\) for \(const e of document\.querySelectorAll\('\.donate'\)\) e\.remove\(\);/);
+  assert.ok(page.includes("if (core.noDonation || c.kids) for (const e of document.querySelectorAll('.donate')) e.remove();"));
 });
 
 test('arcade (B, 20 Nov 2026: "Current MAME", "No line"): MAME runs from its own runner on the page, keyboard keys are not sent twice, Esc never reaches MAME, and the tab keeps its title', () => {
