@@ -116,8 +116,10 @@ test('every PLAY page loads its own style and scripts with the build version, an
 
 test('iPhone: fast taps on the touch keys and the phone pad cancel the touch (Safari zooms otherwise), except the two click buttons', () => {
   const js = read(ROOT, 'src', 'play.js');
-  assert.ok(js.includes("const noZoom = (e) => { if (!e.target.closest('.pkbd, .pkclose')) e.preventDefault(); };"));
-  assert.ok(js.includes("for (const id of ['z-left', 'z-right', 'z-pad', 'canvas']) for (const ev of ['touchstart', 'touchend']) $(id).addEventListener(ev, noZoom, { passive: false });"));
+  assert.ok(js.includes("const noZoom = (e) => { if (!e.target.closest('.pkbd, .pkclose, button:not(.pk), a, input, label, .menu, .give-card, .phones')) e.preventDefault(); };"));
+  assert.ok(read(ROOT, 'play.css').includes('.stage{position:fixed;inset:0;'), 'the game area is fixed to the screen: no page under it to pan');
+  assert.ok(read(ROOT, 'game.html').includes('<img src="/assets/brand/cash-cross.png" alt="" width="28">'), 'the CASH winged cross, at 28 px');
+  assert.ok(js.includes("for (const ev of ['touchstart', 'touchend']) $('stage').addEventListener(ev, noZoom, { passive: false });"));
   assert.ok(read(ROOT, 'src', 'phonepad.js').includes("addEventListener(ev, (e) => e.preventDefault(), { passive: false });"));
   assert.ok(read(ROOT, 'play.css').includes('-webkit-touch-callout:none'));
 });

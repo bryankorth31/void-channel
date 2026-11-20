@@ -23,7 +23,7 @@ button{font:inherit;color:inherit}
 .tool:hover,.tool:focus-visible{border-color:var(--acc);outline:none}
 .tool[aria-pressed=true]{border-color:var(--pink);color:#fff}
 .tool.big{padding:12px 20px;background:var(--pink);border-color:var(--pink);color:#07080c;font-weight:700}
-.stage{position:relative;height:100vh;height:100dvh;overflow:hidden;touch-action:none;user-select:none;-webkit-user-select:none}
+.stage{position:fixed;inset:0;height:100vh;height:100dvh;overflow:hidden;touch-action:none;user-select:none;-webkit-user-select:none}
 .screen{position:absolute;background:#000;box-shadow:0 0 0 1px var(--line),0 0 40px rgba(95,212,255,.08)}
 .screen canvas{display:block;width:100%;height:100%;image-rendering:pixelated;outline:none}
 .cover{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;background:#000c;text-align:center;padding:16px}
@@ -187,8 +187,9 @@ html,body{height:100%;overflow:hidden;overscroll-behavior:none}
 .cover .credits{font-size:12px;color:var(--dim);max-width:520px;margin:14px auto 0}.cover .credits a{color:var(--dim)}
 .menu .credits{font-size:12px;color:var(--dim);margin-top:12px}.menu .credits a{color:var(--dim)}
 /* The donation: a small cross at the bottom of the game picture, outside every touch key's area; dim while playing. */
-.give{position:absolute;left:50%;bottom:8px;transform:translateX(-50%);z-index:4;width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.18);
-  background:rgba(7,8,12,.55);color:#fff;opacity:.45;display:grid;place-items:center;cursor:pointer;padding:0}
+.give{position:absolute;left:50%;bottom:4px;transform:translateX(-50%);z-index:4;width:44px;height:44px;border:0;border-radius:50%;
+  background:transparent;opacity:.55;display:grid;place-items:center;cursor:pointer;padding:0}
+.give img{width:28px;height:auto;filter:drop-shadow(0 1px 3px rgba(0,0,0,.8))}
 .give:hover,.give:focus-visible{opacity:1;outline:none;border-color:var(--pink)}
 .give-card{position:absolute;left:50%;bottom:50px;transform:translateX(-50%);z-index:6;width:min(420px,calc(100% - 24px));background:var(--panel);
   border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-size:14px}

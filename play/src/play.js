@@ -529,8 +529,10 @@
   // happening as you tap the buttons"). Cancelling the touch itself stops the zoom; the keys run on pointer events,
   // which still come first. The two buttons that work by click (the keyboard toggle and Hide keyboard) are left alone,
   // and so is pinch zoom on the rest of the page.
-  const noZoom = (e) => { if (!e.target.closest('.pkbd, .pkclose')) e.preventDefault(); };
-  for (const id of ['z-left', 'z-right', 'z-pad', 'canvas']) for (const ev of ['touchstart', 'touchend']) $(id).addEventListener(ev, noZoom, { passive: false });
+  // The whole game area, gaps between keys included (Bryan: the double tap made the page scroll and stick). Buttons and
+  // links that work by click (Play, the menu, the cross and its card, the keyboard toggle) keep their taps.
+  const noZoom = (e) => { if (!e.target.closest('.pkbd, .pkclose, button:not(.pk), a, input, label, .menu, .give-card, .phones')) e.preventDefault(); };
+  for (const ev of ['touchstart', 'touchend']) $('stage').addEventListener(ev, noZoom, { passive: false });
 
   // Cheats (Bryan, 20 Nov 2026: "add toggle for cheats"): a console game whose engine takes cheats lists them in the pause
   // menu, each a switch; the ones switched on are kept for the game in this browser and set again when it starts. The
