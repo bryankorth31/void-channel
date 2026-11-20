@@ -14,7 +14,8 @@
 <!-- VoidTV PLAY: a test page that boots one arcade game on a MAME web build, sound off, outside the player.
      Licence: GPL-2.0-or-later. MAME's own web build is not a libretro core: it reads a global Module (canvas,
      arguments, preRun) and runs MAME's main(). Served by play/serve.js, e.g.
-     http://127.0.0.1:8789/play/test/arcade.html?engine=arcade-trial/arcadetest&item=arcade_digdug&zip=digdug.zip&driver=digdug -->
+     http://127.0.0.1:8789/play/test/arcade.html?engine=../engine/mame/williams&item=arcade_joust&zip=joust.zip&driver=joust
+     The engine's wasm is kept gzipped (<engine>.wasm.gz), as the arcade runner loads it; a plain <engine>.wasm also works. -->
 <pre id="out">starting</pre>
 <canvas id="canvas" tabindex="0"></canvas>
 <script>
@@ -87,6 +88,20 @@
       }, 20);
       const origPrint = window.Module.print;
       window.Module.print = (txt) => { origPrint(txt); if (/Average speed|exiting|Exit/i.test(txt)) state.exitAtMs = Math.round(performance.now() - t0); };
+    }
+    // The engine is kept gzipped: unpack it here and hand it to Emscripten through instantiateWasm (MAME's build
+    // ignores wasmBinary and would fetch the plain .wasm). Only real wasm (starting "\0asm") is used.
+    const gz = await fetch(q.get('engine') + '.wasm.gz');
+    if (gz.ok) {
+      let buf = new Uint8Array(await gz.arrayBuffer());
+      if (buf[0] === 0x1f && buf[1] === 0x8b) buf = new Uint8Array(await new Response(new Blob([buf]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer());
+      if (buf[0] === 0 && buf[1] === 0x61 && buf[2] === 0x73 && buf[3] === 0x6d) {
+        state.engineBytes = buf.length;
+        window.Module.instantiateWasm = (imports, done) => {
+          WebAssembly.instantiate(buf, imports).then((r) => done(r.instance, r.module), (e) => { state.error = 'engine start: ' + e; show(); });
+          return {};
+        };
+      }
     }
     const s = document.createElement('script');
     s.src = q.get('engine') + '.js';

@@ -16,7 +16,7 @@ when you press Play. Each core is built from its own published source, unchanged
 | Stella 2014 | Atari 2600 | GNU GPL version 2 | https://github.com/libretro/stella2014-libretro | `7d1361e407e63f29e52892655069e5fb4096e691` |
 | mGBA | Game Boy Advance | Mozilla Public License 2.0 | https://github.com/libretro/mgba | `7a12d6d4b9acb14c0ae62c9166b6a2f3d08007f6` |
 | Handy | Atari Lynx | zlib licence | https://github.com/libretro/libretro-handy | `bc55d462f0b2d6b073ea93dc552ebd73cec60fd1` |
-| MAME 0.289 | arcade machines (one engine per machine family, in `play/engine/mame/`) | GNU GPL version 2 for MAME as a whole | https://github.com/mamedev/mame | `f09e0805da149cb15bd1cd777fbbcc65640d7866` (in [mame.txt](mame.txt)) |
+| MAME 0.289 | arcade machines (engines that each hold one or more machine families, in `play/engine/mame/`) | GNU GPL version 2 for MAME as a whole | https://github.com/mamedev/mame | `f09e0805da149cb15bd1cd777fbbcc65640d7866` (in [mame.txt](mame.txt)) |
 
 The commits for every core but DOSBox Pure also live in [cores.js](cores.js), which is the one place the build reads them from.
 Every core was built with Emscripten 7.0.0 (emcc `777e6e5db7b4990bcaeb1b9998ed642cc84e6629`), installed by the
@@ -38,8 +38,9 @@ sound chip and Shay Green's sound and video filters (GNU LGPL 2.1 or later), min
 the libretro common code (MIT).
 
 MAME is different from the others: it is not a libretro core but MAME's own web build, which draws through SDL3 and is
-started by the player's arcade runner. Each arcade engine holds only the machines its game needs, so it stays under
-Cloudflare's 25 MB file limit (Joust's is 20 MB, about 5 MB on the wire). Its licence, MAME's `COPYING`, sits beside the
+started by the player's arcade runner. Each arcade engine holds only the machine families its games need, and is stored
+gzipped so it stays under Cloudflare's 25 MB file limit (Joust's is 20 MB plain, 4.8 MB gzipped); the runner unpacks it in
+the browser. Its licence, MAME's `COPYING`, sits beside the
 engines in `play/engine/mame/`. Exactly how it was built, tools included, is in [mame.txt](mame.txt).
 
 ## Get the source
