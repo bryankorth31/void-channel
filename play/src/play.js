@@ -54,7 +54,9 @@
   // Continue (block C): an automatic slot per game, written when the menu opens, the tab hides, the page closes or Games
   // is pressed, under the same build rule as a manual save. The start screen then offers Continue.
   const AUTO = (c) => c.id + ':auto';
-  let autoBusy = false, resumeState = null;
+  let autoBusy = false, resumeState = null, autoTimer = 0;
+  // A page that is closing cannot finish a save, so play also saves itself every 30 seconds (not while paused or hidden).
+  const AUTO_EVERY_MS = 30000;
   async function autosave() {
     if (!started || !runner || autoBusy) return;
     autoBusy = true;
@@ -155,12 +157,13 @@
     hub = PlayHub.createHub({ send, onAction: action });
     hub.setCard(card, PlayCards.gamepadMap(card));
     runner.start(card, base, build.commit.slice(0, 12));
+    autoTimer = setInterval(() => { if (started && !paused && !document.hidden) autosave(); }, AUTO_EVERY_MS);
     place.sig = ''; place();
   }
 
   // Ends the game for good: the engine stops, nothing it sent late reaches the page, the menu closes.
   function stopGame() {
-    clearTimeout(deadline);
+    clearTimeout(deadline); clearInterval(autoTimer);
     if (runner) runner.stop();
     runner = null; hub = null; started = false; paused = false;
     padState.fill(0); $('menu').hidden = true; $('b-pause').textContent = 'Pause';

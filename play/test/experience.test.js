@@ -27,7 +27,7 @@ test('every action is something a player can actually do on at least one input',
 
 test('a console action speaks the game\'s words on every input', () => {
   const lines = Object.fromEntries(Cards.actionLines(byId('golden-axe-genesis')).map((l) => [l.do, l.how]));
-  assert.equal(lines.Attack, 'A on a gamepad, Z on the keyboard, B on screen');
+  assert.equal(lines.Attack, 'the bottom button (A) on a gamepad, Z on the keyboard, B on screen');
   assert.equal(lines.Move, 'the d-pad on a gamepad, the arrow keys on the keyboard, the d-pad on screen');
 });
 
@@ -38,7 +38,7 @@ test('a DOS range reads as a range, and the gamepad says which part it reaches',
 
 test('one input at a time, for the start screen', () => {
   const pad = Cards.actionLines(byId('super-mario-world'), 'pad').map((l) => l.do + ': ' + l.how);
-  assert.deepEqual(pad.slice(0, 2), ['Move: the d-pad', 'Jump: A']);
+  assert.deepEqual(pad.slice(0, 2), ['Move: d-pad Left or Right', 'Jump: the bottom button (A)']);
 });
 
 test('the start screen shows the item picture through /cors/, and Continue comes from a same-build automatic save', () => {
@@ -63,4 +63,19 @@ test('block D: every console card gets its machine\'s pad shape, and every face 
   assert.equal(Touch.minCols(byId('super-mario-world')), 3);
   assert.equal(Touch.minCols(byId('tetris-game-boy')), 2);
   assert.equal(Touch.minCols(byId('oregon-trail-1990')), 2);
+});
+
+test('C1: play saves itself every 30 seconds too, since a closing page cannot finish a save', () => {
+  const js = fs.readFileSync(path.join(PLAY, 'src', 'play.js'), 'utf8');
+  assert.match(js, /const AUTO_EVERY_MS = 30000;/);
+  assert.ok(js.includes("autoTimer = setInterval(() => { if (started && !paused && !document.hidden) autosave(); }, AUTO_EVERY_MS);"));
+  assert.ok(js.includes("clearInterval(autoTimer)"));
+});
+
+test('A1 to A3: directions are named, buttons by their place, and no action prints without a way to do it', () => {
+  const lines = (id, dev) => Object.fromEntries(Cards.actionLines(byId(id), dev).map((l) => [l.do, l.how]));
+  assert.equal(lines('tetris-game-boy')['Drop faster'], 'd-pad Down on a gamepad, Down arrow on the keyboard, d-pad Down on screen');
+  assert.equal(lines('super-mario-world', 'pad').Jump, 'the bottom button (A)');
+  assert.ok(!('Answer yes or no' in lines('oregon-trail-1990', 'pad')));
+  for (const c of cards) for (const dev of ['pad', 'keyboard', 'touch']) for (const l of Cards.actionLines(c, dev)) assert.ok(l.how, c.id + ' ' + dev + ' ' + l.do);
 });
