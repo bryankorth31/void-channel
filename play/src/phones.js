@@ -18,6 +18,7 @@
   const QUIET_MS = 800;    // a phone on the beat (one message every 200 ms while it holds anything) not heard this long
   const GONE_MS = 5000;    // not heard this long: gone, like a pad whose battery died
   const QUEUE = 24;        // states waiting their turn; past this the newest wins, so the screen never runs behind
+  const STALL_MS = 250;    // the screen's own page did not run for this long: its silence, not the phones'
 
   // Pure (tested): a gamepad as the hub reads one, from the phone's held-button number.
   function padOf(seat, b) {
@@ -120,7 +121,7 @@
   function create(opts) {
     const on = opts || {};
     const clock = on.now || (() => performance.now());
-    let ws = null, room = null, locked = false;
+    let ws = null, room = null, locked = false, polled = null;
     const phones = new Map();   // room seat -> the phone (fresh())
     const changed = () => on.change && on.change(list());
     const send = (to, msg) => { if (ws && ws.readyState === 1) ws.send(JSON.stringify({ to, msg })); };
@@ -175,6 +176,10 @@
       pads() {
         const now = clock(), out = [];
         let turned = false;
+        // The screen's own page stalled (a save loading, the tab coming back to the front): the phones' messages wait
+        // unread behind this very call, so a phone still with us is not called silent for it (the auditor's review).
+        if (polled !== null && now - polled > STALL_MS) for (const p of phones.values()) if (!p.quiet) p.heard = now;
+        polled = now;
         for (const [seat, p] of phones) {
           const quiet = p.beat && now - p.heard > GONE_MS;
           if (quiet !== p.quiet) { p.quiet = quiet; turned = true; }
@@ -201,7 +206,7 @@
     };
   }
 
-  const api = { create, padOf, cardFor, take, settle, fresh, BASE, ON_PHONE, HOLD_MS, QUIET_MS, GONE_MS, kept };
+  const api = { create, padOf, cardFor, take, settle, fresh, BASE, ON_PHONE, HOLD_MS, QUIET_MS, GONE_MS, STALL_MS, kept };
   if (typeof module === 'object' && module.exports) module.exports = api;
   else root.PlayPhones = api;
 })(typeof self !== 'undefined' ? self : this);

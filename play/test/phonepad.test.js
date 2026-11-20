@@ -143,6 +143,37 @@ test('the screen: every tap reaches the game as a press and a release, in order,
   assert.ok(f.queue.length <= 24);
 });
 
+test('the screen page itself stalling is not the phones going silent; a phone on a new page or a new socket keeps its player number', async () => {
+  const s = screen();
+  try {
+    await s.opened;
+    s.say({ type: 'join', from: 1 }); s.say({ type: 'join', from: 2 });
+    s.say({ from: 1, msg: { type: 'pad', b: 1 << 15, n: 1, v: 2 } }); s.say({ from: 2, msg: { type: 'pad', b: 1, n: 1, v: 2 } });
+    s.frame(16);
+    assert.deepEqual(s.hub.held(), ['P1:Right', 'P2:B']);
+    // The page does not run for two seconds (a save state loading). The phones' beats sit unread behind that frame.
+    s.frame(2000);
+    assert.deepEqual(s.hub.held(), ['P1:Right', 'P2:B'], 'nothing is let go for a stall of the screen page itself');
+    s.say({ from: 1, msg: { type: 'pad', b: 1 << 15, n: 9, v: 2 } }); s.say({ from: 2, msg: { type: 'pad', b: 1, n: 9, v: 2 } });
+    s.frame(16);
+    assert.deepEqual(s.hub.held(), ['P1:Right', 'P2:B']);
+    // But a phone that then really stays silent still lets go.
+    for (let t = 0; t < PH.QUIET_MS + 100; t += 16) { s.frame(16); if (t % 192 === 0) s.say({ from: 2, msg: { type: 'pad', b: 1, n: 10 + t, v: 2 } }); }
+    assert.deepEqual(s.hub.held(), ['P2:B'], 'phone 1 went silent; phone 2 kept its beat');
+    // Phone 1 locked its screen: after 5 s it is away, its place kept. It comes back on a new socket within the minute
+    // (the relay says join, back) and is player 1 again with nobody touching the big screen.
+    for (let t = 0; t < PH.GONE_MS + 100; t += 16) { s.frame(16); if (t % 192 === 0) s.say({ from: 2, msg: { type: 'pad', b: 1, n: 5000 + t, v: 2 } }); }
+    assert.ok(s.seats.includes('1 away'));
+    s.say({ type: 'join', from: 1, back: true });
+    // Its count carries on from where its page was (the page did not reload): the new start must not turn it away.
+    s.say({ from: 1, msg: { type: 'pad', b: 1 << 14, n: 500, v: 2 } });
+    s.frame(16);
+    assert.equal(s.hub.seat(101), 1, 'the same player number');
+    assert.ok(s.seats.includes('1 back'));
+    assert.deepEqual(s.hub.held(), ['P1:Left', 'P2:B'], 'and it is heard at once, count 500 and all');
+  } finally { s.done(); }
+});
+
 // A screen with its room, on a clock the test moves; the relay's messages are handed to it directly.
 function screen() {
   let now = 0, sock = null;
@@ -158,7 +189,9 @@ function screen() {
   const golden = cardOf('golden-axe-genesis');
   hub.setCard(golden, Cards.gamepadMap(golden));
   const frame = (ms) => { now += ms; hub.pollPads(t.pads()); t.seats((i) => hub.seat(i)); };
-  return { t, opened, say, hub, keys, seats, frame, done: () => { global.WebSocket = realWS; global.location = realLoc; }, sock: () => sock };
+  // Time passes a frame at a time, as on a real page (one long step would be the page itself stalling).
+  const run = (ms) => { for (let t = 0; t < ms; t += 16) frame(16); };
+  return { t, opened, say, hub, keys, seats, frame, run, done: () => { global.WebSocket = realWS; global.location = realLoc; }, sock: () => sock };
 }
 
 test('the stuck-key guard: a phone that goes silent with a direction held lets go, then gives up its seat like a dropped pad', async () => {
@@ -170,16 +203,16 @@ test('the stuck-key guard: a phone that goes silent with a direction held lets g
     s.frame(16);
     assert.deepEqual(s.hub.held(), ['P1:Right']);
     // The beat keeps it held: a message every 200 ms.
-    for (let i = 2; i < 12; i++) { s.frame(200); s.say({ from: 1, msg: { type: 'pad', b: 1 << 15, n: i, v: 2 } }); }
+    for (let i = 2; i < 12; i++) { s.run(200); s.say({ from: 1, msg: { type: 'pad', b: 1 << 15, n: i, v: 2 } }); }
     s.frame(16);
     assert.deepEqual(s.hub.held(), ['P1:Right'], 'held as long as the phone says so');
     // The phone freezes (its page put away, its network gone): nothing more arrives, and no close.
-    s.frame(PH.QUIET_MS - 50);
+    s.run(PH.QUIET_MS - 50);
     assert.deepEqual(s.hub.held(), ['P1:Right']);
-    s.frame(100);
+    s.run(100);
     assert.deepEqual(s.hub.held(), [], 'let go within ' + PH.QUIET_MS + ' ms of silence');
     assert.equal(s.t.list()[0].quiet, false);
-    s.frame(PH.GONE_MS);
+    s.run(PH.GONE_MS);
     assert.equal(s.t.list()[0].quiet, true, 'and after 5 s it is away');
     assert.ok(s.seats.includes('1 away'), 'its seat is held for it, as for a real pad that dropped');
     // It comes back and plays on as the same player.
@@ -197,7 +230,7 @@ test('the stuck-key guard: a phone that goes silent with a direction held lets g
     assert.deepEqual(s.hub.held(), [], 'a rejoin holds nothing until the phone says so');
     // A pad page from before the beat (still open on some phone) is never called silent: it would lose a long hold.
     s.say({ type: 'join', from: 3 }); s.say({ from: 3, msg: { type: 'pad', b: 1 << 15 } }); s.frame(16);
-    s.frame(PH.GONE_MS * 2);
+    s.run(PH.GONE_MS * 2);
     assert.equal(s.hub.held().length, 1, 'an earlier pad page keeps its hold');
   } finally { s.done(); }
 });
