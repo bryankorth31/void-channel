@@ -67,8 +67,15 @@
       <button type="button" id="b-save" class="tool" title="Save your spot in this browser">Save</button>
       <button type="button" id="b-load" class="tool" title="Go back to your saved spot">Load</button>
       <button type="button" id="m-reset" class="tool">Restart the game</button>
+      <button type="button" id="m-cheats" class="tool" aria-expanded="false" hidden>Cheats</button>
       <a class="tool" href="./">Back to the games</a>
     </div>
+    <!-- Cheats (Bryan, 20 Nov 2026: "add toggle for cheats"): each of the game's cheats is a switch; from libretro-database. -->
+    <section id="cheats" class="cheats" hidden aria-label="Cheats">
+      <h3>Cheats</h3>
+      <ul id="cheat-list" class="cheat-list"></ul>
+      <p class="cheat-src">Cheat codes from <a id="cheat-src" href="#" target="_blank" rel="noopener">libretro-database</a>, shared under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>. Some codes may not work on every copy of a game.</p>
+    </section>
     <p class="donate"><span id="donate-line"></span> <a id="donate" href="#" target="_blank" rel="noopener">Donate</a></p>
   </div>
   <p id="toast" class="toast" role="status" aria-live="polite"><span id="toast-text"></span> <button type="button" id="toast-undo" class="undo" hidden>Undo</button></p>

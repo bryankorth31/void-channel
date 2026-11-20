@@ -63,6 +63,8 @@
   let autoBusy = false, resumeState = null, autoTimer = 0;
   // A page that is closing cannot finish a save, so play also saves itself every 30 seconds (not while paused or hidden).
   const AUTO_EVERY_MS = 30000;
+  // Bumped whenever play/core/host.c changes, so a browser fetches the rebuilt engines (2: cheats, 20 Nov 2026).
+  const HOST_V = 'h2';
   async function autosave() {
     if (!started || !runner || autoBusy) return;
     autoBusy = true;
@@ -221,7 +223,8 @@
     runner = (isArcade() ? PlayArcade : PlayRunner).createRunner({ canvas: $('canvas'), mute: q.get('mute') === '1', on: {
       note: (t) => toast(t),
       status, error: (t) => fail(t),
-      ready: () => { started = true; },
+      ready: () => { started = true; applyCheats(); },
+      cheats: (m) => { if (!m.ok) toast('This game\'s engine cannot take cheats'); else if (m.on) toast(m.on === 1 ? 'One cheat on' : m.on + ' cheats on'); },
       firstFrame: () => {
         clearTimeout(deadline); $('cover').hidden = true; $('canvas').focus({ preventScroll: true }); stayAwake(true); armBack();
         if (isPhone() && innerHeight > innerWidth && PlayCards.isPad(card)) toast('Turn your phone sideways for a bigger picture');
@@ -237,7 +240,7 @@
         if (name === 'click' || name === 'rclick') { ptrButtons &= name === 'click' ? ~1 : ~2; sendMouse(0, 0); }
       } });
     hub.setCard(card, PlayCards.gamepadMap(card));
-    runner.start(card, base, build.commit.slice(0, 12));
+    runner.start(card, base, build.commit.slice(0, 12) + HOST_V);
     autoTimer = setInterval(() => { if (started && !paused && !document.hidden) autosave(); }, AUTO_EVERY_MS);
     place.sig = ''; place();
   }
@@ -479,6 +482,16 @@
   }
   addEventListener('keydown', arcadeEsc, true);
   addEventListener('keyup', arcadeEsc, true);
+  // The PC keyboard's coin keys get the same short pulse as the pad, touch and phones (the runner's key()): some machines
+  // ignore a coin held a quarter second, and a typed 5 can be held that long (audit, 20 Nov 2026). Caught before MAME.
+  function arcadeCoin(e) {
+    if (!isArcade() || !started || !e.isTrusted || (e.code !== 'Digit5' && e.code !== 'Digit6')) return;
+    e.preventDefault(); e.stopImmediatePropagation();
+    if (runner) runner.wakeSound();   // keyEvent never sees these keys, so they wake the sound here (iPad with a keyboard)
+    if (e.type === 'keydown' && !e.repeat && runner) runner.key(e.code, true);
+  }
+  addEventListener('keydown', arcadeCoin, true);
+  addEventListener('keyup', arcadeCoin, true);
   addEventListener('keydown', (e) => keyEvent(e, true));
   addEventListener('keyup', (e) => keyEvent(e, false));
   addEventListener('pointerdown', () => runner && runner.wakeSound(), { passive: true });
@@ -489,6 +502,41 @@
   $('b-pause').onclick = () => setPaused(!paused);
   $('m-resume').onclick = () => setPaused(false);
   $('m-reset').onclick = restart;
+
+  // Cheats (Bryan, 20 Nov 2026: "add toggle for cheats"): a console game whose engine takes cheats lists them in the pause
+  // menu, each a switch; the ones switched on are kept for the game in this browser and set again when it starts. The
+  // codes come from libretro-database (CC BY-SA 4.0; play/tools/cheats.js), credited under the list.
+  const CHEAT_CORES = ['snes9x', 'fceumm', 'gambatte', 'genesis-plus-gx', 'mgba'];
+  let cheatList = null, cheatsOn = new Set();
+  const cheatKey = () => 'voidtv-cheats:' + card.id;
+  function applyCheats() { if (runner && runner.cheats && cheatList && started) runner.cheats([...cheatsOn].sort((a, b) => a - b).map((i) => cheatList[i].code)); }
+  function drawCheats() {
+    const ul = $('cheat-list'); ul.textContent = '';
+    cheatList.forEach((ch, i) => {
+      const li = document.createElement('li'), box = document.createElement('input'), lab = document.createElement('label');
+      box.type = 'checkbox'; box.id = 'cheat-' + i; box.checked = cheatsOn.has(i);
+      lab.htmlFor = box.id; lab.textContent = ch.name;
+      box.onchange = () => {
+        if (box.checked) cheatsOn.add(i); else cheatsOn.delete(i);
+        try { localStorage.setItem(cheatKey(), JSON.stringify([...cheatsOn])); } catch (e) { /* kept for this visit only */ }
+        if (started) applyCheats();
+      };
+      li.append(box, lab); ul.appendChild(li);
+    });
+  }
+  function loadCheats(c) {
+    if (!PlayCards.isPad(c) || !CHEAT_CORES.includes(c.core)) return;
+    fetch('cheats/' + encodeURIComponent(c.id) + '.json').then((r) => (r.ok ? r.text() : null)).then((t) => {
+      let j = null; try { j = JSON.parse(t); } catch (e) { return; }
+      if (!j || !Array.isArray(j.cheats) || !j.cheats.length) return;
+      cheatList = j.cheats.filter((x) => x && typeof x.name === 'string' && typeof x.code === 'string');
+      if (/^https:\/\/github\.com\/libretro\/libretro-database\//.test(j.source || '')) $('cheat-src').href = j.source;
+      try { cheatsOn = new Set((JSON.parse(localStorage.getItem(cheatKey()) || '[]') || []).filter((i) => Number.isInteger(i) && i >= 0 && i < cheatList.length)); } catch (e) { cheatsOn = new Set(); }
+      drawCheats();
+      $('m-cheats').hidden = false;
+    }).catch(() => {});
+  }
+  $('m-cheats').onclick = () => { const open = $('cheats').hidden; $('cheats').hidden = !open; $('m-cheats').setAttribute('aria-expanded', String(open)); };
   $('b-save').onclick = save;
   $('b-load').onclick = load;
   $('b-touch').onclick = () => { touch = !touch; place.sig = ''; place(); };
@@ -512,7 +560,7 @@
   ]).then(([c, shelf]) => {
     const bad = PlayCards.check(c);
     if (bad.length) throw new Error('This game card is not right yet (' + bad.join(', ') + ')');
-    card = c; if (phones) phones.card(phoneCard());
+    card = c; if (phones) phones.card(phoneCard()); loadCheats(c);
     const core = PlayCards.CORES[c.core];
     build = { core: c.core, commit: core.source.split('/').pop() };
     document.title = c.title + ' | PLAY | voidtv.net';

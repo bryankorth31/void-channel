@@ -279,6 +279,13 @@ onmessage = (e) => {
     else if (m.type === 'key') key(m.down, m.code);
     else if (m.type === 'pad') M._host_pad(m.port, m.bits);
     else if (m.type === 'mouse') { if (M._host_mouse) M._host_mouse(m.dx | 0, m.dy | 0, m.buttons | 0); }
+    // Cheats (Bryan, 20 Nov 2026): all cleared, then each one switched on set again, in the core's own code format.
+    else if (m.type === 'cheats') {
+      if (!M._host_cheat_reset || !M._host_cheat_set) { postMessage({ type: 'cheats', ok: false }); return; }
+      M._host_cheat_reset();
+      (m.codes || []).forEach((code, i) => { const s = String(code).slice(0, 200); const n = M.lengthBytesUTF8(s) + 1; const p = M._malloc(n); M.stringToUTF8(s, p, n); M._host_cheat_set(i, 1, p); M._free(p); });
+      postMessage({ type: 'cheats', ok: true, on: (m.codes || []).length });
+    }
     else if (m.type === 'pause') paused = true;
     else if (m.type === 'resume') paused = false;
     else if (m.type === 'save') save();

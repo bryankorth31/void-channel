@@ -202,6 +202,12 @@ EMSCRIPTEN_KEEPALIVE void host_set_var(const char *key, const char *value) {
   snprintf(var_key[var_count], 64, "%s", key); snprintf(var_val[var_count], 64, "%s", value); var_count++; var_changed = 1;
 }
 
+/* Cheats (Bryan, 20 Nov 2026: "add toggle for cheats"): the page clears them all, then sets the ones switched on, each
+   in the core's own code format (Game Genie, Pro Action Replay, raw address:value), as libretro defines it. A core
+   that has no cheat support ignores them. */
+EMSCRIPTEN_KEEPALIVE void host_cheat_reset(void) { retro_cheat_reset(); }
+EMSCRIPTEN_KEEPALIVE void host_cheat_set(unsigned index, int enabled, const char *code) { retro_cheat_set(index, enabled ? true : false, code); }
+
 /* save states: the core's own snapshot, copied out whole */
 EMSCRIPTEN_KEEPALIVE int host_state_size(void) { return (int)retro_serialize_size(); }
 EMSCRIPTEN_KEEPALIVE int host_state_save(void *buf, int size) { return retro_serialize(buf, (size_t)size) ? 1 : 0; }

@@ -84,6 +84,7 @@
         else if (m.type === 'sound') { if (node) node.port.postMessage(new Int16Array(m.samples), [m.samples]); }
         else if (m.type === 'ready') { rate = m.rate; if (node) node.port.postMessage({ rate }); on.ready && on.ready(m); }
         else if (m.type === 'status') on.status && on.status(m.text);
+        else if (m.type === 'cheats') on.cheats && on.cheats(m);
         else if (m.type === 'error') on.error && on.error(m.text);
         else if (m.type === 'saved') { why = m.why || ''; settle(m.state || null); }
         else if (m.type === 'loaded') settle(!!m.ok);
@@ -114,6 +115,8 @@
       pad: (port, bits) => post({ type: 'pad', port, bits }),
       // A DOS game's mouse (plan T21b): movement since the last call, and the buttons held (1 left, 2 right, 4 middle).
       mouse: (dx, dy, buttons) => post({ type: 'mouse', dx: Math.round(dx), dy: Math.round(dy), buttons }),
+      // Cheats: the codes of the ones switched on (all others off).
+      cheats: (codes) => post({ type: 'cheats', codes: (codes || []).slice(0, 40) }),
       pause: () => { post({ type: 'pause' }); if (audio) audio.suspend(); },
       resume: () => { post({ type: 'resume' }); if (audio) audio.resume(); },
       save: () => ask({ type: 'save' }),

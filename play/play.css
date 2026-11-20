@@ -163,3 +163,13 @@ a.tool{display:inline-flex;align-items:center;text-decoration:none;color:var(--f
 .phones-list{list-style:none;margin:0 0 16px;padding:0;font-size:clamp(15px,1.6vw,20px)}
 .phones-list li{padding:4px 0}.phones-list .slow{color:var(--gold)}
 .phones-list .tool.small{min-height:30px;padding:3px 9px;margin-left:10px;font-size:13px}
+/* Cheats: a list of switches in the pause menu. */
+.cheats{margin-top:14px;border-top:1px solid var(--line);padding-top:10px}
+.cheats[hidden]{display:none}
+.cheats h3{margin:0 0 8px;font-size:15px}
+.cheat-list{list-style:none;margin:0;padding:0;max-height:min(40vh,320px);overflow:auto}
+.cheat-list li{display:flex;align-items:center;gap:10px;padding:5px 2px}
+.cheat-list input{width:22px;height:22px;accent-color:var(--pink);flex:none}
+.cheat-list label{cursor:pointer;font-size:15px}
+.cheat-src{font-size:12px;color:var(--dim);margin:8px 0 0}
+.cheat-src a{color:var(--acc)}

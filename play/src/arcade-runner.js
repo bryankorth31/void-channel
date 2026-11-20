@@ -273,11 +273,21 @@
     // which is how the page tells them from the real keyboard.
     const KEYS = { ArrowUp: 38, ArrowDown: 40, ArrowLeft: 37, ArrowRight: 39, Enter: 13, Space: 32, ControlLeft: 17, AltLeft: 18,
       ShiftLeft: 16, Digit1: 49, Digit2: 50, Digit5: 53, Digit6: 54 };
-    function key(code, down) {
+    function send(code, down) {
       const k = code.startsWith('Digit') ? code.slice(5) : code.startsWith('Key') ? code.slice(3).toLowerCase()
         : { Space: ' ', ControlLeft: 'Control', AltLeft: 'Alt', ShiftLeft: 'Shift' }[code] || code;
       const ev = new KeyboardEvent(down ? 'keydown' : 'keyup', { code, key: k, keyCode: KEYS[code] || 0, which: KEYS[code] || 0, bubbles: true, cancelable: true });
       document.dispatchEvent(ev);
+    }
+    // A coin is a short pulse, however long the button is held, as a real coin switch is: some machines ignore a coin
+    // held past a fifth of a second (Space Fury, Zektor; Tehkan World Cup past a quarter), and a tap on glass often lasts
+    // that long (the arcade audit, 20 Nov 2026). MAME's default coin keys are 5 and 6 on every machine.
+    const COIN = new Set(['Digit5', 'Digit6']);
+    function key(code, down) {
+      if (!COIN.has(code)) return send(code, down);
+      if (!down) return;
+      send(code, true);
+      setTimeout(() => send(code, false), 80);   // 80 ms: measured to credit Space Fury and Star Trek (audit)
     }
 
     return {

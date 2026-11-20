@@ -137,7 +137,7 @@ const brandSrc = path.join(ROOT, 'assets', 'brand');
     { let sha = process.env.CF_PAGES_COMMIT_SHA || ''; if (!sha) { try { sha = require('child_process').execSync('git rev-parse HEAD', { cwd: ROOT, stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim(); } catch (e) { sha = ''; } }
       if (/^[0-9a-f]{40}$/.test(sha)) { const g = path.join(dst, 'game.html'); fs.writeFileSync(g, fs.readFileSync(g, 'utf8').replace('/void-channel/tree/master/play', '/void-channel/tree/' + sha + '/play')); } }
     fs.copyFileSync(path.join(P, 'LICENSE'), path.join(dst, 'LICENSE.txt'));
-    for (const d of ['src', 'cards', 'engine']) fs.cpSync(path.join(P, d), path.join(dst, d), { recursive: true });
+    for (const d of ['src', 'cards', 'engine', 'cheats']) fs.cpSync(path.join(P, d), path.join(dst, d), { recursive: true });
     fs.mkdirSync(path.join(dst, 'shelf'), { recursive: true });
     for (const f of ['index.json', 'status.json']) fs.copyFileSync(path.join(P, 'shelf', f), path.join(dst, 'shelf', f));
   } }
