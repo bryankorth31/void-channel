@@ -233,10 +233,10 @@ body.shell .bar{transition:transform .2s}
 /* The screen sits deep: a dark lip, the bezel's own plastic, a lit edge, a shadow under it all; a pink power light. */
 body.shell #screen{border-radius:6px;box-shadow:0 0 0 3px #070a14,0 0 0 11px #1c2238,0 0 0 12px rgba(255,255,255,.10),0 0 0 15px #0b0e1a,0 14px 26px 12px rgba(0,0,0,.55)}
 body.shell #screen::before{content:'';position:absolute;z-index:3;left:-8px;top:-8px;width:6px;height:6px;border-radius:50%;
-  background:radial-gradient(ellipse at 35% 30%,#ffd6f2 0%,#ff4fc8 45%,#a3157a 100%);box-shadow:0 0 8px rgba(255,79,200,.85),0 0 16px rgba(255,79,200,.4)}
+  background:radial-gradient(ellipse at 35% 30%,#ffd6f2 0%,var(--pink) 45%,#a3157a 100%);pointer-events:none;box-shadow:0 0 8px rgba(255,79,200,.85),0 0 16px rgba(255,79,200,.4)}
 /* A neon line in the bezel under the picture, pink to cyan. */
 body.shell #screen::after{content:'';position:absolute;z-index:3;left:10%;right:10%;bottom:-8px;height:2px;border-radius:2px;pointer-events:none;
-  background:linear-gradient(90deg,transparent,#ff4fc8 18%,#b56cff 50%,#5fe3ff 82%,transparent);box-shadow:0 0 8px rgba(181,108,255,.7)}
+  background:linear-gradient(90deg,transparent,var(--pink) 18%,#b56cff 50%,var(--blue) 82%,transparent);box-shadow:0 0 8px rgba(181,108,255,.7)}
 /* Keys: rubber in electrical black, lit from the top left, a thick dark under-edge that presses down; held, a cyan edge. */
 body.shell .pk{background:radial-gradient(ellipse at 32% 22%,rgba(255,255,255,.16) 0%,transparent 48%),linear-gradient(180deg,#4b4c55 0%,#3a3b44 30%,#2c2d35 70%,#202128 100%);
   border:2px solid #17181e;border-top-color:rgba(255,255,255,.14);border-bottom:6px solid #0a0a0e;color:#dfe3f2;
@@ -272,8 +272,8 @@ body.shell .pdpad::before{content:'';position:absolute;inset:6%;pointer-events:n
   background:radial-gradient(circle at 50% 50%,rgba(0,0,0,.45) 0 7%,transparent 9%),radial-gradient(ellipse at 35% 25%,rgba(255,255,255,.18) 0%,transparent 45%),linear-gradient(180deg,#4b4c55 0%,#3a3b44 30%,#2c2d35 70%,#202128 100%);
   clip-path:polygon(35% 0,65% 0,65% 35%,100% 35%,100% 65%,65% 65%,65% 100%,35% 100%,35% 65%,0 65%,0 35%,35% 35%);
   filter:drop-shadow(0 5px 0 #0a0a0e) drop-shadow(0 8px 10px rgba(0,0,0,.45))}
-body.shell .pdpad .pdir{position:absolute;z-index:1;color:#5fe3ff;text-shadow:0 0 6px rgba(95,227,255,.6)}
-body.shell .pdpad .pdir.on{color:#fff;text-shadow:0 0 10px #5fe3ff}
+body.shell .pdpad .pdir{position:absolute;z-index:1;color:var(--blue);text-shadow:0 0 6px rgba(95,227,255,.6)}
+body.shell .pdpad .pdir.on{color:#fff;text-shadow:0 0 10px var(--blue)}
 /* The neon plate, upright when the pad has the room: VOIDTV PLAY in the logo's pink and cyan, in a glass frame. */
 body.shell .cpad.up::before,body.shell .cpad.up::after{display:none;position:absolute;left:50%;top:calc(var(--e) + 62px);transform:translateX(-50%);pointer-events:none}
 @container (min-height:400px){
@@ -281,7 +281,7 @@ body.shell .cpad.up::before,body.shell .cpad.up::after{display:none;position:abs
     border:2px solid rgba(181,108,255,.85);box-shadow:0 0 10px rgba(181,108,255,.55),0 0 22px rgba(95,227,255,.25),inset 0 0 12px rgba(181,108,255,.3)}
   body.shell .cpad.up::after{display:block;content:'VOIDTV PLAY';width:212px;height:40px;line-height:40px;text-align:center;
     font-family:'Unbounded',sans-serif;font-weight:700;font-size:17px;letter-spacing:.06em;color:transparent;
-    background:linear-gradient(90deg,#ff4fc8 0%,#ff4fc8 48%,#5fe3ff 58%,#5fe3ff 100%);-webkit-background-clip:text;background-clip:text;
+    background:linear-gradient(90deg,var(--pink) 0%,var(--pink) 48%,var(--blue) 58%,var(--blue) 100%);-webkit-background-clip:text;background-clip:text;
     filter:drop-shadow(0 0 5px rgba(255,79,200,.55)) drop-shadow(0 0 9px rgba(95,227,255,.35))}
 }
 /* ---- Phone edges and taps (whole-site audit, 20 Nov 2026, points B to E). ---- */
