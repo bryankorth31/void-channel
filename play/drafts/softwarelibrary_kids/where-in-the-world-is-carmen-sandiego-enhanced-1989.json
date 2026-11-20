@@ -1,0 +1,53 @@
+{
+  "id": "where-in-the-world-is-carmen-sandiego-enhanced-1989",
+  "title": "Where in the World is Carmen Sandiego Enhanced",
+  "year": 1989,
+  "publisher": "Bro/derbund Software, Inc.",
+  "system": "dos",
+  "core": "dosbox-pure",
+  "players": 1,
+  "archive": {
+    "item": "msdos_Where_in_the_World_is_Carmen_Sandiego_Enhanced_1989",
+    "file": "Where_in_the_World_is_Carmen_Sandiego_Enhanced_1989.zip",
+    "size": 513918,
+    "start": "wwcse/CARMEN.EXE"
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Enter",
+      "Escape",
+      "Space"
+    ],
+    "dpad": true,
+    "keyboard": true
+  },
+  "actions": [
+    {
+      "do": "Confirm",
+      "press": "Enter"
+    },
+    {
+      "do": "Back out",
+      "press": "Escape"
+    },
+    {
+      "do": "Go on",
+      "press": "Space"
+    }
+  ],
+  "vars": {
+    "dosbox_pure_aspect_correction": "true"
+  },
+  "genre": [
+    "educational video game"
+  ],
+  "help": "",
+  "draft": {
+    "from": "softwarelibrary_kids",
+    "needs": [
+      "keys and mouse"
+    ],
+    "item": "https://archive.org/details/msdos_Where_in_the_World_is_Carmen_Sandiego_Enhanced_1989"
+  }
+}

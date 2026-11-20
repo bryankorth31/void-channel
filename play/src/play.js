@@ -422,7 +422,8 @@
 
   const id = q.get('game') || 'oregon-trail-1990';
   Promise.all([
-    fetch('cards/' + encodeURIComponent(id) + '.json').then((r) => { if (!r.ok) throw new Error('There is no game by that name here. Pick one from the Games shelf.'); return r.json(); }),
+    // Plan G4: the approve page's Try it opens a draft card (play/drafts, on this PC only; voidtv.net has none).
+    fetch((/^[A-Za-z0-9._-]+$/.test(q.get('draft') || '') ? 'drafts/' + q.get('draft') + '/' : 'cards/') + encodeURIComponent(id) + '.json').then((r) => { if (!r.ok) throw new Error('There is no game by that name here. Pick one from the Games shelf.'); return r.json(); }),
     // The nightly check's answer: a game whose file the Archive no longer has is off the shelf, and an old link says so.
     fetch('shelf/status.json', { cache: 'no-store' }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
   ]).then(([c, shelf]) => {

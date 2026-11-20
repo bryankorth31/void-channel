@@ -1,0 +1,53 @@
+{
+  "id": "number-munchers-1990",
+  "title": "Number Munchers",
+  "year": 1990,
+  "publisher": "MECC",
+  "system": "dos",
+  "core": "dosbox-pure",
+  "players": 1,
+  "archive": {
+    "item": "msdos_Number_Munchers_1990",
+    "file": "Number_Munchers_1990.zip",
+    "size": 281328,
+    "start": "NumbMunc/NM.EXE"
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Enter",
+      "Escape",
+      "Space"
+    ],
+    "dpad": true,
+    "keyboard": true
+  },
+  "actions": [
+    {
+      "do": "Confirm",
+      "press": "Enter"
+    },
+    {
+      "do": "Back out",
+      "press": "Escape"
+    },
+    {
+      "do": "Go on",
+      "press": "Space"
+    }
+  ],
+  "vars": {
+    "dosbox_pure_aspect_correction": "true"
+  },
+  "genre": [
+    "educational video game"
+  ],
+  "help": "",
+  "draft": {
+    "from": "softwarelibrary_kids",
+    "needs": [
+      "keys and mouse"
+    ],
+    "item": "https://archive.org/details/msdos_Number_Munchers_1990"
+  }
+}

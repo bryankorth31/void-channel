@@ -1,0 +1,53 @@
+{
+  "id": "alfs-u-s-geography-1993",
+  "title": "ALF's U.S. Geography",
+  "year": 1993,
+  "publisher": "",
+  "system": "dos",
+  "core": "dosbox-pure",
+  "players": 1,
+  "archive": {
+    "item": "msdos_ALFs_U.S._Geography_1993",
+    "file": "ALFs_U.S._Geography_1993.zip",
+    "size": 163439,
+    "start": "ALFUS/IAFIX.BAT"
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Enter",
+      "Escape",
+      "Space"
+    ],
+    "dpad": true,
+    "keyboard": true
+  },
+  "actions": [
+    {
+      "do": "Confirm",
+      "press": "Enter"
+    },
+    {
+      "do": "Back out",
+      "press": "Escape"
+    },
+    {
+      "do": "Go on",
+      "press": "Space"
+    }
+  ],
+  "vars": {
+    "dosbox_pure_aspect_correction": "true"
+  },
+  "genre": [
+    "educational video game"
+  ],
+  "help": "",
+  "draft": {
+    "from": "softwarelibrary_kids",
+    "needs": [
+      "keys and mouse"
+    ],
+    "item": "https://archive.org/details/msdos_ALFs_U.S._Geography_1993"
+  }
+}

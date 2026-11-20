@@ -18,6 +18,7 @@ const ISOLATE = { 'cross-origin-opener-policy': 'same-origin', 'cross-origin-emb
 http.createServer((req, res) => {
   let p = decodeURIComponent(req.url.split('?')[0]);
   if (p === '/api/piece') return piece(req, res);
+  if (p === '/api/drafts') return drafts(req, res);
   if (p === '/' || p === '/play') { res.writeHead(302, { location: '/play/' }); return res.end(); }
   let root = null;
   if (p.startsWith('/play/')) { root = PLAY; p = p.slice(5); } else if (p.startsWith('/assets/')) { root = ASSETS; p = p.slice(7); }
@@ -27,7 +28,8 @@ http.createServer((req, res) => {
   if (!f.startsWith(root)) { res.writeHead(403, ISOLATE); return res.end(); }
   fs.readFile(f, (e, b) => {
     if (e) { res.writeHead(404, ISOLATE); return res.end('not found'); }
-    const shelf = root === PLAY && f === path.join(PLAY, 'index.html');
+    // Not isolated: the shelf and the approve page show Archive pictures, which an isolated page may not load.
+    const shelf = root === PLAY && (f === path.join(PLAY, 'index.html') || f === path.join(PLAY, 'tools', 'approve.html'));
     res.writeHead(200, Object.assign({ 'content-type': TYPES[path.extname(f)] || 'application/octet-stream' }, shelf ? PLAIN : ISOLATE));
     res.end(b);
   });
@@ -45,4 +47,49 @@ async function piece(req, res) {
     for await (const chunk of r.body) res.write(chunk);
     res.end();
   } catch (e) { res.writeHead(500, PLAIN); res.end(String(e.message || e)); }
+}
+
+// Plan G4: the approve page (play/tools/approve.html, on this PC only; the site never copies play/tools or play/drafts).
+// GET lists every draft; POST { collection, id, decision: 'shelf' | 'kids' | 'skip' } decides one. Approving moves the
+// draft into play/cards (marked kids: true for the Kids learning list), looks up its facts and rebuilds the shelf list.
+// Only a page from this same server may decide (Sec-Fetch-Site), so no other page in the browser can approve a game.
+const { execFile } = require('child_process');
+const DRAFTS = path.join(PLAY, 'drafts');
+const send = (res, code, obj) => { res.writeHead(code, Object.assign({ 'content-type': 'application/json' }, PLAIN)); res.end(JSON.stringify(obj)); };
+const safeName = (x) => typeof x === 'string' && /^[A-Za-z0-9._-]{1,120}$/.test(x);
+function drafts(req, res) {
+  if (req.method === 'GET') {
+    const out = [];
+    for (const col of fs.existsSync(DRAFTS) ? fs.readdirSync(DRAFTS).filter((d) => fs.statSync(path.join(DRAFTS, d)).isDirectory()) : []) {
+      for (const f of fs.readdirSync(path.join(DRAFTS, col)).filter((x) => x.endsWith('.json'))) {
+        try { out.push(Object.assign({ collection: col }, JSON.parse(fs.readFileSync(path.join(DRAFTS, col, f), 'utf8')))); } catch (e) { /* a broken draft is left out */ }
+      }
+    }
+    return send(res, 200, { drafts: out });
+  }
+  if (req.method !== 'POST' || req.headers['sec-fetch-site'] !== 'same-origin') return send(res, 403, { error: 'Only the approve page on this PC may decide' });
+  let body = '';
+  req.on('data', (c) => { body += c; if (body.length > 10000) req.destroy(); });
+  req.on('end', () => {
+    let d; try { d = JSON.parse(body); } catch (e) { return send(res, 400, { error: 'Not JSON' }); }
+    if (!safeName(d.collection) || !safeName(d.id) || !['shelf', 'kids', 'skip'].includes(d.decision)) return send(res, 400, { error: 'Bad request' });
+    const from = path.join(DRAFTS, d.collection, d.id + '.json');
+    if (!fs.existsSync(from)) return send(res, 404, { error: 'No such draft' });
+    const card = JSON.parse(fs.readFileSync(from, 'utf8'));
+    if (d.decision === 'skip') {
+      fs.mkdirSync(path.join(DRAFTS, d.collection, 'skipped'), { recursive: true });
+      fs.renameSync(from, path.join(DRAFTS, d.collection, 'skipped', d.id + '.json'));
+      return send(res, 200, { ok: true, decided: 'skip' });
+    }
+    const to = path.join(PLAY, 'cards', d.id + '.json');
+    if (fs.existsSync(to)) return send(res, 409, { error: 'A card with that id is already on the shelf' });
+    delete card.draft;
+    if (d.decision === 'kids') card.kids = true;
+    fs.writeFileSync(to, JSON.stringify(card, null, 2) + '\n');
+    fs.unlinkSync(from);
+    // Facts, then the shelf list; the card is on the shelf once both have run.
+    execFile(process.execPath, [path.join(PLAY, 'tools', 'facts.js')], () => {
+      execFile(process.execPath, [path.join(PLAY, 'tools', 'shelf.js')], (e) => send(res, e ? 500 : 200, e ? { error: 'The shelf list did not rebuild: ' + e.message } : { ok: true, decided: d.decision }));
+    });
+  });
 }

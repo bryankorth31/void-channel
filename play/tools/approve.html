@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PLAY drafts | approve</title>
+<!-- VoidTV PLAY: the approve page (plan G4). Licence: GPL-2.0-or-later (play/LICENSE). On this PC only, through
+     node play/serve.js; the site never copies play/tools. Each draft from node play/tools/drafts.js shows here with its
+     picture and what it still needs. Try it plays it; Shelf puts it on the shelf; Shelf and Kids also puts it on the
+     Kids learning list; Skip sets it aside. Nothing reaches voidtv.net until the next push. -->
+<style>
+:root{--bg:#07080c;--panel:#0f1118;--line:#1d2130;--fg:#e8e8ee;--dim:#8a8fa3;--acc:#5fd4ff;--pink:#ff4fc8;--gold:#f2a93b;--ok:#5fe39a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.45 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;padding:20px 16px 40px}
+h1{font-size:22px;margin:0 0 4px}
+p.lead{color:var(--dim);margin:0 0 16px;max-width:760px}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 14px}
+select,button,a.btn{font:600 14px system-ui,sans-serif;color:var(--fg);background:var(--panel);border:1px solid #2a3044;border-radius:8px;padding:8px 12px;min-height:38px;cursor:pointer;text-decoration:none}
+button.shelf{background:var(--acc);color:#07080c;border:0}
+button.kids{background:var(--ok);color:#07080c;border:0}
+button:disabled{opacity:.5;cursor:default}
+.count{color:var(--dim)}
+.list{display:grid;gap:10px}
+.row{display:grid;grid-template-columns:96px 1fr auto;gap:14px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px}
+.row img{width:96px;height:72px;object-fit:cover;border-radius:6px;background:#0a0c12}
+.row h2{font-size:16px;margin:0}
+.meta{color:var(--dim);font-size:13px}
+.needs{font-size:13px;color:var(--gold)}
+.acts{display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-end}
+.done{opacity:.45}
+.said{font-size:13px;color:var(--ok)}
+@media (max-width:640px){.row{grid-template-columns:72px 1fr}.row img{width:72px;height:54px}.acts{grid-column:1/-1;justify-content:flex-start}}
+</style>
+</head>
+<body>
+<h1>Drafts to approve</h1>
+<p class="lead">Games drafted from Internet Archive collections. Try one before you approve it. A DOS game may still need its keys
+  or a mouse looked at; that is listed under it. Approving writes its card on this PC; the shelf on voidtv.net changes only with the next push.</p>
+<div class="bar">
+  <label>Collection <select id="col"></select></label>
+  <label>Machine <select id="sys"><option value="">All</option></select></label>
+  <span class="count" id="count"></span>
+</div>
+<div class="list" id="list"><p class="meta">Loading the drafts</p></div>
+<script>
+(function () {
+  'use strict';
+  const $ = (id) => document.getElementById(id);
+  let all = [];
+  const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+  function fill(sel, values, keep) {
+    const was = sel.value; sel.textContent = '';
+    if (keep) sel.appendChild(new Option('All', ''));
+    for (const v of values) sel.appendChild(new Option(v, v));
+    if ([...sel.options].some((o) => o.value === was)) sel.value = was;
+  }
+  function show() {
+    const col = $('col').value, sys = $('sys').value;
+    const rows = all.filter((d) => (!col || d.collection === col) && (!sys || d.system === sys));
+    $('count').textContent = rows.length + ' draft' + (rows.length === 1 ? '' : 's');
+    const list = $('list'); list.textContent = '';
+    if (!rows.length) { list.appendChild(el('p', 'meta', 'No drafts here. Make some with: node play/tools/drafts.js <collection>')); return; }
+    for (const d of rows) {
+      const row = el('div', 'row');
+      const img = el('img'); img.alt = ''; img.loading = 'lazy'; img.src = 'https://archive.org/services/img/' + encodeURIComponent(d.archive.item);
+      const mid = el('div');
+      mid.append(el('h2', null, d.title),
+        el('div', 'meta', [d.system, d.year, d.publisher, Math.round((d.archive.size || 0) / 1024) + ' KB', d.archive.item].filter(Boolean).join(' · ')));
+      if (d.draft && d.draft.needs && d.draft.needs.length) mid.appendChild(el('div', 'needs', 'Look at: ' + d.draft.needs.join(', ')));
+      const acts = el('div', 'acts');
+      const tryIt = el('a', 'btn', 'Try it');
+      tryIt.href = '../game.html?game=' + encodeURIComponent(d.id) + '&draft=' + encodeURIComponent(d.collection) + '&mute=1';
+      tryIt.target = '_blank'; tryIt.rel = 'noopener';
+      const page = el('a', 'btn', 'Archive page'); page.href = 'https://archive.org/details/' + encodeURIComponent(d.archive.item); page.target = '_blank'; page.rel = 'noopener';
+      const said = el('div', 'said');
+      const btns = [['shelf', 'Shelf', 'shelf'], ['kids', 'Shelf and Kids', 'kids'], ['skip', 'Skip', '']].map(([decision, label, cls]) => {
+        const b = el('button', cls, label);
+        b.onclick = () => decide(d, decision, row, said, btns);
+        return b;
+      });
+      acts.append(tryIt, page, ...btns);
+      mid.appendChild(said);
+      row.append(img, mid, acts);
+      list.appendChild(row);
+    }
+  }
+  async function decide(d, decision, row, said, btns) {
+    for (const b of btns) b.disabled = true;
+    said.textContent = decision === 'skip' ? 'Setting it aside' : 'Writing the card and looking up its facts';
+    try {
+      const r = await fetch('/api/drafts', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ collection: d.collection, id: d.id, decision }) });
+      const j = await r.json();
+      if (!r.ok) throw new Error(j.error || r.status);
+      said.textContent = decision === 'skip' ? 'Skipped' : decision === 'kids' ? 'On the shelf and the Kids list' : 'On the shelf';
+      row.classList.add('done');
+      all = all.filter((x) => x !== d);
+    } catch (e) { said.textContent = 'That did not work: ' + e.message; for (const b of btns) b.disabled = false; }
+  }
+  fetch('/api/drafts').then((r) => r.json()).then((j) => {
+    all = j.drafts.sort((a, b) => a.title.localeCompare(b.title));
+    fill($('col'), [...new Set(all.map((d) => d.collection))].sort(), true);
+    fill($('sys'), [...new Set(all.map((d) => d.system))].sort(), true);
+    $('col').onchange = show; $('sys').onchange = show;
+    show();
+  }).catch(() => { $('list').textContent = 'The drafts did not load. Is node play/serve.js running?'; });
+})();
+</script>
+</body>
+</html>
