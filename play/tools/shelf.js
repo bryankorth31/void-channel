@@ -17,6 +17,7 @@ const CARDS = path.join(PLAY, 'cards');
 const SHELF = path.join(PLAY, 'shelf');
 const STATUS = path.join(SHELF, 'status.json');
 const INDEX = path.join(SHELF, 'index.json');
+const STREAM = path.join(SHELF, 'stream.js');
 const Cards = require('../src/cards.js');
 const PAUSE_MS = 1500;
 
@@ -38,6 +39,20 @@ function buildIndex(cards, status) {
     .sort((a, b) => (a.year || 9999) - (b.year || 9999) || a.title.localeCompare(b.title));
   return { built: status.checked, games };
 }
+
+// The big games the voidtv.net pass-through may read in pieces (plan T21, functions/api/piece.js): a card marks
+// "archive.stream": true and records its file's size. A game off the shelf is off this list too.
+function buildStream(cards, status) {
+  const out = {};
+  for (const c of cards) {
+    if (!c.archive || !c.archive.stream || Cards.check(c).length || !(c.archive.size > 0)) continue;
+    if (status.games[c.id] && status.games[c.id].gone) continue;
+    out[c.id] = { item: c.archive.item, file: c.archive.file, size: c.archive.size };
+  }
+  return out;
+}
+const streamModule = (list) => '// Written by play/tools/shelf.js from the cards; do not edit by hand. Read by functions/api/piece.js.\n'
+  + 'export default ' + JSON.stringify(list, null, 2) + ';\n';
 
 // One polite ask: the first 16 bytes. Returns 'ok', 'gone' or 'unsure'.
 async function ask(card) {
@@ -86,9 +101,10 @@ async function main() {
   }
   const index = buildIndex(cards, status);
   fs.writeFileSync(INDEX, JSON.stringify(index, null, 2) + '\n');
+  fs.writeFileSync(STREAM, streamModule(buildStream(cards, status)));
   const gone = Object.values(status.games).filter((g) => g.gone).length;
   console.log('Shelf: ' + index.games.length + ' games' + (gone ? ', ' + gone + ' left off (the Archive no longer has them)' : ''));
 }
 
-module.exports = { buildIndex, loadCards, ask };
+module.exports = { buildIndex, buildStream, streamModule, loadCards, ask };
 if (require.main === module) main().catch((e) => { console.error(String(e.message || e)); process.exit(1); });
