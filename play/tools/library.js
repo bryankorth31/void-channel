@@ -29,7 +29,10 @@ function build(rows, taken) {
   const ids = new Set(taken.ids), items = new Set(taken.items), out = [];
   for (const r of rows) {
     // The start-up check's answer: the assistant's rows carry it as boot: { ok, why, at }; a plain ok is read too.
-    if (!r || !(r.boot ? r.boot.ok : r.ok) || !r.item || !r.file || !Cons.MACHINES[r.system] || items.has(r.item)) continue;
+    // The content screen (the assistant's content-screen.js; adult and abusive titles were found in the 2600 library):
+    // a flagged game never reaches the shelf, and neither does a row the screen has not read.
+    if (!r || !('content' in r) || (r.content && r.content.flag)) continue;
+    if (!(r.boot ? r.boot.ok : r.ok) || !r.item || !r.file || !Cons.MACHINES[r.system] || items.has(r.item)) continue;
     const c = Cons.card({ system: r.system, title: r.title, item: r.item, source: r.source },
       { name: r.file, size: r.size || 0, start: r.start || '' }, { year: r.year, creator: r.publisher });
     if (!c.archive.size) delete c.archive.size;
@@ -47,6 +50,16 @@ function bundles(system, cards) {
   return out;
 }
 
+// The top 150 a machine (Bryan, 20 Nov 2026: "im more of the mind to have top 150"): the assistant's start-checked batch,
+// one file for every machine. A game there started (it is in rows, not in failed); DOS waits for Bryan's content screen,
+// and a likely hack waits for his weed-down. Pure (tested).
+const TOP = path.join(ROOT, 'audit', 'play-mode', 'consoles', 'console-rows.json');
+function topRows(system, list) {
+  return (list || []).filter((r) => r.system === system && r.system !== 'dos' && !r.likelyHack)
+    .map((r) => Object.assign({}, r, { publisher: r.maker, boot: { ok: true, from: 'top-150 start-up check' } }));
+}
+const readTop = () => { try { return JSON.parse(fs.readFileSync(process.env.PLAY_TOP || TOP, 'utf8')).rows || []; } catch (e) { return []; } };
+
 function readRows(system) {
   const f = path.join(ROWS, system + '.jsonl');
   if (!fs.existsSync(f)) return [];
@@ -58,8 +71,11 @@ function main() {
   const taken = { ids: hand.map((c) => c.id), items: hand.map((c) => c.archive.item) };
   fs.rmSync(LIB, { recursive: true, force: true });
   let total = 0;
+  const top = readTop();
   for (const system of [...new Set(collections().map((c) => c.system))]) {
-    const cards = build(readRows(system), taken);
+    // A collection's own rows first (the Archive's curated libraries), then the top 150 for the same machine.
+    const fromTop = collections().some((c) => c.system === system && c.from === 'top150');
+    const cards = build(readRows(system).concat(fromTop ? topRows(system, top) : []), taken);
     for (const c of cards) { taken.ids.push(c.id); taken.items.push(c.archive.item); }
     for (const b of bundles(system, cards)) {
       const f = path.join(LIB, b.name + '.json');
@@ -73,4 +89,4 @@ function main() {
 }
 
 if (require.main === module) main();
-module.exports = { build, bundles, PER };
+module.exports = { build, bundles, topRows, PER };

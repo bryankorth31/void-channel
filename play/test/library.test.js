@@ -8,11 +8,11 @@ const path = require('path');
 const Lib = require('../tools/library.js');
 const ShelfTool = require('../tools/shelf.js');
 
-const row = (o) => Object.assign({ system: 'sms', title: 'Fantasy Zone (USA, Europe)', item: 'fz-item', file: 'Fantasy Zone (USA, Europe).sms', size: 131072, year: 1986, publisher: 'Sega', source: 'curated', ok: true }, o);
+const row = (o) => Object.assign({ content: null, system: 'sms', title: 'Fantasy Zone (USA, Europe)', item: 'fz-item', file: 'Fantasy Zone (USA, Europe).sms', size: 131072, year: 1986, publisher: 'Sega', source: 'curated', ok: true }, o);
 
 test('C1: only Bryan\'s approved collections, each naming its machine and his words', () => {
   const list = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'collections.json'), 'utf8')).collections;
-  assert.deepEqual([...new Set(list.map((c) => c.system))].sort(), ['a2600', 'gamegear', 'genesis', 'nes', 'sms']);
+  assert.deepEqual([...new Set(list.map((c) => c.system))].sort(), ['a2600', 'gameboy', 'gamegear', 'gba', 'gbcolor', 'genesis', 'lynx', 'nes', 'sms', 'snes']);
   for (const c of list) assert.match(c.approvedBy, /^Bryan, 20 Nov 2026/);
   assert.deepEqual(list.find((c) => c.system === 'genesis').leaveOut, ['genesisvariations', 'sonicromhacks']);
   assert.ok(!list.some((c) => c.system === 'dos'), 'DOS waits for the content screen');
@@ -62,4 +62,18 @@ test('C2: the assistant\'s rows carry the start-up check as boot: { ok }', () =>
   assert.equal(Lib.build([Object.assign({}, r, { boot: { ok: true, at: '2026-11-20' } })], { ids: [], items: [] }).length, 1);
   assert.equal(Lib.build([Object.assign({}, r, { boot: { ok: false, why: 'one flat colour' } })], { ids: [], items: [] }).length, 0);
   assert.equal(Lib.build([r], { ids: [], items: [] }).length, 0, 'not checked: not on the shelf');
+});
+
+test('the content screen: a flagged game never reaches the shelf, nor a row the screen has not read', () => {
+  assert.equal(Lib.build([row({ content: { flag: true, reason: 'sexual: harem' } })], { ids: [], items: [] }).length, 0);
+  const unread = row(); delete unread.content;
+  assert.equal(Lib.build([unread], { ids: [], items: [] }).length, 0);
+  assert.equal(Lib.build([row({ content: null })], { ids: [], items: [] }).length, 1);
+});
+
+test('the Atari 2600 library\'s names read as a box prints them', () => {
+  const C = require('../tools/console-cards.js');
+  assert.equal(C.cleanTitle('Atari 2600: Adventure'), 'Adventure');
+  assert.equal(C.cleanTitle('Atari 2600: A-Team, The'), 'The A-Team');
+  assert.equal(C.cleanTitle('Atari 2600: Halo 2600'), 'Halo 2600', 'a name that ends in 2600 keeps it');
 });

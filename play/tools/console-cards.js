@@ -26,6 +26,9 @@ const MACHINES = {
   // The 2600's joystick has one button (Fire); Reset and Select are switches on the console (whole collections).
   a2600: { core: 'stella2014', ext: /\.(bin|a26)$/i, end: '2600', keys: ['P1:B', 'P1:Select', 'P1:Start'], labels: { 'P1:B': 'Fire', 'P1:Start': 'Reset' },
     buttons: [['P1:B', 'Fire']], startDo: 'New game (Reset)', how: 'The stick moves; Fire is the button. Reset starts a new game; Select picks a game mode.' },
+  // Atari Lynx (the top-150 batch): A and B, two Option buttons, and Pause.
+  lynx: { core: 'handy', ext: /\.(lnx|lyx|o)$/i, end: 'lynx', keys: ['P1:B', 'P1:A', 'P1:L', 'P1:R', 'P1:Start'], labels: { 'P1:L': 'Option 1', 'P1:R': 'Option 2', 'P1:Start': 'Pause' },
+    buttons: [['P1:A', 'A button'], ['P1:B', 'B button']], startDo: 'Pause', how: 'A and B are the game\'s two buttons; Option 1 and 2 are its option keys; Pause pauses.' },
   nes: { core: 'fceumm', ext: /\.nes$/i, end: 'nes', keys: ['P1:B', 'P1:A', 'P1:Select', 'P1:Start'],
     buttons: [['P1:A', 'A button'], ['P1:B', 'B button']], how: 'A and B are the game\'s two buttons; Start begins and pauses.' },
   snes: { core: 'snes9x', ext: /\.(sfc|smc)$/i, end: 'snes', keys: ['P1:Y', 'P1:X', 'P1:B', 'P1:A', 'P1:L', 'P1:R', 'P1:Select', 'P1:Start'],
@@ -59,7 +62,9 @@ const TITLES = { 'legend of zelda, the a link to the past': 'The Legend of Zelda
   'metroid ii: return of samus': 'Metroid II: Return of Samus' };
 function cleanTitle(t) {
   const s = String(t).replace(/\(\s*[^)]*\)/g, ' ').replace(/\s+SNES(\s+ROM)?\b.*$/i, '').replace(/\s+Rev\s*\d+\b.*$/i, '')
-    .replace(/\s+(19|20)\d\d\b.*$/, '').replace(/\s+/g, ' ').trim();
+    .replace(/\s+(19|20)\d\d\b.*$/, '').replace(/\s+/g, ' ').trim()
+    // The Atari 2600 library's names: "Atari 2600: Adventure" and "A-Team, The" read as a box would print them ("Halo 2600" is its own name).
+    .replace(/^Atari 2600:\s*/i, '').replace(/^(.+), (The|A|An)$/i, '$2 $1');
   return TITLES[s.toLowerCase()] || s;
 }
 

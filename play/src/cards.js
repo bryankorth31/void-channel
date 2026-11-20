@@ -165,7 +165,7 @@
   // mGBA): the player unpacks it and hands the core the one file with the machine's own ending.
   const ROM_EXTS = { nes: ['nes', 'unf', 'fds'], snes: ['sfc', 'smc', 'fig', 'swc'], genesis: ['md', 'gen', 'bin', 'smd'],
     sms: ['sms'], gamegear: ['gg'], gameboy: ['gb', 'gbc'], gbcolor: ['gbc', 'gb'], gba: ['gba'], a2600: ['a26', 'bin'],
-    lynx: ['lnx', 'o'] };
+    lynx: ['lnx', 'lyx', 'o'] };
   const romExts = (card) => (card && !(card.archive || {}).start && ROM_EXTS[card.system]) || [];
 
   const api = { check, warnings, gameUrl, itemPage, gameFile, engineOf, CORES, isPad, gamepadMap, keyMap, PAD_GAMEPAD, PAD_KEYBOARD,
