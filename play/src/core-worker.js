@@ -179,6 +179,18 @@ function mountStreamed(msg) {
   return '/game/disk/' + PlayUnzip.safe(hit.name);
 }
 
+// Write a kept battery save back into the game. The size an engine reports can differ between loading and playing (the
+// audit: Genesis Plus GX says 64 KB before the first frame and only the written part once running; mGBA says 128 KB while
+// it still guesses the save type), so a save that fits goes in from the start of the game's save memory, never past
+// its end. Yes or no.
+function putSram(buf) {
+  const n = M && M._host_sram_size ? M._host_sram_size() : 0, p = n ? M._host_sram() : 0;
+  const b = buf ? new Uint8Array(buf) : null;
+  if (!p || !b || !b.length || b.length > n) return false;
+  M.HEAPU8.set(b, p);
+  return true;
+}
+
 async function start(msg) {
   say('Loading the engine');
   importScripts(ENGINE);
@@ -209,7 +221,7 @@ async function start(msg) {
   if (!callStr('host_load', path)) throw new Error('The core could not open ' + path);
   for (let port = 0; port < (msg.pads || 0); port++) M._host_plug_pad(port);
   // The game's own battery save, kept by the page apart from save states: back in before the first frame.
-  if (msg.sram && M._host_sram_size) { const n = M._host_sram_size(), p = n ? M._host_sram() : 0; if (p && msg.sram.byteLength === n) M.HEAPU8.set(new Uint8Array(msg.sram), p); }
+  if (msg.sram) putSram(msg.sram);
   rewindOn = !!msg.rewind;
   fps = M._host_fps() || 60;
   if (rewindOn) planRewind();
@@ -310,7 +322,7 @@ onmessage = (e) => {
     else if (m.type === 'sram-get') { const n = M._host_sram_size ? M._host_sram_size() : 0, p = n ? M._host_sram() : 0; const b = p ? M.HEAPU8.slice(p, p + n).buffer : null; postMessage({ type: 'sram', bytes: b }, b ? [b] : []); }
     else if (m.type === 'load') load(m.state);
     // A battery save brought back from a file: written in, then the game starts over and reads it as on power-on.
-    else if (m.type === 'sram-set') { const n = M._host_sram_size ? M._host_sram_size() : 0, p = n ? M._host_sram() : 0; const ok = !!(p && m.bytes && m.bytes.byteLength === n); if (ok) { M.HEAPU8.set(new Uint8Array(m.bytes), p); M._host_reset(); ring = []; } postMessage({ type: 'sram-set', ok }); }
+    else if (m.type === 'sram-set') { const ok = putSram(m.bytes); if (ok) { M._host_reset(); ring = []; } postMessage({ type: 'sram-set', ok }); }
     else if (m.type === 'reset') { M._host_reset(); ring = []; }
     else if (m.type === 'rewind') rewinding = rewindOn && !!m.on;
     else if (m.type === 'stop') { running = false; clearTimeout(timer); close(); }

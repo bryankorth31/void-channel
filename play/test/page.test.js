@@ -133,7 +133,7 @@ test('controller mode (Bryan, 20 Nov 2026): with a gamepad in hand the picture f
   assert.equal(up.screen.w, 390);
   const js = read(ROOT, 'src', 'play.js');
   assert.ok(js.includes("p.index < PlayPhones.BASE && p.mapping === 'standard' && p.buttons.some((b) => b.pressed))) controllerMode(true);"), 'a real pad, not a Phones phone');
-  assert.ok(js.includes("addEventListener('orientationchange', () => { if (hub) hub.releaseAll(); });"), 'turning the phone lets go of every key');
+  assert.ok(js.includes("addEventListener('orientationchange', () => { if (hub) hub.releaseAll(); PlayTouch.releaseAll(); });"), 'turning the phone lets go of every key');
 });
 
 test('the donation cross is never on the picture or a key: after the keys are laid out it takes the first free spot for the layout', () => {
@@ -151,7 +151,9 @@ test('battery saves (the audit, 20 Nov 2026): a game\'s own save RAM is kept per
   assert.match(read(ROOT, 'core', 'host.c'), /EMSCRIPTEN_KEEPALIVE void \*host_sram\(void\) \{ return retro_get_memory_data\(RETRO_MEMORY_SAVE_RAM\); \}/);
   for (const core of ['snes9x', 'fceumm', 'gambatte', 'genesis-plus-gx', 'mgba']) assert.ok(read(ROOT, 'engine', core + '.js').includes('host_sram_size'), core);
   const w = read(ROOT, 'src', 'core-worker.js');
-  assert.ok(w.indexOf("if (msg.sram && M._host_sram_size)") > w.indexOf("M._host_plug_pad(port);") && w.indexOf("if (msg.sram && M._host_sram_size)") < w.indexOf("postMessage({ type: 'ready'"), 'written back after loading, before the first frame');
+  assert.ok(w.indexOf("if (msg.sram) putSram(msg.sram);") > w.indexOf("M._host_plug_pad(port);") && w.indexOf("if (msg.sram) putSram(msg.sram);") < w.indexOf("postMessage({ type: 'ready'"), 'written back after loading, before the first frame');
+  // The audit: Genesis Plus GX and mGBA report another size at load than at save time, so a save that fits goes in.
+  assert.ok(w.includes('if (!p || !b || !b.length || b.length > n) return false;') && !w.includes('byteLength === n'));
   const js = read(ROOT, 'src', 'play.js');
   assert.ok(js.includes("PlaySaves.get(id + ':sram').then((rec) => (rec && rec.state) || null).catch(() => null),"), 'read before anything can start');
   assert.ok(js.includes("await PlaySaves.put(card.id + ':sram', b, {});"), 'kept on every autosave when it changed');

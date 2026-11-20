@@ -16,6 +16,11 @@
     'QWERTYUIOP'.split('').map((c) => 'Key' + c), 'ASDFGHJKL'.split('').map((c) => 'Key' + c),
     ['ShiftLeft', ...'ZXCVBNM'.split('').map((c) => 'Key' + c), 'Backspace'], ['Space', 'Enter']];
 
+  // Everything the touch layer holds can be let go at once (the audit, Bryan: "3 of the directional buttons locked down"
+  // when Safari took the touch for a zoom and the finger's own lift never came). Each key and pad adds its own here.
+  let letGo = [];
+  function releaseAll() { for (const f of letGo) { try { f(); } catch (e) { /* a key already gone */ } } }
+
   // Keep a finger's events on the button it started on (never throws, even for a pointer the browser does not track).
   const capture = (node, e) => { try { node.setPointerCapture(e.pointerId); } catch (err) { /* nothing to capture */ } };
   // A small buzz under the thumb, only after a real tap (browsers refuse it before one).
@@ -32,7 +37,8 @@
     const b = el('button', 'pk ' + (cls || ''), label(code));
     b.type = 'button'; b.dataset.code = code; b.setAttribute('aria-label', code);
     const up = (e) => { if (b.dataset.down) { delete b.dataset.down; hub.touch(code, false, e.pointerId); } };
-    b.addEventListener('pointerdown', (e) => { e.preventDefault(); capture(b, e); b.dataset.down = '1'; tick(); hub.touch(code, true, e.pointerId); });
+    b.addEventListener('pointerdown', (e) => { e.preventDefault(); capture(b, e); b.dataset.down = String(e.pointerId); tick(); hub.touch(code, true, e.pointerId); });
+    letGo.push(() => { if (b.dataset.down) { const id = Number(b.dataset.down); delete b.dataset.down; hub.touch(code, false, id); } });
     b.addEventListener('pointerup', up); b.addEventListener('pointercancel', up); b.addEventListener('lostpointercapture', up);
     b.addEventListener('contextmenu', (e) => e.preventDefault());
     return b;
@@ -69,6 +75,7 @@
     pad.addEventListener('pointerdown', (e) => { e.preventDefault(); capture(pad, e); aim(e); });
     pad.addEventListener('pointermove', (e) => { if (held.has(e.pointerId)) aim(e); });
     pad.addEventListener('pointerup', lift); pad.addEventListener('pointercancel', lift); pad.addEventListener('lostpointercapture', lift);
+    letGo.push(() => { for (const id of [...held.keys()]) lift({ pointerId: id }); });
     return pad;
   }
 
@@ -156,6 +163,7 @@
 
   // Build the pad for this card into the zones the layout gave us.
   function build(zones, card, hub) {
+    letGo = [];
     const c = (card && card.controls) || {};
     if (c.kind === 'pad') {
       for (const z of Object.values(zones)) z.textContent = '';
@@ -212,7 +220,7 @@
     return { keyboard: kb, openKeyboard: () => kb.classList.add('open') };
   }
 
-  const api = { build, plan, label, QWERTY, SHAPES, SYSTEM_SHAPE, shapeOf, minCols };
+  const api = { build, releaseAll, plan, label, QWERTY, SHAPES, SYSTEM_SHAPE, shapeOf, minCols };
   if (typeof module === 'object' && module.exports) module.exports = api;
   else root.PlayTouch = api;
 })(typeof self !== 'undefined' ? self : this);

@@ -110,7 +110,7 @@
   // While the menu is open the game hears nothing: every held key is let go first, then the gamepad drives the menu.
   function setPaused(p) {
     if (!runner || !started || p === paused) return;
-    if (p) { hub.releaseAll(); letGoMouse(); runner.rewind(false); paused = true; runner.pause(); autosave(); stayAwake(false); }
+    if (p) { hub.releaseAll(); PlayTouch.releaseAll(); letGoMouse(); runner.rewind(false); paused = true; runner.pause(); autosave(); stayAwake(false); }
     else { paused = false; runner.resume(); runner.wakeSound(); stayAwake(true); }
     $('menu').hidden = !p; $('b-pause').textContent = p ? 'Resume' : 'Pause';
     document.body.classList.toggle('paused', p);
@@ -654,7 +654,12 @@
   document.addEventListener('visibilitychange', () => { if (document.hidden && started) { if (!paused) setPaused(true); else autosave(); } });
   addEventListener('resize', place);
   // Turning the phone mid-game: nothing stays held down across the change (the keys move under the thumbs).
-  addEventListener('orientationchange', () => { if (hub) hub.releaseAll(); });
+  addEventListener('orientationchange', () => { if (hub) hub.releaseAll(); PlayTouch.releaseAll(); });
+  // The audit (Bryan: "3 of the directional buttons locked down" after a zoom): when the browser takes a touch for itself,
+  // the finger's own lift never reaches the key. So when the last finger leaves the screen, or the page is zoomed, every
+  // touch key and the d-pad let go, and their lights go out.
+  for (const ev of ['touchend', 'touchcancel']) document.addEventListener(ev, (e) => { if (!e.touches.length) PlayTouch.releaseAll(); }, true);
+  if (window.visualViewport) visualViewport.addEventListener('resize', () => PlayTouch.releaseAll());
 
   // Controller mode (Bryan, 20 Nov 2026: "people use game controllers on their phone ... the screen becomes the entire game
   // screen ... and no longer needs the controllers on the screen"). On a touch screen, the first press on a real gamepad

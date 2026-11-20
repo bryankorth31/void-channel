@@ -154,7 +154,7 @@ test('T21b: a DOS game\'s mouse: host.c answers the engine\'s mouse, a quick cli
   const js = fs.readFileSync(path.join(__dirname, '..', 'src', 'play.js'), 'utf8');
   for (const bit of ['const wantsMouse = () => !!(card && card.controls && card.controls.mouse && !PlayCards.isPad(card));',
     'cv.requestPointerLock()', "if (Date.now() - tapAt < 300 && travel < 12) tapClick(most >= 2 ? 2 : 1);",
-    'const now = (b(5) || b(11) ? 1 : 0) | (b(7) || b(10) ? 2 : 0);', 'holding = true; ptrButtons |= 1;', "if (name === 'click' || name === 'rclick') { ptrButtons |= name === 'click' ? 1 : 2;", 'hub.releaseAll(); letGoMouse();']) assert.ok(js.includes(bit), bit);
+    'const now = (b(5) || b(11) ? 1 : 0) | (b(7) || b(10) ? 2 : 0);', 'holding = true; ptrButtons |= 1;', "if (name === 'click' || name === 'rclick') { ptrButtons |= name === 'click' ? 1 : 2;", 'hub.releaseAll(); PlayTouch.releaseAll(); letGoMouse();']) assert.ok(js.includes(bit), bit);
   assert.match(fs.readFileSync(path.join(__dirname, '..', 'src', 'runner.js'), 'utf8'), /mouse: \(dx, dy, buttons\) => post\(\{ type: 'mouse'/);
   assert.match(fs.readFileSync(path.join(__dirname, '..', 'src', 'core-worker.js'), 'utf8'), /else if \(m\.type === 'mouse'\) \{ if \(M\._host_mouse\)/);
 });

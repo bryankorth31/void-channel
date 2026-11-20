@@ -41,3 +41,15 @@ test('an empty card draws nothing and does not throw', () => {
   const p = Touch.plan({});
   assert.deepEqual([p.numbers, p.go, p.rest, p.sideways.left, p.sideways.right], [[], [], [], [], []]);
 });
+
+test('the audit (Bryan: "3 of the directional buttons locked down"): when the browser takes a touch, every touch key and the d-pad let go', () => {
+  const fs = require('fs'), path = require('path');
+  const tp = fs.readFileSync(path.join(__dirname, '..', 'src', 'touchpad.js'), 'utf8');
+  assert.ok(tp.includes('function releaseAll() {') && tp.includes('const api = { build, releaseAll,'));
+  assert.ok(tp.includes("letGo.push(() => { for (const id of [...held.keys()]) lift({ pointerId: id }); });"), 'the d-pad, lights included');
+  assert.ok(tp.includes('b.dataset.down = String(e.pointerId);'), 'a key remembers its finger, so it lets go as that finger');
+  const js = fs.readFileSync(path.join(__dirname, '..', 'src', 'play.js'), 'utf8');
+  assert.ok(js.includes("for (const ev of ['touchend', 'touchcancel']) document.addEventListener(ev, (e) => { if (!e.touches.length) PlayTouch.releaseAll(); }, true);"));
+  assert.ok(js.includes("visualViewport.addEventListener('resize', () => PlayTouch.releaseAll());"));
+  assert.ok(js.includes('hub.releaseAll(); PlayTouch.releaseAll(); letGoMouse();'), 'Pause lets go of the touch layer too');
+});
