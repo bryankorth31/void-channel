@@ -278,3 +278,13 @@ test('backgrounds move the way voidtv.net moves its own: a column behind the fro
   assert.ok(!course.includes('pointer: coarse'), 'the fixed picture must drift on a tablet too, so touch screens are not left out');
   assert.ok(read('credits.html').includes('are our own'), 'the credits page does not say whose the backgrounds are');
 });
+
+test('a quiz answer gets a second try: the first wrong pick does not show the answer', () => {
+  build();
+  const dir = path.join(uni.UNI, 'site-preview');
+  const page = fs.readdirSync(dir).filter((f) => f.endsWith('.html')).map((f) => fs.readFileSync(path.join(dir, f), 'utf8')).find((h) => h.includes('class="qq"'));
+  assert.ok(page, 'no course page has a quiz');
+  assert.ok(page.includes('class="qh" role="status" hidden>Not quite. You have one more try.'), 'the one more try line is not on the question');
+  assert.ok(page.includes("if (j !== a && !q.classList.contains('tried'))"), 'a first wrong pick must not settle the question');
+  assert.ok(page.includes('on the second try'), 'the score does not say how many took two tries');
+});

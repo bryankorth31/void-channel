@@ -164,6 +164,7 @@ function quiz(u) {
   if (!(u.quiz || []).length) return '';
   return '<details class="quiz"><summary><h3>Check yourself</h3><span>' + u.quiz.length + ' questions, each answer quotes the ' + (u.reading ? 'book' : 'lecture') + '</span></summary>' + u.quiz.map((q, i) => '<div class="qq" data-a="' + q.a + '"><p><b>' + (i + 1) + '.</b> ' + esc(q.q) + '</p><div class="qc">'
     + q.choices.map((ch, j) => '<button data-j="' + j + '">' + esc(ch) + '</button>').join('') + '</div>'
+    + '<p class="qh" role="status" hidden>Not quite. You have one more try.</p>'
     + '<div class="qa" hidden><p class="qr"></p><p>' + esc(q.why) + '</p><blockquote>"' + esc(q.quote) + '"' + (q.ref ? '<a class="qt" href="' + esc(q.ref) + '">From the book: open the chapter</a>' : '<button class="qt" data-t="' + q.t + '">From the lecture, at ' + clock(q.t) + '</button>') + '</blockquote></div></div>').join('')
     + '<div class="qs" hidden></div></details>';
 }
@@ -228,7 +229,7 @@ ${CARDCSS}
 .qq{padding:10px 0;border-top:1px solid var(--line)}.qq:first-of-type{border-top:0}.qq>p{margin:0 0 8px;font-size:16px}
 .qc{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:8px}
 .qc button:disabled{cursor:default;opacity:.55}.qc button.right{opacity:1;border-color:#5fe39a;color:#5fe39a}.qc button.wrong{opacity:1;border-color:#e08a8f;color:#e08a8f}
-.qa{margin-top:10px;font-size:15px;color:var(--soft)}.qa p{margin:0 0 6px}.qr{font-weight:600}.qr.ok{color:#5fe39a}.qr.no{color:#e08a8f}
+.qa{margin-top:10px;font-size:15px;color:var(--soft)}.qa p{margin:0 0 6px}.qr{font-weight:600}.qr.ok{color:#5fe39a}.qr.no{color:#e08a8f}.qh{margin:10px 0 0;font-size:15px;font-weight:600;color:#e08a8f}
 .qa blockquote{margin:6px 0 0;padding:8px 12px;border-left:3px solid var(--line);font-family:var(--head);color:#e4ddcc}
 .qt{display:block;margin-top:8px;font-family:var(--body);font-size:13px;padding:5px 10px;color:var(--gold)}
 .qs{margin-top:12px;padding:10px 14px;border-radius:8px;background:var(--chip);color:var(--gold)}
@@ -402,13 +403,17 @@ document.addEventListener('click', function (e) {
   var b = e.target.closest('.chap button, button.qt'); if (b) { seek(b, +b.dataset.t); return; }
   var c = e.target.closest('.qc button'); if (!c) return;
   var q = c.closest('.qq'); if (q.classList.contains('done')) return;
-  var a = +q.dataset.a, j = +c.dataset.j; q.classList.add('done');
+  var a = +q.dataset.a, j = +c.dataset.j;
+  // A second try (B, 20 Nov 2026: "allow a second try on quiz answers"): the first wrong pick is marked and switched off,
+  // the answer stays hidden, and the next pick settles it either way.
+  if (j !== a && !q.classList.contains('tried')) { q.classList.add('tried'); c.classList.add('wrong'); c.disabled = true; q.querySelector('.qh').hidden = false; return; }
+  q.classList.add('done'); q.querySelector('.qh').hidden = true;
   q.querySelectorAll('.qc button').forEach(function (x) { var k = +x.dataset.j; if (k === a) x.classList.add('right'); else if (k === j) x.classList.add('wrong'); x.disabled = true; });
-  q.querySelector('.qr').textContent = j === a ? 'Right.' : 'Not quite.';
+  q.querySelector('.qr').textContent = j === a ? (q.classList.contains('tried') ? 'Right, on your second try.' : 'Right.') : 'Not quite.';
   q.querySelector('.qr').className = 'qr ' + (j === a ? 'ok' : 'no');
   q.querySelector('.qa').hidden = false;
   var z = q.closest('.quiz'), all = z.querySelectorAll('.qq'), done = z.querySelectorAll('.qq.done');
-  if (all.length === done.length) { var r = z.querySelectorAll('.qc .right:not(:disabled), .qq.done').length; var n = 0; all.forEach(function (x) { if (x.querySelector('.qr.ok')) n++; }); var sEl = z.querySelector('.qs'); sEl.textContent = 'You got ' + n + ' of ' + all.length + '. Missed one? The quote under it shows where the lecture says it.'; sEl.hidden = false; }
+  if (all.length === done.length) { var n = 0, s = 0; all.forEach(function (x) { if (x.querySelector('.qr.ok')) { n++; if (x.classList.contains('tried')) s++; } }); var sEl = z.querySelector('.qs'); sEl.textContent = 'You got ' + n + ' of ' + all.length + (s ? ', ' + s + ' on the second try' : '') + '. Missed one? The quote under it shows where the lecture says it.'; sEl.hidden = false; }
 });
 // Keeping your place: which units you marked done and the last unit you looked at, kept in this browser only.
 var VU = { get: function (k, d) { try { return JSON.parse(localStorage.getItem(k)) || d; } catch (e) { return d; } }, set: function (k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} } };
@@ -470,7 +475,7 @@ html[data-look="daylight"] .pair .warn,html[data-look="daylight"] .reader .warn{
 html[data-look="daylight"] .pair .old p{color:#5a6377}
 html[data-look="daylight"] .unit.isdone .donebtn,html[data-look="daylight"] .donecount,html[data-look="daylight"] .card .prog,html[data-look="daylight"] .wrap nav a.isdone span::after{color:#1b7a43;border-color:#8fd0a8}
 html[data-look="daylight"] header.top{box-shadow:0 1px 0 var(--line)}
-html[data-look="daylight"] .quiz{background:#f1f4fa}html[data-look="daylight"] .qa blockquote{color:#2f3647;border-left-color:#c5cbdc}html[data-look="daylight"] .qc button.right{border-color:#1b7a43;color:#1b7a43}html[data-look="daylight"] .qc button.wrong{border-color:#b3261e;color:#b3261e}html[data-look="daylight"] .qr.ok{color:#1b7a43}html[data-look="daylight"] .qr.no{color:#b3261e}
+html[data-look="daylight"] .quiz{background:#f1f4fa}html[data-look="daylight"] .qa blockquote{color:#2f3647;border-left-color:#c5cbdc}html[data-look="daylight"] .qc button.right{border-color:#1b7a43;color:#1b7a43}html[data-look="daylight"] .qc button.wrong{border-color:#b3261e;color:#b3261e}html[data-look="daylight"] .qr.ok{color:#1b7a43}html[data-look="daylight"] .qr.no,html[data-look="daylight"] .qh{color:#b3261e}
 html[data-look="daylight"] .r-read{background:#fff1d6;color:#7a5200}html[data-look="daylight"] .r-listen{background:#f1e6ff;color:#5b2a9a}html[data-look="daylight"] .r-watch{background:#e3edff;color:#1f55e6}html[data-look="daylight"] .do{background:#ecf8f0;border-color:#b9e2c7}html[data-look="daylight"] .sc-dots button{background:#c9d0e2}html[data-look="daylight"] .sc-dots button.on{background:var(--acc)}html[data-look="daylight"] .uses a{background:#fdeaf1;border-color:#f2b6cd}
 html[data-look="daylight"] .hero::after{background:linear-gradient(180deg,rgba(11,18,32,.25) 0%,rgba(11,18,32,.72) 100%)}
 html[data-look="daylight"] .hero .dom{color:#ffd98a}

@@ -213,3 +213,7 @@ the HQ areas chat. Steps 7 to 10 start after the 22 Nov reset.
 - 19 Nov 2026: Bryan: "make the background drift on my tablet too". The fixed picture behind the inner pages now
   drifts and grows on touch screens as well (voidtv.net keeps it still there). Only a window 700 wide or less keeps
   it still, and people who ask their device for less motion still get none. Not checked on the real tablet.
+- 20 Nov 2026: Bryan: "allow a second try on quiz answers". In Check yourself, a first wrong pick is marked red and
+  switched off, the page says "Not quite. You have one more try.", and the answer, the reason and the quote stay
+  hidden. The next pick settles it: right says "Right, on your second try.", wrong shows the answer as before. The
+  score line says how many took two tries. A right first pick works as it did.
