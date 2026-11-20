@@ -50,3 +50,26 @@ test('triviaCounts sums the bank index per topic', () => {
   assert.deepEqual(fn(() => idx, path, __dirname), { tv: { family: 240, all: 600 }, games: { family: 50, all: 50 } });
   assert.equal(fn(() => null, path, __dirname), null);
 });
+
+// ---- Audit A34: the build stamp (Bryan, 20 Nov 2026: "Yes, fix it") ----
+const { stampTrivia } = require('../scripts/trivia/stamp');
+
+test('A34: every stylesheet and script both trivia pages load gets the build stamp, and nothing else changes', () => {
+  for (const f of ['trivia/index.html', 'trivia/phone.html']) {
+    const html = read(f);
+    const out = stampTrivia(html, 'abc123def456');
+    const scripts = [...html.matchAll(/<script src="([^"]+)"/g)].map((m) => m[1]);
+    assert.ok(scripts.length >= 2, f);
+    for (const s of scripts) assert.ok(out.includes('<script src="' + s + '?v=abc123def456"'), f + ': ' + s);
+    if (/<link rel="stylesheet" href="trivia\.css"/.test(html)) assert.ok(out.includes('href="trivia.css?v=abc123def456"'), f);
+    assert.equal(out.replace(/\?v=abc123def456/g, ''), html, f + ': only the stamps were added');
+  }
+  assert.equal(stampTrivia('<script src="src/host.js"></script>', ''), '<script src="src/host.js"></script>', 'no commit, no stamp');
+  assert.equal(stampTrivia('<script src="src/host.js"></script>', 'not-a-sha'), '<script src="src/host.js"></script>');
+});
+
+test('A34: the site build stamps the trivia pages with the commit it builds', () => {
+  const src = read('scripts/site.js');
+  assert.match(src, /const \{ stampTrivia \} = require\('\.\/trivia\/stamp'\);/);
+  assert.match(src, /for \(const f of \['index\.html', 'phone\.html'\]\) fs\.writeFileSync\(path\.join\(dst, f\), stampTrivia\(/);
+});

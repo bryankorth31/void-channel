@@ -161,6 +161,14 @@ const brandSrc = path.join(ROOT, 'assets', 'brand');
     fs.mkdirSync(dst, { recursive: true });
     for (const f of ['index.html', 'phone.html', 'trivia.css']) fs.copyFileSync(path.join(T, f), path.join(dst, f));
     for (const d of ['src', 'bank']) fs.cpSync(path.join(T, d), path.join(dst, d), { recursive: true });
+    // The build's commit on every stylesheet and script the two pages load, so a push reaches a returning browser at once
+    // instead of after its 4-hour cache (audit A34; the same stamp PLAY uses).
+    let sha = process.env.CF_PAGES_COMMIT_SHA || '';
+    if (!sha) { try { sha = require('child_process').execSync('git rev-parse HEAD', { cwd: ROOT, stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim(); } catch (e) { sha = ''; } }
+    if (/^[0-9a-f]{40}$/.test(sha)) {
+      const { stampTrivia } = require('./trivia/stamp');
+      for (const f of ['index.html', 'phone.html']) fs.writeFileSync(path.join(dst, f), stampTrivia(fs.readFileSync(path.join(dst, f), 'utf8'), sha.slice(0, 12)));
+    }
   } }
 if (fs.existsSync(brandSrc)) fs.cpSync(brandSrc, path.join(OUT, 'assets', 'brand'), { recursive: true, filter: (p) => { const parts = path.relative(brandSrc, p).split(path.sep); return !parts.includes('src') && !parts.includes('sheets'); } }); // the 2K originals and design sheets stay out of the site
 // Browsers, search engines and feed readers ask for /favicon.ico on their own; without the file they got the home page.
