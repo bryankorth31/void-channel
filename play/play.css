@@ -311,3 +311,52 @@ body.shell .cpad.up::before,body.shell .cpad.up::after{display:none;position:abs
   .pp{gap:6px}.psec,.prest{gap:6px}.pp .pk{min-height:50px}
   .psec{min-height:calc(var(--r) * 50px + (var(--r) - 1) * 6px)}
 }
+/* ---- The handheld from Bryan's own parts (20 Nov 2026: "Yes, build it", after the mock-ups from his University
+   Archives sheets). The layout, key sizes and hit areas are the shell's above, unchanged; what changes is what they
+   wear: his weathered plastic casing with grime, his grille and black tape drawn into the background (so no decoration
+   can take a tap), his rubber d-pad, his red and yellow buttons (the same art in VoidTV pink and cyan for the others),
+   his rubber pills for Select, Start, Rewind, L and R, and each word on a strip of masking tape stuck on its key, so the
+   words stay inside their keys and read in daylight. The parts are play/skin/*.webp, 82 KB in all, loaded only once a
+   game plays in the shell. ---- */
+body.shell .stage{background:
+  url(skin/grille.webp) no-repeat calc(50% + 4px) calc(100% - 2px)/104px auto,
+  url(skin/tape.webp) no-repeat -24px 56%/84px auto,
+  url(skin/grime.webp) no-repeat -50px 100%/260px auto,
+  url(skin/grime.webp) no-repeat calc(100% + 70px) 64%/230px auto,
+  radial-gradient(ellipse at 22% 6%,rgba(205,215,245,.16) 0%,transparent 45%),
+  radial-gradient(ellipse at 50% 50%,transparent 58%,rgba(5,8,18,.5) 100%),
+  url(skin/plastic.webp) center/cover no-repeat,#4a5270;
+  box-shadow:inset 0 3px 0 rgba(255,255,255,.08),inset 3px 0 0 rgba(255,255,255,.05),inset 0 0 0 1px rgba(0,0,0,.45),inset 0 -12px 26px rgba(0,0,0,.4)}
+/* The d-pad: his black rubber cross in a moulded well; the whole circle still takes a thumb, diagonals too. */
+body.shell .pdpad::before{inset:5%;background:url(skin/dpad.webp) center/contain no-repeat;clip-path:none;
+  filter:drop-shadow(0 6px 7px rgba(0,0,0,.6))}
+body.shell .pdpad::after{content:'';position:absolute;inset:-1%;z-index:-1;border-radius:50%;pointer-events:none;
+  background:radial-gradient(circle,rgba(10,12,22,.32) 62%,transparent 71%);box-shadow:inset 0 7px 12px rgba(0,0,0,.5),0 2px 0 rgba(255,255,255,.07)}
+body.shell .pdpad .pdir{color:rgba(255,255,255,.18);text-shadow:none;font-size:13px}
+body.shell .pdpad .pdir.on{color:var(--blue);text-shadow:0 0 10px var(--blue)}
+/* Face buttons: his painted buttons. B red and A yellow, X cyan and Y pink; Genesis A red, B yellow, C pink. */
+body.shell .cface .pk{background:url(skin/btn-red.webp) center/100% 100% no-repeat;border:0;border-radius:50%;
+  box-shadow:0 7px 10px rgba(0,0,0,.5);color:#2a1410}
+body.shell .cface .pk[data-code="P1:A"],body.shell .cface.s-abc .pk[data-code="P1:B"]{background-image:url(skin/btn-yellow.webp);color:#2b2208}
+body.shell .cface.s-abc .pk[data-code="P1:Y"]{background-image:url(skin/btn-red.webp);color:#2a1410}
+body.shell .cface.s-abc .pk[data-code="P1:A"],body.shell .cface:not(.s-abc) .pk[data-code="P1:Y"]{background-image:url(skin/btn-pink.webp);color:#2b0c22}
+body.shell .cface .pk[data-code="P1:X"]{background-image:url(skin/btn-cyan.webp);color:#06202a}
+body.shell .cface .pk .big{font-weight:800;text-shadow:0 1px 0 rgba(255,255,255,.35)}
+body.shell .cface .pk[data-down]{filter:brightness(.82);transform:translateY(3px);box-shadow:0 3px 5px rgba(0,0,0,.5)}
+/* The pad the face buttons sit in: dark rubber with a rim, as his A-B pill. */
+body.shell .cpad .cface::before{background:linear-gradient(180deg,#3a3c47 0%,#2a2c35 55%,#1d1f26 100%);
+  box-shadow:inset 0 2px 0 rgba(255,255,255,.12),inset 0 -3px 6px rgba(0,0,0,.5),0 0 0 3px #0e0f14,0 8px 14px rgba(0,0,0,.45)}
+/* Select, Start, Rewind, L and R: his rubber pill. */
+body.shell .cpad .pill,body.shell .cpad .cshoulder{background:url(skin/pill.webp) center/100% 100% no-repeat;border:0;box-shadow:none;
+  filter:drop-shadow(0 4px 4px rgba(0,0,0,.5));color:#1d1813}
+body.shell .cpad .pill[data-down],body.shell .cpad .cshoulder[data-down]{transform:translateY(3px);filter:brightness(.85) drop-shadow(0 1px 2px rgba(0,0,0,.5));box-shadow:none}
+/* The words: dark marker on a strip of masking tape stuck on the key, inside the key, readable in daylight. */
+body.shell .cpad .pk .small,body.shell .cpad .pill .big,body.shell .cpad .cshoulder .big{background:url(skin/label.webp) center/cover;color:#1d1813;
+  font-weight:700;font-size:11px;line-height:1.25;padding:1px 6px;border-radius:2px;box-shadow:0 1px 2px rgba(0,0,0,.45);
+  max-width:96%;white-space:normal;text-align:center;overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;opacity:1}
+/* A pill says its own name (Select, Start, Rewind); the longer action word is in the help, not on the pill. */
+body.shell .cpad .pill{padding:0 4px}
+body.shell .cpad .pill:not(.crewind) .small{display:none}
+body.shell .cpad .crewind .small{font-size:11px;padding:1px 5px}
+body.shell .cpad .cface .pk .small{transform:rotate(-2deg)}   /* tape stuck on a round button, a little askew */
+body.shell .cpad .crewind .big{background:none;box-shadow:none;color:#e6e9f5;font-size:12px;transform:none;padding:0}

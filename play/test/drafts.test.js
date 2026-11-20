@@ -38,7 +38,7 @@ test('G3: titles read naturally and ids are plain', () => {
 
 test('G4: the approve page and the drafts stay on this PC, only a page from the same server may decide, and Try it plays a draft', () => {
   const site = fs.readFileSync(path.join(PLAY, '..', 'scripts', 'site.js'), 'utf8');
-  assert.ok(site.includes("for (const d of ['src', 'cards', 'engine', 'cheats', 'library']"), 'the site copies only these folders, never tools or drafts');
+  assert.ok(site.includes("for (const d of ['src', 'cards', 'engine', 'cheats', 'library', 'skin']"), 'the site copies only these folders, never tools or drafts');
   const serve = fs.readFileSync(path.join(PLAY, 'serve.js'), 'utf8');
   for (const bit of ["if (req.method !== 'POST' || req.headers['sec-fetch-site'] !== 'same-origin')", "['shelf', 'kids', 'skip'].includes(d.decision)",
     "if (d.decision === 'kids') card.kids = true;", "const safeName = (x) => typeof x === 'string' && /^[A-Za-z0-9._-]{1,120}$/.test(x);"]) assert.ok(serve.includes(bit), bit);

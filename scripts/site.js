@@ -149,7 +149,7 @@ const brandSrc = path.join(ROOT, 'assets', 'brand');
         }
       } }
     fs.copyFileSync(path.join(P, 'LICENSE'), path.join(dst, 'LICENSE.txt'));
-    for (const d of ['src', 'cards', 'engine', 'cheats', 'library'].filter((x) => fs.existsSync(path.join(P, x)))) fs.cpSync(path.join(P, d), path.join(dst, d), { recursive: true });
+    for (const d of ['src', 'cards', 'engine', 'cheats', 'library', 'skin'].filter((x) => fs.existsSync(path.join(P, x)))) fs.cpSync(path.join(P, d), path.join(dst, d), { recursive: true });
     fs.mkdirSync(path.join(dst, 'shelf'), { recursive: true });
     for (const f of ['index.json', 'status.json']) fs.copyFileSync(path.join(P, 'shelf', f), path.join(dst, 'shelf', f));
   } }

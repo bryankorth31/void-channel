@@ -199,3 +199,17 @@ test('the handheld body from Bryan\'s University Archives sheets ("more depth an
   assert.ok(css.includes('body.shell .cpad .cface::before{') && /pointer-events:none;border-radius:999px/.test(css), 'the base is drawing only, never a key');
   assert.ok(read(ROOT, 'src', 'touchpad.js').includes("face.classList.add('s-' + (SYSTEM_SHAPE[card.system] || 'pair'));"));
 });
+
+test('the handheld wears Bryan\'s own parts (20 Nov 2026: "Yes, build it"): his casing, d-pad, buttons, pills and tape labels, small, and no decoration takes a tap', () => {
+  const css = read(ROOT, 'play.css');
+  for (const f of ['plastic', 'grime', 'grille', 'tape', 'dpad', 'btn-red', 'btn-yellow', 'btn-pink', 'btn-cyan', 'pill', 'label']) {
+    assert.ok(fs.existsSync(path.join(ROOT, 'skin', f + '.webp')), f);
+    assert.ok(css.includes('url(skin/' + f + '.webp)'), f + ' is used');
+  }
+  const total = fs.readdirSync(path.join(ROOT, 'skin')).reduce((s, f) => s + fs.statSync(path.join(ROOT, 'skin', f)).size, 0);
+  assert.ok(total < 300 * 1024, 'the parts stay small: ' + Math.round(total / 1024) + ' KB');
+  // The grille, the tape and the grime are drawn into the body's background, so no decoration can take a tap.
+  assert.match(css, /body\.shell \.stage\{background:\n  url\(skin\/grille\.webp\)/);
+  // The words stay inside their keys, on a strip of tape.
+  assert.ok(css.includes('body.shell .cpad .pk .small,body.shell .cpad .pill .big,body.shell .cpad .cshoulder .big{background:url(skin/label.webp)'));
+});
