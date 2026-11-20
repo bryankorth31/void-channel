@@ -123,6 +123,19 @@ const brandSrc = path.join(ROOT, 'assets', 'brand');
 { const P = path.join(ROOT, 'player', 'src'); const dst = path.join(OUT, 'assets', 'player'); fs.mkdirSync(dst, { recursive: true });
   fs.writeFileSync(path.join(dst, 'voidplayer.js'), ['core.js', 'icons.js', 'player.js'].map((f) => fs.readFileSync(path.join(P, f), 'utf8')).join('\n;\n'));
   fs.copyFileSync(path.join(P, 'player.css'), path.join(dst, 'player.css')); }
+// PLAY (play/, plan T19): the shelf and the game player at /play/. Only what a visitor's browser loads is copied: the two pages,
+// their styles and scripts, the game cards, the shelf list and the engines we built; the build tools, tests and core sources stay
+// in the repo (play/core/README.md says where to get each engine's exact source). No game file is copied: games come from the
+// Internet Archive when someone presses Play.
+{ const P = path.join(ROOT, 'play'); const dst = path.join(OUT, 'play');
+  if (fs.existsSync(P)) {
+    fs.mkdirSync(dst, { recursive: true });
+    for (const f of ['index.html', 'game.html', 'play.css', 'shelf.css']) fs.copyFileSync(path.join(P, f), path.join(dst, f));
+    fs.copyFileSync(path.join(P, 'LICENSE'), path.join(dst, 'LICENSE.txt'));
+    for (const d of ['src', 'cards', 'engine']) fs.cpSync(path.join(P, d), path.join(dst, d), { recursive: true });
+    fs.mkdirSync(path.join(dst, 'shelf'), { recursive: true });
+    fs.copyFileSync(path.join(P, 'shelf', 'index.json'), path.join(dst, 'shelf', 'index.json'));
+  } }
 if (fs.existsSync(brandSrc)) fs.cpSync(brandSrc, path.join(OUT, 'assets', 'brand'), { recursive: true, filter: (p) => { const parts = path.relative(brandSrc, p).split(path.sep); return !parts.includes('src') && !parts.includes('sheets'); } }); // the 2K originals and design sheets stay out of the site
 // Browsers, search engines and feed readers ask for /favicon.ico on their own; without the file they got the home page.
 if (fs.existsSync(path.join(brandSrc, 'favicon.ico'))) fs.copyFileSync(path.join(brandSrc, 'favicon.ico'), path.join(OUT, 'favicon.ico'));

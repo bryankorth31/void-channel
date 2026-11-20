@@ -72,9 +72,17 @@ const SECURITY_HEADERS = [
   ['Permissions-Policy', 'camera=(), microphone=(), geolocation=()'],
   ['Content-Security-Policy-Report-Only', CSP],
 ];
+// PLAY (play/, plan T19): the game player runs its engine on threads, which browsers allow only on a cross-origin
+// isolated page, so the player page and the files it loads carry the two isolation headers. The shelf (/play/ itself)
+// does not: it shows box art straight from the Internet Archive, which an isolated page may not load.
+const ISOLATE = '  Cross-Origin-Opener-Policy: same-origin\n  Cross-Origin-Embedder-Policy: require-corp\n';
+const PLAY_HEADERS = '/play/game.html\n' + ISOLATE + '/play/game\n' + ISOLATE + '/play/src/*\n' + ISOLATE
+  + '/play/engine/*\n' + ISOLATE + '  Cache-Control: public, max-age=86400\n/play/cards/*\n' + ISOLATE + '  Cache-Control: public, max-age=300\n'
+  + '/play/shelf/*\n  Cache-Control: public, max-age=300\n';
 function headersFile() {
   return '/*\n' + SECURITY_HEADERS.map(([k, v]) => `  ${k}: ${v}\n`).join('')
-    + '/data/*\n  Cache-Control: public, max-age=300\n/show/*\n  Cache-Control: public, max-age=300\n/assets/*\n  Cache-Control: public, max-age=86400\n';
+    + '/data/*\n  Cache-Control: public, max-age=300\n/show/*\n  Cache-Control: public, max-age=300\n/assets/*\n  Cache-Control: public, max-age=86400\n'
+    + PLAY_HEADERS;
 }
 // Names of the three headers the doctor insists on that a response lacks. get(name) returns the value or null.
 function missingSecurityHeaders(get) {
