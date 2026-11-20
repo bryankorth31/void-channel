@@ -45,7 +45,7 @@
   // While the menu is open the game hears nothing: every held key is let go first, then the gamepad drives the menu.
   function setPaused(p) {
     if (!runner || !started || p === paused) return;
-    if (p) { hub.releaseAll(); paused = true; runner.pause(); autosave(); }
+    if (p) { hub.releaseAll(); runner.rewind(false); paused = true; runner.pause(); autosave(); }
     else { paused = false; runner.resume(); runner.wakeSound(); }
     $('menu').hidden = !p; $('b-pause').textContent = p ? 'Resume' : 'Pause';
     if (p) $('m-resume').focus({ preventScroll: true }); else $('canvas').focus({ preventScroll: true });
@@ -96,7 +96,9 @@
     toast('The game started over', undo);
   }
 
+  // Our own actions: menu and keyboard on the press; rewind for as long as it is held (console games).
   function action(name) {
+    if (name === 'rewind') { if (runner && !paused) runner.rewind(true); return; }
     if (name === 'menu') setPaused(!paused);
     else if (name === 'keyboard' && pad && !paused) pad.keyboard.classList.toggle('open');
   }
@@ -154,7 +156,7 @@
       aspect: (a) => { if (Math.abs(a - aspect) > 0.01) { aspect = a; place(); } },
     } });
     runner.prepareSound();                     // in the Play tap itself, so iPhone and iPad allow the sound
-    hub = PlayHub.createHub({ send, onAction: action });
+    hub = PlayHub.createHub({ send, onAction: action, onRelease: (name) => { if (name === 'rewind' && runner) runner.rewind(false); } });
     hub.setCard(card, PlayCards.gamepadMap(card));
     runner.start(card, base, build.commit.slice(0, 12));
     autoTimer = setInterval(() => { if (started && !paused && !document.hidden) autosave(); }, AUTO_EVERY_MS);
@@ -219,6 +221,10 @@
     for (const l of PlayCards.actionLines(c)) {
       const li = document.createElement('li'); const b = document.createElement('b'); b.textContent = l.do;
       li.append(b, ': ' + l.how); ul.appendChild(li);
+    }
+    if (PlayCards.isPad(c)) {
+      const li = document.createElement('li'); const b = document.createElement('b'); b.textContent = 'Rewind';
+      li.append(b, ': hold the left trigger (LT) on a gamepad, R on the keyboard, ◀◀ on screen (up to 20 seconds back)'); ul.appendChild(li);
     }
     const esc = PlayCards.isPad(c) ? ', Esc on the keyboard' : '';
     $('pause-how').textContent = 'Pause: Back and Start together on a gamepad' + esc + ', or the Pause button.';

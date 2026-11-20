@@ -11,14 +11,16 @@
 
   function createHub(opts) {
     const send = opts.send;                    // send(code, down): to the game
-    const onAction = opts.onAction || (() => {}); // our own buttons: 'menu' (the same on every pad), 'keyboard'
+    const onAction = opts.onAction || (() => {}); // our own buttons: 'menu' (the same on every pad), 'keyboard', 'rewind'
+    const onRelease = opts.onRelease || (() => {});
     let map = {};                              // gamepad button name -> key code or '@action'
     const holders = new Map();                 // key code -> Set of sources holding it
     const padHeld = new Map();                 // gamepad index -> Set of codes it holds now
     const padActions = new Map();              // gamepad index -> Set of actions held (fire once per press)
 
     function hold(source, code, down) {
-      if (code[0] === '@') { if (down) onAction(code.slice(1), source); return; }
+      // An action of ours: onAction hears the press; onRelease the letting go (a held one, like rewind, needs both).
+      if (code[0] === '@') { if (down) onAction(code.slice(1), source); else onRelease(code.slice(1), source); return; }
       let set = holders.get(code);
       if (!set) holders.set(code, (set = new Set()));
       const was = set.size > 0;
@@ -64,6 +66,7 @@
         const now = padCodes(pad, Math.min(4, order.indexOf(pad.index) + 1)), before = padHeld.get(pad.index) || new Set();
         const actNow = new Set([...now].filter((c) => c[0] === '@')), actBefore = padActions.get(pad.index) || new Set();
         for (const a of actNow) if (!actBefore.has(a)) hold('pad' + pad.index, a, true);
+        for (const a of actBefore) if (!actNow.has(a)) hold('pad' + pad.index, a, false);
         padActions.set(pad.index, actNow);
         const keysNow = new Set([...now].filter((c) => c[0] !== '@'));
         for (const c of before) if (!keysNow.has(c)) hold('pad' + pad.index, c, false);
