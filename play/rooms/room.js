@@ -8,8 +8,13 @@
   'use strict';
   const ALPHABET = '23456789ACDEFGHJKMNPQRTUVWXY';   // no 0, O, 1, I, L, B, S or Z: easy to read off a projector
   const KINDS = ['pad', 'trivia'];
-  const LIMITS = { phones: 16, perSecond: 60, bytes: 1024, idleMs: 30 * 60 * 1000, lifeMs: 4 * 60 * 60 * 1000 };
-  const CLOSE = { noRoom: 4404, full: 4409, hostGone: 4410, tooBig: 4413, ended: 4408 };
+  // Per kind (audit review, 20 Nov 2026): a gamepad sends only when a button changes, so 30 a second is past any hand;
+  // trivia sends an answer now and then, but a movie night can bring 200 phones.
+  const LIMITS = { bytes: 1024, idleMs: 30 * 60 * 1000, lifeMs: 4 * 60 * 60 * 1000, holdMs: 60 * 1000,
+    pad: { phones: 16, perSecond: 30 }, trivia: { phones: 200, perSecond: 5 } };
+  const CLOSE = { noRoom: 4404, full: 4409, hostGone: 4410, tooBig: 4413, ended: 4408, locked: 4423, removed: 4403 };
+  // A phone's own seat token: random, kept in that phone's tab only, so a phone that drops gets its seat back.
+  const goodToken = (t) => typeof t === 'string' && /^[A-Za-z0-9_-]{16,64}$/.test(t);
 
   // A room code from a random source (rand() gives 0 <= x < 1). Four characters is about 600,000 codes.
   const makeCode = (rand) => Array.from({ length: 4 }, () => ALPHABET[Math.floor(rand() * ALPHABET.length)]).join('');
@@ -18,13 +23,20 @@
 
   function createRoom({ code, kind, send, close, now = () => Date.now() }) {
     if (!KINDS.includes(kind)) throw new Error('kind');
-    let host = null;
-    const phones = new Map();   // sock -> { seat, window, count }
+    let host = null, locked = false;
+    const lim = LIMITS[kind];
+    const phones = new Map();   // sock -> { seat, token, window, count }
+    const held = new Map();     // token -> { seat, until }: a dropped phone's seat, kept a minute
     const born = now();
     let last = born;
     const json = (sock, obj) => send(sock, JSON.stringify(obj));
     const seatOf = (sock) => (phones.get(sock) || {}).seat;
-    const freeSeat = () => { const used = new Set([...phones.values()].map((p) => p.seat)); for (let n = 1; ; n++) if (!used.has(n)) return n; };
+    const freeSeat = () => {
+      const t = now();
+      for (const [k, h] of held) if (h.until < t) held.delete(k);
+      const used = new Set([...phones.values()].map((p) => p.seat).concat([...held.values()].map((h) => h.seat)));
+      for (let n = 1; ; n++) if (!used.has(n)) return n;
+    };
 
     return {
       code, kind,
@@ -36,14 +48,18 @@
         json(sock, { type: 'room', code, kind, join: (joinBase || '') + '/join?r=' + code });
         return true;
       },
-      addPhone(sock) {
+      addPhone(sock, token) {
         if (!host) { close(sock, CLOSE.noRoom, 'No room by that code'); return null; }
-        if (phones.size >= LIMITS.phones) { close(sock, CLOSE.full, 'This room is full'); return null; }
-        const seat = freeSeat();
-        phones.set(sock, { seat, window: 0, count: 0 });
+        const tok = goodToken(token) ? token : null;
+        const back = tok && held.get(tok);
+        if (back && back.until >= now()) held.delete(tok);
+        else if (locked) { close(sock, CLOSE.locked, 'The screen has locked this room'); return null; }
+        if (phones.size >= lim.phones) { close(sock, CLOSE.full, 'This room is full'); return null; }
+        const seat = back && back.until >= now() ? back.seat : freeSeat();
+        phones.set(sock, { seat, token: tok, window: 0, count: 0 });
         last = now();
         json(sock, { type: 'hello', seat, kind });
-        json(host, { type: 'join', from: seat });
+        json(host, back ? { type: 'join', from: seat, back: true } : { type: 'join', from: seat });
         return seat;
       },
       // A text frame from either side. The relay looks only at the envelope, never inside msg.
@@ -54,6 +70,9 @@
         if (!m || typeof m !== 'object') return;
         last = t;
         if (sock === host) {
+          // The screen's own say over its room: remove a phone, or lock the room so no new phone joins.
+          if (m.relay === 'remove') { for (const [p, info] of phones) if (info.seat === m.seat) { phones.delete(p); json(host, { type: 'leave', from: info.seat }); close(p, CLOSE.removed, 'The screen removed this phone'); } return; }
+          if (m.relay === 'lock') { locked = !!m.on; json(host, { type: 'locked', on: locked }); return; }
           const to = m.to, msg = m.msg;
           if (!msg || typeof msg !== 'object') return;
           const out = JSON.stringify(msg);
@@ -64,7 +83,7 @@
         if (!p) return;
         const sec = Math.floor(t / 1000);
         if (p.window !== sec) { p.window = sec; p.count = 0; }
-        if (++p.count > LIMITS.perSecond) return;   // past the rate a hand can press: dropped, not answered
+        if (++p.count > lim.perSecond) return;   // past the rate a hand can press: dropped, not answered
         json(host, { from: p.seat, msg: m });
       },
       drop(sock) {
@@ -77,6 +96,7 @@
         const p = phones.get(sock);
         if (!p) return null;
         phones.delete(sock);
+        if (p.token) held.set(p.token, { seat: p.seat, until: now() + LIMITS.holdMs });
         if (host) json(host, { type: 'leave', from: p.seat });
         return 'left';
       },

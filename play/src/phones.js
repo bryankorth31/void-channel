@@ -29,7 +29,7 @@
 
   function create(opts) {
     const on = opts || {};
-    let ws = null, room = null;
+    let ws = null, room = null, locked = false;
     const phones = new Map();   // room seat -> { b, delay, player }
     const changed = () => on.change && on.change(list());
     const send = (to, msg) => { if (ws && ws.readyState === 1) ws.send(JSON.stringify({ to, msg })); };
@@ -44,19 +44,24 @@
           if (m.type === 'room') { room = { code: m.code, join: m.join }; ok(room); changed(); return; }
           if (m.type === 'join') { phones.set(m.from, { b: 0, delay: null, player: null }); if (on.card) send(m.from, on.card()); changed(); return; }
           if (m.type === 'leave') { phones.delete(m.from); changed(); return; }
+          if (m.type === 'locked') { locked = !!m.on; changed(); return; }
           const p = phones.get(m.from), msg = m.msg || {};
           if (!p) return;
           if (msg.type === 'pad' && Number.isInteger(msg.b)) p.b = msg.b & 0x1ffff;
           else if (msg.type === 'ping') send(m.from, { type: 'pong', t: msg.t });
           else if (msg.type === 'delay' && Number.isFinite(msg.ms)) { p.delay = Math.max(0, Math.min(9999, Math.round(msg.ms))); changed(); }
         };
-        ws.onclose = () => { const had = !!room; ws = null; room = null; phones.clear(); changed(); if (!had) no(new Error('The phone room did not open. Check the connection and try again.')); };
+        ws.onclose = () => { const had = !!room; ws = null; room = null; locked = false; phones.clear(); changed(); if (!had) no(new Error('The phone room did not open. Check the connection and try again.')); };
       });
     }
 
     return {
       open, list,
       get room() { return room; },
+      get locked() { return locked; },
+      // The screen's say over its room (audit review): remove one phone, or lock the room to new phones.
+      remove: (seat) => { if (ws && ws.readyState === 1) ws.send(JSON.stringify({ relay: 'remove', seat })); },
+      lock: (on) => { if (ws && ws.readyState === 1) ws.send(JSON.stringify({ relay: 'lock', on: !!on })); },
       // The phones as gamepads, for the hub's poll each frame.
       pads: () => [...phones].map(([seat, p]) => padOf(seat, p.b)),
       // After the hub's poll: tell each phone which player it is when that changes.

@@ -144,9 +144,15 @@
       const li = document.createElement('li');
       li.textContent = (p.player ? 'Player ' + p.player : 'Phone ' + p.seat) + (p.delay === null ? '' : ', delay ' + p.delay + ' ms' + (p.delay > 120 ? ': presses will feel late' : ''));
       if (p.delay > 120) li.className = 'slow';
+      const x = document.createElement('button'); x.type = 'button'; x.className = 'tool small'; x.textContent = 'Remove';
+      x.setAttribute('aria-label', 'Remove ' + li.textContent.split(',')[0]); x.onclick = () => phones.remove(p.seat);
+      li.appendChild(x);
       ul.appendChild(li);
     }
     if (!list.length) { const li = document.createElement('li'); li.textContent = 'No phones yet'; ul.appendChild(li); }
+    const lock = $('phones-lock');
+    lock.textContent = phones && phones.locked ? 'Let new phones in' : 'Lock: no new phones';
+    lock.setAttribute('aria-pressed', String(!!(phones && phones.locked)));
   }
   function showPhones(open) {
     $('phones').hidden = !open; $('b-phones').setAttribute('aria-expanded', String(open));
@@ -161,6 +167,7 @@
   }
   $('b-phones').onclick = () => showPhones($('phones').hidden);
   $('phones-close').onclick = () => showPhones(false);
+  $('phones-lock').onclick = () => { if (phones) phones.lock(!phones.locked); };
   addEventListener('pagehide', () => { if (phones) phones.close(); });
 
   // Gamepads are read once a frame. Before the game starts, a gamepad's A or Start presses Play, so a controller goes

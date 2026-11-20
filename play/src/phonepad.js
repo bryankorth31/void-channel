@@ -33,6 +33,18 @@
   const $ = (id) => document.getElementById(id);
   const code = (new URLSearchParams(location.search).get('r') || '').toUpperCase();
   const held = new Set();
+  // A random seat token for this tab only (sent only to its room, gone when the tab closes): a phone that drops and
+  // comes back within a minute keeps its seat.
+  let seatToken = null;
+  function token() {
+    if (seatToken) return seatToken;
+    try { seatToken = sessionStorage.getItem('voidtv-seat'); } catch (e) { /* private mode: kept in memory only */ }
+    if (!seatToken || !/^[A-Za-z0-9_-]{16,64}$/.test(seatToken)) {
+      seatToken = [...crypto.getRandomValues(new Uint8Array(16))].map((b) => b.toString(16).padStart(2, '0')).join('');
+      try { sessionStorage.setItem('voidtv-seat', seatToken); } catch (e) { /* fine */ }
+    }
+    return seatToken;
+  }
   let ws = null, ended = false, tries = 0, lastSent = -1;
   function note(h, p, link) { $('note-h').textContent = h; $('note-p').textContent = p; $('note-a').hidden = !link; $('note').hidden = false; $('pad').hidden = true; }
   const send = (m) => { if (ws && ws.readyState === 1) ws.send(JSON.stringify(m)); };
@@ -95,7 +107,7 @@
 
   function connect() {
     if (!/^[2-9A-Z]{4}$/.test(code)) { note('No room code', 'Scan the code on the big screen, or type it.', true); return; }
-    ws = new WebSocket((location.protocol === 'https:' ? 'wss://' : 'ws://') + location.host + '/api/room/' + code + '/join');
+    ws = new WebSocket((location.protocol === 'https:' ? 'wss://' : 'ws://') + location.host + '/api/room/' + code + '/join?t=' + token());
     ws.onmessage = (e) => {
       let m; try { m = JSON.parse(e.data); } catch (x) { return; }
       if (m.type === 'hello') { tries = 0; lastSent = -1; note('Joined', 'Waiting for the big screen.', false); }
@@ -109,6 +121,8 @@
       if (ended) return;
       if (e.code === 4404) { note('No room with that code', 'The code changes each time. Check the big screen.', true); return; }
       if (e.code === 4409) { note('This game is full', 'Up to 16 phones can join one screen.', false); return; }
+      if (e.code === 4423) { note('This room is locked', 'The screen is not letting new phones in right now.', false); return; }
+      if (e.code === 4403) { ended = true; note('The screen removed this phone', 'Ask whoever runs the screen if that was a mistake.', false); return; }
       if (e.code === 4410 || e.code === 4408) { note('The game screen closed', 'Scan the new code on the big screen to join again.', true); return; }
       // A dropped connection (a phone walking out of Wi-Fi): try again, a little slower each time.
       note('Reconnecting', 'The connection dropped. Trying again.', false);

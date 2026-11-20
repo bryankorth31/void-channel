@@ -41,7 +41,7 @@ function createRooms() {
     }
     const room = rooms.get(R.normCode(m[1]));
     if (!room || !room.open) { conn.close(R.CLOSE.noRoom, 'No room by that code'); return; }
-    if (room.addPhone(conn) === null) return;
+    if (room.addPhone(conn, u.searchParams.get('t')) === null) return;
     conn.onmessage = (t) => room.message(conn, t);
     conn.onclose = () => room.drop(conn);
   }

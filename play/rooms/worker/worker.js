@@ -32,7 +32,7 @@ export class Room {
     } else if (url.pathname === '/join') {
       const room = this.room;
       if (!room || !room.open) { close(server, R.CLOSE.noRoom, 'No room by that code'); return new Response(null, { status: 101, webSocket: client }); }
-      if (room.addPhone(server) !== null) {
+      if (room.addPhone(server, url.searchParams.get('t')) !== null) {
         server.addEventListener('message', (e) => room.message(server, typeof e.data === 'string' ? e.data : ''));
         server.addEventListener('close', () => room.drop(server));
         server.addEventListener('error', () => room.drop(server));

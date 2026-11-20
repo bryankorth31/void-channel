@@ -41,7 +41,8 @@ export async function onRequest({ request, env, params }) {
   if (parts.length === 2 && parts[1] === 'join') {
     const code = R.normCode(parts[0]);
     if (!code) return json(404, { error: 'No room by that code' });
-    return stub(code).fetch(new Request('https://room/join', request));
+    const t = new URL(request.url).searchParams.get('t') || '';
+    return stub(code).fetch(new Request('https://room/join?t=' + encodeURIComponent(t.slice(0, 64)), request));
   }
   return json(404, { error: 'Not found' });
 }

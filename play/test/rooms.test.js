@@ -53,7 +53,7 @@ test('messages: a phone reaches the screen with its seat; the screen reaches one
   assert.equal(h.sent('tv').length, before, 'junk and strangers are ignored');
 });
 
-test('limits: 16 phones, 60 messages a second a phone, 1 KB a message', () => {
+test('limits: a pad room takes 16 phones at 30 messages a second each, 1 KB a message', () => {
   const h = harness();
   h.room.addHost('tv');
   for (let i = 0; i < 16; i++) assert.ok(h.room.addPhone('p' + i));
@@ -61,9 +61,9 @@ test('limits: 16 phones, 60 messages a second a phone, 1 KB a message', () => {
   assert.equal(h.closed.get('p16'), R.CLOSE.full);
   const before = h.sent('tv').length;
   for (let i = 0; i < 100; i++) h.room.message('p0', '{"type":"press"}');
-  assert.equal(h.sent('tv').length - before, 60);
+  assert.equal(h.sent('tv').length - before, 30);
   h.advance(1000); h.room.message('p0', '{"type":"press"}');
-  assert.equal(h.sent('tv').length - before, 61, 'a new second, a new allowance');
+  assert.equal(h.sent('tv').length - before, 31, 'a new second, a new allowance');
   h.room.message('p1', JSON.stringify({ t: 'x'.repeat(2000) }));
   assert.equal(h.closed.get('p1'), R.CLOSE.tooBig);
 });
@@ -192,4 +192,82 @@ test('R3: the pages: the join page sends a phone to the room kind, the pad page 
   assert.ok(js.includes("const allPads = () => [...(navigator.getGamepads ? [...navigator.getGamepads()] : []), ...(phones ? phones.pads() : [])];"));
   const site = fs.readFileSync(path.join(P, '..', 'scripts', 'site.js'), 'utf8');
   assert.ok(site.includes("'pad.html', 'join.html'"), 'the site build copies the phone pages');
+});
+
+test('audit review: a trivia room takes 200 phones at 5 messages a second; a dropped phone gets its seat back within a minute; the screen can remove a phone and lock the room', () => {
+  const t = harness('trivia');
+  t.room.addHost('tv');
+  for (let i = 0; i < 200; i++) assert.ok(t.room.addPhone('p' + i));
+  assert.equal(t.room.addPhone('p200'), null);
+  const before = t.sent('tv').length;
+  for (let i = 0; i < 20; i++) t.room.message('p0', '{"type":"a","pick":1}');
+  assert.equal(t.sent('tv').length - before, 5);
+
+  const h = harness();
+  h.room.addHost('tv');
+  const tok = 'abcdefghijklmnop1234';
+  assert.equal(h.room.addPhone('a', tok), 1);
+  assert.equal(h.room.addPhone('b'), 2);
+  h.room.drop('a');
+  assert.equal(h.room.addPhone('c'), 3, 'the seat of the phone that dropped is kept for it');
+  h.advance(30 * 1000);
+  assert.equal(h.room.addPhone('a2', tok), 1, 'the same phone back within a minute takes seat 1');
+  assert.deepEqual(h.sent('tv').at(-1), { type: 'join', from: 1, back: true });
+  h.room.drop('a2'); h.advance(61 * 1000);
+  assert.equal(h.room.addPhone('d'), 1, 'after a minute the seat is free for anyone');
+  assert.equal(h.room.addPhone('e', 'short'), 4, 'a bad token is just no token');
+
+  h.room.message('tv', JSON.stringify({ relay: 'remove', seat: 2 }));
+  assert.equal(h.closed.get('b'), R.CLOSE.removed);
+  assert.deepEqual(h.sent('tv').at(-1), { type: 'leave', from: 2 });
+  h.room.message('tv', JSON.stringify({ relay: 'lock', on: true }));
+  assert.deepEqual(h.sent('tv').at(-1), { type: 'locked', on: true });
+  assert.equal(h.room.addPhone('stranger'), null);
+  assert.equal(h.closed.get('stranger'), R.CLOSE.locked);
+  const tok2 = 'zyxwvutsrqponmlk9876';
+  h.room.message('tv', JSON.stringify({ relay: 'lock', on: false }));
+  assert.ok(h.room.addPhone('f', tok2));
+  h.room.message('tv', JSON.stringify({ relay: 'lock', on: true }));
+  h.room.drop('f');
+  assert.ok(h.room.addPhone('f2', tok2), 'a phone of this room coming back gets in even when locked');
+  assert.equal(h.room.message('f2', JSON.stringify({ relay: 'remove', seat: 1 })), undefined);
+  assert.ok(![...h.closed.values()].includes(R.CLOSE.removed) || h.closed.get('d') !== R.CLOSE.removed, 'a phone cannot remove anyone');
+});
+
+test('audit review over real sockets: a phone back with its token keeps its seat; the screen removes and locks', async () => {
+  const { spawn } = require('child_process');
+  const path = require('path');
+  const port = 8900 + Math.floor(Math.random() * 90);
+  const srv = spawn(process.execPath, [path.join(__dirname, '..', 'serve.js'), String(port)], { stdio: ['ignore', 'pipe', 'pipe'] });
+  try {
+    await new Promise((ok) => srv.stdout.once('data', ok));
+    const base = 'ws://127.0.0.1:' + port, origin = 'http://127.0.0.1:' + port;
+    const open = (url) => new Promise((ok, no) => {
+      const ws = new WebSocket(url, { headers: { origin } });
+      const q = []; let wake = null;
+      ws.onmessage = (e) => { q.push(JSON.parse(e.data)); if (wake) { wake(); wake = null; } };
+      ws.next = async () => { while (!q.length) await new Promise((w) => { wake = w; }); return q.shift(); };
+      ws.onopen = () => ok(ws); ws.onerror = () => no(new Error('refused'));
+      ws.closed = new Promise((c) => { ws.onclose = (e) => c(e.code); });
+    });
+    const tv = await open(base + '/api/room/open?kind=pad');
+    const { code } = await tv.next();
+    const tok = 'phone-token-0123456789';
+    const a = await open(base + '/api/room/' + code + '/join?t=' + tok);
+    assert.equal((await a.next()).seat, 1); await tv.next();
+    const b = await open(base + '/api/room/' + code + '/join');
+    assert.equal((await b.next()).seat, 2); await tv.next();
+    a.close(); assert.deepEqual(await tv.next(), { type: 'leave', from: 1 });
+    const a2 = await open(base + '/api/room/' + code + '/join?t=' + tok);
+    assert.equal((await a2.next()).seat, 1, 'back in its own seat');
+    assert.deepEqual(await tv.next(), { type: 'join', from: 1, back: true });
+    tv.send(JSON.stringify({ relay: 'remove', seat: 2 }));
+    assert.deepEqual(await tv.next(), { type: 'leave', from: 2 });
+    assert.equal(await b.closed, R.CLOSE.removed);
+    tv.send(JSON.stringify({ relay: 'lock', on: true }));
+    assert.deepEqual(await tv.next(), { type: 'locked', on: true });
+    const c = await open(base + '/api/room/' + code + '/join');
+    assert.equal(await c.closed, R.CLOSE.locked);
+    tv.close();
+  } finally { srv.kill(); }
 });
