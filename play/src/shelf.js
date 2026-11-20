@@ -60,7 +60,7 @@
     if (g.publisher) lines.push(['Made by', g.publisher]);
     if (g.genres && g.genres.length) lines.push(['Kind', g.genres.join(', ')]);
     lines.push(['Players', g.players > 1 ? '1 or ' + g.players + ', a gamepad each' : '1']);
-    lines.push(['Plays with', 'a gamepad, the keyboard or touch']);
+    lines.push(['Plays with', g.mouse ? 'a mouse; on a touch screen the picture is a trackpad; on a gamepad the right stick' : 'a gamepad, the keyboard or touch']);
     return lines;
   }
 

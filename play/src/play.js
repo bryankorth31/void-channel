@@ -105,6 +105,7 @@
   // Our own actions: menu and keyboard on the press; rewind for as long as it is held (console games).
   function action(name) {
     if (name === 'rewind') { if (runner && !paused) runner.rewind(true); return; }
+    if (name === 'click' || name === 'rclick') { ptrButtons |= name === 'click' ? 1 : 2; sendMouse(0, 0); return; }
     if (name === 'menu') setPaused(!paused);
     else if (name === 'keyboard' && pad && !paused) pad.keyboard.classList.toggle('open');
   }
@@ -184,7 +185,10 @@
     } });
     runner.prepareSound();                     // in the Play tap itself, so iPhone and iPad allow the sound
     hub = PlayHub.createHub({ send, onAction: action, onSeat: seatNote,
-      onRelease: (name) => { if (name === 'rewind' && runner) runner.rewind(false); } });
+      onRelease: (name) => {
+        if (name === 'rewind' && runner) runner.rewind(false);
+        if (name === 'click' || name === 'rclick') { ptrButtons &= name === 'click' ? ~1 : ~2; sendMouse(0, 0); }
+      } });
     hub.setCard(card, PlayCards.gamepadMap(card));
     runner.start(card, base, build.commit.slice(0, 12));
     autoTimer = setInterval(() => { if (started && !paused && !document.hidden) autosave(); }, AUTO_EVERY_MS);
@@ -206,7 +210,10 @@
   // On a computer a click on the picture hands the mouse to the game (pointer lock) and Esc lets it go. On a touch
   // screen the picture is a trackpad: drag moves, a tap is the left button, a two-finger tap the right. On a gamepad
   // the right stick moves, R3 is the left button and L3 the right. Nothing reaches the game while it is paused.
-  const TOUCH_SPEED = 1.5, STICK_SPEED = 14, STICK_DEAD = 0.15;
+  const TOUCH_SPEED = 1.5, STICK_SPEED = 14, STICK_DEAD = 0.15, HOLD_MS = 350;
+  const MOUSE_HOW = { keyboard: 'click the picture to use your mouse (Esc lets it go)',
+    touch: 'drag on the picture to move, tap to click, two-finger tap for the right button, hold then drag to drag; or the L click and R click keys',
+    pad: 'the right stick moves, RB clicks, RT right-clicks' };
   const wantsMouse = () => !!(card && card.controls && card.controls.mouse && !PlayCards.isPad(card));
   let ptrButtons = 0, padButtons = 0;
   const cv = $('canvas');
@@ -229,12 +236,17 @@
   addEventListener('mouseup', (e) => { if (document.pointerLockElement === cv) { ptrButtons = e.buttons & 7; sendMouse(0, 0); } });
   cv.addEventListener('contextmenu', (e) => { if (wantsMouse()) e.preventDefault(); });
   const fingers = new Map();
-  let tapAt = 0, travel = 0, most = 0;
+  let tapAt = 0, travel = 0, most = 0, holdTimer = 0, holding = false;
   function tapClick(b) { ptrButtons = b; sendMouse(0, 0); setTimeout(() => { ptrButtons = 0; sendMouse(0, 0); }, 90); }
   cv.addEventListener('pointerdown', (e) => {
     if (e.pointerType !== 'touch' || !wantsMouse() || !started) return;
     e.preventDefault();
-    if (!fingers.size) { tapAt = Date.now(); travel = 0; most = 0; }
+    if (!fingers.size) {
+      tapAt = Date.now(); travel = 0; most = 0; holding = false;
+      // Hold still a moment, then drag: the left button stays down for the drag (moving a unit, a window, a slider).
+      clearTimeout(holdTimer);
+      holdTimer = setTimeout(() => { if (fingers.size === 1 && travel < 8) { holding = true; ptrButtons |= 1; sendMouse(0, 0); } }, HOLD_MS);
+    }
     fingers.set(e.pointerId, [e.clientX, e.clientY]); most = Math.max(most, fingers.size);
     try { cv.setPointerCapture(e.pointerId); } catch (x) { /* synthetic pointers */ }
   });
@@ -247,6 +259,8 @@
   });
   const lift = (e) => {
     if (!fingers.delete(e.pointerId) || fingers.size) return;
+    clearTimeout(holdTimer);
+    if (holding) { holding = false; ptrButtons &= ~1; sendMouse(0, 0); return; }
     if (Date.now() - tapAt < 300 && travel < 12) tapClick(most >= 2 ? 2 : 1);
   };
   cv.addEventListener('pointerup', lift);
@@ -258,7 +272,7 @@
     const lean = (v) => (Math.abs(v || 0) < STICK_DEAD ? 0 : Math.sign(v) * v * v * STICK_SPEED);
     const dx = lean(p.axes[2]), dy = lean(p.axes[3]);
     const b = (i) => !!(p.buttons[i] && p.buttons[i].pressed);
-    const now = (b(11) ? 1 : 0) | (b(10) ? 2 : 0);
+    const now = (b(5) || b(11) ? 1 : 0) | (b(7) || b(10) ? 2 : 0);
     if (dx || dy || now !== padButtons) { padButtons = now; sendMouse(dx, dy); }
   }
 
@@ -309,6 +323,10 @@
       const li = document.createElement('li'); const b = document.createElement('b'); b.textContent = l.do;
       li.append(b, ': ' + l.how); ul.appendChild(li);
     }
+    if (c.controls && c.controls.mouse && !PlayCards.isPad(c)) {
+      const li = document.createElement('li'); const b = document.createElement('b'); b.textContent = 'Plays with a mouse';
+      li.append(b, ': ' + MOUSE_HOW[device()]); ul.insertBefore(li, ul.firstChild);
+    }
     ul.setAttribute('aria-label', 'How to play on the ' + where);
   }
   addEventListener('gamepadconnected', () => { if (card && !started) cover(card); });
@@ -331,7 +349,7 @@
     }
     if (c.controls && c.controls.mouse && !PlayCards.isPad(c)) {
       const li = document.createElement('li'); const b = document.createElement('b'); b.textContent = 'Mouse';
-      li.append(b, ': click the picture to use your mouse (Esc lets it go); on a touch screen drag on the picture, tap to click, two-finger tap for the right button; on a gamepad the right stick moves, R3 clicks, L3 right-clicks'); ul.appendChild(li);
+      li.append(b, ': ' + MOUSE_HOW.keyboard + '; on a touch screen ' + MOUSE_HOW.touch + '; on a gamepad ' + MOUSE_HOW.pad); ul.appendChild(li);
       $('canvas').style.touchAction = 'none';
     }
     const esc = PlayCards.isPad(c) ? ', Esc on the keyboard' : '';

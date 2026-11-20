@@ -10,6 +10,7 @@
   let names = {};
   const label = (code) => names[code] || LABELS[code] || code.replace(/^P[1-4]:/, '').replace(/^Key|^Digit/, '');
   LABELS['@rewind'] = '◀◀';
+  LABELS['@click'] = 'L click'; LABELS['@rclick'] = 'R click';   // a DOS game's mouse buttons (plan T21b)
   const QWERTY = [['Digit1', 'Digit2', 'Digit3', 'Digit4', 'Digit5', 'Digit6', 'Digit7', 'Digit8', 'Digit9', 'Digit0'],
     'QWERTYUIOP'.split('').map((c) => 'Key' + c), 'ASDFGHJKL'.split('').map((c) => 'Key' + c),
     ['ShiftLeft', ...'ZXCVBNM'.split('').map((c) => 'Key' + c), 'Backspace'], ['Space', 'Enter']];
@@ -89,7 +90,7 @@
   // Space and the rest. A card with no numbers is a game pad: arrows on the left, every key on the right.
   // Upright: the numbers in one row (two on a narrow phone), then Space and Enter, then the arrows beside the rest.
   function plan(c) {
-    const numbers = c.numbers || [], keys = c.keys || [];
+    const numbers = c.numbers || [], keys = (c.keys || []).concat(c.mouse ? ['@click', '@rclick'] : []);
     const go = ['Space', 'Enter'].filter((k) => keys.includes(k));
     const rest = keys.filter((k) => !go.includes(k));
     const sideways = numbers.length
