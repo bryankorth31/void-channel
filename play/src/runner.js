@@ -90,7 +90,8 @@
       worker.onerror = (e) => { if (!stopped && on.error) on.error(e.message || 'The engine stopped'); };
       worker.postMessage({ type: 'start', gameUrl: PlayCards.gameUrl(card), gameFile: PlayCards.gameFile(card),
         start: card.archive.start || '', vars: card.vars || {},
-        pads: PlayCards.isPad(card) ? Math.max(1, card.players || 1) : 0 });
+        pads: PlayCards.isPad(card) ? Math.max(1, card.players || 1) : 0,
+        rewind: PlayCards.isPad(card) });
     }
 
     // Stop means stopped: the worker and its helper threads end now, no late picture or sound reaches the page, and a
@@ -113,6 +114,7 @@
       save: () => ask({ type: 'save' }),
       load: (state) => { const copy = state.slice(0); return ask({ type: 'load', state: copy }, [copy]); },
       reset: () => post({ type: 'reset' }),
+      rewind: (on) => post({ type: 'rewind', on: !!on }),
       frames: () => frames,
       wakeSound: () => { if (audio && audio.state === 'suspended') audio.resume(); },
     };

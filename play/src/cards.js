@@ -27,10 +27,10 @@
   // A console card ("controls.kind": "pad") presses the console's own buttons, named P1:A, P1:Start and so on (P2: for
   // the second player). These are the usual seats for them; a card only lists what differs.
   const PAD_GAMEPAD = { A: 'P1:B', B: 'P1:A', X: 'P1:Y', Y: 'P1:X', LB: 'P1:L', RB: 'P1:R', Back: 'P1:Select',
-    Start: 'P1:Start', Up: 'P1:Up', Down: 'P1:Down', Left: 'P1:Left', Right: 'P1:Right', Home: '@menu' };
+    Start: 'P1:Start', Up: 'P1:Up', Down: 'P1:Down', Left: 'P1:Left', Right: 'P1:Right', Home: '@menu', LT: '@rewind' };
   const PAD_KEYBOARD = { ArrowUp: 'P1:Up', ArrowDown: 'P1:Down', ArrowLeft: 'P1:Left', ArrowRight: 'P1:Right',
     KeyZ: 'P1:B', KeyX: 'P1:A', KeyA: 'P1:Y', KeyS: 'P1:X', KeyQ: 'P1:L', KeyW: 'P1:R', Enter: 'P1:Start',
-    ShiftRight: 'P1:Select', Escape: '@menu' };
+    ShiftRight: 'P1:Select', Escape: '@menu', KeyR: '@rewind' };
   const isPad = (card) => !!(card && card.controls && card.controls.kind === 'pad');
   const gamepadMap = (card) => Object.assign({}, isPad(card) ? PAD_GAMEPAD : {}, (card && card.gamepad) || {});
   // What a PC key does in this game: itself in a DOS game, a console button (or nothing) in a console game.

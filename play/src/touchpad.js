@@ -9,6 +9,7 @@
   // A console button (P1:A) shows its own letter; a card can rename any key (Genesis A B C, the 2600's Fire and Reset).
   let names = {};
   const label = (code) => names[code] || LABELS[code] || code.replace(/^P[1-4]:/, '').replace(/^Key|^Digit/, '');
+  LABELS['@rewind'] = '◀◀';
   const QWERTY = [['Digit1', 'Digit2', 'Digit3', 'Digit4', 'Digit5', 'Digit6', 'Digit7', 'Digit8', 'Digit9', 'Digit0'],
     'QWERTYUIOP'.split('').map((c) => 'Key' + c), 'ASDFGHJKL'.split('').map((c) => 'Key' + c),
     ['ShiftLeft', ...'ZXCVBNM'.split('').map((c) => 'Key' + c), 'Backspace'], ['Space', 'Enter']];
@@ -115,7 +116,7 @@
 
   function consoleKey(code, hub, card, cls) {
     const b = keyButton(code, hub, cls);
-    const word = (root.PlayCards && root.PlayCards.actionFor(card, code)) || '';
+    const word = code === '@rewind' ? 'Rewind' : (root.PlayCards && root.PlayCards.actionFor(card, code)) || '';
     b.textContent = '';
     b.append(el('span', 'big', label(code)));
     if (word) b.append(el('span', 'small', word));
@@ -135,6 +136,7 @@
     }
     const small = el('div', 'csmall');
     for (const code of ['P1:Select', 'P1:Start']) if (keys.includes(code)) small.appendChild(consoleKey(code, hub, card, 'pill'));
+    small.appendChild(consoleKey('@rewind', hub, card, 'pill rewind'));
     const shoulder = (code) => (keys.includes(code) ? consoleKey(code, hub, card, 'cshoulder') : null);
     const L = shoulder('P1:L'), R = shoulder('P1:R');
     const pad = el('div', 'cdpad'); if (card.controls.dpad) pad.appendChild(dpad(hub, PAD_DIRS));

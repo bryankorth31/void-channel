@@ -79,3 +79,21 @@ test('A1 to A3: directions are named, buttons by their place, and no action prin
   assert.ok(!('Answer yes or no' in lines('oregon-trail-1990', 'pad')));
   for (const c of cards) for (const dev of ['pad', 'keyboard', 'touch']) for (const l of Cards.actionLines(c, dev)) assert.ok(l.how, c.id + ' ' + dev + ' ' + l.do);
 });
+
+test('block E: rewind on console games only, seated on LT, R and a touch key, held not pressed', () => {
+  assert.equal(Cards.PAD_GAMEPAD.LT, '@rewind');
+  assert.equal(Cards.PAD_KEYBOARD.KeyR, '@rewind');
+  const worker = fs.readFileSync(path.join(PLAY, 'src', 'core-worker.js'), 'utf8');
+  assert.match(worker, /const REWIND_KEEP = 40, REWIND_STEP_FRAMES = 6;/);
+  assert.match(worker, /rewindOn = !!msg\.rewind;/);
+  assert.match(worker, /else if \(m\.type === 'rewind'\) rewinding = rewindOn && !!m\.on;/);
+  const runner = fs.readFileSync(path.join(PLAY, 'src', 'runner.js'), 'utf8');
+  assert.match(runner, /rewind: PlayCards\.isPad\(card\) \}\);/);
+  const Hub = require('../src/hub.js');
+  const seen = [];
+  const hub = Hub.createHub({ send: () => {}, onAction: (a) => seen.push('press ' + a), onRelease: (a) => seen.push('release ' + a) });
+  hub.setCard({}, Cards.gamepadMap(byId('super-mario-world')));
+  const pad = (b) => ({ index: 0, mapping: 'standard', axes: [0, 0], buttons: Array.from({ length: 17 }, (_, i) => ({ pressed: i === b, value: i === b ? 1 : 0 })) });
+  hub.pollPads([pad(Hub.BUTTONS.LT)]); hub.pollPads([pad(-1)]);
+  assert.deepEqual(seen, ['press rewind', 'release rewind']);
+});

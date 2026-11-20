@@ -20,6 +20,22 @@ function host() {
 importScripts('keys.js', 'unzip.js');
 
 let M = null, running = false, paused = false, timer = 0, lastFrame = -1, fps = 60, next = 0;
+// Rewind (audit batch 4, block E; console cores only): a snapshot every half second, the last 20 seconds kept. While
+// rewind is held, every sixth frame steps back one snapshot (about five times real speed) and shows it.
+const REWIND_KEEP = 40, REWIND_STEP_FRAMES = 6;
+let rewindOn = false, rewinding = false, ring = [], frameNo = 0;
+function snapshot() {
+  const size = M._host_state_size(); if (!size) return;
+  const p = M._malloc(size);
+  if (M._host_state_save(p, size)) { ring.push(M.HEAPU8.slice(p, p + size)); if (ring.length > REWIND_KEEP) ring.shift(); }
+  M._free(p);
+}
+function stepBack() {
+  const state = ring.length > 1 ? ring.pop() : ring[0];
+  if (!state) return;
+  const p = M._malloc(state.length); M.HEAPU8.set(state, p); M._host_state_load(p, state.length); M._free(p);
+  M._host_run(); M._host_audio_clear();
+}
 const held = new Set();
 const say = (text) => postMessage({ type: 'status', text });
 
@@ -83,6 +99,7 @@ async function start(msg) {
   say('Starting the game');
   if (!callStr('host_load', path)) throw new Error('The core could not open ' + path);
   for (let port = 0; port < (msg.pads || 0); port++) M._host_plug_pad(port);
+  rewindOn = !!msg.rewind;
   fps = M._host_fps() || 60;
   postMessage({ type: 'ready', fps, rate: M._host_sample_rate() || 44100, aspect: M._host_aspect() });
   running = true; next = performance.now();
@@ -96,7 +113,12 @@ function tick() {
   const now = performance.now();
   if (!paused) {
     let steps = 0;
-    while (next <= now && steps < 4) { M._host_run(); next += 1000 / fps; steps++; }
+    while (next <= now && steps < 4) {
+      frameNo++;
+      if (rewinding) { if (frameNo % REWIND_STEP_FRAMES === 0) stepBack(); }
+      else { M._host_run(); if (rewindOn && frameNo % Math.max(1, Math.round(fps / 2)) === 0) snapshot(); }
+      next += 1000 / fps; steps++;
+    }
     if (next < now - 4000 / fps) next = now;
     sendFrame(); sendSound();
   } else next = now;
@@ -143,6 +165,7 @@ function save() {
 }
 
 function load(buf) {
+  ring = []; // the old snapshots belong to the spot you just left
   const bytes = new Uint8Array(buf);
   const p = M._malloc(bytes.length);
   M.HEAPU8.set(bytes, p);
@@ -162,7 +185,8 @@ onmessage = (e) => {
     else if (m.type === 'resume') paused = false;
     else if (m.type === 'save') save();
     else if (m.type === 'load') load(m.state);
-    else if (m.type === 'reset') M._host_reset();
+    else if (m.type === 'reset') { M._host_reset(); ring = []; }
+    else if (m.type === 'rewind') rewinding = rewindOn && !!m.on;
     else if (m.type === 'stop') { running = false; clearTimeout(timer); close(); }
   } catch (err) {
     // A save or load that throws is answered "no" (the game keeps running); anything else stops the game with its reason.
