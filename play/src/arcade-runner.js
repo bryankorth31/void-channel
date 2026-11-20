@@ -165,7 +165,8 @@
         }
       } catch (e) {
         console.warn('[mame] engine unpack:', e);
-        if (on.error) on.error('The arcade engine did not load. Try again in a moment, or use a newer browser.');
+        if (on.error) on.error(root.DecompressionStream ? 'The arcade engine did not load. Try again in a moment.'
+          : 'This browser cannot open the arcade engine. A newer browser can.');
         return;
       }
       watchFrames(); keepTitle();
