@@ -270,6 +270,11 @@ node scripts\uni.js check
 node scripts\uni.js build
 ```
 
+There are two kinds. `"kind": "amount"` draws blocks whose volume is the number (the biomass set). `"kind": "size"`
+draws each thing as wide as it really is: every number is in metres, `"unit"` is `{ "measure": "length" }`, and each
+thing may name a `shape` (ball, tall, disc, ring for an orbit, bar for a distance). The second block in the same unit
+(From a blood cell to the next galaxy) is the one to copy. A unit can carry one block or a list of them.
+
 A thing with no number or no source is refused by the check. The stage shows in the preview at once. It goes in the
 public copy only when the block says `"live": true`, the same rule as a lab.
 

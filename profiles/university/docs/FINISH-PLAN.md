@@ -179,3 +179,18 @@ the HQ areas chat. Steps 7 to 10 start after the 22 Nov reset.
   no console errors. Not checked: a real tablet's two-finger pinch (the preview has no touch). The block is
   `"live": false`, so the public copy does not carry it yet. Next step, not started: scale of size (cell to galaxy),
   the same block with spheres and travel across about 27 powers of ten.
+- 19 Nov 2026, 3D scale stage, sizes (Bryan in this chat: "Yes, build it"). The scale block has a second kind,
+  `"size"`: each thing drawn as wide as it really is, in metres. A unit may now carry a list of scale blocks.
+  Thirteen things from a red blood cell (8 thousandths of a millimetre) to the gap to the Andromeda galaxy (2.5
+  million light years), a span of about 27 powers of ten. The stage keeps what you look at in the middle and
+  redraws the rest around it at the scale of the moment; Bigger and Smaller travel between neighbours, pulling back
+  before moving. A solid thing far too big to fit shows as the wall of its near side. Shapes: ball, tall (a person),
+  disc (a galaxy, a blood cell), ring (an orbit), bar (a distance). Every size was read from its source before it
+  went in: NASA fact sheets (Sun, Moon, Earth, Jupiter, Neptune's orbit, the asteroids Bennu and Vesta), NASA Goddard
+  (the Milky Way), and papers for the cell, the person, Betelgeuse, the nearest star and Andromeda. Left out on
+  purpose: the observable universe, because no source I could read gave its width (not built on a number from
+  memory); CDC's height page refused the reader, so the person's height is from the NCD-RisC paper instead.
+  Found by looking and fixed: the eye first ended up inside the giant neighbour of a small thing, so bigger things
+  now run behind what you look at. Checked by hand at 1920x1080, 1316x821, 821x1316 and 1278x513; no sideways
+  scroll, no console errors; the amount stage still works beside it. Not checked: a real tablet's pinch. The shapes
+  are plain coloured solids, not pictures of the real things. Both stages are `"live": false`.

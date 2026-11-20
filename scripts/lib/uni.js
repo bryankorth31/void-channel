@@ -204,13 +204,17 @@ RULES: plain language, no em dashes anywhere, never get round a site that blocks
 // check(log, { links: false }) does everything but call the web (the self-test), and leaves check.json alone.
 // A scale block (scale.js): measured things drawn in 3D at their true size to each other. Every number must be a real
 // one with its source beside it, so a thing with no number, or a number with no source link, is refused here.
-const SCALE_GROUPS = ['plant', 'microbe', 'fungi', 'animal', 'people', 'farm', 'wild'];
+const SCALE_GROUPS = ['plant', 'microbe', 'fungi', 'animal', 'people', 'farm', 'wild', 'cell', 'rock', 'planet', 'star', 'galaxy', 'span'];
+const SCALE_SHAPES = ['ball', 'tall', 'disc', 'ring', 'bar'];
+// A unit carries one scale block or a list of them.
+const scalesOf = (u) => (Array.isArray(u.scale) ? u.scale : u.scale ? [u.scale] : []);
 function scaleProblems(sc) {
   const out = [];
   if (!sc || typeof sc !== 'object') return ['the scale block is not an object'];
-  if (sc.kind !== 'amount') out.push('kind must be "amount" (blocks whose volume is the number)');
+  if (sc.kind !== 'amount' && sc.kind !== 'size') out.push('kind must be "amount" (blocks whose volume is the number) or "size" (things as wide as they really are, in metres)');
   if (!sc.title || !sc.ask) out.push('needs a title and an ask');
-  if (!sc.unit || !sc.unit.words || !(sc.unit.per > 0)) out.push('needs a unit: its words and how many of them one counts for');
+  if (sc.kind === 'size') { if (!sc.unit || sc.unit.measure !== 'length') out.push('a size block measures length: "unit": { "measure": "length" }, every number in metres'); }
+  else if (!sc.unit || !sc.unit.words || !(sc.unit.per > 0)) out.push('needs a unit: its words and how many of them one counts for');
   const states = Array.isArray(sc.states) ? sc.states : [];
   if (!states.length || states.some((x) => !x.key || !/^[a-z]+$/.test(x.key) || !x.name)) out.push('needs at least one state with a plain key and a name');
   const things = Array.isArray(sc.things) ? sc.things : [];
@@ -222,6 +226,8 @@ function scaleProblems(sc) {
     if (names.has(t.name)) out.push(who + ' is listed twice'); names.add(t.name);
     if (t.name.length > 22) out.push(who + ': the name is over 22 letters, too long for its label');
     if (!SCALE_GROUPS.includes(t.group)) out.push(who + ': group must be one of ' + SCALE_GROUPS.join(', '));
+    if (sc.kind === 'size' && t.shape !== undefined && !SCALE_SHAPES.includes(t.shape)) out.push(who + ': shape must be one of ' + SCALE_SHAPES.join(', '));
+    if (t.thick !== undefined && !(t.thick > 0 && t.thick <= 1)) out.push(who + ': thick is the thickness as a share of the width, above 0 and up to 1');
     const v = t.values || {};
     if (!states.length || !(v[states[0].key] > 0)) out.push(who + ': no measured number for ' + (states[0] ? states[0].name : 'the first state'));
     for (const k of Object.keys(v)) { if (!states.some((x) => x.key === k)) out.push(who + ': a number for a state that is not listed: ' + k); if (!(typeof v[k] === 'number' && v[k] >= 0 && Number.isFinite(v[k]))) out.push(who + ': ' + k + ' is not a number'); }
@@ -271,9 +277,9 @@ async function check(log = () => {}, opt = {}) {
   }
   for (const c of builtCourses()) for (const u of [...c.units, ...(c.todo || [])]) if (!Number.isInteger(u.n)) problems.push({ where: c.slug, what: 'a unit number is not a whole number: ' + String(u.n).slice(0, 20) });
   for (const c of builtCourses()) walkText(c.slug + '.json', c);
-  for (const c of builtCourses()) for (const u of c.units) if (u.scale) {
-    for (const what of scaleProblems(u.scale)) problems.push({ where: c.slug + ' unit ' + u.n + ' scale', what });
-    for (const x of Object.values(u.scale.sources || {})) if (/^https:\/\//.test(x.url || '')) urls.set(x.url, c.slug + ' unit ' + u.n + ' scale');
+  for (const c of builtCourses()) for (const u of c.units) for (const sc of scalesOf(u)) {
+    for (const what of scaleProblems(sc)) problems.push({ where: c.slug + ' unit ' + u.n + ' scale', what });
+    for (const x of Object.values((sc && sc.sources) || {})) if (/^https:\/\//.test(x.url || '')) urls.set(x.url, c.slug + ' unit ' + u.n + ' scale');
   }
   for (const b of shelfBooks()) { walkText('shelf/' + b.source + '.json', b.chapters.map((c) => [c.title, c.why, c.passages.map((x) => [x.plain, x.warnings])])); if (b.scan) urls.set(b.scan, 'shelf/' + b.source + '.json'); }
   for (const r of readJson(path.join(UNI, 'shelf', 'warnings.json'), { rules: [] }).rules || []) { walkText('shelf/warnings.json ' + r.id, [r.warning, r.source]); if (/^https:\/\//.test(r.url || '')) urls.set(r.url, 'shelf/warnings.json ' + r.id); else problems.push({ where: 'shelf/warnings.json ' + r.id, what: 'a warning needs an https page' }); }
@@ -903,4 +909,4 @@ function shelfBooks() {
     .map((b) => ({ ...b, live: live.has(b.source), written: b.chapters.filter((c) => c.passages.some((p) => p.plain)).length }));
 }
 
-module.exports = { overview, scaffold, setLive, brief, rewriteBrief, check, media, hearLectures, retime, locate, search, transcript, unitNeeds, slugify, UNI, SRC, draft, keepDraft, gateDraft, sceneFrom, shelfPlan, shelfWrite, shelfChapters, gatePlain, setShelfLive, shelfBooks, classFrom, lectures, scaleProblems };
+module.exports = { overview, scaffold, setLive, brief, rewriteBrief, check, media, hearLectures, retime, locate, search, transcript, unitNeeds, slugify, UNI, SRC, draft, keepDraft, gateDraft, sceneFrom, shelfPlan, shelfWrite, shelfChapters, gatePlain, setShelfLive, shelfBooks, classFrom, lectures, scaleProblems, scalesOf };

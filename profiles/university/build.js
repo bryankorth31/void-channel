@@ -98,7 +98,7 @@ function lab(u) {
 // The scale: measured things in 3D at their true size to each other (scale.js; B, 19 Nov 2026: "3 dimensional visible
 // visual explainers to show scale ... that can be rotated and manipulated spatially"). The list, the numbers and the
 // sources are plain HTML here, so they read with no 3D at all; scale.js draws the stage and wires the list to it.
-const SCALE_COLOR = { plant: '#4fb873', microbe: '#9b8cf0', fungi: '#d79a55', animal: '#58b6e8', people: '#ff6fb5', farm: '#ffc44d', wild: '#6fe0c0' };
+const SCALE_COLOR = { plant: '#4fb873', microbe: '#9b8cf0', fungi: '#d79a55', animal: '#58b6e8', people: '#ff6fb5', farm: '#ffc44d', wild: '#6fe0c0', cell: '#ff8f96', rock: '#b9a48a', planet: '#58b6e8', star: '#ffb347', galaxy: '#9b8cf0', span: '#c5cade' };
 // 450 with "tonnes of carbon" counted in billions -> "450 billion tonnes of carbon"; 0.007 -> "7 million ..."
 function amount(v, unit) {
   if (v === 0) return 'none';
@@ -107,12 +107,24 @@ function amount(v, unit) {
   const t = n >= 1e12 ? say(n / 1e12, 'trillion') : n >= 1e9 ? say(n / 1e9, 'billion') : n >= 1e6 ? say(n / 1e6, 'million') : n >= 1e3 ? Number(n.toPrecision(2)).toLocaleString('en-US') : say(n, '');
   return t + ' ' + unit.words;
 }
-function scaleBlock(u) {
-  if (!shipsScale(u)) return ''; // the public copy carries a scale only once it is marked live
-  const sc = u.scale;
-  const things = sc.things.map((t) => ({ name: t.name, more: t.more || '', color: SCALE_COLOR[t.group], values: t.values }));
+// A length in metres, said in the unit a person would use for it: 8e-6 -> "8 thousandths of a millimetre",
+// 1.3914e9 -> "1.39 million km", 9.46e20 -> "100,000 light years".
+function length(m) {
+  const n = (x) => { const v = Number(x.toPrecision(3)); return v >= 1000 ? v.toLocaleString('en-US') : String(v); };
+  const ly = m / 9.4607e15;
+  return m < 1e-6 ? n(m * 1e9) + ' millionths of a millimetre' : m < 1e-3 ? n(m * 1e6) + ' thousandths of a millimetre' : m < 1e-2 ? n(m * 1e3) + ' mm' : m < 1 ? n(m * 100) + ' cm'
+    : m < 1e3 ? n(m) + ' m' : m < 1e9 ? n(m / 1e3) + ' km' : m < 1e12 ? n(m / 1e9) + ' million km' : m < 1e15 ? n(m / 1e12) + ' billion km'
+    : ly < 1e6 ? n(ly) + ' light years' : ly < 1e9 ? n(ly / 1e6) + ' million light years' : n(ly / 1e9) + ' billion light years';
+}
+// what a thing's number says on the page: an amount in its unit, or a width (a bar is a distance, so it is not "across")
+const said = (v, sc, t) => (sc.kind === 'size' ? length(v) + (t.shape === 'bar' ? '' : t.shape === 'tall' ? ' tall' : ' across') : amount(v, sc.unit));
+const scalesOf = (u) => (Array.isArray(u.scale) ? u.scale : u.scale ? [u.scale] : []);
+// a unit carries one scale block or a list of them; the public copy carries each only once it is marked live
+const scaleBlock = (u) => scalesOf(u).filter((sc) => !LIVE || sc.live).map(scaleOne).join('');
+function scaleOne(sc) {
+  const things = sc.things.map((t) => ({ name: t.name, more: t.more || '', color: SCALE_COLOR[t.group], values: t.values, ...(t.shape ? { shape: t.shape } : {}), ...(t.thick ? { thick: t.thick } : {}) }));
   const cfg = { kind: sc.kind, states: sc.states, things, base: sc.base || null, guess: sc.guess || null, hint: 'Press a name in the list, or turn the stage, to look closer.' };
-  const rows = sc.things.map((t) => '<li><button type="button" title="Go to ' + esc(t.name) + ' on the stage"' + sc.states.map((st) => ' data-v' + st.key + '="' + esc(t.values[st.key] === undefined ? 'no measured number for then' : amount(t.values[st.key], sc.unit)) + '"').join('') + '><i style="background:' + SCALE_COLOR[t.group] + '"></i><b>' + esc(t.name) + '</b><span class="v">' + esc(amount(t.values[sc.states[0].key], sc.unit)) + '</span></button></li>').join('');
+  const rows = sc.things.map((t) => '<li><button type="button" title="Go to ' + esc(t.name) + ' on the stage"' + sc.states.map((st) => ' data-v' + st.key + '="' + esc(t.values[st.key] === undefined ? 'no measured number for then' : said(t.values[st.key], sc, t)) + '"').join('') + '><i style="background:' + SCALE_COLOR[t.group] + '"></i><b>' + esc(t.name) + '</b><span class="v">' + esc(said(t.values[sc.states[0].key], sc, t)) + '</span></button></li>').join('');
   const states = sc.states.length > 1 ? '<div class="scale-states"><span>When</span>' + sc.states.map((st, i) => '<button type="button" data-state="' + esc(st.key) + '"' + (i ? '' : ' class="on"') + ' title="Show the amounts for: ' + esc(st.name) + '">' + esc(st.name) + '</button>').join('') + '</div>' : '<div class="scale-states" hidden></div>';
   const g = sc.guess ? '<b>Guess first</b><p>' + esc(sc.guess.q) + '</p><div class="opts">' + sc.guess.options.map((o, i) => '<button type="button" data-i="' + i + '">' + esc(o) + '</button>').join('') + '</div><p class="said" hidden></p><button type="button" class="see" hidden>Show me</button>' : '';
   const tools = [['bigger', '&#8249; Bigger', 'Go to the next bigger thing'], ['smaller', 'Smaller &#8250;', 'Go to the next smaller thing'], ['in', '+', 'Zoom in'], ['out', '&#8722;', 'Zoom out'], ['all', 'See all', 'Step back until everything fits']].map(([d, t, tip]) => '<button type="button" data-do="' + d + '" title="' + tip + '" aria-label="' + tip + '">' + t + '</button>').join('');
@@ -772,7 +784,7 @@ shipJs(path.join(DIR, 'crystal.js'), path.join(OUT, 'crystal.js'));
 shipJs(path.join(DIR, 'scene.js'), path.join(OUT, 'scene.js'));
 // A lab is on a page when the unit has one; the public copy carries only labs marked live.
 const shipsLab = (u) => !!(u.lab && (!LIVE || u.lab.live));
-const shipsScale = (u) => !!(u.scale && (!LIVE || u.scale.live));
+const shipsScale = (u) => scalesOf(u).some((sc) => !LIVE || sc.live);
 const LIVE_SLUGS = new Set((JSON.parse(fs.readFileSync(path.join(DIR, 'list.json'), 'utf8')).courses || []).filter((c) => c.live).map((c) => c.slug));
 const courses = fs.readdirSync(path.join(DIR, 'courses')).filter((f) => f.endsWith('.json'));
 // The preview (never the public copy) also shows each whole local draft (scripts/uni.js draft) inside its course,

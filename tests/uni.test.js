@@ -208,7 +208,7 @@ test('the public pages carry no machine-made tells: no middle-dot strings, no ca
 
 test('scale: every thing on a 3D stage has a real number and a source, and the page says the amounts in words', () => {
   const course = JSON.parse(fs.readFileSync(path.join(uni.UNI, 'courses', 'critical-thinking.json'), 'utf8'));
-  const sc = course.units.find((u) => u.scale).scale;
+  const sc = uni.scalesOf(course.units.find((u) => u.scale))[0];
   assert.deepEqual(uni.scaleProblems(sc), []);
   const copy = () => JSON.parse(JSON.stringify(sc));
   let x = copy(); delete x.things[0].values.now;
@@ -217,7 +217,7 @@ test('scale: every thing on a 3D stage has a real number and a source, and the p
   assert.match(uni.scaleProblems(x).join(' | '), /no source/);
   x = copy(); x.sources.baron.url = 'http://example.org/paper';
   assert.match(uni.scaleProblems(x).join(' | '), /https link/);
-  x = copy(); x.kind = 'size';
+  x = copy(); x.kind = 'weight';
   assert.match(uni.scaleProblems(x).join(' | '), /kind must be/);
   x = copy(); x.guess.answer = 9;
   assert.match(uni.scaleProblems(x).join(' | '), /right answer/);
@@ -235,7 +235,24 @@ test('scale: every thing on a 3D stage has a real number and a source, and the p
   for (const f of ['scale.js', 'three.module.min.js', 'three-LICENSE.txt']) assert.ok(fs.existsSync(path.join(prev, f)), f + ' is not beside the page that needs it');
   // the public copy carries a scale only once it is marked live, the same rule as a lab
   build('--site');
-  const live = course.units.some((u) => u.scale && u.scale.live) && list().courses.find((c) => c.slug === 'critical-thinking').live;
+  const live = course.units.some((u) => uni.scalesOf(u).some((x) => x.live)) && list().courses.find((c) => c.slug === 'critical-thinking').live;
   assert.equal(fs.existsSync(path.join(SITE, 'scale.js')), !!live);
   if (!live) assert.doesNotMatch(fs.readFileSync(path.join(SITE, 'critical-thinking.html'), 'utf8'), /src="scale\.js"|data-scale=/);
+});
+
+test('scale, sizes: widths are in metres from their sources, said in the unit a person would use', () => {
+  const course = JSON.parse(fs.readFileSync(path.join(uni.UNI, 'courses', 'critical-thinking.json'), 'utf8'));
+  const sc = course.units.flatMap((u) => uni.scalesOf(u)).find((x) => x.kind === 'size');
+  assert.deepEqual(uni.scaleProblems(sc), []);
+  const m = Object.fromEntries(sc.things.map((t) => [t.name, t.values.now]));
+  // NASA fact sheets: volumetric mean radius 1737.4, 6371.0, 69911 and 695700 km
+  assert.deepEqual([m['The Moon'], m.Earth, m.Jupiter, m['The Sun']], [3474800, 12742000, 139822000, 1391400000]);
+  assert.equal(Math.round(m['The Sun'] / m.Earth), 109, 'the guess says about 109 Earths across the Sun');
+  let x = JSON.parse(JSON.stringify(sc)); x.things[0].shape = 'cube';
+  assert.match(uni.scaleProblems(x).join(' | '), /shape must be/);
+  x = JSON.parse(JSON.stringify(sc)); x.unit = { words: 'metres', per: 1 };
+  assert.match(uni.scaleProblems(x).join(' | '), /measures length/);
+  build();
+  const page = fs.readFileSync(path.join(uni.UNI, 'site-preview', 'critical-thinking.html'), 'utf8');
+  for (const words of ['8 thousandths of a millimetre across', '1.82 m tall', '490 m across', '3,470 km across', '12,700 km across', '1.39 million km across', '9.03 billion km across', '4.22 light years<', '100,000 light years across', '2.5 million light years<']) assert.ok(page.includes(words), 'the page does not say: ' + words);
 });

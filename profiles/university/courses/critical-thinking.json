@@ -916,219 +916,440 @@
         10
       ],
       "needIt": "Loan rates, medical risks and \"50% off\" are all numbers someone chose to show you; three quick questions tell you whether they mean what they seem to.",
-      "scale": {
-        "live": false,
-        "kind": "amount",
-        "title": "The weight of everything alive",
-        "ask": "Each block is one group of living things, and its volume is that group's real share of all life on Earth. Guess first, then turn it, zoom in, and walk down the row until you find the people.",
-        "unit": {
-          "words": "tonnes of carbon",
-          "per": 1000000000
-        },
-        "base": {
-          "name": "People",
-          "words": "all people",
-          "cap": "All people"
-        },
-        "states": [
-          {
-            "key": "now",
-            "name": "Today"
+      "scale": [
+        {
+          "live": false,
+          "kind": "amount",
+          "title": "The weight of everything alive",
+          "ask": "Each block is one group of living things, and its volume is that group's real share of all life on Earth. Guess first, then turn it, zoom in, and walk down the row until you find the people.",
+          "unit": {
+            "words": "tonnes of carbon",
+            "per": 1000000000
           },
-          {
-            "key": "before",
-            "name": "Before people spread",
-            "note": "The paper's rough numbers for the world before the great loss of large animals (which began about 50,000 years ago) and before farming. A faint outline means the paper gives no number for then, so today's size is kept."
-          }
-        ],
-        "things": [
-          {
-            "name": "Plants",
-            "group": "plant",
-            "values": {
-              "now": 450,
-              "before": 900
-            },
-            "more": "Mostly trees, and mostly wood. The paper says plants have fallen to about half since people began clearing land.",
-            "src": "baron"
-          },
-          {
-            "name": "Bacteria",
-            "group": "microbe",
-            "values": {
-              "now": 70
-            },
-            "more": "Most of them live deep underground. This number is sure only to within about ten times.",
-            "src": "baron"
-          },
-          {
-            "name": "Fungi",
-            "group": "fungi",
-            "values": {
-              "now": 12
-            },
-            "more": "Mushrooms are the small part you see; most of it is threads in the soil.",
-            "src": "baron"
-          },
-          {
-            "name": "Archaea",
-            "group": "microbe",
-            "values": {
-              "now": 7
-            },
-            "more": "Single cells much like bacteria, mostly deep underground.",
-            "src": "baron"
-          },
-          {
-            "name": "Protists",
-            "group": "microbe",
-            "values": {
-              "now": 4
-            },
-            "more": "Algae, amoebas and other single cells that have a nucleus.",
-            "src": "baron"
-          },
-          {
-            "name": "Sea arthropods",
-            "group": "animal",
-            "values": {
-              "now": 1
-            },
-            "more": "Krill, crabs, shrimp and the tiny copepods that fill the oceans.",
-            "src": "baron"
-          },
-          {
-            "name": "Fish",
-            "group": "animal",
-            "values": {
-              "now": 0.7,
-              "before": 0.8
-            },
-            "more": "Fishing has taken about 100 million tonnes out of the total.",
-            "src": "baron"
-          },
-          {
-            "name": "Land arthropods",
-            "group": "animal",
-            "values": {
-              "now": 0.2
-            },
-            "more": "Insects, spiders and their kin.",
-            "src": "baron"
-          },
-          {
-            "name": "Worms",
-            "group": "animal",
-            "values": {
-              "now": 0.2
-            },
-            "more": "Earthworms and the other segmented worms (annelids).",
-            "src": "baron"
-          },
-          {
-            "name": "Molluscs",
-            "group": "animal",
-            "values": {
-              "now": 0.2
-            },
-            "more": "Snails, clams, squid.",
-            "src": "baron"
-          },
-          {
-            "name": "Viruses",
-            "group": "microbe",
-            "values": {
-              "now": 0.2
-            },
-            "more": "Counted by the paper beside the living things. Sure only to within about twenty times.",
-            "src": "baron"
-          },
-          {
-            "name": "Jellyfish and corals",
-            "group": "animal",
-            "values": {
-              "now": 0.1
-            },
-            "src": "baron"
-          },
-          {
-            "name": "Livestock",
-            "group": "farm",
-            "values": {
-              "now": 0.1,
-              "before": 0
-            },
-            "more": "Farm mammals, mostly cattle and pigs.",
-            "src": "baron"
-          },
-          {
+          "base": {
             "name": "People",
-            "group": "people",
-            "values": {
-              "now": 0.06
-            },
-            "src": "baron"
+            "words": "all people",
+            "cap": "All people"
           },
-          {
-            "name": "Roundworms",
-            "group": "animal",
-            "values": {
-              "now": 0.02
+          "states": [
+            {
+              "key": "now",
+              "name": "Today"
             },
-            "more": "Nematodes: more of them by count than any other animal, and still this small.",
-            "src": "baron"
+            {
+              "key": "before",
+              "name": "Before people spread",
+              "note": "The paper's rough numbers for the world before the great loss of large animals (which began about 50,000 years ago) and before farming. A faint outline means the paper gives no number for then, so today's size is kept."
+            }
+          ],
+          "things": [
+            {
+              "name": "Plants",
+              "group": "plant",
+              "values": {
+                "now": 450,
+                "before": 900
+              },
+              "more": "Mostly trees, and mostly wood. The paper says plants have fallen to about half since people began clearing land.",
+              "src": "baron"
+            },
+            {
+              "name": "Bacteria",
+              "group": "microbe",
+              "values": {
+                "now": 70
+              },
+              "more": "Most of them live deep underground. This number is sure only to within about ten times.",
+              "src": "baron"
+            },
+            {
+              "name": "Fungi",
+              "group": "fungi",
+              "values": {
+                "now": 12
+              },
+              "more": "Mushrooms are the small part you see; most of it is threads in the soil.",
+              "src": "baron"
+            },
+            {
+              "name": "Archaea",
+              "group": "microbe",
+              "values": {
+                "now": 7
+              },
+              "more": "Single cells much like bacteria, mostly deep underground.",
+              "src": "baron"
+            },
+            {
+              "name": "Protists",
+              "group": "microbe",
+              "values": {
+                "now": 4
+              },
+              "more": "Algae, amoebas and other single cells that have a nucleus.",
+              "src": "baron"
+            },
+            {
+              "name": "Sea arthropods",
+              "group": "animal",
+              "values": {
+                "now": 1
+              },
+              "more": "Krill, crabs, shrimp and the tiny copepods that fill the oceans.",
+              "src": "baron"
+            },
+            {
+              "name": "Fish",
+              "group": "animal",
+              "values": {
+                "now": 0.7,
+                "before": 0.8
+              },
+              "more": "Fishing has taken about 100 million tonnes out of the total.",
+              "src": "baron"
+            },
+            {
+              "name": "Land arthropods",
+              "group": "animal",
+              "values": {
+                "now": 0.2
+              },
+              "more": "Insects, spiders and their kin.",
+              "src": "baron"
+            },
+            {
+              "name": "Worms",
+              "group": "animal",
+              "values": {
+                "now": 0.2
+              },
+              "more": "Earthworms and the other segmented worms (annelids).",
+              "src": "baron"
+            },
+            {
+              "name": "Molluscs",
+              "group": "animal",
+              "values": {
+                "now": 0.2
+              },
+              "more": "Snails, clams, squid.",
+              "src": "baron"
+            },
+            {
+              "name": "Viruses",
+              "group": "microbe",
+              "values": {
+                "now": 0.2
+              },
+              "more": "Counted by the paper beside the living things. Sure only to within about twenty times.",
+              "src": "baron"
+            },
+            {
+              "name": "Jellyfish and corals",
+              "group": "animal",
+              "values": {
+                "now": 0.1
+              },
+              "src": "baron"
+            },
+            {
+              "name": "Livestock",
+              "group": "farm",
+              "values": {
+                "now": 0.1,
+                "before": 0
+              },
+              "more": "Farm mammals, mostly cattle and pigs.",
+              "src": "baron"
+            },
+            {
+              "name": "People",
+              "group": "people",
+              "values": {
+                "now": 0.06
+              },
+              "src": "baron"
+            },
+            {
+              "name": "Roundworms",
+              "group": "animal",
+              "values": {
+                "now": 0.02
+              },
+              "more": "Nematodes: more of them by count than any other animal, and still this small.",
+              "src": "baron"
+            },
+            {
+              "name": "Wild mammals",
+              "group": "wild",
+              "values": {
+                "now": 0.007,
+                "before": 0.04
+              },
+              "more": "Every wild mammal on land and in the sea, whales included.",
+              "src": "baron"
+            },
+            {
+              "name": "Farmed birds",
+              "group": "farm",
+              "values": {
+                "now": 0.005,
+                "before": 0
+              },
+              "more": "Mostly chickens.",
+              "src": "baron"
+            },
+            {
+              "name": "Wild birds",
+              "group": "wild",
+              "values": {
+                "now": 0.002
+              },
+              "src": "baron"
+            }
+          ],
+          "sources": {
+            "baron": {
+              "title": "The biomass distribution on Earth",
+              "by": "Yinon Bar-On, Rob Phillips and Ron Milo",
+              "year": 2018,
+              "where": "Proceedings of the National Academy of Sciences 115, 6506 (doi 10.1073/pnas.1711842115), free to read at Europe PMC",
+              "url": "https://europepmc.org/article/PMC/PMC6016768"
+            }
           },
-          {
-            "name": "Wild mammals",
-            "group": "wild",
-            "values": {
-              "now": 0.007,
-              "before": 0.04
-            },
-            "more": "Every wild mammal on land and in the sea, whales included.",
-            "src": "baron"
-          },
-          {
-            "name": "Farmed birds",
-            "group": "farm",
-            "values": {
-              "now": 0.005,
-              "before": 0
-            },
-            "more": "Mostly chickens.",
-            "src": "baron"
-          },
-          {
-            "name": "Wild birds",
-            "group": "wild",
-            "values": {
-              "now": 0.002
-            },
-            "src": "baron"
-          }
-        ],
-        "sources": {
-          "baron": {
-            "title": "The biomass distribution on Earth",
-            "by": "Yinon Bar-On, Rob Phillips and Ron Milo",
-            "year": 2018,
-            "where": "Proceedings of the National Academy of Sciences 115, 6506 (doi 10.1073/pnas.1711842115), free to read at Europe PMC",
-            "url": "https://europepmc.org/article/PMC/PMC6016768"
+          "note": "Living things are weighed here by the carbon in them, the usual yardstick, because the water in a body varies. These are estimates: most are sure to within a few times, not to the last digit, and the paper gives the range for each.",
+          "guess": {
+            "q": "Which holds more living mass: every wild mammal on Earth, or all the people?",
+            "options": [
+              "Wild mammals",
+              "People",
+              "About the same"
+            ],
+            "answer": 1,
+            "after": "People come to about 60 million tonnes of carbon. Every wild mammal on land and sea together comes to about 7 million. Livestock is larger again, about 100 million.",
+            "show": "People"
           }
         },
-        "note": "Living things are weighed here by the carbon in them, the usual yardstick, because the water in a body varies. These are estimates: most are sure to within a few times, not to the last digit, and the paper gives the range for each.",
-        "guess": {
-          "q": "Which holds more living mass: every wild mammal on Earth, or all the people?",
-          "options": [
-            "Wild mammals",
-            "People",
-            "About the same"
+        {
+          "live": false,
+          "kind": "size",
+          "title": "From a blood cell to the next galaxy",
+          "ask": "Each thing is drawn as wide as it really is. No screen can hold them all at once, so walk from one to the next with Bigger and Smaller and watch each one turn into a speck beside its neighbour.",
+          "unit": {
+            "measure": "length"
+          },
+          "base": {
+            "name": "A person",
+            "words": "the height of a person",
+            "cap": "A person's height",
+            "verb": "comes to"
+          },
+          "states": [
+            {
+              "key": "now",
+              "name": "Today"
+            }
           ],
-          "answer": 1,
-          "after": "People come to about 60 million tonnes of carbon. Every wild mammal on land and sea together comes to about 7 million. Livestock is larger again, about 100 million.",
-          "show": "People"
+          "things": [
+            {
+              "name": "Red blood cell",
+              "group": "cell",
+              "shape": "disc",
+              "values": {
+                "now": 0.000008
+              },
+              "more": "About four times as wide as it is thick, and one of the smaller cells in your body.",
+              "thick": 0.25,
+              "src": "chang"
+            },
+            {
+              "name": "A person",
+              "group": "people",
+              "shape": "tall",
+              "values": {
+                "now": 1.825
+              },
+              "more": "Dutch men born late last century, the tallest people measured, average just over 1.82 m. Most people are a little shorter.",
+              "src": "ncd"
+            },
+            {
+              "name": "Asteroid Bennu",
+              "group": "rock",
+              "shape": "ball",
+              "values": {
+                "now": 490
+              },
+              "more": "A small asteroid that crosses Earth's path. A spacecraft brought a sample of it home.",
+              "src": "nasaast"
+            },
+            {
+              "name": "Asteroid Vesta",
+              "group": "rock",
+              "shape": "ball",
+              "values": {
+                "now": 569000
+              },
+              "more": "One of the largest asteroids, 569 km at its longest.",
+              "src": "nasaast"
+            },
+            {
+              "name": "The Moon",
+              "group": "rock",
+              "shape": "ball",
+              "values": {
+                "now": 3474800
+              },
+              "src": "nasa"
+            },
+            {
+              "name": "Earth",
+              "group": "planet",
+              "shape": "ball",
+              "values": {
+                "now": 12742000
+              },
+              "src": "nasa"
+            },
+            {
+              "name": "Jupiter",
+              "group": "planet",
+              "shape": "ball",
+              "values": {
+                "now": 139822000
+              },
+              "more": "The largest planet.",
+              "src": "nasa"
+            },
+            {
+              "name": "The Sun",
+              "group": "star",
+              "shape": "ball",
+              "values": {
+                "now": 1391400000
+              },
+              "src": "nasa"
+            },
+            {
+              "name": "Betelgeuse",
+              "group": "star",
+              "shape": "ball",
+              "values": {
+                "now": 1063029600000
+              },
+              "more": "A red supergiant star in Orion. The paper puts its radius at 764 Suns, give or take about a hundred.",
+              "src": "joyce"
+            },
+            {
+              "name": "Neptune's orbit",
+              "group": "span",
+              "shape": "ring",
+              "values": {
+                "now": 9029906000000
+              },
+              "more": "The path of the farthest planet, 30 times as far from the Sun as Earth is.",
+              "src": "nasa"
+            },
+            {
+              "name": "To the nearest star",
+              "group": "span",
+              "shape": "bar",
+              "values": {
+                "now": 39959815000000000
+              },
+              "more": "Proxima Centauri, 1.295 parsecs away. Light takes a little over four years to cross it.",
+              "src": "anglada"
+            },
+            {
+              "name": "The Milky Way",
+              "group": "galaxy",
+              "shape": "disc",
+              "values": {
+                "now": 946070000000000000000
+              },
+              "more": "Our galaxy: about 100,000 light years across, and thin like a plate.",
+              "thick": 0.03,
+              "src": "nasamw"
+            },
+            {
+              "name": "To the next big galaxy",
+              "group": "span",
+              "shape": "bar",
+              "values": {
+                "now": 2.3605605e+22
+              },
+              "more": "The Andromeda galaxy, 765 kiloparsecs away, give or take 28.",
+              "src": "riess"
+            }
+          ],
+          "sources": {
+            "nasa": {
+              "title": "Planetary Fact Sheets (Sun, Moon, Earth, Jupiter, Neptune)",
+              "by": "NASA Space Science Data Coordinated Archive",
+              "year": 2024,
+              "url": "https://nssdc.gsfc.nasa.gov/planetary/planetfact.html"
+            },
+            "nasaast": {
+              "title": "Asteroid Fact Sheet",
+              "by": "NASA Space Science Data Coordinated Archive",
+              "year": 2019,
+              "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/asteroidfact.html"
+            },
+            "nasamw": {
+              "title": "The Milky Way galaxy",
+              "by": "NASA Goddard Space Flight Center, Imagine the Universe",
+              "year": 2025,
+              "url": "https://imagine.gsfc.nasa.gov/features/cosmic/milkyway_info.html"
+            },
+            "joyce": {
+              "title": "Standing on the shoulders of giants: new mass and distance estimates for Betelgeuse",
+              "by": "Meridith Joyce and others",
+              "year": 2020,
+              "where": "The Astrophysical Journal 902",
+              "url": "https://arxiv.org/abs/2006.09837"
+            },
+            "anglada": {
+              "title": "A terrestrial planet candidate in a temperate orbit around Proxima Centauri",
+              "by": "Guillem Anglada-Escudé and others",
+              "year": 2016,
+              "where": "Nature 536, 437",
+              "url": "https://arxiv.org/abs/1609.03449"
+            },
+            "riess": {
+              "title": "Cepheid period-luminosity relations in the near-infrared and the distance to M31",
+              "by": "Adam Riess, Juergen Fliri and David Valls-Gabaud",
+              "year": 2011,
+              "where": "arXiv 1110.3769",
+              "url": "https://arxiv.org/abs/1110.3769"
+            },
+            "ncd": {
+              "title": "A century of trends in adult human height",
+              "by": "NCD Risk Factor Collaboration",
+              "year": 2016,
+              "where": "eLife 5, e13410",
+              "url": "https://europepmc.org/article/PMC/PMC4961475"
+            },
+            "chang": {
+              "title": "MD/DPD multiscale framework for predicting morphology and stresses of red blood cells in health and disease",
+              "by": "Hung-Yu Chang, Xuejin Li, He Li and George Karniadakis",
+              "year": 2016,
+              "where": "PLoS Computational Biology 12, e1005173",
+              "url": "https://europepmc.org/article/PMC/PMC5085038"
+            }
+          },
+          "note": "Sizes are across the widest part. The Sun, Moon and planets are from their measured radius; the two bars are distances, not objects. Betelgeuse and the two distances carry real uncertainty, given in their papers.",
+          "guess": {
+            "q": "How many Earths would fit side by side across the Sun?",
+            "options": [
+              "About 10",
+              "About 100",
+              "About 1,000"
+            ],
+            "answer": 1,
+            "after": "About 109. The Sun is 1.39 million km across and the Earth is 12,700.",
+            "show": "The Sun"
+          }
         }
-      }
+      ]
     },
     {
       "n": 4,
