@@ -28,7 +28,7 @@
     const canvas = opts.canvas, ctx = canvas.getContext('2d', { alpha: false });
     const on = opts.on || {};
     let worker = null, audio = null, node = null, rate = 0, frames = 0, stopped = false;
-    let sramWait = null;
+    let sramWait = null, sramSetWait = null;
     let why = '';                           // why the last save failed, when the engine said ('dos': still at DOS)
     let asking = null;                      // the one save or load waiting for its answer: { done, timer }
     const queue = [];                       // the rest, one at a time
@@ -92,6 +92,7 @@
         else if (m.type === 'error') on.error && on.error(m.text);
         else if (m.type === 'saved') { why = m.why || ''; settle(m.state || null); }
         else if (m.type === 'loaded') settle(!!m.ok);
+        else if (m.type === 'sram-set') { const r = sramSetWait; sramSetWait = null; if (r) r(!!m.ok); }
         else if (m.type === 'sram') { const r = sramWait; sramWait = null; if (r) r(m.bytes ? new Uint8Array(m.bytes) : null); }
       };
       worker.onerror = (e) => { if (!stopped && on.error) on.error(e.message || 'The engine stopped'); };
@@ -128,6 +129,8 @@
       save: () => ask({ type: 'save' }),
       // The game's own battery save (Pokemon's SAVE): read out for the page to keep apart from save states.
       sram: () => new Promise((ok) => { if (!worker || stopped) return ok(null); sramWait = ok; post({ type: 'sram-get' }); setTimeout(() => { if (sramWait === ok) { sramWait = null; ok(null); } }, 2000); }),
+      // A battery save from a file: written into the game, which then starts over and reads it (yes or no).
+      sramSet: (bytes) => new Promise((ok) => { if (!worker || stopped || !bytes) return ok(false); sramSetWait = ok; const copy = new Uint8Array(bytes).slice(0).buffer; worker.postMessage({ type: 'sram-set', bytes: copy }, [copy]); setTimeout(() => { if (sramSetWait === ok) { sramSetWait = null; ok(false); } }, 2000); }),
       load: (state) => { const copy = state.slice(0); return ask({ type: 'load', state: copy }, [copy]); },
       reset: () => post({ type: 'reset' }),
       rewind: (on) => post({ type: 'rewind', on: !!on }),

@@ -170,3 +170,19 @@ test('the handheld shell on a phone (Bryan: "Phones, both ways"): the bar steps 
   const css = read(ROOT, 'play.css');
   assert.ok(css.includes('body.shell:not(.paused):not(.showbar) .bar{transform:translateY(-100%)'), 'the bar is back while paused');
 });
+
+test('whole-site audit 2 and 3 (Bryan: "Yes, pass 2 and 3 to the lead"): the browser is asked once to keep the saves, and a save goes to a file and back', () => {
+  const js = read(ROOT, 'src', 'play.js'), html = read(ROOT, 'game.html');
+  // 2: asked once, after Play or a save, with no question of ours and nothing said on a no.
+  assert.ok(js.includes("navigator.storage.persisted().then((yes) => (yes ? true : navigator.storage.persist())).catch(() => {});"));
+  assert.ok(js.includes("localStorage.getItem('voidtv-play-keep')") && js.includes('  function begin() {\n    keepStorage();'));
+  // 3: in the pause menu row (touch and gamepad reach it), each with a tip; the file is made and read here only.
+  for (const id of ['b-file-save', 'b-file-load']) assert.match(html, new RegExp('<button type="button" id="' + id + '" class="tool" title="[^"]+">'));
+  assert.ok(/<div class="menu-row">[\s\S]*id="b-file-load"[\s\S]*<\/div>/.test(html));
+  assert.ok(js.includes("a.download = 'voidtv-' + card.id + '.json';"), 'the file is named for the game only');
+  assert.ok(!/fetch\([^)]*FILE_KIND|sendBeacon/.test(js), 'nothing is sent anywhere');
+  // Checked for this game, the spot only in its own build, the battery save in any build.
+  assert.ok(js.includes("if (f.game !== card.id) return toast("));
+  assert.ok(js.includes('if (spot && PlaySaves.fits(spot, build)) {') && js.includes('const ok = await runner.sramSet(sram);'));
+  assert.ok(read(ROOT, 'src', 'core-worker.js').includes("else if (m.type === 'sram-set') {"));
+});

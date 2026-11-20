@@ -309,6 +309,8 @@ onmessage = (e) => {
     else if (m.type === 'save') save();
     else if (m.type === 'sram-get') { const n = M._host_sram_size ? M._host_sram_size() : 0, p = n ? M._host_sram() : 0; const b = p ? M.HEAPU8.slice(p, p + n).buffer : null; postMessage({ type: 'sram', bytes: b }, b ? [b] : []); }
     else if (m.type === 'load') load(m.state);
+    // A battery save brought back from a file: written in, then the game starts over and reads it as on power-on.
+    else if (m.type === 'sram-set') { const n = M._host_sram_size ? M._host_sram_size() : 0, p = n ? M._host_sram() : 0; const ok = !!(p && m.bytes && m.bytes.byteLength === n); if (ok) { M.HEAPU8.set(new Uint8Array(m.bytes), p); M._host_reset(); ring = []; } postMessage({ type: 'sram-set', ok }); }
     else if (m.type === 'reset') { M._host_reset(); ring = []; }
     else if (m.type === 'rewind') rewinding = rewindOn && !!m.on;
     else if (m.type === 'stop') { running = false; clearTimeout(timer); close(); }

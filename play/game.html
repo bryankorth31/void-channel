@@ -78,6 +78,11 @@
       <button type="button" id="m-resume" class="tool big">Keep playing</button>
       <button type="button" id="b-save" class="tool" title="Save your spot in this browser">Save</button>
       <button type="button" id="b-load" class="tool" title="Go back to your saved spot">Load</button>
+      <!-- Save to a file (whole-site audit, Bryan: "Yes, pass 2 and 3 to the lead"): with no accounts, this is how a save
+           moves to another device and outlives a browser that clears its data. The file never goes to voidtv.net. -->
+      <button type="button" id="b-file-save" class="tool" title="Keep this game's save as a file on this device, to load here later or on another device">Save to a file</button>
+      <button type="button" id="b-file-load" class="tool" title="Load this game's save from a file made with Save to a file">Load from a file</button>
+      <input type="file" id="file-in" accept=".json,application/json" hidden>
       <button type="button" id="m-reset" class="tool">Restart the game</button>
       <button type="button" id="m-cheats" class="tool" aria-expanded="false" hidden>Cheats</button>
       <a class="tool" href="./">Back to the games</a>

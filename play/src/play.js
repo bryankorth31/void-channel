@@ -158,7 +158,7 @@
     const state = await runner.save();
     if (!state && runner.saveWhy() === 'arcade') return toast('Arcade games cannot be saved yet');
     if (!state) return toast(runner.saveWhy() === 'dos' ? 'This game can be saved once it is past its DOS start menu' : 'The game could not be saved just now');
-    try { await PlaySaves.put(card.id, state, build); toast('Saved in this browser'); } catch (e) { toast('This browser would not keep the save'); }
+    try { await PlaySaves.put(card.id, state, build); toast('Saved in this browser'); keepStorage(); } catch (e) { toast('This browser would not keep the save'); }
   }
   // Load and Restart first keep where you are, so one wrong tap is undone with one tap.
   async function keepHere() { const s = await runner.save(); return s ? () => runner.load(s).then((ok) => toast(ok ? 'Back where you were' : 'That could not be undone')) : null; }
@@ -173,6 +173,80 @@
     toast(ok ? 'Back to your saved spot' : 'That save would not load', ok ? undo : null);
     if (ok) setPaused(false);
   }
+  // Save to a file and Load from a file (whole-site audit, Bryan: "Yes, pass 2 and 3 to the lead"). One file per game: the
+  // game's own battery save, the saved spot with the engine build that made it, and an arcade game's score table.
+  // Nothing about the person is in the file or its name, and it never goes to voidtv.net: it is made and read here.
+  const FILE_KIND = 'voidtv-play-save';
+  const toB64 = (u8) => { let s = ''; for (let i = 0; i < u8.length; i += 32768) s += String.fromCharCode.apply(null, u8.subarray(i, i + 32768)); return btoa(s); };
+  const fromB64 = (s) => { const b = atob(String(s)); const u = new Uint8Array(b.length); for (let i = 0; i < b.length; i++) u[i] = b.charCodeAt(i); return u; };
+  async function saveFile() {
+    if (!started || !runner) return;
+    const out = { kind: FILE_KIND, v: 1, game: card.id, title: card.title };
+    try { const b = runner.sram && await runner.sram(); if (b && b.length) out.sram = toB64(b); } catch (e) { /* none */ }
+    try {
+      const s = await runner.save();
+      if (s) out.spot = { core: build.core, commit: build.commit, state: toB64(new Uint8Array(s)) };
+    } catch (e) { /* none */ }
+    try {
+      if (runner.keepScores) await runner.keepScores();
+      const nv = await PlaySaves.get(card.id + ':nvram');
+      if (nv && nv.state && typeof nv.state === 'object') {
+        out.scores = { stamp: nv.stamp, files: {} };
+        for (const [k, v] of Object.entries(nv.state)) out.scores.files[k] = toB64(new Uint8Array(v));
+      }
+    } catch (e) { /* none */ }
+    if (!out.sram && !out.spot && !out.scores) return toast(runner.saveWhy() === 'dos' ? 'This game can be saved once it is past its DOS start menu' : 'Nothing to save for this game yet');
+    const url = URL.createObjectURL(new Blob([JSON.stringify(out)], { type: 'application/json' }));
+    const a = document.createElement('a'); a.href = url; a.download = 'voidtv-' + card.id + '.json';
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 60000);
+    toast('Saved to a file on this device');
+    keepStorage();
+  }
+  async function loadFile(file) {
+    if (!started || !runner || !file) return;
+    let f = null;
+    try { f = JSON.parse(await file.text()); } catch (e) { /* not ours */ }
+    if (!f || f.kind !== FILE_KIND) return toast('That file is not a PLAY save');
+    if (f.game !== card.id) return toast('That file is for ' + (typeof f.title === 'string' ? f.title.slice(0, 60) : 'another game') + ', not this game');
+    try {
+      // The score table comes back for the next start (an arcade machine reads it on power-on).
+      if (f.scores && f.scores.files) {
+        const files = {}; for (const [k, v] of Object.entries(f.scores.files)) if (/^[A-Za-z0-9._ -]{1,80}$/.test(k)) files[k] = fromB64(v);
+        await PlaySaves.put(card.id + ':nvram', files, { stamp: f.scores.stamp });
+        if (isArcade()) return toast('The high scores are back: they show the next time this game starts');
+      }
+      const spot = f.spot && f.spot.state ? { state: fromB64(f.spot.state).buffer, core: f.spot.core, commit: f.spot.commit } : null;
+      const sram = f.sram ? fromB64(f.sram) : null;
+      if (sram) { await PlaySaves.put(card.id + ':sram', sram, {}); sramKept = sram; autosave.sramSig = ''; }
+      if (spot && PlaySaves.fits(spot, build)) {
+        await PlaySaves.put(card.id, spot.state, build);
+        const undo = await keepHere();
+        const ok = await runner.load(spot.state.slice(0));
+        toast(ok ? 'Back to the spot saved in the file' : 'That save would not load', ok ? undo : null);
+        if (ok) setPaused(false);
+        return;
+      }
+      if (sram && runner.sramSet) {
+        const ok = await runner.sramSet(sram);
+        toast(spot ? 'The spot in that file was saved with an older build of this game\'s engine, so it cannot load. The game started over with its own save from the file: load it from the game\'s menu.'
+          : ok ? 'The game started over with its own save from the file: load it from the game\'s menu.' : 'That save would not load');
+        if (ok) setPaused(false);
+        return;
+      }
+      toast(spot ? 'That file was saved with an older build of this game\'s engine, so it cannot load' : 'That file has nothing this game can load');
+    } catch (e) { toast('That file would not load'); }
+  }
+  // Ask the browser once to keep PLAY's saves when the device runs low on space (no question of ours, nothing said if
+  // it says no). Asked after the first Play or save, a tap the browser can see; remembered so it is never asked again.
+  function keepStorage() {
+    try {
+      if (!navigator.storage || !navigator.storage.persist || localStorage.getItem('voidtv-play-keep')) return;
+      localStorage.setItem('voidtv-play-keep', '1');
+      navigator.storage.persisted().then((yes) => (yes ? true : navigator.storage.persist())).catch(() => {});
+    } catch (e) { /* storage off */ }
+  }
+
   async function restart() {
     if (!started) return;
     const undo = await keepHere();
@@ -292,6 +366,7 @@
 
   const isArcade = () => !!(card && PlayCards.CORES[card.core] && PlayCards.CORES[card.core].kind === 'mame');
   function begin() {
+    keepStorage();
     window.scrollTo(0, 0);
     if (!$('phones').hidden) showPhones(false);   // the code steps aside for the game; the Phones button brings it back
     // MAME's classic module cannot start over in place: once one has run, a new start is the page loaded again.
@@ -671,6 +746,9 @@
   $('m-cheats').onclick = () => showCheats($('cheats').hidden);
   $('b-save').onclick = save;
   $('b-load').onclick = load;
+  $('b-file-save').onclick = saveFile;
+  $('b-file-load').onclick = () => { $('file-in').value = ''; $('file-in').click(); };
+  $('file-in').onchange = () => loadFile($('file-in').files[0]);
   $('b-touch').onclick = () => { if (padMode) { padMode = false; touch = true; } else touch = !touch; place.sig = ''; place(); };
   // iPhone has no fullscreen for a web page: the button shows only where the browser can do it.
   if (!document.fullscreenEnabled) $('b-full').hidden = true;
