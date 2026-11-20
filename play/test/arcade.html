@@ -40,9 +40,22 @@
       arguments: q.get('args') ? q.get('args').split(',') : [driver, '-rompath', '/roms', '-sound', 'none', '-window',
         '-nomaximize', '-skip_gameinfo', '-nokeepaspect', '-resolution', '448x576', '-video', q.get('video') || 'accel', '-verbose'],
       // The classic (not modular) build keeps its file system in a page-wide FS.
-      preRun: [() => { const fs = Module.FS || window.FS; fs.mkdir('/roms'); fs.writeFile('/roms/' + zip, bytes); }],
+      preRun: [() => {
+        const fs = Module.FS || window.FS; fs.mkdir('/roms'); fs.writeFile('/roms/' + zip, bytes);
+        // &clock=1: a small Lua script prints MAME's emulated time each emulated second (add
+        // -autoboot_script,/s/clock.lua to &args); the page stamps each with the real time to measure speed.
+        if (q.get('clock')) {
+          fs.mkdir('/s');
+          fs.writeFile('/s/clock.lua', 'local last = -1\nsub = emu.add_machine_frame_notifier(function()\n' +
+            '  local t = math.floor(manager.machine.time:as_double())\n  if t ~= last then last = t; print("EMUTIME " .. t) end\nend)\n');
+        }
+      }],
       locateFile: (f) => q.get('engine').replace(/[^/]*$/, '') + f,
-      print: (t) => { state.log.push(t); if (state.log.length > 400) state.log.shift(); },
+      print: (t) => {
+        const m = /^EMUTIME (\d+)/.exec(t);
+        if (m) { (state.clock = state.clock || []).push([+m[1], Math.round(performance.now() - t0)]); return; }
+        state.log.push(t); if (state.log.length > 400) state.log.shift();
+      },
       printErr: (t) => { state.log.push('! ' + t); if (state.log.length > 400) state.log.shift(); },
       onAbort: (w) => { state.error = 'abort: ' + w; show(); },
     };
@@ -64,6 +77,12 @@
       const t = setInterval(() => {
         if (typeof window._emscripten_set_main_loop_timing === 'function' && (window.MainLoop || {}).func) {
           window._emscripten_set_main_loop_timing(2, 0); state.unpacedAtMs = Math.round(performance.now() - t0); clearInterval(t);
+          // The loop may be waiting on a frame callback that never comes (a pane the app keeps hidden): schedule it now.
+          try { window.MainLoop.scheduler(); } catch (e) { state.kickError = String(e); }
+          // Count MAME's main-loop calls (each one emulates 1/60 s) and the time spent inside them; the last call
+          // marks where -str made MAME stop.
+          const ml = window.MainLoop, f = ml.func; state.calls = 0; state.msInside = 0;
+          ml.func = function () { const a = performance.now(); state.calls++; try { return f.apply(this, arguments); } finally { const b = performance.now(); state.msInside += b - a; state.lastCallAtMs = Math.round(b - t0); } };
         }
       }, 20);
       const origPrint = window.Module.print;
