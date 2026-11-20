@@ -130,7 +130,7 @@ test('arcade (B, 20 Nov 2026: "Current MAME", "No line"): MAME runs from its own
     "addEventListener('keydown', arcadeEsc, true);", "runner = (isArcade() ? PlayArcade : PlayRunner).createRunner("]) assert.ok(js.includes(bit), bit);
   const ar = fs.readFileSync(path.join(PLAY, 'src', 'arcade-runner.js'), 'utf8');
   assert.ok(ar.includes("ctx[fn] = function () { frames++;"), 'the first picture is MAME\'s first draw');
-  assert.ok(ar.includes("fetch(engine.replace(/\\.js$/, '.wasm.gz'))") && ar.includes('WebAssembly.instantiate(buf, imports).then((r) => done(r.instance, r.module)'), 'a gzipped engine is unpacked by the page');
+  assert.ok(ar.includes("fetch(engine.replace(/\\.js$/, '.wasm.gz') + '?v=' + ENGINE_V)") && ar.includes('WebAssembly.instantiate(buf, imports).then((r) => done(r.instance, r.module)'), 'a gzipped engine is unpacked by the page');
   assert.ok(ar.includes('if (document.title !== mine) document.title = mine;'));
   assert.equal(joust.firstBoot.resetAt, 12, 'a Williams first boot goes on with one soft reset');
   assert.ok(ar.includes("manager.machine:soft_reset()") && ar.includes("args.push('-autoboot_script', '/lua/firstboot.lua')"));

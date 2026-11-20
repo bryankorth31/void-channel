@@ -12,6 +12,11 @@
 (function (root) {
   'use strict';
   const KEPT = 'voidtv-play-games';
+  // The engine files are cached for a day at the edge, and a missing file there is answered with the site's home page, which
+  // is cached too. If an engine is asked for while a deploy is still spreading, that wrong answer sticks. Bump ENGINE_V
+  // whenever an engine file changes under the same name, as brand files bump ?v= (20 Nov 2026: williams.wasm.gz was
+  // answered with the home page for a day after the push that added it).
+  const ENGINE_V = '2';
 
   function createRunner(opts) {
     const canvas = opts.canvas, on = opts.on || {};
@@ -142,7 +147,7 @@
       // The page unpacks it and hands it to Emscripten as Module.wasmBinary. With no .wasm.gz the engine fetches its
       // own plain .wasm, as before. The magic-byte check covers a server that already unpacked it on the way.
       try {
-        const res = await fetch(engine.replace(/\.js$/, '.wasm.gz'));
+        const res = await fetch(engine.replace(/\.js$/, '.wasm.gz') + '?v=' + ENGINE_V);
         if (res.ok) {
           let buf = new Uint8Array(await res.arrayBuffer());
           if (buf[0] === 0x1f && buf[1] === 0x8b) {
