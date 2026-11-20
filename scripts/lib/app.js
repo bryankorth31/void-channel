@@ -11,6 +11,7 @@ const { rankEpisode } = require('../../player/tools/rank-sources');
 // the one JSON loader (SP-006) and the pure parts of saving and importing Mine (SP-012).
 const { fetchJsonSource: FETCH_JSON_SRC } = require('./app-fetch');
 const { meSource: ME_SRC } = require('./app-me');
+const { nearSource: NEAR_SRC } = require('./app-near');
 // Live TV schedule: the builder (Node) and the pure schedule logic the page inlines (see scripts/lib/tvgrid.js).
 const TVGRID = require('./tvgrid');
 const TVGRID_SRC = TVGRID.source;
@@ -486,7 +487,7 @@ html{-webkit-tap-highlight-color:transparent}
 @media(max-width:600px){.bar{padding:10px 12px;gap:6px}.dd>button{padding:8px 10px 8px 12px;font-size:13px}.dd .panel{position:fixed;left:12px;right:12px;top:auto;bottom:12px;max-width:none;max-height:60vh}}
 .bar select{background:var(--panel);border:1px solid var(--line);color:var(--fg);padding:7px 10px;border-radius:8px}
 .bar .count{color:var(--dim);margin-left:auto;font-size:13px}
-.chips{display:flex;flex-wrap:wrap;gap:6px;padding:0 20px 8px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;padding:0 20px 8px}.nomatch{padding:2px 20px 0;color:var(--dim);font-size:15px}.nomatch p{margin:0 0 10px}.nomatch b{color:var(--fg)}@media(max-width:600px){.nomatch{padding:2px 12px 0}}
 .chip{background:var(--panel2);border:1px solid var(--line);color:var(--fg);padding:4px 10px;border-radius:999px;font-size:13px;cursor:pointer}
 .chip.on{border-color:var(--acc);color:var(--acc)}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;padding:6px 20px 24px}
@@ -696,6 +697,9 @@ function column(){const main=$('main');if(!main)return;const old=main.querySelec
  c.innerHTML=h;main.appendChild(c)}
 const field=column;
 function keepTracks(fn){const pos={};document.querySelectorAll('.track').forEach(t=>{pos[t.id]=t.scrollLeft});const y=window.scrollY;fn();document.querySelectorAll('.track').forEach(t=>{if(pos[t.id]){t.style.scrollBehavior='auto';t.scrollLeft=pos[t.id];t.style.scrollBehavior=''}});window.scrollTo(0,y)}
+/* A search or filter that finds nothing says so, and a search offers the titles one typing slip away (audit of 20 Nov 2026, A10). The 18+ shows stay out while the door is closed. */
+${NEAR_SRC}
+function noMatch(){const q=state.q.trim(),filt=[state.type,state.tag,state.genre,state.network,state.decade].filter(Boolean);if(!q)return '<div class="nomatch"><p>No shows fit '+(filt.length>1?'these filters together':'this filter')+'. Press Clear to start over.</p></div>';const pool=SHOWS.filter(s=>!gated(s)),near=nearTitles(q,pool.map(s=>s.show),6).map(i=>pool[i]);return '<div class="nomatch"><p>Nothing matches <b>“'+esc(q)+'”</b>'+(filt.length?' in '+esc(filt.join(', ')):'')+'. '+(near.length?'Closest titles:':'Check the spelling, or press Clear and browse.')+'</p></div>'+(near.length?'<div class="grid">'+near.map(s=>card(s,'grid')).join('')+'</div>':'')}
 function browse(){let list=filtered();if(!state.q)list=list.filter(s=>!hidden(s));const any=state.type||state.genre||state.network||state.decade||state.tag||state.q;
  const bar=filterBar(list);
  let h='';
@@ -703,7 +707,7 @@ function browse(){let list=filtered();if(!state.q)list=list.filter(s=>!hidden(s)
   if(state.q&&state.q.length>=3&&state.q!==state.lastQ){clearTimeout(state.qT);const q=state.q,n=list.length;state.qT=setTimeout(()=>{state.lastQ=q;track('search',{q,n})},1200)}
   h=bar+'<div class="chips">'+[['type',state.type],['tag',state.tag],['genre',state.genre],['network',state.network],['decade',state.decade]].filter(x=>x[1]).map(([k,v])=>'<span class="chip on" onclick="state.'+k+'=\\'\\';render()">'+esc(v)+' ✕</span>').join('')+(state.q?'<span class="chip on" onclick="state.q=\\'\\';$(\\'q\\').value=\\'\\';render()">“'+esc(state.q)+'” ✕</span>':'')+'</div>';
   const sig=[state.type,state.tag,state.genre,state.network,state.decade,state.q,state.sort].join('|');if(sig!==state.gridSig){state.gridSig=sig;state.gridN=0}const N=state.gridN||60;
-  h+='<div class="grid">'+list.slice(0,N).map(s=>card(s,'grid')).join('')+'</div>'+(list.length>N?'<p class="moreline"><button class="btn" onclick="state.gridN='+(N+60)+';render()">Show '+Math.min(60,list.length-N)+' more of '+list.length+'</button></p>':'');
+  h+=!list.length?noMatch():'<div class="grid">'+list.slice(0,N).map(s=>card(s,'grid')).join('')+'</div>'+(list.length>N?'<p class="moreline"><button class="btn" onclick="state.gridN='+(N+60)+';render()">Show '+Math.min(60,list.length-N)+' more of '+list.length+'</button></p>':'');
  } else {
   // 1. Live TV first (B, 25 Oct 2026: the home page opens on a channel already playing, nothing in the way; the wall of 158 featured shows is gone)
   h+='<section class="home-tv" id="htv"></section><div id="onnow">'+onNowHtml()+'</div>';
@@ -1126,7 +1130,7 @@ function swipeSurf(el){if(!el||el._sw)return;el._sw=1;let x0=0,y0=0,t0=0;el.addE
  el.addEventListener('touchend',(e)=>{const t=e.changedTouches[0],dx=t.clientX-x0,dy=t.clientY-y0;if(Date.now()-t0<700&&Math.abs(dx)>60&&Math.abs(dx)>2*Math.abs(dy))surf(dx<0?1:-1)},{passive:true})}
 async function tvPage(){const main=$('main');if(!TV){killPlayer();main.innerHTML='<div class="loading"><span class="signal"></span><span>Searching the Void for a signal…</span></div>';try{await ensureTV()}catch(_){killPlayer();main.innerHTML='<div class="loading">The channels did not load.</div>';return}if(state.view!=='tv')return}
  const chans=TV.filter(c=>!c.adult||ME.adult);const cur=chans.find(c=>c.id===state.chan)||chans[0];if(!cur){killPlayer();main.innerHTML='<div class="loading">No channels are on the air right now.</div>';return}state.chan=cur.id;const now=chanNow(cur);const s=SHOWS[now.a.s];
- let h='<div class="tv"><div class="pagehead"><img class="door" src="'+BASE+'assets/brand/ui/doors/live.png" alt=""><div><h1>Live TV</h1><div class="g">'+chans.length+' channels, always on, the same for everyone</div></div></div><div class="screen">'+(state.tvOn?'<div class="hv"><div class="vpx-host" id="vph"></div>'+(stillWanted()?'':introHtml())+'</div>':swirlHtml('state.tvOn=true;render()'))+'<div class="osd"></div></div>';
+ let h='<div class="tv"><button class="back" onclick="go(\\'\\')"><i class="ico back"></i> Browse</button><div class="pagehead" style="padding-left:0"><img class="door" src="'+BASE+'assets/brand/ui/doors/live.png" alt=""><div><h1>Live TV</h1><div class="g">'+chans.length+' channels, always on, the same for everyone</div></div></div><div class="screen">'+(state.tvOn?'<div class="hv"><div class="vpx-host" id="vph"></div>'+(stillWanted()?'':introHtml())+'</div>':swirlHtml('state.tvOn=true;render()'))+'<div class="osd"></div></div>';
  h+='<p class="hint">Always on, same for everyone: the clock decides what is playing. ↑ ↓ to surf. G jumps to the guide: arrows move, Enter opens a show. Nothing here is recorded in Mine unless you open the show.</p>';
  h+='<div class="guide">'+gdShell(cur)+'</div></div>';
  killPlayer();main.innerHTML=h;introOut(main);swipeSurf(document.querySelector('.tv .screen'));keepChan(cur.id);gdInit(cur.id);document.title=cur.name+' · '+SITE;osd(cur,now.a,s,null);if(state.tvOn)tvPlay(cur)}
