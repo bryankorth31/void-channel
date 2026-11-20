@@ -75,9 +75,17 @@ const SECURITY_HEADERS = [
 // PLAY (play/, plan T19): the game player runs its engine on threads, which browsers allow only on a cross-origin
 // isolated page, so the player page and the files it loads carry the two isolation headers. The shelf (/play/ itself)
 // does not: it shows box art straight from the Internet Archive, which an isolated page may not load.
-const ISOLATE = '  Cross-Origin-Opener-Policy: same-origin\n  Cross-Origin-Embedder-Policy: require-corp\n';
-const PLAY_HEADERS = '/play/game.html\n' + ISOLATE + '/play/game\n' + ISOLATE + '/play/src/*\n' + ISOLATE
-  + '/play/engine/*\n' + ISOLATE + '  Cache-Control: public, max-age=86400\n/play/cards/*\n' + ISOLATE + '  Cache-Control: public, max-age=300\n'
+// The player also runs WebAssembly and an audio worklet made in the page, so those paths get their own report-only policy
+// that allows them (the site-wide one would flag every game, and break PLAY if it were ever enforced). The same paths and
+// policy are in functions/_middleware.js for when the password gate sends pages through the Function; the test in
+// tests/play-door.test.js fails when the two differ.
+const PLAY_ISOLATED = ['/play/game.html', '/play/game', '/play/src/*', '/play/engine/*', '/play/cards/*'];
+const isPlayIsolated = (p) => PLAY_ISOLATED.some((r) => (r.endsWith('*') ? p.startsWith(r.slice(0, -1)) : p === r));
+const PLAY_CSP = CSP.replace("script-src 'self'", "script-src 'self' 'wasm-unsafe-eval' blob:") + "; worker-src 'self' blob:";
+const ISOLATE = '  Cross-Origin-Opener-Policy: same-origin\n  Cross-Origin-Embedder-Policy: require-corp\n'
+  + '  ! Content-Security-Policy-Report-Only\n  Content-Security-Policy-Report-Only: ' + PLAY_CSP + '\n';
+const PLAY_CACHE = { '/play/engine/*': '  Cache-Control: public, max-age=86400\n', '/play/cards/*': '  Cache-Control: public, max-age=300\n' };
+const PLAY_HEADERS = PLAY_ISOLATED.map((p) => p + '\n' + ISOLATE + (PLAY_CACHE[p] || '')).join('')
   + '/play/shelf/*\n  Cache-Control: public, max-age=300\n';
 function headersFile() {
   return '/*\n' + SECURITY_HEADERS.map(([k, v]) => `  ${k}: ${v}\n`).join('')
@@ -279,7 +287,7 @@ async function liveLights({ base, versionTextBody, doFetch, remote, nowMs }) {
 
 module.exports = {
   LIMITS, SECURITY_HEADERS, CSP,
-  gateMode, gateDecision, isGated, routesFor, headersFile, missingSecurityHeaders, versionText, parseVersion,
+  PLAY_ISOLATED, PLAY_CSP, isPlayIsolated, gateMode, gateDecision, isGated, routesFor, headersFile, missingSecurityHeaders, versionText, parseVersion,
   checkOutput, shrinkVerdict, shrinkBaseline, readLastCounts, countsFromVersion, liveCountsSync, unreadableGrids,
   filesLight, gateLight, wwwLight, headersLight, liveVersionLight, shrinkLight, backupLight, liveLights,
 };
