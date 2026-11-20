@@ -328,6 +328,13 @@ then 0.30 dollars per million. The narrow routes of an open site save cost, not 
 350 files a day while hunts added shows; the build guard above and the doctor's `files` light exist because of that.
 The TV-movie reference list (9 MB) is not part of the site.
 
+PLAY adds Function requests (20 Nov 2026). `/play/engine/*` and `/play/cards/*` run the middleware so a missing file
+answers 404, not the home page the edge would cache: about 2 Function requests each time someone starts a game (the card
+and the engine; a kept copy in the browser saves the engine). `/api/piece` serves streamed DOS games (off while
+stream.js is empty). Phone rooms (`/api/room/*`, the voidtv-rooms Durable Object) count each phone's messages: a phone
+sends only when a button changes, plus one ping every 2 seconds. Durable Objects are billed with Workers Paid
+(1 million requests a month included); incoming WebSocket messages count at 20 to 1.
+
 ## Vercel (current host of the old app)
 
 Still serving the June Expo build on the free Hobby plan. Nothing to do there until the swap; after

@@ -222,6 +222,11 @@ test('PLAY engines and cards: a missing one answers 404 and is never cached; rea
   assert.deepEqual(new Uint8Array(await real.arrayBuffer()), gz);
   const card = await ask('/play/cards/joust-arcade.json', async () => new Response('{"id":"x"}', { headers: { 'content-type': 'application/json' } }));
   assert.equal(card.status, 200);
+  // _headers does not reach an answer through a Function, so the middleware gives the same cache times _headers would.
+  const hf = G.headersFile();
+  const cacheIn = (rule) => { const lines = hf.split('\n'); const i = lines.indexOf(rule); for (let j = i + 1; j < lines.length && lines[j].startsWith(' '); j++) { const m = /Cache-Control: (.*)$/.exec(lines[j]); if (m) return m[1].trim(); } return null; };
+  assert.equal(real.headers.get('cache-control'), cacheIn('/play/engine/*'));
+  assert.equal(card.headers.get('cache-control'), cacheIn('/play/cards/*'));
   for (const u of ['/about', '/play/', '/play/game']) assert.equal((await ask(u, nextOk())).status, 200, u + ' keeps the home-page routing');
   const gated = await ask('/play/engine/mame/williams.js', nextOk(), { SITE_PASSWORD: 'secret' });
   assert.equal(gated.status, 401, 'the password page is not turned into a 404');

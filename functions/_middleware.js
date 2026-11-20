@@ -77,9 +77,17 @@ const safePath = (u) => { const x = new URL(u); const p = x.pathname.replace(/^\
 // engine and card files are never HTML, so they pass untouched. Keep in step with PLAY_STRICT in scripts/lib/siteguards.js.
 const PLAY_STRICT = ['/play/engine/*', '/play/cards/*'];
 const isPlayStrict = (p) => PLAY_STRICT.some((r) => p.startsWith(r.slice(0, -1)));
+// _headers rules do not reach an answer that comes through a Function, so a real engine or card keeps its cache time here
+// (the same as _headers gives it; tests/site-middleware.test.js keeps the two equal).
+const PLAY_CACHE = { '/play/engine/': 'public, max-age=86400', '/play/cards/': 'public, max-age=300' };
 function strict(res, path) {
-  if (!isPlayStrict(path) || res.status !== 200 || !/^text\/html/i.test(res.headers.get('content-type') || '')) return res;
-  return new Response('Not found\n', { status: 404, headers: { 'content-type': 'text/plain; charset=utf-8', 'Cache-Control': 'no-store' } });
+  if (!isPlayStrict(path)) return res;
+  if (res.status === 200 && /^text\/html/i.test(res.headers.get('content-type') || '')) {
+    return new Response('Not found\n', { status: 404, headers: { 'content-type': 'text/plain; charset=utf-8', 'Cache-Control': 'no-store' } });
+  }
+  if (res.status !== 200) return res;
+  const cc = PLAY_CACHE[Object.keys(PLAY_CACHE).find((p) => path.startsWith(p))];
+  try { res.headers.set('Cache-Control', cc); return res; } catch (e) { const out = new Response(res.body, res); out.headers.set('Cache-Control', cc); return out; }
 }
 export async function onRequest(ctx) {
   const url = new URL(ctx.request.url);
