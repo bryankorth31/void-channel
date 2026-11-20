@@ -53,6 +53,29 @@
     return HOME_ROWS.map((f) => ({ f, title: viewTitle(f), games: games.filter((g) => matches(g, f)).sort(byPopular) })).filter((r) => r.games.length);
   }
 
+  // A list's own rows, like VoidTV's pages for one kind of show (pure: tested): a machine, a family, a kind or a decade
+  // opens with its most played, then one row for each way left to narrow it (by machine, by kind, two at once, by
+  // decade), each with at least LIST_ROW_MIN games; every game follows, A to Z. A search, or a list that fits in one
+  // row, is just its games.
+  const LIST_ROW_MIN = 4;
+  function listRows(games, f) {
+    if (f.q || games.length <= ROW_CAP) return [];
+    const rows = [{ title: 'Most played', f: null, games: games.slice().sort(byPopular) }];
+    const add = (title, more) => {
+      const nf = Object.assign({}, f, more), list = games.filter((g) => matches(g, nf)).sort(byPopular);
+      if (list.length >= LIST_ROW_MIN && list.length < games.length) rows.push({ title, f: nf, games: list });
+    };
+    if (!f.m) {
+      const count = new Map(); for (const g of games) count.set(g.system, (count.get(g.system) || 0) + 1);
+      for (const [k] of [...count].sort((a, b) => b[1] - a[1])) add(sysOf({ system: k }).name, { m: k });
+    }
+    if (!f.g) for (const [k] of GENRES) add(k, { g: k });
+    if (!f.p) add('Two at once', { p: '2' });
+    if (!f.d) for (const d of [...new Set(games.map((g) => decadeOf(g.year)).filter((d) => d !== null))].sort((a, b) => a - b)) add(decadeName(d), { d: String(d) });
+    return rows;
+  }
+  const byName = (a, b) => a.title.localeCompare(b.title);
+
   // The hero (pure: tested): the most played game of each machine, the most played first, with a machine between every
   // two games, the machines most played first. A slide is { g } for a game or { system, name, count, games } for a machine.
   function heroSlides(games, nGames = 8, nMachines = 4) {
@@ -293,7 +316,7 @@
   // What a filtered list is called (pure: tested): "Sega", "Action", "Super Nintendo, Two at once", 'Found: "mario"'.
   function viewTitle(f) {
     const parts = [];
-    if (f.s && SETS[f.s]) parts.push(SETS[f.s].title);
+    if (f.s && SETS[f.s] && !f.m) parts.push(SETS[f.s].title);   // "Sega Genesis", not "Sega, Sega Genesis"
     if (f.m) parts.push(sysOf({ system: f.m }).name);
     if (f.g) parts.push(f.g);
     if (f.p === '2') parts.push('Two at once');
@@ -533,12 +556,13 @@
       continueRow().then((sec) => { if (sec && turn === shown) rows.prepend(sec); }).catch(() => {});
       return;
     }
-    const games = shelfGames.filter((g) => matches(g, filter)).sort(byPopular);
+    let games = shelfGames.filter((g) => matches(g, filter)).sort(byPopular);
+    const own = listRows(games, filter);
     const head = el('div', 'vhead');
     const back = el('button', 'flt crumb', '← All games'); back.type = 'button';
     back.onclick = () => { filter = {}; const q = document.getElementById('f-q'); if (q) q.value = ''; changed(); };
     const h = el('h2', '', viewTitle(filter));
-    h.append(el('small', '', games.length ? games.length.toLocaleString('en-US') + (games.length === 1 ? ' game' : ' games, the most played first') : ''));
+    h.append(el('small', '', games.length ? games.length.toLocaleString('en-US') + (games.length === 1 ? ' game' : own.length ? ' games' : ' games, the most played first') : ''));
     head.append(back, h);
     rows.append(head);
     if (!games.length) {
@@ -548,6 +572,11 @@
       p.append('No games match these choices. ', b);
       rows.appendChild(p);
       return;
+    }
+    for (const r of own) rows.append(rowSection(r.title, r.games, r.f, r.games.length));
+    if (own.length) {
+      games = games.slice().sort(byName);
+      const sec = el('section', 'row'); sec.append(el('h2', '', 'Every game, A to Z')); rows.append(sec);
     }
     const list = el('div', 'boxes');
     // Plan C4: a list of hundreds shows a page at a time; the last box is "More", which adds the next page in place.
@@ -659,7 +688,7 @@
   const TV = /SMART-TV|SmartTV|Tizen|Web0S|webOS|BRAVIA|Android TV|GoogleTV|CrKey|AFT[A-Z]|Roku|HbbTV/i;
 
   const api = { PAGE_FIRST, PAGE_MORE, ROW_CAP, HERO_MS, SYSTEMS, SETS, HOME_ROWS, decadeName, backLines, IDLE_MS, TOUR_MS, GENRES, genresOf,
-    readFilter, writeFilter, matches, choices, byPopular, homeRows, heroSlides, aboutLine, playsText, viewTitle };
+    readFilter, writeFilter, matches, choices, byPopular, homeRows, listRows, heroSlides, aboutLine, playsText, viewTitle };
   if (typeof module === 'object' && module.exports) { module.exports = api; return; }
   root.PlayShelf = api;
   fetch('shelf/index.json', { cache: 'no-store' }).then((r) => r.json()).then(render)

@@ -29,6 +29,7 @@ test('the front page: rows like VoidTV, each a filter, the most played first (th
   assert.deepEqual(Shelf.readFilter('?s=sega&s2=x'), { s: 'sega' });
   assert.deepEqual(Shelf.readFilter('?s=nonsense'), {}, 'a set the page does not know is dropped');
   assert.equal(Shelf.viewTitle({ m: 'snes', p: '2' }), 'Super Nintendo, Two at once');
+  assert.equal(Shelf.viewTitle({ s: 'sega', m: 'genesis' }), 'Sega Genesis');
   // Every set row on the real shelf has games, and Continue playing comes first, from the saves in this browser.
   const index = JSON.parse(fs.readFileSync(path.join(PLAY, 'shelf', 'index.json'), 'utf8'));
   for (const k of Object.keys(Shelf.SETS)) assert.ok(index.games.some((x) => Shelf.matches(x, { s: k })), k);
@@ -36,6 +37,23 @@ test('the front page: rows like VoidTV, each a filter, the most played first (th
   assert.ok(src.includes("const sec = rowSection('Continue playing', list);") && src.includes('if (sec && turn === shown) rows.prepend(sec);'));
   assert.ok(src.includes(".filter((k) => k.endsWith(':auto'))"));
   assert.ok(fs.readFileSync(path.join(PLAY, 'src', 'saves.js'), 'utf8').includes("keys: () => run('readonly', (s) => s.getAllKeys()),"));
+});
+
+test("a list opens with its own rows, like VoidTV's pages for one kind of show; a search or a short list is just its games", () => {
+  const g = (id, o) => Object.assign({ id, title: id, system: 'genesis', players: 1, plays: 0, year: 1991, genres: [] }, o);
+  const games = [];
+  for (let i = 0; i < 30; i++) games.push(g('g' + i, { plays: i, genres: i < 6 ? ['Action'] : [] }));
+  for (let i = 0; i < 10; i++) games.push(g('s' + i, { system: 'sms', plays: 100 + i, year: 1987, players: i < 2 ? 2 : 1 }));
+  const rows = Shelf.listRows(games, { s: 'sega' });
+  assert.deepEqual(rows.map((r) => r.title), ['Most played', 'Sega Genesis', 'Master System', 'Action', 'The 80s', 'The 90s']);
+  assert.equal(rows[0].f, null, 'the most played row needs no See all: every game follows');
+  assert.deepEqual(rows[1].f, { s: 'sega', m: 'genesis' }, 'a row narrows the list it sits in');
+  assert.equal(rows[0].games[0].id, 's9');
+  assert.ok(!rows.some((r) => r.title === 'Two at once'), 'a row of fewer than four is left out');
+  assert.deepEqual(Shelf.listRows(games, { q: 'g' }), []);
+  assert.deepEqual(Shelf.listRows(games.slice(0, 20), { m: 'genesis' }), []);
+  const src = fs.readFileSync(path.join(PLAY, 'src', 'shelf.js'), 'utf8');
+  assert.ok(src.includes("sec.append(el('h2', '', 'Every game, A to Z'));"));
 });
 
 test("the hero turns through each machine's most played game, a machine between every two", () => {
