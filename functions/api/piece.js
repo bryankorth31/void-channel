@@ -23,8 +23,9 @@ export async function handle(request, games, fetchImpl) {
   const url = new URL(request.url);
   const g = Object.prototype.hasOwnProperty.call(games, url.searchParams.get('game') || '') ? games[url.searchParams.get('game')] : null;
   if (!g) return say(404, 'Not a streamed game on this shelf');
-  const site = request.headers.get('sec-fetch-site');
-  if (site && site !== 'same-origin') return say(403, 'Only voidtv.net pages may ask for pieces');
+  // Audit P21a: the header must be there and say same-origin. Browsers always send it; a script or curl without it is
+  // refused too, so the pass-through answers only voidtv.net's own player.
+  if (request.headers.get('sec-fetch-site') !== 'same-origin') return say(403, 'Only voidtv.net pages may ask for pieces');
   const p = url.searchParams.get('piece') || '';
   if (!/^\d{1,6}$/.test(p)) return say(400, 'piece must be a whole number');
   const start = +p * PIECE;

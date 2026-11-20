@@ -50,6 +50,7 @@ test('no open proxy: only games on the list, never an address, only from our own
   assert.equal((await handle(ask('game=__proto__&piece=0'), GAMES, a.fetchImpl)).status, 404);
   assert.equal((await handle(ask('url=https://example.com/x&piece=0'), GAMES, a.fetchImpl)).status, 404);
   assert.equal((await handle(ask('game=big-dos&piece=0', 'cross-site'), GAMES, a.fetchImpl)).status, 403);
+  assert.equal((await handle(ask('game=big-dos&piece=0', null), GAMES, a.fetchImpl)).status, 403, 'audit P21a: no header, no piece');
   assert.equal((await handle(ask('game=big-dos&piece=-1'), GAMES, a.fetchImpl)).status, 400);
   assert.equal((await handle(ask('game=big-dos&piece=3'), GAMES, a.fetchImpl)).status, 416);
   assert.equal(a.asked.length, 0, 'none of these reached the Archive');
