@@ -103,6 +103,7 @@
     if (g.players > 1) s += g.players === 2 ? ' One or two players.' : ' One to ' + (COUNT[g.players] || g.players) + ' players.';
     return s;
   }
+  // The Internet Archive's count of a game's plays, never voidtv.net's own: every place it shows says whose it is.
   const playsText = (n) => (!n ? '' : n >= 1e6 ? (n / 1e6).toFixed(1).replace(/\.0$/, '') + ' million plays' : n.toLocaleString('en-US') + (n === 1 ? ' play' : ' plays'));
   const metaLine = (g) => [sysOf(g).name, g.year, g.players > 1 ? '1 to ' + g.players + ' players' : '', (g.genres || [])[0]].filter(Boolean).join(' · ');
 
@@ -265,7 +266,7 @@
       for (const [d, w] of h.how) { const li = el('li'), b = el('b', '', d); li.append(b, ' ' + w); ul.appendChild(li); }
       p.append(ul);
     } else if (h.help) p.append(el('p', 'help', h.help));
-    if (g.plays) p.append(el('span', 'plays', playsText(g.plays) + ' at the Internet Archive'));
+    if (g.plays) p.append(el('span', 'plays', playsText(g.plays) + ' on the Internet Archive'));
     p.append(el('span', 'hint', inputNow() === 'pad' ? 'A to pick it up' : inputNow() === 'touch' ? 'Tap to pick it up' : 'Click or Enter to pick it up'));
     p.hidden = false;
     peekOn = { g, a, kb: !!kb };
@@ -467,7 +468,7 @@
     if (s.g) {
       const g = s.g, sys = sysOf(g);
       copy.append(el('span', 'kicker', 'Most played on ' + (g.system === 'arcade' ? 'the arcade' : sys.name)), el('h2', 'ht', g.title),
-        el('p', 'ov', aboutLine(g)), el('div', 'meta', [g.year, g.players > 1 ? '1 to ' + g.players + ' players' : '', playsText(g.plays)].filter(Boolean).join(' · ')));
+        el('p', 'ov', aboutLine(g)), el('div', 'meta', [g.year, g.players > 1 ? '1 to ' + g.players + ' players' : '', g.plays ? playsText(g.plays) + ' on the Internet Archive' : ''].filter(Boolean).join(' · ')));
       const acts = el('div', 'acts');
       const play = el('a', 'btn gold', 'Play'); play.href = hrefOf(g);
       play.addEventListener('click', (e) => { if (e.ctrlKey || e.metaKey || e.shiftKey || e.button) return; e.preventDefault(); pickUp(g, play); });

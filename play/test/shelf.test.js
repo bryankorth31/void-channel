@@ -81,6 +81,9 @@ test("a card's info says what the game is, from its card; plays read in plain wo
   assert.equal(Shelf.playsText(2165497), '2.2 million plays');
   assert.equal(Shelf.playsText(12353), '12,353 plays');
   assert.equal(Shelf.playsText(0), '');
+  // The auditor: the counts are the Internet Archive's, not voidtv.net's, and every place they show says so.
+  const js = fs.readFileSync(path.join(PLAY, 'src', 'shelf.js'), 'utf8');
+  assert.equal((js.match(/playsText(g.plays)/g) || []).length, (js.match(/playsText(g.plays) + ' on the Internet Archive'/g) || []).length);
   // Every game on the shelf carries its plays (play/shelf/plays.json, refreshed with node play/tools/shelf.js --plays).
   const index = JSON.parse(fs.readFileSync(path.join(PLAY, 'shelf', 'index.json'), 'utf8'));
   for (const x of index.games) assert.equal(typeof x.plays, 'number', x.id);
@@ -193,7 +196,7 @@ test('G2: plain genres, filters that only offer what exists, and the choice kept
   assert.equal(Shelf.writeFilter(f), '?m=snes&g=Platform&p=2&d=1990&q=mario');
   const games = JSON.parse(fs.readFileSync(path.join(PLAY, 'shelf', 'index.json'), 'utf8')).games;
   assert.deepEqual(games.filter((g) => Shelf.matches(g, f)).map((g) => g.id).sort(), ['super-mario-world', 'super-mario-all-stars-snes'].sort()); // All-Stars: two players since the audit's two-player check
-  assert.deepEqual(games.filter((g) => Shelf.matches(g, { q: 'golden' })).map((g) => g.id).sort(), ['golden-axe-genesis', 'golden-axe-sms']);
+  assert.deepEqual(games.filter((g) => !g.b && Shelf.matches(g, { q: 'golden' })).map((g) => g.id).sort(), ['golden-axe-genesis', 'golden-axe-sms']);   // hand-made cards; the collections add Ax Battler and the like
   for (const k of ['m', 'g', 'p', 'd']) for (const [v] of Shelf.choices(games, k).slice(1)) {
     assert.ok(games.some((g) => Shelf.matches(g, { [k]: v })), k + '=' + v + ' leads to at least one game');
   }
