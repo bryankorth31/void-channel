@@ -10,7 +10,7 @@ const fs = require('fs');
 const path = require('path');
 const PORT = +process.argv[2] || +process.env.PORT || 8789;
 const { pathToFileURL } = require('url');
-const PLAY = __dirname, ASSETS = path.join(__dirname, '..', 'assets');
+const PLAY = __dirname, ASSETS = path.join(__dirname, '..', 'assets'), TRIVIA = path.join(__dirname, '..', 'trivia');
 const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.json': 'application/json',
   '.wasm': 'application/wasm', '.png': 'image/png', '.svg': 'image/svg+xml', '.woff2': 'font/woff2', '.ico': 'image/x-icon' };
 const PLAIN = { 'cache-control': 'no-store' };
@@ -22,11 +22,14 @@ http.createServer((req, res) => {
   const room = /^\/api\/room\/([^/]+)$/.exec(p);
   if (room && room[1] !== 'open') return rooms.lookup(req, res, room[1]);
   if (p === '/join') p = '/play/join.html';
+  // Trivia Nights (its own chat owns trivia/): the host screen at /trivia/, the phone page at /trivia/phone, plain files.
+  if (p === '/trivia' || p === '/trivia/phone') p = p === '/trivia' ? '/trivia/' : '/trivia/phone.html';
   if (p === '/api/piece') return piece(req, res);
   if (p === '/api/drafts') return drafts(req, res);
   if (p === '/' || p === '/play') { res.writeHead(302, { location: '/play/' }); return res.end(); }
   let root = null;
   if (p.startsWith('/play/')) { root = PLAY; p = p.slice(5); } else if (p.startsWith('/assets/')) { root = ASSETS; p = p.slice(7); }
+  else if (p.startsWith('/trivia/')) { root = TRIVIA; p = p.slice(7); }
   if (!root) { res.writeHead(404, ISOLATE); return res.end('not found'); }
   if (p.endsWith('/')) p += 'index.html';
   const f = path.join(root, path.normalize(p).replace(/^([/\\])+/, ''));
@@ -34,7 +37,7 @@ http.createServer((req, res) => {
   fs.readFile(f, (e, b) => {
     if (e) { res.writeHead(404, ISOLATE); return res.end('not found'); }
     // Not isolated: the shelf and the approve page show Archive pictures, which an isolated page may not load.
-    const shelf = root === PLAY && (f === path.join(PLAY, 'index.html') || f === path.join(PLAY, 'tools', 'approve.html'));
+    const shelf = root === TRIVIA || (root === PLAY && (f === path.join(PLAY, 'index.html') || f === path.join(PLAY, 'tools', 'approve.html')));
     res.writeHead(200, Object.assign({ 'content-type': TYPES[path.extname(f)] || 'application/octet-stream' }, shelf ? PLAIN : ISOLATE));
     res.end(b);
   });
