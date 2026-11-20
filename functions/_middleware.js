@@ -34,6 +34,7 @@ function playHeaders(out, path) {
 }
 // A response from next() is normally mutable; one that is not (a redirect or a cached asset) is copied first.
 function withSecurity(res, path) {
+  if (res.status === 101) return res;   // a WebSocket handover (phone rooms): its headers are not ours to change, and a copy would lose the socket
   let out = res;
   try { for (const [k, v] of SECURITY) out.headers.set(k, v); } catch (e) { out = new Response(res.body, res); for (const [k, v] of SECURITY) out.headers.set(k, v); }
   playHeaders(out, path);
