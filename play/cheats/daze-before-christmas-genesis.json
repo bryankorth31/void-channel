@@ -1,0 +1,81 @@
+{
+  "game": "daze-before-christmas-genesis",
+  "source": "https://github.com/libretro/libretro-database/blob/master/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Daze%20Before%20Christmas%20(Australia).cht",
+  "licence": "CC-BY-SA-4.0",
+  "cheats": [
+    {
+      "name": "Start With 99 Lives",
+      "code": "NSBT-AABY"
+    },
+    {
+      "name": "Start With 255 Lives",
+      "code": "99BT-AABY"
+    },
+    {
+      "name": "Infinite Lives",
+      "code": "AL1T-AA9C"
+    },
+    {
+      "name": "Invincibility",
+      "code": "ABSA-AN94"
+    },
+    {
+      "name": "Infinite Presents (Hundred Digit) P1",
+      "code": "FF0064:0009"
+    },
+    {
+      "name": "Infinite Presents (Tens &amp; Ones Digits) P1",
+      "code": "FF0064:0099"
+    },
+    {
+      "name": "Fake Infinite Santa Hats (Health Bar) P1",
+      "code": "FF003A:0007"
+    },
+    {
+      "name": "Infinite Santas (Lives) P1",
+      "code": "FF002C:0009"
+    },
+    {
+      "name": "Infinite Health Santa P1",
+      "code": "FF0FB0:0007"
+    },
+    {
+      "name": "1 Hit Invincible",
+      "code": "FF0FB1:00FF"
+    },
+    {
+      "name": "Invincibility",
+      "code": "R0KA-A6WC"
+    },
+    {
+      "name": "Infinite Santa Hats (Health)",
+      "code": "A4KA-AA4W"
+    },
+    {
+      "name": "Regional Lockout Bypass",
+      "code": "AABT-AA3J"
+    },
+    {
+      "name": "Level Modifier",
+      "code": "FF0054:0000"
+    },
+    {
+      "name": "1 Shot Kill Bosses",
+      "code": "FF0FF8:0000"
+    },
+    {
+      "name": "1 Shot Kill Bosses",
+      "code": "PCKT-AE1J"
+    },
+    {
+      "name": "Enable Level Select",
+      "code": "FF2CBE:00FF",
+      "risky": true
+    },
+    {
+      "name": "Enable Level Select",
+      "code": "AL0T-AA2Y",
+      "risky": true
+    }
+  ]
+}

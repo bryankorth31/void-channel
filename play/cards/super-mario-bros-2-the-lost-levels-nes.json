@@ -1,0 +1,53 @@
+{
+  "id": "super-mario-bros-2-the-lost-levels-nes",
+  "title": "Super Mario Bros. 2: The Lost Levels",
+  "year": 1986,
+  "publisher": "Nintendo",
+  "system": "nes",
+  "core": "fceumm",
+  "players": 1,
+  "archive": {
+    "item": "1986-super-mario-bros.-2-the-lost-levels-japan",
+    "file": "(1986) Super Mario Bros. 2; The Lost Levels (Japan).nes",
+    "size": 73744
+  },
+  "controls": {
+    "kind": "pad",
+    "dpad": true,
+    "keys": [
+      "P1:B",
+      "P1:A",
+      "P1:Select",
+      "P1:Start"
+    ]
+  },
+  "help": "A and B are the game's two buttons; Start begins and pauses.",
+  "actions": [
+    {
+      "do": "Move",
+      "press": [
+        "P1:Up",
+        "P1:Down",
+        "P1:Left",
+        "P1:Right"
+      ]
+    },
+    {
+      "do": "A button",
+      "press": "P1:A"
+    },
+    {
+      "do": "B button",
+      "press": "P1:B"
+    },
+    {
+      "do": "Start and pause",
+      "press": "P1:Start"
+    }
+  ],
+  "added": "Bryan, 20 Nov 2026: \"All of the list\"",
+  "genre": [
+    "platform game"
+  ],
+  "genreBy": "set by hand (20 Nov 2026); Wikidata had no genre for it"
+}

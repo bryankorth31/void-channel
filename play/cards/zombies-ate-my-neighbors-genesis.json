@@ -1,0 +1,66 @@
+{
+  "id": "zombies-ate-my-neighbors-genesis",
+  "title": "Zombies Ate My Neighbors",
+  "year": 1993,
+  "publisher": "Konami/LucasArts",
+  "system": "genesis",
+  "core": "genesis-plus-gx",
+  "players": 1,
+  "archive": {
+    "item": "sg_Zombies_Ate_My_Neighbors_1993_Konami_LucasArts_US",
+    "file": "Zombies_Ate_My_Neighbors_1993_Konami_LucasArts_US.bin",
+    "size": 1048576
+  },
+  "controls": {
+    "kind": "pad",
+    "dpad": true,
+    "keys": [
+      "P1:Y",
+      "P1:B",
+      "P1:A",
+      "P1:Start"
+    ],
+    "labels": {
+      "P1:Y": "A",
+      "P1:B": "B",
+      "P1:A": "C"
+    }
+  },
+  "help": "A, B and C are the game's three buttons; Start pauses.",
+  "actions": [
+    {
+      "do": "Move",
+      "press": [
+        "P1:Up",
+        "P1:Down",
+        "P1:Left",
+        "P1:Right"
+      ]
+    },
+    {
+      "do": "Button A",
+      "press": "P1:Y"
+    },
+    {
+      "do": "Button B",
+      "press": "P1:B"
+    },
+    {
+      "do": "Button C",
+      "press": "P1:A"
+    },
+    {
+      "do": "Start and pause",
+      "press": "P1:Start"
+    }
+  ],
+  "added": "Bryan, 20 Nov 2026: \"All of the list\"",
+  "cheats": true,
+  "facts": {
+    "genre": [
+      "shoot 'em up"
+    ],
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q219804"
+  }
+}

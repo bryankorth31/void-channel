@@ -1,0 +1,73 @@
+{
+  "id": "venture-arcade",
+  "title": "Venture",
+  "year": 1981,
+  "publisher": "Exidy",
+  "system": "arcade",
+  "core": "mame",
+  "players": 2,
+  "aspect": 1.3333,
+  "archive": {
+    "item": "arcade_venture",
+    "file": "venture.zip",
+    "size": 81298,
+    "driver": "venture",
+    "engine": "classics"
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Digit5",
+      "Digit1",
+      "ControlLeft"
+    ],
+    "dpad": true,
+    "labels": {
+      "ControlLeft": "Button 1",
+      "Digit5": "Coin",
+      "Digit1": "Start"
+    }
+  },
+  "gamepad": {
+    "Up": "ArrowUp",
+    "Down": "ArrowDown",
+    "Left": "ArrowLeft",
+    "Right": "ArrowRight",
+    "A": "ControlLeft",
+    "B": "ControlLeft",
+    "Back": "Digit5",
+    "Start": "Digit1"
+  },
+  "help": "An arcade game from Exidy, 1981. Put a coin in, then press Start. It warms up for about half a minute every time it starts.",
+  "actions": [
+    {
+      "do": "Put a coin in",
+      "press": "Digit5"
+    },
+    {
+      "do": "Start",
+      "press": "Digit1"
+    },
+    {
+      "do": "Move",
+      "press": [
+        "ArrowUp",
+        "ArrowDown",
+        "ArrowLeft",
+        "ArrowRight"
+      ]
+    },
+    {
+      "do": "Button 1",
+      "press": "ControlLeft"
+    }
+  ],
+  "made": "arcade-cards",
+  "facts": {
+    "genre": [
+      "action game"
+    ],
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q2654149"
+  }
+}

@@ -5,14 +5,14 @@
   "publisher": "Williams",
   "system": "arcade",
   "core": "mame",
-  "players": 1,
+  "players": 2,
   "aspect": 1.3333,
   "archive": {
     "item": "arcade_joust",
     "file": "joust.zip",
     "size": 66848,
     "driver": "joust",
-    "engine": "williams"
+    "engine": "classics"
   },
   "controls": {
     "kind": "dos-keys",
@@ -63,5 +63,22 @@
   ],
   "firstBoot": {
     "resetAt": 12
+  },
+  "gamepadSeats": {
+    "2": {
+      "Left": "KeyD",
+      "Right": "KeyG",
+      "A": "KeyA",
+      "B": "KeyA",
+      "Back": "Digit6",
+      "Start": "Digit2"
+    }
+  },
+  "facts": {
+    "genre": [
+      "platform game"
+    ],
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q1567550"
   }
 }

@@ -1,0 +1,90 @@
+{
+  "id": "toobin-arcade",
+  "title": "Toobin'",
+  "year": 1988,
+  "publisher": "Atari Games",
+  "system": "arcade",
+  "core": "mame",
+  "players": 2,
+  "aspect": 0.75,
+  "archive": {
+    "item": "arcade_toobin",
+    "file": "toobin.zip",
+    "size": 1495437,
+    "driver": "toobin",
+    "engine": "m68000"
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Digit5",
+      "ControlLeft",
+      "KeyD",
+      "KeyA",
+      "KeyQ"
+    ],
+    "dpad": false,
+    "labels": {
+      "ControlLeft": "Throw",
+      "KeyD": "R Paddle Forward",
+      "KeyA": "L Paddle Forward",
+      "KeyQ": "L Paddle Backward",
+      "KeyE": "R Paddle Backward",
+      "Digit5": "Coin"
+    }
+  },
+  "gamepad": {
+    "A": "ControlLeft",
+    "B": "KeyD",
+    "X": "KeyA",
+    "Y": "KeyQ",
+    "LB": "KeyE",
+    "Back": "Digit5",
+    "Start": "ControlLeft"
+  },
+  "help": "An arcade game from Atari Games, 1988. Put two coins in, then press Throw to start.",
+  "actions": [
+    {
+      "do": "Put two coins in",
+      "press": "Digit5"
+    },
+    {
+      "do": "Throw",
+      "press": "ControlLeft"
+    },
+    {
+      "do": "R Paddle Forward",
+      "press": "KeyD"
+    },
+    {
+      "do": "L Paddle Forward",
+      "press": "KeyA"
+    },
+    {
+      "do": "L Paddle Backward",
+      "press": "KeyQ"
+    },
+    {
+      "do": "R Paddle Backward",
+      "press": "KeyE"
+    }
+  ],
+  "made": "arcade-cards",
+  "gamepadSeats": {
+    "2": {
+      "A": "ControlRight",
+      "B": "KeyL",
+      "X": "KeyJ",
+      "Y": "KeyU",
+      "LB": "KeyO",
+      "Back": "Digit6"
+    }
+  },
+  "facts": {
+    "genre": [
+      "action game"
+    ],
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q1990991"
+  }
+}

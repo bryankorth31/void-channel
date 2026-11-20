@@ -1,0 +1,69 @@
+{
+  "id": "avalanche-arcade",
+  "title": "Avalanche",
+  "year": 1978,
+  "publisher": "Atari",
+  "system": "arcade",
+  "core": "mame",
+  "players": 2,
+  "aspect": 1.3333,
+  "archive": {
+    "item": "arcade_avalnche",
+    "file": "avalnche.zip",
+    "size": 5012,
+    "driver": "avalnche",
+    "engine": "atari"
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Digit5",
+      "Digit1",
+      "ControlLeft"
+    ],
+    "dpad": true,
+    "labels": {
+      "ControlLeft": "Button 1",
+      "Digit5": "Coin",
+      "Digit1": "Start"
+    }
+  },
+  "gamepad": {
+    "Left": "ArrowLeft",
+    "Right": "ArrowRight",
+    "A": "ControlLeft",
+    "B": "ControlLeft",
+    "Back": "Digit5",
+    "Start": "Digit1"
+  },
+  "help": "An arcade game from Atari, 1978. Put a coin in, then press Start.",
+  "actions": [
+    {
+      "do": "Put a coin in",
+      "press": "Digit5"
+    },
+    {
+      "do": "Start",
+      "press": "Digit1"
+    },
+    {
+      "do": "Turn",
+      "press": [
+        "ArrowLeft",
+        "ArrowRight"
+      ]
+    },
+    {
+      "do": "Button 1",
+      "press": "ControlLeft"
+    }
+  ],
+  "made": "arcade-cards",
+  "facts": {
+    "genre": [
+      "action game"
+    ],
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q4827474"
+  }
+}

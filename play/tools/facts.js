@@ -53,7 +53,15 @@ const norm = (t) => searchTitle(String(t)).toLowerCase().replace(/&/g, 'and').re
 function pick(card, found) {
   const want = PLATFORM[card.system] || [];
   const same = found.filter((e) => e.labels.some((l) => norm(l) === norm(card.title)));
-  const onMachine = same.filter((e) => e.platforms.some((p) => want.includes(p)));
+  // An arcade game's platform on Wikidata is its own board ("Namco Galaga"), so no one machine item matches it: there the
+  // same title must have come out the same year, give or take one (the arcade release is the first date an item has).
+  // With no year to go on, a title that names exactly one video game is taken ("Mr. Do!'s Wild Ride").
+  const onlyGame = same.filter((e) => e.inst.includes(VIDEO_GAME));
+  const onMachine = card.system === 'arcade'
+    ? (same.filter((e) => e.year && card.year && Math.abs(e.year - card.year) <= 1).length
+      ? same.filter((e) => e.year && card.year && Math.abs(e.year - card.year) <= 1)
+      : onlyGame.length === 1 && !onlyGame[0].year ? onlyGame : [])
+    : same.filter((e) => e.platforms.some((p) => want.includes(p)));
   const games = onMachine.filter((e) => e.inst.includes(VIDEO_GAME));
   const fits = games.length ? games : onMachine.filter((e) => e.inst.includes(SERIES));
   if (!fits.length) return null;
@@ -73,7 +81,7 @@ function fold(rows) {
     if (!by.has(id)) by.set(id, { id, labels: [], inst: [], platforms: [], genres: [], players: null, year: null });
     const e = by.get(id);
     if (b.lab) add(e.labels, b.lab.value);
-    add(e.inst, qid(b.inst.value)); add(e.platforms, qid(b.p.value));
+    add(e.inst, qid(b.inst.value)); if (b.p) add(e.platforms, qid(b.p.value));
     if (b.genreLabel && !/^Q\d+$/.test(b.genreLabel.value)) add(e.genres, b.genreLabel.value);
     if (b.max && +b.max.value) e.players = Math.max(e.players || 0, +b.max.value);
     if (b.date) { const y = +b.date.value.slice(0, 4); if (y && (!e.year || y < e.year)) e.year = y; }
@@ -87,7 +95,8 @@ async function lookUp(card) {
     '  SERVICE wikibase:mwapi { bd:serviceParam wikibase:api "EntitySearch"; wikibase:endpoint "www.wikidata.org";',
     '    mwapi:search ' + JSON.stringify(searchTitle(card.title)) + '; mwapi:language "en"; mwapi:limit "15". ?g wikibase:apiOutputItem mwapi:item. }',
     '  ?g wdt:P31 ?inst . FILTER(?inst IN (wd:' + VIDEO_GAME + ', wd:' + SERIES + '))',
-    '  ?g wdt:P400 ?p .',
+    // Many arcade items name no platform at all, so for arcade it is optional (the year decides there; see pick).
+    card.system === 'arcade' ? '  OPTIONAL { ?g wdt:P400 ?p . }' : '  ?g wdt:P400 ?p .',
     '  { ?g rdfs:label ?lab } UNION { ?g skos:altLabel ?lab } FILTER(LANG(?lab) IN ("en", "mul"))',
     '  OPTIONAL { ?g wdt:P136 ?genre } OPTIONAL { ?g wdt:P1873 ?max } OPTIONAL { ?g wdt:P577 ?date }',
     '  SERVICE wikibase:label { bd:serviceParam wikibase:language "en,mul". } }'].join('\n');
@@ -100,6 +109,9 @@ async function main() {
     const file = path.join(CARDS, f);
     const card = JSON.parse(fs.readFileSync(file, 'utf8'));
     if (card.facts && !again) { console.log('kept   ' + card.id); continue; }
+    // --skip=arcade leaves a machine out (a pass for new console cards need not ask again about arcade titles it missed).
+    const skip = (process.argv.find((x) => x.startsWith('--skip=')) || '').slice(7).split(',').filter(Boolean);
+    if (skip.includes(card.system) || (card.genre && card.genre.length && !again)) continue;
     let facts = null;
     try { facts = await lookUp(card); } catch (e) { console.log('error  ' + card.id + '  ' + e.message); continue; }
     if (!facts) {

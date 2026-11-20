@@ -1,0 +1,69 @@
+{
+  "id": "field-goal-arcade",
+  "title": "Field Goal",
+  "year": 1979,
+  "publisher": "Taito",
+  "system": "arcade",
+  "core": "mame",
+  "players": 2,
+  "aspect": 0.75,
+  "archive": {
+    "item": "arcade_fgoal",
+    "file": "fgoal.zip",
+    "size": 16729,
+    "driver": "fgoal",
+    "engine": "classics"
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Digit5",
+      "Digit1"
+    ],
+    "dpad": true,
+    "labels": {
+      "Digit5": "Coin",
+      "Digit1": "Start"
+    }
+  },
+  "gamepad": {
+    "Left": "ArrowLeft",
+    "Right": "ArrowRight",
+    "Back": "Digit5",
+    "Start": "Digit1"
+  },
+  "help": "An arcade game from Taito, 1979. Put a coin in, then press Start.",
+  "actions": [
+    {
+      "do": "Put a coin in",
+      "press": "Digit5"
+    },
+    {
+      "do": "Start",
+      "press": "Digit1"
+    },
+    {
+      "do": "Turn",
+      "press": [
+        "ArrowLeft",
+        "ArrowRight"
+      ]
+    }
+  ],
+  "made": "arcade-cards",
+  "gamepadSeats": {
+    "2": {
+      "Left": "KeyD",
+      "Right": "KeyG",
+      "Back": "Digit5",
+      "Start": "Digit2"
+    }
+  },
+  "facts": {
+    "genre": [
+      "Breakout clone"
+    ],
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q11332579"
+  }
+}

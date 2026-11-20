@@ -34,10 +34,15 @@
     // (card.gamepadShift = { on: 'LT', map: { Up: 'Digit4', ... } }), so a pad reaches more keys than it has buttons.
     let shift = null;
     let players = 1;
+    // An arcade machine's second player has keys of their own (MAME: R F D G to move, A S Q to fire), not a renumbered
+    // console button: card.gamepadSeats = { 2: { A: 'KeyA', Up: 'KeyR', ... } } gives a seat its own map.
+    let seatMaps = {};
     function setCard(card, full) {
       map = Object.assign({ Start: '@menu' }, full || (card && card.gamepad) || {});
       shift = (card && card.gamepadShift && card.gamepadShift.on && card.gamepadShift.map) ? card.gamepadShift : null;
       players = Math.max(1, Math.min(4, (card && card.players) || 1));
+      seatMaps = {};
+      for (const [n, m] of Object.entries((card && card.gamepadSeats) || {})) seatMaps[n] = Object.assign({ Start: '@menu' }, m);
     }
 
     // Couch mode (plan T18): each pad keeps its seat. A pad takes the lowest free seat the first time the browser shows
@@ -80,7 +85,7 @@
       const on = (i) => !!(pad.buttons && pad.buttons[i] && (pad.buttons[i].pressed || pad.buttons[i].value > 0.5));
       if (on(BUTTONS.Back) && on(BUTTONS.Start)) { codes.add('@menu'); return codes; }
       // While the shift button is held, the second set answers and the shift button itself sends nothing.
-      const m = shift && on(BUTTONS[shift.on]) ? shift.map : map;
+      const m = shift && on(BUTTONS[shift.on]) ? shift.map : (seatMaps[player] || map);
       for (const [name, idx] of Object.entries(BUTTONS)) {
         if (shift && name === shift.on) continue;
         const b = pad.buttons && pad.buttons[idx];

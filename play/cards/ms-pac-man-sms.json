@@ -1,0 +1,59 @@
+{
+  "id": "ms-pac-man-sms",
+  "title": "Ms. Pac-Man",
+  "year": 1991,
+  "publisher": "",
+  "system": "sms",
+  "core": "genesis-plus-gx",
+  "players": 1,
+  "archive": {
+    "item": "segasms_Ms._Pac-Man_1991_Namco_-_Tengen",
+    "file": "Ms._Pac-Man_1991_Namco_-_Tengen.bin",
+    "as": "ms-pac-man.sms",
+    "size": 131072
+  },
+  "controls": {
+    "kind": "pad",
+    "dpad": true,
+    "keys": [
+      "P1:B",
+      "P1:A",
+      "P1:Start"
+    ],
+    "labels": {
+      "P1:B": "1",
+      "P1:A": "2",
+      "P1:Start": "Pause"
+    }
+  },
+  "help": "Buttons 1 and 2 are the game's two buttons; Start is the console's pause button.",
+  "actions": [
+    {
+      "do": "Move",
+      "press": [
+        "P1:Up",
+        "P1:Down",
+        "P1:Left",
+        "P1:Right"
+      ]
+    },
+    {
+      "do": "Button 1",
+      "press": "P1:B"
+    },
+    {
+      "do": "Button 2",
+      "press": "P1:A"
+    },
+    {
+      "do": "Start and pause",
+      "press": "P1:Start"
+    }
+  ],
+  "added": "Bryan, 20 Nov 2026: \"All of the list\"",
+  "cheats": true,
+  "genre": [
+    "maze game"
+  ],
+  "genreBy": "set by hand (20 Nov 2026); Wikidata had no genre for it"
+}

@@ -1,0 +1,83 @@
+{
+  "id": "kozmik-kroozr-arcade",
+  "title": "Kozmik Kroozr",
+  "year": 1982,
+  "publisher": "Bally Midway",
+  "system": "arcade",
+  "core": "mame",
+  "players": 2,
+  "aspect": 1.3333,
+  "archive": {
+    "item": "arcade_kroozr",
+    "file": "kroozr.zip",
+    "size": 45549,
+    "driver": "kroozr",
+    "engine": "m68000",
+    "parents": [
+      {
+        "item": "arcade_kroozr",
+        "file": "midssio.zip",
+        "size": 163
+      }
+    ]
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Digit5",
+      "Digit1",
+      "ControlLeft",
+      "AltLeft"
+    ],
+    "dpad": true,
+    "labels": {
+      "ControlLeft": "Button 1",
+      "AltLeft": "Button 2",
+      "Digit5": "Coin",
+      "Digit1": "Start"
+    }
+  },
+  "gamepad": {
+    "Left": "KeyZ",
+    "Right": "KeyX",
+    "Up": "ArrowUp",
+    "Down": "ArrowDown",
+    "A": "ControlLeft",
+    "B": "AltLeft",
+    "Back": "Digit5",
+    "Start": "Digit1"
+  },
+  "help": "An arcade game from Bally Midway, 1982. Put a coin in, then press Start.",
+  "actions": [
+    {
+      "do": "Put a coin in",
+      "press": "Digit5"
+    },
+    {
+      "do": "Start",
+      "press": "Digit1"
+    },
+    {
+      "do": "Turn",
+      "press": [
+        "ArrowUp",
+        "ArrowDown",
+        "KeyZ",
+        "KeyX"
+      ]
+    },
+    {
+      "do": "Button 1",
+      "press": "ControlLeft"
+    },
+    {
+      "do": "Button 2",
+      "press": "AltLeft"
+    }
+  ],
+  "made": "arcade-cards",
+  "genre": [
+    "shoot 'em up"
+  ],
+  "genreBy": "set by hand from the Internet Archive item and the game itself (20 Nov 2026); Wikidata had no match"
+}

@@ -115,8 +115,8 @@ test('no donation line on games run by a non-commercial core (B, 19 Nov 2026: "L
 test('arcade (B, 20 Nov 2026: "Current MAME", "No line"): MAME runs from its own runner on the page, keyboard keys are not sent twice, Esc never reaches MAME, and the tab keeps its title', () => {
   const Cards2 = require('../src/cards.js');
   const joust = JSON.parse(fs.readFileSync(path.join(PLAY, 'cards', 'joust-arcade.json'), 'utf8'));
-  assert.equal(Cards2.engineOf(joust), 'engine/mame/williams.js');
-  const W = path.join(PLAY, 'engine', 'mame', 'williams');
+  assert.equal(Cards2.engineOf(joust), 'engine/mame/classics.js', 'Joust plays on the classics engine (87 families) since the 244-game batch');
+  const W = path.join(PLAY, 'engine', 'mame', 'classics');
   const wasm = fs.existsSync(W + '.wasm.gz') ? W + '.wasm.gz' : W + '.wasm';
   assert.ok(fs.existsSync(W + '.js') && fs.existsSync(wasm));
   assert.ok(fs.statSync(wasm).size < 25 * 1024 * 1024, 'under Cloudflare\'s 25 MiB file cap');
@@ -146,6 +146,7 @@ test('arcade (B, 20 Nov 2026: "Current MAME", "No line"): MAME runs from its own
   assert.ok(Math.abs(runs - 600) <= 2, 'about 600 turns in 10 s at 75 Hz, got ' + runs);
   assert.ok(ar.includes('root._emscripten_set_main_loop_timing(0, STEP); if (root.MainLoop && root.MainLoop.scheduler) root.MainLoop.scheduler();'), 'a page with no frames falls back to a timer');
   assert.ok(ar.includes("'-nojoystick'"), 'audit AR4: the pad reaches MAME through the hub only');
+  assert.ok(ar.includes("s.src = engine + '?v=' + ENGINE_V;"), 'the engine script and its wasm are fetched as one build (Joust live, 20 Nov 2026)');
   // The 244-game batch (20 Nov 2026): a parent zip under MAME's name, timed presses past an operator screen, the engine's bytes
   // let go once it runs, and a big game's download counted out.
   assert.ok(ar.includes("name: p.as || p.file.split('/').pop()"));
@@ -154,3 +155,34 @@ test('arcade (B, 20 Nov 2026: "Current MAME", "No line"): MAME runs from its own
   assert.ok(ar.includes("on.status('Fetching the game: ' + mb + ' of ' + Math.round(size / 1e6) + ' MB')"));
   assert.ok(!ar.includes('root.Module.wasmBinary = buf;'), 'no second reference to the engine bytes');
 });
+
+test('arcade cards (Bryan picked the 245 most-played; the assistant read each input from MAME): every arcade card names a real engine, gives player 2 their own keys, and seats the controls the usual way', () => {
+  const A = require('../tools/arcade-cards.js');
+  const Hub = require('../src/hub.js');
+  const arcade = cards.filter((c) => c.core === 'mame');
+  assert.ok(arcade.length >= 243, 'all but Space Bugger: ' + arcade.length);
+  for (const c of arcade) {
+    assert.deepEqual(Cards.check(c), [], c.id);
+    assert.ok(fs.existsSync(path.join(PLAY, Cards.engineOf(c))), c.id + ' ' + c.archive.engine);
+    assert.ok(c.gamepad.Back && c.gamepad.Start, c.id + ' has a coin and a start on the pad');
+    assert.ok(c.actions.length >= 3, c.id);
+  }
+  // The mapping, on hand-made fields: a gas pedal on RT and A, a dial on the arrows by MAME's own keys, twin sticks on the face buttons.
+  const f = (name, type, player, keys, extra) => Object.assign({ name, type, player, analog: !!extra, keys: keys.map((k) => ({ dom: [k] })) }, extra || {});
+  const k = (x) => [{ dom: [x] }];
+  const drive = A.seatMap([f('P1 Pedal 1', 'P1_PEDAL', 1, [], { inc: k('ControlLeft') }), f('Paddle', 'P1_PADDLE', 1, [], { inc: k('ArrowRight'), dec: k('ArrowLeft') }), f('Gear Shift', 'P1_BUTTON3', 1, ['Space'])], 1);
+  assert.deepEqual(drive.map, { RT: 'ControlLeft', A: 'ControlLeft', Left: 'ArrowLeft', Right: 'ArrowRight', B: 'Space' });
+  const twin = A.seatMap([f('Up', 'P1_JOYSTICKLEFT_UP', 1, ['KeyE']), f('Fire Up', 'P1_JOYSTICKRIGHT_UP', 1, ['KeyI']), f('Fire Down', 'P1_JOYSTICKRIGHT_DOWN', 1, ['KeyK'])], 1);
+  assert.deepEqual(twin.map, { Up: 'KeyE', Y: 'KeyI', A: 'KeyK' });
+  // Player 2 on a second gamepad presses player 2's keys.
+  const tron = cards.find((c) => c.id === 'tron-arcade');
+  const sent = [];
+  const hub = Hub.createHub({ send: (code, down) => sent.push(code + (down ? ' down' : ' up')) });
+  hub.setCard(tron, Cards.gamepadMap(tron));
+  const press = (index, button) => ({ index, id: 'pad ' + index, mapping: 'standard', axes: [0, 0, 0, 0],
+    buttons: Array.from({ length: 17 }, (_, i) => ({ pressed: i === button, value: i === button ? 1 : 0 })) });
+  hub.pollPads([press(0, Hub.BUTTONS.A), press(1, Hub.BUTTONS.A)]);
+  assert.deepEqual(sent, [tron.gamepad.A + ' down', tron.gamepadSeats[2].A + ' down']);
+  assert.notEqual(tron.gamepad.A, tron.gamepadSeats[2].A);
+});
+

@@ -1,0 +1,73 @@
+{
+  "id": "targ-arcade",
+  "title": "Targ",
+  "year": 1980,
+  "publisher": "Exidy",
+  "system": "arcade",
+  "core": "mame",
+  "players": 2,
+  "aspect": 1.3333,
+  "archive": {
+    "item": "arcade_targ",
+    "file": "targ.zip",
+    "size": 15042,
+    "driver": "targ",
+    "engine": "classics"
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Digit5",
+      "Digit1",
+      "ControlLeft"
+    ],
+    "dpad": true,
+    "labels": {
+      "ControlLeft": "Button 1",
+      "Digit5": "Coin",
+      "Digit1": "Start"
+    }
+  },
+  "gamepad": {
+    "Up": "ArrowUp",
+    "Down": "ArrowDown",
+    "Left": "ArrowLeft",
+    "Right": "ArrowRight",
+    "A": "ControlLeft",
+    "B": "ControlLeft",
+    "Back": "Digit5",
+    "Start": "Digit1"
+  },
+  "help": "An arcade game from Exidy, 1980. Put a coin in, then press Start.",
+  "actions": [
+    {
+      "do": "Put a coin in",
+      "press": "Digit5"
+    },
+    {
+      "do": "Start",
+      "press": "Digit1"
+    },
+    {
+      "do": "Move",
+      "press": [
+        "ArrowUp",
+        "ArrowDown",
+        "ArrowLeft",
+        "ArrowRight"
+      ]
+    },
+    {
+      "do": "Button 1",
+      "press": "ControlLeft"
+    }
+  ],
+  "made": "arcade-cards",
+  "facts": {
+    "genre": [
+      "vehicular combat game"
+    ],
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q7685817"
+  }
+}

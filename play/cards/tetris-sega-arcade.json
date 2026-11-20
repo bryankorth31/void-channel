@@ -1,0 +1,96 @@
+{
+  "id": "tetris-sega-arcade",
+  "title": "Tetris",
+  "year": 1988,
+  "publisher": "Sega",
+  "system": "arcade",
+  "core": "mame",
+  "players": 2,
+  "aspect": 1.3333,
+  "archive": {
+    "item": "arcade_tetris",
+    "file": "tetris.zip",
+    "size": 3243940,
+    "driver": "tetris",
+    "engine": "m68000"
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Digit5",
+      "Digit1",
+      "ControlLeft",
+      "AltLeft",
+      "Space"
+    ],
+    "dpad": true,
+    "labels": {
+      "ControlLeft": "Button 1",
+      "AltLeft": "Button 2",
+      "Space": "Button 3",
+      "Digit5": "Coin",
+      "Digit1": "Start"
+    }
+  },
+  "gamepad": {
+    "Down": "ArrowDown",
+    "Left": "ArrowLeft",
+    "Right": "ArrowRight",
+    "A": "ControlLeft",
+    "B": "AltLeft",
+    "X": "Space",
+    "Back": "Digit5",
+    "Start": "Digit1"
+  },
+  "help": "An arcade game from Sega, 1988. Put a coin in, then press Start.",
+  "actions": [
+    {
+      "do": "Put a coin in",
+      "press": "Digit5"
+    },
+    {
+      "do": "Start",
+      "press": "Digit1"
+    },
+    {
+      "do": "Move",
+      "press": [
+        "ArrowDown",
+        "ArrowLeft",
+        "ArrowRight"
+      ]
+    },
+    {
+      "do": "Button 1",
+      "press": "ControlLeft"
+    },
+    {
+      "do": "Button 2",
+      "press": "AltLeft"
+    },
+    {
+      "do": "Button 3",
+      "press": "Space"
+    }
+  ],
+  "made": "arcade-cards",
+  "gamepadSeats": {
+    "2": {
+      "Down": "KeyF",
+      "Left": "KeyD",
+      "Right": "KeyG",
+      "A": "KeyA",
+      "B": "KeyS",
+      "X": "KeyQ",
+      "Back": "Digit6",
+      "Start": "Digit2"
+    }
+  },
+  "facts": {
+    "genre": [
+      "puzzle video game"
+    ],
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q4050885"
+  }
+}

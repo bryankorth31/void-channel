@@ -1,0 +1,80 @@
+{
+  "id": "video-pinball-arcade",
+  "title": "Video Pinball",
+  "year": 1979,
+  "publisher": "Atari",
+  "system": "arcade",
+  "core": "mame",
+  "players": 1,
+  "aspect": 0.75,
+  "archive": {
+    "item": "arcade_videopin",
+    "file": "videopin.zip",
+    "size": 9545,
+    "driver": "videopin",
+    "engine": "atari"
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Digit5",
+      "Digit1",
+      "ControlLeft",
+      "ControlRight",
+      "Space",
+      "ArrowDown"
+    ],
+    "dpad": false,
+    "labels": {
+      "ControlLeft": "Left Flipper",
+      "ControlRight": "Right Flipper",
+      "Space": "Nudge",
+      "ArrowDown": "Ball Shooter",
+      "Digit5": "Coin",
+      "Digit1": "Start"
+    }
+  },
+  "gamepad": {
+    "A": "ControlLeft",
+    "B": "ControlRight",
+    "X": "Space",
+    "Y": "ArrowDown",
+    "Back": "Digit5",
+    "Start": "Digit1"
+  },
+  "help": "An arcade game from Atari, 1979. Put a coin in, then press Start.",
+  "actions": [
+    {
+      "do": "Put a coin in",
+      "press": "Digit5"
+    },
+    {
+      "do": "Start",
+      "press": "Digit1"
+    },
+    {
+      "do": "Left Flipper",
+      "press": "ControlLeft"
+    },
+    {
+      "do": "Right Flipper",
+      "press": "ControlRight"
+    },
+    {
+      "do": "Nudge",
+      "press": "Space"
+    },
+    {
+      "do": "Ball Shooter",
+      "press": "ArrowDown"
+    }
+  ],
+  "made": "arcade-cards",
+  "facts": {
+    "genre": [
+      "pinball video game"
+    ],
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q4785083"
+  }
+}

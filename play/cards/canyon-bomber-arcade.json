@@ -1,0 +1,74 @@
+{
+  "id": "canyon-bomber-arcade",
+  "title": "Canyon Bomber",
+  "year": 1977,
+  "publisher": "Atari",
+  "system": "arcade",
+  "core": "mame",
+  "players": 2,
+  "aspect": 1.3333,
+  "archive": {
+    "item": "arcade_canyon",
+    "file": "canyon.zip",
+    "size": 3510,
+    "driver": "canyon",
+    "engine": "atari"
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Digit5",
+      "Digit1",
+      "ControlLeft",
+      "KeyH"
+    ],
+    "dpad": false,
+    "labels": {
+      "ControlLeft": "Button 1",
+      "KeyH": "Hiscore Reset",
+      "Digit5": "Coin",
+      "Digit1": "Start"
+    }
+  },
+  "gamepad": {
+    "A": "ControlLeft",
+    "B": "KeyH",
+    "Back": "Digit5",
+    "Start": "Digit1"
+  },
+  "help": "An arcade game from Atari, 1977. Put a coin in, then press Start.",
+  "actions": [
+    {
+      "do": "Put a coin in",
+      "press": "Digit5"
+    },
+    {
+      "do": "Start",
+      "press": "Digit1"
+    },
+    {
+      "do": "Button 1",
+      "press": "ControlLeft"
+    },
+    {
+      "do": "Hiscore Reset",
+      "press": "KeyH"
+    }
+  ],
+  "made": "arcade-cards",
+  "gamepadSeats": {
+    "2": {
+      "A": "KeyA",
+      "B": "KeyA",
+      "Back": "Digit6",
+      "Start": "Digit2"
+    }
+  },
+  "facts": {
+    "genre": [
+      "arcade"
+    ],
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q2936913"
+  }
+}

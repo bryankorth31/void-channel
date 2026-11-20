@@ -1,0 +1,167 @@
+{
+  "game": "super-mario-advance-4-super-mario-bros-3-gba",
+  "source": "https://github.com/libretro/libretro-database/blob/master/cht/Nintendo%20-%20Game%20Boy%20Advance/Super%20Mario%20Advance%204%20-%20Super%20Mario%20Bros.%203%20(USA%2C%20Europe)%20(Code%20Breaker).cht",
+  "licence": "CC-BY-SA-4.0",
+  "cheats": [
+    {
+      "name": "Stop Timer",
+      "code": "33003D0E+0020"
+    },
+    {
+      "name": "Infinite Lives (Mario)",
+      "code": "33002A6A+0062"
+    },
+    {
+      "name": "Infinite Lives (Luigi)",
+      "code": "33002A6C+0062"
+    },
+    {
+      "name": "Mario Always Has 98 Coins",
+      "code": "33002C58+0062"
+    },
+    {
+      "name": "Luigi Always Has 98 Coins",
+      "code": "33002C83+0062"
+    },
+    {
+      "name": "Infinite Turns Card Matching Game",
+      "code": "33004F08+0001"
+    },
+    {
+      "name": "Press R For Pow Time",
+      "code": "74000130+02FF+33003CF8+00FF"
+    },
+    {
+      "name": "Infinite Star Power",
+      "code": "33002C2E+00FF"
+    },
+    {
+      "name": "Invincibility",
+      "code": "33003F64+0035"
+    },
+    {
+      "name": "Press L Trigger+Up For Fire Powers",
+      "code": "74000130+01BF+33FE6400+0002+73FE6400+0002+33003F5F+0002"
+    },
+    {
+      "name": "Press L Trigger+Down For Leaf Powers",
+      "code": "74000130+017F+33FE6400+0003+73FE6400+0003+33003F5F+0003"
+    },
+    {
+      "name": "Press L Trigger+Left For Frog Powers",
+      "code": "74000130+01DF+33FE6400+0004+73FE6400+0004+33003F5F+0004"
+    },
+    {
+      "name": "Press R Trigger+Right For Racoon Powers",
+      "code": "74000130+01EF+33FE6400+0005+73FE6400+0005+33003F5F+0005"
+    },
+    {
+      "name": "Press R Trigger+Up For Hammer Bros. Powers",
+      "code": "74000130+02BF+33FE6400+0006+73FE6400+0006+33003F5F+0006"
+    },
+    {
+      "name": "Press R Trigger+Down For Cape Powers",
+      "code": "74000130+027F+33FE6400+0007+73FE6400+0007+33003F5F+0007"
+    },
+    {
+      "name": "Start With 2 Of Every Power Up (Alternate)",
+      "code": "43002C2E+0101+0101000F+0002"
+    },
+    {
+      "name": "Invincible And Invisible",
+      "code": "33003F64+0007"
+    },
+    {
+      "name": "Starman Type Invincibility",
+      "code": "33003F65+0005"
+    },
+    {
+      "name": "Invincible Hammer Mario",
+      "code": "33003F78+0007"
+    },
+    {
+      "name": "Max P Meter (You Can't Fly)",
+      "code": "33003F7B+000A"
+    },
+    {
+      "name": "Fly Anytime",
+      "code": "33003F49+0007"
+    },
+    {
+      "name": "No Flash Starman Invincibility",
+      "code": "33003F84+0003"
+    },
+    {
+      "name": "No Jump Or Coin Sounds",
+      "code": "33003F3D+000D"
+    },
+    {
+      "name": "Press L + Up To Recatch Boomerang (Sometimes Vegetables)",
+      "code": "74000130+01BF+330046C6+0004"
+    },
+    {
+      "name": "Infinite Time To Hold Bricks",
+      "code": "33004284+0064+33004214+0064+330041A4+0064"
+    },
+    {
+      "name": "Infinite Time To Hold Turtle Shells",
+      "code": "330046E4+00BF+33004604+00CC"
+    },
+    {
+      "name": "Infinite 99999 Coins In World-E",
+      "code": "8300399C+869F+3300399E+0001"
+    },
+    {
+      "name": "Have Maximum Score",
+      "code": "83003854+423F+33003856+000F"
+    },
+    {
+      "name": "Enable Code (Must Be On)",
+      "code": "000021FA+000A+10002884+0007"
+    },
+    {
+      "name": "Press L To Hide Behind Stuff",
+      "code": "74000130+01FF+33003D06+00FF"
+    },
+    {
+      "name": "P Meter Always Full",
+      "code": "33003C9F+007F+33003F48+00FF"
+    },
+    {
+      "name": "Tap Select For Form Chancge",
+      "code": "74000130+03FB+E3FE5400+0001+73FE5400+0004+E3003F5E+0100+74000130+03FF+83FE5400+0000+73003F5E+1102+83003F5E+0002"
+    },
+    {
+      "name": "Disappear At Level Start",
+      "code": "33003F66+0003"
+    },
+    {
+      "name": "Always Float To The Ground",
+      "code": "33003F61+0004"
+    },
+    {
+      "name": "'Kicker' Mario",
+      "code": "33003F69+0007"
+    },
+    {
+      "name": "Face Forward",
+      "code": "33003F6A+000A"
+    },
+    {
+      "name": "Mario Walks Away",
+      "code": "33003F6B+0006"
+    },
+    {
+      "name": "Mario's On A Conveyor Belt",
+      "code": "33003F6E+000C"
+    },
+    {
+      "name": "Ducking Jumps",
+      "code": "33003F70+000F"
+    },
+    {
+      "name": "Splash Always On Mario",
+      "code": "33003F75+0001"
+    }
+  ]
+}

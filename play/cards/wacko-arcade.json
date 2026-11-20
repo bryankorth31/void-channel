@@ -1,0 +1,82 @@
+{
+  "id": "wacko-arcade",
+  "title": "Wacko",
+  "year": 1982,
+  "publisher": "Bally Midway",
+  "system": "arcade",
+  "core": "mame",
+  "players": 2,
+  "aspect": 1.3333,
+  "archive": {
+    "item": "arcade_wacko",
+    "file": "wacko.zip",
+    "size": 40532,
+    "driver": "wacko",
+    "engine": "m68000",
+    "parents": [
+      {
+        "item": "arcade_wacko",
+        "file": "midssio.zip",
+        "size": 163
+      }
+    ]
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Digit5",
+      "Digit1"
+    ],
+    "dpad": true,
+    "labels": {
+      "Digit5": "Coin",
+      "Digit1": "Start"
+    }
+  },
+  "gamepad": {
+    "Up": "KeyE",
+    "Down": "KeyD",
+    "Left": "KeyS",
+    "Right": "KeyF",
+    "Back": "Digit5",
+    "Start": "Digit1"
+  },
+  "help": "An arcade game from Bally Midway, 1982. Put a coin in, then press Start.",
+  "actions": [
+    {
+      "do": "Put a coin in",
+      "press": "Digit5"
+    },
+    {
+      "do": "Start",
+      "press": "Digit1"
+    },
+    {
+      "do": "Move",
+      "press": [
+        "KeyE",
+        "KeyD",
+        "KeyS",
+        "KeyF"
+      ]
+    }
+  ],
+  "made": "arcade-cards",
+  "gamepadSeats": {
+    "2": {
+      "Left": "KeyD",
+      "Right": "KeyG",
+      "Up": "KeyR",
+      "Down": "KeyF",
+      "Back": "Digit6",
+      "Start": "Digit2"
+    }
+  },
+  "facts": {
+    "genre": [
+      "action game"
+    ],
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q3564953"
+  }
+}

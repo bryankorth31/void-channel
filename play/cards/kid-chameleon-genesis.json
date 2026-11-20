@@ -1,0 +1,69 @@
+{
+  "id": "kid-chameleon-genesis",
+  "title": "Kid Chameleon",
+  "year": 1992,
+  "publisher": "Sega",
+  "system": "genesis",
+  "core": "genesis-plus-gx",
+  "players": 1,
+  "archive": {
+    "item": "Kid_Chameleon",
+    "file": "Kid_Chameleon.bin",
+    "size": 1048576
+  },
+  "controls": {
+    "kind": "pad",
+    "dpad": true,
+    "keys": [
+      "P1:Y",
+      "P1:B",
+      "P1:A",
+      "P1:Start"
+    ],
+    "labels": {
+      "P1:Y": "A",
+      "P1:B": "B",
+      "P1:A": "C"
+    }
+  },
+  "help": "Kid is pulled into a video game and fights through it with masks that change who he is. C jumps, B runs and attacks, A uses the mask's power.",
+  "actions": [
+    {
+      "do": "Move",
+      "press": [
+        "P1:Left",
+        "P1:Right",
+        "P1:Up",
+        "P1:Down"
+      ]
+    },
+    {
+      "do": "Jump",
+      "press": "P1:A"
+    },
+    {
+      "do": "Run and attack",
+      "press": "P1:B"
+    },
+    {
+      "do": "Mask power",
+      "press": "P1:Y"
+    },
+    {
+      "do": "Start and pause",
+      "press": "P1:Start"
+    }
+  ],
+  "genre": [
+    "platform game"
+  ],
+  "added": "Bryan, 20 Nov 2026: \"yes add them\"",
+  "facts": {
+    "genre": [
+      "platform game"
+    ],
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q2889334"
+  },
+  "cheats": true
+}

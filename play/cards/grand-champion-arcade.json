@@ -1,0 +1,65 @@
+{
+  "id": "grand-champion-arcade",
+  "title": "Grand Champion",
+  "year": 1981,
+  "publisher": "Taito",
+  "system": "arcade",
+  "core": "mame",
+  "players": 1,
+  "aspect": 0.75,
+  "archive": {
+    "item": "arcade_grchamp",
+    "file": "grchamp.zip",
+    "size": 79375,
+    "driver": "grchamp",
+    "engine": "classics"
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Digit5",
+      "ControlLeft"
+    ],
+    "dpad": true,
+    "labels": {
+      "ControlLeft": "Gas",
+      "Digit5": "Coin"
+    }
+  },
+  "gamepad": {
+    "Up": "ArrowUp",
+    "Left": "ArrowLeft",
+    "Right": "ArrowRight",
+    "RT": "ControlLeft",
+    "A": "ControlLeft",
+    "Back": "Digit5",
+    "Start": "ControlLeft"
+  },
+  "help": "An arcade game from Taito, 1981. Put a coin in, then press Gas to start.",
+  "actions": [
+    {
+      "do": "Put a coin in",
+      "press": "Digit5"
+    },
+    {
+      "do": "Move",
+      "press": [
+        "ArrowUp",
+        "ArrowLeft",
+        "ArrowRight"
+      ]
+    },
+    {
+      "do": "Gas",
+      "press": "ControlLeft"
+    }
+  ],
+  "made": "arcade-cards",
+  "facts": {
+    "genre": [
+      "racing video game"
+    ],
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q11300328"
+  }
+}

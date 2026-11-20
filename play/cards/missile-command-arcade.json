@@ -1,0 +1,99 @@
+{
+  "id": "missile-command-arcade",
+  "title": "Missile Command",
+  "year": 1980,
+  "publisher": "Atari",
+  "system": "arcade",
+  "core": "mame",
+  "players": 2,
+  "aspect": 1.3333,
+  "archive": {
+    "item": "arcade_missile",
+    "file": "missile.zip",
+    "size": 10831,
+    "driver": "missile",
+    "engine": "atari"
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Digit5",
+      "Digit1",
+      "ControlLeft",
+      "AltLeft",
+      "Space"
+    ],
+    "dpad": true,
+    "labels": {
+      "ControlLeft": "Button 1",
+      "AltLeft": "Button 2",
+      "Space": "Button 3",
+      "Digit5": "Coin",
+      "Digit1": "Start"
+    }
+  },
+  "gamepad": {
+    "Left": "ArrowLeft",
+    "Right": "ArrowRight",
+    "Up": "ArrowUp",
+    "Down": "ArrowDown",
+    "A": "ControlLeft",
+    "B": "AltLeft",
+    "X": "Space",
+    "Back": "Digit5",
+    "Start": "Digit1"
+  },
+  "help": "An arcade game from Atari, 1980. Put two coins in, then press Start.",
+  "actions": [
+    {
+      "do": "Put two coins in",
+      "press": "Digit5"
+    },
+    {
+      "do": "Start",
+      "press": "Digit1"
+    },
+    {
+      "do": "Roll",
+      "press": [
+        "ArrowUp",
+        "ArrowDown",
+        "ArrowLeft",
+        "ArrowRight"
+      ]
+    },
+    {
+      "do": "Button 1",
+      "press": "ControlLeft"
+    },
+    {
+      "do": "Button 2",
+      "press": "AltLeft"
+    },
+    {
+      "do": "Button 3",
+      "press": "Space"
+    }
+  ],
+  "made": "arcade-cards",
+  "gamepadSeats": {
+    "2": {
+      "Left": "KeyD",
+      "Right": "KeyG",
+      "Up": "KeyR",
+      "Down": "KeyF",
+      "A": "KeyA",
+      "B": "KeyS",
+      "X": "KeyQ",
+      "Back": "Digit6",
+      "Start": "Digit2"
+    }
+  },
+  "facts": {
+    "genre": [
+      "shoot 'em up"
+    ],
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q1192794"
+  }
+}

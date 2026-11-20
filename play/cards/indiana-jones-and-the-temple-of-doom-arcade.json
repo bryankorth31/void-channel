@@ -1,0 +1,74 @@
+{
+  "id": "indiana-jones-and-the-temple-of-doom-arcade",
+  "title": "Indiana Jones and the Temple of Doom",
+  "year": 1985,
+  "publisher": "Atari Games",
+  "system": "arcade",
+  "core": "mame",
+  "players": 2,
+  "aspect": 1.3333,
+  "archive": {
+    "item": "arcade_indytemp",
+    "file": "indytemp.zip",
+    "size": 767196,
+    "driver": "indytempc",
+    "engine": "m68000",
+    "parents": [
+      {
+        "item": "arcade_indytemp",
+        "file": "atarisy1.zip",
+        "size": 49407
+      }
+    ]
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Digit5",
+      "ControlLeft"
+    ],
+    "dpad": true,
+    "labels": {
+      "ControlLeft": "Left Whip",
+      "Digit5": "Coin"
+    }
+  },
+  "gamepad": {
+    "Up": "ArrowUp",
+    "Down": "ArrowDown",
+    "Left": "ArrowLeft",
+    "Right": "ArrowRight",
+    "A": "ControlLeft",
+    "B": "ControlLeft",
+    "Back": "Digit5",
+    "Start": "ControlLeft"
+  },
+  "help": "An arcade game from Atari Games, 1985. Put a coin in, then press Left Whip to start.",
+  "actions": [
+    {
+      "do": "Put a coin in",
+      "press": "Digit5"
+    },
+    {
+      "do": "Move",
+      "press": [
+        "ArrowUp",
+        "ArrowDown",
+        "ArrowLeft",
+        "ArrowRight"
+      ]
+    },
+    {
+      "do": "Left Whip",
+      "press": "ControlLeft"
+    }
+  ],
+  "made": "arcade-cards",
+  "facts": {
+    "genre": [
+      "action game"
+    ],
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q6023299"
+  }
+}

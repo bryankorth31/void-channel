@@ -1,0 +1,106 @@
+{
+  "id": "major-league-arcade",
+  "title": "Major League",
+  "year": 1985,
+  "publisher": "Sega",
+  "system": "arcade",
+  "core": "mame",
+  "players": 2,
+  "aspect": 0.75,
+  "archive": {
+    "item": "arcade_mjleague",
+    "file": "mjleague.zip",
+    "size": 313475,
+    "driver": "mjleague",
+    "engine": "m68000"
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Digit5",
+      "Digit1",
+      "ControlLeft",
+      "AltLeft",
+      "Space",
+      "ShiftLeft"
+    ],
+    "dpad": true,
+    "labels": {
+      "KeyA": "Slower",
+      "KeyZ": "Faster",
+      "ControlLeft": "Button 1",
+      "AltLeft": "Button 2",
+      "Space": "Button 3",
+      "ShiftLeft": "Button 4",
+      "Digit5": "Coin",
+      "Digit1": "Start"
+    }
+  },
+  "gamepad": {
+    "Left": "ArrowLeft",
+    "Right": "ArrowRight",
+    "Up": "ArrowUp",
+    "Down": "ArrowDown",
+    "LB": "KeyA",
+    "RB": "KeyZ",
+    "A": "ControlLeft",
+    "B": "AltLeft",
+    "X": "Space",
+    "Y": "ShiftLeft",
+    "LT": "KeyZ",
+    "Back": "Digit5",
+    "Start": "Digit1"
+  },
+  "help": "An arcade game from Sega, 1985. Put a coin in, then press Start.",
+  "actions": [
+    {
+      "do": "Put a coin in",
+      "press": "Digit5"
+    },
+    {
+      "do": "Start",
+      "press": "Digit1"
+    },
+    {
+      "do": "Roll",
+      "press": [
+        "ArrowUp",
+        "ArrowDown",
+        "ArrowLeft",
+        "ArrowRight"
+      ]
+    },
+    {
+      "do": "Button 1",
+      "press": "ControlLeft"
+    },
+    {
+      "do": "Button 2",
+      "press": "AltLeft"
+    },
+    {
+      "do": "Button 3",
+      "press": "Space"
+    }
+  ],
+  "made": "arcade-cards",
+  "gamepadSeats": {
+    "2": {
+      "Left": "KeyD",
+      "Right": "KeyG",
+      "Up": "KeyR",
+      "Down": "KeyF",
+      "A": "KeyA",
+      "B": "KeyS",
+      "X": "KeyQ",
+      "Y": "KeyW",
+      "LB": "KeyE",
+      "Back": "Digit6",
+      "Start": "Digit2"
+    }
+  },
+  "genre": [
+    "sports video game"
+  ],
+  "genreBy": "set by hand from the Internet Archive item and the game itself (20 Nov 2026); Wikidata had no match"
+}

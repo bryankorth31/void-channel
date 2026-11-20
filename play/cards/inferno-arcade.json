@@ -1,0 +1,101 @@
+{
+  "id": "inferno-arcade",
+  "title": "Inferno",
+  "year": 1984,
+  "publisher": "Williams",
+  "system": "arcade",
+  "core": "mame",
+  "players": 2,
+  "aspect": 1.3333,
+  "archive": {
+    "item": "arcade_inferno",
+    "file": "inferno.zip",
+    "size": 67543,
+    "driver": "inferno",
+    "engine": "classics"
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Digit5",
+      "Digit1",
+      "ControlLeft",
+      "KeyK",
+      "KeyL",
+      "KeyJ",
+      "KeyI"
+    ],
+    "dpad": true,
+    "labels": {
+      "KeyI": "Fire up",
+      "KeyK": "Fire down",
+      "KeyJ": "Fire left",
+      "KeyL": "Fire right",
+      "ControlLeft": "Button 1",
+      "Digit5": "Coin",
+      "Digit1": "Start"
+    }
+  },
+  "gamepad": {
+    "Up": "KeyE",
+    "Down": "KeyD",
+    "Left": "KeyS",
+    "Right": "KeyF",
+    "Y": "KeyI",
+    "A": "KeyK",
+    "X": "KeyJ",
+    "B": "KeyL",
+    "LB": "ControlLeft",
+    "Back": "Digit5",
+    "Start": "Digit1"
+  },
+  "help": "An arcade game from Williams, 1984. Put a coin in, then press Start.",
+  "actions": [
+    {
+      "do": "Put a coin in",
+      "press": "Digit5"
+    },
+    {
+      "do": "Start",
+      "press": "Digit1"
+    },
+    {
+      "do": "Move",
+      "press": [
+        "KeyE",
+        "KeyD",
+        "KeyS",
+        "KeyF"
+      ]
+    },
+    {
+      "do": "Fire",
+      "press": [
+        "KeyK",
+        "KeyJ",
+        "KeyL",
+        "KeyI"
+      ]
+    },
+    {
+      "do": "Button 1",
+      "press": "ControlLeft"
+    }
+  ],
+  "made": "arcade-cards",
+  "gamepadSeats": {
+    "2": {
+      "A": "KeyA",
+      "B": "KeyA",
+      "Back": "Digit6",
+      "Start": "Digit2"
+    }
+  },
+  "firstBoot": {
+    "resetAt": 20
+  },
+  "genre": [
+    "shoot 'em up"
+  ],
+  "genreBy": "set by hand from the Internet Archive item and the game itself (20 Nov 2026); Wikidata had no match"
+}

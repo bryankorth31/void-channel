@@ -104,6 +104,10 @@ test('G1: Wikidata facts match by the same title on the same machine; a near tit
   assert.equal(F.norm('Kirby & The Amazing Mirror'), F.norm('Kirby and the Amazing Mirror'));
   assert.equal(F.searchTitle('Ms. Pac-Man (Lynx)'), 'Ms. Pac-Man');
   assert.equal(F.PLATFORM.lynx[0], 'Q753657', 'the Lynx, not the Atari 7800 (Q753600)');
+  // Arcade: the platform is the game's own board, so the same title must come out the same year (give or take one).
+  const arcade = [cand('Q1043534', ['Galaga'], ['Q7889'], ['Q3870048', 'Q172742'], ["shoot 'em up"], 1981), cand('Q9', ['Galaga'], ['Q7889'], ['Q1406'], ['remake'], 2008)];
+  assert.equal(F.pick({ title: 'Galaga', system: 'arcade', year: 1981 }, arcade).source, 'https://www.wikidata.org/wiki/Q1043534');
+  assert.equal(F.pick({ title: 'Galaga', system: 'arcade', year: 1995 }, arcade), null, 'a far year is another game');
   const src = fs.readFileSync(path.join(PLAY, 'tools', 'facts.js'), 'utf8');
   assert.ok(!/mobygames\.com|igdb\.com/i.test(src.replace(/MobyGames and IGDB have terms against this/, '')), 'no other game site is read');
   for (const c of Tool.loadCards()) assert.ok((c.genre && c.genre.length) || (c.facts && c.facts.source), c.id + ' has a genre, by hand or from Wikidata');

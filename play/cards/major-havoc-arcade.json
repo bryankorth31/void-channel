@@ -1,0 +1,76 @@
+{
+  "id": "major-havoc-arcade",
+  "title": "Major Havoc",
+  "year": 1983,
+  "publisher": "Atari",
+  "system": "arcade",
+  "core": "mame",
+  "players": 2,
+  "aspect": 1.3333,
+  "archive": {
+    "item": "arcade_mhavoc",
+    "file": "mhavoc.zip",
+    "size": 69696,
+    "driver": "mhavoc",
+    "engine": "atari"
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Digit5",
+      "ControlLeft",
+      "AltLeft"
+    ],
+    "dpad": true,
+    "labels": {
+      "ControlLeft": "Button 1",
+      "AltLeft": "Button 2",
+      "Digit5": "Coin"
+    }
+  },
+  "gamepad": {
+    "Left": "ArrowLeft",
+    "Right": "ArrowRight",
+    "A": "ControlLeft",
+    "B": "AltLeft",
+    "Back": "Digit5",
+    "Start": "ControlLeft"
+  },
+  "help": "An arcade game from Atari, 1983. Put a coin in, then press Button 1 to start.",
+  "actions": [
+    {
+      "do": "Put a coin in",
+      "press": "Digit5"
+    },
+    {
+      "do": "Turn",
+      "press": [
+        "ArrowLeft",
+        "ArrowRight"
+      ]
+    },
+    {
+      "do": "Button 1",
+      "press": "ControlLeft"
+    },
+    {
+      "do": "Button 2",
+      "press": "AltLeft"
+    }
+  ],
+  "made": "arcade-cards",
+  "gamepadSeats": {
+    "2": {
+      "A": "KeyA",
+      "B": "KeyS",
+      "Back": "Digit6"
+    }
+  },
+  "facts": {
+    "genre": [
+      "platform game"
+    ],
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q3280555"
+  }
+}

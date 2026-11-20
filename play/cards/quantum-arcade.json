@@ -1,0 +1,65 @@
+{
+  "id": "quantum-arcade",
+  "title": "Quantum",
+  "year": 1982,
+  "publisher": "General Computer Corporation (Atari license)",
+  "system": "arcade",
+  "core": "mame",
+  "players": 2,
+  "aspect": 0.75,
+  "archive": {
+    "item": "arcade_quantum",
+    "file": "quantum.zip",
+    "size": 112395,
+    "driver": "quantum",
+    "engine": "m68000"
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Digit5",
+      "Digit1"
+    ],
+    "dpad": true,
+    "labels": {
+      "Digit5": "Coin",
+      "Digit1": "Start"
+    }
+  },
+  "gamepad": {
+    "Left": "ArrowLeft",
+    "Right": "ArrowRight",
+    "Up": "ArrowUp",
+    "Down": "ArrowDown",
+    "Back": "Digit5",
+    "Start": "Digit1"
+  },
+  "help": "An arcade game from General Computer Corporation (Atari license), 1982. Put a coin in, then press Start.",
+  "actions": [
+    {
+      "do": "Put a coin in",
+      "press": "Digit5"
+    },
+    {
+      "do": "Start",
+      "press": "Digit1"
+    },
+    {
+      "do": "Roll",
+      "press": [
+        "ArrowUp",
+        "ArrowDown",
+        "ArrowLeft",
+        "ArrowRight"
+      ]
+    }
+  ],
+  "made": "arcade-cards",
+  "facts": {
+    "genre": [
+      "game of skill"
+    ],
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q7268973"
+  }
+}

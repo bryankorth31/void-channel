@@ -1,0 +1,62 @@
+{
+  "id": "pokemon-leaf-green-gba",
+  "title": "Pokémon LeafGreen",
+  "year": 2004,
+  "publisher": "Nintendo, Game Freak",
+  "system": "gba",
+  "core": "mgba",
+  "players": 1,
+  "archive": {
+    "item": "pokemon-leaf-green-version_202308",
+    "file": "PokemonLeafGreenVersion.gba",
+    "size": 16777216
+  },
+  "controls": {
+    "kind": "pad",
+    "dpad": true,
+    "keys": [
+      "P1:B",
+      "P1:A",
+      "P1:L",
+      "P1:R",
+      "P1:Select",
+      "P1:Start"
+    ]
+  },
+  "help": "Travel the region, catch and raise Pokémon, and battle the gym leaders. A talks and picks, B goes back, Start opens the menu. Save often from the menu, or use Save in Pause.",
+  "actions": [
+    {
+      "do": "Walk",
+      "press": [
+        "P1:Up",
+        "P1:Down",
+        "P1:Left",
+        "P1:Right"
+      ]
+    },
+    {
+      "do": "Talk and pick",
+      "press": "P1:A"
+    },
+    {
+      "do": "Go back",
+      "press": "P1:B"
+    },
+    {
+      "do": "Menu",
+      "press": "P1:Start"
+    }
+  ],
+  "genre": [
+    "role-playing video game"
+  ],
+  "added": "Bryan, 20 Nov 2026: \"yes add them\"",
+  "cheats": true,
+  "facts": {
+    "genre": [
+      "role-playing video game"
+    ],
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q26910884"
+  }
+}

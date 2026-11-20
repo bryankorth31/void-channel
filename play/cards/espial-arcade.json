@@ -1,0 +1,91 @@
+{
+  "id": "espial-arcade",
+  "title": "Espial",
+  "year": 1983,
+  "publisher": "Orca / Thunderbolt",
+  "system": "arcade",
+  "core": "mame",
+  "players": 2,
+  "aspect": 1.3333,
+  "archive": {
+    "item": "arcade_espial",
+    "file": "espial.zip",
+    "size": 54594,
+    "driver": "espial",
+    "engine": "classics"
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Digit5",
+      "Digit1",
+      "ControlLeft",
+      "AltLeft"
+    ],
+    "dpad": true,
+    "labels": {
+      "ControlLeft": "Button 1",
+      "AltLeft": "Button 2",
+      "Digit5": "Coin",
+      "Digit1": "Start"
+    }
+  },
+  "gamepad": {
+    "Up": "ArrowUp",
+    "Down": "ArrowDown",
+    "Left": "ArrowLeft",
+    "Right": "ArrowRight",
+    "A": "ControlLeft",
+    "B": "AltLeft",
+    "Back": "Digit5",
+    "Start": "Digit1"
+  },
+  "help": "An arcade game from Orca / Thunderbolt, 1983. Put a coin in, then press Start.",
+  "actions": [
+    {
+      "do": "Put a coin in",
+      "press": "Digit5"
+    },
+    {
+      "do": "Start",
+      "press": "Digit1"
+    },
+    {
+      "do": "Move",
+      "press": [
+        "ArrowUp",
+        "ArrowDown",
+        "ArrowLeft",
+        "ArrowRight"
+      ]
+    },
+    {
+      "do": "Button 1",
+      "press": "ControlLeft"
+    },
+    {
+      "do": "Button 2",
+      "press": "AltLeft"
+    }
+  ],
+  "made": "arcade-cards",
+  "gamepadSeats": {
+    "2": {
+      "Up": "KeyR",
+      "Down": "KeyF",
+      "Left": "KeyD",
+      "Right": "KeyG",
+      "A": "KeyA",
+      "B": "KeyS",
+      "Back": "Digit5",
+      "Start": "Digit2"
+    }
+  },
+  "facts": {
+    "genre": [
+      "shoot 'em up"
+    ],
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q133846081"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "id": "cosmic-alien-arcade",
+  "title": "Cosmic Alien",
+  "year": 1979,
+  "publisher": "Universal",
+  "system": "arcade",
+  "core": "mame",
+  "players": 2,
+  "aspect": 0.75,
+  "archive": {
+    "item": "arcade_cosmica",
+    "file": "cosmica.zip",
+    "size": 30908,
+    "driver": "cosmica",
+    "engine": "classics"
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Digit5",
+      "Digit1",
+      "ControlLeft"
+    ],
+    "dpad": true,
+    "labels": {
+      "ControlLeft": "Button 1",
+      "Digit5": "Coin",
+      "Digit1": "Start"
+    }
+  },
+  "gamepad": {
+    "Left": "ArrowLeft",
+    "Right": "ArrowRight",
+    "A": "ControlLeft",
+    "B": "ControlLeft",
+    "Back": "Digit5",
+    "Start": "Digit1"
+  },
+  "help": "An arcade game from Universal, 1979. Put a coin in, then press Start.",
+  "actions": [
+    {
+      "do": "Put a coin in",
+      "press": "Digit5"
+    },
+    {
+      "do": "Start",
+      "press": "Digit1"
+    },
+    {
+      "do": "Move",
+      "press": [
+        "ArrowLeft",
+        "ArrowRight"
+      ]
+    },
+    {
+      "do": "Button 1",
+      "press": "ControlLeft"
+    }
+  ],
+  "made": "arcade-cards",
+  "gamepadSeats": {
+    "2": {
+      "Left": "KeyD",
+      "Right": "KeyG",
+      "A": "KeyA",
+      "B": "KeyA",
+      "Back": "Digit5",
+      "Start": "Digit2"
+    }
+  },
+  "genre": [
+    "shoot 'em up"
+  ],
+  "genreBy": "set by hand from the Internet Archive item and the game itself (20 Nov 2026); Wikidata had no match"
+}

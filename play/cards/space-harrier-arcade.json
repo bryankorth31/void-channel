@@ -1,0 +1,87 @@
+{
+  "id": "space-harrier-arcade",
+  "title": "Space Harrier",
+  "year": 1985,
+  "publisher": "Sega",
+  "system": "arcade",
+  "core": "mame",
+  "players": 1,
+  "aspect": 1.3333,
+  "archive": {
+    "item": "arcade_sharrier",
+    "file": "sharrier.zip",
+    "size": 784744,
+    "driver": "sharrier",
+    "engine": "m68000"
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Digit5",
+      "Digit1",
+      "ControlLeft",
+      "AltLeft",
+      "Space"
+    ],
+    "dpad": true,
+    "labels": {
+      "ControlLeft": "Button 1",
+      "AltLeft": "Button 2",
+      "Space": "Button 3",
+      "Digit5": "Coin",
+      "Digit1": "Start"
+    }
+  },
+  "gamepad": {
+    "Left": "ArrowLeft",
+    "Right": "ArrowRight",
+    "Up": "ArrowUp",
+    "Down": "ArrowDown",
+    "A": "ControlLeft",
+    "B": "AltLeft",
+    "X": "Space",
+    "Back": "Digit5",
+    "Start": "Digit1"
+  },
+  "help": "An arcade game from Sega, 1985. Put a coin in, then press Start.",
+  "actions": [
+    {
+      "do": "Put a coin in",
+      "press": "Digit5"
+    },
+    {
+      "do": "Start",
+      "press": "Digit1"
+    },
+    {
+      "do": "Move",
+      "press": [
+        "ArrowUp",
+        "ArrowDown",
+        "ArrowLeft",
+        "ArrowRight"
+      ]
+    },
+    {
+      "do": "Button 1",
+      "press": "ControlLeft"
+    },
+    {
+      "do": "Button 2",
+      "press": "AltLeft"
+    },
+    {
+      "do": "Button 3",
+      "press": "Space"
+    }
+  ],
+  "made": "arcade-cards",
+  "facts": {
+    "genre": [
+      "rail shooter",
+      "shoot 'em up"
+    ],
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q1707792"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "id": "centipede-arcade",
+  "title": "Centipede",
+  "year": 1980,
+  "publisher": "Atari",
+  "system": "arcade",
+  "core": "mame",
+  "players": 1,
+  "aspect": 0.75,
+  "archive": {
+    "item": "arcade_centiped",
+    "file": "centiped.zip",
+    "size": 86196,
+    "driver": "centiped",
+    "engine": "atari"
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Digit5",
+      "Digit1",
+      "ControlLeft"
+    ],
+    "dpad": true,
+    "labels": {
+      "ControlLeft": "Button 1",
+      "Digit5": "Coin",
+      "Digit1": "Start"
+    }
+  },
+  "gamepad": {
+    "Up": "ArrowUp",
+    "Down": "ArrowDown",
+    "Left": "ArrowLeft",
+    "Right": "ArrowRight",
+    "A": "ControlLeft",
+    "B": "ControlLeft",
+    "Back": "Digit5",
+    "Start": "Digit1"
+  },
+  "help": "An arcade game from Atari, 1980. Put a coin in, then press Start.",
+  "actions": [
+    {
+      "do": "Put a coin in",
+      "press": "Digit5"
+    },
+    {
+      "do": "Start",
+      "press": "Digit1"
+    },
+    {
+      "do": "Move",
+      "press": [
+        "ArrowUp",
+        "ArrowDown",
+        "ArrowLeft",
+        "ArrowRight"
+      ]
+    },
+    {
+      "do": "Button 1",
+      "press": "ControlLeft"
+    }
+  ],
+  "made": "arcade-cards",
+  "facts": {
+    "genre": [
+      "fixed shooter"
+    ],
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q1053648"
+  }
+}

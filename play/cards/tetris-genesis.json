@@ -1,0 +1,67 @@
+{
+  "id": "tetris-genesis",
+  "title": "Tetris",
+  "year": 1989,
+  "publisher": "Sega",
+  "system": "genesis",
+  "core": "genesis-plus-gx",
+  "players": 1,
+  "archive": {
+    "item": "sg_Tetris_1989_Sega_JP_en",
+    "file": "Tetris_1989_Sega_JP_en.bin",
+    "size": 262144
+  },
+  "controls": {
+    "kind": "pad",
+    "dpad": true,
+    "keys": [
+      "P1:Y",
+      "P1:B",
+      "P1:A",
+      "P1:Start"
+    ],
+    "labels": {
+      "P1:Y": "A",
+      "P1:B": "B",
+      "P1:A": "C"
+    }
+  },
+  "help": "A, B and C are the game's three buttons; Start pauses.",
+  "actions": [
+    {
+      "do": "Move",
+      "press": [
+        "P1:Up",
+        "P1:Down",
+        "P1:Left",
+        "P1:Right"
+      ]
+    },
+    {
+      "do": "Button A",
+      "press": "P1:Y"
+    },
+    {
+      "do": "Button B",
+      "press": "P1:B"
+    },
+    {
+      "do": "Button C",
+      "press": "P1:A"
+    },
+    {
+      "do": "Start and pause",
+      "press": "P1:Start"
+    }
+  ],
+  "added": "Bryan, 20 Nov 2026: \"All of the list\"",
+  "cheats": true,
+  "facts": {
+    "genre": [
+      "puzzle video game",
+      "skill-based video game"
+    ],
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q124453185"
+  }
+}

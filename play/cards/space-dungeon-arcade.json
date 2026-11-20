@@ -1,0 +1,96 @@
+{
+  "id": "space-dungeon-arcade",
+  "title": "Space Dungeon",
+  "year": 1981,
+  "publisher": "Taito America Corporation",
+  "system": "arcade",
+  "core": "mame",
+  "players": 2,
+  "aspect": 0.75,
+  "archive": {
+    "item": "arcade_sdungeon",
+    "file": "sdungeon.zip",
+    "size": 64195,
+    "driver": "sdungeon",
+    "engine": "classics",
+    "parents": [
+      {
+        "item": "arcade_sdungeon",
+        "file": "m68705p3.zip",
+        "size": 266
+      }
+    ]
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Digit5",
+      "Digit1",
+      "KeyK",
+      "KeyL",
+      "KeyJ",
+      "KeyI"
+    ],
+    "dpad": true,
+    "labels": {
+      "KeyI": "Fire up",
+      "KeyK": "Fire down",
+      "KeyJ": "Fire left",
+      "KeyL": "Fire right",
+      "Digit5": "Coin",
+      "Digit1": "Start"
+    }
+  },
+  "gamepad": {
+    "Up": "KeyE",
+    "Down": "KeyD",
+    "Left": "KeyS",
+    "Right": "KeyF",
+    "Y": "KeyI",
+    "A": "KeyK",
+    "X": "KeyJ",
+    "B": "KeyL",
+    "Back": "Digit5",
+    "Start": "Digit1"
+  },
+  "help": "An arcade game from Taito America Corporation, 1981. Put a coin in, then press Start.",
+  "actions": [
+    {
+      "do": "Put a coin in",
+      "press": "Digit5"
+    },
+    {
+      "do": "Start",
+      "press": "Digit1"
+    },
+    {
+      "do": "Move",
+      "press": [
+        "KeyE",
+        "KeyD",
+        "KeyS",
+        "KeyF"
+      ]
+    },
+    {
+      "do": "Fire",
+      "press": [
+        "KeyK",
+        "KeyJ",
+        "KeyL",
+        "KeyI"
+      ]
+    }
+  ],
+  "made": "arcade-cards",
+  "firstBoot": {
+    "resetAt": 8
+  },
+  "facts": {
+    "genre": [
+      "shoot 'em up"
+    ],
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q7572335"
+  }
+}

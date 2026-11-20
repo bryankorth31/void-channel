@@ -1,0 +1,84 @@
+{
+  "id": "out-run-arcade",
+  "title": "Out Run",
+  "year": 1986,
+  "publisher": "Sega",
+  "system": "arcade",
+  "core": "mame",
+  "players": 1,
+  "aspect": 1.3333,
+  "archive": {
+    "item": "arcade_outrun",
+    "file": "outrun.zip",
+    "size": 2896496,
+    "driver": "outrun",
+    "engine": "m68000"
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Digit5",
+      "Digit1",
+      "Space",
+      "ControlLeft",
+      "AltLeft"
+    ],
+    "dpad": true,
+    "labels": {
+      "ControlLeft": "Gas",
+      "AltLeft": "Brake",
+      "Space": "Gear Shift",
+      "Digit5": "Coin",
+      "Digit1": "Start"
+    }
+  },
+  "gamepad": {
+    "Left": "ArrowLeft",
+    "Right": "ArrowRight",
+    "RT": "ControlLeft",
+    "A": "ControlLeft",
+    "LT": "AltLeft",
+    "B": "AltLeft",
+    "X": "Space",
+    "Back": "Digit5",
+    "Start": "Digit1"
+  },
+  "help": "An arcade game from Sega, 1986. Put a coin in, then press Start.",
+  "actions": [
+    {
+      "do": "Put a coin in",
+      "press": "Digit5"
+    },
+    {
+      "do": "Start",
+      "press": "Digit1"
+    },
+    {
+      "do": "Steer",
+      "press": [
+        "ArrowLeft",
+        "ArrowRight"
+      ]
+    },
+    {
+      "do": "Gas",
+      "press": "ControlLeft"
+    },
+    {
+      "do": "Brake",
+      "press": "AltLeft"
+    },
+    {
+      "do": "Gear Shift",
+      "press": "Space"
+    }
+  ],
+  "made": "arcade-cards",
+  "facts": {
+    "genre": [
+      "racing video game"
+    ],
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q1142287"
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "id": "street-fighter-alpha-2-arcade",
+  "title": "Street Fighter Alpha 2",
+  "year": 1996,
+  "publisher": "Capcom",
+  "system": "arcade",
+  "core": "mame",
+  "players": 2,
+  "aspect": 1.3333,
+  "archive": {
+    "item": "arcade_sfa2",
+    "file": "sfa2.zip",
+    "size": 21966120,
+    "driver": "sfa2",
+    "engine": "m68000",
+    "parents": [
+      {
+        "item": "arcade_sfa2",
+        "file": "qsound_hle.zip",
+        "size": 2676
+      }
+    ]
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Digit5",
+      "Digit1",
+      "ControlLeft",
+      "AltLeft",
+      "Space",
+      "ShiftLeft"
+    ],
+    "dpad": true,
+    "labels": {
+      "ControlLeft": "Button 1",
+      "AltLeft": "Button 2",
+      "Space": "Button 3",
+      "ShiftLeft": "Button 4",
+      "KeyZ": "Button 5",
+      "KeyX": "Button 6",
+      "Digit5": "Coin",
+      "Digit1": "Start"
+    }
+  },
+  "gamepad": {
+    "Up": "ArrowUp",
+    "Down": "ArrowDown",
+    "Left": "ArrowLeft",
+    "Right": "ArrowRight",
+    "A": "ControlLeft",
+    "B": "AltLeft",
+    "X": "Space",
+    "Y": "ShiftLeft",
+    "LB": "KeyZ",
+    "RB": "KeyX",
+    "Back": "Digit5",
+    "Start": "Digit1"
+  },
+  "help": "An arcade game from Capcom, 1996. Put a coin in, then press Start.",
+  "actions": [
+    {
+      "do": "Put a coin in",
+      "press": "Digit5"
+    },
+    {
+      "do": "Start",
+      "press": "Digit1"
+    },
+    {
+      "do": "Move",
+      "press": [
+        "ArrowUp",
+        "ArrowDown",
+        "ArrowLeft",
+        "ArrowRight"
+      ]
+    },
+    {
+      "do": "Button 1",
+      "press": "ControlLeft"
+    },
+    {
+      "do": "Button 2",
+      "press": "AltLeft"
+    },
+    {
+      "do": "Button 3",
+      "press": "Space"
+    }
+  ],
+  "made": "arcade-cards",
+  "gamepadSeats": {
+    "2": {
+      "Up": "KeyR",
+      "Down": "KeyF",
+      "Left": "KeyD",
+      "Right": "KeyG",
+      "A": "KeyA",
+      "B": "KeyS",
+      "X": "KeyQ",
+      "Y": "KeyW",
+      "LB": "KeyE",
+      "Back": "Digit6",
+      "Start": "Digit2"
+    }
+  },
+  "facts": {
+    "genre": [
+      "fighting game"
+    ],
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q2422795"
+  }
+}

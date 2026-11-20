@@ -1,0 +1,93 @@
+{
+  "id": "rescue-arcade",
+  "title": "Rescue",
+  "year": 1982,
+  "publisher": "Stern Electronics",
+  "system": "arcade",
+  "core": "mame",
+  "players": 2,
+  "aspect": 0.75,
+  "archive": {
+    "item": "arcade_rescue",
+    "file": "rescue.zip",
+    "size": 46836,
+    "driver": "rescue",
+    "engine": "classics"
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Digit5",
+      "Digit1",
+      "ControlLeft",
+      "KeyK",
+      "KeyL",
+      "KeyJ",
+      "KeyI"
+    ],
+    "dpad": true,
+    "labels": {
+      "KeyI": "Fire up",
+      "KeyK": "Fire down",
+      "KeyJ": "Fire left",
+      "KeyL": "Fire right",
+      "ControlLeft": "Button 1",
+      "Digit5": "Coin",
+      "Digit1": "Start"
+    }
+  },
+  "gamepad": {
+    "Up": "KeyE",
+    "Down": "KeyD",
+    "Left": "KeyS",
+    "Right": "KeyF",
+    "Y": "KeyI",
+    "A": "KeyK",
+    "X": "KeyJ",
+    "B": "KeyL",
+    "LB": "ControlLeft",
+    "Back": "Digit5",
+    "Start": "Digit1"
+  },
+  "help": "An arcade game from Stern Electronics, 1982. Put a coin in, then press Start.",
+  "actions": [
+    {
+      "do": "Put a coin in",
+      "press": "Digit5"
+    },
+    {
+      "do": "Start",
+      "press": "Digit1"
+    },
+    {
+      "do": "Move",
+      "press": [
+        "KeyE",
+        "KeyD",
+        "KeyS",
+        "KeyF"
+      ]
+    },
+    {
+      "do": "Fire",
+      "press": [
+        "KeyK",
+        "KeyJ",
+        "KeyL",
+        "KeyI"
+      ]
+    },
+    {
+      "do": "Button 1",
+      "press": "ControlLeft"
+    }
+  ],
+  "made": "arcade-cards",
+  "facts": {
+    "genre": [
+      "multidirectional shooter"
+    ],
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q20874872"
+  }
+}

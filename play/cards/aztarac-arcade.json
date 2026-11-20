@@ -1,0 +1,87 @@
+{
+  "id": "aztarac-arcade",
+  "title": "Aztarac",
+  "year": 1983,
+  "publisher": "Centuri",
+  "system": "arcade",
+  "core": "mame",
+  "players": 2,
+  "aspect": 1.3333,
+  "archive": {
+    "item": "arcade_aztarac",
+    "file": "aztarac.zip",
+    "size": 32834,
+    "driver": "aztarac",
+    "engine": "m68000"
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Digit5",
+      "Digit1",
+      "ControlLeft",
+      "AltLeft"
+    ],
+    "dpad": true,
+    "labels": {
+      "KeyA": "Slower",
+      "KeyZ": "Faster",
+      "ControlLeft": "Button 1",
+      "AltLeft": "Button 2",
+      "Digit5": "Coin",
+      "Digit1": "Start"
+    }
+  },
+  "gamepad": {
+    "Left": "KeyZ",
+    "Right": "KeyX",
+    "Up": "ArrowUp",
+    "Down": "ArrowDown",
+    "LB": "KeyA",
+    "RB": "KeyZ",
+    "A": "ControlLeft",
+    "B": "AltLeft",
+    "Back": "Digit5",
+    "Start": "Digit1"
+  },
+  "help": "An arcade game from Centuri, 1983. Put a coin in, then press Start.",
+  "actions": [
+    {
+      "do": "Put a coin in",
+      "press": "Digit5"
+    },
+    {
+      "do": "Start",
+      "press": "Digit1"
+    },
+    {
+      "do": "Turn",
+      "press": [
+        "ArrowUp",
+        "ArrowDown",
+        "KeyZ",
+        "KeyX"
+      ]
+    },
+    {
+      "do": "Button 1",
+      "press": "ControlLeft"
+    },
+    {
+      "do": "Button 2",
+      "press": "AltLeft"
+    },
+    {
+      "do": "Slower",
+      "press": "KeyA"
+    }
+  ],
+  "made": "arcade-cards",
+  "facts": {
+    "genre": [
+      "shooter game"
+    ],
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q4832927"
+  }
+}

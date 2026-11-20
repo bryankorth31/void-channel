@@ -1,0 +1,85 @@
+{
+  "id": "crystal-castles-arcade",
+  "title": "Crystal Castles",
+  "year": 1983,
+  "publisher": "Atari",
+  "system": "arcade",
+  "core": "mame",
+  "players": 2,
+  "aspect": 1.3333,
+  "archive": {
+    "item": "arcade_ccastles",
+    "file": "ccastles.zip",
+    "size": 28065,
+    "driver": "ccastles",
+    "engine": "atari"
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Digit5",
+      "ControlLeft",
+      "AltLeft"
+    ],
+    "dpad": true,
+    "labels": {
+      "ControlLeft": "Left Jump",
+      "AltLeft": "Right Jump",
+      "Digit5": "Coin"
+    }
+  },
+  "gamepad": {
+    "Left": "ArrowLeft",
+    "Right": "ArrowRight",
+    "Up": "ArrowUp",
+    "Down": "ArrowDown",
+    "A": "ControlLeft",
+    "B": "AltLeft",
+    "Back": "Digit5",
+    "Start": "ControlLeft"
+  },
+  "help": "An arcade game from Atari, 1983. Put a coin in, then press Left Jump to start.",
+  "actions": [
+    {
+      "do": "Put a coin in",
+      "press": "Digit5"
+    },
+    {
+      "do": "Roll",
+      "press": [
+        "ArrowUp",
+        "ArrowDown",
+        "ArrowLeft",
+        "ArrowRight"
+      ]
+    },
+    {
+      "do": "Left Jump",
+      "press": "ControlLeft"
+    },
+    {
+      "do": "Right Jump",
+      "press": "AltLeft"
+    }
+  ],
+  "made": "arcade-cards",
+  "gamepadSeats": {
+    "2": {
+      "Left": "KeyD",
+      "Right": "KeyG",
+      "Up": "KeyR",
+      "Down": "KeyF",
+      "A": "KeyA",
+      "B": "KeyA",
+      "Back": "Digit6"
+    }
+  },
+  "facts": {
+    "genre": [
+      "action game",
+      "maze video game"
+    ],
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q1142341"
+  }
+}

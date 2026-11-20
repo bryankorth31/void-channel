@@ -1,0 +1,98 @@
+{
+  "id": "orbit-arcade",
+  "title": "Orbit",
+  "year": 1978,
+  "publisher": "Atari",
+  "system": "arcade",
+  "core": "mame",
+  "players": 2,
+  "aspect": 1.3333,
+  "archive": {
+    "item": "arcade_orbit",
+    "file": "orbit.zip",
+    "size": 8797,
+    "driver": "orbit",
+    "engine": "atari"
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Digit5",
+      "Numpad0",
+      "Numpad1",
+      "Numpad2",
+      "Numpad3"
+    ],
+    "dpad": true,
+    "labels": {
+      "Numpad0": "Game 0",
+      "Numpad1": "Game 1",
+      "Numpad2": "Game 2",
+      "Numpad3": "Game 3",
+      "Numpad4": "Game 4",
+      "Numpad5": "Game 5",
+      "Numpad6": "Game 6",
+      "Numpad7": "Game 7",
+      "Digit5": "Coin"
+    }
+  },
+  "gamepad": {
+    "Left": "ArrowLeft",
+    "Right": "ArrowRight",
+    "A": "Numpad0",
+    "B": "Numpad1",
+    "X": "Numpad2",
+    "Y": "Numpad3",
+    "LB": "Numpad4",
+    "RB": "Numpad5",
+    "LT": "Numpad6",
+    "RT": "Numpad7",
+    "Back": "Digit5",
+    "Start": "Numpad0"
+  },
+  "help": "An arcade game from Atari, 1978. Put a coin in, then press Game 0 to start.",
+  "actions": [
+    {
+      "do": "Put a coin in",
+      "press": "Digit5"
+    },
+    {
+      "do": "Move",
+      "press": [
+        "ArrowLeft",
+        "ArrowRight"
+      ]
+    },
+    {
+      "do": "Game 0",
+      "press": "Numpad0"
+    },
+    {
+      "do": "Game 1",
+      "press": "Numpad1"
+    },
+    {
+      "do": "Game 2",
+      "press": "Numpad2"
+    },
+    {
+      "do": "Game 3",
+      "press": "Numpad3"
+    }
+  ],
+  "made": "arcade-cards",
+  "gamepadSeats": {
+    "2": {
+      "Left": "KeyD",
+      "Right": "KeyG",
+      "A": "KeyA",
+      "B": "KeyS",
+      "X": "KeyQ",
+      "Back": "Digit6"
+    }
+  },
+  "genre": [
+    "shoot 'em up"
+  ],
+  "genreBy": "set by hand from the Internet Archive item and the game itself (20 Nov 2026); Wikidata had no match"
+}

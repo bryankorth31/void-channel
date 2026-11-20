@@ -1,0 +1,92 @@
+{
+  "id": "stargate-arcade",
+  "title": "Stargate",
+  "year": 1981,
+  "publisher": "Williams / Vid Kidz",
+  "system": "arcade",
+  "core": "mame",
+  "players": 2,
+  "aspect": 1.3333,
+  "archive": {
+    "item": "arcade_stargate",
+    "file": "stargate.zip",
+    "size": 36543,
+    "driver": "stargate",
+    "engine": "classics"
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Digit5",
+      "Digit1",
+      "ControlLeft",
+      "AltLeft",
+      "Space",
+      "ShiftLeft"
+    ],
+    "dpad": true,
+    "labels": {
+      "ControlLeft": "Fire",
+      "AltLeft": "Thrust",
+      "Space": "Smart Bomb",
+      "ShiftLeft": "Reverse",
+      "KeyZ": "Inviso",
+      "KeyX": "Hyperspace",
+      "Digit5": "Coin",
+      "Digit1": "Start"
+    }
+  },
+  "gamepad": {
+    "Up": "ArrowUp",
+    "Down": "ArrowDown",
+    "A": "ControlLeft",
+    "B": "AltLeft",
+    "X": "Space",
+    "Y": "ShiftLeft",
+    "LB": "KeyZ",
+    "RB": "KeyX",
+    "Back": "Digit5",
+    "Start": "Digit1"
+  },
+  "help": "An arcade game from Williams / Vid Kidz, 1981. Put a coin in, then press Start.",
+  "actions": [
+    {
+      "do": "Put a coin in",
+      "press": "Digit5"
+    },
+    {
+      "do": "Start",
+      "press": "Digit1"
+    },
+    {
+      "do": "Move",
+      "press": [
+        "ArrowUp",
+        "ArrowDown"
+      ]
+    },
+    {
+      "do": "Fire",
+      "press": "ControlLeft"
+    },
+    {
+      "do": "Thrust",
+      "press": "AltLeft"
+    },
+    {
+      "do": "Smart Bomb",
+      "press": "Space"
+    }
+  ],
+  "made": "arcade-cards",
+  "firstBoot": {
+    "resetAt": 12
+  },
+  "facts": {
+    "genre": [
+      "shoot 'em up"
+    ],
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q445221"
+  }
+}

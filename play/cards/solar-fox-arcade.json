@@ -1,0 +1,92 @@
+{
+  "id": "solar-fox-arcade",
+  "title": "Solar Fox",
+  "year": 1981,
+  "publisher": "Bally Midway",
+  "system": "arcade",
+  "core": "mame",
+  "players": 2,
+  "aspect": 1.3333,
+  "archive": {
+    "item": "arcade_solarfox",
+    "file": "solarfox.zip",
+    "size": 34706,
+    "driver": "solarfox",
+    "engine": "m68000",
+    "parents": [
+      {
+        "item": "arcade_solarfox",
+        "file": "midssio.zip",
+        "size": 163
+      }
+    ]
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Digit5",
+      "ControlLeft",
+      "AltLeft"
+    ],
+    "dpad": true,
+    "labels": {
+      "ControlLeft": "Button 1",
+      "AltLeft": "Button 2",
+      "Digit5": "Coin"
+    }
+  },
+  "gamepad": {
+    "Up": "ArrowUp",
+    "Down": "ArrowDown",
+    "Left": "ArrowLeft",
+    "Right": "ArrowRight",
+    "A": "ControlLeft",
+    "B": "AltLeft",
+    "Back": "Digit5",
+    "Start": "ControlLeft"
+  },
+  "help": "An arcade game from Bally Midway, 1981. Put a coin in, then press Button 1 to start.",
+  "actions": [
+    {
+      "do": "Put a coin in",
+      "press": "Digit5"
+    },
+    {
+      "do": "Move",
+      "press": [
+        "ArrowUp",
+        "ArrowDown",
+        "ArrowLeft",
+        "ArrowRight"
+      ]
+    },
+    {
+      "do": "Button 1",
+      "press": "ControlLeft"
+    },
+    {
+      "do": "Button 2",
+      "press": "AltLeft"
+    }
+  ],
+  "made": "arcade-cards",
+  "gamepadSeats": {
+    "2": {
+      "Up": "KeyR",
+      "Down": "KeyF",
+      "Left": "KeyD",
+      "Right": "KeyG",
+      "A": "KeyA",
+      "B": "KeyS",
+      "Back": "Digit6"
+    }
+  },
+  "facts": {
+    "genre": [
+      "action game",
+      "puzzle video game"
+    ],
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q7555897"
+  }
+}

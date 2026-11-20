@@ -1,0 +1,75 @@
+{
+  "id": "tetris-atari-games-arcade",
+  "title": "Tetris",
+  "year": 1988,
+  "publisher": "Atari Games",
+  "system": "arcade",
+  "core": "mame",
+  "players": 2,
+  "aspect": 1.3333,
+  "archive": {
+    "item": "arcade_atetris",
+    "file": "atetris.zip",
+    "size": 261860,
+    "driver": "atetris",
+    "engine": "m68000"
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Digit5",
+      "ControlLeft"
+    ],
+    "dpad": true,
+    "labels": {
+      "ControlLeft": "Button 1",
+      "Digit5": "Coin"
+    }
+  },
+  "gamepad": {
+    "Down": "ArrowDown",
+    "Left": "ArrowLeft",
+    "Right": "ArrowRight",
+    "A": "ControlLeft",
+    "B": "ControlLeft",
+    "Back": "Digit5",
+    "Start": "ControlLeft"
+  },
+  "help": "An arcade game from Atari Games, 1988. Put a coin in, then press Button 1 to start.",
+  "actions": [
+    {
+      "do": "Put a coin in",
+      "press": "Digit5"
+    },
+    {
+      "do": "Move",
+      "press": [
+        "ArrowDown",
+        "ArrowLeft",
+        "ArrowRight"
+      ]
+    },
+    {
+      "do": "Button 1",
+      "press": "ControlLeft"
+    }
+  ],
+  "made": "arcade-cards",
+  "gamepadSeats": {
+    "2": {
+      "Down": "KeyF",
+      "Left": "KeyD",
+      "Right": "KeyG",
+      "A": "KeyA",
+      "B": "KeyA",
+      "Back": "Digit6"
+    }
+  },
+  "facts": {
+    "genre": [
+      "puzzle video game"
+    ],
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q4050885"
+  }
+}

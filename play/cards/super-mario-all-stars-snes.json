@@ -1,0 +1,65 @@
+{
+  "id": "super-mario-all-stars-snes",
+  "title": "Super Mario All-Stars",
+  "year": 1993,
+  "publisher": "Nintendo",
+  "system": "snes",
+  "core": "snes9x",
+  "players": 1,
+  "archive": {
+    "item": "super-mario-all-stars-usa_202504",
+    "file": "Super Mario All-Stars (USA).sfc",
+    "size": 2097152
+  },
+  "controls": {
+    "kind": "pad",
+    "dpad": true,
+    "keys": [
+      "P1:Y",
+      "P1:X",
+      "P1:B",
+      "P1:A",
+      "P1:L",
+      "P1:R",
+      "P1:Select",
+      "P1:Start"
+    ]
+  },
+  "help": "A, B, X, Y and the shoulder buttons are the game's own; Start begins and pauses.",
+  "actions": [
+    {
+      "do": "Move",
+      "press": [
+        "P1:Up",
+        "P1:Down",
+        "P1:Left",
+        "P1:Right"
+      ]
+    },
+    {
+      "do": "B button",
+      "press": "P1:B"
+    },
+    {
+      "do": "A button",
+      "press": "P1:A"
+    },
+    {
+      "do": "Y button",
+      "press": "P1:Y"
+    },
+    {
+      "do": "Start and pause",
+      "press": "P1:Start"
+    }
+  ],
+  "added": "Bryan, 20 Nov 2026: \"All of the list\"",
+  "cheats": true,
+  "facts": {
+    "genre": [
+      "platform game"
+    ],
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q1058903"
+  }
+}

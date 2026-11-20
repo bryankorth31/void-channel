@@ -1,0 +1,71 @@
+{
+  "id": "depth-charge-arcade",
+  "title": "Depth Charge",
+  "year": 1977,
+  "publisher": "Gremlin",
+  "system": "arcade",
+  "core": "mame",
+  "players": 1,
+  "aspect": 1.3333,
+  "archive": {
+    "item": "arcade_depthch",
+    "file": "depthch.zip",
+    "size": 16970,
+    "driver": "depthch",
+    "engine": "classics"
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Digit5",
+      "ControlLeft",
+      "AltLeft"
+    ],
+    "dpad": true,
+    "labels": {
+      "ControlLeft": "Button 1",
+      "AltLeft": "Button 2",
+      "Digit5": "Coin"
+    }
+  },
+  "gamepad": {
+    "Left": "ArrowLeft",
+    "Right": "ArrowRight",
+    "A": "ControlLeft",
+    "B": "AltLeft",
+    "Back": "Digit5",
+    "Start": "ControlLeft"
+  },
+  "help": "An arcade game from Gremlin, 1977. Put a coin in, then press Button 1 to start.",
+  "actions": [
+    {
+      "do": "Put a coin in",
+      "press": "Digit5"
+    },
+    {
+      "do": "Move",
+      "press": [
+        "ArrowLeft",
+        "ArrowRight"
+      ]
+    },
+    {
+      "do": "Button 1",
+      "press": "ControlLeft"
+    },
+    {
+      "do": "Button 2",
+      "press": "AltLeft"
+    }
+  ],
+  "made": "arcade-cards",
+  "facts": {
+    "genre": [],
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q5260964"
+  },
+  "genre": [
+    "shoot 'em up"
+  ],
+  "genreBy": "set by hand from the Internet Archive item and the game itself (20 Nov 2026); Wikidata had no match"
+}

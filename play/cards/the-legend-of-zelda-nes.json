@@ -1,0 +1,57 @@
+{
+  "id": "the-legend-of-zelda-nes",
+  "title": "The Legend of Zelda",
+  "year": 1986,
+  "publisher": "Nintendo",
+  "system": "nes",
+  "core": "fceumm",
+  "players": 1,
+  "archive": {
+    "item": "zelda_nes_2",
+    "file": "zelda.nes",
+    "size": 131088
+  },
+  "controls": {
+    "kind": "pad",
+    "dpad": true,
+    "keys": [
+      "P1:B",
+      "P1:A",
+      "P1:Select",
+      "P1:Start"
+    ]
+  },
+  "help": "A and B are the game's two buttons; Start begins and pauses.",
+  "actions": [
+    {
+      "do": "Move",
+      "press": [
+        "P1:Up",
+        "P1:Down",
+        "P1:Left",
+        "P1:Right"
+      ]
+    },
+    {
+      "do": "A button",
+      "press": "P1:A"
+    },
+    {
+      "do": "B button",
+      "press": "P1:B"
+    },
+    {
+      "do": "Start and pause",
+      "press": "P1:Start"
+    }
+  ],
+  "added": "Bryan, 20 Nov 2026: \"All of the list\"",
+  "cheats": true,
+  "facts": {
+    "genre": [
+      "action-adventure game"
+    ],
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q12395"
+  }
+}

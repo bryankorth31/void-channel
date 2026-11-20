@@ -1,0 +1,66 @@
+{
+  "id": "streets-of-rage-2-genesis",
+  "title": "Streets of Rage 2",
+  "year": 1992,
+  "publisher": "Sega",
+  "system": "genesis",
+  "core": "genesis-plus-gx",
+  "players": 1,
+  "archive": {
+    "item": "sg_Streets_of_Rage_2_1992_Sega_US",
+    "file": "Streets_of_Rage_2_1992_Sega_US.bin",
+    "size": 2097152
+  },
+  "controls": {
+    "kind": "pad",
+    "dpad": true,
+    "keys": [
+      "P1:Y",
+      "P1:B",
+      "P1:A",
+      "P1:Start"
+    ],
+    "labels": {
+      "P1:Y": "A",
+      "P1:B": "B",
+      "P1:A": "C"
+    }
+  },
+  "help": "A, B and C are the game's three buttons; Start pauses.",
+  "actions": [
+    {
+      "do": "Move",
+      "press": [
+        "P1:Up",
+        "P1:Down",
+        "P1:Left",
+        "P1:Right"
+      ]
+    },
+    {
+      "do": "Button A",
+      "press": "P1:Y"
+    },
+    {
+      "do": "Button B",
+      "press": "P1:B"
+    },
+    {
+      "do": "Button C",
+      "press": "P1:A"
+    },
+    {
+      "do": "Start and pause",
+      "press": "P1:Start"
+    }
+  ],
+  "added": "Bryan, 20 Nov 2026: \"All of the list\"",
+  "cheats": true,
+  "facts": {
+    "genre": [
+      "side-scrolling beat 'em up"
+    ],
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q2569030"
+  }
+}

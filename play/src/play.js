@@ -531,7 +531,7 @@
     });
   }
   function loadCheats(c) {
-    if (!PlayCards.isPad(c) || !CHEAT_CORES.includes(c.core)) return;
+    if (!c.cheats || !PlayCards.isPad(c) || !CHEAT_CORES.includes(c.core)) return;
     fetch('cheats/' + encodeURIComponent(c.id) + '.json').then((r) => (r.ok ? r.text() : null)).then((t) => {
       let j = null; try { j = JSON.parse(t); } catch (e) { return; }
       if (!j || !Array.isArray(j.cheats) || !j.cheats.length) return;

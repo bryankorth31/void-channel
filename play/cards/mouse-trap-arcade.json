@@ -1,0 +1,89 @@
+{
+  "id": "mouse-trap-arcade",
+  "title": "Mouse Trap",
+  "year": 1981,
+  "publisher": "Exidy",
+  "system": "arcade",
+  "core": "mame",
+  "players": 2,
+  "aspect": 1.3333,
+  "archive": {
+    "item": "arcade_mtrap",
+    "file": "mtrap.zip",
+    "size": 94805,
+    "driver": "mtrap",
+    "engine": "classics"
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Digit5",
+      "Digit1",
+      "ControlLeft",
+      "AltLeft",
+      "Space",
+      "ShiftLeft"
+    ],
+    "dpad": true,
+    "labels": {
+      "ControlLeft": "Dog Button",
+      "AltLeft": "Yellow Button",
+      "Space": "Red Button",
+      "ShiftLeft": "Blue Button",
+      "Digit5": "Coin",
+      "Digit1": "Start"
+    }
+  },
+  "gamepad": {
+    "Up": "ArrowUp",
+    "Down": "ArrowDown",
+    "Left": "ArrowLeft",
+    "Right": "ArrowRight",
+    "A": "ControlLeft",
+    "B": "AltLeft",
+    "X": "Space",
+    "Y": "ShiftLeft",
+    "Back": "Digit5",
+    "Start": "Digit1"
+  },
+  "help": "An arcade game from Exidy, 1981. Put a coin in, then press Start. It warms up for about half a minute every time it starts.",
+  "actions": [
+    {
+      "do": "Put a coin in",
+      "press": "Digit5"
+    },
+    {
+      "do": "Start",
+      "press": "Digit1"
+    },
+    {
+      "do": "Move",
+      "press": [
+        "ArrowUp",
+        "ArrowDown",
+        "ArrowLeft",
+        "ArrowRight"
+      ]
+    },
+    {
+      "do": "Dog Button",
+      "press": "ControlLeft"
+    },
+    {
+      "do": "Yellow Button",
+      "press": "AltLeft"
+    },
+    {
+      "do": "Red Button",
+      "press": "Space"
+    }
+  ],
+  "made": "arcade-cards",
+  "facts": {
+    "genre": [
+      "maze video game"
+    ],
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q3326170"
+  }
+}

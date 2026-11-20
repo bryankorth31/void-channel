@@ -1,0 +1,53 @@
+{
+  "id": "super-mario-land-2-dx-game-boy",
+  "title": "Super Mario Land 2 DX",
+  "year": 1992,
+  "publisher": "",
+  "system": "gameboy",
+  "core": "gambatte",
+  "players": 1,
+  "archive": {
+    "item": "super-mario-land-2-dx_202301",
+    "file": "Super Mario Land 2 DX.gbc",
+    "size": 1048576
+  },
+  "controls": {
+    "kind": "pad",
+    "dpad": true,
+    "keys": [
+      "P1:B",
+      "P1:A",
+      "P1:Select",
+      "P1:Start"
+    ]
+  },
+  "help": "A fan-made colour version of the 1992 Game Boy game. A and B are the game's two buttons; Start begins and pauses.",
+  "actions": [
+    {
+      "do": "Move",
+      "press": [
+        "P1:Up",
+        "P1:Down",
+        "P1:Left",
+        "P1:Right"
+      ]
+    },
+    {
+      "do": "A button",
+      "press": "P1:A"
+    },
+    {
+      "do": "B button",
+      "press": "P1:B"
+    },
+    {
+      "do": "Start and pause",
+      "press": "P1:Start"
+    }
+  ],
+  "added": "Bryan, 20 Nov 2026: \"All of the list\"",
+  "genre": [
+    "platform game"
+  ],
+  "genreBy": "set by hand (20 Nov 2026); Wikidata had no genre for it"
+}

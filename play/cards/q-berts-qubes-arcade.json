@@ -1,0 +1,75 @@
+{
+  "id": "q-berts-qubes-arcade",
+  "title": "Q*bert's Qubes",
+  "year": 1983,
+  "publisher": "Mylstar",
+  "system": "arcade",
+  "core": "mame",
+  "players": 2,
+  "aspect": 0.75,
+  "archive": {
+    "item": "arcade_qbertqub",
+    "file": "qbertqub.zip",
+    "size": 46583,
+    "driver": "qbertqub",
+    "engine": "classics",
+    "parents": [
+      {
+        "item": "arcade_qbertqub",
+        "file": "votrax.zip",
+        "size": 590,
+        "as": "votrsc01a.zip"
+      }
+    ]
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Digit5",
+      "Digit1"
+    ],
+    "dpad": true,
+    "labels": {
+      "Digit5": "Coin",
+      "Digit1": "Start"
+    }
+  },
+  "gamepad": {
+    "Up": "ArrowUp",
+    "Down": "ArrowDown",
+    "Left": "ArrowLeft",
+    "Right": "ArrowRight",
+    "Back": "Digit5",
+    "Start": "Digit1"
+  },
+  "help": "An arcade game from Mylstar, 1983. Put a coin in, then press Start.",
+  "actions": [
+    {
+      "do": "Put a coin in",
+      "press": "Digit5"
+    },
+    {
+      "do": "Start",
+      "press": "Digit1"
+    },
+    {
+      "do": "Move",
+      "press": [
+        "ArrowUp",
+        "ArrowDown",
+        "ArrowLeft",
+        "ArrowRight"
+      ]
+    }
+  ],
+  "made": "arcade-cards",
+  "facts": {
+    "genre": [],
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q107452172"
+  },
+  "genre": [
+    "puzzle video game"
+  ],
+  "genreBy": "set by hand from the Internet Archive item and the game itself (20 Nov 2026); Wikidata had no match"
+}

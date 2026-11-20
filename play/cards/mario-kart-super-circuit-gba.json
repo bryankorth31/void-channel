@@ -1,0 +1,59 @@
+{
+  "id": "mario-kart-super-circuit-gba",
+  "title": "Mario Kart: Super Circuit",
+  "year": 2001,
+  "publisher": "Nintendo",
+  "system": "gba",
+  "core": "mgba",
+  "players": 1,
+  "archive": {
+    "item": "mario-kart-super-circuit_gba",
+    "file": "MarioKartSuperCircuit.gba",
+    "size": 4194304
+  },
+  "controls": {
+    "kind": "pad",
+    "dpad": true,
+    "keys": [
+      "P1:B",
+      "P1:A",
+      "P1:L",
+      "P1:R",
+      "P1:Select",
+      "P1:Start"
+    ]
+  },
+  "help": "A and B are the game's main buttons, L and R the shoulders; Start opens the menu.",
+  "actions": [
+    {
+      "do": "Move",
+      "press": [
+        "P1:Up",
+        "P1:Down",
+        "P1:Left",
+        "P1:Right"
+      ]
+    },
+    {
+      "do": "A button",
+      "press": "P1:A"
+    },
+    {
+      "do": "B button",
+      "press": "P1:B"
+    },
+    {
+      "do": "Start and pause",
+      "press": "P1:Start"
+    }
+  ],
+  "added": "Bryan, 20 Nov 2026: \"All of the list\"",
+  "cheats": true,
+  "facts": {
+    "genre": [
+      "kart racing game"
+    ],
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q2068675"
+  }
+}

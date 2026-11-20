@@ -21,8 +21,9 @@ const MAX = 40;   // a list longer than this is mostly one-level codes; the firs
 
 // Pure (tested): the title as the .cht names it, without our "(Game Gear)" and the like.
 // Accents fold ("Pokémon" is "Pokemon"), and a trailing "Version" or "Edition" is the same game ("Pokemon - FireRed Version").
+// "The" is left out on both sides: the files write "Legend of Zelda, The - A Link to the Past" and "Lion King, The".
 const norm = (t) => String(t).normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/\s*\([^)]*\)|\s*\[[^\]]*\]/g, '').toLowerCase()
-  .replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '').replace(/(version|edition)$/, '');
+  .replace(/\bthe\b/g, '').replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '').replace(/(version|edition)$/, '');
 // Pure (tested): the best file for a title among a folder's names.
 function pickFile(title, names) {
   const want = norm(title);
@@ -81,6 +82,8 @@ async function main() {
       source: 'https://github.com/libretro/libretro-database/blob/master/' + src.split('/').map(encodeURIComponent).join('/'),
       licence: 'CC-BY-SA-4.0', cheats }, null, 2) + '\n');
     console.log('cheats  ' + card.id + '  ' + cheats.length + '  ' + file);
+    // The card says it has a list, so the game page asks only for lists that exist (no 404 in the console).
+    if (!card.cheats) { card.cheats = true; fs.writeFileSync(path.join(PLAY, 'cards', f), JSON.stringify(card, null, 2) + '\n'); }
   }
 }
 

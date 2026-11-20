@@ -29,7 +29,7 @@ test('MAME looks for sound samples beside the games, so Zaxxon finds the .wav fi
   assert.ok(i > 0, 'a sample path is given');
   assert.equal(args[i + 1], '/roms', 'the same folder the zips are written to');
   assert.ok(args.includes('-rompath') && args[args.indexOf('-rompath') + 1] === '/roms');
-  assert.ok(added.length === 1 && /classics\.js$/.test(added[0].src), 'the engine script is added once');
+  assert.ok(added.length === 1 && /classics\.js\?v=\d+$/.test(added[0].src), 'the engine script is added once, with its version (349be6c3e)');
   // The zip goes where both paths point.
   const written = [];
   globalThis.FS = { mkdir: () => {}, writeFile: (p) => written.push(p) };

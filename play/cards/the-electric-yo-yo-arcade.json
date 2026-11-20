@@ -1,0 +1,85 @@
+{
+  "id": "the-electric-yo-yo-arcade",
+  "title": "The Electric Yo-Yo",
+  "year": 1982,
+  "publisher": "Taito America Corporation",
+  "system": "arcade",
+  "core": "mame",
+  "players": 2,
+  "aspect": 0.75,
+  "archive": {
+    "item": "arcade_elecyoyo",
+    "file": "elecyoyo.zip",
+    "size": 35592,
+    "driver": "elecyoyo",
+    "engine": "classics",
+    "parents": [
+      {
+        "item": "arcade_elecyoyo",
+        "file": "m68705p3.zip",
+        "size": 266
+      }
+    ]
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Digit5",
+      "Digit1"
+    ],
+    "dpad": true,
+    "labels": {
+      "Digit5": "Coin",
+      "Digit1": "Start"
+    }
+  },
+  "gamepad": {
+    "Up": "ArrowUp",
+    "Down": "ArrowDown",
+    "Left": "ArrowLeft",
+    "Right": "ArrowRight",
+    "Back": "Digit5",
+    "Start": "Digit1"
+  },
+  "help": "An arcade game from Taito America Corporation, 1982. Put a coin in, then press Start.",
+  "actions": [
+    {
+      "do": "Put a coin in",
+      "press": "Digit5"
+    },
+    {
+      "do": "Start",
+      "press": "Digit1"
+    },
+    {
+      "do": "Move",
+      "press": [
+        "ArrowUp",
+        "ArrowDown",
+        "ArrowLeft",
+        "ArrowRight"
+      ]
+    }
+  ],
+  "made": "arcade-cards",
+  "gamepadSeats": {
+    "2": {
+      "Up": "KeyR",
+      "Down": "KeyF",
+      "Left": "KeyD",
+      "Right": "KeyG",
+      "Back": "Digit6",
+      "Start": "Digit2"
+    }
+  },
+  "firstBoot": {
+    "resetAt": 8
+  },
+  "facts": {
+    "genre": [
+      "action game"
+    ],
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q139752231"
+  }
+}

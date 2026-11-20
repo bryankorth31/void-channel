@@ -1,0 +1,102 @@
+{
+  "id": "sprint-2-arcade",
+  "title": "Sprint 2",
+  "year": 1976,
+  "publisher": "Atari (Kee Games)",
+  "system": "arcade",
+  "core": "mame",
+  "players": 2,
+  "aspect": 1.3333,
+  "archive": {
+    "item": "arcade_sprint2",
+    "file": "sprint2.zip",
+    "size": 10532,
+    "driver": "sprint2",
+    "engine": "atari"
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Digit5",
+      "Digit1",
+      "ControlLeft",
+      "KeyZ",
+      "KeyX",
+      "KeyC"
+    ],
+    "dpad": true,
+    "labels": {
+      "ControlLeft": "Gas",
+      "KeyZ": "Gear 1",
+      "KeyX": "Gear 2",
+      "KeyC": "Gear 3",
+      "KeyV": "Gear 4",
+      "Space": "Track Select",
+      "Digit5": "Coin",
+      "Digit1": "Start"
+    }
+  },
+  "gamepad": {
+    "Left": "ArrowLeft",
+    "Right": "ArrowRight",
+    "A": "ControlLeft",
+    "B": "KeyZ",
+    "X": "KeyX",
+    "Y": "KeyC",
+    "LB": "KeyV",
+    "RB": "Space",
+    "Back": "Digit5",
+    "Start": "Digit1"
+  },
+  "help": "An arcade game from Atari (Kee Games), 1976. Put a coin in, then press Start.",
+  "actions": [
+    {
+      "do": "Put a coin in",
+      "press": "Digit5"
+    },
+    {
+      "do": "Start",
+      "press": "Digit1"
+    },
+    {
+      "do": "Turn",
+      "press": [
+        "ArrowLeft",
+        "ArrowRight"
+      ]
+    },
+    {
+      "do": "Gas",
+      "press": "ControlLeft"
+    },
+    {
+      "do": "Gear 1",
+      "press": "KeyZ"
+    },
+    {
+      "do": "Gear 2",
+      "press": "KeyX"
+    }
+  ],
+  "made": "arcade-cards",
+  "gamepadSeats": {
+    "2": {
+      "Left": "KeyD",
+      "Right": "KeyG",
+      "A": "KeyA",
+      "B": "KeyQ",
+      "X": "KeyW",
+      "Y": "KeyE",
+      "LB": "KeyR",
+      "Back": "Digit6",
+      "Start": "Digit2"
+    }
+  },
+  "facts": {
+    "genre": [
+      "racing video game"
+    ],
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q3494252"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "id": "sonic-chaos-game-gear",
+  "title": "Sonic Chaos",
+  "year": 1993,
+  "publisher": "SEGA",
+  "system": "gamegear",
+  "core": "genesis-plus-gx",
+  "players": 1,
+  "archive": {
+    "item": "sonicchaosgg",
+    "file": "sonicchaosgg.bin",
+    "as": "sonic-chaos.gg",
+    "size": 524288
+  },
+  "controls": {
+    "kind": "pad",
+    "dpad": true,
+    "keys": [
+      "P1:B",
+      "P1:A",
+      "P1:Start"
+    ],
+    "labels": {
+      "P1:B": "1",
+      "P1:A": "2"
+    }
+  },
+  "help": "Buttons 1 and 2 are the game's two buttons; Start begins and pauses.",
+  "actions": [
+    {
+      "do": "Move",
+      "press": [
+        "P1:Up",
+        "P1:Down",
+        "P1:Left",
+        "P1:Right"
+      ]
+    },
+    {
+      "do": "Button 1",
+      "press": "P1:B"
+    },
+    {
+      "do": "Button 2",
+      "press": "P1:A"
+    },
+    {
+      "do": "Start and pause",
+      "press": "P1:Start"
+    }
+  ],
+  "added": "Bryan, 20 Nov 2026: \"All of the list\"",
+  "cheats": true,
+  "facts": {
+    "genre": [
+      "platform game"
+    ],
+    "players": null,
+    "source": "https://www.wikidata.org/wiki/Q151531"
+  }
+}
