@@ -24,7 +24,8 @@
     return { w: Math.floor(w), h: Math.floor(h) };
   }
 
-  function layout(vw, vh, aspect, touch) {
+  // minCols: a console pad three buttons wide (Super Nintendo diamond, Genesis A B C) asks for three key columns a side.
+  function layout(vw, vh, aspect, touch, minCols) {
     aspect = aspect > 0 ? aspect : 4 / 3;
     const top = HEADER, stageH = vh - HEADER;
     if (!touch) {
@@ -32,7 +33,7 @@
       return { mode: 'plain', screen: { x: Math.floor((vw - s.w) / 2), y: top + Math.floor((stageH - s.h) / 2), w: s.w, h: s.h } };
     }
     if (vw > vh) {
-      const cols = columns(stageH);
+      const cols = Math.max(columns(stageH), minCols || 2);
       const s = fit(vw - 2 * columnWidth(cols), stageH - 16, aspect);
       const col = Math.floor((vw - s.w) / 2);
       const screen = { x: col, y: top + Math.floor((stageH - s.h) / 2), w: s.w, h: s.h };

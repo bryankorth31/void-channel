@@ -99,9 +99,71 @@
     return { numbers, go, rest, sideways, keyboard: !!c.keyboard, dpad: !!c.dpad };
   }
 
+  // Console pads shaped like the machine's own (audit batch 4, block D): one shape per system, rules not per-game code.
+  // Each shape places the face buttons on a small grid [code, row, column]; L and R sit at the top of their side, Select
+  // and Start small underneath. A button shows its letter big and its action word small (from the card's actions).
+  const SHAPES = {
+    diamond: { cols: 3, rows: 3, face: [['P1:X', 1, 2], ['P1:Y', 2, 1], ['P1:A', 2, 3], ['P1:B', 3, 2]] },
+    abc: { cols: 3, rows: 3, face: [['P1:Y', 3, 1], ['P1:B', 2, 2], ['P1:A', 1, 3]] },
+    pair: { cols: 2, rows: 2, face: [['P1:B', 2, 1], ['P1:A', 1, 2]] },
+    one: { cols: 1, rows: 1, face: [['P1:B', 1, 1]] },
+  };
+  const SYSTEM_SHAPE = { snes: 'diamond', genesis: 'abc', nes: 'pair', gameboy: 'pair', gbcolor: 'pair', sms: 'pair', gamegear: 'pair', a2600: 'one' };
+  const shapeOf = (card) => SHAPES[SYSTEM_SHAPE[card && card.system] || 'pair'];
+  // How many key columns a side needs at least: a three-wide shape asks the layout for wider sides.
+  const minCols = (card) => (card && card.controls && card.controls.kind === 'pad' && shapeOf(card).cols >= 3 ? 3 : 2);
+
+  function consoleKey(code, hub, card, cls) {
+    const b = keyButton(code, hub, cls);
+    const word = (root.PlayCards && root.PlayCards.actionFor(card, code)) || '';
+    b.textContent = '';
+    b.append(el('span', 'big', label(code)));
+    if (word) b.append(el('span', 'small', word));
+    b.setAttribute('aria-label', label(code) + (word ? ', ' + word : ''));
+    return b;
+  }
+
+  function buildConsole(zones, card, hub) {
+    const keys = card.controls.keys || [];
+    const shape = shapeOf(card);
+    const face = el('div', 'cface');
+    face.style.setProperty('--cols', shape.cols); face.style.setProperty('--rows', shape.rows);
+    if (shape === SHAPES.one) face.classList.add('one');
+    for (const [code, r, col] of shape.face) {
+      if (!keys.includes(code)) continue;
+      const k = consoleKey(code, hub, card); k.style.gridRow = r; k.style.gridColumn = col; face.appendChild(k);
+    }
+    const small = el('div', 'csmall');
+    for (const code of ['P1:Select', 'P1:Start']) if (keys.includes(code)) small.appendChild(consoleKey(code, hub, card, 'pill'));
+    const shoulder = (code) => (keys.includes(code) ? consoleKey(code, hub, card, 'cshoulder') : null);
+    const L = shoulder('P1:L'), R = shoulder('P1:R');
+    const pad = el('div', 'cdpad'); if (card.controls.dpad) pad.appendChild(dpad(hub, PAD_DIRS));
+    if (zones.pad) {
+      const box = el('div', 'cbox port');
+      if (L || R) { const top = el('div', 'ctop'); top.append(L || el('span'), R || el('span')); box.appendChild(top); }
+      const main = el('div', 'cmain'); main.append(pad, face); box.append(main);
+      if (small.children.length) box.appendChild(small);
+      zones.pad.appendChild(box);
+    } else {
+      const left = el('div', 'cbox'), right = el('div', 'cbox');
+      if (L) left.appendChild(L);
+      left.appendChild(pad);
+      if (R) right.appendChild(R);
+      right.appendChild(face);
+      if (small.children.length) right.appendChild(small);
+      zones.left.appendChild(left); zones.right.appendChild(right);
+    }
+    return { keyboard: el('div'), openKeyboard: () => {} };
+  }
+
   // Build the pad for this card into the zones the layout gave us.
   function build(zones, card, hub) {
     const c = (card && card.controls) || {};
+    if (c.kind === 'pad') {
+      for (const z of Object.values(zones)) z.textContent = '';
+      names = c.labels || {};
+      return buildConsole(zones, card, hub);
+    }
     const p = plan(c);
     names = c.labels || {};
     const dirs = c.kind === 'pad' ? PAD_DIRS : ARROWS;
@@ -152,7 +214,7 @@
     return { keyboard: kb, openKeyboard: () => kb.classList.add('open') };
   }
 
-  const api = { build, plan, label, QWERTY };
+  const api = { build, plan, label, QWERTY, SHAPES, SYSTEM_SHAPE, shapeOf, minCols };
   if (typeof module === 'object' && module.exports) module.exports = api;
   else root.PlayTouch = api;
 })(typeof self !== 'undefined' ? self : this);

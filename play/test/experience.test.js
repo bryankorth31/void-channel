@@ -52,3 +52,15 @@ test('the start screen shows the item picture through /cors/, and Continue comes
   assert.match(html, /id="b-continue"/);
   assert.match(html, /<ul id="controls" class="keys-help"><\/ul>/);
 });
+
+test('block D: every console card gets its machine\'s pad shape, and every face button of the shape exists on the card', () => {
+  const Touch = require('../src/touchpad.js');
+  const want = { snes: 'diamond', genesis: 'abc', nes: 'pair', gameboy: 'pair', sms: 'pair', gamegear: 'pair', a2600: 'one' };
+  for (const c of cards.filter(Cards.isPad)) {
+    assert.equal(Touch.SYSTEM_SHAPE[c.system], want[c.system], c.id);
+    for (const [code] of Touch.shapeOf(c).face) assert.ok(c.controls.keys.includes(code), c.id + ' lacks ' + code);
+  }
+  assert.equal(Touch.minCols(byId('super-mario-world')), 3);
+  assert.equal(Touch.minCols(byId('tetris-game-boy')), 2);
+  assert.equal(Touch.minCols(byId('oregon-trail-1990')), 2);
+});
