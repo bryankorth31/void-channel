@@ -174,6 +174,8 @@ EMSCRIPTEN_KEEPALIVE void host_key(int down, unsigned keycode, unsigned characte
   if (key_event) key_event(down != 0, keycode, character, (uint16_t)mods);
 }
 EMSCRIPTEN_KEEPALIVE void host_pad(unsigned port, unsigned bits) { if (port < 4) pads[port] = (uint16_t)bits; }
+/* Plug a controller into a port, as a console frontend does at start: many cores read no buttons until told. */
+EMSCRIPTEN_KEEPALIVE void host_plug_pad(unsigned port) { retro_set_controller_port_device(port, RETRO_DEVICE_JOYPAD); }
 
 EMSCRIPTEN_KEEPALIVE void host_set_var(const char *key, const char *value) {
   for (int i = 0; i < var_count; i++) if (!strcmp(var_key[i], key)) { snprintf(var_val[i], 64, "%s", value); var_changed = 1; return; }

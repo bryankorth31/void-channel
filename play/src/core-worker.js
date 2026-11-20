@@ -7,7 +7,7 @@
 //               save, load {state}, reset, stop
 // Messages out: status {text}, ready {fps, rate, aspect}, frame {w, h, pixels}, sound {samples}, saved {state},
 //               loaded {ok}, error {text}
-/* global importScripts, DosboxPure, PlayKeys, PlayUnzip */
+/* global importScripts, PlayKeys, PlayUnzip */
 'use strict';
 // The core starts its helper threads from this same script address, so a helper thread lands here too. It only
 // needs the engine: load it and step aside (the engine runs the thread itself). The page names the engine in
@@ -56,7 +56,9 @@ async function unpack(bytes, start) {
 async function start(msg) {
   say('Loading the engine');
   importScripts(ENGINE);
-  M = await DosboxPure({
+  // Every engine is built to the same shape: PlayCore (DOSBox Pure, built first, is named DosboxPure).
+  const factory = self.PlayCore || self.DosboxPure;
+  M = await factory({
     locateFile: (f) => new URL(f, ENGINE).href,
     print: (t) => console.log('[core]', t),
     printErr: (t) => console.warn('[core]', t),
@@ -71,6 +73,7 @@ async function start(msg) {
   for (const [k, v] of Object.entries(msg.vars || {})) callStr('host_set_var', k, String(v));
   say('Starting the game');
   if (!callStr('host_load', path)) throw new Error('The core could not open ' + path);
+  for (let port = 0; port < (msg.pads || 0); port++) M._host_plug_pad(port);
   fps = M._host_fps() || 60;
   postMessage({ type: 'ready', fps, rate: M._host_sample_rate() || 44100, aspect: M._host_aspect() });
   running = true; next = performance.now();

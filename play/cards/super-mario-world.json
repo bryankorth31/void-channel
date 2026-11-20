@@ -1,0 +1,28 @@
+{
+  "id": "super-mario-world",
+  "title": "Super Mario World",
+  "year": 1991,
+  "publisher": "Nintendo",
+  "system": "snes",
+  "core": "snes9x",
+  "players": 2,
+  "archive": {
+    "item": "super-mario-world-usa_202406",
+    "file": "Super Mario World (USA).sfc"
+  },
+  "controls": {
+    "kind": "pad",
+    "dpad": true,
+    "keys": [
+      "P1:Y",
+      "P1:X",
+      "P1:B",
+      "P1:A",
+      "P1:L",
+      "P1:R",
+      "P1:Select",
+      "P1:Start"
+    ]
+  },
+  "help": "B jumps, A spin-jumps, hold Y to run and carry."
+}

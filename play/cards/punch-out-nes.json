@@ -1,0 +1,24 @@
+{
+  "id": "punch-out-nes",
+  "title": "Mike Tyson's Punch-Out!!",
+  "year": 1987,
+  "publisher": "Nintendo",
+  "system": "nes",
+  "core": "fceumm",
+  "players": 1,
+  "archive": {
+    "item": "mike-tysons-punch-out-usa-rev-a",
+    "file": "Mike Tyson's Punch-Out!! (USA) (Rev-A).nes"
+  },
+  "controls": {
+    "kind": "pad",
+    "dpad": true,
+    "keys": [
+      "P1:B",
+      "P1:A",
+      "P1:Select",
+      "P1:Start"
+    ]
+  },
+  "help": "B is a left punch, A a right; Up with a punch goes to the face. Start throws a star punch when you have one."
+}

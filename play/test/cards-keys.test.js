@@ -26,14 +26,35 @@ test('every card in cards/ passes the card check and is named after its id', () 
   }
 });
 
-test('every key a card names is a key the core knows, and every gamepad button exists', () => {
+// A DOS card names PC keys; a console card ("kind": "pad") names the console's own buttons, P1:A, P2:Start and so on,
+// with the libretro joypad's button names.
+const PAD_BUTTON = /^P[12]:(B|Y|Select|Start|Up|Down|Left|Right|A|X|L|R|L2|R2|L3|R3)$/;
+const known = (card, code) => (Cards.isPad(card) ? PAD_BUTTON.test(code) : Keys.known(code));
+
+test('every key a card names is a key its core knows, and every gamepad button exists', () => {
   for (const f of cardFiles) {
     const card = loadCard(f), c = card.controls || {};
-    for (const code of [...(c.numbers || []), ...(c.keys || [])]) assert.ok(Keys.known(code), f + ': ' + code);
-    for (const [button, code] of Object.entries(card.gamepad || {})) {
+    for (const code of [...(c.numbers || []), ...(c.keys || [])]) assert.ok(known(card, code), f + ': ' + code);
+    for (const [button, code] of Object.entries(Cards.gamepadMap(card))) {
       assert.ok(button in Hub.BUTTONS, f + ': no gamepad button ' + button);
-      if (code[0] !== '@') assert.ok(Keys.known(code), f + ': ' + button + ' -> ' + code);
+      if (code[0] !== '@') assert.ok(known(card, code), f + ': ' + button + ' -> ' + code);
     }
+    for (const [pc, code] of Object.entries(Cards.keyMap(card) || {})) {
+      assert.ok(Keys.known(pc), f + ': no PC key ' + pc);
+      if (code[0] !== '@') assert.ok(PAD_BUTTON.test(code), f + ': ' + pc + ' -> ' + code);
+    }
+  }
+});
+
+test('every card names a core that plays its system, and each core\'s source commit is recorded', () => {
+  const recipes = require(path.join(ROOT, 'core', 'cores.js'));
+  const readme = fs.readFileSync(path.join(ROOT, 'core', 'README.md'), 'utf8');
+  for (const name of Object.keys(Cards.CORES)) {
+    if (name === 'dosbox-pure') continue;   // its commit is in core/dosbox-pure.txt (page.test.js)
+    assert.ok(recipes[name], name + ' has a recipe in core/cores.js');
+    assert.match(recipes[name].commit, /^[0-9a-f]{40}$/, name + ' names an exact commit');
+    assert.ok(readme.includes(recipes[name].commit), name + ': core/README.md names the same commit');
+    assert.deepEqual(recipes[name].systems.slice().sort(), Cards.CORES[name].systems.slice().sort(), name + ' systems agree');
   }
 });
 

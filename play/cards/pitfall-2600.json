@@ -1,0 +1,27 @@
+{
+  "id": "pitfall-2600",
+  "title": "Pitfall!",
+  "year": 1982,
+  "publisher": "Activision (this copy: CCE, Brazil)",
+  "system": "a2600",
+  "core": "stella2014",
+  "players": 1,
+  "archive": {
+    "item": "atari_2600_pitfall_1983_cce_c-813",
+    "file": "atari_2600_pitfall_1983_cce_c-813.bin"
+  },
+  "controls": {
+    "kind": "pad",
+    "dpad": true,
+    "keys": [
+      "P1:B",
+      "P1:Select",
+      "P1:Start"
+    ],
+    "labels": {
+      "P1:B": "Fire",
+      "P1:Start": "Reset"
+    }
+  },
+  "help": "The stick runs and climbs; Fire jumps. Reset starts a new game."
+}

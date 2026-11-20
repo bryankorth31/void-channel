@@ -1,0 +1,38 @@
+{
+  "id": "prince-of-persia-1990",
+  "title": "Prince of Persia",
+  "year": 1990,
+  "publisher": "Broderbund",
+  "system": "dos",
+  "core": "dosbox-pure",
+  "players": 1,
+  "archive": {
+    "item": "msdos_Prince_of_Persia_1990",
+    "file": "Prince_of_Persia_1990.zip",
+    "start": "Ppersia/PRINCE.EXE"
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "ShiftLeft",
+      "Space",
+      "Enter",
+      "Escape"
+    ],
+    "dpad": true
+  },
+  "gamepad": {
+    "A": "ShiftLeft",
+    "B": "ArrowUp",
+    "X": "Space",
+    "Y": "Enter",
+    "Up": "ArrowUp",
+    "Down": "ArrowDown",
+    "Left": "ArrowLeft",
+    "Right": "ArrowRight"
+  },
+  "help": "Arrows run, climb and crouch; Up jumps. Hold Shift to grab a ledge, step carefully or swing the sword.",
+  "vars": {
+    "dosbox_pure_aspect_correction": "true"
+  }
+}

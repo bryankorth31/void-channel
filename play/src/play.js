@@ -77,10 +77,21 @@
       firstFrame: () => { clearTimeout(deadline); $('cover').hidden = true; $('canvas').focus({ preventScroll: true }); },
       aspect: (a) => { if (Math.abs(a - aspect) > 0.01) { aspect = a; place(); } },
     } });
-    hub = PlayHub.createHub({ send: (code, down) => runner.key(code, down), onAction: action });
-    hub.setCard(card);
+    hub = PlayHub.createHub({ send, onAction: action });
+    hub.setCard(card, PlayCards.gamepadMap(card));
     runner.start(card, base);
     place.sig = ''; place();
+  }
+
+  // A console button (P1:A, P2:Start) goes to that player's pad as one bit; anything else is a PC key.
+  const PAD_BITS = { B: 0, Y: 1, Select: 2, Start: 3, Up: 4, Down: 5, Left: 6, Right: 7, A: 8, X: 9, L: 10, R: 11 };
+  const padState = [0, 0, 0, 0];
+  function send(code, down) {
+    const m = /^P([1-4]):([A-Za-z]+)$/.exec(code);
+    if (!m) return runner.key(code, down);
+    const port = +m[1] - 1, bit = 1 << PAD_BITS[m[2]];
+    padState[port] = down ? padState[port] | bit : padState[port] & ~bit;
+    runner.pad(port, padState[port]);
   }
 
   function fail(text) {
@@ -92,10 +103,10 @@
   // The gamepad line in the pause menu, drawn from the card, so it always says what the buttons really do.
   function padHelp(c) {
     const say = (v) => v === '@keyboard' ? 'opens the keyboard' : v === '@menu' ? 'pauses' : 'is ' + PlayTouch.label(v);
-    const map = Object.assign({ Start: '@menu' }, c.gamepad || {});
-    const order = ['A', 'B', 'X', 'Y', 'LB', 'RB', 'LT', 'RT', 'Start'];
+    const map = Object.assign({ Start: '@menu' }, PlayCards.gamepadMap(c));
+    const order = ['A', 'B', 'X', 'Y', 'LB', 'RB', 'LT', 'RT', 'Back', 'Start', 'Home'];
     const parts = order.filter((b) => map[b]).map((b) => b + ' ' + say(map[b]));
-    if (map.Up) parts.push('the d-pad and stick are the arrows');
+    if (map.Up) parts.push(PlayCards.isPad(c) ? 'the d-pad and stick move' : 'the d-pad and stick are the arrows');
     return parts.join(', ') + '.';
   }
 
@@ -104,9 +115,12 @@
     // Keys go to the game unless the pause menu is open and has the focus. A hidden panel never keeps them.
     if (!hub || !started || (!$('menu').hidden && e.target.closest('.menu'))) return;
     if (e.code === 'F11') return;
-    if (!PlayKeys.known(e.code)) return;
+    // A console game: the card's keyboard seats (arrows, Z X A S Q W, Enter); a DOS game: the key itself.
+    const keys = PlayCards.keyMap(card);
+    const code = keys ? keys[e.code] : e.code;
+    if (!code || (!keys && !PlayKeys.known(code))) return;
     e.preventDefault();
-    if (!e.repeat) hub.keyboard(e.code, down);
+    if (!e.repeat) hub.keyboard(code, down);
   }
   addEventListener('keydown', (e) => keyEvent(e, true));
   addEventListener('keyup', (e) => keyEvent(e, false));
@@ -134,6 +148,10 @@
     $('title').textContent = c.title + (c.year ? ' (' + c.year + ')' : '');
     $('help').textContent = c.help || '';
     $('pad-help').textContent = padHelp(c);
+    // The footer names this game's own engine, its licence and its exact source (and its licence text when not GPL).
+    const core = PlayCards.CORES[c.core];
+    $('core-name').textContent = core.name; $('core-licence').textContent = core.licence; $('src-core').href = core.source;
+    $('core-terms').hidden = !core.terms; if (core.terms) $('core-terms-link').href = core.terms;
     $('from').innerHTML = '';
     const a = document.createElement('a'); a.href = PlayCards.itemPage(c); a.target = '_blank'; a.rel = 'noopener'; a.textContent = 'the Internet Archive';
     $('from').append('The game plays straight from ', a, '.');

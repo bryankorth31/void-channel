@@ -1,0 +1,29 @@
+{
+  "id": "golden-axe-genesis",
+  "title": "Golden Axe",
+  "year": 1989,
+  "publisher": "Sega",
+  "system": "genesis",
+  "core": "genesis-plus-gx",
+  "players": 2,
+  "archive": {
+    "item": "sg_Golden_Axe_Rev_1_1989_Sega",
+    "file": "Golden_Axe_Rev_1_1989_Sega.bin"
+  },
+  "controls": {
+    "kind": "pad",
+    "dpad": true,
+    "keys": [
+      "P1:Y",
+      "P1:B",
+      "P1:A",
+      "P1:Start"
+    ],
+    "labels": {
+      "P1:Y": "A",
+      "P1:B": "B",
+      "P1:A": "C"
+    }
+  },
+  "help": "A is magic, B attacks, C jumps. A second gamepad joins as player 2."
+}
