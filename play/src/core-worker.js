@@ -50,6 +50,38 @@ const say = (text) => postMessage({ type: 'status', text });
 
 // The game file, in one plain sentence when it cannot come: gone from the Archive, the Archive busy, or too big.
 const MAX_DOWNLOAD = 256 * 1024 * 1024;
+// Audit K5: a game played once is kept in the viewer's own browser (Cache Storage), so the next play starts at once.
+// The viewer's copy only: nothing is kept on voidtv.net. The eight most recent games up to 64 MB each; an older one is
+// let go, and the browser may clear any of them when it needs room. A kept copy whose size differs from the card's is
+// not used (the Archive file changed).
+const KEEP_GAMES = 8, KEEP_MAX = 64 * 1024 * 1024, KEPT = 'voidtv-play-games';
+async function keptGame(url, known) {
+  try {
+    if (!self.caches) return null;
+    const r = await (await caches.open(KEPT)).match(url);
+    if (!r) return null;
+    const b = new Uint8Array(await r.arrayBuffer());
+    return !known || b.length === known ? b : null;
+  } catch (e) { return null; }
+}
+async function keepGame(url, bytes) {
+  try {
+    if (!self.caches || bytes.length > KEEP_MAX) return;
+    const c = await caches.open(KEPT);
+    await c.delete(url);                         // to the back of the line: the newest is kept longest
+    await c.put(url, new Response(bytes, { headers: { 'content-type': 'application/octet-stream' } }));
+    const keys = await c.keys();
+    for (const k of keys.slice(0, Math.max(0, keys.length - KEEP_GAMES))) await c.delete(k);
+  } catch (e) { /* no room or no storage: the game still plays */ }
+}
+async function gameBytes(url, known) {
+  const kept = await keptGame(url, known);
+  if (kept) return kept;
+  const b = await fetchBytes(url, known);
+  keepGame(url, b);
+  return b;
+}
+
 async function fetchBytes(url, known) {
   let r;
   try { r = await fetch(url, { credentials: 'omit' }); } catch (e) {
@@ -151,7 +183,7 @@ async function start(msg) {
     path = mountStreamed(msg);
   } else {
     say('Fetching the game from the Internet Archive');
-    const game = await fetchBytes(msg.gameUrl, msg.gameSize);
+    const game = await gameBytes(msg.gameUrl, msg.gameSize);
     if (msg.start && /\.zip$/i.test(msg.gameFile)) path = await unpack(game, msg.start);
     else M.FS.writeFile(path, game);
   }

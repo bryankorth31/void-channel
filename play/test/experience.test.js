@@ -136,7 +136,7 @@ test('audit K3: a big game says how far its download has come, and the 256 MB ca
   const w = fs.readFileSync(path.join(PLAY, 'src', 'core-worker.js'), 'utf8');
   for (const bit of ["const reader = r.body.getReader(), parts = [];", "if (got > MAX_DOWNLOAD) { reader.cancel();",
     "if (size >= 2 * 1048576 && now - told > 250) { told = now; say(fetchLine(got, size)); }",
-    "const game = await fetchBytes(msg.gameUrl, msg.gameSize);"]) assert.ok(w.includes(bit), bit);
+    "const game = await gameBytes(msg.gameUrl, msg.gameSize);", "const b = await fetchBytes(url, known);"]) assert.ok(w.includes(bit), bit);
   assert.match(fs.readFileSync(path.join(PLAY, 'src', 'runner.js'), 'utf8'), /gameSize: card\.archive\.size \|\| 0,/);
 });
 
@@ -149,4 +149,11 @@ test('audit S6 and S5: the back of a shelf box starts the game itself (not on a 
   const games = JSON.parse(fs.readFileSync(path.join(PLAY, 'shelf', 'index.json'), 'utf8')).games;
   for (const g of games) for (const d of ['pad', 'keyboard', 'touch']) assert.ok(g.how[d].length >= 1 && g.how[d].length <= 3, g.id + ' ' + d);
   assert.ok(fs.readFileSync(path.join(PLAY, 'index.html'), 'utf8').includes('<script src="src/saves.js"></script>\n<script src="src/shelf.js"></script>'));
+});
+
+test('audit K5 and S7: a played game is kept in the viewer\'s own browser for a quick second start, and the box back shows the top of its picture', () => {
+  const w = fs.readFileSync(path.join(PLAY, 'src', 'core-worker.js'), 'utf8');
+  for (const bit of ["const KEEP_GAMES = 8, KEEP_MAX = 64 * 1024 * 1024, KEPT = 'voidtv-play-games';", 'return !known || b.length === known ? b : null;',
+    'const game = await gameBytes(msg.gameUrl, msg.gameSize);']) assert.ok(w.includes(bit), bit);
+  assert.ok(fs.readFileSync(path.join(PLAY, 'shelf.css'), 'utf8').includes('object-fit:cover;object-position:top;'));
 });
