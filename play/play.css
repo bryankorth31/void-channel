@@ -5,7 +5,10 @@
 html,body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.4 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
 /* No double-tap zoom (Bryan, 20 Nov 2026: on a phone a double tap zoomed the page, and the game area, which takes every
    touch, then blocked the pinch back out). Pinch zoom stays wherever the page allows it. */
-html{touch-action:manipulation}
+/* No double-tap zoom anywhere on the page (Bryan's iPhone report): touch-action is not inherited and a scrolling panel
+   (the pause menu, the cheats list) breaks the chain, so every element says it; the game area and the touch keys keep
+   their own 'none', and pinch zoom stays for anyone who needs it. */
+html,*{touch-action:manipulation}
 a{color:var(--acc)} a:hover{color:#fff}
 button{font:inherit;color:inherit}
 .bar{position:fixed;inset:0 0 auto 0;height:52px;display:flex;align-items:center;gap:12px;padding:0 12px;background:rgba(7,8,12,.92);border-bottom:1px solid var(--line);z-index:5}

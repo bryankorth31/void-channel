@@ -132,7 +132,7 @@ test('T21 player half: a streamed zip reads its table from the end and fetches a
 test('T21 player half: the worker streams only a card marked to stream, by game id, and the local server runs the same Function', () => {
   const fs = require('fs');
   const w = fs.readFileSync(path.join(__dirname, '..', 'src', 'core-worker.js'), 'utf8');
-  for (const bit of ["importScripts('keys.js', 'unzip.js', 'inflate.js', 'lazyzip.js');", 'if (msg.stream && msg.start) {', "x.open('GET', url + '&piece=' + n, false);"]) assert.ok(w.includes(bit), bit);
+  for (const bit of ["['keys.js', 'unzip.js', 'inflate.js', 'lazyzip.js'].map((f) =>", 'if (msg.stream && msg.start) {', "x.open('GET', url + '&piece=' + n, false);"]) assert.ok(w.includes(bit), bit);
   assert.ok(fs.readFileSync(path.join(__dirname, '..', 'src', 'runner.js'), 'utf8').includes("stream: card.archive.stream ? { url: new URL('/api/piece?game=' + encodeURIComponent(card.id), location.href).href, size: card.archive.size } : null,"));
   assert.ok(fs.readFileSync(path.join(__dirname, '..', 'serve.js'), 'utf8').includes("if (p === '/api/piece') return piece(req, res);"));
 });

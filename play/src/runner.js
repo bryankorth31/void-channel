@@ -76,6 +76,9 @@
       const workerUrl = new URL('src/core-worker.js', base);
       // ?v= the engine's build: a new engine never meets an old one in the browser's cache (the js and wasm always match).
       workerUrl.searchParams.set('engine', '../' + PlayCards.engineOf(card) + (version ? '?v=' + version : ''));
+      // The page's build (site.js writes it on voidtv.net): the worker and the scripts it loads are this build's, not a cached older one.
+      const build = typeof document !== 'undefined' ? (document.querySelector('meta[name="play-build"]') || {}).content : null;
+      if (build && /^[0-9a-f]{12}$/.test(build)) workerUrl.searchParams.set('b', build);
       worker = new Worker(workerUrl);
       worker.onmessage = (e) => {
         if (stopped) return;

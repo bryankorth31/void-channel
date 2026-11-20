@@ -92,3 +92,17 @@ test('whole-site audit A24 and A25: the shelf has a visible way back and to TV, 
   const css = read(ROOT, 'shelf.css');
   assert.ok(css.includes('@media (max-height:640px){') && css.includes('.intro p:not(.pad-hint){display:none}'), 'a short window folds the intro away');
 });
+
+test('every PLAY page loads its own style and scripts with the build version, and so does the game worker (an iPhone kept the old play.css)', () => {
+  const site = read(ROOT, '..', 'scripts', 'lib', '..', 'site.js');
+  assert.ok(site.includes("'$1?v=' + v + '\"'") && site.includes('<meta name="play-build" content="'), 'site.js versions the scripts and names the build');
+  const v = '0123456789ab';
+  for (const f of ['index.html', 'game.html', 'pad.html', 'join.html']) {
+    const h = read(ROOT, f).replace(/(src="src\/[a-z0-9-]+\.js)"/g, '$1?v=' + v + '"').replace(/(href="(?:play|shelf)\.css)"/g, '$1?v=' + v + '"');
+    assert.ok(!/src="src\/[a-z0-9-]+\.js"/.test(h) && !/href="(play|shelf)\.css"/.test(h), f + ' has nothing left unversioned');
+  }
+  assert.ok(read(ROOT, 'src', 'runner.js').includes("if (build && /^[0-9a-f]{12}$/.test(build)) workerUrl.searchParams.set('b', build);"));
+  assert.ok(read(ROOT, 'src', 'core-worker.js').includes("f + '?v=' + BUILD"));
+  for (const css of ['play.css', 'shelf.css']) assert.ok(read(ROOT, css).includes('html,*{touch-action:manipulation}'), css);
+  assert.match(read(ROOT, 'play.css'), /\.stage\{[^}]*touch-action:none/, 'the game area keeps every touch');
+});

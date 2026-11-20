@@ -17,7 +17,8 @@ if (self.name === 'em-pthread') importScripts(ENGINE);
 else host();
 
 function host() {
-importScripts('keys.js', 'unzip.js', 'inflate.js', 'lazyzip.js');
+const BUILD = new URLSearchParams(self.location.search).get('b');
+importScripts(...['keys.js', 'unzip.js', 'inflate.js', 'lazyzip.js'].map((f) => (BUILD && /^[0-9a-f]{12}$/.test(BUILD) ? f + '?v=' + BUILD : f)));
 
 let M = null, running = false, paused = false, timer = 0, lastFrame = -1, fps = 60, next = 0;
 // Rewind (audit batch 4, block E; console cores only): the last 20 seconds, in snapshots spaced by a memory budget per
