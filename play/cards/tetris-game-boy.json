@@ -20,5 +20,29 @@
       "P1:Start"
     ]
   },
-  "help": "Left and right move, Down drops faster, A and B turn the piece."
+  "help": "Left and right move, Down drops faster, A and B turn the piece.",
+  "actions": [
+    {
+      "do": "Move the piece",
+      "press": [
+        "P1:Left",
+        "P1:Right"
+      ]
+    },
+    {
+      "do": "Drop faster",
+      "press": "P1:Down"
+    },
+    {
+      "do": "Turn",
+      "press": [
+        "P1:A",
+        "P1:B"
+      ]
+    },
+    {
+      "do": "Start and pause",
+      "press": "P1:Start"
+    }
+  ]
 }

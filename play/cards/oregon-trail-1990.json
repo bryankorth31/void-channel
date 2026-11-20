@@ -51,5 +51,35 @@
   "help": "Pick from a list with its number, then Enter. Space goes on when the game asks you to press it. Type names and answers on the keyboard.",
   "vars": {
     "dosbox_pure_aspect_correction": "true"
-  }
+  },
+  "actions": [
+    {
+      "do": "Pick from a list",
+      "press": "Digit1",
+      "to": "Digit9"
+    },
+    {
+      "do": "Confirm",
+      "press": "Enter"
+    },
+    {
+      "do": "Go on",
+      "press": "Space"
+    },
+    {
+      "do": "Answer yes or no",
+      "press": [
+        "KeyY",
+        "KeyN"
+      ]
+    },
+    {
+      "do": "Type a name",
+      "press": "@keyboard"
+    },
+    {
+      "do": "Back out",
+      "press": "Escape"
+    }
+  ]
 }

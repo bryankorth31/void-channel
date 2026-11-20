@@ -45,10 +45,27 @@
   // While the menu is open the game hears nothing: every held key is let go first, then the gamepad drives the menu.
   function setPaused(p) {
     if (!runner || !started || p === paused) return;
-    if (p) { hub.releaseAll(); paused = true; runner.pause(); }
+    if (p) { hub.releaseAll(); paused = true; runner.pause(); autosave(); }
     else { paused = false; runner.resume(); runner.wakeSound(); }
     $('menu').hidden = !p; $('b-pause').textContent = p ? 'Resume' : 'Pause';
     if (p) $('m-resume').focus({ preventScroll: true }); else $('canvas').focus({ preventScroll: true });
+  }
+
+  // Continue (block C): an automatic slot per game, written when the menu opens, the tab hides, the page closes or Games
+  // is pressed, under the same build rule as a manual save. The start screen then offers Continue.
+  const AUTO = (c) => c.id + ':auto';
+  let autoBusy = false, resumeState = null;
+  async function autosave() {
+    if (!started || !runner || autoBusy) return;
+    autoBusy = true;
+    try { const s = await runner.save(); if (s) await PlaySaves.put(AUTO(card), s, build); } catch (e) { /* best effort */ }
+    autoBusy = false;
+  }
+  function continueGame() {
+    const rec = continueGame.rec;
+    if (!rec) return begin();
+    resumeState = rec.state;
+    begin();
   }
 
   async function save() {
@@ -111,7 +128,7 @@
     if (hub) { hub.pollPads(pads); if (paused) menuPads(pads); else menuWas.clear(); }
     else {
       const down = pads.some((p) => p && p.mapping === 'standard' && ((p.buttons[0] && p.buttons[0].pressed) || (p.buttons[9] && p.buttons[9].pressed)));
-      if (down && !padWasDown && !$('b-play').hidden) begin();
+      if (down && !padWasDown && !$('b-play').hidden) (document.activeElement === $('b-continue') ? continueGame() : begin());
       padWasDown = down;
     }
     requestAnimationFrame(poll);
@@ -123,12 +140,15 @@
 
   function begin() {
     stopGame();
-    $('b-play').hidden = true; status('Starting');
+    $('b-play').hidden = true; $('b-continue').hidden = true; status('Starting');
     deadline = setTimeout(() => fail('The game did not arrive from the Internet Archive in time. Check the connection and press Play to try again.'), DEADLINE_MS);
     runner = PlayRunner.createRunner({ canvas: $('canvas'), mute: q.get('mute') === '1', on: {
       status, error: (t) => fail(t),
       ready: () => { started = true; },
-      firstFrame: () => { clearTimeout(deadline); $('cover').hidden = true; $('canvas').focus({ preventScroll: true }); },
+      firstFrame: () => {
+        clearTimeout(deadline); $('cover').hidden = true; $('canvas').focus({ preventScroll: true });
+        if (resumeState) { const s = resumeState; resumeState = null; runner.load(s).then((ok) => toast(ok ? 'Back where you left off' : 'That spot would not load; starting fresh')); }
+      },
       aspect: (a) => { if (Math.abs(a - aspect) > 0.01) { aspect = a; place(); } },
     } });
     runner.prepareSound();                     // in the Play tap itself, so iPhone and iPad allow the sound
@@ -165,38 +185,40 @@
     $('b-play').textContent = 'Play again'; $('b-play').hidden = false;
   }
 
-  // The three help lines, drawn from the card, so they always say what the keys and buttons really do.
-  const nameOf = (c, code) => (c.controls.labels && c.controls.labels[code]) || PlayTouch.label(code);
-  const SEATS = { A: 'the bottom button', B: 'the right button', X: 'the left button', Y: 'the top button', LB: 'the left shoulder',
-    RB: 'the right shoulder', LT: 'the left trigger', RT: 'the right trigger', Back: 'Back', Start: 'Start', Home: 'the Home button' };
-  function padHelp(c) {
-    const map = Object.assign({ Start: '@menu' }, PlayCards.gamepadMap(c));
-    const say = (v) => (v === '@keyboard' ? 'opens the keyboard' : v === '@menu' ? 'pauses' : 'is ' + nameOf(c, v));
-    const order = ['A', 'B', 'X', 'Y', 'LB', 'RB', 'LT', 'RT', 'Back', 'Start', 'Home'];
-    // A console game names only the buttons that machine has (a Game Boy has no X, Y, L or R).
-    const has = (v) => v[0] === '@' || !PlayCards.isPad(c) || (c.controls.keys || []).includes(v);
-    const parts = order.filter((b) => map[b] && has(map[b])).map((b) => SEATS[b] + ' ' + say(map[b]));
-    if (map.Up) parts.push(PlayCards.isPad(c) ? 'the d-pad and stick move' : 'the d-pad and stick are the arrows');
-    parts.push('Back and Start together pause');
-    const s = parts.join(', ') + '.';
-    return s[0].toUpperCase() + s.slice(1);
+  // The start screen (block B): the item's own picture from the Archive (through /cors/, which this isolated page may
+  // load), the title, year, maker and machine, and the first three actions for the input in hand.
+  const SYSTEM_NAMES = { dos: 'PC (DOS)', a2600: 'Atari 2600', nes: 'NES', snes: 'Super Nintendo', genesis: 'Sega Genesis', sms: 'Master System', gamegear: 'Game Gear', gameboy: 'Game Boy', gbcolor: 'Game Boy Color' };
+  function device() {
+    const pads = navigator.getGamepads ? [...navigator.getGamepads()] : [];
+    if (pads.some((p) => p && p.mapping === 'standard')) return 'pad';
+    return touch ? 'touch' : 'keyboard';
   }
-  function keyboardHelp(c) {
-    const keys = PlayCards.keyMap(c);
-    if (!keys) return 'plays it as the PC did.';
-    const NAMES = { ArrowUp: 'Up', ArrowDown: 'Down', ArrowLeft: 'Left', ArrowRight: 'Right', ShiftRight: 'right Shift', Escape: 'Esc' };
-    const key = (k) => NAMES[k] || k.replace(/^Key/, '');
-    const parts = ['the arrows move'];
-    for (const [k, v] of Object.entries(keys)) {
-      if (/^Arrow/.test(k)) continue;
-      if (v === '@menu') parts.push(key(k) + ' pauses');
-      else if ([...(c.controls.keys || [])].includes(v)) parts.push(key(k) + ' is ' + nameOf(c, v));
+  function cover(c) {
+    $('cover-title').textContent = c.title;
+    $('cover-meta').textContent = [c.year, c.publisher, SYSTEM_NAMES[c.system]].filter(Boolean).join(' · ');
+    const art = $('cover-art');
+    art.onload = () => { art.hidden = false; }; art.onerror = () => { art.hidden = true; };
+    art.src = 'https://archive.org/cors/' + c.archive.item + '/__ia_thumb.jpg';
+    const where = { pad: 'gamepad', touch: 'screen', keyboard: 'keyboard' }[device()];
+    const ul = $('cover-actions'); ul.textContent = '';
+    for (const l of PlayCards.actionLines(c, device() === 'touch' ? 'touch' : device()).filter((x) => x.how).slice(0, 3)) {
+      const li = document.createElement('li'); const b = document.createElement('b'); b.textContent = l.do;
+      li.append(b, ': ' + l.how); ul.appendChild(li);
     }
-    return parts.join(', ') + '.';
+    ul.setAttribute('aria-label', 'How to play on the ' + where);
   }
-  function touchHelp(c) {
-    if (c.controls.keyboard) return 'the keys this game needs sit beside the picture; Keyboard opens the full keyboard for typing.';
-    return 'the d-pad and the game\'s own buttons sit beside the picture.';
+  addEventListener('gamepadconnected', () => { if (card && !started) cover(card); });
+
+  // The pause menu's Controls: the card's actions, each with how to do it on a gamepad, the keyboard and the screen
+  // (PlayCards.actionLines), then one line on how to pause. A game is described once, on its card.
+  function controls(c) {
+    const ul = $('controls'); ul.textContent = '';
+    for (const l of PlayCards.actionLines(c)) {
+      const li = document.createElement('li'); const b = document.createElement('b'); b.textContent = l.do;
+      li.append(b, ': ' + l.how); ul.appendChild(li);
+    }
+    const esc = PlayCards.isPad(c) ? ', Esc on the keyboard' : '';
+    $('pause-how').textContent = 'Pause: Back and Start together on a gamepad' + esc + ', or the Pause button.';
   }
 
   // The PC keyboard: every key the PC knew goes to the game; our own shortcuts stay out of its way.
@@ -216,7 +238,7 @@
   addEventListener('keyup', (e) => keyEvent(e, false));
   addEventListener('pointerdown', () => runner && runner.wakeSound(), { passive: true });
   addEventListener('blur', () => hub && hub.releaseAll());
-  document.addEventListener('visibilitychange', () => { if (document.hidden && started && !paused) setPaused(true); });
+  document.addEventListener('visibilitychange', () => { if (document.hidden && started) { if (!paused) setPaused(true); else autosave(); } });
   addEventListener('resize', place);
 
   $('b-pause').onclick = () => setPaused(!paused);
@@ -228,7 +250,11 @@
   // iPhone has no fullscreen for a web page: the button shows only where the browser can do it.
   if (!document.fullscreenEnabled) $('b-full').hidden = true;
   $('b-full').onclick = () => { if (document.fullscreenElement) document.exitFullscreen(); else document.documentElement.requestFullscreen().catch(() => {}); };
-  $('b-play').onclick = begin;
+  $('b-play').onclick = () => { resumeState = null; begin(); };
+  $('b-continue').onclick = continueGame;
+  // Leaving keeps your place: Games saves first, then goes; a hidden tab or a closing page saves as it can.
+  $('b-games').onclick = (e) => { if (!started) return; e.preventDefault(); const to = e.currentTarget.href; autosave().then(() => { location.href = to; }); };
+  addEventListener('pagehide', () => { autosave(); });
 
   const id = q.get('game') || 'oregon-trail-1990';
   Promise.all([
@@ -244,9 +270,8 @@
     document.title = c.title + ' | PLAY | voidtv.net';
     $('title').textContent = c.title + (c.year ? ' (' + c.year + ')' : '');
     $('help').textContent = c.help || '';
-    $('kb-help').textContent = keyboardHelp(c);
-    $('pad-help').textContent = padHelp(c);
-    $('touch-help').textContent = touchHelp(c);
+    controls(c);
+    cover(c);
     // The footer names this game's own engine, its licence and its exact source (and its licence text when not GPL).
     $('core-name').textContent = core.name; $('core-licence').textContent = core.licence; $('src-core').href = core.source;
     $('core-terms').hidden = !core.terms; if (core.terms) $('core-terms-link').href = core.terms;
@@ -258,7 +283,14 @@
     if (shelf && shelf.games && shelf.games[c.id] && shelf.games[c.id].gone) throw new Error("This game's file is no longer on the Internet Archive, so it is off the shelf. Pick another from Games.");
     if (typeof SharedArrayBuffer === 'undefined' || typeof WebAssembly !== 'object') throw new Error('This browser cannot run PLAY games yet. A current Chrome, Edge, Firefox or Safari can.');
     if (!self.crossOriginIsolated) throw new Error('PLAY cannot start here: this page was served without the settings the engine needs. That is our side, not your browser.');
-    status(c.title + ' is ready'); $('b-play').hidden = false; $('b-play').focus({ preventScroll: true });
+    status(''); $('b-play').hidden = false; $('b-play').focus({ preventScroll: true });
+    // An automatic save from this same build: offer Continue first (focused) and the fresh start as New game.
+    PlaySaves.get(AUTO(c)).then((rec) => {
+      if (!PlaySaves.fits(rec, build) || started) return;
+      continueGame.rec = rec;
+      $('b-continue').hidden = false; $('b-play').textContent = 'New game'; $('b-play').classList.add('second');
+      $('b-continue').focus({ preventScroll: true });
+    }).catch(() => {});
     place();
   }).catch((e) => status(String(e.message || e)));
   place(); poll();

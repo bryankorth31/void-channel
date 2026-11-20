@@ -23,5 +23,29 @@
       "P1:Start": "Reset"
     }
   },
-  "help": "The stick runs and climbs; Fire jumps. Reset starts a new game."
+  "help": "The stick runs and climbs; Fire jumps. Reset starts a new game.",
+  "actions": [
+    {
+      "do": "Run",
+      "press": [
+        "P1:Left",
+        "P1:Right"
+      ]
+    },
+    {
+      "do": "Jump",
+      "press": "P1:B"
+    },
+    {
+      "do": "Climb",
+      "press": [
+        "P1:Up",
+        "P1:Down"
+      ]
+    },
+    {
+      "do": "New game",
+      "press": "P1:Start"
+    }
+  ]
 }

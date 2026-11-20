@@ -24,5 +24,30 @@
       "P1:Start"
     ]
   },
-  "help": "B jumps, A spin-jumps, hold Y to run and carry."
+  "help": "B jumps, A spin-jumps, hold Y to run and carry.",
+  "actions": [
+    {
+      "do": "Move",
+      "press": [
+        "P1:Left",
+        "P1:Right"
+      ]
+    },
+    {
+      "do": "Jump",
+      "press": "P1:B"
+    },
+    {
+      "do": "Spin jump",
+      "press": "P1:A"
+    },
+    {
+      "do": "Run and carry",
+      "press": "P1:Y"
+    },
+    {
+      "do": "Start and pause",
+      "press": "P1:Start"
+    }
+  ]
 }

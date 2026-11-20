@@ -34,5 +34,30 @@
   "help": "Arrows run, climb and crouch; Up jumps. Hold Shift to grab a ledge, step carefully or swing the sword.",
   "vars": {
     "dosbox_pure_aspect_correction": "true"
-  }
+  },
+  "actions": [
+    {
+      "do": "Run",
+      "press": [
+        "ArrowLeft",
+        "ArrowRight"
+      ]
+    },
+    {
+      "do": "Jump",
+      "press": "ArrowUp"
+    },
+    {
+      "do": "Crouch",
+      "press": "ArrowDown"
+    },
+    {
+      "do": "Grab, step carefully, swing the sword",
+      "press": "ShiftLeft"
+    },
+    {
+      "do": "Skip the story",
+      "press": "Enter"
+    }
+  ]
 }

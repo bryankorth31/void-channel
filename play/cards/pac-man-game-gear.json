@@ -24,5 +24,24 @@
       "P1:A": "2"
     }
   },
-  "help": "Steer with the d-pad; Start begins."
+  "help": "Steer with the d-pad; Start begins.",
+  "actions": [
+    {
+      "do": "Steer",
+      "press": [
+        "P1:Up",
+        "P1:Down",
+        "P1:Left",
+        "P1:Right"
+      ]
+    },
+    {
+      "do": "Start",
+      "press": "P1:Start"
+    },
+    {
+      "do": "Choose in the menus",
+      "press": "P1:B"
+    }
+  ]
 }

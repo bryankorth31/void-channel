@@ -61,7 +61,74 @@
   const gameFile = (card) => card.archive.as || card.archive.file.split('/').pop();
   const engineOf = (card) => CORES[card.core].engine;
 
-  const api = { check, gameUrl, itemPage, gameFile, engineOf, CORES, isPad, gamepadMap, keyMap, PAD_GAMEPAD, PAD_KEYBOARD };
+  // Actions (audit batch 4, block A): what the game's buttons DO, in the game's own words. A card lists three to six,
+  // the ones a newcomer needs first: { do: 'Jump', press: 'P1:B' }, press may be a list (any of them: the arrows) or a
+  // range (press: 'Digit1', to: 'Digit9'), or '@keyboard' (the pop-up keyboard). Every help line, the start screen and the
+  // touch keys' small words are drawn from it, so a game is described once and every input speaks its words:
+  // "Jump: A on a gamepad, Z on the keyboard, B on screen".
+  function warnings(card) {
+    const w = [];
+    if (!Array.isArray(card.actions) || card.actions.length < 3) w.push('actions: list the three to six things a newcomer needs first');
+    return w;
+  }
+  const DIGIT = /^Digit(\d)$/;
+  function codesOf(a) {
+    const list = [].concat(a.press);
+    if (a.to && DIGIT.test(list[0]) && DIGIT.test(a.to)) {
+      const from = +list[0].slice(5), to = +a.to.slice(5); const out = [];
+      for (let n = from; n <= to; n++) out.push('Digit' + n);
+      return out;
+    }
+    return list;
+  }
+  const KEY_NAMES = { ArrowUp: 'Up arrow', ArrowDown: 'Down arrow', ArrowLeft: 'Left arrow', ArrowRight: 'Right arrow',
+    Enter: 'Enter', Space: 'Space', Escape: 'Esc', ShiftLeft: 'Shift', ShiftRight: 'right Shift', Backspace: 'Backspace' };
+  const keyName = (k) => KEY_NAMES[k] || k.replace(/^Key|^Digit/, '');
+  const DIRS = ['Up', 'Down', 'Left', 'Right'];
+  const join = (xs) => (xs.length < 3 ? xs.join(' or ') : xs.slice(0, -1).join(', ') + ' or ' + xs[xs.length - 1]);
+  // How to do one action on each kind of input: { pad, keyboard, touch } in plain words ('' when that input cannot).
+  function seatsOf(card, a) {
+    const codes = codesOf(a);
+    const range = a.to ? keyName(codes[0]) + ' to ' + keyName(codes[codes.length - 1]) : null;
+    if (codes[0] === '@keyboard') return { pad: 'Y', keyboard: 'type', touch: 'Keyboard' };
+    const map = gamepadMap(card), keys = keyMap(card);
+    const pad = [], dirs = new Set();
+    for (const [btn, code] of Object.entries(map)) if (codes.includes(code)) (DIRS.includes(btn) ? dirs.add(btn) : pad.push(btn));
+    if (dirs.size) pad.unshift('the d-pad');
+    const kb = keys ? Object.entries(keys).filter(([, v]) => codes.includes(v)).map(([k]) => keyName(k)) : codes.map(keyName);
+    const labels = (card.controls && card.controls.labels) || {};
+    const touchKeys = new Set([...(card.controls.keys || []), ...(card.controls.numbers || [])]);
+    const onScreen = codes.filter((c) => touchKeys.has(c)).map((c) => labels[c] || keyName(c.replace(/^P[1-4]:/, '')));
+    const dpadOnScreen = card.controls.dpad && codes.some((c) => /^(P[1-4]:)?(Up|Down|Left|Right)$|^Arrow/.test(c));
+    // Arrow keys read as one: "the arrow keys", "Left or Right arrow".
+    const arrows = kb.filter((k) => / arrow$/.test(k));
+    const kbWords = arrows.length > 2 && arrows.length === kb.length ? ['the arrow keys']
+      : arrows.length === 2 && kb.length === 2 ? [arrows[0].replace(/ arrow$/, '') + ' or ' + arrows[1]] : kb;
+    // A gamepad reaches only part of a range (four shoulder buttons for nine numbers): say which part.
+    const padReach = range && pad.length ? ' (' + keyName(map[pad[0]]) + ' to ' + keyName(map[pad[pad.length - 1]]) + ')' : '';
+    return {
+      pad: pad.length ? join(pad) + padReach : '',
+      keyboard: range && !keys ? range : kbWords.length === 1 ? kbWords[0] : join(kbWords),
+      touch: range ? range : dpadOnScreen && !onScreen.length ? 'the d-pad' : join(onScreen),
+    };
+  }
+  // One line per action: "Jump: A on a gamepad, Z on the keyboard, B on screen". device narrows it to one input.
+  function actionLines(card, device) {
+    return (card.actions || []).map((a) => {
+      const s = seatsOf(card, a);
+      const parts = device ? [s[device]].filter(Boolean)
+        : [s.pad && s.pad + ' on a gamepad', s.keyboard && s.keyboard + ' on the keyboard', s.touch && s.touch + ' on screen'].filter(Boolean);
+      return { do: a.do, how: parts.join(', ') };
+    });
+  }
+  // The small word under a touch key: the action that key does, if the card names one.
+  function actionFor(card, code) {
+    const a = (card.actions || []).find((x) => codesOf(x).includes(code));
+    return a ? a.do : '';
+  }
+
+  const api = { check, warnings, gameUrl, itemPage, gameFile, engineOf, CORES, isPad, gamepadMap, keyMap, PAD_GAMEPAD, PAD_KEYBOARD,
+    codesOf, seatsOf, actionLines, actionFor };
   if (typeof module === 'object' && module.exports) module.exports = api;
   else root.PlayCards = api;
 })(typeof self !== 'undefined' ? self : this);
