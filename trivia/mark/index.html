@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mark moments | Trivia Night</title>
+<link rel="stylesheet" href="mark.css">
+</head>
+<body>
+<header class="bar">
+  <a class="back" id="back" href="#" title="Back to the list of shows and films" aria-label="Back to the list of shows and films">&larr;</a>
+  <span class="name">Mark moments</span>
+  <span class="tag" title="This page runs on this computer only; it is never on voidtv.net">THIS PC ONLY</span>
+  <span class="where" id="where"></span>
+  <label class="who" title="Your name goes on every moment you save, as the person who picked and approved it">Your name
+    <input id="by" maxlength="40" autocomplete="name" placeholder="Bryan"></label>
+</header>
+
+<div class="cols">
+  <aside class="list" aria-label="Shows and films">
+    <input id="find" type="search" placeholder="Find a show or film" title="Type part of a name to narrow the list">
+    <p class="hint" id="listHint"></p>
+    <ul id="titles"></ul>
+  </aside>
+
+  <main id="work">
+    <section class="empty" id="empty">
+      <h1>Pick a show or film</h1>
+      <p>Best known first, from the fame list. Play an episode, find the few seconds that say the show (the main cast,
+        a famous line, the theme, a frame anyone would know), mark it and save it. Saved moments are what clip rounds play.</p>
+    </section>
+
+    <section id="title" hidden>
+      <div class="row">
+        <h1 id="tname"></h1>
+        <select id="file" title="Which episode to play"></select>
+      </div>
+      <div class="stage">
+        <video id="v" controls preload="metadata" playsinline title="The episode, played from archive.org"></video>
+        <div class="tools">
+          <div class="btns">
+            <button id="b5" title="Back 5 seconds (left arrow with Shift)">-5 s</button>
+            <button id="b1" title="Back 1 second (left arrow)">-1 s</button>
+            <button id="pp" class="main" title="Play or pause (Space)">Play</button>
+            <button id="f1" title="Forward 1 second (right arrow)">+1 s</button>
+            <button id="f5" title="Forward 5 seconds (right arrow with Shift)">+5 s</button>
+          </div>
+          <div class="field"><span>Kind</span>
+            <div class="seg" id="kind">
+              <label title="A scene that says the show: the main cast, a place everyone knows"><input type="radio" name="kind" value="scene" checked>Scene</label>
+              <label title="A famous line; type the words heard below"><input type="radio" name="kind" value="line">Line</label>
+              <label title="The theme song or opening"><input type="radio" name="kind" value="theme">Theme song</label>
+              <label title="One frame, shown as a picture question"><input type="radio" name="kind" value="still">Still</label>
+            </div>
+          </div>
+          <div class="field" id="lenField"><span>Length</span>
+            <div class="seg" id="len">
+              <label title="Play 10 seconds from the start mark"><input type="radio" name="len" value="10" checked>10 s</label>
+              <label title="Play 15 seconds from the start mark"><input type="radio" name="len" value="15">15 s</label>
+            </div>
+          </div>
+          <input id="line" maxlength="200" placeholder="The words heard (for a line)" title="The words of the line, as said" hidden>
+          <input id="note" maxlength="200" placeholder="Note (optional): who is on screen, what happens" title="A note for whoever reads the moment later">
+          <div class="btns">
+            <button id="markStart" class="main" title="Mark the start here, at the time the video is at now (M)">Mark start here</button>
+            <button id="preview" title="Play just the marked stretch (P)" disabled>Play the moment</button>
+            <button id="save" class="go" title="Save the moment with your name (checked against the catalog first)" disabled>Save moment</button>
+          </div>
+          <p class="marked" id="marked">Nothing marked yet.</p>
+          <p class="status" id="status" role="status"></p>
+        </div>
+      </div>
+      <h2>Saved for this title <span id="count"></span></h2>
+      <ul class="saved" id="saved"></ul>
+    </section>
+  </main>
+</div>
+<script src="mark.js"></script>
+</body>
+</html>
