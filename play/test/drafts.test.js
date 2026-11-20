@@ -46,3 +46,13 @@ test('G4: the approve page and the drafts stay on this PC, only a page from the 
   const html = fs.readFileSync(path.join(PLAY, 'tools', 'approve.html'), 'utf8');
   for (const label of ['Try it', 'Shelf and Kids', 'Skip']) assert.ok(html.includes("'" + label + "'"), label);
 });
+
+test('audit D-1, D-2 and the boot results: the approve API answers this computer\'s own address only, shows the boot checks, and a slow DOS start says so', () => {
+  const serve = fs.readFileSync(path.join(PLAY, 'serve.js'), 'utf8');
+  assert.ok(serve.includes("if (!/^(127\.0\.0\.1|localhost)(:\d+)?$/.test(req.headers.host || '')) return send(res, 403, { error: 'This computer only' });"));
+  assert.ok(serve.includes("'audit', 'play-mode', 'drafts-boot', col + '.json'"));
+  assert.ok(fs.readFileSync(path.join(PLAY, 'tools', 'approve.html'), 'utf8').includes("'Boots: first picture at '"));
+  const js = fs.readFileSync(path.join(PLAY, 'src', 'play.js'), 'utf8');
+  assert.ok(js.includes("if (!PlayCards.isPad(card)) blankWatch();"));
+  assert.ok(js.includes("toast('Older games can take half a minute to start')"));
+});

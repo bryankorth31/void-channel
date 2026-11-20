@@ -179,6 +179,7 @@
       firstFrame: () => {
         clearTimeout(deadline); $('cover').hidden = true; $('canvas').focus({ preventScroll: true }); stayAwake(true); armBack();
         if (isPhone() && innerHeight > innerWidth && PlayCards.isPad(card)) toast('Turn your phone sideways for a bigger picture');
+        if (!PlayCards.isPad(card)) blankWatch();
         if (resumeState) { const s = resumeState; resumeState = null; runner.load(s).then((ok) => toast(ok ? 'Back where you left off' : 'That spot would not load; starting fresh')); }
       },
       aspect: (a) => { if (Math.abs(a - aspect) > 0.01) { aspect = a; place(); } },
@@ -193,6 +194,24 @@
     runner.start(card, base, build.commit.slice(0, 12));
     autoTimer = setInterval(() => { if (started && !paused && !document.hidden) autosave(); }, AUTO_EVERY_MS);
     place.sig = ''; place();
+  }
+
+  // Audit D-2: some older DOS games keep the screen black for up to half a minute after they start. While the picture
+  // has no more than a couple of colours, say so now and then, so nobody thinks it froze; stop once it shows something.
+  function blankWatch() {
+    const t0 = Date.now(), cv = $('canvas');
+    const said = new Set();
+    const tick = setInterval(() => {
+      if (!started || !runner || Date.now() - t0 > 30000) return clearInterval(tick);
+      let colours = new Set();
+      try {
+        const d = cv.getContext('2d').getImageData(0, 0, cv.width, cv.height).data;
+        for (let i = 0; i < d.length && colours.size < 4; i += 4 * 97) colours.add((d[i] << 16) | (d[i + 1] << 8) | d[i + 2]);
+      } catch (e) { return clearInterval(tick); }
+      if (colours.size > 2) return clearInterval(tick);
+      const at = Math.floor((Date.now() - t0) / 1000);
+      for (const s of [3, 15]) if (at >= s && !said.has(s)) { said.add(s); toast('Older games can take half a minute to start'); }
+    }, 1000);
   }
 
   // Couch mode (plan T18): say when a seat changes hands, and pause when a playing pad drops (a flat battery), the way

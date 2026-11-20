@@ -29,6 +29,7 @@ button:disabled{opacity:.5;cursor:default}
 .acts{display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-end}
 .done{opacity:.45}
 .said{font-size:13px;color:var(--ok)}
+.boot{font-size:13px}.boot.ok{color:var(--ok)}.boot.bad{color:var(--pink)}
 @media (max-width:640px){.row{grid-template-columns:72px 1fr}.row img{width:72px;height:54px}.acts{grid-column:1/-1;justify-content:flex-start}}
 </style>
 </head>
@@ -46,7 +47,7 @@ button:disabled{opacity:.5;cursor:default}
 (function () {
   'use strict';
   const $ = (id) => document.getElementById(id);
-  let all = [];
+  let all = [], boot = {};
   const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
   function fill(sel, values, keep) {
     const was = sel.value; sel.textContent = '';
@@ -67,6 +68,9 @@ button:disabled{opacity:.5;cursor:default}
       mid.append(el('h2', null, d.title),
         el('div', 'meta', [d.system, d.year, d.publisher, Math.round((d.archive.size || 0) / 1024) + ' KB', d.archive.item].filter(Boolean).join(' · ')));
       if (d.draft && d.draft.needs && d.draft.needs.length) mid.appendChild(el('div', 'needs', 'Look at: ' + d.draft.needs.join(', ')));
+      // The auditor's boot check, when there is one: whether it reached a title or game screen, and how soon.
+      const b = boot[d.collection] && boot[d.collection].results && boot[d.collection].results[d.id];
+      if (b) mid.appendChild(el('div', b.boots ? 'boot ok' : 'boot bad', b.boots ? 'Boots: first picture at ' + b.first_picture_s + ' s (' + b.seen + ')' : 'Did not boot in the check: ' + (b.seen || 'no picture')));
       const acts = el('div', 'acts');
       const tryIt = el('a', 'btn', 'Try it');
       tryIt.href = '../game.html?game=' + encodeURIComponent(d.id) + '&draft=' + encodeURIComponent(d.collection) + '&mute=1';
@@ -97,6 +101,7 @@ button:disabled{opacity:.5;cursor:default}
     } catch (e) { said.textContent = 'That did not work: ' + e.message; for (const b of btns) b.disabled = false; }
   }
   fetch('/api/drafts').then((r) => r.json()).then((j) => {
+    boot = j.boot || {};
     all = j.drafts.sort((a, b) => a.title.localeCompare(b.title));
     fill($('col'), [...new Set(all.map((d) => d.collection))].sort(), true);
     fill($('sys'), [...new Set(all.map((d) => d.system))].sort(), true);

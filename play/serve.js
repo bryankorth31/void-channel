@@ -58,6 +58,8 @@ const DRAFTS = path.join(PLAY, 'drafts');
 const send = (res, code, obj) => { res.writeHead(code, Object.assign({ 'content-type': 'application/json' }, PLAIN)); res.end(JSON.stringify(obj)); };
 const safeName = (x) => typeof x === 'string' && /^[A-Za-z0-9._-]{1,120}$/.test(x);
 function drafts(req, res) {
+  // Audit D-1: this computer's own address only, so a web page that points a borrowed name at 127.0.0.1 gets nothing.
+  if (!/^(127\.0\.0\.1|localhost)(:\d+)?$/.test(req.headers.host || '')) return send(res, 403, { error: 'This computer only' });
   if (req.method === 'GET') {
     const out = [];
     for (const col of fs.existsSync(DRAFTS) ? fs.readdirSync(DRAFTS).filter((d) => fs.statSync(path.join(DRAFTS, d)).isDirectory()) : []) {
@@ -65,7 +67,12 @@ function drafts(req, res) {
         try { out.push(Object.assign({ collection: col }, JSON.parse(fs.readFileSync(path.join(DRAFTS, col, f), 'utf8')))); } catch (e) { /* a broken draft is left out */ }
       }
     }
-    return send(res, 200, { drafts: out });
+    // The auditor's boot checks (audit/play-mode/drafts-boot/<collection>.json, on this PC only), when there are any.
+    const boot = {};
+    for (const col of new Set(out.map((x) => x.collection))) {
+      try { boot[col] = JSON.parse(fs.readFileSync(path.join(PLAY, '..', 'audit', 'play-mode', 'drafts-boot', col + '.json'), 'utf8')); } catch (e) { /* none yet */ }
+    }
+    return send(res, 200, { drafts: out, boot });
   }
   if (req.method !== 'POST' || req.headers['sec-fetch-site'] !== 'same-origin') return send(res, 403, { error: 'Only the approve page on this PC may decide' });
   let body = '';
