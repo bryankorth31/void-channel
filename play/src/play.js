@@ -12,7 +12,9 @@
   const q = new URLSearchParams(location.search);
   const $ = (id) => document.getElementById(id);
   const base = new URL('./', location.href);
-  const touchWanted = q.get('touch') === '1' || (q.get('touch') !== '0' && matchMedia('(pointer: coarse)').matches);
+  // A TV's browser (plan T24): played with its remote or a gamepad, so it never draws the touch pad.
+  const isTV = /SMART-TV|SmartTV|Tizen|Web0S|webOS|BRAVIA|Android TV|GoogleTV|CrKey|AFT[A-Z]|Roku|HbbTV/i.test(navigator.userAgent);
+  const touchWanted = q.get('touch') === '1' || (q.get('touch') !== '0' && !isTV && matchMedia('(pointer: coarse)').matches);
   let card = null, build = null, runner = null, hub = null, pad = null, aspect = 4 / 3, touch = touchWanted, paused = false, started = false;
 
   for (const e of document.querySelectorAll('#donate-line, .donate-line')) e.textContent = DONATE_LINE;
@@ -170,7 +172,7 @@
       status, error: (t) => fail(t),
       ready: () => { started = true; },
       firstFrame: () => {
-        clearTimeout(deadline); $('cover').hidden = true; $('canvas').focus({ preventScroll: true }); stayAwake(true);
+        clearTimeout(deadline); $('cover').hidden = true; $('canvas').focus({ preventScroll: true }); stayAwake(true); armBack();
         if (isPhone() && innerHeight > innerWidth && PlayCards.isPad(card)) toast('Turn your phone sideways for a bigger picture');
         if (resumeState) { const s = resumeState; resumeState = null; runner.load(s).then((ok) => toast(ok ? 'Back where you left off' : 'That spot would not load; starting fresh')); }
       },
@@ -252,7 +254,27 @@
   }
 
   // The PC keyboard: every key the PC knew goes to the game; our own shortcuts stay out of its way.
+  // Back (plan T24): a TV remote's Back, a phone's back gesture or the browser's Back opens the pause menu instead of
+  // leaving the game; Back again from the menu leaves. Done with one history step pushed when the game starts.
+  const BACK_KEYS = new Set(['GoBack', 'BrowserBack']);
+  const BACK_CODES = new Set([461, 10009]); // webOS and Tizen remotes
+  let backArmed = false;
+  function armBack() { if (!backArmed) { history.pushState({ play: 1 }, ''); backArmed = true; } }
+  addEventListener('popstate', () => {
+    if (!backArmed) return;
+    backArmed = false;
+    if (started && !paused) { setPaused(true); armBack(); } // first Back: the menu; the next one leaves
+    else history.back();
+  });
+  function remoteKey(e) {
+    if (!started) return false;
+    if (BACK_KEYS.has(e.key) || BACK_CODES.has(e.keyCode)) { e.preventDefault(); if (!paused) setPaused(true); else history.back(); return true; }
+    if (e.key === 'MediaPlayPause' || e.key === 'MediaPause' || e.key === 'MediaPlay') { e.preventDefault(); setPaused(e.key === 'MediaPlay' ? false : e.key === 'MediaPause' ? true : !paused); return true; }
+    return false;
+  }
+
   function keyEvent(e, down) {
+    if (down && remoteKey(e)) return;
     if (runner) runner.wakeSound();
     // Keys go to the game unless the pause menu is open and has the focus. A hidden panel never keeps them.
     if (!hub || !started || (!$('menu').hidden && e.target.closest('.menu'))) return;
