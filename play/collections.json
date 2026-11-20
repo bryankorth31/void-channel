@@ -1,6 +1,8 @@
 {
  "about": "Plan C1: the collections whose games go on the PLAY shelf by themselves once they pass the start-up check. Only Bryan adds a line.",
  "rule": "Finished games only, flagged adult and abusive titles kept out (Bryan, 20 Nov 2026: \"Yes, that rule\"); nothing from a collection on Kids; gambling and horror held until he says.",
+ "adultShelf": false,
+ "adultShelfWhy": "Off until Bryan rules: his two relayed answers differ (gated, or kept out everywhere).",
  "collections": [
   {"name":"sega_genesis_library","system":"genesis","kids":false,"leaveOut":["genesisvariations","sonicromhacks"],"approvedBy":"Bryan, 20 Nov 2026: \"Yes that's right ... pull in the Sega libraries\"","at":"2026-11-20"},
   {"name":"sega_sms_library","system":"sms","kids":false,"approvedBy":"Bryan, 20 Nov 2026: \"Yes that's right ... pull in the Sega libraries\"","at":"2026-11-20"},

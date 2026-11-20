@@ -119,3 +119,11 @@ test('the audit on finished games: item and file names count, and a date after t
   assert.equal(snes.length, 1, 'a real game with an upload date stays'); assert.equal(snes[0].year, null, 'and loses the wrong year');
   assert.equal(Lib.build([row({ system: 'gbcolor', title: 'Pokemon Crystal Version', item: 'pokemon-crystal-polish-version', file: 'p.gbc', size: 2097152, year: 2001 })], { ids: [], items: [] }).length, 0, 'a translation');
 });
+
+test('the audit: an adult word in the title, or a personal upload with no year and no maker, stays off; no 18+ bundles until Bryan turns them on', () => {
+  assert.equal(Lib.build([row({ title: 'NBA Jam XXX', item: 'nba-jam-0000' })], { ids: [], items: [] }).length, 0);
+  assert.equal(Lib.build([row({ source: 'personal upload', year: undefined, publisher: '', maker: '' })], { ids: [], items: [] }).length, 0);
+  const c = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'collections.json'), 'utf8'));
+  assert.equal(c.adultShelf, false, 'off until Bryan rules');
+  assert.ok(!fs.readdirSync(path.join(__dirname, '..', 'library')).some((d) => d.startsWith('adult-')), 'no 18+ bundle in the tree');
+});

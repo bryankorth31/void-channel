@@ -23,6 +23,7 @@ const LIB = path.join(PLAY, 'library');
 const PER = 500;
 
 const collections = () => JSON.parse(fs.readFileSync(path.join(PLAY, 'collections.json'), 'utf8')).collections;
+const adultOn = () => JSON.parse(fs.readFileSync(path.join(PLAY, 'collections.json'), 'utf8')).adultShelf === true;
 
 // Pure (tested): the cards for one system's rows, given the ids and items the hand-made cards already hold. adult: the
 // 18+ shelf's cards instead (Bryan, 20 Nov 2026: adult-themed games behind a gate; the abusive ones "are bad": never).
@@ -71,6 +72,10 @@ function finished(r) {
   if (r.weed === 'keep') return true;
   if (UNFINISHED.test(name) || HELD.test(name) || FAN.test(name)) return false;
   if (r.likelyHack) return false;
+  // The content screen's words, read again from the title itself (the audit: NBA Jam XXX), and a personal upload with
+  // no year and no maker (half of those were hacks: Pokemon Prism, SMB 3 MIX); Bryan's weed-down keeps the real ones.
+  if (/\b(xxx|porn\w*|hentai|nude|naked|sex\w*|erotic|blowjob|fuck\w*)\b/i.test(name)) return false;
+  if (r.source !== 'curated' && !r.year && !String(r.maker || r.publisher || '').trim()) return false;
   // Dated after its machine's life: doubtful, unless Wikidata knows it as a game on that machine (then the date is the
   // upload's, and the card leaves the year empty rather than put the game in the wrong decade).
   // Wikidata's match is by name ("dk2" matched Donkey Kong 2), so a late date also needs a real dump's region tag.
@@ -120,7 +125,8 @@ function main() {
     const cards = build(readRows(system).concat(fromTop ? topRows(system, top, readWeed(system)) : []), taken);
     for (const c of cards) { taken.ids.push(c.id); taken.items.push(c.archive.item); }
     // The 18+ shelf's games for this machine, in their own bundles (adult-<machine>/<n>), never on the main shelf.
-    const adult = build(readRows(system).concat(fromTop ? topRows(system, top, readWeed(system)) : []), taken, true);
+    // Only when Bryan has turned the 18+ shelf on in play/collections.json ("adultShelf": true); off until he rules.
+    const adult = adultOn() ? build(readRows(system).concat(fromTop ? topRows(system, top, readWeed(system)) : []), taken, true) : [];
     for (const c of adult) { taken.ids.push(c.id); taken.items.push(c.archive.item); }
     for (const b of bundles(system, cards).concat(bundles('adult-' + system, adult))) {
       const f = path.join(LIB, b.name + '.json');
