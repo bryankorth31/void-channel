@@ -51,19 +51,33 @@
       };
     }
 
-    // A screen faster than 60 Hz would run the game fast (one 1/60 s step per browser frame): measure the browser's frame
-    // rate for a second, then let MAME's loop run every n-th frame (1 on 60 Hz, 2 on 120 Hz).
-    // Some panes and covered windows say 'visible' yet fire few or no frames, and the game would crawl or stop. So the
-    // pace is decided once: browser frames when they come at least 30 a second, else a 60 Hz timer, with the loop woken
-    // once (it may be waiting on a frame that never comes). A hidden tab simply waits, as it should.
+    // Each turn of MAME's loop emulates 1/60 s. Audit AR6: on any screen (60, 75, 90, 120, 144 Hz) the game keeps real
+    // speed when it is paced by time, not by counting frames: the loop is offered every browser frame, and a hook before
+    // each turn lets it run only when 1/60 s of real time has built up since the last (Emscripten skips a turn when a
+    // pre-main-loop hook answers false). Some panes and covered windows say 'visible' yet fire few or no frames; there
+    // the loop goes on a 60 Hz timer instead and is woken once. A hidden tab simply waits, as it should.
+    const STEP = 1000 / 60;
+    function gate() {
+      let owed = 0, last = performance.now();
+      return () => {
+        const now = performance.now();
+        owed = Math.min(owed + (now - last), 3 * STEP);   // after a pause or a stall, catch up a little, never race
+        last = now;
+        if (owed < STEP - 1) return false;
+        owed -= STEP;
+        return true;
+      };
+    }
     function pace() {
       let n = 0, first = 0, decided = false;
       const decide = (rate) => {
         if (decided) return;
         decided = true;
         try {
-          if (rate >= 30) root._emscripten_set_main_loop_timing(1, Math.max(1, Math.round(rate / 60)));
-          else { root._emscripten_set_main_loop_timing(0, 1000 / 60); if (root.MainLoop && root.MainLoop.scheduler) root.MainLoop.scheduler(); }
+          if (rate >= 30) {
+            root._emscripten_set_main_loop_timing(1, 1);
+            if (root.MainLoop && root.MainLoop.preMainLoop) root.MainLoop.preMainLoop.push(gate());
+          } else { root._emscripten_set_main_loop_timing(0, STEP); if (root.MainLoop && root.MainLoop.scheduler) root.MainLoop.scheduler(); }
         } catch (e) { /* keep the default */ }
       };
       const count = (now) => {

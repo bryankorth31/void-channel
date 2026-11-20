@@ -131,7 +131,15 @@ test('arcade (B, 20 Nov 2026: "Current MAME", "No line"): MAME runs from its own
   assert.equal(joust.firstBoot.resetAt, 12, 'a Williams first boot goes on with one soft reset');
   assert.ok(ar.includes("manager.machine:soft_reset()") && ar.includes("args.push('-autoboot_script', '/lua/firstboot.lua')"));
   assert.ok(ar.includes("'-nothrottle', '-nosleep'"), 'the browser frames alone pace MAME');
-  assert.ok(ar.includes('if (rate >= 30) root._emscripten_set_main_loop_timing(1, Math.max(1, Math.round(rate / 60)));'), 'a 120 Hz screen does not double the speed');
-  assert.ok(ar.includes('root._emscripten_set_main_loop_timing(0, 1000 / 60); if (root.MainLoop && root.MainLoop.scheduler) root.MainLoop.scheduler();'), 'a page with no frames falls back to a timer');
+  assert.ok(ar.includes('root.MainLoop.preMainLoop.push(gate());'), 'audit AR6: paced by time, so every refresh rate gives real speed');
+  // The gate itself: on a 144 Hz screen it lets 60 turns a second through.
+  const gateSrc = ar.slice(ar.indexOf('const STEP = 1000 / 60;'), ar.indexOf('    function pace() {'));
+  const mk = new Function('performance', gateSrc + 'return gate;');
+  let clock = 0; const g = mk({ now: () => clock })();
+  let runs = 0; for (let i = 0; i < 144 * 10; i++) { clock += 1000 / 144; if (g()) runs++; }
+  assert.ok(Math.abs(runs - 600) <= 2, 'about 600 turns in 10 s at 144 Hz, got ' + runs);
+  clock = 0; const g2 = mk({ now: () => clock })(); runs = 0; for (let i = 0; i < 75 * 10; i++) { clock += 1000 / 75; if (g2()) runs++; }
+  assert.ok(Math.abs(runs - 600) <= 2, 'about 600 turns in 10 s at 75 Hz, got ' + runs);
+  assert.ok(ar.includes('root._emscripten_set_main_loop_timing(0, STEP); if (root.MainLoop && root.MainLoop.scheduler) root.MainLoop.scheduler();'), 'a page with no frames falls back to a timer');
   assert.ok(ar.includes("'-nojoystick'"), 'audit AR4: the pad reaches MAME through the hub only');
 });
