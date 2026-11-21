@@ -24,7 +24,7 @@ information". And: "also use this for cast, and kids, across the entire voidtv u
   - While phones are in the room, a question pops up 3 minutes into an episode and then every 5 minutes, the same moment for everyone on the channel (`popAt` in `src/remote.js`).
   - The big screen shows only a small icon in the picture's top corner, with "1 of 2 answered" and then "got it", fading out after the result. The question is on the phones, which buzz.
   - The question is the clip chat's line just said (`trivia/src/timed.js`) when one is approved for that moment. Otherwise it is one about the show as a whole that gives nothing away (`trivia/src/live.js`, during).
-  - Never on kids channels, never in the last minute of an episode. The icon's look is one setting, `ICON` in `src/voidtv.js`.
+  - Never on kids channels, never in the last minute of an episode. The icon's look is one setting, `ICON` in `src/voidtv.js`: the little neon TV as HQ shows it, in a circle (Bryan, 20 Nov 2026: "the lil neon tv used in the hq").
 
 ## How it is built
 

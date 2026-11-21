@@ -111,12 +111,12 @@
 
   // The icon: small, in the picture's top corner, a slow fade in and out (no flashing). It counts the phones that answered,
   // then the ones that got it. Clicking it shows the remote's code, so another phone can join. ICON is the one setting for
-  // its look (Bryan picks it).
-  const ICON = '<img src="' + (typeof BASE === 'string' ? BASE : '/') + 'assets/brand/icon-192.png" alt=""><b>?</b>';
-  const ICON_CSS = '.vtv-pop{position:absolute;top:14px;right:14px;z-index:30;width:64px;height:64px;cursor:pointer;opacity:0;transition:opacity .8s ease;pointer-events:none}'
-    + '.vtv-pop.vtv-pop-on{opacity:1;pointer-events:auto}.vtv-pop img{width:100%;height:100%;display:block;border-radius:14px;filter:drop-shadow(0 2px 10px rgba(0,0,0,.6))}'
-    + '.vtv-pop b{position:absolute;right:-6px;bottom:-4px;width:26px;height:26px;border-radius:50%;background:#5fd4ff;color:#07080c;font:800 17px/26px system-ui,sans-serif;text-align:center}'
-    + '.vtv-pop i{position:absolute;left:50%;top:100%;transform:translateX(-50%);margin-top:4px;white-space:nowrap;font:700 12px system-ui,sans-serif;font-style:normal;color:#fff;background:rgba(7,8,12,.75);border-radius:999px;padding:2px 8px}'
+  // its look: the little neon TV as HQ shows it in its header (Bryan, 20 Nov 2026: "the lil neon tv used in the hq"), the
+  // site's own icon in a circle.
+  const ICON = '<img src="' + (typeof BASE === 'string' ? BASE : '/') + 'assets/brand/icon-192.png" alt="">';
+  const ICON_CSS = '.vtv-pop{position:absolute;top:14px;right:14px;z-index:30;width:52px;height:52px;cursor:pointer;opacity:0;transition:opacity .8s ease;pointer-events:none}'
+    + '.vtv-pop.vtv-pop-on{opacity:1;pointer-events:auto}.vtv-pop img{width:100%;height:100%;display:block;border-radius:50%;filter:drop-shadow(0 2px 10px rgba(0,0,0,.6))}'
+    + '.vtv-pop i{position:absolute;right:0;top:100%;margin-top:4px;white-space:nowrap;font:700 12px system-ui,sans-serif;font-style:normal;color:#fff;background:rgba(7,8,12,.75);border-radius:999px;padding:2px 8px}'
     + '.vtv-pop i:empty{display:none}';
   let icon = null, iconKey = '';
   function popIcon(z) {
