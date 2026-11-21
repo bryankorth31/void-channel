@@ -38,7 +38,7 @@ test('a DOS range reads as a range, and the gamepad says which part it reaches',
 
 test('one input at a time, for the start screen', () => {
   const pad = Cards.actionLines(byId('super-mario-world'), 'pad').map((l) => l.do + ': ' + l.how);
-  assert.deepEqual(pad.slice(0, 2), ['Move: d-pad Left or Right', 'Jump: the bottom button (A)']);
+  assert.deepEqual(pad.slice(0, 2), ['Move: d-pad Left or Right', 'Jump: the right button (B)']);
 });
 
 test('the start screen shows the item picture through /cors/, and Continue comes from a same-build automatic save', () => {
@@ -75,7 +75,7 @@ test('C1: play saves itself every 30 seconds too, since a closing page cannot fi
 test('A1 to A3: directions are named, buttons by their place, and no action prints without a way to do it', () => {
   const lines = (id, dev) => Object.fromEntries(Cards.actionLines(byId(id), dev).map((l) => [l.do, l.how]));
   assert.equal(lines('tetris-game-boy')['Drop faster'], 'd-pad Down on a gamepad, Down arrow on the keyboard, d-pad Down on screen');
-  assert.equal(lines('super-mario-world', 'pad').Jump, 'the bottom button (A)');
+  assert.equal(lines('super-mario-world', 'pad').Jump, 'the right button (B)');
   assert.ok(!('Answer yes or no' in lines('oregon-trail-1990', 'pad')));
   for (const c of cards) for (const dev of ['pad', 'keyboard', 'touch']) for (const l of Cards.actionLines(c, dev)) assert.ok(l.how, c.id + ' ' + dev + ' ' + l.do);
 });

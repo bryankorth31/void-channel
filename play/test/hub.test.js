@@ -165,3 +165,24 @@ test('steady directions (Bryan, Golden Axe: "really kind of touchy"): wide strai
   assert.equal(at(0, 0.25, 0), 'R', 'letting go needs the thumb nearer the centre than pressing');
   assert.equal(at(0, 0.2, 0), '');
 });
+
+test('a Genesis keeps its A B C by place on a gamepad (left, bottom, right), not by letter', () => {
+  const Cards = require('../src/cards.js');
+  const m = Cards.gamepadMap({ system: 'genesis', controls: { kind: 'pad' } });
+  assert.equal(m.A, 'P1:B'); assert.equal(m.B, 'P1:A'); assert.equal(m.X, 'P1:Y');
+  const n = Cards.gamepadMap({ system: 'nes', controls: { kind: 'pad' } });
+  assert.equal(n.A, 'P1:A'); assert.equal(n.B, 'P1:B');
+});
+
+test('Bryan, 20 Nov 2026 (a Bluetooth controller on his phone: "the A and B buttons were reversed"): on a Nintendo game the button marked A presses the game’s A, on an Xbox-marked pad and on a Nintendo-made one', () => {
+  const Hub = require('../src/hub.js'), Cards = require('../src/cards.js');
+  const card = { system: 'snes', controls: { kind: 'pad' } };
+  const press = (id, i) => ({ index: 0, id, mapping: 'standard', buttons: Array.from({ length: 17 }, (_, n) => ({ pressed: n === i, value: n === i ? 1 : 0 })), axes: [0, 0, 0, 0] });
+  for (const [id, bottom, right] of [['Xbox Wireless Controller', 'P1:A', 'P1:B'], ['Pro Controller (Vendor: 057e Product: 2009)', 'P1:B', 'P1:A']]) {
+    const sent = [];
+    const hub = Hub.createHub({ send: (c, d) => { if (d) sent.push(c); } });
+    hub.setCard(card, Cards.gamepadMap(card));
+    hub.pollPads([press(id, Hub.BUTTONS.A)]); hub.pollPads([press(id, -1)]); hub.pollPads([press(id, Hub.BUTTONS.B)]);
+    assert.deepEqual(sent, [bottom, right], id);
+  }
+});

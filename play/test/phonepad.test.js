@@ -249,7 +249,7 @@ test('the stuck-key guard: a phone that goes silent with a direction held lets g
 test('the pad shows the game\'s own buttons: only what the machine has, its letters, its shape, what each does', () => {
   // A Nintendo game: B and A, Select and Start. Before, the phone drew Y, X, B, A, LB and RB, lettered as an Xbox pad.
   const nes = phoneCard('mario-bros-nes');
-  assert.deepEqual(nes.keys.filter((k) => k.at === 'face').map((k) => k.t + '=' + k.n), ['B=A', 'A=B'], 'the machine\'s B is the pad\'s bottom button');
+  assert.deepEqual(nes.keys.filter((k) => k.at === 'face').map((k) => k.t + '=' + k.n), ['B=B', 'A=A'], 'each button sends its own letter (Bryan, 20 Nov 2026: a pad\'s A presses the game\'s A)');
   assert.equal(nes.shape, 'pair'); assert.equal(nes.cols, 2);
   assert.ok(!nes.keys.some((k) => k.at === 'left' || k.at === 'right'), 'no L or R on a machine without them');
   assert.deepEqual(nes.keys.filter((k) => k.at === 'pill').map((k) => k.t + '=' + k.n), ['Select=Back', 'Start=Start', 'Menu=Back+Start']);

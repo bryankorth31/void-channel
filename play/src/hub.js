@@ -8,6 +8,8 @@
   const BUTTONS = { A: 0, B: 1, X: 2, Y: 3, LB: 4, RB: 5, LT: 6, RT: 7, Back: 8, Start: 9, L3: 10, R3: 11,
     Up: 12, Down: 13, Left: 14, Right: 15, Home: 16 };
   const STICK = 0.5;   // how far a stick must lean to count as a direction
+  // A pad made by Nintendo (vendor 057e: the Switch Pro Controller, Joy-Con) prints its letters the Nintendo way.
+  const NINTENDO = /057e|nintendo|pro controller|joy-?con/i;
 
   // Steady directions (Bryan, 20 Nov 2026, Golden Axe: "really kind of touchy ... I just can't hold that"; the assistant
   // measured the game's speed right, so the feel was the input). One rule for the touch d-pad and the stick: eight
@@ -57,7 +59,9 @@
     // An arcade machine's second player has keys of their own (MAME: R F D G to move, A S Q to fire), not a renumbered
     // console button: card.gamepadSeats = { 2: { A: 'KeyA', Up: 'KeyR', ... } } gives a seat its own map.
     let seatMaps = {};
+    let console_ = false;
     function setCard(card, full) {
+      console_ = !!(card && card.controls && card.controls.kind === 'pad' && ['nes', 'snes', 'gameboy', 'gbcolor', 'gba'].includes(card.system));   // as cards.js BY_LETTER
       map = Object.assign({ Start: '@menu' }, full || (card && card.gamepad) || {});
       shift = (card && card.gamepadShift && card.gamepadShift.on && card.gamepadShift.map) ? card.gamepadShift : null;
       players = Math.max(1, Math.min(4, (card && card.players) || 1));
@@ -107,10 +111,14 @@
       if (on(BUTTONS.Back) && on(BUTTONS.Start)) { codes.add('@menu'); return codes; }
       // While the shift button is held, the second set answers and the shift button itself sends nothing.
       const m = shift && on(BUTTONS[shift.on]) ? shift.map : (seatMaps[player] || map);
+      // A Nintendo-made pad is marked B at the bottom and A on the right (the browser still calls the bottom one "A"), so
+      // for a console game its letters are read as printed: the button marked A presses the game's A.
+      const swap = console_ && NINTENDO.test(pad.id || '') ? { A: 'B', B: 'A', X: 'Y', Y: 'X' } : null;
       for (const [name, idx] of Object.entries(BUTTONS)) {
         if (shift && name === shift.on) continue;
         const b = pad.buttons && pad.buttons[idx];
-        if (b && (b.pressed || b.value > 0.5) && m[name]) codes.add(seat(m[name]));
+        const as = swap && swap[name] ? swap[name] : name;
+        if (b && (b.pressed || b.value > 0.5) && m[as]) codes.add(seat(m[as]));
       }
       const ax = (pad.axes && pad.axes[0]) || 0, ay = (pad.axes && pad.axes[1]) || 0;
       if (m.Stick !== 'none') {

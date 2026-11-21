@@ -42,7 +42,15 @@
     KeyZ: 'P1:B', KeyX: 'P1:A', KeyA: 'P1:Y', KeyS: 'P1:X', KeyQ: 'P1:L', KeyW: 'P1:R', Enter: 'P1:Start',
     ShiftRight: 'P1:Select', Escape: '@menu', KeyR: '@rewind' };
   const isPad = (card) => !!(card && card.controls && card.controls.kind === 'pad');
-  const gamepadMap = (card) => Object.assign({}, isPad(card) ? PAD_GAMEPAD : {}, (card && card.gamepad) || {});
+  // On a Nintendo machine, whose buttons carry the same letters as a gamepad's, by the letter printed on the controller
+  // (Bryan, 20 Nov 2026, with a Bluetooth controller on his phone: "the A and B buttons were reversed. the controls on
+  // screen show the B to the left and the A to the right, and on the controller the actual buttons are the other way
+  // around"): the button marked A presses the game's A. A standard gamepad names its buttons the Xbox way (A at the
+  // bottom); a Nintendo-made pad, marked B at the bottom, is read as such (hub.js). Other machines (Genesis A B C, the
+  // Master System's 1 and 2) keep their buttons by place, left to right.
+  const BY_LETTER = ['nes', 'snes', 'gameboy', 'gbcolor', 'gba'];
+  const byLetter = (card) => !!(card && isPad(card) && BY_LETTER.includes(card.system));
+  const gamepadMap = (card) => Object.assign({}, isPad(card) ? PAD_GAMEPAD : {}, byLetter(card) ? { A: 'P1:A', B: 'P1:B', X: 'P1:X', Y: 'P1:Y' } : {}, (card && card.gamepad) || {});
   // What a PC key does in this game: itself in a DOS game, a console button (or nothing) in a console game.
   const keyMap = (card) => (isPad(card) ? Object.assign({}, PAD_KEYBOARD, card.keyboard || {}) : null);
 
@@ -168,7 +176,7 @@
     lynx: ['lnx', 'lyx', 'o'] };
   const romExts = (card) => (card && !(card.archive || {}).start && ROM_EXTS[card.system]) || [];
 
-  const api = { check, warnings, gameUrl, itemPage, gameFile, engineOf, CORES, isPad, gamepadMap, keyMap, PAD_GAMEPAD, PAD_KEYBOARD,
+  const api = { check, warnings, gameUrl, itemPage, gameFile, engineOf, CORES, isPad, gamepadMap, keyMap, PAD_GAMEPAD, PAD_KEYBOARD, byLetter, BY_LETTER,
     codesOf, seatsOf, actionLines, actionFor, ROM_EXTS, romExts };
   if (typeof module === 'object' && module.exports) module.exports = api;
   else root.PlayCards = api;

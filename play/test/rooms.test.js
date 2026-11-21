@@ -206,7 +206,7 @@ test('R3 and R4: a phone sends held buttons as a gamepad would; the screen turns
   const golden = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'cards', 'golden-axe-genesis.json'), 'utf8'));
   hub.setCard(golden, Cards.gamepadMap(golden));
   hub.pollPads([PH.padOf(1, PP.bits(new Set(['A']))), PH.padOf(2, PP.bits(new Set(['A'])))]);
-  assert.deepEqual(sent, ['P1:B down', 'P2:B down']);
+  assert.deepEqual(sent, ['P1:B down', 'P2:B down'], 'Golden Axe (Genesis) keeps its buttons by place');
   assert.equal(hub.seat(101), 1); assert.equal(hub.seat(102), 2);
   hub.pollPads([PH.padOf(1, 0)]);
   assert.ok(seats.includes('2 away'), 'the phone that left keeps its seat held');
