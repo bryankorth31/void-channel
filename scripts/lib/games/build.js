@@ -85,12 +85,20 @@ const GAMES = {
 
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
-// Only a card that says kids: true, plays on an engine we serve, and has our own picture.
+// Kids cards held off the Kids shelf until a fault is fixed (Bryan's call each time; the card stays kids on PLAY).
+const HOLD = {
+  // Bryan, 20 Nov 2026 ("yes" to keeping it off until fixed): it runs a one-time display test of about 90 seconds at
+  // every start, because nothing is kept between plays, so a child sits through a long blank wait.
+  'reader-rabbit-1-windows-1997': 'about 90 seconds of display test at every start',
+};
+
+// Only a card that says kids: true, is not held, plays on an engine we serve, and has our own picture.
 function kidsCards(play, artDir) {
   const out = [];
   for (const f of fs.readdirSync(path.join(play, 'cards')).filter((x) => x.endsWith('.json')).sort()) {
     let c; try { c = JSON.parse(fs.readFileSync(path.join(play, 'cards', f), 'utf8')); } catch (e) { continue; }
     if (c.kids !== true || !c.id || !/^[a-z0-9-]+$/.test(c.id) || !c.core) continue;
+    if (HOLD[c.id]) { console.warn('Kids games: ' + c.id + ' held off Kids (' + HOLD[c.id] + ')'); continue; }
     out.push({ card: c, art: artDir && fs.existsSync(path.join(artDir, c.id + '.jpg')) });
   }
   return out;
@@ -260,7 +268,7 @@ function buildGames(out, root, opts = {}) {
   return { games: games.length, engines: [...engines], version, play };
 }
 
-module.exports = { buildGames, kidsGamePage, kidsCards, playDir, GAMES, ROWS };
+module.exports = { buildGames, kidsGamePage, kidsCards, playDir, GAMES, ROWS, HOLD };
 if (require.main === module) {
   const a = process.argv.slice(2);
   if (!a[0]) { console.error('usage: node scripts/lib/games/build.js <out dir> [<art dir>]'); process.exit(1); }

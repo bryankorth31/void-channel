@@ -75,3 +75,15 @@ test('the worker isolates /games/ for the engine, and a card that is not there i
   const home = await get('/');
   assert.equal(home.headers.get('cross-origin-embedder-policy'), null, 'the rest of the site is unchanged');
 });
+
+test('a held kids card stays off the Kids shelf, while other kids cards come through (Bryan holds a game until its fault is fixed)', () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'kids-hold-'));
+  try {
+    fs.mkdirSync(path.join(dir, 'cards'));
+    const card = (id) => ({ id, title: id, system: 'dos', core: 'dosbox-pure', kids: true, archive: { item: id, file: id + '.zip' } });
+    const held = Object.keys(G.HOLD);
+    assert.ok(held.includes('reader-rabbit-1-windows-1997'), 'Reader Rabbit 1 (Windows) is held: about 90 seconds of display test at every start');
+    for (const id of held.concat(['a-kids-game'])) fs.writeFileSync(path.join(dir, 'cards', id + '.json'), JSON.stringify(card(id)));
+    assert.deepEqual(G.kidsCards(dir, null).map((g) => g.card.id), ['a-kids-game']);
+  } finally { fs.rmSync(dir, { recursive: true, force: true }); }
+});
