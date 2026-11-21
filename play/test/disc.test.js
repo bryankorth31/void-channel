@@ -127,6 +127,29 @@ test('Kids: none of ScummVM\'s own menus within reach, and a game\'s own Quit en
     'the start screen with Play again comes back, never a frozen picture');
 });
 
+test('a phone tap clicks where it touches in a ScummVM game: pointer mode, the finger sent as a place (the auditor, 21 Nov 2026)', () => {
+  assert.deepEqual(Cards.CORES.scummvm.touch, { vars: { scummvm_pointer_device: 'pointer' } });
+  const host = fs.readFileSync(path.join(PLAY, 'core', 'host.c'), 'utf8');
+  assert.ok(host.includes('case RETRO_DEVICE_ID_POINTER_PRESSED: return (ptr_down || ptr_seen) ? 1 : 0;'), 'a quick tap is still seen for one frame');
+  assert.ok(host.includes('EMSCRIPTEN_KEEPALIVE void host_pointer(int x, int y, int down) {'));
+  assert.ok(host.includes('mouse_pressed = 0; ptr_seen = 0; }'));
+  assert.ok(fs.readFileSync(path.join(PLAY, 'src', 'core-worker.js'), 'utf8').includes("else if (m.type === 'pointer') { if (M._host_pointer) M._host_pointer(m.x | 0, m.y | 0, m.down ? 1 : 0); }"));
+  assert.ok(fs.readFileSync(path.join(PLAY, 'src', 'runner.js'), 'utf8').includes("pointer: (x, y, down) => post({ type: 'pointer',"));
+  const js = fs.readFileSync(path.join(PLAY, 'src', 'play.js'), 'utf8');
+  assert.ok(js.includes('pointerMode = !!(tc && touch); pointerId = null;'), 'started on a touch screen, the core starts in pointer mode');
+  assert.ok(js.includes('runner.start(pointerMode ? Object.assign({}, card, { vars: Object.assign({}, card.vars, tc.vars) }) : card,'));
+  assert.ok(js.includes("if (e.pointerType !== 'touch' || !wantsMouse() || !started || pointerMode) return;"), 'the DOS trackpad stays out of it');
+  assert.ok(js.includes('if (pointerMode || !wantsMouse() || !started || paused'), 'no pointer lock in pointer mode');
+  const T = require('../src/touchpad.js');
+  for (const id of ['putt-putt-saves-the-zoo-1995', 'just-grandma-and-me-living-books-1997']) {
+    const c = JSON.parse(fs.readFileSync(path.join(PLAY, 'cards', id + '.json'), 'utf8'));
+    assert.equal(c.controls.kind, 'pointer', id);
+    const keys = T.plan(c.controls).rest;
+    assert.ok(!keys.includes('@click') && !keys.includes('@rclick'), id + ': no L click or R click keys on a phone');
+    assert.ok(keys.includes('Escape') && c.controls.labels.Escape === 'Skip' && c.gamepad.B === 'Escape', id + ': a Skip key on screen and on a gamepad (Esc lets a held mouse go)');
+  }
+});
+
 test('ScummVM\'s engine files sit in engine/ under Cloudflare\'s cap, with its licence beside them', () => {
   for (const f of ['scummvm.js', 'scummvm.wasm', 'scummvm.LICENSE.txt']) {
     const p = path.join(PLAY, 'engine', f);

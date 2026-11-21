@@ -37,6 +37,7 @@ static unsigned mouse_pressed;        /* pressed since the last frame: a quick c
 static char var_key[MAX_VARS][64], var_val[MAX_VARS][64];
 static int var_count, var_changed;
 static int game_loaded, core_ended;
+static int ptr_x, ptr_y, ptr_down, ptr_seen;   /* the finger on the picture (host_pointer) */
 /* HOST_VARS_AT_START (the ScummVM build only, play/core/build-scummvm.sh): a setting given before the game loads is its
    starting setting, not a change. ScummVM reads its settings when it starts, and a change it hears of on its first frame
    reaches for a system object not made yet. Every other core is built without it and behaves exactly as before. */
@@ -131,6 +132,16 @@ static int16_t input_state(unsigned port, unsigned device, unsigned index, unsig
     if (id == RETRO_DEVICE_ID_JOYPAD_MASK) return (int16_t)pads[port];
     return id < 16 ? (pads[port] >> id) & 1 : 0;
   }
+  /* A finger on the picture (ScummVM's pointer mode): where it is, -32767 to 32767 across the picture, and whether it is
+     down. A tap that comes and goes between two frames is still seen as down for one frame (ptr_seen). */
+  if (device == RETRO_DEVICE_POINTER && port == 0 && index == 0) {
+    switch (id) {
+      case RETRO_DEVICE_ID_POINTER_X: return (int16_t)ptr_x;
+      case RETRO_DEVICE_ID_POINTER_Y: return (int16_t)ptr_y;
+      case RETRO_DEVICE_ID_POINTER_PRESSED: return (ptr_down || ptr_seen) ? 1 : 0;
+      case RETRO_DEVICE_ID_POINTER_COUNT: return (ptr_down || ptr_seen) ? 1 : 0;
+    }
+  }
   if (device == RETRO_DEVICE_MOUSE && port == 0) {
     switch (id) {
       case RETRO_DEVICE_ID_MOUSE_X: return (int16_t)mouse_dx;
@@ -177,7 +188,7 @@ EMSCRIPTEN_KEEPALIVE int host_load(const char *path) {
 }
 
 /* A frame reads the movement gathered since the last one, then it starts again from nothing. */
-EMSCRIPTEN_KEEPALIVE void host_run(void) { retro_run(); mouse_dx = mouse_dy = 0; mouse_pressed = 0; }
+EMSCRIPTEN_KEEPALIVE void host_run(void) { retro_run(); mouse_dx = mouse_dy = 0; mouse_pressed = 0; ptr_seen = 0; }
 EMSCRIPTEN_KEEPALIVE void host_reset(void) { retro_reset(); }
 EMSCRIPTEN_KEEPALIVE void host_unload(void) { retro_unload_game(); retro_deinit(); free(game_data); game_data = NULL; }
 
@@ -201,6 +212,13 @@ EMSCRIPTEN_KEEPALIVE void host_key(int down, unsigned keycode, unsigned characte
   if (key_event) key_event(down != 0, keycode, character, (uint16_t)mods);
 }
 /* The mouse (plan T21b): movement adds up until the next frame reads it; the buttons are as they are now. */
+EMSCRIPTEN_KEEPALIVE void host_pointer(int x, int y, int down) {
+  ptr_x = x < -32767 ? -32767 : x > 32767 ? 32767 : x;
+  ptr_y = y < -32767 ? -32767 : y > 32767 ? 32767 : y;
+  ptr_down = down ? 1 : 0;
+  if (down) ptr_seen = 1;
+}
+
 EMSCRIPTEN_KEEPALIVE void host_mouse(int dx, int dy, unsigned buttons) {
   mouse_dx += dx; mouse_dy += dy; mouse_pressed |= buttons & ~mouse_buttons; mouse_buttons = buttons;
   if (mouse_dx > 32767) mouse_dx = 32767; if (mouse_dx < -32768) mouse_dx = -32768;

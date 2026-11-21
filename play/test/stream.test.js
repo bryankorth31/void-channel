@@ -166,7 +166,7 @@ test('T21b to Bryan\'s spec: L click and R click keys on a mouse card\'s touch p
   assert.ok(!Touch.plan({ keys: ['Enter'] }).sideways.right.includes('@click'));
   const Shelf = require('../src/shelf.js');
   assert.match(Shelf.backLines({ system: 'dos', players: 1, mouse: true }).find((l) => l[0] === 'Plays with')[1], /^a mouse/);
-  assert.ok(fs.readFileSync(path.join(__dirname, '..', 'src', 'play.js'), 'utf8').includes("b.textContent = 'Plays with a mouse';"));
+  assert.ok(fs.readFileSync(path.join(__dirname, '..', 'src', 'play.js'), 'utf8').includes("b.textContent = byTouch ? 'Plays by touch' : 'Plays with a mouse';"));
 });
 
 test('audit M1: letting go of the mouse during play pauses the game', () => {

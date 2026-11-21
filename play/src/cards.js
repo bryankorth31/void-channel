@@ -52,6 +52,10 @@
         scummvm_gamepad_cursor_acceleration_time: '0.2', scummvm_analog_response: 'linear', scummvm_analog_deadzone: '15',
         scummvm_framerate: 'disabled', scummvm_samplerate: '48000 Hz', scummvm_gui_aspect_ratio: '1', scummvm_gui_h_res: '720',
         scummvm_browsing_mode: 'local' },
+      // Played by touch (the auditor, 21 Nov 2026: a tap on Grandma's menu did nothing), the core takes the finger itself:
+      // its pointer mode puts its cursor where the finger touches, a tap clicks there, a drag drags, a long press is the
+      // right button. The page sends the finger (play.js, pointerMode); a mouse keeps the mouse mode above.
+      touch: { vars: { scummvm_pointer_device: 'pointer' } },
       // ScummVM's own settings file, written before it starts: no "not yet fully supported" box in front of a child (a
       // card is carded only after it plays through in a test), no "are you sure" when the game is left, and none of
       // ScummVM's own menus within reach (the Kids session, 21 Nov 2026): its main menu (Ctrl+F5, a gamepad's Start, and

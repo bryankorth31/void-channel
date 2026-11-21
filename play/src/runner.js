@@ -126,6 +126,8 @@
       pad: (port, bits) => post({ type: 'pad', port, bits }),
       // A DOS game's mouse (plan T21b): movement since the last call, and the buttons held (1 left, 2 right, 4 middle).
       mouse: (dx, dy, buttons) => post({ type: 'mouse', dx: Math.round(dx), dy: Math.round(dy), buttons }),
+      // A finger on the picture, for a core in pointer mode (ScummVM played by touch): x and y from -1 to 1 across it.
+      pointer: (x, y, down) => post({ type: 'pointer', x: Math.round(Math.max(-1, Math.min(1, x)) * 32767), y: Math.round(Math.max(-1, Math.min(1, y)) * 32767), down: !!down }),
       // Cheats: the codes of the ones switched on (all others off).
       cheats: (codes) => post({ type: 'cheats', codes: (codes || []).slice(0, 40) }),
       pause: () => { post({ type: 'pause' }); if (audio) audio.suspend(); },

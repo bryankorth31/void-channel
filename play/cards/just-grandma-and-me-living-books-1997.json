@@ -3,11 +3,16 @@
   "core": "scummvm",
   "players": 1,
   "controls": {
-    "kind": "dos-keys",
-    "keys": [],
+    "kind": "pointer",
+    "keys": [
+      "Escape"
+    ],
     "dpad": false,
     "keyboard": false,
-    "mouse": true
+    "mouse": true,
+    "labels": {
+      "Escape": "Skip"
+    }
   },
   "actions": [
     {
@@ -19,12 +24,13 @@
       "press": "@point"
     },
     {
-      "do": "Pause",
-      "press": "@menu"
+      "do": "Skip a scene",
+      "press": "Escape"
     }
   ],
   "gamepad": {
-    "Start": "@menu"
+    "Start": "@menu",
+    "B": "Escape"
   },
   "genre": [
     "educational video game"
@@ -41,5 +47,5 @@
     "start": "OUTLINE",
     "stream": true
   },
-  "help": "Point and click. Read along with Little Critter at the beach, or play inside every page."
+  "help": "Point and click. Read along with Little Critter at the beach, or play inside every page. Skip passes a page being read."
 }

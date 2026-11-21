@@ -378,6 +378,8 @@ onmessage = (e) => {
     else if (m.type === 'key') key(m.down, m.code);
     else if (m.type === 'pad') M._host_pad(m.port, m.bits);
     else if (m.type === 'mouse') { if (M._host_mouse) M._host_mouse(m.dx | 0, m.dy | 0, m.buttons | 0); }
+    // A finger on the picture (ScummVM's pointer mode): where, -32767 to 32767 across it, and whether it is down.
+    else if (m.type === 'pointer') { if (M._host_pointer) M._host_pointer(m.x | 0, m.y | 0, m.down ? 1 : 0); }
     // Cheats (Bryan, 20 Nov 2026): all cleared, then each one switched on set again, in the core's own code format.
     else if (m.type === 'cheats') {
       if (!M._host_cheat_reset || !M._host_cheat_set) { postMessage({ type: 'cheats', ok: false }); return; }

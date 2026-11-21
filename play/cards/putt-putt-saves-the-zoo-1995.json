@@ -3,11 +3,16 @@
   "core": "scummvm",
   "players": 1,
   "controls": {
-    "kind": "dos-keys",
-    "keys": [],
+    "kind": "pointer",
+    "keys": [
+      "Escape"
+    ],
     "dpad": false,
     "keyboard": false,
-    "mouse": true
+    "mouse": true,
+    "labels": {
+      "Escape": "Skip"
+    }
   },
   "actions": [
     {
@@ -19,12 +24,13 @@
       "press": "@point"
     },
     {
-      "do": "Pause",
-      "press": "@menu"
+      "do": "Skip a scene",
+      "press": "Escape"
     }
   ],
   "gamepad": {
-    "Start": "@menu"
+    "Start": "@menu",
+    "B": "Escape"
   },
   "genre": [
     "educational video game"
@@ -41,5 +47,5 @@
     "start": "PUTTZOO.HE0",
     "stream": true
   },
-  "help": "Point and click. Help Putt-Putt find the six missing baby animals before the zoo opens."
+  "help": "Point and click. Help Putt-Putt find the six missing baby animals before the zoo opens. Skip passes a scene."
 }

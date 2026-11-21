@@ -118,8 +118,8 @@ test('a slow download is not a failed one: each word of progress before the firs
   const js = fs.readFileSync(path.join(PLAY, 'src', 'play.js'), 'utf8');
   assert.ok(js.includes('function armDeadline() { clearTimeout(deadline); deadline = setTimeout(() => { arriving = false; fail(NOT_ARRIVED); }, DEADLINE_MS); }'));
   assert.ok(js.includes('    arriving = true; armDeadline();\n'), 'Play starts the minute');
-  assert.ok(js.includes('status: (t) => { status(t); if (arriving) armDeadline(); }'), 'progress starts it again');
-  assert.ok(js.includes("arriving = false; clearTimeout(deadline); $('cover').hidden = true;"), 'the first picture ends it');
+  assert.ok(js.includes('status: (t) => { if (!arriving) return; status(t); armDeadline(); }'), 'progress starts it again, and only before the first picture');
+  assert.ok(js.includes("arriving = false; status(''); clearTimeout(deadline); $('cover').hidden = true;"), 'the first picture ends it and clears the progress line');
   // The worker says progress only when bytes come, so a download that truly stops still fails after a minute.
   const w = fs.readFileSync(path.join(PLAY, 'src', 'core-worker.js'), 'utf8');
   assert.ok(w.includes("if (size >= 2 * 1048576 && now - told > 250) { told = now; say(fetchLine(got, size, what)); }"));

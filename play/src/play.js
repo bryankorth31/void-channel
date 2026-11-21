@@ -517,14 +517,16 @@
     arriving = true; armDeadline();
     runner = (isArcade() ? PlayArcade : isFlash() ? PlayFlash : PlayRunner).createRunner({ canvas: $('canvas'), mute: q.get('mute') === '1', volume: gainOf(vol), on: {
       note: (t) => toast(t),
-      status: (t) => { status(t); if (arriving) armDeadline(); }, error: (t) => { arriving = false; fail(t); },
+      // Progress words belong to the start screen, until the first picture (the auditor: "Reading the disc: N MB so far"
+      // stayed for the whole game); a message that matters later comes as a toast or an error.
+      status: (t) => { if (!arriving) return; status(t); armDeadline(); }, error: (t) => { arriving = false; fail(t); },
       // The game ended itself (its own Quit): the start screen comes back with Play again; on Kids, the way back is the
       // kids games. Never a frozen last picture.
       ended: () => { arriving = false; fail('The game has ended. Press Play again to start it over, or pick another game.'); },
       ready: () => { started = true; applyCheats(); place.sig = ''; place(); setTimeout(toolbarTip, 1500); },
       cheats: (m) => { if (!m.ok) toast('This game\'s engine cannot take cheats'); else if (m.on) toast(m.on === 1 ? 'One cheat on' : m.on + ' cheats on'); },
       firstFrame: () => {
-        arriving = false; clearTimeout(deadline); $('cover').hidden = true; $('canvas').focus({ preventScroll: true }); stayAwake(true); armBack();
+        arriving = false; status(''); clearTimeout(deadline); $('cover').hidden = true; $('canvas').focus({ preventScroll: true }); stayAwake(true); armBack();
         if (!PlayCards.isPad(card) && !isFlash()) blankWatch();   // a Flash game draws in its own element, not the canvas
         if (resumeState) { const s = resumeState; resumeState = null; runner.load(s).then((ok) => toast(ok ? 'Back where you left off' : 'That spot would not load; starting fresh')); }
       },
@@ -537,7 +539,10 @@
         if (name === 'click' || name === 'rclick') { ptrButtons &= name === 'click' ? ~1 : ~2; sendMouse(0, 0); }
       } });
     hub.setCard(card, PlayCards.gamepadMap(card));
-    runner.start(card, base, build.commit.slice(0, 12) + HOST_V, sramKept);
+    // Started on a touch screen, a core that takes the finger itself (ScummVM) starts in its pointer mode.
+    const tc = touchCore(card);
+    pointerMode = !!(tc && touch); pointerId = null;
+    runner.start(pointerMode ? Object.assign({}, card, { vars: Object.assign({}, card.vars, tc.vars) }) : card, base, build.commit.slice(0, 12) + HOST_V, sramKept);
     autoTimer = setInterval(() => { if (started && !paused && !document.hidden) autosave(); }, AUTO_EVERY_MS);
     cpStart();
     place.sig = ''; place();
@@ -578,10 +583,24 @@
   // screen the picture is a trackpad: drag moves, a tap is the left button, a two-finger tap the right. On a gamepad
   // the right stick moves, R3 is the left button and L3 the right. Nothing reaches the game while it is paused.
   const TOUCH_SPEED = 1.5, STICK_SPEED = 14, STICK_DEAD = 0.15, HOLD_MS = 350;
+  const TAP_HOW = 'tap the picture where you want to click; hold to drag';
   const MOUSE_HOW = { keyboard: 'click the picture to use your mouse (Esc lets it go)',
     touch: 'drag on the picture to move, tap to click, two-finger tap for the right button, hold then drag to drag; or the L click and R click keys',
     pad: 'the right stick moves, RB clicks, RT right-clicks' };
   const wantsMouse = () => !!(card && card.controls && card.controls.mouse && !PlayCards.isPad(card));
+  // Pointer mode (the auditor, 21 Nov 2026: on a phone a tap on a ScummVM picture book did nothing): a core that can take
+  // the finger itself (its entry in cards.js has touch settings) gets them when the game starts on a touch screen, and
+  // the page sends where the finger is instead of moving a mouse: the game's cursor goes to the finger and a tap clicks
+  // there. Fixed for the game when it starts (the core reads it then).
+  let pointerMode = false;
+  const touchCore = (c) => { const core = c && PlayCards.CORES[c.core]; return core && core.touch ? core.touch : null; };
+  function sendPointer(e, down) {
+    if (!runner || !runner.pointer) return;
+    const r = cv.getBoundingClientRect();
+    if (!r.width || !r.height) return;
+    runner.pointer(((e.clientX - r.left) / r.width) * 2 - 1, ((e.clientY - r.top) / r.height) * 2 - 1, down);
+  }
+  let pointerId = null;
   let ptrButtons = 0, padButtons = 0;
   const cv = $('canvas');
   function sendMouse(dx, dy) { if (runner && started && !paused && wantsMouse()) runner.mouse(dx, dy, ptrButtons | padButtons); }
@@ -590,8 +609,19 @@
     if (runner && wantsMouse()) runner.mouse(0, 0, 0);
     if (document.pointerLockElement === cv && document.exitPointerLock) document.exitPointerLock();
   }
+  // In pointer mode the finger (or a mouse) goes to the core where it touches; nothing is locked or moved by steps.
+  cv.addEventListener('pointerdown', (e) => {
+    if (!pointerMode || !started || paused || pointerId !== null) return;
+    e.preventDefault(); pointerId = e.pointerId;
+    try { cv.setPointerCapture(e.pointerId); } catch (x) { /* synthetic pointers */ }
+    sendPointer(e, true);
+  });
+  cv.addEventListener('pointermove', (e) => { if (pointerMode && e.pointerId === pointerId) sendPointer(e, true); });
+  const pointerUp = (e) => { if (!pointerMode || e.pointerId !== pointerId) return; pointerId = null; sendPointer(e, false); };
+  cv.addEventListener('pointerup', pointerUp);
+  cv.addEventListener('pointercancel', pointerUp);
   cv.addEventListener('click', () => {
-    if (!wantsMouse() || !started || paused || document.pointerLockElement === cv || !cv.requestPointerLock) return;
+    if (pointerMode || !wantsMouse() || !started || paused || document.pointerLockElement === cv || !cv.requestPointerLock) return;
     try { const r = cv.requestPointerLock(); if (r && r.catch) r.catch(() => {}); } catch (e) { /* the browser said no */ }
   });
   document.addEventListener('pointerlockchange', () => {
@@ -611,7 +641,7 @@
   let tapAt = 0, travel = 0, most = 0, holdTimer = 0, holding = false;
   function tapClick(b) { ptrButtons = b; sendMouse(0, 0); setTimeout(() => { ptrButtons = 0; sendMouse(0, 0); }, 90); }
   cv.addEventListener('pointerdown', (e) => {
-    if (e.pointerType !== 'touch' || !wantsMouse() || !started) return;
+    if (e.pointerType !== 'touch' || !wantsMouse() || !started || pointerMode) return;
     e.preventDefault();
     if (!fingers.size) {
       tapAt = Date.now(); travel = 0; most = 0; holding = false;
@@ -697,8 +727,10 @@
       li.append(b, ': ' + l.how); ul.appendChild(li);
     }
     if (c.controls && c.controls.mouse && !PlayCards.isPad(c) && (PlayCards.CORES[c.core] || {}).kind !== 'ruffle') {   // a Flash card's actions say it
-      const li = document.createElement('li'); const b = document.createElement('b'); b.textContent = 'Plays with a mouse';
-      li.append(b, ': ' + MOUSE_HOW[device()]); ul.insertBefore(li, ul.firstChild);
+      // A core that takes the finger itself: on a touch screen, a tap goes where it touches.
+      const byTouch = !!(touchCore(c) && device() === 'touch');
+      const li = document.createElement('li'); const b = document.createElement('b'); b.textContent = byTouch ? 'Plays by touch' : 'Plays with a mouse';
+      li.append(b, ': ' + (byTouch ? TAP_HOW : MOUSE_HOW[device()])); ul.insertBefore(li, ul.firstChild);
     }
     ul.setAttribute('aria-label', 'How to play on the ' + where);
   }
@@ -722,7 +754,7 @@
     }
     if (c.controls && c.controls.mouse && !PlayCards.isPad(c) && (PlayCards.CORES[c.core] || {}).kind !== 'ruffle') {   // a Flash card's actions say it
       const li = document.createElement('li'); const b = document.createElement('b'); b.textContent = 'Mouse';
-      li.append(b, ': ' + MOUSE_HOW.keyboard + '; on a touch screen ' + MOUSE_HOW.touch + '; on a gamepad ' + MOUSE_HOW.pad); ul.appendChild(li);
+      li.append(b, ': ' + MOUSE_HOW.keyboard + '; on a touch screen ' + (touchCore(c) ? TAP_HOW : MOUSE_HOW.touch) + '; on a gamepad ' + MOUSE_HOW.pad); ul.appendChild(li);
       $('canvas').style.touchAction = 'none';
     }
     const esc = PlayCards.isPad(c) ? ', Esc on the keyboard' : '';
