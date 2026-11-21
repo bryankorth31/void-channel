@@ -234,8 +234,12 @@ test('the shelf rows use VoidTV\'s own side arrows (Bryan, 20 Nov 2026: "exactly
 test('the shelf looks like voidtv.net (Bryan, 20 Nov 2026: "like voidtv.net with the lighting like elements and the images of the character"): VoidTV\'s lightning static behind, his voidarcade art in the hero', () => {
   const fs = require('fs'), path = require('path'), P = path.join(__dirname, '..');
   const css = fs.readFileSync(path.join(P, 'shelf.css'), 'utf8'), js = fs.readFileSync(path.join(P, 'src', 'shelf.js'), 'utf8');
-  assert.ok(fs.readFileSync(path.join(P, 'index.html'), 'utf8').includes('<div class="bgimg" aria-hidden="true"></div>'));
+  const html = fs.readFileSync(path.join(P, 'index.html'), 'utf8');
+  assert.ok(html.includes('<div class="atmos lo" aria-hidden="true"><div class="bgimg"></div><div class="void"><i></i></div></div>') && html.includes('<div class="atmos hi" aria-hidden="true"><div class="grain"></div></div>'));
   assert.ok(css.includes('url(/assets/brand/bg/static-bolt.jpg) center/cover no-repeat;opacity:.5') && css.includes('url(/assets/brand/bg/static-bolt-m.jpg)'));
+  // It moves like voidtv.net's (Bryan: "move and scroll like the voidtv does"): the same scroll rule, the grain, the void.
+  assert.ok(js.includes("bg.style.transform = 'translate3d(0,' + (-f * 60 + w * 22) + 'px,0) scale(' + (1.06 + f * 0.05 + w2 * 0.015) + ')';"));
+  assert.ok(css.includes('animation:grain .6s steps(6) infinite') && css.includes('.void i{position:absolute;inset:0;display:block;background:url(/assets/brand/void-soft.webp)'));
   for (const f of ['voidarcade-wall', 'voidarcade-wall-m', 'voidarcade-player', 'voidarcade-player-m']) {
     const p = path.join(P, '..', 'assets', 'brand', 'bg', f + '.webp');
     assert.ok(fs.existsSync(p) && fs.statSync(p).size < 300 * 1024, f);

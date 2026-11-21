@@ -249,8 +249,21 @@ body.home .shelf{padding-top:6px}
 /* ---- The look of voidtv.net (Bryan, 20 Nov 2026: "the background to now be like voidtv.net with the lighting like
    elements and the images of the character in the hero"). The background: VoidTV's own lightning static, fixed behind the
    whole page as voidtv.net's .bgimg is. The hero opens on Bryan's voidarcade art: the hooded player at the wall of TVs. ---- */
-.bgimg{position:fixed;inset:0;z-index:0;pointer-events:none;background:#07080c url(/assets/brand/bg/static-bolt.jpg) center/cover no-repeat;opacity:.5}
+/* VoidTV's atmosphere (site/index.html .atmos), its values as they are: the picture a little larger than the screen so it
+   can drift, a dark wash down the page, the slow void at the bottom right, the film grain on top. */
+.atmos{position:fixed;inset:0;overflow:hidden;pointer-events:none}
+.atmos.lo{z-index:0}.atmos.hi{z-index:1000}
+.atmos>.bgimg,.atmos>.void,.atmos>.grain{position:absolute}
+.bgimg{inset:-12% 0 -12% 0;background:#07080c url(/assets/brand/bg/static-bolt.jpg) center/cover no-repeat;opacity:.5;will-change:transform}
+.bgimg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,8,12,.55) 0%,rgba(7,8,12,.78) 45%,rgba(7,8,12,.96) 100%)}
 @media (max-width:700px){.bgimg{background-image:url(/assets/brand/bg/static-bolt-m.jpg)}}
+.void{right:-18vw;bottom:-22vw;width:64vw;height:64vw;max-width:900px;max-height:900px;opacity:.07;will-change:transform}
+.void i{position:absolute;inset:0;display:block;background:url(/assets/brand/void-soft.webp) center/contain no-repeat;animation:spin 240s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.grain{left:-50%;top:-50%;width:200%;height:200%;opacity:.045;background:url(/assets/brand/noise.png) repeat;background-size:160px 160px;mix-blend-mode:screen;animation:grain .6s steps(6) infinite;will-change:transform}
+@keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-4%,-8%)}40%{transform:translate(-12%,4%)}60%{transform:translate(6%,-18%)}80%{transform:translate(-4%,18%)}100%{transform:translate(9%,0)}}
+@media (max-width:700px){.grain{animation:none;left:0;top:0;width:100%;height:100%}}
+@media (prefers-reduced-motion:reduce){.grain,.void i{animation:none}}
 body>header,body>.hero-home,body>main,body>.shelf,body>footer,body>section{position:relative;z-index:1}
 /* An art slide: the picture itself, sharp, not blurred like a game's; the neon sign stays clear of the words. */
 .hero-home .s.art .bg{filter:none;left:0;top:0;width:100%;height:100%;object-position:50% 30%}
