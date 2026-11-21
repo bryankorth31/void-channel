@@ -306,3 +306,10 @@ test('audit review over real sockets: a phone back with its token keeps its seat
     tv.close();
   } finally { srv.kill(); }
 });
+
+test('Void University (Bryan, 20 Nov 2026): a lesson room takes 40 phones at 10 messages a second and ends with its screen', () => {
+  assert.ok(R.KINDS.includes('lesson'));
+  assert.deepEqual(R.LIMITS.lesson, { phones: 40, perSecond: 10, screenHoldMs: 0 });
+  const room = R.createRoom({ code: 'KX7L', kind: 'lesson', key: 'k'.repeat(32), send: () => {}, close: () => {} });
+  room.addHost('tv'); assert.equal(room.addPhone('a'), 1); assert.equal(room.drop('tv'), 'ended');
+});

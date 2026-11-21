@@ -186,3 +186,15 @@ test('Bryan, 20 Nov 2026 (a Bluetooth controller on his phone: "the A and B butt
     assert.deepEqual(sent, [bottom, right], id);
   }
 });
+
+test('the auditor, 20 Nov 2026: on a two-button Nintendo machine the left and top buttons press B and A too', () => {
+  const Hub = require('../src/hub.js'), Cards = require('../src/cards.js');
+  const press = (i) => ({ index: 0, id: 'Xbox Wireless Controller', mapping: 'standard', buttons: Array.from({ length: 17 }, (_, n) => ({ pressed: n === i, value: n === i ? 1 : 0 })), axes: [0, 0, 0, 0] });
+  for (const [system, want] of [['nes', ['P1:B', 'P1:A']], ['snes', ['P1:X', 'P1:Y']]]) {
+    const card = { system, controls: { kind: 'pad' } }, sent = [];
+    const hub = Hub.createHub({ send: (c, d) => { if (d) sent.push(c); } });
+    hub.setCard(card, Cards.gamepadMap(card));
+    hub.pollPads([press(Hub.BUTTONS.X)]); hub.pollPads([press(-1)]); hub.pollPads([press(Hub.BUTTONS.Y)]);
+    assert.deepEqual(sent, want, system);
+  }
+});

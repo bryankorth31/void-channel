@@ -59,9 +59,12 @@
     // An arcade machine's second player has keys of their own (MAME: R F D G to move, A S Q to fire), not a renumbered
     // console button: card.gamepadSeats = { 2: { A: 'KeyA', Up: 'KeyR', ... } } gives a seat its own map.
     let seatMaps = {};
-    let console_ = false;
+    let console_ = false, two = false;
     function setCard(card, full) {
       console_ = !!(card && card.controls && card.controls.kind === 'pad' && ['nes', 'snes', 'gameboy', 'gbcolor', 'gba'].includes(card.system));   // as cards.js BY_LETTER
+      // A two-button machine (the NES, the Game Boys) has no X or Y: there a pad's left button also presses B and its top
+      // one A, so a thumb used to the old place still plays (the auditor, 20 Nov 2026: those two had gone dead).
+      two = console_ && card.system !== 'snes';
       map = Object.assign({ Start: '@menu' }, full || (card && card.gamepad) || {});
       shift = (card && card.gamepadShift && card.gamepadShift.on && card.gamepadShift.map) ? card.gamepadShift : null;
       players = Math.max(1, Math.min(4, (card && card.players) || 1));
@@ -117,7 +120,8 @@
       for (const [name, idx] of Object.entries(BUTTONS)) {
         if (shift && name === shift.on) continue;
         const b = pad.buttons && pad.buttons[idx];
-        const as = swap && swap[name] ? swap[name] : name;
+        let as = swap && swap[name] ? swap[name] : name;
+        if (two && !String(pad.id || '').startsWith('phone') && (as === 'X' || as === 'Y') && m[as] && /^P1:[XY]$/.test(m[as])) as = as === 'X' ? 'B' : 'A';
         if (b && (b.pressed || b.value > 0.5) && m[as]) codes.add(seat(m[as]));
       }
       const ax = (pad.axes && pad.axes[0]) || 0, ay = (pad.axes && pad.axes[1]) || 0;
