@@ -194,3 +194,10 @@ test('Bryan, 20 Nov 2026 ("with pokemon or games that had a wider aspect can the
   const css = fs.readFileSync(path.join(__dirname, '..', 'play.css'), 'utf8');
   assert.ok(css.includes('.over.overpic .cpad.side .cdpad:not(:has(.pdir.on)),.over.overpic .cpad.side .cface:not(:has([data-down])){opacity:.6}'));
 });
+
+test('the auditor and Bryan, 20 Nov 2026 ("you routinely leave a gap on the left"): sideways only the notch side keeps its margin', () => {
+  const fs = require('fs'), path = require('path');
+  const play = fs.readFileSync(path.join(__dirname, '..', 'src', 'play.js'), 'utf8');
+  assert.ok(play.includes('const ins = notchSide(insets());'));
+  assert.ok(play.includes("if (type === 'landscape-primary') return Object.assign({}, ins, { r: 0 });") && play.includes("if (type === 'landscape-secondary') return Object.assign({}, ins, { l: 0 });"));
+});

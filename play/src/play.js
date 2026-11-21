@@ -34,6 +34,17 @@
 
   // The phone's own safe-area edges (the iPhone's home bar, rounded corners and notch), read from the phone through
   // env(safe-area-inset-*) on a hidden probe. ?inset=t,r,b,l stands in for a phone in tests.
+  // Sideways an iPhone reports the notch's margin on both sides, though the notch is on one only (the auditor measured
+  // 47 px of empty plastic beside the d-pad; Bryan: "you routinely leave a gap on the left", then "looks good, deploy
+  // this"). The side the notch is on keeps its margin; the other side's keys go to the edge and the picture gets the width.
+  // landscape-primary (window.orientation 90): the phone's top, and its notch, to the left; landscape-secondary: right.
+  function notchSide(ins) {
+    if (innerWidth <= innerHeight || !(ins.l > 0 && ins.r > 0)) return ins;
+    const type = (screen.orientation && screen.orientation.type) || (window.orientation === 90 ? 'landscape-primary' : window.orientation === -90 ? 'landscape-secondary' : '');
+    if (type === 'landscape-primary') return Object.assign({}, ins, { r: 0 });
+    if (type === 'landscape-secondary') return Object.assign({}, ins, { l: 0 });
+    return ins;
+  }
   function insets() {
     const o = (q.get('inset') || '').split(',').map(Number);
     if (o.length === 4 && o.every((n) => n >= 0 && n < 200)) return { t: o[0], r: o[1], b: o[2], l: o[3] };
@@ -46,7 +57,7 @@
   function place() {
     // The handheld shell: a phone (its short side up to 540 px) with the touch keys on, while a game plays.
     const shell = touch && !padMode && started && Math.min(innerWidth, innerHeight) <= 540;
-    const ins = insets();
+    const ins = notchSide(insets());
     // The picture may run under the edges (a game's picture under the home bar is fine); keys and the cross may not. Key
     // columns and the room under an upright picture are laid out inside the edges. A console pad sideways floats in its
     // own layer, which keeps inside them by itself, so the picture keeps its full size; controller mode has no keys.
