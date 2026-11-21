@@ -36,7 +36,7 @@
 
   // One phone as the screen keeps it. shown is what the game sees; queue holds the states that came in and wait.
   const fresh = (now) => ({ shown: 0, queue: [], flip: [], heard: now, beat: false, n: -1, delay: null, player: null, quiet: false,
-    direct: false, got: 0, gotDirect: 0, pc: null, ch: null, parts: null });
+    direct: false, got: 0, gotDirect: 0, pc: null, ch: null, parts: null, silent: false });
   // Pure (tested): a text in pieces, and the pieces back into the text. store keeps one text at a time (id names it: a
   // new id starts over); answers the whole text when its last piece has come, else null.
   const pieces = (text, size) => { const out = []; for (let i = 0; i < text.length; i += size) out.push(text.slice(i, i + size)); return out.length ? out : ['']; };
@@ -60,7 +60,14 @@
   // Pure (tested): what the game sees this frame. Waiting states are let through in order; a button that changed less
   // than HOLD_MS ago waits (the others go through at once), so a tap shorter than a frame is still a press and a release.
   function settle(p, now) {
-    if (p.beat && now - p.heard > QUIET_MS) { p.queue.length = 0; p.shown = 0; return 0; }
+    if (p.beat && now - p.heard > QUIET_MS) {
+      // What the screen had is forgotten, so the phone's next word must count though it carries the count already seen:
+      // a phone back from a silence with the thumb still down says the same state again, and the hold must come back
+      // (the auditor, 21 Nov 2026: it did not, since the count stopped going up with every beat). Once a silence.
+      if (!p.silent) { p.silent = true; p.n -= 1; }
+      p.queue.length = 0; p.shown = 0; return 0;
+    }
+    p.silent = false;
     while (p.queue.length) {
       const next = p.queue[0];
       let ok = 0, wait = 0;

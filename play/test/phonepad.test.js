@@ -185,6 +185,40 @@ test('the screen page itself stalling is not the phones going silent; a phone on
   } finally { s.done(); }
 });
 
+test('a phone back from a silence with the thumb still down: the hold comes back, though its state carries the count already seen', async () => {
+  const RIGHT = 1 << 15;
+  // The pure rule first.
+  const p = PH.fresh(0); p.beat = true;
+  PH.take(p, RIGHT, 7, 0);
+  assert.equal(PH.settle(p, 16), RIGHT);
+  assert.equal(PH.settle(p, PH.QUIET_MS + 20), 0, 'silent: let go');
+  assert.equal(PH.settle(p, PH.QUIET_MS + 36), 0, 'and it stays let go while the silence lasts');
+  PH.take(p, 0, 6, PH.QUIET_MS + 40);
+  assert.equal(PH.settle(p, PH.QUIET_MS + 56), 0, 'a late copy of an older state is still dropped');
+  PH.take(p, RIGHT, 7, PH.QUIET_MS + 60);
+  assert.equal(PH.settle(p, PH.QUIET_MS + 76), RIGHT, 'the same state, the same count: held again');
+  PH.take(p, RIGHT, 7, PH.QUIET_MS + 260);
+  assert.equal(p.n, 7, 'and from there the count is as it was');
+  // Twice over: a second silence forgets again, once.
+  assert.equal(PH.settle(p, 3 * PH.QUIET_MS), 0);
+  PH.take(p, RIGHT, 7, 3 * PH.QUIET_MS + 10);
+  assert.equal(PH.settle(p, 3 * PH.QUIET_MS + 26), RIGHT);
+  // Through the screen and the hub: the phone's page freezes four seconds with the thumb on Right, then wakes and beats.
+  const s = screen();
+  try {
+    await s.opened;
+    s.say({ type: 'join', from: 1 });
+    s.say({ from: 1, msg: { type: 'pad', b: RIGHT, n: 3, v: 2 } }); s.run(100);
+    assert.deepEqual(s.hub.held(), ['P1:Right']);
+    s.run(4000);
+    assert.deepEqual(s.hub.held(), [], 'let go while it was silent');
+    s.say({ from: 1, msg: { type: 'pad', b: RIGHT, n: 3, v: 2 } }); s.run(50);
+    assert.deepEqual(s.hub.held(), ['P1:Right'], 'the wake-up beat brings the hold back');
+    s.say({ from: 1, msg: { type: 'pad', b: 0, n: 4, v: 2 } }); s.run(50);
+    assert.deepEqual(s.hub.held(), []);
+  } finally { s.done(); }
+});
+
 // A screen with its room, on a clock the test moves; the relay's messages are handed to it directly.
 function screen(more) {
   let now = 0, sock = null;
