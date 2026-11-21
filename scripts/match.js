@@ -6,12 +6,14 @@
 // The best file wins each (season, episode). Confidence sets the state:
 //   >= 0.85 LIVE  |  >= 0.50 REVIEW  |  below: left out (kept in the candidates file).
 // Writes catalog/shows/<slug>.json (the grid the site will read) and docs/COVERAGE.md.
+// A strict profile (profile.json "strict": true, VOIDtv Kids) keeps LIVE only; see STRICT below.
 // No network. Usage: node scripts/match.js [name substring]
 const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
 const PROFILE = require('./lib/profile');
+const sound = require('./lib/sound');
 const { writeIfChanged } = require('./lib/writeIfChanged');
 const { nearNameGuard } = require('./lib/tvmazeguard'); // the one TVmaze name decision, shared with hunt.js and retvmaze.js
 const { seriesExclude, HATE, flat: flatEx } = require('./lib/hardexclude');
@@ -23,6 +25,12 @@ const OUT_DIR = path.join(PROFILE.catalogDir, 'shows');
 const OUT_MD = path.join(PROFILE.docsDir, 'COVERAGE.md');
 const DROPPED_FILE = path.join(CACHE_DIR, 'match-dropped.json'); // git-ignored (catalog/cache); HQ can read it
 const LIVE = 0.85, REVIEW = 0.5;
+// Strict profiles (VOIDtv Kids, docs/KIDS.md 3): every file passes scripts/lib/strict.js before it is scored, LIVE
+// matches only, no self-listing, no guessed order; perFile shows keep only files approved in HQ. Writes
+// <catalog>/strict-report.json and <docs>/STRICT.md. Off for VOIDtv, whose path below is unchanged.
+const STRICT = PROFILE.strict ? require('./lib/strict') : null;
+const RULES = STRICT && STRICT.compile(JSON.parse(fs.readFileSync(path.join(PROFILE.dir, 'rules.json'), 'utf8')));
+const STRICT_RUN = {}, STRICT_UPLOADERS = {}; // show name -> its strict report / its uploader hashes (denied, to look at)
 const REACT = /\b(reaction|reacts?|reacting|review|recap|commentary|breakdown|watch ?along|first time watching|normies|mark watches|group reaction|walkthrough|playthrough|gameplay|let'?s play|longplay|speedrun)\b/i;
 
 function norm(s) {
@@ -49,6 +57,7 @@ function noEmail(v, key) {
 }
 function slug(s) { return norm(s).replace(/ /g, '-').replace(/^(con|prn|aux|nul|com[1-9]|lpt[1-9])$/, '$1-show'); }
 const STOP = new Set(['the', 'a', 'an', 'and', 'of', 'to', 'in', 'on', 'at', 'for', 'with', 'is', 'it', 'part']);
+const TITLE_OVER_NUMBER = []; // strict: files whose own title overruled their S/E numbers (2b in decideGrid), listed after a run
 const QUALITY_RE = /\b(\d{3,4}p|x26[45]|h ?26[45]|hevc|aac|ac3|dvdrip|webrip|web dl|hdtv|bluray|bdrip|xvid|divx|mp4|mkv|avi|proper|repack|internal|uncut|uncensored|dual audio|multi|eng|english|sub(bed|s)?|dub(bed)?|fine cut|rough cut|complete|season|episode|ep|disc|dvd|vhs|rip|hq|lq|remaster(ed)?)\b/g;
 
 function bigrams(s) { const out = new Set(); for (let i = 0; i < s.length - 1; i++) out.add(s.slice(i, i + 2)); return out; }
@@ -150,6 +159,9 @@ const OVERRIDES = fs.existsSync(path.join(PROFILE.catalogDir, 'overrides.json'))
 // Re-read per show: HQ rewrites the file while long matches run, and a decision made mid-run should count.
 const DEAD_FILE = path.join(PROFILE.catalogDir, 'dead-files.json');
 function readDead() { try { return JSON.parse(fs.readFileSync(DEAD_FILE, 'utf8')); } catch (e) { return {}; } } // linkcheck.js retires files the Archive no longer serves
+// Originals whose sound a browser cannot play, and the Archive's own copy to play instead (scripts/sound-check.js, scripts/lib/sound.js).
+const SOUND_FILE = path.join(PROFILE.catalogDir, 'sound-files.json');
+function readSound() { try { return JSON.parse(fs.readFileSync(SOUND_FILE, 'utf8')); } catch (e) { return {}; } }
 function readOverrides() { try { return JSON.parse(fs.readFileSync(path.join(PROFILE.catalogDir, 'overrides.json'), 'utf8')); } catch (e) { return OVERRIDES; } }
 // ---- Does an upload title NAME the show? ----
 // A plain substring test said "Parker's Puzzle" names The Parkers, "Monster Jam" names Monster, "Naruto Shippuden" names Naruto and "The Body Language Guy"
@@ -273,7 +285,7 @@ function matchShow(entry, drops) {
   const cf = path.join(CAND_DIR, slug(show) + '.json');
   if (!fs.existsSync(cf)) return null;
   const cand = JSON.parse(fs.readFileSync(cf, 'utf8'));
-  const r = gridFor(entry, cand, loadTv(show), { ov: readOverrides()[slug(show)] || {}, readDead, firstAdded });
+  const r = gridFor(entry, cand, loadTv(show), { ov: readOverrides()[slug(show)] || {}, readDead, readSound, firstAdded });
   const outFile = path.join(OUT_DIR, slug(show) + '.json');
   if (drops && (r.noTvmaze || r.coverage.live + r.coverage.review === 0)) { // the only two ways a run can take a grid away; read the grid that is on disk now, before it goes
     let old = null; try { old = JSON.parse(fs.readFileSync(outFile, 'utf8')); } catch (_) { /* none */ }
@@ -316,6 +328,9 @@ function decideGrid(entry, cand, tv, ctx) {
   const ov = ctx.ov || {};
   const tags = ctx.tags || new Map();
   if (ov.excludeItems) cand.items = cand.items.filter((it) => !ov.excludeItems.includes(it.id));
+  // A copy that would play with no sound (Dolby, DTS) plays the Archive's own .ia.mp4 copy instead: same episode, same name (B, 16 Nov 2026: Dragon Tales).
+  const SOUND = (ctx.readSound || (() => ({})))();
+  if (Object.keys(SOUND).length) cand = { ...cand, items: cand.items.map((it) => ({ ...it, files: it.files.map((f) => sound.playable(it.id, f, SOUND)) })) };
   const aliases = [...(ov.aliases || []), ...(BUILTIN_ALIASES[slug(show)] || [])].map(norm).filter(Boolean);
   const DEAD = (ctx.readDead || (() => ({})))();
   const rejected = new Set([...(ov.rejectFiles || []), ...Object.keys(DEAD)]); // B's rejections in HQ, and the files linkcheck retired
@@ -324,7 +339,7 @@ function decideGrid(entry, cand, tv, ctx) {
   // A guide cached before the TVmaze name guard existed can belong to another show (I Love the '70s on I Love the '90s, audit P3B-03). The guard
   // (scripts/lib/tvmazeguard.js) is the one decision hunt.js uses to take a guide; it now also decides whether a cached one is used. An id B pinned in HQ stands.
   if (tv && !ov.tvmazeId && tv.name && !nearNameGuard(entry, tv).ok) tv = null;
-  if (!tv || !tv.episodes.length) { const sg = selfGrid(entry, withoutRejected(cand), aliases, [], ov.placeFiles, ov.acceptFiles); return sg || { show, type: entry.type, network: entry.network, noTvmaze: true }; }
+  if (!tv || !tv.episodes.length) { if (STRICT) { STRICT_RUN[show] = STRICT.emptyReport('no TVmaze episode list; strict never self-lists'); return { show, type: entry.type, network: entry.network, noTvmaze: true }; } const sg = selfGrid(entry, withoutRejected(cand), aliases, [], ov.placeFiles, ov.acceptFiles); return sg || { show, type: entry.type, network: entry.network, noTvmaze: true }; }
   const showWords = norm(show).split(' ').filter((w) => !STOP.has(w));
   const core = norm(show).replace(/^the /, '');
   const nets = typeof tv.network === 'string' && norm(tv.network) ? [norm(tv.network)] : []; // the show's own network, for the title test
@@ -344,6 +359,7 @@ function decideGrid(entry, cand, tv, ctx) {
   const firstYear = tv.premiered ? +tv.premiered.slice(0, 4) : 0;
   let dateRejected = 0;
   const ordered = [...tv.episodes].sort((a, b) => (a.airdate || '').localeCompare(b.airdate || '') || a.season - b.season || a.number - b.number);
+  const J = STRICT && STRICT.judge(RULES, entry, tv, cand.items, ov.acceptFiles); // strict: this show's file checks and their counts
 
   const assignments = new Map(); // key -> [{conf, file, item, reasons}]
   // Hard excludes for series (audit batch C2, B 26 Oct): hate and extremist material, a government collection, or news, politics and government
@@ -361,14 +377,15 @@ function decideGrid(entry, cand, tv, ctx) {
     const unmatched = []; // episode-band files this item could not place by number or title
     const itemEx = seriesExclude({ title: item.title, item: item.id, collection: item.collection }, exOwn);
     for (const f of item.files) {
+      if (J && !J.pass(item, f)) { tags.set(f, 'excluded'); continue; } // strict: words, collection, other series, uploader, reputation, runtime, per-file approval; strict.js sets the band
       // A file whose own name, or whose upload's title, names the show is an episode of it, whatever its title says ("The Masked Lunatic That
       // Hijacked American News" is a Mystery Files episode, "World Nightly News 2026" a Mind of Mencia sketch): its name is tested for hate words
       // only. The upload title itself is always tested.
       const stemEx = hateIn(f.name) || (!namesShow(f.name) && !itemTitled && seriesExclude({ stem: f.name }, exOwn));
       if ((itemEx || stemEx) && !isAccepted(item, f)) { tags.set(f, 'excluded'); continue; } // the fallback reuses only placed and no-match files, so it stays out there too
       // Files hunted before the show had a TVmaze runtime carry generic bands (half-hour, hour); re-band them now that we know the runtime.
-      if (!tv.runtime && (f.band === 'half-hour' || f.band === 'hour' || f.band === 'short')) f.band = 'episode';
-      if (tv.runtime && f.seconds && !(f.band === 'episode' || f.band === 'double')) { const m = f.seconds / 60, rt = tv.runtime; f.band = m < 4 ? 'clip' : (m >= rt * 0.7 && m <= rt * 1.35) ? 'episode' : (m >= rt * 1.7 && m <= rt * 2.5) ? 'double' : m > rt * 4 ? 'block' : 'odd'; }
+      if (!J && !tv.runtime && (f.band === 'half-hour' || f.band === 'hour' || f.band === 'short')) f.band = 'episode';
+      if (!J && tv.runtime && f.seconds && !(f.band === 'episode' || f.band === 'double')) { const m = f.seconds / 60, rt = tv.runtime; f.band = m < 4 ? 'clip' : (m >= rt * 0.7 && m <= rt * 1.35) ? 'episode' : (m >= rt * 1.7 && m <= rt * 2.5) ? 'double' : m > rt * 4 ? 'block' : 'odd'; }
       if (!(f.band === 'episode' || f.band === 'double')) { tags.set(f, 'wrong-length'); continue; }
       const fileNamesOther = namesOtherShow(f.name, show, aliases);
       const fp = titlePart(f.name, showWords);
@@ -384,6 +401,20 @@ function decideGrid(entry, cand, tv, ctx) {
       } else if (f.ep && f.ep.season == null && f.ep.episode >= 1 && f.ep.episode <= ordered.length) {
         candidates.push({ ep: ordered[f.ep.episode - 1], base: 0.4, why: 'absolute episode number' });
       }
+      // 1b. Strict: a production number TVmaze knows ("Episode 4133", "Show 1051", "#1586") places the file, and the same
+      // digits read as S/E ("123" = 1x23) or as an absolute episode number do not.
+      const pm = J && J.production(item, f);
+      if (pm) {
+        candidates = candidates.filter((c) => !(c.why !== 'airdate in filename' && f.ep && (f.ep.season == null ? f.ep.episode : f.ep.season * 100 + f.ep.episode) === pm.n));
+        const ex = candidates.find((c) => c.ep === pm.ep);
+        if (ex) { ex.base = Math.max(ex.base, 0.7); ex.why += ' + production number ' + pm.n; } else candidates.push({ ep: pm.ep, base: 0.7, why: 'production number ' + pm.n });
+      }
+      // 1c. Strict: a file named after two stories that sit next to each other in the guide (scripts/lib/strict.js pairOf, WordGirl)
+      // is that pair. Its S/E numbers count half hours, not stories, so every number-based place goes; it is placed on both stories
+      // by the two titles (the second story's entry plays the half hour from its start, as these files always did), and no title
+      // guess adds another.
+      const pr = J && J.pair(item, f);
+      if (pr) candidates = [{ ep: pr.a, base: 0.75, why: 'two stories by title: ' + pr.a.name + ' + ' + pr.b.name }, { ep: pr.b, base: 0.75, why: 'two stories by title (the second): ' + pr.a.name + ' + ' + pr.b.name }];
       // 2. Title similarity (best episode by name)
       let best = null, bestSim = 0;
       for (const e of tv.episodes) { const s = titleSim(fp, e.name); if (s > bestSim) { bestSim = s; best = e; } }
@@ -391,10 +422,32 @@ function decideGrid(entry, cand, tv, ctx) {
       // upload that does not name the show is how Tweenies ended up under Look Around You.
       const titleAlone = !namesShow(f.name) && !itemTitled;
       const strongTitle = best && norm(best.name).split(' ').filter((w) => !STOP.has(w) && w.length > 2).length >= 2;
-      if (!dateHit && best && bestSim >= 0.6 && (!titleAlone || strongTitle) && !(itemLonger && !namesTitle(f.name, [core, ...aliases], nets))) {
+      if (!pr && !dateHit && best && bestSim >= 0.6 && (!titleAlone || strongTitle) && !(itemLonger && !namesTitle(f.name, [core, ...aliases], nets))) {
         const existing = candidates.find((c) => c.ep === best);
         if (existing) { existing.base += bestSim >= 0.8 ? 0.3 : 0.15; existing.why += ' + title match'; }
         else candidates.push({ ep: best, base: bestSim >= 0.8 ? 0.5 : 0.3, why: `title ~ "${best.name}" (${bestSim.toFixed(2)})` });
+      }
+      // 2b. Strict: the file's own episode title outranks its numbers (B, 16 Nov 2026: "Go for it", after transcripts showed 9
+      // kids standouts playing another episode). When the name's title is plainly ANOTHER episode of this show (a close title
+      // match with two real words, and not the numbered one's), the upload counts in another order (a DVD set, another season
+      // split), so the number places nothing and the file goes where its title says, with the weight a number would have had.
+      // A title that matches no episode proves nothing (Sesame Street files often carry a different name for the same show).
+      const solid = best ? norm(best.name).split(' ').filter((w) => !STOP.has(w) && w.length > 2) : [];
+      if (J && !pr && !pm && !dateHit && best && bestSim >= 0.8 && (solid.length >= 2 || solid.some((w) => w.length >= 7))) { // "Chimpanzee and Me" is a real title too
+        const numbered = candidates.filter((c) => /^(S\/E in filename|absolute episode number)/.test(c.why));
+        const wrong = numbered.filter((c) => c.ep !== best && titleSim(fp, c.ep.name) < 0.35);
+        if (wrong.length) {
+          candidates = candidates.filter((c) => !wrong.includes(c));
+          const t = candidates.find((c) => c.ep === best && /^title ~/.test(c.why));
+          // A file of two stories ("Flip Flop - Just for Laughs") plays from its start, so it may only stand for its FIRST story.
+          const raw = f.name.split('/').pop().replace(/^.*?\b(?:s\d{1,2}\s?e\d{1,3}(?:-e?\d{1,3})?|\d{1,2}x\d{1,3}|episode\s*\d{1,3})\b[\s.\-–:]*/i, '');
+          const parts = raw.split(/\s+[-–]\s+|;\s*|\s+&\s+|\s+\+\s+|\.-\./).map((x) => norm(x)).filter(Boolean);
+          const whole = Math.min(titleSim(fp, best.name), titleSim(norm(best.name), fp)) >= 0.9; // the guide lists both stories as one ("Pistachio/Full Team Ahead")
+          const first = parts.length < 2 || whole || titleSim(titlePart(parts[0], showWords), best.name) >= 0.8;
+          if (t && !first) candidates = candidates.filter((c) => c !== t);
+          if (t && first && bestSim >= 0.8 && namesShow(f.name)) { t.base = 0.6; t.why += ', its numbers say ' + wrong.map((c) => c.ep.season + 'x' + c.ep.number).join(' ') + ' (another order)'; }
+          TITLE_OVER_NUMBER.push(`${show}: "${f.name.slice(0, 70)}" not ${wrong.map((c) => c.ep.season + 'x' + c.ep.number + ' ' + c.ep.name).join(', ')}${t && t.base === 0.6 ? ' -> ' + best.season + 'x' + best.number + ' ' + best.name : ' -> nothing'}`);
+        }
       }
       // Why a file that is not placed was turned away. The scores below stay as they were; the tag only decides what the fallback may reuse.
       const pen = { other: false, notNamed: false }; let placedAny = false;
@@ -421,7 +474,8 @@ function decideGrid(entry, cand, tv, ctx) {
         conf = Math.max(0, Math.min(1, conf));
         if (foreign) conf = Math.min(conf, LIVE - 0.01); // a dub is REVIEW at most, never LIVE, however well it is named (audit M5: 0.85 had made 379 LIVE)
         if (process.env.MATCH_DEBUG) console.log(`  [debug] ${f.name.slice(0, 60)} -> ${c.ep.season}x${c.ep.number} conf ${conf.toFixed(2)} (${c.why}; band ${f.band}; names ${namesShow(f.name)}/${itemTitled}; other ${fileNamesOther}/${itemNamesOther})`);
-        if (conf < REVIEW && ![item.id + '|' + f.name, item.id + '|' + noEmail(f.name)].some((k) => (ov.acceptFiles || []).includes(k))) continue; // an accepted file is kept whatever the judges say
+        if ((J ? +conf.toFixed(2) < LIVE : conf < REVIEW) && !isAccepted(item, f)) continue; // an accepted file is kept whatever the judges say (strict: LIVE or nothing, judged on the stored 2-decimal confidence)
+        if (J) J.placed(item, f);
         const risk = codecRisk(f.name, f.format, f.playable);
         placedAny = true;
         push(c.ep, { conf: +conf.toFixed(2), why: c.why, item: item.id, itemTitle: item.title, file: f.file, name: f.name, url: f.url, seconds: f.seconds, format: f.format, playable: f.playable, codecRisk: risk || undefined, langRisk: foreign || undefined, sizeMB: f.sizeMB });
@@ -431,10 +485,10 @@ function decideGrid(entry, cand, tv, ctx) {
     // Sequence fallback: a DVD/season rip whose files carry no names ("Disc 1 10", "VTS_03_1").
     // If the ITEM names the show, holds 5+ unplaced episode-length files and no other show, offer
     // them in natural order as consecutive episodes of the season the item title suggests
-    // (volume/season N, else 1) at REVIEW confidence. A human confirms with a glance.
+    // (volume/season N, else 1) at REVIEW confidence. A human confirms with a glance. Never in strict mode: no guessed order.
     const titleNamesMe = namesTitle(item.title || '', [core, ...aliases], nets); // the upload's TITLE names the show (an identifier does not)
     // noGuess (overrides.json) turns this off for one show, when its disc rips cannot be trusted in order (SpongeBob, B 25 Oct).
-    if (!ov.noGuess && titleNamesMe && !itemNamesOther && unmatched.length >= 5 && !REACT.test(item.title || '') && !langRisk(item.title)) {
+    if (!J && !ov.noGuess && titleNamesMe && !itemNamesOther && unmatched.length >= 5 && !REACT.test(item.title || '') && !langRisk(item.title)) {
       const m = /\b(?:season|series|volume|vol\.?)\s*(\d{1,2}|one|two|three|four|five|six|seven|eight|nine|ten)\b/i.exec(item.title || '');
       const words = { one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10 };
       const season = m ? (words[m[1].toLowerCase()] || +m[1]) : 1;
@@ -476,6 +530,7 @@ function decideGrid(entry, cand, tv, ctx) {
       const plc = opts.find((o) => PLACED.test(o.why)); // a file B placed on this episode wins over one he only accepted
       const acc = plc || opts.find((o) => fkeys(o).some((k) => accepted.has(k)));
       if (acc) { if (acc !== plc) { acc.conf = 1; acc.why = 'accepted in HQ | ' + acc.why; } opts = [acc, ...opts.filter((o) => o !== acc)]; }
+      if (J) opts = opts.filter((o) => o.conf >= LIVE && (o.playable || o === acc)); // strict: LIVE or nothing, alternates included
       const pick = opts[0] || null;
       const state = !pick ? 'MISSING' : (pick.conf >= LIVE && (pick.playable || acc === pick)) ? 'LIVE' : 'REVIEW';
       if (pick && !pick.playable) pick.why += ` | not browser-playable: ${pick.codecRisk}`;
@@ -483,6 +538,56 @@ function decideGrid(entry, cand, tv, ctx) {
       return { number: e.number, name: e.name, airdate: e.airdate, state, file: pick, alternates: opts.slice(1, 4) };
     });
     seasons.push({ season: s, episodes: eps });
+  }
+  // Strict, a show flagged byNumber in list.json (Sesame Street, B 15 Nov 2026, decision 5a): the uploads name their episode
+  // number ("Episode 4133") and TVmaze has no entry for most of those numbers, so they are listed by that number in one
+  // more season, 0, shown as "Episodes by number". Not a guess: the number is the episode. Only files that passed every
+  // strict check, name the show, play in a browser, are no reaction or dub, and carry exactly one number; a number TVmaze
+  // already places stays in its real season. The name is the upload's topic when its title gives one, else "Episode N".
+  if (J && (entry.flags || []).includes('byNumber')) {
+    const usedN = new Set();
+    for (const list of assignments.values()) for (const o of list) { const m = /production number (\d+)/.exec(o.why || ''); if (m) usedN.add(+m[1]); }
+    const byN = new Map();
+    for (const item of cand.items) for (const f of item.files) {
+      if (!J.ok(item, f) || !(f.band === 'episode' || f.band === 'double') || !f.playable) continue;
+      if (fileKeys(item.id, f.name).some((k) => rejected.has(k))) continue;
+      if (!(namesShow(f.name) || namesShow(item.title || '') || idNamesShow(item.id))) continue;
+      if (REACT.test(f.name) || REACT.test(item.title || '') || langRisk(f.name) || langRisk(item.title)) continue;
+      const n = J.number(item, f);
+      if (!n || usedN.has(n)) continue;
+      // The upload must say the number is an episode's ("Episode 4133", "Ep. 56", "#4417", "Show 1051", or "(2589)" on its
+      // own) in the file's name or the upload's title: a lone number can be a DVD track ("105 - The Great Numbers Game").
+      const says = new RegExp('(?:episode|epis|ep|show|no|#)\\.?\\s*#?\\s*' + n + '(?!\\d)|\\(\\s*' + n + '\\s*\\)', 'i');
+      if (!says.test(String(f.name || '').split('/').pop()) && !says.test(item.title || '')) continue;
+      if (!byN.has(n)) byN.set(n, []);
+      byN.get(n).push({ conf: 1, why: 'production number ' + n + ' (by number)', item: item.id, itemTitle: item.title, file: f.file, name: f.name, url: f.url, seconds: f.seconds, format: f.format, playable: f.playable, sizeMB: f.sizeMB, ref: [item, f] });
+    }
+    const showRe = new RegExp(show.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'ig');
+    // The topic: a phrase in brackets ("Episode 1257 (Telly Monster's Debut)") or right after the number ("#4417 - Grandparents
+    // Celebration"), in the file's own name or, for a one-file upload, its title. A phrase about the copy (VHS, full, original,
+    // Sprout version, raw...), a date, a site name, or one word is not a topic; then the entry is "Episode N".
+    const NOISE = /\b(?:vhs|dvd|dvdrip|transfer|recordings?|recorded|rip(?:ped)?|tape|off[- ]air|broadcast|aired?|airing|partial|full|complete|original|version|sprout|raw|rare|labell?ed|quality|copy|upload|hd|sd|\d{3,4}p|pbs|kids|afn|family|more|part|pt)\b|\b(?:january|february|march|april|may|june|july|august|september|october|november|december)\b|\b(?:19|20)\d\d\b|\w+\.(?:net|com|org)\b/i;
+    const topic = (o, n) => {
+      const texts = [String(o.name || '').split('/').pop().replace(/\.[a-z0-9]{2,4}$/i, '')];
+      if ((o.ref[0].files || []).length === 1) texts.push(String(o.itemTitle || ''));
+      for (const t of texts) {
+        const phrases = [...t.matchAll(/\(([^()]{4,80})\)/g)].map((m) => m[1]);
+        const after = new RegExp('(?:^|[^\\d])' + n + '\\s*[-:–]\\s*([^()\\[\\]]{4,80})').exec(t); if (after) phrases.push(after[1]);
+        for (const p of phrases) {
+          const c = p.replace(showRe, ' ').replace(/\s+/g, ' ').replace(/^[\s\-:,.#]+|[\s\-:,.#]+$/g, '').trim();
+          if (c.split(' ').length >= 2 && /[a-z]{3}/i.test(c) && !NOISE.test(c) && !/\d{3}/.test(c)) return c.slice(0, 80);
+        }
+      }
+      return 'Episode ' + n;
+    };
+    const eps = [...byN.keys()].sort((a, b) => a - b).map((n) => {
+      const opts = byN.get(n).sort((a, b) => (b.sizeMB || 0) - (a.sizeMB || 0));
+      const name = topic(opts[0], n);
+      for (const o of opts) { J.placed(o.ref[0], o.ref[1]); delete o.ref; }
+      live++;
+      return { number: n, name, state: 'LIVE', file: opts[0], alternates: opts.slice(1, 4) };
+    });
+    if (eps.length) seasons.push({ season: 0, episodes: eps });
   }
   // When the TVmaze list and the uploads do not speak the same language (web series on DVD, toon collections),
   // self-listing places far more files and says so. Not when the files were turned away for being too old: those belong elsewhere.
@@ -492,7 +597,7 @@ function decideGrid(entry, cand, tv, ctx) {
   const pool = cand.items.reduce((n, it) => n + it.files.filter((f) => f.band !== 'block' && f.band !== 'odd').length, 0);
   // guideOnly (overrides.json): keep the TVmaze grid even when few files place, rather than guess an order from the files
   // (B, 25 Oct: SpongeBob's guessed "episode 1" was Disc 13 of a season 5 DVD, and a visitor gave up on it).
-  if (!ov.guideOnly && placed * 6 < pool && pool >= 20 && dateRejected < pool / 2) {
+  if (!J && !ov.guideOnly && placed * 6 < pool && pool >= 20 && dateRejected < pool / 2) { // never in strict mode: The Parkers' 828 kids' compilations came this way
     const whyNot = (f, item) => rejectionTag({ other: namesOtherShow(f.name, show, aliases) || (!namesShow(f.name) && namesOtherShow(item.title || '', show, aliases)), react: REACT.test(tagText(f.name)) || REACT.test(tagText(item.title || '')), foreign: langRisk(f.name) || langRisk(item.title), notNamed: !namesShow(f.name) && !(namesShow(item.title || '') || idNamesShow(item.id)) });
     const sg = selfGrid(entry, fallbackCand(withoutRejected(cand), tags, { tv, namesTitle: (t) => namesTitle(t, [core, ...aliases], nets), cores: [core, ...aliases], whyNot }), aliases, nets, ov.placeFiles, ov.acceptFiles);
     const sgPlaced = sg ? sg.seasons.reduce((n, se) => n + se.episodes.length, 0) : 0;
@@ -505,6 +610,7 @@ function decideGrid(entry, cand, tv, ctx) {
     coverage: { total, live, review, missing: total - live - review, pct: Math.round(((live + review) / total) * 100) },
     seasons,
   };
+  if (J) { STRICT_RUN[show] = J.finish(live, seasons); STRICT_UPLOADERS[show] = J.uploaders; }
   return out;
 }
 
@@ -662,6 +768,30 @@ function main() {
   const dropped = saveDropped(drops, rows, at); // a partial run (HQ's one-show match) updates the list too
   if (!partial) writeCoverage(rows, dropped); // a filtered run leaves the full report alone
   console.log(`\nWrote ${rows.length} grids to catalog/shows/ and docs/COVERAGE.md`);
+  if (STRICT && TITLE_OVER_NUMBER.length) { console.log(`\nStrict: ${TITLE_OVER_NUMBER.length} files whose own title overruled their numbers:`); for (const l of TITLE_OVER_NUMBER) console.log('  ' + l); }
+  if (STRICT) { const t = writeStrict(partial); console.log(`Strict: ${t.showsWithEpisodes} of ${t.shows} shows have episodes, ${t.kept} episodes kept; see STRICT.md and strict-report.json`); }
+}
+
+// Strict profiles: per-show counts and example rejects (<catalog>/strict-report.json) and the readable table
+// (<docs>/STRICT.md). A filtered run updates its own shows and keeps the rest.
+// Writes with a short retry: on Windows a file another process has open (HQ, a viewer) can refuse a write for a moment.
+const writeRetry = (file, text) => { for (let a = 0; ; a++) { try { fs.writeFileSync(file, text); return; } catch (e) { if (a >= 4) throw e; const until = Date.now() + 150 * (a + 1); while (Date.now() < until) {} } } };
+function writeStrict(partial) {
+  const file = path.join(PROFILE.catalogDir, 'strict-report.json');
+  let old = {};
+  if (partial) { try { old = JSON.parse(fs.readFileSync(file, 'utf8')).shows || {}; } catch (e) { /* first run */ } }
+  const shows = { ...old, ...STRICT_RUN };
+  const hunted = new Set(fs.existsSync(CAND_DIR) ? fs.readdirSync(CAND_DIR) : []);
+  const report = { generatedAt: new Date().toISOString(), profile: PROFILE.name, totals: STRICT.totals(shows),
+    noCandidates: LIST.shows.filter((s) => !hunted.has(slug(s.name) + '.json')).map((s) => s.name), shows };
+  writeRetry(file, JSON.stringify(report, null, 2));
+  // the uploader hashes behind STRICT.md, only under cache/, which is never committed
+  const uf = path.join(CACHE_DIR, 'uploaders-to-look-at.json');
+  let oldU = {}; if (partial) { try { oldU = JSON.parse(fs.readFileSync(uf, 'utf8')).shows || {}; } catch (e) { /* first run */ } }
+  fs.mkdirSync(CACHE_DIR, { recursive: true });
+  writeRetry(uf, JSON.stringify({ generatedAt: report.generatedAt, _readme: 'Archive uploader hashes (uploaderHash, as hunt.js writes it) behind STRICT.md (denied by reputation; to look at). Keep out of git.', shows: { ...oldU, ...STRICT_UPLOADERS } }, null, 2));
+  fs.writeFileSync(path.join(PROFILE.docsDir, 'STRICT.md'), STRICT.markdown(report, PROFILE.siteName));
+  return report.totals;
 }
 if (require.main === module) main();
 module.exports = { norm, tagText, slug, noEmail, namesTitle, titleNaming, closesName, REACT, QUALITY_RE, OTHER_SHOWS, BUILTIN_ALIASES, makeOtherShows, forOtherShow, otherShowCores, namesOtherShow, variantKey, rejectionTag, stripShow, isJunkItem, isJunkFile, isExtras, inRuntimeBand, episodeNumberOf,

@@ -98,6 +98,19 @@ test('the middleware keeps the same security headers as the build writes into _h
   const src = fs.readFileSync(path.join(ROOT, 'functions', '_middleware.js'), 'utf8');
   for (const [k, v] of G.SECURITY_HEADERS) assert.ok(src.includes(JSON.stringify(k).replace(/"/g, "'")) && (src.includes(`'${v}'`) || src.includes(`"${v}"`)), `${k} in _middleware.js must equal siteguards.js`);
   assert.ok(src.includes(G.CSP), 'the policy text must be identical');
+  assert.ok(src.includes(G.KIDS_CSP), "the kids policy text must be identical");
+});
+
+test('a kids address gets the kids policy: no Sentry, no TMDB; voidtv.net keeps its own', async () => {
+  const { onRequest } = await load('functions/_middleware.js');
+  const next = async () => new Response('page', { status: 200 });
+  for (const [u, env] of [['https://voidtv-kids.pages.dev/', {}], ['https://example.org/', { GATE_BRAND: 'kids' }], ['https://kids.voidtv.net/show/x', { SITE_PASSWORD: 'p' }]]) {
+    const res = await onRequest({ request: new Request(u), env, next });
+    assert.equal(res.headers.get('Content-Security-Policy-Report-Only'), G.KIDS_CSP, u);
+    assert.doesNotMatch(res.headers.get('Content-Security-Policy-Report-Only'), /sentry|tmdb/i);
+  }
+  const v = await onRequest({ request: new Request('https://voidtv.net/'), env: {}, next });
+  assert.equal(v.headers.get('Content-Security-Policy-Report-Only'), G.CSP);
 });
 
 test('the gate page still ships its promos loop (another chat owns that code; this only checks it was not lost)', () => {

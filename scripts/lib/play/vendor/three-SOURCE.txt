@@ -1,0 +1,6 @@
+three.js r187 (npm package "three" 0.187.0, MIT, three.js authors).
+Downloaded 15 Nov 2026 with Bryan's OK for Void Village (profiles/kids/docs/PLAN-void-village.md).
+Packed into one file (global THREE) with esbuild 0.25.12 from body-atlas/app: entry "export * from ./three.module.js", --bundle --format=iife --minify --legal-comments=none --target=es2020. Code unchanged; comments removed (the licence is in three-LICENSE.txt).
+sha256 three.module.js: 104f56145899722094556490d787aae0617cc2fc3382f31df02d724ea1aee341
+sha256 three.core.js: 613e370f76638fdef83926642bf256dc9615684922de1ce1f63a8583e5d78578
+sha256 three.min.js (this file): 368e1c06bb6e221abb366e890eef9b2baf9ba9af558dea0df294f12b6b4608d0

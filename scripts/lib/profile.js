@@ -21,7 +21,7 @@ const name = process.env.VOID_PROFILE || 'voidtv';
 const defaults = {
   name: 'voidtv', siteName: 'voidtv.net', tagline: 'before AI slop, there was human creativity', domain: 'https://voidtv.net',
   listFile: 'scripts/show-list.json', catalogDir: 'catalog', siteDir: 'site', docsDir: 'docs', reference: 'tvmaze', mediatype: 'movies',
-  rows: null, taskPrefix: 'VoidTV', port: 8780,
+  rows: null, topics: null, taskPrefix: 'VoidTV', port: 8780,
 };
 const file = path.join(ROOT, 'profiles', name, 'profile.json');
 let p = { ...defaults };
@@ -32,7 +32,19 @@ if (!p.taskPrefix || p.taskPrefix === defaults.taskPrefix && name !== 'voidtv') 
 fs.mkdirSync(path.resolve(ROOT, p.docsDir), { recursive: true });
 module.exports = {
   ROOT, name: p.name, siteName: p.siteName, tagline: p.tagline, domain: p.domain, reference: p.reference, mediatype: p.mediatype,
-  rows: p.rows, taskPrefix: p.taskPrefix, port: +p.port || 8780,
+  rows: p.rows, topics: p.topics || null, taskPrefix: p.taskPrefix, port: +p.port || 8780,
+  // Kids-style switches (profiles/kids/profile.json). Off unless a profile sets them, so VOIDtv is unchanged:
+  //   strict        matcher: no self-list fallback, no REVIEW picks, junk words, runtime against the show's own length
+  //   approvedOnly  the site shows only list entries marked "approved": true (a person approved them in HQ)
+  //   features      { downloads, archiveLinks, people, sixDegrees, cash, donate, live, share, sentry, externalLinks,
+  //                   tmdbImages: booleans, default true; analytics: 'full' | 'aggregate' }
+  //   theme         'kids' for the bright, calm look; otherwise VOIDtv's
+  strict: !!p.strict, approvedOnly: !!p.approvedOnly, theme: p.theme || 'void',
+  features: { downloads: true, archiveLinks: true, people: true, sixDegrees: true, cash: true, donate: true, live: true, share: true, sentry: true, externalLinks: true, tmdbImages: true, analytics: 'full', ...(p.features || {}) },
+  //   portals       the other VOID sites this one links to: [{ name, url, blurb, kids }]. Names always carry "voidtv.net".
+  //                 A site with links out shows them in its footer ("More from VOID"); the kids site only behind the
+  //                 grown-up check on its "For grown-ups" page. None (VOIDtv today): nothing renders.
+  portals: (Array.isArray(p.portals) ? p.portals : []).filter((x) => x && x.name && /^https:\/\//.test(x.url || '')).map((x) => ({ name: String(x.name), url: String(x.url), blurb: String(x.blurb || ''), kids: !!x.kids })),
   listFile: path.resolve(ROOT, p.listFile), catalogDir: path.resolve(ROOT, p.catalogDir), siteDir: path.resolve(ROOT, p.siteDir), docsDir: path.resolve(ROOT, p.docsDir),
   dir: path.join(ROOT, 'profiles', name),
 };

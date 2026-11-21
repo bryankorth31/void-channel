@@ -1,0 +1,84 @@
+/* PLAY AND LEARN, style A "Sticker book": thick ink outlines, flat kids colors, cards that sit up like stickers.
+   Nothing moves on its own and nothing flashes; the only change is a card turning, a picture going into a bin. */
+:root{--paper:#fff8e7;--cream:#fff1cc;--ink:#1b1f3b;--dim:#3a3f66;--sun:#ffd23f;--teal:#2ec4b6;--pink:#ff5fa2;--sky:#4cc9f0}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--paper);color:var(--ink)}
+body{font:20px/1.45 system-ui,Segoe UI,Roboto,sans-serif;-webkit-tap-highlight-color:transparent}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:5px solid var(--ink);outline-offset:3px;box-shadow:0 0 0 10px var(--sun)}
+.pl-top{display:flex;align-items:center;gap:14px;padding:12px 20px;border-bottom:4px solid var(--ink)}
+.pl-top img{width:52px;height:52px}
+.pl-top .n{font-family:Unbounded,system-ui,sans-serif;font-weight:800;font-size:24px;white-space:nowrap}.pl-top .n .w1{color:var(--pink)}.pl-top .n .w2{color:var(--teal)}
+.pl-top a+a{margin-left:10px}.pl-top a{margin-left:auto;font-weight:700;color:var(--ink);background:#fff;border:3px solid var(--ink);border-radius:999px;padding:8px 18px;text-decoration:none}
+.pl-prev{background:var(--sun);border-bottom:4px solid var(--ink);padding:6px 20px;font-weight:800;text-align:center}
+main{max-width:980px;margin:0 auto;padding:18px 16px 40px;position:relative}
+.pl-h{font-family:Unbounded,system-ui,sans-serif;font-size:32px;margin:6px 0 18px;text-align:center}.pl-sub{text-align:center;font-size:22px;font-weight:700;margin:-10px 0 18px;color:var(--dim)}
+svg{display:block;width:100%;height:100%}
+.gl{font-family:Unbounded,system-ui,sans-serif;font-weight:800;line-height:1}
+
+/* sticker cards */
+.pl-game,.pl-topic,.pl-pick,.pl-card,.pl-bin,.pl-btn,.pl-back,.pl-next,.pl-ear{background:#fff;border:5px solid var(--ink);border-radius:26px;box-shadow:6px 6px 0 var(--ink)}
+.pl-game:active,.pl-topic:active,.pl-pick:active,.pl-card:active,.pl-bin:active,.pl-btn:active,.pl-next:active{box-shadow:2px 2px 0 var(--ink);transform:translate(4px,4px)}
+
+.pl-games,.pl-topics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;max-width:720px;margin:0 auto}
+.pl-game,.pl-topic{display:flex;flex-direction:column;align-items:center;gap:10px;padding:20px 12px 16px}
+.pl-game svg,.pl-topic svg{width:120px;height:120px}
+.pl-topic .gl{font-size:96px;height:120px;display:flex;align-items:center}
+.pl-game b,.pl-topic b{font-size:24px}
+.pl-game[data-game=listen]{background:#e3f7f5}.pl-game[data-game=match]{background:#e5f6fd}.pl-game[data-game=sort]{background:#ffe9f3}.pl-game[data-game=trace]{background:#fff6d6}
+
+.pl-back{position:absolute;left:16px;top:16px;width:64px;height:64px;padding:12px;border-radius:20px;z-index:2}
+.pl-steps{display:flex;gap:8px;justify-content:center;margin:12px 0 4px;min-height:18px}.pl-steps i{width:18px;height:18px;border:3px solid var(--ink);border-radius:50%;background:#fff}.pl-steps i.d{background:var(--teal)}.pl-steps i.c{background:var(--sun)}
+.pl-ask{display:flex;align-items:center;justify-content:center;gap:14px;margin:14px 70px 18px;min-height:70px}
+.pl-ask p{margin:0;font-size:26px;font-weight:800;text-align:center}
+.pl-ear{width:64px;height:64px;padding:6px;flex:none;border-radius:50%;box-shadow:4px 4px 0 var(--ink)}
+.pl-say{min-height:64px;text-align:center;font-size:22px;font-weight:700;margin:16px 0 8px}
+.pl-next{display:block;margin:0 auto;width:96px;height:96px;padding:18px;border-radius:50%;background:var(--sun)}
+
+/* Listen and tap */
+.pl-picks{display:flex;gap:22px;justify-content:center;flex-wrap:wrap}
+.pl-pick{width:180px;height:180px;padding:20px;display:flex;align-items:center;justify-content:center}
+.pl-pick .gl{font-size:110px}
+.pl-picks.wait .pl-pick{opacity:.55;cursor:default}
+.pl-pick.ok{background:var(--sun)}.pl-pick.tried{background:#eee8d8;opacity:.6}.pl-pick.hint{border-color:var(--teal);box-shadow:6px 6px 0 var(--teal)}
+
+/* Match pairs */
+.pl-board{display:grid;gap:16px;justify-content:center;grid-template-columns:repeat(3,140px)}.pl-board.n8{grid-template-columns:repeat(4,140px)}
+.pl-card{width:140px;height:140px;padding:16px;background:var(--sky);display:flex;align-items:center;justify-content:center}
+.pl-card .f{display:none;width:100%;height:100%;align-items:center;justify-content:center}.pl-card .gl{font-size:76px}
+.pl-card.up{background:#fff}.pl-card.up .f{display:flex}.pl-card.ok{background:var(--sun)}
+
+/* Sort it */
+.pl-thing{height:190px;display:flex;align-items:center;justify-content:center}
+.pl-drag{width:170px;height:170px;padding:18px;background:#fff;border:5px solid var(--ink);border-radius:26px;box-shadow:6px 6px 0 var(--ink);touch-action:none;display:flex;align-items:center;justify-content:center;cursor:grab;user-select:none}
+.pl-drag .gl{font-size:100px}.pl-drag.held{cursor:grabbing;box-shadow:10px 10px 0 var(--ink);position:relative;z-index:3}
+.pl-bins{display:flex;gap:22px;justify-content:center;margin-top:18px}
+.pl-bin{width:min(300px,44vw);min-height:190px;border-radius:10px 10px 34px 34px;display:flex;flex-direction:column;align-items:center;gap:6px;padding:14px 10px}
+.pl-bin.b0{background:var(--teal)}.pl-bin.b1{background:var(--pink)}
+.pl-bin .ic{width:64px;height:64px;background:#fff;border:4px solid var(--ink);border-radius:18px;padding:4px}
+.pl-bin b{font-size:22px}
+.pl-bin .in{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}.pl-bin .in i{width:44px;height:44px;background:#fff;border:3px solid var(--ink);border-radius:12px;padding:3px;display:flex;align-items:center;justify-content:center}.pl-bin .in .gl{font-size:26px}
+
+/* Trace */
+.pl-trace{display:flex;gap:20px;justify-content:center;align-items:flex-start}
+.pl-model{width:90px;height:90px;padding:10px;background:#fff;border:4px solid var(--ink);border-radius:20px;display:flex;align-items:center;justify-content:center}.pl-model .gl{font-size:56px}
+.pl-pad{width:min(440px,72vw);height:min(440px,72vw);background:#fff;border:5px solid var(--ink);border-radius:30px;box-shadow:6px 6px 0 var(--ink);touch-action:none}
+
+/* show a grown-up, and resting */
+.pl-grown{max-width:640px;margin:20px auto;text-align:center;background:var(--sun);border:5px solid var(--ink);border-radius:32px;box-shadow:8px 8px 0 var(--ink);padding:26px 20px}
+.pl-grown p{margin:6px 0;font-size:22px}.pl-grown .big{font-family:Unbounded,system-ui,sans-serif;font-size:34px;font-weight:800}.pl-show{font-weight:800}
+.pl-did{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:10px}.pl-did>*{width:70px;height:70px}
+.pl-did>svg,.pl-did>.gl{background:#fff;border:4px solid var(--ink);border-radius:18px;padding:8px;display:flex;align-items:center;justify-content:center;font-size:40px}
+.pl-rest svg{width:120px;height:120px;margin:0 auto 6px}
+.pl-acts{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+.pl-btn{padding:14px 26px;font-size:22px;font-weight:800;text-decoration:none;color:var(--ink);display:inline-block}.pl-btn.alt{background:#fff}
+
+@media(max-width:640px){
+ .pl-top{padding:10px 14px}.pl-top img{width:42px;height:42px}.pl-top .n{font-size:18px}.pl-top a{padding:6px 12px;font-size:16px}
+ .pl-h{font-size:24px}.pl-games,.pl-topics{gap:14px}.pl-game svg,.pl-topic svg{width:84px;height:84px}.pl-topic .gl{font-size:70px;height:84px}.pl-game b,.pl-topic b{font-size:19px}
+ .pl-ask{margin:70px 0 14px}.pl-ask p{font-size:21px}
+ .pl-pick{width:28vw;height:28vw;padding:10px}.pl-pick .gl{font-size:16vw}.pl-picks{gap:12px}
+ .pl-board,.pl-board.n8{grid-template-columns:repeat(3,26vw);gap:10px}.pl-board.n8{grid-template-columns:repeat(4,20vw)}.pl-card{width:auto;height:auto;aspect-ratio:1;padding:8px}.pl-card .gl{font-size:12vw}
+ .pl-trace{flex-direction:column;align-items:center}.pl-pad{width:86vw;height:86vw}
+ .pl-bins{gap:12px}.pl-bin{min-height:150px}
+}

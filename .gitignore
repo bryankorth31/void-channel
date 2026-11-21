@@ -42,6 +42,9 @@ hq-app/dist/
 
 # per-profile runtime caches
 profiles/*/catalog/cache/
+# raw hunt results: builder input that carries Archive uploaders' email addresses (third-party personal data);
+# a site is built from the matched grids (catalog/shows), which carry none
+profiles/*/catalog/candidates/
 profiles/*/site/
 beta/.wrangler/
 .wrangler/
@@ -59,3 +62,6 @@ motion/pack/*/
 
 # audit drafts: findings, ledgers and plans that quote B stay on this PC (publish.js pushes docs/, so they never go under docs/)
 audit/
+
+# kids previews (scripts/site.js --preview): local only, never committed or deployed
+profiles/*/site-preview/

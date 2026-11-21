@@ -1,0 +1,21 @@
+// voidtv.net kids at kids.voidtv.net, open with no password (Bryan, 17 Nov 2026: "I want the address to now just be
+// kids.voidtv.net instead of kids-test and I don't want a password on it anymore"). It replaces the gated test Worker
+// voidtv-kids-test (kids-test.voidtv.net, 15 Nov 2026), which is deleted after this one is up.
+// It lives in the CASH Cloudflare account, which holds the voidtv.net zone. Run wrangler from Bryan's own terminal
+// (Claude's shell only sees the personal account). Steps: profiles/kids/docs/DEPLOY-KIDS.md.
+{
+  "name": "voidtv-kids",
+  "account_id": "4548472a99b9105065b715b3848a4a12",
+  "compatibility_date": "2026-11-01",
+  "main": "worker.js",
+  "assets": {
+    "directory": "../../profiles/kids/site",
+    "binding": "ASSETS",
+    "run_worker_first": true,
+    "not_found_handling": "single-page-application"
+  },
+  "analytics_engine_datasets": [{ "binding": "VOIDTV_EVENTS", "dataset": "voidtv_kids_events" }],
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [{ "pattern": "kids.voidtv.net", "custom_domain": true }]
+}

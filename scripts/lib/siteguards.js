@@ -72,8 +72,24 @@ const SECURITY_HEADERS = [
   ['Permissions-Policy', 'camera=(), microphone=(), geolocation=()'],
   ['Content-Security-Policy-Report-Only', CSP],
 ];
-function headersFile() {
-  return '/*\n' + SECURITY_HEADERS.map(([k, v]) => `  ${k}: ${v}\n`).join('')
+// voidtv.net kids (PROFILE.theme 'kids', or a kids host in functions/_middleware.js): the same headers with a policy that
+// names nothing a kids page may not load (docs/KIDS.md, K4): no Sentry, no TMDB, images from the site itself (posters are
+// self-hosted), and the Archive only for the video and the player's look-up of where a file lives.
+const KIDS_CSP = [
+  "default-src 'self'",
+  "script-src 'self' 'unsafe-inline'",
+  "style-src 'self' 'unsafe-inline'",
+  "img-src 'self' data:",
+  "media-src 'self' blob: https://archive.org https://*.archive.org",
+  "connect-src 'self' https://archive.org https://*.archive.org",
+  "frame-ancestors 'none'",
+  "object-src 'none'",
+  "base-uri 'self'",
+  "form-action 'self'",
+].join('; ');
+const KIDS_SECURITY_HEADERS = SECURITY_HEADERS.map(([k, v]) => [k, k === 'Content-Security-Policy-Report-Only' ? KIDS_CSP : v]);
+function headersFile(o = {}) {
+  return '/*\n' + (o.kids ? KIDS_SECURITY_HEADERS : SECURITY_HEADERS).map(([k, v]) => `  ${k}: ${v}\n`).join('')
     + '/data/*\n  Cache-Control: public, max-age=300\n/show/*\n  Cache-Control: public, max-age=300\n/assets/*\n  Cache-Control: public, max-age=86400\n';
 }
 // Names of the three headers the doctor insists on that a response lacks. get(name) returns the value or null.
@@ -269,8 +285,18 @@ async function liveLights({ base, versionTextBody, doFetch, remote, nowMs }) {
   return out;
 }
 
+// The kids sitemap (Bryan, 17 Nov 2026: "Add a sitemap"): every page a child or parent can land on, so search engines find
+// them all. Kids only, and only on an open, non-preview build; voidtv.net's output does not change.
+function sitemapFor(origin, paths) {
+  const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  const base = String(origin).replace(/\/$/, '');
+  return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+    + paths.map((p) => '<url><loc>' + esc(base + p) + '</loc></url>\n').join('') + '</urlset>\n';
+}
+
 module.exports = {
-  LIMITS, SECURITY_HEADERS, CSP,
+  sitemapFor,
+  LIMITS, SECURITY_HEADERS, CSP, KIDS_SECURITY_HEADERS, KIDS_CSP,
   gateMode, gateDecision, isGated, routesFor, headersFile, missingSecurityHeaders, versionText, parseVersion,
   checkOutput, shrinkVerdict, shrinkBaseline, readLastCounts, countsFromVersion, liveCountsSync, unreadableGrids,
   filesLight, gateLight, wwwLight, headersLight, liveVersionLight, shrinkLight, backupLight, liveLights,

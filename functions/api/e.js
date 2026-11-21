@@ -21,6 +21,22 @@ function agent(ua) {
   return { device, browser, os };
 }
 
+// AGGREGATE mode: an ANALYTICS_MODE=aggregate variable on a Pages project (voidtv.net kids). Pages runs the repo's
+// own functions/ folder for every project, so the switch lives here rather than in a second copy of the intake.
+// COPPA: a site for children may not collect persistent identifiers, so this keeps only what a count needs: the event
+// name and a show/episode key ("episode X played N times today"). No session id, page, referrer, search text or file
+// names, and nothing from the request: no IP, country, region, city, colo, timezone, device, browser or OS.
+const KIDS_TYPES = new Set(['view', 'play', 'tick', 'end', 'error', 'search', 'act', 'report']);
+const KIDS_SLUG = /^[a-z0-9-]{0,80}$/, EPKEY = /^\d{1,4}x\d{1,5}$/; // anything else (free text, ids) is dropped
+function aggregate(events, ds) {
+  for (const e of events.slice(0, 25)) {
+    if (!e || typeof e !== 'object' || !KIDS_TYPES.has(e.t)) continue;
+    const slug = KIDS_SLUG.test(str(e.slug, 80)) ? str(e.slug, 80) : '', ep = EPKEY.test(str(e.ep, 16)) ? str(e.ep, 16) : '';
+    try { ds.writeDataPoint({ indexes: [slug || '-'], blobs: [str(e.t, 16), slug, ep, 'kids'], doubles: [1] }); } catch (x) { /* a refusing dataset never breaks the answer */ }
+  }
+  return new Response(null, { status: 204 });
+}
+
 const TYPES = new Set(['view', 'play', 'tick', 'end', 'error', 'tune', 'tvplay', 'search', 'act', 'report']);
 // The shapes the page really sends (scripts/lib/app.js track()): a show slug, a channel id or p<id> for a person; season x episode;
 // the view name from document.body.dataset.view ('' before the first render). Anything else is dropped, not stored, so a script
@@ -40,6 +56,10 @@ export async function onRequestPost({ request, env }) {
   if (!Array.isArray(events)) events = [events];
   const ds = env.VOIDTV_EVENTS;
   if (!ds) return new Response(null, { status: 204 });
+  // Kids by its variable or, failing closed if that was forgotten on a preview or branch deploy, by a host containing
+  // "kids" (every kids address does; no voidtv.net address does).
+  let host = ''; try { host = new URL(request.url).hostname; } catch (x) { /* no address: not a kids host */ }
+  if (env.ANALYTICS_MODE === 'aggregate' || /kids/i.test(host)) return aggregate(events, ds);
   const cf = request.cf || {};
   const { device, browser, os } = agent(request.headers.get('user-agent') || '');
   for (const e of events.slice(0, 25)) {

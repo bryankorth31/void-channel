@@ -3,7 +3,12 @@
 // catalog/qr.json (HQ > QR codes edits it; site.js publishes it as /qr.json). No cookies, no IPs.
 // The password gate lets /q/ through so a stranger's scan still lands somewhere sensible.
 const str = (v, n = 200) => (v == null ? '' : String(v)).slice(0, n);
+// voidtv.net kids shares these functions (Pages runs the repo's functions/ for every project). There a scan is never
+// logged (COPPA: no location or device about a child) and never forwarded off the site: it goes home. Kids is known
+// by its variables or, failing closed if they were forgotten, by a host containing "kids" (every kids address does).
+const kidsSite = (env, request) => env.GATE_BRAND === 'kids' || env.ANALYTICS_MODE === 'aggregate' || /kids/i.test(new URL(request.url).hostname);
 export async function onRequestGet({ request, env, params }) {
+  if (kidsSite(env, request)) return new Response(null, { status: 302, headers: { Location: new URL('/', request.url).toString(), 'cache-control': 'no-store' } });
   const code = String(params.code || '').toLowerCase().replace(/[^a-z0-9-]/g, '').slice(0, 40);
   let map = {};
   try { const r = await env.ASSETS.fetch(new URL('/qr.json', request.url)); if (r.ok) map = await r.json(); } catch (e) { /* no map: fall through to home */ }

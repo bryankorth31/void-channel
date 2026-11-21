@@ -63,6 +63,12 @@ function searchWords(show) {
 }
 
 // ---- polite fetch with cache -------------------------------------------------------------
+// A slow line is not a refusal: when the connection times out or drops before the request is sent (this PC's links
+// sometimes take over 10 s to open, and Node gives up at 10 s: UND_ERR_CONNECT_TIMEOUT), the Archive never saw the
+// call. Retry it in seconds; the long quiet periods are for the Archive saying no (HTTP errors). Seen 18 Oct 2026:
+// one hunt spent most of 20 minutes waiting out connect timeouts as if they were refusals.
+const NET = /UND_ERR_CONNECT_TIMEOUT|UND_ERR_SOCKET|ECONNRESET|ETIMEDOUT|ECONNREFUSED|ENETUNREACH|EAI_AGAIN|ENOTFOUND/;
+const netError = (e) => !!(e && e.cause && NET.test(String(e.cause.code || e.cause.name || '')));
 let REFETCH = false;
 async function getJson(url, cacheKey) {
   const cf = cacheKey && path.join(CACHE_DIR, cacheKey + '.json');
@@ -70,6 +76,7 @@ async function getJson(url, cacheKey) {
   const have = cf && cachedPath(cf); // search pages are kept gzipped (scripts/lib/cachefile.js)
   if (have && !(REFETCH && /^scrape-/.test(cacheKey) && Date.now() - fs.statSync(have).mtimeMs > 14 * 864e5)) return readCached(cf);
   if (calls >= budget) throw new Error('budget exhausted');
+  let quick = 0;
   for (let attempt = 0; ; attempt++) {
     calls++;
     try {
@@ -83,6 +90,7 @@ async function getJson(url, cacheKey) {
       }
       throw new Error(`HTTP ${res.status}`);
     } catch (e) {
+      if (netError(e) && quick < 3) { quick++; attempt--; console.log(`    slow line (${e.cause.code || e.cause.name}); retrying in ${5 * quick}s`); await sleep(5000 * quick); continue; }
       if (attempt >= BACKOFF_MS.length) throw e;
       console.log(`    Archive refused (${e.message}); quiet for ${BACKOFF_MS[attempt] / 1000}s`);
       await sleep(BACKOFF_MS[attempt]);
@@ -96,7 +104,7 @@ async function tvmaze(show) {
   const cf = path.join(CACHE_DIR, key + '.json');
   const ov = OVERRIDES[slug(show)] || {}; // was referenced below without being declared: every uncached lookup threw and returned null
   if (fs.existsSync(cf)) { const cached = JSON.parse(fs.readFileSync(cf, 'utf8')); if (!ov.tvmazeId || cached.id === ov.tvmazeId) return cached; }
-  try {
+  for (let tries = 1; ; tries++) try {
     // Punctuation confuses TVmaze's search ("NTSF:SD:SUV::" finds nothing; "NTSF SD SUV" does).
     const r = await fetch(ov.tvmazeId ? 'https://api.tvmaze.com/shows/' + ov.tvmazeId : 'https://api.tvmaze.com/singlesearch/shows?q=' + encodeURIComponent(show.replace(/[^\w\s'&!.-]/g, ' ').replace(/\s+/g, ' ').trim()), { signal: AbortSignal.timeout(20000) });
     if (!r.ok) return null;
@@ -113,7 +121,10 @@ async function tvmaze(show) {
     };
     fs.mkdirSync(CACHE_DIR, { recursive: true }); fs.writeFileSync(cf, JSON.stringify(out));
     return out;
-  } catch (e) { console.log('   TVmaze error: ' + e.message); return null; }
+  } catch (e) {
+    if (netError(e) && tries < 4) { console.log(`   TVmaze slow line (${e.cause.code || e.cause.name}); retrying in ${5 * tries}s`); await sleep(5000 * tries); continue; }
+    console.log('   TVmaze error: ' + e.message); return null;
+  }
 }
 // Lead actors and characters: the discriminators that rescue a common-word title ("Oz", "Rome").
 async function tvmazeCast(id) {
@@ -250,6 +261,9 @@ async function openItem(id, show, tv) {
   return {
     id, title: noEmail(Array.isArray(m.title) ? m.title.join(' / ') : m.title), uploaderHash: uploaderHash(m.uploader), date: m.date, collection: m.collection,
     description: noEmail(String(m.description || '')).slice(0, 300),
+    // subject tags ("YouTube Poop", "G Major"...) for strict profiles only, whose word check reads them (docs/KIDS.md 3a):
+    // [] when the item has none. VOIDtv's candidates stay as they were (undefined keys are not written).
+    subject: PROFILE.strict ? (m.subject == null ? [] : [].concat(m.subject).map((s) => noEmail(String(s)).slice(0, 100)).slice(0, 40)) : undefined,
     totalVideo: vids.length, episodeShaped: episodes.length, nameHits: hits,
     files: vids,
   };

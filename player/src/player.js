@@ -23,6 +23,8 @@
     onEvent: null, onEnded: null, onNext: null, onPrev: null, onReport: null, config: null,
     syncButton: false, // the "Out of sync?" button in the control row: for testers and the lab, not for viewers (the failure card has its own "Picture out of sync" choice)
     channelButtons: null, // Live TV only: { onNext, onPrev } adds the big "Previous channel" and "Next channel" buttons to the control row (and the ChannelUp/ChannelDown and PageUp/PageDown keys)
+    // noDownload: no Download link on the can't-play cards and no advice to download (a site without downloads: kids)
+    noDownload: false,
   };
   const CHANNEL_FLASH_MS = 2500; // how long the channel name stays over the picture after a channel change
   const AVSYNC_MIN_WIDTH = 720; // a player narrower than this has no room for the control, as with speed and picture-in-picture, which player.css hides sooner
@@ -666,9 +668,9 @@
       const f = this.ep && (this.ep.files || [])[0];
       const net = cause === 'network'; // the core decides the cause; the page does not guess it from the reason text
       this._card('<span class="vpx-nosig" aria-hidden="true">' + (ICON['no-signal'] || '') + '</span><p class="vpx-k">' + (net ? 'The Archive is not sending this episode right now' : 'This episode will not play in this browser') + '</p>'
-        + '<p class="vpx-dim">' + (net ? 'We tried every copy and every server we could reach. They hiccup now and then; trying again in a minute usually works.' : 'We tried every copy we have. You can download the file and play it in VLC.') + '</p>'
+        + '<p class="vpx-dim">' + (net ? 'We tried every copy and every server we could reach. They hiccup now and then; trying again in a minute usually works.' : (this.o.noDownload ? 'We tried every copy we have. Try another episode.' : 'We tried every copy we have. You can download the file and play it in VLC.')) + '</p>'
         + '<div class="vpx-acts"><button data-c="retry" class="vpx-primary">' + (ICON.retry || '') + 'Try again</button>'
-        + (f ? '<a class="vpx-btn" href="' + esc(f.url) + '" target="_blank" rel="noopener" download>' + (ICON.download || '') + 'Download</a>' : '')
+        + (f && !this.o.noDownload ? '<a class="vpx-btn" href="' + esc(f.url) + '" target="_blank" rel="noopener" download>' + (ICON.download || '') + 'Download</a>' : '')
         + (this.o.onNext ? '<button data-c="next">' + (ICON.next || '') + 'Next episode</button>' : '')
         + (this.o.onReport ? '<button data-c="report">' + (ICON.flag || '') + 'Report</button><button data-c="avsync">Picture out of sync</button>' : '') + '</div>', (c, btn) => {
         if (c === 'retry') { this._hideCard(); this.core.event('retry', now()); }
@@ -682,9 +684,9 @@
     _notice(reason) {
       if (reason !== 'silent') return;
       const f = this.ep && (this.ep.files || [])[0];
-      this._card('<span class="vpx-nosig" aria-hidden="true">' + (ICON.mute || '') + '</span><p class="vpx-k">No sound for this episode in this browser</p><p class="vpx-dim">Its sound is in a format this browser cannot play, and we have no other copy. Edge, Safari and most TVs can play it, or download it for VLC.</p>'
+      this._card('<span class="vpx-nosig" aria-hidden="true">' + (ICON.mute || '') + '</span><p class="vpx-k">No sound for this episode in this browser</p><p class="vpx-dim">Its sound is in a format this browser cannot play, and we have no other copy. Edge, Safari and most TVs can play it' + (this.o.noDownload ? '.' : ', or download it for VLC.') + '</p>'
         + '<div class="vpx-acts"><button data-c="keep" class="vpx-primary">Keep watching</button>'
-        + (f ? '<a class="vpx-btn" href="' + esc(f.url) + '" target="_blank" rel="noopener" download>' + (ICON.download || '') + 'Download</a>' : '')
+        + (f && !this.o.noDownload ? '<a class="vpx-btn" href="' + esc(f.url) + '" target="_blank" rel="noopener" download>' + (ICON.download || '') + 'Download</a>' : '')
         + (this.o.onNext ? '<button data-c="next">' + (ICON.next || '') + 'Next episode</button>' : '') + '</div>', (c) => {
         this._hideCard();
         if (c === 'next' && this.o.onNext) this.o.onNext(this);

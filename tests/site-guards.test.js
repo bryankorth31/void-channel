@@ -344,3 +344,11 @@ test('shrinkBaseline: a live build newer than the last publish is the baseline (
   assert.equal(G.shrinkBaseline(null, null), null);
   assert.equal(G.shrinkBaseline(null, live('2026-10-25T22:11:16Z')).shows, 4036, 'no record yet: what is live');
 });
+
+test('sitemapFor: one <url> per page on the given origin, escaped', () => {
+  const x = G.sitemapFor('https://kids.voidtv.net/', ['/', '/show/a&b/']);
+  assert.ok(x.startsWith('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'));
+  assert.equal((x.match(/<url>/g) || []).length, 2);
+  assert.ok(x.includes('<loc>https://kids.voidtv.net/</loc>'));
+  assert.ok(x.includes('<loc>https://kids.voidtv.net/show/a&amp;b/</loc>'));
+});
