@@ -9,6 +9,11 @@
 //   QUIET_MS has let go of everything; after GONE_MS it is treated as a pad that dropped (its seat held for it).
 // - A press and its release that arrive together (a home network often delivers two messages at once) fell between two
 //   frames and the game never saw the press. Each change now stays HOLD_MS, so every tap reaches the game, in order.
+// - Lag (Bryan, 21 Nov 2026: "Yes, start" on a direct link). Through the relay a press takes about 65 ms one way on
+//   voidtv.net, at times 160: phone, Cloudflare, screen. Now the phone also opens a link straight to this page over the
+//   same Wi-Fi (a WebRTC data channel; no outside server is asked, so it connects only where the two can reach each
+//   other) and says every state on both. The screen takes whichever copy comes first: each state carries the phone's
+//   count, so the later copy is dropped. Where the link cannot connect, everything is as before.
 (function (root) {
   'use strict';
   const NAMES = ['A', 'B', 'X', 'Y', 'LB', 'RB', 'LT', 'RT', 'Back', 'Start', 'L3', 'R3', 'Up', 'Down', 'Left', 'Right', 'Home'];
@@ -19,6 +24,9 @@
   const GONE_MS = 5000;    // not heard this long: gone, like a pad whose battery died
   const QUEUE = 24;        // states waiting their turn; past this the newest wins, so the screen never runs behind
   const STALL_MS = 250;    // the screen's own page did not run for this long: its silence, not the phones'
+  const PART = 600;        // a link's description goes through the room in pieces this long (the relay takes 1 KB)
+  const GATHER_MS = 1500;  // how long this page looks for its own addresses before it answers
+  const RECLAIM_MS = 400, RECLAIM_TRIES = 8;   // asking for a kept room again while it still stands (see open())
 
   // Pure (tested): a gamepad as the hub reads one, from the phone's held-button number.
   function padOf(seat, b) {
@@ -27,7 +35,19 @@
   }
 
   // One phone as the screen keeps it. shown is what the game sees; queue holds the states that came in and wait.
-  const fresh = (now) => ({ shown: 0, queue: [], flip: [], heard: now, beat: false, n: -1, delay: null, player: null, quiet: false });
+  const fresh = (now) => ({ shown: 0, queue: [], flip: [], heard: now, beat: false, n: -1, delay: null, player: null, quiet: false,
+    direct: false, got: 0, gotDirect: 0, pc: null, ch: null, parts: null });
+  // Pure (tested): a text in pieces, and the pieces back into the text. store keeps one text at a time (id names it: a
+  // new id starts over); answers the whole text when its last piece has come, else null.
+  const pieces = (text, size) => { const out = []; for (let i = 0; i < text.length; i += size) out.push(text.slice(i, i + size)); return out.length ? out : ['']; };
+  function gather(store, m) {
+    if (!m || !Number.isInteger(m.i) || !Number.isInteger(m.of) || m.of < 1 || m.of > 40 || m.i < 0 || m.i >= m.of || typeof m.d !== 'string' || m.d.length > 900) return null;
+    if (store.id !== m.id || store.of !== m.of) { store.id = m.id; store.of = m.of; store.d = []; store.n = 0; }
+    if (store.d[m.i] === undefined) { store.d[m.i] = m.d; store.n++; }
+    if (store.n < store.of) return null;
+    const text = store.d.join(''); store.id = undefined; store.d = []; store.n = 0;
+    return text;
+  }
   // Pure (tested): a state arrived from the phone. n is the phone's own count: an older one that arrives late is ignored.
   function take(p, b, n, now) {
     p.heard = now;
@@ -125,7 +145,52 @@
     const phones = new Map();   // room seat -> the phone (fresh())
     const changed = () => on.change && on.change(list());
     const send = (to, msg) => { if (ws && ws.readyState === 1) ws.send(JSON.stringify({ to, msg })); };
-    const list = () => [...phones].map(([seat, p]) => ({ seat, player: p.player, delay: p.delay, quiet: p.quiet })).sort((a, b) => a.seat - b.seat);
+    const list = () => [...phones].map(([seat, p]) => ({ seat, player: p.player, delay: p.delay, quiet: p.quiet, direct: p.direct })).sort((a, b) => a.seat - b.seat);
+
+    // ---- The direct link, this page's end: the phone offers, this page answers ----
+    const RTC = on.rtc !== undefined ? on.rtc : (typeof RTCPeerConnection !== 'undefined' ? RTCPeerConnection : null);
+    function unlink(p) {
+      const pc = p.pc, ch = p.ch; p.pc = p.ch = null; p.parts = null;
+      if (p.direct) { p.direct = false; }
+      try { if (ch) ch.close(); } catch (e) { /* gone */ }
+      try { if (pc) pc.close(); } catch (e) { /* gone */ }
+    }
+    const found = (pc) => new Promise((done) => {
+      if (pc.iceGatheringState === 'complete') return done();
+      const t = setTimeout(done, GATHER_MS);
+      pc.addEventListener('icegatheringstatechange', () => { if (pc.iceGatheringState === 'complete') { clearTimeout(t); done(); } });
+    });
+    async function link(seat, p, sdp, id) {
+      unlink(p);
+      if (!RTC) return;
+      const pc = p.pc = new RTC({ iceServers: [] });   // no outside server: this network's own addresses only
+      const mine = () => p.pc === pc && phones.get(seat) === p;
+      pc.ondatachannel = (e) => {
+        const ch = e.channel;
+        if (!mine()) return;
+        p.ch = ch;
+        ch.onmessage = (ev) => { if (p.ch !== ch || !mine()) return; let m; try { m = JSON.parse(ev.data); } catch (x) { return; } hear(seat, p, m, ch); };
+        ch.onclose = () => { if (p.ch === ch) { p.ch = null; if (p.direct) { p.direct = false; changed(); } } };
+      };
+      try {
+        await pc.setRemoteDescription({ type: 'offer', sdp });
+        await pc.setLocalDescription(await pc.createAnswer());
+        await found(pc);
+        if (!mine()) return;
+        const parts = pieces(pc.localDescription.sdp, PART);
+        parts.forEach((d, i) => send(seat, { type: 'rtc', k: 'answer', id, i, of: parts.length, d }));
+      } catch (e) { if (mine()) unlink(p); }
+    }
+    // One message from a phone, by the relay (ch null) or by its direct link (ch). The same rules for both.
+    function hear(seat, p, msg, ch) {
+      p.heard = clock();
+      if (msg.type === 'pad' && Number.isInteger(msg.b)) { if (msg.v >= 2) p.beat = true; if (ch) p.gotDirect++; else p.got++; take(p, msg.b & 0x1ffff, msg.n, p.heard); }
+      // The answer goes back the way the question came, with how many states this page has had that way (the phone
+      // shows any the relay dropped).
+      else if (msg.type === 'ping') { const pong = { type: 'pong', t: msg.t, g: ch ? p.gotDirect : p.got }; if (ch) { try { ch.send(JSON.stringify(pong)); } catch (e) { /* closing */ } } else send(seat, pong); }
+      else if (msg.type === 'delay' && Number.isFinite(msg.ms)) { p.delay = Math.max(0, Math.min(9999, Math.round(msg.ms))); p.direct = !!msg.direct; changed(); }
+      else if (msg.type === 'rtc' && !ch && msg.k === 'offer') { p.parts = p.parts || {}; const sdp = gather(p.parts, msg); if (sdp) link(seat, p, sdp, msg.id); }
+    }
 
     // open(): the room this tab already holds if it is still waiting, else a new one. resumeOnly: only take a held room
     // back (a page opening with a phone already connected), never open a new one.
@@ -135,7 +200,14 @@
       if (opening) return opening;
       const k = kept();
       if (resumeOnly && !k) return Promise.resolve(null);
-      opening = connect(k).catch((e) => {
+      // The page before this one (the shelf opening a game) closes its socket as it goes, but the relay may hear of that
+      // a moment after this page asks for the room, and says no while the old socket still looks open. Found 21 Nov 2026:
+      // the phone was then lost, every few tries. So while the room still stands (the relay's own lookup says so), ask
+      // again for a few seconds; only a room that is gone is forgotten.
+      const stands = (code) => (on.lookup ? on.lookup(code) : fetch('/api/room/' + code, { cache: 'no-store' }).then((r) => r.ok)).catch(() => false);
+      const takeBack = (left) => connect(k).catch((e) => (left <= 0 ? Promise.reject(e)
+        : stands(k.code).then((yes) => (yes ? new Promise((r) => setTimeout(r, on.reclaimMs === undefined ? RECLAIM_MS : on.reclaimMs)).then(() => takeBack(left - 1)) : Promise.reject(e)))));
+      opening = (k ? takeBack(RECLAIM_TRIES) : connect(null)).catch((e) => {
         if (k) { keep(null); return resumeOnly ? null : connect(null); }   // the room did not wait: a new one
         throw e;
       }).finally(() => { opening = null; });
@@ -150,17 +222,14 @@
           if (m.type === 'room') { room = { code: m.code, join: m.join, back: !!m.back }; if (m.key) keep({ code: m.code, key: m.key }); ok(room); changed(); return; }
           // A join (also a phone back on a new socket, or this page taking the room back) starts clean: nothing it held
           // before is held now, and it counts as heard from this moment.
-          if (m.type === 'join') { phones.set(m.from, fresh(clock())); if (on.card) send(m.from, on.card()); changed(); return; }
-          if (m.type === 'leave') { phones.delete(m.from); changed(); return; }
+          if (m.type === 'join') { if (phones.has(m.from)) unlink(phones.get(m.from)); phones.set(m.from, fresh(clock())); if (on.card) send(m.from, on.card()); changed(); return; }
+          if (m.type === 'leave') { if (phones.has(m.from)) unlink(phones.get(m.from)); phones.delete(m.from); changed(); return; }
           if (m.type === 'locked') { locked = !!m.on; changed(); return; }
           const p = phones.get(m.from), msg = m.msg || {};
-          if (!p) return;
-          p.heard = clock();
-          if (msg.type === 'pad' && Number.isInteger(msg.b)) { if (msg.v >= 2) p.beat = true; take(p, msg.b & 0x1ffff, msg.n, p.heard); }
-          else if (msg.type === 'ping') send(m.from, { type: 'pong', t: msg.t });
-          else if (msg.type === 'delay' && Number.isFinite(msg.ms)) { p.delay = Math.max(0, Math.min(9999, Math.round(msg.ms))); changed(); }
+          if (!p || typeof msg !== 'object') return;
+          hear(m.from, p, msg, null);
         };
-        ws.onclose = () => { const had = !!room; ws = null; room = null; locked = false; phones.clear(); changed(); if (!had) no(new Error('The phone room did not open. Check the connection and try again.')); };
+        ws.onclose = () => { const had = !!room; ws = null; room = null; locked = false; for (const p of phones.values()) unlink(p); phones.clear(); changed(); if (!had) no(new Error('The phone room did not open. Check the connection and try again.')); };
       });
     }
 
@@ -206,7 +275,7 @@
     };
   }
 
-  const api = { create, padOf, cardFor, take, settle, fresh, BASE, ON_PHONE, HOLD_MS, QUIET_MS, GONE_MS, STALL_MS, kept };
+  const api = { create, padOf, cardFor, take, settle, fresh, pieces, gather, PART, BASE, ON_PHONE, HOLD_MS, QUIET_MS, GONE_MS, STALL_MS, kept };
   if (typeof module === 'object' && module.exports) module.exports = api;
   else root.PlayPhones = api;
 })(typeof self !== 'undefined' ? self : this);

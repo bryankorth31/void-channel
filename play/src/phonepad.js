@@ -17,6 +17,12 @@
 //   whatever the browser reported, and so does the page hiding, losing focus, or the connection dropping.
 // - A dead connection was noticed only when the browser gave up on it. Now a phone that hears nothing from the screen
 //   for QUIET_MS opens a new one, and takes its own seat back.
+// - Lag (Bryan, 21 Nov 2026: "Yes, start" on a direct link). Every press went phone, Cloudflare, screen: about 65 ms one
+//   way on voidtv.net, at times 160. Now, once joined, the phone also opens a link straight to the screen over the same
+//   Wi-Fi (a WebRTC data channel, described to the screen through the room; no outside server is asked) and says every
+//   state on both ways at once; the screen takes the first to arrive. If the link cannot connect, or stops, the relay
+//   carries on as before and the phone tries the link again a few times. The line at the top says which way is in use
+//   (Direct or Relay), its delay, and any state the relay dropped.
 (function (root) {
   'use strict';
   const Hub = root.PlayHub || (typeof module === 'object' && module.exports ? require('./hub.js') : null);
@@ -29,6 +35,12 @@
   const QUIET_MS = 6000;  // nothing heard from the screen this long (it answers a ping every 2 s): the connection is dead
   const AWAY_MS = 50000;  // while the screen changes pages (the relay waits 45 s for it) nothing answers: wait that long
   const REACH = 30;       // a touch this near a button (px) presses it: a thumb need not be exact
+  const PART = 600;       // the direct link's description goes through the room in pieces this long (the relay takes 1 KB)
+  const GATHER_MS = 1500; // how long the phone looks for its own addresses before it offers
+  const ANSWER_MS = 10000;   // no direct link this long after offering: that try is over
+  const DIRECT_OK_MS = 3500; // the direct link answered a ping within this: it is the way in use
+  const DIRECT_DEAD_MS = 10000;   // it has not answered for this long: closed, and tried again
+  const RETRY_MS = [5000, 20000, 60000];   // the tries after the first, then no more until the phone joins again
 
   // Pure (tested): the held buttons as one number, bit n for button n. A name may hold two ("Back+Start", the menu).
   const bits = (held) => [...held].reduce((b, name) => name.split('+').reduce((x, n) => (n in BUTTONS ? x | (1 << BUTTONS[n]) : x), b), 0);
@@ -47,6 +59,23 @@
   const dirs = (x, y, size, prev) => aim(x, y, size, prev).dirs;
   // Pure (tested): what the phone says about the delay, from a round trip in ms.
   const delayText = (rtt) => { const ms = Math.round(rtt / 2); return { text: 'Delay ' + ms + ' ms', slow: ms > SLOW_MS }; };
+  // Pure (tested): the line at the top of the pad: which way presses travel, how long one takes, and how many states the
+  // relay dropped since this phone joined (nothing is said of none).
+  function pathText(direct, ms, lost) {
+    if (ms == null) return { text: '', slow: false };
+    const slow = ms > SLOW_MS;
+    return { text: (direct ? 'Direct ' : 'Relay ') + Math.round(ms) + ' ms' + (slow ? ': presses will feel late' : '') + (lost > 0 ? ', ' + lost + ' dropped' : ''), slow };
+  }
+  // Pure (tested): a text in pieces, and the pieces back into the text (the same pair as the screen's, src/phones.js).
+  const pieces = (text, size) => { const out = []; for (let i = 0; i < text.length; i += size) out.push(text.slice(i, i + size)); return out.length ? out : ['']; };
+  function gather(store, m) {
+    if (!m || !Number.isInteger(m.i) || !Number.isInteger(m.of) || m.of < 1 || m.of > 40 || m.i < 0 || m.i >= m.of || typeof m.d !== 'string' || m.d.length > 900) return null;
+    if (store.id !== m.id || store.of !== m.of) { store.id = m.id; store.of = m.of; store.d = []; store.n = 0; }
+    if (store.d[m.i] === undefined) { store.d[m.i] = m.d; store.n++; }
+    if (store.n < store.of) return null;
+    const text = store.d.join(''); store.id = undefined; store.d = []; store.n = 0;
+    return text;
+  }
   // Pure (tested): how long to wait before the next message may go, and how long until the beat is due.
   const waitFor = (now, lastAt) => Math.max(0, GAP_MS - (now - lastAt));
   const beatDue = (now, lastAt, changedAt, b) => now - lastAt >= (b || now - changedAt < 1000 ? BEAT_MS : REST_MS);
@@ -75,7 +104,7 @@
     return cur && offBy(cur, x, y) <= cur.w ? cur : null;
   }
 
-  const api = { BUTTONS, SLOW_MS, GAP_MS, BEAT_MS, REST_MS, QUIET_MS, AWAY_MS, REACH, bits, aim, dirs, delayText, waitFor, beatDue, keyAt, slide };
+  const api = { BUTTONS, SLOW_MS, GAP_MS, BEAT_MS, REST_MS, QUIET_MS, AWAY_MS, REACH, PART, DIRECT_OK_MS, bits, aim, dirs, delayText, pathText, pieces, gather, waitFor, beatDue, keyAt, slide };
   if (typeof module === 'object' && module.exports) { module.exports = api; return; }
   root.PlayPhonePad = api;
 
@@ -102,15 +131,84 @@
 
   // What is held, and saying so: at once when it changes (never faster than one message in GAP_MS; the newest state is
   // what goes), and again on the beat. Each message is the whole state with a count, so the screen can drop a late one.
-  let held = new Set(), lastB = -1, lastAt = -1e9, changedAt = -1e9, count = 0, timer = null;
-  function say() { timer = null; lastB = bits(held); lastAt = now(); send({ type: 'pad', b: lastB, n: ++count, v: 2 }); }
+  // count goes up with every change, so the screen can tell a newer state from a late copy of an older one: the same
+  // state travels by the relay and, where it is open, by the direct link, and the screen takes the first to arrive.
+  let held = new Set(), cur = 0, count = 0, lastN = -1, lastAt = -1e9, changedAt = -1e9, timer = null, sentRelay = 0;
+  const state = () => ({ type: 'pad', b: cur, n: count, v: 2 });
+  // The direct link carries a state the moment it changes: it has no limit to keep under.
+  function sayDirect() { if (ch && ch.readyState === 'open') { try { ch.send(JSON.stringify(state())); } catch (e) { /* closing: the relay has it */ } } }
+  function say() { timer = null; lastN = count; lastAt = now(); if (ws && ws.readyState === 1) sentRelay++; send(state()); }
   function sendPad() {
-    if (bits(held) === lastB) return;
-    changedAt = now();
-    const wait = waitFor(changedAt, lastAt);
+    const b = bits(held);
+    if (b !== cur) { cur = b; count++; changedAt = now(); sayDirect(); }
+    if (count === lastN) return;
+    const wait = waitFor(now(), lastAt);
     if (!wait) say(); else if (!timer) timer = setTimeout(say, wait);
   }
-  setInterval(() => { if (!timer && beatDue(now(), lastAt, changedAt, lastB > 0 ? lastB : 0)) say(); }, 50);
+  // Said again by both ways, whether or not the other heard (a joined or returning screen, the beat).
+  const sayAll = () => { say(); sayDirect(); };
+  setInterval(() => { if (!timer && beatDue(now(), lastAt, changedAt, cur)) sayAll(); }, 50);
+
+  // ---- The direct link, the phone's end: the phone offers, the screen answers, both through the room ----
+  const RTC = typeof RTCPeerConnection !== 'undefined' && !/[?&]direct=0\b/.test(location.search) ? RTCPeerConnection : null;
+  let pc = null, ch = null, linkId = 0, linkTries = 0, linkAgain = null, answer = {}, directMs = null, directAt = -1e9, relayMs = null, lost = 0;
+  const pingsOut = new Map();   // a relay ping's time -> how many states had gone by the relay when it left
+  const directNow = () => !!(ch && ch.readyState === 'open' && now() - directAt < DIRECT_OK_MS);
+  function showPath() {
+    const direct = directNow(), d = pathText(direct, direct ? directMs : relayMs, lost);
+    $('delay').textContent = d.text; $('delay').classList.toggle('slow', d.slow); $('delay').dataset.path = direct ? 'direct' : 'relay';
+  }
+  function unlink() {
+    const p = pc, c = ch; pc = ch = null; directAt = -1e9;
+    try { if (c) c.close(); } catch (e) { /* gone */ }
+    try { if (p) p.close(); } catch (e) { /* gone */ }
+  }
+  function retryLink() { if (linkAgain || linkTries >= RETRY_MS.length) return; linkAgain = setTimeout(() => { linkAgain = null; link(); }, RETRY_MS[linkTries++]); }
+  // A new start for the link (the phone joined, or the screen opened a new page): the tries begin again.
+  function resetLink() { unlink(); linkTries = 0; if (linkAgain) { clearTimeout(linkAgain); linkAgain = null; } }
+  const found = (p) => new Promise((done) => {
+    if (p.iceGatheringState === 'complete') return done();
+    const t = setTimeout(done, GATHER_MS);
+    p.addEventListener('icegatheringstatechange', () => { if (p.iceGatheringState === 'complete') { clearTimeout(t); done(); } });
+  });
+  async function link() {
+    if (!RTC || !ws || ws.readyState !== 1 || away || ended) return;
+    unlink();
+    const id = ++linkId, mine = pc = new RTC({ iceServers: [] });   // no outside server: this network's own addresses only
+    const c = ch = mine.createDataChannel('pad', { ordered: false, maxRetransmits: 0 });   // the newest state matters, not an old one sent again
+    c.onopen = () => { if (c !== ch) return; sayDirect(); pingDirect(); };
+    c.onclose = () => { if (c !== ch) return; unlink(); showPath(); retryLink(); };
+    c.onmessage = (e) => {
+      if (c !== ch) return;
+      let m; try { m = JSON.parse(e.data); } catch (x) { return; }
+      if (m.type !== 'pong') return;
+      const first = !directNow();
+      directMs = (now() - m.t) / 2; directAt = now(); linkTries = 0;
+      if (first) { showPath(); send({ type: 'delay', ms: Math.round(directMs), direct: true }); }
+    };
+    mine.onconnectionstatechange = () => { if (mine === pc && mine.connectionState === 'failed') { unlink(); showPath(); retryLink(); } };
+    try {
+      await mine.setLocalDescription(await mine.createOffer());
+      await found(mine);
+      if (mine !== pc) return;
+      const parts = pieces(mine.localDescription.sdp, PART);
+      answer = {};
+      parts.forEach((d, i) => send({ type: 'rtc', k: 'offer', id, i, of: parts.length, d }));
+      setTimeout(() => { if (mine === pc && !directNow()) { unlink(); showPath(); retryLink(); } }, ANSWER_MS);
+    } catch (e) { if (mine === pc) { unlink(); retryLink(); } }
+  }
+  function linkAnswer(m) {
+    if (!pc || m.id !== linkId) return;
+    const sdp = gather(answer, m);
+    if (sdp) pc.setRemoteDescription({ type: 'answer', sdp }).catch(() => { unlink(); retryLink(); });
+  }
+  function pingDirect() { if (ch && ch.readyState === 'open') { try { ch.send(JSON.stringify({ type: 'ping', t: now() })); } catch (e) { /* closing */ } } }
+  setInterval(() => {
+    pingDirect();
+    // Open but silent: the link is dead though nothing said so. The relay never stopped; close it and try again.
+    if (ch && ch.readyState === 'open' && directAt > 0 && now() - directAt > DIRECT_DEAD_MS) { unlink(); retryLink(); }
+    showPath();
+  }, 1000);
 
   // ---- The buttons, drawn from the card the big screen sent ----
   let boxes = [], dpadBox = null, card = null;
@@ -197,7 +295,7 @@
   document.addEventListener('pointermove', move);
   for (const ev of ['pointerup', 'pointercancel']) document.addEventListener(ev, up);
   for (const ev of ['touchend', 'touchcancel']) document.addEventListener(ev, (e) => { if (!e.touches.length) letGo(); }, true);
-  document.addEventListener('visibilitychange', () => { if (document.hidden) { letGo(); if (timer) { clearTimeout(timer); timer = null; } if (bits(held) !== lastB) say(); } });   // said now: a hidden page's timers may not run
+  document.addEventListener('visibilitychange', () => { if (document.hidden) { letGo(); if (timer) { clearTimeout(timer); timer = null; } if (count !== lastN) say(); } });   // said now: a hidden page's timers may not run
   for (const ev of ['blur', 'pagehide']) addEventListener(ev, letGo);
   // iPhone Safari zooms on fast taps and scrolls or selects on a long press whatever touch-action says; the pad runs on
   // pointer events, so the touches themselves go (the notes' link and the header stay ordinary).
@@ -218,19 +316,29 @@
       heardAt = now();
       let m; try { m = JSON.parse(e.data); } catch (x) { return; }
       if (m.type !== 'host-away') away = false;
-      if (m.type === 'hello') { tries = 0; lastB = -1; if (card) { $('note').hidden = true; $('pad').hidden = false; say(); } else note('Joined', 'Waiting for the big screen.', false); }
-      else if (m.type === 'card') { draw(m); say(); }
+      if (m.type === 'hello') { tries = 0; lastN = -1; sentRelay = 0; lost = 0; pingsOut.clear(); resetLink(); if (card) { $('note').hidden = true; $('pad').hidden = false; say(); } else note('Joined', 'Waiting for the big screen.', false); }
+      // The screen's buttons for this game. A screen is there now: the direct link is opened if it is not already.
+      else if (m.type === 'card') { draw(m); sayAll(); if (!pc && !linkAgain) link(); }
       else if (m.type === 'seat') $('who').textContent = 'Player ' + m.seat;
-      else if (m.type === 'pong') { const d = delayText(now() - m.t); $('delay').textContent = d.text + (d.slow ? ': presses will feel late' : ''); $('delay').classList.toggle('slow', d.slow); send({ type: 'delay', ms: Math.round((now() - m.t) / 2) }); }
+      else if (m.type === 'pong') {
+        relayMs = (now() - m.t) / 2;
+        // Everything said by the relay before that ping had arrived when it did, unless the relay dropped it.
+        if (pingsOut.has(m.t)) { if (Number.isInteger(m.g)) lost = Math.max(lost, pingsOut.get(m.t) - m.g); pingsOut.delete(m.t); }
+        const direct = directNow();
+        showPath(); send({ type: 'delay', ms: Math.round(direct ? directMs : relayMs), direct });
+      }
+      else if (m.type === 'rtc' && m.k === 'answer') linkAnswer(m);
       else if (m.type === 'host-gone') { ended = true; note('The game screen closed', 'Scan the new code on the big screen to join again.', true); }
       // The big screen is changing pages (the shelf opening a game): the phone stays connected and waits a moment.
       // While it is away nothing answers this phone's pings: that silence is the screen's, not a dead connection.
-      else if (m.type === 'host-away') { away = true; $('game').textContent = 'The screen is opening the game...'; }
-      else if (m.type === 'host-back') say();   // the new page sends its own buttons; it hears what is held now
+      else if (m.type === 'host-away') { away = true; resetLink(); $('game').textContent = 'The screen is opening the game...'; }
+      // The new page sends its own buttons (and the direct link is opened to it then); it hears what is held now, and its
+      // count of what the relay brought starts again, so the phone's does too.
+      else if (m.type === 'host-back') { sentRelay = 0; lost = 0; pingsOut.clear(); resetLink(); say(); }
     };
     sock.onclose = (e) => {
       if (sock !== ws) return;   // an old connection this page already replaced
-      ws = null; letGo();
+      ws = null; letGo(); resetLink(); showPath();
       if (ended) return;
       if (e.code === 4404) { note('No room with that code', 'The code changes each time. Check the big screen.', true); return; }
       if (e.code === 4409) { note('This game is full', 'Up to 16 phones can join one screen.', false); return; }
@@ -244,11 +352,13 @@
     };
   }
   setInterval(() => {
-    send({ type: 'ping', t: now() });
+    const t = now();
+    if (ws && ws.readyState === 1) { pingsOut.set(t, sentRelay); if (pingsOut.size > 8) pingsOut.delete(pingsOut.keys().next().value); }
+    send({ type: 'ping', t });
     // The screen answers every ping. Silence this long means the connection is dead though the browser has not said so:
     // let go, drop it and open a new one (the relay gives this phone its own seat back).
     if (ws && !ended && now() - heardAt > (away ? AWAY_MS : QUIET_MS)) {
-      const dead = ws; ws = null; letGo();
+      const dead = ws; ws = null; letGo(); resetLink();
       try { dead.close(); } catch (e) { /* already gone */ }
       note('Reconnecting', 'The connection dropped. Trying again.', false);
       if (!again) again = setTimeout(connect, 200);

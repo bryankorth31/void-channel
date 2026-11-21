@@ -186,12 +186,12 @@ test('the screen page itself stalling is not the phones going silent; a phone on
 });
 
 // A screen with its room, on a clock the test moves; the relay's messages are handed to it directly.
-function screen() {
+function screen(more) {
   let now = 0, sock = null;
   const realWS = global.WebSocket, realLoc = global.location;
   global.WebSocket = class { constructor() { sock = this; this.readyState = 1; this.out = []; } send(t) { this.out.push(JSON.parse(t)); } close() {} };
   global.location = { protocol: 'https:', host: 'voidtv.net' };
-  const t = PH.create({ now: () => now, card: () => ({ type: 'card' }) });
+  const t = PH.create(Object.assign({ now: () => now, card: () => ({ type: 'card' }) }, more));
   const opened = t.open();
   const say = (m) => sock.onmessage({ data: JSON.stringify(m) });
   say({ type: 'room', code: 'KX7P', join: 'https://voidtv.net/join?r=KX7P' });
@@ -244,6 +244,154 @@ test('the stuck-key guard: a phone that goes silent with a direction held lets g
     s.run(PH.GONE_MS * 2);
     assert.equal(s.hub.held().length, 1, 'an earlier pad page keeps its hold');
   } finally { s.done(); }
+});
+
+test('taking a kept room back: refused while the socket of the old page still looks open, the new page asks again; a room that is gone is forgotten', async () => {
+  const realWS = global.WebSocket, realLoc = global.location, realSS = global.sessionStorage;
+  const store = { 'voidtv-play-room': JSON.stringify({ code: 'KX7P', key: 'abcdefghijklmnopqrstuvwx' }) };
+  global.sessionStorage = { getItem: (k) => (k in store ? store[k] : null), setItem: (k, v) => { store[k] = v; }, removeItem: (k) => { delete store[k]; } };
+  global.location = { protocol: 'https:', host: 'voidtv.net' };
+  try {
+    // The relay says no twice (the old socket), then yes.
+    let asked = 0; const urls = [];
+    global.WebSocket = class { constructor(u) { urls.push(u); this.readyState = 1; const n = ++asked;
+      setImmediate(() => { if (n < 3) this.onclose({ code: 4404 }); else this.onmessage({ data: JSON.stringify({ type: 'room', code: 'KX7P', join: 'j', key: 'abcdefghijklmnopqrstuvwx', back: true }) }); }); }
+      send() {} close() {} };
+    const t = PH.create({ lookup: async () => true, reclaimMs: 1 });
+    const room = await t.open(true);
+    assert.deepEqual([room.code, room.back, asked], ['KX7P', true, 3], 'the third ask took the room back');
+    assert.ok(urls.every((u) => u.includes('code=KX7P&key=abcdefghijklmnopqrstuvwx')));
+    assert.ok(PH.kept(), 'and the tab still holds its key');
+    // A room that is gone (the lookup says so): one ask, then forgotten, and no new room is opened for a page that only resumes.
+    asked = 0;
+    global.WebSocket = class { constructor() { this.readyState = 1; asked++; setImmediate(() => this.onclose({ code: 4404 })); } send() {} close() {} };
+    const g = PH.create({ lookup: async () => false, reclaimMs: 1 });
+    assert.equal(await g.open(true), null);
+    assert.equal(asked, 1); assert.equal(PH.kept(), null);
+  } finally { global.WebSocket = realWS; global.location = realLoc; global.sessionStorage = realSS; }
+});
+
+// The direct link (Bryan, 21 Nov 2026: "Yes, start"): through the relay a press took about 65 ms on voidtv.net, at times
+// over 100; by a link straight from phone to screen, the wait for the next frame and no more.
+test('the direct link: its description crosses the room in pieces the relay takes, whole and in order or not', () => {
+  const sdp = 'v=0\r\n' + 'a=candidate:1 1 udp 2113937151 6d39ac10-b2fb-4fb9-96a4-15a4b6ce56bf.local 52498 typ host\r\n'.repeat(18);
+  for (const M of [PH, PP]) {
+    const parts = M.pieces(sdp, M.PART);
+    assert.ok(parts.length > 1);
+    for (const [i, d] of parts.entries()) assert.ok(JSON.stringify({ to: 16, msg: { type: 'rtc', k: 'answer', id: 999, i, of: parts.length, d } }).length < R.LIMITS.bytes, 'a piece fits one relay message');
+    const store = {};
+    let whole = null;
+    for (const i of [2, 0, 1, 1].concat(parts.map((_, n) => n))) whole = M.gather(store, { id: 7, i, of: parts.length, d: parts[i] }) || whole;
+    assert.equal(whole, sdp, 'out of order and with a piece twice');
+    // A new try (a new id) starts over: pieces of the old one are not mixed in.
+    M.gather(store, { id: 8, i: 0, of: 2, d: 'old ' });
+    assert.equal(M.gather(store, { id: 9, i: 1, of: 2, d: 'B' }), null);
+    assert.equal(M.gather(store, { id: 9, i: 0, of: 2, d: 'A' }), 'AB');
+    for (const junk of [null, {}, { id: 1, i: 0, of: 0, d: 'x' }, { id: 1, i: 5, of: 2, d: 'x' }, { id: 1, i: 0, of: 99, d: 'x' }, { id: 1, i: 0, of: 1, d: 5 }, { id: 1, i: 0, of: 1, d: 'x'.repeat(2000) }]) assert.equal(M.gather({}, junk), null);
+    assert.deepEqual(M.pieces('', 600), ['']);
+  }
+  assert.equal(PH.PART, PP.PART);
+});
+
+test('the direct link: the phone\'s line says which way presses travel, how long one takes, and what the relay dropped', () => {
+  assert.deepEqual(PP.pathText(true, 1.4, 0), { text: 'Direct 1 ms', slow: false });
+  assert.deepEqual(PP.pathText(false, 66.2, 0), { text: 'Relay 66 ms', slow: false });
+  assert.deepEqual(PP.pathText(false, 180, 0), { text: 'Relay 180 ms: presses will feel late', slow: true });
+  assert.deepEqual(PP.pathText(false, 50, 3), { text: 'Relay 50 ms, 3 dropped', slow: false });
+  assert.deepEqual(PP.pathText(false, null, 0), { text: '', slow: false }, 'nothing measured yet: nothing claimed');
+});
+
+test('the direct link, the screen\'s end: it answers a phone\'s offer, takes whichever copy of a state comes first, and loses nothing when the link goes', async () => {
+  const made = [];
+  class FakeRTC {
+    constructor(cfg) { made.push(this); this.cfg = cfg; this.iceGatheringState = 'complete'; this.localDescription = null; this.closed = false; }
+    async setRemoteDescription(d) { this.remote = d; }
+    async createAnswer() { return { type: 'answer', sdp: 'ANSWER ' + 'y'.repeat(1500) }; }
+    async setLocalDescription(d) { this.localDescription = d; }
+    addEventListener() {}
+    close() { this.closed = true; }
+  }
+  const channel = () => ({ out: [], closed: false, send(t) { this.out.push(JSON.parse(t)); }, close() { this.closed = true; } });
+  const tick = () => new Promise((r) => setImmediate(r));
+  const s = screen({ rtc: FakeRTC });
+  try {
+    await s.opened;
+    s.say({ type: 'join', from: 1 });
+    const offer = 'OFFER ' + 'x'.repeat(1300), parts = PP.pieces(offer, PP.PART);
+    parts.forEach((d, i) => s.say({ from: 1, msg: { type: 'rtc', k: 'offer', id: 1, i, of: parts.length, d } }));
+    await tick(); await tick();
+    assert.equal(made.length, 1);
+    assert.deepEqual(made[0].cfg, { iceServers: [] }, 'no outside server is asked: this network\'s own addresses only');
+    assert.deepEqual(made[0].remote, { type: 'offer', sdp: offer });
+    const back = s.sock().out.filter((m) => m.to === 1 && m.msg.type === 'rtc');
+    const store = {}; let answer = null;
+    for (const m of back) { assert.equal(m.msg.k, 'answer'); assert.equal(m.msg.id, 1); answer = PP.gather(store, m.msg) || answer; }
+    assert.equal(answer, 'ANSWER ' + 'y'.repeat(1500), 'the answer goes back to that phone through the room, in pieces');
+    // The link opens. A state comes by it first; the relay's copy of the same state, later, changes nothing.
+    const ch = channel(); made[0].ondatachannel({ channel: ch });
+    const RIGHT = 1 << 15;
+    ch.onmessage({ data: JSON.stringify({ type: 'pad', b: RIGHT, n: 1, v: 2 }) });
+    s.frame(16);
+    assert.deepEqual(s.hub.held(), ['P1:Right'], 'heard by the direct link alone');
+    ch.onmessage({ data: JSON.stringify({ type: 'pad', b: 0, n: 2, v: 2 }) });
+    s.frame(40);
+    assert.deepEqual(s.hub.held(), []);
+    s.say({ from: 1, msg: { type: 'pad', b: RIGHT, n: 1, v: 2 } });   // the relay's late copy of the press
+    s.frame(16);
+    assert.deepEqual(s.hub.held(), [], 'a late copy of an older state does not press it again');
+    s.say({ from: 1, msg: { type: 'pad', b: 0, n: 2, v: 2 } });
+    // And the other way round: the relay first, the direct copy late.
+    s.say({ from: 1, msg: { type: 'pad', b: 1, n: 3, v: 2 } }); s.frame(40);
+    ch.onmessage({ data: JSON.stringify({ type: 'pad', b: 1, n: 3, v: 2 }) }); s.frame(16);
+    assert.deepEqual(s.hub.held(), ['P1:B']);
+    assert.deepEqual(s.keys.filter((k) => k === 'P1:B down').length, 1, 'one press, though it came twice');
+    // A ping is answered the way it came, with how many states came that way.
+    ch.onmessage({ data: JSON.stringify({ type: 'ping', t: 5 }) });
+    assert.deepEqual(ch.out.at(-1), { type: 'pong', t: 5, g: 3 });
+    s.say({ from: 1, msg: { type: 'ping', t: 6 } });
+    assert.deepEqual(s.sock().out.at(-1), { to: 1, msg: { type: 'pong', t: 6, g: 3 } });
+    s.say({ from: 1, msg: { type: 'delay', ms: 2, direct: true } });
+    assert.deepEqual([s.t.list()[0].delay, s.t.list()[0].direct], [2, true]);
+    // The link goes silent with B held, but the relay still brings the beat: nothing is let go.
+    for (let i = 0; i < 20; i++) { s.run(200); s.say({ from: 1, msg: { type: 'pad', b: 1, n: 3, v: 2 } }); }
+    assert.deepEqual(s.hub.held(), ['P1:B'], 'held through the relay alone');
+    // The phone joins again (a new socket): its old link is closed, and nothing its old link says counts any more.
+    s.say({ type: 'join', from: 1, back: true });
+    assert.equal(made[0].closed, true); assert.equal(ch.closed, true);
+    ch.onmessage({ data: JSON.stringify({ type: 'pad', b: RIGHT, n: 99, v: 2 }) }); s.frame(16);
+    assert.deepEqual(s.hub.held(), []);
+    // A phone that leaves takes its link with it.
+    const p2 = PP.pieces('OFFER 2', PP.PART);
+    s.say({ type: 'join', from: 2 }); s.say({ from: 2, msg: { type: 'rtc', k: 'offer', id: 4, i: 0, of: p2.length, d: p2[0] } });
+    await tick(); await tick();
+    assert.equal(made.length, 2);
+    s.say({ type: 'leave', from: 2 });
+    assert.equal(made[1].closed, true);
+  } finally { s.done(); }
+  // A screen whose browser has no such link: the offer is ignored, the relay plays on.
+  const n = screen({ rtc: null });
+  try {
+    await n.opened;
+    n.say({ type: 'join', from: 1 });
+    n.say({ from: 1, msg: { type: 'rtc', k: 'offer', id: 1, i: 0, of: 1, d: 'OFFER' } });
+    await tick();
+    assert.ok(!n.sock().out.some((m) => m.msg && m.msg.type === 'rtc'), 'no answer');
+    n.say({ from: 1, msg: { type: 'pad', b: 1, n: 1, v: 2 } }); n.frame(16);
+    assert.deepEqual(n.hub.held(), ['P1:B']);
+  } finally { n.done(); }
+});
+
+test('the direct link, the phone\'s end: every state goes both ways, the relay never stops, and the tries end', () => {
+  const js = fs.readFileSync(path.join(P, 'src', 'phonepad.js'), 'utf8');
+  assert.ok(js.includes("new RTC({ iceServers: [] })"), 'no outside server');
+  assert.ok(js.includes("createDataChannel('pad', { ordered: false, maxRetransmits: 0 })"), 'the newest state matters, not an old one sent again');
+  assert.ok(js.includes("if (b !== cur) { cur = b; count++; changedAt = now(); sayDirect(); }"), 'a change goes by the direct link at once');
+  assert.ok(js.includes("const sayAll = () => { say(); sayDirect(); };"), 'and the beat goes both ways');
+  assert.ok(js.includes("if (count === lastN) return;"), 'the relay is told every state the direct link was');
+  assert.ok(js.includes("const RETRY_MS = [5000, 20000, 60000];"), 'three more tries, then the relay alone until the phone joins again');
+  assert.ok(js.includes("else if (m.type === 'host-away') { away = true; resetLink();"), 'a screen changing pages takes the old link with it');
+  assert.ok(js.includes("else if (m.type === 'card') { draw(m); sayAll(); if (!pc && !linkAgain) link(); }"), 'the link is opened once a screen is there');
+  assert.ok(/direct=0/.test(js), 'a phone can be told to use the relay alone (pad.html?r=CODE&direct=0)');
 });
 
 test('the pad shows the game\'s own buttons: only what the machine has, its letters, its shape, what each does', () => {
