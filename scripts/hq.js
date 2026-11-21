@@ -217,13 +217,25 @@ function startJob(name, args) {
   const child = spawn(nb.bin, [path.join(ROOT, 'scripts', name + '.js'), ...args], { cwd: ROOT, env: nb.env, detached: true, stdio: ['ignore', fd, fd], windowsHide: true });
   child.unref();
   const job = { id, name, args, pid: child.pid, started: new Date().toISOString(), pstart: null, log, done: null, code: null };
-  child.on('exit', (code) => { job.done = new Date().toISOString(); job.code = code; saveJobs(); });
+  // Finished once, by its own exit (or a start that failed), with its real code. A job Stop ended keeps its code if the
+  // exit comes after; LISTENING says HQ still waits for this job's exit (see jobOver).
+  LISTENING.add(id);
+  const finish = (code) => { if (!LISTENING.delete(id)) return; job.done = job.done || new Date().toISOString(); if (job.code == null) job.code = code == null ? -1 : code; saveJobs(); };
+  child.on('exit', (code) => finish(code));
+  child.on('error', () => finish(-1));
   JOBS.unshift(job); saveJobs();
   // Keep when this process was created, so a later Stop can tell it from another program given the same number.
   processInfoLater(child.pid).then((info) => { if (info && !job.done && scriptRe(name).test(info.cmd || '')) { job.pstart = info.created; saveJobs(); } });
   return job;
 }
-const jobList = () => JOBS.map((j) => { const running = j.done ? false : alive(j.pid); if (!running && !j.done) { j.done = new Date().toISOString(); j.code = j.code == null ? -1 : j.code; saveJobs(); } return { ...j, running, tail: tail(j.log, 3) }; });
+// The jobs HQ started this run and still waits to hear exit from. On a busy PC a process can be gone a moment before its
+// exit event runs; a look in that gap marked a Publish that ended well as failed (-1), and the page said the publish failed
+// (the same slip the Hindi HQ had, e84032944; Bryan, 21 Nov 2026: "fix the HQ publish timing slip"). So a job HQ is still
+// listening to counts as running until its own exit says how it ended. A job from before an HQ restart has no listener:
+// once its process is gone it is marked finished with -1, as before (its code is unknown).
+const LISTENING = new Set();
+const jobOver = (j) => !!j.done || (!LISTENING.has(j.id) && !alive(j.pid));
+const jobList = () => JOBS.map((j) => { const running = !jobOver(j); if (!running && !j.done) { j.done = new Date().toISOString(); j.code = j.code == null ? -1 : j.code; saveJobs(); } return { ...j, running, tail: tail(j.log, 3) }; });
 // Stop one job that HQ started, never a bare process number. The job record says which process it was; before anything
 // is killed the live process must still be that one (same script in its command line, same creation time). If it is not,
 // nothing is killed (409), one line goes to the console, and a job whose number now belongs to another program is
@@ -236,7 +248,11 @@ function stopHqJob(job, read = processInfo) {
   try { live = read(job.pid); } catch (e) { return refuse('could not read the process (' + String(e.message).slice(0, 60) + ')', 'HQ could not check that process, so it did not stop it.'); }
   const v = sameProcess(job, live);
   const finished = (note) => { job.done = new Date().toISOString(); job.code = job.code == null ? -1 : job.code; return { status: 200, body: { ok: true, stopped: false, note }, changed: true }; };
-  if (v.gone) return finished('That job had already ended.');
+  if (v.gone) {
+    // Gone, but HQ still waits for its exit: that exit will finish it with its real code, so it is not marked here.
+    if (LISTENING.has(job.id)) return { status: 200, body: { ok: true, stopped: false, note: 'That job is just ending.' } };
+    return finished('That job had already ended.');
+  }
   if (!v.ok) { const r = refuse(v.why, 'Process ' + job.pid + ' is no longer that job (' + v.why + '), so HQ did not stop it.'); if (v.replaced) { job.done = new Date().toISOString(); job.code = job.code == null ? -1 : job.code; r.changed = true; } return r; }
   try { execFileSync('taskkill', ['/PID', String(job.pid), '/T', '/F'], { windowsHide: true, stdio: 'ignore' }); } catch (e) { /* gone between the check and the kill */ }
   return { status: 200, body: { ok: true, stopped: true } };
@@ -440,7 +456,7 @@ const server = http.createServer(async (req, res) => {
     if (p === '/api/order' && req.method === 'POST') { const b = await body(req); if (!Array.isArray(b.order)) throw new Error('order must be an array'); writeJson(FILES.order, b.order.filter((x) => Array.isArray(x) && x.length === 2)); return send(res, 200, { ok: true }); }
     if (p === '/api/jobs' && req.method === 'GET') return send(res, 200, { jobs: jobList(), processes: nodeProcesses(), processesError: LOOKUP.processes });
     if (p === '/api/jobs' && req.method === 'POST') { const b = await body(req); return send(res, 200, startJob(b.name, b.args)); }
-    if (p.startsWith('/api/jobs/') && p.endsWith('/log')) { const id = p.split('/')[3]; const j = JOBS.find((x) => x.id === id); if (!j) return send(res, 404, { error: 'no job' }); const running = j.done ? false : alive(j.pid); return send(res, 200, { log: tail(j.log, +url.searchParams.get('tail') || 200), running, code: j.code, ...(j.name === 'publish' && !running ? { outcome: publishline.outcome(tail(j.log, 60), j.code == null ? -1 : j.code) } : {}) }); } // a finished publish also says how it ended, in words the page shows as they are
+    if (p.startsWith('/api/jobs/') && p.endsWith('/log')) { const id = p.split('/')[3]; const j = JOBS.find((x) => x.id === id); if (!j) return send(res, 404, { error: 'no job' }); const running = !jobOver(j); return send(res, 200, { log: tail(j.log, +url.searchParams.get('tail') || 200), running, code: j.code, ...(j.name === 'publish' && !running ? { outcome: publishline.outcome(tail(j.log, 60), j.code == null ? -1 : j.code) } : {}) }); } // a finished publish also says how it ended, in words the page shows as they are
     if (p.startsWith('/api/jobs/') && p.endsWith('/stop') && req.method === 'POST') { const id = p.split('/')[3]; const j = JOBS.find((x) => x.id === id); if (!j) return send(res, 404, { error: 'no such job' }); const r = stopHqJob(j); if (r.changed) saveJobs(); return send(res, r.status, r.body); }
     if (p === '/api/processes/stop' && req.method === 'POST') { // never a bare number: one of HQ's own jobs (checked against the start time HQ stored) or a listed node job (checked against the start time the page showed)
       const b = await body(req); const pid = typeof b.pid === 'number' ? b.pid : NaN; const j = Number.isInteger(pid) ? JOBS.find((x) => !x.done && x.pid === pid) : null;
@@ -509,5 +525,6 @@ function start(opts = {}) {
     });
   });
 }
-module.exports = { start, PORT, ROOT, guards: { hostAllowed, originAllowed, mediaType }, stop: { stopHqJob, stopListedProcess, sameProcess, processInfo, scriptRe, builderScript } };
+module.exports = { start, PORT, ROOT, guards: { hostAllowed, originAllowed, mediaType }, stop: { stopHqJob, stopListedProcess, sameProcess, processInfo, scriptRe, builderScript },
+  jobs: { startJob, jobList, jobOver } };
 if (require.main === module) start().catch((e) => { console.error(e.message); process.exit(1); });

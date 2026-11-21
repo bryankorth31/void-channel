@@ -41,6 +41,9 @@ cp.spawn = function (cmd, args, opts) {
     const fake = new (require('node:events'))();
     fake.pid = 999997; // not a number any process can hold (Windows process numbers are multiples of 4)
     fake.unref = () => {};
+    // It never runs, so it ends at once with no exit code, as a real one tells HQ through its exit event. HQ waits for that
+    // event before calling a job finished (21 Nov 2026, the publish timing slip; tests/hq-jobs-gap.test.js).
+    setImmediate(() => fake.emit('exit', null));
     return fake;
   }
   return realSpawn.apply(this, arguments);
