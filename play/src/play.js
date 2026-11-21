@@ -87,7 +87,8 @@
     if ($('cover-turn')) $('cover-turn').hidden = !(card && isPhone() && innerHeight > innerWidth && PlayCards.isPad(card));
     if ($('cover-full')) $('cover-full').hidden = !(card && isPhone() && iPhoneSafari());
     // The phone controller is offered where the game is on the big screen (a phone cannot be the big screen).
-    if ($('cover-phone') && !KIDS) { $('cover-phone').hidden = !card || isPhone(); $('m-phones').hidden = isPhone(); }
+    // A phone pad cannot drive a Flash game (it plays by pointing), so a Flash card never offers one.
+    if ($('cover-phone') && !KIDS) { $('cover-phone').hidden = !card || isPhone() || isFlash(); $('m-phones').hidden = isPhone() || isFlash(); }
     document.body.classList.toggle('padmode', padMode);
     document.body.classList.toggle('shell', shell);
     document.body.classList.toggle('sidebar', shell && innerWidth > innerHeight && !!card && PlayCards.isPad(card));
@@ -722,7 +723,9 @@
       $('canvas').style.touchAction = 'none';
     }
     const esc = PlayCards.isPad(c) ? ', Esc on the keyboard' : '';
-    $('pause-how').textContent = 'Pause: Back and Start together on a gamepad' + esc + ', or the Pause button.';
+    // A Flash game keeps Esc for itself once it has been clicked (the auditor, 20 Nov 2026), so its line names the button.
+    $('pause-how').textContent = (PlayCards.CORES[c.core] || {}).kind === 'ruffle' ? 'Pause with the Pause button, or Start on a gamepad.'
+      : 'Pause: Back and Start together on a gamepad' + esc + ', or the Pause button.';
   }
 
   // The PC keyboard: every key the PC knew goes to the game; our own shortcuts stay out of its way.
@@ -952,6 +955,9 @@
     document.title = c.title + (KIDS ? ' | Games | voidtv.net kids' : ' | PLAY | voidtv.net');
     $('title').textContent = c.title + (c.year ? ' (' + c.year + ')' : '');
     $('help').textContent = c.help || '';
+    // What a Flash game cannot do stays out of its menu (the auditor, 20 Nov 2026): its saves are its own (Save and Load
+    // would only say no), and a phone pad cannot point for it.
+    if (isFlash()) for (const k of ['b-save', 'b-load', 'b-file-save', 'b-file-load', 'm-phones', 'b-phones', 'cover-phone']) if ($(k)) $(k).hidden = true;
     controls(c);
     cover(c);
     // The footer names this game's own engine, its licence and its exact source (and its licence text when not GPL).

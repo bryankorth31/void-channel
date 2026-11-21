@@ -53,6 +53,7 @@ button{font:inherit;color:inherit}
 }
 /* Upright: rows of big keys fill the room under the picture. --r is how many rows a section holds. */
 .pp{height:100%;display:flex;flex-direction:column;justify-content:center;gap:12px}
+.phint{margin:0;text-align:center;color:var(--dim);font-size:18px}
 .psec{--r:1;--nc:1;flex:var(--r) 1 0;min-height:calc(var(--r) * 56px + (var(--r) - 1) * 10px);max-height:calc(var(--r) * 120px + (var(--r) - 1) * 10px);display:grid;gap:10px}
 .psec .pk{width:100%;height:100%}
 .pnums,.pgo{grid-template-columns:repeat(var(--nc),minmax(0,1fr));grid-auto-rows:minmax(0,1fr)}

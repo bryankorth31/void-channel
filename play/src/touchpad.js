@@ -129,7 +129,9 @@
   // Space and the rest. A card with no numbers is a game pad: arrows on the left, every key on the right.
   // Upright: the numbers in one row (two on a narrow phone), then Space and Enter, then the arrows beside the rest.
   function plan(c) {
-    const numbers = c.numbers || [], keys = (c.keys || []).concat(c.mouse ? ['@click', '@rclick'] : []);
+    // A pointer card (Flash) takes a tap on the picture as its click, so it gets no L click and R click keys (the auditor,
+    // 20 Nov 2026); a DOS game's picture is a trackpad, so it needs them.
+    const numbers = c.numbers || [], keys = (c.keys || []).concat(c.mouse && c.kind !== 'pointer' ? ['@click', '@rclick'] : []);
     // Space and Enter get their own wide row only as themselves; an arcade card that names Space ("Button 3") keeps it
     // with its other buttons (the spacing audit: a row for it pushed Chinese Hero's Button 4 off an upright phone).
     const named = c.labels || {};
@@ -267,6 +269,8 @@
           s.appendChild(g);
         }
       }
+      // A pointer card has no keys here: one line says how it plays instead (the auditor, 20 Nov 2026).
+      if (c.kind === 'pointer') pp.appendChild(el('p', 'phint', 'Tap the picture'));
       zones.pad.appendChild(sizer(pp)); zones.pad.appendChild(kb);
     } else {
       const left = el('div', 'pcol'), right = el('div', 'pcol');

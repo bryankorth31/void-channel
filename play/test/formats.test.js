@@ -57,6 +57,20 @@ test('Flash: Ruffle\'s crash panel never shows (it links to ruffle.rs and GitHub
   assert.ok(!/ruffle\.rs|github/i.test(src.match(/const CRASH = '([^']*)'/)[1]), 'our message names no other site');
 });
 
+test('Flash on a phone and in the menu (the auditor\'s notes, 20 Nov 2026): no click keys, no save or phone items, pause by the button', () => {
+  const T = require('../src/touchpad.js');
+  const flash = cards.find((c) => c.system === 'flash'), dos = cards.find((c) => c.id === 'amazon-trail-1993');
+  assert.deepEqual(T.plan(flash.controls).rest, [], 'a tap on the picture clicks, so no L click or R click keys');
+  assert.ok(T.plan(dos.controls).rest.includes('@click') && T.plan(dos.controls).rest.includes('@rclick'), 'a DOS mouse game keeps its keys');
+  const pad = fs.readFileSync(path.join(PLAY, 'src', 'touchpad.js'), 'utf8');
+  assert.ok(pad.includes("if (c.kind === 'pointer') pp.appendChild(el('p', 'phint', 'Tap the picture'));"));
+  const js = fs.readFileSync(path.join(PLAY, 'src', 'play.js'), 'utf8');
+  assert.ok(js.includes("if (isFlash()) for (const k of ['b-save', 'b-load', 'b-file-save', 'b-file-load', 'm-phones', 'b-phones', 'cover-phone']) if ($(k)) $(k).hidden = true;"));
+  assert.ok(js.includes("$('cover-phone').hidden = !card || isPhone() || isFlash(); $('m-phones').hidden = isPhone() || isFlash();"), 'the layout never shows them again');
+  assert.ok(js.includes("'Pause with the Pause button, or Start on a gamepad.'"), 'Esc belongs to a Flash game once clicked');
+  for (const c of cards.filter((x) => x.system === 'flash')) assert.match(c.help, /Pause with the Pause button\.$/, c.id);
+});
+
 test('Flash cards: a .swf from the Archive, pointer actions on every input, on Kids', () => {
   const flash = cards.filter((c) => c.system === 'flash');
   assert.ok(flash.length >= 2);
