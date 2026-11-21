@@ -72,3 +72,15 @@ test('the built per-show files: one per show, own questions only, no clips, sour
     assert.ok(top.filter((n) => n > median).length >= 7, 'the best known shows have more questions than the middle');
   }
 });
+
+test('during the show: only questions about the show as a whole, never an episode (Bryan: "Yes, add the strip")', () => {
+  const extra = SET.concat([q('tv-network-alpha', 'network')]);
+  const seen = new Set();
+  for (let i = 0; i < 300; i++) {
+    const p = L.pickLive(extra, { seed: 'd' + i, season: 9, number: 9, during: true });
+    assert.ok(L.DURING_ROUNDS.includes(p.round), p.round);
+    seen.add(p.round);
+  }
+  assert.deepEqual([...seen].sort(), ['cast', 'first-aired', 'network']);
+  assert.equal(L.pickLive([SET[2], SET[3]], { seed: 'x', season: 9, number: 9, during: true }), null, 'a show with only episode questions asks nothing during the show');
+});

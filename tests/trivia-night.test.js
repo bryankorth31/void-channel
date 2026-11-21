@@ -39,6 +39,7 @@ test('the graphics card: free unless another job holds it in studio mode and its
 });
 
 test('the bank is rebuilt only when the transcript and moment checks did not fail', () => {
+  assert.equal(N.bankAllowed({ timed: { status: 'failed' } }), true, 'the timed questions stand apart from the bank');
   assert.equal(N.bankAllowed({}), true);
   assert.equal(N.bankAllowed({ transcripts: { status: 'ok' }, moments: { status: 'ok' } }), true);
   assert.equal(N.bankAllowed({ moments: { status: 'failed' } }), false);
@@ -48,10 +49,10 @@ test('the bank is rebuilt only when the transcript and moment checks did not fai
 
 test('the night runs the tools it names, in order, and claims and releases the card around Whisper', () => {
   const src = fs.readFileSync(path.join(__dirname, '..', 'scripts', 'trivia', 'night.js'), 'utf8');
-  assert.deepEqual(N.JOBS, ['fame', 'pool', 'queue', 'whisper', 'transcripts', 'moments', 'bank']);
+  assert.deepEqual(N.JOBS, ['fame', 'pool', 'queue', 'whisper', 'transcripts', 'moments', 'timed', 'bank']);
   // The runner names each tool it runs. It does not need them all in this copy: the transcript tools are the clip chat's and
   // may not be committed yet, and a night with a tool missing logs that job as failed and goes on (a clean copy must still pass).
-  for (const f of ['fame.js', 'pool.js', 'transcripts.js', 'whisper_lines.py', 'moments.js', 'bank.js']) assert.ok(src.includes('scripts/trivia/' + f), f);
+  for (const f of ['fame.js', 'pool.js', 'transcripts.js', 'whisper_lines.py', 'moments.js', 'timed.js', 'bank.js']) assert.ok(src.includes('scripts/trivia/' + f), f);
   assert.match(src, /'--set', 'studio', '--by', TAG/);
   assert.match(src, /finally \{ log\('   release: '/);
   assert.match(src, /scripts\/trivia\/fame\.js'\)\], 120, \[0, 3\]\)/, 'fame.js exit 3 (some page views still to come) counts as done');

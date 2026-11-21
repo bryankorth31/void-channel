@@ -171,6 +171,9 @@ const brandSrc = path.join(ROOT, 'assets', 'brand');
     fs.mkdirSync(dst, { recursive: true });
     for (const f of ['index.html', 'phone.html', 'trivia.css']) fs.copyFileSync(path.join(T, f), path.join(dst, f));
     for (const d of ['src', 'bank']) fs.cpSync(path.join(T, d), path.join(dst, d), { recursive: true });
+    // Questions timed to the scene playing (the clip chat's scripts/trivia/timed.js writes trivia/timed/), for Live TV's strip;
+    // only when that folder exists.
+    if (fs.existsSync(path.join(T, 'timed'))) fs.cpSync(path.join(T, 'timed'), path.join(dst, 'timed'), { recursive: true });
     // The build's commit on every stylesheet and script the two pages load, so a push reaches a returning browser at once
     // instead of after its 4-hour cache (audit A34; the same stamp PLAY uses).
     let sha = process.env.CF_PAGES_COMMIT_SHA || '';

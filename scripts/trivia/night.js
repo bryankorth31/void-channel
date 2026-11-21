@@ -15,7 +15,9 @@
 //                                                      and skipped when another job holds it or another Whisper is running
 //   5. transcripts  node scripts/trivia/transcripts.js check
 //   6. moments      node scripts/trivia/moments.js     every saved moment still plays from the Archive where it says
-//   7. bank         node scripts/trivia/bank.js        rebuild the questions; its checker must pass every one
+//   7. timed        node scripts/trivia/timed.js       the clip chat's scene-timed questions for Live TV's strip (trivia/timed/),
+//                                                      from lines a person approved; skipped until that tool exists
+//   8. bank         node scripts/trivia/bank.js        rebuild the questions; its checker must pass every one
 //   then a morning line: catalog/cache/trivia/night.json and a line in catalog/cache/trivia/night.log
 //
 // The fame list, transcripts, Whisper and moments tools are the clip chat's; this file only runs them, as they are.
@@ -40,7 +42,7 @@ const QUEUE = path.join(ROOT, 'trivia', 'transcripts', 'queue.json');
 const TAG = 'trivia-night';
 const WEEK = 7 * 864e5;
 
-const JOBS = ['fame', 'pool', 'queue', 'whisper', 'transcripts', 'moments', 'bank'];
+const JOBS = ['fame', 'pool', 'queue', 'whisper', 'transcripts', 'moments', 'timed', 'bank'];
 
 // ---------- pure parts (tested in tests/trivia-night.test.js) ----------
 
@@ -128,7 +130,9 @@ function main() {
   if (want('pool')) plan.push(['pool', due(path.join(ROOT, 'catalog', 'trivia-pool.json'), now, o.force || !!o.only) ? 'run' : 'skip: the pool is under a week old']);
   if (want('queue')) plan.push(['queue', 'run: the next ' + o.shows + ' shows, ' + o.eps + ' episodes each']);
   if (want('whisper')) plan.push(['whisper', 'run if the card is free and the queue has episodes, at most ' + o.whisperMinutes + ' minutes']);
-  for (const k of ['transcripts', 'moments', 'bank']) if (want(k)) plan.push([k, 'run']);
+  for (const k of ['transcripts', 'moments']) if (want(k)) plan.push([k, 'run']);
+  if (want('timed')) plan.push(['timed', fs.existsSync(path.join(ROOT, 'scripts', 'trivia', 'timed.js')) ? 'run' : 'skip: scripts/trivia/timed.js is not there yet']);
+  if (want('bank')) plan.push(['bank', 'run']);
 
   if (o.dry) { for (const [k, v] of plan) console.log(k.padEnd(12) + v); return; }
 
@@ -158,6 +162,8 @@ function main() {
       }
       else if (k === 'transcripts') results.transcripts = run('transcripts', process.execPath, [path.join(ROOT, 'scripts/trivia/transcripts.js'), 'check'], 20);
       else if (k === 'moments') results.moments = run('moments', process.execPath, [path.join(ROOT, 'scripts/trivia/moments.js')], 20);
+      // The timed questions stand apart from the bank: a timed question that fails its check is logged, and the bank still rebuilds.
+      else if (k === 'timed') results.timed = run('timed', process.execPath, [path.join(ROOT, 'scripts/trivia/timed.js')], 20);
       else if (k === 'bank') {
         if (!bankAllowed(results)) { results.bank = { status: 'skipped', why: 'a check before it failed; yesterday\'s questions stay' }; log('-- bank: skipped, a check before it failed'); continue; }
         results.bank = run('bank', process.execPath, [path.join(ROOT, 'scripts/trivia/bank.js')], 30);

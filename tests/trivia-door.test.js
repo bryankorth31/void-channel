@@ -73,3 +73,8 @@ test('A34: the site build stamps the trivia pages with the commit it builds', ()
   assert.match(src, /const \{ stampTrivia \} = require\('\.\/trivia\/stamp'\);/);
   assert.match(src, /for \(const f of \['index\.html', 'phone\.html'\]\) fs\.writeFileSync\(path\.join\(dst, f\), stampTrivia\(/);
 });
+
+test('the site build copies the clip chat\'s timed questions (trivia/timed) when the folder exists', () => {
+  const src = read('scripts/site.js');
+  assert.match(src, /if \(fs\.existsSync\(path\.join\(T, 'timed'\)\)\) fs\.cpSync\(path\.join\(T, 'timed'\), path\.join\(dst, 'timed'\), \{ recursive: true \}\);/);
+});

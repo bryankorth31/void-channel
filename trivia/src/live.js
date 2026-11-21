@@ -5,12 +5,14 @@
 // Live TV plays the same schedule for everyone, so a question chosen from the channel and the airing (the seed) is the same
 // question for every viewer of that channel, anywhere, at the same break: watching together, answering together. The Live TV
 // page (scripts/lib/app.js, the phone remote chat's wiring) asks at a break's start and shows the question on the TV and on the
-// phones joined to its room; it never asks on kids channels (tvKids) and never over the show itself.
+// phones joined to its room, and in the strip under the picture while a show plays (during: true); it never asks on kids
+// channels (tvKids).
 //
-// liveQuestion({ slug, season, number, seed }) -> Promise of a question from trivia/bank/shows/<slug>.json, or null:
+// liveQuestion({ slug, season, number, seed, during }) -> Promise of a question from trivia/bank/shows/<slug>.json, or null:
 //   - only that show's questions (built by scripts/trivia/bank.js, each with its source), never a clip;
 //   - never about an episode later than the one just shown (no spoilers);
 //   - the same seed gives the same question (use the channel id and the airing's start).
+//   - during: true (the strip under the picture while the show plays): only cast, first aired and network questions, no episode.
 // pickLive(questions, opts) is the same choice without the fetch (pure; tested in tests/trivia-live.test.js).
 (function (root) {
   'use strict';
@@ -25,9 +27,15 @@
     return a.season > season || (a.season === season && Number.isInteger(number) && a.number > number);
   }
 
+  // During the show (the strip under the picture; Bryan, 20 Nov 2026: "Yes, add the strip"): only questions about the show
+  // as a whole (who played whom, first aired, network), never one about an episode, so nothing on screen is given away or
+  // spoiled. At a break (during false) episode questions up to the one just shown may come too.
+  const DURING_ROUNDS = ['cast', 'first-aired', 'network'];
+
   function pickLive(questions, opts) {
     const o = opts || {};
-    const ok = (questions || []).filter((q) => q && !q.media && Array.isArray(q.choices) && q.choices.length >= 2 && !later(q, o.season, o.number));
+    const ok = (questions || []).filter((q) => q && !q.media && Array.isArray(q.choices) && q.choices.length >= 2 && !later(q, o.season, o.number)
+      && (!o.during || DURING_ROUNDS.includes(q.round)));
     if (!ok.length) return null;
     const list = ok.slice().sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
     const r = G.seeded(hash(String(o.seed == null ? '' : o.seed)))();
@@ -45,6 +53,6 @@
     return cache.get(url).then((qs) => pickLive(qs, o)).catch(() => null);
   }
 
-  const api = { pickLive, liveQuestion, later, hash };
+  const api = { pickLive, liveQuestion, later, hash, DURING_ROUNDS };
   if (typeof module !== 'undefined' && module.exports) module.exports = api; else root.TriviaLive = api;
 })(this);
