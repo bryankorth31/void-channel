@@ -52,18 +52,30 @@
   const beatDue = (now, lastAt, changedAt, b) => now - lastAt >= (b || now - changedAt < 1000 ? BEAT_MS : REST_MS);
   // Pure (tested): which button a touch at (x, y) presses, from each button's box { n, x, y, w, h, round }: the one it
   // is on, or the nearest within REACH. only narrows it (a thumb sliding across the face buttons stays on face buttons).
+  // How far (x, y) is from a button's edge (0 or less: on it).
+  const offBy = (k, x, y) => (k.round ? Math.hypot(x - k.x - k.w / 2, y - k.y - k.h / 2) - k.w / 2
+    : Math.hypot(Math.max(k.x - x, 0, x - (k.x + k.w)), Math.max(k.y - y, 0, y - (k.y + k.h))));
   function keyAt(boxes, x, y, only) {
     let best = null, near = REACH;
     for (const k of boxes) {
       if (only && !only(k)) continue;
-      const cx = k.x + k.w / 2, cy = k.y + k.h / 2;
-      const d = k.round ? Math.hypot(x - cx, y - cy) - k.w / 2 : Math.hypot(Math.max(k.x - x, 0, x - (k.x + k.w)), Math.max(k.y - y, 0, y - (k.y + k.h)));
+      const d = offBy(k, x, y);
       if (d < near) { near = d; best = k; }
     }
     return best;
   }
+  // Pure (tested): the button a finger is on after it slid to (x, y). cur is the button it was on (null once it slid off
+  // everything). On the face buttons a thumb rolls: onto the next one (the first is let go), or it stays on its button
+  // while it drifts no more than that button's width past its edge; clearly off, it holds nothing, and holds again when
+  // it comes back onto a face button. Select, Start, L and R do not roll: off by more than their own height, they let go.
+  function slide(boxes, cur, face, x, y) {
+    if (cur && !cur.face) return offBy(cur, x, y) > cur.h ? null : cur;
+    const k = keyAt(boxes, x, y, face ? (b) => b.face : null);
+    if (k) return k;
+    return cur && offBy(cur, x, y) <= cur.w ? cur : null;
+  }
 
-  const api = { BUTTONS, SLOW_MS, GAP_MS, BEAT_MS, REST_MS, QUIET_MS, AWAY_MS, REACH, bits, aim, dirs, delayText, waitFor, beatDue, keyAt };
+  const api = { BUTTONS, SLOW_MS, GAP_MS, BEAT_MS, REST_MS, QUIET_MS, AWAY_MS, REACH, bits, aim, dirs, delayText, waitFor, beatDue, keyAt, slide };
   if (typeof module === 'object' && module.exports) { module.exports = api; return; }
   root.PlayPhonePad = api;
 
@@ -150,9 +162,11 @@
   const fingers = new Map();   // pointer id -> { pad: true, sector, dirs } or { key }
   function place(e, f) {
     if (f.pad) { if (!dpadBox) return; const a = aim(e.clientX - dpadBox.x, e.clientY - dpadBox.y, dpadBox.size, f.sector); f.sector = a.sector; f.dirs = a.dirs; return; }
-    if (f.key && !f.key.face) return;   // Select, Start, L and R do not slide
-    const k = keyAt(boxes, e.clientX, e.clientY, f.key ? (x) => x.face : null);
-    if (k) f.key = k; else if (!f.key) f.none = true;
+    if (f.dead) return;
+    const k = slide(boxes, f.key || null, !!f.face, e.clientX, e.clientY);
+    if (!f.began) { f.began = true; if (!k) { f.none = true; return; } f.face = !!k.face; }   // a touch on nothing is no finger of ours
+    else if (!k && !f.face) f.dead = true;   // slid off Select, Start, L or R: nothing more until it lifts
+    f.key = k;
   }
   function refresh() {
     const next = new Set();

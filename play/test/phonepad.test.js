@@ -113,6 +113,17 @@ test('a touch near a button presses it; a thumb sliding over the face buttons mo
   assert.equal(PP.keyAt(boxes, 100, 90).n, 'Start', 'between a pill and a face button: the nearer one');
   assert.equal(PP.keyAt(boxes, 100, 90, (k) => k.face).n, 'A', 'but a thumb that started on a face button stays on face buttons');
   assert.equal(PP.keyAt(boxes, 100, 50).n, 'Start', 'just past the pill');
+  // A thumb rolling (the auditor's question on the fix): from A onto B lets go of A and presses B; a little drift off a
+  // button keeps it; clearly off everything holds nothing; back onto a face button holds again.
+  const [A, B, START] = boxes;
+  assert.equal(PP.slide(boxes, A, true, 240, 80), B, 'rolled onto B: B, and A no more');
+  assert.equal(PP.slide(boxes, A, true, 140, 240), A, 'drifted 60 px under A: still A');
+  assert.equal(PP.slide(boxes, A, true, 140, 370), null, 'far from every button: nothing is held');
+  assert.equal(PP.slide(boxes, null, true, 140, 140), A, 'and back on A: held again');
+  assert.equal(PP.slide(boxes, null, true, 40, 50), null, 'a thumb that began on a face button never lands on a pill');
+  assert.equal(PP.slide(boxes, START, false, 60, 100), START, 'a pill keeps a little drift');
+  assert.equal(PP.slide(boxes, START, false, 60, 200), null, 'and lets go when the finger is clearly off it');
+  assert.equal(PP.slide(boxes, START, false, 140, 140), null, 'without ever turning into a face button');
 });
 
 test('the screen: every tap reaches the game as a press and a release, in order, even when both arrive in one frame', () => {
