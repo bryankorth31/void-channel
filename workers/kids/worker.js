@@ -26,9 +26,21 @@ export default {
       return env.ASSETS.fetch(request);
     };
     const res = await onRequest({ request, env: kidsEnv, next });
-    return url.pathname.startsWith('/games/') ? gamesHeaders(url.pathname, res) : res;
+    return noBeacon(url.pathname.startsWith('/games/') ? gamesHeaders(url.pathname, res) : res);
   },
 };
+
+// No Cloudflare page-view beacon on a kids page (the PLAY auditor, 21 Nov 2026: a page contacted
+// static.cloudflareinsights.com). The zone's Web Analytics adds that script to HTML at Cloudflare's edge for real
+// browsers; Cloudflare does not change a response marked no-transform, so every HTML answer here carries it. Kids keeps
+// only its own counts (/api/e, aggregate). If the beacon still shows, Web Analytics must exclude kids.voidtv.net.
+function noBeacon(res) {
+  if (!/text\/html/i.test(res.headers.get('content-type') || '')) return res;
+  const out = new Response(res.body, res);
+  const cc = out.headers.get('cache-control');
+  if (!/no-transform/i.test(cc || '')) out.headers.set('cache-control', cc ? cc + ', no-transform' : 'no-transform');
+  return out;
+}
 
 // Computer games (/games/, scripts/lib/games/build.js): PLAY's engine runs the PC on its own thread, which a browser
 // allows only on a page that is cross-origin isolated, so every file under /games/ carries the two headers that turn

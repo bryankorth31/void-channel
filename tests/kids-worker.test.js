@@ -53,3 +53,14 @@ test('analytics keep counts only, refuse requests from scripts, and the copied P
   }
   assert.deepEqual(A.asked, []);
 });
+
+test('every kids HTML page is marked no-transform, so Cloudflare adds no page-view beacon to it (the PLAY auditor, 21 Nov 2026)', async () => {
+  const W = await load(); const A = assets();
+  for (const p of ['/', '/play/', '/games/', '/games/game.html']) {
+    const res = await W.fetch(req(p), { ASSETS: A });
+    assert.match(res.headers.get('cache-control') || '', /no-transform/, p);
+  }
+  const json = { fetch: async () => new Response('{}', { headers: { 'content-type': 'application/json' } }) };
+  const res = await W.fetch(req('/data/breaks.json'), { ASSETS: json });
+  assert.doesNotMatch(res.headers.get('cache-control') || '', /no-transform/, 'only HTML needs it');
+});
