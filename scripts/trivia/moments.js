@@ -4,9 +4,13 @@
 // that the examples you're using are that noticeable").
 //
 // A moment, as kept in trivia/moments/<show slug>.json or trivia/moments/film-<TMDB id>.json:
-//   { id, kind: scene | line | theme | still, show (slug) or film (TMDB id), season, number, item, url,
+//   { id, kind: scene | line | theme | still | find | whodunit, show (slug) or film (TMDB id), season, number, item, url,
 //     start, end (seconds; a still has end = start), line (the words heard, for a line), note,
 //     by (who picked it), at (when), approved: { by, at } }
+// Two kinds for the watch party's games (B, 20 Nov 2026: "trivia /treasure hunt or the detective who done it games"):
+//   find: something to spot on screen; find = what ("the red phone"); start to end = while it can be seen (5 to 20 s).
+//   whodunit: an episode's mystery, written once by a person; q (the question), choices (four suspects), answer (0 to 3),
+//     start = when guessing opens, lock = when guesses close, end = when the episode reveals it.
 // A moment a person picks on the marking page is approved by that person as they save it. Moments found by a machine
 // later (subtitle lines, transcripts) are saved without approved and do not reach a game until a person approves them.
 //
@@ -20,7 +24,7 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..', '..');
 // TRIVIA_MOMENTS_DIR and TRIVIA_DB move the store and the catalog (the tests use them).
 const DIR = process.env.TRIVIA_MOMENTS_DIR || path.join(ROOT, 'trivia', 'moments');
-const KINDS = { scene: 'Scene', line: 'Line', theme: 'Theme song', still: 'Still' };
+const KINDS = { scene: 'Scene', line: 'Line', theme: 'Theme song', still: 'Still', find: 'Spot it', whodunit: 'Whodunit' };
 const MIN_SECS = 5;
 const MAX_SECS = 20;
 // What clip rounds may cut from: live, plays, MP4, five minutes or more (episodes) or ten (films), as the bank's templates.
@@ -59,9 +63,21 @@ function problems(m, file) {
   if (!m.at || isNaN(Date.parse(m.at))) out.push('has no time it was picked');
   if (!Number.isFinite(m.start) || !Number.isFinite(m.end)) out.push('has no start and end');
   else if (m.kind === 'still') { if (m.end !== m.start) out.push('a still is one frame: end must equal start'); }
+  else if (m.kind === 'whodunit') {
+    if (!(Number.isFinite(m.lock) && m.start < m.lock && m.lock <= m.end)) out.push('a whodunit needs guessing to open, then close, then the reveal, in that order');
+    else if (m.lock - m.start < 60) out.push('a whodunit needs at least a minute to guess in');
+  }
   else if (m.end - m.start < MIN_SECS || m.end - m.start > MAX_SECS) out.push(`must run ${MIN_SECS} to ${MAX_SECS} seconds`);
   if (m.kind === 'line' && !(m.line && String(m.line).trim())) out.push('a line moment needs the words heard');
-  for (const k of ['line', 'note']) {
+  if (m.kind === 'find' && !(m.find && String(m.find).trim().length >= 3 && String(m.find).length <= 80)) out.push('a spot-it moment needs what to find (3 to 80 characters)');
+  if (m.kind === 'whodunit') {
+    const c = Array.isArray(m.choices) ? m.choices.map((x) => String(x || '').trim()) : [];
+    if (!m.q || !String(m.q).trim() || String(m.q).length > 120) out.push('a whodunit needs its question (up to 120 characters)');
+    if (c.length !== 4 || c.some((x) => !x || x.length > 60) || new Set(c.map((x) => x.toLowerCase())).size !== 4) out.push('a whodunit needs four different suspects');
+    if (!Number.isInteger(m.answer) || m.answer < 0 || m.answer > 3) out.push('a whodunit needs the right answer picked');
+    for (const x of [m.q, ...c]) if (x && DASH.test(x)) { out.push('a whodunit carries a long dash'); break; }
+  }
+  for (const k of ['line', 'note', 'find']) {
     if (m[k] && String(m[k]).length > 200) out.push(k + ' is longer than 200 characters');
     if (m[k] && DASH.test(m[k])) out.push(k + ' carries a long dash');
   }

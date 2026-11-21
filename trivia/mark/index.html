@@ -51,6 +51,8 @@
               <label title="A famous line; type the words heard below"><input type="radio" name="kind" value="line">Line</label>
               <label title="The theme song or opening"><input type="radio" name="kind" value="theme">Theme song</label>
               <label title="One frame, shown as a picture question"><input type="radio" name="kind" value="still">Still</label>
+              <label title="Treasure hunt: something to spot on screen while it can be seen; phones tap when they see it"><input type="radio" name="kind" value="find">Spot it</label>
+              <label title="Detective game for a mystery episode: four suspects, the right one, and when guessing opens, closes and the answer is revealed"><input type="radio" name="kind" value="whodunit">Whodunit</label>
             </div>
           </div>
           <div class="field" id="lenField"><span>Length</span>
@@ -60,6 +62,21 @@
             </div>
           </div>
           <input id="line" maxlength="200" placeholder="The words heard (for a line)" title="The words of the line, as said" hidden>
+          <input id="find" maxlength="80" placeholder="What to spot, for example: the red phone" title="What players look for; mark the start where it first shows" hidden>
+          <fieldset class="who" id="who" hidden>
+            <input id="wq" maxlength="120" value="Who did it?" title="The question everyone guesses">
+            <div class="sus" title="Four suspects; tick the one who did it">
+              <label><input type="radio" name="wans" value="0"><input class="wc" maxlength="60" placeholder="Suspect A"></label>
+              <label><input type="radio" name="wans" value="1"><input class="wc" maxlength="60" placeholder="Suspect B"></label>
+              <label><input type="radio" name="wans" value="2"><input class="wc" maxlength="60" placeholder="Suspect C"></label>
+              <label><input type="radio" name="wans" value="3"><input class="wc" maxlength="60" placeholder="Suspect D"></label>
+            </div>
+            <div class="btns">
+              <button type="button" id="wAsk" title="Guessing opens at the time the video is at now">Guessing opens here</button>
+              <button type="button" id="wLock" title="Guesses close at the time the video is at now (before the reveal)">Guesses close here</button>
+              <button type="button" id="wReveal" title="The episode reveals who did it at the time the video is at now">Revealed here</button>
+            </div>
+          </fieldset>
           <input id="note" maxlength="200" placeholder="Note (optional): who is on screen, what happens" title="A note for whoever reads the moment later">
           <div class="btns">
             <button id="markStart" class="main" title="Mark the start here, at the time the video is at now (M)">Mark start here</button>

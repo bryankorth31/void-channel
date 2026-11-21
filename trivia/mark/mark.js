@@ -70,6 +70,7 @@
     S.file = S.files[i];
     $('file').value = String(i);
     S.start = null;
+    S.w = { ask: null, lock: null, reveal: null };   // a whodunit's times belong to one episode
     S.previewing = false;
     drawMarked();
     if (!S.file) return;
@@ -139,20 +140,42 @@
     for (const li of $('lines').children) li.classList.toggle('now', Number(li.dataset.i) === i);
   }
 
+  // A whodunit's three times: guessing opens, guesses close, the episode reveals it (seconds into the file).
+  S.w = { ask: null, lock: null, reveal: null };
+  const KIND_NAMES = { scene: 'Scene', line: 'Line', theme: 'Theme song', still: 'Still', find: 'Spot it', whodunit: 'Whodunit' };
+
   function drawMarked() {
+    if (kind() === 'whodunit') {
+      const w = S.w, t = (x) => (x === null ? 'not set' : mmss(x));
+      $('save').disabled = w.ask === null || w.lock === null || w.reveal === null;
+      $('marked').textContent = 'Guessing opens ' + t(w.ask) + ', closes ' + t(w.lock) + ', revealed ' + t(w.reveal) + '.';
+      return;
+    }
     const has = S.start !== null;
     $('preview').disabled = !has;
     $('save').disabled = !has;
     $('marked').textContent = has
       ? (kind() === 'still' ? 'One frame at ' + mmss(S.start) : 'From ' + mmss(S.start) + ' to ' + mmss(end()) + ' (' + Math.round(end() - S.start) + ' s)')
-      : 'Nothing marked yet. Play, pause where the moment begins, then Mark start here.';
+      : kind() === 'find' ? 'Play, pause where the thing to spot first shows, then Mark start here.'
+        : 'Nothing marked yet. Play, pause where the moment begins, then Mark start here.';
   }
 
   function onKind() {
     const k = kind();
-    $('lenField').hidden = k === 'still';
+    $('lenField').hidden = k === 'still' || k === 'whodunit';
     $('line').hidden = k !== 'line';
+    $('find').hidden = k !== 'find';
+    $('who').hidden = k !== 'whodunit';
+    $('markStart').hidden = k === 'whodunit';
+    $('preview').hidden = k === 'whodunit';
     drawMarked();
+  }
+
+  function setW(which) {
+    if (!S.file) return;
+    S.w[which] = Math.round(v.currentTime * 10) / 10;
+    drawMarked();
+    say({ ask: 'Guessing opens at ', lock: 'Guesses close at ', reveal: 'Revealed at ' }[which] + mmss(S.w[which]) + '.');
   }
 
   function preview(from, to) {
@@ -181,8 +204,10 @@
       const li = document.createElement('li');
       const where = m.film ? '' : 'S' + m.season + ' E' + m.number + ', ';
       li.innerHTML = '<span class="k"></span><span class="d"><span class="w"></span><br><small></small></span>';
-      li.querySelector('.k').textContent = { scene: 'Scene', line: 'Line', theme: 'Theme song', still: 'Still' }[m.kind] || m.kind;
-      li.querySelector('.w').textContent = where + (m.kind === 'still' ? mmss(m.start) : mmss(m.start) + ' to ' + mmss(m.end)) + (m.line ? ': "' + m.line + '"' : '') + (m.note ? ' (' + m.note + ')' : '');
+      li.querySelector('.k').textContent = KIND_NAMES[m.kind] || m.kind;
+      li.querySelector('.w').textContent = m.kind === 'whodunit'
+        ? where + m.q + ' ' + m.choices.join(', ') + '. Answer: ' + m.choices[m.answer] + '. Guessing ' + mmss(m.start) + ' to ' + mmss(m.lock) + ', revealed ' + mmss(m.end)
+        : where + (m.kind === 'still' ? mmss(m.start) : mmss(m.start) + ' to ' + mmss(m.end)) + (m.line ? ': "' + m.line + '"' : '') + (m.find ? ': spot ' + m.find : '') + (m.note ? ' (' + m.note + ')' : '');
       li.querySelector('small').textContent = 'Picked by ' + m.by + ', ' + new Date(m.at).toLocaleString();
       const play = document.createElement('button');
       play.textContent = 'Play';
@@ -191,7 +216,7 @@
         const i = S.files.findIndex((f) => m.film || (f.season === m.season && f.number === m.number));
         if (i < 0) return say('That episode is not in the list any more.', 'err');
         if (S.files[i] !== S.file) loadFile(i, m.start);
-        const go = () => preview(m.start, m.end);
+        const go = () => (m.kind === 'whodunit' ? preview(Math.max(0, m.end - 5), m.end + 10) : preview(m.start, m.end));
         if (v.readyState >= 1) go(); else v.addEventListener('loadedmetadata', go, { once: true });
       };
       const del = document.createElement('button');
@@ -221,13 +246,27 @@
     const by = $('by').value.trim();
     if (by.length < 2) { $('by').focus(); return say('Type your name at the top first; it goes on the moment.', 'err'); }
     if (kind() === 'line' && !$('line').value.trim()) { $('line').focus(); return say('Type the words heard for a line.', 'err'); }
+    if (kind() === 'find' && $('find').value.trim().length < 3) { $('find').focus(); return say('Type what players should spot.', 'err'); }
+    const sus = [...document.querySelectorAll('#who .wc')].map((x) => x.value.trim());
+    const pick = document.querySelector('input[name=wans]:checked');
+    if (kind() === 'whodunit') {
+      if (sus.some((x) => !x)) return say('Type all four suspects.', 'err');
+      if (!pick) return say('Tick the suspect who did it.', 'err');
+    }
     store('trivia-mark-by', by);
-    const body = { key: S.cur.key, season: S.file.season, number: S.file.number, kind: kind(), start: S.start, end: end(), line: kind() === 'line' ? $('line').value : '', note: $('note').value, by };
+    const who = kind() === 'whodunit';
+    const body = { key: S.cur.key, season: S.file.season, number: S.file.number, kind: kind(), start: who ? S.w.ask : S.start, end: who ? S.w.reveal : end(),
+      line: kind() === 'line' ? $('line').value : '', find: $('find').value, note: $('note').value, by,
+      q: $('wq').value, choices: sus, answer: pick ? Number(pick.value) : null, lock: S.w.lock };
     try {
       await api('/api/moments', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
       say('Saved. It was checked against the catalog.', 'ok');
       S.start = null;
+      S.w = { ask: null, lock: null, reveal: null };
+      for (const x of document.querySelectorAll('#who .wc')) x.value = '';
+      for (const x of document.querySelectorAll('input[name=wans]')) x.checked = false;
       $('line').value = '';
+      $('find').value = '';
       $('note').value = '';
       drawMarked();
       await drawSaved();
@@ -241,6 +280,9 @@
   $('pp').onclick = () => { S.previewing = false; if (v.paused) v.play().catch(() => {}); else v.pause(); };
   $('markStart').onclick = () => { if (!S.file) return; S.start = Math.round(v.currentTime * 10) / 10; drawMarked(); say('Start marked. Play the moment to check it, then save.'); };
   $('preview').onclick = () => { if (S.start !== null) preview(S.start, end()); };
+  $('wAsk').onclick = () => setW('ask');
+  $('wLock').onclick = () => setW('lock');
+  $('wReveal').onclick = () => setW('reveal');
   $('save').onclick = save;
   $('file').onchange = () => loadFile(Number($('file').value));
   $('find').oninput = drawList;

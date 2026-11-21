@@ -3,6 +3,7 @@
 // just said: "Finish the line". Each question comes from a Line moment a person approved on the marking page (the words
 // checked against what is heard, plan C0), so nothing a machine heard reaches a screen unchecked (the C6 rule).
 //
+// Also the watch party's games: 'spot' (Spot it, from find moments) and 'whodunit' (from whodunit moments); see below.
 // A question: { id, category: 'tv', round: 'finish-line', band, q, choices, answer, season, number, at, source, about }
 //   at = the second in the episode file the line has been said by (the moment's end); the strip asks from then on.
 //   The wrong endings are the ends of other lines said in the same episode (its timed transcript), or, with no
@@ -77,10 +78,50 @@ function question(m, show, otherLines) {
   };
 }
 
+// The watch party's two games (B, 20 Nov 2026: "trivia /treasure hunt or the detective who done it games").
+// Spot it: shown LEAD seconds before the thing appears; a tap from open to close is right, quicker scores more.
+const LEAD = 5;
+function spotQuestion(m, show) {
+  if (m.kind !== 'find' || !m.approved || !m.find) return { skip: 'not an approved spot-it moment' };
+  return {
+    id: 'timed-' + m.id, category: 'tv', round: 'spot', band: show.band, q: 'Spot it: ' + m.find, find: m.find,
+    season: m.season, number: m.number, at: Math.max(0, m.start - LEAD), open: m.start, close: m.end,
+    source: { site: 'Internet Archive', url: 'https://archive.org/details/' + m.item,
+      fact: show.name + ', season ' + m.season + ', episode ' + m.number + ', from ' + mmss(m.start) + ' to ' + mmss(m.end) + ': ' + m.find + ' (marked by ' + m.by + ')',
+      read: String(m.approved.at || m.at).slice(0, 10) },
+    about: { show: m.show, season: m.season, number: m.number, moment: m.id },
+  };
+}
+
+// Whodunit: asked when guessing opens; a guess can change until lock; the reveal scores it. The answer was written by a
+// person who watched the episode, and the source says who and where the episode reveals it.
+function whodunitQuestion(m, show) {
+  if (m.kind !== 'whodunit' || !m.approved) return { skip: 'not an approved whodunit' };
+  return {
+    id: 'timed-' + m.id, category: 'tv', round: 'whodunit', band: show.band, q: m.q, choices: m.choices.slice(), answer: m.answer,
+    season: m.season, number: m.number, at: m.start, lock: m.lock, reveal: m.end,
+    source: { site: 'Internet Archive', url: 'https://archive.org/details/' + m.item,
+      fact: show.name + ', season ' + m.season + ', episode ' + m.number + ': revealed at ' + mmss(m.end) + ' (answer written by ' + m.by + ' after watching)',
+      read: String(m.approved.at || m.at).slice(0, 10) },
+    about: { show: m.show, season: m.season, number: m.number, moment: m.id },
+  };
+}
+
 // Everything wrong with a built question, given the moment it came from (or null).
 function problems(q, m) {
   const out = [];
   if (!m) return ['its moment is gone'];
+  if (q.round === 'spot') {
+    if (q.open !== m.start || q.close !== m.end || q.at !== Math.max(0, m.start - LEAD) || q.find !== m.find) out.push('is not at its moment');
+    if (DASH.test(q.q)) out.push('carries a long dash');
+    return out;
+  }
+  if (q.round === 'whodunit') {
+    if (q.at !== m.start || q.lock !== m.lock || q.reveal !== m.end) out.push('is not at its moment');
+    if (q.answer !== m.answer || JSON.stringify(q.choices) !== JSON.stringify(m.choices)) out.push('does not match the answer written');
+    if ([q.q, ...q.choices].some((x) => DASH.test(x))) out.push('carries a long dash');
+    return out;
+  }
   if (!Array.isArray(q.choices) || q.choices.length !== 4 || new Set(q.choices.map((c) => c.toLowerCase())).size !== 4) out.push('needs four different choices');
   const s = split(m.line);
   if (!s || q.choices[q.answer] !== s.rest) out.push('the right choice is not the rest of the line');
@@ -100,13 +141,20 @@ function build() {
   const skipped = [];
   for (const key of M.allKeys()) {
     if (key.startsWith('film-')) continue;
-    const moments = M.load(key).filter((m) => m.kind === 'line' && m.approved);
-    if (!moments.length) continue;
+    const all = M.load(key).filter((m) => ['line', 'find', 'whodunit'].includes(m.kind) && m.approved);
+    const moments = all.filter((m) => m.kind === 'line');
+    if (!all.length) continue;
     const show = pool.get(key);
     if (!show) { skipped.push(`${key}: not in the trivia pool (no official US rating, or not playing)`); continue; }
-    for (const m of moments) {
+    for (const m of all) {
       const bad = M.problems(m, M.fileFor(db, m));
       if (bad.length) { skipped.push(`${m.id}: ${bad.join('; ')}`); continue; }
+      if (m.kind !== 'line') {
+        const q = m.kind === 'find' ? spotQuestion(m, show) : whodunitQuestion(m, show);
+        if (q.skip) { skipped.push(`${m.id}: ${q.skip}`); continue; }
+        (byShow[key] = byShow[key] || []).push(q);
+        continue;
+      }
       const tr = readJson(path.join(T.DIR, key, `s${m.season}e${m.number}.json`), null);
       const others = tr && tr.lines.length >= 20
         ? tr.lines.filter((l) => l.end < m.start - 1 || l.start > m.end + 1).map((l) => l.text)
@@ -152,4 +200,4 @@ function main() {
 }
 
 if (require.main === module) main();
-module.exports = { split, foils, question, problems, build, write, OUT };
+module.exports = { split, foils, question, spotQuestion, whodunitQuestion, problems, build, write, OUT, LEAD };
