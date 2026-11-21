@@ -1,0 +1,8 @@
+core: ScummVM (its libretro core, backends/platform/libretro)
+version: 2026.4.0 (tag v2026.4.0)
+source: https://github.com/scummvm/scummvm
+commit: 7d2709da5136866589f7602f5f5a7b17de03420e
+licence: GPL-3.0-or-later (COPYING in its source, served beside the engine as engine/scummvm.LICENSE.txt)
+engines: scumm (with he, the Humongous games) and mohawk (Living Books), through ScummVM's own LITE=1 switch
+built with: Emscripten 7.0.0 (emcc 777e6e5db7b4990bcaeb1b9998ed642cc84e6629), emsdk commit 708dcbcc9ee23bc7d2dad44fc90db377e38b771c, GNU make 4.4.1
+build: bash play/core/build-scummvm.sh (ScummVM's libretro Makefile with platform=emscripten, then our host.c linked in)

@@ -1,0 +1,45 @@
+{
+  "system": "cdrom",
+  "core": "scummvm",
+  "players": 1,
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [],
+    "dpad": false,
+    "keyboard": false,
+    "mouse": true
+  },
+  "actions": [
+    {
+      "do": "Pick",
+      "press": "@click"
+    },
+    {
+      "do": "Point",
+      "press": "@point"
+    },
+    {
+      "do": "Pause",
+      "press": "@menu"
+    }
+  ],
+  "gamepad": {
+    "Start": "@menu"
+  },
+  "genre": [
+    "educational video game"
+  ],
+  "kids": true,
+  "id": "putt-putt-saves-the-zoo-1995",
+  "title": "Putt-Putt Saves the Zoo",
+  "year": 1995,
+  "publisher": "Humongous Entertainment",
+  "archive": {
+    "item": "PUTTZOO1995",
+    "file": "PUTTZOO.ISO",
+    "size": 628418560,
+    "start": "PUTTZOO.HE0",
+    "stream": true
+  },
+  "help": "Point and click. Help Putt-Putt find the six missing baby animals before the zoo opens."
+}

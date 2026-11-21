@@ -674,7 +674,7 @@
 
   // The start screen (block B): the item's own picture from the Archive (through /cors/, which this isolated page may
   // load), the title, year, maker and machine, and the first three actions for the input in hand.
-  const SYSTEM_NAMES = { dos: 'PC (DOS)', a2600: 'Atari 2600', nes: 'NES', snes: 'Super Nintendo', genesis: 'Sega Genesis', sms: 'Master System', gamegear: 'Game Gear', gameboy: 'Game Boy', gbcolor: 'Game Boy Color', gba: 'Game Boy Advance', lynx: 'Atari Lynx', arcade: 'Arcade', win3: 'Windows 3.1', flash: 'Flash' };
+  const SYSTEM_NAMES = { dos: 'PC (DOS)', a2600: 'Atari 2600', nes: 'NES', snes: 'Super Nintendo', genesis: 'Sega Genesis', sms: 'Master System', gamegear: 'Game Gear', gameboy: 'Game Boy', gbcolor: 'Game Boy Color', gba: 'Game Boy Advance', lynx: 'Atari Lynx', arcade: 'Arcade', win3: 'Windows 3.1', flash: 'Flash', cdrom: 'PC CD-ROM' };
   function device() {
     const pads = allPads();
     if (pads.some((p) => p && p.mapping === 'standard')) return 'pad';

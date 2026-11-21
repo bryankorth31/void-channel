@@ -36,6 +36,15 @@ static unsigned mouse_buttons;        /* 1 left, 2 right, 4 middle */
 static unsigned mouse_pressed;        /* pressed since the last frame: a quick click is seen even if let go before it */
 static char var_key[MAX_VARS][64], var_val[MAX_VARS][64];
 static int var_count, var_changed;
+static int game_loaded;
+/* HOST_VARS_AT_START (the ScummVM build only, play/core/build-scummvm.sh): a setting given before the game loads is its
+   starting setting, not a change. ScummVM reads its settings when it starts, and a change it hears of on its first frame
+   reaches for a system object not made yet. Every other core is built without it and behaves exactly as before. */
+#ifdef HOST_VARS_AT_START
+#define VAR_CHANGED() (game_loaded)
+#else
+#define VAR_CHANGED() 1
+#endif
 static void *game_data;
 
 /* ---- what the core asks for ---- */
@@ -160,6 +169,7 @@ EMSCRIPTEN_KEEPALIVE int host_load(const char *path) {
   }
   if (!retro_load_game(&info)) return 0;
   retro_get_system_av_info(&av);
+  game_loaded = 1;
   return 1;
 }
 
@@ -197,9 +207,9 @@ EMSCRIPTEN_KEEPALIVE void host_pad(unsigned port, unsigned bits) { if (port < 4)
 EMSCRIPTEN_KEEPALIVE void host_plug_pad(unsigned port) { retro_set_controller_port_device(port, RETRO_DEVICE_JOYPAD); }
 
 EMSCRIPTEN_KEEPALIVE void host_set_var(const char *key, const char *value) {
-  for (int i = 0; i < var_count; i++) if (!strcmp(var_key[i], key)) { snprintf(var_val[i], 64, "%s", value); var_changed = 1; return; }
+  for (int i = 0; i < var_count; i++) if (!strcmp(var_key[i], key)) { snprintf(var_val[i], 64, "%s", value); var_changed = VAR_CHANGED(); return; }
   if (var_count == MAX_VARS) return;
-  snprintf(var_key[var_count], 64, "%s", key); snprintf(var_val[var_count], 64, "%s", value); var_count++; var_changed = 1;
+  snprintf(var_key[var_count], 64, "%s", key); snprintf(var_val[var_count], 64, "%s", value); var_count++; var_changed = VAR_CHANGED();
 }
 
 /* Cheats (Bryan, 20 Nov 2026: "add toggle for cheats"): the page clears them all, then sets the ones switched on, each

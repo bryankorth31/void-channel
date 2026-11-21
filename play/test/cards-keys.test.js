@@ -51,6 +51,7 @@ test('every card names a core that plays its system, and each core\'s source com
   const readme = fs.readFileSync(path.join(ROOT, 'core', 'README.md'), 'utf8');
   for (const name of Object.keys(Cards.CORES)) {
     if (name === 'dosbox-pure') continue;   // its commit is in core/dosbox-pure.txt (page.test.js)
+    if (name === 'scummvm') continue;   // its commit is in core/scummvm.txt (disc.test.js)
     if (Cards.CORES[name].kind === 'mame') continue;   // MAME's own build: its record is core/mame.txt (arcade.test.js)
     if (Cards.CORES[name].kind === 'ruffle') continue;   // Ruffle's own web build: its record is core/ruffle.txt (formats.test.js)
     assert.ok(recipes[name], name + ' has a recipe in core/cores.js');

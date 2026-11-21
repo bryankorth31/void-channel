@@ -18,7 +18,7 @@ else host();
 
 function host() {
 const BUILD = new URLSearchParams(self.location.search).get('b');
-importScripts(...['keys.js', 'unzip.js', 'inflate.js', 'lazyzip.js'].map((f) => (BUILD && /^[0-9a-f]{12}$/.test(BUILD) ? f + '?v=' + BUILD : f)));
+importScripts(...['keys.js', 'unzip.js', 'inflate.js', 'lazyzip.js', 'lazydisc.js'].map((f) => (BUILD && /^[0-9a-f]{12}$/.test(BUILD) ? f + '?v=' + BUILD : f)));
 
 let M = null, running = false, paused = false, timer = 0, lastFrame = -1, fps = 60, next = 0;
 // Rewind (audit batch 4, block E; console cores only): the last 20 seconds, in snapshots spaced by a memory budget per
@@ -221,6 +221,23 @@ function mountStreamed(msg) {
   return '/game/disk/' + PlayUnzip.safe(hit.name);
 }
 
+// A CD-ROM game (Bryan, 20 Nov 2026: CD-ROM kids games through ScummVM): its disc image, ISO or raw BIN, read in pieces
+// through the same pass-through, each read fetching only the pieces it touches (lazydisc.js). The engine gets the path
+// of the game's own start file on that disc (ScummVM finds the game from the folder it sits in).
+const isDisc = (name) => /\.(iso|bin)$/i.test(name || '');
+function mountDisc(msg) {
+  const disc = PlayLazyDisc.open(msg.stream.size, piecesFrom(msg.stream.url));
+  let told = 0;
+  PlayLazyDisc.mount(M.FS, disc, '/game/disk', () => {
+    // While the game reads from the disc, say how much has come so far, now and then.
+    if (Date.now() - told > 1000) { told = Date.now(); say('Reading the disc: ' + Math.round(disc.fetched() / 1048576) + ' MB so far'); }
+  });
+  const want = msg.start.split(String.fromCharCode(92)).join('/').toLowerCase();
+  const hit = disc.entries.find((e) => e.name.toLowerCase() === want);
+  if (!hit) throw new Error('The disc has no ' + msg.start);
+  return '/game/disk/' + hit.name;
+}
+
 // Write a kept battery save back into the game. The size an engine reports can differ between loading and playing (the
 // audit: Genesis Plus GX says 64 KB before the first frame and only the written part once running; mGBA says 128 KB while
 // it still guesses the save type), so a save that fits goes in from the start of the game's save memory, never past
@@ -246,8 +263,13 @@ async function start(msg) {
     printErr: (t) => console.warn('[core]', t),
   });
   for (const d of ['/game', '/save', '/sys']) M.FS.mkdir(d);
+  // A core's own starting files (ScummVM's settings file), from its entry in cards.js: in /sys only, never elsewhere.
+  for (const [p, text] of Object.entries(msg.files || {})) if (/^\/sys\/[A-Za-z0-9._-]+$/.test(p)) M.FS.writeFile(p, String(text));
   let path = '/game/' + msg.gameFile;
-  if (msg.stream && msg.start) {
+  if (msg.stream && msg.start && isDisc(msg.gameFile)) {
+    say("Reading the disc's list of files");
+    path = mountDisc(msg);
+  } else if (msg.stream && msg.start) {
     say("Reading the game's list of files");
     path = mountStreamed(msg);
   } else {
@@ -258,8 +280,9 @@ async function start(msg) {
     else if (/\.zip$/i.test(msg.gameFile) && msg.rom && msg.rom.length) path = await romFromZip(game, msg.rom, path);
     else M.FS.writeFile(path, game);
   }
-  M._host_init();
+  // The game's settings go in before the core starts, so a core that reads them when it starts (ScummVM) has them.
   for (const [k, v] of Object.entries(msg.vars || {})) callStr('host_set_var', k, String(v));
+  M._host_init();
   say('Starting the game');
   if (!callStr('host_load', path)) throw new Error('The core could not open ' + path);
   for (let port = 0; port < (msg.pads || 0); port++) M._host_plug_pad(port);

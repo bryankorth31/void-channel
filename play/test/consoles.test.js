@@ -31,7 +31,7 @@ test('every core a card names has both engine files on disk', () => {
 });
 
 test('every core but DOSBox Pure has a recipe with an exact commit, a source link and a licence', () => {
-  for (const name of Object.keys(Cards.CORES).filter((n) => n !== 'dosbox-pure' && !['mame', 'ruffle'].includes(Cards.CORES[n].kind))) {
+  for (const name of Object.keys(Cards.CORES).filter((n) => !['dosbox-pure', 'scummvm'].includes(n) && !['mame', 'ruffle'].includes(Cards.CORES[n].kind))) {
     const r = RECIPES[name];
     assert.ok(r, name);
     assert.match(r.commit, /^[0-9a-f]{40}$/, name);
@@ -90,8 +90,9 @@ test('the second gamepad plays as player 2 on a console card', () => {
 test('the footer data for every core: its name, licence, exact source, and the licence text of a non-GPL core', () => {
   for (const [name, core] of Object.entries(Cards.CORES)) {
     assert.ok(core.name && core.licence, name);
-    const commit = name === 'dosbox-pure' || core.kind === 'mame' || core.kind === 'ruffle'
-      ? fs.readFileSync(path.join(PLAY, 'core', name === 'dosbox-pure' ? 'dosbox-pure.txt' : core.kind === 'ruffle' ? 'ruffle.txt' : 'mame.txt'), 'utf8').match(/commit: *([0-9a-f]{40})/)[1]
+    const own = { 'dosbox-pure': 'dosbox-pure.txt', scummvm: 'scummvm.txt' }[name] || (core.kind === 'ruffle' ? 'ruffle.txt' : core.kind === 'mame' ? 'mame.txt' : '');
+    const commit = own
+      ? fs.readFileSync(path.join(PLAY, 'core', own), 'utf8').match(/commit: *([0-9a-f]{40})/)[1]
       : RECIPES[name].commit;
     assert.ok(core.source.endsWith('/tree/' + commit), name);
     if (core.licence !== 'GPL-2.0') {
@@ -190,7 +191,7 @@ test('arcade cards (Bryan picked the 245 most-played; the assistant read each in
 
 test('a console game kept inside a .zip: the core gets the one file with the machine\'s own ending (the assistant: FireRed\'s zip was refused)', () => {
   for (const [name, core] of Object.entries(Cards.CORES)) {
-    if (core.kind === 'mame' || core.kind === 'ruffle' || name === 'dosbox-pure') continue;
+    if (core.kind === 'mame' || core.kind === 'ruffle' || name === 'dosbox-pure' || name === 'scummvm') continue;   // whole games, not one file
     for (const s of core.systems) assert.ok((Cards.ROM_EXTS[s] || []).length, s + ' has its file endings');
   }
   assert.deepEqual(Cards.romExts({ system: 'gba', archive: { file: 'x.zip' } }), ['gba']);

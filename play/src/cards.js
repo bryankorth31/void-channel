@@ -38,6 +38,23 @@
     // flash-runner.js (kind 'ruffle'). The game's .swf comes from the Archive. MIT or Apache-2.0, so the donation line stays.
     ruffle: { kind: 'ruffle', engine: 'engine/ruffle/ruffle.js', systems: ['flash'], name: 'Ruffle 0.8.0', licence: 'MIT or Apache-2.0',
       source: 'https://github.com/ruffle-rs/ruffle/tree/cd4cb8f45f144d5a9209f496ee09b60ad136b5b3', terms: 'engine/ruffle/LICENSE.md' },
+    // CD-ROM kids games (Bryan, 20 Nov 2026: "Yes, build slice 1"): ScummVM's libretro core in PLAY's own host, built here
+    // with only its Humongous (SCUMM HE) and Living Books (Mohawk) engines (play/core/scummvm.txt). The disc image comes
+    // from the Archive in pieces (lazydisc.js). GPL-3.0-or-later allows any use, so the donation line stays.
+    scummvm: { engine: 'engine/scummvm.js', systems: ['cdrom'], name: 'ScummVM 2026.4.0', licence: 'GPL-3.0-or-later',
+      source: 'https://github.com/scummvm/scummvm/tree/7d2709da5136866589f7602f5f5a7b17de03420e', terms: 'engine/scummvm.LICENSE.txt',
+      // The core's own published defaults (its libretro-core-options.h), which a full frontend gives and our host does not:
+      // left unset, the core falls back to gamepad-only pointing and hands the host a hardware-frame marker instead of a
+      // picture. Two differ from its list: drawing in software (there is no graphics card handoff in a worker), and the
+      // pointer is the mouse (PLAY's mouse path: the real mouse, the touch trackpad, the right stick).
+      vars: { scummvm_video_hw_acceleration: 'disabled', scummvm_pointer_device: 'mouse', scummvm_mouse_speed: '1.0',
+        scummvm_mouse_fine_control_speed_reduction: '4', scummvm_gamepad_cursor_speed: '1.0',
+        scummvm_gamepad_cursor_acceleration_time: '0.2', scummvm_analog_response: 'linear', scummvm_analog_deadzone: '15',
+        scummvm_framerate: 'disabled', scummvm_samplerate: '48000 Hz', scummvm_gui_aspect_ratio: '1', scummvm_gui_h_res: '720',
+        scummvm_browsing_mode: 'local' },
+      // ScummVM's own settings file, written before it starts: no "not yet fully supported" box in front of a child (a
+      // card is carded only after it plays through in a test), and no "are you sure" when the game is left.
+      files: { '/sys/scummvm.ini': '[scummvm]\nenable_unsupported_game_warning=false\nconfirm_exit=false\n' } },
   };
 
   // The Windows a Windows 3.1 card starts on: the Internet Archive's own Emularity Windows 3.1 package (item
@@ -87,6 +104,8 @@
     else if (core.kind === 'mame' && !/^[a-z0-9_]+$/.test(a.engine || '')) bad.push('archive.engine');
     else if (!core.systems.includes(card.system)) bad.push('system');
     else if (card.system === 'win3' && (!WINDOWS[a.windows] || !a.start)) bad.push('archive.windows');
+    // A CD-ROM card names its disc image (ISO or BIN), the game's start file on it, and is read in pieces (stream).
+    else if (card.system === 'cdrom' && (!/\.(iso|bin)$/i.test(a.file) || !a.start || !a.stream || !(a.size > 0))) bad.push('archive.disc');
     if (!card.controls || !card.controls.kind) bad.push('controls');
     return bad;
   }

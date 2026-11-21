@@ -18,6 +18,7 @@ when you press Play. Each core is built from its own published source, unchanged
 | Handy | Atari Lynx | zlib licence | https://github.com/libretro/libretro-handy | `bc55d462f0b2d6b073ea93dc552ebd73cec60fd1` |
 | MAME 0.289 | arcade machines (engines that each hold one or more machine families, in `play/engine/mame/`) | GNU GPL version 2 for MAME as a whole | https://github.com/mamedev/mame | `f09e0805da149cb15bd1cd777fbbcc65640d7866` (in [mame.txt](mame.txt)) |
 | Ruffle 0.8.0 | Flash games (.swf), in `play/engine/ruffle/` | MIT or Apache-2.0, at your option | https://github.com/ruffle-rs/ruffle | `cd4cb8f45f144d5a9209f496ee09b60ad136b5b3` (in [ruffle.txt](ruffle.txt)) |
+| ScummVM 2026.4.0 | CD-ROM kids games: Humongous (SCUMM HE) and Living Books (Mohawk) only | GNU GPL version 3 or later | https://github.com/scummvm/scummvm | `7d2709da5136866589f7602f5f5a7b17de03420e` (in [scummvm.txt](scummvm.txt)) |
 
 Windows 3.1 games need no engine of their own: they run in DOSBox Pure on the Internet Archive's own minimal Windows 3.1
 package (item `emularity_win31`), which the player fetches from the Archive at Play, like the game. voidtv.net never
@@ -82,6 +83,12 @@ Our side of every build is [host.c](host.c), the host's C half, which answers th
 libretro contract (`libretro.h`, MIT licence, from the core's own source).
 
 MAME: follow the build command in [mame.txt](mame.txt) (GNU make and MAME's own genie tool, no recipe in cores.js).
+
+ScummVM: its own libretro core, built by its own Makefile with `platform=emscripten` and only the kids engines
+(`LITE=1` with our list: scumm, he, mohawk), then linked with [host.c](host.c), compiled with `-DHOST_VARS_AT_START`:
+`EMSDK=<emsdk> SCUMMVM=<scummvm folder> MAKE=<gnu make> bash play/core/build-scummvm.sh`. It needs GNU make, Bash, Python
+3 and Git (ScummVM's build fetches its pinned libraries). ScummVM's own files end unchanged. The record is
+[scummvm.txt](scummvm.txt); its licence travels as `play/engine/scummvm.LICENSE.txt`.
 
 Ruffle: like MAME, its own web build, not a libretro core. With Rust (and its `wasm32-unknown-unknown` target),
 `wasm-bindgen-cli` at the version Ruffle pins, Java and Node.js: `RUFFLE=<your ruffle folder> bash play/core/build-ruffle.sh`.

@@ -1,0 +1,45 @@
+{
+  "system": "cdrom",
+  "core": "scummvm",
+  "players": 1,
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [],
+    "dpad": false,
+    "keyboard": false,
+    "mouse": true
+  },
+  "actions": [
+    {
+      "do": "Pick",
+      "press": "@click"
+    },
+    {
+      "do": "Point",
+      "press": "@point"
+    },
+    {
+      "do": "Pause",
+      "press": "@menu"
+    }
+  ],
+  "gamepad": {
+    "Start": "@menu"
+  },
+  "genre": [
+    "educational video game"
+  ],
+  "kids": true,
+  "id": "just-grandma-and-me-living-books-1997",
+  "title": "Just Grandma and Me",
+  "year": 1997,
+  "publisher": "Living Books",
+  "archive": {
+    "item": "GRANDMALB97",
+    "file": "GRANDMA.ISO",
+    "size": 84670464,
+    "start": "OUTLINE",
+    "stream": true
+  },
+  "help": "Point and click. Read along with Little Critter at the beach, or play inside every page."
+}
