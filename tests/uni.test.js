@@ -216,7 +216,7 @@ test('the public pages carry no machine-made tells: no middle-dot strings, no ca
     assert.equal((h.match(/text-transform:uppercase/g) || []).length, 1, p + ': only the crest wordmark is in capitals');
     assert.match(h, /prefers-reduced-motion:reduce/, p + ': no reduced-motion rule');
     assert.doesNotMatch(h, /class="kick"/, p + ': a label line sits over the headline');
-    assert.equal((h.match(/fonts\.googleapis\.com\/css2/g) || []).length, 1, p + ': the public copy loads only the faces it uses');
+    assert.equal((h.match(/<link href="fonts\/[a-z]+\.css" rel="stylesheet">/g) || []).length, 1, p + ': the public copy loads only the faces it uses');
   }
 });
 
@@ -387,9 +387,13 @@ test('Body Atlas sits in the University as a practice site: its lessons open fro
 });
 
 test('answer on your phones: each question has the second its line ends, and the phone page takes a lesson with two tries', () => {
-  const ends = uni.quizEnds('human-nature', 1);
-  assert.ok(ends.length >= 4, 'no question times for a heard lecture');
-  for (const x of ends) assert.ok(x && x.heard && x.e > x.t && x.e - x.t < 60, 'a question is not asked just after its line: ' + JSON.stringify(x));
+  // a made-up lecture, one word a second: nothing here reads a heard lecture, which is kept out of git
+  const said = [];
+  for (let i = 0; i < 60; i++) said.push({ w: 'word' + i, raw: 'word' + i + (i % 10 === 9 ? '.' : ''), t: i });
+  const quote = said.slice(20, 30).map((x) => x.raw).join(' ');
+  const quiz = [{ t: 20, quote }, { quote: 'a book question has no time' }, { t: 40, quote: 'these words are not in the lecture at all, not one' }];
+  assert.deepEqual(uni.endsFor(quiz, { words: said }), [{ t: 20, e: 30, heard: true }, null, { t: 40, e: 46, heard: false }], 'asked a second after the last quoted word; estimated when the words are not found');
+  assert.deepEqual(uni.endsFor(quiz, null)[0], { t: 20, e: 26, heard: false }, 'a lecture not heard yet is timed by reading speed');
   assert.deepEqual(uni.quizEnds('no-such-course', 1), []);
   assert.deepEqual(uni.quizEnds('the-body', 1), [null, null, null, null, null], 'a lesson quiz has no lecture time, so it is not asked by the clock');
   const dir = path.join(uni.UNI, 'make');
@@ -406,4 +410,32 @@ test('answer on your phones: each question has the second its line ends, and the
   assert.strictEqual(serve.allowed('/make/answer-screen.js', false), false);
   build('--site');
   for (const f of fs.readdirSync(SITE).filter((x) => x.endsWith('.html'))) assert.ok(!fs.readFileSync(path.join(SITE, f), 'utf8').includes('answer-screen'), f + ' carries the answer button into the public copy');
+});
+
+test('public pages name no workers.dev address and ask Google for nothing: Mind Gym at its own address, fonts kept on the site', () => {
+  const gym = list().practice.find((g) => g.name === 'Mind Gym');
+  assert.strictEqual(gym.url, 'https://gym.bspokevisuals.com/');
+  build(); build('--site');
+  const type = JSON.parse(fs.readFileSync(path.join(uni.UNI, 'profile.json'), 'utf8')).type || 'inter';
+  for (const dir of [SITE, path.join(uni.UNI, 'site-preview')]) {
+    for (const f of fs.readdirSync(dir).filter((x) => /\.(html|js|css|json)$/.test(x) && !/three\.module|planck/.test(x))) {
+      const h = fs.readFileSync(path.join(dir, f), 'utf8');
+      assert.ok(!/workers\.dev/.test(h), f + ' carries a workers.dev address');
+      assert.ok(!/fonts\.googleapis|fonts\.gstatic/.test(h), f + ' asks Google for a font');
+    }
+  }
+  assert.ok(fs.readFileSync(path.join(SITE, 'critical-thinking.html'), 'utf8').includes('href="https://gym.bspokevisuals.com/rooms/hole-finder/"'), 'a Train it piece does not open its room at the new address');
+  const page = fs.readFileSync(path.join(SITE, 'index.html'), 'utf8');
+  assert.ok(page.includes('<link href="fonts/' + type + '.css" rel="stylesheet">'), 'the page does not load its own font sheet');
+  const css = fs.readFileSync(path.join(SITE, 'fonts', type + '.css'), 'utf8');
+  const files = [...new Set([...css.matchAll(/url\(([^)]+)\)/g)].map((m) => m[1]))];
+  assert.ok(files.length >= 2 && files.every((x) => /^[a-z0-9-]+\.woff2$/.test(x) && fs.existsSync(path.join(SITE, 'fonts', x))), 'a font file the sheet names is not on the site');
+  assert.deepEqual(fs.readdirSync(path.join(SITE, 'fonts')).filter((x) => x.endsWith('.woff2')).sort(), files.slice().sort(), 'the public copy carries only the chosen typeface');
+});
+
+test('the preview server answers only to this computer\'s own names, so a page under a borrowed name cannot use it', () => {
+  const serve = require('../profiles/university/serve.js');
+  const port = serve.PORT;
+  for (const h of ['127.0.0.1:' + port, 'localhost:' + port, 'LOCALHOST:' + port, ...serve.addresses().map((a) => a + ':' + port)]) assert.strictEqual(serve.hostOk(h), true, h + ' is this computer');
+  for (const h of ['evil.example:' + port, 'evil.example', '127.0.0.1.evil.example:' + port, '127.0.0.1:1', '', undefined, 'localhost']) assert.strictEqual(serve.hostOk(h), false, String(h) + ' must be refused');
 });

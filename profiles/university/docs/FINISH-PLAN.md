@@ -9,6 +9,33 @@ buttons in HQ, local models on this PC for the thinking parts, a plain run guide
 Read on 19 Nov 2026: weekly meters 81% all models, 73% Fable; stop line 85% this week, 60% after the 22 Nov reset.
 Tests that day: `tests/uni.test.js` 5 of 5, `tests/hq.test.js` 41 of 41, nothing failing.
 
+## Where it stands (21 Nov 2026)
+
+This list is the current one. The table and steps below it are the plan as written on 19 Nov, kept for the record.
+Self-test: `node scripts/uni.js selftest`, 4 parts, all pass. `tests/uni.test.js`: 28 of 28.
+
+Done and live: Your money, plainly (8 of 8), Critical thinking (6 of 6, with the two 3D scale stages), The mind's
+mechanisms (18 of 18), The body (4 of 4, opening Body Atlas lessons, with the way back). Moving backgrounds, a
+second try on quiz answers, fonts kept on the site, Mind Gym at gym.bspokevisuals.com.
+
+Done, on this PC only: the phone lessons, both sides (make questions, answer on phones). Not tried with real phones.
+
+Nothing is left that can be finished without Bryan. What waits on his word, in order:
+
+1. 55 drafted units to read and keep: Human nature 24, Grow your own vegetables 13, Sew, mend and make clothes 10,
+   Manners 8. `node scripts\uni.js keep <course> <n>`. This is the largest thing between here and done.
+2. How a self holds together is live with both units unfinished (no main piece, no crystal). Take it off the live
+   site until they are written, or write them. His full name as author on that page is also his call.
+3. Whisper: How the country began is 19 of 25 heard, Why we eat what we eat 0 of 23. Run on a night the lexROM job
+   is not using the graphics card.
+4. The phone lessons on the live site: the relay door for university.voidtv.net is built in the PLAY lead's chat
+   and waits on his word there; then the answering side is shipped in the public copy here.
+5. HQ buttons (Draft, Self-test, Deploy): the HQ areas chat.
+6. The VOID ACADEMY sign in the backgrounds against the name Void University.
+
+Parked, not finishing work: new courses in the empty areas, the shelf beyond its first book, Body Atlas units
+beyond the ankle lesson that is coming.
+
 ## Kids beside University
 
 | Part | Kids today (branch `kids`, C:\Users\bryan\void-kids) | University today | What University lacks |
@@ -273,3 +300,12 @@ the HQ areas chat. Steps 7 to 10 start after the 22 Nov reset.
   switch now takes the file to change (the command still changes the real one), and the test works on a throwaway
   copy, checks both directions and the Body Atlas card with its course, and fails if the real file changed. No
   other University test writes a real project file.
+- 21 Nov 2026, five finish items (Bryan: "finish them"). (1) The learner-side test read a heard lecture, which is
+  kept out of git, so it failed on a fresh copy (night audit N20, also met by the PLAY lead): the timing is now a
+  pure function, `endsFor`, tested on a made-up lecture. (2) Mind Gym's address is gym.bspokevisuals.com (his
+  pick in the audit chat, N5); a test refuses any workers.dev address in a built page. (3) The preview server
+  refuses a request that does not name this computer (127.0.0.1, localhost or its network address, with the port),
+  so a page under a borrowed name cannot save a question or start a rebuild (N16). (4) The typefaces are kept in
+  `fonts/` and served from the site; no page asks Google for anything (N17). The public copy carries only the
+  chosen typeface, the preview all three. (5) This plan has a current list at the top. Checked in the preview at
+  1278x513: the faces load from the site, Train it opens the new address, a borrowed name gets 403.

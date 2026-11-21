@@ -1029,7 +1029,11 @@ function quizEnds(slug, n) {
   if (!u) return [];
   const m = u.main || {};
   const tr = m.item && m.file ? transcript(m.item, m.file) : null;
-  return arr(u.quiz).map((q) => {
+  return endsFor(u.quiz, tr);
+}
+// Pure: for each timed question, the second its quoted line has just been said. tr may be null (not heard).
+function endsFor(quiz, tr) {
+  return arr(quiz).map((q) => {
     if (typeof q.t !== 'number') return null;
     const hit = tr && exact(tr, q.quote);
     return { t: q.t, e: hit ? Math.ceil(tr.words[hit.i + hit.n - 1].t) + 1 : Math.round(q.t + tokens(q.quote).length / 2.5) + 2, heard: !!hit };
@@ -1051,4 +1055,4 @@ function addQuestion(slug, n, m) {
   return { item: r.item, where: x.kept ? 'unit' : 'draft', count: x.u.quiz.length };
 }
 
-module.exports = { overview, scaffold, setLive, brief, rewriteBrief, check, media, hearLectures, retime, locate, search, transcript, unitNeeds, slugify, UNI, SRC, draft, keepDraft, gateDraft, sceneFrom, shelfPlan, shelfWrite, shelfChapters, gatePlain, setShelfLive, shelfBooks, classFrom, lectures, scaleProblems, scalesOf, linesAt, madeQuestion, makeUnits, makeLines, addQuestion, lessonQuoteProblem, quizEnds };
+module.exports = { overview, scaffold, setLive, brief, rewriteBrief, check, media, hearLectures, retime, locate, search, transcript, unitNeeds, slugify, UNI, SRC, draft, keepDraft, gateDraft, sceneFrom, shelfPlan, shelfWrite, shelfChapters, gatePlain, setShelfLive, shelfBooks, classFrom, lectures, scaleProblems, scalesOf, linesAt, madeQuestion, makeUnits, makeLines, addQuestion, lessonQuoteProblem, quizEnds, endsFor };

@@ -16,7 +16,7 @@ const PORT = +process.env.PORT || 8783;
 const ROOT = path.join(__dirname, 'site-preview');
 const MAKE = path.join(__dirname, 'make');
 const QR = path.join(__dirname, '..', '..', 'play', 'src', 'qr.js'); // PLAY's own QR maker, served as it is
-const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.json': 'application/json', '.png': 'image/png', '.jpg': 'image/jpeg', '.svg': 'image/svg+xml' };
+const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.json': 'application/json', '.png': 'image/png', '.jpg': 'image/jpeg', '.svg': 'image/svg+xml', '.woff2': 'font/woff2' };
 const NOSTORE = { 'cache-control': 'no-store' };
 
 const isLocal = (req) => ['127.0.0.1', '::1', '::ffff:127.0.0.1'].includes(req.socket.remoteAddress);
@@ -37,6 +37,11 @@ function addresses() {
   }
   return out.sort((x, y) => x.rank - y.rank).map((x) => x.address);
 }
+
+// The name the request was sent to must be this computer's own: 127.0.0.1, localhost, or its address on the home
+// network, with this port. A web page reached under any other name that happens to point here (so that it looks
+// like this computer asking) is refused before anything else is looked at.
+const hostOk = (host) => { const h = String(host || '').toLowerCase(); return ['127.0.0.1', 'localhost', '[::1]', ...addresses()].some((n) => h === n + ':' + PORT); };
 
 const json = (res, status, obj) => { res.writeHead(status, { 'content-type': 'application/json', ...NOSTORE }); res.end(JSON.stringify(obj)); };
 const sendFile = (res, f, head = {}) => fs.readFile(f, (e, b) => {
@@ -76,6 +81,7 @@ function create() {
   }
 
   const server = http.createServer((req, res) => {
+    if (!hostOk(req.headers.host)) { res.writeHead(403, { 'content-type': 'text/plain; charset=utf-8' }); return res.end('This server answers only to its own address.'); }
     const u = new URL(req.url, 'http://x');
     let p = '';
     try { p = decodeURIComponent(u.pathname); } catch (e) { res.writeHead(400); return res.end(); }
@@ -93,6 +99,7 @@ function create() {
   });
   // A room is opened by this computer only, and only a lesson room; a phone may join one.
   server.on('upgrade', (req, socket) => {
+    if (!hostOk(req.headers.host)) { socket.end('HTTP/1.1 403 Forbidden\r\n\r\n'); return; }
     const u = new URL(req.url, 'http://x');
     if (u.pathname === '/api/room/open' && (!isLocal(req) || u.searchParams.get('kind') !== 'lesson')) { socket.end('HTTP/1.1 403 Forbidden\r\n\r\n'); return; }
     rooms.upgrade(req, socket);
@@ -101,4 +108,4 @@ function create() {
 }
 
 if (require.main === module) create().listen(PORT, '0.0.0.0', () => console.log('Void University preview: http://127.0.0.1:' + PORT + '/  (a phone on the same Wi-Fi may open only the make-questions page)'));
-module.exports = { create, allowed, addresses };
+module.exports = { create, allowed, addresses, hostOk, PORT };

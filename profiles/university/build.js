@@ -524,11 +524,12 @@ const INSTALL = '<button type="button" class="inst" id="inst" hidden>Install</bu
 // real pages. The public copy loads only the faces it uses.
 const TYPE = (() => { try { return JSON.parse(fs.readFileSync(path.join(DIR, 'profile.json'), 'utf8')).type || 'inter'; } catch (e) { return 'inter'; } })();
 const TYPES = {
-  inter: { name: 'Inter (as it was)', href: 'https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;800&display=swap' },
-  hyper: { name: 'Atkinson Hyperlegible, made for easy reading', href: 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&display=swap' },
-  literata: { name: 'Literata, a book face', href: 'https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600;7..72,700&family=Schibsted+Grotesk:wght@600;800&display=swap' },
+  inter: { name: 'Inter (as it was)', href: 'fonts/inter.css' },
+  hyper: { name: 'Atkinson Hyperlegible, made for easy reading', href: 'fonts/hyper.css' },
+  literata: { name: 'Literata, a book face', href: 'fonts/literata.css' },
 };
-const FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>' + (LIVE ? [TYPE] : Object.keys(TYPES)).map((k) => '<link href="' + (TYPES[k] || TYPES.inter).href + '" rel="stylesheet">').join('');
+// The typefaces are kept on the site (fonts/, each under the SIL Open Font License), so no visit asks Google for anything.
+const FONTS = (LIVE ? [TYPE] : Object.keys(TYPES)).map((k) => '<link href="' + (TYPES[k] || TYPES.inter).href + '" rel="stylesheet">').join('');
 const TYPECSS = `
 html[data-type="hyper"]{--body:"Atkinson Hyperlegible Next","Atkinson Hyperlegible",Verdana,sans-serif;--head:"Bricolage Grotesque","Atkinson Hyperlegible Next",Verdana,sans-serif}
 html[data-type="literata"]{--body:Literata,"Iowan Old Style",Palatino,serif;--head:"Schibsted Grotesk",Verdana,sans-serif}
@@ -835,7 +836,7 @@ function credits(all) {
   const rows = Object.keys(IMG).map((k) => { const x = IMG[k]; return '<tr><td><img src="' + esc(x.file) + '" alt=""></td><td>' + esc(x.title || 'Untitled') + '</td><td>' + esc(x.creator || 'unknown') + '</td><td>' + esc(x.license) + '</td><td><a href="' + esc(x.page) + '" target="_blank" rel="noopener">' + esc(x.source) + '</a></td></tr>'; }).join('');
   return `<!doctype html><html lang="en" data-look="${LOOK}" data-type="${TYPE}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${APPHEAD}<title>Photo credits | Void University</title>${FONTS}<style>${BASE}
 main{max-width:1100px;margin:0 auto;padding:30px 32px}h1{font-family:var(--head)}table{width:100%;border-collapse:collapse;font-size:14px}td{border-bottom:1px solid var(--line);padding:8px;vertical-align:middle}td img{width:96px;height:60px;object-fit:cover;border-radius:4px;display:block}${LOOKCSS}${TYPECSS}</style></head><body>
-${top('credits', all)}<main><h1>Photo credits</h1><p>Every photo here is public domain (CC0), found through Openverse. We list who took each one anyway, with a link to where it came from.</p><table>${rows}</table><h1>Backgrounds</h1><p>The pictures of the classroom and the archive room behind the pages are our own, made for Void University. The lightning, the static and the film grain over them are Void TV's own.</p>${all.some((c) => c.units.some(shipsLab)) ? '<h1>Lab physics</h1><p>Things in the labs fall, roll and bounce using Planck.js by Erin Catto and Ali Shakiba, free to use under the <a href="planck-LICENSE.txt">MIT licence</a>. The labs themselves are our own work.</p>' : ''}${all.some((c) => c.units.some(shipsScale)) ? '<h1>3D stages</h1><p>The 3D scale stages are drawn with three.js by the three.js authors, free to use under the <a href="three-LICENSE.txt">MIT licence</a>. The stages and what they show are our own work; each one names the papers its numbers come from.</p>' : ''}</main>${FOOT()}</body></html>`;
+${top('credits', all)}<main><h1>Photo credits</h1><p>Every photo here is public domain (CC0), found through Openverse. We list who took each one anyway, with a link to where it came from.</p><table>${rows}</table><h1>Backgrounds</h1><p>The pictures of the classroom and the archive room behind the pages are our own, made for Void University. The lightning, the static and the film grain over them are Void TV's own.</p><h1>Typefaces</h1><p>Atkinson Hyperlegible Next (Braille Institute), Bricolage Grotesque, Inter, Fraunces, Literata and Schibsted Grotesk are used under the SIL Open Font License and are served from this site.</p>${all.some((c) => c.units.some(shipsLab)) ? '<h1>Lab physics</h1><p>Things in the labs fall, roll and bounce using Planck.js by Erin Catto and Ali Shakiba, free to use under the <a href="planck-LICENSE.txt">MIT licence</a>. The labs themselves are our own work.</p>' : ''}${all.some((c) => c.units.some(shipsScale)) ? '<h1>3D stages</h1><p>The 3D scale stages are drawn with three.js by the three.js authors, free to use under the <a href="three-LICENSE.txt">MIT licence</a>. The stages and what they show are our own work; each one names the papers its numbers come from.</p>' : ''}</main>${FOOT()}</body></html>`;
 }
 
 // A wrong address: wrangler.jsonc serves 404.html for it. Links start from the site root, since the wrong address can be
@@ -898,6 +899,13 @@ MECH = loaded.find((c) => c.shelf === 'supplement') || null;
 for (const c of loaded) if (c.shelf !== 'supplement') for (const u of c.units) for (const n of u.mechanisms || []) (USED[n] = USED[n] || []).push({ slug: c.slug, course: c.name, n: u.n, title: u.title });
 fs.mkdirSync(path.join(OUT, 'img'), { recursive: true });
 for (const k of Object.keys(IMG)) fs.copyFileSync(path.join(DIR, IMG[k].file), path.join(OUT, IMG[k].file));
+// The font sheets and the files they name: every typeface in the preview (it has the picker), only the chosen one in the public copy.
+fs.mkdirSync(path.join(OUT, 'fonts'), { recursive: true });
+for (const k of (LIVE ? [TYPES[TYPE] ? TYPE : 'inter'] : Object.keys(TYPES))) {
+  const sheet = fs.readFileSync(path.join(DIR, 'fonts', k + '.css'), 'utf8');
+  fs.writeFileSync(path.join(OUT, 'fonts', k + '.css'), sheet);
+  for (const m of sheet.matchAll(/url\(([a-z0-9-]+\.woff2)\)/g)) fs.copyFileSync(path.join(DIR, 'fonts', m[1]), path.join(OUT, 'fonts', m[1]));
+}
 fs.mkdirSync(path.join(OUT, 'img', 'bg'), { recursive: true });
 for (const f of fs.readdirSync(path.join(DIR, 'img', 'bg')).filter((x) => /\.(jpg|png)$/.test(x))) fs.copyFileSync(path.join(DIR, 'img', 'bg', f), path.join(OUT, 'img', 'bg', f)); // the moving backgrounds
 for (const f of APPICONS) fs.copyFileSync(path.join(DIR, 'img', f), path.join(OUT, 'img', f)); // home-screen icons (make-icons.js)
