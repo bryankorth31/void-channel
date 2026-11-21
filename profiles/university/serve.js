@@ -61,6 +61,7 @@ function create() {
       const slug = u.searchParams.get('slug'), n = +u.searchParams.get('n');
       if (req.method === 'GET' && p === '/api/make/info') return json(res, 200, { port: PORT, addresses: addresses(), units: uni.makeUnits(slug) });
       if (req.method === 'GET' && p === '/api/make/lines') return json(res, 200, uni.makeLines(slug, n, +u.searchParams.get('t')));
+      if (req.method === 'GET' && p === '/api/make/ends') return json(res, 200, uni.quizEnds(slug, n));
       if (req.method !== 'POST' || !sameSite(req)) return json(res, 403, { error: 'Only the preview page itself may do this.' });
       if (p === '/api/make/save') {
         const m = await body(req);

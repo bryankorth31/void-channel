@@ -1015,6 +1015,24 @@ function makeLines(slug, n, t) {
   if (!x) throw new Error('This unit has no lecture that has been heard.');
   return { t: Math.max(0, +t || 0), lines: linesAt(x.tr, t) };
 }
+// Taking a lesson on a phone: the second at which each quiz quote of a unit has just been said, so the question can
+// be asked right after its line. Exact where the lecture has been heard; a reading-speed estimate where it has not.
+function quizEnds(slug, n) {
+  if (!SLUG_OK.test(String(slug)) || !Number.isInteger(+n)) return [];
+  const c = readJson(courseFile(slug), null);
+  if (!c) return [];
+  const kept = (c.units || []).find((u) => u.n === +n);
+  const d = kept ? null : readJson(draftFile(slug, n), null);
+  const u = kept || (d && d.ok && d.unit);
+  if (!u) return [];
+  const m = u.main || {};
+  const tr = m.item && m.file ? transcript(m.item, m.file) : null;
+  return arr(u.quiz).map((q) => {
+    if (typeof q.t !== 'number') return null;
+    const hit = tr && exact(tr, q.quote);
+    return { t: q.t, e: hit ? Math.ceil(tr.words[hit.i + hit.n - 1].t) + 1 : Math.round(q.t + tokens(q.quote).length / 2.5) + 2, heard: !!hit };
+  });
+}
 function addQuestion(slug, n, m) {
   const x = makeUnit(slug, n);
   if (!x) throw new Error('This unit has no lecture that has been heard.');
@@ -1031,4 +1049,4 @@ function addQuestion(slug, n, m) {
   return { item: r.item, where: x.kept ? 'unit' : 'draft', count: x.u.quiz.length };
 }
 
-module.exports = { overview, scaffold, setLive, brief, rewriteBrief, check, media, hearLectures, retime, locate, search, transcript, unitNeeds, slugify, UNI, SRC, draft, keepDraft, gateDraft, sceneFrom, shelfPlan, shelfWrite, shelfChapters, gatePlain, setShelfLive, shelfBooks, classFrom, lectures, scaleProblems, scalesOf, linesAt, madeQuestion, makeUnits, makeLines, addQuestion, lessonQuoteProblem };
+module.exports = { overview, scaffold, setLive, brief, rewriteBrief, check, media, hearLectures, retime, locate, search, transcript, unitNeeds, slugify, UNI, SRC, draft, keepDraft, gateDraft, sceneFrom, shelfPlan, shelfWrite, shelfChapters, gatePlain, setShelfLive, shelfBooks, classFrom, lectures, scaleProblems, scalesOf, linesAt, madeQuestion, makeUnits, makeLines, addQuestion, lessonQuoteProblem, quizEnds };

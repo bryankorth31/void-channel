@@ -305,6 +305,22 @@ deploy.
 What a phone can reach: only the phone page and its room. The preview pages, the lecture's words and every save
 stay on this computer. This works at home only; the live site has no make button.
 
+### Taking a lesson on phones
+
+The other button on a lecture, **Answer on your phones**, is for learners. It shows on any lecture that has timed
+questions (Check yourself with times).
+
+1. Press it. A QR picture shows. Everyone scans it; up to 40 phones, on the same Wi-Fi as this computer.
+2. Play the lecture. When it reaches the end of a line a question quotes, the lecture stops and the question is on
+   every phone.
+3. Each phone gets two tries, then sees the answer, the reason and the lecture's own line. The computer shows only
+   how many have answered.
+4. The lecture plays on when every phone has answered. **Carry on** plays on without waiting.
+5. **Done** ends it. Each phone shows its own score. Nothing is saved anywhere.
+
+A question the lecture is skipped past is not asked; wind back before it and it is. This works at home only, like
+making questions: the live site has neither button until the phone relay on voidtv.net accepts the University.
+
 ## 15. Body Atlas lessons in a course
 
 Body Atlas (body.bspokevisuals.com) is a practice site in `profiles\university\list.json`, the same kind of entry as

@@ -19,6 +19,7 @@
     + '.makeside{flex:1 1 260px;min-width:0;font-size:15px}.makeside p{margin:0 0 8px}.makestate{font-weight:600}.makeaddr{color:var(--dim);font-size:14px;overflow-wrap:anywhere}.makeaddr b{color:var(--fg);letter-spacing:.08em}'
     + '.makelist{margin:8px 0;padding-left:22px}.makelist li{margin:0 0 4px}.makelist i{font-style:normal;color:var(--gold);margin-right:8px}.makerow{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}';
   document.head.appendChild(css);
+  var take = document.createElement('script'); take.src = '/make/answer-screen.js'; document.head.appendChild(take);
 
   fetch('/api/make/info?slug=' + encodeURIComponent(SLUG)).then(function (r) { return r.ok ? r.json() : null; }).then(function (j) {
     if (!j) return;

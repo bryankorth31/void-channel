@@ -371,3 +371,25 @@ test('Body Atlas sits in the University as a practice site: its lessons open fro
   assert.strictEqual(!!g.live, !!live, 'the course and its practice card must go live together');
   assert.strictEqual(fs.existsSync(path.join(SITE, 'the-body.html')), !!live);
 });
+
+test('answer on your phones: each question has the second its line ends, and the phone page takes a lesson with two tries', () => {
+  const ends = uni.quizEnds('human-nature', 1);
+  assert.ok(ends.length >= 4, 'no question times for a heard lecture');
+  for (const x of ends) assert.ok(x && x.heard && x.e > x.t && x.e - x.t < 60, 'a question is not asked just after its line: ' + JSON.stringify(x));
+  assert.deepEqual(uni.quizEnds('no-such-course', 1), []);
+  assert.deepEqual(uni.quizEnds('the-body', 1), [null, null, null, null, null], 'a lesson quiz has no lecture time, so it is not asked by the clock');
+  const dir = path.join(uni.UNI, 'make');
+  const phone = fs.readFileSync(path.join(dir, 'phone.html'), 'utf8'), screen = fs.readFileSync(path.join(dir, 'answer-screen.js'), 'utf8');
+  for (const t of ['ask', 'choice', 'go', 'result', 'why', 'quote', 'over']) {
+    assert.ok(screen.includes("type: '" + t + "'"), 'the screen never sends ' + t);
+    assert.ok(phone.includes("m.type === '" + t + "'"), 'the phone does not understand ' + t);
+  }
+  assert.ok(phone.includes("type: 'pick'") && screen.includes("x.type === 'pick'"), 'a tap on the phone is not heard by the screen');
+  assert.ok(screen.includes('tries < 2') && phone.includes('You have one more try.'), 'a learner gets a second try, as on the page');
+  assert.ok(!/[\u2014\u2013]/.test(screen) && !/Users|@gmail|bryan/i.test(screen), 'no long dashes or personal details');
+  const serve = require('../profiles/university/serve.js');
+  assert.strictEqual(serve.allowed('/api/make/ends', false), false, 'question times stay on this computer');
+  assert.strictEqual(serve.allowed('/make/answer-screen.js', false), false);
+  build('--site');
+  for (const f of fs.readdirSync(SITE).filter((x) => x.endsWith('.html'))) assert.ok(!fs.readFileSync(path.join(SITE, f), 'utf8').includes('answer-screen'), f + ' carries the answer button into the public copy');
+});

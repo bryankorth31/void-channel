@@ -256,3 +256,15 @@ the HQ areas chat. Steps 7 to 10 start after the 22 Nov reset.
 - 20 Nov 2026: Bryan, asked whether to mark the Body course live: "Yes, mark live". The body and the Body Atlas card
   in the Body row are both live in list.json (`uni.js live the-body on` turns both on). They reach the live site at
   his next deploy. After that, the Body Atlas chat needs the word that the course is live, to aim its back arrow.
+- 20 Nov 2026, the learner side of the phone lessons (Bryan: "build the learner side of the phone lessons"). A
+  lecture with timed questions has a second button in the preview, Answer on your phones (make/answer-screen.js).
+  It opens a lesson room and a QR code; up to 40 phones join. When the lecture reaches the end of the line a
+  question quotes (the exact second from the transcript, uni.js quizEnds), it stops and the question goes to the
+  phones. Two tries each, as on the page, then the answer, the reason and the lecture's line. The lecture plays on
+  when all have answered or on Carry on; Done ends it and each phone shows its own score. The answer is judged on
+  the computer and the computer shows only a count; nothing is kept. The phone page (make/phone.html) is the one
+  page for both sides: the room tells it which. Checked with two browser tabs on the network address as phones:
+  join, a question at its second, right on a second try, wrong twice, play on when both answered, a skipped
+  question not asked, Carry on, Done and both scores; no console errors. Not checked: real phones, and a real
+  lecture playing through (the play position was set by hand in the check). Not on the live site: the relay on
+  voidtv.net still refuses the University's address.

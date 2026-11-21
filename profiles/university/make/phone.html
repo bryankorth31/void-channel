@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Make questions | Void University</title>
+<title>Void University on your phone</title>
 <style>
 :root{color-scheme:dark;--bg:#07080c;--panel:#111827;--line:#2b3550;--fg:#eef1f8;--dim:#a5aec4;--gold:#f0c869;--ok:#5fe39a;--no:#e08a8f}
 *{box-sizing:border-box}
@@ -31,11 +31,13 @@ input:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:1px}
 .lines li i{font-style:normal;color:var(--gold);font-size:13px;margin-right:8px}
 #note{font-weight:600;min-height:1.4em}
 #note.ok{color:var(--ok)}#note.no{color:var(--no)}
+.picks{display:grid;gap:10px;margin:0 0 14px}.picks button{text-align:left;font-size:18px;padding:16px}.picks button:disabled{opacity:.6}.picks button.right{opacity:1;border-color:var(--ok);color:var(--ok)}.picks button.wrong{opacity:1;border-color:var(--no);color:var(--no)}
+#aq{font-size:21px;font-weight:600;line-height:1.3;margin:0 0 14px}blockquote{margin:8px 0 14px;padding:8px 12px;border-left:3px solid var(--line);color:var(--dim)}
 [hidden]{display:none!important}
 </style>
 </head>
 <body>
-<h1>Void University: make questions</h1>
+<h1 id="kind">Void University: make questions</h1>
 <h2 id="title">Connecting to the computer</h2>
 <p id="note" role="status"></p>
 
@@ -51,6 +53,15 @@ input:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:1px}
   <div class="row"><button type="button" id="toggle" title="Play or pause the lecture on the computer">Play or pause the lecture</button></div>
   <p class="dim" id="count">No questions made yet.</p>
   <p class="dim">Watch the lecture on the computer. When something worth a question is said, tap Mark. The lecture stops and the words come up here.</p>
+</section>
+
+<section id="answer" hidden>
+  <p class="dim" id="awhich"></p>
+  <p id="aq"></p>
+  <div class="picks" id="picks"></div>
+  <div id="after" hidden><p id="awhy"></p><blockquote id="aquote"></blockquote></div>
+  <p class="dim" id="ascore"></p>
+  <p class="dim" id="await">Watch the lecture on the big screen. Each question comes here when the lecture reaches it.</p>
 </section>
 
 <section id="write" hidden>
@@ -89,7 +100,7 @@ input:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:1px}
     try { sessionStorage.setItem('vu-make-token', token); } catch (e) {}
   }
   function norm(s) { var c = String(s || '').trim().toUpperCase(); return c.length === 4 && c.split('').every(function (x) { return ALPHA.indexOf(x) >= 0; }) ? c : ''; }
-  function show(id) { ['enter', 'ready', 'write'].forEach(function (k) { $(k).hidden = k !== id; }); window.scrollTo(0, 0); }
+  function show(id) { ['enter', 'ready', 'write', 'answer'].forEach(function (k) { $(k).hidden = k !== id; }); window.scrollTo(0, 0); }
   function note(text, kind) { $('note').textContent = text || ''; $('note').className = kind || ''; }
   function send(obj) { if (ws && ws.readyState === 1) { ws.send(JSON.stringify(obj)); return true; } note('Not connected to the computer. Wait a moment, or scan the code again.', 'no'); return false; }
 
@@ -100,6 +111,7 @@ input:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:1px}
     ws.onmessage = function (ev) { var m; try { m = JSON.parse(ev.data); } catch (e) { return; } hear(m); };
     ws.onclose = function (ev) {
       if (ev.code === 4404) { askCode('No lecture is open with that code. Look at the code on the computer and type it here.'); return; }
+      if (mode === 'answer' && (over || ev.code === 4410 || gone)) { if (!over) finish(); return; }
       if (ev.code === 4410 || gone) { askCode('The computer closed the lecture. Your saved questions are kept. To make more, press Make questions on the computer and scan again.'); return; }
       if (ev.code === 4409) { askCode('That room is full.'); return; }
       if (ev.code === 4411) { note('This phone joined again in another tab. Use that tab.', 'no'); return; }
@@ -109,8 +121,46 @@ input:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:1px}
   }
   function askCode(text) { $('title').textContent = 'Join a lecture'; note(text, text ? 'no' : ''); show('enter'); }
 
+  var mode = 'make', asking = null, tally = { right: 0, second: 0, seen: 0 }, total = 0, over = false;
+  function score() { $('ascore').textContent = tally.seen ? 'You have ' + tally.right + ' of ' + tally.seen + ' right' + (tally.second ? ', ' + tally.second + ' on the second try' : '') + '.' : ''; }
+  function answer(m) {
+    if (m.type === 'ask') { asking = { i: m.i, choices: [], open: false }; $('awhich').textContent = 'Question ' + (m.i + 1) + ' of ' + m.of; $('aq').textContent = m.q; $('picks').textContent = ''; $('after').hidden = true; $('await').hidden = true; note(''); show('answer'); return true; }
+    if (!asking || m.i !== asking.i) return m.type === 'choice' || m.type === 'go' || m.type === 'result' || m.type === 'why' || m.type === 'quote';
+    if (m.type === 'choice') { asking.choices[m.j] = m.text; return true; }
+    if (m.type === 'go') {
+      asking.open = true;
+      asking.choices.forEach(function (text, j) {
+        var b = document.createElement('button'); b.type = 'button'; b.textContent = text; b.title = 'Choose this answer';
+        b.onclick = function () { if (!asking.open || b.disabled) return; if (send({ type: 'pick', i: asking.i, j: j })) { asking.open = false; note('Checking.'); } };
+        $('picks').appendChild(b);
+      });
+      return true;
+    }
+    if (m.type === 'result') {
+      var bs = $('picks').querySelectorAll('button');
+      if (m.more) { if (bs[m.j]) { bs[m.j].className = 'wrong'; bs[m.j].disabled = true; } asking.open = true; note('Not quite. You have one more try.', 'no'); return true; }
+      [].forEach.call(bs, function (b, j) { b.disabled = true; if (j === m.a) b.className = 'right'; else if (j === m.j) b.className = 'wrong'; });
+      tally.seen++; if (m.ok) { tally.right++; if (m.second) tally.second++; }
+      note(m.ok ? (m.second ? 'Right, on your second try.' : 'Right.') : (m.late ? 'The lecture moved on. The answer is marked.' : 'Not quite.'), m.ok ? 'ok' : 'no');
+      score(); $('await').hidden = false; $('await').textContent = 'The lecture carries on when everyone has answered.';
+      return true;
+    }
+    if (m.type === 'why') { $('awhy').textContent = m.text; $('after').hidden = false; return true; }
+    if (m.type === 'quote') { $('aquote').textContent = '"' + m.text + '" (the lecture, at ' + m.clock + ')'; return true; }
+    return false;
+  }
+  function finish() {
+    over = true; asking = null;
+    $('title').textContent = 'The lesson is over';
+    $('awhich').textContent = ''; $('aq').textContent = ''; $('picks').textContent = ''; $('after').hidden = true; $('await').hidden = true;
+    $('ascore').textContent = tally.seen ? 'You got ' + tally.right + ' of ' + tally.seen + (tally.second ? ', ' + tally.second + ' on the second try' : '') + '.' + (total > tally.seen ? ' ' + (total - tally.seen) + ' of the ' + total + ' questions were not reached.' : '') : 'No question was reached this time.';
+    note(''); show('answer');
+  }
   function hear(m) {
     if (m.type === 'hello') { note(''); return; }
+    if (m.type === 'unit' && m.mode === 'answer') { mode = 'answer'; $('kind').textContent = 'Void University: answer on your phone'; total = +m.of || 0; $('title').textContent = m.title || 'The lecture'; if (!asking) { $('await').hidden = false; score(); show('answer'); } return; }
+    if (m.type === 'over') { finish(); return; }
+    if (mode === 'answer' && answer(m)) return;
     if (m.type === 'host-gone') { gone = true; return; }
     if (m.type === 'unit') { $('title').textContent = m.title || 'The lecture'; made = +m.made || 0; count(); if ($('write').hidden) show('ready'); return; }
     if (m.type === 'playing') { note(m.on ? 'The lecture is playing.' : 'The lecture is paused.'); return; }
