@@ -256,6 +256,11 @@ async function main() {
     const tok = (env.match(/^TMDB_READ_TOKEN=(.+)$/m) || [])[1];
     if (tok) await ping('tmdb', 'https://api.themoviedb.org/3/configuration', { headers: { Authorization: 'Bearer ' + tok.trim() } }, null, 'TMDB token rejected or TMDB down; art fetches will fail.');
     else add('tmdb', 'yellow', 'no TMDB_READ_TOKEN in backend/.env', 'Art and people lookups need it.');
+    // phones: the phone controller's relay on the live site (scripts/lib/phonecheck.js plays a screen and a phone against it).
+    if (PROFILE.name === 'voidtv') {
+      try { const pc = require('./lib/phonecheck'); const c = pc.classify(await pc.phoneCheck(PROFILE.domain)); add('phones', c.level, c.msg, c.fix); }
+      catch (e) { add('phones', 'yellow', 'the phone controller check could not run: ' + String(e.message).split('\n')[0].slice(0, 80), 'Restore scripts/lib/phonecheck.js from git: git checkout -- scripts/lib/phonecheck.js'); }
+    }
     let liveText = null;
     await ping('live', PROFILE.domain + '/version.txt', {}, async (r) => { if (!r.ok) return false; liveText = (await r.text()).trim(); return true; }, PROFILE.domain + ' did not answer; check Cloudflare Pages.');
     // What the live site says about itself (audit batch B, B3): live:version (CF-016) compares version.txt with origin/master as this PC last saw

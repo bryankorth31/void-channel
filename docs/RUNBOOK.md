@@ -44,6 +44,7 @@ means and what to do. Everything here is clickable in HQ or a one-line command.
 | live:missing-files | a file that cannot exist (`/assets/zz-check.png`, `/data/shows/zz-check.json`) is answered with the home page (the host's normal fallback, which the page copes with) or 401 behind the password | the host cannot be reached | red: a file that cannot exist came back as JSON, so the host is serving something it should not. Open the Cloudflare dashboard > Workers & Pages > voidtvsite > Deployments and check the latest deploy. Runs only in the full doctor, not `--quick` |
 | site-guards | never shown: the gate, files, www, headers, shrink, backup and live-version lights ran | scripts/lib/siteguards.js is missing or will not load, so those seven lights could not run; by hand: git checkout -- scripts/lib/siteguards.js, then run the doctor again | n/a |
 | live:site | never shown: the live:version, gate, files, www, headers and live:missing-files lights speak for the live site | the live site could not be checked at all (the message names the error: usually no internet, or voidtv.net not answering). Open https://voidtv.net/version.txt in a browser; if it loads, run the doctor again; if not, Cloudflare: Workers and Pages > voidtvsite > Deployments | n/a |
+| phones | a room opened on the live relay, a phone joined, 100 of 100 game-pad states arrived at 50 a second, and the room came back to the next page (the doctor plays the screen and the phone itself; the message gives the delay, usually 40 to 70 ms) | the relay **dropped** states (it is older than the site: a held button can stick up to a second), or the room did **not come back** to the next page (a phone connected on the shelf is lost when a game opens; connecting from the game page still works), or it is **slow** from this PC (over 150 ms typical: run the doctor again in a few minutes). For the first two, deploy the relay from your own terminal: `cd play/rooms/worker`, then `npx wrangler deploy` | **phones cannot connect**: the Phone controller button shows no code, or a code no phone can join. Run the doctor once more in a minute. If it stays red: in Cloudflare check the `voidtv-rooms` Worker exists and the Pages project has it bound as `ROOMS`, then deploy it as in yellow. By hand any time: `node scripts/lib/phonecheck.js` |
 | analytics | token present | not connected | HQ > Reports lists the two one-time Cloudflare steps. |
 | links | under 3% of sampled files dead | 3 to 8% | over 8%: the Archive took down a batch. Dead files are retired automatically and alternates picked at the next match; re-hunt the worst shows from HQ (Shows > the show > Re-hunt now) to find new copies. |
 | cache | 50 GB or more free on the disk (the cache size is shown, not judged: it grows with the catalog) | | the disk is under 50 GB free. First pack the search pages if a plain one is left: `node scripts/pack-cache.js` (gzip, lossless, about 30% of the size; it refuses while a hunt or the scout runs). Then delete the oldest `catalog/cache/scrape-*`, `mscrape-*` and `scout-*` pages, never while a hunt runs: a hunt fetches them again when it needs them. The doctor already prunes old metadata files. Never delete `tvmaze-*` files: they are the only copy of every episode list (see the backup light). |
@@ -59,6 +60,19 @@ lights need nothing. The steps below are for the days you have time to make the 
 3. Shows > "review only": watch a minute of a file the judges were unsure about, Accept.
 4. Analytics > Searches: zero-result searches are things people want; Add shows.
 5. A show plays with no sound (B, 16 Nov 2026: Dragon Tales): its copies carry Dolby or DTS sound that browsers cannot play. On the show's page press **Check sound**: HQ reads the start of each file (nothing is downloaded) and switches each silent copy to the Archive's own copy of the same file (`<name>.ia.mp4`, AAC sound), then re-matches the show; Publish now sends it. By hand: `node scripts/sound-check.js --slug <show> --match` (kids: set `VOID_PROFILE=kids` first). Whole catalog: Jobs > Check sound, every show (hours; it remembers what it heard, so it can be stopped and run again). The switches live in `catalog/sound-files.json`; delete a line there and re-match to undo one. Tests: `node --test tests/sound.test.js`.
+
+## The phone as a game pad, on a real phone
+
+The doctor's **phones** light checks the relay. Only a real phone shows the rest; it takes two minutes.
+
+1. On the PC open voidtv.net/play, press **Phone controller**, and scan the code with the phone (or type the four letters at voidtv.net/join).
+2. Read the line at the top of the pad on the phone:
+   - **Direct N ms**: the phone talks straight to the screen over your Wi-Fi. N is normally under 10. This is the fast way.
+   - **Relay N ms**: presses go through voidtv.net (normally 40 to 90). It plays, a little later. This is what you get when the phone is on mobile data, on a guest Wi-Fi that keeps devices apart, or in a browser that cannot open the direct link.
+   - **N dropped** after either: the relay lost that many states; the phones light will be yellow too.
+3. Pick a game with the phone (arrows, then A twice) and play. Nothing should keep moving after you lift your thumbs.
+4. To compare the two ways on the same phone, add `&direct=0` to the pad page's address: it then uses the relay alone.
+5. If a button ever sticks or the phone is dropped between the shelf and a game: note the game and what the top line said, and run the doctor.
 
 ## Weekly
 
