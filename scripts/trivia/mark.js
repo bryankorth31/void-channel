@@ -77,6 +77,9 @@ function fromPage(b, db) {
     ...base, kind: String(b.kind || ''), item: file ? file.item : null, url: file ? file.url : null,
     start, end: b.kind === 'still' ? start : Math.round(Number(b.end) * 10) / 10,
     ...(b.line && String(b.line).trim() ? { line: String(b.line).trim() } : {}),
+    ...(b.kind === 'find' ? { find: String(b.find || '').trim() } : {}),
+    ...(b.kind === 'whodunit' ? { q: String(b.q || '').trim(), choices: (Array.isArray(b.choices) ? b.choices : []).slice(0, 4).map((x) => String(x || '').trim()),
+      answer: Number(b.answer), lock: Math.round(Number(b.lock) * 10) / 10 } : {}),
     ...(b.note && String(b.note).trim() ? { note: String(b.note).trim() } : {}),
     by, at, approved: { by, at },
   };
