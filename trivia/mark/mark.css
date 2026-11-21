@@ -56,6 +56,14 @@ video{width:100%;aspect-ratio:16/9;max-height:calc(100vh - 150px);background:#00
 .marked{margin:0;color:var(--fg)}
 .status{margin:0;min-height:1.4em;color:var(--dim)}
 .status.ok{color:var(--green)} .status.err{color:var(--red)}
+h2 small{color:var(--dim);font-weight:400;font-size:12px}
+#lineFind{width:100%;max-width:420px;margin-bottom:6px}
+.lines{list-style:none;margin:0;padding:0;max-height:180px;overflow:auto;border:1px solid var(--line);border-radius:8px}
+.lines li{display:flex;gap:10px;padding:4px 8px;cursor:pointer;border-bottom:1px solid var(--line)}
+.lines li:hover{background:var(--panel)}
+.lines li.now{background:rgba(95,212,255,.10)}
+.lines li.marked{background:rgba(242,169,59,.14)}
+.lines .t{color:var(--dim);font-variant-numeric:tabular-nums;width:52px;flex:none}
 .saved{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:4px}
 .saved li{display:flex;gap:10px;align-items:center;padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:var(--panel)}
 .saved .k{color:var(--gold);font-weight:600;width:84px}

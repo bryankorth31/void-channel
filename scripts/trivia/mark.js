@@ -8,6 +8,7 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 const M = require('./moments');
+const T = require('./transcripts');
 
 const ROOT = path.join(__dirname, '..', '..');
 const PAGE = path.join(ROOT, 'trivia', 'mark');
@@ -39,6 +40,16 @@ function filesOf(db, key) {
   const film = /^film-(\d+)$/.exec(key);
   if (film) { const f = M.filmOf(db, Number(film[1])); return f ? [{ label: f.title + (f.year ? ' (' + f.year + ')' : ''), item: f.item, url: f.url, seconds: f.seconds }] : []; }
   return M.episodesOf(db, key).map((e) => ({ season: e.season, number: e.number, label: `S${e.season} E${e.number}` + (e.name ? ' ' + e.name : ''), item: e.item, url: e.url, seconds: e.seconds }));
+}
+
+// An episode's timed transcript (plan C18), so a line can be picked from what was said: its lines and their source, or
+// { lines: [] } when there is none yet. Only a show's episodes have one.
+function transcriptOf(key, season, number) {
+  if (!/^[a-z0-9-]+$/.test(key) || key.startsWith('film-') || !Number.isInteger(season) || !Number.isInteger(number)) return { lines: [] };
+  try {
+    const t = JSON.parse(fs.readFileSync(path.join(T.DIR, key, `s${season}e${number}.json`), 'utf8'));
+    return { source: t.source, lines: t.lines || [] };
+  } catch { return { lines: [] }; }
 }
 
 function send(res, code, body, type) {
@@ -81,6 +92,7 @@ function server() {
       if (u.pathname === '/api/titles') return send(res, 200, titles(db));
       if (u.pathname === '/api/files') return send(res, 200, filesOf(db, u.searchParams.get('key') || ''));
       if (u.pathname === '/api/moments' && req.method === 'GET') return send(res, 200, M.load(u.searchParams.get('key') || ''));
+      if (u.pathname === '/api/transcript') return send(res, 200, transcriptOf(u.searchParams.get('key') || '', Number(u.searchParams.get('season')), Number(u.searchParams.get('number'))));
       if (u.pathname === '/api/moments' && req.method === 'POST') {
         const { m, file } = fromPage(await readBody(req), db);
         const p = M.problems(m, file);
@@ -109,4 +121,4 @@ function server() {
 }
 
 if (require.main === module) server().listen(PORT, '127.0.0.1', () => console.log('Trivia marking page: http://127.0.0.1:' + PORT + '/trivia/mark/'));
-module.exports = { server, titles, filesOf, fromPage };
+module.exports = { server, titles, filesOf, fromPage, transcriptOf };

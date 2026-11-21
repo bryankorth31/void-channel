@@ -76,6 +76,67 @@
     if (v.getAttribute('src') !== S.file.url) v.src = S.file.url;
     if (at !== undefined) { const go = () => { v.currentTime = at; }; if (v.readyState >= 1) go(); else v.addEventListener('loadedmetadata', go, { once: true }); }
     say('Playing from archive.org: ' + S.file.item);
+    loadLines();
+  }
+
+  // ---------- what is said (the episode's timed transcript, plan C18) ----------
+  S.lines = [];
+  S.nowLine = -1;
+  async function loadLines() {
+    const f = S.file;
+    S.lines = [];
+    S.nowLine = -1;
+    $('linesBox').hidden = true;
+    if (!f || f.season === undefined) return;
+    let t;
+    try { t = await api('/api/transcript?key=' + encodeURIComponent(S.cur.key) + '&season=' + f.season + '&number=' + f.number); } catch { return; }
+    if (S.file !== f || !t.lines.length) return;
+    S.lines = t.lines;
+    $('linesSrc').textContent = t.source && t.source.kind === 'whisper'
+      ? '(heard by Whisper on this PC: check the words before you save)'
+      : '(from the Archive item\'s own subtitle file)';
+    drawLines();
+    $('linesBox').hidden = false;
+  }
+
+  function drawLines() {
+    const q = $('lineFind').value.trim().toLowerCase();
+    const ol = $('lines');
+    ol.textContent = '';
+    S.lines.forEach((l, i) => {
+      if (q && !l.text.toLowerCase().includes(q)) return;
+      const li = document.createElement('li');
+      li.dataset.i = i;
+      li.innerHTML = '<span class="t"></span><span></span>';
+      li.firstChild.textContent = mmss(l.start).replace(/\.\d$/, '');
+      li.lastChild.textContent = l.text;
+      li.onclick = () => pickLine(i);
+      ol.appendChild(li);
+    });
+  }
+
+  // A line picked from the transcript: the video goes a second before it, the start is marked there, the kind is Line,
+  // the words are filled in for the person to check, and the length covers the whole line.
+  function pickLine(i) {
+    const l = S.lines[i];
+    S.start = Math.max(0, Math.round((l.start - 1) * 10) / 10);
+    document.querySelector('input[name=kind][value=line]').checked = true;
+    document.querySelector('input[name=len][value="' + (l.end + 0.5 - S.start > 10 ? 15 : 10) + '"]').checked = true;
+    $('line').value = l.text;
+    onKind();
+    v.currentTime = S.start;
+    for (const li of $('lines').children) li.classList.toggle('marked', Number(li.dataset.i) === i);
+    say('Line marked from ' + mmss(S.start) + '. Check the words against what you hear (Play the moment), fix them if needed, then save.');
+  }
+
+  function followLine() {
+    if (!S.lines.length || $('linesBox').hidden) return;
+    const t = v.currentTime;
+    let i = -1;
+    for (let k = 0; k < S.lines.length && S.lines[k].start <= t; k++) i = k;
+    if (i === S.nowLine) return;
+    S.nowLine = i;
+    for (const li of $('lines').children) li.classList.toggle('now', Number(li.dataset.i) === i);
   }
 
   function drawMarked() {
@@ -104,6 +165,7 @@
 
   v.addEventListener('timeupdate', () => {
     if (S.previewing !== false && v.currentTime >= S.previewing) { v.pause(); S.previewing = false; }
+    followLine();
   });
   v.addEventListener('play', () => { $('pp').textContent = 'Pause'; });
   v.addEventListener('pause', () => { $('pp').textContent = 'Play'; });
@@ -182,6 +244,7 @@
   $('save').onclick = save;
   $('file').onchange = () => loadFile(Number($('file').value));
   $('find').oninput = drawList;
+  $('lineFind').oninput = drawLines;
   for (const r of document.querySelectorAll('input[name=kind], input[name=len]')) r.onchange = onKind;
   $('back').onclick = (e) => { e.preventDefault(); v.pause(); S.cur = null; $('title').hidden = true; $('empty').hidden = false; $('where').textContent = ''; drawList(); $('find').focus(); };
   document.addEventListener('keydown', (e) => {

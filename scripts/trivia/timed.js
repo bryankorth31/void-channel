@@ -1,0 +1,155 @@
+// TRIVIA NIGHTS: questions timed to a moment of an episode (plan C19, the clip chat's part of the Live TV strip;
+// Bryan, 20 Nov 2026: "Yes, add the strip"). While a show plays on Live TV, the strip can ask about the line that was
+// just said: "Finish the line". Each question comes from a Line moment a person approved on the marking page (the words
+// checked against what is heard, plan C0), so nothing a machine heard reaches a screen unchecked (the C6 rule).
+//
+// A question: { id, category: 'tv', round: 'finish-line', band, q, choices, answer, season, number, at, source, about }
+//   at = the second in the episode file the line has been said by (the moment's end); the strip asks from then on.
+//   The wrong endings are the ends of other lines said in the same episode (its timed transcript), or, with no
+//   transcript, of other approved lines of the same show; never one that matches the right ending.
+// Writes trivia/timed/<show>.json and trivia/timed/index.json (not in trivia/bank, which bank.js clears on every build).
+// Reads trivia/moments/, trivia/transcripts/, catalog/trivia-pool.json (a show not in the pool is not asked about) and
+// catalog/voidtv.db (through the moments check). Nothing here needs AI to run.
+// Usage: node scripts/trivia/timed.js     build and check; exit 1 when any question fails its check
+'use strict';
+const fs = require('fs');
+const path = require('path');
+const M = require('./moments');
+const T = require('./transcripts');
+
+const ROOT = path.join(__dirname, '..', '..');
+const OUT = process.env.TRIVIA_TIMED_DIR || path.join(ROOT, 'trivia', 'timed');
+const POOL = process.env.TRIVIA_POOL || path.join(ROOT, 'catalog', 'trivia-pool.json');
+const DASH = /[–—]/;
+
+// ---------- pure parts (tested) ----------
+
+function hash(s) { let h = 2166136261; for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); } return h >>> 0; }
+const words = (s) => String(s || '').replace(/[–—]/g, '-').trim().split(/\s+/).filter(Boolean);
+const same = (a, b) => a.toLowerCase().replace(/[^a-z0-9 ]/g, '').trim() === b.toLowerCase().replace(/[^a-z0-9 ]/g, '').trim();
+function mmss(t) { const s = Math.max(0, Math.round(t)); return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0'); }
+
+// A line into what is shown and what is to be finished: about half the words each side, at least three to finish.
+// Null when the line is too short to make a fair question (fewer than six words).
+function split(line) {
+  const w = words(line);
+  if (w.length < 6) return null;
+  const cut = Math.max(3, Math.min(w.length - 3, Math.floor(w.length / 2)));
+  return { shown: w.slice(0, cut).join(' '), rest: w.slice(cut).join(' '), n: w.length - cut };
+}
+
+// Up to three wrong endings with about as many words, from other lines: the last words of each, never the right ending
+// or one that holds it, never two the same. The seed picks them, so a rebuild gives the same question.
+function foils(rest, n, others, seed) {
+  const pool = [];
+  for (const o of others) {
+    const w = words(o);
+    if (w.length < n + 1) continue;
+    const e = w.slice(w.length - n).join(' ');
+    if (same(e, rest) || e.toLowerCase().includes(rest.toLowerCase()) || rest.toLowerCase().includes(e.toLowerCase())) continue;
+    if (!pool.some((p) => same(p, e))) pool.push(e);
+  }
+  const out = [];
+  let k = seed;
+  while (out.length < 3 && pool.length) { k = (Math.imul(k, 1103515245) + 12345) >>> 0; out.push(pool.splice(k % pool.length, 1)[0]); }
+  return out.length === 3 ? out : null;
+}
+
+// One Finish the Line question from an approved Line moment, or null with the reason.
+function question(m, show, otherLines) {
+  if (m.kind !== 'line' || !m.approved || !m.line) return { skip: 'not an approved line' };
+  const s = split(m.line);
+  if (!s) return { skip: 'the line is too short (six words or more)' };
+  const seed = hash(m.id);
+  const wrong = foils(s.rest, s.n, otherLines, seed);
+  if (!wrong) return { skip: 'not enough other lines for three wrong endings' };
+  const answer = seed % 4;
+  const choices = wrong.slice();
+  choices.splice(answer, 0, s.rest);
+  return {
+    id: 'timed-' + m.id, category: 'tv', round: 'finish-line', band: show.band,
+    q: 'Finish the line: "' + s.shown + ' ..."', choices, answer,
+    season: m.season, number: m.number, at: m.end,
+    source: { site: 'Internet Archive', url: 'https://archive.org/details/' + m.item,
+      fact: show.name + ', season ' + m.season + ', episode ' + m.number + ', at ' + mmss(m.start) + ': "' + m.line + '" (the words checked by ' + m.by + ')',
+      read: String(m.approved.at || m.at).slice(0, 10) },
+    about: { show: m.show, season: m.season, number: m.number, moment: m.id },
+  };
+}
+
+// Everything wrong with a built question, given the moment it came from (or null).
+function problems(q, m) {
+  const out = [];
+  if (!m) return ['its moment is gone'];
+  if (!Array.isArray(q.choices) || q.choices.length !== 4 || new Set(q.choices.map((c) => c.toLowerCase())).size !== 4) out.push('needs four different choices');
+  const s = split(m.line);
+  if (!s || q.choices[q.answer] !== s.rest) out.push('the right choice is not the rest of the line');
+  if (q.at !== m.end || q.season !== m.season || q.number !== m.number) out.push('is not at its moment');
+  if ([q.q, ...(q.choices || [])].some((x) => DASH.test(x))) out.push('carries a long dash');
+  return out;
+}
+
+// ---------- build ----------
+
+function readJson(f, fallback) { try { return JSON.parse(fs.readFileSync(f, 'utf8')); } catch { return fallback; } }
+
+function build() {
+  const pool = new Map((readJson(POOL, { shows: [] }).shows || []).map((s) => [s.slug, s]));
+  const db = M.openDb();
+  const byShow = {};
+  const skipped = [];
+  for (const key of M.allKeys()) {
+    if (key.startsWith('film-')) continue;
+    const moments = M.load(key).filter((m) => m.kind === 'line' && m.approved);
+    if (!moments.length) continue;
+    const show = pool.get(key);
+    if (!show) { skipped.push(`${key}: not in the trivia pool (no official US rating, or not playing)`); continue; }
+    for (const m of moments) {
+      const bad = M.problems(m, M.fileFor(db, m));
+      if (bad.length) { skipped.push(`${m.id}: ${bad.join('; ')}`); continue; }
+      const tr = readJson(path.join(T.DIR, key, `s${m.season}e${m.number}.json`), null);
+      const others = tr && tr.lines.length >= 20
+        ? tr.lines.filter((l) => l.end < m.start - 1 || l.start > m.end + 1).map((l) => l.text)
+        : moments.filter((x) => x.id !== m.id).map((x) => x.line);
+      const q = question(m, show, others);
+      if (q.skip) { skipped.push(`${m.id}: ${q.skip}`); continue; }
+      (byShow[key] = byShow[key] || []).push(q);
+    }
+  }
+  db.close();
+  return { byShow, skipped };
+}
+
+function write(byShow) {
+  fs.mkdirSync(OUT, { recursive: true });
+  for (const f of fs.readdirSync(OUT)) if (f.endsWith('.json')) fs.rmSync(path.join(OUT, f));
+  const shows = {};
+  for (const [slug, qs] of Object.entries(byShow)) {
+    qs.sort((a, b) => a.season - b.season || a.number - b.number || a.at - b.at);
+    fs.writeFileSync(path.join(OUT, slug + '.json'), JSON.stringify({ questions: qs }) + '\n');
+    shows[slug] = qs.length;
+  }
+  fs.writeFileSync(path.join(OUT, 'index.json'), JSON.stringify({ builtAt: new Date().toISOString(), shows }) + '\n');
+  return shows;
+}
+
+function main() {
+  const { byShow, skipped } = build();
+  const shows = write(byShow);
+  // Read every written question back against its moment.
+  let n = 0, bad = 0;
+  for (const slug of Object.keys(shows)) {
+    const moments = new Map(M.load(slug).map((m) => [m.id, m]));
+    for (const q of readJson(path.join(OUT, slug + '.json'), { questions: [] }).questions) {
+      n++;
+      const p = problems(q, moments.get(q.about.moment));
+      if (p.length) { bad++; console.log(`FAIL ${q.id}: ${p.join('; ')}`); }
+    }
+  }
+  for (const s of skipped) console.log('skipped ' + s);
+  console.log(`${n} timed questions for ${Object.keys(shows).length} shows, ${bad} failed, ${skipped.length} moments skipped`);
+  if (bad) process.exitCode = 1;
+}
+
+if (require.main === module) main();
+module.exports = { split, foils, question, problems, build, write, OUT };
