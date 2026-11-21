@@ -1,0 +1,54 @@
+{
+  "id": "strawberry-shortcake-musical-match-ups-2600",
+  "title": "Strawberry Shortcake - Musical Match-ups",
+  "year": 1983,
+  "publisher": "Parker Brothers",
+  "system": "a2600",
+  "core": "stella2014",
+  "players": 1,
+  "archive": {
+    "item": "atari_2600_strawberry_shortcake_-_musical_match-ups_1983_parker_brothers_dawn_sto",
+    "file": "atari_2600_strawberry_shortcake_-_musical_match-ups_1983_parker_brothers_dawn_sto.bin",
+    "size": 4096
+  },
+  "controls": {
+    "kind": "pad",
+    "dpad": true,
+    "keys": [
+      "P1:B",
+      "P1:Select",
+      "P1:Start"
+    ],
+    "labels": {
+      "P1:B": "Fire",
+      "P1:Start": "Reset"
+    }
+  },
+  "help": "The stick moves; Fire is the button. Reset starts a new game; Select picks a game mode.",
+  "actions": [
+    {
+      "do": "Move",
+      "press": [
+        "P1:Up",
+        "P1:Down",
+        "P1:Left",
+        "P1:Right"
+      ]
+    },
+    {
+      "do": "Fire",
+      "press": "P1:B"
+    },
+    {
+      "do": "New game (Reset)",
+      "press": "P1:Start"
+    }
+  ],
+  "added": "Whole collections (Bryan, 20 Nov 2026: \"Pull those shelves in\"); started in the PLAY start-up check",
+  "plays": 748,
+  "kids": true,
+  "genre": [
+    "educational video game",
+    "puzzle video game"
+  ]
+}

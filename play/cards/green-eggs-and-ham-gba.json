@@ -1,0 +1,56 @@
+{
+  "id": "green-eggs-and-ham-gba",
+  "title": "Green Eggs and Ham",
+  "year": 2003,
+  "publisher": "NewKidCo",
+  "system": "gba",
+  "core": "mgba",
+  "players": 1,
+  "archive": {
+    "item": "eggs_gba",
+    "file": "eggs.gba",
+    "size": 4194304
+  },
+  "controls": {
+    "kind": "pad",
+    "dpad": true,
+    "keys": [
+      "P1:B",
+      "P1:A",
+      "P1:L",
+      "P1:R",
+      "P1:Select",
+      "P1:Start"
+    ]
+  },
+  "help": "A and B are the game's main buttons, L and R the shoulders; Start opens the menu.",
+  "actions": [
+    {
+      "do": "Move",
+      "press": [
+        "P1:Up",
+        "P1:Down",
+        "P1:Left",
+        "P1:Right"
+      ]
+    },
+    {
+      "do": "A button",
+      "press": "P1:A"
+    },
+    {
+      "do": "B button",
+      "press": "P1:B"
+    },
+    {
+      "do": "Start and pause",
+      "press": "P1:Start"
+    }
+  ],
+  "added": "Whole collections (Bryan, 20 Nov 2026: \"Pull those shelves in\"); started in the PLAY start-up check",
+  "plays": 1637,
+  "kids": true,
+  "genre": [
+    "educational video game"
+  ]
+}

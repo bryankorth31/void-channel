@@ -1,0 +1,54 @@
+{
+  "id": "extreme-sports-with-the-berenstain-bears-game-boy-color",
+  "title": "Extreme Sports with The Berenstain Bears",
+  "year": 2000,
+  "publisher": "Sound Source Interactive",
+  "system": "gbcolor",
+  "core": "gambatte",
+  "players": 1,
+  "archive": {
+    "item": "berenstain",
+    "file": "berenstain.gbc",
+    "size": 1048576
+  },
+  "controls": {
+    "kind": "pad",
+    "dpad": true,
+    "keys": [
+      "P1:B",
+      "P1:A",
+      "P1:Select",
+      "P1:Start"
+    ]
+  },
+  "help": "A and B are the game's two buttons; Start begins and pauses.",
+  "actions": [
+    {
+      "do": "Move",
+      "press": [
+        "P1:Up",
+        "P1:Down",
+        "P1:Left",
+        "P1:Right"
+      ]
+    },
+    {
+      "do": "A button",
+      "press": "P1:A"
+    },
+    {
+      "do": "B button",
+      "press": "P1:B"
+    },
+    {
+      "do": "Start and pause",
+      "press": "P1:Start"
+    }
+  ],
+  "added": "Whole collections (Bryan, 20 Nov 2026: \"Pull those shelves in\"); started in the PLAY start-up check",
+  "plays": 226,
+  "kids": true,
+  "genre": [
+    "sports video game"
+  ]
+}

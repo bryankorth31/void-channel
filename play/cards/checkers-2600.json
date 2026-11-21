@@ -1,0 +1,54 @@
+{
+  "id": "checkers-2600",
+  "title": "Checkers",
+  "year": null,
+  "publisher": "",
+  "system": "a2600",
+  "core": "stella2014",
+  "players": 1,
+  "archive": {
+    "item": "atari_2600_checkers_1980_activision_alan_miller_ag-003",
+    "file": "atari_2600_checkers_1980_activision_alan_miller_ag-003.bin",
+    "size": 2048
+  },
+  "controls": {
+    "kind": "pad",
+    "dpad": true,
+    "keys": [
+      "P1:B",
+      "P1:Select",
+      "P1:Start"
+    ],
+    "labels": {
+      "P1:B": "Fire",
+      "P1:Start": "Reset"
+    }
+  },
+  "help": "The stick moves; Fire is the button. Reset starts a new game; Select picks a game mode.",
+  "actions": [
+    {
+      "do": "Move",
+      "press": [
+        "P1:Up",
+        "P1:Down",
+        "P1:Left",
+        "P1:Right"
+      ]
+    },
+    {
+      "do": "Fire",
+      "press": "P1:B"
+    },
+    {
+      "do": "New game (Reset)",
+      "press": "P1:Start"
+    }
+  ],
+  "added": "Whole collections (Bryan, 20 Nov 2026: \"Pull those shelves in\"); started in the PLAY start-up check",
+  "plays": 864,
+  "kids": true,
+  "genre": [
+    "board game video game",
+    "strategy video game"
+  ]
+}

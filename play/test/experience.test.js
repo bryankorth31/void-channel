@@ -55,7 +55,7 @@ test('the start screen shows the item picture through /cors/, and Continue comes
 
 test('block D: every console card gets its machine\'s pad shape, and every face button of the shape exists on the card', () => {
   const Touch = require('../src/touchpad.js');
-  const want = { snes: 'diamond', genesis: 'abc', nes: 'pair', gameboy: 'pair', sms: 'pair', gamegear: 'pair', gba: 'pair', lynx: 'pair', a2600: 'one' };
+  const want = { snes: 'diamond', genesis: 'abc', nes: 'pair', gameboy: 'pair', gbcolor: 'pair', sms: 'pair', gamegear: 'pair', gba: 'pair', lynx: 'pair', a2600: 'one' };
   for (const c of cards.filter(Cards.isPad)) {
     assert.equal(Touch.SYSTEM_SHAPE[c.system], want[c.system], c.id);
     for (const [code] of Touch.shapeOf(c).face) assert.ok(c.controls.keys.includes(code), c.id + ' lacks ' + code);

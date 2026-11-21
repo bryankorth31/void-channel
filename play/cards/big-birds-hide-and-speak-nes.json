@@ -1,0 +1,54 @@
+{
+  "id": "big-birds-hide-and-speak-nes",
+  "title": "Big Bird's Hide and Speak",
+  "year": 1990,
+  "publisher": "Hi-Tech Expressions",
+  "system": "nes",
+  "core": "fceumm",
+  "players": 1,
+  "archive": {
+    "item": "bigbird_nes_2",
+    "file": "bigbird.nes",
+    "size": 393232
+  },
+  "controls": {
+    "kind": "pad",
+    "dpad": true,
+    "keys": [
+      "P1:B",
+      "P1:A",
+      "P1:Select",
+      "P1:Start"
+    ]
+  },
+  "help": "A and B are the game's two buttons; Start begins and pauses.",
+  "actions": [
+    {
+      "do": "Move",
+      "press": [
+        "P1:Up",
+        "P1:Down",
+        "P1:Left",
+        "P1:Right"
+      ]
+    },
+    {
+      "do": "A button",
+      "press": "P1:A"
+    },
+    {
+      "do": "B button",
+      "press": "P1:B"
+    },
+    {
+      "do": "Start and pause",
+      "press": "P1:Start"
+    }
+  ],
+  "added": "Whole collections (Bryan, 20 Nov 2026: \"Pull those shelves in\"); started in the PLAY start-up check",
+  "plays": 931,
+  "kids": true,
+  "genre": [
+    "educational video game"
+  ]
+}
