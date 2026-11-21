@@ -909,4 +909,102 @@ function shelfBooks() {
     .map((b) => ({ ...b, live: live.has(b.source), written: b.chapters.filter((c) => c.passages.some((p) => p.plain)).length }));
 }
 
-module.exports = { overview, scaffold, setLive, brief, rewriteBrief, check, media, hearLectures, retime, locate, search, transcript, unitNeeds, slugify, UNI, SRC, draft, keepDraft, gateDraft, sceneFrom, shelfPlan, shelfWrite, shelfChapters, gatePlain, setShelfLive, shelfBooks, classFrom, lectures, scaleProblems, scalesOf };
+// Questions made by hand while a lecture plays (Bryan, 20 Nov 2026: "we could create a system where we build question
+// answer during lectures and other documentaries and vids ... we can create the lesson in one sitting"). A phone,
+// paired with the preview by a QR code (profiles/university/serve.js and make/), marks a moment; these functions give
+// the lecture's own words there and take the question written from them. A made question passes the same gate as a
+// drafted one: a word for word quote of 8 words or more, four different choices, a reason.
+//   linesAt(tr, t)                  the words said around second t, in short lines (pure)
+//   madeQuestion(tr, existing, m)   one question checked, or the plain reason it is refused (pure)
+//   makeUnits(slug)                 the units of a course a question can be made on: shown in the preview, lecture heard
+//   makeLines(slug, n, t)           linesAt for a unit
+//   addQuestion(slug, n, m)         writes it into the unit: the draft while it is a draft, the course once kept
+const rawWords = (tr) => { const R = []; for (const sg of tr.segments || []) for (const w of sg.words || []) R.push({ raw: String(w[0]).trim(), t: +w[1] }); return R; };
+const ENDS = /[.?!]["')\]]?$/;
+function linesAt(tr, t, before = 30, after = 8) {
+  const R = rawWords(tr);
+  if (!R.length) return [];
+  t = Math.max(0, +t || 0);
+  let a = R.findIndex((w) => w.t >= t - before);
+  if (a < 0) a = Math.max(0, R.length - 60);
+  let b = a;
+  while (b + 1 < R.length && R[b + 1].t <= t + after) b++;
+  for (let k = 0; k < 25 && a > 0 && !ENDS.test(R[a - 1].raw); k++) a--; // back to where a sentence starts
+  for (let k = 0; k < 25 && b + 1 < R.length && !ENDS.test(R[b].raw); k++) b++; // on to where one ends
+  const lines = [];
+  let from = a;
+  for (let i = a; i <= b; i++) {
+    if (ENDS.test(R[i].raw) || i - from >= 15 || i === b) {
+      const next = i + 1 < R.length ? R[i + 1].t : Infinity;
+      lines.push({ a: from, b: i + 1, t: R[from].t, text: R.slice(from, i + 1).map((w) => w.raw).join(' '), here: R[from].t <= t && t < next });
+      from = i + 1;
+    }
+  }
+  if (lines.length && !lines.some((l) => l.here)) lines[t < lines[0].t ? 0 : lines.length - 1].here = true;
+  return lines;
+}
+const MADE_MAX = { q: 300, choice: 150, why: 400 };
+function madeQuestion(tr, existing, m) {
+  m = m && typeof m === 'object' ? m : {};
+  const R = rawWords(tr);
+  const a = +m.from, b = +m.to;
+  if (!Number.isInteger(a) || !Number.isInteger(b) || a < 0 || b > R.length || b <= a) return { error: 'Pick the words of the lecture the answer comes from.' };
+  if (b - a > 150) return { error: 'That is too much of the lecture for one quote. Pick fewer lines.' };
+  const choices = arr(m.choices).map(clean);
+  if (clean(m.q).length > MADE_MAX.q || clean(m.why).length > MADE_MAX.why || choices.some((x) => x.length > MADE_MAX.choice)) return { error: 'One of the boxes is too long. Shorten it.' };
+  const quote = clean(R.slice(a, b).map((w) => w.raw).join(' '));
+  const g = gateDraft({ quiz: [{ q: m.q, choices, a: m.a, why: m.why, quote }] }, tr, { reading: true });
+  if (!g.unit.quiz.length) {
+    const why = g.notes.find((x) => x.startsWith('question dropped')) || '';
+    if (/under 8 words/.test(why)) return { error: 'Pick at least 8 of the lecture\'s words.' };
+    if (/4 different choices/.test(why)) return { error: 'Write the right answer and three different wrong ones.' };
+    if (/no question or reason/.test(why)) return { error: 'Write the question, and one line on why the answer is right.' };
+    if (/not one of the choices/.test(why)) return { error: 'The right answer is not marked.' };
+    return { error: 'Those words could not be matched to the lecture. Pick whole lines.' };
+  }
+  const item = g.unit.quiz[0];
+  if (arr(existing).some((k) => typeof k.t === 'number' && Math.abs(k.t - item.t) < 5)) return { error: 'A question already quotes this moment. Pick other words.' };
+  return { item };
+}
+// The unit a question is made on, the way the preview shows it: the kept unit, or else its whole draft.
+function makeUnit(slug, n) {
+  if (!SLUG_OK.test(String(slug)) || !Number.isInteger(+n)) return null;
+  const c = readJson(courseFile(slug), null);
+  if (!c) return null;
+  const kept = (c.units || []).find((u) => u.n === +n);
+  const d = kept ? null : readJson(draftFile(slug, n), null);
+  const u = kept || (d && d.ok && d.unit);
+  if (!u || !u.main || !u.main.item || !u.main.file) return null;
+  const tr = transcript(u.main.item, u.main.file);
+  return tr ? { c, d, u, kept: !!kept, tr } : null;
+}
+function makeUnits(slug) {
+  if (!SLUG_OK.test(String(slug))) return [];
+  const c = readJson(courseFile(slug), null);
+  if (!c) return [];
+  const ns = new Set((c.units || []).map((u) => u.n));
+  if (fs.existsSync(DRAFTS)) for (const f of fs.readdirSync(DRAFTS)) { const m = /^(.+)-(\d+)\.json$/.exec(f); if (m && m[1] === slug) ns.add(+m[2]); }
+  return [...ns].filter((n) => makeUnit(slug, n)).sort((x, y) => x - y);
+}
+function makeLines(slug, n, t) {
+  const x = makeUnit(slug, n);
+  if (!x) throw new Error('This unit has no lecture that has been heard.');
+  return { t: Math.max(0, +t || 0), lines: linesAt(x.tr, t) };
+}
+function addQuestion(slug, n, m) {
+  const x = makeUnit(slug, n);
+  if (!x) throw new Error('This unit has no lecture that has been heard.');
+  const r = madeQuestion(x.tr, x.u.quiz, m);
+  if (r.error) return r;
+  x.u.quiz = [...arr(x.u.quiz), r.item].sort((p, q) => p.t - q.t);
+  if (x.kept) writeJson(courseFile(slug), x.c);
+  else {
+    x.d.missing = arr(x.d.missing).filter((s) => !/quiz questions/.test(s));
+    if (x.u.quiz.length < 4) x.d.missing.push('4 quiz questions (has ' + x.u.quiz.length + ')');
+    x.d.ok = !x.d.missing.length;
+    writeJson(draftFile(slug, n), x.d);
+  }
+  return { item: r.item, where: x.kept ? 'unit' : 'draft', count: x.u.quiz.length };
+}
+
+module.exports = { overview, scaffold, setLive, brief, rewriteBrief, check, media, hearLectures, retime, locate, search, transcript, unitNeeds, slugify, UNI, SRC, draft, keepDraft, gateDraft, sceneFrom, shelfPlan, shelfWrite, shelfChapters, gatePlain, setShelfLive, shelfBooks, classFrom, lectures, scaleProblems, scalesOf, linesAt, madeQuestion, makeUnits, makeLines, addQuestion };

@@ -217,3 +217,17 @@ the HQ areas chat. Steps 7 to 10 start after the 22 Nov reset.
   switched off, the page says "Not quite. You have one more try.", and the answer, the reason and the quote stay
   hidden. The next pick settles it: right says "Right, on your second try.", wrong shows the answer as before. The
   score line says how many took two tries. A right first pick works as it did.
+- 20 Nov 2026, make questions with a phone (Bryan: "we could create a system where we build question answer during
+  lectures ... we can create the lesson in one sitting"; "both, making first"; in this chat: "Yes, build it"). The
+  making side, on his PC. A heard lecture in the preview has a Make questions button: it opens a lesson room on
+  PLAY's phone relay (play/rooms, required as it is; the PLAY lead added the lesson kind) and shows a QR code. The
+  phone marks a moment, the lecture stops, the words said there come up on the phone, and the question written
+  from them is checked by the same gate as a drafted one (word for word quote of 8 words or more, four different
+  answers, a reason) and written into the unit's draft, or the course once kept. Done rebuilds the page. The
+  preview server now listens on the home network, and gives a device that is not this computer only the phone
+  page and its room (checked with curl from the network address: every other page and every write answered 403).
+  Checked with a second browser tab on the network address as the phone: join, mark, lines, Earlier words, three
+  refusals, a good save, the question in Check yourself after Done, the phone told the room closed; the test
+  question was then removed. Not checked: a real phone scanning the real code, and the Windows firewall prompt.
+  Not built: the taking side, and the live site (the relay refuses the University's address until the PLAY lead
+  opens it on Bryan's go there).

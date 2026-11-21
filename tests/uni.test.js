@@ -288,3 +288,52 @@ test('a quiz answer gets a second try: the first wrong pick does not show the an
   assert.ok(page.includes("if (j !== a && !q.classList.contains('tried'))"), 'a first wrong pick must not settle the question');
   assert.ok(page.includes('on the second try'), 'the score does not say how many took two tries');
 });
+
+
+test('make questions: the lecture words around a moment come in short lines, and a made question passes the same gate as a drafted one', () => {
+  // a made-up lecture: 60 words, one every second, a sentence every ten words
+  const said = [];
+  for (let i = 0; i < 60; i++) said.push(['word' + i + (i % 10 === 9 ? '.' : ''), i, i + 0.5, 1]);
+  const tr = { segments: [{ words: said }], words: said.map((w) => ({ w: w[0].replace('.', ''), raw: w[0], t: w[1] })) };
+  const lines = uni.linesAt(tr, 34, 12, 3);
+  assert.ok(lines.length >= 2 && lines.every((l) => l.b > l.a && l.text.length < 700), 'lines are short enough for one relay message');
+  assert.strictEqual(lines.filter((l) => l.here).length, 1, 'exactly one line is the marked moment');
+  const here = lines.find((l) => l.here);
+  assert.ok(here.t <= 34 && said[here.b - 1][1] >= 34, 'the marked line holds second 34');
+  assert.strictEqual(lines[0].a % 10, 0, 'the first line starts where a sentence starts');
+  const good = { q: 'What is said here?', choices: ['Right', 'Wrong one', 'Wrong two', 'Wrong three'], a: 0, why: 'The lecture says it.', from: 20, to: 30 };
+  const r = uni.madeQuestion(tr, [], good);
+  assert.ok(r.item, r.error);
+  assert.strictEqual(r.item.t, 20, 'the time is where the quote starts');
+  assert.strictEqual(r.item.choices[r.item.a], 'Right', 'the right answer is still right after it moves');
+  assert.ok(r.item.quote.startsWith('word20 ') && r.item.quote.endsWith('word29.'), 'the quote is the lecture word for word');
+  const refused = (m, re) => assert.match(uni.madeQuestion(tr, [], { ...good, ...m }).error || '', re);
+  refused({ from: 20, to: 25 }, /at least 8/);
+  refused({ choices: ['Right', 'Same', 'Same', 'Other'] }, /three different wrong/);
+  refused({ why: '' }, /why the answer is right/);
+  refused({ from: 50, to: 999 }, /Pick the words/);
+  refused({ q: 'x'.repeat(301) }, /too long/);
+  assert.match(uni.madeQuestion(tr, [{ t: 22 }], good).error, /already quotes this moment/);
+});
+
+test('make questions: a device on the network gets the phone page and its room, nothing else; the public copy has no make button', () => {
+  const serve = require('../profiles/university/serve.js');
+  for (const p of ['/', '/index.html', '/human-nature.html', '/api/make/info', '/api/make/lines', '/api/make/save', '/api/make/rebuild', '/make/screen.js', '/make/qr.js', '/api/room/open', '/api/room/ABCDE']) {
+    assert.strictEqual(serve.allowed(p, false), false, p + ' must not be given to a device that is not this computer');
+    assert.strictEqual(serve.allowed(p, true), true);
+  }
+  for (const p of ['/join', '/make/phone.html', '/api/room/KX7P']) assert.strictEqual(serve.allowed(p, false), true, 'a phone needs ' + p);
+  assert.ok(require('../play/rooms/room.js').KINDS.includes('lesson'), 'the phone relay has no lesson room');
+  build();
+  const prev = fs.readFileSync(path.join(uni.UNI, 'site-preview', 'human-nature.html'), 'utf8');
+  assert.ok(prev.includes('class="makebar" hidden') && prev.includes('src="/make/screen.js"'), 'the preview lecture page has no make button');
+  build('--site');
+  for (const f of fs.readdirSync(SITE).filter((x) => x.endsWith('.html'))) {
+    const h = fs.readFileSync(path.join(SITE, f), 'utf8');
+    assert.ok(!h.includes('makebar') && !h.includes('/make/'), f + ' carries the make button into the public copy');
+  }
+  assert.ok(!fs.existsSync(path.join(SITE, 'make')), 'the make folder must never be in the public copy');
+  const phone = fs.readFileSync(path.join(uni.UNI, 'make', 'phone.html'), 'utf8') + fs.readFileSync(path.join(uni.UNI, 'make', 'screen.js'), 'utf8');
+  assert.ok(!/[—–]/.test(phone), 'no long dashes');
+  assert.ok(!/Users|@gmail|bryan/i.test(phone), 'no personal details');
+});

@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Make questions | Void University</title>
+<style>
+:root{color-scheme:dark;--bg:#07080c;--panel:#111827;--line:#2b3550;--fg:#eef1f8;--dim:#a5aec4;--gold:#f0c869;--ok:#5fe39a;--no:#e08a8f}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding:16px 16px 40px;max-width:640px;margin:0 auto}
+h1{font-size:15px;font-weight:600;color:var(--gold);margin:0 0 2px;letter-spacing:.04em}
+h2{font-size:20px;margin:0 0 14px;line-height:1.25}
+p{margin:0 0 12px}
+.dim{color:var(--dim);font-size:15px}
+button,input,textarea{font:inherit;color:inherit}
+button{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 16px;min-height:48px;cursor:pointer}
+button:active{border-color:var(--gold)}
+button.big{display:block;width:100%;font-size:22px;font-weight:700;padding:26px 16px;background:#1a2440;border-color:var(--gold);margin:6px 0 14px}
+button.go{background:#1d3a2a;border-color:var(--ok);font-weight:700}
+.row{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 14px}
+.row>button{flex:1 1 140px}
+label{display:block;font-size:14px;color:var(--dim);margin:12px 0 4px}
+input,textarea{width:100%;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:11px 12px}
+textarea{resize:vertical;min-height:70px}
+input:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:1px}
+#code{font-size:28px;letter-spacing:.3em;text-transform:uppercase;text-align:center}
+.lines{margin:0 0 6px;padding:0;list-style:none}
+.lines li{border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:0 0 6px;background:var(--panel)}
+.lines li.on{border-color:var(--gold);background:#2a2412}
+.lines li i{font-style:normal;color:var(--gold);font-size:13px;margin-right:8px}
+#note{font-weight:600;min-height:1.4em}
+#note.ok{color:var(--ok)}#note.no{color:var(--no)}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<h1>Void University: make questions</h1>
+<h2 id="title">Connecting to the computer</h2>
+<p id="note" role="status"></p>
+
+<section id="enter" hidden>
+  <p class="dim">Type the four letter code shown beside the lecture on the computer.</p>
+  <label for="code">Code</label>
+  <input id="code" maxlength="4" autocomplete="off" autocapitalize="characters" spellcheck="false" title="The four letter code beside the QR picture on the computer">
+  <div class="row" style="margin-top:14px"><button type="button" id="joinbtn" class="go" title="Join the lecture on the computer with this code">Join</button></div>
+</section>
+
+<section id="ready" hidden>
+  <button type="button" id="mark" class="big" title="Stops the lecture and brings up the words that were just said">Mark this moment</button>
+  <div class="row"><button type="button" id="toggle" title="Play or pause the lecture on the computer">Play or pause the lecture</button></div>
+  <p class="dim" id="count">No questions made yet.</p>
+  <p class="dim">Watch the lecture on the computer. When something worth a question is said, tap Mark. The lecture stops and the words come up here.</p>
+</section>
+
+<section id="write" hidden>
+  <div class="row"><button type="button" id="back" title="Drop this question and carry on with the lecture">← Back to the lecture</button></div>
+  <p class="dim" id="at"></p>
+  <p class="dim">Tap the first and the last line the answer comes from. At least 8 words.</p>
+  <div class="row"><button type="button" id="earlier" title="Show the words said before these">Earlier words</button><button type="button" id="later" title="Show the words said after these">Later words</button></div>
+  <ul class="lines" id="lines"></ul>
+  <p class="dim" id="picked"></p>
+  <label for="q">The question</label>
+  <textarea id="q" maxlength="300" title="The question a learner will be asked"></textarea>
+  <label for="c0">The right answer</label>
+  <input id="c0" maxlength="150" title="The right answer. Its place among the four is mixed for you.">
+  <label for="c1">A wrong answer</label>
+  <input id="c1" maxlength="150" title="A wrong answer that sounds possible">
+  <label for="c2">Another wrong answer</label>
+  <input id="c2" maxlength="150" title="A second wrong answer">
+  <label for="c3">A third wrong answer</label>
+  <input id="c3" maxlength="150" title="A third wrong answer">
+  <label for="why">Why the right answer is right, in one line</label>
+  <textarea id="why" maxlength="400" title="Shown to the learner after they answer"></textarea>
+  <div class="row" style="margin-top:16px"><button type="button" id="save" class="go" title="Send the question to the computer. It is checked against the lecture and added to the unit.">Save the question</button></div>
+</section>
+
+<script>
+(function () {
+  'use strict';
+  var $ = function (id) { return document.getElementById(id); };
+  var ALPHA = '23456789ACDEFGHJKMNPQRTUVWXY';
+  var code = norm(new URLSearchParams(location.search).get('r')), ws = null, made = 0, lines = [], lo = -1, hi = -1, lineId = 0, gone = false;
+  var token = '';
+  try { token = sessionStorage.getItem('vu-make-token') || ''; } catch (e) {}
+  if (!/^[A-Za-z0-9_-]{16,64}$/.test(token)) {
+    var a = new Uint8Array(18); crypto.getRandomValues(a);
+    token = Array.prototype.map.call(a, function (x) { return 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_-'[x % 64]; }).join('');
+    try { sessionStorage.setItem('vu-make-token', token); } catch (e) {}
+  }
+  function norm(s) { var c = String(s || '').trim().toUpperCase(); return c.length === 4 && c.split('').every(function (x) { return ALPHA.indexOf(x) >= 0; }) ? c : ''; }
+  function show(id) { ['enter', 'ready', 'write'].forEach(function (k) { $(k).hidden = k !== id; }); window.scrollTo(0, 0); }
+  function note(text, kind) { $('note').textContent = text || ''; $('note').className = kind || ''; }
+  function send(obj) { if (ws && ws.readyState === 1) { ws.send(JSON.stringify(obj)); return true; } note('Not connected to the computer. Wait a moment, or scan the code again.', 'no'); return false; }
+
+  function connect() {
+    gone = false;
+    $('title').textContent = 'Connecting to the computer';
+    ws = new WebSocket((location.protocol === 'https:' ? 'wss://' : 'ws://') + location.host + '/api/room/' + code + '/join?t=' + token);
+    ws.onmessage = function (ev) { var m; try { m = JSON.parse(ev.data); } catch (e) { return; } hear(m); };
+    ws.onclose = function (ev) {
+      if (ev.code === 4404) { askCode('No lecture is open with that code. Look at the code on the computer and type it here.'); return; }
+      if (ev.code === 4410 || gone) { askCode('The computer closed the lecture. Your saved questions are kept. To make more, press Make questions on the computer and scan again.'); return; }
+      if (ev.code === 4409) { askCode('That room is full.'); return; }
+      if (ev.code === 4411) { note('This phone joined again in another tab. Use that tab.', 'no'); return; }
+      note('The connection dropped. Joining again.', 'no');
+      setTimeout(connect, 1500);
+    };
+  }
+  function askCode(text) { $('title').textContent = 'Join a lecture'; note(text, text ? 'no' : ''); show('enter'); }
+
+  function hear(m) {
+    if (m.type === 'hello') { note(''); return; }
+    if (m.type === 'host-gone') { gone = true; return; }
+    if (m.type === 'unit') { $('title').textContent = m.title || 'The lecture'; made = +m.made || 0; count(); if ($('write').hidden) show('ready'); return; }
+    if (m.type === 'playing') { note(m.on ? 'The lecture is playing.' : 'The lecture is paused.'); return; }
+    if (m.type === 'error') { note(m.text, 'no'); return; }
+    if (m.type === 'at') { lineId = m.id; lines = []; lo = hi = -1; $('at').textContent = 'The lecture is stopped. These are its words around ' + m.clock + '.'; show('write'); note(''); return; }
+    if (m.type === 'line' && m.id === lineId) { lines.push(m); if (m.here && lo < 0) lo = hi = lines.length - 1; return; }
+    if (m.type === 'end' && m.id === lineId) { draw(); return; }
+    if (m.type === 'saved') {
+      $('save').disabled = false;
+      if (!m.ok) { note(m.text, 'no'); return; }
+      made = m.made; count();
+      ['q', 'c0', 'c1', 'c2', 'c3', 'why'].forEach(function (k) { $(k).value = ''; });
+      show('ready');
+      note('Saved at ' + m.clock + '. The lecture is playing again.', 'ok');
+    }
+  }
+  function count() { $('count').textContent = made ? made + (made === 1 ? ' question' : ' questions') + ' made this sitting.' : 'No questions made yet.'; }
+  function words() { var n = 0; for (var i = lo; i >= 0 && i <= hi; i++) n += lines[i].b - lines[i].a; return n; }
+  function draw() {
+    var ul = $('lines'); ul.textContent = '';
+    lines.forEach(function (l, i) {
+      var li = document.createElement('li'), t = document.createElement('i');
+      t.textContent = Math.floor(l.t / 60) + ':' + String(Math.floor(l.t % 60)).padStart(2, '0');
+      li.appendChild(t); li.appendChild(document.createTextNode(l.text));
+      if (i >= lo && i <= hi) li.className = 'on';
+      li.onclick = function () { if (lo < 0 || (i >= lo && i <= hi)) lo = hi = i; else if (i < lo) lo = i; else hi = i; draw(); };
+      ul.appendChild(li);
+    });
+    if (!lines.length) { $('picked').textContent = 'No words were heard at this moment. Try Earlier words.'; return; }
+    var n = words();
+    $('picked').textContent = n ? n + ' words picked' + (n < 8 ? '. Pick at least 8.' : '.') : 'No line picked yet.';
+  }
+
+  $('joinbtn').onclick = function () { var c = norm($('code').value); if (!c) { note('A code is four letters and numbers, like KX7P.', 'no'); return; } code = c; note(''); $('enter').hidden = true; connect(); };
+  $('code').onkeydown = function (e) { if (e.key === 'Enter') $('joinbtn').click(); };
+  $('mark').onclick = function () { if (send({ type: 'mark' })) note('Bringing up the words.'); };
+  $('toggle').onclick = function () { send({ type: 'toggle' }); };
+  $('back').onclick = function () { send({ type: 'cancel' }); show('ready'); note('The lecture is playing again.'); };
+  $('earlier').onclick = function () { if (lines.length) send({ type: 'more', t: Math.max(0, lines[0].t - 6) }); };
+  $('later').onclick = function () { if (lines.length) send({ type: 'more', t: lines[lines.length - 1].t + 28 }); };
+  $('save').onclick = function () {
+    var need = { q: 'Write the question.', c0: 'Write the right answer.', c1: 'Write three wrong answers.', c2: 'Write three wrong answers.', c3: 'Write three wrong answers.', why: 'Write one line on why the answer is right.' };
+    for (var k in need) if (!$(k).value.trim()) { note(need[k], 'no'); $(k).focus(); return; }
+    if (lo < 0 || words() < 8) { note('Pick at least 8 of the lecture\'s words.', 'no'); return; }
+    for (var f in need) if (!send({ type: 'field', k: f, v: $(f).value.trim() })) return;
+    if (send({ type: 'save', from: lines[lo].a, to: lines[hi].b })) { $('save').disabled = true; note('Sending to the computer.'); }
+  };
+
+  if (code) connect(); else askCode('');
+})();
+</script>
+</body>
+</html>

@@ -206,6 +206,9 @@ function unit(u, voices, c) {
     + lab(u)
     + scaleBlock(u)
     + (u.main ? '<div class="pieces">' + piece(u.main, true) + '</div>' : '')
+    // Preview only: make questions with a phone while the lecture plays (make/screen.js shows the button once the
+    // preview server says this lecture has been heard). The public copy never carries it.
+    + (!LIVE && u.main && u.main.item ? '<div class="makebar" hidden><button type="button" class="makebtn" title="Shows a QR code. Scan it with your phone, then mark moments in the lecture and write a question for each. The questions join Check yourself.">Make questions with your phone</button></div>' : '')
     + reader(u)
     + chapters(u)
     + quiz(u)
@@ -448,7 +451,7 @@ if ('IntersectionObserver' in window) {
   var seen = new IntersectionObserver(function (es) { es.forEach(function (x) { if (x.isIntersecting) VU.set('vu:last', { slug: SLUG, name: CNAME, n: +x.target.id.slice(1), title: x.target.querySelector('h2').textContent }); }); }, { rootMargin: '-40% 0px -40% 0px' });
   document.querySelectorAll('.unit').forEach(function (u) { seen.observe(u); });
 }
-</script>
+</script>${LIVE ? '' : '<script src="/make/qr.js"></script><script src="/make/screen.js"></script>'}
 </body></html>`;
 }
 

@@ -278,6 +278,33 @@ thing may name a `shape` (ball, tall, disc, ring for an orbit, bar for a distanc
 A thing with no number or no source is refused by the check. The stage shows in the preview at once. It goes in the
 public copy only when the block says `"live": true`, the same rule as a lab.
 
+## 14. Make questions with your phone
+
+While a lecture plays in the preview on this computer, your phone is the note pad. One viewing gives the unit its
+timed questions.
+
+1. Start the preview (`node profiles\university\serve.js`) and open a course that has lectures. The first time,
+   Windows may ask whether Node.js may be reached on private networks. Say yes, or the phone cannot connect.
+2. On a lecture, press **Make questions with your phone**. A QR picture shows. The button is there only for a
+   lecture that has been heard (`node scripts\uni.js listen <course>`).
+3. Scan it with the phone. The phone must be on the same Wi-Fi as this computer. If the phone cannot open the
+   page, press **Phone cannot open it? Try another address**, or type the address and code shown beside the picture.
+4. Play the lecture. When something worth a question is said, tap **Mark this moment** on the phone. The lecture
+   stops and the words just said come up on the phone.
+5. Tap the first and last line the answer comes from (8 words or more). Write the question, the right answer,
+   three wrong answers and one line on why. Tap **Save the question**. The lecture plays again.
+6. Press **Done** on the computer. The page is built again with your questions in Check yourself.
+
+A question is refused, with the reason on the phone, when its words are under 8, two answers are the same, a box
+is empty, or another question already quotes that moment. The quote is always the lecture word for word.
+
+Where it is written: into the unit's draft while the unit is a draft (`keep` still decides when it joins the
+course), or straight into the course once the unit is kept. A kept unit of a live course carries it at your next
+deploy.
+
+What a phone can reach: only the phone page and its room. The preview pages, the lecture's words and every save
+stay on this computer. This works at home only; the live site has no make button.
+
 ## Where things are
 
 - Courses: `profiles\university\courses\*.json`. Which are live: `profiles\university\list.json`.
