@@ -25,6 +25,10 @@
   },
   "actions": [
     {
+      "do": "Begin (the screen stays dark until you do)",
+      "press": "Enter"
+    },
+    {
       "do": "Confirm",
       "press": "Enter"
     },
@@ -53,6 +57,6 @@
   "genre": [
     "educational video game"
   ],
-  "help": "Point and click with the mouse, drag on a touch screen, or use the right stick. Enter picks, Esc backs out.",
+  "help": "The screen stays dark at first: press Enter (A on a gamepad) to begin. Point and click with the mouse, drag on a touch screen, or use the right stick. Enter picks, Esc backs out.",
   "kids": true
 }
