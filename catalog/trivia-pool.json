@@ -1,5 +1,5 @@
 {
- "builtAt": "2026-11-21T06:22:34.380Z",
+ "builtAt": "2026-11-21T07:04:33.421Z",
  "rules": "plays today; family = US TV-PG/PG and under; after dark = any official US rating; no US rating = out; fame line set by Bryan",
  "fameLine": 100,
  "shows": [
@@ -2022,14 +2022,14 @@
   {
    "slug": "blockbusters",
    "name": "Blockbusters",
-   "tmdbId": 32924,
+   "tmdbId": 5151,
    "premiered": "1983-08-29",
    "playing": 1,
-   "votes": 0,
+   "votes": 4,
    "us": "",
-   "source": "https://www.themoviedb.org/tv/32924",
+   "source": "https://www.themoviedb.org/tv/5151",
    "band": "out",
-   "why": "no official US rating on TMDB"
+   "why": "TMDB record is another show (Blockbusters, 1980)"
   },
   {
    "slug": "blood-drive",
@@ -3036,8 +3036,8 @@
    "votes": 78,
    "us": "TV-14",
    "source": "https://www.themoviedb.org/tv/65152",
-   "band": "after-dark",
-   "why": "US TV-14"
+   "band": "out",
+   "why": "TMDB record is another show (Degrassi: Next Class, 2016)"
   },
   {
    "slug": "class-of-3000",
@@ -3664,6 +3664,18 @@
    "why": "no official US rating on TMDB"
   },
   {
+   "slug": "cyderdelic",
+   "name": "Cyderdelic",
+   "tmdbId": 111873,
+   "premiered": "2002-01-07",
+   "playing": 6,
+   "votes": 4,
+   "us": "",
+   "source": "https://www.themoviedb.org/tv/111873",
+   "band": "out",
+   "why": "TMDB record is another show (Cyderdelic, 2004)"
+  },
+  {
    "slug": "da-ali-g-show",
    "name": "Da Ali G Show",
    "tmdbId": 4417,
@@ -3998,6 +4010,18 @@
    "source": "https://www.themoviedb.org/tv/17425",
    "band": "after-dark",
    "why": "US TV-14"
+  },
+  {
+   "slug": "dennis-the-menace-and-gnasher",
+   "name": "Dennis the Menace and Gnasher",
+   "tmdbId": 7407,
+   "premiered": "2009-09-07",
+   "playing": 4,
+   "votes": 20,
+   "us": "",
+   "source": "https://www.themoviedb.org/tv/7407",
+   "band": "out",
+   "why": "TMDB record is another show (Dennis the Menace and Gnasher, 1996)"
   },
   {
    "slug": "derren-brown-trick-or-treat",
@@ -6192,8 +6216,8 @@
    "votes": 972,
    "us": "TV-MA",
    "source": "https://www.themoviedb.org/tv/96713",
-   "band": "after-dark",
-   "why": "US TV-MA"
+   "band": "out",
+   "why": "TMDB record is another show (The Midnight Gospel, 2020)"
   },
   {
    "slug": "grand",
@@ -9460,6 +9484,18 @@
    "why": "no official US rating on TMDB"
   },
   {
+   "slug": "michael-every-day",
+   "name": "Michael: Every Day",
+   "tmdbId": 136332,
+   "premiered": "2011-09-14",
+   "playing": 6,
+   "votes": 1,
+   "us": "",
+   "source": "https://www.themoviedb.org/tv/136332",
+   "band": "out",
+   "why": "TMDB record is another show (Michael: Every Day, 2017)"
+  },
+  {
    "slug": "midnight-patrol-adventures-in-the-dream-zone",
    "name": "Midnight Patrol: Adventures in the Dream Zone",
    "tmdbId": 10375,
@@ -12402,14 +12438,14 @@
   {
    "slug": "room-101",
    "name": "Room 101",
-   "tmdbId": 55775,
+   "tmdbId": 2470,
    "premiered": "2012-01-20",
    "playing": 1,
-   "votes": 0,
+   "votes": 27,
    "us": "",
-   "source": "https://www.themoviedb.org/tv/55775",
+   "source": "https://www.themoviedb.org/tv/2470",
    "band": "out",
-   "why": "no official US rating on TMDB"
+   "why": "TMDB record is another show (Room 101, 1994)"
   },
   {
    "slug": "roommates",
@@ -12720,8 +12756,8 @@
    "votes": 18,
    "us": "TV-PG",
    "source": "https://www.themoviedb.org/tv/38785",
-   "band": "family",
-   "why": "US TV-PG"
+   "band": "out",
+   "why": "TMDB record is another show (Beyond Scared Straight, 2011)"
   },
   {
    "slug": "school-spirits",
@@ -12782,6 +12818,18 @@
    "source": "https://www.themoviedb.org/tv/11057",
    "band": "out",
    "why": "no official US rating on TMDB"
+  },
+  {
+   "slug": "sctv",
+   "name": "SCTV",
+   "tmdbId": 303914,
+   "premiered": "1976-09-21",
+   "playing": 74,
+   "votes": 7,
+   "us": "TV-PG",
+   "source": "https://www.themoviedb.org/tv/303914",
+   "band": "out",
+   "why": "TMDB record is another show (SCTV Network 90, 1981)"
   },
   {
    "slug": "sea-of-souls",
@@ -13009,7 +13057,7 @@
    "us": "",
    "source": "https://www.themoviedb.org/tv/10304",
    "band": "out",
-   "why": "no official US rating on TMDB"
+   "why": "TMDB record is another show (Suburban Shootout, 2006)"
   },
   {
    "slug": "shorties-watchin-shorties",
@@ -14725,7 +14773,7 @@
    "us": "",
    "source": "https://www.themoviedb.org/tv/3531",
    "band": "out",
-   "why": "no official US rating on TMDB"
+   "why": "TMDB record is another show (The Celebrity Apprentice, 2004)"
   },
   {
    "slug": "the-apprentice-youre-fired",
@@ -14904,8 +14952,8 @@
    "votes": 4,
    "us": "TV-G",
    "source": "https://www.themoviedb.org/tv/1755",
-   "band": "family",
-   "why": "US TV-G"
+   "band": "out",
+   "why": "TMDB record is another show (Beyond the Break, 2006)"
   },
   {
    "slug": "the-brian-benben-show",
@@ -18078,14 +18126,14 @@
   {
    "slug": "trl",
    "name": "TRL",
-   "tmdbId": 2960,
+   "tmdbId": 26834,
    "premiered": "2002-03-06",
    "playing": 1,
-   "votes": 0,
+   "votes": 16,
    "us": "",
-   "source": "https://www.themoviedb.org/tv/2960",
+   "source": "https://www.themoviedb.org/tv/26834",
    "band": "out",
-   "why": "no official US rating on TMDB"
+   "why": "TMDB record is another show (TRL, 1998)"
   },
   {
    "slug": "trollhunters-tales-of-arcadia",
@@ -18458,6 +18506,18 @@
    "source": "https://www.themoviedb.org/tv/603",
    "band": "family",
    "why": "US TV-PG"
+  },
+  {
+   "slug": "vh1-storytellers",
+   "name": "VH1 Storytellers",
+   "tmdbId": 6478,
+   "premiered": "1996-02-20",
+   "playing": 4,
+   "votes": 4,
+   "us": "TV-PG",
+   "source": "https://www.themoviedb.org/tv/6478",
+   "band": "out",
+   "why": "TMDB record is another show (VH1 Storytellers, 2005)"
   },
   {
    "slug": "vicious",

@@ -5,6 +5,14 @@
 // Usage: node scripts/art.js            (shows without art yet)
 //        node scripts/art.js --fresh    (re-fetch everything)
 //        node scripts/art.js Seinfeld   (one show, re-fetched)
+//        node scripts/art.js --recheck [--hold file.json]   (every show whose art is another show's, matched again;
+//                                        the slugs in the hold file, a JSON list, are left as they are)
+// A TMDB record is taken only when it is this show (scripts/lib/sameshow.js): the same name as VoidTV's (or the cached
+// TVmaze record's, when that agrees), or a name that starts with it, first aired within a year; else the same-name record
+// nearest in year. A new show with no such record gets no art, and the site draws its own poster. Art already there is
+// never removed by the builder (a re-check only replaces it with a better match). Before 21 Nov 2026 the top search hit
+// was taken when no year matched, so "Payne" (CBS, 1999) wore Tyler Perry's House of Payne (night audit N12; Bryan: "Yes,
+// fix all"); docs/ART-RECHECK.md has the run and what was put back.
 const fs = require('fs');
 const path = require('path');
 
@@ -34,10 +42,15 @@ async function tmdb(p, params = {}) {
   throw new Error('rate limited');
 }
 
-function tvmazeYear(show) {
-  const f = path.join(CACHE_DIR, 'tvmaze-' + slug(show) + '.json');
-  try { return parseInt(JSON.parse(fs.readFileSync(f, 'utf8')).premiered.slice(0, 4), 10) || null; } catch (e) { return null; }
+const { sameShow, pickSame, identity, exactName } = require('./lib/sameshow');
+function tvmazeOf(show) {
+  try { const j = JSON.parse(fs.readFileSync(path.join(CACHE_DIR, 'tvmaze-' + slug(show) + '.json'), 'utf8')); return { name: j.name || show, premiered: j.premiered || null }; } catch (e) { return { name: show, premiered: null }; }
 }
+// The names and first year a show is judged by: VoidTV's own name, and the cached TVmaze record only when its name agrees.
+function idOf(show) { const t = tvmazeOf(show); return identity(show, t.name, t.premiered); }
+function tvmazeYear(show) { return parseInt(String(idOf(show).first || '').slice(0, 4), 10) || null; }
+// Is this TMDB record (a detail, or an art.json entry's title and year) this show?
+function isThisShow(show, name, first) { const id = idOf(show); return id.names.some((n) => sameShow(n, id.first, name, first)); }
 
 const OVERRIDES = fs.existsSync(path.join(PROFILE.catalogDir, 'overrides.json')) ? JSON.parse(fs.readFileSync(path.join(PROFILE.catalogDir, 'overrides.json'), 'utf8')) : {};
 async function lookup(entry) {
@@ -46,7 +59,11 @@ async function lookup(entry) {
   const cf = path.join(CACHE_DIR, 'tmdb-' + slug(show) + '.json');
   const ov = OVERRIDES[slug(show)] || {};
   let detail;
-  if (fs.existsSync(cf)) { detail = JSON.parse(fs.readFileSync(cf, 'utf8')); if (ov.tmdbId && detail && detail.id !== ov.tmdbId) detail = null; } // an id set in HQ beats a stale cache
+  if (fs.existsSync(cf)) {
+    detail = JSON.parse(fs.readFileSync(cf, 'utf8'));
+    if (ov.tmdbId && detail && detail.id !== ov.tmdbId) detail = null; // an id set in HQ beats a stale cache
+    else if (!ov.tmdbId && detail && !isThisShow(show, detail.name, detail.first_air_date)) detail = null; // a cached wrong match is looked up again
+  }
   if (detail) { /* cached */ }
   else if (ov.tmdbId) { // a fixed id from overrides.json wins (name collisions)
     detail = await tmdb('/tv/' + ov.tmdbId);
@@ -55,11 +72,12 @@ async function lookup(entry) {
   }
   else {
     const q = show.replace(/\s*\(.*?\)\s*/g, ' ').trim();
-    let res = (await tmdb('/search/tv', { query: q, ...(year ? { first_air_date_year: String(year) } : {}) })).results || [];
-    if (!res.length && year) res = (await tmdb('/search/tv', { query: q })).results || [];
-    if (!res.length) return null;
-    // Prefer the result whose first-air year matches TVmaze (within a year), else the top hit.
-    const pick = res.find((r) => year && r.first_air_date && Math.abs(parseInt(r.first_air_date.slice(0, 4), 10) - year) <= 1) || res[0];
+    // The result that is this show (scripts/lib/sameshow.js pickSame): searched with the year first, then without it;
+    // never the top hit when none is.
+    const id = idOf(show);
+    let pick = year ? pickSame((await tmdb('/search/tv', { query: q, first_air_date_year: String(year) })).results, id.names, id.first) : null;
+    if (!pick) pick = pickSame((await tmdb('/search/tv', { query: q })).results, id.names, id.first);
+    if (!pick) return null;
     detail = await tmdb('/tv/' + pick.id);
     fs.mkdirSync(CACHE_DIR, { recursive: true });
     fs.writeFileSync(cf, JSON.stringify(detail));
@@ -82,18 +100,29 @@ async function lookup(entry) {
 async function main() {
   const args = process.argv.slice(2);
   const fresh = args.includes('--fresh');
-  const filter = (args.find((a) => !a.startsWith('--')) || '').toLowerCase();
+  const filter = (args.find((a, i) => !a.startsWith('--') && !['--slug', '--hold'].includes(args[i - 1])) || '').toLowerCase(); // a show name, not an option's value
   const art = fs.existsSync(OUT) ? JSON.parse(fs.readFileSync(OUT, 'utf8')) : {};
   const SLUG_ONLY = (() => { const i = process.argv.indexOf('--slug'); return i >= 0 ? process.argv[i + 1] : null; })();
+  const recheck = args.includes('--recheck');
+  const hold = (() => { const i = args.indexOf('--hold'); try { return new Set(i >= 0 ? JSON.parse(fs.readFileSync(args[i + 1], 'utf8')) : []); } catch (e) { console.error('--hold: ' + e.message); process.exit(1); } })();
   let done = 0, miss = 0;
   for (const entry of LIST.shows) {
     const s = slug(entry.name);
     if (SLUG_ONLY ? s !== SLUG_ONLY : (filter && !entry.name.toLowerCase().includes(filter))) continue;
     const ovId = (OVERRIDES[s] || {}).tmdbId;
-    if (!filter && !SLUG_ONLY && !fresh && art[s] && !(ovId && art[s].tmdbId !== ovId)) continue;
-    if (filter || SLUG_ONLY || fresh) { try { fs.unlinkSync(path.join(CACHE_DIR, 'tmdb-' + s + '.json')); } catch (e) {} }
+    const wrong = recheck && art[s] && !ovId && !hold.has(s) && !isThisShow(entry.name, art[s].title, art[s].year);
+    if (recheck && !wrong) continue;
+    if (!filter && !SLUG_ONLY && !fresh && !wrong && art[s] && !(ovId && art[s].tmdbId !== ovId)) continue;
+    if (filter || SLUG_ONLY || fresh || wrong) { try { fs.unlinkSync(path.join(CACHE_DIR, 'tmdb-' + s + '.json')); } catch (e) {} }
     try {
       const a = await lookup(entry);
+      // No TMDB record passes: the old art stays. A builder never removes art on its own: on 21 Nov 2026 a run that did
+      // cleared right art (Columbo and M*A*S*H, whose years and cached TVmaze records differ between sources; "Luke Cage"
+      // is TMDB's "Marvel's Luke Cage"), and names alone cannot tell those from wrong art ("Fear" wearing Cape Fear). Art
+      // to remove is a person's call: these lines list it.
+      if (!a && art[s] && (filter || SLUG_ONLY || fresh || wrong)) {
+        miss++; console.log(`${entry.name}  ->  no better TMDB record; kept ${art[s].title} (${art[s].year})${exactName(idOf(entry.name).names, art[s].title) ? '' : ': CHECK BY EYE, another name'}`); continue;
+      }
       if (a) { art[s] = a; done++; if (done % 25 === 0) fs.writeFileSync(OUT, JSON.stringify(art, null, 1)); /* flush so the nightly time cap keeps what was fetched */ console.log(`${entry.name}  ->  ${a.title} (${a.year}) ${a.poster ? 'poster' : 'no poster'}, ${a.genres.join('/') || 'no genres'}`); }
       else { miss++; console.log(`${entry.name}  ->  no TMDB match`); }
     } catch (e) { miss++; console.log(`${entry.name}  ->  ${e.message}`); }

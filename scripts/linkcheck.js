@@ -32,7 +32,29 @@ for (const f of fs.readdirSync(SHOWS)) {
 // deterministic-ish rotation: a different slice each night, by day number
 const day = Math.floor(Date.now() / 864e5);
 const start = files.length ? (day * SAMPLE) % files.length : 0;
-const picks = files.slice(start, start + SAMPLE).concat(files.slice(0, Math.max(0, start + SAMPLE - files.length)));
+const rotation = files.slice(start, start + SAMPLE).concat(files.slice(0, Math.max(0, start + SAMPLE - files.length)));
+// Trivia's clip, picture and sound questions play these files on a big screen in front of a room, so they go first: a slice of
+// them each night (--trivia, 75 by default; about 1,300 files, so each is asked again within about 18 nights), and the question bank
+// (scripts/trivia/bank.js) drops a retired one on its next build. Before this, a file trivia used came up in the rotation once in
+// more than a year, and the hand check found a clip whose Archive item had gone dark (plan T5, 21 Nov 2026). voidtv only.
+const TRIVIA_SAMPLE = args.includes('--trivia') ? +(args[args.indexOf('--trivia') + 1]) || 0 : 75;
+function triviaUrls() {
+  const dir = path.join(ROOT, 'trivia', 'bank'); const urls = new Set();
+  if (PROFILE.name !== 'voidtv' || !fs.existsSync(dir)) return urls;
+  for (const f of fs.readdirSync(dir).filter((x) => /^(tv|movies)-\d+\.json$/.test(x))) {
+    let j; try { j = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')); } catch (e) { continue; }
+    for (const q of (Array.isArray(j) ? j : j.questions || [])) if (q.media && q.media.url) urls.add(q.media.url.split('#')[0]);
+  }
+  return urls;
+}
+const tUrls = triviaUrls();
+// Files the shows list does not hold (the TV movie clips) are named the same way, item|file name without its extension.
+const known = new Set(files.map((f) => f.url));
+const fromUrl = (u) => { const m = u.match(/\/download\/([^/]+)\/(.+)$/); if (!m) return null; const name = decodeURIComponent(m[2]).replace(/\.[^./]+$/, ''); return { show: 'TV movie', slug: '', key: m[1] + '|' + name, url: u }; };
+const tFiles = files.filter((f) => tUrls.has(f.url)).concat([...tUrls].filter((u) => !known.has(u)).map(fromUrl).filter(Boolean)).sort((a, b) => a.key.localeCompare(b.key));
+const tStart = tFiles.length ? (day * TRIVIA_SAMPLE) % tFiles.length : 0;
+const tPicks = TRIVIA_SAMPLE ? tFiles.slice(tStart, tStart + TRIVIA_SAMPLE).concat(tFiles.slice(0, Math.max(0, tStart + TRIVIA_SAMPLE - tFiles.length))) : [];
+const picks = [...new Map([...tPicks, ...rotation].map((f) => [f.key, f])).values()];
 // also re-test a few previously dead files so takedowns that come back are forgiven
 const retest = Object.keys(dead).slice((day * 10) % Math.max(1, Object.keys(dead).length)).slice(0, 10);
 
@@ -51,25 +73,57 @@ async function alive(url) {
   return true;
 }
 
+// A whole Archive item taken down (dark): one dead file often means the whole upload is gone, and the matcher and the
+// question bank would only swap in another file from the same dead item (trivia's hand check, 21 Nov 2026: a "Dragons: Race
+// to the Edge" upload went dark and the bank moved to its other episodes, all 403). So for each item with a dead file the
+// Archive is asked once whether the item itself is gone; if it is, every file of it is retired together.
+const itemAsked = new Set();
+async function itemGone(item) {
+  try {
+    const r = await fetch('https://archive.org/metadata/' + encodeURIComponent(item), { signal: AbortSignal.timeout(REQUEST_MS) });
+    if (!r.ok) return false;
+    const j = await r.json();
+    return !!(j && (j.is_dark || (j.created && !j.metadata) || (j.metadata === undefined && Object.keys(j).length === 0)));
+  } catch (e) { return false; } // trouble asking is not a takedown
+}
+async function retireItem(item, at, newlyDead) {
+  if (itemAsked.has(item)) return; itemAsked.add(item);
+  if (!(await itemGone(item))) return;
+  let n = 0;
+  for (const f of files.concat(tFiles)) {
+    if (!f.key.startsWith(item + '|') || dead[f.key]) continue;
+    dead[f.key] = { at, show: f.show, slug: f.slug, why: 'the whole item was taken down' }; n++;
+  }
+  if (n) { newlyDead.push(item + ' · the whole item, ' + n + ' more file(s)'); console.log('DEAD ITEM ' + item + ': ' + n + ' more file(s) retired with it'); }
+  await sleep(1000);
+}
+
 (async () => {
   let checked = 0, newlyDead = [], revived = [], partial = false;
+  const at = new Date().toISOString().slice(0, 10);
   for (const p of picks) {
     if (overBudget()) { partial = true; break; }
     checked++;
     const ok = await alive(p.url);
-    if (!ok && !dead[p.key]) { dead[p.key] = { at: new Date().toISOString().slice(0, 10), show: p.show, slug: p.slug }; newlyDead.push(p.show + ' · ' + p.key.slice(0, 60)); console.log('DEAD ' + p.show + ': ' + p.key.slice(0, 80)); }
+    if (!ok && !dead[p.key]) { dead[p.key] = { at, show: p.show, slug: p.slug }; newlyDead.push(p.show + ' · ' + p.key.slice(0, 60)); console.log('DEAD ' + p.show + ': ' + p.key.slice(0, 80)); }
+    if (!ok) await retireItem(p.key.split('|')[0], at, newlyDead);
     await sleep(1000);
+  }
+  // The items already on the list are asked too (one request each), so files of a dark item that were never sampled go now.
+  for (const key of Object.keys(dead)) {
+    if (overBudget()) { partial = true; break; }
+    await retireItem(key.split('|')[0], at, newlyDead);
   }
   for (const key of retest) {
     if (overBudget()) { partial = true; break; }
-    const d = dead[key]; const url = files.find((f) => f.key === key)?.url;
+    const d = dead[key]; const url = (files.find((f) => f.key === key) || tFiles.find((f) => f.key === key))?.url;
     if (!url) continue;
     if (await alive(url)) { delete dead[key]; revived.push(key); console.log('BACK ' + key.slice(0, 80)); }
     await sleep(1000);
   }
   fs.writeFileSync(DEAD, JSON.stringify(dead, null, 1));
   const minutes = Math.round((Date.now() - t0) / 6000) / 10;
-  const summary = { at: new Date().toISOString(), checked, sample: picks.length, partial, minutes, slow, dead: newlyDead.length, deadTotal: Object.keys(dead).length, newlyDead: newlyDead.slice(0, 50), revived, population: files.length };
+  const summary = { at: new Date().toISOString(), checked, sample: picks.length, trivia: tPicks.length, triviaFiles: tFiles.length, partial, minutes, slow, dead: newlyDead.length, deadTotal: Object.keys(dead).length, newlyDead: newlyDead.slice(0, 50), revived, population: files.length };
   fs.mkdirSync(path.dirname(OUT), { recursive: true });
   fs.writeFileSync(OUT, JSON.stringify(summary, null, 1));
   console.log(`\nchecked ${checked} of ${files.length} files in ${minutes} min${partial ? ' (stopped at the time budget)' : ''}: ${newlyDead.length} newly dead, ${revived.length} back, ${Object.keys(dead).length} retired in all; ${slow} slow request(s)`);

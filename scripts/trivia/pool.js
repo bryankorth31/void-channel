@@ -123,16 +123,8 @@ async function fetchAll(list, kind, cacheFile, tok, limit) {
   return cache;
 }
 
-// Is TMDB's record the same show as TVmaze's? The catalog joins them by id, and a wrong join would hand a show another
-// show's rating, votes and cast (the catalog's "Clubhouse", a 2004 drama, carried Mickey Mouse Clubhouse's TMDB id).
-// Same when the names match once tidied (or one holds the other) and the first years are at most one apart (pure; tested).
-function tidy(s) { return String(s || '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/&/g, ' and ').replace(/^the\s+/, '').replace(/[^a-z0-9]+/g, ' ').trim(); }
-function sameShow(tvmazeName, tvmazeFirst, tmdbName, tmdbFirst) {
-  const a = tidy(tvmazeName), b = tidy(tmdbName);
-  if (!a || !b || !(a === b || a.includes(b) || b.includes(a))) return false;
-  const ya = parseInt(String(tvmazeFirst || '').slice(0, 4), 10), yb = parseInt(String(tmdbFirst || '').slice(0, 4), 10);
-  return !(ya && yb) || Math.abs(ya - yb) <= 1;
-}
+// Is TMDB's record the same show as TVmaze's? (scripts/lib/sameshow.js, shared with scripts/art.js since 21 Nov 2026.)
+const { sameShow } = require('../lib/sameshow');
 
 // The pool from the titles and the cache (pure; tested).
 function buildPool(shows, films, tvCache, filmCache) {

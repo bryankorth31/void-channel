@@ -94,9 +94,12 @@ async function main() {
   for (const entry of LIST.shows) {
     const s = slug(entry.name);
     const a = ART[s];
-    if (!a || !a.tmdbId) { skipped++; continue; }
     const outFile = path.join(OUT_DIR, s + '.json');
+    // A show with no TMDB record of its own has no cast here; a file left from an old wrong match (another show's people,
+    // night audit N12, 21 Nov 2026) is removed, and one made for a different TMDB id is made again.
+    if (!a || !a.tmdbId) { skipped++; if (fs.existsSync(outFile)) { fs.unlinkSync(outFile); console.log(`${entry.name}: no TMDB record of its own; old cast removed`); } continue; }
     let rec = (!fresh && fs.existsSync(outFile)) ? JSON.parse(fs.readFileSync(outFile, 'utf8')) : null;
+    if (rec && rec.tmdbId && rec.tmdbId !== a.tmdbId) rec = null;
     let dirty = false;
     if (!rec) {
       let c;

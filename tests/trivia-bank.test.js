@@ -130,6 +130,19 @@ test('clips: only LIVE MP4 episodes of five minutes or more, ten seconds from th
   }
 });
 
+// Hand check T5 (21 Nov 2026): a clip whose Archive item had gone dark was still in the bank. The dead-file list
+// (catalog/dead-files.json, item|name with or without the extension, as match.js reads it) keeps such a file out.
+test('clips: a file on the dead-file list makes no question, named with or without its extension', () => {
+  for (const key of ['alpha_s3|e1.mp4', 'alpha_s3|e1']) {
+    const { db, pool } = fixture();
+    const data = B.gather(db, pool, new Set(), {}, metaOf, { [key]: { at: '2026-11-21', slug: 'alpha' } });
+    data.cards = cards;
+    const clips = B.makeQuestions(data).filter((x) => x.media);
+    assert.ok(clips.length >= 1, key + ': the other LIVE file still makes a clip');
+    assert.ok(clips.every((q) => q.media.item !== 'alpha_s3'), key + ': never the dead file');
+  }
+});
+
 test('a self-listed episode name (an upload file name) is never asked', () => {
   const { qs } = build();
   assert.ok(!qs.some((x) => /upload file name/.test(x.q)));

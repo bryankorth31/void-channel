@@ -92,7 +92,7 @@ function openDb() {
 // Everything the templates need, in plain objects, so the templates themselves stay pure and testable.
 // foreign: names of shows VoidTV's list marks as not in English. Their decks would ask a US crowd about actors and
 // episode names it has never heard, so they stay out for now (a World TV deck could take them later).
-function gather(db, pool, foreign, overrides, metaOf) {
+function gather(db, pool, foreign, overrides, metaOf, deadFiles) {
   const line = pool.fameLine;
   if (!line) throw new Error('catalog/trivia-pool.json has no fame line; run node scripts/trivia/pool.js');
   const away = foreign || new Set();
@@ -113,6 +113,11 @@ function gather(db, pool, foreign, overrides, metaOf) {
   // Clips: only episodes VoidTV plays today (LIVE: matched with confidence), as MP4 files a browser plays with sound (match.js has
   // already swapped a silent original for the Archive's own .ia.mp4 copy), at least five minutes long.
   const getClips = db.prepare("select season, number, name, item, file, url, seconds from episodes where show_slug = ? and state = 'LIVE' and playable = 1 and seconds >= 300 and format in ('MPEG4', 'h.264', 'h.264 IA') and lower(url) like '%.mp4' order by season, number");
+  // Files the Archive has taken down (catalog/dead-files.json, keyed item|file, written by scripts/linkcheck.js, which checks
+  // trivia's own clip files first each night): a clip, picture or sound question never plays one (hand check T5, 21 Nov 2026).
+  const DEAD = (deadFiles !== undefined ? deadFiles : readJson(path.join(ROOT, 'catalog', 'dead-files.json'), {})) || {};
+  // The list names a file as item|name, the name with or without its extension (match.js reads it the same way).
+  const alive = (item, url) => { const f = decodeURIComponent(String(url || '').split('/download/' + item + '/')[1] || '').split('#')[0]; return !DEAD[item + '|' + f] && !DEAD[item + '|' + f.replace(/\.[^.\/]+$/, '')]; };
   for (const [slug, p] of showBand) {
     const s = getShow.get(slug);
     if (!s) continue;
@@ -120,7 +125,7 @@ function gather(db, pool, foreign, overrides, metaOf) {
     s.cast = getCast.all(slug);
     s.castRead = fileDay(path.join(ROOT, 'catalog', 'people', slug + '.json'));
     s.episodes = getEps.all(slug);
-    s.clips = getClips.all(slug);
+    s.clips = getClips.all(slug).filter((e) => alive(e.item, e.url));
     shows.push(s);
   }
   // How many shows carry each episode name, over the whole catalog (not just the pool), so "only one show" is true.
@@ -132,6 +137,7 @@ function gather(db, pool, foreign, overrides, metaOf) {
     const f = getFilm.get(+id);
     if (!f) continue;
     f.band = p.band; f.votes = p.votes; f.tmdbSource = p.source; f.read = day(pool.builtAt);
+    if (f.item && f.url && !alive(f.item, f.url)) f.url = null; // taken down: no clip (filmClip needs a url)
     films.push(f);
   }
   const cardsDir = path.join(ROOT, 'play', 'cards');

@@ -1,58 +1,157 @@
 {
  "show": "Spawn",
  "slug": "spawn",
- "tmdbId": 35331,
+ "tmdbId": 10331,
  "cast": [
   {
-   "id": 1230375,
-   "name": "Steven 'Bajo' O'Donnell",
-   "photo": "https://image.tmdb.org/t/p/w185/aeEgN9W4muJ4l7OiIkKWQKJmqFg.jpg",
+   "id": 64849,
+   "name": "Todd McFarlane",
+   "photo": "https://image.tmdb.org/t/p/w185/fG0NF6gKK0lBwJTtTPXzp4e4yp8.jpg",
    "character": "Self - Host",
-   "episodes": 314
+   "episodes": 18
   },
   {
-   "id": 1207768,
-   "name": "Stephanie Bendixsen",
-   "photo": "https://image.tmdb.org/t/p/w185/kQPpYr4rzHNCSwwDqr3wCdCxOEl.jpg",
-   "character": "Self - Host",
-   "episodes": 294
+   "id": 65827,
+   "name": "Keith David",
+   "photo": "https://image.tmdb.org/t/p/w185/1x0QXavmIy3QmhyrOsV7gMnJaEx.jpg",
+   "character": "Al Simmons / Spawn (voice)",
+   "episodes": 18
   },
   {
-   "id": 1846773,
-   "name": "Angharad Yeo",
-   "photo": "https://image.tmdb.org/t/p/w185/7q1b0ks0mRcWzOE7enuZf3NMwvC.jpg",
-   "character": "Self - Host",
-   "episodes": 104
+   "id": 15413,
+   "name": "Richard Dysart",
+   "photo": "https://image.tmdb.org/t/p/w185/yQOaZexN3YbqGWOguu2VrjsvX2G.jpg",
+   "character": "Nicholas Cogliostro (voice)",
+   "episodes": 18
   },
   {
-   "id": 3314978,
-   "name": "Gemma Driscoll",
-   "photo": "https://image.tmdb.org/t/p/w185/zcUiUGBUORd0SfwEwjmviKKv7hK.jpg",
-   "character": "Self - Host",
-   "episodes": 84
-  },
-  {
-   "id": 3314994,
-   "name": "William Yates",
+   "id": 95200,
+   "name": "Dominique Jennings",
    "photo": null,
-   "character": "Self - Host",
-   "episodes": 44
+   "character": "Wanda Blake (voice)",
+   "episodes": 18
   },
   {
-   "id": 1846779,
-   "name": "Gus Ronald",
-   "photo": "https://image.tmdb.org/t/p/w185/yT1kILjdnlo1UDjd0jpNunJBOuq.jpg",
-   "character": "Self - Host",
-   "episodes": 20
+   "id": 1739,
+   "name": "James Keane",
+   "photo": "https://image.tmdb.org/t/p/w185/qGOuDCsYQ6IVfUr2P5K2pV6v9Ij.jpg",
+   "character": "Sam Burke (voice)",
+   "episodes": 18
   },
   {
-   "id": 3435701,
-   "name": "Chloé Hayden",
-   "photo": "https://image.tmdb.org/t/p/w185/aorTK7XsxZtOm380mvRfh6uuuKc.jpg",
-   "character": "Self",
+   "id": 8316,
+   "name": "Michael McShane",
+   "photo": "https://image.tmdb.org/t/p/w185/xGd7WMiumvnsGttbBXVRsrhos7X.jpg",
+   "character": "Twitch Williams (voice)",
+   "episodes": 18
+  },
+  {
+   "id": 79050,
+   "name": "John Rafter Lee",
+   "photo": "https://image.tmdb.org/t/p/w185/sbC7Lye8KmVOilHGIHZin4rRKyI.jpg",
+   "character": "Jason Wynn (voice)",
+   "episodes": 18
+  },
+  {
+   "id": 5504,
+   "name": "Michael Nicolosi",
+   "photo": "https://image.tmdb.org/t/p/w185/s3jxEzrq7RFWirtdvycXLAuNN3g.jpg",
+   "character": "Clown (voice)",
+   "episodes": 18
+  },
+  {
+   "id": 121276,
+   "name": "Victor Love",
+   "photo": "https://image.tmdb.org/t/p/w185/cA9DY2dW9qXMS5TtagtAV2IbzPg.jpg",
+   "character": "Terry Fitzgerald (voice)",
+   "episodes": 12
+  },
+  {
+   "id": 87118,
+   "name": "Michael Beach",
+   "photo": "https://image.tmdb.org/t/p/w185/7gCBCpK2OSzuUWk5iTZds9NjqkF.jpg",
+   "character": "Terry Fitzgerald (voice)",
+   "episodes": 6
+  },
+  {
+   "id": 780,
+   "name": "Ronny Cox",
+   "photo": "https://image.tmdb.org/t/p/w185/cKkVkqft2RacSDhsKxO8nMFgeAd.jpg",
+   "character": "",
+   "episodes": 3
+  },
+  {
+   "id": 10431,
+   "name": "Jennifer Jason Leigh",
+   "photo": "https://image.tmdb.org/t/p/w185/7DbG2AO3nygHAkNC866HLPKkxv9.jpg",
+   "character": "",
+   "episodes": 1
+  },
+  {
+   "id": 60739,
+   "name": "Kath Soucie",
+   "photo": "https://image.tmdb.org/t/p/w185/dSE1JtsdA1aSgIIw415bsXtmkPg.jpg",
+   "character": "",
    "episodes": 1
   }
  ],
- "crew": [],
- "fetchedAt": "2026-11-21T06:08:31.753Z"
+ "crew": [
+  {
+   "id": 64849,
+   "name": "Todd McFarlane",
+   "photo": "https://image.tmdb.org/t/p/w185/fG0NF6gKK0lBwJTtTPXzp4e4yp8.jpg",
+   "jobs": [
+    "Creator",
+    "Executive Producer"
+   ],
+   "episodes": 18
+  },
+  {
+   "id": 188269,
+   "name": "John Leekley",
+   "photo": "https://image.tmdb.org/t/p/w185/1OCl1T6oNA2hKSBgXxhFEsQxPtd.jpg",
+   "jobs": [
+    "Executive Producer",
+    "Writer"
+   ],
+   "episodes": 18
+  },
+  {
+   "id": 1242606,
+   "name": "Rebekah Bradford",
+   "photo": "https://image.tmdb.org/t/p/w185/s6jdk3WvGPXwprndjsuI179VKYU.jpg",
+   "jobs": [
+    "Writer"
+   ],
+   "episodes": 18
+  },
+  {
+   "id": 35270,
+   "name": "Eric Radomski",
+   "photo": "https://image.tmdb.org/t/p/w185/z1vRonppwah0DVC4bvb711ukP4a.jpg",
+   "jobs": [
+    "Director"
+   ],
+   "episodes": 4
+  },
+  {
+   "id": 4231587,
+   "name": "John Hays",
+   "photo": null,
+   "jobs": [
+    "Director"
+   ],
+   "episodes": 2
+  },
+  {
+   "id": 56452,
+   "name": "Alan B. McElroy",
+   "photo": "https://image.tmdb.org/t/p/w185/uUVDalBQ2kwrlzCcZL9HaN45XsU.jpg",
+   "jobs": [
+    "Writer"
+   ],
+   "episodes": 2
+  }
+ ],
+ "fetchedAt": "2026-10-13T18:29:31.882Z"
 }

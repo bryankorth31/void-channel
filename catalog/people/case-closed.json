@@ -1,16 +1,782 @@
 {
  "show": "Case Closed",
  "slug": "case-closed",
- "tmdbId": 67076,
+ "tmdbId": 30983,
  "cast": [
   {
-   "id": 25879,
-   "name": "Geoff Pierson",
-   "photo": "https://image.tmdb.org/t/p/w185/vIhxKBwqV19CwHdPuycmkchYOba.jpg",
-   "character": "Self - Narrator",
+   "id": 68470,
+   "name": "Minami Takayama",
+   "photo": "https://image.tmdb.org/t/p/w185/4Gunxt2UWnAX74ZoXKtqK2rI0e.jpg",
+   "character": "Conan Edogawa (voice)",
+   "episodes": 1217
+  },
+  {
+   "id": 68472,
+   "name": "Kappei Yamaguchi",
+   "photo": "https://image.tmdb.org/t/p/w185/mJyxKRZxLv9D7LH5KcNSkjSKYOB.jpg",
+   "character": "Shinichi Kudo (voice)",
+   "episodes": 1217
+  },
+  {
+   "id": 87582,
+   "name": "Wakana Yamazaki",
+   "photo": "https://image.tmdb.org/t/p/w185/1hBk3w3v1p1VuAHs5On9nvL2rX2.jpg",
+   "character": "Ran Mouri (voice)",
+   "episodes": 1217
+  },
+  {
+   "id": 90133,
+   "name": "Akemi Okamura",
+   "photo": "https://image.tmdb.org/t/p/w185/qEwVfsrA23SCzRZMSlghw2sHctQ.jpg",
+   "character": "Ran Mouri (voice)",
+   "episodes": 1217
+  },
+  {
+   "id": 54690,
+   "name": "Akira Kamiya",
+   "photo": "https://image.tmdb.org/t/p/w185/tJRMwbWFObv03KhATALs0Xbbgq7.jpg",
+   "character": "Kogoro Mouri (voice)",
+   "episodes": 1217
+  },
+  {
+   "id": 237076,
+   "name": "Rikiya Koyama",
+   "photo": "https://image.tmdb.org/t/p/w185/hsZm87BORLpzhaycBaWOD5xpjVC.jpg",
+   "character": "Kogoro Mouri (voice)",
+   "episodes": 1217
+  },
+  {
+   "id": 40325,
+   "name": "Megumi Hayashibara",
+   "photo": "https://image.tmdb.org/t/p/w185/3Alm4pmBIxpeeh0Sdippxdbkpne.jpg",
+   "character": "Ai Haibara (voice)",
+   "episodes": 1217
+  },
+  {
+   "id": 142704,
+   "name": "Kenichi Ogata",
+   "photo": "https://image.tmdb.org/t/p/w185/iQLEawIP2593yrGy22GzLSpnfgl.jpg",
+   "character": "Hiroshi Agasa (voice)",
+   "episodes": 1217
+  },
+  {
+   "id": 1244457,
+   "name": "Yukiko Iwai",
+   "photo": "https://image.tmdb.org/t/p/w185/9JpPkRCd4eYzMDUex8LZtSvEbUm.jpg",
+   "character": "Ayumi Yoshida (voice)",
+   "episodes": 1217
+  },
+  {
+   "id": 112278,
+   "name": "Wataru Takagi",
+   "photo": "https://image.tmdb.org/t/p/w185/amccLvyTl5JP7T9F05BojgQedNw.jpg",
+   "character": "Genta Kojima (voice)",
+   "episodes": 1217
+  },
+  {
+   "id": 73044,
+   "name": "Ikue Otani",
+   "photo": "https://image.tmdb.org/t/p/w185/my8LBLQ4MsK4hRz1PAATIqtieaI.jpg",
+   "character": "Mitsuhiko Tsuburaya (voice)",
+   "episodes": 1217
+  },
+  {
+   "id": 87583,
+   "name": "Chafurin",
+   "photo": "https://image.tmdb.org/t/p/w185/kiPG7EtYWxkj78US35gnTIMq5Dn.jpg",
+   "character": "Juzo Megure (voice)",
+   "episodes": 1217
+  },
+  {
+   "id": 1070347,
+   "name": "Ichikawa Ebizo XI",
+   "photo": "https://image.tmdb.org/t/p/w185/vjGX7Y2DxJ0YchRWdIkApaVRJCk.jpg",
+   "character": "Ichikawa Ebizo XI (voice)",
    "episodes": 2
+  },
+  {
+   "id": 101912,
+   "name": "Yukitoshi Hori",
+   "photo": "https://image.tmdb.org/t/p/w185/ygck090UXAWoRvFuakktMdRSsxO.jpg",
+   "character": "(voice)",
+   "episodes": 1
+  },
+  {
+   "id": 1253087,
+   "name": "Mari Maruta",
+   "photo": "https://image.tmdb.org/t/p/w185/zv1tFZFZ83XyEeGvmdBfazzGVGe.jpg",
+   "character": "Aiko (voice)",
+   "episodes": 1
+  },
+  {
+   "id": 1251444,
+   "name": "Yumi Hikita",
+   "photo": "https://image.tmdb.org/t/p/w185/8PxZZvwzlxYYSe4ooqtIVlWDQBW.jpg",
+   "character": "Hitomi (voice)",
+   "episodes": 1
+  },
+  {
+   "id": 126283,
+   "name": "Isshin Chiba",
+   "photo": "https://image.tmdb.org/t/p/w185/79dHFfMSqnpPkh4DNXNLitYxyJ0.jpg",
+   "character": "Kishida (voice)",
+   "episodes": 1
+  },
+  {
+   "id": 1247665,
+   "name": "Naomi Nagasawa",
+   "photo": "https://image.tmdb.org/t/p/w185/dnUuHzWs0SKSRW8Vrz4FMQ7cBLa.jpg",
+   "character": "Reiko (voice)",
+   "episodes": 1
+  },
+  {
+   "id": 1243319,
+   "name": "Takeshi Watabe",
+   "photo": "https://image.tmdb.org/t/p/w185/5H3ViQhKZFKSqCzqORDnABpa5z4.jpg",
+   "character": "Sewa Takanori (voice)",
+   "episodes": 1
+  },
+  {
+   "id": 65438,
+   "name": "Shinpachi Tsuji",
+   "photo": "https://image.tmdb.org/t/p/w185/af5ILJbixauO84bsuLOr8XSU9yd.jpg",
+   "character": "Shachou (voice)",
+   "episodes": 1
+  },
+  {
+   "id": 126282,
+   "name": "Hiroshi Naka",
+   "photo": "https://image.tmdb.org/t/p/w185/9EmVmKWMczAd6qIGnmoYB2JBb7i.jpg",
+   "character": "Asou (voice)",
+   "episodes": 1
+  },
+  {
+   "id": 114739,
+   "name": "Yuzuru Fujimoto",
+   "photo": "https://image.tmdb.org/t/p/w185/wDEh8Jf17dAJzRHHjw3DL3zqhGH.jpg",
+   "character": "Tani (voice)",
+   "episodes": 1
+  },
+  {
+   "id": 933722,
+   "name": "Kae Araki",
+   "photo": "https://image.tmdb.org/t/p/w185/cxTyiRskkgUpQfZrCw7zpkocV5I.jpg",
+   "character": "Tani Akiko (voice)",
+   "episodes": 1
+  },
+  {
+   "id": 552683,
+   "name": "Hochu Otsuka",
+   "photo": "https://image.tmdb.org/t/p/w185/3RHQcrsWnAFK6AifSis1lMq08cR.jpg",
+   "character": "Yuukaihan (voice)",
+   "episodes": 1
   }
  ],
- "crew": [],
- "fetchedAt": "2026-11-21T06:09:04.916Z"
+ "crew": [
+  {
+   "id": 3746081,
+   "name": "Akira Yoshimura",
+   "photo": null,
+   "jobs": [
+    "Director"
+   ],
+   "episodes": 10
+  },
+  {
+   "id": 1253060,
+   "name": "Akatsuki Yamatoya",
+   "photo": null,
+   "jobs": [
+    "Writer"
+   ],
+   "episodes": 4
+  },
+  {
+   "id": 1569523,
+   "name": "Nobuharu Kamanaka",
+   "photo": "https://image.tmdb.org/t/p/w185/yo3DA4cmoDDe9hvE2PTjTYYUszq.jpg",
+   "jobs": [
+    "Director"
+   ],
+   "episodes": 2
+  },
+  {
+   "id": 1381235,
+   "name": "Masato Sato",
+   "photo": null,
+   "jobs": [
+    "Director"
+   ],
+   "episodes": 2
+  },
+  {
+   "id": 1842576,
+   "name": "Yoshihisa Matsumoto",
+   "photo": null,
+   "jobs": [
+    "Writer"
+   ],
+   "episodes": 2
+  },
+  {
+   "id": 1255755,
+   "name": "Junichi Miyashita",
+   "photo": "https://image.tmdb.org/t/p/w185/6AFgV2vCnW2CgfotR9hjasz8jCz.jpg",
+   "jobs": [
+    "Writer"
+   ],
+   "episodes": 2
+  },
+  {
+   "id": 66156,
+   "name": "Hiroshi Kashiwabara",
+   "photo": "https://image.tmdb.org/t/p/w185/liI1pzEacRFTJw6WQsjioqJhGUV.jpg",
+   "jobs": [
+    "Writer"
+   ],
+   "episodes": 2
+  },
+  {
+   "id": 101915,
+   "name": "Yasuichiro Yamamoto",
+   "photo": null,
+   "jobs": [
+    "Director"
+   ],
+   "episodes": 1
+  },
+  {
+   "id": 3105761,
+   "name": "Masakazu Yamazaki",
+   "photo": null,
+   "jobs": [
+    "Director"
+   ],
+   "episodes": 1
+  },
+  {
+   "id": 2188791,
+   "name": "Minoru Tozawa",
+   "photo": null,
+   "jobs": [
+    "Director"
+   ],
+   "episodes": 1
+  },
+  {
+   "id": 2381606,
+   "name": "Matsuo Asami",
+   "photo": null,
+   "jobs": [
+    "Director"
+   ],
+   "episodes": 1
+  },
+  {
+   "id": 99203,
+   "name": "Toshiya Shinohara",
+   "photo": "https://image.tmdb.org/t/p/w185/oGuIUXd2s4x97Pm8zVFA0R7x9EO.jpg",
+   "jobs": [
+    "Director"
+   ],
+   "episodes": 1
+  },
+  {
+   "id": 2646562,
+   "name": "Shuji Miyahara",
+   "photo": null,
+   "jobs": [
+    "Director"
+   ],
+   "episodes": 1
+  },
+  {
+   "id": 2387640,
+   "name": "Koichiro Kuroda",
+   "photo": null,
+   "jobs": [
+    "Director"
+   ],
+   "episodes": 1
+  },
+  {
+   "id": 1456652,
+   "name": "Kojin Ochi",
+   "photo": null,
+   "jobs": [
+    "Director"
+   ],
+   "episodes": 1
+  },
+  {
+   "id": 102033,
+   "name": "Kenji Kodama",
+   "photo": "https://image.tmdb.org/t/p/w185/egHkNYdpKLt9GMAaDSSZA1uDX6K.jpg",
+   "jobs": [
+    "Director"
+   ],
+   "episodes": 1
+  }
+ ],
+ "fetchedAt": "2026-10-13T18:38:55.778Z",
+ "episodes": {
+  "1x1": {
+   "d": [
+    {
+     "id": 102033,
+     "name": "Kenji Kodama",
+     "photo": "https://image.tmdb.org/t/p/w185/egHkNYdpKLt9GMAaDSSZA1uDX6K.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 66156,
+     "name": "Hiroshi Kashiwabara",
+     "photo": "https://image.tmdb.org/t/p/w185/liI1pzEacRFTJw6WQsjioqJhGUV.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 101912,
+     "name": "Yukitoshi Hori",
+     "photo": "https://image.tmdb.org/t/p/w185/ygck090UXAWoRvFuakktMdRSsxO.jpg",
+     "as": "(voice)"
+    },
+    {
+     "id": 1253087,
+     "name": "Mari Maruta",
+     "photo": "https://image.tmdb.org/t/p/w185/zv1tFZFZ83XyEeGvmdBfazzGVGe.jpg",
+     "as": "Aiko (voice)"
+    },
+    {
+     "id": 1251444,
+     "name": "Yumi Hikita",
+     "photo": "https://image.tmdb.org/t/p/w185/8PxZZvwzlxYYSe4ooqtIVlWDQBW.jpg",
+     "as": "Hitomi (voice)"
+    },
+    {
+     "id": 126283,
+     "name": "Isshin Chiba",
+     "photo": "https://image.tmdb.org/t/p/w185/79dHFfMSqnpPkh4DNXNLitYxyJ0.jpg",
+     "as": "Kishida (voice)"
+    },
+    {
+     "id": 1247665,
+     "name": "Naomi Nagasawa",
+     "photo": "https://image.tmdb.org/t/p/w185/dnUuHzWs0SKSRW8Vrz4FMQ7cBLa.jpg",
+     "as": "Reiko (voice)"
+    },
+    {
+     "id": 1243319,
+     "name": "Takeshi Watabe",
+     "photo": "https://image.tmdb.org/t/p/w185/5H3ViQhKZFKSqCzqORDnABpa5z4.jpg",
+     "as": "Sewa Takanori (voice)"
+    },
+    {
+     "id": 65438,
+     "name": "Shinpachi Tsuji",
+     "photo": "https://image.tmdb.org/t/p/w185/af5ILJbixauO84bsuLOr8XSU9yd.jpg",
+     "as": "Shachou (voice)"
+    }
+   ]
+  },
+  "1x2": {
+   "d": [
+    {
+     "id": 99203,
+     "name": "Toshiya Shinohara",
+     "photo": "https://image.tmdb.org/t/p/w185/oGuIUXd2s4x97Pm8zVFA0R7x9EO.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 66156,
+     "name": "Hiroshi Kashiwabara",
+     "photo": "https://image.tmdb.org/t/p/w185/liI1pzEacRFTJw6WQsjioqJhGUV.jpg"
+    }
+   ],
+   "g": [
+    {
+     "id": 126282,
+     "name": "Hiroshi Naka",
+     "photo": "https://image.tmdb.org/t/p/w185/9EmVmKWMczAd6qIGnmoYB2JBb7i.jpg",
+     "as": "Asou (voice)"
+    },
+    {
+     "id": 114739,
+     "name": "Yuzuru Fujimoto",
+     "photo": "https://image.tmdb.org/t/p/w185/wDEh8Jf17dAJzRHHjw3DL3zqhGH.jpg",
+     "as": "Tani (voice)"
+    },
+    {
+     "id": 933722,
+     "name": "Kae Araki",
+     "photo": "https://image.tmdb.org/t/p/w185/cxTyiRskkgUpQfZrCw7zpkocV5I.jpg",
+     "as": "Tani Akiko (voice)"
+    },
+    {
+     "id": 552683,
+     "name": "Hochu Otsuka",
+     "photo": "https://image.tmdb.org/t/p/w185/3RHQcrsWnAFK6AifSis1lMq08cR.jpg",
+     "as": "Yuukaihan (voice)"
+    }
+   ]
+  },
+  "1x3": {
+   "d": [
+    {
+     "id": 1381235,
+     "name": "Masato Sato",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 1255755,
+     "name": "Junichi Miyashita",
+     "photo": "https://image.tmdb.org/t/p/w185/6AFgV2vCnW2CgfotR9hjasz8jCz.jpg"
+    }
+   ],
+   "g": []
+  },
+  "1x4": {
+   "d": [
+    {
+     "id": 1456652,
+     "name": "Kojin Ochi",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 102036,
+     "name": "Kazunari Kouchi",
+     "photo": "https://image.tmdb.org/t/p/w185/mMws5wEc7HWGLzXPzW5Jhbz8wP9.jpg"
+    }
+   ],
+   "g": []
+  },
+  "1x25": {
+   "d": [
+    {
+     "id": 1381235,
+     "name": "Masato Sato",
+     "photo": null
+    }
+   ],
+   "w": [],
+   "g": []
+  },
+  "1x464": {
+   "d": [
+    {
+     "id": 2646562,
+     "name": "Shuji Miyahara",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 2234439,
+     "name": "Takashi Sano",
+     "photo": null
+    }
+   ],
+   "g": []
+  },
+  "1x562": {
+   "d": [
+    {
+     "id": 3105761,
+     "name": "Masakazu Yamazaki",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 1255755,
+     "name": "Junichi Miyashita",
+     "photo": "https://image.tmdb.org/t/p/w185/6AFgV2vCnW2CgfotR9hjasz8jCz.jpg"
+    }
+   ],
+   "g": []
+  },
+  "1x563": {
+   "d": [
+    {
+     "id": 2188791,
+     "name": "Minoru Tozawa",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 1842576,
+     "name": "Yoshihisa Matsumoto",
+     "photo": null
+    }
+   ],
+   "g": []
+  },
+  "1x564": {
+   "d": [
+    {
+     "id": 1569523,
+     "name": "Nobuharu Kamanaka",
+     "photo": "https://image.tmdb.org/t/p/w185/yo3DA4cmoDDe9hvE2PTjTYYUszq.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 1842576,
+     "name": "Yoshihisa Matsumoto",
+     "photo": null
+    }
+   ],
+   "g": []
+  },
+  "1x565": {
+   "d": [
+    {
+     "id": 2381606,
+     "name": "Matsuo Asami",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 1121899,
+     "name": "Masaki Tsuji",
+     "photo": null
+    }
+   ],
+   "g": []
+  },
+  "1x566": {
+   "d": [
+    {
+     "id": 2387640,
+     "name": "Koichiro Kuroda",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 2247307,
+     "name": "Takeo Ohno",
+     "photo": null
+    }
+   ],
+   "g": []
+  },
+  "1x795": {
+   "d": [
+    {
+     "id": 101915,
+     "name": "Yasuichiro Yamamoto",
+     "photo": "https://image.tmdb.org/t/p/w185/rKLXDNrQQD6c9mQR2WRwoIkS5fN.jpg"
+    }
+   ],
+   "w": [
+    {
+     "id": 3070595,
+     "name": "Tatsuro Inamoto",
+     "photo": null
+    }
+   ],
+   "g": []
+  },
+  "1x804": {
+   "d": [],
+   "w": [],
+   "g": [
+    {
+     "id": 1070347,
+     "name": "Ichikawa Ebizo XI",
+     "photo": "https://image.tmdb.org/t/p/w185/vjGX7Y2DxJ0YchRWdIkApaVRJCk.jpg",
+     "as": "Ichikawa Ebizo XI (voice)"
+    }
+   ]
+  },
+  "1x805": {
+   "d": [],
+   "w": [],
+   "g": [
+    {
+     "id": 1070347,
+     "name": "Ichikawa Ebizo XI",
+     "photo": "https://image.tmdb.org/t/p/w185/vjGX7Y2DxJ0YchRWdIkApaVRJCk.jpg",
+     "as": "Ichikawa Ebizo XI (voice)"
+    }
+   ]
+  },
+  "1x994": {
+   "d": [
+    {
+     "id": 3746081,
+     "name": "Akira Yoshimura",
+     "photo": null
+    }
+   ],
+   "w": [],
+   "g": []
+  },
+  "1x1000": {
+   "d": [
+    {
+     "id": 3746081,
+     "name": "Akira Yoshimura",
+     "photo": null
+    }
+   ],
+   "w": [],
+   "g": []
+  },
+  "1x1003": {
+   "d": [
+    {
+     "id": 3746081,
+     "name": "Akira Yoshimura",
+     "photo": null
+    }
+   ],
+   "w": [],
+   "g": []
+  },
+  "1x1015": {
+   "d": [
+    {
+     "id": 3746081,
+     "name": "Akira Yoshimura",
+     "photo": null
+    }
+   ],
+   "w": [],
+   "g": []
+  },
+  "1x1016": {
+   "d": [],
+   "w": [
+    {
+     "id": 1253060,
+     "name": "Akatsuki Yamatoya",
+     "photo": null
+    }
+   ],
+   "g": []
+  },
+  "1x1017": {
+   "d": [],
+   "w": [
+    {
+     "id": 1253060,
+     "name": "Akatsuki Yamatoya",
+     "photo": null
+    }
+   ],
+   "g": []
+  },
+  "1x1020": {
+   "d": [
+    {
+     "id": 3746081,
+     "name": "Akira Yoshimura",
+     "photo": null
+    }
+   ],
+   "w": [],
+   "g": []
+  },
+  "1x1022": {
+   "d": [],
+   "w": [
+    {
+     "id": 1253060,
+     "name": "Akatsuki Yamatoya",
+     "photo": null
+    }
+   ],
+   "g": []
+  },
+  "1x1027": {
+   "d": [
+    {
+     "id": 3746081,
+     "name": "Akira Yoshimura",
+     "photo": null
+    }
+   ],
+   "w": [
+    {
+     "id": 1253060,
+     "name": "Akatsuki Yamatoya",
+     "photo": null
+    }
+   ],
+   "g": []
+  },
+  "1x1030": {
+   "d": [
+    {
+     "id": 1569523,
+     "name": "Nobuharu Kamanaka",
+     "photo": "https://image.tmdb.org/t/p/w185/yo3DA4cmoDDe9hvE2PTjTYYUszq.jpg"
+    }
+   ],
+   "w": [],
+   "g": []
+  },
+  "1x1035": {
+   "d": [
+    {
+     "id": 3746081,
+     "name": "Akira Yoshimura",
+     "photo": null
+    }
+   ],
+   "w": [],
+   "g": []
+  },
+  "1x1046": {
+   "d": [
+    {
+     "id": 3746081,
+     "name": "Akira Yoshimura",
+     "photo": null
+    }
+   ],
+   "w": [],
+   "g": []
+  },
+  "1x1060": {
+   "d": [
+    {
+     "id": 3746081,
+     "name": "Akira Yoshimura",
+     "photo": null
+    }
+   ],
+   "w": [],
+   "g": []
+  },
+  "1x1207": {
+   "d": [],
+   "w": [],
+   "g": [
+    {
+     "id": 3197690,
+     "name": "Hiroaki Morishima",
+     "photo": null,
+     "as": ""
+    },
+    {
+     "id": 2057243,
+     "name": "Yuka Kageyama",
+     "photo": "https://image.tmdb.org/t/p/w185/nRm8t2McH5lwqSpm3R5g4k7c8Eg.jpg",
+     "as": ""
+    }
+   ]
+  }
+ },
+ "episodesAt": "2026-10-19T11:34:59.012Z"
 }
