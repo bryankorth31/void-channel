@@ -140,6 +140,7 @@ function setLive(slug, live) {
   const c = (L.courses || []).find((x) => x.slug === slug);
   if (!c) throw new Error('No course ' + slug + ' in list.json');
   c.live = !!live;
+  for (const g of L.practice || []) if (g.course === slug) g.live = !!live;
   writeJson(LIST, L);
   return { slug, live: c.live };
 }
@@ -245,6 +246,16 @@ function scaleProblems(sc) {
   return out;
 }
 
+// A quiz quote from a practice site's lesson: the lesson's step must still say it, word for word. Pure.
+function lessonQuoteProblem(lesson, q) {
+  const step = (lesson.chapters || []).flatMap((c) => c.steps || []).find((x) => x.id === q.step);
+  if (!step || typeof step.say !== 'string') return 'the lesson has no step ' + q.step;
+  const say = tokens(step.say).join(' '), quote = tokens(q.quote).join(' ');
+  if (tokens(q.quote).length < 8) return 'the quote is under 8 words';
+  if (!(' ' + say + ' ').includes(' ' + quote + ' ')) return 'the lesson no longer says this word for word at step ' + q.step + ': ' + String(q.quote).slice(0, 60);
+  if ((step.src || []).some((x) => FORBIDDEN.test(String(x)) || /statpearls/i.test(String(x)))) return 'the step this quotes rests on a source the University does not use: ' + q.step;
+  return '';
+}
 async function check(log = () => {}, opt = {}) {
   const problems = [];
   const urls = new Map();
@@ -310,6 +321,19 @@ async function check(log = () => {}, opt = {}) {
     if (++n % 20 === 0) log(n + ' of ' + all.length + ' links checked');
   };
   for (let i = 0; i < all.length; i += 6) await Promise.all(all.slice(i, i + 6).map(one)); // six at a time: polite to the sites
+  // A quiz that quotes a practice site's lesson (Body Atlas) is checked against the lesson's own file, by lesson name
+  // and step id, so a line corrected over there is caught here instead of being misquoted.
+  for (const g of list().practice || []) {
+    if (!g.lessons) continue;
+    const files = new Map();
+    for (const c of builtCourses()) for (const u of c.units) for (const [i, q] of (u.quiz || []).entries()) {
+      if (!q.lesson || !(g.rooms || []).some((r) => r.id === q.lesson)) continue;
+      const where = c.slug + ' unit ' + u.n + ' quiz ' + (i + 1);
+      if (!files.has(q.lesson)) { try { const r = await fetch(g.url + g.lessons.replace('{id}', q.lesson), { headers: { 'user-agent': 'VoidUniversity-linkcheck/1.0' }, signal: AbortSignal.timeout(20000) }); files.set(q.lesson, r.ok ? await r.json() : null); } catch (e) { files.set(q.lesson, null); } }
+      const what = files.get(q.lesson) ? lessonQuoteProblem(files.get(q.lesson), q) : 'the lesson file did not answer: ' + q.lesson;
+      if (what) problems.push({ where, what });
+    }
+  }
   const out = { at: new Date().toISOString(), links: all.length, problems };
   writeJson(CHECK, out);
   return out;
@@ -1007,4 +1031,4 @@ function addQuestion(slug, n, m) {
   return { item: r.item, where: x.kept ? 'unit' : 'draft', count: x.u.quiz.length };
 }
 
-module.exports = { overview, scaffold, setLive, brief, rewriteBrief, check, media, hearLectures, retime, locate, search, transcript, unitNeeds, slugify, UNI, SRC, draft, keepDraft, gateDraft, sceneFrom, shelfPlan, shelfWrite, shelfChapters, gatePlain, setShelfLive, shelfBooks, classFrom, lectures, scaleProblems, scalesOf, linesAt, madeQuestion, makeUnits, makeLines, addQuestion };
+module.exports = { overview, scaffold, setLive, brief, rewriteBrief, check, media, hearLectures, retime, locate, search, transcript, unitNeeds, slugify, UNI, SRC, draft, keepDraft, gateDraft, sceneFrom, shelfPlan, shelfWrite, shelfChapters, gatePlain, setShelfLive, shelfBooks, classFrom, lectures, scaleProblems, scalesOf, linesAt, madeQuestion, makeUnits, makeLines, addQuestion, lessonQuoteProblem };

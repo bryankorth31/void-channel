@@ -1,6 +1,6 @@
 # The Hunt
 
-Wide-net results, 12745 shows: 3524 FOUND, 3794 TRACES, 5427 NOT FOUND.
+Wide-net results, 12746 shows: 3524 FOUND, 3794 TRACES, 5428 NOT FOUND.
 
 Mentions = Archive items naming the show in any field. Episode-shaped = video files whose runtime fits the show's TVmaze runtime. Named = those whose filename also carries the show name. FOUND = 8+ episode-shaped files.
 
@@ -7895,6 +7895,7 @@ Mentions = Archive items naming the show in any field. Episode-shaped = video fi
 | NOT FOUND | Saiyuki | Anime | 22 | 0 | 0 | 0 |  |
 | NOT FOUND | Sasaki and Peeps | Anime | 2 | 1 | 0 | 0 | sasaki-and-peeps-media-history-2026-version (0) |
 | NOT FOUND | Secret Mission - Undercover Agents Never Back Down! | Anime | 4 | 0 | 0 | 0 |  |
+| NOT FOUND | Seirei Gensouki: Spirit Chronicles | Anime | 5 | 1 | 0 | 0 | highlight-moment-seirei-gensouki-s-1 (0) |
 | NOT FOUND | So What's Wrong with Getting Reborn as a Goblin? | Anime | 0 | 0 | 0 | 0 |  |
 | NOT FOUND | Souryo to Majiwaru Shikiyoku no Yoru ni... | Anime | 0 | 0 | 0 | 0 |  |
 | NOT FOUND | Sparks of Tomorrow | Anime | 54 | 0 | 0 | 0 |  |

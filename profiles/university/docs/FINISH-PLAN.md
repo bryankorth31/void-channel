@@ -240,3 +240,16 @@ the HQ areas chat. Steps 7 to 10 start after the 22 Nov reset.
   no moving grain for people who ask for less motion. Not used, they belong to other builds: the classroom with
   children (Kids), Void Trivia Night (Trivia), and the style and material sheet (a reference). Open: the neon sign
   in the pictures says VOID ACADEMY and the site is named Void University.
+- 20 Nov 2026, Body Atlas in the University (Bryan, in the Body Atlas chat: "it needs toi be worked in to that";
+  in the first University chat: "add the body to university"; in this chat: "build it . also want more lessons").
+  Not a new panel: Body Atlas is a second practice site in list.json beside Mind Gym, and its lessons are its
+  rooms. A practice site can now say how a room opens, what it calls it, its own label and lines, and that it can
+  send people back (the link then carries from=university and the unit number, never an address). The Body area
+  has its first course, The body: four units (shoulder, hip, knee, spleen), each with why you need it, an everyday
+  scene, the lesson to open, a crystal and five questions. All 20 quiz lines quote a step of the lesson word for
+  word, checked against the lesson files fetched from the live site; `uni.js check` now does the same check and
+  refuses a quote from a step that rests on StatPearls. Every claim in the units comes from a lesson line. Preview
+  only: the course and the Body Atlas card are not live. Checked at 1316x821 and 821x1316: the piece, the link, a
+  quiz answer and its link to the lesson; no sideways scroll, no console errors. Not checked: the lesson opening
+  from the link on a tablet, and the back arrow, which the Body Atlas side is building. More lessons: they are
+  made in Body Atlas first; each new public one is then one room and one unit here (RUN.md section 15).

@@ -339,3 +339,35 @@ test('make questions: a device on the network gets the phone page and its room, 
   assert.ok(!/[—–]/.test(phone), 'no long dashes');
   assert.ok(!/Users|@gmail|bryan/i.test(phone), 'no personal details');
 });
+
+test('Body Atlas sits in the University as a practice site: its lessons open from units, and a quiz quote must be the lesson word for word', () => {
+  const L = list();
+  const g = L.practice.find((x) => x.name === 'Body Atlas');
+  assert.ok(g && g.area === 'Body' && g.course === 'the-body' && /^https:/.test(g.url), 'Body Atlas is not in the practice list');
+  const course = JSON.parse(fs.readFileSync(path.join(uni.UNI, 'courses', 'the-body.json'), 'utf8'));
+  const rooms = new Set(g.rooms.map((r) => r.id));
+  for (const u of course.units) {
+    assert.deepEqual(uni.unitNeeds(u, course), [], 'unit ' + u.n + ' is not whole');
+    assert.ok(u.main.role === 'train' && rooms.has(u.main.room), 'unit ' + u.n + ' opens no Body Atlas lesson');
+    assert.ok(u.quiz.length >= 4, 'unit ' + u.n + ' has under 4 questions');
+    for (const q of u.quiz) assert.ok(q.lesson === u.main.room && q.step && new Set(q.choices).size === 4 && q.a >= 0 && q.a < 4, 'a quiz line of unit ' + u.n + ' is not keyed to its lesson');
+  }
+  // the quote check, on a made-up lesson
+  const lesson = { chapters: [{ steps: [{ id: 's1', say: 'The spleen sits high on the left of the belly, behind the ribs.', src: ['a paper'] }, { id: 's2', say: 'It is found more often in skiing, soccer and basketball players.', src: ['StatPearls, some chapter'] }] }] };
+  assert.strictEqual(uni.lessonQuoteProblem(lesson, { step: 's1', quote: 'sits high on the left of the belly, behind the ribs.' }), '');
+  assert.match(uni.lessonQuoteProblem(lesson, { step: 's1', quote: 'sits low on the left of the belly, behind the ribs.' }), /no longer says this word for word/);
+  assert.match(uni.lessonQuoteProblem(lesson, { step: 's9', quote: 'sits high on the left of the belly, behind the ribs.' }), /no step/);
+  assert.match(uni.lessonQuoteProblem(lesson, { step: 's1', quote: 'behind the ribs.' }), /under 8 words/);
+  assert.match(uni.lessonQuoteProblem(lesson, { step: 's2', quote: 'It is found more often in skiing, soccer and basketball players.' }), /source the University does not use/);
+  build();
+  const page = fs.readFileSync(path.join(uni.UNI, 'site-preview', 'the-body.html'), 'utf8');
+  assert.ok(page.includes('href="https://body.bspokevisuals.com/?lesson=shoulder&amp;from=university&amp;unit=1"'), 'the shoulder unit does not open its lesson with the way back');
+  assert.ok(page.includes('>Open the lesson</a>') && page.includes('See it in 3D') && page.includes('each answer quotes the lesson') && page.includes('From the lesson: open it'), 'the lesson piece or its quiz is not worded for a lesson');
+  // Mind Gym rooms still open the old way
+  assert.ok(fs.readFileSync(path.join(uni.UNI, 'site-preview', 'critical-thinking.html'), 'utf8').includes('rooms/hole-finder/" target="_blank" rel="noopener">Open the room</a>'), 'a Mind Gym room no longer opens');
+  // the public copy carries the course and the card only once both are marked live
+  build('--site');
+  const live = L.courses.find((c) => c.slug === 'the-body').live;
+  assert.strictEqual(!!g.live, !!live, 'the course and its practice card must go live together');
+  assert.strictEqual(fs.existsSync(path.join(SITE, 'the-body.html')), !!live);
+});

@@ -1,0 +1,1098 @@
+{
+  "slug": "the-body",
+  "name": "The body",
+  "domain": "Body",
+  "kind": "authored",
+  "status": "draft",
+  "levels": [
+    "high school",
+    "young adults",
+    "everyday"
+  ],
+  "draftedBy": "Written from the Body Atlas lessons' own lines (body.bspokevisuals.com), 20 Nov 2026. Every line here waits to be kept, changed or struck.",
+  "why": "Your body is a set of parts that hold each other in place. When one gives, what you feel and what happens next follow from what sits beside it. Each unit opens a Body Atlas lesson, where you watch it happen on a real 3D body, then checks what you saw.",
+  "outcomes": [
+    "Name what holds a shoulder, a hip and a knee together.",
+    "Say what tears when each one gives, and why it gives more easily afterward.",
+    "Say why a hip is put back within hours.",
+    "Say why a swollen spleen is felt in the stomach."
+  ],
+  "units": [
+    {
+      "n": 1,
+      "title": "A shoulder that comes out, and why it comes out again",
+      "needIt": "A shoulder that has come out once comes out more easily the next time. Knowing what tore tells you why, and why a young shoulder is the one most likely to need surgery.",
+      "why": "The shoulder trades depth for reach: a ball on a shallow socket, deepened by a rim of cartilage. When the ball is pushed out to the front, that rim is pulled off, and the socket is about half as deep afterward.",
+      "outcome": "Name the parts that hold a shoulder in, and say what is torn when it comes out to the front.",
+      "reachesYou": "Someone near you puts a shoulder out. The arm is held a little away from the side and turned outward. What happens next is easier to follow when you know what moved.",
+      "main": {
+        "role": "train",
+        "room": "shoulder"
+      },
+      "do": "Raise one arm out to the side and turn it outward, slowly. That raised, turned out position is where the lowest front band of the shoulder is the main brake. Feel where it stops, on both sides.",
+      "crystal": {
+        "speed": 0.3,
+        "partials": [
+          "The top of the arm bone is a ball on a shallow socket.",
+          "A rim of cartilage, the labrum, makes the socket deeper.",
+          "Out to the front is the most common way a shoulder comes out.",
+          "The labrum is pulled off the front rim: a Bankart lesion.",
+          "With the labrum off, the socket is about half as deep."
+        ],
+        "key": "A shoulder that has come out is easier to put out again, because the rim that deepened its socket is torn off.",
+        "decoys": [
+          {
+            "text": "Once it is back in the socket, the shoulder is as good as before.",
+            "why": "Back in place, the labrum is still off the rim, so the socket is about half as deep front to back."
+          },
+          {
+            "text": "A shoulder comes out because its muscles are weak.",
+            "why": "The lesson shows a shallow socket and a torn rim. What holds the ball is the rim, the sleeve and its bands."
+          }
+        ],
+        "aha": "The shoulder reaches so far because its socket is shallow, and that same shallowness is why a torn rim matters so much."
+      },
+      "scene": {
+        "analogy": "A golf ball on a tee with a chipped edge",
+        "map": [
+          [
+            "The golf ball",
+            "Head of the arm bone"
+          ],
+          [
+            "The tee",
+            "Shoulder socket"
+          ],
+          [
+            "the rim",
+            "labrum"
+          ]
+        ],
+        "actors": [
+          {
+            "id": "left",
+            "type": "card",
+            "x": 40,
+            "y": 40,
+            "w": 250,
+            "h": 100,
+            "label": "The golf ball",
+            "color": "blue",
+            "o": 0,
+            "size": 22
+          },
+          {
+            "id": "right",
+            "type": "card",
+            "x": 510,
+            "y": 40,
+            "w": 250,
+            "h": 100,
+            "label": "The tee",
+            "color": "blue",
+            "o": 0,
+            "size": 22
+          },
+          {
+            "id": "thing",
+            "type": "stamp",
+            "x": 340,
+            "y": 20,
+            "w": 120,
+            "label": "THE RIM",
+            "color": "gold",
+            "o": 0,
+            "s": 0.4,
+            "size": 18
+          },
+          {
+            "id": "act",
+            "type": "stamp",
+            "x": 340,
+            "y": 160,
+            "w": 120,
+            "label": "CHIPS",
+            "color": "fg",
+            "o": 0,
+            "s": 0.4,
+            "size": 18
+          },
+          {
+            "id": "line",
+            "type": "text",
+            "x": 400,
+            "y": 325,
+            "label": "It sat fine until the edge chipped.",
+            "color": "pink",
+            "size": 22,
+            "o": 0
+          }
+        ],
+        "beats": [
+          {
+            "say": "A ball sits on a small cup, held by the cup's edge.",
+            "dur": 2.4,
+            "set": {
+              "left": {
+                "o": 1
+              },
+              "right": {
+                "o": 1
+              },
+              "thing": {
+                "o": 1,
+                "s": 1
+              }
+            }
+          },
+          {
+            "say": "One hard knock chips the edge off.",
+            "dur": 2.4,
+            "set": {
+              "act": {
+                "o": 1,
+                "s": 1,
+                "shake": true
+              }
+            }
+          },
+          {
+            "say": "You set the ball back. It sits, but the cup is shallower.",
+            "dur": 2.6,
+            "set": {
+              "left": {
+                "sub": "rolls off at a nudge"
+              },
+              "right": {
+                "sub": "half as deep as before"
+              }
+            }
+          },
+          {
+            "say": "Now a small nudge is enough to roll it off.",
+            "dur": 2.6,
+            "set": {
+              "line": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "A torn rim leaves a shallow socket, so the shoulder comes out again.",
+            "dur": 3.4,
+            "set": {
+              "left": {
+                "label": "Head of the arm bone",
+                "size": 18,
+                "color": "gold"
+              },
+              "right": {
+                "label": "Shoulder socket",
+                "size": 18,
+                "color": "green"
+              },
+              "thing": {
+                "label": "LABRUM",
+                "size": 18
+              },
+              "act": {
+                "label": "TEARS OFF",
+                "size": 14,
+                "color": "pink"
+              },
+              "line": {
+                "label": "Back in place, but the socket is half as deep.",
+                "size": 18,
+                "color": "green"
+              }
+            }
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "What does the labrum do for the shoulder socket?",
+          "choices": [
+            "It makes the arm bone longer",
+            "It makes the socket deeper",
+            "It carries blood to the ball",
+            "It turns the arm outward"
+          ],
+          "a": 1,
+          "why": "The rim of cartilage runs round the socket and deepens it.",
+          "quote": "A rim of tough cartilage, the labrum, runs round the socket and makes it deeper.",
+          "lesson": "shoulder",
+          "step": "p3",
+          "ref": "https://body.bspokevisuals.com/?lesson=shoulder"
+        },
+        {
+          "q": "What is a Bankart lesion?",
+          "choices": [
+            "A dent in the back of the ball",
+            "A stretched nerve under the ball",
+            "The labrum pulled off the front rim of the socket",
+            "A torn muscle at the back of the shoulder"
+          ],
+          "a": 2,
+          "why": "When the ball is pushed out to the front, it takes the front of the rim with it.",
+          "quote": "The labrum is pulled off the front of the socket's rim. This is called a Bankart lesion.",
+          "lesson": "shoulder",
+          "step": "h1",
+          "ref": "https://body.bspokevisuals.com/?lesson=shoulder"
+        },
+        {
+          "q": "In the study of 77 people, which nerve was hurt most often after a front dislocation?",
+          "choices": [
+            "The sciatic nerve",
+            "The posterior cord",
+            "The medial cord",
+            "The axillary nerve"
+          ],
+          "a": 3,
+          "why": "It winds under the ball and is stretched over it when the ball moves.",
+          "quote": "The axillary nerve was the one hurt most often, in 42 percent.",
+          "lesson": "shoulder",
+          "step": "h7",
+          "ref": "https://body.bspokevisuals.com/?lesson=shoulder"
+        },
+        {
+          "q": "Twenty five years after a first front dislocation treated without surgery, how many shoulders had never come out again?",
+          "choices": [
+            "43 percent",
+            "5 percent",
+            "90 percent",
+            "All of them"
+          ],
+          "a": 0,
+          "why": "In that study fewer than half stayed in for good.",
+          "quote": "25 years after a first front dislocation treated without surgery, 43 percent of shoulders had never come out again.",
+          "lesson": "shoulder",
+          "step": "a3",
+          "ref": "https://body.bspokevisuals.com/?lesson=shoulder"
+        },
+        {
+          "q": "Which age group went on to surgery more often?",
+          "choices": [
+            "Ages 26 to 40",
+            "Ages 12 to 25",
+            "Both the same",
+            "Neither went on to surgery"
+          ],
+          "a": 1,
+          "why": "About twice as many of the younger shoulders were operated on.",
+          "quote": "Of the shoulders of people aged 12 to 25, 38 percent went on to surgery, against 18 percent for ages 26 to 40.",
+          "lesson": "shoulder",
+          "step": "a5",
+          "ref": "https://body.bspokevisuals.com/?lesson=shoulder"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "title": "A hip pushed out behind, and why the clock matters",
+      "needIt": "In a front-on car crash the knee hits the dashboard and can drive the hip out of its socket. How soon it is put back decides how often the ball of the hip survives.",
+      "why": "The hip is a ball in a deep socket, wrapped in strong ligaments. When it is pushed out it almost always goes out behind, where the sciatic nerve runs, and the ball can lose its blood supply while it is out.",
+      "outcome": "Say why a hip out of its socket is put back within hours, and what is at risk until it is.",
+      "reachesYou": "You ride in the front seat of a car with your knee close to the dashboard. If someone near you is in a crash and their leg is held bent and drawn in across the body, you will know why nobody waits.",
+      "main": {
+        "role": "train",
+        "room": "hip"
+      },
+      "do": "Sit on a chair with your hip and knee each bent to a right angle. Trace the line of your thigh from the knee to the hip. That is the path a blow to the knee takes to the socket.",
+      "crystal": {
+        "speed": 0.3,
+        "partials": [
+          "The head of the femur is a ball in a deep socket.",
+          "A knee striking the dashboard can push the hip out behind.",
+          "Out behind is 8 to 9 times as common as out to the front.",
+          "The sciatic nerve can be cut, stretched or pressed by the head.",
+          "The longer the hip stays out, the more often the head dies."
+        ],
+        "key": "A hip out behind is put back promptly, because the longer it stays out the more often the head of the femur dies.",
+        "decoys": [
+          {
+            "text": "A hip that is out can wait until morning.",
+            "why": "Of hips put back within six hours, 88 in 100 did well, against 42 in 100 of those put back later."
+          },
+          {
+            "text": "The only harm is to the bone.",
+            "why": "A nerve is hurt in about 10 in 100 adults, most often the sciatic nerve."
+          }
+        ],
+        "aha": "Putting the hip back promptly restores the joint and takes the head off the nerve in one move."
+      },
+      "scene": {
+        "analogy": "A garden hose pinched under a car tyre",
+        "map": [
+          [
+            "The tap",
+            "Blood supply"
+          ],
+          [
+            "The plant",
+            "Head of the femur"
+          ],
+          [
+            "the hose",
+            "the hip"
+          ]
+        ],
+        "actors": [
+          {
+            "id": "left",
+            "type": "card",
+            "x": 40,
+            "y": 40,
+            "w": 250,
+            "h": 100,
+            "label": "The tap",
+            "color": "blue",
+            "o": 0,
+            "size": 22
+          },
+          {
+            "id": "right",
+            "type": "card",
+            "x": 510,
+            "y": 40,
+            "w": 250,
+            "h": 100,
+            "label": "The plant",
+            "color": "blue",
+            "o": 0,
+            "size": 22
+          },
+          {
+            "id": "thing",
+            "type": "stamp",
+            "x": 340,
+            "y": 20,
+            "w": 120,
+            "label": "THE HOSE",
+            "color": "gold",
+            "o": 0,
+            "s": 0.4,
+            "size": 18
+          },
+          {
+            "id": "act",
+            "type": "stamp",
+            "x": 340,
+            "y": 160,
+            "w": 120,
+            "label": "PINCHED",
+            "color": "fg",
+            "o": 0,
+            "s": 0.4,
+            "size": 18
+          },
+          {
+            "id": "line",
+            "type": "text",
+            "x": 400,
+            "y": 325,
+            "label": "Move the tyre now, not tonight.",
+            "color": "pink",
+            "size": 22,
+            "o": 0
+          }
+        ],
+        "beats": [
+          {
+            "say": "Water runs from the tap through a hose to a plant.",
+            "dur": 2.4,
+            "set": {
+              "left": {
+                "o": 1
+              },
+              "right": {
+                "o": 1
+              },
+              "thing": {
+                "o": 1,
+                "s": 1
+              }
+            }
+          },
+          {
+            "say": "A tyre rolls onto the hose and pinches it shut.",
+            "dur": 2.4,
+            "set": {
+              "act": {
+                "o": 1,
+                "s": 1,
+                "shake": true
+              }
+            }
+          },
+          {
+            "say": "The tap is still on, but the plant gets nothing.",
+            "dur": 2.6,
+            "set": {
+              "left": {
+                "sub": "still on, nothing gets through"
+              },
+              "right": {
+                "sub": "dries out by the hour"
+              }
+            }
+          },
+          {
+            "say": "Every hour the tyre stays, more of the plant dies.",
+            "dur": 2.6,
+            "set": {
+              "line": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "The longer a hip stays out, the more often its head dies.",
+            "dur": 3.4,
+            "set": {
+              "left": {
+                "label": "Blood supply",
+                "size": 22,
+                "color": "gold"
+              },
+              "right": {
+                "label": "Head of the femur",
+                "size": 18,
+                "color": "green"
+              },
+              "thing": {
+                "label": "THE HIP",
+                "size": 18
+              },
+              "act": {
+                "label": "OUT",
+                "size": 18,
+                "color": "pink"
+              },
+              "line": {
+                "label": "Put back within hours, the head usually lives.",
+                "size": 18,
+                "color": "green"
+              }
+            }
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Which way does a hip come out most often?",
+          "choices": [
+            "Out to the front",
+            "Straight down",
+            "Out behind",
+            "Out to the side"
+          ],
+          "a": 2,
+          "why": "A blow along the thigh, like a knee on a dashboard, drives the head backward.",
+          "quote": "Out behind is 8 to 9 times as common as out to the front.",
+          "lesson": "hip",
+          "step": "f4",
+          "ref": "https://body.bspokevisuals.com/?lesson=hip"
+        },
+        {
+          "q": "Which nerve is hurt most often when a hip is pushed out behind?",
+          "choices": [
+            "The axillary nerve",
+            "The tibial nerve alone",
+            "No nerve is near the hip",
+            "The sciatic nerve"
+          ],
+          "a": 3,
+          "why": "It runs behind the joint, where the head comes to rest.",
+          "quote": "Most often it is the sciatic nerve, usually its peroneal part, after a hip pushed out behind.",
+          "lesson": "hip",
+          "step": "h6",
+          "ref": "https://body.bspokevisuals.com/?lesson=hip"
+        },
+        {
+          "q": "Of hips put back within six hours, how many in 100 did well?",
+          "choices": [
+            "88",
+            "42",
+            "10",
+            "5"
+          ],
+          "a": 0,
+          "why": "Put back later, fewer than half did well.",
+          "quote": "88 in 100 of those put back within six hours did well, against 42 in 100 of those put back later.",
+          "lesson": "hip",
+          "step": "h9",
+          "ref": "https://body.bspokevisuals.com/?lesson=hip"
+        },
+        {
+          "q": "What is avascular necrosis of the hip?",
+          "choices": [
+            "The labrum tearing at the back",
+            "The head of the femur dying for want of blood",
+            "The socket rim breaking off",
+            "The sciatic nerve being stretched"
+          ],
+          "a": 1,
+          "why": "The longer the hip is out of its socket, the more often it happens.",
+          "quote": "The head of the femur can also die for want of blood. This is called avascular necrosis, and the longer the hip stays out, the more often it happens.",
+          "lesson": "hip",
+          "step": "h8",
+          "ref": "https://body.bspokevisuals.com/?lesson=hip"
+        },
+        {
+          "q": "In the Allis manoeuvre, how are the hip and the knee held?",
+          "choices": [
+            "Both held straight",
+            "The hip straight and the knee bent",
+            "Both bent to a right angle",
+            "The hip bent and the knee straight"
+          ],
+          "a": 2,
+          "why": "With both bent, the pull runs along the length of the thigh.",
+          "quote": "In the Allis manoeuvre the hip and the knee are both bent to a right angle, and the pull is upward.",
+          "lesson": "hip",
+          "step": "b3",
+          "ref": "https://body.bspokevisuals.com/?lesson=hip"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "title": "A knee that gives way inward and tears its ACL",
+      "needIt": "The ACL tears about 40 thousandths of a second after the foot lands, as the knee falls inward. Knowing what it holds tells you why the knee is loose afterward.",
+      "why": "Four ligaments guard the knee: two inside that stop the shin sliding forward and backward, and one on each side that stop it bending inward and outward. When the knee falls inward near straight and the shin turns in, the ACL tears, and it stays torn.",
+      "outcome": "Name the four ligaments of the knee and the one job each has.",
+      "reachesYou": "You land from a jump or cut sideways on a nearly straight leg. The knee dips inward for an instant, and afterward it feels like it will not hold. That instant is this lesson.",
+      "main": {
+        "role": "train",
+        "room": "knee"
+      },
+      "do": "Stand in front of a mirror and do a small hop, landing on both feet. Watch whether your knees stay over your feet or dip toward each other as you land.",
+      "crystal": {
+        "speed": 0.3,
+        "partials": [
+          "The knee is a hinge that also turns a little.",
+          "The ACL stops the shin sliding forward on the thigh bone.",
+          "The medial collateral stops the knee bending inward.",
+          "The ACL tears about 40 milliseconds after the foot lands.",
+          "The knee comes back by itself, but the ligament stays torn."
+        ],
+        "key": "After an ACL tear the knee goes back to its place by itself, but the ligament does not, so the knee is loose from then on.",
+        "decoys": [
+          {
+            "text": "If the knee went back into place, nothing is torn.",
+            "why": "The lesson shows the knee coming back by itself while the ACL stays torn."
+          },
+          {
+            "text": "The ACL tears slowly, as the knee is bent too far.",
+            "why": "It tears about 40 milliseconds after the foot lands, with the knee near straight."
+          }
+        ],
+        "aha": "Each ligament guards one direction, so the way the knee gave tells you which one tore."
+      },
+      "scene": {
+        "analogy": "A gate held by a latch that snaps in the wind",
+        "map": [
+          [
+            "The gate",
+            "The shin bone"
+          ],
+          [
+            "The gatepost",
+            "The thigh bone"
+          ],
+          [
+            "the latch",
+            "the ACL"
+          ]
+        ],
+        "actors": [
+          {
+            "id": "left",
+            "type": "card",
+            "x": 40,
+            "y": 40,
+            "w": 250,
+            "h": 100,
+            "label": "The gate",
+            "color": "blue",
+            "o": 0,
+            "size": 22
+          },
+          {
+            "id": "right",
+            "type": "card",
+            "x": 510,
+            "y": 40,
+            "w": 250,
+            "h": 100,
+            "label": "The gatepost",
+            "color": "blue",
+            "o": 0,
+            "size": 22
+          },
+          {
+            "id": "thing",
+            "type": "stamp",
+            "x": 340,
+            "y": 20,
+            "w": 120,
+            "label": "THE LATCH",
+            "color": "gold",
+            "o": 0,
+            "s": 0.4,
+            "size": 14
+          },
+          {
+            "id": "act",
+            "type": "stamp",
+            "x": 340,
+            "y": 160,
+            "w": 120,
+            "label": "SNAPS",
+            "color": "fg",
+            "o": 0,
+            "s": 0.4,
+            "size": 18
+          },
+          {
+            "id": "line",
+            "type": "text",
+            "x": 400,
+            "y": 325,
+            "label": "It closed again. It just will not stay.",
+            "color": "pink",
+            "size": 22,
+            "o": 0
+          }
+        ],
+        "beats": [
+          {
+            "say": "A gate hangs on its post, kept shut by one small latch.",
+            "dur": 2.4,
+            "set": {
+              "left": {
+                "o": 1
+              },
+              "right": {
+                "o": 1
+              },
+              "thing": {
+                "o": 1,
+                "s": 1
+              }
+            }
+          },
+          {
+            "say": "A gust swings it the wrong way and the latch snaps.",
+            "dur": 2.4,
+            "set": {
+              "act": {
+                "o": 1,
+                "s": 1,
+                "shake": true
+              }
+            }
+          },
+          {
+            "say": "The gate swings back and looks closed, same as before.",
+            "dur": 2.6,
+            "set": {
+              "left": {
+                "sub": "swings shut, looks fine"
+              },
+              "right": {
+                "sub": "nothing holds it now"
+              }
+            }
+          },
+          {
+            "say": "The next push opens it, because nothing holds it.",
+            "dur": 2.6,
+            "set": {
+              "line": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "The knee returns by itself. The torn ligament does not.",
+            "dur": 3.4,
+            "set": {
+              "left": {
+                "label": "The shin bone",
+                "size": 22,
+                "color": "gold"
+              },
+              "right": {
+                "label": "The thigh bone",
+                "size": 22,
+                "color": "green"
+              },
+              "thing": {
+                "label": "THE ACL",
+                "size": 18
+              },
+              "act": {
+                "label": "TEARS",
+                "size": 18,
+                "color": "pink"
+              },
+              "line": {
+                "label": "Back in place, and loose from then on.",
+                "size": 22,
+                "color": "green"
+              }
+            }
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "What does the ACL stop?",
+          "choices": [
+            "The tibia sliding backward",
+            "The knee bending outward",
+            "The kneecap gliding on the femur",
+            "The tibia sliding forward on the femur"
+          ],
+          "a": 3,
+          "why": "It runs from the front of the tibia to the back of the femur, so it checks a forward slide.",
+          "quote": "It stops the tibia sliding forward on the femur.",
+          "lesson": "knee",
+          "step": "k5",
+          "ref": "https://body.bspokevisuals.com/?lesson=knee"
+        },
+        {
+          "q": "Which ligament stops the knee bending inward?",
+          "choices": [
+            "The tibial collateral, also called the medial collateral",
+            "The fibular collateral",
+            "The posterior cruciate",
+            "The anterior cruciate"
+          ],
+          "a": 0,
+          "why": "It sits on the inner side, which is the side that opens when the knee falls inward.",
+          "quote": "On the inner side, the tibial collateral ligament, also called the medial collateral, stops the knee bending inward.",
+          "lesson": "knee",
+          "step": "k7",
+          "ref": "https://body.bspokevisuals.com/?lesson=knee"
+        },
+        {
+          "q": "How soon after the foot lands does the ACL tear?",
+          "choices": [
+            "About 4 seconds",
+            "About 40 milliseconds",
+            "About half a second",
+            "About 2 minutes"
+          ],
+          "a": 1,
+          "why": "That is a small part of one second.",
+          "quote": "It tears about 40 milliseconds after the foot lands, as the knee falls inward and the shin turns in.",
+          "lesson": "knee",
+          "step": "h1",
+          "ref": "https://body.bspokevisuals.com/?lesson=knee"
+        },
+        {
+          "q": "What do the menisci do?",
+          "choices": [
+            "Stop the tibia sliding forward",
+            "Join the kneecap to the femur",
+            "Spread the load and deepen the top of the tibia",
+            "Stop the knee bending outward"
+          ],
+          "a": 2,
+          "why": "They are two cushions of cartilage between the femur and the tibia.",
+          "quote": "They spread the load and deepen the top of the tibia.",
+          "lesson": "knee",
+          "step": "k9",
+          "ref": "https://body.bspokevisuals.com/?lesson=knee"
+        },
+        {
+          "q": "After the ACL tears, what does the knee do?",
+          "choices": [
+            "It stays out until it is pulled back",
+            "It comes back and is as firm as before",
+            "It locks straight and cannot bend",
+            "It comes back to its place by itself and is loose from then on"
+          ],
+          "a": 3,
+          "why": "Nothing has to be put back, yet the ligament is torn.",
+          "quote": "Then the knee comes back to its place by itself, but the ligament stays torn, so the knee is loose from then on.",
+          "lesson": "knee",
+          "step": "g4",
+          "ref": "https://body.bspokevisuals.com/?lesson=knee"
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "title": "A spleen that swells, and what it pushes on",
+      "needIt": "A swollen spleen is felt as fullness after a few bites, or as a weight under the left ribs. Both make sense once you see what the spleen rests against.",
+      "why": "The spleen filters the blood, high on the left under the ribs. It touches the stomach, the pancreas, the left kidney and the bend of the colon. When it swells, it reaches into where they rest.",
+      "outcome": "Say where the spleen sits, what it touches, and why a big one makes a person feel full early.",
+      "reachesYou": "Someone tells you they feel full after a few mouthfuls, or carry a heaviness under the left ribs. With the spleen and the stomach pictured side by side, those two feelings are one thing.",
+      "main": {
+        "role": "train",
+        "room": "spleen"
+      },
+      "do": "Put your left hand flat on your left side over the lowest ribs, toward the back. The spleen sits under there, behind the ninth to eleventh ribs. Count the ribs to find them.",
+      "crystal": {
+        "speed": 0.3,
+        "partials": [
+          "The spleen sits high on the left, behind the ninth to eleventh ribs.",
+          "The spleen filters the blood.",
+          "Its underside touches the back wall of the stomach.",
+          "It also touches the pancreas, the left kidney and the colon.",
+          "A big spleen presses on the stomach."
+        ],
+        "key": "A swollen spleen is felt through its neighbours: pressing on the stomach gives fullness early when eating.",
+        "decoys": [
+          {
+            "text": "Feeling full early always starts inside the stomach.",
+            "why": "In myelofibrosis a big spleen presses on the stomach from outside, and that gives the early fullness."
+          },
+          {
+            "text": "A spleen has room to swell without touching anything.",
+            "why": "It already rests on the stomach, the pancreas, the left kidney and the colon."
+          }
+        ],
+        "aha": "Where an organ sits decides what you feel when it grows."
+      },
+      "scene": {
+        "analogy": "Two people on a small bench when one puts a bag down",
+        "map": [
+          [
+            "The big bag",
+            "The spleen"
+          ],
+          [
+            "The person beside it",
+            "The stomach"
+          ],
+          [
+            "the bench",
+            "the belly"
+          ]
+        ],
+        "actors": [
+          {
+            "id": "left",
+            "type": "card",
+            "x": 40,
+            "y": 40,
+            "w": 250,
+            "h": 100,
+            "label": "The big bag",
+            "color": "blue",
+            "o": 0,
+            "size": 22
+          },
+          {
+            "id": "right",
+            "type": "card",
+            "x": 510,
+            "y": 40,
+            "w": 250,
+            "h": 100,
+            "label": "The person beside it",
+            "color": "blue",
+            "o": 0,
+            "size": 18
+          },
+          {
+            "id": "thing",
+            "type": "stamp",
+            "x": 340,
+            "y": 20,
+            "w": 120,
+            "label": "THE BENCH",
+            "color": "gold",
+            "o": 0,
+            "s": 0.4,
+            "size": 14
+          },
+          {
+            "id": "act",
+            "type": "stamp",
+            "x": 340,
+            "y": 160,
+            "w": 120,
+            "label": "SPREADS",
+            "color": "fg",
+            "o": 0,
+            "s": 0.4,
+            "size": 18
+          },
+          {
+            "id": "line",
+            "type": "text",
+            "x": 400,
+            "y": 325,
+            "label": "I did not move. I just have less room.",
+            "color": "pink",
+            "size": 22,
+            "o": 0
+          }
+        ],
+        "beats": [
+          {
+            "say": "Two people share a bench that fits two and no more.",
+            "dur": 2.4,
+            "set": {
+              "left": {
+                "o": 1
+              },
+              "right": {
+                "o": 1
+              },
+              "thing": {
+                "o": 1,
+                "s": 1
+              }
+            }
+          },
+          {
+            "say": "One sets a bag down and it keeps spreading.",
+            "dur": 2.4,
+            "set": {
+              "act": {
+                "o": 1,
+                "s": 1,
+                "shake": true
+              }
+            }
+          },
+          {
+            "say": "The bench does not get longer.",
+            "dur": 2.6,
+            "set": {
+              "left": {
+                "sub": "takes more of the seat"
+              },
+              "right": {
+                "sub": "squeezed, less room to sit"
+              }
+            }
+          },
+          {
+            "say": "The other is squeezed, and feels it first.",
+            "dur": 2.6,
+            "set": {
+              "line": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "A big spleen presses on the stomach, so fullness comes early.",
+            "dur": 3.4,
+            "set": {
+              "left": {
+                "label": "The spleen",
+                "size": 22,
+                "color": "gold"
+              },
+              "right": {
+                "label": "The stomach",
+                "size": 22,
+                "color": "green"
+              },
+              "thing": {
+                "label": "THE BELLY",
+                "size": 14
+              },
+              "act": {
+                "label": "SWELLS",
+                "size": 18,
+                "color": "pink"
+              },
+              "line": {
+                "label": "Full after a few bites.",
+                "size": 22,
+                "color": "green"
+              }
+            }
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Where does the spleen sit?",
+          "choices": [
+            "High on the left of the belly, behind the ninth to eleventh ribs",
+            "Low on the right, beside the colon",
+            "In the middle, behind the stomach and the pancreas",
+            "Under the left kidney"
+          ],
+          "a": 0,
+          "why": "It lies between the stomach and the diaphragm.",
+          "quote": "It sits high on the left of the belly, between the stomach and the diaphragm, behind the ninth to eleventh ribs.",
+          "lesson": "spleen",
+          "step": "s1",
+          "ref": "https://body.bspokevisuals.com/?lesson=spleen"
+        },
+        {
+          "q": "What does the spleen do?",
+          "choices": [
+            "It makes the stomach's acid",
+            "It filters the blood",
+            "It moves the diaphragm",
+            "It empties the colon"
+          ],
+          "a": 1,
+          "why": "Blood comes in by the splenic artery, is filtered, and leaves by the splenic vein.",
+          "quote": "The spleen filters the blood. Immune white cells in it react to germs in the blood, and cell-eating cells engulf debris and damaged cells.",
+          "lesson": "spleen",
+          "step": "s2",
+          "ref": "https://body.bspokevisuals.com/?lesson=spleen"
+        },
+        {
+          "q": "What does the front part of the spleen's underside touch?",
+          "choices": [
+            "The upper front of the left kidney",
+            "The left bend of the colon",
+            "The back wall of the stomach",
+            "The tail of the pancreas"
+          ],
+          "a": 2,
+          "why": "That contact is why a big spleen is felt in the stomach.",
+          "quote": "The front part of its underside touches the back wall of the stomach.",
+          "lesson": "spleen",
+          "step": "r1",
+          "ref": "https://body.bspokevisuals.com/?lesson=spleen"
+        },
+        {
+          "q": "In myelofibrosis, why does a big spleen make a person feel full early?",
+          "choices": [
+            "It pushes the left kidney upward",
+            "It rests on the colon",
+            "It lifts the diaphragm",
+            "It presses on the stomach"
+          ],
+          "a": 3,
+          "why": "Its underside already touches the back wall of the stomach.",
+          "quote": "In myelofibrosis, a big spleen presses on the stomach, and that gives a feeling of fullness early when eating.",
+          "lesson": "spleen",
+          "step": "y5",
+          "ref": "https://body.bspokevisuals.com/?lesson=spleen"
+        },
+        {
+          "q": "About how long is an adult spleen?",
+          "choices": [
+            "About 12 centimetres",
+            "About 2 centimetres",
+            "About 30 centimetres",
+            "About 50 centimetres"
+          ],
+          "a": 0,
+          "why": "The lesson gives its usual size: about 12 centimetres long, 7 wide and 3 to 4 thick.",
+          "quote": "An adult spleen is usually about 12 centimetres long, 7 wide and 3 to 4 thick.",
+          "lesson": "spleen",
+          "step": "s5",
+          "ref": "https://body.bspokevisuals.com/?lesson=spleen"
+        }
+      ]
+    }
+  ]
+}

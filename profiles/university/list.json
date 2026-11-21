@@ -97,6 +97,14 @@
       "kind": "found",
       "status": "draft",
       "live": false
+    },
+    {
+      "slug": "the-body",
+      "name": "The body",
+      "type": "Body",
+      "kind": "authored",
+      "status": "draft",
+      "live": false
     }
   ],
   "_types": "The 15 areas are the front page rows (Bryan, 15 Nov 2026: \"I like those rows\"). A row shows each whole course as one card. A course with \"shelf\": \"supplement\" (the mind's mechanisms) shows its units as small cards instead, and any unit anywhere can point to them with \"mechanisms\": [unit numbers].",
@@ -147,6 +155,43 @@
           "id": "your-channels",
           "name": "Your Channels",
           "trains": "Knowing how your own inner pictures, voices and feelings work, so each room can start the way that fits you."
+        }
+      ]
+    },
+    {
+      "name": "Body Atlas",
+      "area": "Body",
+      "url": "https://body.bspokevisuals.com/",
+      "what": "A real 3D human body you can turn and take apart. Its lessons show a joint giving way or an organ swelling, what that hurts, and how it is put right, each line with its source.",
+      "live": false,
+      "course": "the-body",
+      "label": "See it in 3D",
+      "word": "lesson",
+      "open": "?lesson={id}",
+      "back": "university",
+      "lessons": "data/teach-{id}.json",
+      "tip": "Tap once inside and the lesson speaks.",
+      "licence": "Free on Body Atlas, no account. Every line there names its source.",
+      "rooms": [
+        {
+          "id": "shoulder",
+          "name": "A shoulder pushed out to the front, and put back",
+          "trains": "Watch a shoulder pushed out to the front, see what it tears, and watch it put back."
+        },
+        {
+          "id": "hip",
+          "name": "A hip pushed out behind, and put back",
+          "trains": "Watch a hip pushed out behind, see what it hurts, and watch it put back."
+        },
+        {
+          "id": "knee",
+          "name": "A knee that gives way inward and tears its ACL",
+          "trains": "Watch a knee give way inward and tear its ACL, and see what else is hurt."
+        },
+        {
+          "id": "spleen",
+          "name": "A spleen that swells",
+          "trains": "Watch a spleen swell, and see what it reaches and presses on."
         }
       ]
     }

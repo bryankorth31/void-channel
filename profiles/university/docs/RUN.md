@@ -305,6 +305,24 @@ deploy.
 What a phone can reach: only the phone page and its room. The preview pages, the lecture's words and every save
 stay on this computer. This works at home only; the live site has no make button.
 
+## 15. Body Atlas lessons in a course
+
+Body Atlas (body.bspokevisuals.com) is a practice site in `profiles\university\list.json`, the same kind of entry as
+Mind Gym. Its lessons are its rooms. A unit opens one with `"main": { "role": "train", "room": "<lesson name>" }`,
+which shows a **See it in 3D** piece with an **Open the lesson** button. The course built on it is The body
+(`courses\the-body.json`): shoulder, hip, knee, spleen.
+
+To add a lesson once Body Atlas has made one public:
+
+1. Add it to the Body Atlas entry's `rooms` in list.json: `id` (the lesson's short name), `name` (its title),
+   `trains` (one line on what it shows).
+2. Write its unit in `courses\the-body.json` like the others. Each quiz line names its `lesson` and `step` and
+   quotes that step word for word, 8 words or more.
+3. `node scripts\uni.js check` reads the lesson's own file from Body Atlas and refuses a quote the lesson does
+   not say, a step that is gone, or a step that rests on a source the University does not use.
+
+Mark it live with `node scripts\uni.js live the-body on`. That also turns on the Body Atlas card in the Body row.
+
 ## Where things are
 
 - Courses: `profiles\university\courses\*.json`. Which are live: `profiles\university\list.json`.

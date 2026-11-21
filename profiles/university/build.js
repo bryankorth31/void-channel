@@ -27,7 +27,10 @@ const PRACTICE = JSON.parse(fs.readFileSync(path.join(DIR, 'list.json'), 'utf8')
 function trainPiece(p) {
   for (const g of PRACTICE) {
     const r = (g.rooms || []).find((x) => x.id === p.room);
-    if (r) return { ...p, title: r.name, by: g.name, note: r.trains, url: g.url + 'rooms/' + r.id + '/', licence: 'Free on ' + g.name + ', no account; your record stays in your own browser.' };
+    if (r) return { ...p, title: r.name, by: g.name, note: r.trains + (g.tip ? ' ' + g.tip : ''), roleName: g.label, open: 'Open the ' + (g.word || 'room'),
+      // a site that can send people back gets told where they came from: the unit's number, never an address
+      url: g.url + (g.open || 'rooms/{id}/').replace('{id}', r.id) + (g.back && p.unit ? '&from=' + g.back + '&unit=' + p.unit : ''),
+      licence: g.licence || ('Free on ' + g.name + ', no account; your record stays in your own browser.') };
   }
   throw new Error('train piece names a room no practice site has: ' + p.room);
 }
@@ -42,10 +45,10 @@ function piece(p, main) {
   else if (!held && url && p.role === 'listen') media = '<audio controls preload="none" src="' + esc(url) + '"></audio>';
   else if (!held && p.pointer) media = '<a class="btn" href="' + esc(libraryUrl(p)) + '" target="_blank" rel="noopener">Find it at a library</a>';
   else if (!held && p.role === 'read' && p.url) media = '<a class="btn" href="' + esc(p.url) + '" target="_blank" rel="noopener">Open it</a>';
-  else if (!held && p.role === 'train') media = '<a class="btn" href="' + esc(p.url) + '" target="_blank" rel="noopener">Open the room</a>';
+  else if (!held && p.role === 'train') media = '<a class="btn" href="' + esc(p.url) + '" target="_blank" rel="noopener">' + esc(p.open || 'Open the room') + '</a>';
   else if (!held && p.role === 'read' && pageUrl(p)) media = '<a class="btn" href="' + esc(pageUrl(p)) + '" target="_blank" rel="noopener">Open the book</a>';
   return '<div class="piece ' + (main ? 'main' : 'comp') + (held ? ' held' : '') + '">'
-    + '<div class="ph"><span class="role r-' + esc(p.role) + '">' + esc(ROLE[p.role] || p.role) + '</span>'
+    + '<div class="ph"><span class="role r-' + esc(p.role) + '">' + esc(p.roleName || ROLE[p.role] || p.role) + '</span>'
     + (p.voidtv ? '<span class="tag">On voidtv.net</span>' : '') + '</div>'
     + '<b>' + esc(p.title) + '</b><div class="meta">' + esc(meta) + '</div>'
     + (p.note ? '<p>' + esc(p.note) + '</p>' : '')
@@ -175,10 +178,10 @@ function chapters(u) {
 // Our own quiz, written from the lecture; every answer quotes the line it comes from (checked word for word).
 function quiz(u) {
   if (!(u.quiz || []).length) return '';
-  return '<details class="quiz"><summary><h3>Check yourself</h3><span>' + u.quiz.length + ' questions, each answer quotes the ' + (u.reading ? 'book' : 'lecture') + '</span></summary>' + u.quiz.map((q, i) => '<div class="qq" data-a="' + q.a + '"><p><b>' + (i + 1) + '.</b> ' + esc(q.q) + '</p><div class="qc">'
+  return '<details class="quiz"><summary><h3>Check yourself</h3><span>' + u.quiz.length + ' questions, each answer quotes the ' + (u.reading ? 'book' : u.main && u.main.role === 'train' ? 'lesson' : 'lecture') + '</span></summary>' + u.quiz.map((q, i) => '<div class="qq" data-a="' + q.a + '"><p><b>' + (i + 1) + '.</b> ' + esc(q.q) + '</p><div class="qc">'
     + q.choices.map((ch, j) => '<button data-j="' + j + '">' + esc(ch) + '</button>').join('') + '</div>'
     + '<p class="qh" role="status" hidden>Not quite. You have one more try.</p>'
-    + '<div class="qa" hidden><p class="qr"></p><p>' + esc(q.why) + '</p><blockquote>"' + esc(q.quote) + '"' + (q.ref ? '<a class="qt" href="' + esc(q.ref) + '">From the book: open the chapter</a>' : '<button class="qt" data-t="' + q.t + '">From the lecture, at ' + clock(q.t) + '</button>') + '</blockquote></div></div>').join('')
+    + '<div class="qa" hidden><p class="qr"></p><p>' + esc(q.why) + '</p><blockquote>"' + esc(q.quote) + '"' + (q.lesson ? '<a class="qt" href="' + esc(q.ref) + '" target="_blank" rel="noopener">From the lesson: open it</a>' : q.ref ? '<a class="qt" href="' + esc(q.ref) + '">From the book: open the chapter</a>' : '<button class="qt" data-t="' + q.t + '">From the lecture, at ' + clock(q.t) + '</button>') + '</blockquote></div></div>').join('')
     + '<div class="qs" hidden></div></details>';
 }
 
@@ -205,7 +208,7 @@ function unit(u, voices, c) {
     + links(u, c)
     + lab(u)
     + scaleBlock(u)
-    + (u.main ? '<div class="pieces">' + piece(u.main, true) + '</div>' : '')
+    + (u.main ? '<div class="pieces">' + piece(u.main.role === 'train' ? { ...u.main, unit: u.n } : u.main, true) + '</div>' : '')
     // Preview only: make questions with a phone while the lecture plays (make/screen.js shows the button once the
     // preview server says this lecture has been heard). The public copy never carries it.
     + (!LIVE && u.main && u.main.item ? '<div class="makebar" hidden><button type="button" class="makebtn" title="Shows a QR code. Scan it with your phone, then mark moments in the lecture and write a question for each. The questions join Check yourself.">Make questions with your phone</button></div>' : '')
