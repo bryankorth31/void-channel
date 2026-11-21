@@ -187,6 +187,9 @@
     + '.vrm-n{color:#ff4fc8!important;font-weight:600}.vrm-row{display:flex;gap:8px;justify-content:center;margin-top:10px}'
     + '.vrm button{font:inherit;font-size:14px;background:#161a25;color:#e8e8ee;border:1px solid #2a2f40;border-radius:10px;padding:8px 14px;cursor:pointer;min-height:40px}'
     + '.vrm button:hover{border-color:#5fd4ff}.vrm-err{color:#f3c969!important}'
+    // Inside the picture (night audit N14): the panel sits in the picture's top corner, never on the buttons under it, and shows
+    // in fullscreen too. Smaller there, and it scrolls if the picture is short.
+    + '.vrm.vrm-in{position:absolute;top:12px;right:12px;bottom:auto;z-index:40;width:min(270px,46%);max-height:calc(100% - 84px);padding:12px}.vrm-in .vrm-qr{width:128px;height:128px}.vrm-in .vrm-code{font-size:28px}'
     + '.vrm-chip{position:fixed;right:16px;bottom:16px;z-index:9000;background:#0d0f16;color:#e8e8ee;border:1px solid #ff4fc8;border-radius:999px;padding:8px 14px;font:600 13px system-ui,sans-serif;cursor:pointer}.vrm-chip[hidden]{display:none}';
   let box = null, chip = null, shown = false;
   function build() {
@@ -200,6 +203,8 @@
       + '<div class="vrm-row"><button type="button" id="vrm-hide">Hide</button><button type="button" id="vrm-end">End remote</button></div>';
     chip = document.createElement('button'); chip.type = 'button'; chip.className = 'vrm-chip'; chip.hidden = true; chip.onclick = () => show();
     document.body.appendChild(box); document.body.appendChild(chip);
+    // Inside the picture, a tap on the panel is the panel's: it never pauses the show or turns on fullscreen under it.
+    for (const t of ['click', 'dblclick', 'pointerdown', 'mousedown', 'touchstart', 'pointerup', 'mouseup']) box.addEventListener(t, (e) => e.stopPropagation());
     box.querySelector('#vrm-hide').onclick = hide;
     box.querySelector('#vrm-end').onclick = end;
     addEventListener('keydown', (e) => { if (e.key === 'Escape' && shown) { e.stopPropagation(); hide(); } }, true);
@@ -219,7 +224,15 @@
     chip.textContent = (party ? 'Watch party' : 'Phone remote') + (n || t ? ': ' + [n ? n + ' phone' + (n === 1 ? '' : 's') : '', tvWords].filter(Boolean).join(', ') : '');
     chip.hidden = shown || !room;
   }
-  function show() { build(); shown = true; box.hidden = false; draw(); }
+  // Where the panel goes: inside the picture when the page has one (the adapter's panelHost), else the window's corner.
+  function place() {
+    if (!box) return;
+    let host = null; try { host = ad && ad.panelHost ? ad.panelHost() : null; } catch (e) { host = null; }
+    const want = host || document.body;
+    if (box.parentNode !== want) want.appendChild(box);
+    box.classList.toggle('vrm-in', !!host);
+  }
+  function show() { build(); shown = true; place(); box.hidden = false; draw(); }
   function hide() { shown = false; if (box) box.hidden = true; draw(); }
 
   // The page's one call: start(adapter) on the Phone remote button; start(adapter, true) on load, to take back a room this
@@ -229,7 +242,7 @@
     ad = adapter; build();
     if (party || (kept() && kept().party)) partyMode = true;
     if (!timers.length) {
-      timers.push(setInterval(() => tick(false), POLL_MS), setInterval(listTick, LIST_MS), setInterval(() => tick(true), ALIVE_MS), setInterval(quizTick, 400));
+      timers.push(setInterval(() => tick(false), POLL_MS), setInterval(listTick, LIST_MS), setInterval(() => tick(true), ALIVE_MS), setInterval(quizTick, 400), setInterval(() => { if (shown) place(); }, 1000));
       addEventListener('pagehide', () => { if (ws) ws.close(); });   // a reload: the room waits 45 s for the next load
     }
     if (!resume) show();

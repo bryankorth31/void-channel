@@ -24,8 +24,9 @@
         const next = nx ? 'Next: ' + clock(nx.st) + ' ' + (ns ? ns.show : '') : '';
         if (x.k === 'ep' && s) {
           const cur = T.cur || { se: a.se, n: a.n }, name = epName(s, cur.se, cur.n);
+          // The time left runs to the next show, as the line under the picture counts it (night audit N13: one meaning on both).
           return { k: 'tv', where: 'Now on ' + c.name, t: s.show, s: epCode(cur.se, cur.n) + (name ? ' · ' + name : ''), nx: next,
-            left: (a.st + a.du * 6e4 - t) / 1000, slug: s.slug, art: s.poster || '',
+            left: (a.en - t) / 1000, slug: s.slug, art: s.poster || '',
             acts: [{ a: 'ch', l: 'CH' }, { a: 'info', l: 'About' }] };
         }
         // A break: the cards, or a short between shows. Watch it now plays the coming show On Demand, as the card's button does.
@@ -152,6 +153,8 @@
   const BEFORE = 'voidtv-party-before';
   let partyZone = '', before = (() => { try { return JSON.parse(sessionStorage.getItem(BEFORE) || 'null'); } catch (e) { return null; } })();
   adapter.party = () => ({ chan: state.chan || '', on: onTv() });
+  // The remote's panel goes inside the picture on Live TV (night audit N14: never over CH, Open show or the remote's own button).
+  adapter.panelHost = () => (onTv() && typeof VP !== 'undefined' && VP && VP.root && document.body.contains(VP.root) ? VP.root : null);
   // On a TV in a party: the first TV's pop-up, shown here as the same small icon, with the first TV's counts.
   adapter.popShow = (q) => popIcon(q && q.pop && onTv() ? { n: q.n, phase: q.phase } : null, q ? { phones: q.phones, answered: q.answered, right: q.right } : null);
   adapter.partyApply = (m) => {
