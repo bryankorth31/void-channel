@@ -313,3 +313,26 @@ test('Void University (Bryan, 20 Nov 2026): a lesson room takes 40 phones at 10 
   const room = R.createRoom({ code: 'KX7L', kind: 'lesson', key: 'k'.repeat(32), send: () => {}, close: () => {} });
   room.addHost('tv'); assert.equal(room.addPhone('a'), 1); assert.equal(room.drop('tv'), 'ended');
 });
+
+test('Watch and Talk (Bryan, 21 Nov 2026): a talk room takes two grown-ups\' phones at 5 messages a second, waits 45 seconds for its kids page, and leaves the other kinds as they were', () => {
+  assert.ok(R.KINDS.includes('talk'));
+  assert.deepEqual(R.LIMITS.talk, { phones: 2, perSecond: 5, screenHoldMs: 45 * 1000 });
+  assert.deepEqual(R.LIMITS.pad, { phones: 16, perSecond: 60, screenHoldMs: 45 * 1000 });
+  assert.deepEqual(R.LIMITS.trivia, { phones: 200, perSecond: 5, screenHoldMs: 0 });
+  assert.deepEqual(R.LIMITS.lesson, { phones: 40, perSecond: 10, screenHoldMs: 0 });
+  assert.equal(R.LIMITS.remote.phones, 16);
+  assert.throws(() => R.createRoom({ code: 'KX7T', kind: 'chat', send: () => {}, close: () => {} }), /kind/);
+  const h = harness('talk');
+  assert.ok(h.room.addHost('tablet', 'https://kids.voidtv.net'));
+  assert.equal(h.room.addPhone('mum'), 1);
+  assert.equal(h.room.addPhone('dad'), 2);
+  assert.equal(h.room.addPhone('third'), null, 'a third phone is refused');
+  assert.equal(h.closed.get('third'), R.CLOSE.full);
+  for (let i = 0; i < 6; i++) h.room.message('mum', JSON.stringify({ type: i % 2 ? 'play' : 'pause' }));
+  assert.equal(h.sent('tablet').filter((m) => m.from === 1 && m.msg).length, 5, 'the sixth message in one second is dropped');
+  h.room.message('tablet', JSON.stringify({ to: 'all', msg: { type: 'q', id: 'sesame-street-32x62:1' } }));
+  assert.deepEqual(h.sent('dad').slice(-1), [{ type: 'q', id: 'sesame-street-32x62:1' }]);
+  const keyed = R.createRoom({ code: 'KX7K', kind: 'talk', key: 'k'.repeat(32), send: () => {}, close: () => {} });
+  keyed.addHost('tablet'); keyed.addPhone('mum');
+  assert.equal(keyed.drop('tablet'), 'away', 'the kids page can change without losing the phone');
+});

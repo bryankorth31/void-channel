@@ -7,7 +7,11 @@
 (function (root) {
   'use strict';
   const ALPHABET = '23456789ACDEFGHJKMNPQRTUVWXY';   // no 0, O, 1, I, L, B, S or Z: easy to read off a projector
-  const KINDS = ['pad', 'trivia', 'lesson', 'remote'];   // lesson: Void University, a phone as the note pad during a lecture (Bryan, 20 Nov 2026)
+  const KINDS = ['pad', 'trivia', 'lesson', 'remote', 'talk'];   // lesson: Void University, a phone as the note pad during a lecture (Bryan, 20 Nov 2026)
+  // talk: Void TV Kids' Watch and Talk (Bryan, 21 Nov 2026: "Start now"; profiles/kids/docs/PLAN-kids-watch-and-talk.md). While a
+  // child watches, a grown-up's own phone gets the talk-about-it questions; the phone sends back only pause and play. One or two
+  // grown-ups' phones; the kids tablet locks the room once a phone is in. Opened only from kids.voidtv.net (workers/kids/rooms.js
+  // in void-kids), which reaches this same room core through the voidtv-rooms Durable Object.
   // remote: a phone as the TV remote across voidtv.net (Bryan, 20 Nov 2026: "a channel switcher, save to phone, info on the phone
   // about the show"); remote/README.md. A few phones in a living room, a tap now and then; the room waits for its screen's next
   // page as a game pad's does, and lasts an evening of TV (12 hours) instead of 4, since nobody taps a remote during a film.
@@ -19,7 +23,8 @@
   const LIMITS = { bytes: 1024, idleMs: 30 * 60 * 1000, lifeMs: 4 * 60 * 60 * 1000, holdMs: 60 * 1000,
     pad: { phones: 16, perSecond: 60, screenHoldMs: 45 * 1000 }, trivia: { phones: 200, perSecond: 5, screenHoldMs: 0 },
     lesson: { phones: 40, perSecond: 10, screenHoldMs: 0 },   // a teacher's phone or a class's; notes, not button presses
-    remote: { phones: 16, perSecond: 10, screenHoldMs: 45 * 1000, lifeMs: 12 * 60 * 60 * 1000 } };
+    remote: { phones: 16, perSecond: 10, screenHoldMs: 45 * 1000, lifeMs: 12 * 60 * 60 * 1000 },
+    talk: { phones: 2, perSecond: 5, screenHoldMs: 45 * 1000 } };   // a pause or play now and then; the kids page may change, so it waits 45 s
   const CLOSE = { noRoom: 4404, full: 4409, hostGone: 4410, tooBig: 4413, ended: 4408, locked: 4423, removed: 4403, replaced: 4411 };
   // A phone's own seat token: random, kept in that phone's tab only, so a phone that drops gets its seat back.
   const goodToken = (t) => typeof t === 'string' && /^[A-Za-z0-9_-]{16,64}$/.test(t);
