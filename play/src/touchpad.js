@@ -317,7 +317,8 @@
       const w = Math.round(pic.w * k), h = Math.round(pic.h * k);
       const x = Math.max(0, Math.round(pic.x + (pic.w - w) / 2) - LEFT), y = Math.round(pic.y + (pic.h - h) / 2);
       const right = ow - (x + w), side = Math.max(0, Math.min(x, right));
-      const short = oh < 340, wide = side >= 146;   // room for two small keys side by side (64 + 8 + 64 + 10)
+      // Room for two small keys side by side (64 + 8 + 64 + 10); o.stack: a wide game's picture takes that room, so they stack.
+      const short = oh < 340, wide = !o.stack && side >= 146;
       const stackL = wide ? 102 : 156, stackR = cheats && wide && !short ? 116 : 102;
       const vert = Math.min(oh - 2 * e - stackL - GAP, oh - 2 * e - stackR - 24);   // 24 px under Start and Cheats (the auditor)
       const S = Math.max(0, Math.min(300, vert, x - GAP, right - e - GAP));

@@ -95,9 +95,18 @@
       // From the biggest picture the height allows (the layout's own leaves room for key columns this pad does not use;
       // the auditor: 243x182 on a 667x331 phone), at the game's own shape.
       const asp = L.screen.w / L.screen.h;
-      let ph = oh, pw = ph * asp; if (pw > ow) { pw = ow; ph = pw / asp; }
-      const fit = PlayTouch.sideFit({ ow, oh, pic: { x: (ow - pw) / 2, y: (oh - ph) / 2, w: pw, h: ph }, cheats: document.body.classList.contains('has-cheats') });
-      set($('screen'), { x: fit.x + ox, y: fit.y + oy, w: fit.w, h: fit.h });
+      // A wide game (a Game Boy Advance, 3:2) fills the height instead (Bryan, 20 Nov 2026: "with pokemon or games that had
+      // a wider aspect can the screen increase to it? ... in landscape", then "go on 2"): the controls keep the size they
+      // have beside a 4:3 picture and lie see-through over the picture's outer edges (.overpic, play.css).
+      const wideGame = asp > 1.4, ref = wideGame ? 4 / 3 : asp;
+      let ph = oh, pw = ph * ref; if (pw > ow) { pw = ow; ph = pw / ref; }
+      const fit = PlayTouch.sideFit({ ow, oh, pic: { x: (ow - pw) / 2, y: (oh - ph) / 2, w: pw, h: ph }, cheats: document.body.classList.contains('has-cheats'), stack: wideGame });
+      if (wideGame) {
+        // Never under the column of small keys (Select, Rewind; Start, Cheats): 10 + 64 + 18 px each side.
+        const h = Math.min(oh, ow / asp, (ow - 2 * 92) / asp), w = h * asp;
+        set($('screen'), { x: ox + (ow - w) / 2, y: oy + (oh - h) / 2, w, h });
+      } else set($('screen'), { x: fit.x + ox, y: fit.y + oy, w: fit.w, h: fit.h });
+      over.classList.toggle('overpic', wideGame);
       over.style.setProperty('--side', fit.side + 'px');
       over.style.setProperty('--S', Math.max(110, fit.S) + 'px');
       over.classList.toggle('wide', fit.wide);

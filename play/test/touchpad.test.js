@@ -186,3 +186,11 @@ test('Bryan, 20 Nov 2026 ("the right buttons are a pinched aspect though and sho
   // Round buttons of 38% of S in a diamond: centres 0.3 S apart on each axis, so 0.424 S apart, clear of 0.38 S.
   for (const S of [120, 168, 220]) { const db = Math.min(92, S * 0.38); assert.ok(Math.hypot(S / 2 - db / 2, S / 2 - db / 2) - db >= 5, 'gap at S ' + S); }
 });
+
+test('Bryan, 20 Nov 2026 ("with pokemon or games that had a wider aspect can the screen increase to it? ... in landscape"; "go on 2"): a wide game fills the height sideways, the controls see-through over its edges', () => {
+  const fs = require('fs'), path = require('path');
+  const play = fs.readFileSync(path.join(__dirname, '..', 'src', 'play.js'), 'utf8');
+  assert.ok(play.includes('const wideGame = asp > 1.4, ref = wideGame ? 4 / 3 : asp;') && play.includes("over.classList.toggle('overpic', wideGame);"));
+  const css = fs.readFileSync(path.join(__dirname, '..', 'play.css'), 'utf8');
+  assert.ok(css.includes('.over.overpic .cpad.side .cdpad:not(:has(.pdir.on)),.over.overpic .cpad.side .cface:not(:has([data-down])){opacity:.6}'));
+});
