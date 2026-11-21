@@ -127,6 +127,39 @@ test('watch party: a TV that joins takes the first TV\'s time zone (Eastern and 
   assert.ok(V.fits({ type: 'p-score', list: big.slice(0, 8) }), 'the list for the other TVs fits one message');
 });
 
+test('night audit N10: the phone takes no link from a message: its own donation setting, the logo home, a show only at its page on this site', () => {
+  // A room's screen can be any script (the relay checks only the Origin header), so nothing it sends becomes a link.
+  assert.equal(V.showPath('the-lucy-show'), '/show/the-lucy-show');
+  for (const bad of ['javascript:alert(1)', '//evil.example', 'a/b', 'https:x', '', null, '../x', 'x y']) assert.equal(V.showPath(bad), '', String(bad));
+  const pj = fs.readFileSync(path.join(ROOT, 'remote', 'src', 'phone.js'), 'utf8');
+  const sets = pj.match(/\.href\s*=\s*[^;]+;/g) || [];
+  assert.ok(sets.length >= 3, 'the phone sets its links');
+  for (const x of sets) assert.match(x, /^\.href = (DONATE_URL|V\.showPath\((info|it)\.slug\));$/, 'every link is the site\'s own: ' + x);
+  for (const field of ['site.donate', 'm.home', 'info.url', 'it.url']) assert.ok(!new RegExp('href\\s*=\\s*' + field.replace('.', '\\.')).test(pj), field + ' is never a link');
+  // The donation setting is the project's one (scripts/lib/app.js DONATE_URL), as on Trivia's phone page.
+  const appDonate = /const DONATE_URL = '([^']+)'/.exec(fs.readFileSync(path.join(ROOT, 'scripts', 'lib', 'app.js'), 'utf8'))[1];
+  assert.equal(/const DONATE_URL = '([^']+)'/.exec(pj)[1], appDonate);
+  // The logo is a plain link home in the page itself; no message changes it.
+  assert.match(fs.readFileSync(path.join(ROOT, 'remote', 'index.html'), 'utf8'), /<a class="mark" id="mark" href="\/">/);
+});
+
+test('night audit: a show\'s details go to a phone only past the page\'s own adult door (adult, or Late Night by type or tag)', () => {
+  const vm = require('vm');
+  const src = fs.readFileSync(path.join(ROOT, 'remote', 'src', 'voidtv.js'), 'utf8');
+  const shows = { plain: { slug: 'plain', show: 'Plain' }, ln: { slug: 'ln', show: 'Late', type: 'Late Night' }, tag: { slug: 'tag', show: 'Tagged', tags: ['Late Night'] }, ad: { slug: 'ad', show: 'Adult', adult: 1 } };
+  const run = (adult) => {
+    const ctx = { self: {}, document: {}, location: { origin: 'https://voidtv.net' }, ME: { adult }, BY_SLUG: shows, urlFor: (s) => '/show/' + s,
+      Intl, Object, JSON, Math, Date, Number, String, Array, Map, Set, sessionStorage: { getItem: () => null } };
+    ctx.self = ctx; ctx.self.RemoteScreen = {}; ctx.self.VoidRemote = V;
+    vm.createContext(ctx);
+    vm.runInContext('const isAdult=(s)=>!!(s&&(s.adult||s.type===\'Late Night\'||(s.tags||[]).includes(\'Late Night\')));const gated=(s)=>isAdult(s)&&!ME.adult;' + src, ctx);
+    return ctx.self.SiteRemote;
+  };
+  const shut = run(false), open = run(true);
+  assert.equal(shut.info('plain').t, 'Plain');
+  for (const s of ['ln', 'tag', 'ad']) { assert.equal(shut.info(s), null, s + ' stays behind the door'); assert.equal(open.info(s).t, shows[s].show, s + ' past the door'); }
+});
+
 test('the remote room: 16 phones, 10 a second, waits 45 s for its screen, and lasts 12 hours', () => {
   assert.ok(R.KINDS.includes('remote'));
   assert.deepEqual(R.LIMITS.remote, { phones: 16, perSecond: 10, screenHoldMs: 45000, lifeMs: 12 * 3600 * 1000 });
@@ -172,7 +205,7 @@ test('the pages are wired: join sends a remote room to /remote/, the site copies
   }
   // The one donation ask carries CASH by name and stays off Kids.
   const pj = fs.readFileSync(path.join(ROOT, 'remote', 'src', 'phone.js'), 'utf8');
-  assert.match(pj, /Every donation goes to CASH \(cashvalues\.org\)/); assert.match(pj, /site\.donate && !site\.kids/);
+  assert.match(pj, /Every donation goes to CASH \(cashvalues\.org\)/); assert.match(pj, /if \(site && !site\.kids\)/);
 });
 
 test('a phone and a screen talk through the local relay: the screen opens a remote room, the join page finds it, the phone asks and is answered', async () => {

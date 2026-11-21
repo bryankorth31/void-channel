@@ -8,6 +8,10 @@
   const $ = (id) => document.getElementById(id);
   const code = (new URLSearchParams(location.search).get('r') || '').trim().toUpperCase();
   const SAVE_KEY = 'voidtv-remote-saved';
+  // Night audit N10 (21 Nov 2026): the phone takes no link from a message. Nothing proves a room's screen is a voidtv.net page,
+  // so the donation link is this site's own setting (scripts/lib/app.js DONATE_URL; tests/remote.test.js keeps them the same),
+  // the logo goes home on this site, and a show opens only at its page here (VoidRemote.showPath, from the slug).
+  const DONATE_URL = 'https://square.link/u/bJl9PGAC';
   let sock = null, ended = false, tries = 0, site = null, now = null, nowAt = 0, list = null, info = null, wantSave = '', drawnActs = '';
   const parts = {};
   let saved = V.savedRead((() => { try { return localStorage.getItem(SAVE_KEY); } catch (e) { return '[]'; } })());
@@ -74,7 +78,7 @@
     if (info.ppl) box.appendChild(el('p', 'ppl', 'With ' + info.ppl));
     if (info.about) box.appendChild(el('p', '', info.about));
     const acts = el('div', 'acts');
-    if (info.url) { const a = el('a', 'btn', 'Open on this phone'); a.href = info.url; acts.appendChild(a); }
+    if (V.showPath(info.slug)) { const a = el('a', 'btn', 'Open on this phone'); a.href = V.showPath(info.slug); acts.appendChild(a); }
     const on = V.savedHas(saved, info.slug);
     const b = el('button', on ? 'saved-on' : '', on ? 'Saved on this phone' : 'Save to phone'); b.type = 'button';
     b.onclick = () => { if (!V.savedHas(saved, info.slug)) save(info.slug); else tab('s'); drawInfo(); };
@@ -103,16 +107,16 @@
     for (const it of saved) {
       const c = el('div', 'card sv'); c.appendChild(el('div', 't', it.t)); if (it.s) c.appendChild(el('div', 's', it.s));
       const acts = el('div', 'acts');
-      if (it.url) { const a = el('a', 'btn', 'Open on this phone'); a.href = it.url; acts.appendChild(a); }
+      if (V.showPath(it.slug)) { const a = el('a', 'btn', 'Open on this phone'); a.href = V.showPath(it.slug); acts.appendChild(a); }
       const g = el('button', '', 'Big screen'); g.type = 'button'; g.onclick = () => { act('go', { slug: it.slug }); tab('r'); }; acts.appendChild(g);
       const d = el('button', '', 'Remove'); d.type = 'button'; d.onclick = () => { saved = V.savedDrop(saved, it.slug); store(); drawSaved(); drawNow(); }; acts.appendChild(d);
       c.appendChild(acts); box.appendChild(c);
     }
     // The one ask, where the service is delivered; never on Kids (its donation sits behind the grown-up check).
     const give = $('give');
-    if (site && site.donate && !site.kids) {
+    if (site && !site.kids) {
       give.textContent = 'If you found this service helpful, please think of donating to keep it running and to make more services like this possible. Every donation goes to CASH (cashvalues.org) and feeds its mission in the real world. ';
-      const a = el('a', '', 'Donate to CASH'); a.href = site.donate; a.target = '_blank'; a.rel = 'noopener'; give.appendChild(a);
+      const a = el('a', '', 'Donate to CASH'); a.href = DONATE_URL; a.target = '_blank'; a.rel = 'noopener'; give.appendChild(a);
       give.hidden = false;
     } else give.hidden = true;
   }
@@ -170,7 +174,7 @@
     if (m.type === 'host-away') { status('The big screen is reloading'); return; }
     if (m.type === 'host-back') { status('Room ' + code); hi(); return; }
     if (m.type === 'host-gone') { ended = true; note('The big screen ended the remote', 'Press Phone remote on the big screen for a new code.'); return; }
-    if (m.type === 'r-site') { site = m; $('mark').href = m.home || '/'; document.title = 'Remote | ' + (m.name || 'voidtv.net'); drawSaved(); return; }
+    if (m.type === 'r-site') { site = m; document.title = 'Remote | ' + (m.name || 'voidtv.net'); drawSaved(); return; }
     if (m.type === 'r-now') { now = m; nowAt = Date.now(); drawNow(); if (quiz && quiz.nowKey !== nowKey(m)) quizGone(); return; }
     if (m.type === 'r-list') { const l = V.listTake(parts, m); if (l) { list = l; drawList(); } return; }
     if (m.type === 'r-info') {

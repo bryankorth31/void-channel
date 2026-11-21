@@ -83,6 +83,11 @@
     return m;
   }
 
+  // A show's page on this same site, from its slug alone (night audit N10, 21 Nov 2026). The phone never opens an address a
+  // screen sent: nothing proves a room's screen is a voidtv.net page (a script can open a room), so a link from a message
+  // could lead anywhere, or run code on voidtv.net. '' when the slug is not a slug.
+  const showPath = (slug) => (idOk(slug) && !/[:/]/.test(slug) ? '/show/' + slug : '');
+
   // Saved on the phone (its own storage, nothing sent anywhere): newest first, one entry a show, at most SAVED_MAX.
   function savedAdd(list, it, now) {
     if (!it || !idOk(it.slug)) return list || [];
@@ -201,7 +206,7 @@
   // "8:30 pm", "18 min left" and "1:05 left": the times as the phone shows them.
   const leftWords = (sec) => { sec = Math.max(0, Math.round(sec)); const h = Math.floor(sec / 3600), m = Math.floor(sec % 3600 / 60); return h ? h + ' h ' + String(m).padStart(2, '0') + ' min left' : m ? m + ' min left' : 'under a minute left'; };
 
-  const api = { MAX, ACTIONS, SAVED_MAX, clip, readDo, siteMsg, nowMsg, listMsgs, listTake, infoMsg, savedAdd, savedDrop, savedHas, savedRead, size, fits, leftWords, LETTERS, quizAsk, quizAnswer, quizResults, quizCount, POP, popAt, zoneOk, tzOff, zoneCity, partyScores, scoreLine };
+  const api = { MAX, ACTIONS, SAVED_MAX, clip, readDo, siteMsg, nowMsg, listMsgs, listTake, infoMsg, savedAdd, savedDrop, savedHas, savedRead, size, fits, leftWords, LETTERS, quizAsk, quizAnswer, quizResults, quizCount, POP, popAt, zoneOk, tzOff, zoneCity, partyScores, scoreLine, showPath };
   if (typeof module === 'object' && module.exports) module.exports = api;
   else root.VoidRemote = api;
 })(typeof self !== 'undefined' ? self : this);

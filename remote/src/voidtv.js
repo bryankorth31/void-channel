@@ -4,7 +4,7 @@
 // (full hold: a phone can change channel, never start anything early). Loaded only when someone presses Phone remote.
 (function (root) {
   'use strict';
-  /* global TV, TVCUR, TVC_NOW, TVLIB, TVG, SHOWS, BY_SLUG, ME, SITE, DONATE, TRIVIA, BASE, VP, state, chanNow, viewNow, tvLive, tune, surf, tvNow, go, urlFor, clock */
+  /* global gated, TV, TVCUR, TVC_NOW, TVLIB, TVG, SHOWS, BY_SLUG, ME, SITE, DONATE, TRIVIA, BASE, VP, state, chanNow, viewNow, tvLive, tune, surf, tvNow, go, urlFor, clock */
   if (typeof document === 'undefined' || !root.RemoteScreen) return;
   const has = (f) => typeof f === 'function';
   const chans = () => (typeof TV !== 'undefined' && TV ? TV.filter((c) => !c.adult || ME.adult) : []);
@@ -52,7 +52,8 @@
 
     info(slug) {
       const s = typeof BY_SLUG !== 'undefined' && Object.prototype.hasOwnProperty.call(BY_SLUG, slug) ? BY_SLUG[slug] : null;
-      if (!s || (s.adult && !ME.adult)) return null;
+      // The page's own adult door (gated: adult, or a Late Night type or tag, while the door is closed; night audit, 21 Nov 2026).
+      if (!s || (typeof gated === 'function' ? gated(s) : (s.adult && !ME.adult))) return null;
       return { slug: s.slug, t: s.show, sub: [s.year, s.network, s.seasonCount ? s.seasonCount + ' season' + (s.seasonCount === 1 ? '' : 's') : '', s.eps ? s.eps + ' episodes' : ''].filter(Boolean).join(' · '),
         ppl: s.people || '', about: s.overview || '', url: showUrl(s.slug) };
     },
