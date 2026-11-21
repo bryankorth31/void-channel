@@ -321,7 +321,7 @@
       const short = oh < 340, wide = !o.stack && side >= 146;
       const stackL = wide ? 102 : 156, stackR = cheats && wide && !short ? 116 : 102;
       const vert = Math.min(oh - 2 * e - stackL - GAP, oh - 2 * e - stackR - 24);   // 24 px under Start and Cheats (the auditor)
-      const S = Math.max(0, Math.min(300, vert, x - GAP, right - e - GAP));
+      const S = Math.max(0, Math.min(300, vert, x + 10 - GAP, right - e - GAP));   // the d-pad box starts 10 px past the left edge
       const r = { k: Math.round(k * 100) / 100, x, y, w, h, side, wide, S };
       if (!best || S > best.S) best = r;
       // Big enough (on a narrow phone, a fifth of its width): keep the biggest picture that allows it (the auditor: a

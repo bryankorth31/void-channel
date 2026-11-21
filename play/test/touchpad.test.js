@@ -169,8 +169,8 @@ test('Bryan, 20 Nov 2026 ("the d pad size increased ... these two control areas 
   const a = T.sideFit({ ow: 844, oh: 390, pic: { x: 162, y: 0, w: 520, h: 390 }, cheats: true });
   assert.ok(a.S >= 160 && a.k < 1 && a.k >= 0.7, 'the picture gives a little room: ' + JSON.stringify(a));
   
-  assert.equal(a.x + a.w / 2, 162 + 260 - 15, '15 px left of the middle (Bryan: "scoot 15 px to the left away from the buttons")');
-  assert.ok(a.x - 8 >= a.S && 844 - a.x - a.w - 10 - 8 >= a.S, 'both controls clear of the picture');
+  assert.ok(Math.abs(a.x + a.w / 2 - (162 + 260 - 15)) <= 1, '15 px left of the middle (Bryan: "scoot 15 px to the left away from the buttons")');
+  assert.ok(a.x + 10 - 8 >= a.S && 844 - a.x - a.w - 10 - 8 >= a.S, 'both controls clear of the picture');
   // A wide margin already (a tablet-like phone): the picture keeps its full size.
   const b = T.sideFit({ ow: 1000, oh: 390, pic: { x: 240, y: 0, w: 520, h: 390 } });
   assert.equal(b.k, 1);
@@ -187,13 +187,11 @@ test('Bryan, 20 Nov 2026 ("the right buttons are a pinched aspect though and sho
   for (const S of [120, 168, 220]) { const db = Math.min(92, S * 0.38); assert.ok(Math.hypot(S / 2 - db / 2, S / 2 - db / 2) - db >= 5, 'gap at S ' + S); }
 });
 
-test('Bryan, 20 Nov 2026 ("with pokemon or games that had a wider aspect can the screen increase to it? ... in landscape"; "go on 2"): a wide game fills the height sideways, the controls see-through over its edges', () => {
+test('Bryan, 20 Nov 2026 ("the controls are now wholly incorrect. they sit half on the screen and more transparent"): no control lies over the picture or goes see-through, wide games included', () => {
   const fs = require('fs'), path = require('path');
   const play = fs.readFileSync(path.join(__dirname, '..', 'src', 'play.js'), 'utf8');
-  assert.ok(play.includes('const wideGame = asp > 1.4 && oh >= 340, ref = wideGame ? 4 / 3 : asp;') && play.includes("over.classList.toggle('overpic', wideGame);"));
-  assert.ok(play.includes("over.classList.toggle('x-dpad', on(over.querySelector('.cdpad')));"), 'only a group over the picture fades');
   const css = fs.readFileSync(path.join(__dirname, '..', 'play.css'), 'utf8');
-  assert.ok(css.includes('.over.overpic.x-dpad .cpad.side .cdpad:not(:has(.pdir.on)),.over.overpic.x-face .cpad.side .cface:not(:has([data-down])){opacity:.6}'));
+  assert.ok(!/wideGame|overpic|x-dpad/.test(play) && !/overpic/.test(css));
 });
 
 test('the auditor and Bryan, 20 Nov 2026 ("you routinely leave a gap on the left"): sideways only the notch side keeps its margin', () => {

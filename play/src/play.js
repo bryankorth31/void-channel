@@ -21,6 +21,19 @@
   for (const e of document.querySelectorAll('#donate-line, .donate-line')) e.textContent = DONATE_LINE;
   for (const e of document.querySelectorAll('#donate, .donate-link')) e.href = DONATE_URL;
 
+  // The kids page (kids.voidtv.net/games/, <html data-kids>; built by the kids site, Bryan, 20 Nov 2026: "appropriate games
+  // use the same system we are making in play"). Kids rules: only a card marked kids plays; no donation in front of a child
+  // (it sits behind the grown-up check on For grown-ups); no phone controller (other phones joining by a code); no cheats;
+  // no link that leaves the site; the start picture is the kids site's own copy (art/<id>.jpg), not one from outside.
+  const KIDS = document.documentElement.hasAttribute('data-kids');
+  if (KIDS) {
+    q.delete('b'); q.delete('draft');   // only the kids cards: no collection bundle, no draft
+    for (const e of document.querySelectorAll('.donate, #give, #give-card')) e.remove();
+    for (const k of ['b-phones', 'cover-phone', 'm-phones', 'phones', 'm-cheats', 'cheats']) if ($(k)) $(k).hidden = true;
+    for (const a of document.querySelectorAll('a.mark')) a.href = '/';
+    for (const a of document.querySelectorAll('#b-games, .menu a[href="./"]')) a.href = '/games/';
+  }
+
   // A short note at the bottom of the picture; with undo, an Undo button for a few seconds.
   function toast(text, undo) {
     const e = $('toast'), b = $('toast-undo');
@@ -74,7 +87,7 @@
     if ($('cover-turn')) $('cover-turn').hidden = !(card && isPhone() && innerHeight > innerWidth && PlayCards.isPad(card));
     if ($('cover-full')) $('cover-full').hidden = !(card && isPhone() && iPhoneSafari());
     // The phone controller is offered where the game is on the big screen (a phone cannot be the big screen).
-    if ($('cover-phone')) { $('cover-phone').hidden = !card || isPhone(); $('m-phones').hidden = isPhone(); }
+    if ($('cover-phone') && !KIDS) { $('cover-phone').hidden = !card || isPhone(); $('m-phones').hidden = isPhone(); }
     document.body.classList.toggle('padmode', padMode);
     document.body.classList.toggle('shell', shell);
     document.body.classList.toggle('full', full);
@@ -106,28 +119,17 @@
       // From the biggest picture the height allows (the layout's own leaves room for key columns this pad does not use;
       // the auditor: 243x182 on a 667x331 phone), at the game's own shape.
       const asp = L.screen.w / L.screen.h;
-      // A wide game (a Game Boy Advance, 3:2) fills the height instead (Bryan, 20 Nov 2026: "with pokemon or games that had
-      // a wider aspect can the screen increase to it? ... in landscape", then "go on 2"): the controls keep the size they
-      // have beside a 4:3 picture and lie see-through over the picture's outer edges (.overpic, play.css).
-      // Not on a very short screen (under 340): there the stacked small keys would crowd the d-pad (the auditor).
-      const wideGame = asp > 1.4 && oh >= 340, ref = wideGame ? 4 / 3 : asp;
-      let ph = oh, pw = ph * ref; if (pw > ow) { pw = ow; ph = pw / ref; }
-      const fit = PlayTouch.sideFit({ ow, oh, pic: { x: (ow - pw) / 2, y: (oh - ph) / 2, w: pw, h: ph }, cheats: document.body.classList.contains('has-cheats'), stack: wideGame });
-      if (wideGame) {
-        // Never under the column of small keys (Select, Rewind; Start, Cheats): 10 + 64 + 18 px each side.
-        const h = Math.min(oh, ow / asp, (ow - 2 * 92) / asp), w = h * asp;
-        set($('screen'), { x: ox + (ow - w) / 2, y: oy + (oh - h) / 2, w, h });
-      } else set($('screen'), { x: fit.x + ox, y: fit.y + oy, w: fit.w, h: fit.h });
-      over.classList.toggle('overpic', wideGame);
+      // Every game, wide ones too, gets the picture that fits between the controls; no control lies over it (Bryan,
+      // 20 Nov 2026, on the wide-games try: "the controls are now wholly incorrect. they sit half on the screen and more
+      // transparent ... they were almost right before this").
+      let ph = oh, pw = ph * asp; if (pw > ow) { pw = ow; ph = pw / asp; }
+      const fit = PlayTouch.sideFit({ ow, oh, pic: { x: (ow - pw) / 2, y: (oh - ph) / 2, w: pw, h: ph }, cheats: document.body.classList.contains('has-cheats') });
+      set($('screen'), { x: fit.x + ox, y: fit.y + oy, w: fit.w, h: fit.h });
       over.style.setProperty('--side', fit.side + 'px');
       over.style.setProperty('--S', Math.max(110, fit.S) + 'px');
       over.classList.toggle('wide', fit.wide);
       // A phone too small for even that: the d-pad crosses the picture's edge, see-through.
       over.classList.toggle('crossing', fit.S < 110);
-      // After the sizes above are in place: only a group that really lies over the picture goes see-through (the auditor: Kirby at 844x340 faded over plain plastic).
-      const pr = $('screen').getBoundingClientRect(), on = (el) => { if (!el) return false; const r = el.getBoundingClientRect(); return wideGame && r.width > 0 && r.left < pr.right && r.right > pr.left && r.top < pr.bottom && r.bottom > pr.top; };
-      over.classList.toggle('x-dpad', on(over.querySelector('.cdpad'))); over.classList.toggle('x-face', on(over.querySelector('.cface')));
-      over.classList.toggle('x-l', on(over.querySelector('.csl'))); over.classList.toggle('x-r', on(over.querySelector('.csr')));
     }
     $('b-touch').setAttribute('aria-pressed', String(touch));
     if (touch) PlayTouch.fit($('stage'));
@@ -383,6 +385,7 @@
     lock.setAttribute('aria-pressed', String(!!(phones && phones.locked)));
   }
   function showPhones(open) {
+    if (KIDS) return;   // no phone controller on the kids page
     $('phones').hidden = !open; $('b-phones').setAttribute('aria-expanded', String(open));
     if (!open) return;
     if (!phones) phones = PlayPhones.create({ card: phoneCard, change: phonesList });
@@ -401,7 +404,7 @@
   addEventListener('pagehide', () => { if (phones) phones.close(); });
   // A phone connected on the shelf, or in the game before, stays connected (Bryan, 20 Nov 2026: "connect the phone as the
   // controller prior to being in a game"): this page quietly takes back the room this tab holds, phones in their seats.
-  if (PlayPhones.kept()) {
+  if (!KIDS && PlayPhones.kept()) {
     phones = PlayPhones.create({ card: phoneCard, change: phonesList });
     phones.open(true).then((r) => {
       if (!r) return;
@@ -668,7 +671,8 @@
     $('cover-meta').textContent = [c.year, c.publisher, SYSTEM_NAMES[c.system]].filter(Boolean).join(' · ');
     const art = $('cover-art');
     art.onload = () => { art.hidden = false; }; art.onerror = () => { art.hidden = true; };
-    art.src = 'https://archive.org/cors/' + c.archive.item + '/__ia_thumb.jpg';
+    if (KIDS) art.src = 'art/' + encodeURIComponent(c.id) + '.jpg';
+    else art.src = 'https://archive.org/cors/' + c.archive.item + '/__ia_thumb.jpg';
     const where = { pad: 'gamepad', touch: 'screen', keyboard: 'keyboard' }[device()];
     const ul = $('cover-actions'); ul.textContent = '';
     for (const l of PlayCards.actionLines(c, device() === 'touch' ? 'touch' : device()).filter((x) => x.how).slice(0, 3)) {
@@ -857,7 +861,7 @@
     });
   }
   function loadCheats(c) {
-    if (!c.cheats || !PlayCards.isPad(c) || !CHEAT_CORES.includes(c.core)) return;
+    if (KIDS || !c.cheats || !PlayCards.isPad(c) || !CHEAT_CORES.includes(c.core)) return;
     fetch('cheats/' + encodeURIComponent(c.id) + '.json').then((r) => (r.ok ? r.text() : null)).then((t) => {
       let j = null; try { j = JSON.parse(t); } catch (e) { return; }
       if (!j || !Array.isArray(j.cheats) || !j.cheats.length) return;
@@ -913,8 +917,9 @@
     // Plan G4: the approve page's Try it opens a draft card (play/drafts, on this PC only; voidtv.net has none).
     // Plan C4: a whole collection's game has no card file of its own; its card sits in a bundle (play/library), named by
     // the shelf's link (&b=genesis/2) or, for an old link without it, found in the shelf list.
+    // The kids page reads only its own cards: ?b= and ?draft= are dropped at the top, and there is no shelf list.
     (/^[a-z0-9]+\/\d+$/.test(q.get('b') || '') ? fromBundle(id, q.get('b')) : fetch((/^[A-Za-z0-9._-]+$/.test(q.get('draft') || '') ? 'drafts/' + q.get('draft') + '/' : 'cards/') + encodeURIComponent(id) + '.json').then((r) => {
-      if (r.status === 404 && !q.get('draft')) return fetch('shelf/index.json').then((x) => x.json()).then((ix) => { const g = (ix.games || []).find((x) => x.id === id && x.b); if (!g) throw new Error('There is no game by that name here. Pick one from the Games shelf.'); return fromBundle(id, g.b); });
+      if (r.status === 404 && !q.get('draft') && !KIDS) return fetch('shelf/index.json').then((x) => x.json()).then((ix) => { const g = (ix.games || []).find((x) => x.id === id && x.b); if (!g) throw new Error('There is no game by that name here. Pick one from the Games shelf.'); return fromBundle(id, g.b); });
       if (!r.ok) throw new Error('There is no game by that name here. Pick one from the Games shelf.');
       // A card asked for while a deploy is spreading can come back as the site's home page (cached a few minutes).
       return r.text().then((t) => { try { return JSON.parse(t); } catch (e) { throw new Error('This game did not load. Try again in a few minutes, or pick another game.'); } });
@@ -927,10 +932,11 @@
     sramKept = sram;
     const bad = PlayCards.check(c);
     if (bad.length) throw new Error('This game card is not right yet (' + bad.join(', ') + ')');
+    if (KIDS && c.kids !== true) throw new Error('That game is not on Kids. Pick one from the games.');
     card = c; if (phones) phones.card(phoneCard()); loadCheats(c);
     const core = PlayCards.CORES[c.core];
     build = { core: c.core, commit: core.source.split('/').pop() };
-    document.title = c.title + ' | PLAY | voidtv.net';
+    document.title = c.title + (KIDS ? ' | Games | voidtv.net kids' : ' | PLAY | voidtv.net');
     $('title').textContent = c.title + (c.year ? ' (' + c.year + ')' : '');
     $('help').textContent = c.help || '';
     controls(c);
@@ -942,8 +948,11 @@
     // CASH donation behind the grown-up check (Bryan, 17 Nov 2026), so none here either.
     if (core.noDonation || c.kids) for (const e of document.querySelectorAll('.donate')) e.remove();
     $('from').innerHTML = '';
-    const a = document.createElement('a'); a.href = PlayCards.itemPage(c); a.target = '_blank'; a.rel = 'noopener'; a.textContent = 'the Internet Archive';
-    $('from').append('The game plays straight from ', a, '.');
+    if (KIDS) $('from').textContent = 'The game plays straight from the Internet Archive.';   // in words: no link leaves the kids site
+    else {
+      const a = document.createElement('a'); a.href = PlayCards.itemPage(c); a.target = '_blank'; a.rel = 'noopener'; a.textContent = 'the Internet Archive';
+      $('from').append('The game plays straight from ', a, '.');
+    }
     if (shelf && shelf.games && shelf.games[c.id] && shelf.games[c.id].gone) throw new Error("This game's file is no longer on the Internet Archive, so it is off the shelf. Pick another from Games.");
     if (typeof SharedArrayBuffer === 'undefined' || typeof WebAssembly !== 'object') throw new Error('This browser cannot run PLAY games yet. A current Chrome, Edge, Firefox or Safari can.');
     if (!self.crossOriginIsolated) throw new Error('PLAY cannot start here: this page was served without the settings the engine needs. That is our side, not your browser.');

@@ -557,13 +557,10 @@ body.muted .spk .off{display:inline}body.muted .spk .on{display:none}
 .cpad.side .cface.s-abc .pk[data-code="P1:A"]{right:0;top:0}
 /* The dish hugs the three buttons, so its round ends stay inside the square (the auditor: cut by the screen's bottom edge). */
 body.shell .cpad.side .cface.s-abc::before{width:calc((var(--S,150px) - var(--db)) * 1.414 + var(--db) + 6px);height:calc(var(--db) + 6px);transform:translate(-50%,-50%) rotate(-45deg)}
-/* The d-pad at the very left edge sideways (Bryan: "the screen and the dpad should scoot 15 px to the left"). */
-.cpad.side .cdpad{left:0}
-/* A wide game's picture fills the height sideways; the d-pad and the face buttons lie over its outer edges, see-through,
-   and come up solid while a thumb is on them (Bryan, 20 Nov 2026: "go on 2"). */
-.over.overpic.x-dpad .cpad.side .cdpad:not(:has(.pdir.on)),.over.overpic.x-face .cpad.side .cface:not(:has([data-down])){opacity:.6}
-body.shell .over.overpic.x-dpad .cpad.side .pdpad{background:rgba(16,19,30,.42)}
-body.shell .over.overpic.x-face .cpad.side .cface::before{opacity:.5}
-/* Over a wide game's picture the small keys stay on the plastic: one column under L, one under R, Cheats under Start. */
-@container (min-height:380px){.over.overpic:not(.wide) .cpad.side .ccheats{display:flex !important;right:var(--e);top:calc(var(--e) + 112px)}}
-.over.overpic.x-l .cpad.side .csl:not([data-down]),.over.overpic.x-r .cpad.side .csr:not([data-down]){opacity:.6}   /* L and R where they touch a corner of the picture */
+/* The left group at the very left edge sideways (Bryan: "the screen and the dpad should scoot 15 px to the left"; then
+   "not going the last 10 px to the left"): the d-pad's drawn ring starts at the edge (its box 10 px past it), and L,
+   Select and Rewind start at the edge. */
+.cpad.side .cdpad{left:-10px}
+.cpad.side .csl,.cpad.side .cselect{left:0}
+.cpad.side .crewind{left:0}
+.over.wide .cpad.side .crewind{left:72px}
