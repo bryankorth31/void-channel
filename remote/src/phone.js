@@ -118,20 +118,54 @@
     $('v-r').hidden = w !== 'r'; $('v-s').hidden = w !== 's';
   }
 
+  // Trivia in the breaks: the question the big screen shows, answered here. One answer a question; the answer comes with the
+  // big screen's, and the card goes when the next show starts.
+  let quiz = null;
+  function drawQuiz(m) {
+    quiz = m; tab('r');
+    $('q-kick').textContent = m.kick || 'Trivia'; $('q-q').textContent = m.q; $('q-r').textContent = '';
+    const box = $('q-a'); box.textContent = '';
+    m.choices.forEach((c, i) => {
+      const b = el('button', m.pick === i ? 'picked' : ''); b.type = 'button'; b.disabled = m.pick != null;
+      b.appendChild(el('b', '', V.LETTERS[i])); b.appendChild(document.createTextNode(c));
+      b.onclick = () => {
+        if (quiz !== m || m.pick != null) return;
+        m.pick = i; b.classList.add('picked'); for (const x of box.children) x.disabled = true;
+        say({ type: 't-a', n: m.n, pick: i });
+        if (navigator.vibrate) navigator.vibrate(15);
+      };
+      box.appendChild(b);
+    });
+    if (m.pick != null) $('q-r').textContent = 'Locked in: ' + V.LETTERS[m.pick] + '. The answer comes up on the big screen.';
+    $('quiz').hidden = false;
+  }
+  function quizResult(m) {
+    if (!quiz || quiz.n !== m.n) return;
+    [...$('q-a').children].forEach((b, i) => { b.disabled = true; b.classList.toggle('ok', i === m.answer); b.classList.toggle('no', i !== m.answer); });
+    const r = $('q-r'); r.textContent = '';
+    r.appendChild(el('span', 'big ' + (m.right ? 'right' : 'wrong'), m.right ? 'Right! +' + m.points.toLocaleString() + ' points' : m.pick == null ? 'No answer this time' : 'Not this time'));
+    if (!m.right) r.appendChild(document.createTextNode('It was ' + m.a + '. '));
+    r.appendChild(document.createTextNode('Your score: ' + m.score.toLocaleString() + (m.of > 1 ? ', ' + ordinal(m.place) + ' of ' + m.of + ' phones' : '') + '.'));
+    if (m.src) r.appendChild(el('div', 's', 'Source: ' + m.src));
+  }
+  const ordinal = (n) => n + (n % 100 >= 11 && n % 100 <= 13 ? 'th' : ['th', 'st', 'nd', 'rd'][n % 10] || 'th');
+
   function onMsg(m) {
+    if (m.type === 't-q' && m.live && Array.isArray(m.choices)) { drawQuiz(m); return; }
+    if (m.type === 't-got') { if (quiz && quiz.n === m.n) $('q-r').textContent = 'Locked in: ' + V.LETTERS[m.pick] + '. The answer comes up on the big screen.'; return; }
+    if (m.type === 't-res' && m.live) { quizResult(m); return; }
     if (m.type === 'hello') { tries = 0; $('note').classList.remove('on'); $('app').hidden = false; status('Room ' + code); say({ type: 'r-hi' }); return; }
     if (m.type === 'host-away') { status('The big screen is reloading'); return; }
     if (m.type === 'host-back') { status('Room ' + code); say({ type: 'r-hi' }); return; }
     if (m.type === 'host-gone') { ended = true; note('The big screen ended the remote', 'Press Phone remote on the big screen for a new code.'); return; }
     if (m.type === 'r-site') { site = m; $('mark').href = m.home || '/'; document.title = 'Remote | ' + (m.name || 'voidtv.net'); drawSaved(); return; }
-    if (m.type === 'r-now') { now = m; nowAt = Date.now(); drawNow(); return; }
+    if (m.type === 'r-now') { now = m; nowAt = Date.now(); drawNow(); if (!m.brk && quiz) { quiz = null; $('quiz').hidden = true; } return; }
     if (m.type === 'r-list') { const l = V.listTake(parts, m); if (l) { list = l; drawList(); } return; }
     if (m.type === 'r-info') {
       info = m;
       if (wantSave === m.slug) { wantSave = ''; saved = V.savedAdd(saved, { slug: m.slug, t: m.t, s: m.sub, url: m.url }, Date.now()); store(); drawSaved(); drawNow(); }
       drawInfo(); return;
     }
-    // t- messages are Trivia's (trivia/src/live.js), drawn here once the Live TV trivia slice lands.
   }
   function join() {
     if (!/^[2-9A-Z]{4}$/.test(code)) { note('No room code', 'Scan the code on the big screen, or type it.'); return; }

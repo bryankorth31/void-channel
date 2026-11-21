@@ -64,7 +64,7 @@ function page(opts) {
   const mkPlayer = (h, o) => { const p = { root: { id: 'r' }, v: {}, o, load(ep, lo) { log.loads.push({ id: ep.id, startAt: lo.startAt }); }, flashChannel() {} }; log.mk.push(o); player = p; return p; };
   const state = { view: 'tv', chan: 'void', tvOn: true, tvFails: 0 };
   const sandbox = {
-    setTimeout, setInterval: () => 1, clearInterval() {}, requestAnimationFrame: (f) => f(), state, SHOWS: W.SHOWS, CG: COLORS, ME: { adult: 0 }, SITE: 'voidtv.net', Date: FDate, Math, Map, WeakMap, Object, Array, JSON, String, mkPlayer, vpEvent() {},
+    setTimeout, setInterval: () => 1, clearInterval() {}, requestAnimationFrame: (f) => f(), state, SHOWS: W.SHOWS, CG: COLORS, ME: { adult: 0 }, SITE: 'voidtv.net', REMOTE_ON: false, REMOTE_V: '', TRIVIA: null, Date: FDate, Math, Map, WeakMap, Object, Array, JSON, String, mkPlayer, vpEvent() {},
     filesFor: () => [{ url: 'u' }], esc: (s) => String(s == null ? '' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])),
     ensure: async () => {}, track: (k, d) => log.tracked.push([k, d && d.slug]), urlFor: (s) => '/' + s, render: () => { log.render++; },
     history: { replaceState: (x, y, u) => log.replaced.push(u) }, window: { scrollTo: () => { log.scrolled++; } }, innerWidth: opts.width || 1200,

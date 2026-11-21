@@ -4,7 +4,7 @@
 // (full hold: a phone can change channel, never start anything early). Loaded only when someone presses Phone remote.
 (function (root) {
   'use strict';
-  /* global TV, TVCUR, TVLIB, TVG, SHOWS, BY_SLUG, ME, SITE, DONATE, state, chanNow, viewNow, tvLive, tune, surf, tvNow, go, urlFor, clock */
+  /* global TV, TVCUR, TVC_NOW, TVLIB, TVG, SHOWS, BY_SLUG, ME, SITE, DONATE, state, chanNow, viewNow, tvLive, tune, surf, tvNow, go, urlFor, clock */
   if (typeof document === 'undefined' || !root.RemoteScreen) return;
   const has = (f) => typeof f === 'function';
   const chans = () => (typeof TV !== 'undefined' && TV ? TV.filter((c) => !c.adult || ME.adult) : []);
@@ -29,7 +29,7 @@
             acts: [{ a: 'ch', l: 'CH' }, { a: 'info', l: 'About' }] };
         }
         // A break: the cards, or a short between shows. Watch it now plays the coming show On Demand, as the card's button does.
-        return { k: 'tv', where: 'Break on ' + c.name, t: ns ? 'Up next: ' + ns.show : 'A short break', s: nx ? 'Starts at ' + clock(nx.st) : '',
+        return { k: 'tv', brk: true, where: 'Break on ' + c.name, t: ns ? 'Up next: ' + ns.show : 'A short break', s: nx ? 'Starts at ' + clock(nx.st) : '',
           nx: '', left: nx ? (nx.st - t) / 1000 : null, slug: ns ? ns.slug : '', art: (ns && ns.poster) || '',
           acts: [{ a: 'ch', l: 'CH' }].concat(ns ? [{ a: 'now', l: 'Watch it now' }, { a: 'info', l: 'About' }] : []) };
       }
@@ -64,6 +64,14 @@
       if (cmd.a === 'now') { if (onTv()) tvNow(); return; }
       if (cmd.a === 'tv') { toTv(state.chan); return; }
       if (cmd.a === 'go') { if (typeof BY_SLUG !== 'undefined' && Object.prototype.hasOwnProperty.call(BY_SLUG, cmd.slug)) go(cmd.slug); }
+    },
+
+    // Trivia in the breaks: the question the break card shows now (scripts/lib/app.js, tvSpot), as the phones need it.
+    quiz() {
+      const d = typeof TVC_NOW !== 'undefined' ? TVC_NOW : null, sp = d && d.spot;
+      if (!sp || sp.kind !== 'trivia' || !onTv()) return null;
+      const q = sp.q;
+      return { n: sp.n, show: sp.show, q: q.q, choices: q.choices, answer: q.answer, phase: sp.phase, endsAt: sp.endsAt, msTotal: sp.msTotal, src: q.source || null };
     },
   };
   root.SiteRemote = adapter;   // the name every site's adapter takes; the page passes it to RemoteScreen.start

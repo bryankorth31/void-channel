@@ -52,7 +52,7 @@ function page(opts) {
   const state = Object.assign({ view: 'tv', chan: 'one', tvOn: true, tvFails: 0 }, opts.state);
   const unref = (f) => (fn, ms) => { const t = f(fn, ms); if (t && t.unref) t.unref(); return t; }; // the cards' timers must not keep the test run alive
   const sandbox = {
-    setTimeout, setInterval: unref(setInterval), clearInterval, clearTimeout, state, SHOWS, CG: [], SPOTS: opts.spots, ME: { adult: false }, SITE: 'voidtv.net', Date: FDate, Math, Map, WeakMap, Object, Array, mkPlayer, vpEvent() {}, filesFor: () => [{ url: 'u' }], esc: (s) => String(s == null ? '' : s),
+    setTimeout, setInterval: unref(setInterval), clearInterval, clearTimeout, state, SHOWS, CG: [], SPOTS: opts.spots, TRIVIA: opts.trivia || null, REMOTE_ON: false, REMOTE_V: '', ME: { adult: false }, SITE: 'voidtv.net', Date: FDate, Math, Map, WeakMap, Object, Array, mkPlayer, vpEvent() {}, filesFor: () => [{ url: 'u' }], esc: (s) => String(s == null ? '' : s),
     ensure: async (s) => { if (opts.missing && s.slug === opts.missing) throw new Error('the show file is gone (404)'); },
     track: (k, d) => log.tracked.push([k, d && d.slug]), urlFor: (s) => '/' + s, render: () => { log.render++; },
     go: async (slug) => { log.go.push(slug); state.view = 'show'; state.show = SHOWS.find((s) => s.slug === slug); }, play: (se, e) => log.play.push([se, e]),
@@ -410,6 +410,34 @@ test('Spots: everyone on a channel sees the same spot at the same moment, and a 
   assert.deepEqual(JSON.parse(JSON.stringify(Q.map((b) => b.cards))), JSON.parse(JSON.stringify(B.map((b) => b.cards))));
   const kids = breaks(p, Object.assign({}, c, { kc: 1 }));
   assert.ok(kids.length > 0 && kids.every((b) => b.cards.every((d) => !d.spot)), 'no spots on a kids channel');
+});
+// Trivia in the breaks (B, 20 Nov 2026: "Trivia in breaks"). The question comes from trivia/src/live.js; here it is put straight
+// into the page's cache (TVQ), as it would be once fetched, keyed by channel and airing.
+test('Trivia in the breaks: cards 5 to 7 ask the question about the show that just played, card 8 gives the answer and its source; never next to another spot; none on kids channels or without a question', () => {
+  const p = page({ spots: SPOTS, trivia: { tv: 1 } }), c = p.TV[0];
+  const TVQ = vm.runInContext('TVQ', p.sandbox), html = vm.runInContext('tvCardHtml', p.sandbox);
+  const q = { q: 'Who played Jenna?', choices: ['Ann', 'Bea', 'Cy', 'Di'], answer: 2, source: { site: 'TMDB', fact: 'Cy as Jenna, 138 episodes' } };
+  const none = breaks(p, c);
+  assert.ok(none.every((b) => b.cards.every((d) => !(d.spot && d.spot.kind === 'trivia'))), 'no question, no trivia: the cards are as before');
+  for (const b of none) TVQ[c.id + '|' + b.a.st] = { n: 77, q, show: 'Show a' };
+  const B = breaks(p, c).filter((b) => b.K0 >= 8);
+  assert.ok(B.length > 0, 'some breaks are long enough');
+  for (const b of B) {
+    const ph = b.cards.map((d) => (d.spot && d.spot.kind === 'trivia' ? d.spot.phase : '-'));
+    assert.deepEqual(ph.slice(4, 8), ['q', 'q', 'q', 'a'], 'cards 5 to 8');
+    assert.ok(!ph.slice(0, 4).concat(ph.slice(8)).some((x) => x !== '-'), 'only there');
+    for (let i = 1; i < b.cards.length; i++) { const x = b.cards[i - 1].spot, y = b.cards[i].spot; assert.ok(!(x && y && x.kind !== y.kind), 'never next to another spot'); }
+    const sp = b.cards[4].spot;
+    // Card i shows while until - t is from (K0 - i) to (K0 - i + 1) cards, so the answer card (i = 7) begins at until - (K0 - 6) cards:
+    // after the middle of the last question card, and no later than the middle of the answer card.
+    assert.equal(sp.endsAt, b.a.en - (b.K0 - 6) * 9000, 'answers close as the answer card begins');
+    assert.ok(b.a.en - (b.K0 - 5.5) * 9000 < sp.endsAt && sp.endsAt <= b.a.en - (b.K0 - 6.5) * 9000);
+    const ask = html(b.cards[5]), out = html(b.cards[7]);
+    assert.match(ask, /Trivia: Show a/); assert.match(ask, /Who played Jenna\?/); assert.match(ask, /<b>C<\/b>Cy/); assert.ok(!ask.includes('class="ok"') && !ask.includes('TMDB'), 'no answer while it is asked');
+    assert.match(out, /<li class="ok"><b>C<\/b>Cy<\/li>/); assert.match(out, /Source: TMDB\. Cy as Jenna, 138 episodes/);
+  }
+  const kids = breaks(p, Object.assign({}, c, { kc: 1 }));
+  assert.ok(kids.every((b) => b.cards.every((d) => !d.spot)), 'never on a kids channel');
 });
 // The page's promo helpers (they sit after the Live TV functions in app.js), run with a promos.json the test makes.
 const PROMO_TEXT = (() => { const s = APP.indexOf('function promoUrl('), e = APP.indexOf('\n', APP.indexOf('const id=ids[seed%ids.length]')); assert.ok(s > 0 && e > s, 'the promo helpers are where this test expects them'); return APP.slice(s, e); })();

@@ -34,6 +34,9 @@ ul{list-style:none;margin:0;padding:0}
 .sv{display:flex;flex-direction:column;gap:6px}.sv .acts{margin-top:4px}
 .empty,.note{color:var(--dim);font-size:15px;line-height:1.45}
 .give{color:var(--dim);font-size:13px;line-height:1.45;border-top:1px solid var(--line);margin-top:18px;padding-top:12px}.give a{color:var(--blue)}
+.quiz{border-color:var(--pink)}.qa{display:grid;gap:8px;margin-top:10px}.qa button{justify-content:flex-start;text-align:left;min-height:52px;width:100%}
+.qa b{color:var(--blue);margin-right:4px}.qa .picked{border-color:var(--pink);background:#2a1430}.qa .ok{border-color:#5fd47a;background:#12301c}.qa .no{color:var(--dim)}
+.res{margin-top:10px;font-size:15px;line-height:1.45}.res .big{font-size:20px;font-weight:800;display:block}.res .right{color:#5fd47a}.res .wrong{color:var(--gold)}
 #note{display:none;text-align:center;padding:40px 8px}#note.on{display:block}#note h1{font-size:22px;margin:0 0 8px}
 [hidden]{display:none!important}
 </style>
@@ -44,6 +47,7 @@ ul{list-style:none;margin:0;padding:0}
 <main id="app" hidden>
   <div class="tabs" role="tablist"><button type="button" role="tab" id="tab-r" aria-selected="true">Remote</button><button type="button" role="tab" id="tab-s" aria-selected="false">Saved</button></div>
   <section id="v-r">
+    <div class="card quiz" id="quiz" hidden><div class="where" id="q-kick"></div><div class="t" id="q-q"></div><div class="qa" id="q-a"></div><div class="res" id="q-r" role="status"></div></div>
     <div class="card"><div class="now"><img id="n-art" alt="" hidden><div>
       <div class="where" id="n-where"></div><div class="t" id="n-t">Waiting for the big screen</div><div class="s" id="n-s"></div>
       <div class="left" id="n-left"></div><div class="nx" id="n-nx"></div></div></div>

@@ -59,6 +59,32 @@ test('saved on the phone: newest first, one entry a show, a cap, and junk from s
   assert.deepEqual(V.savedRead(JSON.stringify([{ slug: 'ok', t: 'Ok', url: 'javascript:x' }, { slug: '<b>' }])), [{ slug: 'ok', t: 'Ok', s: '', url: '', at: 0 }]);
 });
 
+test('trivia in the breaks: the question fits, each phone answers once and in time, results score with Trivia\'s points and give places', () => {
+  const G = require('../trivia/src/game.js');
+  const z = { n: 77, show: 'The Lucy Show', q: 'Who played Lucy? '.repeat(40), choices: ['Ann', 'Bea', 'Lucille Ball', 'Di'], answer: 2, phase: 'q', endsAt: 30000, msTotal: 27000, src: { site: 'TMDB' } };
+  const ask = V.quizAsk(z, 3000);
+  assert.ok(V.fits(ask)); assert.equal(ask.type, 't-q'); assert.equal(ask.live, true); assert.equal(ask.secs, 27); assert.equal(ask.kick, 'Trivia: The Lucy Show'); assert.equal(ask.pick, null);
+  const book = {};
+  assert.deepEqual(V.quizAnswer(book, 1, { type: 't-a', n: 77, pick: 2 }, z, 3000), { type: 't-got', n: 77, pick: 2 });   // right, with the whole time left
+  assert.equal(V.quizAnswer(book, 1, { type: 't-a', n: 77, pick: 0 }, z, 4000), null, 'one answer a question');
+  assert.deepEqual(V.quizAnswer(book, 2, { type: 't-a', n: 77, pick: 0 }, z, 20000), { type: 't-got', n: 77, pick: 0 });  // wrong
+  for (const [m, t] of [[{ type: 't-a', n: 76, pick: 1 }, 5000], [{ type: 't-a', n: 77, pick: 4 }, 5000], [{ type: 't-a', n: 77, pick: '1' }, 5000], [{ type: 't-a', n: 77, pick: 1 }, 30001]])
+    assert.equal(V.quizAnswer(book, 3, m, z, t), null, JSON.stringify(m) + ' at ' + t);
+  assert.equal(V.quizAnswer(book, 3, { type: 't-a', n: 77, pick: 1 }, Object.assign({}, z, { phase: 'a' }), 5000), null, 'not once the answer is out');
+  const res = new Map(V.quizResults(book, [1, 2, 3], Object.assign({}, z, { phase: 'a' }), G.points));
+  assert.equal(res.get(1).right, true); assert.equal(res.get(1).points, G.points(true, 27000, 27000)); assert.equal(res.get(1).place, 1);
+  assert.equal(res.get(2).right, false); assert.equal(res.get(2).points, 0); assert.equal(res.get(2).pick, 0);
+  assert.equal(res.get(3).pick, null); assert.equal(res.get(3).place, 2, 'a tie shares a place');
+  assert.equal(res.get(1).a, 'C: Lucille Ball'); assert.equal(res.get(1).src, 'TMDB'); assert.equal(res.get(1).of, 3);
+  for (const m of res.values()) assert.ok(V.fits(m));
+  assert.deepEqual(V.quizCount(book, [1, 2, 3], z), { phones: 3, answered: 2, right: 1 });
+  // The next question: scores carry over, answers start fresh.
+  const z2 = Object.assign({}, z, { n: 78, answer: 0, endsAt: 90000 });
+  V.quizAnswer(book, 2, { type: 't-a', n: 78, pick: 0 }, z2, 63000);
+  const r2 = new Map(V.quizResults(book, [1, 2, 3], Object.assign({}, z2, { phase: 'a' }), G.points));
+  assert.equal(r2.get(2).score, G.points(true, 27000, 27000)); assert.equal(r2.get(1).score, r2.get(2).score); assert.equal(r2.get(1).place, 1); assert.equal(r2.get(2).place, 1);
+});
+
 test('the remote room: 16 phones, 10 a second, waits 45 s for its screen, and lasts 12 hours', () => {
   assert.ok(R.KINDS.includes('remote'));
   assert.deepEqual(R.LIMITS.remote, { phones: 16, perSecond: 10, screenHoldMs: 45000, lifeMs: 12 * 3600 * 1000 });
@@ -100,7 +126,7 @@ test('the pages are wired: join sends a remote room to /remote/, the site copies
   assert.match(phone, /src="\/remote\/src\/remote\.js"/); assert.match(phone, /src="\/remote\/src\/phone\.js"/);
   for (const f of ['remote/index.html', 'remote/src/remote.js', 'remote/src/screen.js', 'remote/src/phone.js', 'remote/src/voidtv.js', 'remote/README.md']) {
     const t = fs.readFileSync(path.join(ROOT, f), 'utf8');
-    assert.ok(!t.includes('—'), f + ' has an em dash');
+    assert.ok(!t.includes(String.fromCharCode(0x2014)), f + ' has an em dash');
   }
   // The one donation ask carries CASH by name and stays off Kids.
   const pj = fs.readFileSync(path.join(ROOT, 'remote', 'src', 'phone.js'), 'utf8');

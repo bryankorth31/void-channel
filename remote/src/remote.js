@@ -42,7 +42,7 @@
   // What is on now. k: what the screen is showing (tv, show, page). acts: the buttons that make sense now, each { a, l }:
   // a is an action from ACTIONS, l the words on it. left: seconds to go, counted down on the phone from when it arrives.
   function nowMsg(o) {
-    const m = { type: 'r-now', k: clip(o.k || 'page', 10), where: clip(o.where, 50), t: clip(o.t, 80), s: clip(o.s, 90),
+    const m = { type: 'r-now', k: clip(o.k || 'page', 10), brk: !!o.brk, where: clip(o.where, 50), t: clip(o.t, 80), s: clip(o.s, 90),
       nx: clip(o.nx, 90), left: Number.isFinite(o.left) && o.left > 0 ? Math.round(o.left) : null,
       slug: idOk(o.slug) ? o.slug : '', art: /^https:\/\/[^"'<>\s]{1,200}$/.test(o.art || '') ? o.art : '',
       acts: (o.acts || []).filter((x) => x && Object.prototype.hasOwnProperty.call(ACTIONS, x.a)).slice(0, 6).map((x) => ({ a: x.a, l: clip(x.l, 24) })) };
@@ -99,10 +99,58 @@
       url: /^https?:\/\/[^"'<>\s]{1,200}$/.test(x.url || '') ? x.url : '', at: Number(x.at) || 0 }));
   }
 
+  // TRIVIA IN THE BREAKS (Bryan, 20 Nov 2026: "Trivia in breaks"). The Live TV page shows one question about the show that just
+  // played (trivia/src/live.js picks it; the same one for everyone on the channel); phones in the room answer it. The messages
+  // are Trivia Night's own (t-q, t-a, t-got, t-res, trivia/src/phone.js), so both games speak alike. A quiz, as a site's adapter
+  // gives it: { n, show, q, choices, answer, phase: 'q' | 'a', endsAt (when answers close, ms), msTotal, src }.
+  const LETTERS = ['A', 'B', 'C', 'D'];
+  function quizAsk(z, now) {
+    const m = { type: 't-q', n: z.n, of: 0, live: true, kick: clip('Trivia: ' + z.show, 60), q: clip(z.q, 300),
+      choices: z.choices.slice(0, 4).map((c) => clip(c, 80)), secs: Math.max(0, Math.round((z.endsAt - now) / 1000)), pick: null };
+    while (!fits(m) && m.q.length > 40) m.q = clip(m.q, m.q.length - 40);
+    return m;
+  }
+  // A phone's answer: the question now open, a choice it has, its first answer only, before answers close. Gives the t-got.
+  function quizAnswer(book, seat, m, z, now) {
+    if (!z || z.phase !== 'q' || !m || m.type !== 't-a' || m.n !== z.n || now > z.endsAt) return null;
+    if (!Number.isInteger(m.pick) || m.pick < 0 || m.pick >= z.choices.length) return null;
+    const p = book[seat] || (book[seat] = { score: 0 });
+    if (p.n === z.n) return null;
+    p.n = z.n; p.pick = m.pick; p.at = now;
+    return { type: 't-got', n: z.n, pick: m.pick };
+  }
+  // The answer is out: each phone's result, with its points (points(right, msLeft, msTotal), Trivia's scoring) and its place
+  // among the phones in the room. Called once a question.
+  function quizResults(book, seats, z, points) {
+    const pts = points || ((right) => (right ? 1000 : 0));
+    const got = new Map();
+    for (const seat of seats) {
+      const p = book[seat] || (book[seat] = { score: 0 });
+      const pick = p.n === z.n ? p.pick : null, right = pick === z.answer;
+      const add = pick === null ? 0 : pts(right, z.endsAt - p.at, z.msTotal);
+      p.score += add; got.set(seat, { pick, right, add });
+    }
+    const list = seats.map((seat) => ({ seat, score: book[seat].score })).sort((a, b) => (b.score - a.score) || (a.seat - b.seat));
+    let place = 0, last = null;
+    const src = z.src && z.src.site ? clip(z.src.site, 40) : '';
+    return list.map((r, i) => {
+      if (r.score !== last) { place = i + 1; last = r.score; }
+      const g = got.get(r.seat);
+      return [r.seat, { type: 't-res', n: z.n, live: true, pick: g.pick, answer: z.answer, a: clip(LETTERS[z.answer] + ': ' + z.choices[z.answer], 90),
+        right: g.right, points: g.add, score: r.score, place, of: list.length, src }];
+    });
+  }
+  // For the TV card: how many phones answered this question, and how many got it right once it is out.
+  function quizCount(book, seats, z) {
+    let answered = 0, right = 0;
+    for (const seat of seats) { const p = book[seat]; if (p && p.n === z.n) { answered++; if (p.pick === z.answer) right++; } }
+    return { phones: seats.length, answered, right };
+  }
+
   // "8:30 pm", "18 min left" and "1:05 left": the times as the phone shows them.
   const leftWords = (sec) => { sec = Math.max(0, Math.round(sec)); const h = Math.floor(sec / 3600), m = Math.floor(sec % 3600 / 60); return h ? h + ' h ' + String(m).padStart(2, '0') + ' min left' : m ? m + ' min left' : 'under a minute left'; };
 
-  const api = { MAX, ACTIONS, SAVED_MAX, clip, readDo, siteMsg, nowMsg, listMsgs, listTake, infoMsg, savedAdd, savedDrop, savedHas, savedRead, size, fits, leftWords };
+  const api = { MAX, ACTIONS, SAVED_MAX, clip, readDo, siteMsg, nowMsg, listMsgs, listTake, infoMsg, savedAdd, savedDrop, savedHas, savedRead, size, fits, leftWords, LETTERS, quizAsk, quizAnswer, quizResults, quizCount };
   if (typeof module === 'object' && module.exports) module.exports = api;
   else root.VoidRemote = api;
 })(typeof self !== 'undefined' ? self : this);

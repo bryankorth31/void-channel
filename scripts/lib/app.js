@@ -330,6 +330,11 @@ header .mine-link{cursor:pointer;color:var(--fg);font-size:14px;padding:7px 12px
 .tvc .tvc-give{display:inline-flex;align-items:center;margin-top:16px;font-size:18px;padding:11px 30px;font-weight:700}
 .tvc-kick{display:inline-block;margin-bottom:12px;padding:3px 12px;border-radius:999px;background:rgba(95,227,255,.14);color:var(--brand-blue);font-size:clamp(12px,1.8cqi,18px);font-weight:700;letter-spacing:.06em;text-transform:uppercase}
 .tvc-fact .tvc-line{font-size:clamp(17px,3.6cqi,38px)}
+.tvc-trivia .tvc-line{font-size:clamp(16px,3.2cqi,34px)}.tvc-trivia .tvc-kick{background:rgba(255,79,200,.16);color:var(--brand-pink)}
+.tvc-ch{list-style:none;margin:12px auto 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px;max-width:780px;text-align:left}
+.tvc-ch li{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:7px 12px;font-size:clamp(12px,2.1cqi,22px);font-weight:600;line-height:1.25}
+.tvc-ch b{color:var(--brand-blue);margin-right:8px}.tvc-ch li.ok{border-color:#5fd47a;background:rgba(95,212,122,.2)}.tvc-ch li.no{color:var(--dim)}
+.tvc-src{margin-top:8px;color:var(--dim);font-size:clamp(11px,1.6cqi,16px)}.tvc-qn{margin:8px 0 4px;color:var(--brand-pink);font-size:clamp(12px,1.9cqi,19px);font-weight:700}
 .tvc-vid{width:100%;max-width:none}.tvc-vid video{width:100%;max-height:72%;aspect-ratio:16/9;object-fit:contain;display:block;margin:0 auto;border-radius:8px;background:#000}
 .guide{margin-top:12px;border:1px solid var(--line);border-radius:10px;overflow:hidden}.ch{display:grid;grid-template-columns:minmax(150px,1fr) 2fr;gap:10px;padding:9px 12px;border-bottom:1px solid var(--line);cursor:pointer;font-size:14px}.ch:last-child{border-bottom:0}.ch:hover,.ch.on{background:var(--panel2)}.ch.on .cn{color:var(--acc)}.ch small{display:block;color:var(--dim);font-size:11px}
 @media(max-width:600px){.ch{grid-template-columns:1fr;gap:2px}.osd .acts{margin-left:0;width:100%}}
@@ -898,8 +903,10 @@ function osd(c,a,s,ep){const el=document.querySelector('.osd');if(!el||!s)return
  el.innerHTML='<b>'+esc(c.name)+'</b><span>'+esc(s.show)+' · '+code(a)+(ep?' · '+esc(ep.name):'')+'</span><span class="g">'+(left>0?mmss(left)+' left · ':'')+'next: '+(nx?clock(nx.st)+' '+esc(ns?ns.show:''):'')+'</span><span class="acts"><button class="btn chbtn" onclick="surf(-1)" aria-label="Previous channel"><i class="ico chevron-left"></i>CH</button><button class="btn chbtn" onclick="surf(1)" aria-label="Next channel">CH<i class="ico chevron-right"></i></button><button class="btn" onclick="go(\\''+s.slug+'\\')">Open show</button>'+(REMOTE_ON?'<button class="btn" onclick="remoteOpen()" title="Use your phone as the remote">Phone remote</button>':'')+'</span>'}
 // THE PHONE REMOTE (B, 20 Nov 2026: "a channel switcher, save to phone, info on the phone about the show"): its code loads only
 // when someone presses Phone remote (remote/README.md). A room this tab held before a reload is taken back on load.
-let REMOTE_P=null;
-function remoteLoad(){if(!REMOTE_P)REMOTE_P=['play/src/qr.js','remote/src/remote.js','remote/src/screen.js','remote/src/voidtv.js'].reduce((p,f)=>p.then(()=>new Promise((ok,no)=>{const sc=document.createElement('script');sc.src=BASE+f+'?v='+REMOTE_V;sc.onload=ok;sc.onerror=()=>no(new Error(f));document.head.appendChild(sc)})),Promise.resolve()).catch((e)=>{REMOTE_P=null;throw e});return REMOTE_P}
+/* Scripts loaded only when needed (the remote, the break trivia), in order, each once. */
+const JS_P={};
+function jsLoad(list){const key='L:'+list.join(' ');if(!JS_P[key])JS_P[key]=list.reduce((p,f)=>p.then(()=>JS_P['F:'+f]||(JS_P['F:'+f]=new Promise((ok,no)=>{const sc=document.createElement('script');sc.src=BASE+f+'?v='+REMOTE_V;sc.onload=ok;sc.onerror=()=>{delete JS_P['F:'+f];no(new Error(f))};document.head.appendChild(sc)}))),Promise.resolve()).catch((e)=>{delete JS_P[key];throw e});return JS_P[key]}
+function remoteLoad(){return jsLoad(['play/src/qr.js','remote/src/remote.js','remote/src/screen.js','remote/src/voidtv.js'])}
 function remoteOpen(resume){if(!REMOTE_ON)return;if(!resume)track('act',{slug:state.chan||'',x:'remote-open'});remoteLoad().then(()=>window.RemoteScreen&&RemoteScreen.start(window.SiteRemote,!!resume)).catch(()=>{})}
 // FULL HOLD (B, 21 Oct 2026): Live TV never starts anything before its time. What plays at an instant comes from the schedule alone
 // (tvAt), so a viewer who tunes in, comes back from a stall or changes channel lands where everyone else is: the airing's episode, then
@@ -977,6 +984,9 @@ function tvFact(ns,seed){if(!ns)return '';const y=ns.year,net=ns.network,ppl=Str
 function tvSpot(c,a,until,t,d,seed,ns){const S=typeof SPOTS!=='undefined'?SPOTS:null;if(!S)return d;
  const s0=tvStretchStart(c,a,until),K0=Math.max(0,Math.floor((until-s0)/TVC_MS)),i=K0-d.k,kids=tvKids(c,a);
  if(!kids&&S.donate&&K0>=3&&(i===1||i===2)&&tvFirstOfHour(c,s0)){d.spot={kind:'donate',id:'d'+s0};return d}
+ /* Trivia (B, 20 Nov 2026: "Trivia in breaks"): three cards ask one question about the show that just played, the fourth gives the answer and its source; phones in the room answer it (remote/). The same question for everyone on the channel. It takes cards 5 to 8, or 13 to 16 when a video spot holds 8 to 11, so it never sits next to another spot. With none for that show, card 5 stays a fact spot. */
+ if(!kids){const T=K0>=12&&typeof promoBreakSpot==='function'&&promoBreakSpot(seed,4*TVC_MS/1000)?12:4;if(K0>=T+4&&i<T)tvQuiz(c,a);
+  if(K0>=T+4&&i>=T&&i<=T+3){const z=tvQuiz(c,a);if(z){d.spot={kind:'trivia',id:(i<T+3?'tq':'ta')+s0,n:z.n,q:z.q,show:z.show,phase:i<T+3?'q':'a',endsAt:until-(K0-T-2)*TVC_MS,msTotal:3*TVC_MS};return d}}}
  if(!kids&&i===4&&K0>=6){const pool=[].concat((S.trivia||[]).map(x=>['Did you know?',x]),(S.tips||[]).map(x=>['Tip',x]),(S.know||[]).map(x=>['Good to know',x]));
   if(pool.length){const p=pool[(seed+Math.floor(s0/36e5))%pool.length];d.spot={kind:'fact',id:'f'+s0,kick:p[0],text:p[1]};return d}}
  // A video spot starts at card 8 and holds as many cards as the promo runs (to card 11 at most, 36 s; audit P3A-03).
@@ -987,7 +997,17 @@ function tvCardHtml(d){const nx='<div class="tvc-next"><span>Up next</span><b>'+
  if(!sp)return '<div class="tvc-card"><div class="tvc-line">'+esc(d.line)+'</div>'+nx+'<button type="button" class="btn tvc-now" onclick="tvNow()">Watch it now</button></div>';
  if(sp.kind==='donate'){const D=SPOTS.donate;return '<div class="tvc-card"><div class="tvc-wm"><span class="v">void</span><span class="n">tv.net</span></div><div class="tvc-line">'+esc(D.line)+'</div><div class="tvc-credit">'+esc(D.credit||'')+'</div><a class="btn gold tvc-give" href="'+DONATE+'" target="_blank" rel="noopener" onclick="track(\\'act\\',{slug:state.chan,x:\\'spot-donate-tap\\'})">'+esc(D.button||'Donate')+'</a>'+nx+'</div>'}
  if(sp.kind==='fact')return '<div class="tvc-card"><div class="tvc-kick">'+esc(sp.kick)+'</div><div class="tvc-line">'+esc(sp.text)+'</div>'+nx+'</div>';
+ if(sp.kind==='trivia'){const q=sp.q,ans=sp.phase==='a',src=ans&&q.source&&q.source.site?'<div class="tvc-src">Source: '+esc(q.source.site)+(q.source.fact?'. '+esc(q.source.fact):'')+'</div>':'';
+  return '<div class="tvc-card"><div class="tvc-kick">'+(ans?'The answer':'Trivia: '+esc(sp.show))+'</div><div class="tvc-line">'+esc(q.q)+'</div><ol class="tvc-ch">'+q.choices.map((x,j)=>'<li'+(ans?(j===q.answer?' class="ok"':' class="no"'):'')+'><b>'+'ABCD'[j]+'</b>'+esc(x)+'</li>').join('')+'</ol>'+src+'<div class="tvc-qn">'+tvQuizNote(sp)+'</div>'+nx+'</div>'}
  return '<div class="tvc-card tvc-vid"><video muted playsinline autoplay preload="auto" src="'+esc(sp.src)+'"'+(sp.poster?' poster="'+esc(sp.poster)+'"':'')+' onloadedmetadata="this.currentTime=Math.min('+sp.off.toFixed(1)+',Math.max(0,this.duration-0.5))"></video>'+nx+'</div>'}
+/* The question for a break: asked once per channel and airing (trivia/src/live.js, loaded the first time it is needed), never on kids channels (tvSpot checks). Null until it arrives, and when that show has none. */
+const TVQ={};
+function tvQuiz(c,a){if(!TRIVIA)return null;const key=c.id+'|'+a.st;if(key in TVQ)return TVQ[key];const s=SHOWS[a.s];TVQ[key]=null;if(!s)return null;
+ if(Object.keys(TVQ).length>200)for(const k in TVQ)if(k!==key)delete TVQ[k];
+ jsLoad(['trivia/src/game.js','trivia/src/live.js']).then(()=>TriviaLive.liveQuestion({slug:s.slug,season:a.se,number:a.n,seed:key},BASE+'trivia/bank/')).then(q=>{if(q&&q.choices&&q.choices.length>=2)TVQ[key]={n:TriviaLive.hash(key)%1e9,q,show:s.show}}).catch(()=>{});return null}
+function tvQuizNote(sp){const R=window.RemoteScreen,k=R&&R.quizCount?R.quizCount({n:sp.n,answer:sp.q.answer}):null;
+ if(sp.phase==='a')return k&&k.answered?k.right+' of '+k.phones+' phone'+(k.phones===1?'':'s')+' got it':'';
+ return 'Answer in <b class="tvc-qleft">'+tvLeft((sp.endsAt-Date.now())/1000)+'</b>'+(k?' · '+k.answered+' of '+k.phones+' phone'+(k.phones===1?'':'s')+' answered':REMOTE_ON?' · play along: Phone remote, under the picture':'')}
 function tvSpotShown(c,sp){if(TVS_SEEN[sp.id+c.id])return;TVS_SEEN[sp.id+c.id]=1;track('act',{slug:c.id,x:'spot-'+sp.kind})}
 // The card on channel c at instant t, in a run of cards that ends at until: k counts the cards left to the end (0 is the last one).
 function tvCard(c,a,until,t){const nx=TVG.nextAiring(c,TVLIB,a),ns=nx&&SHOWS[nx.s],k=Math.max(0,Math.floor((until-t)/TVC_MS)),seed=tvHash(c.id+':'+until);
@@ -1005,7 +1025,7 @@ function tvCards(c,x,token){const host=$('vph');if(!host)return;tvCardsOff();TVC
   if(!el&&VP.root&&VP.root.querySelector&&document.createElement){el=document.createElement('div');el.setAttribute('role','status');VP.root.insertBefore(el,VP.root.querySelector('.vpx-chname')||VP.root.querySelector('.vpx-card'))}
   if(!el)return;
   const key=d.spot?d.spot.id:'k'+d.k;if(key!==shown){shown=key;el.className='tvc '+(d.spot?'tvc-spot tvc-'+d.spot.kind:'tvc-'+d.look+(d.line.length>90?' tvc-long':''));el.innerHTML=tvCardHtml(d);if(d.spot)tvSpotShown(c,d.spot)}
-  else{const l=el.querySelector('.tvc-left');if(l)l.textContent=tvLeft(d.left)}};
+  else{const l=el.querySelector('.tvc-left');if(l)l.textContent=tvLeft(d.left);const qn=d.spot&&d.spot.kind==='trivia'&&el.querySelector('.tvc-qn');if(qn){const h=tvQuizNote(d.spot);if(qn.innerHTML!==h)qn.innerHTML=h}}};
  const iv=setInterval(tick,250);TVC_TIMER=iv;tick()}
 // Next during a break (B, 21 Oct 2026): the coming show plays now, On Demand, in the normal show player; Live TV's schedule is the same
 // for everyone else. Outside a break Next is the next channel, as before.

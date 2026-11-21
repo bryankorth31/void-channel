@@ -20,6 +20,41 @@
   let ad = null, ws = null, room = null, ended = false, opening = null, retry = 0;
   const seats = new Set();
   let lastNow = '', lastList = '', listVer = 0, timers = [];
+  // Trivia in the breaks: an adapter may give quiz() (remote/src/remote.js says what a quiz is). book: each seat's score and
+  // its answer to the question now open, for this room's evening.
+  // The scores are kept for this tab with the room, so a reload (or the page changing) does not wipe a phone's evening.
+  const book = {}, BOOK = 'voidtv-remote-book';
+  function bookLoad(code, back) {
+    for (const s in book) delete book[s];
+    if (!back) return;
+    try {
+      const k = JSON.parse(sessionStorage.getItem(BOOK) || 'null');
+      if (k && k.code === code && k.book) for (const s in k.book) {
+        const p = k.book[s];
+        if (/^\d+$/.test(s) && p && Number.isFinite(p.score)) book[s] = Number.isInteger(p.n) ? { score: p.score, n: p.n, pick: p.pick, at: p.at } : { score: p.score };
+      }
+    } catch (e) { /* none kept */ }
+  }
+  function bookSave() { try { if (room) sessionStorage.setItem(BOOK, JSON.stringify({ code: room.code, book })); } catch (e) { /* this page only */ } }
+  let quizN = null, quizPhase = '';
+  const quizNow = () => { try { return ad && ad.quiz ? ad.quiz() : null; } catch (e) { return null; } };
+  function quizTick() {
+    const z = quizNow();
+    if (!z) { quizN = null; quizPhase = ''; return; }
+    // Each phone is asked with its own answer, if it gave one (the page reloaded mid-question: its buttons stay locked).
+    if (z.phase === 'q' && quizN !== z.n) {
+      quizN = z.n; quizPhase = 'q';
+      const q = V.quizAsk(z, Date.now());
+      for (const seat of seats) { const p = book[seat]; send(seat, Object.assign({}, q, { pick: p && p.n === z.n ? p.pick : null })); }
+      return;
+    }
+    // The answer is out: each phone hears its own result once. A question this screen never asked (it tuned in at the answer)
+    // gives no results, only the answer on the TV.
+    if (z.phase === 'a' && quizPhase !== 'a') {
+      const asked = quizN === z.n; quizN = z.n; quizPhase = 'a';
+      if (asked) { for (const [seat, m] of V.quizResults(book, [...seats], z, root.TriviaGame && root.TriviaGame.points)) send(seat, m); bookSave(); }
+    }
+  }
   const send = (to, msg) => { if (ws && ws.readyState === 1 && V.fits(msg)) ws.send(JSON.stringify({ to, msg })); };
 
   // Everything a phone needs, to one phone (a join, a phone back, a phone asking again) or to all.
@@ -27,6 +62,13 @@
     send(to, V.siteMsg(ad.site()));
     const n = V.nowMsg(ad.now()); send(to, n); if (to === 'all') lastNow = sameKey(n);
     for (const l of ad.lists()) for (const m of V.listMsgs(l.id, l.title, l.items, l.on, listVer)) send(to, m);
+    // A phone that joins (or wakes) while a question is open gets it, with its own answer if it gave one.
+    const z = quizNow();
+    if (to !== 'all' && z && z.phase === 'q' && quizN === z.n) {
+      const q = V.quizAsk(z, Date.now()), p = book[to];
+      if (p && p.n === z.n) q.pick = p.pick;
+      send(to, q);
+    }
   }
   // The time left is counted down on the phone, so it alone is no reason to send again (it changes every second; sending it
   // each poll made the phone redraw its buttons under a thumb). Anything else that changes goes at once.
@@ -46,12 +88,15 @@
 
   function onMessage(e) {
     let m; try { m = JSON.parse(e.data); } catch (x) { return; }
-    if (m.type === 'room') { room = { code: m.code, join: m.join }; retry = 0; if (m.key) keep({ code: m.code, key: m.key }); draw(); return; }
-    if (m.type === 'join') { seats.add(m.from); all(m.from); draw(); return; }
+    if (m.type === 'room') { if (!room || room.code !== m.code) bookLoad(m.code, !!m.back); room = { code: m.code, join: m.join }; retry = 0; if (m.key) keep({ code: m.code, key: m.key }); draw(); return; }
+    // The first phone in: the panel steps aside after a moment (the chip in the corner brings it back), so it never sits over
+    // the picture or a trivia card.
+    if (m.type === 'join') { const first = !seats.size; seats.add(m.from); all(m.from); draw(); if (first && shown) setTimeout(() => { if (seats.size) hide(); }, 2500); return; }
     if (m.type === 'leave') { seats.delete(m.from); draw(); return; }
     const msg = m.msg || {};
     if (!seats.has(m.from)) return;
     if (msg.type === 'r-hi') { all(m.from); return; }
+    if (msg.type === 't-a') { const g = V.quizAnswer(book, m.from, msg, quizN === null ? null : quizNow(), Date.now()); if (g) { send(m.from, g); bookSave(); } return; }
     const cmd = V.readDo(msg);
     if (!cmd) return;
     if (cmd.a === 'info') { const i = ad.info(cmd.slug); if (i) send(m.from, V.infoMsg(i)); return; }
@@ -88,7 +133,7 @@
     return opening;
   }
   // End remote: the relay ends the room at once and tells the phones (a plain close would keep it 45 s for a reload).
-  function end() { ended = true; keep(null); if (ws && ws.readyState === 1) ws.send(JSON.stringify({ relay: 'end' })); if (ws) ws.close(); ws = null; room = null; seats.clear(); hide(); }
+  function end() { ended = true; keep(null); try { sessionStorage.removeItem(BOOK); } catch (e) { /* fine */ } if (ws && ws.readyState === 1) ws.send(JSON.stringify({ relay: 'end' })); if (ws) ws.close(); ws = null; room = null; seats.clear(); hide(); }
 
   // The panel: the code, the QR, how many phones. Small, in a corner, out of the picture's way once a phone is in.
   const CSS = '.vrm{position:fixed;right:16px;bottom:16px;z-index:9000;width:min(300px,calc(100vw - 32px));background:#0d0f16;color:#e8e8ee;border:1px solid #2a2f40;border-radius:16px;padding:16px;font:15px system-ui,Segoe UI,Roboto,sans-serif;box-shadow:0 10px 40px rgba(0,0,0,.6);text-align:center}'
@@ -132,7 +177,7 @@
   function start(adapter, resume) {
     ad = adapter; build();
     if (!timers.length) {
-      timers.push(setInterval(() => tick(false), POLL_MS), setInterval(listTick, LIST_MS), setInterval(() => tick(true), ALIVE_MS));
+      timers.push(setInterval(() => tick(false), POLL_MS), setInterval(listTick, LIST_MS), setInterval(() => tick(true), ALIVE_MS), setInterval(quizTick, 400));
       addEventListener('pagehide', () => { if (ws) ws.close(); });   // a reload: the room waits 45 s for the next load
     }
     if (!resume) show();
@@ -140,5 +185,7 @@
       .catch((e) => { show(); box.querySelector('#vrm-err').textContent = e.message; return null; });
   }
 
-  root.RemoteScreen = { start, end, show, hide, get room() { return room; }, get phones() { return seats.size; }, changed: () => tick(false) };
+  root.RemoteScreen = { start, end, show, hide, get room() { return room; }, get phones() { return seats.size; }, changed: () => tick(false),
+    // For the TV's trivia card: how many phones answered the open question, and how many got it right.
+    quizCount: (z) => (z && seats.size ? V.quizCount(book, [...seats], z) : null) };
 })(typeof self !== 'undefined' ? self : this);

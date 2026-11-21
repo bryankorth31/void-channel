@@ -13,6 +13,12 @@ information". And: "also use this for cast, and kids, across the entire voidtv u
 - Saved tab: shows saved on this phone only. Open one on the phone, or put it on the big screen. One CASH donation line at the
   bottom (never on Kids).
 - A reload of the big screen keeps the room for 45 seconds, so the phones stay connected.
+- Trivia in the breaks (Bryan, 20 Nov 2026: "Trivia in breaks"):
+  - In a Live TV break, three cards ask one question about the show that just played, and the fourth gives the answer and its source.
+  - The question is the same for everyone on the channel: `trivia/src/live.js` picks it from the channel and the airing.
+  - The cards are 5 to 8, or 13 to 16 when a video spot holds 8 to 11, so trivia never sits next to another spot. A break shorter than that has none, and so does a show with no questions (card 5 stays a fact spot). Never on kids channels.
+  - Phones in the room answer it with Trivia Night's own messages (`t-q`, `t-a`, `t-got`, `t-res`) and get points, early answers worth more (Trivia's `points`).
+  - The big screen says how many phones answered and how many got it. Scores last the evening, and a reload keeps them.
 
 ## How it is built
 
