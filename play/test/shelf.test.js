@@ -240,6 +240,6 @@ test('the shelf looks like voidtv.net (Bryan, 20 Nov 2026: "like voidtv.net with
     const p = path.join(P, '..', 'assets', 'brand', 'bg', f + '.webp');
     assert.ok(fs.existsSync(p) && fs.statSync(p).size < 300 * 1024, f);
   }
-  assert.ok(js.includes('heroList.unshift(ART[0]); heroList.splice(Math.ceil(heroList.length / 2), 0, ART[1]);'), 'the art opens the hero and comes back halfway');
+  assert.ok(!js.includes('heroList.unshift(ART[0])'), 'Bryan said no to the art in the hero ("i want to have the hero treated like the hero in voidtv.net")');
   assert.ok(js.includes("bg.dataset.srcset = base + '-m.webp 960w, ' + base + '.webp 1920w';"), 'the browser picks the size');
 });

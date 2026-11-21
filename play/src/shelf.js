@@ -417,8 +417,9 @@
     if (!h || !shelfGames.length) return;
     heroList = heroSlides(shelfGames);
     if (!heroList.length) return;
-    // Bryan's voidarcade art opens the hero and comes back halfway round: the hooded player at the wall of TVs.
-    heroList.unshift(ART[0]); heroList.splice(Math.ceil(heroList.length / 2), 0, ART[1]);
+    // Bryan's voidarcade art is not in the hero (20 Nov 2026, on seeing it: "no. i want to have the hero treated like the
+    // hero in voidtv.net. how its playing live tv"); the hero shows the games until that is built. ART stays for later.
+    void ART;
     h.textContent = '';
     const slides = el('div', 'slides');
     for (const s of heroList) {
