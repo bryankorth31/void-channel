@@ -121,7 +121,8 @@
         if (shift && name === shift.on) continue;
         const b = pad.buttons && pad.buttons[idx];
         let as = swap && swap[name] ? swap[name] : name;
-        if (two && !String(pad.id || '').startsWith('phone') && (as === 'X' || as === 'Y') && m[as] && /^P1:[XY]$/.test(m[as])) as = as === 'X' ? 'B' : 'A';
+        // By place on every pad (the auditor): the left button presses B, the top one A, whatever is printed on them.
+        if (two && !String(pad.id || '').startsWith('phone') && (name === 'X' || name === 'Y') && /^P1:[XY]$/.test(m[as] || '')) as = name === 'X' ? 'B' : 'A';
         if (b && (b.pressed || b.value > 0.5) && m[as]) codes.add(seat(m[as]));
       }
       const ax = (pad.axes && pad.axes[0]) || 0, ay = (pad.axes && pad.axes[1]) || 0;
