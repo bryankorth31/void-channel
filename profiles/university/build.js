@@ -679,7 +679,7 @@ function top(current, all) {
     + 'window.__par=frame;addEventListener("scroll",function(){if(!q){q=true;requestAnimationFrame(frame)}},{passive:true});addEventListener("resize",frame);frame()})()</script>';
   // Every voidtv.net area (Bryan, 20 Nov 2026, M1): the hamburger drawer from voidtv.net's one list. The menu only, no
   // card: Open Yale's terms (oyc.yale.edu/terms) say no ads on the University while it uses Yale material.
-  const AREAS = '<script src="https://voidtv.net/assets/brand/areas/areas.js?v=1" defer data-site="university" data-here="university" data-ads="off"></script>';
+  const AREAS = '<script src="https://voidtv.net/assets/brand/areas/areas.js?v=' + require('../../scripts/lib/areas-v')() + '" defer data-site="university" data-here="university" data-ads="off"></script>';
   return atmos + AREAS + '<header class="top"><span data-void-areas-menu></span><a class="crest" href="index.html">' + CREST + '<span><b>Void University</b><small>Learn from people who did it</small></span></a><nav class="nav">' + links + '</nav>' + INSTALL + DRAFT + '</header>'
     + '<script>(function(){var h=document.querySelector("header.top"),s=function(){document.documentElement.style.setProperty("--hh",h.offsetHeight+"px")};s();addEventListener("load",s);if(window.ResizeObserver)new ResizeObserver(s).observe(h);else addEventListener("resize",s)})()</script>' + move;
 }

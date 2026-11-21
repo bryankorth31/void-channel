@@ -1279,7 +1279,7 @@ function page({ data, mode = 'embed', routes = 'hash', base = '/', meta = {} }) 
     : `const CG=${JSON.stringify(colors)};const SPOTS=${JSON.stringify(spots)};const PEOPLE={};const LINKS={};const BIO={};let TV=null;let TVLIB=null;let GRAPH_LOADED=false;`;
   // Every voidtv.net area: the hamburger drawer and the small card (assets/brand/areas/areas.js; Bryan, 20 Nov 2026, M1 + A1).
   // Never on kids: its other-area links sit behind the grown-up check. A sister site loads voidtv.net's copy, so the list is in one place.
-  const areasScript = PROFILE.name === 'kids' || mode === 'embed' ? '' : `<script src="${PROFILE.name === 'voidtv' ? base : 'https://voidtv.net/'}assets/brand/areas/areas.js?v=1" defer></script>`;
+  const areasScript = PROFILE.name === 'kids' || mode === 'embed' ? '' : `<script src="${PROFILE.name === 'voidtv' ? base : 'https://voidtv.net/'}assets/brand/areas/areas.js?v=${require('./areas-v')()}" defer></script>`;
   const indexScript = areasScript + `<script src="${base}assets/player/voidplayer.js?v=${PLAYER_V}"></script>` + (mode === 'embed' ? '' : `<script src="${base}data/index.js"></script>`);
   const hx = (v) => String(v == null ? '' : v).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   const title = hx(meta.title ? `${meta.title} · ${SITE_NAME}` : SITE_NAME);

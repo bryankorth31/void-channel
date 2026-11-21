@@ -45,9 +45,16 @@ test('where it loads: voidtv.net, PLAY, Trivia, University; never kids', () => {
   for (const f of ['play/index.html', 'trivia/index.html']) {
     const h = read(f);
     assert.match(h, /<span data-void-areas-menu><\/span>/, f + ' has the menu');
-    assert.match(h, /<script src="\/assets\/brand\/areas\/areas\.js(\?v=\d+)?" defer/, f + ' loads the list');   // Trivia's build stamps the version (A34)
+    assert.match(h, /<script src="\/assets\/brand\/areas\/areas\.js" defer/, f + ' loads the list');   // the build stamps the version (PLAY: site.js; Trivia: A34)
   }
   const U = read('profiles/university/build.js');
-  assert.match(U, /areas\.js\?v=\d+" defer data-site="university" data-here="university" data-ads="off"/, 'University: the menu, no card');
+  assert.match(U, /areas\.js\?v=' \+ require\('\.\.\/\.\.\/scripts\/lib\/areas-v'\)\(\) \+ '" defer data-site="university" data-here="university" data-ads="off"/, 'University: the menu, no card');
+  assert.match(APP, /areas\.js\?v=\$\{require\('\.\/areas-v'\)\(\)\}" defer/, 'voidtv.net: the version comes from the list itself');
+});
+
+test('the version is a hash of the list, so a changed list is never held in a cache', () => {
+  const v = require('../scripts/lib/areas-v')();
+  assert.match(v, /^[0-9a-f]{10}$/);
+  assert.equal(v, require('crypto').createHash('sha1').update(SRC).digest('hex').slice(0, 10));
 });
 
