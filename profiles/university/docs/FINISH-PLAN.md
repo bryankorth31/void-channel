@@ -253,3 +253,6 @@ the HQ areas chat. Steps 7 to 10 start after the 22 Nov reset.
   quiz answer and its link to the lesson; no sideways scroll, no console errors. Not checked: the lesson opening
   from the link on a tablet, and the back arrow, which the Body Atlas side is building. More lessons: they are
   made in Body Atlas first; each new public one is then one room and one unit here (RUN.md section 15).
+- 20 Nov 2026: Bryan, asked whether to mark the Body course live: "Yes, mark live". The body and the Body Atlas card
+  in the Body row are both live in list.json (`uni.js live the-body on` turns both on). They reach the live site at
+  his next deploy. After that, the Body Atlas chat needs the word that the course is live, to aim its back arrow.
