@@ -113,6 +113,35 @@ test('refuses: no destination, a destination inside the repository or the cache,
   assert.equal(run(['--to']).status, 2);
 });
 
+// Build audit 19 Nov 2026, V6: nothing ran the backup, and the only copy sat on the same drive as the cache.
+test('a backup drive that is not there is refused in plain words, with nothing copied and no stamp', { skip: process.platform !== 'win32' && 'Windows drive letters' }, () => {
+  const letter = 'ZYXWVUTSRQPONMLKJIHG'.split('').find((l) => !fs.existsSync(l + ':\\'));
+  assert.ok(letter, 'a drive letter that is not in use on this PC');
+  const from = cache();
+  const r = run(['--from', from, '--to', letter + ':\\Backups\\voidtv-cache']);
+  assert.equal(r.status, 2);
+  assert.match(r.out, new RegExp('Refused: the backup drive ' + letter + ':\\\\ is not there, so nothing was copied\\. Plug it in'));
+  assert.match(r.out, /Back up the cache now/);
+  assert.ok(!fs.existsSync(path.join(from, 'backup-stamp.json')), 'no stamp, so the backup light keeps the age of the last real copy');
+});
+
+test('the nightly runs the backup by itself: after the publish, before the doctor, to the folder the one setting names', () => {
+  const src = fs.readFileSync(path.join(REPO, 'scripts', 'nightly.js'), 'utf8');
+  const order = [...src.matchAll(/^step\('([\w-]+)', \[([^\]]*)\]/gm)].map((m) => m[1]);
+  const at = (name) => order.indexOf(name);
+  assert.ok(at('backup') > 0, 'nightly.js has a backup step: ' + order.join(', '));
+  assert.ok(at('publish') < at('backup') && at('backup') < at('doctor'), 'after publish and before doctor, so tonight\'s light reads tonight\'s stamp: ' + order.join(', '));
+  assert.match(src, /^step\('backup', \['scripts\/backup-cache\.js'\], \d+\);/m, 'no --to here: the folder comes from VOID_BACKUP_DIR in backend/.env, one setting in one place');
+});
+
+test('HQ can run the backup with no AI: the job name is allowed and the Jobs tab has the button', () => {
+  const hq = fs.readFileSync(path.join(REPO, 'scripts', 'hq.js'), 'utf8');
+  const set = /const SCRIPTS = new Set\(\[([^\]]*)\]\)/.exec(hq);
+  assert.ok(set && set[1].includes("'backup-cache'"), 'scripts/hq.js lets HQ start backup-cache');
+  const page = fs.readFileSync(path.join(REPO, 'scripts', 'hq', 'index.html'), 'utf8');
+  assert.ok(page.includes("['Back up the cache now (to the backup drive; seconds after the first copy)','backup-cache',[]]"), 'the Jobs button');
+});
+
 test('a file that cannot be copied is counted, the rest are copied, and the exit code says so', () => {
   const from = cache(), to = path.join(TMP, 'dest' + n);
   fs.mkdirSync(to, { recursive: true });

@@ -260,8 +260,13 @@ function backupLight(stamp, nowMs) {
   const days = (nowMs - new Date(stamp.at).getTime()) / 864e5;
   const what = `${(stamp.files || 0).toLocaleString('en-US')} files, ${mb(stamp.bytes || 0)}`;
   if (stamp.failed > 0) return light('backup', 'yellow', `the last backup could not copy ${stamp.failed} file${stamp.failed === 1 ? '' : 's'} (${what} kept)`, 'Close any hunt that is writing the cache and run node scripts/backup-cache.js again.');
-  if (!(days <= BACKUP_DAYS)) return light('backup', 'yellow', `last backup ${Math.floor(days)} days ago (${what})`, 'Run node scripts/backup-cache.js (add --to <folder> the first time). It copies only what changed.');
-  return light('backup', 'green', `backed up ${days < 1 ? 'today' : Math.floor(days) + ' day' + (Math.floor(days) === 1 ? '' : 's') + ' ago'}: ${what}`);
+  if (!(days <= BACKUP_DAYS)) return light('backup', 'yellow', `last backup ${Math.floor(days)} days ago (${what})`, 'The nightly pass runs the backup by itself: if the backup drive is unplugged, plug it in. Then HQ > Jobs > Back up the cache now, or node scripts/backup-cache.js (add --to <folder> when no VOID_BACKUP_DIR is set in backend/.env). It copies only what changed.');
+  // A copy on the same drive as the cache is lost with that drive (audit 19 Nov 2026, V6: the only backup sat on C: beside the cache).
+  // Only a path that names its drive (C:\..., or a network share) can be compared; anything else is "not known" and never judged.
+  const driveOf = (p) => { const r = typeof p === 'string' ? require('path').win32.parse(p).root.toLowerCase() : ''; return /^[a-z]:/.test(r) || r.startsWith('\\\\') ? r : ''; };
+  const when = days < 1 ? 'today' : Math.floor(days) + ' day' + (Math.floor(days) === 1 ? '' : 's') + ' ago';
+  if (driveOf(stamp.from) && driveOf(stamp.from) === driveOf(stamp.to)) return light('backup', 'yellow', `backed up ${when}, but the copy is on the same drive as the cache (${stamp.to}): ${what}`, 'A drive that fails takes both. Put VOID_BACKUP_DIR=<a folder on another drive> in backend/.env and run the backup again: HQ > Jobs > Back up the cache now, or node scripts/backup-cache.js.');
+  return light('backup', 'green', `backed up ${when}${stamp.to ? ' to ' + stamp.to : ''}: ${what}`);
 }
 
 // Everything the doctor learns from the live site, as lights. doFetch(url, init) is fetch (tests pass a fake). versionText is the body of

@@ -6,6 +6,8 @@
 //   4. people.js --episodes --bios cast, episode credits, bios, the graph
 //   5. db.js                       the SQLite mirror
 //   6. publish.js                  commit + push -> Cloudflare rebuilds
+//   7. backup-cache.js             the part of catalog/cache that cannot be rebuilt cheaply, copied to the folder VOID_BACKUP_DIR
+//                                  names in backend/.env (another drive); seconds after the first copy
 //   then doctor.js (the lights) and alert.js (tells Bryan when a light needs him; docs/RUNBOOK.md, alert)
 // Each step gets a time limit; a failing step is logged and the pass continues, because a stale
 // poster is not a reason to skip the publish. Log: catalog/cache/nightly.log
@@ -51,6 +53,10 @@ step('people', ['scripts/people.js', '--episodes', '--bios', '4000'], 120);
 step('linkcheck', ['scripts/linkcheck.js', '--sample', '150'], 15); // link rot: retire files the Archive dropped
 step('db', ['scripts/db.js'], 20);
 step('publish', ['scripts/publish.js'], 20);
+// The backup runs by itself (build audit 19 Nov 2026, V6: nothing ran it, and the last copy was a month old on the same drive). After
+// the publish, so a long first copy never delays the site, and before the doctor, so tonight's backup light reads tonight's stamp.
+// A backup drive that is not plugged in is a FAILED line here; the backup light then ages to yellow and the alert says so.
+step('backup', ['scripts/backup-cache.js'], 30);
 step('doctor', ['scripts/doctor.js'], 10); // the lights HQ shows; red exits 1 and is logged here
 step('alert', ['scripts/alert.js'], 2); // tells Bryan when a light needs him (scripts/lib/alertmsg.js); quiet nights send nothing
 log('==== nightly done');

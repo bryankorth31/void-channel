@@ -258,6 +258,27 @@ test('backup light: green under 7 days, yellow older or with failures, red when 
   assert.match(G.backupLight(stamp(2), now).msg, /2 days ago: 86,661 files, 2374\.0 MB/);
 });
 
+// Build audit 19 Nov 2026, V6: the only backup sat on the same drive as the cache it protects.
+test('backup light: a fresh copy on the same drive as the cache is yellow and says why; on another drive it is green and names the folder', () => {
+  const now = Date.parse('2026-11-20T12:00:00Z');
+  const stamp = (from, to, daysAgo = 0.5) => ({ at: new Date(now - daysAgo * 864e5).toISOString(), files: 89687, bytes: 2481e6, failed: 0, from, to });
+  const same = G.backupLight(stamp('C:\\Users\\bryan\\void-channel\\catalog\\cache', 'C:\\Users\\bryan\\void-channel-backups\\cache'), now);
+  assert.equal(same.level, 'yellow');
+  assert.match(same.msg, /backed up today, but the copy is on the same drive as the cache \(C:\\Users\\bryan\\void-channel-backups\\cache\)/);
+  assert.match(same.fix, /VOID_BACKUP_DIR=<a folder on another drive>/);
+  assert.match(same.fix, /Back up the cache now/);
+  const other = G.backupLight(stamp('C:\\Users\\bryan\\void-channel\\catalog\\cache', 'E:\\Backups\\voidtv-cache'), now);
+  assert.equal(other.level, 'green');
+  assert.match(other.msg, /^backed up today to E:\\Backups\\voidtv-cache: 89,687 files, 2481\.0 MB$/);
+  assert.equal(G.backupLight(stamp('c:\\a\\cache', 'C:\\b'), now).level, 'yellow', 'the drive letter is compared whatever its case');
+  assert.equal(G.backupLight(stamp('C:\\a\\cache', '\\\\nas\\share\\voidtv'), now).level, 'green', 'a network share is another place');
+  // An old copy is said as old first; a path that names no drive is not judged at all.
+  assert.match(G.backupLight(stamp('C:\\a\\cache', 'E:\\b', 30), now).msg, /^last backup 30 days ago/);
+  assert.match(G.backupLight(stamp('C:\\a\\cache', 'E:\\b', 30), now).fix, /if the backup drive is unplugged, plug it in/);
+  assert.equal(G.backupLight(stamp('/tmp/x/cache', '/tmp/y'), now).level, 'green');
+  assert.equal(G.backupLight({ at: new Date(now - 864e5).toISOString(), files: 8, bytes: 1234, failed: 0 }, now).level, 'green', 'a stamp from before the folders were recorded');
+});
+
 // A fake fetch: a table of "METHOD url" -> { status, headers }. Anything not in the table fails like a dead network.
 const fakeFetch = (table) => async (url, init) => {
   const hit = table[`${(init && init.method) || 'GET'} ${url}`];

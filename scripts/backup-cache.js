@@ -105,6 +105,10 @@ function main(argv) {
     if (!to) { console.error('Refused: no destination. Give --to <folder>, or put VOID_BACKUP_DIR=<folder> in backend/.env. A folder on another drive is best.'); return 2; }
     if (inside(to, ROOT)) { console.error('Refused: ' + to + ' is inside this repository, which is published. Choose a folder outside ' + ROOT + '.'); return 2; }
     if (inside(to, from) || inside(from, to)) { console.error('Refused: the destination and the cache folder must not contain each other.'); return 2; }
+    // The backup folder is on another drive on purpose, and that drive may be an external one. When it is not there, say so in plain
+    // words (the nightly logs this line) instead of failing on a folder that cannot be made.
+    const drive = path.parse(path.resolve(to)).root;
+    if (drive && !fs.existsSync(drive)) { console.error('Refused: the backup drive ' + drive + ' is not there, so nothing was copied. Plug it in and run the backup again (HQ > Jobs > Back up the cache now), or name another folder in VOID_BACKUP_DIR in backend/.env.'); return 2; }
   }
   if (!fs.existsSync(from) || !fs.statSync(from).isDirectory()) { console.error('Refused: no cache folder at ' + from + '.'); return 2; }
   const mb = (n) => (n / 1e6).toFixed(1) + ' MB';
