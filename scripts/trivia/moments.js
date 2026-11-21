@@ -11,6 +11,9 @@
 //   find: something to spot on screen; find = what ("the red phone"); start to end = while it can be seen (5 to 20 s).
 //   whodunit: an episode's mystery, written once by a person; q (the question), choices (four suspects), answer (0 to 3),
 //     start = when guessing opens, lock = when guesses close, end = when the episode reveals it.
+//   clue: a clue in a mystery episode (B, 20 Nov 2026, the Mystery channel: "compete along the way with clues");
+//     clue = what it is ("the muddy boots"); start to end = while it shows (5 to 20 s). It pops up then, and players
+//     can change their whodunit guess after it.
 // A moment a person picks on the marking page is approved by that person as they save it. Moments found by a machine
 // later (subtitle lines, transcripts) are saved without approved and do not reach a game until a person approves them.
 //
@@ -24,7 +27,7 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..', '..');
 // TRIVIA_MOMENTS_DIR and TRIVIA_DB move the store and the catalog (the tests use them).
 const DIR = process.env.TRIVIA_MOMENTS_DIR || path.join(ROOT, 'trivia', 'moments');
-const KINDS = { scene: 'Scene', line: 'Line', theme: 'Theme song', still: 'Still', find: 'Spot it', whodunit: 'Whodunit' };
+const KINDS = { scene: 'Scene', line: 'Line', theme: 'Theme song', still: 'Still', find: 'Spot it', whodunit: 'Whodunit', clue: 'Clue' };
 const MIN_SECS = 5;
 const MAX_SECS = 20;
 // What clip rounds may cut from: live, plays, MP4, five minutes or more (episodes) or ten (films), as the bank's templates.
@@ -69,6 +72,7 @@ function problems(m, file) {
   }
   else if (m.end - m.start < MIN_SECS || m.end - m.start > MAX_SECS) out.push(`must run ${MIN_SECS} to ${MAX_SECS} seconds`);
   if (m.kind === 'line' && !(m.line && String(m.line).trim())) out.push('a line moment needs the words heard');
+  if (m.kind === 'clue' && !(m.clue && String(m.clue).trim().length >= 3 && String(m.clue).length <= 120)) out.push('a clue needs what the clue is (3 to 120 characters)');
   if (m.kind === 'find' && !(m.find && String(m.find).trim().length >= 3 && String(m.find).length <= 80)) out.push('a spot-it moment needs what to find (3 to 80 characters)');
   if (m.kind === 'whodunit') {
     const c = Array.isArray(m.choices) ? m.choices.map((x) => String(x || '').trim()) : [];
@@ -77,7 +81,7 @@ function problems(m, file) {
     if (!Number.isInteger(m.answer) || m.answer < 0 || m.answer > 3) out.push('a whodunit needs the right answer picked');
     for (const x of [m.q, ...c]) if (x && DASH.test(x)) { out.push('a whodunit carries a long dash'); break; }
   }
-  for (const k of ['line', 'note', 'find']) {
+  for (const k of ['line', 'note', 'find', 'clue']) {
     if (m[k] && String(m[k]).length > 200) out.push(k + ' is longer than 200 characters');
     if (m[k] && DASH.test(m[k])) out.push(k + ' carries a long dash');
   }

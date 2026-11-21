@@ -78,6 +78,7 @@ function fromPage(b, db) {
     start, end: b.kind === 'still' ? start : Math.round(Number(b.end) * 10) / 10,
     ...(b.line && String(b.line).trim() ? { line: String(b.line).trim() } : {}),
     ...(b.kind === 'find' ? { find: String(b.find || '').trim() } : {}),
+    ...(b.kind === 'clue' ? { clue: String(b.clue || '').trim() } : {}),
     ...(b.kind === 'whodunit' ? { q: String(b.q || '').trim(), choices: (Array.isArray(b.choices) ? b.choices : []).slice(0, 4).map((x) => String(x || '').trim()),
       answer: Number(b.answer), lock: Math.round(Number(b.lock) * 10) / 10 } : {}),
     ...(b.note && String(b.note).trim() ? { note: String(b.note).trim() } : {}),

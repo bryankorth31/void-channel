@@ -142,7 +142,7 @@
 
   // A whodunit's three times: guessing opens, guesses close, the episode reveals it (seconds into the file).
   S.w = { ask: null, lock: null, reveal: null };
-  const KIND_NAMES = { scene: 'Scene', line: 'Line', theme: 'Theme song', still: 'Still', find: 'Spot it', whodunit: 'Whodunit' };
+  const KIND_NAMES = { scene: 'Scene', line: 'Line', theme: 'Theme song', still: 'Still', find: 'Spot it', whodunit: 'Whodunit', clue: 'Clue' };
 
   function drawMarked() {
     if (kind() === 'whodunit') {
@@ -157,6 +157,7 @@
     $('marked').textContent = has
       ? (kind() === 'still' ? 'One frame at ' + mmss(S.start) : 'From ' + mmss(S.start) + ' to ' + mmss(end()) + ' (' + Math.round(end() - S.start) + ' s)')
       : kind() === 'find' ? 'Play, pause where the thing to spot first shows, then Mark start here.'
+        : kind() === 'clue' ? 'Play, pause where the clue shows, then Mark start here.'
         : 'Nothing marked yet. Play, pause where the moment begins, then Mark start here.';
   }
 
@@ -165,6 +166,7 @@
     $('lenField').hidden = k === 'still' || k === 'whodunit';
     $('line').hidden = k !== 'line';
     $('find').hidden = k !== 'find';
+    $('clue').hidden = k !== 'clue';
     $('who').hidden = k !== 'whodunit';
     $('markStart').hidden = k === 'whodunit';
     $('preview').hidden = k === 'whodunit';
@@ -207,7 +209,7 @@
       li.querySelector('.k').textContent = KIND_NAMES[m.kind] || m.kind;
       li.querySelector('.w').textContent = m.kind === 'whodunit'
         ? where + m.q + ' ' + m.choices.join(', ') + '. Answer: ' + m.choices[m.answer] + '. Guessing ' + mmss(m.start) + ' to ' + mmss(m.lock) + ', revealed ' + mmss(m.end)
-        : where + (m.kind === 'still' ? mmss(m.start) : mmss(m.start) + ' to ' + mmss(m.end)) + (m.line ? ': "' + m.line + '"' : '') + (m.find ? ': spot ' + m.find : '') + (m.note ? ' (' + m.note + ')' : '');
+        : where + (m.kind === 'still' ? mmss(m.start) : mmss(m.start) + ' to ' + mmss(m.end)) + (m.line ? ': "' + m.line + '"' : '') + (m.find ? ': spot ' + m.find : '') + (m.clue ? ': clue, ' + m.clue : '') + (m.note ? ' (' + m.note + ')' : '');
       li.querySelector('small').textContent = 'Picked by ' + m.by + ', ' + new Date(m.at).toLocaleString();
       const play = document.createElement('button');
       play.textContent = 'Play';
@@ -247,6 +249,7 @@
     if (by.length < 2) { $('by').focus(); return say('Type your name at the top first; it goes on the moment.', 'err'); }
     if (kind() === 'line' && !$('line').value.trim()) { $('line').focus(); return say('Type the words heard for a line.', 'err'); }
     if (kind() === 'find' && $('find').value.trim().length < 3) { $('find').focus(); return say('Type what players should spot.', 'err'); }
+    if (kind() === 'clue' && $('clue').value.trim().length < 3) { $('clue').focus(); return say('Type what the clue is.', 'err'); }
     const sus = [...document.querySelectorAll('#who .wc')].map((x) => x.value.trim());
     const pick = document.querySelector('input[name=wans]:checked');
     if (kind() === 'whodunit') {
@@ -256,7 +259,7 @@
     store('trivia-mark-by', by);
     const who = kind() === 'whodunit';
     const body = { key: S.cur.key, season: S.file.season, number: S.file.number, kind: kind(), start: who ? S.w.ask : S.start, end: who ? S.w.reveal : end(),
-      line: kind() === 'line' ? $('line').value : '', find: $('find').value, note: $('note').value, by,
+      line: kind() === 'line' ? $('line').value : '', find: $('find').value, clue: $('clue').value, note: $('note').value, by,
       q: $('wq').value, choices: sus, answer: pick ? Number(pick.value) : null, lock: S.w.lock };
     try {
       await api('/api/moments', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
@@ -267,6 +270,7 @@
       for (const x of document.querySelectorAll('input[name=wans]')) x.checked = false;
       $('line').value = '';
       $('find').value = '';
+      $('clue').value = '';
       $('note').value = '';
       drawMarked();
       await drawSaved();

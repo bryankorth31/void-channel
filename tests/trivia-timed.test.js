@@ -45,6 +45,9 @@ const URL1 = 'https://archive.org/download/bb/e1.mp4';
     m({ kind: 'find', show: 'breaking-bad', season: 1, number: 1, start: 900, end: 912, find: 'the pink teddy bear' }),
     m({ kind: 'whodunit', show: 'breaking-bad', season: 1, number: 1, start: 1200, lock: 2400, end: 3000, q: 'Who made the blue meth?',
       choices: ['Walter White', 'Jesse Pinkman', 'Hank Schrader', 'Skyler White'], answer: 0 }),
+    m({ kind: 'clue', show: 'breaking-bad', season: 1, number: 1, start: 1500, end: 1510, clue: 'the gas mask in the RV' }),
+    m({ kind: 'clue', show: 'breaking-bad', season: 1, number: 1, start: 2000, end: 2012, clue: 'chalk dust on his sleeve' }),
+    m({ kind: 'clue', show: 'breaking-bad', season: 1, number: 1, start: 2600, end: 2610, clue: 'too late to count' }),
   ]);
   M.save('nopool', [{ ...m({ kind: 'line', show: 'nopool', season: 1, number: 1, start: 10, end: 20, line: 'one two three four five six seven' }), item: 'np', url: 'https://archive.org/download/np/1.mp4' }]);
 }
@@ -87,7 +90,11 @@ test('the build: approved lines only, in the pool only, each checked against its
   assert.deepEqual([who.at, who.lock, who.reveal, who.choices[who.answer]], [1200, 2400, 3000, 'Walter White']);
   assert.ok(who.source.fact.endsWith('revealed at 50:00 (answer written by Bryan after watching)'), who.source.fact);
   for (const x of [spot, who]) assert.deepEqual(TQ.problems(x, M.load('breaking-bad').find((y) => y.id === x.about.moment)), []);
-  assert.deepEqual(shows, { 'breaking-bad': 3 });
+  assert.deepEqual(who.clues, [1500, 2000]);   // the clue after guesses close is not one players could use
+  const clue = byShow['breaking-bad'].find((x) => x.round === 'clue' && x.at === 1500);
+  assert.deepEqual([clue.q, clue.until], ['Clue: the gas mask in the RV', 1510]);
+  assert.deepEqual(TQ.problems(clue, M.load('breaking-bad').find((y) => y.id === clue.about.moment)), []);
+  assert.deepEqual(shows, { 'breaking-bad': 6 });
   assert.ok(fs.existsSync(path.join(process.env.TRIVIA_TIMED_DIR, 'index.json')));
 });
 
@@ -123,7 +130,33 @@ test('scoring: a spot tap while it shows, a whodunit guess locked in early', () 
   assert.equal(live.guessPoints(2500, 0, who), 0);  // after guesses closed
 });
 
-test('the moment check knows the two new kinds', () => {
+test('clues pop up only when asked for, while they show', () => {
+  const clue = { id: 'c', round: 'clue', season: 1, number: 1, at: 1500, until: 1510 };
+  assert.equal(live.pickTimed([clue], { season: 1, number: 1, at: 1505 }), null);   // the Live TV strip never gets one
+  assert.equal(live.pickTimed([clue], { season: 1, number: 1, at: 1505, rounds: ['clue'] }).id, 'c');
+  assert.equal(live.pickTimed([clue], { season: 1, number: 1, at: 1511, rounds: ['clue'] }), null);
+});
+
+test('whodunit results: right answers first, earliest first, each said against the clues', () => {
+  const q = { at: 1200, lock: 2400, answer: 0, choices: ['Walter', 'Jesse', 'Hank', 'Skyler'], clues: [1500, 2000] };
+  const r = live.whodunitResults(q, [
+    { id: 1, name: 'Mom', pick: 0, lockedAt: 2100 },
+    { id: 2, name: 'Bryan', pick: 0, lockedAt: 1300 },
+    { id: 3, name: 'Dad', pick: 2, lockedAt: 1700 },
+    { id: 4, name: 'Son', pick: 0, lockedAt: 1800 },
+    { id: 5, name: 'Aunt', pick: null, lockedAt: null },
+  ]);
+  assert.deepEqual(r.rows.map((x) => x.name + ' ' + x.at + ' ' + x.when + ' ' + x.points),
+    ['Bryan 21:40 before any clue 960', 'Son 30:00 before the second clue 750', 'Mom 35:00 after all 2 clues 630', 'Aunt  no guess 0', 'Dad 28:20 before the second clue 0']);
+  assert.deepEqual([r.answer, r.right, r.of, r.first.name], ['Walter', 3, 5, 'Bryan']);
+  const one = live.whodunitResults({ ...q, clues: [1500] }, [{ id: 1, name: 'A', pick: 0, lockedAt: 1600 }]);
+  assert.equal(one.rows[0].when, 'after the clue');
+  assert.equal(live.whodunitResults({ ...q, clues: [] }, [{ id: 1, name: 'A', pick: 0, lockedAt: 1600 }]).rows[0].when, 'with no clues in this episode');
+});
+
+test('the moment check knows the new kinds', () => {
+  assert.deepEqual(M.problems({ show: 'x', season: 1, number: 1, url: 'u', by: 'Bryan', at: '2026-11-20T22:00:00Z', kind: 'clue', start: 1500, end: 1510, clue: 'the boots' }, { url: 'u', seconds: 3485 }), []);
+  assert.match(M.problems({ show: 'x', season: 1, number: 1, url: 'u', by: 'Bryan', at: '2026-11-20T22:00:00Z', kind: 'clue', start: 1500, end: 1510 }, { url: 'u', seconds: 3485 }).join(), /what the clue is/);
   const base = { show: 'x', season: 1, number: 1, url: 'u', by: 'Bryan', at: '2026-11-20T22:00:00Z' };
   const file = { url: 'u', seconds: 3485 };
   assert.deepEqual(M.problems({ ...base, kind: 'find', start: 900, end: 912, find: 'the red phone' }, file), []);

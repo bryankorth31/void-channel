@@ -11,7 +11,10 @@
 //   spot         "Spot it: the red phone", offered from q.at (a few seconds before it shows) until q.open;
 //                a tap from q.open to q.close is right (spotPoints);
 //   whodunit     offered from q.at (guessing opens) until q.lock; guesses can change until q.lock; the episode
-//                reveals the answer at q.reveal, and guessPoints scores each player's last guess then.
+//                reveals the answer at q.reveal, and guessPoints scores each player's last guess then;
+//                whodunitResults ranks everyone at the reveal: who had it right, when they locked it in, and how
+//                many of the episode's clues (q.clues) they had seen by then (the Mystery channel, plan M2);
+//   clue         a clue event (not a question), shown from q.at until q.until; whodunit guesses may change after it.
 // Every question has the bank's shape (q, choices, answer, source, band, round), built by scripts/trivia/timed.js from
 // moments a person approved on the marking page. pickTimed is the same choice without the fetch (pure; tested).
 (function (root) {
@@ -27,6 +30,7 @@
     if (at < q.at) return false;
     if (q.round === 'spot') return at < q.open;
     if (q.round === 'whodunit') return at < q.lock;
+    if (q.round === 'clue') return at < q.until;
     return at - q.at <= WINDOW;
   }
 
@@ -61,6 +65,31 @@
     return early((q.lock - lockedAt) / (q.lock - q.at));
   }
 
+  const mmss = (t) => { const s = Math.max(0, Math.floor(t)); return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0'); };
+  const ORD = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth', 'ninth', 'tenth'];
+
+  // The whodunit's results at the reveal. guesses: each player's last guess, { id, name, pick (0 to 3, or null),
+  // lockedAt (the episode second it was made) }. Right answers first, earliest lock-in first; then the rest by name.
+  // Each row says when it was locked in against the clues: "before any clue", "before the second clue",
+  // "after all 3 clues".
+  function whodunitResults(q, guesses) {
+    const clues = (q.clues || []).slice().sort((a, b) => a - b);
+    const rows = (guesses || []).map((g) => {
+      const right = g.pick === q.answer && g.lockedAt >= q.at && g.lockedAt <= q.lock;
+      const seen = Number.isFinite(g.lockedAt) ? clues.filter((t) => t <= g.lockedAt).length : 0;
+      const when = !Number.isFinite(g.lockedAt) || g.pick == null ? 'no guess'
+        : !clues.length ? 'with no clues in this episode'
+        : seen === 0 ? 'before any clue'
+        : seen < clues.length ? 'before the ' + (ORD[seen] || (seen + 1) + 'th') + ' clue'
+        : clues.length === 1 ? 'after the clue' : 'after all ' + clues.length + ' clues';
+      return { id: g.id, name: g.name, pick: g.pick == null ? null : g.pick, right, points: guessPoints(g.lockedAt, g.pick, q),
+        lockedAt: Number.isFinite(g.lockedAt) ? g.lockedAt : null, at: Number.isFinite(g.lockedAt) ? mmss(g.lockedAt) : '', seen, when };
+    });
+    rows.sort((a, b) => (b.right - a.right) || (a.right ? a.lockedAt - b.lockedAt : String(a.name).localeCompare(String(b.name))));
+    const solved = rows.filter((r) => r.right);
+    return { answer: q.choices ? q.choices[q.answer] : null, rows, right: solved.length, of: rows.length, first: solved[0] || null };
+  }
+
   async function getJson(url) {
     try { const r = await fetch(url); return r.ok ? await r.json() : null; } catch (e) { return null; }
   }
@@ -76,6 +105,6 @@
     return q || null;
   }
 
-  const api = { momentQuestion, pickTimed, spotPoints, guessPoints, WINDOW };
+  const api = { momentQuestion, pickTimed, spotPoints, guessPoints, whodunitResults, WINDOW };
   if (typeof module !== 'undefined' && module.exports) module.exports = api; else root.TriviaTimed = api;
 })(typeof window !== 'undefined' ? window : globalThis);
