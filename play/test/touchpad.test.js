@@ -190,9 +190,10 @@ test('Bryan, 20 Nov 2026 ("the right buttons are a pinched aspect though and sho
 test('Bryan, 20 Nov 2026 ("with pokemon or games that had a wider aspect can the screen increase to it? ... in landscape"; "go on 2"): a wide game fills the height sideways, the controls see-through over its edges', () => {
   const fs = require('fs'), path = require('path');
   const play = fs.readFileSync(path.join(__dirname, '..', 'src', 'play.js'), 'utf8');
-  assert.ok(play.includes('const wideGame = asp > 1.4, ref = wideGame ? 4 / 3 : asp;') && play.includes("over.classList.toggle('overpic', wideGame);"));
+  assert.ok(play.includes('const wideGame = asp > 1.4 && oh >= 340, ref = wideGame ? 4 / 3 : asp;') && play.includes("over.classList.toggle('overpic', wideGame);"));
+  assert.ok(play.includes("over.classList.toggle('x-dpad', on(over.querySelector('.cdpad')));"), 'only a group over the picture fades');
   const css = fs.readFileSync(path.join(__dirname, '..', 'play.css'), 'utf8');
-  assert.ok(css.includes('.over.overpic .cpad.side .cdpad:not(:has(.pdir.on)),.over.overpic .cpad.side .cface:not(:has([data-down])){opacity:.6}'));
+  assert.ok(css.includes('.over.overpic.x-dpad .cpad.side .cdpad:not(:has(.pdir.on)),.over.overpic.x-face .cpad.side .cface:not(:has([data-down])){opacity:.6}'));
 });
 
 test('the auditor and Bryan, 20 Nov 2026 ("you routinely leave a gap on the left"): sideways only the notch side keeps its margin', () => {

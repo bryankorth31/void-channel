@@ -109,7 +109,8 @@
       // A wide game (a Game Boy Advance, 3:2) fills the height instead (Bryan, 20 Nov 2026: "with pokemon or games that had
       // a wider aspect can the screen increase to it? ... in landscape", then "go on 2"): the controls keep the size they
       // have beside a 4:3 picture and lie see-through over the picture's outer edges (.overpic, play.css).
-      const wideGame = asp > 1.4, ref = wideGame ? 4 / 3 : asp;
+      // Not on a very short screen (under 340): there the stacked small keys would crowd the d-pad (the auditor).
+      const wideGame = asp > 1.4 && oh >= 340, ref = wideGame ? 4 / 3 : asp;
       let ph = oh, pw = ph * ref; if (pw > ow) { pw = ow; ph = pw / ref; }
       const fit = PlayTouch.sideFit({ ow, oh, pic: { x: (ow - pw) / 2, y: (oh - ph) / 2, w: pw, h: ph }, cheats: document.body.classList.contains('has-cheats'), stack: wideGame });
       if (wideGame) {
@@ -123,6 +124,10 @@
       over.classList.toggle('wide', fit.wide);
       // A phone too small for even that: the d-pad crosses the picture's edge, see-through.
       over.classList.toggle('crossing', fit.S < 110);
+      // After the sizes above are in place: only a group that really lies over the picture goes see-through (the auditor: Kirby at 844x340 faded over plain plastic).
+      const pr = $('screen').getBoundingClientRect(), on = (el) => { if (!el) return false; const r = el.getBoundingClientRect(); return wideGame && r.width > 0 && r.left < pr.right && r.right > pr.left && r.top < pr.bottom && r.bottom > pr.top; };
+      over.classList.toggle('x-dpad', on(over.querySelector('.cdpad'))); over.classList.toggle('x-face', on(over.querySelector('.cface')));
+      over.classList.toggle('x-l', on(over.querySelector('.csl'))); over.classList.toggle('x-r', on(over.querySelector('.csr')));
     }
     $('b-touch').setAttribute('aria-pressed', String(touch));
     if (touch) PlayTouch.fit($('stage'));
