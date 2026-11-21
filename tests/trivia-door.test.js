@@ -78,3 +78,44 @@ test('the site build copies the clip chat\'s timed questions (trivia/timed) when
   const src = read('scripts/site.js');
   assert.match(src, /if \(fs\.existsSync\(path\.join\(T, 'timed'\)\)\) fs\.cpSync\(path\.join\(T, 'timed'\), path\.join\(dst, 'timed'\), \{ recursive: true \}\);/);
 });
+
+// Bryan, 20 Nov 2026: "use these with the other lighting type bg that voidtv uses and treat in the same way with how it scrolls".
+test('both trivia pages carry VoidTV\'s atmosphere: Trivia Night behind the big screen, Facts Night behind the phone', () => {
+  const pages = { 'trivia/index.html': 'trivianight', 'trivia/phone.html': 'factsnight' };
+  for (const [f, pic] of Object.entries(pages)) {
+    const html = read(f), css = f.endsWith('index.html') ? read('trivia/trivia.css') : html;
+    assert.ok(html.includes('<div class="atmos lo" aria-hidden="true"><div class="bgimg"></div><div class="void"><i></i></div></div>'), f);
+    assert.ok(html.includes('<script src="src/atmos.js"></script>\n<div class="atmos hi" aria-hidden="true"><div class="grain"></div></div>\n</body>'), f);
+    assert.ok(css.includes('url(/assets/brand/bg/' + pic + '.webp) center/cover no-repeat;opacity:.5') && css.includes('url(/assets/brand/bg/' + pic + '-m.webp)'), f);
+    assert.ok(css.includes('.bgimg{inset:-12% 0 -12% 0;') && css.includes('animation:grain .6s steps(6) infinite') && css.includes('url(/assets/brand/void-soft.webp)'), f);
+    for (const s of ['', '-m']) {
+      const p = path.join(REPO, 'assets', 'brand', 'bg', pic + s + '.webp');
+      assert.ok(fs.existsSync(p) && fs.statSync(p).size < 300 * 1024, pic + s);
+    }
+  }
+});
+
+test('the trivia background moves with the scroll by voidtv.net\'s own rule, and holds still on touch screens and for less motion', () => {
+  const vm = require('vm'), code = read('trivia/src/atmos.js');
+  const run = ({ coarse = false, reduce = false, width = 1920 } = {}) => {
+    const bg = { style: {} }, vd = { style: {} }; let raf = null;
+    const win = { scrollY: 0, innerWidth: width, innerHeight: 1080, addEventListener() {}, requestAnimationFrame: (f) => { raf = f; },
+      matchMedia: (q) => ({ matches: (q.includes('reduced-motion') && reduce) || (q.includes('coarse') && coarse) }),
+      document: { hidden: false, documentElement: { scrollHeight: 3080 }, addEventListener() {}, querySelectorAll: () => [],
+        querySelector: (s) => (s === '.atmos .bgimg' ? bg : s === '.atmos .void' ? vd : null) } };
+    win.window = win;
+    vm.runInNewContext(code, win);
+    if (raf) { win.scrollY = 2000; raf(); }
+    return { bg, vd, raf };
+  };
+  // voidtv.net's numbers at 2000 px down a page with 2000 px to scroll (scripts/lib/app.js): all the way down, two swells.
+  const y = 2000, f = 1, w = Math.sin(y / 700), w2 = Math.sin(y / 430);
+  const big = run();
+  assert.equal(big.bg.style.transform, 'translate3d(0,' + (-f * 60 + w * 22) + 'px,0) scale(' + (1.06 + f * 0.05 + w2 * 0.015) + ')');
+  assert.equal(big.vd.style.transform, 'translate3d(' + (w2 * 60) + 'px,' + (-f * 120 + w * 90) + 'px,0) rotate(' + (y * 0.06) + 'deg) scale(' + (1.05 + w2 * 0.12) + ')');
+  assert.equal(run({ coarse: true }).bg.style.transform, '', 'a touch screen holds still');
+  assert.equal(run({ width: 390 }).bg.style.transform, '', 'a phone holds still');
+  const calm = run({ reduce: true });
+  assert.equal(calm.raf, null, 'less motion: nothing runs');
+  assert.equal(calm.bg.style.transform, undefined);
+});

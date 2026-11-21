@@ -10,6 +10,10 @@
 <link rel="stylesheet" href="trivia.css">
 </head>
 <body>
+<!-- The background, as voidtv.net's (Bryan, 20 Nov 2026: "use these with the other lighting type bg that voidtv uses and treat in
+     the same way with how it scrolls"): his VOID TRIVIA NIGHT picture and VoidTV's slow void, moved by the scroll (src/atmos.js),
+     and its film grain over everything. -->
+<div class="atmos lo" aria-hidden="true"><div class="bgimg"></div><div class="void"><i></i></div></div>
 <header class="bar">
   <a class="back" id="back" href="/" title="Back to voidtv.net" aria-label="Back to voidtv.net">&larr;</a>
   <a class="mark" href="/" title="voidtv.net home"><span class="v">voidtv</span><span class="n">.net</span></a>
@@ -176,5 +180,7 @@
 <script src="src/words.js"></script>
 <script src="src/game.js"></script>
 <script src="src/host.js"></script>
+<script src="src/atmos.js"></script>
+<div class="atmos hi" aria-hidden="true"><div class="grain"></div></div>
 </body>
 </html>
