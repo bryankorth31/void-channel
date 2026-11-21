@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#07080c">
+<title>Remote | voidtv.net</title>
+<!-- VoidTV phone remote, the phone's page (Bryan, 20 Nov 2026: "a channel switcher, save to phone, info on the phone about the
+     show"). A phone comes here from the code on the big screen (/join). It draws what the screen sends; shows saved here stay
+     on this phone only. Nothing is asked for. Licence: GPL-2.0-or-later. remote/README.md has the whole of it. -->
+<style>
+:root{--bg:#07080c;--card:#10131c;--fg:#e8e8ee;--dim:#8a8fa3;--line:#1d2130;--pink:#ff4fc8;--blue:#5fd4ff;--gold:#f3c969}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--fg);font:16px system-ui,Segoe UI,Roboto,sans-serif;-webkit-text-size-adjust:100%}
+body{padding:12px 16px calc(20px + env(safe-area-inset-bottom));max-width:520px;margin:0 auto;touch-action:manipulation}
+button,a.btn{font:inherit;color:var(--fg);background:#161a25;border:1px solid #2a2f40;border-radius:12px;padding:10px 14px;min-height:44px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:6px}
+button:active{transform:scale(.98)}
+header{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:10px}
+.mark{font-weight:800;font-size:20px;color:var(--fg);text-decoration:none}.mark span{color:var(--pink)}
+#status{color:var(--dim);font-size:13px;text-align:right}
+.tabs{display:flex;gap:8px;margin-bottom:12px}.tabs button{flex:1}.tabs button[aria-selected="true"]{border-color:var(--blue);color:var(--blue)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;margin-bottom:12px}
+.now{display:flex;gap:12px}.now img{width:72px;height:108px;object-fit:cover;border-radius:8px;flex:none;background:#000}
+.where{color:var(--pink);font-size:13px;font-weight:600}.t{font-size:19px;font-weight:700;margin:2px 0}.s,.nx,.left{color:var(--dim);font-size:14px}
+.acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.ch{display:flex;gap:10px;margin-bottom:12px}.ch button{flex:1;background:var(--pink);border-color:var(--pink);color:#fff;font-weight:800;font-size:20px;min-height:64px;letter-spacing:.05em}
+.saved-on{border-color:var(--gold);color:var(--gold)}
+h2{font-size:14px;color:var(--dim);font-weight:600;margin:16px 0 6px}
+input[type=search]{width:100%;font:inherit;background:#0f1118;color:var(--fg);border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin-bottom:6px}
+ul{list-style:none;margin:0;padding:0}
+.row{width:100%;justify-content:flex-start;text-align:left;background:none;border:0;border-top:1px solid var(--line);border-radius:0;padding:10px 4px;display:block}
+.row b{font-weight:600}.row small{color:var(--dim);margin-left:6px}.row.on b{color:var(--pink)}
+.info p{margin:8px 0;color:#c5c8d4;font-size:15px;line-height:1.45}.info .ppl{color:var(--dim);font-size:14px}
+.sv{display:flex;flex-direction:column;gap:6px}.sv .acts{margin-top:4px}
+.empty,.note{color:var(--dim);font-size:15px;line-height:1.45}
+.give{color:var(--dim);font-size:13px;line-height:1.45;border-top:1px solid var(--line);margin-top:18px;padding-top:12px}.give a{color:var(--blue)}
+#note{display:none;text-align:center;padding:40px 8px}#note.on{display:block}#note h1{font-size:22px;margin:0 0 8px}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<header><a class="mark" id="mark" href="/">voidtv<span>.net</span></a><div id="status" role="status">Connecting</div></header>
+<div id="note"><h1 id="note-h"></h1><p class="note" id="note-p"></p><p><a class="btn" href="/join">Type a code</a></p></div>
+<main id="app" hidden>
+  <div class="tabs" role="tablist"><button type="button" role="tab" id="tab-r" aria-selected="true">Remote</button><button type="button" role="tab" id="tab-s" aria-selected="false">Saved</button></div>
+  <section id="v-r">
+    <div class="card"><div class="now"><img id="n-art" alt="" hidden><div>
+      <div class="where" id="n-where"></div><div class="t" id="n-t">Waiting for the big screen</div><div class="s" id="n-s"></div>
+      <div class="left" id="n-left"></div><div class="nx" id="n-nx"></div></div></div>
+      <div class="acts" id="n-acts"></div></div>
+    <div class="ch" id="ch" hidden><button type="button" id="ch-down" aria-label="Previous channel">&lsaquo; CH</button><button type="button" id="ch-up" aria-label="Next channel">CH &rsaquo;</button></div>
+    <div class="card info" id="info" hidden></div>
+    <div id="list-box" hidden><h2 id="list-h">On now</h2><input type="search" id="find" placeholder="Find a channel or a show" aria-label="Find a channel or a show"><ul id="list"></ul></div>
+  </section>
+  <section id="v-s" hidden><div id="saved"></div><div class="give" id="give" hidden></div></section>
+</main>
+<script src="/remote/src/remote.js"></script>
+<script src="/remote/src/phone.js"></script>
+</body>
+</html>

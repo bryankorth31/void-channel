@@ -7,7 +7,10 @@
 (function (root) {
   'use strict';
   const ALPHABET = '23456789ACDEFGHJKMNPQRTUVWXY';   // no 0, O, 1, I, L, B, S or Z: easy to read off a projector
-  const KINDS = ['pad', 'trivia', 'lesson'];   // lesson: Void University, a phone as the note pad during a lecture (Bryan, 20 Nov 2026)
+  const KINDS = ['pad', 'trivia', 'lesson', 'remote'];   // lesson: Void University, a phone as the note pad during a lecture (Bryan, 20 Nov 2026)
+  // remote: a phone as the TV remote across voidtv.net (Bryan, 20 Nov 2026: "a channel switcher, save to phone, info on the phone
+  // about the show"); remote/README.md. A few phones in a living room, a tap now and then; the room waits for its screen's next
+  // page as a game pad's does, and lasts an evening of TV (12 hours) instead of 4, since nobody taps a remote during a film.
   // Per kind. A gamepad (Bryan, 20 Nov 2026, on a phone as the pad: "it seems to just be playing on its own"): 30 a second
   // was measured too low. A thumb rolling the d-pad while another taps passes it, and a message past the limit is dropped
   // in silence, so a dropped release left the key held on the screen. The phone now sends at most 50 a second and says
@@ -15,7 +18,8 @@
   // Trivia sends an answer now and then, but a movie night can bring 200 phones.
   const LIMITS = { bytes: 1024, idleMs: 30 * 60 * 1000, lifeMs: 4 * 60 * 60 * 1000, holdMs: 60 * 1000,
     pad: { phones: 16, perSecond: 60, screenHoldMs: 45 * 1000 }, trivia: { phones: 200, perSecond: 5, screenHoldMs: 0 },
-    lesson: { phones: 40, perSecond: 10, screenHoldMs: 0 } };   // a teacher's phone or a class's; notes, not button presses
+    lesson: { phones: 40, perSecond: 10, screenHoldMs: 0 },   // a teacher's phone or a class's; notes, not button presses
+    remote: { phones: 16, perSecond: 10, screenHoldMs: 45 * 1000, lifeMs: 12 * 60 * 60 * 1000 } };
   const CLOSE = { noRoom: 4404, full: 4409, hostGone: 4410, tooBig: 4413, ended: 4408, locked: 4423, removed: 4403, replaced: 4411 };
   // A phone's own seat token: random, kept in that phone's tab only, so a phone that drops gets its seat back.
   const goodToken = (t) => typeof t === 'string' && /^[A-Za-z0-9_-]{16,64}$/.test(t);
@@ -106,6 +110,8 @@
           // The screen's own say over its room: remove a phone, or lock the room so no new phone joins.
           if (m.relay === 'remove') { for (const [p, info] of phones) if (info.seat === m.seat) { phones.delete(p); json(host, { type: 'leave', from: info.seat }); close(p, CLOSE.removed, 'The screen removed this phone'); } return; }
           if (m.relay === 'lock') { locked = !!m.on; json(host, { type: 'locked', on: locked }); return; }
+          // The screen is done (End remote): the room ends now, its phones told so, instead of waiting for a next page.
+          if (m.relay === 'end') { const h = host; this.end(); close(h, CLOSE.ended, 'The screen ended the room'); return; }
           const to = m.to, msg = m.msg;
           if (!msg || typeof msg !== 'object') return;
           const out = JSON.stringify(msg);
@@ -148,7 +154,7 @@
       tick() {
         const t = now();
         if (!host && away && away < t) return this.end();
-        if (host && (t - last > LIMITS.idleMs || t - born > LIMITS.lifeMs)) { const h = host; this.ending = true; this.drop(h); close(h, CLOSE.ended, 'The room timed out'); return 'ended'; }
+        if (host && (t - last > LIMITS.idleMs || t - born > (lim.lifeMs || LIMITS.lifeMs))) { const h = host; this.ending = true; this.drop(h); close(h, CLOSE.ended, 'The room timed out'); return 'ended'; }
         return null;
       },
     };

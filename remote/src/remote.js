@@ -1,0 +1,108 @@
+// VoidTV phone remote: the parts both sides share, pure and tested (tests/remote.test.js). Licence: GPL-2.0-or-later.
+// Bryan, 20 Nov 2026: "using the qr code phone dynamic in creating a remote control to use across void tv in a custom way where
+// things are on the phone where ppl can select, a channel switcher, save to phone, info on the phone about the show, hold
+// information", and "also use this for cast, and kids, across the entire voidtv universe".
+//
+// So the phone page knows no site: it draws what the screen sends. A screen (voidtv.net, later Kids, Void Cast) says who it is
+// (r-site), what is on now with the actions that make sense there (r-now), lists to pick from (r-list), and a show's details
+// when asked (r-info). The phone sends back one kind of thing, r-do, an action by name. Each site writes a small adapter that
+// answers those (remote/src/voidtv.js for voidtv.net). Trivia rides in the same room with its own t- messages.
+// Every message fits the relay's 1 KB (play/rooms/room.js), envelope included.
+(function (root) {
+  'use strict';
+  const MAX = 1024;
+  const ENVELOPE = 40;   // {"to":"all","msg":...} or {"from":16,"msg":...} around the message
+  // Actions a phone may ask for, and what each carries. Anything else is dropped unread.
+  const ACTIONS = { ch: 'dir', tune: 'id', now: '', go: 'slug', info: 'slug', tv: '' };
+  const SAVED_MAX = 100;
+
+  // A string as a phone or a screen may show it: plain text, no control characters, at most n characters.
+  function clip(s, n) {
+    const t = String(s == null ? '' : s).replace(/[\u0000-\u001f\u007f]+/g, ' ').replace(/\s+/g, ' ').trim();
+    return t.length > n ? t.slice(0, n - 1).replace(/\s+\S*$/, '') + '…' : t;
+  }
+  const idOk = (s) => typeof s === 'string' && /^[a-z0-9][a-z0-9._:/-]{0,79}$/i.test(s);
+  const size = (msg) => JSON.stringify(msg).length + ENVELOPE;
+  const fits = (msg) => size(msg) <= MAX;
+
+  // What the phone sent, made safe: { a, dir | id | slug } or null.
+  function readDo(m) {
+    if (!m || m.type !== 'r-do' || !Object.prototype.hasOwnProperty.call(ACTIONS, m.a)) return null;
+    const need = ACTIONS[m.a];
+    if (need === 'dir') return m.dir === 1 || m.dir === -1 ? { a: m.a, dir: m.dir } : null;
+    if (need === 'id' || need === 'slug') return idOk(m[need]) ? { a: m.a, [need]: m[need] } : null;
+    return { a: m.a };
+  }
+
+  // Who the screen is. donate is the site's own CASH link, or '' where none is shown (Kids: only behind its grown-up check).
+  function siteMsg(o) {
+    return { type: 'r-site', name: clip(o.name, 40), home: clip(o.home, 120), donate: o.donate ? clip(o.donate, 200) : '', kids: !!o.kids };
+  }
+
+  // What is on now. k: what the screen is showing (tv, show, page). acts: the buttons that make sense now, each { a, l }:
+  // a is an action from ACTIONS, l the words on it. left: seconds to go, counted down on the phone from when it arrives.
+  function nowMsg(o) {
+    const m = { type: 'r-now', k: clip(o.k || 'page', 10), where: clip(o.where, 50), t: clip(o.t, 80), s: clip(o.s, 90),
+      nx: clip(o.nx, 90), left: Number.isFinite(o.left) && o.left > 0 ? Math.round(o.left) : null,
+      slug: idOk(o.slug) ? o.slug : '', art: /^https:\/\/[^"'<>\s]{1,200}$/.test(o.art || '') ? o.art : '',
+      acts: (o.acts || []).filter((x) => x && Object.prototype.hasOwnProperty.call(ACTIONS, x.a)).slice(0, 6).map((x) => ({ a: x.a, l: clip(x.l, 24) })) };
+    while (!fits(m) && m.art) m.art = '';
+    while (!fits(m) && m.s.length > 10) m.s = clip(m.s, m.s.length - 10);
+    return m;
+  }
+
+  // A long list (every channel and what is on it) cut into messages that each fit. items: [{ id, t, s }]; on: the id that is
+  // playing now. The phone puts the parts together by part and of, and draws the list once every part of this ver is in.
+  function listMsgs(id, title, items, on, ver) {
+    const rows = items.filter((x) => x && idOk(x.id)).map((x) => ({ id: x.id, t: clip(x.t, 40), s: clip(x.s, 50) }));
+    const out = [];
+    let cur = [];
+    const head = (part) => ({ type: 'r-list', id, title: clip(title, 40), on: idOk(on) ? on : '', ver: ver | 0, part, of: 0, items: [] });
+    for (const r of rows) {
+      const m = head(out.length); m.items = cur.concat([r]);
+      if (cur.length && !fits(Object.assign(m, { of: 999 }))) { out.push(cur); cur = [r]; } else cur.push(r);
+    }
+    if (cur.length || !out.length) out.push(cur);
+    return out.map((items2, i) => Object.assign(head(i), { of: out.length, items: items2 }));
+  }
+  // The phone's side: a part arrived. Returns the whole list when this ver is complete, else null.
+  function listTake(store, m) {
+    if (!m || m.type !== 'r-list' || !Number.isInteger(m.part) || !Number.isInteger(m.of) || m.of < 1 || m.of > 200) return null;
+    let s = store[m.id];
+    if (!s || s.ver !== m.ver) s = store[m.id] = { ver: m.ver, of: m.of, parts: [] };
+    s.parts[m.part] = m.items || [];
+    for (let i = 0; i < s.of; i++) if (!s.parts[i]) return null;
+    return { id: m.id, title: m.title, on: m.on, items: [].concat(...s.parts) };
+  }
+
+  // A show's details for the phone, from one shown on the screen.
+  function infoMsg(o) {
+    const m = { type: 'r-info', slug: idOk(o.slug) ? o.slug : '', t: clip(o.t, 80), sub: clip(o.sub, 90), ppl: clip(o.ppl, 120),
+      about: clip(o.about, 420), url: /^https?:\/\/[^"'<>\s]{1,200}$/.test(o.url || '') ? o.url : '' };
+    while (!fits(m) && m.about.length > 40) m.about = clip(m.about, m.about.length - 40);
+    return m;
+  }
+
+  // Saved on the phone (its own storage, nothing sent anywhere): newest first, one entry a show, at most SAVED_MAX.
+  function savedAdd(list, it, now) {
+    if (!it || !idOk(it.slug)) return list || [];
+    const rest = (list || []).filter((x) => x && x.slug !== it.slug);
+    return [{ slug: it.slug, t: clip(it.t, 80), s: clip(it.s, 90), url: it.url || '', at: now || 0 }].concat(rest).slice(0, SAVED_MAX);
+  }
+  const savedDrop = (list, slug) => (list || []).filter((x) => x && x.slug !== slug);
+  const savedHas = (list, slug) => (list || []).some((x) => x && x.slug === slug);
+  // What a phone's storage held, made safe (it may be from an older page, or edited by hand).
+  function savedRead(text) {
+    let a; try { a = JSON.parse(text || '[]'); } catch (e) { return []; }
+    if (!Array.isArray(a)) return [];
+    return a.filter((x) => x && idOk(x.slug)).slice(0, SAVED_MAX).map((x) => ({ slug: x.slug, t: clip(x.t, 80), s: clip(x.s, 90),
+      url: /^https?:\/\/[^"'<>\s]{1,200}$/.test(x.url || '') ? x.url : '', at: Number(x.at) || 0 }));
+  }
+
+  // "8:30 pm", "18 min left" and "1:05 left": the times as the phone shows them.
+  const leftWords = (sec) => { sec = Math.max(0, Math.round(sec)); const h = Math.floor(sec / 3600), m = Math.floor(sec % 3600 / 60); return h ? h + ' h ' + String(m).padStart(2, '0') + ' min left' : m ? m + ' min left' : 'under a minute left'; };
+
+  const api = { MAX, ACTIONS, SAVED_MAX, clip, readDo, siteMsg, nowMsg, listMsgs, listTake, infoMsg, savedAdd, savedDrop, savedHas, savedRead, size, fits, leftWords };
+  if (typeof module === 'object' && module.exports) module.exports = api;
+  else root.VoidRemote = api;
+})(typeof self !== 'undefined' ? self : this);

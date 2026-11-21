@@ -153,6 +153,16 @@ const brandSrc = path.join(ROOT, 'assets', 'brand');
     fs.mkdirSync(path.join(dst, 'shelf'), { recursive: true });
     for (const f of ['index.json', 'status.json']) fs.copyFileSync(path.join(P, 'shelf', f), path.join(dst, 'shelf', f));
   } }
+// The phone remote (remote/, B, 20 Nov 2026: "a channel switcher, save to phone, info on the phone about the show"): the phone's page
+// at /remote/ and the scripts the big screen loads when someone presses Phone remote. The relay and the QR maker are PLAY's.
+{ const M = path.join(ROOT, 'remote'), dst = path.join(OUT, 'remote');
+  if (PROFILE.name === 'voidtv' && fs.existsSync(path.join(M, 'index.html'))) {
+    fs.mkdirSync(path.join(dst, 'src'), { recursive: true });
+    for (const f of fs.readdirSync(path.join(M, 'src')).filter((x) => x.endsWith('.js'))) fs.copyFileSync(path.join(M, 'src', f), path.join(dst, 'src', f));
+    // The phone page's scripts carry this build's stamp (the big screen's use the page's own), so a push reaches a phone at once.
+    const v = (process.env.CF_PAGES_COMMIT_SHA || String(Date.now())).slice(0, 9);
+    fs.writeFileSync(path.join(dst, 'index.html'), fs.readFileSync(path.join(M, 'index.html'), 'utf8').replace(/(src="\/remote\/src\/[a-z0-9-]+\.js)"/g, '$1?v=' + v + '"'));
+  } }
 // Trivia Night (trivia/, B, 20 Nov 2026: "Yes, a Trivia row"): the host screen at /trivia/, the phone page at /trivia/phone, their
 // style and scripts, and the question bank (its files are written by scripts/trivia/bank.js). voidtv.net only, and only when the
 // bank is built. The QR maker and the room relay are PLAY's (/play/src/qr.js, /api/room/*); no media is copied.

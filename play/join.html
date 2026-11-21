@@ -33,7 +33,7 @@ button{display:block;margin:18px auto 0;font:inherit;font-weight:700;background:
   const norm = (s) => { const c = String(s || '').trim().toUpperCase(); return c.length === 4 && [...c].every((x) => ALPHABET.includes(x)) ? c : null; };
   const why = document.getElementById('why'), box = document.getElementById('code');
   // Where each kind of room is played from a phone.
-  const PAGES = { pad: '/play/pad.html?r=', trivia: '/trivia/phone?r=' };
+  const PAGES = { pad: '/play/pad.html?r=', trivia: '/trivia/phone?r=', remote: '/remote/?r=' };
   async function go(raw) {
     const code = norm(raw);
     if (!code) { why.textContent = 'That code is four letters and numbers, like KX7P.'; return; }
