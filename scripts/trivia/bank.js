@@ -138,6 +138,13 @@ function gather(db, pool, foreign, overrides, metaOf) {
   // Only games on PLAY's shelf (play/shelf/index.json), read from their full cards.
   const onShelf = new Set(((readJson(path.join(ROOT, 'play', 'shelf', 'index.json'), {}) || {}).games || []).map((g) => g.id));
   const cards = fs.existsSync(cardsDir) ? fs.readdirSync(cardsDir).filter((f) => f.endsWith('.json')).map((f) => readJson(path.join(cardsDir, f), null)).filter((c) => c && onShelf.has(c.id)) : [];
+  // The fame list (catalog/trivia-fame.json, the clip chat's): a show's rank among the best known. The best known get deeper
+  // question sets, so Live TV trivia has fresh questions break after break where most people watch (Bryan, 20 Nov 2026:
+  // "starting with the most popular content first").
+  const fame = readJson(path.join(ROOT, 'catalog', 'trivia-fame.json'), null);
+  const fameRank = new Map();
+  for (const t of ((fame && fame.tv) || [])) if (t.voidtv && t.voidtv.slug && !fameRank.has(t.voidtv.slug)) fameRank.set(t.voidtv.slug, t.rank);
+  for (const s of shows) if (fameRank.has(s.slug)) s.fameRank = fameRank.get(s.slug);
   return { shows, films, cards, nameShows, metaOf: metaOf || archiveMeta };
 }
 
@@ -355,10 +362,14 @@ function gameQs(cards) {
   return out;
 }
 
+// The best known shows (fame rank this high or better) get up to 12 cast and 12 episode questions instead of 4 and 3.
+const DEEP_RANK = 200;
+
 function makeQuestions(data) {
   const qs = [];
   for (const s of data.shows) {
-    qs.push(...firstAired(s), ...premieredOn(s, data.shows), ...whoPlayed(s, 4), ...whichShow(s, data.shows, data.nameShows, 3), ...clipQs(s, data.shows, data.metaOf || archiveMeta));
+    const deep = s.fameRank && s.fameRank <= DEEP_RANK;
+    qs.push(...firstAired(s), ...premieredOn(s, data.shows), ...whoPlayed(s, deep ? 12 : 4), ...whichShow(s, data.shows, data.nameShows, deep ? 12 : 3), ...clipQs(s, data.shows, data.metaOf || archiveMeta));
   }
   for (const f of data.films) qs.push(...filmYear(f), ...filmClip(f, data.films, data.metaOf || archiveMeta));
   qs.push(...gameQs(data.cards));
@@ -386,6 +397,21 @@ function datesOf(qs) {
   return out;
 }
 
+// Per-show question sets for Live TV: a show's own questions with no clip (the show is already on screen), each kept with its
+// source, in a stable order. A show's questions carry its own band: a TV-14 show's channel is already playing that show, and
+// Late Night and adult-marked shows never reach the bank at all. Kids channels never ask (the Live TV side checks that). A slug is only ever the catalog's own (letters, numbers, dashes).
+function showFiles(qs) {
+  const out = new Map();
+  for (const q of qs) {
+    const slug = q.about && q.about.show;
+    if (!slug || !/^[a-z0-9-]+$/.test(slug) || q.media) continue;
+    if (!out.has(slug)) out.set(slug, []);
+    out.get(slug).push(q);
+  }
+  for (const list of out.values()) list.sort((a, b) => (a.id < b.id ? -1 : 1));
+  return out;
+}
+
 function write(qs, meta) {
   fs.rmSync(OUT, { recursive: true, force: true });
   fs.mkdirSync(OUT, { recursive: true });
@@ -406,6 +432,11 @@ function write(qs, meta) {
   // year question already proved, with its title, band and source. The host builds those rounds from it at play time.
   const dates = datesOf(qs);
   fs.writeFileSync(path.join(OUT, 'dates.json'), JSON.stringify(dates));
+  // Live TV trivia (trivia/src/live.js): one small file per show, so a TV page loads only the show on screen.
+  const shows = showFiles(qs);
+  fs.mkdirSync(path.join(OUT, 'shows'), { recursive: true });
+  for (const [slug, list] of shows) fs.writeFileSync(path.join(OUT, 'shows', slug + '.json'), JSON.stringify(list));
+  fs.writeFileSync(path.join(OUT, 'shows', 'index.json'), JSON.stringify(Object.fromEntries([...shows].map(([slug, list]) => [slug, list.length]))));
   fs.writeFileSync(path.join(OUT, 'index.json'), JSON.stringify({ ...meta, total: qs.length, rounds, files, dates: { file: 'dates.json', count: dates.length },
     credit: 'Facts from TVmaze (CC BY-SA), TMDB, Wikidata (CC0) and the Internet Archive. This product uses the TMDB API but is not endorsed or certified by TMDB.' }, null, 1));
   return files;
@@ -428,7 +459,7 @@ function main() {
   console.log('Checker: every question passes.');
 }
 
-module.exports = { datesOf, clipQs, filmClip, archiveMeta, PD_MARK, CLIP_SECS, mmss, screenOk, looksLikeGuests, guestShow, hash, rng, shuffle, norm, sameish, clean, nearYears, usablePart, usableEpisodeName, choicesOf, agreedNetwork, makerName,
+module.exports = { showFiles, DEEP_RANK, datesOf, clipQs, filmClip, archiveMeta, PD_MARK, CLIP_SECS, mmss, screenOk, looksLikeGuests, guestShow, hash, rng, shuffle, norm, sameish, clean, nearYears, usablePart, usableEpisodeName, choicesOf, agreedNetwork, makerName,
   firstAired, premieredOn, whoPlayed, whichShow, filmYear, gameQs, makeQuestions, gather };
 // Exported before main runs, so the checker (which needs these helpers) can load while main is running.
 if (require.main === module) main();
