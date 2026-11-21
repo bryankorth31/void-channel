@@ -407,6 +407,9 @@
   // (its picture, name, machine, year, Play) or a machine (three of its games, "See the N games"). Arrows, a swipe or a
   // gamepad turn it by hand; resting on it, a box in hand or a hidden tab holds it still.
   const HERO_MS = 8000;
+  // Bryan's voidarcade art (assets/brand/bg/voidarcade-*.webp, from his own pictures, 20 Nov 2026).
+  const ART = [{ art: 'wall', kicker: 'The arcade is open', line: 'Hundreds of old games from the Internet Archive. Free, no account, nothing to install.' },
+    { art: 'player', kicker: 'Pull up a crate', line: 'Arcade, consoles and old PCs. A keyboard, a gamepad, a touch screen or your phone.' }];
   let heroList = [], heroAt = 0, heroTimer = 0, heroHeld = 0;
   function heroHold(on) { heroHeld = Math.max(0, heroHeld + (on ? 1 : -1)); }
   function hero() {
@@ -414,10 +417,18 @@
     if (!h || !shelfGames.length) return;
     heroList = heroSlides(shelfGames);
     if (!heroList.length) return;
+    // Bryan's voidarcade art opens the hero and comes back halfway round: the hooded player at the wall of TVs.
+    heroList.unshift(ART[0]); heroList.splice(Math.ceil(heroList.length / 2), 0, ART[1]);
     h.textContent = '';
     const slides = el('div', 'slides');
     for (const s of heroList) {
-      const one = el('div', 's');
+      const one = el('div', 's' + (s.art ? ' art ' + s.art : ''));
+      if (s.art) {
+        const bg = new Image(); bg.alt = ''; bg.className = 'bg'; bg.decoding = 'async';
+        const base = '/assets/brand/bg/voidarcade-' + s.art;
+        bg.dataset.src = base + '.webp'; bg.dataset.srcset = base + '-m.webp 960w, ' + base + '.webp 1920w';   // the browser picks by screen
+        one.append(bg); slides.append(one); continue;
+      }
       const g0 = s.g || s.games[0];
       const bg = new Image(); bg.alt = ''; bg.className = 'bg'; bg.decoding = 'async'; bg.dataset.src = picOf(g0);
       one.append(bg);
@@ -460,12 +471,19 @@
     all.forEach((s, j) => {
       s.classList.toggle('on', j === heroAt);
       // Pictures load for this slide and the next only.
-      if (j === heroAt || j === (heroAt + 1) % all.length) for (const img of s.querySelectorAll('img[data-src]')) { img.src = img.dataset.src; img.removeAttribute('data-src'); }
+      if (j === heroAt || j === (heroAt + 1) % all.length) for (const img of s.querySelectorAll('img[data-src]')) { if (img.dataset.srcset) { img.sizes = '100vw'; img.srcset = img.dataset.srcset; } img.src = img.dataset.src; img.removeAttribute('data-src'); }
     });
     const s = heroList[heroAt], copy = h.querySelector('.copy');
     copy.textContent = '';
     copy.append(el('span', 'hline', 'PLAY · old games from the Internet Archive, free, no account'));
-    if (s.g) {
+    h.classList.toggle('art-on', !!s.art);
+    if (s.art) {
+      copy.append(el('span', 'kicker', s.kicker), el('p', 'ov', s.line));
+      const acts = el('div', 'acts');
+      const go = el('a', 'btn gold', 'Pick a game'); go.href = '#rows';
+      go.addEventListener('click', (e) => { e.preventDefault(); const r = document.querySelector('.shelf .row'); if (r) r.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
+      acts.append(go); copy.append(acts);
+    } else if (s.g) {
       const g = s.g, sys = sysOf(g);
       copy.append(el('span', 'kicker', 'Most played on ' + (g.system === 'arcade' ? 'the arcade' : sys.name)), el('h2', 'ht', g.title),
         el('p', 'ov', aboutLine(g)), el('div', 'meta', [g.year, g.players > 1 ? '1 to ' + g.players + ' players' : '', g.plays ? playsText(g.plays) + ' on the Internet Archive' : ''].filter(Boolean).join(' · ')));
