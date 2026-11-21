@@ -782,7 +782,7 @@ function instClose(){try{localStorage.setItem('void_inst_x','1')}catch(_){}const
 addEventListener('beforeinstallprompt',(e)=>{e.preventDefault();INST=e;instShow()});addEventListener('appinstalled',()=>{INST=null;instShow()});setTimeout(instShow,0);
 async function installApp(){if(INST){INST.prompt();try{await INST.userChoice}catch(_){}INST=null;instShow();return}if(instIOS())alert('To add voidtv.net to your home screen: tap the Share button, then Add to Home Screen.')}
 if('serviceWorker' in navigator&&location.protocol==='https:')addEventListener('load',()=>{navigator.serviceWorker.register('/sw.js').catch(()=>{})});
-try{if(REMOTE_ON&&sessionStorage.getItem('voidtv-remote-room'))addEventListener('load',()=>remoteOpen(true))}catch(_){}
+try{if(REMOTE_ON&&sessionStorage.getItem('voidtv-remote-room'))addEventListener('load',()=>remoteOpen(true));if(REMOTE_ON&&sessionStorage.getItem('voidtv-party'))addEventListener('load',()=>partyOpen(true))}catch(_){}
 function mkPlayer(host,o){if(!window.VoidPlayer){host.innerHTML='<div class="loading">The player did not load. Refresh the page.</div>';return null}return VoidPlayer.create(host,Object.assign({globalKeys:true,storageKey:'voidtv',onEvent:vpEvent,syncButton:!!state.dbg},o||{}))}
 function nextEp(){const s=state.show;if(!s||!s.seasons||!s.seasons[state.se])return null;const se=s.seasons[state.se];if(state.e+1<se.episodes.length)return se.episodes[state.e+1];return s.seasons[state.se+1]?s.seasons[state.se+1].episodes[0]:null}
 function prevEp(){const s=state.show;if(!s||!s.seasons)return;if(state.e>0)play(state.se,state.e-1);else if(state.se>0)play(state.se-1,s.seasons[state.se-1].episodes.length-1)}
@@ -895,20 +895,22 @@ const clock=(ms)=>new Date(ms).toLocaleTimeString([],{hour:'numeric',minute:'2-d
 function tuneHere(id){const host=$('vph'),g=document.querySelector('.guide'),home=viewNow()==='home';if(!tvLive()||!TV||!VP||!host||(!home&&!g)||!host.contains(VP.root))return false;
  const chans=TV.filter(c=>!c.adult||ME.adult),cur=chans.find(c=>c.id===id);if(!cur)return false;const now=chanNow(cur);if(!now)return false;const s=SHOWS[now.a.s];
  if(!home){gdTune(cur.id);document.title=cur.name+' · '+SITE}osd(cur,now.a,s,null);tvSwirlFlash();if(VP.flashChannel)VP.flashChannel(cur.name);tvPlay(cur);return true}
-function tune(id){track('tune',{slug:id});state.chan=id;state.tvOn=true;keepChan(id);const home=viewNow()==='home';if(!home)history.replaceState(null,'',urlFor('tv/'+id));if(!tuneHere(id)){if(home){HTV.forced=true;homeTvStart()}else render()}window.scrollTo(0,0)}
+function tune(id){if(window.PartyGuest&&PartyGuest.holds(id))return;track('tune',{slug:id});state.chan=id;state.tvOn=true;keepChan(id);const home=viewNow()==='home';if(!home)history.replaceState(null,'',urlFor('tv/'+id));if(!tuneHere(id)){if(home){HTV.forced=true;homeTvStart()}else render()}window.scrollTo(0,0)}
 // Flipping channels lands on a picture (B, 26 Oct 2026: four channels in a row waiting on cards is not good to flip through): CH and swipe
 // skip a channel that is on its holding cards right now; a short filler or special playing in a break counts as a picture. With every
 // channel on cards, it moves one. Picking a channel directly (the guide, On now) still shows it as it is.
 function surf(dir){if(!TV)return;const list=TV.filter(c=>!c.adult||ME.adult);if(!list.length)return;const i=list.findIndex(c=>c.id===state.chan),n=list.length,now=Date.now();
  let pick=list[(i+dir+n)%n];for(let s=1;s<n;s++){const c=list[(i+dir*s+n*s)%n];const x=tvAt(c,now);if(!x||x.k!=='card'){pick=c;break}}tune(pick.id)}
 function osd(c,a,s,ep){const el=document.querySelector('.osd');if(!el||!s)return;const left=(a.en-Date.now())/1000,nx=TVG.nextAiring(c,TVLIB,a),ns=nx&&SHOWS[nx.s];
- el.innerHTML='<b>'+esc(c.name)+'</b><span>'+esc(s.show)+' · '+code(a)+(ep?' · '+esc(ep.name):'')+'</span><span class="g">'+(left>0?mmss(left)+' left · ':'')+'next: '+(nx?clock(nx.st)+' '+esc(ns?ns.show:''):'')+'</span><span class="acts"><button class="btn chbtn" onclick="surf(-1)" aria-label="Previous channel"><i class="ico chevron-left"></i>CH</button><button class="btn chbtn" onclick="surf(1)" aria-label="Next channel">CH<i class="ico chevron-right"></i></button><button class="btn" onclick="go(\\''+s.slug+'\\')">Open show</button>'+(REMOTE_ON?'<button class="btn" onclick="remoteOpen()" title="Use your phone as the remote">Phone remote</button>':'')+'</span>'}
+ el.innerHTML='<b>'+esc(c.name)+'</b><span>'+esc(s.show)+' · '+code(a)+(ep?' · '+esc(ep.name):'')+'</span><span class="g">'+(left>0?mmss(left)+' left · ':'')+'next: '+(nx?clock(nx.st)+' '+esc(ns?ns.show:''):'')+'</span><span class="acts"><button class="btn chbtn" onclick="surf(-1)" aria-label="Previous channel"><i class="ico chevron-left"></i>CH</button><button class="btn chbtn" onclick="surf(1)" aria-label="Next channel">CH<i class="ico chevron-right"></i></button><button class="btn" onclick="go(\\''+s.slug+'\\')">Open show</button>'+(REMOTE_ON?'<button class="btn" onclick="remoteOpen()" title="Use your phone as the remote">Phone remote</button><button class="btn" onclick="partyOpen()" title="Watch Live TV together from different homes and time zones">Watch party</button>':'')+'</span>'}
 // THE PHONE REMOTE (B, 20 Nov 2026: "a channel switcher, save to phone, info on the phone about the show"): its code loads only
 // when someone presses Phone remote (remote/README.md). A room this tab held before a reload is taken back on load.
 /* Scripts loaded only when needed (the remote, the break trivia), in order, each once. */
 const JS_P={};
 function jsLoad(list){const key='L:'+list.join(' ');if(!JS_P[key])JS_P[key]=list.reduce((p,f)=>p.then(()=>JS_P['F:'+f]||(JS_P['F:'+f]=new Promise((ok,no)=>{const sc=document.createElement('script');sc.src=BASE+f+'?v='+REMOTE_V;sc.onload=ok;sc.onerror=()=>{delete JS_P['F:'+f];no(new Error(f))};document.head.appendChild(sc)}))),Promise.resolve()).catch((e)=>{delete JS_P[key];throw e});return JS_P[key]}
-function remoteLoad(){return jsLoad(['play/src/qr.js','remote/src/remote.js','remote/src/screen.js','remote/src/voidtv.js'])}
+function remoteLoad(){return jsLoad(['play/src/qr.js','remote/src/remote.js','remote/src/screen.js','remote/src/voidtv.js','remote/src/party.js'])}
+/* THE WATCH PARTY (B, 20 Nov 2026: "the party that initiated gets their live tv to be the dominant and then when the others go they are on that one"): start one here, or join another TV's and follow it (remote/src/party.js). */
+function partyOpen(resume){if(!REMOTE_ON)return;if(!resume)track('act',{slug:state.chan||'',x:'party-open'});remoteLoad().then(()=>{if(!window.PartyGuest)return;if(resume)PartyGuest.rejoin(window.SiteRemote);else PartyGuest.chooser(window.SiteRemote)}).catch(()=>{})}
 function remoteOpen(resume){if(!REMOTE_ON)return;if(!resume)track('act',{slug:state.chan||'',x:'remote-open'});remoteLoad().then(()=>window.RemoteScreen&&RemoteScreen.start(window.SiteRemote,!!resume)).catch(()=>{})}
 // FULL HOLD (B, 21 Oct 2026): Live TV never starts anything before its time. What plays at an instant comes from the schedule alone
 // (tvAt), so a viewer who tunes in, comes back from a stall or changes channel lands where everyone else is: the airing's episode, then
@@ -1007,8 +1009,8 @@ const TVQ={};
 function tvQuiz(c,a){if(!TRIVIA)return null;const key=c.id+'|'+a.st;if(key in TVQ)return TVQ[key];const s=SHOWS[a.s];TVQ[key]=null;if(!s)return null;
  if(Object.keys(TVQ).length>200)for(const k in TVQ)if(k!==key)delete TVQ[k];
  jsLoad(['trivia/src/game.js','trivia/src/live.js']).then(()=>TriviaLive.liveQuestion({slug:s.slug,season:a.se,number:a.n,seed:key},BASE+'trivia/bank/')).then(q=>{if(q&&q.choices&&q.choices.length>=2)TVQ[key]={n:TriviaLive.hash(key)%1e9,q,show:s.show}}).catch(()=>{});return null}
-function tvQuizNote(sp){const R=window.RemoteScreen,k=R&&R.quizCount?R.quizCount({n:sp.n,answer:sp.q.answer}):null;
- if(sp.phase==='a')return k&&k.answered?k.right+' of '+k.phones+' phone'+(k.phones===1?'':'s')+' got it':'';
+function tvQuizNote(sp){const R=window.PartyGuest&&PartyGuest.on?PartyGuest:window.RemoteScreen,k=R&&R.quizCount?R.quizCount({n:sp.n,answer:sp.q.answer}):null;
+ if(sp.phase==='a'){const sc=R&&R.scores&&window.VoidRemote?VoidRemote.scoreLine(R.scores()):'';return (k&&k.answered?k.right+' of '+k.phones+' phone'+(k.phones===1?'':'s')+' got it':'')+(sc&&(R===window.PartyGuest||R.party)?'<br><small>'+esc(sc)+'</small>':'')}
  return 'Answer in <b class="tvc-qleft">'+tvLeft((sp.endsAt-Date.now())/1000)+'</b>'+(k?' · '+k.answered+' of '+k.phones+' phone'+(k.phones===1?'':'s')+' answered':REMOTE_ON?' · play along: Phone remote, under the picture':'')}
 function tvSpotShown(c,sp){if(TVS_SEEN[sp.id+c.id])return;TVS_SEEN[sp.id+c.id]=1;track('act',{slug:c.id,x:'spot-'+sp.kind})}
 // The card on channel c at instant t, in a run of cards that ends at until: k counts the cards left to the end (0 is the last one).

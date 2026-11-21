@@ -26,6 +26,26 @@ information". And: "also use this for cast, and kids, across the entire voidtv u
   - The question is the clip chat's line just said (`trivia/src/timed.js`) when one is approved for that moment. Otherwise it is one about the show as a whole that gives nothing away (`trivia/src/live.js`, during).
   - Never on kids channels, never in the last minute of an episode. The icon's look is one setting, `ICON` in `src/voidtv.js`: the little neon TV as HQ shows it, in a circle (Bryan, 20 Nov 2026: "the lil neon tv used in the hq").
 
+## The watch party (Bryan, 20 Nov 2026: "my parents live in central tz and i eastern ... the party that initiated gets their live tv to be the dominant and then when the others go they are on that one")
+
+- On Live TV, **Watch party** (beside Phone remote): start a party on this TV, or join another TV's with its code.
+- The first TV leads. A TV that joins plays Live TV in the first TV's time zone (`TVG.setOff` with `tzOff`), on its channel,
+  and follows each channel change. Its own channel buttons wait ("In a watch party the first TV picks the channel").
+  - Live TV is worked out from the clock in a zone, so the same zone means the same moment of the same airing everywhere. Times still show in each home's own time.
+- Phones in either home scan their own TV's code. All play one game: the break trivia and the pop-ups, one score list.
+  - Each phone is named by its home's city, never a person's name ("1st Phone 2 (New York) 530").
+  - The list shows on every TV's trivia answer card, and the pop-up icon shows on every TV.
+- Leaving gives the TV back its own zone and channel, even after a reload during the party. A reload of either TV keeps the party.
+- A TV whose clock is more than 5 seconds off the first TV's says so in its panel; the clock is not corrected.
+- Messages, all inside the remote's room:
+  - `p-hi`: a TV joins, with its zone.
+  - `p-tv`: the first TV's zone, channel and clock, on each change and every 30 s.
+  - `p-quiz`: the open question's counts.
+  - `p-score`: the list.
+  - A phone that scanned a joined TV's code says so in its `r-hi` (`h`).
+- Built: `src/party.js` (the joining TV), the party parts of `src/screen.js` (the first TV) and `src/voidtv.js` (zone and channel), and `src/remote.js` (`tzOff`, `zoneCity`, `partyScores`, `scoreLine`).
+- Not yet: the clip chat's spot-it and whodunit rounds on the phones, and the Mystery channel screens. Each waits on Bryan's go.
+
 ## How it is built
 
 - One relay for every phone feature: PLAY's rooms (`play/rooms/`, `/api/room/*`), kind `remote` (16 phones, 10 messages a

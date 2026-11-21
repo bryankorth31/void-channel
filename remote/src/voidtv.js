@@ -121,21 +121,56 @@
     + '.vtv-pop i{position:absolute;right:0;top:100%;margin-top:4px;white-space:nowrap;font:700 12px system-ui,sans-serif;font-style:normal;color:#fff;background:rgba(7,8,12,.75);border-radius:999px;padding:2px 8px}'
     + '.vtv-pop i:empty{display:none}';
   let icon = null, iconKey = '';
-  function popIcon(z) {
+  // k: the counts, when another TV gives them (a TV in a watch party shows the first TV's); else this TV's own room.
+  function popIcon(z, k0) {
     const host = typeof VP !== 'undefined' && VP && VP.root;
     if (!z || !host || !host.appendChild) { if (icon) icon.classList.remove('vtv-pop-on'); iconKey = ''; return; }
     if (!icon || icon.parentNode !== host) {
       if (!document.getElementById('vtv-pop-css')) { const st = document.createElement('style'); st.id = 'vtv-pop-css'; st.textContent = ICON_CSS; document.head.appendChild(st); }
       if (icon && icon.parentNode) icon.parentNode.removeChild(icon);
       icon = document.createElement('div'); icon.className = 'vtv-pop'; icon.setAttribute('role', 'status');
-      icon.innerHTML = ICON + '<i></i>'; icon.onclick = () => root.RemoteScreen.show();
+      icon.innerHTML = ICON + '<i></i>';
+      icon.onclick = () => (root.PartyGuest && root.PartyGuest.on ? root.PartyGuest.chooser(adapter) : root.RemoteScreen.show());
       host.appendChild(icon);
     }
-    const k = root.RemoteScreen.quizCount(z);
+    const k = k0 || root.RemoteScreen.quizCount(z);
     const words = !k ? '' : z.phase === 'q' ? k.answered + ' of ' + k.phones + ' answered' : k.right + ' of ' + k.phones + ' got it';
     const key = z.n + words;
     if (key !== iconKey) { iconKey = key; icon.querySelector('i').textContent = words; icon.setAttribute('aria-label', 'Trivia on your phone. ' + words); }
     icon.classList.add('vtv-pop-on');
   }
+
+  // ---- The watch party (remote/src/party.js; Bryan, 20 Nov 2026: "then the party that initiated gets their live tv to be the
+  // dominant and then when the others go they are on that one") ----
+  // The first TV tells the party its channel. A TV that joins takes the first TV's time zone for Live TV (TVG.setOff: the
+  // schedule is the clock in a zone, so the same zone is the same moment of the same airing), plays its channel and follows
+  // each change. The schedule is laid out again for the new zone (TV and TVLIB start over; the page loads them anew).
+  const LOCAL = (ms) => -new Date(ms).getTimezoneOffset() * 60000;
+  const localZone = () => { try { return Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) { return ''; } };
+  // before: this TV's own channel when it joined, kept for the tab so a reload during the party still goes back to it.
+  const BEFORE = 'voidtv-party-before';
+  let partyZone = '', before = (() => { try { return JSON.parse(sessionStorage.getItem(BEFORE) || 'null'); } catch (e) { return null; } })();
+  adapter.party = () => ({ chan: state.chan || '', on: onTv() });
+  // On a TV in a party: the first TV's pop-up, shown here as the same small icon, with the first TV's counts.
+  adapter.popShow = (q) => popIcon(q && q.pop && onTv() ? { n: q.n, phase: q.phase } : null, q ? { phones: q.phones, answered: q.answered, right: q.right } : null);
+  adapter.partyApply = (m) => {
+    if (!before) { before = { chan: state.chan }; try { sessionStorage.setItem(BEFORE, JSON.stringify(before)); } catch (e) { /* this page only */ } }
+    let moved = false;
+    if (V.zoneOk(m.zone) && m.zone !== (partyZone || localZone())) {
+      const f = V.tzOff(m.zone);
+      if (f) { TVG.setOff(f); partyZone = m.zone; TV = null; TVLIB = null; moved = true; }
+    }
+    if (!m.on || !m.chan) return;   // the first TV is not on Live TV: this one stays where it is until it is
+    const v = viewNow();
+    if (moved || state.chan !== m.chan || v !== 'tv') {
+      root.PartyGuest.follow(() => { state.tvOn = true; if (!moved && v === 'tv' && TV) tune(m.chan); else go('tv/' + m.chan, true); });
+    }
+  };
+  adapter.partyLeave = () => {
+    const b = before; before = null; try { sessionStorage.removeItem(BEFORE); } catch (e) { /* fine */ }
+    if (partyZone) { TVG.setOff(LOCAL); partyZone = ''; TV = null; TVLIB = null; }
+    const v = viewNow();
+    if (v === 'tv' || v === 'home') { state.tvOn = true; go(b && b.chan ? 'tv/' + b.chan : 'tv', true); }
+  };
   root.SiteRemote = adapter;   // the name every site's adapter takes; the page passes it to RemoteScreen.start
 })(typeof self !== 'undefined' ? self : this);

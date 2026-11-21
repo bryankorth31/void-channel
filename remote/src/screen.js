@@ -20,6 +20,45 @@
   let ad = null, ws = null, room = null, ended = false, opening = null, retry = 0;
   const seats = new Set();
   let lastNow = '', lastList = '', listVer = 0, timers = [];
+  // THE WATCH PARTY (remote/README.md). Other TVs join this room as members (they say p-hi with their zone) and follow this
+  // one: it sends them its zone and channel (p-tv), the question's progress (p-quiz) and the one score list (p-score).
+  // homes: a phone that scanned another TV's code says which TV (its r-hi carries h), so the list can name its home.
+  const tvs = new Map(), homes = new Map();
+  const phoneSeats = () => [...seats].filter((s) => !tvs.has(s));
+  let partyMode = false, partyKey = '', partyAt = 0, quizKey = '';
+  const myZone = () => { try { return Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) { return ''; } };
+  // A phone keeps its home's name after its TV leaves the party (its score stays on the list).
+  const homeZones = new Map();
+  const homeOf = (seat) => {
+    const h = homes.get(seat);
+    if (h !== undefined && tvs.has(h) && tvs.get(h).zone) homeZones.set(seat, tvs.get(h).zone);
+    return V.zoneCity(homeZones.get(seat) || (h !== undefined ? '' : myZone()));
+  };
+  const scores = () => V.partyScores(book, phoneSeats(), homeOf);
+  function partyTick(force) {
+    if (!tvs.size || !ad || !ad.party) return;
+    const p = ad.party();
+    if (!p) return;
+    const m = { type: 'p-tv', zone: myZone(), chan: p.chan || '', on: !!p.on, phones: phoneSeats().length, tvs: tvs.size + 1 };
+    const key = JSON.stringify(m), t = Date.now();
+    if (!force && key === partyKey && t - partyAt < 30000) return;   // and again every 30 s, which also carries this TV's clock
+    partyKey = key; partyAt = t; m.t = t;
+    for (const s of tvs.keys()) send(s, m);
+  }
+  function partyQuiz(z) {
+    if (!tvs.size) return;
+    const k = z && V.quizCount(book, phoneSeats(), z);
+    const m = z ? { type: 'p-quiz', n: z.n, phase: z.phase, pop: !!z.pop, answered: k.answered, right: k.right, phones: k.phones } : { type: 'p-quiz', n: null };
+    const key = JSON.stringify(m);
+    if (key === quizKey) return;
+    quizKey = key;
+    for (const s of tvs.keys()) send(s, m);
+  }
+  function partyScores(to) {
+    if (!tvs.size) return;
+    const m = { type: 'p-score', list: scores().slice(0, 8).map((r) => ({ seat: r.seat, score: r.score, place: r.place, home: r.home })) };
+    for (const s of to ? [to] : tvs.keys()) send(s, m);
+  }
   // Trivia in the breaks: an adapter may give quiz() (remote/src/remote.js says what a quiz is). book: each seat's score and
   // its answer to the question now open, for this room's evening.
   // The scores are kept for this tab with the room, so a reload (or the page changing) does not wipe a phone's evening.
@@ -40,19 +79,20 @@
   const quizNow = () => { try { return ad && ad.quiz ? ad.quiz() : null; } catch (e) { return null; } };
   function quizTick() {
     const z = quizNow();
+    partyQuiz(z);
     if (!z) { quizN = null; quizPhase = ''; return; }
     // Each phone is asked with its own answer, if it gave one (the page reloaded mid-question: its buttons stay locked).
     if (z.phase === 'q' && quizN !== z.n) {
       quizN = z.n; quizPhase = 'q';
       const q = V.quizAsk(z, Date.now());
-      for (const seat of seats) { const p = book[seat]; send(seat, Object.assign({}, q, { pick: p && p.n === z.n ? p.pick : null })); }
+      for (const seat of phoneSeats()) { const p = book[seat]; send(seat, Object.assign({}, q, { pick: p && p.n === z.n ? p.pick : null })); }
       return;
     }
     // The answer is out: each phone hears its own result once. A question this screen never asked (it tuned in at the answer)
     // gives no results, only the answer on the TV.
     if (z.phase === 'a' && quizPhase !== 'a') {
       const asked = quizN === z.n; quizN = z.n; quizPhase = 'a';
-      if (asked) { for (const [seat, m] of V.quizResults(book, [...seats], z, root.TriviaGame && root.TriviaGame.points)) send(seat, m); bookSave(); }
+      if (asked) { for (const [seat, m] of V.quizResults(book, phoneSeats(), z, root.TriviaGame && root.TriviaGame.points)) send(seat, m); bookSave(); partyScores(); }
     }
   }
   const send = (to, msg) => { if (ws && ws.readyState === 1 && V.fits(msg)) ws.send(JSON.stringify({ to, msg })); };
@@ -77,6 +117,7 @@
     if (!seats.size || !ad) return;
     const n = V.nowMsg(ad.now()), j = sameKey(n);
     if (force || j !== lastNow) { lastNow = j; send('all', n); }
+    partyTick(false);
   }
   function listTick() {
     if (!seats.size || !ad) return;
@@ -88,20 +129,23 @@
 
   function onMessage(e) {
     let m; try { m = JSON.parse(e.data); } catch (x) { return; }
-    if (m.type === 'room') { if (!room || room.code !== m.code) bookLoad(m.code, !!m.back); room = { code: m.code, join: m.join }; retry = 0; if (m.key) keep({ code: m.code, key: m.key }); draw(); return; }
+    if (m.type === 'room') { if (!room || room.code !== m.code) bookLoad(m.code, !!m.back); room = { code: m.code, join: m.join }; retry = 0; if (m.key) keep({ code: m.code, key: m.key, party: partyMode }); draw(); return; }
     // The first phone in: the panel steps aside after a moment (the chip in the corner brings it back), so it never sits over
     // the picture or a trivia card.
-    if (m.type === 'join') { const first = !seats.size; seats.add(m.from); all(m.from); draw(); if (first && shown) setTimeout(() => { if (seats.size) hide(); }, 2500); return; }
-    if (m.type === 'leave') { seats.delete(m.from); draw(); return; }
+    if (m.type === 'join') { const first = !phoneSeats().length; seats.add(m.from); all(m.from); draw(); if (first && shown && !partyMode) setTimeout(() => { if (phoneSeats().length) hide(); }, 2500); return; }
+    if (m.type === 'leave') { seats.delete(m.from); tvs.delete(m.from); homes.delete(m.from); draw(); partyTick(true); return; }
     const msg = m.msg || {};
     if (!seats.has(m.from)) return;
-    if (msg.type === 'r-hi') { all(m.from); return; }
+    // Another TV joins the party: it hears this TV's zone, channel and clock at once, and the score list so far.
+    if (msg.type === 'p-hi') { tvs.set(m.from, { zone: V.zoneOk(msg.zone) ? msg.zone : '' }); for (const p of homes.keys()) homeOf(p); quizKey = ''; draw(); partyTick(true); partyScores(m.from); return; }
+    if (tvs.has(m.from)) return;   // a TV in the party only follows; it does not steer
+    if (msg.type === 'r-hi') { if (Number.isInteger(msg.h) && msg.h !== m.from) { homes.set(m.from, msg.h); homeOf(m.from); } all(m.from); return; }
     if (msg.type === 't-a') { const g = V.quizAnswer(book, m.from, msg, quizN === null ? null : quizNow(), Date.now()); if (g) { send(m.from, g); bookSave(); } return; }
     const cmd = V.readDo(msg);
     if (!cmd) return;
     if (cmd.a === 'info') { const i = ad.info(cmd.slug); if (i) send(m.from, V.infoMsg(i)); return; }
     try { ad.act(cmd); } catch (x) { /* a page that cannot do it now: the phone sees nothing change */ }
-    setTimeout(() => { tick(); listTick(); }, 250);   // the page has changed channel: say so at once, not at the next poll
+    setTimeout(() => { tick(); listTick(); partyTick(true); }, 250);   // the page has changed channel: say so at once, not at the next poll
   }
 
   function connect(k) {
@@ -112,7 +156,7 @@
       sock.onmessage = (e) => { if (!had) { had = true; ok(); } onMessage(e); };
       sock.onclose = (e) => {
         if (ws !== sock) return;
-        ws = null; const was = room; room = null; seats.clear(); draw();
+        ws = null; const was = room; room = null; seats.clear(); tvs.clear(); draw();
         if (!had) { no(new Error('The phone remote did not open. Check the connection and try again.')); return; }
         // The room timed out (12 hours, or 30 minutes with no word) or ended: start clean the next time. Otherwise the connection
         // dropped: take the same room back while it waits, so the phones stay.
@@ -133,10 +177,10 @@
     return opening;
   }
   // End remote: the relay ends the room at once and tells the phones (a plain close would keep it 45 s for a reload).
-  function end() { ended = true; keep(null); try { sessionStorage.removeItem(BOOK); } catch (e) { /* fine */ } if (ws && ws.readyState === 1) ws.send(JSON.stringify({ relay: 'end' })); if (ws) ws.close(); ws = null; room = null; seats.clear(); hide(); }
+  function end() { ended = true; keep(null); try { sessionStorage.removeItem(BOOK); } catch (e) { /* fine */ } if (ws && ws.readyState === 1) ws.send(JSON.stringify({ relay: 'end' })); if (ws) ws.close(); ws = null; room = null; seats.clear(); tvs.clear(); homes.clear(); partyMode = false; hide(); }
 
   // The panel: the code, the QR, how many phones. Small, in a corner, out of the picture's way once a phone is in.
-  const CSS = '.vrm{position:fixed;right:16px;bottom:16px;z-index:9000;width:min(300px,calc(100vw - 32px));background:#0d0f16;color:#e8e8ee;border:1px solid #2a2f40;border-radius:16px;padding:16px;font:15px system-ui,Segoe UI,Roboto,sans-serif;box-shadow:0 10px 40px rgba(0,0,0,.6);text-align:center}'
+  const CSS = '.vrm{position:fixed;right:16px;bottom:16px;z-index:9000;width:min(300px,calc(100vw - 32px));max-height:calc(100vh - 32px);overflow:auto;background:#0d0f16;color:#e8e8ee;border:1px solid #2a2f40;border-radius:16px;padding:16px;font:15px system-ui,Segoe UI,Roboto,sans-serif;box-shadow:0 10px 40px rgba(0,0,0,.6);text-align:center}'
     + '.vrm[hidden]{display:none}.vrm h3{margin:0 0 8px;font-size:17px}.vrm p{margin:6px 0;color:#a3a8bb;font-size:13px;line-height:1.4}.vrm b{color:#e8e8ee}'
     + '.vrm-qr{background:#fff;border-radius:10px;padding:8px;width:180px;height:180px;margin:6px auto}.vrm-qr svg{width:100%;height:100%;display:block}'
     + '.vrm-code{font:700 34px/1.1 ui-monospace,Consolas,monospace;letter-spacing:.18em;color:#5fd4ff;margin:4px 0}'
@@ -149,8 +193,10 @@
     if (box) return;
     const st = document.createElement('style'); st.textContent = CSS; document.head.appendChild(st);
     box = document.createElement('div'); box.className = 'vrm'; box.hidden = true; box.setAttribute('role', 'dialog'); box.setAttribute('aria-label', 'Phone remote');
-    box.innerHTML = '<h3>Phone remote</h3><div class="vrm-qr" id="vrm-qr"></div><p>Scan with your phone’s camera, or go to <b id="vrm-site"></b> and type</p>'
-      + '<div class="vrm-code" id="vrm-code">....</div><p class="vrm-n" id="vrm-n"></p><p class="vrm-err" id="vrm-err" role="status"></p>'
+    box.innerHTML = '<h3 id="vrm-h">Phone remote</h3><div class="vrm-qr" id="vrm-qr"></div><p>Scan with your phone’s camera, or go to <b id="vrm-site"></b> and type</p>'
+      + '<div class="vrm-code" id="vrm-code">....</div><p class="vrm-n" id="vrm-n"></p>'
+      + '<p id="vrm-party" hidden>Another TV joins: on voidtv.net, Live TV, press <b>Watch party</b> and type this code. It plays this TV’s channel, at this TV’s time.</p>'
+      + '<p class="vrm-err" id="vrm-err" role="status"></p>'
       + '<div class="vrm-row"><button type="button" id="vrm-hide">Hide</button><button type="button" id="vrm-end">End remote</button></div>';
     chip = document.createElement('button'); chip.type = 'button'; chip.className = 'vrm-chip'; chip.hidden = true; chip.onclick = () => show();
     document.body.appendChild(box); document.body.appendChild(chip);
@@ -164,9 +210,13 @@
     $('vrm-site').textContent = location.host + '/join';
     $('vrm-code').textContent = room ? room.code : '....';
     $('vrm-qr').innerHTML = room && root.PlayQR ? root.PlayQR.svg(room.join, 6) : '';
-    const n = seats.size;
-    $('vrm-n').textContent = !room ? '' : n ? n + ' phone' + (n === 1 ? '' : 's') + ' connected' : 'No phone yet';
-    chip.textContent = 'Phone remote' + (n ? ': ' + n + ' phone' + (n === 1 ? '' : 's') : '');
+    const n = phoneSeats().length, t = tvs.size, party = partyMode || t > 0;
+    const tvWords = t ? t + ' other TV' + (t === 1 ? '' : 's') : '';
+    $('vrm-h').textContent = party ? 'Watch party' : 'Phone remote';
+    $('vrm-end').textContent = party ? 'End the party' : 'End remote';
+    $('vrm-party').hidden = !party;
+    $('vrm-n').textContent = !room ? '' : [n ? n + ' phone' + (n === 1 ? '' : 's') + ' connected' : 'No phone yet', tvWords].filter(Boolean).join(' · ');
+    chip.textContent = (party ? 'Watch party' : 'Phone remote') + (n || t ? ': ' + [n ? n + ' phone' + (n === 1 ? '' : 's') : '', tvWords].filter(Boolean).join(', ') : '');
     chip.hidden = shown || !room;
   }
   function show() { build(); shown = true; box.hidden = false; draw(); }
@@ -174,8 +224,10 @@
 
   // The page's one call: start(adapter) on the Phone remote button; start(adapter, true) on load, to take back a room this
   // tab held before a reload (nothing opens if it held none).
-  function start(adapter, resume) {
+  // start(adapter, false, true): the same room, opened as a watch party (its panel tells another TV how to join).
+  function start(adapter, resume, party) {
     ad = adapter; build();
+    if (party || (kept() && kept().party)) partyMode = true;
     if (!timers.length) {
       timers.push(setInterval(() => tick(false), POLL_MS), setInterval(listTick, LIST_MS), setInterval(() => tick(true), ALIVE_MS), setInterval(quizTick, 400));
       addEventListener('pagehide', () => { if (ws) ws.close(); });   // a reload: the room waits 45 s for the next load
@@ -185,7 +237,9 @@
       .catch((e) => { show(); box.querySelector('#vrm-err').textContent = e.message; return null; });
   }
 
-  root.RemoteScreen = { start, end, show, hide, get room() { return room; }, get phones() { return seats.size; }, changed: () => tick(false),
-    // For the TV's trivia card: how many phones answered the open question, and how many got it right.
-    quizCount: (z) => (z && seats.size ? V.quizCount(book, [...seats], z) : null) };
+  root.RemoteScreen = { start, end, show, hide, get room() { return room; }, get phones() { return phoneSeats().length; }, get tvs() { return tvs.size; },
+    get party() { return partyMode || tvs.size > 0; }, changed: () => tick(false),
+    // For the TV's trivia card: how many phones answered the open question, and how many got it right; the party's score list.
+    quizCount: (z) => (z && phoneSeats().length ? V.quizCount(book, phoneSeats(), z) : null),
+    scores: () => scores() };
 })(typeof self !== 'undefined' ? self : this);

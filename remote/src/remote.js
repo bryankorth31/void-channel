@@ -162,10 +162,46 @@
     return { i, start, close, until };
   }
 
+  // THE WATCH PARTY (Bryan, 20 Nov 2026: "my parents live in central tz and i eastern ... then the party that initiated gets
+  // their live tv to be the dominant and then when the others go they are on that one"). Live TV is one schedule worked out
+  // from the clock in a time zone (scripts/lib/tvgrid.js, TVG.setOff), so a TV that joins a party only needs the host's
+  // zone: then both are at the same moment of the same airing with nothing else to keep in step.
+  const zoneOk = (z) => { if (typeof z !== 'string' || !/^[A-Za-z_]+(\/[A-Za-z0-9_+-]+){0,2}$/.test(z)) return false; try { new Intl.DateTimeFormat('en-US', { timeZone: z }); return true; } catch (e) { return false; } };
+  // A zone's offset from UTC at an instant, in ms (what TVG.setOff takes), from the browser's own zone rules. Kept per quarter
+  // hour, since the schedule asks it often and a zone changes its offset only on the hour or the half hour.
+  function tzOff(zone) {
+    if (!zoneOk(zone)) return null;
+    const f = new Intl.DateTimeFormat('en-US', { timeZone: zone, hourCycle: 'h23', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' });
+    const kept = new Map();
+    return (ms) => {
+      const k = Math.floor(ms / 900000);
+      let off = kept.get(k);
+      if (off === undefined) {
+        const p = {}; for (const x of f.formatToParts(k * 900000)) p[x.type] = x.value;
+        off = Date.UTC(+p.year, +p.month - 1, +p.day, +p.hour % 24, +p.minute, +p.second) - k * 900000;
+        if (kept.size > 2000) kept.clear();
+        kept.set(k, off);
+      }
+      return off;
+    };
+  }
+  // "America/Chicago" -> "Chicago": how a home is named on the score list (no names of people, only where the TV is).
+  const zoneCity = (z) => (zoneOk(z) ? z.split('/').pop().replace(/_/g, ' ') : '');
+  // One score list for the party: every phone, best first, each with its place and its home's city.
+  function partyScores(book, phoneSeats, homeOf) {
+    const list = phoneSeats.map((seat) => ({ seat, score: (book[seat] && book[seat].score) || 0, home: clip(homeOf(seat) || '', 30) }))
+      .sort((a, b) => (b.score - a.score) || (a.seat - b.seat));
+    let place = 0, last = null;
+    return list.map((r, i) => { if (r.score !== last) { place = i + 1; last = r.score; } return Object.assign(r, { place }); }).slice(0, 16);
+  }
+  // The score list in a line, for a TV card: "1st Phone 2 (Chicago) 1,400 · 2nd Phone 1 (New York) 700".
+  const ORD = (n) => n + (n % 100 >= 11 && n % 100 <= 13 ? 'th' : ['th', 'st', 'nd', 'rd'][n % 10] || 'th');
+  const scoreLine = (list, max) => (list || []).slice(0, max || 4).map((r) => ORD(r.place) + ' Phone ' + r.seat + (r.home ? ' (' + r.home + ')' : '') + ' ' + r.score.toLocaleString('en-US')).join(' · ');
+
   // "8:30 pm", "18 min left" and "1:05 left": the times as the phone shows them.
   const leftWords = (sec) => { sec = Math.max(0, Math.round(sec)); const h = Math.floor(sec / 3600), m = Math.floor(sec % 3600 / 60); return h ? h + ' h ' + String(m).padStart(2, '0') + ' min left' : m ? m + ' min left' : 'under a minute left'; };
 
-  const api = { MAX, ACTIONS, SAVED_MAX, clip, readDo, siteMsg, nowMsg, listMsgs, listTake, infoMsg, savedAdd, savedDrop, savedHas, savedRead, size, fits, leftWords, LETTERS, quizAsk, quizAnswer, quizResults, quizCount, POP, popAt };
+  const api = { MAX, ACTIONS, SAVED_MAX, clip, readDo, siteMsg, nowMsg, listMsgs, listTake, infoMsg, savedAdd, savedDrop, savedHas, savedRead, size, fits, leftWords, LETTERS, quizAsk, quizAnswer, quizResults, quizCount, POP, popAt, zoneOk, tzOff, zoneCity, partyScores, scoreLine };
   if (typeof module === 'object' && module.exports) module.exports = api;
   else root.VoidRemote = api;
 })(typeof self !== 'undefined' ? self : this);

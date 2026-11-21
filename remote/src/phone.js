@@ -23,6 +23,9 @@
     return t;
   }
   const say = (m) => { if (sock && sock.readyState === 1) sock.send(JSON.stringify(m)); };
+  // A phone that scanned a code on another TV in a watch party says which TV is its home (h, that TV's seat), for the score list.
+  const home = /^[0-9]{1,2}$/.test(new URLSearchParams(location.search).get('h') || '') ? +new URLSearchParams(location.search).get('h') : null;
+  const hi = () => say(home ? { type: 'r-hi', h: home } : { type: 'r-hi' });
   const act = (a, more) => say(Object.assign({ type: 'r-do', a }, more || {}));
   const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
   const status = (t) => { $('status').textContent = t; };
@@ -163,9 +166,9 @@
     if (m.type === 't-q' && m.live && Array.isArray(m.choices)) { drawQuiz(m); return; }
     if (m.type === 't-got') { if (quiz && quiz.n === m.n) $('q-r').textContent = lockedWords(m.pick); return; }
     if (m.type === 't-res' && m.live) { quizResult(m); return; }
-    if (m.type === 'hello') { tries = 0; $('note').classList.remove('on'); $('app').hidden = false; status('Room ' + code); say({ type: 'r-hi' }); return; }
+    if (m.type === 'hello') { tries = 0; $('note').classList.remove('on'); $('app').hidden = false; status('Room ' + code); hi(); return; }
     if (m.type === 'host-away') { status('The big screen is reloading'); return; }
-    if (m.type === 'host-back') { status('Room ' + code); say({ type: 'r-hi' }); return; }
+    if (m.type === 'host-back') { status('Room ' + code); hi(); return; }
     if (m.type === 'host-gone') { ended = true; note('The big screen ended the remote', 'Press Phone remote on the big screen for a new code.'); return; }
     if (m.type === 'r-site') { site = m; $('mark').href = m.home || '/'; document.title = 'Remote | ' + (m.name || 'voidtv.net'); drawSaved(); return; }
     if (m.type === 'r-now') { now = m; nowAt = Date.now(); drawNow(); if (quiz && quiz.nowKey !== nowKey(m)) quizGone(); return; }
@@ -199,7 +202,7 @@
   $('ch-up').onclick = () => act('ch', { dir: 1 }); $('ch-down').onclick = () => act('ch', { dir: -1 });
   $('find').oninput = drawList;
   // A phone that wakes up asks again (it may have slept through a channel change); a dead socket closes and joins again.
-  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') { if (sock && sock.readyState === 1) say({ type: 'r-hi' }); else if (!sock && !ended) { tries = 0; join(); } } });
+  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') { if (sock && sock.readyState === 1) hi(); else if (!sock && !ended) { tries = 0; join(); } } });
   setInterval(tickLeft, 15000);
   drawSaved(); join();
 })();

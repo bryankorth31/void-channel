@@ -101,6 +101,32 @@ test('pop-ups during the show: 3 minutes in, then every 5, open 40 s with the re
   assert.equal(V.quizAsk({ n: 1, show: 'S', q: 'Q', choices: ['a', 'b'], endsAt: 0 }, 0).pop, false);
 });
 
+test('watch party: a TV that joins takes the first TV\'s time zone (Eastern and Central at the same moment), and one score list names each home', () => {
+  const ny = V.tzOff('America/New_York'), chi = V.tzOff('America/Chicago'), kol = V.tzOff('Asia/Kolkata');
+  const nov = Date.UTC(2026, 10, 20, 12), jul = Date.UTC(2026, 6, 1, 12);
+  assert.equal(ny(nov), -5 * 3600e3); assert.equal(chi(nov), -6 * 3600e3); assert.equal(ny(jul), -4 * 3600e3); assert.equal(kol(nov), 5.5 * 3600e3);
+  // The clocks go back at 2 am in New York on 1 Nov 2026 (06:00 UTC): the offset turns there, to the minute.
+  assert.equal(ny(Date.UTC(2026, 10, 1, 5, 59)), -4 * 3600e3); assert.equal(ny(Date.UTC(2026, 10, 1, 6, 0)), -5 * 3600e3);
+  for (const bad of ['', 'Nowhere/Land', '../etc', 'America/New_York;x', null, 42]) assert.equal(V.tzOff(bad), null, String(bad));
+  assert.equal(V.zoneCity('America/Los_Angeles'), 'Los Angeles'); assert.equal(V.zoneCity('junk'), '');
+  // The schedule with a zone (scripts/lib/tvgrid.js): Live TV's broadcast day starts at 6 am local, so a TV in Central that takes
+  // New York's zone counts the same day at the same instant as the TV in New York, and its own zone starts the day an hour later.
+  const G = require('../scripts/lib/tvgrid.js').tvgridFactory();
+  const at = Date.UTC(2026, 10, 20, 11, 30);   // 6:30 am in New York, 5:30 am in Chicago
+  G.setOff(ny); const dNy = G.dayOf(at);
+  G.setOff(chi); const dChi = G.dayOf(at);
+  G.setOff((ms) => -new Date(ms).getTimezoneOffset() * 60000);
+  assert.equal(dChi, dNy - 1, 'in Chicago it is still the day before, by Live TV\'s 6 am day');
+  // The score list: best first, ties share a place, each phone named by its home's city, never a person's name.
+  const book = { 1: { score: 1400 }, 3: { score: 700 }, 4: { score: 1400 } };
+  const homes = { 1: 'New York', 3: 'Chicago', 4: 'Chicago' };
+  const list = V.partyScores(book, [1, 3, 4, 5], (s) => homes[s]);
+  assert.deepEqual(list.map((r) => [r.seat, r.place, r.score, r.home]), [[1, 1, 1400, 'New York'], [4, 1, 1400, 'Chicago'], [3, 3, 700, 'Chicago'], [5, 4, 0, '']]);
+  assert.equal(V.scoreLine(list, 3), '1st Phone 1 (New York) 1,400 · 1st Phone 4 (Chicago) 1,400 · 3rd Phone 3 (Chicago) 700');
+  const big = V.partyScores(Object.fromEntries(Array.from({ length: 16 }, (_, i) => [i + 1, { score: i * 100 }])), Array.from({ length: 16 }, (_, i) => i + 1), () => 'Los Angeles');
+  assert.ok(V.fits({ type: 'p-score', list: big.slice(0, 8) }), 'the list for the other TVs fits one message');
+});
+
 test('the remote room: 16 phones, 10 a second, waits 45 s for its screen, and lasts 12 hours', () => {
   assert.ok(R.KINDS.includes('remote'));
   assert.deepEqual(R.LIMITS.remote, { phones: 16, perSecond: 10, screenHoldMs: 45000, lifeMs: 12 * 3600 * 1000 });
