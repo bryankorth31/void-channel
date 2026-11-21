@@ -17,8 +17,13 @@ const hq = require('../scripts/lib/hindihq');
 const write = (f, v) => { fs.mkdirSync(path.dirname(path.join(H, f)), { recursive: true }); fs.writeFileSync(path.join(H, f), typeof v === 'string' ? v : JSON.stringify(v)); };
 const read = (f) => JSON.parse(fs.readFileSync(path.join(H, f), 'utf8'));
 const wait = (ms) => new Promise((r) => setTimeout(r, ms));
-// A stopped job's process can take a moment to let go of its log on Windows, so the clean-up retries.
-test.after(() => fs.rmSync(BASE, { recursive: true, force: true, maxRetries: 20, retryDelay: 250 }));
+// A stopped job's process can take a moment to let go of its log on Windows, so the clean-up retries. In a full parallel run
+// something else (most likely Windows Defender reading new temp files) can hold the folder longer than that (EPERM, 20 Nov 2026,
+// reported by the PLAY lead; the trivia tests met the same): then the temp folder is left behind and the run does not fail.
+test.after(() => {
+  try { fs.rmSync(BASE, { recursive: true, force: true, maxRetries: 20, retryDelay: 250 }); }
+  catch (e) { if (e.code !== 'EPERM' && e.code !== 'EBUSY') throw e; }
+});
 
 const file = (state, extra = {}) => ({ state, file: { playable: true, item: 'item-' + state.toLowerCase(), itemTitle: 'Upload ' + state, ...extra } });
 function fixture() {
