@@ -124,4 +124,10 @@ test('the marking page is never copied to the live site', () => {
   assert.doesNotMatch(block, /mark|moments/);
 });
 
-test.after(() => fs.rmSync(TMP, { recursive: true, force: true, maxRetries: 5, retryDelay: 200 }));
+// The temporary folder goes, but a full parallel run can find Windows (the virus scanner, the indexer) still holding a
+// new temp file for a moment: the same EPERM hit other suites' temp folders on 20 Nov 2026 too. Retry for a few seconds,
+// then leave the folder to Windows' own temp clean-up rather than fail a run over a test's leftover.
+test.after(() => {
+  try { fs.rmSync(TMP, { recursive: true, force: true, maxRetries: 10, retryDelay: 300 }); }
+  catch (e) { if (e.code !== 'EPERM' && e.code !== 'EBUSY') throw e; }
+});

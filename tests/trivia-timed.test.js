@@ -97,4 +97,8 @@ test('the marking page reads an episode transcript, and none for a film or a bad
   assert.deepEqual(mark.transcriptOf('../x', 1, 1), { lines: [] });
 });
 
-test.after(() => fs.rmSync(TMP, { recursive: true, force: true, maxRetries: 5, retryDelay: 200 }));
+// As in trivia-moments: retry, then leave a still-held temp folder to Windows rather than fail a parallel run.
+test.after(() => {
+  try { fs.rmSync(TMP, { recursive: true, force: true, maxRetries: 10, retryDelay: 300 }); }
+  catch (e) { if (e.code !== 'EPERM' && e.code !== 'EBUSY') throw e; }
+});
