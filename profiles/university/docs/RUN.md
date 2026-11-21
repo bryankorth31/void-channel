@@ -318,8 +318,20 @@ questions (Check yourself with times).
 4. The lecture plays on when every phone has answered. **Carry on** plays on without waiting.
 5. **Done** ends it. Each phone shows its own score. Nothing is saved anywhere.
 
-A question the lecture is skipped past is not asked; wind back before it and it is. This works at home only, like
-making questions: the live site has neither button until the phone relay on voidtv.net accepts the University.
+A question the lecture is skipped past is not asked; wind back before it and it is.
+
+On the live site (since 21 Nov 2026): the same button is on every live lecture that has timed questions. Phones
+need no shared Wi-Fi there: they scan the code, which opens `university.voidtv.net/join`, and the questions pass
+through voidtv.net's phone relay, which keeps nothing. Making questions stays on this computer.
+
+After you keep a unit or change a question, set the exact second each question is asked, then build and deploy:
+
+```
+node scripts\uni.js ends <course>
+```
+
+It reads the heard lecture and writes the second each quoted line ends beside the question. A question whose
+quote is not in the lecture word for word is asked by an estimate from its start time and is named in the output.
 
 ## 15. Body Atlas lessons in a course
 

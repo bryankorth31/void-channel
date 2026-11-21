@@ -624,7 +624,7 @@ function gateDraft(raw, tr, opt = {}) {
     // the right answer moves to a place set by where the quote is said, so it is not always the first choice
     const right = choices[q.a]; const rest = choices.filter((x, i) => i !== q.a); const at = hit.i % 4;
     rest.splice(at, 0, right);
-    quiz.push({ q: clean(q.q), choices: rest, a: at, why: clean(q.why), quote: clean(q.quote), t: hit.t });
+    quiz.push({ q: clean(q.q), choices: rest, a: at, why: clean(q.why), quote: clean(q.quote), t: hit.t, e: Math.ceil(tr.words[hit.i + hit.n - 1].t) + 1 }); // e: the second the quoted line has just been said
   }
   unit.quiz = quiz.sort((a, b) => a.t - b.t);
   const cr = raw.crystal && typeof raw.crystal === 'object' ? raw.crystal : {};
@@ -744,7 +744,7 @@ async function draft(slug, n, log = () => {}, ask = askOllama) {
   const lic = (c.units.find((u) => u.main && u.main.licence) || { main: {} }).main.licence || (c.source && c.source.licence) || '';
   if (rd) { // a quote from a book points at its chapter on the shelf page, not at a time
     const ref = 'shelf-' + rd.shelf + '.html#c' + bch.n;
-    for (const q of best.unit.quiz) { delete q.t; q.ref = ref; }
+    for (const q of best.unit.quiz) { delete q.t; delete q.e; q.ref = ref; }
     t = { ...t, main: { role: 'read', title: bch.title, by: book.by + ', ' + book.year, url: ref, licence: book.licence + '. The plain English beside it is ours.', note: 'One chapter of an old book, in plain English, with the printed words beside it.' } };
   }
   const unit = { n: t.n, title: t.title, ...(rd ? { reading: rd } : {}), ...best.unit, main: t.main || { role: /\.mp3$/i.test(m.file) ? 'listen' : 'watch', title: m.title || t.title, by: (c.source && c.source.by) || '', item: m.item, file: m.file, seconds: Math.round(tr.seconds), licence: lic, note: /\.mp3$/i.test(m.file) ? 'A full lecture, sound only. Use the chapters to hear it in pieces.' : 'A full lecture. Use the chapters to watch it in pieces.' } };
@@ -1031,6 +1031,37 @@ function quizEnds(slug, n) {
   const tr = m.item && m.file ? transcript(m.item, m.file) : null;
   return endsFor(u.quiz, tr);
 }
+// Writes that second into a course's kept units as "e", beside each question's "t", where the lecture has been heard.
+// The build puts it on the page, so Answer on your phones asks at the right moment on the live site too.
+function stampEnds(slug) {
+  if (!SLUG_OK.test(String(slug))) throw new Error('Not a course slug: ' + String(slug).slice(0, 40));
+  const c = readJson(courseFile(slug), null);
+  if (!c) throw new Error('No course ' + slug);
+  const out = { set: 0, same: 0, unheard: [], missing: [] };
+  for (const u of c.units) {
+    const m = u.main || {};
+    if (!m.item || !m.file || !(u.quiz || []).some((q) => typeof q.t === 'number')) continue;
+    const tr = transcript(m.item, m.file);
+    if (!tr) { out.unheard.push(u.n); continue; }
+    endsFor(u.quiz, tr).forEach((x, i) => {
+      if (!x) return;
+      if (!x.heard) { out.missing.push('unit ' + u.n + ' quiz ' + (i + 1)); return; }
+      if (u.quiz[i].e === x.e) out.same++; else { u.quiz[i].e = x.e; out.set++; }
+    });
+  }
+  if (out.set) writeJson(courseFile(slug), c);
+  // the course's drafts too, so a unit carries its question ends from the day it is kept
+  if (fs.existsSync(DRAFTS)) for (const name of fs.readdirSync(DRAFTS).filter((x) => x.startsWith(slug + '-') && /-\d+\.json$/.test(x))) {
+    const d = readJson(path.join(DRAFTS, name), null);
+    const m = (d && d.unit && d.unit.main) || {};
+    const tr = m.item && m.file ? transcript(m.item, m.file) : null;
+    if (!d || d.slug !== slug || !tr) continue;
+    let changed = 0;
+    endsFor(d.unit.quiz, tr).forEach((x, i) => { if (x && x.heard && d.unit.quiz[i].e !== x.e) { d.unit.quiz[i].e = x.e; changed++; } });
+    if (changed) { writeJson(path.join(DRAFTS, name), d); out.set += changed; }
+  }
+  return out;
+}
 // Pure: for each timed question, the second its quoted line has just been said. tr may be null (not heard).
 function endsFor(quiz, tr) {
   return arr(quiz).map((q) => {
@@ -1055,4 +1086,4 @@ function addQuestion(slug, n, m) {
   return { item: r.item, where: x.kept ? 'unit' : 'draft', count: x.u.quiz.length };
 }
 
-module.exports = { overview, scaffold, setLive, brief, rewriteBrief, check, media, hearLectures, retime, locate, search, transcript, unitNeeds, slugify, UNI, SRC, draft, keepDraft, gateDraft, sceneFrom, shelfPlan, shelfWrite, shelfChapters, gatePlain, setShelfLive, shelfBooks, classFrom, lectures, scaleProblems, scalesOf, linesAt, madeQuestion, makeUnits, makeLines, addQuestion, lessonQuoteProblem, quizEnds, endsFor };
+module.exports = { overview, scaffold, setLive, brief, rewriteBrief, check, media, hearLectures, retime, locate, search, transcript, unitNeeds, slugify, UNI, SRC, draft, keepDraft, gateDraft, sceneFrom, shelfPlan, shelfWrite, shelfChapters, gatePlain, setShelfLive, shelfBooks, classFrom, lectures, scaleProblems, scalesOf, linesAt, madeQuestion, makeUnits, makeLines, addQuestion, lessonQuoteProblem, quizEnds, endsFor, stampEnds };

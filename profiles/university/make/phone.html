@@ -33,11 +33,14 @@ input:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:1px}
 #note.ok{color:var(--ok)}#note.no{color:var(--no)}
 .picks{display:grid;gap:10px;margin:0 0 14px}.picks button{text-align:left;font-size:18px;padding:16px}.picks button:disabled{opacity:.6}.picks button.right{opacity:1;border-color:var(--ok);color:var(--ok)}.picks button.wrong{opacity:1;border-color:var(--no);color:var(--no)}
 #aq{font-size:21px;font-weight:600;line-height:1.3;margin:0 0 14px}blockquote{margin:8px 0 14px;padding:8px 12px;border-left:3px solid var(--line);color:var(--dim)}
+a{color:var(--gold)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 [hidden]{display:none!important}
 </style>
 </head>
 <body>
-<h1 id="kind">Void University: make questions</h1>
+<!--home-->
+<h1 id="kind">Void University</h1>
 <h2 id="title">Connecting to the computer</h2>
 <p id="note" role="status"></p>
 
@@ -61,6 +64,7 @@ input:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:1px}
   <div class="picks" id="picks"></div>
   <div id="after" hidden><p id="awhy"></p><blockquote id="aquote"></blockquote></div>
   <p class="dim" id="ascore"></p>
+  <p class="dim" id="give" hidden><!--give--></p>
   <p class="dim" id="await">Watch the lecture on the big screen. Each question comes here when the lecture reaches it.</p>
 </section>
 
@@ -107,7 +111,7 @@ input:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:1px}
   function connect() {
     gone = false;
     $('title').textContent = 'Connecting to the computer';
-    ws = new WebSocket((location.protocol === 'https:' ? 'wss://' : 'ws://') + location.host + '/api/room/' + code + '/join?t=' + token);
+    ws = new WebSocket((/(^|\.)voidtv\.net$/.test(location.hostname) ? 'wss://voidtv.net' : (location.protocol === 'https:' ? 'wss://' : 'ws://') + location.host) + '/api/room/' + code + '/join?t=' + token);
     ws.onmessage = function (ev) { var m; try { m = JSON.parse(ev.data); } catch (e) { return; } hear(m); };
     ws.onclose = function (ev) {
       if (ev.code === 4404) { askCode('No lecture is open with that code. Look at the code on the computer and type it here.'); return; }
@@ -154,6 +158,7 @@ input:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:1px}
     $('title').textContent = 'The lesson is over';
     $('awhich').textContent = ''; $('aq').textContent = ''; $('picks').textContent = ''; $('after').hidden = true; $('await').hidden = true;
     $('ascore').textContent = tally.seen ? 'You got ' + tally.right + ' of ' + tally.seen + (tally.second ? ', ' + tally.second + ' on the second try' : '') + '.' + (total > tally.seen ? ' ' + (total - tally.seen) + ' of the ' + total + ' questions were not reached.' : '') : 'No question was reached this time.';
+    if ($('give').textContent.trim()) $('give').hidden = false;
     note(''); show('answer');
   }
   function hear(m) {
@@ -162,7 +167,7 @@ input:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:1px}
     if (m.type === 'over') { finish(); return; }
     if (mode === 'answer' && answer(m)) return;
     if (m.type === 'host-gone') { gone = true; return; }
-    if (m.type === 'unit') { $('title').textContent = m.title || 'The lecture'; made = +m.made || 0; count(); if ($('write').hidden) show('ready'); return; }
+    if (m.type === 'unit') { $('kind').textContent = 'Void University: make questions'; $('title').textContent = m.title || 'The lecture'; made = +m.made || 0; count(); if ($('write').hidden) show('ready'); return; }
     if (m.type === 'playing') { note(m.on ? 'The lecture is playing.' : 'The lecture is paused.'); return; }
     if (m.type === 'error') { note(m.text, 'no'); return; }
     if (m.type === 'at') { lineId = m.id; lines = []; lo = hi = -1; $('at').textContent = 'The lecture is stopped. These are its words around ' + m.clock + '.'; show('write'); note(''); return; }

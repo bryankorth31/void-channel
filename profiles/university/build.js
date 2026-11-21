@@ -175,13 +175,16 @@ function chapters(u) {
   if (!(u.chapters || []).length) return '';
   return '<div class="chap"><span>' + (u.main && u.main.role === 'listen' ? 'Hear it in pieces' : 'Watch it in pieces') + '</span>' + u.chapters.map((x) => '<button data-t="' + x.t + '"><i>' + clock(x.t) + '</i>' + esc(x.title) + '</button>').join('') + '</div>';
 }
+// A unit whose lecture plays on the page and whose questions carry a time can be taken on phones (Answer on your
+// phones): the page stops at each question's line and sends it to the phones in the room.
+const shipsAnswer = (u) => !!(u.main && u.main.item && (u.quiz || []).some((q) => typeof q.t === 'number'));
 // Our own quiz, written from the lecture; every answer quotes the line it comes from (checked word for word).
 function quiz(u) {
   if (!(u.quiz || []).length) return '';
   return '<details class="quiz"><summary><h3>Check yourself</h3><span>' + u.quiz.length + ' questions, each answer quotes the ' + (u.reading ? 'book' : u.main && u.main.role === 'train' ? 'lesson' : 'lecture') + '</span></summary>' + u.quiz.map((q, i) => '<div class="qq" data-a="' + q.a + '"><p><b>' + (i + 1) + '.</b> ' + esc(q.q) + '</p><div class="qc">'
     + q.choices.map((ch, j) => '<button data-j="' + j + '">' + esc(ch) + '</button>').join('') + '</div>'
     + '<p class="qh" role="status" hidden>Not quite. You have one more try.</p>'
-    + '<div class="qa" hidden><p class="qr"></p><p>' + esc(q.why) + '</p><blockquote>"' + esc(q.quote) + '"' + (q.lesson ? '<a class="qt" href="' + esc(q.ref) + '" target="_blank" rel="noopener">From the lesson: open it</a>' : q.ref ? '<a class="qt" href="' + esc(q.ref) + '">From the book: open the chapter</a>' : '<button class="qt" data-t="' + q.t + '">From the lecture, at ' + clock(q.t) + '</button>') + '</blockquote></div></div>').join('')
+    + '<div class="qa" hidden><p class="qr"></p><p>' + esc(q.why) + '</p><blockquote>"' + esc(q.quote) + '"' + (q.lesson ? '<a class="qt" href="' + esc(q.ref) + '" target="_blank" rel="noopener">From the lesson: open it</a>' : q.ref ? '<a class="qt" href="' + esc(q.ref) + '">From the book: open the chapter</a>' : '<button class="qt" data-t="' + q.t + '"' + (q.e ? ' data-e="' + q.e + '"' : '') + '>From the lecture, at ' + clock(q.t) + '</button>') + '</blockquote></div></div>').join('')
     + '<div class="qs" hidden></div></details>';
 }
 
@@ -454,7 +457,7 @@ if ('IntersectionObserver' in window) {
   var seen = new IntersectionObserver(function (es) { es.forEach(function (x) { if (x.isIntersecting) VU.set('vu:last', { slug: SLUG, name: CNAME, n: +x.target.id.slice(1), title: x.target.querySelector('h2').textContent }); }); }, { rootMargin: '-40% 0px -40% 0px' });
   document.querySelectorAll('.unit').forEach(function (u) { seen.observe(u); });
 }
-</script>${LIVE ? '' : '<script src="/make/qr.js"></script><script src="/make/screen.js"></script>'}
+</script>${LIVE ? (c.units.some(shipsAnswer) ? '<script src="qr.js"></script><script src="answer.js"></script>' : '') : '<script src="/make/qr.js"></script><script src="/make/screen.js"></script>'}
 </body></html>`;
 }
 
@@ -836,7 +839,7 @@ function credits(all) {
   const rows = Object.keys(IMG).map((k) => { const x = IMG[k]; return '<tr><td><img src="' + esc(x.file) + '" alt=""></td><td>' + esc(x.title || 'Untitled') + '</td><td>' + esc(x.creator || 'unknown') + '</td><td>' + esc(x.license) + '</td><td><a href="' + esc(x.page) + '" target="_blank" rel="noopener">' + esc(x.source) + '</a></td></tr>'; }).join('');
   return `<!doctype html><html lang="en" data-look="${LOOK}" data-type="${TYPE}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${APPHEAD}<title>Photo credits | Void University</title>${FONTS}<style>${BASE}
 main{max-width:1100px;margin:0 auto;padding:30px 32px}h1{font-family:var(--head)}table{width:100%;border-collapse:collapse;font-size:14px}td{border-bottom:1px solid var(--line);padding:8px;vertical-align:middle}td img{width:96px;height:60px;object-fit:cover;border-radius:4px;display:block}${LOOKCSS}${TYPECSS}</style></head><body>
-${top('credits', all)}<main><h1>Photo credits</h1><p>Every photo here is public domain (CC0), found through Openverse. We list who took each one anyway, with a link to where it came from.</p><table>${rows}</table><h1>Backgrounds</h1><p>The pictures of the classroom and the archive room behind the pages are our own, made for Void University. The lightning, the static and the film grain over them are Void TV's own.</p><h1>Typefaces</h1><p>Atkinson Hyperlegible Next (Braille Institute), Bricolage Grotesque, Inter, Fraunces, Literata and Schibsted Grotesk are used under the SIL Open Font License and are served from this site.</p>${all.some((c) => c.units.some(shipsLab)) ? '<h1>Lab physics</h1><p>Things in the labs fall, roll and bounce using Planck.js by Erin Catto and Ali Shakiba, free to use under the <a href="planck-LICENSE.txt">MIT licence</a>. The labs themselves are our own work.</p>' : ''}${all.some((c) => c.units.some(shipsScale)) ? '<h1>3D stages</h1><p>The 3D scale stages are drawn with three.js by the three.js authors, free to use under the <a href="three-LICENSE.txt">MIT licence</a>. The stages and what they show are our own work; each one names the papers its numbers come from.</p>' : ''}</main>${FOOT()}</body></html>`;
+${top('credits', all)}<main><h1>Photo credits</h1><p>Every photo here is public domain (CC0), found through Openverse. We list who took each one anyway, with a link to where it came from.</p><table>${rows}</table><h1>Backgrounds</h1><p>The pictures of the classroom and the archive room behind the pages are our own, made for Void University. The lightning, the static and the film grain over them are Void TV's own.</p><h1>Phones</h1><p>The QR code maker and the relay that passes questions between a screen and its phones are Void TV PLAY's own.</p><h1>Typefaces</h1><p>Atkinson Hyperlegible Next (Braille Institute), Bricolage Grotesque, Inter, Fraunces, Literata and Schibsted Grotesk are used under the SIL Open Font License and are served from this site.</p>${all.some((c) => c.units.some(shipsLab)) ? '<h1>Lab physics</h1><p>Things in the labs fall, roll and bounce using Planck.js by Erin Catto and Ali Shakiba, free to use under the <a href="planck-LICENSE.txt">MIT licence</a>. The labs themselves are our own work.</p>' : ''}${all.some((c) => c.units.some(shipsScale)) ? '<h1>3D stages</h1><p>The 3D scale stages are drawn with three.js by the three.js authors, free to use under the <a href="three-LICENSE.txt">MIT licence</a>. The stages and what they show are our own work; each one names the papers its numbers come from.</p>' : ''}</main>${FOOT()}</body></html>`;
 }
 
 // A wrong address: wrangler.jsonc serves 404.html for it. Links start from the site root, since the wrong address can be
@@ -894,6 +897,15 @@ if (loaded.some((c) => c.units.some(shipsScale))) {
   shipJs(path.join(DIR, 'scale.js'), path.join(OUT, 'scale.js'));
   fs.copyFileSync(path.join(DIR, 'vendor', 'three.module.min.js'), path.join(OUT, 'three.module.min.js'));
   fs.copyFileSync(path.join(DIR, 'vendor', 'three-LICENSE.txt'), path.join(OUT, 'three-LICENSE.txt'));
+}
+// Answer on your phones, in the public copy (Bryan, 21 Nov 2026: "Yes, build it"): the screen's script, PLAY's own QR
+// maker, and the phone page at /join, which is where the relay on voidtv.net sends a phone that scans the code.
+// Making questions stays in the preview on Bryan's PC: it writes course files, and the live site has nowhere to write.
+if (LIVE && loaded.some((c) => c.units.some(shipsAnswer))) {
+  shipJs(path.join(DIR, 'make', 'answer-screen.js'), path.join(OUT, 'answer.js'));
+  shipJs(path.join(DIR, '..', '..', 'play', 'src', 'qr.js'), path.join(OUT, 'qr.js'));
+  const give = 'If you found this service helpful, please think of donating to keep it running and to make more services like this possible. Every donation goes to CASH (cashvalues.org) and feeds its mission in the real world. <a href="' + DONATE + '" target="_blank" rel="noopener">Donate to CASH</a>';
+  fs.writeFileSync(path.join(OUT, 'join.html'), fs.readFileSync(path.join(DIR, 'make', 'phone.html'), 'utf8').replace('<!--give-->', () => give).replace('<!--home-->', '<p><a href="index.html" title="Go to the Void University front page">← Void University</a></p>'));
 }
 MECH = loaded.find((c) => c.shelf === 'supplement') || null;
 for (const c of loaded) if (c.shelf !== 'supplement') for (const u of c.units) for (const n of u.mechanisms || []) (USED[n] = USED[n] || []).push({ slug: c.slug, course: c.name, n: u.n, title: u.title });

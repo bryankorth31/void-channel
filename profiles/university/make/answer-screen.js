@@ -8,6 +8,10 @@
   'use strict';
   if (typeof SLUG !== 'string' || !window.WebSocket) return;
   var info = null, open = null;
+  // On the live site the rooms are voidtv.net's (its door lets this site open lesson rooms and nothing else), a phone
+  // joins at this site's own /join, and no server stands behind the page. In the preview everything is this computer.
+  var LIVE_SITE = /(^|\.)voidtv\.net$/.test(location.hostname);
+  var ROOMS = LIVE_SITE ? 'wss://voidtv.net' : (location.protocol === 'https:' ? 'wss://' : 'ws://') + location.host;
   var clock = function (t) { return Math.floor(t / 60) + ':' + String(Math.floor(t % 60)).padStart(2, '0'); };
   var words = function (s) { return String(s).trim().split(/\s+/).filter(Boolean).length; };
 
@@ -19,18 +23,20 @@
       var at = qq.querySelector('button.qt[data-t]'), ps = qq.querySelectorAll('.qa p');
       var quote = bq.textContent.trim().replace(/^"|"$/g, '');
       return { q: p.textContent.trim(), choices: [].map.call(qq.querySelectorAll('.qc button'), function (x) { return x.textContent; }), a: +qq.dataset.a,
-        why: ps.length > 1 ? ps[1].textContent : '', quote: quote, t: at ? +at.dataset.t : null, e: at ? +at.dataset.t + Math.round(words(quote) / 2.5) + 2 : null };
+        why: ps.length > 1 ? ps[1].textContent : '', quote: quote, t: at ? +at.dataset.t : null, e: at ? (at.dataset.e ? +at.dataset.e : +at.dataset.t + Math.round(words(quote) / 2.5) + 2) : null };
     }).filter(function (x) { return x.t !== null && x.choices.length === 4; });
   }
 
   // its own button class: the making script answers every .makebtn
   var css = document.createElement('style');
-  css.textContent = '.askbar{margin:12px 0}.askbtn{font:inherit;font-size:14px;padding:8px 16px;border-radius:999px;border:1px solid var(--line);background:var(--panel2);color:var(--fg);cursor:pointer}.askbtn:hover{border-color:var(--gold)}';
+  css.textContent = '.askbar{margin:12px 0}.askbtn{font:inherit;font-size:14px;padding:8px 16px;border-radius:999px;border:1px solid var(--line);background:var(--panel2);color:var(--fg);cursor:pointer}.askbtn:hover{border-color:var(--gold)}'
+    + '.askbar .makepanel{display:flex;flex-wrap:wrap;gap:18px;align-items:flex-start;margin-top:12px;padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--panel2)}'
+    + '.askbar .makepanel button{font:inherit;font-size:14px;padding:8px 16px;border-radius:999px;border:1px solid var(--line);background:var(--panel2);color:var(--fg);cursor:pointer}.askbar .makepanel button:hover{border-color:var(--gold)}'
+    + '.askbar .makeqr{background:#fff;border-radius:8px;padding:6px;line-height:0;flex:0 0 auto}.askbar .makeqr svg{width:190px;height:190px;display:block}'
+    + '.askbar .makeside{flex:1 1 260px;min-width:0;font-size:15px}.askbar .makeside p{margin:0 0 8px}.askbar .makestate{font-weight:600}.askbar .makeaddr{color:var(--dim);font-size:14px;overflow-wrap:anywhere}.askbar .makerow{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}';
   document.head.appendChild(css);
 
-  fetch('/api/make/info?slug=' + encodeURIComponent(SLUG)).then(function (r) { return r.ok ? r.json() : null; }).then(function (j) {
-    if (!j) return;
-    info = j;
+  function addButtons() {
     [].forEach.call(document.querySelectorAll('.unit'), function (unit) {
       if (!unit.querySelector('video, audio') || !questions(unit).length) return;
       var bar = document.createElement('div');
@@ -40,7 +46,9 @@
       if (!after) return;
       after.parentNode.insertBefore(bar, after.nextSibling);
     });
-  }).catch(function () {});
+  }
+  if (LIVE_SITE) addButtons();
+  else fetch('/api/make/info?slug=' + encodeURIComponent(SLUG)).then(function (r) { return r.ok ? r.json() : null; }).then(function (j) { if (!j) return; info = j; addButtons(); }).catch(function () {});
 
   document.addEventListener('click', function (e) {
     var b = e.target.closest('.askbtn');
@@ -64,10 +72,10 @@
     s.panel.querySelector('.makeother').onclick = function () { s.which++; paint(s); };
     s.panel.querySelector('.askgo').onclick = function () { settle(s); };
     // the exact second each quoted line ends, where the lecture has been heard; the page's own estimate otherwise
-    fetch('/api/make/ends?slug=' + encodeURIComponent(SLUG) + '&n=' + n).then(function (r) { return r.json(); }).then(function (ends) {
+    if (!LIVE_SITE) fetch('/api/make/ends?slug=' + encodeURIComponent(SLUG) + '&n=' + n).then(function (r) { return r.json(); }).then(function (ends) {
       if (Array.isArray(ends)) s.qs.forEach(function (q) { var hit = ends.filter(function (x) { return x && x.t === q.t; })[0]; if (hit) q.e = hit.e; });
     }).catch(function () {});
-    var ws = s.ws = new WebSocket((location.protocol === 'https:' ? 'wss://' : 'ws://') + location.host + '/api/room/open?kind=lesson');
+    var ws = s.ws = new WebSocket(ROOMS + '/api/room/open?kind=lesson');
     ws.onmessage = function (ev) { var m; try { m = JSON.parse(ev.data); } catch (err) { return; } if (open === s) hear(s, m); };
     ws.onclose = function () { if (open === s) say(s, 'The room closed. Press Done, then Answer on your phones again.'); };
     s.tick = function () { if (open === s) watch(s); };
@@ -78,6 +86,11 @@
   function paint(s) {
     var list = (info && info.addresses) || [], host = list.length ? list[s.which % list.length] : '';
     var qr = s.panel.querySelector('.makeqr'), addr = s.panel.querySelector('.makeaddr');
+    if (LIVE_SITE) {
+      qr.innerHTML = window.PlayQR.svg(location.origin + '/join?r=' + s.code, 6);
+      addr.textContent = 'Or open ' + location.host + '/join on a phone and type the code ' + s.code + '. Answers pass between this screen and the phones through voidtv.net and are not kept.';
+      return;
+    }
     s.panel.querySelector('.makeother').hidden = list.length < 2;
     if (!host) { qr.hidden = true; addr.textContent = 'This computer has no address on a network, so a phone cannot reach it. Join the Wi-Fi and try again.'; return; }
     var base = 'http://' + host + ':' + location.port;
@@ -89,7 +102,7 @@
   function waiting(s) { return seats(s).filter(function (k) { return !s.seats[k].done[s.cur]; }); }
   function status(s) {
     var n = seats(s).length, who = n + (n === 1 ? ' phone' : ' phones') + ' connected. ';
-    if (s.cur < 0) say(s, n ? who + 'Play the lecture. Each question goes to the phones when the lecture reaches it (' + s.qs.length + ' in all).' : 'Scan this with your phones. They must be on the same Wi-Fi as this computer.');
+    if (s.cur < 0) say(s, n ? who + 'Play the lecture. Each question goes to the phones when the lecture reaches it (' + s.qs.length + ' in all).' : (LIVE_SITE ? 'Scan this with your phones.' : 'Scan this with your phones. They must be on the same Wi-Fi as this computer.'));
     else say(s, 'Question ' + (s.cur + 1) + ' of ' + s.qs.length + ' is on the phones. ' + (n - waiting(s).length) + ' of ' + n + ' answered.');
   }
 

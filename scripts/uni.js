@@ -54,6 +54,9 @@ const [cmd, ...args] = process.argv.slice(2);
   } else if (cmd === 'times') {
     const r = uni.retime(args[0]);
     console.log(r.set + ' times set from the lecture, ' + r.same + ' already right' + (r.unheard.length ? '; units not heard yet: ' + r.unheard.join(', ') : '') + (r.missing.length ? '\nNot found (look by hand): ' + r.missing.join('; ') : ''));
+  } else if (cmd === 'ends') {
+    const r = uni.stampEnds(args[0]);
+    console.log(r.set + ' question ends set from the lecture, ' + r.same + ' already right' + (r.unheard.length ? '; units not heard yet: ' + r.unheard.join(', ') : '') + (r.missing.length ? '; quote not found word for word: ' + r.missing.join(', ') : ''));
   } else if (cmd === 'find') {
     const c = JSON.parse(require('fs').readFileSync(path.join(uni.UNI, 'courses', args[0] + '.json'), 'utf8'));
     const u = [...c.units, ...(c.todo || [])].find((x) => x.n === +args[1]); const m = u && (u.main || u.lecture);

@@ -28,8 +28,8 @@ Nothing is left that can be finished without Bryan. What waits on his word, in o
    site until they are written, or write them. His full name as author on that page is also his call.
 3. Whisper: How the country began is 19 of 25 heard, Why we eat what we eat 0 of 23. Run on a night the lexROM job
    is not using the graphics card.
-4. The phone lessons on the live site: the relay door for university.voidtv.net is built in the PLAY lead's chat
-   and waits on his word there; then the answering side is shipped in the public copy here.
+4. The phone lessons on the live site: built 21 Nov (the answering side). It waits on his University deploy, and
+   then on one try with real phones.
 5. HQ buttons (Draft, Self-test, Deploy): the HQ areas chat.
 6. The VOID ACADEMY sign in the backgrounds against the name Void University.
 
@@ -309,3 +309,15 @@ the HQ areas chat. Steps 7 to 10 start after the 22 Nov reset.
   `fonts/` and served from the site; no page asks Google for anything (N17). The public copy carries only the
   chosen typeface, the preview all three. (5) This plan has a current list at the top. Checked in the preview at
   1278x513: the faces load from the site, Train it opens the new address, a borrowed name gets 403.
+- 21 Nov 2026, Answer on your phones on the live site (Bryan: "Yes, build it", after the PLAY lead opened the
+  relay's door to lesson rooms from university.voidtv.net). The public copy now ships the screen script
+  (answer.js), PLAY's QR maker (qr.js) and the phone page as join.html, loaded only on a course that has a
+  lecture with timed questions (Human nature, Your money, plainly: 10 units). On a voidtv.net address the pages
+  open rooms at wss://voidtv.net, the QR leads to this site's own /join, and the page asks for no server. Each
+  question carries the exact second its line ends (`"e"`, written by `node scripts/uni.js ends <course>`, also set
+  on every new drafted or phone-made question): 39 set in the two live courses and 157 in the Human nature drafts;
+  17 older questions whose quote is not in the lecture word for word keep the estimate. The phone page has a way
+  home and the donation line on the live site. Making questions stays in the preview. Checked: 29 of 29 tests, the
+  preview flow again with a stand-in phone. Not checked, and it cannot be before a deploy: the live path itself,
+  since the relay accepts only the University's real address. Check after the deploy: open a Human nature lecture
+  on the live site, press Answer on your phones, scan with a phone.

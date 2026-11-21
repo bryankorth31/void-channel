@@ -28,7 +28,7 @@ test('the public copy carries only live courses, and no lab unless a lab is live
   assert.ok(!fs.existsSync(path.join(SITE, 'stale-page.html')), 'a page from an earlier build was left in site/');
   const live = new Set(list().courses.filter((c) => c.live).map((c) => c.slug));
   const pages = fs.readdirSync(SITE).filter((f) => f.endsWith('.html')).map((f) => f.replace(/\.html$/, ''));
-  for (const p of pages) assert.ok(live.has(p) || ['index', 'credits', '404'].includes(p), p + '.html is in the public copy but not live');
+  for (const p of pages) assert.ok(live.has(p) || ['index', 'credits', '404', 'join'].includes(p), p + '.html is in the public copy but not live');
   const anyLiveLab = fs.readdirSync(path.join(uni.UNI, 'courses')).some((f) => {
     const c = JSON.parse(fs.readFileSync(path.join(uni.UNI, 'courses', f), 'utf8'));
     return live.has(c.slug) && c.units.some((u) => u.lab && u.lab.live);
@@ -172,7 +172,7 @@ test('the steps scene: three or four cards in a row that never touch, and the wr
 test('the public copy: a way back on every page, no empty area tiles, a not-found page, an offline Try again, no working notes', () => {
   build('--site');
   const read = (f) => fs.readFileSync(path.join(SITE, f), 'utf8');
-  const pages = fs.readdirSync(SITE).filter((f) => f.endsWith('.html'));
+  const pages = fs.readdirSync(SITE).filter((f) => f.endsWith('.html') && f !== 'join.html');
   for (const p of pages) {
     const h = read(p);
     assert.match(h, /header\.top\{[^}]*position:sticky;top:0/, p + ': the header does not stay in reach');
@@ -210,7 +210,7 @@ test('live: one line puts a course on or off the public copy', () => {
 
 test('the public pages carry no machine-made tells: no middle-dot strings, no capitals labels, and less motion when asked', () => {
   build('--site');
-  for (const p of fs.readdirSync(SITE).filter((f) => f.endsWith('.html'))) {
+  for (const p of fs.readdirSync(SITE).filter((f) => f.endsWith('.html') && f !== 'join.html')) {
     const h = fs.readFileSync(path.join(SITE, p), 'utf8');
     assert.doesNotMatch(h, /\u00b7/, p + ': a middle dot joins two things; say it in words');
     assert.equal((h.match(/text-transform:uppercase/g) || []).length, 1, p + ': only the crest wordmark is in capitals');
@@ -409,7 +409,7 @@ test('answer on your phones: each question has the second its line ends, and the
   assert.strictEqual(serve.allowed('/api/make/ends', false), false, 'question times stay on this computer');
   assert.strictEqual(serve.allowed('/make/answer-screen.js', false), false);
   build('--site');
-  for (const f of fs.readdirSync(SITE).filter((x) => x.endsWith('.html'))) assert.ok(!fs.readFileSync(path.join(SITE, f), 'utf8').includes('answer-screen'), f + ' carries the answer button into the public copy');
+  for (const f of fs.readdirSync(SITE).filter((x) => x.endsWith('.html'))) assert.ok(!fs.readFileSync(path.join(SITE, f), 'utf8').includes('answer-screen'), f + ' names a preview file in the public copy');
 });
 
 test('public pages name no workers.dev address and ask Google for nothing: Mind Gym at its own address, fonts kept on the site', () => {
@@ -438,4 +438,33 @@ test('the preview server answers only to this computer\'s own names, so a page u
   const port = serve.PORT;
   for (const h of ['127.0.0.1:' + port, 'localhost:' + port, 'LOCALHOST:' + port, ...serve.addresses().map((a) => a + ':' + port)]) assert.strictEqual(serve.hostOk(h), true, h + ' is this computer');
   for (const h of ['evil.example:' + port, 'evil.example', '127.0.0.1.evil.example:' + port, '127.0.0.1:1', '', undefined, 'localhost']) assert.strictEqual(serve.hostOk(h), false, String(h) + ' must be refused');
+});
+
+test('answer on your phones is on the live site: exact question times on the page, rooms on voidtv.net, the phone page at /join', () => {
+  // a made-up course: stampEnds is the same arithmetic as endsFor, which the test above pins down
+  build('--site');
+  const read = (f) => fs.readFileSync(path.join(SITE, f), 'utf8');
+  const withLecture = list().courses.filter((c) => c.live).map((c) => JSON.parse(fs.readFileSync(path.join(uni.UNI, 'courses', c.slug + '.json'), 'utf8')))
+    .filter((c) => c.units.some((u) => u.main && u.main.item && (u.quiz || []).some((q) => typeof q.t === 'number')));
+  assert.ok(withLecture.length, 'no live course has a lecture with timed questions');
+  for (const c of withLecture) {
+    const h = read(c.slug + '.html');
+    assert.ok(h.includes('<script src="qr.js"></script><script src="answer.js"></script>'), c.slug + ' does not load the answer script');
+    for (const u of c.units) for (const q of u.quiz || []) if (typeof q.e === 'number') {
+      assert.ok(q.e > q.t && q.e - q.t < 90, c.slug + ' unit ' + u.n + ': a question is asked long after its line');
+      assert.ok(h.includes('data-t="' + q.t + '" data-e="' + q.e + '"'), c.slug + ' unit ' + u.n + ': the page does not carry the second the line ends');
+    }
+    assert.ok(c.units.some((u) => (u.quiz || []).some((q) => typeof q.e === 'number')), c.slug + ' has no exact question time; run: node scripts/uni.js ends ' + c.slug);
+  }
+  // a course with no lecture on the page (The body) does not load it
+  assert.ok(!read('the-body.html').includes('answer.js'), 'a course with nothing to answer by the clock loads the answer script');
+  for (const f of ['answer.js', 'qr.js', 'join.html']) assert.ok(fs.existsSync(path.join(SITE, f)), f + ' is not in the public copy');
+  const screen = read('answer.js'), phone = read('join.html');
+  for (const x of [screen, phone]) assert.ok(x.includes("'wss://voidtv.net'") && x.includes('voidtv\\.net$/.test(location.hostname)'), 'on the live site the rooms must be voidtv.net\'s');
+  assert.ok(screen.includes("location.origin + '/join?r='"), 'the code on the live screen must lead to this site\'s own /join');
+  assert.ok(screen.includes("if (!LIVE_SITE) fetch('/api/make/ends") && screen.includes('if (LIVE_SITE) addButtons();'), 'the live page must not ask for a server it does not have');
+  assert.ok(phone.includes('Donate to CASH') && phone.includes('href="index.html"') && phone.includes('prefers-reduced-motion:reduce'), 'the live phone page needs the donation line, a way home and the reduced-motion rule');
+  assert.ok(!phone.includes('<!--') && !/Users|@gmail|bryan/i.test(phone + screen), 'no leftover marker or personal detail on the live phone page');
+  // making questions never ships: it writes course files
+  assert.ok(!fs.existsSync(path.join(SITE, 'screen.js')) && !fs.readdirSync(SITE).some((f) => /make/.test(f)), 'the make side is in the public copy');
 });
