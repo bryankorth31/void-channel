@@ -81,9 +81,10 @@ test('a held kids card stays off the Kids shelf, while other kids cards come thr
   try {
     fs.mkdirSync(path.join(dir, 'cards'));
     const card = (id) => ({ id, title: id, system: 'dos', core: 'dosbox-pure', kids: true, archive: { item: id, file: id + '.zip' } });
-    const held = Object.keys(G.HOLD);
-    assert.ok(held.includes('reader-rabbit-1-windows-1997'), 'Reader Rabbit 1 (Windows) is held: about 90 seconds of display test at every start');
-    for (const id of held.concat(['a-kids-game'])) fs.writeFileSync(path.join(dir, 'cards', id + '.json'), JSON.stringify(card(id)));
+    // Reader Rabbit 1 (Windows) was held for its 90-second start and is lifted now; the hold itself is checked on a stand-in.
+    assert.equal(G.HOLD['reader-rabbit-1-windows-1997'], undefined, 'Reader Rabbit 1 is back on Kids (its start was fixed)');
+    G.HOLD['a-held-game'] = 'a fault that is not fixed yet';
+    for (const id of ['a-held-game', 'a-kids-game']) fs.writeFileSync(path.join(dir, 'cards', id + '.json'), JSON.stringify(card(id)));
     assert.deepEqual(G.kidsCards(dir, null).map((g) => g.card.id), ['a-kids-game']);
-  } finally { fs.rmSync(dir, { recursive: true, force: true }); }
+  } finally { delete G.HOLD['a-held-game']; fs.rmSync(dir, { recursive: true, force: true }); }
 });

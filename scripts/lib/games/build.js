@@ -86,11 +86,9 @@ const GAMES = {
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
 // Kids cards held off the Kids shelf until a fault is fixed (Bryan's call each time; the card stays kids on PLAY).
-const HOLD = {
-  // Bryan, 20 Nov 2026 ("yes" to keeping it off until fixed): it runs a one-time display test of about 90 seconds at
-  // every start, because nothing is kept between plays, so a child sits through a long blank wait.
-  'reader-rabbit-1-windows-1997': 'about 90 seconds of display test at every start',
-};
+// Reader Rabbit 1 (Windows) was held for its 90-second display test at every start (Bryan, 20 Nov 2026); lifted once
+// PLAY wrote WinG's answer into WIN.INI (play-new-formats 7590a3abe) and its title came up within 20 seconds.
+const HOLD = {};
 
 // Only a card that says kids: true, is not held, plays on an engine we serve, and has our own picture.
 function kidsCards(play, artDir) {
