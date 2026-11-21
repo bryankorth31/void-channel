@@ -178,3 +178,11 @@ test('Bryan, 20 Nov 2026 ("the d pad size increased ... these two control areas 
   const c = T.sideFit({ ow: 560, oh: 375, pic: { x: 30, y: 0, w: 500, h: 375 } });
   assert.ok(c.k >= 0.82);
 });
+
+test('Bryan, 20 Nov 2026 ("the right buttons are a pinched aspect though and should be made wider to fit the space"): sideways the diamond and A B C fill a square as wide as the d-pad', () => {
+  const fs = require('fs'), path = require('path');
+  const css = fs.readFileSync(path.join(__dirname, '..', 'play.css'), 'utf8');
+  assert.ok(css.includes('.cpad.side .cface.s-diamond,.cpad.side .cface.s-abc{display:block;width:var(--S,150px);height:var(--S,150px);--db:min(92px,calc(var(--S,150px) * 0.38))}'));
+  // Round buttons of 38% of S in a diamond: centres 0.3 S apart on each axis, so 0.424 S apart, clear of 0.38 S.
+  for (const S of [120, 168, 220]) { const db = Math.min(92, S * 0.38); assert.ok(Math.hypot(S / 2 - db / 2, S / 2 - db / 2) - db >= 5, 'gap at S ' + S); }
+});

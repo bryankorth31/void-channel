@@ -545,3 +545,18 @@ body.muted .spk .off{display:inline}body.muted .spk .on{display:none}
 .cpad.side,.over.wide .cpad.side,body.has-cheats .over.wide .cpad.side{--d:var(--S,150px);
   --b:clamp(40px,min(calc((var(--S,150px) - (var(--rows) - 1) * 8px) / var(--rows)),calc((var(--S,150px) - 8px) / 2)),92px)}
 .over.wide .cpad.side,.over:not(.wide) .cpad.side{--d:var(--S,150px)}
+/* Sideways the face buttons fill their square as the d-pad fills its own (Bryan, 20 Nov 2026: "the left dpad is correct.
+   the right buttons are a pinched aspect though and should be made wider to fit the space"). The Super Nintendo diamond
+   and the Genesis A B C spread across the whole S by S box, as wide as tall, each button 38% of S (round buttons 7 px
+   apart at S 168; 41% is where they would touch): X at the top, Y left, A right, B at the bottom; Genesis A B C on the
+   diagonal from the lower left. */
+.cpad.side .cface.s-diamond,.cpad.side .cface.s-abc{display:block;width:var(--S,150px);height:var(--S,150px);--db:min(92px,calc(var(--S,150px) * 0.38))}
+.cpad.side .cface.s-diamond .pk,.cpad.side .cface.s-abc .pk{position:absolute;width:var(--db);height:var(--db)}
+.cpad.side .cface.s-diamond .pk[data-code="P1:X"]{left:calc(50% - var(--db) / 2);top:0}
+.cpad.side .cface.s-diamond .pk[data-code="P1:Y"]{left:0;top:calc(50% - var(--db) / 2)}
+.cpad.side .cface.s-diamond .pk[data-code="P1:A"]{right:0;top:calc(50% - var(--db) / 2)}
+.cpad.side .cface.s-diamond .pk[data-code="P1:B"]{left:calc(50% - var(--db) / 2);bottom:0}
+.cpad.side .cface.s-abc .pk[data-code="P1:Y"]{left:0;bottom:0}
+.cpad.side .cface.s-abc .pk[data-code="P1:B"]{left:calc(50% - var(--db) / 2);top:calc(50% - var(--db) / 2)}
+.cpad.side .cface.s-abc .pk[data-code="P1:A"]{right:0;top:0}
+body.shell .cpad.side .cface.s-abc::before{width:calc((var(--S,150px) - var(--db)) * 1.414 + var(--db) + 16px);height:calc(var(--db) + 16px);transform:translate(-50%,-50%) rotate(-45deg)}
