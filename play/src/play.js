@@ -90,6 +90,7 @@
     if ($('cover-phone') && !KIDS) { $('cover-phone').hidden = !card || isPhone(); $('m-phones').hidden = isPhone(); }
     document.body.classList.toggle('padmode', padMode);
     document.body.classList.toggle('shell', shell);
+    document.body.classList.toggle('sidebar', shell && innerWidth > innerHeight && !!card && PlayCards.isPad(card));
     document.body.classList.toggle('full', full);
     document.body.dataset.mode = L.mode;
     const set = (el, r) => { if (!r) { el.hidden = true; return; } el.hidden = false; Object.assign(el.style, { left: r.x + 'px', top: r.y + 'px', width: r.w + 'px', height: r.h + 'px' }); };
@@ -125,6 +126,10 @@
       let ph = oh, pw = ph * asp; if (pw > ow) { pw = ow; ph = pw / asp; }
       const fit = PlayTouch.sideFit({ ow, oh, pic: { x: (ow - pw) / 2, y: (oh - ph) / 2, w: pw, h: ph }, cheats: document.body.classList.contains('has-cheats') });
       set($('screen'), { x: fit.x + ox, y: fit.y + oy, w: fit.w, h: fit.h });
+      // The bar, when a touch brings it back, sits over the picture only, between L and R, so it never takes their taps
+      // (the auditor: for 3 to 6 s after a touch on the picture, a tap on R landed on the volume or on Full).
+      document.body.style.setProperty('--barL', Math.round(fit.x + ox) + 'px');
+      document.body.style.setProperty('--barR', Math.round(innerWidth - (fit.x + ox + fit.w)) + 'px');
       over.style.setProperty('--side', fit.side + 'px');
       over.style.setProperty('--S', Math.max(110, fit.S) + 'px');
       over.classList.toggle('wide', fit.wide);

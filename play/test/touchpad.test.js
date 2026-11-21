@@ -200,3 +200,11 @@ test('the auditor and Bryan, 20 Nov 2026 ("you routinely leave a gap on the left
   assert.ok(play.includes('const ins = notchSide(insets());'));
   assert.ok(play.includes("if (type === 'landscape-primary') return Object.assign({}, ins, { r: 0 });") && play.includes("if (type === 'landscape-secondary') return Object.assign({}, ins, { l: 0 });"));
 });
+
+test('the auditor, 20 Nov 2026: sideways in the handheld the bar sits over the picture only, never over L and R', () => {
+  const fs = require('fs'), path = require('path');
+  const css = fs.readFileSync(path.join(__dirname, '..', 'play.css'), 'utf8');
+  assert.ok(css.includes('body.shell.sidebar .bar{left:var(--barL,0px);right:var(--barR,0px);'));
+  const play = fs.readFileSync(path.join(__dirname, '..', 'src', 'play.js'), 'utf8');
+  assert.ok(play.includes("document.body.style.setProperty('--barL', Math.round(fit.x + ox) + 'px');"));
+});

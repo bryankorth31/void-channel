@@ -564,3 +564,8 @@ body.shell .cpad.side .cface.s-abc::before{width:calc((var(--S,150px) - var(--db
 .cpad.side .csl,.cpad.side .cselect{left:0}
 .cpad.side .crewind{left:0}
 .over.wide .cpad.side .crewind{left:72px}
+/* Sideways in the handheld the bar sits over the picture only, between L and R (the auditor: while it showed after a
+   touch on the picture, a tap on R or L landed on the bar's volume, Full or Games). Its tools keep to that width. */
+body.shell.sidebar .bar{left:var(--barL,0px);right:var(--barR,0px);border-radius:0 0 12px 12px;gap:6px;padding-left:8px;padding-right:8px}
+body.shell.sidebar .bar .tag,body.shell.sidebar #vol,body.shell.sidebar .bar .mark .n,body.shell #b-phones{display:none}   /* a phone is not the big screen */
+body.shell.sidebar .bar .title{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
