@@ -83,18 +83,25 @@ function fromPage(b, db) {
   return { m: { id: M.momentId(m), ...m }, file };
 }
 
-function server() {
+// The catalog is opened for one request and closed after it. Held open for the server's life, it blocked VoidTV's
+// nightly database step (scripts/db.js could not replace catalog/voidtv.db while Windows had it open; 20 Nov 2026).
+function withDb(fn) {
   const db = M.openDb();
+  try { return fn(db); } finally { db.close(); }
+}
+
+function server() {
   return http.createServer(async (req, res) => {
     const u = new URL(req.url, 'http://127.0.0.1');
     try {
       if (u.pathname === '/') { res.writeHead(302, { Location: '/trivia/mark/' }); return res.end(); }
-      if (u.pathname === '/api/titles') return send(res, 200, titles(db));
-      if (u.pathname === '/api/files') return send(res, 200, filesOf(db, u.searchParams.get('key') || ''));
+      if (u.pathname === '/api/titles') return send(res, 200, withDb(titles));
+      if (u.pathname === '/api/files') return send(res, 200, withDb((db) => filesOf(db, u.searchParams.get('key') || '')));
       if (u.pathname === '/api/moments' && req.method === 'GET') return send(res, 200, M.load(u.searchParams.get('key') || ''));
       if (u.pathname === '/api/transcript') return send(res, 200, transcriptOf(u.searchParams.get('key') || '', Number(u.searchParams.get('season')), Number(u.searchParams.get('number'))));
       if (u.pathname === '/api/moments' && req.method === 'POST') {
-        const { m, file } = fromPage(await readBody(req), db);
+        const body = await readBody(req);
+        const { m, file } = withDb((db) => fromPage(body, db));
         const p = M.problems(m, file);
         if (p.length) return send(res, 400, { error: p.join('; ') });
         const key = M.keyOf(m);

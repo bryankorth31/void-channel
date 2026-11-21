@@ -100,6 +100,10 @@ test('the marking server: list, save with who picked it, refuse a bad one, delet
   assert.equal(del.status, 200);
   assert.equal((await json('/api/moments?key=friends')).body.length, 0);
 
+  // The running server holds no handle on the catalog: VoidTV's nightly step must be able to replace the file.
+  fs.renameSync(DB, DB + '.moved');
+  fs.renameSync(DB + '.moved', DB);
+
   const page = await fetch(base + '/trivia/mark/');
   assert.equal(page.status, 200);
   assert.match(await page.text(), /Mark moments/);
