@@ -15,6 +15,9 @@
     "not_found_handling": "single-page-application"
   },
   "analytics_engine_datasets": [{ "binding": "VOIDTV_EVENTS", "dataset": "voidtv_kids_events" }],
+  // Watch and Talk's phone rooms: PLAY's Durable Object in the voidtv-rooms Worker (same CASH account; deploy that Worker
+  // first, profiles/kids/docs/DEPLOY-KIDS.md). Kids opens only "talk" rooms through it (workers/kids/rooms.js).
+  "durable_objects": { "bindings": [{ "name": "ROOMS", "class_name": "Room", "script_name": "voidtv-rooms" }] },
   "workers_dev": false,
   "preview_urls": false,
   "routes": [{ "pattern": "kids.voidtv.net", "custom_domain": true }]

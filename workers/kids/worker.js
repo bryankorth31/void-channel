@@ -7,14 +7,20 @@
 // - search engines may find it (Bryan, 17 Nov 2026: "Let search engines in"); robots.txt is the build's own (all
 //   allowed but /data/).
 // A SITE_PASSWORD left on the Worker by mistake is ignored: the open site is this file's choice, not a missing secret.
+// - /api/room/* is Watch and Talk's door to the phone rooms (rooms.js): talk rooms only, kids pages only, through PLAY's
+//   voidtv-rooms Durable Object bound as ROOMS (Bryan, 21 Nov 2026: "Start now"; profiles/kids/docs/PLAN-kids-watch-and-talk.md).
 import { onRequest } from '../../functions/_middleware.js';
 import { onRequestPost as countEvents } from '../../functions/api/e.js';
+import { rooms } from './rooms.js';
 
 const plain = (body, status) => new Response(body, { status, headers: { 'content-type': 'text/plain; charset=utf-8', 'cache-control': 'no-store' } });
 
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    // Doors that answer before the page middleware: a WebSocket answer must reach the browser as the room gave it, and
+    // these answers are JSON, never a page. (A later door, such as the CD-ROM games' pieces, goes here the same way.)
+    if (url.pathname === '/api/room' || url.pathname.startsWith('/api/room/')) return rooms(request, env);
     const kidsEnv = { ...env, GATE_BRAND: 'kids', SITE_PASSWORD: undefined };
     const next = async () => {
       const p = url.pathname;
