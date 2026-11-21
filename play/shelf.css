@@ -284,3 +284,7 @@ html,body{overflow-x:clip}
 .column .stat{opacity:.4;mix-blend-mode:screen;-webkit-mask:linear-gradient(180deg,transparent,#000 28%,#000 72%,transparent);mask:linear-gradient(180deg,transparent,#000 28%,#000 72%,transparent)}
 @media (min-width:701px) and (prefers-reduced-motion:no-preference){.column .neon:nth-child(-n+6){animation:colkb var(--kbd,70s) ease-in-out infinite alternate}}
 @keyframes colkb{from{transform:scale(1)}to{transform:scale(1.07)}}
+/* Over Bryan's art the row headings keep their contrast (the auditor: "318 games" went weak where a bright part sat
+   behind it): a lighter grey for the count and a soft dark edge on the heading's words. */
+.row h2{text-shadow:0 1px 3px rgba(7,8,12,.9),0 0 10px rgba(7,8,12,.7)}
+.row h2 small{color:#b9bccb}
