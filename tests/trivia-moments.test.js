@@ -66,7 +66,8 @@ test('the marking server: list, save with who picked it, refuse a bad one, delet
   const net = require('net');
   const port = await new Promise((r) => { const s = net.createServer().listen(0, '127.0.0.1', () => { const p = s.address().port; s.close(() => r(p)); }); });
   const srv = spawn(process.execPath, ['--no-warnings', path.join(ROOT, 'scripts', 'trivia', 'mark.js'), String(port)], { env: process.env, stdio: ['ignore', 'pipe', 'pipe'] });
-  t.after(() => srv.kill());
+  // Wait for the server to exit: it holds the temporary catalog open, and Windows will not delete the folder until it lets go.
+  t.after(async () => { if (srv.exitCode === null) { const gone = new Promise((r) => srv.once('exit', r)); srv.kill(); await gone; } });
   await new Promise((r) => srv.stdout.once('data', r));
   const base = 'http://127.0.0.1:' + port;
   const json = async (url, opts) => { const r = await fetch(base + url, opts); return { status: r.status, body: await r.json() }; };
@@ -119,4 +120,4 @@ test('the marking page is never copied to the live site', () => {
   assert.doesNotMatch(block, /mark|moments/);
 });
 
-test.after(() => fs.rmSync(TMP, { recursive: true, force: true }));
+test.after(() => fs.rmSync(TMP, { recursive: true, force: true, maxRetries: 5, retryDelay: 200 }));

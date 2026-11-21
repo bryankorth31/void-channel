@@ -5,10 +5,12 @@
 //
 // How known a title is, from two counts anyone can check:
 //   - views: how many times its English Wikipedia page was read in the last 12 full months (Wikimedia page views,
-//     people only, no bots). This is what people look up now, so a show everyone knew in 1995 and nobody looks up
-//     today ranks low.
-//   - links: how many Wikipedias have a page on it (Wikidata sitelinks), so how far round the world it is known.
-// The list is ranked by views. Links only decide who is looked at (a floor per category, below).
+//     people only, no bots). This is what people look up now.
+//   - links: how many Wikipedias have a page on it (Wikidata sitelinks), so how far round the world it is known and
+//     how long it has lasted: classics gather Wikipedias over the years.
+// The list is ranked by a blend of the two (Bryan, 20 Nov 2026: "The blend"): known = ln(views) + 2 ln(links), so
+// Breaking Bad, South Park, Friends and Doctor Who stand with the big current shows. Views alone put brand-new
+// streaming shows first. The floor of links per category (below) decides who is looked at.
 // Matching to VoidTV is exact for shows and films (Wikidata holds the TMDB id, and so does the catalog); games match
 // PLAY's cards by name and year.
 //
@@ -77,10 +79,12 @@ function sparql(cat) {
 }`;
 }
 
-// The first release year of some items (P577, the earliest of its dates).
-function yearsQuery(ids) {
+// The first year of some items: a TV series' start time (P580, its first air date; its other dates can be older,
+// The Walking Dead's earliest P577 is 2003), else the earliest publication date (P577, films and games).
+function yearsQuery(ids, cat) {
+  const prop = cat === 'tv' ? 'wdt:P580' : 'wdt:P577';
   return `SELECT ?item (MIN(?date) AS ?first) WHERE { VALUES ?item { ${ids.map((q) => 'wd:' + q).join(' ')} }
-  ?item wdt:P577 ?date . } GROUP BY ?item`;
+  ?item ${prop} ?date . } GROUP BY ?item`;
 }
 
 const qid = (uri) => uri.replace(/^.*\//, '');
@@ -109,9 +113,13 @@ function fromRows(cat, bindings) {
 }
 
 // Rank by page views, most first; a tie goes to the one on more Wikipedias, then by name so a rebuild is the same.
+// How known a title is: what people look up now, weighed with how far round the world and how long it has been known.
+function known(t) { return Math.log(Math.max(1, t.views)) + 2 * Math.log(Math.max(1, t.links)); }
+
+// Rank by that, most known first; a tie goes to more views, then by name so a rebuild is the same.
 function rank(list) {
-  return list.slice().sort((a, b) => (b.views - a.views) || (b.links - a.links) || a.title.localeCompare(b.title))
-    .map((t, i) => ({ rank: i + 1, ...t }));
+  return list.slice().sort((a, b) => (known(b) - known(a)) || (b.views - a.views) || a.title.localeCompare(b.title))
+    .map((t, i) => ({ rank: i + 1, ...t, known: Math.round(known(t) * 100) / 100 }));
 }
 
 // A game's place on VoidTV: a PLAY card with the same name (normalised) from within a year of it.
@@ -170,14 +178,14 @@ async function wikidata(cat, offline) {
 }
 
 // First release years for the kept titles, 200 items a question, cached with the rest.
-async function years(ids, offline) {
-  const file = path.join(CACHE, 'fame-years.json');
+async function years(ids, cat, offline) {
+  const file = path.join(CACHE, 'fame-years-' + cat + '.json');
   const cache = readJson(file, {});
   const todo = offline ? [] : ids.filter((q) => cache[q] === undefined);
   for (let i = 0; i < todo.length; i += 200) {
     const part = todo.slice(i, i + 200);
     for (const q of part) cache[q] = null;
-    for (const b of await ask(yearsQuery(part), 'years')) {
+    for (const b of await ask(yearsQuery(part, cat), 'years')) {
       const y = Number(b.first.value.slice(0, 4));
       if (Number.isFinite(y) && y > 1800) cache[qid(b.item.value)] = y;
     }
@@ -229,10 +237,10 @@ function voidtv() {
   for (const r of db.prepare(`select show_slug as slug, sum(state = 'LIVE' and playable = 1) as live,
       sum(${clipOk}) as clipReady from episodes group by show_slug`).iterate()) counts.set(r.slug, r);
   const shows = new Map();
-  for (const r of db.prepare('select slug, name, tmdb_id as tmdb from shows where tmdb_id is not null').iterate()) {
+  for (const r of db.prepare('select slug, name, tmdb_id as tmdb, premiered from shows where tmdb_id is not null').iterate()) {
     const c = counts.get(r.slug) || { live: 0, clipReady: 0 };
     const prev = shows.get(r.tmdb);
-    if (!prev || c.live > prev.live) shows.set(r.tmdb, { slug: r.slug, name: r.name, live: c.live || 0, clipReady: c.clipReady || 0 });
+    if (!prev || c.live > prev.live) shows.set(r.tmdb, { slug: r.slug, name: r.name, live: c.live || 0, clipReady: c.clipReady || 0, premiered: r.premiered || null });
   }
   const films = new Map();
   for (const r of db.prepare(`select tmdb_id as tmdb, title, state, playable, (${clipOk}) as clipReady from movies`).iterate()) {
@@ -251,10 +259,12 @@ function report(list, win, builtAt) {
   const lines = [];
   lines.push('# Trivia fame list', '');
   lines.push(`Built ${builtAt.slice(0, 10)} by \`node scripts/trivia/fame.js\`. Plan T7 (clip rounds).`, '');
-  lines.push('Ranked by how many times each title\'s English Wikipedia page was read by people (not bots) from '
+  lines.push('Ranked by a blend of two counts (Bryan, 20 Nov 2026: "The blend"). "Views" is how many times the title\'s'
+    + ' English Wikipedia page was read by people (not bots) from '
     + `${win.start.slice(0, 4)}-${win.start.slice(4, 6)} to ${win.end.slice(0, 4)}-${win.end.slice(4, 6)}`
-    + ' (Wikimedia page views). "Wikipedias" is how many language Wikipedias have a page on it (Wikidata), so how far'
-    + ' round the world it is known. Only titles with an English Wikipedia page are counted.', '');
+    + ' (Wikimedia page views): what people look up now. "Wikipedias" is how many language Wikipedias have a page on it'
+    + ' (Wikidata): how far round the world it is known and how long it has lasted. Known = ln(views) + 2 ln(Wikipedias),'
+    + ' so the classics stand with the big current shows. Only titles with an English Wikipedia page are counted.', '');
   lines.push('"Ready for clips" means VoidTV plays it from the Archive as an MP4 of five minutes or more, the files clip'
     + ' rounds can cut from.', '');
   lines.push('## How many of the best known VoidTV can play', '');
@@ -303,20 +313,23 @@ async function main() {
     const counted = items.filter((t) => views.has(t.title)).map((t) => ({ ...t, views: views.get(t.title) }));
     unviewed += items.length - counted.length;
     const kept = rank(counted).slice(0, KEEP);
-    const yr = await years(kept.map((t) => t.wikidata), offline);
+    const yr = await years(kept.map((t) => t.wikidata), cat, offline);
     list[cat] = kept.map(({ tmdbAll, ...t }) => {
       let v = null;
       const ids = tmdbAll || [];
       const from = cat === 'tv' ? vt.shows : cat === 'film' ? vt.films : null;
       if (from) { const hit = ids.find((n) => from.has(n)); if (hit !== undefined) { v = from.get(hit); t.tmdb = hit; } }
-      const year = yr[t.wikidata] || null;
+      // A show VoidTV knows takes its first air year from the catalog (TVmaze, as the bank's questions do); Wikidata
+      // can hold an older start date for the same item (The Walking Dead: 2003, the comic, beside 2010).
+      const aired = cat === 'tv' && v && v.premiered ? Number(String(v.premiered).slice(0, 4)) : null;
+      const year = aired || yr[t.wikidata] || null;
       if (cat === 'game') { const c = findCard({ ...t, year }, vt.cards); if (c) v = { card: c.id }; }
       return { ...t, year, voidtv: v };
     });
   }
   const out = {
     builtAt, window: win,
-    rules: 'ranked by English Wikipedia page views (people, last 12 full months); looked at: Wikidata items of each kind '
+    rules: 'ranked by known = ln(English Wikipedia page views, people, last 12 full months) + 2 ln(Wikipedias with a page); looked at: Wikidata items of each kind '
       + 'on at least ' + Object.keys(CATS).map((c) => `${CATS[c].minLinks} Wikipedias (${c})`).join(', '),
     sources: { wikidata: 'https://query.wikidata.org/', pageviews: 'https://wikimedia.org/api/rest_v1/metrics/pageviews/' },
     ...list,

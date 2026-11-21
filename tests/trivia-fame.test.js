@@ -38,16 +38,20 @@ test('answer rows fold into one title record per item', () => {
 });
 
 test('the years question asks only for the kept items', () => {
-  const q = F.yearsQuery(['Q1', 'Q22']);
+  const q = F.yearsQuery(['Q1', 'Q22'], 'film');
+  assert.match(F.yearsQuery(['Q1'], 'tv'), /wdt:P580/);
   assert.match(q, /VALUES \?item \{ wd:Q1 wd:Q22 \}/);
   assert.match(q, /MIN\(\?date\)/);
 });
 
-test('ranking goes by views, then Wikipedias, then name', () => {
+test('ranking blends views now with Wikipedias, then views, then name', () => {
+  // a classic on many Wikipedias beats a new show with more views but few Wikipedias (B: "The blend")
   const r = F.rank([
-    { title: 'B', views: 10, links: 5 }, { title: 'A', views: 10, links: 5 }, { title: 'C', views: 10, links: 9 }, { title: 'D', views: 99, links: 1 },
+    { title: 'New show', views: 8000000, links: 20 }, { title: 'Classic', views: 1700000, links: 110 },
+    { title: 'B', views: 10, links: 5 }, { title: 'A', views: 10, links: 5 },
   ]);
-  assert.deepEqual(r.map((t) => `${t.rank}${t.title}`), ['1D', '2C', '3A', '4B']);
+  assert.deepEqual(r.map((t) => `${t.rank} ${t.title}`), ['1 Classic', '2 New show', '3 A', '4 B']);
+  assert.ok(r[0].known > r[1].known);
 });
 
 test('a game matches a PLAY card by name and a year either side', () => {
