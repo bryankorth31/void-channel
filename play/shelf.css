@@ -275,3 +275,12 @@ body>header,body>.hero-home,body>main,body>.shelf,body>footer,body>section{posit
 /* The row arrows sit 2 px past a row that runs to the page's edge; the page never slides sideways for that (the auditor:
    1282 px wide at a 1280 screen). clip, not hidden, so the sticky bar keeps working. */
 html,body{overflow-x:clip}
+/* VoidTV's column (scripts/lib/app.js .column), as the site draws it: Bryan's pictures and the lightning static, tiles
+   that scroll with the page and overlap (Bryan, 20 Nov 2026: "the cool infinite scrolling paralax effect using the
+   overlapping opacity with the lightning images"). */
+.shelf>.column{position:absolute;left:0;right:0;top:0;z-index:-1;pointer-events:none;overflow:hidden;will-change:transform}
+.column i{position:absolute;left:0;width:100%;display:block;background-size:cover;background-position:center}
+.column .neon{opacity:.7;-webkit-mask:linear-gradient(180deg,transparent,#000 10%,#000 90%,transparent);mask:linear-gradient(180deg,transparent,#000 10%,#000 90%,transparent);transform-origin:center}
+.column .stat{opacity:.4;mix-blend-mode:screen;-webkit-mask:linear-gradient(180deg,transparent,#000 28%,#000 72%,transparent);mask:linear-gradient(180deg,transparent,#000 28%,#000 72%,transparent)}
+@media (min-width:701px) and (prefers-reduced-motion:no-preference){.column .neon:nth-child(-n+6){animation:colkb var(--kbd,70s) ease-in-out infinite alternate}}
+@keyframes colkb{from{transform:scale(1)}to{transform:scale(1.07)}}

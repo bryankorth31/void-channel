@@ -247,3 +247,11 @@ test('the shelf looks like voidtv.net (Bryan, 20 Nov 2026: "like voidtv.net with
   assert.ok(!js.includes('heroList.unshift(ART[0])'), 'Bryan said no to the art in the hero ("i want to have the hero treated like the hero in voidtv.net")');
   assert.ok(js.includes("bg.dataset.srcset = base + '-m.webp 960w, ' + base + '.webp 1920w';"), 'the browser picks the size');
 });
+
+test('Bryan, 20 Nov 2026 ("the cool infinite scrolling paralax effect using the overlapping opacity with the lightning images"): VoidTV’s column on the shelf, his pictures and the lightning static', () => {
+  const fs = require('fs'), path = require('path'), P = path.join(__dirname, '..');
+  const css = fs.readFileSync(path.join(P, 'shelf.css'), 'utf8'), js = fs.readFileSync(path.join(P, 'src', 'shelf.js'), 'utf8');
+  assert.ok(js.includes("const ART = ['voidarcade-wall', 'voidarcade-player'], STAT = ['static-glitch', 'static-bolt', 'static-dark'];"));
+  assert.ok(css.includes('.column .stat{opacity:.4;mix-blend-mode:screen;') && css.includes('.column .neon{opacity:.7;'));
+  for (const f of ['static-glitch', 'static-bolt', 'static-dark']) for (const s of ['', '-m']) assert.ok(fs.existsSync(path.join(P, '..', 'assets', 'brand', 'bg', 'col', f + s + '.jpg')), f + s);
+});

@@ -430,6 +430,37 @@
     });
   })();
 
+  // ---- VoidTV's column (Bryan, 20 Nov 2026: "the bg needs the cool infinite scrolling paralax effect using the overlapping
+  // opacity with the lightning images"): scripts/lib/app.js column(), as the site draws it. A stack of tiles as tall as the
+  // page scrolls with it over the fixed picture: Bryan's own two pictures take turns, and VoidTV's three static-lightning
+  // pictures sit over the joins, half a tile down, see-through and screened, so the tiles melt into each other. Rebuilt
+  // when the page grows; the first tiles swell slowly on a computer, still for anyone who asks for less motion.
+  (function column() {
+    if (typeof document === 'undefined') return;   // the tests load this file outside a page
+    const main = document.getElementById('shelf');
+    if (!main || typeof ResizeObserver === 'undefined') return;
+    const ART = ['voidarcade-wall', 'voidarcade-player'], STAT = ['static-glitch', 'static-bolt', 'static-dark'];
+    let lastH = 0;
+    function build() {
+      const H = main.scrollHeight;
+      if (Math.abs(H - lastH) < 200) return;
+      lastH = H;
+      const old = main.querySelector(':scope > .column'); if (old) old.remove();
+      if (H < 1200) return;
+      const phone = innerWidth <= 700, sfx = phone ? '-m' : '';
+      const T = Math.round((main.clientWidth || innerWidth) * (phone ? 1.25 : 0.558));
+      if (!(T >= 50)) return;
+      const n = Math.min(Math.ceil(H / T) + 1, 400);
+      const c = document.createElement('div'); c.className = 'column'; c.setAttribute('aria-hidden', 'true'); c.style.height = H + 'px';
+      let h = '';
+      for (let i = 0; i < n; i++) h += '<i class="neon" style="top:' + (i * T) + 'px;height:' + T + 'px;background-image:url(/assets/brand/bg/' + ART[i % ART.length] + sfx + '.webp);--kbd:' + (64 + (i % 4) * 11) + 's;animation-delay:-' + ((i * 19) % 64) + 's"></i>';
+      for (let i = 0; i < n; i++) h += '<i class="stat" style="top:' + Math.round((i + 1) * T - T / 2) + 'px;height:' + T + 'px;background-image:url(/assets/brand/bg/col/' + STAT[i % STAT.length] + sfx + '.jpg)"></i>';
+      c.innerHTML = h; main.prepend(c);
+    }
+    new ResizeObserver(() => build()).observe(main);
+    addEventListener('resize', () => { lastH = 0; build(); });
+  })();
+
   const HERO_MS = 8000;
   // Bryan's voidarcade art (assets/brand/bg/voidarcade-*.webp, from his own pictures, 20 Nov 2026).
   const ART = [{ art: 'wall', kicker: 'The arcade is open', line: 'Hundreds of old games from the Internet Archive. Free, no account, nothing to install.' },
