@@ -52,6 +52,11 @@
     { id: 'read', name: 'lexROM', line: 'Books read one word at a time', site: 'lexrom', url: 'https://lexrom.bspokevisuals.com/', live: true,
       also: 'Also free', kicker: 'Reading', head: 'Read a book one word at a time.', text: 'Free classics, your own books and the news, on the breath. No account.',
       go: 'Open lexROM', pic: 'https://lexrom.bspokevisuals.com/icon-512.png', picFit: 'contain' },
+    // Bryan, 21 Nov 2026 ("Both": a FBDM Lab line in this menu, and one in each area): "fbdmlab is also where all my builds
+    // that work go". Never on Kids (Kids never loads this file). The lab has no picture of its own, so its card uses voidtv.net's.
+    { id: 'lab', name: 'FBDM Lab', line: 'Every build that works, in one place', site: 'fbdmlab', url: 'https://fbdmlab.org/', live: true,
+      also: 'Also from us', kicker: 'The lab', head: 'Where the working builds go.', text: 'An independent lab: everything that works ends up here, to look around and try.',
+      go: 'Visit FBDM Lab', pic: '/assets/brand/bg/static-glitch-m.jpg' },
     // Not open yet: they join the menu and the cards the day live turns true.
     { id: 'westside', name: 'voidtv.net west side', line: 'Films and shows from West Africa', site: 'westside', url: 'https://westside.voidtv.net/', live: false,
       kicker: 'West Africa', head: 'Films and shows from Ghana and Nigeria.', text: 'Kumawood, Ghallywood and Nollywood, free, no account.',
