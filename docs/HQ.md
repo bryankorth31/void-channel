@@ -174,6 +174,34 @@ to its end; at most once in 30 days per device (localStorage voidtv:enjoy), and 
 `enjoy` in scripts/hq.js). voidtv.net only: off on Kids and other profiles. Code: scripts/lib/app.js (enjoyAsk, enjoyCard); test:
 tests/enjoy.test.js.
 
+## HQ says when something fails or ends (21 Nov 2026)
+
+Build audit 19 Nov 2026, H2 to H8. Before, a refused save or job start showed nothing, a started job said "started" for 4
+seconds and never how it ended, and a failed lookup read as an empty list.
+
+- **A message with a coloured edge stays until you press Dismiss.** Red: it failed or was refused. Amber: it is waiting or
+  held. Green: it finished. A plain note still goes away after 4 seconds. Messages stack in the bottom right corner.
+- **A refused press says what was refused**: "Not saved: ...", "The hunt job did not start: ...", "The order was not saved:
+  ...". Under those there is a net: anything a button's work throws ends in "That did not go through (...)".
+- **A job started from HQ is watched until it ends**, on whatever tab you are by then: "... finished.", "... stopped.", or
+  "... failed (exit 1). Open the Jobs tab and press its log to see why." A re-match after a decision and the doctor say
+  nothing more when they end well inside a minute; after a minute they say "is taking longer than a minute" and then the
+  ending. A publish ends in publish's own words (pushed, held, refused, failed).
+- **Jobs tab**: the two lists draw themselves again every 15 seconds while anything runs; an open log stays open; pressing
+  the tab you are on draws it again. Leaving the tab stops the log reading.
+- **Shows list**: saving a decision, changing the show list or the end of any job drops the kept list, so the next look is
+  fresh.
+- **A lookup that failed says so, in amber**: "Could not check which jobs are running (...)" and "Could not read the
+  scheduled tasks (...)". "No builder jobs running" and "none found" now only mean that.
+- **Health box**: a check older than 30 hours is amber even when its lights were green, and says "That is an old check and
+  may no longer be true: press Run doctor".
+- **Arrows and crosses have names**: hover one to read it (Move up, Move down, Take off the home page, Remove this alias,
+  Stop excluding this item, Delete this shape). The crosses on a show page still save at once; the tip says so.
+
+By hand, no HQ: a job's own log is `catalog/cache/hq-<job>-<id>.log`; its exit code is in `catalog/cache/hq-jobs.json`.
+Tests: `node --test tests/hq-page.test.js` (the page's own job-watching code run with a made-up clock) and the lookup test
+in `tests/hq.test.js`.
+
 ## Events the site sends
 
 `view` (page, slug) · `play` (slug, season x episode, file) · `tick` every 60 s while playing (position,

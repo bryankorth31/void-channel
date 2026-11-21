@@ -499,7 +499,7 @@ test('GET /api/git answers with the top line: words, a level and the hover text,
 test('the page asks for the top line on every tab change and after a publish; it holds no "nothing to publish" words of its own', async () => {
   const page = (await call(port, 'GET', '/')).text;
   assert.ok(page.includes("async function gitLine(){const gl=$('#gitline');try{const g=await api('/api/git');gl.textContent=g.line.text;gl.title=g.line.title;gl.className=g.line.level}"), 'gitLine() shows the line as HQ words it');
-  assert.ok(page.includes("async function render(){nav();gitLine();const m=$('#main');"), 'render() asks for the line first, on every tab');
+  assert.ok(page.includes('async function render(){nav();gitLine();'), 'render() asks for the line first, on every tab');
   assert.ok(!page.includes("'nothing to publish'"), 'the words live in scripts/lib/publishline.js only');
   assert.ok(page.includes('#gitline{max-width:340px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}'), 'the line still cannot push the header onto two rows');
   assert.ok(page.includes('#gitline.wait{color:var(--rev)}#gitline.bad{color:var(--red)}'), 'waiting is amber, not known or refused is red');
@@ -514,7 +514,7 @@ test('a press on Publish is answered in words that stay: the page waits for the 
   assert.match(fn[0], /toast\('Publish did not start: '\+e\.message,'bad','publish'\)/, 'a press the engine refuses says so and stays');
   assert.doesNotMatch(fn[0], /toast\('Publishing… job/, 'the old 4 second note is gone');
   assert.ok(page.includes("if(level){t.setAttribute('role','status');") && page.includes("b.textContent='Dismiss';b.onclick=()=>t.remove()") && page.includes("else setTimeout(()=>t.remove(),4000)"), 'a note with a level stays until Dismiss; a plain note still leaves after 4 seconds');
-  assert.ok(page.includes('async function waitJob(id){return jobEnd(id,60,1000)}'), 'the older wait uses the same block');
+  assert.ok(page.includes("async function waitJob(id,name,quietOk){watchJob(id,name||'The job',quietOk);const r=await jobEnd(id,60,1000);"), 'the one-minute wait uses the same block, and hands the job to the watcher (tests/hq-page.test.js)');
 });
 
 test('a finished publish job says how it ended: held, with what to press; a run that left no ending line is not called a success', async () => {
@@ -549,6 +549,31 @@ test('a finished publish job says how it ended: held, with what to press; a run 
 // ---- the stop logic itself, against sleepers this test starts and ends -----------------------------------------
 
 test('stop: a job whose process is still the one HQ launched is stopped, and only that process', { skip: !WIN && 'Windows only' }, async () => {
+// Audit 19 Nov 2026, H6: a lookup that failed read "No builder jobs running" and "none found", as if it had worked.
+test('a lookup that fails is said as a failure beside the list (processesError), never as an empty list; the next good one clears it', { skip: !WIN && 'the lookups are Windows ones' }, async () => {
+  const { start } = require(HQ_FILE);
+  const used = await freePort([port]); // the port the two tests above started and closed their HQ on: a kept-alive connection to it may linger
+  const p = await freePort([port, used]);
+  const srv = await start({ port: p });
+  const keep = process.env.PATH, keep2 = process.env.Path;
+  try {
+    const good = (await call(p, 'GET', '/api/jobs')).json;
+    assert.ok(Array.isArray(good.processes));
+    assert.equal(good.processesError, null, 'the lookup worked: ' + good.processesError);
+    // Make the lookup itself fail in this process only: with no PATH the engine cannot find PowerShell.
+    process.env.PATH = ''; process.env.Path = '';
+    const bad = (await call(p, 'GET', '/api/jobs')).json;
+    assert.deepEqual(bad.processes, []);
+    assert.equal(typeof bad.processesError, 'string', 'a failed lookup is not an empty list');
+    assert.ok(bad.processesError.length > 0);
+    process.env.PATH = keep; if (keep2 !== undefined) process.env.Path = keep2;
+    assert.equal((await call(p, 'GET', '/api/jobs')).json.processesError, null);
+  } finally {
+    process.env.PATH = keep; if (keep2 !== undefined) process.env.Path = keep2;
+    await new Promise((ok) => srv.server.close(ok));
+  }
+});
+
   const { stopHqJob, processInfo } = require(HQ_FILE).stop;
   const target = spawn(process.execPath, ['-e', 'setTimeout(()=>{},60000)', 'C:\\fake\\scripts\\art.js'], { stdio: 'ignore', windowsHide: true });
   const bystander = spawn(process.execPath, ['-e', 'setTimeout(()=>{},60000)', 'C:\\fake\\scripts\\art.js'], { stdio: 'ignore', windowsHide: true });

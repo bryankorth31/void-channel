@@ -120,9 +120,9 @@ function overview() {
   for (const r of rows) { if (r.hunted) tot.hunted++; if (r.matched) tot.matched++; if (r.hidden) tot.hidden++; if (r.stats) { if (r.stats.playing) tot.playing++; tot.episodesLive += r.stats.live; tot.episodesReview += r.stats.review; tot.episodesPlaying += r.stats.playing; } }
   return {
     totals: tot, byType: by('type'), byTag: by('tags'),
-    jobs: jobList(), processes: nodeProcesses(),
+    jobs: jobList(), processes: nodeProcesses(), processesError: LOOKUP.processes, // filled by the call just before it
     publishLog: tail(path.join(CACHE, 'publish.log'), 4), nightlyLog: tail(path.join(CACHE, 'nightly.log'), 8),
-    tasks: scheduledTasks(), git: gitState(), analytics: cfa.configured(), profile: PROFILE.name, siteName: PROFILE.siteName,
+    tasks: scheduledTasks(), tasksError: LOOKUP.tasks, git: gitState(), analytics: cfa.configured(), profile: PROFILE.name, siteName: PROFILE.siteName,
   };
 }
 
@@ -141,23 +141,31 @@ function gitState() {
   return facts;
 }
 
+// A lookup that failed is said as a failure, never as an empty list (audit 19 Nov 2026, H6): "none found" made the tasks look
+// gone, and "No builder jobs running" could send him to start a second hunt. Each lookup leaves its error here (null when it
+// worked) and the answers carry it beside the list as tasksError and processesError.
+const LOOKUP = { tasks: null, processes: null };
+const lookupWhy = (e) => String((e && e.stderr && e.stderr.toString().trim()) || (e && e.message) || e).split('\n')[0].slice(0, 160);
 function scheduledTasks() {
+  LOOKUP.tasks = null;
   try {
-    const one = (n) => { try { return execSync('schtasks /Query /FO CSV /V /TN "' + n + '"', { stdio: ['ignore', 'pipe', 'ignore'] }).toString(); } catch (e) { return ''; } };
+    // A task that does not exist is a true "none" (schtasks says it cannot find it); any other failure is the lookup failing.
+    const one = (n) => { try { return execSync('schtasks /Query /FO CSV /V /TN "' + n + '"', { windowsHide: true, stdio: ['ignore', 'pipe', 'pipe'] }).toString(); } catch (e) { const why = lookupWhy(e); if (!/cannot find|does not exist/i.test(why)) LOOKUP.tasks = why; return ''; } };
     const out = one(PROFILE.taskPrefix + ' Publish') + '\n' + one(PROFILE.taskPrefix + ' Nightly'); if (false) execSync('', { windowsHide: true, stdio: ['ignore', 'pipe', 'ignore'] }).toString();
     const lines = out.split('\n').filter((l) => l.startsWith('"') && !l.startsWith('"HostName"'));
     return lines.map((l) => { const c = l.split('","').map((x) => x.replace(/^"|"\r?$/g, '')); return { name: c[1].replace(/^\\/, ''), next: c[2], status: c[3], last: c[5], result: c[6] }; });
-  } catch (e) { return []; }
+  } catch (e) { LOOKUP.tasks = lookupWhy(e); return []; }
 }
 
 function nodeProcesses() {
+  LOOKUP.processes = null;
   try {
     const out = execSync('powershell -NoProfile -Command "Get-CimInstance Win32_Process -Filter \\"Name=\'node.exe\'\\" | Select-Object ProcessId,CreationDate,CommandLine | ConvertTo-Json -Compress"', { windowsHide: true, stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim();
     let arr = out ? JSON.parse(out) : [];
     if (!Array.isArray(arr)) arr = [arr];
     return arr.filter((p) => builderScript(p.CommandLine))
       .map((p) => ({ pid: p.ProcessId, cmd: (p.CommandLine || '').replace(/^.*?node(\.exe)?"?\s+/i, '').replace(ROOT.replace(/\\/g, '\\\\'), '').trim(), started: (() => { const m = /\/Date\((\d+)\)/.exec(String(p.CreationDate)); return m ? new Date(+m[1]).toISOString() : String(p.CreationDate || ''); })() }));
-  } catch (e) { return []; }
+  } catch (e) { LOOKUP.processes = lookupWhy(e); return []; }
 }
 
 // ---- jobs -------------------------------------------------------------------------------------
@@ -430,7 +438,7 @@ const server = http.createServer(async (req, res) => {
     if (p === '/api/qr' && req.method === 'POST') { const b = await body(req); const all = readJson(FILES.qr, {}); const code = String(b.code || '').toLowerCase().replace(/[^a-z0-9-]/g, '').slice(0, 40); if (!code) throw new Error('code needed: letters, digits, dashes'); if (b.remove) { delete all[code]; } else { if (!/^https?:\/\//.test(String(b.url || ''))) throw new Error('target must start with http(s)://'); all[code] = { url: String(b.url).slice(0, 500), label: String(b.label || '').slice(0, 120), created: (all[code] && all[code].created) || new Date().toISOString().slice(0, 10) }; } writeJson(FILES.qr, all); return send(res, 200, { codes: all }); }
     if (p === '/api/order' && req.method === 'GET') { const rows = showRows(); const tags = [...new Set(rows.flatMap((r) => r.tags))].sort(); return send(res, 200, { ...homeOrder(), types: [...readJson(FILES.list, { types: [] }).types, 'TV Movies', 'Specials'], tags }); }
     if (p === '/api/order' && req.method === 'POST') { const b = await body(req); if (!Array.isArray(b.order)) throw new Error('order must be an array'); writeJson(FILES.order, b.order.filter((x) => Array.isArray(x) && x.length === 2)); return send(res, 200, { ok: true }); }
-    if (p === '/api/jobs' && req.method === 'GET') return send(res, 200, { jobs: jobList(), processes: nodeProcesses() });
+    if (p === '/api/jobs' && req.method === 'GET') return send(res, 200, { jobs: jobList(), processes: nodeProcesses(), processesError: LOOKUP.processes });
     if (p === '/api/jobs' && req.method === 'POST') { const b = await body(req); return send(res, 200, startJob(b.name, b.args)); }
     if (p.startsWith('/api/jobs/') && p.endsWith('/log')) { const id = p.split('/')[3]; const j = JOBS.find((x) => x.id === id); if (!j) return send(res, 404, { error: 'no job' }); const running = j.done ? false : alive(j.pid); return send(res, 200, { log: tail(j.log, +url.searchParams.get('tail') || 200), running, code: j.code, ...(j.name === 'publish' && !running ? { outcome: publishline.outcome(tail(j.log, 60), j.code == null ? -1 : j.code) } : {}) }); } // a finished publish also says how it ended, in words the page shows as they are
     if (p.startsWith('/api/jobs/') && p.endsWith('/stop') && req.method === 'POST') { const id = p.split('/')[3]; const j = JOBS.find((x) => x.id === id); if (!j) return send(res, 404, { error: 'no such job' }); const r = stopHqJob(j); if (r.changed) saveJobs(); return send(res, r.status, r.body); }
