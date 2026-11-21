@@ -106,7 +106,9 @@
     const at = typeof VP !== 'undefined' && VP && VP.v ? VP.v.currentTime : NaN;
     const timed = () => root.jsLoad(['trivia/src/timed.js']).then(() => (root.TriviaTimed && Number.isFinite(at) ? root.TriviaTimed.momentQuestion({ slug: s.slug, season: cur.se, number: cur.n, at }) : null)).catch(() => null);
     const live = () => root.jsLoad(['trivia/src/game.js', 'trivia/src/live.js']).then(() => root.TriviaLive.liveQuestion({ slug: s.slug, season: a.se, number: a.n, seed: key, during: true }, BASE + 'trivia/bank/'));
-    timed().then((q) => q || live()).then((q) => { if (q && q.choices && q.choices.length >= 2) MOMENTS[key] = { n: root.TriviaLive ? root.TriviaLive.hash(key) % 1e9 : 0, q }; }).catch(() => {});
+    // Only "Finish the line" fits a 40-second pop-up. The clip chat's spot-it and whodunit rounds keep their own clock (a whodunit
+    // must not show its answer before its reveal), so they wait for their own place (the watch party plan), and this asks live.js.
+    timed().then((q) => (q && q.round === 'finish-line' ? q : live())).then((q) => { if (q && q.choices && q.choices.length >= 2) MOMENTS[key] = { n: root.TriviaLive ? root.TriviaLive.hash(key) % 1e9 : 0, q }; }).catch(() => {});
   }
 
   // The icon: small, in the picture's top corner, a slow fade in and out (no flashing). It counts the phones that answered,
