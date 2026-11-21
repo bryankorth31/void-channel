@@ -1,16 +1,331 @@
 {
  "show": "Lockdown",
  "slug": "lockdown",
- "tmdbId": 15491,
+ "tmdbId": 108137,
  "cast": [
   {
-   "id": 1933540,
-   "name": "Rodd Houston",
+   "id": 2753241,
+   "name": "Amanda Cheung",
    "photo": null,
-   "character": "Narrator (voice)",
-   "episodes": 30
+   "character": "Emi",
+   "episodes": 16
+  },
+  {
+   "id": 2753242,
+   "name": "Dorian Giordano",
+   "photo": "https://image.tmdb.org/t/p/w185/vYiBymEQ06TxmsqpGfHQytgAQEg.jpg",
+   "character": "Aiden",
+   "episodes": 16
+  },
+  {
+   "id": 2753243,
+   "name": "Edison Grant",
+   "photo": "https://image.tmdb.org/t/p/w185/i93CsrjdgdizLLJZm5YtuVjnkP0.jpg",
+   "character": "Luke",
+   "episodes": 16
+  },
+  {
+   "id": 2488532,
+   "name": "Arista Arhin",
+   "photo": "https://image.tmdb.org/t/p/w185/tLpnku6yILYfVvMOS5Y0QQU5O5J.jpg",
+   "character": "Sam",
+   "episodes": 16
+  },
+  {
+   "id": 1739118,
+   "name": "Saara Chaudry",
+   "photo": "https://image.tmdb.org/t/p/w185/1KRvpuItpOs3YtUix24TNDzkgyo.jpg",
+   "character": "Nira",
+   "episodes": 16
+  },
+  {
+   "id": 1746412,
+   "name": "Tomaso Sanelli",
+   "photo": "https://image.tmdb.org/t/p/w185/sGav2QS8Djw9PP3KwwAEUWLgDwj.jpg",
+   "character": "Chris",
+   "episodes": 16
+  },
+  {
+   "id": 2753247,
+   "name": "Jennifer Pogue",
+   "photo": null,
+   "character": "Math teacher",
+   "episodes": 6
+  },
+  {
+   "id": 2753245,
+   "name": "Emaan Chaudry",
+   "photo": null,
+   "character": "Kumari",
+   "episodes": 6
+  },
+  {
+   "id": 2051986,
+   "name": "Sean Patrick Dolan",
+   "photo": "https://image.tmdb.org/t/p/w185/9PuIJKZBd0E0Af5oaAPls3DQ7rm.jpg",
+   "character": "Jeremy",
+   "episodes": 5
+  },
+  {
+   "id": 2753258,
+   "name": "Stephanie Giordano",
+   "photo": null,
+   "character": "Aiden's Mom",
+   "episodes": 4
+  },
+  {
+   "id": 2131931,
+   "name": "Kiki Hammill",
+   "photo": "https://image.tmdb.org/t/p/w185/2oPcwEOOilj6FT3WznWKX1A5sJx.jpg",
+   "character": "Asha",
+   "episodes": 4
+  },
+  {
+   "id": 185102,
+   "name": "Jackie Richardson",
+   "photo": "https://image.tmdb.org/t/p/w185/jIDfdGW26RixUhewLXskCQAoCl8.jpg",
+   "character": "Luke's Grandma",
+   "episodes": 3
+  },
+  {
+   "id": 3131526,
+   "name": "Lex Mayson",
+   "photo": "https://image.tmdb.org/t/p/w185/cQcY5e0RkMAuOydSlNN0h53T7DI.jpg",
+   "character": "Harley",
+   "episodes": 3
+  },
+  {
+   "id": 2019625,
+   "name": "Ayesha Mansur Gonsalves",
+   "photo": "https://image.tmdb.org/t/p/w185/xAbHZ2kXDiDaVsbGoENwLqzibwm.jpg",
+   "character": "Aunt Raina",
+   "episodes": 2
+  },
+  {
+   "id": 4568,
+   "name": "Jayne Eastwood",
+   "photo": "https://image.tmdb.org/t/p/w185/cL75FbJRKDdpvkOJDUgUYPZHKks.jpg",
+   "character": "Ms. Eastwood",
+   "episodes": 2
+  },
+  {
+   "id": 190897,
+   "name": "Raven Dauda",
+   "photo": "https://image.tmdb.org/t/p/w185/g7pj8LHrUTpmGMm3wCrUNqAE5fq.jpg",
+   "character": "Luke's Mom",
+   "episodes": 2
+  },
+  {
+   "id": 21294,
+   "name": "Katie Griffin",
+   "photo": "https://image.tmdb.org/t/p/w185/jply9h89yWO1y1ertpjZEuILkj4.jpg",
+   "character": "Mary",
+   "episodes": 2
+  },
+  {
+   "id": 2753248,
+   "name": "Marianne Sawchuk",
+   "photo": null,
+   "character": "Nurse",
+   "episodes": 1
+  },
+  {
+   "id": 107411,
+   "name": "Nicolas Van Burek",
+   "photo": "https://image.tmdb.org/t/p/w185/mFKlzqrzoTUIalqRLaLODXEPrBA.jpg",
+   "character": "Science teacher",
+   "episodes": 1
+  },
+  {
+   "id": 1796797,
+   "name": "Michael Brown",
+   "photo": "https://image.tmdb.org/t/p/w185/eZrk95bblzGT4QouyK5sodvDOG8.jpg",
+   "character": "Sam's Dad",
+   "episodes": 1
+  },
+  {
+   "id": 1772319,
+   "name": "Matt Bois",
+   "photo": "https://image.tmdb.org/t/p/w185/cWZlJTqwgdrlNYUaVRBv1MvL4lw.jpg",
+   "character": "Reporter",
+   "episodes": 1
+  },
+  {
+   "id": 87147,
+   "name": "Sarah Deakins",
+   "photo": "https://image.tmdb.org/t/p/w185/qvZUGjRpxmLPnCQ0O40Ug9ieMT7.jpg",
+   "character": "Reporter 2",
+   "episodes": 1
+  },
+  {
+   "id": 118814,
+   "name": "Rob Tinkler",
+   "photo": "https://image.tmdb.org/t/p/w185/i08td9dgUt51SEeMUbPgHHkbGbt.jpg",
+   "character": "Chris's Dad",
+   "episodes": 1
+  },
+  {
+   "id": 2753297,
+   "name": "Sohail Ali Hamid Chaudry",
+   "photo": null,
+   "character": "Nira's Dad",
+   "episodes": 1
   }
  ],
- "crew": [],
- "fetchedAt": "2026-10-15T07:57:10.413Z"
+ "crew": [
+  {
+   "id": 1514063,
+   "name": "J.J. Johnson",
+   "photo": null,
+   "jobs": [
+    "Creator",
+    "Director",
+    "Executive Producer",
+    "Writer",
+    "Story"
+   ],
+   "episodes": 16
+  },
+  {
+   "id": 1875934,
+   "name": "Christin Simms",
+   "photo": null,
+   "jobs": [
+    "Creator",
+    "Director",
+    "Executive Producer",
+    "Story",
+    "Writer"
+   ],
+   "episodes": 16
+  },
+  {
+   "id": 2753250,
+   "name": "Lakna Edilima",
+   "photo": null,
+   "jobs": [
+    "Writer"
+   ],
+   "episodes": 18
+  },
+  {
+   "id": 2753251,
+   "name": "Sabrina Sherif",
+   "photo": null,
+   "jobs": [
+    "Writer"
+   ],
+   "episodes": 18
+  },
+  {
+   "id": 4706313,
+   "name": "Thomas Conway",
+   "photo": "https://image.tmdb.org/t/p/w185/pYV8AnLybPwBrtl2xedQShutPug.jpg",
+   "jobs": [
+    "Writer"
+   ],
+   "episodes": 18
+  },
+  {
+   "id": 1243060,
+   "name": "Blair Powers",
+   "photo": null,
+   "jobs": [
+    "Executive Producer"
+   ],
+   "episodes": 16
+  },
+  {
+   "id": 1635683,
+   "name": "Nicole Stamp",
+   "photo": "https://image.tmdb.org/t/p/w185/kWG861XpVFBNkHxxYuLDJMXQ3e1.jpg",
+   "jobs": [
+    "Director",
+    "Writer"
+   ],
+   "episodes": 2
+  },
+  {
+   "id": 63852,
+   "name": "Warren P. Sonoda",
+   "photo": "https://image.tmdb.org/t/p/w185/uDwIiJocQTdraZret4Q7iELTwvI.jpg",
+   "jobs": [
+    "Director"
+   ],
+   "episodes": 2
+  },
+  {
+   "id": 115662,
+   "name": "Melanie Orr",
+   "photo": null,
+   "jobs": [
+    "Director"
+   ],
+   "episodes": 2
+  },
+  {
+   "id": 3154456,
+   "name": "Jenna Neepin",
+   "photo": null,
+   "jobs": [
+    "Director"
+   ],
+   "episodes": 1
+  },
+  {
+   "id": 513934,
+   "name": "Stephen Reynolds",
+   "photo": null,
+   "jobs": [
+    "Director"
+   ],
+   "episodes": 1
+  },
+  {
+   "id": 2048685,
+   "name": "Alicia K. Harris",
+   "photo": "https://image.tmdb.org/t/p/w185/tfSocDHFNK3comBWbheF8FeBF7y.jpg",
+   "jobs": [
+    "Director"
+   ],
+   "episodes": 1
+  },
+  {
+   "id": 1611614,
+   "name": "Tiffany Hsiung",
+   "photo": null,
+   "jobs": [
+    "Director"
+   ],
+   "episodes": 1
+  },
+  {
+   "id": 2663335,
+   "name": "Shawn Gerrard",
+   "photo": null,
+   "jobs": [
+    "Director"
+   ],
+   "episodes": 1
+  },
+  {
+   "id": 1197099,
+   "name": "Lisa Rose Snow",
+   "photo": "https://image.tmdb.org/t/p/w185/b7gmbs8dIgdRfTW3632yhxxhd1A.jpg",
+   "jobs": [
+    "Director"
+   ],
+   "episodes": 1
+  },
+  {
+   "id": 1715708,
+   "name": "Gillian Muller",
+   "photo": null,
+   "jobs": [
+    "Writer"
+   ],
+   "episodes": 1
+  }
+ ],
+ "fetchedAt": "2026-11-21T06:12:23.935Z"
 }

@@ -1,5 +1,5 @@
 {
- "builtAt": "2026-11-20T16:43:31.183Z",
+ "builtAt": "2026-11-21T06:22:34.380Z",
  "rules": "plays today; family = US TV-PG/PG and under; after dark = any official US rating; no US rating = out; fame line set by Bryan",
  "fameLine": 100,
  "shows": [
@@ -390,14 +390,14 @@
   {
    "slug": "action",
    "name": "Action",
-   "tmdbId": 68837,
+   "tmdbId": 2812,
    "premiered": "1999-09-16",
    "playing": 13,
-   "votes": 95,
-   "us": "TV-Y7",
-   "source": "https://www.themoviedb.org/tv/68837",
+   "votes": 25,
+   "us": "",
+   "source": "https://www.themoviedb.org/tv/2812",
    "band": "out",
-   "why": "TMDB record is another show (Justice League Action, 2016)"
+   "why": "no official US rating on TMDB"
   },
   {
    "slug": "adventure-time",
@@ -1074,14 +1074,14 @@
   {
    "slug": "anne-of-green-gables",
    "name": "Anne of Green Gables",
-   "tmdbId": 16047,
+   "tmdbId": 5874,
    "premiered": "1985-12-01",
    "playing": 7,
-   "votes": 53,
-   "us": "",
-   "source": "https://www.themoviedb.org/tv/16047",
-   "band": "out",
-   "why": "TMDB record is another show (Anne of Green Gables, 1979)"
+   "votes": 39,
+   "us": "TV-PG",
+   "source": "https://www.themoviedb.org/tv/5874",
+   "band": "family",
+   "why": "US TV-PG"
   },
   {
    "slug": "anne-with-an-e",
@@ -1266,14 +1266,14 @@
   {
    "slug": "back",
    "name": "Back",
-   "tmdbId": 32573,
+   "tmdbId": 73781,
    "premiered": "2017-09-06",
    "playing": 1,
-   "votes": 421,
+   "votes": 56,
    "us": "TV-MA",
-   "source": "https://www.themoviedb.org/tv/32573",
-   "band": "out",
-   "why": "TMDB record is another show (Strike Back, 2010)"
+   "source": "https://www.themoviedb.org/tv/73781",
+   "band": "after-dark",
+   "why": "US TV-MA"
   },
   {
    "slug": "bad-education",
@@ -1818,26 +1818,26 @@
   {
    "slug": "biker-mice-from-mars",
    "name": "Biker Mice from Mars",
-   "tmdbId": 3320,
+   "tmdbId": 95580,
    "premiered": "2006-08-26",
    "playing": 25,
-   "votes": 72,
+   "votes": 5,
    "us": "",
-   "source": "https://www.themoviedb.org/tv/3320",
+   "source": "https://www.themoviedb.org/tv/95580",
    "band": "out",
-   "why": "TMDB record is another show (Biker Mice from Mars, 1993)"
+   "why": "no official US rating on TMDB"
   },
   {
    "slug": "bill-and-teds-excellent-adventures",
    "name": "Bill & Ted's Excellent Adventures",
-   "tmdbId": 34942,
+   "tmdbId": 35006,
    "premiered": "1990-09-15",
    "playing": 13,
-   "votes": 7,
-   "us": "",
-   "source": "https://www.themoviedb.org/tv/34942",
+   "votes": 27,
+   "us": "NR",
+   "source": "https://www.themoviedb.org/tv/35006",
    "band": "out",
-   "why": "TMDB record is another show (Bill & Ted's Excellent Adventures, 1992)"
+   "why": "rated NR (not rated) in the US"
   },
   {
    "slug": "bill-nye-the-science-guy",
@@ -1854,14 +1854,14 @@
   {
    "slug": "bionic-woman",
    "name": "Bionic Woman",
-   "tmdbId": 2275,
+   "tmdbId": 1246,
    "premiered": null,
    "playing": 1,
-   "votes": 288,
-   "us": "TV-PG",
-   "source": "https://www.themoviedb.org/tv/2275",
-   "band": "family",
-   "why": "US TV-PG"
+   "votes": 127,
+   "us": "",
+   "source": "https://www.themoviedb.org/tv/1246",
+   "band": "out",
+   "why": "no official US rating on TMDB"
   },
   {
    "slug": "black-books",
@@ -2022,14 +2022,14 @@
   {
    "slug": "blockbusters",
    "name": "Blockbusters",
-   "tmdbId": 5151,
+   "tmdbId": 32924,
    "premiered": "1983-08-29",
    "playing": 1,
-   "votes": 4,
+   "votes": 0,
    "us": "",
-   "source": "https://www.themoviedb.org/tv/5151",
+   "source": "https://www.themoviedb.org/tv/32924",
    "band": "out",
-   "why": "TMDB record is another show (Blockbusters, 1980)"
+   "why": "no official US rating on TMDB"
   },
   {
    "slug": "blood-drive",
@@ -2118,14 +2118,14 @@
   {
    "slug": "bob",
    "name": "Bob",
-   "tmdbId": 32726,
+   "tmdbId": 13169,
    "premiered": "1992-09-18",
    "playing": 3,
-   "votes": 1170,
-   "us": "TV-14",
-   "source": "https://www.themoviedb.org/tv/32726",
+   "votes": 9,
+   "us": "",
+   "source": "https://www.themoviedb.org/tv/13169",
    "band": "out",
-   "why": "TMDB record is another show (Bob's Burgers, 2011)"
+   "why": "no official US rating on TMDB"
   },
   {
    "slug": "bob-and-margaret",
@@ -2442,14 +2442,14 @@
   {
    "slug": "buddies",
    "name": "Buddies",
-   "tmdbId": 2574,
+   "tmdbId": 9774,
    "premiered": "1996-03-05",
    "playing": 12,
-   "votes": 43,
-   "us": "TV-PG",
-   "source": "https://www.themoviedb.org/tv/2574",
+   "votes": 4,
+   "us": "",
+   "source": "https://www.themoviedb.org/tv/9774",
    "band": "out",
-   "why": "TMDB record is another show (Bosom Buddies, 1980)"
+   "why": "no official US rating on TMDB"
   },
   {
    "slug": "bug-juice",
@@ -2838,14 +2838,14 @@
   {
    "slug": "chef",
    "name": "Chef",
-   "tmdbId": 41822,
+   "tmdbId": 1523,
    "premiered": "1993-01-28",
    "playing": 1,
-   "votes": 73,
-   "us": "TV-14",
-   "source": "https://www.themoviedb.org/tv/41822",
+   "votes": 32,
+   "us": "",
+   "source": "https://www.themoviedb.org/tv/1523",
    "band": "out",
-   "why": "TMDB record is another show (Top Chef, 2006)"
+   "why": "no official US rating on TMDB"
   },
   {
    "slug": "chicago-med",
@@ -3114,14 +3114,14 @@
   {
    "slug": "clone-high",
    "name": "Clone High",
-   "tmdbId": 118546,
+   "tmdbId": 2342,
    "premiered": "2002-11-02",
    "playing": 13,
-   "votes": 42,
-   "us": "TV-MA",
-   "source": "https://www.themoviedb.org/tv/118546",
-   "band": "out",
-   "why": "TMDB record is another show (Clone High, 2023)"
+   "votes": 105,
+   "us": "TV-14",
+   "source": "https://www.themoviedb.org/tv/2342",
+   "band": "after-dark",
+   "why": "US TV-14"
   },
   {
    "slug": "closer-to-truth",
@@ -3150,14 +3150,14 @@
   {
    "slug": "clubhouse",
    "name": "Clubhouse",
-   "tmdbId": 3934,
+   "tmdbId": 9893,
    "premiered": "2004-09-26",
    "playing": 9,
-   "votes": 399,
-   "us": "TV-Y",
-   "source": "https://www.themoviedb.org/tv/3934",
-   "band": "out",
-   "why": "TMDB record is another show (Mickey Mouse Clubhouse, 2006)"
+   "votes": 3,
+   "us": "TV-PG",
+   "source": "https://www.themoviedb.org/tv/9893",
+   "band": "family",
+   "why": "US TV-PG"
   },
   {
    "slug": "cluedo",
@@ -3378,26 +3378,26 @@
   {
    "slug": "cosby",
    "name": "Cosby",
-   "tmdbId": 1759,
+   "tmdbId": 6445,
    "premiered": "1996-09-16",
    "playing": 87,
-   "votes": 530,
-   "us": "TV-PG",
-   "source": "https://www.themoviedb.org/tv/1759",
-   "band": "out",
-   "why": "TMDB record is another show (The Cosby Show, 1984)"
+   "votes": 34,
+   "us": "TV-G",
+   "source": "https://www.themoviedb.org/tv/6445",
+   "band": "family",
+   "why": "US TV-G"
   },
   {
    "slug": "cosmos",
    "name": "Cosmos",
-   "tmdbId": 58474,
+   "tmdbId": 1430,
    "premiered": "1980-09-28",
    "playing": 13,
-   "votes": 1779,
-   "us": "TV-G",
-   "source": "https://www.themoviedb.org/tv/58474",
+   "votes": 471,
+   "us": "",
+   "source": "https://www.themoviedb.org/tv/1430",
    "band": "out",
-   "why": "TMDB record is another show (Cosmos, 2014)"
+   "why": "no official US rating on TMDB"
   },
   {
    "slug": "cosmos-a-personal-voyage",
@@ -3582,14 +3582,14 @@
   {
    "slug": "crossroads",
    "name": "Crossroads",
-   "tmdbId": 3753,
+   "tmdbId": 21504,
    "premiered": "1955-10-07",
    "playing": 3,
-   "votes": 6,
-   "us": "",
-   "source": "https://www.themoviedb.org/tv/3753",
+   "votes": 4,
+   "us": "NR",
+   "source": "https://www.themoviedb.org/tv/21504",
    "band": "out",
-   "why": "TMDB record is another show (Crossroads, 1964)"
+   "why": "rated NR (not rated) in the US"
   },
   {
    "slug": "crumbs",
@@ -3662,18 +3662,6 @@
    "source": "https://www.themoviedb.org/tv/2702",
    "band": "out",
    "why": "no official US rating on TMDB"
-  },
-  {
-   "slug": "cyderdelic",
-   "name": "Cyderdelic",
-   "tmdbId": 111873,
-   "premiered": "2002-01-07",
-   "playing": 6,
-   "votes": 4,
-   "us": "",
-   "source": "https://www.themoviedb.org/tv/111873",
-   "band": "out",
-   "why": "TMDB record is another show (Cyderdelic, 2004)"
   },
   {
    "slug": "da-ali-g-show",
@@ -4012,18 +4000,6 @@
    "why": "US TV-14"
   },
   {
-   "slug": "dennis-the-menace-and-gnasher",
-   "name": "Dennis the Menace and Gnasher",
-   "tmdbId": 7407,
-   "premiered": "2009-09-07",
-   "playing": 4,
-   "votes": 20,
-   "us": "",
-   "source": "https://www.themoviedb.org/tv/7407",
-   "band": "out",
-   "why": "TMDB record is another show (Dennis the Menace and Gnasher, 1996)"
-  },
-  {
    "slug": "derren-brown-trick-or-treat",
    "name": "Derren Brown: Trick or Treat",
    "tmdbId": 14416,
@@ -4314,14 +4290,14 @@
   {
    "slug": "domino-day",
    "name": "Domino Day",
-   "tmdbId": 131695,
+   "tmdbId": 238128,
    "premiered": "2024-01-31",
    "playing": 6,
-   "votes": 0,
+   "votes": 20,
    "us": "",
-   "source": "https://www.themoviedb.org/tv/131695",
+   "source": "https://www.themoviedb.org/tv/238128",
    "band": "out",
-   "why": "TMDB record is another show (Domino Day, 1998)"
+   "why": "no official US rating on TMDB"
   },
   {
    "slug": "dont-forget-the-lyrics",
@@ -4422,14 +4398,14 @@
   {
    "slug": "dracula",
    "name": "Dracula",
-   "tmdbId": 86850,
+   "tmdbId": 58928,
    "premiered": "2013-10-25",
    "playing": 4,
-   "votes": 877,
+   "votes": 421,
    "us": "TV-14",
-   "source": "https://www.themoviedb.org/tv/86850",
-   "band": "out",
-   "why": "TMDB record is another show (Dracula, 2020)"
+   "source": "https://www.themoviedb.org/tv/58928",
+   "band": "after-dark",
+   "why": "US TV-14"
   },
   {
    "slug": "dragon-ball-daima",
@@ -4446,14 +4422,14 @@
   {
    "slug": "dragon-ball-super",
    "name": "Dragon Ball Super",
-   "tmdbId": 312359,
+   "tmdbId": 62715,
    "premiered": "2015-07-05",
    "playing": 19,
-   "votes": 426,
-   "us": "TV-PG",
-   "source": "https://www.themoviedb.org/tv/312359",
-   "band": "out",
-   "why": "TMDB record is another show (Dragon Ball Super: Beerus, 2026)"
+   "votes": 5422,
+   "us": "TV-14",
+   "source": "https://www.themoviedb.org/tv/62715",
+   "band": "after-dark",
+   "why": "US TV-14"
   },
   {
    "slug": "dragon-striker",
@@ -6054,14 +6030,14 @@
   {
    "slug": "gladiators",
    "name": "Gladiators",
-   "tmdbId": 2461,
+   "tmdbId": 19882,
    "premiered": "2024-01-13",
    "playing": 2,
-   "votes": 15,
+   "votes": 10,
    "us": "",
-   "source": "https://www.themoviedb.org/tv/2461",
+   "source": "https://www.themoviedb.org/tv/19882",
    "band": "out",
-   "why": "TMDB record is another show (Gladiators, 1992)"
+   "why": "no official US rating on TMDB"
   },
   {
    "slug": "god-in-america",
@@ -6222,14 +6198,14 @@
   {
    "slug": "grand",
    "name": "Grand",
-   "tmdbId": 81329,
+   "tmdbId": 10162,
    "premiered": "1990-01-18",
    "playing": 26,
-   "votes": 130,
-   "us": "NR",
-   "source": "https://www.themoviedb.org/tv/81329",
+   "votes": 3,
+   "us": "",
+   "source": "https://www.themoviedb.org/tv/10162",
    "band": "out",
-   "why": "TMDB record is another show (Chronicles of the Sun, 2018)"
+   "why": "no official US rating on TMDB"
   },
   {
    "slug": "grand-designs",
@@ -6822,14 +6798,14 @@
   {
    "slug": "hilda",
    "name": "Hilda",
-   "tmdbId": 72351,
+   "tmdbId": 82456,
    "premiered": "2018-09-21",
    "playing": 33,
-   "votes": 37,
-   "us": "",
-   "source": "https://www.themoviedb.org/tv/72351",
-   "band": "out",
-   "why": "TMDB record is another show (Hilda Hurricane, 1998)"
+   "votes": 258,
+   "us": "TV-Y7",
+   "source": "https://www.themoviedb.org/tv/82456",
+   "band": "family",
+   "why": "US TV-Y7"
   },
   {
    "slug": "hill-street-blues",
@@ -7242,14 +7218,14 @@
   {
    "slug": "hunter",
    "name": "Hunter",
-   "tmdbId": 46298,
+   "tmdbId": 4571,
    "premiered": "1984-09-18",
    "playing": 151,
-   "votes": 2276,
+   "votes": 108,
    "us": "TV-14",
-   "source": "https://www.themoviedb.org/tv/46298",
-   "band": "out",
-   "why": "TMDB record is another show (Hunter x Hunter, 2011)"
+   "source": "https://www.themoviedb.org/tv/4571",
+   "band": "after-dark",
+   "why": "US TV-14"
   },
   {
    "slug": "hyperion-bay",
@@ -7494,14 +7470,14 @@
   {
    "slug": "ink",
    "name": "Ink",
-   "tmdbId": 46286,
+   "tmdbId": 138,
    "premiered": "1996-10-21",
    "playing": 1,
-   "votes": 98,
-   "us": "TV-14",
-   "source": "https://www.themoviedb.org/tv/46286",
+   "votes": 3,
+   "us": "NR",
+   "source": "https://www.themoviedb.org/tv/138",
    "band": "out",
-   "why": "TMDB record is another show (Ink Master, 2012)"
+   "why": "rated NR (not rated) in the US"
   },
   {
    "slug": "insecurity",
@@ -7638,14 +7614,14 @@
   {
    "slug": "iron-chef",
    "name": "Iron Chef",
-   "tmdbId": 4360,
+   "tmdbId": 4594,
    "premiered": "1993-10-10",
    "playing": 6,
-   "votes": 21,
+   "votes": 26,
    "us": "TV-G",
-   "source": "https://www.themoviedb.org/tv/4360",
-   "band": "out",
-   "why": "TMDB record is another show (Iron Chef America, 2005)"
+   "source": "https://www.themoviedb.org/tv/4594",
+   "band": "family",
+   "why": "US TV-G"
   },
   {
    "slug": "it-takes-a-thief",
@@ -8082,14 +8058,14 @@
   {
    "slug": "kath-and-kim",
    "name": "Kath & Kim",
-   "tmdbId": 1772,
+   "tmdbId": 15131,
    "premiered": "2008-10-09",
    "playing": 7,
-   "votes": 27,
-   "us": "TV-MA",
-   "source": "https://www.themoviedb.org/tv/1772",
+   "votes": 9,
+   "us": "",
+   "source": "https://www.themoviedb.org/tv/15131",
    "band": "out",
-   "why": "TMDB record is another show (Kath & Kim, 2002)"
+   "why": "no official US rating on TMDB"
   },
   {
    "slug": "katie-and-orbie",
@@ -8190,14 +8166,14 @@
   {
    "slug": "kings",
    "name": "Kings",
-   "tmdbId": 51018,
+   "tmdbId": 7343,
    "premiered": "2009-03-15",
    "playing": 10,
-   "votes": 33,
-   "us": "",
-   "source": "https://www.themoviedb.org/tv/51018",
-   "band": "out",
-   "why": "TMDB record is another show (Kings, 2022)"
+   "votes": 77,
+   "us": "TV-14",
+   "source": "https://www.themoviedb.org/tv/7343",
+   "band": "after-dark",
+   "why": "US TV-14"
   },
   {
    "slug": "kirk",
@@ -8250,14 +8226,14 @@
   {
    "slug": "kojak",
    "name": "Kojak",
-   "tmdbId": 3572,
+   "tmdbId": 16374,
    "premiered": "2005-03-25",
    "playing": 4,
-   "votes": 160,
-   "us": "TV-PG",
-   "source": "https://www.themoviedb.org/tv/3572",
+   "votes": 7,
+   "us": "NR",
+   "source": "https://www.themoviedb.org/tv/16374",
    "band": "out",
-   "why": "TMDB record is another show (Kojak, 1973)"
+   "why": "rated NR (not rated) in the US"
   },
   {
    "slug": "komi-cant-communicate",
@@ -8610,14 +8586,14 @@
   {
    "slug": "lightning",
    "name": "Lightning",
-   "tmdbId": 71663,
+   "tmdbId": 244886,
    "premiered": "2021-01-25",
    "playing": 1,
-   "votes": 995,
-   "us": "TV-14",
-   "source": "https://www.themoviedb.org/tv/71663",
+   "votes": 0,
+   "us": "",
+   "source": "https://www.themoviedb.org/tv/244886",
    "band": "out",
-   "why": "TMDB record is another show (Black Lightning, 2018)"
+   "why": "no official US rating on TMDB"
   },
   {
    "slug": "lil-bush",
@@ -8886,14 +8862,14 @@
   {
    "slug": "mad",
    "name": "MAD",
-   "tmdbId": 1104,
+   "tmdbId": 33428,
    "premiered": "2010-09-06",
    "playing": 102,
-   "votes": 1653,
-   "us": "TV-14",
-   "source": "https://www.themoviedb.org/tv/1104",
-   "band": "out",
-   "why": "TMDB record is another show (Mad Men, 2007)"
+   "votes": 274,
+   "us": "TV-PG",
+   "source": "https://www.themoviedb.org/tv/33428",
+   "band": "family",
+   "why": "US TV-PG"
   },
   {
    "slug": "mad-about-you",
@@ -9150,14 +9126,14 @@
   {
    "slug": "married",
    "name": "Married",
-   "tmdbId": 4239,
+   "tmdbId": 60782,
    "premiered": "2014-07-17",
    "playing": 3,
-   "votes": 1300,
-   "us": "TV-PG",
-   "source": "https://www.themoviedb.org/tv/4239",
-   "band": "out",
-   "why": "TMDB record is another show (Married... with Children, 1987)"
+   "votes": 37,
+   "us": "TV-MA",
+   "source": "https://www.themoviedb.org/tv/60782",
+   "band": "after-dark",
+   "why": "US TV-MA"
   },
   {
    "slug": "married-with-children",
@@ -9270,14 +9246,14 @@
   {
    "slug": "mayday",
    "name": "Mayday",
-   "tmdbId": 90,
+   "tmdbId": 46898,
    "premiered": null,
    "playing": 3,
-   "votes": 297,
-   "us": "TV-14",
-   "source": "https://www.themoviedb.org/tv/90",
-   "band": "after-dark",
-   "why": "US TV-14"
+   "votes": 24,
+   "us": "",
+   "source": "https://www.themoviedb.org/tv/46898",
+   "band": "out",
+   "why": "no official US rating on TMDB"
   },
   {
    "slug": "mckenna",
@@ -9482,18 +9458,6 @@
    "source": "https://www.themoviedb.org/tv/19138",
    "band": "out",
    "why": "no official US rating on TMDB"
-  },
-  {
-   "slug": "michael-every-day",
-   "name": "Michael: Every Day",
-   "tmdbId": 136332,
-   "premiered": "2011-09-14",
-   "playing": 6,
-   "votes": 1,
-   "us": "",
-   "source": "https://www.themoviedb.org/tv/136332",
-   "band": "out",
-   "why": "TMDB record is another show (Michael: Every Day, 2017)"
   },
   {
    "slug": "midnight-patrol-adventures-in-the-dream-zone",
@@ -10134,14 +10098,14 @@
   {
    "slug": "my-brother-and-me",
    "name": "My Brother and Me",
-   "tmdbId": 70305,
+   "tmdbId": 5250,
    "premiered": "1994-10-15",
    "playing": 6,
    "votes": 6,
-   "us": "TV-MA",
-   "source": "https://www.themoviedb.org/tv/70305",
+   "us": "",
+   "source": "https://www.themoviedb.org/tv/5250",
    "band": "out",
-   "why": "TMDB record is another show (My Brother, My Brother and Me, 2017)"
+   "why": "no official US rating on TMDB"
   },
   {
    "slug": "my-dad-says",
@@ -10158,14 +10122,14 @@
   {
    "slug": "my-hero-academia",
    "name": "My Hero Academia",
-   "tmdbId": 280110,
+   "tmdbId": 65930,
    "premiered": "2016-04-03",
    "playing": 1,
-   "votes": 97,
+   "votes": 5441,
    "us": "TV-14",
-   "source": "https://www.themoviedb.org/tv/280110",
-   "band": "out",
-   "why": "TMDB record is another show (My Hero Academia: Vigilantes, 2025)"
+   "source": "https://www.themoviedb.org/tv/65930",
+   "band": "after-dark",
+   "why": "US TV-14"
   },
   {
    "slug": "my-left-nut",
@@ -10446,14 +10410,14 @@
   {
    "slug": "next-of-kin",
    "name": "Next of Kin",
-   "tmdbId": 76179,
+   "tmdbId": 5635,
    "premiered": "1995-05-15",
    "playing": 21,
-   "votes": 17,
-   "us": "TV-MA",
-   "source": "https://www.themoviedb.org/tv/76179",
+   "votes": 3,
+   "us": "NR",
+   "source": "https://www.themoviedb.org/tv/5635",
    "band": "out",
-   "why": "TMDB record is another show (Next of Kin, 2018)"
+   "why": "rated NR (not rated) in the US"
   },
   {
    "slug": "nick-freno-licensed-teacher",
@@ -10842,14 +10806,14 @@
   {
    "slug": "one-piece",
    "name": "ONE PIECE",
-   "tmdbId": 37854,
+   "tmdbId": 111110,
    "premiered": "2023-08-31",
    "playing": 8,
-   "votes": 5661,
+   "votes": 2002,
    "us": "TV-14",
-   "source": "https://www.themoviedb.org/tv/37854",
-   "band": "out",
-   "why": "TMDB record is another show (One Piece, 1999)"
+   "source": "https://www.themoviedb.org/tv/111110",
+   "band": "after-dark",
+   "why": "US TV-14"
   },
   {
    "slug": "one-west-waikiki",
@@ -10962,14 +10926,14 @@
   {
    "slug": "outlaws",
    "name": "Outlaws",
-   "tmdbId": 8270,
+   "tmdbId": 4100,
    "premiered": "1986-12-28",
    "playing": 11,
-   "votes": 3,
+   "votes": 7,
    "us": "",
-   "source": "https://www.themoviedb.org/tv/8270",
+   "source": "https://www.themoviedb.org/tv/4100",
    "band": "out",
-   "why": "TMDB record is another show (Outlaws, 1960)"
+   "why": "no official US rating on TMDB"
   },
   {
    "slug": "outside-edge",
@@ -11082,14 +11046,14 @@
   {
    "slug": "paradise-city",
    "name": "Paradise City",
-   "tmdbId": 117926,
+   "tmdbId": 5768,
    "premiered": "2021-03-25",
    "playing": 8,
-   "votes": 6,
-   "us": "TV-PG",
-   "source": "https://www.themoviedb.org/tv/117926",
+   "votes": 167,
+   "us": "",
+   "source": "https://www.themoviedb.org/tv/5768",
    "band": "out",
-   "why": "TMDB record is another show (Paradise City, 2009)"
+   "why": "no official US rating on TMDB"
   },
   {
    "slug": "paradise-hotel",
@@ -11190,14 +11154,14 @@
   {
    "slug": "payne",
    "name": "Payne",
-   "tmdbId": 3690,
+   "tmdbId": 3164,
    "premiered": "1999-03-15",
    "playing": 8,
-   "votes": 67,
+   "votes": 2,
    "us": "TV-PG",
-   "source": "https://www.themoviedb.org/tv/3690",
-   "band": "out",
-   "why": "TMDB record is another show (Tyler Perry's House of Payne, 2007)"
+   "source": "https://www.themoviedb.org/tv/3164",
+   "band": "family",
+   "why": "US TV-PG"
   },
   {
    "slug": "peaky-blinders",
@@ -11454,14 +11418,14 @@
   {
    "slug": "plastic-man",
    "name": "Plastic Man",
-   "tmdbId": 293546,
+   "tmdbId": 10731,
    "premiered": "1979-09-22",
    "playing": 16,
-   "votes": 2,
-   "us": "TV-Y7",
-   "source": "https://www.themoviedb.org/tv/293546",
+   "votes": 20,
+   "us": "",
+   "source": "https://www.themoviedb.org/tv/10731",
    "band": "out",
-   "why": "TMDB record is another show (Plastic Man, 2012)"
+   "why": "no official US rating on TMDB"
   },
   {
    "slug": "playboy-after-dark",
@@ -11682,14 +11646,14 @@
   {
    "slug": "press-your-luck",
    "name": "Press Your Luck",
-   "tmdbId": 3784,
+   "tmdbId": 90266,
    "premiered": "2019-06-11",
    "playing": 7,
-   "votes": 13,
-   "us": "TV-G",
-   "source": "https://www.themoviedb.org/tv/3784",
-   "band": "out",
-   "why": "TMDB record is another show (Press Your Luck, 1983)"
+   "votes": 9,
+   "us": "TV-PG",
+   "source": "https://www.themoviedb.org/tv/90266",
+   "band": "family",
+   "why": "US TV-PG"
   },
   {
    "slug": "pride-and-prejudice",
@@ -11730,14 +11694,14 @@
   {
    "slug": "profit",
    "name": "Profit",
-   "tmdbId": 62674,
+   "tmdbId": 623,
    "premiered": "1996-04-08",
    "playing": 7,
-   "votes": 32,
-   "us": "TV-PG",
-   "source": "https://www.themoviedb.org/tv/62674",
+   "votes": 26,
+   "us": "",
+   "source": "https://www.themoviedb.org/tv/623",
    "band": "out",
-   "why": "TMDB record is another show (The Profit, 2013)"
+   "why": "no official US rating on TMDB"
   },
   {
    "slug": "project-greenlight",
@@ -11826,14 +11790,14 @@
   {
    "slug": "public-morals",
    "name": "Public Morals",
-   "tmdbId": 7868,
+   "tmdbId": 63464,
    "premiered": "2015-08-25",
    "playing": 3,
-   "votes": 2,
+   "votes": 19,
    "us": "",
-   "source": "https://www.themoviedb.org/tv/7868",
+   "source": "https://www.themoviedb.org/tv/63464",
    "band": "out",
-   "why": "TMDB record is another show (Public Morals, 1996)"
+   "why": "no official US rating on TMDB"
   },
   {
    "slug": "pulling",
@@ -12234,14 +12198,14 @@
   {
    "slug": "resurrection",
    "name": "Resurrection",
-   "tmdbId": 259909,
+   "tmdbId": 51370,
    "premiered": "2014-03-09",
    "playing": 1,
-   "votes": 770,
-   "us": "TV-MA",
-   "source": "https://www.themoviedb.org/tv/259909",
-   "band": "out",
-   "why": "TMDB record is another show (Dexter: Resurrection, 2025)"
+   "votes": 325,
+   "us": "TV-14",
+   "source": "https://www.themoviedb.org/tv/51370",
+   "band": "after-dark",
+   "why": "US TV-14"
   },
   {
    "slug": "revenge-of-others",
@@ -12282,14 +12246,14 @@
   {
    "slug": "rich-girls",
    "name": "Rich Girls",
-   "tmdbId": 28825,
+   "tmdbId": 12264,
    "premiered": "2003-10-28",
    "playing": 1,
-   "votes": 2,
+   "votes": 1,
    "us": "",
-   "source": "https://www.themoviedb.org/tv/28825",
+   "source": "https://www.themoviedb.org/tv/12264",
    "band": "out",
-   "why": "TMDB record is another show (Poor Little Rich Girls, 1984)"
+   "why": "no official US rating on TMDB"
   },
   {
    "slug": "rik-mayall-presents",
@@ -12318,14 +12282,14 @@
   {
    "slug": "riverboat",
    "name": "Riverboat",
-   "tmdbId": 91185,
+   "tmdbId": 14105,
    "premiered": "1959-09-13",
    "playing": 2,
-   "votes": 4,
-   "us": "NR",
-   "source": "https://www.themoviedb.org/tv/91185",
-   "band": "out",
-   "why": "TMDB record is another show (Riverboat, 1992)"
+   "votes": 6,
+   "us": "TV-PG",
+   "source": "https://www.themoviedb.org/tv/14105",
+   "band": "family",
+   "why": "US TV-PG"
   },
   {
    "slug": "road-rovers",
@@ -12438,14 +12402,14 @@
   {
    "slug": "room-101",
    "name": "Room 101",
-   "tmdbId": 2470,
+   "tmdbId": 55775,
    "premiered": "2012-01-20",
    "playing": 1,
-   "votes": 27,
+   "votes": 0,
    "us": "",
-   "source": "https://www.themoviedb.org/tv/2470",
+   "source": "https://www.themoviedb.org/tv/55775",
    "band": "out",
-   "why": "TMDB record is another show (Room 101, 1994)"
+   "why": "no official US rating on TMDB"
   },
   {
    "slug": "roommates",
@@ -12678,14 +12642,14 @@
   {
    "slug": "saturdays",
    "name": "Saturdays",
-   "tmdbId": 14636,
+   "tmdbId": 216766,
    "premiered": "2023-03-25",
    "playing": 13,
-   "votes": 64,
-   "us": "TV-Y7",
-   "source": "https://www.themoviedb.org/tv/14636",
-   "band": "out",
-   "why": "TMDB record is another show (The Secret Saturdays, 2008)"
+   "votes": 4,
+   "us": "TV-G",
+   "source": "https://www.themoviedb.org/tv/216766",
+   "band": "family",
+   "why": "US TV-G"
   },
   {
    "slug": "saul-of-the-mole-men",
@@ -12820,18 +12784,6 @@
    "why": "no official US rating on TMDB"
   },
   {
-   "slug": "sctv",
-   "name": "SCTV",
-   "tmdbId": 303914,
-   "premiered": "1976-09-21",
-   "playing": 74,
-   "votes": 7,
-   "us": "TV-PG",
-   "source": "https://www.themoviedb.org/tv/303914",
-   "band": "out",
-   "why": "TMDB record is another show (SCTV Network 90, 1981)"
-  },
-  {
    "slug": "sea-of-souls",
    "name": "Sea of Souls",
    "tmdbId": 14358,
@@ -12954,14 +12906,14 @@
   {
    "slug": "shaman-king",
    "name": "Shaman King",
-   "tmdbId": 104699,
+   "tmdbId": 40143,
    "premiered": "2001-07-04",
    "playing": 62,
-   "votes": 321,
-   "us": "TV-14",
-   "source": "https://www.themoviedb.org/tv/104699",
-   "band": "out",
-   "why": "TMDB record is another show (SHAMAN KING, 2021)"
+   "votes": 459,
+   "us": "TV-Y7",
+   "source": "https://www.themoviedb.org/tv/40143",
+   "band": "family",
+   "why": "US TV-Y7"
   },
   {
    "slug": "shameless",
@@ -13470,14 +13422,14 @@
   {
    "slug": "soul-man",
    "name": "Soul Man",
-   "tmdbId": 42992,
+   "tmdbId": 31974,
    "premiered": "1997-04-15",
    "playing": 13,
-   "votes": 11,
+   "votes": 5,
    "us": "TV-PG",
-   "source": "https://www.themoviedb.org/tv/42992",
-   "band": "out",
-   "why": "TMDB record is another show (The Soul Man, 2012)"
+   "source": "https://www.themoviedb.org/tv/31974",
+   "band": "family",
+   "why": "US TV-PG"
   },
   {
    "slug": "soul-train",
@@ -14346,14 +14298,14 @@
   {
    "slug": "sydney",
    "name": "Sydney",
-   "tmdbId": 157950,
+   "tmdbId": 17227,
    "premiered": "1990-03-12",
    "playing": 13,
-   "votes": 77,
-   "us": "TV-14",
-   "source": "https://www.themoviedb.org/tv/157950",
+   "votes": 5,
+   "us": "",
+   "source": "https://www.themoviedb.org/tv/17227",
    "band": "out",
-   "why": "TMDB record is another show (NCIS: Sydney, 2023)"
+   "why": "no official US rating on TMDB"
   },
   {
    "slug": "tabatha-takes-over",
@@ -14478,14 +14430,14 @@
   {
    "slug": "ted",
    "name": "ted",
-   "tmdbId": 97546,
+   "tmdbId": 201834,
    "premiered": "2024-01-11",
    "playing": 14,
-   "votes": 2873,
+   "votes": 788,
    "us": "TV-MA",
-   "source": "https://www.themoviedb.org/tv/97546",
-   "band": "out",
-   "why": "TMDB record is another show (Ted Lasso, 2020)"
+   "source": "https://www.themoviedb.org/tv/201834",
+   "band": "after-dark",
+   "why": "US TV-MA"
   },
   {
    "slug": "teenage-mutant-ninja-turtles",
@@ -14598,14 +14550,14 @@
   {
    "slug": "thats-life",
    "name": "That's Life",
-   "tmdbId": 6078,
+   "tmdbId": 5187,
    "premiered": "2000-10-01",
    "playing": 2,
-   "votes": 2,
-   "us": "",
-   "source": "https://www.themoviedb.org/tv/6078",
-   "band": "out",
-   "why": "TMDB record is another show (That's Life!, 1973)"
+   "votes": 3,
+   "us": "TV-14",
+   "source": "https://www.themoviedb.org/tv/5187",
+   "band": "after-dark",
+   "why": "US TV-14"
   },
   {
    "slug": "thats-my-bush",
@@ -14706,14 +14658,14 @@
   {
    "slug": "the-adventures-of-rocky-and-bullwinkle",
    "name": "The Adventures of Rocky and Bullwinkle",
-   "tmdbId": 291071,
+   "tmdbId": 79371,
    "premiered": "2018-05-11",
    "playing": 13,
-   "votes": 3,
-   "us": "",
-   "source": "https://www.themoviedb.org/tv/291071",
-   "band": "out",
-   "why": "TMDB record is another show (The Adventures of Rocky and Bullwinkle and Friends, 1959)"
+   "votes": 4,
+   "us": "TV-Y7",
+   "source": "https://www.themoviedb.org/tv/79371",
+   "band": "family",
+   "why": "US TV-Y7"
   },
   {
    "slug": "the-affair-was-just-the-beginning",
@@ -15078,14 +15030,14 @@
   {
    "slug": "the-chronicle",
    "name": "The Chronicle",
-   "tmdbId": 120781,
+   "tmdbId": 2137,
    "premiered": "2001-07-14",
    "playing": 20,
-   "votes": 5,
+   "votes": 6,
    "us": "",
-   "source": "https://www.themoviedb.org/tv/120781",
+   "source": "https://www.themoviedb.org/tv/2137",
    "band": "out",
-   "why": "TMDB record is another show (Ultraman Zero: The Chronicle, 2017)"
+   "why": "no official US rating on TMDB"
   },
   {
    "slug": "the-class",
@@ -15102,14 +15054,14 @@
   {
    "slug": "the-client",
    "name": "The Client",
-   "tmdbId": 40244,
+   "tmdbId": 29600,
    "premiered": "1995-09-17",
    "playing": 1,
-   "votes": 165,
-   "us": "TV-14",
-   "source": "https://www.themoviedb.org/tv/40244",
+   "votes": 7,
+   "us": "NR",
+   "source": "https://www.themoviedb.org/tv/29600",
    "band": "out",
-   "why": "TMDB record is another show (The Client List, 2012)"
+   "why": "rated NR (not rated) in the US"
   },
   {
    "slug": "the-colgate-comedy-hour",
@@ -15726,14 +15678,14 @@
   {
    "slug": "the-invisible-man",
    "name": "The Invisible Man",
-   "tmdbId": 4735,
+   "tmdbId": 11490,
    "premiered": "1975-05-06",
    "playing": 12,
-   "votes": 58,
+   "votes": 28,
    "us": "TV-PG",
-   "source": "https://www.themoviedb.org/tv/4735",
-   "band": "out",
-   "why": "TMDB record is another show (The Invisible Man, 2000)"
+   "source": "https://www.themoviedb.org/tv/11490",
+   "band": "family",
+   "why": "US TV-PG"
   },
   {
    "slug": "the-irish-in-america-long-journey-home",
@@ -16482,14 +16434,14 @@
   {
    "slug": "the-paradise",
    "name": "The Paradise",
-   "tmdbId": 73362,
+   "tmdbId": 59674,
    "premiered": "2012-09-25",
    "playing": 16,
-   "votes": 16,
-   "us": "NR",
-   "source": "https://www.themoviedb.org/tv/73362",
-   "band": "out",
-   "why": "TMDB record is another show (The Ladies' Paradise, 2015)"
+   "votes": 90,
+   "us": "TV-PG",
+   "source": "https://www.themoviedb.org/tv/59674",
+   "band": "family",
+   "why": "US TV-PG"
   },
   {
    "slug": "the-peter-serafinowicz-show",
@@ -16578,14 +16530,14 @@
   {
    "slug": "the-planets",
    "name": "The Planets",
-   "tmdbId": 4695,
+   "tmdbId": 6335,
    "premiered": "1999-04-29",
    "playing": 1,
-   "votes": 57,
-   "us": "",
-   "source": "https://www.themoviedb.org/tv/4695",
-   "band": "out",
-   "why": "TMDB record is another show (Battle of the Planets, 1978)"
+   "votes": 25,
+   "us": "TV-G",
+   "source": "https://www.themoviedb.org/tv/6335",
+   "band": "family",
+   "why": "US TV-G"
   },
   {
    "slug": "the-playboy-club",
@@ -16686,14 +16638,14 @@
   {
    "slug": "the-prisoner",
    "name": "The Prisoner",
-   "tmdbId": 894,
+   "tmdbId": 31319,
    "premiered": "2009-11-15",
    "playing": 6,
-   "votes": 225,
+   "votes": 105,
    "us": "TV-PG",
-   "source": "https://www.themoviedb.org/tv/894",
-   "band": "out",
-   "why": "TMDB record is another show (The Prisoner, 1967)"
+   "source": "https://www.themoviedb.org/tv/31319",
+   "band": "family",
+   "why": "US TV-PG"
   },
   {
    "slug": "the-private-life-of-plants",
@@ -17046,14 +16998,14 @@
   {
    "slug": "the-slap",
    "name": "The Slap",
-   "tmdbId": 61816,
+   "tmdbId": 40015,
    "premiered": "2011-10-06",
    "playing": 8,
-   "votes": 35,
-   "us": "TV-14",
-   "source": "https://www.themoviedb.org/tv/61816",
+   "votes": 41,
+   "us": "",
+   "source": "https://www.themoviedb.org/tv/40015",
    "band": "out",
-   "why": "TMDB record is another show (The Slap, 2015)"
+   "why": "no official US rating on TMDB"
   },
   {
    "slug": "the-smell-of-reeves-and-mortimer",
@@ -17166,12 +17118,12 @@
   {
    "slug": "the-tom-green-show",
    "name": "The Tom Green Show",
-   "tmdbId": 22271,
+   "tmdbId": 9826,
    "premiered": null,
    "playing": 12,
-   "votes": 4,
+   "votes": 16,
    "us": "",
-   "source": "https://www.themoviedb.org/tv/22271",
+   "source": "https://www.themoviedb.org/tv/9826",
    "band": "out",
    "why": "no official US rating on TMDB"
   },
@@ -17214,14 +17166,14 @@
   {
    "slug": "the-trials-of-life",
    "name": "The Trials of Life",
-   "tmdbId": 113282,
+   "tmdbId": 9552,
    "premiered": "1990-10-04",
    "playing": 12,
-   "votes": 3,
+   "votes": 24,
    "us": "",
-   "source": "https://www.themoviedb.org/tv/113282",
+   "source": "https://www.themoviedb.org/tv/9552",
    "band": "out",
-   "why": "TMDB record is another show (The Life and Trials of Oscar Pistorius, 2020)"
+   "why": "no official US rating on TMDB"
   },
   {
    "slug": "the-troop",
@@ -17454,14 +17406,14 @@
   {
    "slug": "the-wonderful-world-of-disney",
    "name": "The Wonderful World of Disney",
-   "tmdbId": 23936,
+   "tmdbId": 4231,
    "premiered": "1954-10-27",
    "playing": 154,
-   "votes": 29,
-   "us": "",
-   "source": "https://www.themoviedb.org/tv/23936",
+   "votes": 38,
+   "us": "NR",
+   "source": "https://www.themoviedb.org/tv/4231",
    "band": "out",
-   "why": "TMDB record is another show (The Wonderful World of Disney, 1997)"
+   "why": "rated NR (not rated) in the US"
   },
   {
    "slug": "the-world-according-to-jeff-goldblum",
@@ -17646,14 +17598,14 @@
   {
    "slug": "three",
    "name": "Three",
-   "tmdbId": 48450,
+   "tmdbId": 12689,
    "premiered": "1998-02-02",
    "playing": 8,
-   "votes": 6,
-   "us": "NR",
-   "source": "https://www.themoviedb.org/tv/48450",
+   "votes": 2,
+   "us": "",
+   "source": "https://www.themoviedb.org/tv/12689",
    "band": "out",
-   "why": "TMDB record is another show (3 nach 9, 1974)"
+   "why": "no official US rating on TMDB"
   },
   {
    "slug": "threshold",
@@ -17898,14 +17850,14 @@
   {
    "slug": "together",
    "name": "Together",
-   "tmdbId": 4336,
+   "tmdbId": 64157,
    "premiered": null,
    "playing": 6,
-   "votes": 1387,
-   "us": "TV-MA",
-   "source": "https://www.themoviedb.org/tv/4336",
-   "band": "after-dark",
-   "why": "US TV-MA"
+   "votes": 7,
+   "us": "",
+   "source": "https://www.themoviedb.org/tv/64157",
+   "band": "out",
+   "why": "no official US rating on TMDB"
   },
   {
    "slug": "tokyo-revengers",
@@ -18018,14 +17970,14 @@
   {
    "slug": "total-drama-island",
    "name": "Total Drama Island",
-   "tmdbId": 6618,
+   "tmdbId": 224285,
    "premiered": "2023-04-10",
    "playing": 13,
-   "votes": 294,
-   "us": "TV-PG",
-   "source": "https://www.themoviedb.org/tv/6618",
+   "votes": 38,
+   "us": "",
+   "source": "https://www.themoviedb.org/tv/224285",
    "band": "out",
-   "why": "TMDB record is another show (Total Drama Island, 2007)"
+   "why": "no official US rating on TMDB"
   },
   {
    "slug": "touching-evil",
@@ -18102,14 +18054,14 @@
   {
    "slug": "tribeca",
    "name": "TriBeCa",
-   "tmdbId": 61969,
+   "tmdbId": 13090,
    "premiered": "1993-03-23",
    "playing": 7,
-   "votes": 154,
-   "us": "TV-14",
-   "source": "https://www.themoviedb.org/tv/61969",
+   "votes": 2,
+   "us": "",
+   "source": "https://www.themoviedb.org/tv/13090",
    "band": "out",
-   "why": "TMDB record is another show (Angie Tribeca, 2016)"
+   "why": "no official US rating on TMDB"
   },
   {
    "slug": "trigger-happy-tv",
@@ -18126,14 +18078,14 @@
   {
    "slug": "trl",
    "name": "TRL",
-   "tmdbId": 26834,
+   "tmdbId": 2960,
    "premiered": "2002-03-06",
    "playing": 1,
-   "votes": 16,
+   "votes": 0,
    "us": "",
-   "source": "https://www.themoviedb.org/tv/26834",
+   "source": "https://www.themoviedb.org/tv/2960",
    "band": "out",
-   "why": "TMDB record is another show (TRL, 1998)"
+   "why": "no official US rating on TMDB"
   },
   {
    "slug": "trollhunters-tales-of-arcadia",
@@ -18282,14 +18234,14 @@
   {
    "slug": "ultraviolet",
    "name": "Ultraviolet",
-   "tmdbId": 76386,
+   "tmdbId": 232,
    "premiered": "1998-09-15",
    "playing": 6,
-   "votes": 23,
-   "us": "TV-MA",
-   "source": "https://www.themoviedb.org/tv/76386",
+   "votes": 36,
+   "us": "",
+   "source": "https://www.themoviedb.org/tv/232",
    "band": "out",
-   "why": "TMDB record is another show (Ultraviolet, 2017)"
+   "why": "no official US rating on TMDB"
   },
   {
    "slug": "uncle-grandpa",
@@ -18318,14 +18270,14 @@
   {
    "slug": "under-one-roof",
    "name": "Under One Roof",
-   "tmdbId": 9114,
+   "tmdbId": 10137,
    "premiered": "1995-03-14",
    "playing": 3,
-   "votes": 11,
+   "votes": 1,
    "us": "",
-   "source": "https://www.themoviedb.org/tv/9114",
+   "source": "https://www.themoviedb.org/tv/10137",
    "band": "out",
-   "why": "TMDB record is another show (Under One Roof, 1993)"
+   "why": "no official US rating on TMDB"
   },
   {
    "slug": "under-suspicion",
@@ -18506,18 +18458,6 @@
    "source": "https://www.themoviedb.org/tv/603",
    "band": "family",
    "why": "US TV-PG"
-  },
-  {
-   "slug": "vh1-storytellers",
-   "name": "VH1 Storytellers",
-   "tmdbId": 6478,
-   "premiered": "1996-02-20",
-   "playing": 4,
-   "votes": 4,
-   "us": "TV-PG",
-   "source": "https://www.themoviedb.org/tv/6478",
-   "band": "out",
-   "why": "TMDB record is another show (VH1 Storytellers, 2005)"
   },
   {
    "slug": "vicious",
@@ -19050,14 +18990,14 @@
   {
    "slug": "who-wants-to-be-a-millionaire",
    "name": "Who Wants to Be a Millionaire?",
-   "tmdbId": 2225,
+   "tmdbId": 305938,
    "premiered": "2002-09-16",
    "playing": 1,
-   "votes": 44,
-   "us": "TV-G",
-   "source": "https://www.themoviedb.org/tv/2225",
+   "votes": 6,
+   "us": "",
+   "source": "https://www.themoviedb.org/tv/305938",
    "band": "out",
-   "why": "TMDB record is another show (Who Wants to Be a Millionaire?, 1999)"
+   "why": "no official US rating on TMDB"
   },
   {
    "slug": "whose-line-is-it-anyway",
@@ -19074,14 +19014,14 @@
   {
    "slug": "widows",
    "name": "Widows",
-   "tmdbId": 270476,
+   "tmdbId": 3361,
    "premiered": "1983-03-16",
    "playing": 12,
-   "votes": 612,
-   "us": "TV-MA",
-   "source": "https://www.themoviedb.org/tv/270476",
+   "votes": 8,
+   "us": "",
+   "source": "https://www.themoviedb.org/tv/3361",
    "band": "out",
-   "why": "TMDB record is another show (Widow's Bay, 2026)"
+   "why": "no official US rating on TMDB"
   },
   {
    "slug": "wild-kratts",

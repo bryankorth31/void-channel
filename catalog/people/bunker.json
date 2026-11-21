@@ -1,584 +1,212 @@
 {
  "show": "Bunker",
  "slug": "bunker",
- "tmdbId": 245648,
+ "tmdbId": 124791,
  "cast": [
   {
-   "id": 4520353,
-   "name": "Pau Simon",
+   "id": 52745,
+   "name": "Bruno Bichir",
+   "photo": "https://image.tmdb.org/t/p/w185/af6MbUchuOv9bPh080cF7Awqxi7.jpg",
+   "character": "Vladimiro",
+   "episodes": 8
+  },
+  {
+   "id": 133762,
+   "name": "Miguel Rodarte",
+   "photo": "https://image.tmdb.org/t/p/w185/uEg6DB5dlukpfp0cpOheYR1ChpD.jpg",
+   "character": "Napoleón",
+   "episodes": 8
+  },
+  {
+   "id": 976202,
+   "name": "Claudette Maillé",
+   "photo": "https://image.tmdb.org/t/p/w185/jmERdJIsYqkFqTIh5MbtD0CRoyF.jpg",
+   "character": "Amparo",
+   "episodes": 8
+  },
+  {
+   "id": 562279,
+   "name": "Liz Gallardo",
+   "photo": "https://image.tmdb.org/t/p/w185/pfVzRK4ILlMLwcoq8MQwLlcToTa.jpg",
+   "character": "Maya",
+   "episodes": 8
+  },
+  {
+   "id": 1018057,
+   "name": "Ricardo Polanco",
+   "photo": "https://image.tmdb.org/t/p/w185/8m9hJQa8rIdrJ6qn4OMlJgHnSwv.jpg",
+   "character": "Casper",
+   "episodes": 8
+  },
+  {
+   "id": 2164559,
+   "name": "Gisselle Kuri",
+   "photo": "https://image.tmdb.org/t/p/w185/imjkbVF8wQwSsVJo9eQueJlU5xf.jpg",
+   "character": "Bruna",
+   "episodes": 8
+  },
+  {
+   "id": 1243464,
+   "name": "Jesús Zavala",
+   "photo": "https://image.tmdb.org/t/p/w185/HSniatMJvkYkIKwnJQtrEM12DI.jpg",
+   "character": "Osiris",
+   "episodes": 8
+  },
+  {
+   "id": 2165706,
+   "name": "Victor Oliveira",
    "photo": null,
-   "character": "Max",
+   "character": "Oleg",
    "episodes": 8
   },
   {
-   "id": 1210310,
-   "name": "Alícia Falcó",
-   "photo": "https://image.tmdb.org/t/p/w185/wu2O2SQaNTB15bj1xvRKErCGkls.jpg",
-   "character": "Asia",
+   "id": 1413394,
+   "name": "Adrián Vázquez",
+   "photo": "https://image.tmdb.org/t/p/w185/cyhuSSuFA6DYKG3eI9w6VxPaUrs.jpg",
+   "character": "El Costra",
    "episodes": 8
   },
   {
-   "id": 560247,
-   "name": "Miren Ibarguren",
-   "photo": "https://image.tmdb.org/t/p/w185/ndusbJn7YggtKhz37dIla81c72p.jpg",
-   "character": "Minerva",
-   "episodes": 8
-  },
-  {
-   "id": 1077146,
-   "name": "Joaquín Furriel",
-   "photo": "https://image.tmdb.org/t/p/w185/nCEfia5gvBmuJHOMnXM7vhq01lg.jpg",
-   "character": "Guillermo",
-   "episodes": 8
-  },
-  {
-   "id": 27461,
-   "name": "Natalia Verbeke",
-   "photo": "https://image.tmdb.org/t/p/w185/szL5HDE6s1mmGyuLBxcvTiMYZnA.jpg",
-   "character": "Frida",
-   "episodes": 8
-  },
-  {
-   "id": 1050908,
-   "name": "Carlos Santos",
-   "photo": "https://image.tmdb.org/t/p/w185/pmTSpDOL3C1cH1ZKwVFp1Y041jd.jpg",
-   "character": "Rafa",
-   "episodes": 8
-  },
-  {
-   "id": 1462111,
-   "name": "Montse Guallar",
-   "photo": "https://image.tmdb.org/t/p/w185/ngsTinFxECBGTgzHY4Z86Ymnw5Y.jpg",
-   "character": "Victoria",
-   "episodes": 8
-  },
-  {
-   "id": 4520356,
-   "name": "Agustina Bisio",
-   "photo": "https://image.tmdb.org/t/p/w185/tMHDz04hxFSAlcjypIslynUOhFJ.jpg",
-   "character": "Mimi",
-   "episodes": 8
-  },
-  {
-   "id": 2398102,
-   "name": "Álex Villazán",
-   "photo": "https://image.tmdb.org/t/p/w185/x819gdlvjuK9Bp00VpXyKJ7WyFP.jpg",
-   "character": "Ciro",
-   "episodes": 8
-  },
-  {
-   "id": 1778361,
-   "name": "Alicia Fernández",
-   "photo": "https://image.tmdb.org/t/p/w185/aFPJXBBksyBJrsU9d7eQtskA3kX.jpg",
-   "character": "Julia Baldini",
-   "episodes": 8
-  },
-  {
-   "id": 2415172,
-   "name": "Omar Banana",
-   "photo": "https://image.tmdb.org/t/p/w185/jfZaw1IqOi4ovhMxjIdBGHEypgG.jpg",
-   "character": "Tirso",
-   "episodes": 8
-  },
-  {
-   "id": 1442192,
-   "name": "Vito Sanz",
-   "photo": "https://image.tmdb.org/t/p/w185/yPgr3fd3PjekcMWCv77fLCKOgm8.jpg",
-   "character": "Nano Parker",
-   "episodes": 8
-  },
-  {
-   "id": 2424427,
-   "name": "Miguel Garcés",
-   "photo": "https://image.tmdb.org/t/p/w185/ki6tfBiG85CVKjNS0Er3SNcz5JU.jpg",
-   "character": "García",
-   "episodes": 8
-  },
-  {
-   "id": 3786218,
-   "name": "Alvise Rigo",
-   "photo": "https://image.tmdb.org/t/p/w185/qwlBBDhDwbDl3lfn1mCGsMvpJJp.jpg",
-   "character": "Luca Solatore",
-   "episodes": 8
-  },
-  {
-   "id": 3014978,
-   "name": "Almudena Salort",
-   "photo": "https://image.tmdb.org/t/p/w185/uOzklEnqc9mSVhYNybKQ5TzBmYb.jpg",
-   "character": "Cindy",
-   "episodes": 8
-  },
-  {
-   "id": 2773674,
-   "name": "Jason Fernández",
-   "photo": "https://image.tmdb.org/t/p/w185/2H0dju0IeGOkLXa9W4YyM416brY.jpg",
-   "character": "Jaco",
-   "episodes": 8
-  },
-  {
-   "id": 114463,
-   "name": "Michelle Jenner",
-   "photo": "https://image.tmdb.org/t/p/w185/g3JyHqwBcV7g1ds3dHtWkDXyXqb.jpg",
-   "character": "Roxan",
-   "episodes": 8
-  },
-  {
-   "id": 3109077,
-   "name": "Kamieda Emika",
-   "photo": "https://image.tmdb.org/t/p/w185/meczwZnjwSvJylvIAnaMcIkPi6A.jpg",
-   "character": "Haiku",
-   "episodes": 8
-  },
-  {
-   "id": 2880274,
-   "name": "Mónica Mara",
-   "photo": "https://image.tmdb.org/t/p/w185/wtzi9WP2Oc9DPO3XjNYWfHrAHHw.jpg",
-   "character": "Ane Falcón",
-   "episodes": 8
-  },
-  {
-   "id": 1168829,
-   "name": "Bárbara Santa-Cruz",
-   "photo": "https://image.tmdb.org/t/p/w185/3d9MH5ZAfS8HHY4zSLL8y6XU4Du.jpg",
-   "character": "Elena",
-   "episodes": 8
-  },
-  {
-   "id": 1491206,
-   "name": "Eleazar Ortiz",
+   "id": 1417288,
+   "name": "Paulette Hernández",
    "photo": null,
-   "character": "Antonio",
+   "character": "Eleonora Smith",
    "episodes": 8
   },
   {
-   "id": 4034051,
-   "name": "Candela González",
-   "photo": "https://image.tmdb.org/t/p/w185/aGKfBFAGxtPN48RIeD8FY07pLHO.jpg",
-   "character": "Ingrid",
+   "id": 964847,
+   "name": "Damayanti Quintanar",
+   "photo": "https://image.tmdb.org/t/p/w185/5KHF0ZShAkYKbK8gl2DeInzUVUs.jpg",
+   "character": "Santacruz",
    "episodes": 8
   },
   {
-   "id": 944099,
-   "name": "Enrique Arce",
-   "photo": "https://image.tmdb.org/t/p/w185/1lACQepfukuZ0l6FnUpMO03WxcJ.jpg",
-   "character": "Oswaldo",
+   "id": 1311106,
+   "name": "Juan Pablo de Santiago",
+   "photo": "https://image.tmdb.org/t/p/w185/cdhzvOui6Q5CmiXPFKGt7wuBH7y.jpg",
+   "character": "Oscar",
    "episodes": 8
   },
   {
-   "id": 5706233,
-   "name": "Nino Rumenov",
-   "photo": null,
-   "character": "Orange Suit",
+   "id": 1875322,
+   "name": "Daniel Haddad",
+   "photo": "https://image.tmdb.org/t/p/w185/tCZAs7jDAjOl5545eL93C1mcIsa.jpg",
+   "character": "Georgi",
    "episodes": 8
+  },
+  {
+   "id": 1902932,
+   "name": "Antonio Gaona",
+   "photo": "https://image.tmdb.org/t/p/w185/kH5bwyeWy9QX5RAJVd81wPB1jva.jpg",
+   "character": "Rufus",
+   "episodes": 8
+  },
+  {
+   "id": 1306685,
+   "name": "Alfonso Borbolla",
+   "photo": "https://image.tmdb.org/t/p/w185/60Pw7d3SNCIAf5Iw6QAaikIl9p.jpg",
+   "character": "Aguirre",
+   "episodes": 8
+  },
+  {
+   "id": 1332305,
+   "name": "Daniel Garcia",
+   "photo": "https://image.tmdb.org/t/p/w185/jWwDJ0xopeN250zNJykcp1VyX2o.jpg",
+   "character": "Técnico Jobs",
+   "episodes": 2
+  },
+  {
+   "id": 5257039,
+   "name": "Saburo Iida",
+   "photo": "https://image.tmdb.org/t/p/w185/85MBlckMNGHBS6QbypMN7xJ714r.jpg",
+   "character": "Kwan",
+   "episodes": 1
   }
  ],
  "crew": [
   {
-   "id": 82725,
-   "name": "Álex Pina",
-   "photo": "https://image.tmdb.org/t/p/w185/hMKcFPRKo0I4WLBvkvppyBFDGr8.jpg",
-   "jobs": [
-    "Creator",
-    "Story",
-    "Writer"
-   ],
-   "episodes": 9
-  },
-  {
-   "id": 1637084,
-   "name": "Esther Martínez Lobato",
-   "photo": "https://image.tmdb.org/t/p/w185/eKfsOq2lUAT1UpPAx6iRyhT6OE8.jpg",
-   "jobs": [
-    "Creator",
-    "Story",
-    "Writer"
-   ],
-   "episodes": 9
-  },
-  {
-   "id": 2545953,
-   "name": "David Oliva",
+   "id": 3264959,
+   "name": "Esteban Seimandi",
    "photo": null,
    "jobs": [
-    "Story",
+    "Creator",
     "Writer"
    ],
    "episodes": 8
   },
   {
-   "id": 3910086,
-   "name": "Lorena G. Maldonado",
+   "id": 2266051,
+   "name": "Joe Rendón",
    "photo": null,
    "jobs": [
-    "Story",
+    "Director"
+   ],
+   "episodes": 8
+  },
+  {
+   "id": 3356196,
+   "name": "Gabriel Arana",
+   "photo": null,
+   "jobs": [
+    "Executive Producer"
+   ],
+   "episodes": 8
+  },
+  {
+   "id": 3356200,
+   "name": "Genaro Quiroga",
+   "photo": null,
+   "jobs": [
+    "Executive Producer"
+   ],
+   "episodes": 8
+  },
+  {
+   "id": 3356198,
+   "name": "Santiago Diaz Oso",
+   "photo": null,
+   "jobs": [
+    "Executive Producer"
+   ],
+   "episodes": 8
+  },
+  {
+   "id": 3264960,
+   "name": "Adriano Dalla Torre",
+   "photo": null,
+   "jobs": [
+    "Executive Producer",
     "Writer"
    ],
    "episodes": 8
   },
   {
-   "id": 2013216,
-   "name": "David Barrocal",
+   "id": 3356199,
+   "name": "Amaya Muruzabal",
    "photo": null,
    "jobs": [
-    "Director",
-    "Story",
-    "Writer"
+    "Executive Producer"
    ],
-   "episodes": 5
+   "episodes": 8
   },
   {
-   "id": 1310888,
-   "name": "José Manuel Cravioto",
-   "photo": "https://image.tmdb.org/t/p/w185/ehCbX0CSq5myVim4r1cRwNGQdqL.jpg",
+   "id": 3356197,
+   "name": "Jorge Arana",
+   "photo": null,
    "jobs": [
-    "Director"
+    "Executive Producer"
    ],
-   "episodes": 4
+   "episodes": 8
   },
   {
-   "id": 1565562,
-   "name": "Humberto Ortega",
+   "id": 3356201,
+   "name": "Ariel Amestoy",
    "photo": null,
    "jobs": [
     "Writer"
    ],
-   "episodes": 4
-  },
-  {
-   "id": 1608537,
-   "name": "Jesús Colmenar",
-   "photo": "https://image.tmdb.org/t/p/w185/pvfNjlwcwUFFuB9CSFgVcEGzUZt.jpg",
-   "jobs": [
-    "Director"
-   ],
-   "episodes": 3
+   "episodes": 8
   }
  ],
- "fetchedAt": "2026-10-15T08:49:00.986Z",
- "episodes": {
-  "1x1": {
-   "d": [
-    {
-     "id": 1608537,
-     "name": "Jesús Colmenar",
-     "photo": "https://image.tmdb.org/t/p/w185/pvfNjlwcwUFFuB9CSFgVcEGzUZt.jpg"
-    }
-   ],
-   "w": [
-    {
-     "id": 1637084,
-     "name": "Esther Martínez Lobato",
-     "photo": "https://image.tmdb.org/t/p/w185/eKfsOq2lUAT1UpPAx6iRyhT6OE8.jpg"
-    },
-    {
-     "id": 2013216,
-     "name": "David Barrocal",
-     "photo": null
-    },
-    {
-     "id": 82725,
-     "name": "Álex Pina",
-     "photo": "https://image.tmdb.org/t/p/w185/hMKcFPRKo0I4WLBvkvppyBFDGr8.jpg"
-    },
-    {
-     "id": 2545953,
-     "name": "David Oliva",
-     "photo": null
-    },
-    {
-     "id": 3910086,
-     "name": "Lorena G. Maldonado",
-     "photo": null
-    }
-   ],
-   "g": []
-  },
-  "1x2": {
-   "d": [
-    {
-     "id": 1608537,
-     "name": "Jesús Colmenar",
-     "photo": "https://image.tmdb.org/t/p/w185/pvfNjlwcwUFFuB9CSFgVcEGzUZt.jpg"
-    }
-   ],
-   "w": [
-    {
-     "id": 82725,
-     "name": "Álex Pina",
-     "photo": "https://image.tmdb.org/t/p/w185/hMKcFPRKo0I4WLBvkvppyBFDGr8.jpg"
-    },
-    {
-     "id": 1637084,
-     "name": "Esther Martínez Lobato",
-     "photo": "https://image.tmdb.org/t/p/w185/eKfsOq2lUAT1UpPAx6iRyhT6OE8.jpg"
-    },
-    {
-     "id": 2013216,
-     "name": "David Barrocal",
-     "photo": null
-    },
-    {
-     "id": 2545953,
-     "name": "David Oliva",
-     "photo": null
-    },
-    {
-     "id": 3910086,
-     "name": "Lorena G. Maldonado",
-     "photo": null
-    },
-    {
-     "id": 1565562,
-     "name": "Humberto Ortega",
-     "photo": null
-    }
-   ],
-   "g": []
-  },
-  "1x3": {
-   "d": [
-    {
-     "id": 1310888,
-     "name": "José Manuel Cravioto",
-     "photo": "https://image.tmdb.org/t/p/w185/ehCbX0CSq5myVim4r1cRwNGQdqL.jpg"
-    }
-   ],
-   "w": [
-    {
-     "id": 82725,
-     "name": "Álex Pina",
-     "photo": "https://image.tmdb.org/t/p/w185/hMKcFPRKo0I4WLBvkvppyBFDGr8.jpg"
-    },
-    {
-     "id": 1637084,
-     "name": "Esther Martínez Lobato",
-     "photo": "https://image.tmdb.org/t/p/w185/eKfsOq2lUAT1UpPAx6iRyhT6OE8.jpg"
-    },
-    {
-     "id": 2013216,
-     "name": "David Barrocal",
-     "photo": null
-    },
-    {
-     "id": 2545953,
-     "name": "David Oliva",
-     "photo": null
-    },
-    {
-     "id": 3910086,
-     "name": "Lorena G. Maldonado",
-     "photo": null
-    },
-    {
-     "id": 1565562,
-     "name": "Humberto Ortega",
-     "photo": null
-    }
-   ],
-   "g": [
-    {
-     "id": 1396393,
-     "name": "Óscar Hernández",
-     "photo": null,
-     "as": "Le photographe"
-    }
-   ]
-  },
-  "1x4": {
-   "d": [
-    {
-     "id": 2013216,
-     "name": "David Barrocal",
-     "photo": null
-    }
-   ],
-   "w": [
-    {
-     "id": 82725,
-     "name": "Álex Pina",
-     "photo": "https://image.tmdb.org/t/p/w185/hMKcFPRKo0I4WLBvkvppyBFDGr8.jpg"
-    },
-    {
-     "id": 1637084,
-     "name": "Esther Martínez Lobato",
-     "photo": "https://image.tmdb.org/t/p/w185/eKfsOq2lUAT1UpPAx6iRyhT6OE8.jpg"
-    },
-    {
-     "id": 2013216,
-     "name": "David Barrocal",
-     "photo": null
-    },
-    {
-     "id": 2545953,
-     "name": "David Oliva",
-     "photo": null
-    },
-    {
-     "id": 3910086,
-     "name": "Lorena G. Maldonado",
-     "photo": null
-    },
-    {
-     "id": 1565562,
-     "name": "Humberto Ortega",
-     "photo": null
-    }
-   ],
-   "g": []
-  },
-  "1x5": {
-   "d": [
-    {
-     "id": 1310888,
-     "name": "José Manuel Cravioto",
-     "photo": "https://image.tmdb.org/t/p/w185/ehCbX0CSq5myVim4r1cRwNGQdqL.jpg"
-    },
-    {
-     "id": 2013216,
-     "name": "David Barrocal",
-     "photo": null
-    }
-   ],
-   "w": [
-    {
-     "id": 82725,
-     "name": "Álex Pina",
-     "photo": "https://image.tmdb.org/t/p/w185/hMKcFPRKo0I4WLBvkvppyBFDGr8.jpg"
-    },
-    {
-     "id": 1637084,
-     "name": "Esther Martínez Lobato",
-     "photo": "https://image.tmdb.org/t/p/w185/eKfsOq2lUAT1UpPAx6iRyhT6OE8.jpg"
-    },
-    {
-     "id": 2013216,
-     "name": "David Barrocal",
-     "photo": null
-    },
-    {
-     "id": 2545953,
-     "name": "David Oliva",
-     "photo": null
-    },
-    {
-     "id": 3910086,
-     "name": "Lorena G. Maldonado",
-     "photo": null
-    },
-    {
-     "id": 1565562,
-     "name": "Humberto Ortega",
-     "photo": null
-    }
-   ],
-   "g": []
-  },
-  "1x6": {
-   "d": [
-    {
-     "id": 1310888,
-     "name": "José Manuel Cravioto",
-     "photo": "https://image.tmdb.org/t/p/w185/ehCbX0CSq5myVim4r1cRwNGQdqL.jpg"
-    }
-   ],
-   "w": [
-    {
-     "id": 82725,
-     "name": "Álex Pina",
-     "photo": "https://image.tmdb.org/t/p/w185/hMKcFPRKo0I4WLBvkvppyBFDGr8.jpg"
-    },
-    {
-     "id": 1637084,
-     "name": "Esther Martínez Lobato",
-     "photo": "https://image.tmdb.org/t/p/w185/eKfsOq2lUAT1UpPAx6iRyhT6OE8.jpg"
-    },
-    {
-     "id": 2545953,
-     "name": "David Oliva",
-     "photo": null
-    },
-    {
-     "id": 3910086,
-     "name": "Lorena G. Maldonado",
-     "photo": null
-    }
-   ],
-   "g": []
-  },
-  "1x7": {
-   "d": [
-    {
-     "id": 2013216,
-     "name": "David Barrocal",
-     "photo": null
-    }
-   ],
-   "w": [
-    {
-     "id": 82725,
-     "name": "Álex Pina",
-     "photo": "https://image.tmdb.org/t/p/w185/hMKcFPRKo0I4WLBvkvppyBFDGr8.jpg"
-    },
-    {
-     "id": 1637084,
-     "name": "Esther Martínez Lobato",
-     "photo": "https://image.tmdb.org/t/p/w185/eKfsOq2lUAT1UpPAx6iRyhT6OE8.jpg"
-    },
-    {
-     "id": 2545953,
-     "name": "David Oliva",
-     "photo": null
-    },
-    {
-     "id": 3910086,
-     "name": "Lorena G. Maldonado",
-     "photo": null
-    }
-   ],
-   "g": []
-  },
-  "1x8": {
-   "d": [
-    {
-     "id": 1608537,
-     "name": "Jesús Colmenar",
-     "photo": "https://image.tmdb.org/t/p/w185/pvfNjlwcwUFFuB9CSFgVcEGzUZt.jpg"
-    },
-    {
-     "id": 1310888,
-     "name": "José Manuel Cravioto",
-     "photo": "https://image.tmdb.org/t/p/w185/ehCbX0CSq5myVim4r1cRwNGQdqL.jpg"
-    },
-    {
-     "id": 2013216,
-     "name": "David Barrocal",
-     "photo": null
-    }
-   ],
-   "w": [
-    {
-     "id": 82725,
-     "name": "Álex Pina",
-     "photo": "https://image.tmdb.org/t/p/w185/hMKcFPRKo0I4WLBvkvppyBFDGr8.jpg"
-    },
-    {
-     "id": 1637084,
-     "name": "Esther Martínez Lobato",
-     "photo": "https://image.tmdb.org/t/p/w185/eKfsOq2lUAT1UpPAx6iRyhT6OE8.jpg"
-    },
-    {
-     "id": 2545953,
-     "name": "David Oliva",
-     "photo": null
-    },
-    {
-     "id": 3910086,
-     "name": "Lorena G. Maldonado",
-     "photo": null
-    }
-   ],
-   "g": []
-  }
- },
- "episodesAt": "2026-10-25T07:36:54.871Z"
+ "fetchedAt": "2026-11-21T06:16:58.768Z"
 }

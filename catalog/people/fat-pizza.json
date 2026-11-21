@@ -1,21 +1,42 @@
 {
  "show": "Fat Pizza",
  "slug": "fat-pizza",
- "tmdbId": 204166,
+ "tmdbId": 215723,
  "cast": [
-  {
-   "id": 3597824,
-   "name": "John Boxer",
-   "photo": null,
-   "character": "Bobo Gigliotti",
-   "episodes": 8
-  },
   {
    "id": 92712,
    "name": "Paul Fenech",
    "photo": "https://image.tmdb.org/t/p/w185/diGhPYpnTSWbXEggMmR5GoFYExi.jpg",
-   "character": "Pauly Falzoni",
-   "episodes": 8
+   "character": "Pauly",
+   "episodes": 11
+  },
+  {
+   "id": 92714,
+   "name": "John Boxer",
+   "photo": "https://image.tmdb.org/t/p/w185/uWCHEJG2AElB6e7S4oqzGX7crdD.jpg",
+   "character": "Bobo",
+   "episodes": 11
+  },
+  {
+   "id": 92713,
+   "name": "Paul Nakad",
+   "photo": "https://image.tmdb.org/t/p/w185/rf5yH73W3RKwxUm6p018k4Txorh.jpg",
+   "character": "Sleek",
+   "episodes": 11
+  },
+  {
+   "id": 1322838,
+   "name": "Maria Venuti",
+   "photo": "https://image.tmdb.org/t/p/w185/aAM5XIdGLCfftjF2iaqo27zm4Pj.jpg",
+   "character": "Mama Gigliotti",
+   "episodes": 11
+  },
+  {
+   "id": 3816172,
+   "name": "Kyrah Brock-Fenton",
+   "photo": "https://image.tmdb.org/t/p/w185/9jmqfpBY9deWpyxAxF5E7VQ4MV.jpg",
+   "character": "Holden",
+   "episodes": 7
   }
  ],
  "crew": [
@@ -28,7 +49,5 @@
    ]
   }
  ],
- "fetchedAt": "2026-10-13T18:37:15.493Z",
- "episodes": {},
- "episodesAt": "2026-10-16T07:37:14.983Z"
+ "fetchedAt": "2026-11-21T06:08:59.007Z"
 }

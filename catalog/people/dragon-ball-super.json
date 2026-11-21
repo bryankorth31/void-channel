@@ -1,182 +1,322 @@
 {
  "show": "Dragon Ball Super",
  "slug": "dragon-ball-super",
- "tmdbId": 312359,
+ "tmdbId": 62715,
  "cast": [
   {
    "id": 90496,
    "name": "Masako Nozawa",
    "photo": "https://image.tmdb.org/t/p/w185/jxbXdejmPoiKnNoQz7Dkb80qC26.jpg",
-   "character": "Son Goku / Son Goten (voice)",
-   "episodes": 19
+   "character": "Son Goku / Goku Black / Son Gohan / Son Goten (voice)",
+   "episodes": 131
   },
   {
    "id": 122501,
    "name": "Ryo Horikawa",
    "photo": "https://image.tmdb.org/t/p/w185/vZ69WQJfR5D2xow5FkddduRjq6c.jpg",
    "character": "Vegeta (voice)",
-   "episodes": 19
+   "episodes": 131
   },
   {
-   "id": 122192,
-   "name": "Naoko Watanabe",
-   "photo": "https://image.tmdb.org/t/p/w185/wgX2xT2y21Tv0eKIMSyMXf6CC0U.jpg",
-   "character": "Chichi (voice)",
-   "episodes": 19
-  },
-  {
-   "id": 68916,
-   "name": "Unsho Ishizuka",
-   "photo": "https://image.tmdb.org/t/p/w185/nmj1vTrJc0zvuUYqxSyWXmIGBlP.jpg",
-   "character": "Mr. Satan (voice)",
-   "episodes": 19
+   "id": 122193,
+   "name": "Hiromi Tsuru",
+   "photo": "https://image.tmdb.org/t/p/w185/oFU9CCNLUhklLhEuLutM0FyTUbt.jpg",
+   "character": "Bulma (voice)",
+   "episodes": 131
   },
   {
    "id": 20664,
    "name": "Koichi Yamadera",
    "photo": "https://image.tmdb.org/t/p/w185/biov5jENp2XYfehkcdnRvi796Wi.jpg",
    "character": "Beerus (voice)",
-   "episodes": 19
+   "episodes": 131
   },
   {
-   "id": 619,
-   "name": "Joji Yanami",
-   "photo": "https://image.tmdb.org/t/p/w185/khkGvegnYvx50pAEF1lms7ZKBqy.jpg",
-   "character": "King Kai (voice)",
-   "episodes": 1
+   "id": 1686,
+   "name": "Takeshi Kusao",
+   "photo": "https://image.tmdb.org/t/p/w185/gDiYLUdl9zXXJmhE0bAuB1Jm3FJ.jpg",
+   "character": "Trunks (voice)",
+   "episodes": 131
   },
   {
-   "id": 3515368,
-   "name": "Takahiro Fujimoto",
-   "photo": "https://image.tmdb.org/t/p/w185/fYIjlttclf3AuJxWi3sKNkbgu2J.jpg",
-   "character": "Bubbles (voice)",
-   "episodes": 1
+   "id": 549566,
+   "name": "Eiko Yamada",
+   "photo": "https://image.tmdb.org/t/p/w185/uIESaPrL2AxOaYyfmh6krMVe813.jpg",
+   "character": "Mai (voice)",
+   "episodes": 131
   },
   {
-   "id": 1241955,
-   "name": "Shinichiro Ota",
-   "photo": "https://image.tmdb.org/t/p/w185/mUYW3wKgPWmzCfnj6voNPY5srrl.jpg",
-   "character": "Kibito Kai (voice)",
-   "episodes": 1
+   "id": 90569,
+   "name": "Yuko Minaguchi",
+   "photo": "https://image.tmdb.org/t/p/w185/bEv0ho89VNgWkCCmT2GdNjMAuvZ.jpg",
+   "character": "Videl / Pan (voice)",
+   "episodes": 131
   },
   {
-   "id": 1241540,
-   "name": "Ryoichi Tanaka",
-   "photo": "https://image.tmdb.org/t/p/w185/fZESvhE04R9bxa1r5wU7MtOOBIR.jpg",
-   "character": "Old Kai (voice)",
-   "episodes": 1
+   "id": 122192,
+   "name": "Naoko Watanabe",
+   "photo": "https://image.tmdb.org/t/p/w185/wgX2xT2y21Tv0eKIMSyMXf6CC0U.jpg",
+   "character": "Chichi / Pu'er (voice)",
+   "episodes": 131
+  },
+  {
+   "id": 100126,
+   "name": "Kozo Shioya",
+   "photo": "https://image.tmdb.org/t/p/w185/2IVg74G3MVGIhd3ImlAlo7IvE1P.jpg",
+   "character": "Majin Buu (voice)",
+   "episodes": 131
+  },
+  {
+   "id": 144650,
+   "name": "Aya Hirano",
+   "photo": "https://image.tmdb.org/t/p/w185/AvbCkdSXoKgrQAyG08b4WdGKoX5.jpg",
+   "character": "Dende (voice)",
+   "episodes": 131
+  },
+  {
+   "id": 65510,
+   "name": "Mayumi Tanaka",
+   "photo": "https://image.tmdb.org/t/p/w185/by4t1tYtEXsfbFj9TvOjozBmQla.jpg",
+   "character": "Krilin (voice)",
+   "episodes": 131
+  },
+  {
+   "id": 85286,
+   "name": "Toshio Furukawa",
+   "photo": "https://image.tmdb.org/t/p/w185/zZjO0NxIbEhYW3507gXVnvWeRkG.jpg",
+   "character": "Piccolo (voice)",
+   "episodes": 131
+  },
+  {
+   "id": 115305,
+   "name": "Ryusei Nakao",
+   "photo": "https://image.tmdb.org/t/p/w185/fsxlwNIWj7taqpXRYETmXFk0x1P.jpg",
+   "character": "Freeza / Frost (voice)",
+   "episodes": 131
+  },
+  {
+   "id": 1256603,
+   "name": "Natsuki Hanae",
+   "photo": "https://image.tmdb.org/t/p/w185/alTb0DlcPIbcwM08WSmxFai58sd.jpg",
+   "character": "Jaco (voice)",
+   "episodes": 131
   },
   {
    "id": 78402,
    "name": "Masakazu Morita",
    "photo": "https://image.tmdb.org/t/p/w185/2INsHYbx9gEhhzXPHdqBDdvHjFt.jpg",
    "character": "Whis (voice)",
+   "episodes": 131
+  },
+  {
+   "id": 62318,
+   "name": "Shin-ichiro Miki",
+   "photo": "https://image.tmdb.org/t/p/w185/yL9Tx2HZgK7t5AssYl6oGE9bjdj.jpg",
+   "character": "Zamasu (voice)",
+   "episodes": 131
+  },
+  {
+   "id": 9716,
+   "name": "Kenji Nomura",
+   "photo": "https://image.tmdb.org/t/p/w185/rmTziYxlPje4PiKhPgqMEHu9Axd.jpg",
+   "character": "Toppo (voice)",
+   "episodes": 3
+  },
+  {
+   "id": 115302,
+   "name": "Daisuke Kishio",
+   "photo": "https://image.tmdb.org/t/p/w185/cH2JIa3Uc2k95yIuB462GwocPuT.jpg",
+   "character": "Cabba (voice)",
+   "episodes": 2
+  },
+  {
+   "id": 1678,
+   "name": "Mitsuo Iwata",
+   "photo": "https://image.tmdb.org/t/p/w185/xCAsuzc5OBQZWhG5WSZIyhBZ7xj.jpg",
+   "character": "Champa (Voice)",
    "episodes": 1
   },
   {
-   "id": 1506816,
-   "name": "Yasuhiro Mamiya",
-   "photo": "https://image.tmdb.org/t/p/w185/pvnOU0RZuMKeISDTBEU7uSt3Xkn.jpg",
-   "character": "King (voice)",
+   "id": 77933,
+   "name": "Yuriko Yamaguchi",
+   "photo": "https://image.tmdb.org/t/p/w185/14hV8oOMkZddPpvdpVSODRwVPgv.jpg",
+   "character": "Vados (voice)",
    "episodes": 1
   },
   {
-   "id": 1256203,
-   "name": "Yusei Oda",
-   "photo": "https://image.tmdb.org/t/p/w185/9sqJsFBCyi6XI1oXAXB6auxHBax.jpg",
-   "character": "Chef (voice)",
+   "id": 1248141,
+   "name": "Tetsuo Goto",
+   "photo": "https://image.tmdb.org/t/p/w185/f1cdiE34KIKz64NsdbcjC8A785R.jpg",
+   "character": "Gowasu (voice)",
    "episodes": 1
   },
   {
-   "id": 2047801,
-   "name": "Sohta Arai",
-   "photo": "https://image.tmdb.org/t/p/w185/t6hCcCRZM5JYH1WwcQuFG3YuPqo.jpg",
-   "character": "Leader (voice)",
+   "id": 217924,
+   "name": "Satomi Korogi",
+   "photo": "https://image.tmdb.org/t/p/w185/zNJyGVOJQULuyO0isN8sTVwPaX0.jpg",
+   "character": "Zeno (voice)",
+   "episodes": 1
+  },
+  {
+   "id": 90572,
+   "name": "Yukana",
+   "photo": "https://image.tmdb.org/t/p/w185/AeRUkifrHsx0ZYfRRf64gChACyg.jpg",
+   "character": "Kale (voice)",
+   "episodes": 1
+  },
+  {
+   "id": 1205378,
+   "name": "Yuka Komatsu",
+   "photo": "https://image.tmdb.org/t/p/w185/iqlPvX1pwrbs9ju9WgMaRPuBiCs.jpg",
+   "character": "Caulifla (voice)",
    "episodes": 1
   }
  ],
  "crew": [
   {
-   "id": 555279,
-   "name": "Norihito Sumitomo",
-   "photo": null,
+   "id": 78322,
+   "name": "Akira Toriyama",
+   "photo": "https://image.tmdb.org/t/p/w185/9YorJMvF6DgfJcpATHbGyivZpS5.jpg",
    "jobs": [
-    "Original Music Composer"
+    "Story"
    ],
-   "episodes": 19
+   "episodes": 131
   },
   {
-   "id": 3972831,
-   "name": "Maaya Asakura",
+   "id": 3157569,
+   "name": "Ryota Nakamura",
    "photo": null,
    "jobs": [
     "Director"
    ],
-   "episodes": 1
+   "episodes": 64
+  },
+  {
+   "id": 1596425,
+   "name": "Megumi Ishitani",
+   "photo": "https://image.tmdb.org/t/p/w185/iwZWyRe2iTNyVnHCar8RFx7HU0x.jpg",
+   "jobs": [
+    "Director"
+   ],
+   "episodes": 53
+  },
+  {
+   "id": 139093,
+   "name": "Atsuhiro Tomioka",
+   "photo": "https://image.tmdb.org/t/p/w185/iCW5WUE6Aus5Ed9oMZIOJH2w4jU.jpg",
+   "jobs": [
+    "Writer"
+   ],
+   "episodes": 9
+  },
+  {
+   "id": 1814999,
+   "name": "Toshio Yoshitaka",
+   "photo": null,
+   "jobs": [
+    "Writer"
+   ],
+   "episodes": 8
+  },
+  {
+   "id": 1814986,
+   "name": "Masanori Sato",
+   "photo": null,
+   "jobs": [
+    "Director"
+   ],
+   "episodes": 6
+  },
+  {
+   "id": 1814990,
+   "name": "Ryu King",
+   "photo": null,
+   "jobs": [
+    "Writer"
+   ],
+   "episodes": 6
+  },
+  {
+   "id": 1777180,
+   "name": "Kohei Hatano",
+   "photo": null,
+   "jobs": [
+    "Director"
+   ],
+   "episodes": 4
+  },
+  {
+   "id": 1814969,
+   "name": "Takao Iwai",
+   "photo": null,
+   "jobs": [
+    "Director"
+   ],
+   "episodes": 3
+  },
+  {
+   "id": 1062401,
+   "name": "Kenichi Takeshita",
+   "photo": null,
+   "jobs": [
+    "Director"
+   ],
+   "episodes": 3
+  },
+  {
+   "id": 1814977,
+   "name": "Yoshifumi Fukushima",
+   "photo": null,
+   "jobs": [
+    "Writer"
+   ],
+   "episodes": 3
+  },
+  {
+   "id": 210351,
+   "name": "Hiroshi Yamaguchi",
+   "photo": null,
+   "jobs": [
+    "Writer"
+   ],
+   "episodes": 3
+  },
+  {
+   "id": 4190823,
+   "name": "Masato Mikami",
+   "photo": null,
+   "jobs": [
+    "Director"
+   ],
+   "episodes": 2
+  },
+  {
+   "id": 2569199,
+   "name": "Masato Mitsuka",
+   "photo": null,
+   "jobs": [
+    "Director"
+   ],
+   "episodes": 2
+  },
+  {
+   "id": 1845928,
+   "name": "Ayumu Ono",
+   "photo": null,
+   "jobs": [
+    "Director"
+   ],
+   "episodes": 2
+  },
+  {
+   "id": 1598074,
+   "name": "Kazuya Karasawa",
+   "photo": null,
+   "jobs": [
+    "Director"
+   ],
+   "episodes": 2
   }
  ],
- "fetchedAt": "2026-10-13T18:38:05.696Z",
- "episodes": {
-  "1x1": {
-   "d": [
-    {
-     "id": 3972831,
-     "name": "Maaya Asakura",
-     "photo": null
-    }
-   ],
-   "w": [],
-   "g": [
-    {
-     "id": 619,
-     "name": "Joji Yanami",
-     "photo": "https://image.tmdb.org/t/p/w185/khkGvegnYvx50pAEF1lms7ZKBqy.jpg",
-     "as": "King Kai (voice)"
-    },
-    {
-     "id": 3515368,
-     "name": "Takahiro Fujimoto",
-     "photo": "https://image.tmdb.org/t/p/w185/fYIjlttclf3AuJxWi3sKNkbgu2J.jpg",
-     "as": "Bubbles (voice)"
-    },
-    {
-     "id": 1241955,
-     "name": "Shinichiro Ota",
-     "photo": "https://image.tmdb.org/t/p/w185/mUYW3wKgPWmzCfnj6voNPY5srrl.jpg",
-     "as": "Kibito Kai (voice)"
-    },
-    {
-     "id": 1241540,
-     "name": "Ryoichi Tanaka",
-     "photo": "https://image.tmdb.org/t/p/w185/fZESvhE04R9bxa1r5wU7MtOOBIR.jpg",
-     "as": "Old Kai (voice)"
-    },
-    {
-     "id": 78402,
-     "name": "Masakazu Morita",
-     "photo": "https://image.tmdb.org/t/p/w185/2INsHYbx9gEhhzXPHdqBDdvHjFt.jpg",
-     "as": "Whis (voice)"
-    },
-    {
-     "id": 1506816,
-     "name": "Yasuhiro Mamiya",
-     "photo": "https://image.tmdb.org/t/p/w185/pvnOU0RZuMKeISDTBEU7uSt3Xkn.jpg",
-     "as": "King (voice)"
-    },
-    {
-     "id": 1256203,
-     "name": "Yusei Oda",
-     "photo": "https://image.tmdb.org/t/p/w185/9sqJsFBCyi6XI1oXAXB6auxHBax.jpg",
-     "as": "Chef (voice)"
-    },
-    {
-     "id": 2047801,
-     "name": "Sohta Arai",
-     "photo": "https://image.tmdb.org/t/p/w185/t6hCcCRZM5JYH1WwcQuFG3YuPqo.jpg",
-     "as": "Leader (voice)"
-    }
-   ]
-  }
- },
- "episodesAt": "2026-10-15T07:34:45.556Z"
+ "fetchedAt": "2026-11-21T06:09:03.142Z"
 }

@@ -1,14 +1,28 @@
 {
  "show": "Alternatino",
  "slug": "alternatino",
- "tmdbId": 68922,
+ "tmdbId": 90577,
  "cast": [
   {
    "id": 1457999,
    "name": "Arturo Castro",
    "photo": "https://image.tmdb.org/t/p/w185/pbLoDCfjm3fLtGHVqQcnbM2d0cu.jpg",
-   "character": "Arturo",
-   "episodes": 7
+   "character": "Various Characters",
+   "episodes": 10
+  },
+  {
+   "id": 5022969,
+   "name": "Taylor Blackman",
+   "photo": "https://image.tmdb.org/t/p/w185/rsRhXhJocMugiGaWZLoz3Qo9x3M.jpg",
+   "character": "",
+   "episodes": 1
+  },
+  {
+   "id": 1365504,
+   "name": "Alice Cannon",
+   "photo": null,
+   "character": "Actress",
+   "episodes": 1
   }
  ],
  "crew": [
@@ -17,29 +31,18 @@
    "name": "Arturo Castro",
    "photo": "https://image.tmdb.org/t/p/w185/pbLoDCfjm3fLtGHVqQcnbM2d0cu.jpg",
    "jobs": [
-    "Creator",
-    "Writer"
-   ],
-   "episodes": 7
+    "Creator"
+   ]
   },
   {
-   "id": 1717054,
-   "name": "Ben Weinstein",
+   "id": 2344845,
+   "name": "Nick Jasenovec",
    "photo": null,
    "jobs": [
     "Director"
    ],
-   "episodes": 7
-  },
-  {
-   "id": 1717055,
-   "name": "Brendan Fitzgibbons",
-   "photo": null,
-   "jobs": [
-    "Writer"
-   ],
-   "episodes": 7
+   "episodes": 10
   }
  ],
- "fetchedAt": "2026-10-15T08:27:50.384Z"
+ "fetchedAt": "2026-11-21T06:15:31.899Z"
 }
