@@ -67,7 +67,7 @@ test('the built page never spells the old name: shell, head, header, footer and 
 });
 
 test('header: pink "voidtv" and blue ".net" in the brand-kit colours, on one line (it must still fit a 375 px phone)', () => {
-  const head = SHELL.match(/<header>(?:<span data-void-areas-menu><\/span>)?<div class="logo"[\s\S]*?<\/div>/)[0];   // the areas hamburger sits first (20 Nov 2026, M1)
+  const head = SHELL.match(/<header>(?:<span data-void-areas-menu><\/span>)?<a class="logo"[\s\S]*?<\/a>/)[0];   // the areas hamburger sits first (20 Nov 2026, M1)
   assert.match(head, /<span class="name"><span class="v">voidtv<\/span><span class="n">\.net<\/span><\/span>/);
   assert.equal(head.replace(/<[^>]+>/g, ''), 'voidtv.net');
   const css = SHELL.match(/<style>([\s\S]*?)<\/style>/)[1];
@@ -126,8 +126,7 @@ test('/privacy: the approved text, the address, and no placeholder left', () => 
     'with no ads, no accounts and no fees.',
     'Very little, and nothing that names you.',
     'No account, no sign-up, no email.',
-    'One cookie, only while the site is in testing',
-    'It is no longer set when the site opens to the public, and copies already in browsers expire within 30 days.',
+    'No cookies. voidtv.net sets none.',
     'when a search is made (with the search words, up to 80 characters)',
     'plus your country, region, city, time zone and the data center that answered you, as reported by our hosting provider.',
     'It also carries your browser, operating system and device type, and the name of the site you came from, if any.',
@@ -138,7 +137,7 @@ test('/privacy: the approved text, the address, and no placeholder left', () => 
     'The Sentry script (js.sentry-cdn.com) loads on every page view, so your browser contacts Sentry whenever you open the site.',
     'load from The Movie Database (TMDB)',
     'No advertising, no tracking across sites, no selling of data, no profiles.',
-    'A separate site for children, voidtv.net kids, is being built with its own rules and no identifiers at all.',
+    'Children have their own site, voidtv.net kids, at kids.voidtv.net, with its own rules.',
   ]) assert.ok(t.includes(s), 'privacy text has: ' + s);
   assert.match(html, new RegExp('<a href="mailto:' + CONTACT + '">' + CONTACT + '</a>'));
   assert.ok(!/My Void|favourites|is removed when|hidden for you|We never see it|No IP address is stored/.test(t), 'the sentences the reviews found untrue are gone');

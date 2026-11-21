@@ -39,7 +39,9 @@ test('P1: no em or en dash in docs/DECISIONS.md or in this test file', () => {
   for (const f of ['docs/DECISIONS.md', 'tests/decisions.test.js']) assert.doesNotMatch(read(f), EM, f);
 });
 
-test.todo('P1, B8: the built page carries no em or en dash (drift: the X-Ray path prints a dash on each side of a person)', () => {
+// Was a todo until 21 Nov 2026: the X-Ray path printed a long dash on each side of a person and a person's years a short one
+// (night audit N8). The path now uses arrows and the years read "1931 to 2015".
+test('P1, B8: the built page carries no em or en dash', () => {
   assert.doesNotMatch(SHELL, EM);
 });
 
