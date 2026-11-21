@@ -15,6 +15,7 @@
      and its film grain over everything. -->
 <div class="atmos lo" aria-hidden="true"><div class="bgimg"></div><div class="void"><i></i></div></div>
 <header class="bar">
+  <span data-void-areas-menu></span>
   <a class="back" id="back" href="/" title="Back to voidtv.net" aria-label="Back to voidtv.net">&larr;</a>
   <a class="mark" href="/" title="voidtv.net home"><span class="v">voidtv</span><span class="n">.net</span></a>
   <span class="tag">TRIVIA</span>
@@ -95,6 +96,7 @@
     <p class="count" id="avail">Getting the questions ready</p>
     <button type="button" class="go" id="start" title="Start the game (Enter)" disabled>Start</button>
     <p class="keys">On the night: <b>Enter</b>, <b>Space</b>, a clicker or the remote's right arrow goes on. <b>P</b> pauses. <b>Esc</b> or Back ends the game.</p>
+    <div class="va-slot" data-void-areas-ad></div>
   </section>
 
   <section class="lobby" id="lobby" hidden>
@@ -180,6 +182,8 @@
 <script src="src/words.js"></script>
 <script src="src/game.js"></script>
 <script src="src/host.js"></script>
+<!-- Every voidtv.net area (Bryan, 20 Nov 2026, M1 + A1): the hamburger drawer and one small card, from one list in /assets/brand/areas/areas.js (the build stamps its version). -->
+<script src="/assets/brand/areas/areas.js" defer data-here="trivia"></script>
 <script src="src/atmos.js"></script>
 <div class="atmos hi" aria-hidden="true"><div class="grain"></div></div>
 </body>

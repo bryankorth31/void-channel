@@ -67,7 +67,7 @@ test('the built page never spells the old name: shell, head, header, footer and 
 });
 
 test('header: pink "voidtv" and blue ".net" in the brand-kit colours, on one line (it must still fit a 375 px phone)', () => {
-  const head = SHELL.match(/<header><div class="logo"[\s\S]*?<\/div>/)[0];
+  const head = SHELL.match(/<header>(?:<span data-void-areas-menu><\/span>)?<div class="logo"[\s\S]*?<\/div>/)[0];   // the areas hamburger sits first (20 Nov 2026, M1)
   assert.match(head, /<span class="name"><span class="v">voidtv<\/span><span class="n">\.net<\/span><\/span>/);
   assert.equal(head.replace(/<[^>]+>/g, ''), 'voidtv.net');
   const css = SHELL.match(/<style>([\s\S]*?)<\/style>/)[1];
