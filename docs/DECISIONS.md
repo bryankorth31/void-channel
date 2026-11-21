@@ -19,7 +19,7 @@ reworded). The private sources (chat archive, audit ledgers) stay on B's PC; thi
 
 | Status | Means | Rows |
 |---|---|---|
-| HOLDS | The code does what was decided. | 78 |
+| HOLDS | The code does what was decided. | 77 |
 | PARTLY | Mostly, but one place does not (the note says where). | 18 |
 | DRIFTED | A later change undid it, or a visible text says the old thing (section 15). | 4 |
 | ASK B | The code and his words disagree in a way only B can settle. | 1 |
@@ -182,7 +182,6 @@ reworded). The private sources (chat archive, audit ledgers) stay on B's PC; thi
 | Y4 | Fullscreen works in and out on desktop and phones; the picture is centred, as big as possible, aspect kept, never stretched; the bottom controls and scrubber hide and come back on tap, and stay while paused. | "i dont want stretched or skewed but i do want centered and the biggest keeping aspect" (18 Oct) | audit ASKS-draft; chat "Voidtv", 2026-10-18 | none yet | HOLDS |  |
 | Y5 | Up next continues the same show when more exists. | (9 Jun) | audit ASKS-draft | none yet | HOLDS |  |
 | Y6 | Player work is built apart and connected carefully; every player change keeps the tests green and adds one. | "connect this carefully and aware" (16 Oct) | audit ASKS-draft; chat "Voidtv", 2026-10-14 | none yet | BY EYE |  |
-| Y7 | No relay server for now. | (18 Oct) | audit ASKS-draft | none yet | HOLDS |  |
 | Y8 | Picture in picture keeps the show playing when the viewer goes back to browse (close, play/pause, skip, expand); not on Live TV (branch parked). | "i want automatic picture in picture to continue playing the show" (17 Oct) | audit ASKS-draft; chat "Voidtv", 2026-10-17; plan: RUN-tv-guide-next | none yet | PLANNED |  |
 | Y9 | The soak test must catch audio drift. | "isnt catching the unsyncing of the audio" (19 Oct) | chat "Fable jobs for Void TV", 2026-10-19 | player/test/core.test.js | PARTLY | The core measures audio/video lag (A-022) and the lab summary reports it, so a soak can show drift. But the soak pass check used by launch-check (row 10) looks only at the longest pause (3 s target), so a soak with audio drift still reads GO. Whether the lab r |
 
@@ -248,6 +247,7 @@ reworded). The private sources (chat archive, audit ledgers) stay on B's PC; thi
 |---|---|---|
 | R1 | Retired by B on 25 Oct ("Retired, all three"): the June one-third-of-donations pledge to the Internet Archive, void-TV cards as about 10 percent of cards, and the Fallout CRT look for UI chrome. Also retired with them: the June tagline under the logo. | 25 Oct |
 | R2 | A separate beta-test app for chosen testers, not attached to voidtv.net (June to October). | 15 Oct |
+| Y7 | Was in section 8 (the player): "No relay server for now" (18 Oct). Retired by B on 21 Nov in the ideas-across-sites chat ("Yes, retire it"); the rooms relay (play/rooms, Worker voidtv-rooms) already carried phone rooms against it. | 21 Nov |
 
 Also replaced by a newer row above (the newer row names the old one in its sources): the name VOIDtv (now B1); the round V/T swirl
 as the logo (B3); the password gate of 13 to 19 Oct (G1); "not interested in Live TV at all", 18 Oct (L1); real start times such as 8:24
