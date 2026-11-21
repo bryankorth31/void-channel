@@ -395,6 +395,8 @@ const server = http.createServer(async (req, res) => {
   try {
     if (p === '/' || p === '/index.html') return send(res, 200, fs.readFileSync(path.join(__dirname, 'hq', 'index.html'), 'utf8').replace('__HQ_TOKEN__', TOKEN), MIME['.html']);
     if (p === '/api/ping' && req.method === 'POST') return send(res, 200, { ok: true }); // does nothing; the doctor and the tests use it to see whether the guards above let a call through
+    // PLAY's games-to-add page (the PLAY assistant's file), shown in the PLAY area's frame: HQ itself may frame it.
+    if (p === '/play/more-chunks') { const f = path.join(__dirname, '..', 'audit', 'play-mode', 'weed', 'more-chunks.html'); if (!fs.existsSync(f)) return send(res, 404, { error: 'The PLAY games-to-add page is not made yet.' }); res.writeHead(200, { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store', 'x-frame-options': 'SAMEORIGIN' }); return res.end(fs.readFileSync(f)); }
     // Push live (Bryan, 20 Nov 2026): the shared desk that shows the code commits waiting for GitHub (a push to master is the
     // deploy), their tests on a clean copy, and one button. HQ only starts it; the desk has its own guards and token.
     if (p === '/api/pushlive/open' && req.method === 'POST') return execFile(nodeBin().bin, [path.join(PUSHLIVE, 'open-desk.js'), 'voidtv'], { env: nodeBin().env, windowsHide: true, timeout: 20000 }, (err, out) => { let j = null; try { j = JSON.parse(String(out).trim().split(/\r?\n/).pop()); } catch (e) { /* below */ } send(res, j && j.url ? 200 : 500, j && j.url ? j : { error: (j && j.error) || 'The Push live desk did not start (' + PUSHLIVE + ').' }); });
