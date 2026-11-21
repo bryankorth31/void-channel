@@ -150,6 +150,13 @@ test('a phone tap clicks where it touches in a ScummVM game: pointer mode, the f
   }
 });
 
+test('a stopped game lets the mouse go, so Play again can be clicked (the auditor, 21 Nov 2026)', () => {
+  const js = fs.readFileSync(path.join(PLAY, 'src', 'play.js'), 'utf8');
+  const stop = js.slice(js.indexOf('  function stopGame() {'), js.indexOf('  function stopGame() {') + 700);
+  assert.ok(stop.includes('if (document.pointerLockElement === cv && document.exitPointerLock) document.exitPointerLock();'), 'every stop (ended, a failure, a new game) lets go');
+  assert.ok(js.includes('if (pointerMode || !wantsMouse() || !started || paused || document.pointerLockElement === cv'), 'taken again only by a click on a running game');
+});
+
 test('ScummVM\'s engine files sit in engine/ under Cloudflare\'s cap, with its licence beside them', () => {
   for (const f of ['scummvm.js', 'scummvm.wasm', 'scummvm.LICENSE.txt']) {
     const p = path.join(PLAY, 'engine', f);

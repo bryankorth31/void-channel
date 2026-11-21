@@ -681,6 +681,10 @@
   // Ends the game for good: the engine stops, nothing it sent late reaches the page, the menu closes.
   function stopGame() {
     arriving = false; clearTimeout(deadline); clearInterval(autoTimer); clearInterval(cpTimer); stayAwake(false);
+    // A stopped game lets the mouse go (the auditor, 21 Nov 2026: after a game ended itself the picture still held the
+    // mouse, so a click on Play again went to the picture). It is taken again only by a click on a running game.
+    if (document.pointerLockElement === cv && document.exitPointerLock) document.exitPointerLock();
+    pointerId = null;
     if (runner) runner.stop();
     runner = null; hub = null; started = false; paused = false;
     padState.fill(0); $('menu').hidden = true; $('b-pause').textContent = 'Pause';
