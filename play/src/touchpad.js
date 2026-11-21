@@ -300,7 +300,31 @@
     }
   }
 
-  const api = { build, releaseAll, fit, plan, label, QWERTY, SHAPES, SYSTEM_SHAPE, shapeOf, minCols };
+  // Sideways in the handheld (Bryan, 20 Nov 2026: "the size of the buttons on the right are noticably larger then ... the
+  // d pad size on the left. there is space to have the dpad size increased ... these two control areas ... have begun to
+  // encroach on the screen and should be gently pushed outwards and away"). One control size S for both sides: the d-pad
+  // is S across, and the face buttons fill an S by S box. Both sit at the outer edges, clear of the picture; where the
+  // margins are too narrow for a good S, the picture gives a little room (keeping its shape, centred, never under 82%).
+  // pic: the picture at its natural size in the layer's coordinates (x from the layer's left). Pure (tested).
+  function sideFit(o) {
+    const { ow, oh, pic, cheats } = o, e = o.e || 10, GAP = 8;
+    let best = null;
+    for (let k = 1; k >= 0.82 - 1e-9; k -= 0.02) {
+      const w = Math.round(pic.w * k), h = Math.round(pic.h * k);
+      const x = Math.round(pic.x + (pic.w - w) / 2), y = Math.round(pic.y + (pic.h - h) / 2);
+      const side = Math.max(0, Math.min(x, ow - (x + w)));
+      const short = oh < 340, wide = side >= 150 || short;
+      const stackL = wide ? 102 : 156, stackR = cheats && wide && !short ? 116 : 102;
+      const vert = Math.min(oh - 2 * e - stackL - GAP, oh - 2 * e - stackR - 24);   // 24 px under Start and Cheats (the auditor)
+      const S = Math.max(0, Math.min(300, vert, side - e - GAP));
+      const r = { k: Math.round(k * 100) / 100, x, y, w, h, side, wide, S };
+      if (!best || S > best.S) best = r;
+      if (S >= Math.min(vert, 0.42 * oh, 220)) break;   // big enough: keep the biggest picture that allows it
+    }
+    return best;
+  }
+
+  const api = { build, releaseAll, fit, plan, label, QWERTY, SHAPES, SYSTEM_SHAPE, shapeOf, minCols, sideFit };
   if (typeof module === 'object' && module.exports) module.exports = api;
   else root.PlayTouch = api;
 })(typeof self !== 'undefined' ? self : this);

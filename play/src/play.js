@@ -87,14 +87,18 @@
     // middle (Bryan: "the screen is not centered but heavy to the right"). A margin wide enough for two small keys side
     // by side (.wide) puts Select and Rewind in a row under L, Start and Cheats in a row under R, so a short screen (a
     // phone sideways with its address bar showing) keeps its height for the d-pad and the face buttons.
+    // One control size for the d-pad and the face buttons, both clear of the picture (Bryan: "should be gently pushed
+    // outwards and away"); the picture gives a little room where it must (PlayTouch.sideFit).
     if (shell && floating && innerWidth > innerHeight && L.screen && L.mode !== 'plain') {
-      const over = $('z-over'), ox = parseFloat(over.style.left) || 0;
-      const side = Math.max(0, L.screen.x - ox);
-      over.style.setProperty('--side', side + 'px');
-      over.classList.toggle('wide', side >= 150);
-      // A phone whose margin is narrower than the smallest d-pad: the d-pad crosses the picture's edge, see-through.
-      const dp = over.querySelector('.cdpad');
-      over.classList.toggle('crossing', !!dp && dp.getBoundingClientRect().right > L.screen.x - ox + over.getBoundingClientRect().left + 1);
+      const over = $('z-over'), ox = parseFloat(over.style.left) || 0, oy = parseFloat(over.style.top) || 0;
+      const fit = PlayTouch.sideFit({ ow: parseFloat(over.style.width) || innerWidth, oh: parseFloat(over.style.height) || innerHeight,
+        pic: { x: L.screen.x - ox, y: L.screen.y - oy, w: L.screen.w, h: L.screen.h }, cheats: document.body.classList.contains('has-cheats') });
+      if (fit.k < 1) set($('screen'), { x: fit.x + ox, y: fit.y + oy, w: fit.w, h: fit.h });
+      over.style.setProperty('--side', fit.side + 'px');
+      over.style.setProperty('--S', Math.max(110, fit.S) + 'px');
+      over.classList.toggle('wide', fit.wide);
+      // A phone too small for even that: the d-pad crosses the picture's edge, see-through.
+      over.classList.toggle('crossing', fit.S < 110);
     }
     $('b-touch').setAttribute('aria-pressed', String(touch));
     if (touch) PlayTouch.fit($('stage'));

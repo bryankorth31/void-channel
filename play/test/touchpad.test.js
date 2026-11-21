@@ -115,7 +115,7 @@ test('Bryan, 20 Nov 2026: the d-pad from Lexrom, bigger without overlapping; a C
   const play = fs.readFileSync(path.join(__dirname, '..', 'src', 'play.js'), 'utf8');
   assert.ok(play.includes("else if (name === 'cheats') { if (cheatList && runner && started) { setPaused(true); showCheats(true); } }"));
   assert.ok(play.includes("document.body.classList.add('has-cheats');"));
-  assert.ok(play.includes("over.classList.toggle('wide', side >= 150);") && !play.includes('room - need'), 'the picture stays in the middle (Bryan)');
+  assert.ok(play.includes('PlayTouch.sideFit({') && !play.includes('room - need'), 'the picture stays in the middle (Bryan)');
   assert.ok(play.includes("if (!started || leftFull || !isPhone() || !document.fullscreenEnabled || document.fullscreenElement) return;"));
   const html = fs.readFileSync(path.join(__dirname, '..', 'game.html'), 'utf8');
   assert.ok(html.includes('id="cover-full"') && html.includes('<link rel="manifest" href="manifest.webmanifest">'));
@@ -162,4 +162,19 @@ test('Bryan, 20 Nov 2026, sideways with the address bar showing ("the start and 
   assert.ok(play.includes("toast('Tip: for full screen, tap the menu beside the address, then Hide Toolbar');"));
   const html = fs.readFileSync(path.join(__dirname, '..', 'game.html'), 'utf8');
   assert.ok(html.includes('Full screen on iPhone: tap the menu beside the address, then Hide Toolbar'));
+});
+
+test('Bryan, 20 Nov 2026 ("the d pad size increased ... these two control areas ... should be gently pushed outwards and away"): sideways one control size for both sides, clear of the picture, the picture giving a little room', () => {
+  const T = require('../src/touchpad.js');
+  // iPhone sideways, 844x390, no edges: the picture 520x390 in the middle leaves 162 px each side.
+  const a = T.sideFit({ ow: 844, oh: 390, pic: { x: 162, y: 0, w: 520, h: 390 }, cheats: true });
+  assert.ok(a.S >= 160 && a.k < 1 && a.k >= 0.82, 'the picture gives a little room: ' + JSON.stringify(a));
+  assert.ok(a.side - 10 - 8 >= a.S, 'the controls stay off the picture');
+  assert.equal(a.x + a.w / 2, 162 + 260, 'still in the middle');
+  // A wide margin already (a tablet-like phone): the picture keeps its full size.
+  const b = T.sideFit({ ow: 1000, oh: 390, pic: { x: 240, y: 0, w: 520, h: 390 } });
+  assert.equal(b.k, 1);
+  // Never under 82%.
+  const c = T.sideFit({ ow: 560, oh: 375, pic: { x: 30, y: 0, w: 500, h: 375 } });
+  assert.ok(c.k >= 0.82);
 });

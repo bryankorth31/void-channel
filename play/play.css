@@ -539,3 +539,9 @@ body.muted .spk .off{display:inline}body.muted .spk .on{display:none}
   body.has-cheats .over.wide .cpad.side .cstart{top:calc(var(--e) + 58px)}
 }
 .cpad .cface .pk{min-width:0;min-height:0}
+/* One control size for both sides, sideways (Bryan, 20 Nov 2026: the face buttons looked "noticably larger" than the
+   d-pad; both "gently pushed outwards and away" from the picture): play.js sets --S from PlayTouch.sideFit; the d-pad is
+   S across and the face buttons fill an S by S box. */
+.cpad.side,.over.wide .cpad.side,body.has-cheats .over.wide .cpad.side{--d:var(--S,150px);
+  --b:clamp(40px,min(calc((var(--S,150px) - (var(--rows) - 1) * 8px) / var(--rows)),calc((var(--S,150px) - 8px) / 2)),92px)}
+.over.wide .cpad.side,.over:not(.wide) .cpad.side{--d:var(--S,150px)}
