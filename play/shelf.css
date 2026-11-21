@@ -254,9 +254,12 @@ body.home .shelf{padding-top:6px}
 .atmos{position:fixed;inset:0;overflow:hidden;pointer-events:none}
 .atmos.lo{z-index:0}.atmos.hi{z-index:1000}
 .atmos>.bgimg,.atmos>.void,.atmos>.grain{position:absolute}
-.bgimg{inset:-12% 0 -12% 0;background:#07080c url(/assets/brand/bg/static-bolt.jpg) center/cover no-repeat;opacity:.5;will-change:transform}
+/* Bryan's own art behind the page (20 Nov 2026: "i dont see the arcade image bg i made of the character in the hoodie in
+   front of screens", then on the zoomed-out mock: "use it like that"): the whole picture, zoomed out to fit, a light wash
+   over it; on a phone held upright, where a whole-picture fit would be a thin band, it fills the screen. */
+.bgimg{inset:-12% 0 -12% 0;background:linear-gradient(180deg,rgba(7,8,12,.1),rgba(7,8,12,.55)),url(/assets/brand/bg/voidarcade-wall.webp) center 40%/contain no-repeat #07080c;opacity:1;will-change:transform}
 .bgimg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,8,12,.55) 0%,rgba(7,8,12,.78) 45%,rgba(7,8,12,.96) 100%)}
-@media (max-width:700px){.bgimg{background-image:url(/assets/brand/bg/static-bolt-m.jpg)}}
+@media (max-width:700px){.bgimg{background:linear-gradient(180deg,rgba(7,8,12,.1),rgba(7,8,12,.55)),url(/assets/brand/bg/voidarcade-wall-m.webp) 30% 40%/cover no-repeat #07080c}}
 .void{right:-18vw;bottom:-22vw;width:64vw;height:64vw;max-width:900px;max-height:900px;opacity:.07;will-change:transform}
 .void i{position:absolute;inset:0;display:block;background:url(/assets/brand/void-soft.webp) center/contain no-repeat;animation:spin 240s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
