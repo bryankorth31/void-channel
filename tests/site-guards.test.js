@@ -365,3 +365,29 @@ test('shrinkBaseline: a live build newer than the last publish is the baseline (
   assert.equal(G.shrinkBaseline(null, null), null);
   assert.equal(G.shrinkBaseline(null, live('2026-10-25T22:11:16Z')).shows, 4036, 'no record yet: what is live');
 });
+
+// Bryan, 21 Nov 2026: git branches with commits on no remote (hindi, westside, master's unpushed work) had no copy off this drive.
+test('branch backup light: green when every local-only branch is in the newest copy or new since, yellow when an older commit is in none or the copy shares the drive', () => {
+  const now = Date.parse('2026-11-21T12:00:00Z');
+  const b = (name, sha, ageHours) => ({ name, sha, ageHours });
+  const REPO = 'C:\\Users\\bryan\\void-channel';
+  const stamp = { at: '2026-11-21T08:30:00Z', file: 'branches-2026-11-21-083000.bundle', to: 'E:\\Backups\\voidtv-git', branches: { hindi: 'aaa', master: 'bbb' } };
+  assert.equal(G.branchBackupLight(null, [], REPO, now).level, 'green', 'nothing only on this PC');
+  const none = G.branchBackupLight(null, [b('hindi', 'aaa', 1)], REPO, now);
+  assert.equal(none.level, 'yellow', 'no copy yet');
+  assert.match(none.msg, /hindi/);
+  assert.match(none.fix, /backup-branches\.js/);
+  const ok = G.branchBackupLight(stamp, [b('hindi', 'aaa', 50), b('master', 'bbb', 40)], REPO, now);
+  assert.equal(ok.level, 'green');
+  assert.match(ok.msg, /2 branches .*today to E:\\Backups\\voidtv-git/);
+  const newer = G.branchBackupLight(stamp, [b('hindi', 'aaa', 50), b('master', 'ccc', 2)], REPO, now);
+  assert.equal(newer.level, 'green', 'a commit from the last day and a half waits for the nightly');
+  assert.match(newer.msg, /next nightly/);
+  const stale = G.branchBackupLight(stamp, [b('hindi', 'ddd', G.BRANCH_GRACE_HOURS + 1), b('westside', 'eee', 100)], REPO, now);
+  assert.equal(stale.level, 'yellow', 'an older commit in no copy');
+  assert.match(stale.msg, /hindi, westside/);
+  const same = G.branchBackupLight({ ...stamp, to: 'C:\\Backups\\voidtv-git' }, [b('hindi', 'aaa', 50)], REPO, now);
+  assert.equal(same.level, 'yellow', 'a copy on the drive it protects');
+  assert.match(same.msg, /same drive/);
+  assert.notEqual(G.branchBackupLight(stamp, [b('hindi', 'zzz', 9999)], REPO, now).level, 'red', 'never red: git still has them here');
+});

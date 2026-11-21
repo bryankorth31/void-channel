@@ -263,10 +263,33 @@ function backupLight(stamp, nowMs) {
   if (!(days <= BACKUP_DAYS)) return light('backup', 'yellow', `last backup ${Math.floor(days)} days ago (${what})`, 'The nightly pass runs the backup by itself: if the backup drive is unplugged, plug it in. Then HQ > Jobs > Back up the cache now, or node scripts/backup-cache.js (add --to <folder> when no VOID_BACKUP_DIR is set in backend/.env). It copies only what changed.');
   // A copy on the same drive as the cache is lost with that drive (audit 19 Nov 2026, V6: the only backup sat on C: beside the cache).
   // Only a path that names its drive (C:\..., or a network share) can be compared; anything else is "not known" and never judged.
-  const driveOf = (p) => { const r = typeof p === 'string' ? require('path').win32.parse(p).root.toLowerCase() : ''; return /^[a-z]:/.test(r) || r.startsWith('\\\\') ? r : ''; };
-  const when = days < 1 ? 'today' : Math.floor(days) + ' day' + (Math.floor(days) === 1 ? '' : 's') + ' ago';
+  const when = daysAgo(days);
   if (driveOf(stamp.from) && driveOf(stamp.from) === driveOf(stamp.to)) return light('backup', 'yellow', `backed up ${when}, but the copy is on the same drive as the cache (${stamp.to}): ${what}`, 'A drive that fails takes both. Put VOID_BACKUP_DIR=<a folder on another drive> in backend/.env and run the backup again: HQ > Jobs > Back up the cache now, or node scripts/backup-cache.js.');
   return light('backup', 'green', `backed up ${when}${stamp.to ? ' to ' + stamp.to : ''}: ${what}`);
+}
+// Only a path that names its drive (C:\..., or a network share) can be compared; anything else is "" (not known) and never judged.
+function driveOf(p) { const r = typeof p === 'string' ? require('path').win32.parse(p).root.toLowerCase() : ''; return /^[a-z]:/.test(r) || r.startsWith('\\\\') ? r : ''; }
+function daysAgo(days) { return days < 1 ? 'today' : Math.floor(days) + ' day' + (Math.floor(days) === 1 ? '' : 's') + ' ago'; }
+
+// The branch backup light (Bryan, 21 Nov 2026; scripts/backup-branches.js writes catalog/cache/branches-stamp.json). branches: the
+// local branches that have commits on no remote, as they are now ([{ name, sha, ageHours }], read with git by doctor.js); repoPath:
+// this checkout. A commit made since the last copy is fine for a day and a half (the nightly pass copies it at 3:30 AM); older than
+// that and in no copy, the light turns yellow and names the branches. Never red: git still has them on this drive.
+const BRANCH_GRACE_HOURS = 36;
+function branchBackupLight(stamp, branches, repoPath, nowMs) {
+  const fix = 'If the backup drive is unplugged, plug it in. Then run node scripts/backup-branches.js (the nightly pass runs it by itself): it writes one file that holds every such branch, beside the cache backup in a folder named voidtv-git. Bring them back with git clone <that file> <new folder>.';
+  const list = branches || [];
+  const names = (bs) => bs.slice(0, 4).map((b) => b.name).join(', ') + (bs.length > 4 ? ` and ${bs.length - 4} more` : '');
+  const n = (k) => k + ' branch' + (k === 1 ? '' : 'es');
+  if (!list.length) return light('branch-backup', 'green', 'no branch has commits that are only on this PC');
+  if (!stamp || !stamp.at || !stamp.file) return light('branch-backup', 'yellow', `${n(list.length)} with commits that are only on this PC and in no copy anywhere else: ${names(list)}`, fix);
+  const held = stamp.branches || {};
+  const when = daysAgo((nowMs - new Date(stamp.at).getTime()) / 864e5);
+  const missing = list.filter((b) => held[b.name] !== b.sha && b.ageHours > BRANCH_GRACE_HOURS);
+  if (missing.length) return light('branch-backup', 'yellow', `the newest commits of ${names(missing)} are in no copy off this drive (last copy ${when})`, fix);
+  if (driveOf(stamp.to) && driveOf(stamp.to) === driveOf(repoPath)) return light('branch-backup', 'yellow', `branches copied ${when}, but to the same drive as the repository (${stamp.to})`, 'A drive that fails takes both. Put VOID_BACKUP_DIR=<a folder on another drive> in backend/.env (the branches go in voidtv-git beside it) and run node scripts/backup-branches.js.');
+  const fresh = list.filter((b) => held[b.name] !== b.sha).length;
+  return light('branch-backup', 'green', `${n(list.length)} with commits only on this PC, copied ${when} to ${stamp.to}${fresh ? `; the newest commits of ${fresh} go in at the next nightly` : ''}`);
 }
 
 // Everything the doctor learns from the live site, as lights. doFetch(url, init) is fetch (tests pass a fake). versionText is the body of
@@ -299,5 +322,5 @@ module.exports = {
   LIMITS, SECURITY_HEADERS, CSP,
   PLAY_ISOLATED, PLAY_STRICT, PLAY_CSP, isPlayIsolated, gateMode, gateDecision, isGated, routesFor, headersFile, missingSecurityHeaders, versionText, parseVersion,
   checkOutput, shrinkVerdict, shrinkBaseline, readLastCounts, countsFromVersion, liveCountsSync, unreadableGrids,
-  filesLight, gateLight, wwwLight, headersLight, liveVersionLight, shrinkLight, backupLight, liveLights,
+  filesLight, gateLight, wwwLight, headersLight, liveVersionLight, shrinkLight, backupLight, branchBackupLight, BRANCH_GRACE_HOURS, liveLights,
 };

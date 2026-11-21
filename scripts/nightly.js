@@ -8,6 +8,7 @@
 //   6. publish.js                  commit + push -> Cloudflare rebuilds
 //   7. backup-cache.js             the part of catalog/cache that cannot be rebuilt cheaply, copied to the folder VOID_BACKUP_DIR
 //                                  names in backend/.env (another drive); seconds after the first copy
+//   8. backup-branches.js          the git branches with commits on no remote, one bundle in voidtv-git beside that folder
 //   then doctor.js (the lights) and alert.js (tells Bryan when a light needs him; docs/RUNBOOK.md, alert)
 // Each step gets a time limit; a failing step is logged and the pass continues, because a stale
 // poster is not a reason to skip the publish. Log: catalog/cache/nightly.log
@@ -57,6 +58,9 @@ step('publish', ['scripts/publish.js'], 20);
 // the publish, so a long first copy never delays the site, and before the doctor, so tonight's backup light reads tonight's stamp.
 // A backup drive that is not plugged in is a FAILED line here; the backup light then ages to yellow and the alert says so.
 step('backup', ['scripts/backup-cache.js'], 30);
+// The git branches with commits on no remote, as one checked bundle beside the cache backup (Bryan, 21 Nov 2026: hindi and others
+// lived only on this drive). Writes nothing when no branch moved; keeps the newest 3.
+step('branches', ['scripts/backup-branches.js'], 15);
 step('doctor', ['scripts/doctor.js'], 10); // the lights HQ shows; red exits 1 and is logged here
 step('alert', ['scripts/alert.js'], 2); // tells Bryan when a light needs him (scripts/lib/alertmsg.js); quiet nights send nothing
 log('==== nightly done');

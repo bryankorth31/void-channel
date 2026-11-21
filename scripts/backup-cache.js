@@ -122,5 +122,5 @@ function main(argv) {
   return r.failed ? 1 : 0;
 }
 
-module.exports = { backup, plan, SETS, SKIPPED, STAMP };
+module.exports = { backup, plan, SETS, SKIPPED, STAMP, envBackupDir, inside }; // envBackupDir and inside: scripts/backup-branches.js uses them too
 if (require.main === module) process.exit(main(process.argv.slice(2)));

@@ -236,6 +236,13 @@ async function main() {
       let stamp = null; try { stamp = JSON.parse(fs.readFileSync(path.join(CACHE, 'backup-stamp.json'), 'utf8')); } catch (e) { /* none yet */ }
       const l = guards.backupLight(stamp, Date.now()); add(l.id, l.level, l.msg, l.fix);
     } catch (e) { add('backup', 'yellow', 'could not read the backup stamp: ' + String(e.message).slice(0, 80)); }
+    // 5d. branch-backup: the git branches with commits on no remote (hindi, westside, master's unpushed work...) and whether the
+    //     newest copy holds them (scripts/backup-branches.js, catalog/cache/branches-stamp.json; Bryan, 21 Nov 2026).
+    try {
+      const bb = require('./backup-branches');
+      let stamp = null; try { stamp = JSON.parse(fs.readFileSync(path.join(CACHE, bb.STAMP), 'utf8')); } catch (e) { /* none yet */ }
+      const l = guards.branchBackupLight(stamp, bb.localOnly(ROOT), ROOT, Date.now()); add(l.id, l.level, l.msg, l.fix);
+    } catch (e) { add('branch-backup', 'yellow', 'could not check the branch backup: ' + String(e.message).split('\n')[0].slice(0, 80)); }
   }
 
   // 6. external services and the live site
