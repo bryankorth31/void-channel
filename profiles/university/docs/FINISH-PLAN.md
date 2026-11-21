@@ -268,3 +268,8 @@ the HQ areas chat. Steps 7 to 10 start after the 22 Nov reset.
   question not asked, Carry on, Done and both scores; no console errors. Not checked: real phones, and a real
   lecture playing through (the play position was set by hand in the check). Not on the live site: the relay on
   voidtv.net still refuses the University's address.
+- 21 Nov 2026: a test rewrote the real list.json on every run (reported by the Void TV assets chat; Bryan: "Yes, fix
+  it"). The live test called the live switch on the real file, and the switch always saves the whole file. The
+  switch now takes the file to change (the command still changes the real one), and the test works on a throwaway
+  copy, checks both directions and the Body Atlas card with its course, and fails if the real file changed. No
+  other University test writes a real project file.

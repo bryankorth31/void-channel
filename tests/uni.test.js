@@ -189,9 +189,23 @@ test('the public copy: a way back on every page, no empty area tiles, a not-foun
 });
 
 test('live: one line puts a course on or off the public copy', () => {
-  const before = list().courses.find((c) => c.slug === 'critical-thinking').live;
-  assert.equal(uni.setLive('critical-thinking', before).live, before);
-  assert.throws(() => uni.setLive('no-such-course', true));
+  // on a throwaway copy: the real list.json is never written by a test
+  const real = path.join(uni.UNI, 'list.json'), was = fs.readFileSync(real);
+  const dir = fs.mkdtempSync(path.join(require('os').tmpdir(), 'uni-live-')), copy = path.join(dir, 'list.json');
+  fs.writeFileSync(copy, was);
+  const read = () => JSON.parse(fs.readFileSync(copy, 'utf8'));
+  const course = (slug) => read().courses.find((c) => c.slug === slug).live;
+  assert.equal(uni.setLive('critical-thinking', false, copy).live, false);
+  assert.equal(course('critical-thinking'), false);
+  assert.equal(uni.setLive('critical-thinking', true, copy).live, true);
+  assert.equal(course('critical-thinking'), true);
+  // a course built on a practice site takes that site's card with it, both ways
+  const card = () => read().practice.find((g) => g.course === 'the-body').live;
+  uni.setLive('the-body', false, copy); assert.deepEqual([course('the-body'), card()], [false, false]);
+  uni.setLive('the-body', true, copy); assert.deepEqual([course('the-body'), card()], [true, true]);
+  assert.throws(() => uni.setLive('no-such-course', true, copy));
+  fs.rmSync(dir, { recursive: true, force: true });
+  assert.ok(fs.readFileSync(real).equals(was), 'the test changed the real list.json');
 });
 
 test('the public pages carry no machine-made tells: no middle-dot strings, no capitals labels, and less motion when asked', () => {

@@ -135,13 +135,15 @@ async function lectures(slug) {
   return { slug, lectures: files.length, todo: c.todo.length, sound: !/\.(mp4|ogv|webm)$/i.test(files[0].name), seconds: Math.round(files.reduce((a, f) => a + (+f.length || 0), 0)) };
 }
 
-function setLive(slug, live) {
-  const L = list();
+// file: the list to change. The command leaves it out and changes the real one; a test names a throwaway copy, so
+// running the tests never rewrites the real list.json (found 21 Nov 2026: the test saved the real file each run).
+function setLive(slug, live, file = LIST) {
+  const L = readJson(file, { types: [], courses: [] });
   const c = (L.courses || []).find((x) => x.slug === slug);
   if (!c) throw new Error('No course ' + slug + ' in list.json');
   c.live = !!live;
   for (const g of L.practice || []) if (g.course === slug) g.live = !!live;
-  writeJson(LIST, L);
+  writeJson(file, L);
   return { slug, live: c.live };
 }
 
