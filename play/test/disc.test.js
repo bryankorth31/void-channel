@@ -109,6 +109,24 @@ test('ScummVM starts with its own defaults and settings file, given before it st
   assert.ok(fs.readFileSync(path.join(PLAY, 'core', 'build-scummvm.sh'), 'utf8').includes('-DHOST_VARS_AT_START'));
 });
 
+test('Kids: none of ScummVM\'s own menus within reach, and a game\'s own Quit ends cleanly (the Kids session, 21 Nov 2026)', () => {
+  const ini = Cards.CORES.scummvm.files['/sys/scummvm.ini'];
+  // Each key a child could press to reach ScummVM's main menu (with its launcher and settings), its quit, its debugger
+  // or its on-screen keyboard is bound to nothing. Checked: without these, Ctrl+F5 opened the menu; with them, nothing.
+  for (const k of ['keymap_global_MENU=\n', 'keymap_global_QUIT=\n', 'keymap_global_DEBUGGER=\n', 'keymap_global_VIRT=\n', 'keymap_engine-default_MENU=\n'])
+    assert.ok(ini.includes(k), k);
+  assert.ok(ini.includes('\n[keymapper]\n'), 'the bindings live in ScummVM\'s keymapper section');
+  assert.ok(ini.includes('gui_return_to_launcher_at_exit=false\n'), 'a game that quits never lands in ScummVM\'s launcher');
+  const host = fs.readFileSync(path.join(PLAY, 'core', 'host.c'), 'utf8');
+  assert.ok(host.includes('case RETRO_ENVIRONMENT_SHUTDOWN: core_ended = 1; return true;'));
+  assert.ok(host.includes('EMSCRIPTEN_KEEPALIVE int host_ended(void) { return core_ended; }'));
+  const w = fs.readFileSync(path.join(PLAY, 'src', 'core-worker.js'), 'utf8');
+  assert.ok(w.includes("if (M._host_ended && M._host_ended()) { running = false; postMessage({ type: 'ended' }); return; }"), 'engines built before it simply never say so');
+  assert.ok(fs.readFileSync(path.join(PLAY, 'src', 'runner.js'), 'utf8').includes("else if (m.type === 'ended') on.ended && on.ended();"));
+  assert.ok(fs.readFileSync(path.join(PLAY, 'src', 'play.js'), 'utf8').includes("ended: () => { arriving = false; fail('The game has ended. Press Play again to start it over, or pick another game.'); },"),
+    'the start screen with Play again comes back, never a frozen picture');
+});
+
 test('ScummVM\'s engine files sit in engine/ under Cloudflare\'s cap, with its licence beside them', () => {
   for (const f of ['scummvm.js', 'scummvm.wasm', 'scummvm.LICENSE.txt']) {
     const p = path.join(PLAY, 'engine', f);

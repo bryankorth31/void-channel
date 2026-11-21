@@ -518,6 +518,9 @@
     runner = (isArcade() ? PlayArcade : isFlash() ? PlayFlash : PlayRunner).createRunner({ canvas: $('canvas'), mute: q.get('mute') === '1', volume: gainOf(vol), on: {
       note: (t) => toast(t),
       status: (t) => { status(t); if (arriving) armDeadline(); }, error: (t) => { arriving = false; fail(t); },
+      // The game ended itself (its own Quit): the start screen comes back with Play again; on Kids, the way back is the
+      // kids games. Never a frozen last picture.
+      ended: () => { arriving = false; fail('The game has ended. Press Play again to start it over, or pick another game.'); },
       ready: () => { started = true; applyCheats(); place.sig = ''; place(); setTimeout(toolbarTip, 1500); },
       cheats: (m) => { if (!m.ok) toast('This game\'s engine cannot take cheats'); else if (m.on) toast(m.on === 1 ? 'One cheat on' : m.on + ' cheats on'); },
       firstFrame: () => {

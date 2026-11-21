@@ -93,6 +93,7 @@
         else if (m.type === 'status') on.status && on.status(m.text);
         else if (m.type === 'cheats') on.cheats && on.cheats(m);
         else if (m.type === 'error') on.error && on.error(m.text);
+        else if (m.type === 'ended') on.ended && on.ended();
         else if (m.type === 'saved') { why = m.why || ''; settle(m.state || null); }
         else if (m.type === 'loaded') settle(!!m.ok);
         else if (m.type === 'sram-set') { const r = sramSetWait; sramSetWait = null; if (r) r(!!m.ok); }

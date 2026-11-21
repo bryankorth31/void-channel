@@ -311,6 +311,9 @@ function tick() {
     }
     if (next < now - 4000 / fps) next = now;
     sendFrame(); sendSound();
+    // The core asked to end (a game's own Quit): stop here and tell the page, so its last picture never stays up as if
+    // the game had frozen. Engines built before host_ended existed simply never say so.
+    if (M._host_ended && M._host_ended()) { running = false; postMessage({ type: 'ended' }); return; }
   } else next = now;
   timer = setTimeout(tick, Math.max(0, next - performance.now()));
 }

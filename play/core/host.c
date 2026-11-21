@@ -36,7 +36,7 @@ static unsigned mouse_buttons;        /* 1 left, 2 right, 4 middle */
 static unsigned mouse_pressed;        /* pressed since the last frame: a quick click is seen even if let go before it */
 static char var_key[MAX_VARS][64], var_val[MAX_VARS][64];
 static int var_count, var_changed;
-static int game_loaded;
+static int game_loaded, core_ended;
 /* HOST_VARS_AT_START (the ScummVM build only, play/core/build-scummvm.sh): a setting given before the game loads is its
    starting setting, not a change. ScummVM reads its settings when it starts, and a change it hears of on its first frame
    reaches for a system object not made yet. Every other core is built without it and behaves exactly as before. */
@@ -86,6 +86,9 @@ static bool environment(unsigned cmd, void *data) {
       const struct retro_message_ext *m = (const struct retro_message_ext *)data; printf("[core says] %s\n", m->msg); return true;
     }
     case RETRO_ENVIRONMENT_GET_FASTFORWARDING: *(bool *)data = false; return true;
+    /* The core asks to end (a game's own Quit, in ScummVM): remembered, so the page can say the game has ended instead
+       of showing its last picture for ever. */
+    case RETRO_ENVIRONMENT_SHUTDOWN: core_ended = 1; return true;
     default: return false;          /* no VFS, no hardware rendering, no MIDI, no network: the core falls back */
   }
 }
@@ -182,6 +185,7 @@ EMSCRIPTEN_KEEPALIVE uint32_t *host_frame(void) { return frame; }
 EMSCRIPTEN_KEEPALIVE int host_frame_w(void) { return frame_w; }
 EMSCRIPTEN_KEEPALIVE int host_frame_h(void) { return frame_h; }
 EMSCRIPTEN_KEEPALIVE int host_frame_count(void) { return frame_count; }
+EMSCRIPTEN_KEEPALIVE int host_ended(void) { return core_ended; }
 EMSCRIPTEN_KEEPALIVE int16_t *host_audio(void) { return audio; }
 EMSCRIPTEN_KEEPALIVE int host_audio_len(void) { return audio_len; }
 EMSCRIPTEN_KEEPALIVE void host_audio_clear(void) { audio_len = 0; }

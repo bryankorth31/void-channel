@@ -53,8 +53,12 @@
         scummvm_framerate: 'disabled', scummvm_samplerate: '48000 Hz', scummvm_gui_aspect_ratio: '1', scummvm_gui_h_res: '720',
         scummvm_browsing_mode: 'local' },
       // ScummVM's own settings file, written before it starts: no "not yet fully supported" box in front of a child (a
-      // card is carded only after it plays through in a test), and no "are you sure" when the game is left.
-      files: { '/sys/scummvm.ini': '[scummvm]\nenable_unsupported_game_warning=false\nconfirm_exit=false\n' } },
+      // card is carded only after it plays through in a test), no "are you sure" when the game is left, and none of
+      // ScummVM's own menus within reach (the Kids session, 21 Nov 2026): its main menu (Ctrl+F5, a gamepad's Start, and
+      // F5 in a game, all of which offer its launcher and settings), its quit, debugger and on-screen keyboard keys are
+      // bound to nothing. PLAY's own Pause is the menu; a game's own Quit ends it cleanly (play.js, ended).
+      files: { '/sys/scummvm.ini': '[scummvm]\nenable_unsupported_game_warning=false\nconfirm_exit=false\ngui_return_to_launcher_at_exit=false\n\n'
+        + '[keymapper]\nkeymap_global_MENU=\nkeymap_global_QUIT=\nkeymap_global_DEBUGGER=\nkeymap_global_VIRT=\nkeymap_engine-default_MENU=\n' } },
   };
 
   // The Windows a Windows 3.1 card starts on: the Internet Archive's own Emularity Windows 3.1 package (item
