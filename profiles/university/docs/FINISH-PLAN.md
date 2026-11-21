@@ -231,3 +231,12 @@ the HQ areas chat. Steps 7 to 10 start after the 22 Nov reset.
   question was then removed. Not checked: a real phone scanning the real code, and the Windows firewall prompt.
   Not built: the taking side, and the live site (the relay refuses the University's address until the PLAY lead
   opens it on Bryan's go there).
+- 20 Nov 2026, new backgrounds (Bryan: "i have new artwork to use as the bg and use the other lemnets from voidtv.net
+  like the colored lightning bg", with two zips of five pictures). Used: the two grown-up classroom pictures
+  (img/bg/academy.jpg behind course pages, img/bg/hall.jpg behind the other inner pages, both first in the front
+  page column, the archive room pictures after them). Added from voidtv.net, used the same way: the lightning and
+  static tiles across each join of the column (static-glitch, static-bolt, static-dark, screen blend), the coloured
+  dust that drifts faster than the page, and the film grain over everything. Bright night look only; no dust and
+  no moving grain for people who ask for less motion. Not used, they belong to other builds: the classroom with
+  children (Kids), Void Trivia Night (Trivia), and the style and material sheet (a reference). Open: the neon sign
+  in the pictures says VOID ACADEMY and the site is named Void University.

@@ -260,18 +260,20 @@ test('scale, sizes: widths are in metres from their sources, said in the unit a 
 test('backgrounds move the way voidtv.net moves its own: a column behind the front page, a fixed picture behind the rest', () => {
   build('--site');
   const read = (f) => fs.readFileSync(path.join(SITE, f), 'utf8');
-  for (const f of ['archives.jpg', 'archives-m.jpg', 'desk.jpg', 'desk-m.jpg']) {
+  for (const f of ['academy.jpg', 'academy-m.jpg', 'hall.jpg', 'hall-m.jpg', 'archives.jpg', 'archives-m.jpg', 'desk.jpg', 'desk-m.jpg', 'static-glitch.jpg', 'static-bolt.jpg', 'static-dark.jpg', 'static-bolt-m.jpg', 'noise.png']) {
     const p = path.join(SITE, 'img', 'bg', f);
     assert.ok(fs.existsSync(p), f + ' is not in the public copy');
     assert.ok(fs.statSync(p).size < 500000, f + ' is too heavy for a page');
   }
   const home = read('index.html');
   assert.ok(home.includes('id="colhost"') && home.includes("c.className = 'column'"), 'the front page has no picture column');
-  assert.ok(!home.includes('class="atmos"'), 'the front page should carry the column only, as on voidtv.net');
+  assert.ok(!home.includes('class="bgimg'), 'the front page should carry the column, not the fixed picture, as on voidtv.net');
+  assert.ok(home.includes("stat = ['static-glitch', 'static-bolt', 'static-dark']") && home.includes('class=\"stat\"'), 'the column has no lightning tiles between its pictures');
   const course = read('critical-thinking.html');
-  assert.ok(course.includes('class="bgimg desk"'), 'a course page has no fixed picture');
-  assert.ok(read('404.html').includes('class="bgimg archives"'), 'the not-found page has no fixed picture');
+  assert.ok(course.includes('class="bgimg academy"'), 'a course page has no fixed picture');
+  assert.ok(read('404.html').includes('class="bgimg hall"'), 'the not-found page has no fixed picture');
   for (const h of [home, course]) {
+    assert.ok(h.includes('<div class="dust"></div>') && h.includes('<div class="grain" aria-hidden="true"></div>'), 'the dust and the grain are on every page');
     assert.ok(h.includes('y*0.35'), 'the column should move at about a third of the scroll speed');
     assert.ok(h.includes('prefers-reduced-motion: reduce'), 'the movement must stop for people who ask for less motion');
   }

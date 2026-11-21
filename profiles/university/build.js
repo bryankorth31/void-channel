@@ -566,8 +566,13 @@ header.top{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding:
 .atmos{display:none;position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}html[data-look="bright"] .atmos{display:block}
 .bgimg{position:absolute;inset:-12% 0 -12% 0;background:#07080c center/cover no-repeat;opacity:.55;will-change:transform}
 .bgimg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,8,12,.55) 0%,rgba(7,8,12,.78) 45%,rgba(7,8,12,.96) 100%)}
-.bgimg.desk{background-image:url(img/bg/desk.jpg)}.bgimg.archives{background-image:url(img/bg/archives.jpg)}
-@media (max-width:700px){.bgimg.desk{background-image:url(img/bg/desk-m.jpg)}.bgimg.archives{background-image:url(img/bg/archives-m.jpg)}}
+.bgimg.academy{background-image:url(img/bg/academy.jpg)}.bgimg.hall{background-image:url(img/bg/hall.jpg)}
+@media (max-width:700px){.bgimg.academy{background-image:url(img/bg/academy-m.jpg)}.bgimg.hall{background-image:url(img/bg/hall-m.jpg)}}
+.column i.stat{opacity:.4;mix-blend-mode:screen;animation:none;-webkit-mask:linear-gradient(180deg,transparent,#000 28%,#000 72%,transparent);mask:linear-gradient(180deg,transparent,#000 28%,#000 72%,transparent)}
+.dust{position:absolute;left:-10%;top:-20%;width:120%;height:140%;pointer-events:none;background:radial-gradient(circle at 12% 18%,rgba(95,212,255,.35) 0 1px,transparent 2px),radial-gradient(circle at 78% 32%,rgba(242,169,59,.3) 0 1px,transparent 2px),radial-gradient(circle at 40% 70%,rgba(95,212,255,.28) 0 1px,transparent 2px),radial-gradient(circle at 88% 82%,rgba(255,255,255,.22) 0 1px,transparent 2px),radial-gradient(circle at 22% 52%,rgba(63,207,90,.22) 0 1px,transparent 2px),radial-gradient(circle at 60% 10%,rgba(255,255,255,.18) 0 1px,transparent 2px),radial-gradient(circle at 70% 58%,rgba(95,212,255,.2) 0 1px,transparent 2px),radial-gradient(circle at 5% 90%,rgba(242,169,59,.2) 0 1px,transparent 2px);background-size:900px 700px,1100px 800px,700px 900px,1300px 1000px,800px 600px,1000px 1100px,1200px 900px,900px 1000px;background-position:0 var(--dy,0px);opacity:.9;will-change:transform,background-position}
+.grain{display:none;position:fixed;left:-50%;top:-50%;width:200%;height:200%;pointer-events:none;z-index:1000;opacity:.045;background:url(img/bg/noise.png) repeat;background-size:160px 160px;mix-blend-mode:screen;animation:grain .6s steps(6) infinite;will-change:transform}html[data-look="bright"] .grain{display:block}
+@keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-4%,-8%)}40%{transform:translate(-12%,4%)}60%{transform:translate(6%,-18%)}80%{transform:translate(-4%,18%)}100%{transform:translate(9%,0)}}
+@media (prefers-reduced-motion:reduce){.dust{display:none}.grain{animation:none}}@media (max-width:700px){.dust{display:none}.grain{animation:none;left:0;top:0;width:100%;height:100%}}
 .atmos~*{position:relative;z-index:1}
 #colhost{position:relative;z-index:1;overflow:clip}
 .column{display:none;position:absolute;left:0;right:0;top:0;z-index:-1;pointer-events:none;overflow:hidden;will-change:transform}html[data-look="bright"] .column{display:block}
@@ -660,10 +665,10 @@ function top(current, all) {
   // content and slowly breathes (built in home()). No movement for people who ask for less motion. The fixed picture
   // drifts on tablets too (B, 19 Nov 2026: "make the background drift on my tablet too"); voidtv.net keeps it still
   // on touch screens, and here only a window 700 wide or less keeps it still.
-  const atmos = current === 'home' ? '' : '<div class="atmos" aria-hidden="true"><div class="bgimg ' + (all.some((o) => o.slug === current) ? 'desk' : 'archives') + '"></div></div>';
-  const move = '<script>(function(){if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;var light=innerWidth<=700,bg=document.querySelector(".bgimg"),q=false;'
+  const atmos = '<div class="atmos" aria-hidden="true">' + (current === 'home' ? '' : '<div class="bgimg ' + (all.some((o) => o.slug === current) ? 'academy' : 'hall') + '"></div>') + '<div class="dust"></div></div><div class="grain" aria-hidden="true"></div>';
+  const move = '<script>(function(){if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;var light=innerWidth<=700,bg=document.querySelector(".bgimg"),du=document.querySelector(".dust"),q=false;'
     + 'function frame(){q=false;var y=scrollY,h=Math.max(1,document.documentElement.scrollHeight-innerHeight),f=Math.min(1,y/h),w=Math.sin(y/700),w2=Math.sin(y/430),col=document.querySelector(".column");'
-    + 'if(col)col.style.transform="translate3d(0,"+(y*0.35)+"px,0)";if(light||!bg)return;bg.style.transform="translate3d(0,"+(-f*60+w*22)+"px,0) scale("+(1.06+f*0.05+w2*0.015)+")"}'
+    + 'if(col)col.style.transform="translate3d(0,"+(y*0.35)+"px,0)";if(light)return;if(bg)bg.style.transform="translate3d(0,"+(-f*60+w*22)+"px,0) scale("+(1.06+f*0.05+w2*0.015)+")";if(du){du.style.setProperty("--dy",(-y*0.55)+"px");du.style.transform="translate3d("+(w*30)+"px,0,0) scale("+(1.02+0.05*w2)+")"}}'
     + 'window.__par=frame;addEventListener("scroll",function(){if(!q){q=true;requestAnimationFrame(frame)}},{passive:true});addEventListener("resize",frame);frame()})()</script>';
   return atmos + '<header class="top"><a class="crest" href="index.html">' + CREST + '<span><b>Void University</b><small>Learn from people who did it</small></span></a><nav class="nav">' + links + '</nav>' + INSTALL + DRAFT + '</header>'
     + '<script>(function(){var h=document.querySelector("header.top"),s=function(){document.documentElement.style.setProperty("--hh",h.offsetHeight+"px")};s();addEventListener("load",s);if(window.ResizeObserver)new ResizeObserver(s).observe(h);else addEventListener("resize",s)})()</script>' + move;
@@ -775,7 +780,7 @@ document.querySelectorAll('.rowwrap').forEach(function (w) {
 // changes height. The script in the header moves it at a third of the scroll speed.
 (function () {
   var host = document.getElementById('colhost'); if (!host) return;
-  var pics = ['archives', 'desk'], wait = 0, was = '';
+  var pics = ['hall', 'academy', 'archives', 'desk'], stat = ['static-glitch', 'static-bolt', 'static-dark'], wait = 0, was = '';
   function build() {
     var H = host.scrollHeight, W = host.clientWidth || innerWidth, T = Math.round(W * 0.558), sfx = innerWidth <= 700 ? '-m' : '';
     if (!(T >= 50) || was === H + 'x' + W) return; was = H + 'x' + W;
@@ -783,6 +788,7 @@ document.querySelectorAll('.rowwrap').forEach(function (w) {
     var c = document.createElement('div'), n = Math.min(Math.ceil(H / T) + 1, 60), h = '';
     c.className = 'column'; c.style.height = H + 'px';
     for (var i = 0; i < n; i++) h += '<i style="top:' + (i * T) + 'px;height:' + T + 'px;background-image:url(img/bg/' + pics[i % pics.length] + sfx + '.jpg);--kbd:' + (64 + (i % 4) * 11) + 's;animation-delay:-' + ((i * 19) % 64) + 's"></i>';
+    for (var k = 0; k < n; k++) h += '<i class="stat" style="top:' + Math.round((k + 1) * T - T / 2) + 'px;height:' + T + 'px;background-image:url(img/bg/' + stat[k % stat.length] + sfx + '.jpg)"></i>';
     c.innerHTML = h; host.appendChild(c); if (window.__par) window.__par();
   }
   build();
@@ -823,7 +829,7 @@ function credits(all) {
   const rows = Object.keys(IMG).map((k) => { const x = IMG[k]; return '<tr><td><img src="' + esc(x.file) + '" alt=""></td><td>' + esc(x.title || 'Untitled') + '</td><td>' + esc(x.creator || 'unknown') + '</td><td>' + esc(x.license) + '</td><td><a href="' + esc(x.page) + '" target="_blank" rel="noopener">' + esc(x.source) + '</a></td></tr>'; }).join('');
   return `<!doctype html><html lang="en" data-look="${LOOK}" data-type="${TYPE}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${APPHEAD}<title>Photo credits | Void University</title>${FONTS}<style>${BASE}
 main{max-width:1100px;margin:0 auto;padding:30px 32px}h1{font-family:var(--head)}table{width:100%;border-collapse:collapse;font-size:14px}td{border-bottom:1px solid var(--line);padding:8px;vertical-align:middle}td img{width:96px;height:60px;object-fit:cover;border-radius:4px;display:block}${LOOKCSS}${TYPECSS}</style></head><body>
-${top('credits', all)}<main><h1>Photo credits</h1><p>Every photo here is public domain (CC0), found through Openverse. We list who took each one anyway, with a link to where it came from.</p><table>${rows}</table><h1>Backgrounds</h1><p>The pictures of the archive room behind the pages are our own, made for Void University.</p>${all.some((c) => c.units.some(shipsLab)) ? '<h1>Lab physics</h1><p>Things in the labs fall, roll and bounce using Planck.js by Erin Catto and Ali Shakiba, free to use under the <a href="planck-LICENSE.txt">MIT licence</a>. The labs themselves are our own work.</p>' : ''}${all.some((c) => c.units.some(shipsScale)) ? '<h1>3D stages</h1><p>The 3D scale stages are drawn with three.js by the three.js authors, free to use under the <a href="three-LICENSE.txt">MIT licence</a>. The stages and what they show are our own work; each one names the papers its numbers come from.</p>' : ''}</main>${FOOT()}</body></html>`;
+${top('credits', all)}<main><h1>Photo credits</h1><p>Every photo here is public domain (CC0), found through Openverse. We list who took each one anyway, with a link to where it came from.</p><table>${rows}</table><h1>Backgrounds</h1><p>The pictures of the classroom and the archive room behind the pages are our own, made for Void University. The lightning, the static and the film grain over them are Void TV's own.</p>${all.some((c) => c.units.some(shipsLab)) ? '<h1>Lab physics</h1><p>Things in the labs fall, roll and bounce using Planck.js by Erin Catto and Ali Shakiba, free to use under the <a href="planck-LICENSE.txt">MIT licence</a>. The labs themselves are our own work.</p>' : ''}${all.some((c) => c.units.some(shipsScale)) ? '<h1>3D stages</h1><p>The 3D scale stages are drawn with three.js by the three.js authors, free to use under the <a href="three-LICENSE.txt">MIT licence</a>. The stages and what they show are our own work; each one names the papers its numbers come from.</p>' : ''}</main>${FOOT()}</body></html>`;
 }
 
 // A wrong address: wrangler.jsonc serves 404.html for it. Links start from the site root, since the wrong address can be
@@ -887,7 +893,7 @@ for (const c of loaded) if (c.shelf !== 'supplement') for (const u of c.units) f
 fs.mkdirSync(path.join(OUT, 'img'), { recursive: true });
 for (const k of Object.keys(IMG)) fs.copyFileSync(path.join(DIR, IMG[k].file), path.join(OUT, IMG[k].file));
 fs.mkdirSync(path.join(OUT, 'img', 'bg'), { recursive: true });
-for (const f of fs.readdirSync(path.join(DIR, 'img', 'bg')).filter((x) => x.endsWith('.jpg'))) fs.copyFileSync(path.join(DIR, 'img', 'bg', f), path.join(OUT, 'img', 'bg', f)); // the moving backgrounds
+for (const f of fs.readdirSync(path.join(DIR, 'img', 'bg')).filter((x) => /\.(jpg|png)$/.test(x))) fs.copyFileSync(path.join(DIR, 'img', 'bg', f), path.join(OUT, 'img', 'bg', f)); // the moving backgrounds
 for (const f of APPICONS) fs.copyFileSync(path.join(DIR, 'img', f), path.join(OUT, 'img', f)); // home-screen icons (make-icons.js)
 fs.writeFileSync(path.join(OUT, 'manifest.webmanifest'), JSON.stringify(MANIFEST));
 fs.writeFileSync(path.join(OUT, 'sw.js'), SW);
