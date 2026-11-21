@@ -143,6 +143,13 @@ async function unpack(bytes, start) {
 // settings pointed at C: instead of D:, and a small start file of ours starts Windows. With shell, the game itself is
 // Windows' only program (SYSTEM.INI shell=), as the Archive's win31.zip does with its SETINI step, so a child never
 // meets Program Manager. The game's own files win any clash of names. Returns the start file's path.
+// WinG (the fast-drawing kit many Windows 3.1 kids games use) tests the display the first time it runs, about 90
+// seconds behind a "testing for optimal display performance" box, and keeps the answer in WIN.INI under [WinG]. Nothing
+// is kept between plays here, so every start would test again (Kids held Reader Rabbit back for it; Bryan, 20 Nov 2026).
+// The Archive's package carries the answer for its own emulator's display; this is the answer WinG wrote on our DOSBox
+// Pure's display (read back from WIN.INI after one full test, Reader Rabbit, 20 Nov 2026). If DOSBox Pure's video card
+// setting ever changes, WinG keys it differently, tests once again, and this line needs reading again.
+const WING_SEEN = 'SVGA256.DRV640x480x8(0,12)v4.0.0.58-5D74-1.0.0.37=ECHGECHGECHGECHGDDHGHGHGHDHGHDHGZZZZZZZZZZZZZZZZDDFFDDFFDDFFDDFF1F';
 async function addWindows(msg, program) {
   say('Fetching Windows 3.1 from the Internet Archive');
   const pack = await gameBytes(msg.windows.url, msg.windows.size, 'Windows 3.1');
@@ -158,6 +165,7 @@ async function addWindows(msg, program) {
       name = 'WINDOWS/' + name.slice(8);
       let text = new TextDecoder('latin1').decode(data).split('D:' + BS).join('C:' + BS).split('d:' + BS).join('C:' + BS);
       if (msg.windows.shell && /^WINDOWS\/SYSTEM\.INI$/i.test(name)) text = text.replace(/^shell=.*$/im, 'shell=' + dosPath);
+      if (/^WINDOWS\/WIN\.INI$/i.test(name) && !text.includes(WING_SEEN)) text = text.replace(/^\[WinG\]\r?\n/m, (h) => h + WING_SEEN + (h.endsWith('\r\n') ? '\r\n' : '\n'));
       data = Uint8Array.from(text, (ch) => ch.charCodeAt(0) & 255);
     }
     const full = root + name;

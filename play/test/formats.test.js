@@ -116,3 +116,13 @@ test('Windows 3.1: the worker puts Windows on the game\'s own C: drive and start
   assert.ok(body.includes("M.FS.writeFile(root + 'PLAYWIN.BAT'"));
   assert.ok(body.includes("lines.join('\\r\\n')"), 'DOS line endings');
 });
+
+test('Windows 3.1: WinG\'s display answer for our DOSBox Pure is seeded, so a game starts without its 90-second display test (Bryan held Reader Rabbit off Kids for it, 20 Nov 2026)', () => {
+  const w = fs.readFileSync(path.join(PLAY, 'src', 'core-worker.js'), 'utf8');
+  const seen = w.match(/const WING_SEEN = '([^']+)';/)[1];
+  // The same shape as the answer the Archive's own package carries for its emulator: driver, mode, version, an answer of 66.
+  const [key, answer] = seen.split('=');
+  assert.match(key, /^SVGA256\.DRV640x480x8\(0,12\)v4\.0\.0\.58-[0-9A-F]{4}-1\.0\.0\.37$/);
+  assert.match(answer, /^[A-Z0-9]{66}$/);
+  assert.ok(w.includes("if (/^WINDOWS\\/WIN\\.INI$/i.test(name) && !text.includes(WING_SEEN)) text = text.replace("), 'written under [WinG] in WIN.INI');
+});
