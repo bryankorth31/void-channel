@@ -304,22 +304,28 @@
   // d pad size on the left. there is space to have the dpad size increased ... these two control areas ... have begun to
   // encroach on the screen and should be gently pushed outwards and away"). One control size S for both sides: the d-pad
   // is S across, and the face buttons fill an S by S box. Both sit at the outer edges, clear of the picture; where the
-  // margins are too narrow for a good S, the picture gives a little room (keeping its shape, centred, never under 82%).
+  // margins are too narrow for a good S, the picture gives a little room (keeping its shape, never under 70%).
   // pic: the picture at its natural size in the layer's coordinates (x from the layer's left). Pure (tested).
   function sideFit(o) {
     const { ow, oh, pic, cheats } = o, e = o.e || 10, GAP = 8;
     let best = null;
-    for (let k = 1; k >= 0.82 - 1e-9; k -= 0.02) {
+    // Bryan, 20 Nov 2026: "the screen and the dpad should scoot 15 px to the left away from the buttons": the picture sits
+    // 15 px left of the middle, and the d-pad at the very left edge (play.css).
+    const LEFT = o.left == null ? 15 : o.left;
+    // The picture gives at most 30% of its width (a 667 px phone; live gave it a little more than that already).
+    for (let k = 1; k >= 0.70 - 1e-9; k -= 0.02) {
       const w = Math.round(pic.w * k), h = Math.round(pic.h * k);
-      const x = Math.round(pic.x + (pic.w - w) / 2), y = Math.round(pic.y + (pic.h - h) / 2);
-      const side = Math.max(0, Math.min(x, ow - (x + w)));
-      const short = oh < 340, wide = side >= 150 || short;
+      const x = Math.max(0, Math.round(pic.x + (pic.w - w) / 2) - LEFT), y = Math.round(pic.y + (pic.h - h) / 2);
+      const right = ow - (x + w), side = Math.max(0, Math.min(x, right));
+      const short = oh < 340, wide = side >= 146;   // room for two small keys side by side (64 + 8 + 64 + 10)
       const stackL = wide ? 102 : 156, stackR = cheats && wide && !short ? 116 : 102;
       const vert = Math.min(oh - 2 * e - stackL - GAP, oh - 2 * e - stackR - 24);   // 24 px under Start and Cheats (the auditor)
-      const S = Math.max(0, Math.min(300, vert, side - e - GAP));
+      const S = Math.max(0, Math.min(300, vert, x - GAP, right - e - GAP));
       const r = { k: Math.round(k * 100) / 100, x, y, w, h, side, wide, S };
       if (!best || S > best.S) best = r;
-      if (S >= Math.min(vert, 0.42 * oh, 220)) break;   // big enough: keep the biggest picture that allows it
+      // Big enough (on a narrow phone, a fifth of its width): keep the biggest picture that allows it (the auditor: a
+      // 667 px phone gave a third of its picture away for the controls).
+      if (S >= Math.min(vert, 0.42 * oh, 0.21 * ow, 220)) break;
     }
     return best;
   }

@@ -91,9 +91,13 @@
     // outwards and away"); the picture gives a little room where it must (PlayTouch.sideFit).
     if (shell && floating && innerWidth > innerHeight && L.screen && L.mode !== 'plain') {
       const over = $('z-over'), ox = parseFloat(over.style.left) || 0, oy = parseFloat(over.style.top) || 0;
-      const fit = PlayTouch.sideFit({ ow: parseFloat(over.style.width) || innerWidth, oh: parseFloat(over.style.height) || innerHeight,
-        pic: { x: L.screen.x - ox, y: L.screen.y - oy, w: L.screen.w, h: L.screen.h }, cheats: document.body.classList.contains('has-cheats') });
-      if (fit.k < 1) set($('screen'), { x: fit.x + ox, y: fit.y + oy, w: fit.w, h: fit.h });
+      const ow = parseFloat(over.style.width) || innerWidth, oh = parseFloat(over.style.height) || innerHeight;
+      // From the biggest picture the height allows (the layout's own leaves room for key columns this pad does not use;
+      // the auditor: 243x182 on a 667x331 phone), at the game's own shape.
+      const asp = L.screen.w / L.screen.h;
+      let ph = oh, pw = ph * asp; if (pw > ow) { pw = ow; ph = pw / asp; }
+      const fit = PlayTouch.sideFit({ ow, oh, pic: { x: (ow - pw) / 2, y: (oh - ph) / 2, w: pw, h: ph }, cheats: document.body.classList.contains('has-cheats') });
+      set($('screen'), { x: fit.x + ox, y: fit.y + oy, w: fit.w, h: fit.h });
       over.style.setProperty('--side', fit.side + 'px');
       over.style.setProperty('--S', Math.max(110, fit.S) + 'px');
       over.classList.toggle('wide', fit.wide);

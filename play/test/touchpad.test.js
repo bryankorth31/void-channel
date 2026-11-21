@@ -155,7 +155,6 @@ test('Bryan, 20 Nov 2026, sideways with the address bar showing ("the start and 
   const fs = require('fs'), path = require('path');
   const css = fs.readFileSync(path.join(__dirname, '..', 'play.css'), 'utf8');
   assert.ok(css.includes('.over.wide .cpad.side .crewind{left:calc(var(--e) + 72px);top:calc(var(--e) + 58px)}'), 'Select and Rewind in a row under L where there is room');
-  assert.ok(css.includes('.over:not(.wide) .cpad.side .crewind{left:calc(var(--e) + 72px);top:calc(var(--e) + 58px)}'), 'and on a short narrow screen too');
   assert.ok(css.includes('.cpad .cface .pk{min-width:0;min-height:0}'), 'face buttons take the size the height gives');
   const play = fs.readFileSync(path.join(__dirname, '..', 'src', 'play.js'), 'utf8');
   assert.ok(!/L\.screen\.x \+ shift/.test(play), 'the picture stays in the middle');
@@ -168,15 +167,16 @@ test('Bryan, 20 Nov 2026 ("the d pad size increased ... these two control areas 
   const T = require('../src/touchpad.js');
   // iPhone sideways, 844x390, no edges: the picture 520x390 in the middle leaves 162 px each side.
   const a = T.sideFit({ ow: 844, oh: 390, pic: { x: 162, y: 0, w: 520, h: 390 }, cheats: true });
-  assert.ok(a.S >= 160 && a.k < 1 && a.k >= 0.82, 'the picture gives a little room: ' + JSON.stringify(a));
-  assert.ok(a.side - 10 - 8 >= a.S, 'the controls stay off the picture');
-  assert.equal(a.x + a.w / 2, 162 + 260, 'still in the middle');
+  assert.ok(a.S >= 160 && a.k < 1 && a.k >= 0.7, 'the picture gives a little room: ' + JSON.stringify(a));
+  
+  assert.equal(a.x + a.w / 2, 162 + 260 - 15, '15 px left of the middle (Bryan: "scoot 15 px to the left away from the buttons")');
+  assert.ok(a.x - 8 >= a.S && 844 - a.x - a.w - 10 - 8 >= a.S, 'both controls clear of the picture');
   // A wide margin already (a tablet-like phone): the picture keeps its full size.
   const b = T.sideFit({ ow: 1000, oh: 390, pic: { x: 240, y: 0, w: 520, h: 390 } });
   assert.equal(b.k, 1);
-  // Never under 82%.
+  // Never under 70%.
   const c = T.sideFit({ ow: 560, oh: 375, pic: { x: 30, y: 0, w: 500, h: 375 } });
-  assert.ok(c.k >= 0.82);
+  assert.ok(c.k >= 0.7);
 });
 
 test('Bryan, 20 Nov 2026 ("the right buttons are a pinched aspect though and should be made wider to fit the space"): sideways the diamond and A B C fill a square as wide as the d-pad', () => {

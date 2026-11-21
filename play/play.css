@@ -530,10 +530,6 @@ body.muted .spk .off{display:inline}body.muted .spk .on{display:none}
    buttons keep a full row of height, and the face buttons take the size the height gives (not a 56 px minimum that made
    them run into each other). */
 @container (max-height:339px){
-  /* Short and narrow too (a Game Boy Advance picture is wide): Select and Rewind still go in a row; the row may cross
-     the picture's edge see-through, as the d-pad does on such phones, rather than sit on the d-pad. */
-  .over:not(.wide) .cpad.side{--stackL:102px}
-  .over:not(.wide) .cpad.side .crewind{left:calc(var(--e) + 72px);top:calc(var(--e) + 58px)}
   .cpad.side .ccheats{display:none !important}
   body.has-cheats .over.wide .cpad.side{--stackR:102px}
   body.has-cheats .over.wide .cpad.side .cstart{top:calc(var(--e) + 58px)}
@@ -560,3 +556,5 @@ body.muted .spk .off{display:inline}body.muted .spk .on{display:none}
 .cpad.side .cface.s-abc .pk[data-code="P1:B"]{left:calc(50% - var(--db) / 2);top:calc(50% - var(--db) / 2)}
 .cpad.side .cface.s-abc .pk[data-code="P1:A"]{right:0;top:0}
 body.shell .cpad.side .cface.s-abc::before{width:calc((var(--S,150px) - var(--db)) * 1.414 + var(--db) + 16px);height:calc(var(--db) + 16px);transform:translate(-50%,-50%) rotate(-45deg)}
+/* The d-pad at the very left edge sideways (Bryan: "the screen and the dpad should scoot 15 px to the left"). */
+.cpad.side .cdpad{left:0}
