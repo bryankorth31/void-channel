@@ -341,8 +341,10 @@ stream.js is empty). Phone rooms (`/api/room/*`, the voidtv-rooms Durable Object
 sends only when a button changes, plus one ping every 2 seconds. Durable Objects are billed with Workers Paid
 (1 million requests a month included); incoming WebSocket messages count at 20 to 1. A room's Durable Object stays awake
 while its screen is connected (it accepts sockets the plain way, not the hibernation way), so it is billed for duration the
-whole night: about 1,800 GB-seconds for a 4-hour room against 400,000 included a month, so about 200 such nights a month
-before any charge. Rate-limit `/api/room/*` by address in the dashboard, as `/api/e` is, so room codes cannot be guessed
+whole night: about 1,800 GB-seconds for a 4-hour room (pad, trivia, lesson) against 400,000 included a month, so about
+200 such nights a month before any charge. A `remote` room (the phone remote and watch party) lasts up to 12 hours with
+the TV on: about 5,500 GB-seconds, so about 72 whole-evening rooms a month inside what Workers Paid includes, then about 7
+cents each (night audit N18, 21 Nov 2026). Rate-limit `/api/room/*` by address in the dashboard, as `/api/e` is, so room codes cannot be guessed
 in bulk.
 
 ## Vercel (current host of the old app)
