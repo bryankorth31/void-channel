@@ -26,7 +26,7 @@ const uploaderHash = (u) => (u ? require('crypto').createHash('sha1').update(Str
 const noEmail = (s) => (typeof s === 'string' ? s.replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g, '[email]') : s);
 const LIST = JSON.parse(fs.readFileSync(PROFILE.listFile, 'utf8'));
 const CACHE_DIR = path.join(PROFILE.catalogDir, 'cache');
-const { readCached, writeCached } = require('./lib/cachefile'); // search pages are kept gzipped
+const { readGood, saveAnswer, entries } = require('./lib/cachefile'); // search pages are kept gzipped; an answer that carries an error is never saved or reused
 const CAND_DIR = path.join(PROFILE.catalogDir, 'candidates');
 const SHOWS_DIR = path.join(PROFILE.catalogDir, 'shows');
 const OUT = path.join(PROFILE.catalogDir, 'scout.json');
@@ -52,14 +52,14 @@ function huntsRunning() {
 
 async function getJson(url, cacheKey) {
   const cf = cacheKey && path.join(CACHE_DIR, cacheKey + '.json');
-  if (cf) { const cached = readCached(cf); if (cached !== undefined) return cached; }
+  if (cf) { const cached = readGood(cf); if (cached !== undefined) return cached; }
   if (calls >= budget) throw new Error('budget exhausted');
   for (let attempt = 0; ; attempt++) {
     calls++;
     try {
       const res = await fetch(url, { signal: AbortSignal.timeout(60000), headers: { 'user-agent': 'voidtv-scout/1 (offline catalog builder; one call at a time)' } });
       const text = await res.text();
-      if (res.ok && text.trim().startsWith('{')) { const j = JSON.parse(text); if (cf) { fs.mkdirSync(CACHE_DIR, { recursive: true }); writeCached(cf, text); } await sleep(PAUSE_MS); return j; }
+      if (res.ok && text.trim().startsWith('{')) { if (cf) fs.mkdirSync(CACHE_DIR, { recursive: true }); const j = saveAnswer(cf, text); await sleep(PAUSE_MS); return j; }
       throw new Error(`HTTP ${res.status}`);
     } catch (e) {
       if (attempt >= BACKOFF_MS.length) throw e;
@@ -72,7 +72,7 @@ async function scrapeQuery(q, key, pages = 2) {
   const items = []; let cursor = null;
   for (let page = 0; page < pages; page++) {
     const j = await getJson('https://archive.org/services/search/v1/scrape?' + new URLSearchParams({ q, fields: 'identifier,title,description,subject,year,downloads,collection,creator,uploader', count: '500', ...(cursor ? { cursor } : {}) }), `${key}-${page}`);
-    items.push(...(j.items || [])); cursor = j.cursor; if (!cursor) break;
+    items.push(...entries(j)); cursor = j.cursor; if (!cursor) break;
   }
   return items;
 }

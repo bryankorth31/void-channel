@@ -22,7 +22,7 @@ const { execFileSync } = require('child_process');
 const ROOT = path.join(__dirname, '..');
 const PROFILE = require('./lib/profile');
 const { nearNameGuard, rejectLine, saveRejected } = require('./lib/tvmazeguard');
-const { readCached, writeCached, cachedPath } = require('./lib/cachefile');
+const { cachedPath, readGood, saveAnswer, entries } = require('./lib/cachefile');
 // Archive uploaders are usually e-mail addresses: third-party personal data that must not be committed. The hunters keep
 // a short hash instead (first 12 hex characters of sha1 of the trimmed, lowercased address): enough to tell uploaders
 // apart (scripts/hunt.js candidates, scripts/scout.js via), not enough to read who they are.
@@ -68,7 +68,11 @@ async function getJson(url, cacheKey) {
   const cf = cacheKey && path.join(CACHE_DIR, cacheKey + '.json');
   // --refetch ignores scrape pages older than 14 days, so a re-hunt can see what the Archive has gained since
   const have = cf && cachedPath(cf); // search pages are kept gzipped (scripts/lib/cachefile.js)
-  if (have && !(REFETCH && /^scrape-/.test(cacheKey) && Date.now() - fs.statSync(have).mtimeMs > 14 * 864e5)) return readCached(cf);
+  if (have && !(REFETCH && /^scrape-/.test(cacheKey) && Date.now() - fs.statSync(have).mtimeMs > 14 * 864e5)) {
+    const saved = readGood(cf); // a saved page that holds an Archive error is not a result: it is asked again (scripts/lib/cachefile.js)
+    if (saved !== undefined) return saved;
+    console.log(`    the saved page ${cacheKey} holds an Archive error, not a result; asking again`);
+  }
   if (calls >= budget) throw new Error('budget exhausted');
   for (let attempt = 0; ; attempt++) {
     calls++;
@@ -76,8 +80,8 @@ async function getJson(url, cacheKey) {
       const res = await fetch(url, { signal: AbortSignal.timeout(60000), headers: { 'user-agent': 'voidtv-hunt/1 (offline catalog builder; one call at a time)' } });
       const text = await res.text();
       if (res.ok && text.trim().startsWith('{')) {
-        const j = JSON.parse(text);
-        if (cf) { fs.mkdirSync(CACHE_DIR, { recursive: true }); writeCached(cf, text); }
+        if (cf) fs.mkdirSync(CACHE_DIR, { recursive: true });
+        const j = saveAnswer(cf, text); // an answer that carries an error is refused here and nothing is saved; the catch below waits and asks again
         await sleep(PAUSE_MS);
         return j;
       }
@@ -144,7 +148,7 @@ async function scrapeQuery(q, key) {
       ...(cursor ? { cursor } : {}),
     });
     const j = await getJson(url, `${key}-${page}`);
-    items.push(...(j.items || []));
+    items.push(...entries(j)); // empty entries dropped: an empty entry is not an upload
     cursor = j.cursor;
     if (!cursor || items.length >= 2000) break;
   }

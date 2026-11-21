@@ -20,7 +20,7 @@ const ROOT = path.join(__dirname, '..');
 const PROFILE = require('./lib/profile');
 const { LIVE, REVIEW, tagText, titleSim, itemScore, judgeFile, words } = require('./lib/moviejudge');
 const { hardExclude } = require('./lib/hardexclude');
-const { readCached, writeCached } = require('./lib/cachefile'); // search pages are kept gzipped
+const { readCached, readGood, saveAnswer, entries } = require('./lib/cachefile'); // search pages are kept gzipped; an answer that carries an error is never saved or reused
 // Free text copied from the Archive (descriptions, titles) or from TMDB (overviews) can carry an e-mail address. It is masked here, before
 // anything is written, so a hunt can never put an address into committed data (and publish never has to refuse for that reason).
 const noEmail = (s) => (typeof s === 'string' ? s.replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g, '[email]') : s);
@@ -49,7 +49,7 @@ const slug = (s) => norm(s).replace(/ /g, '-').replace(/^(con|prn|aux|nul|com[1-
 
 async function getJson(url, cacheKey) {
   const cf = path.join(CACHE_DIR, cacheKey + '.json');
-  const cached = readCached(cf);
+  const cached = readGood(cf); // a saved page that holds an Archive error counts as not there, so it is asked again
   if (cached !== undefined) return cached;
   if (calls >= budget) throw new Error('budget exhausted');
   for (let attempt = 0; ; attempt++) {
@@ -57,7 +57,7 @@ async function getJson(url, cacheKey) {
     try {
       const res = await fetch(url, { signal: AbortSignal.timeout(60000), headers: { 'user-agent': 'voidtv-hunt/1 (offline catalog builder; one call at a time)' } });
       const text = await res.text();
-      if (res.ok && text.trim().startsWith('{')) { fs.mkdirSync(CACHE_DIR, { recursive: true }); writeCached(cf, text); await sleep(PAUSE_MS); return JSON.parse(text); }
+      if (res.ok && text.trim().startsWith('{')) { fs.mkdirSync(CACHE_DIR, { recursive: true }); const j = saveAnswer(cf, text); await sleep(PAUSE_MS); return j; }
       throw new Error(`HTTP ${res.status}`);
     } catch (e) {
       if (attempt >= BACKOFF_MS.length) throw e;
@@ -77,7 +77,7 @@ async function search(m, get = getJson) {
   for (const [q, key] of [[q1, 'mscrape-title-' + m.tmdbId], [q2, 'mscrape-' + m.tmdbId]]) {
     const url = 'https://archive.org/services/search/v1/scrape?' + new URLSearchParams({ q, fields: 'identifier,title,description,year,downloads,collection', count: '300' });
     const j = await get(url, key);
-    for (const it of j.items || []) if (!seen.has(it.identifier)) { seen.add(it.identifier); items.push(it); }
+    for (const it of entries(j)) if (!seen.has(it.identifier)) { seen.add(it.identifier); items.push(it); }
     if (items.length >= 300) break; // the title query alone was plenty
   }
   return items;
@@ -164,7 +164,7 @@ function collectionLookup(cacheDir) {
     if (!seen.has(rec.tmdbId)) {
       const byItem = new Map();
       for (const k of ['mscrape-title-' + rec.tmdbId, 'mscrape-' + rec.tmdbId]) {
-        try { for (const it of (readCached(path.join(cacheDir, k + '.json')) || {}).items || []) if (!byItem.has(it.identifier)) byItem.set(it.identifier, it.collection); } catch (e) { /* page not on this PC */ }
+        try { for (const it of entries(readCached(path.join(cacheDir, k + '.json')))) if (!byItem.has(it.identifier)) byItem.set(it.identifier, it.collection); } catch (e) { /* page not on this PC */ }
       }
       seen.set(rec.tmdbId, byItem);
       if (seen.size > 50) seen.delete(seen.keys().next().value);
