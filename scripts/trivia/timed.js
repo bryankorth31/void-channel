@@ -3,7 +3,8 @@
 // just said: "Finish the line". Each question comes from a Line moment a person approved on the marking page (the words
 // checked against what is heard, plan C0), so nothing a machine heard reaches a screen unchecked (the C6 rule).
 //
-// Also the watch party's games: 'spot' (Spot it, from find moments) and 'whodunit' (from whodunit moments); see below.
+// Also the watch party's games: 'spot' (Spot it, from find moments) and 'whodunit' (from whodunit moments), and the
+// Mystery channel's clue events ('clue', from clue moments; a whodunit lists its episode's clue times); see below.
 // A question: { id, category: 'tv', round: 'finish-line', band, q, choices, answer, season, number, at, source, about }
 //   at = the second in the episode file the line has been said by (the moment's end); the strip asks from then on.
 //   The wrong endings are the ends of other lines said in the same episode (its timed transcript), or, with no
@@ -95,13 +96,29 @@ function spotQuestion(m, show) {
 
 // Whodunit: asked when guessing opens; a guess can change until lock; the reveal scores it. The answer was written by a
 // person who watched the episode, and the source says who and where the episode reveals it.
-function whodunitQuestion(m, show) {
+function whodunitQuestion(m, show, clueTimes) {
   if (m.kind !== 'whodunit' || !m.approved) return { skip: 'not an approved whodunit' };
+  // The clues shown while guessing is open, in order: the results say how many a player had seen when they locked in.
+  const clues = (clueTimes || []).filter((t) => t >= m.start && t <= m.lock).sort((a, b) => a - b);
   return {
     id: 'timed-' + m.id, category: 'tv', round: 'whodunit', band: show.band, q: m.q, choices: m.choices.slice(), answer: m.answer,
-    season: m.season, number: m.number, at: m.start, lock: m.lock, reveal: m.end,
+    season: m.season, number: m.number, at: m.start, lock: m.lock, reveal: m.end, clues,
     source: { site: 'Internet Archive', url: 'https://archive.org/details/' + m.item,
       fact: show.name + ', season ' + m.season + ', episode ' + m.number + ': revealed at ' + mmss(m.end) + ' (answer written by ' + m.by + ' after watching)',
+      read: String(m.approved.at || m.at).slice(0, 10) },
+    about: { show: m.show, season: m.season, number: m.number, moment: m.id },
+  };
+}
+
+// A clue: not a question but an event the strip and the phones show while it is on screen (the Mystery channel, plan
+// M1); players may change their whodunit guess after it.
+function clueEvent(m, show) {
+  if (m.kind !== 'clue' || !m.approved || !m.clue) return { skip: 'not an approved clue' };
+  return {
+    id: 'timed-' + m.id, category: 'tv', round: 'clue', band: show.band, q: 'Clue: ' + m.clue, clue: m.clue,
+    season: m.season, number: m.number, at: m.start, until: m.end,
+    source: { site: 'Internet Archive', url: 'https://archive.org/details/' + m.item,
+      fact: show.name + ', season ' + m.season + ', episode ' + m.number + ', at ' + mmss(m.start) + ': ' + m.clue + ' (marked by ' + m.by + ')',
       read: String(m.approved.at || m.at).slice(0, 10) },
     about: { show: m.show, season: m.season, number: m.number, moment: m.id },
   };
@@ -116,7 +133,13 @@ function problems(q, m) {
     if (DASH.test(q.q)) out.push('carries a long dash');
     return out;
   }
+  if (q.round === 'clue') {
+    if (q.at !== m.start || q.until !== m.end || q.clue !== m.clue) out.push('is not at its moment');
+    if (DASH.test(q.q)) out.push('carries a long dash');
+    return out;
+  }
   if (q.round === 'whodunit') {
+    if (!Array.isArray(q.clues) || q.clues.some((t) => t < q.at || t > q.lock)) out.push('lists a clue outside its guessing time');
     if (q.at !== m.start || q.lock !== m.lock || q.reveal !== m.end) out.push('is not at its moment');
     if (q.answer !== m.answer || JSON.stringify(q.choices) !== JSON.stringify(m.choices)) out.push('does not match the answer written');
     if ([q.q, ...q.choices].some((x) => DASH.test(x))) out.push('carries a long dash');
@@ -141,7 +164,7 @@ function build() {
   const skipped = [];
   for (const key of M.allKeys()) {
     if (key.startsWith('film-')) continue;
-    const all = M.load(key).filter((m) => ['line', 'find', 'whodunit'].includes(m.kind) && m.approved);
+    const all = M.load(key).filter((m) => ['line', 'find', 'whodunit', 'clue'].includes(m.kind) && m.approved);
     const moments = all.filter((m) => m.kind === 'line');
     if (!all.length) continue;
     const show = pool.get(key);
@@ -150,7 +173,8 @@ function build() {
       const bad = M.problems(m, M.fileFor(db, m));
       if (bad.length) { skipped.push(`${m.id}: ${bad.join('; ')}`); continue; }
       if (m.kind !== 'line') {
-        const q = m.kind === 'find' ? spotQuestion(m, show) : whodunitQuestion(m, show);
+        const clueTimes = all.filter((c) => c.kind === 'clue' && c.season === m.season && c.number === m.number && !M.problems(c, M.fileFor(db, c)).length).map((c) => c.start);
+        const q = m.kind === 'find' ? spotQuestion(m, show) : m.kind === 'clue' ? clueEvent(m, show) : whodunitQuestion(m, show, clueTimes);
         if (q.skip) { skipped.push(`${m.id}: ${q.skip}`); continue; }
         (byShow[key] = byShow[key] || []).push(q);
         continue;
@@ -200,4 +224,4 @@ function main() {
 }
 
 if (require.main === module) main();
-module.exports = { split, foils, question, spotQuestion, whodunitQuestion, problems, build, write, OUT, LEAD };
+module.exports = { split, foils, question, spotQuestion, whodunitQuestion, clueEvent, problems, build, write, OUT, LEAD };

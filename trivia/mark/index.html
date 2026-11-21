@@ -53,6 +53,7 @@
               <label title="One frame, shown as a picture question"><input type="radio" name="kind" value="still">Still</label>
               <label title="Treasure hunt: something to spot on screen while it can be seen; phones tap when they see it"><input type="radio" name="kind" value="find">Spot it</label>
               <label title="Detective game for a mystery episode: four suspects, the right one, and when guessing opens, closes and the answer is revealed"><input type="radio" name="kind" value="whodunit">Whodunit</label>
+              <label title="A clue in a mystery episode: it pops up while it shows, and players can change their whodunit guess after it"><input type="radio" name="kind" value="clue">Clue</label>
             </div>
           </div>
           <div class="field" id="lenField"><span>Length</span>
@@ -63,6 +64,7 @@
           </div>
           <input id="line" maxlength="200" placeholder="The words heard (for a line)" title="The words of the line, as said" hidden>
           <input id="find" maxlength="80" placeholder="What to spot, for example: the red phone" title="What players look for; mark the start where it first shows" hidden>
+          <input id="clue" maxlength="120" placeholder="The clue, for example: the muddy boots by the door" title="What the clue is; mark the start where it shows" hidden>
           <fieldset class="who" id="who" hidden>
             <input id="wq" maxlength="120" value="Who did it?" title="The question everyone guesses">
             <div class="sus" title="Four suspects; tick the one who did it">
