@@ -220,3 +220,13 @@ test('the audit: search folds accents, so "pokemon" finds the Pokémon games', (
   assert.ok(hits('pokemon') >= 5);
   assert.equal(hits('pokemon'), hits('pokémon'));
 });
+
+test('the shelf rows use VoidTV\'s own side arrows (Bryan, 20 Nov 2026: "exactly like voidtv"): always there on a computer, its chevron icon, whole boxes per press, every row', () => {
+  const fs = require('fs'), path = require('path');
+  const css = fs.readFileSync(path.join(__dirname, '..', 'shelf.css'), 'utf8'), js = fs.readFileSync(path.join(__dirname, '..', 'src', 'shelf.js'), 'utf8');
+  assert.ok(!css.includes('.rowwrap:hover .arrow{opacity:1}') && !/\.arrow\{[^}]*opacity:0/.test(css), 'not only on hover');
+  assert.ok(css.includes('.arrow.l{left:-2px}.arrow.r{right:-2px}') && css.includes('background:linear-gradient(180deg,#1a242b 0%,#121a1f 100%);border:1px solid rgba(95,212,255,.55)'));
+  assert.ok(css.includes('.arrow .ico.chevron-left{--m:url(/assets/brand/ui/icons/chevron-left.png)}') && css.includes('@media (hover:none){.arrow{display:none}}'));
+  assert.ok(js.includes('Math.floor((track.clientWidth - 120) / step) * step'), 'whole boxes, as VoidTV slide()');
+  assert.ok(js.includes("wrap.append(rowArrow(track, -1), track, rowArrow(track, 1));"), 'the Machines row too');
+});

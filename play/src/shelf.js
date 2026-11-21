@@ -503,12 +503,24 @@
       end.onclick = (e) => { e.preventDefault(); open(f); };
       track.append(end);
     }
-    const arrow = (d) => { const b = el('button', 'arrow ' + (d < 0 ? 'l' : 'r'), d < 0 ? '‹' : '›'); b.type = 'button'; b.tabIndex = -1;
-      b.setAttribute('aria-label', d < 0 ? 'Back along the row' : 'Along the row'); b.onclick = () => track.scrollBy({ left: d * track.clientWidth * 0.85, behavior: 'smooth' }); return b; };
+    const arrow = (d) => rowArrow(track, d);
     track.addEventListener('scroll', peekScrolled, { passive: true });
     wrap.append(arrow(-1), track, arrow(1));
     sec.append(h, wrap);
     return sec;
+  }
+  // VoidTV's row arrows (Bryan, 20 Nov 2026: "exactly like voidtv"): its own chevron icon, and a press moves the row by
+  // whole boxes, as many as fit less one arrow's room, so a box never stops cut in half (site/index.html slide()).
+  function rowArrow(track, d) {
+    const b = el('button', 'arrow ' + (d < 0 ? 'l' : 'r')); b.type = 'button'; b.tabIndex = -1;
+    b.append(el('i', 'ico ' + (d < 0 ? 'chevron-left' : 'chevron-right')));
+    b.setAttribute('aria-label', d < 0 ? 'Scroll left' : 'Scroll right'); b.title = d < 0 ? 'Scroll left' : 'Scroll right';
+    b.onclick = () => {
+      const first = track.firstElementChild, gap = parseFloat(getComputedStyle(track).columnGap) || 14;
+      const step = first ? first.getBoundingClientRect().width + gap : 168;
+      track.scrollBy({ left: d * Math.max(step, Math.floor((track.clientWidth - 120) / step) * step), behavior: 'smooth' });
+    };
+    return b;
   }
   function machineRow() {
     const counts = new Map();
@@ -523,7 +535,7 @@
       a.onclick = (e) => { if (e.ctrlKey || e.metaKey || e.shiftKey || e.button) return; e.preventDefault(); open({ m: k }); };
       track.append(a);
     }
-    const wrap = el('div', 'rowwrap'); wrap.append(track); sec.append(wrap);
+    const wrap = el('div', 'rowwrap'); wrap.append(rowArrow(track, -1), track, rowArrow(track, 1)); sec.append(wrap);
     return sec;
   }
   // Continue playing: the games with an automatic save in this browser, the last played first (saves.js keeps them).

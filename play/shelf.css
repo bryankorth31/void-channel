@@ -96,10 +96,19 @@ body.home .shelf{padding-top:6px}
 .track{display:flex;gap:14px;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;touch-action:pan-x pan-y;padding:6px 4px 12px;scrollbar-width:none;scroll-padding:0 20px}
 .track::-webkit-scrollbar{display:none}
 .track .box{flex:0 0 clamp(150px,15vw,220px)}
-.arrow{position:absolute;top:50%;transform:translateY(-70%);width:44px;height:44px;border-radius:50%;border:1px solid rgba(95,212,255,.55);background:rgba(18,26,31,.94);color:var(--fg);font-size:28px;line-height:1;padding:0 0 4px;cursor:pointer;z-index:3;opacity:0;transition:opacity .2s}
-.arrow.l{left:4px}.arrow.r{right:4px}
-.rowwrap:hover .arrow{opacity:1}
+/* The row arrows, exactly VoidTV's (Bryan, 20 Nov 2026: "i want the side arrows from voidtv to be used", "exactly like
+   voidtv"): always there on a computer, a 44 px glass circle with a thin cyan ring and VoidTV's own chevron, at the row's
+   edges; a press moves the row by whole boxes. Hidden on touch screens, where a row is swiped. */
+.arrow{position:absolute;top:50%;transform:translateY(-60%);width:44px;height:44px;border-radius:50%;padding:0;cursor:pointer;z-index:3;
+  display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(180deg,#1a242b 0%,#121a1f 100%);border:1px solid rgba(95,212,255,.55);color:var(--fg);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.05),0 2px 12px rgba(0,0,0,.6)}
+.arrow.l{left:-2px}.arrow.r{right:-2px}
 .arrow:hover{border-color:#7adcf5;color:#9fe6ff;box-shadow:0 0 14px rgba(95,212,255,.45)}
+.arrow:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.arrow .ico{display:inline-block;width:18px;height:18px;background:currentColor;-webkit-mask:var(--m) center/contain no-repeat;mask:var(--m) center/contain no-repeat}
+.arrow .ico.chevron-left{--m:url(/assets/brand/ui/icons/chevron-left.png)}
+.arrow .ico.chevron-right{--m:url(/assets/brand/ui/icons/chevron-right.png)}
 @media (hover:none){.arrow{display:none}}
 /* The machines: a tile each, in its colour; a tile opens that machine's games. */
 .track.machines .mtile{flex:0 0 clamp(140px,14vw,184px)}
