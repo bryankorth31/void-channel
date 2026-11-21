@@ -89,6 +89,9 @@ const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&l
 // Reader Rabbit 1 (Windows) was held for its 90-second display test at every start (Bryan, 20 Nov 2026); lifted once
 // PLAY wrote WinG's answer into WIN.INI (play-new-formats 7590a3abe) and its title came up within 20 seconds.
 const HOLD = {};
+// True once workers/kids/worker.js answers /api/piece for the kids games (PLAY's functions/api/piece.js, with the list of
+// games that stream: play/shelf/stream.js cut to kids cards). Until then, streamed cards stay off Kids.
+const PIECES = false;
 
 // Only a card that says kids: true, is not held, plays on an engine we serve, and has our own picture.
 function kidsCards(play, artDir) {
@@ -97,6 +100,9 @@ function kidsCards(play, artDir) {
     let c; try { c = JSON.parse(fs.readFileSync(path.join(play, 'cards', f), 'utf8')); } catch (e) { continue; }
     if (c.kids !== true || !c.id || !/^[a-z0-9-]+$/.test(c.id) || !c.core) continue;
     if (HOLD[c.id]) { console.warn('Kids games: ' + c.id + ' held off Kids (' + HOLD[c.id] + ')'); continue; }
+    // A game read in pieces through /api/piece (big CD-ROM discs, "archive.stream": true) needs that path on this site;
+    // the kids Worker does not answer it yet, so such a card would never start. Held until PIECES is turned on.
+    if (c.archive && c.archive.stream && !PIECES) { console.warn('Kids games: ' + c.id + ' held off Kids (read in pieces; the kids Worker has no /api/piece yet)'); continue; }
     out.push({ card: c, art: artDir && fs.existsSync(path.join(artDir, c.id + '.jpg')) });
   }
   return out;

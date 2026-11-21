@@ -88,3 +88,15 @@ test('a held kids card stays off the Kids shelf, while other kids cards come thr
     assert.deepEqual(G.kidsCards(dir, null).map((g) => g.card.id), ['a-kids-game']);
   } finally { delete G.HOLD['a-held-game']; fs.rmSync(dir, { recursive: true, force: true }); }
 });
+
+test('a kids card read in pieces (archive.stream) stays off Kids while the kids Worker has no /api/piece', () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'kids-stream-'));
+  try {
+    fs.mkdirSync(path.join(dir, 'cards'));
+    const card = (id, stream) => ({ id, title: id, system: 'dos', core: 'scummvm', kids: true, archive: Object.assign({ item: id, file: id + '.iso' }, stream ? { stream: true } : {}) });
+    fs.writeFileSync(path.join(dir, 'cards', 'putt-putt.json'), JSON.stringify(card('putt-putt', true)));
+    fs.writeFileSync(path.join(dir, 'cards', 'small-game.json'), JSON.stringify(card('small-game', false)));
+    assert.deepEqual(G.kidsCards(dir, null).map((g) => g.card.id), ['small-game']);
+    assert.doesNotMatch(fs.readFileSync(path.join(ROOT, 'workers', 'kids', 'worker.js'), 'utf8'), /\/api\/piece/, 'turn PIECES on in the build when the Worker answers /api/piece');
+  } finally { fs.rmSync(dir, { recursive: true, force: true }); }
+});
