@@ -197,7 +197,7 @@ reworded). The private sources (chat archive, audit ledgers) stay on B's PC; thi
 | H5 | No sideways scroll or bounce on phones, and scrolling works with the pointer or finger over a card. | "its the donate cash button thats to far to the right side and its causing the rubberbanding" (13 Oct) | chat "Voidtv", 2026-10-13; chat "Voidtv", 2026-10-14; audit ASKS-draft | none yet | CAN'T TELL | The rules are present but whether anything overflows sideways on a real phone or blocks scrolling over a card needs a device. B's note said the check is browser only. |
 | H6 | The site is installable: sw.js caches nothing (pages and data always from the network), an Install button on desktop, a strip on phones that stays closed once closed, and a Share hint on iPhone. | "the download of the app and share add to home screen" (25 Oct) | commit 7d3326207; chat "Voidtv", 2026-10-25 | tests/decisions.test.js | HOLDS |  |
 | H7 | Data comes in bite-sized pieces for phones (people in 256 pieces), and no site file nears Cloudflare's 25 MiB cap. | "bite sized pieces for mobile" (25 Oct) | commit 39466c0d7; chat "Voidtv", 2026-10-25 | tests/site-build.test.js | HOLDS |  |
-| H8 | The logo top left goes home; the header is pinned, with no hamburger menu; each card shows its length. | (10 Jun) | audit ASKS-draft; chat "Voidtv", 2026-10-14 | none yet | HOLDS |  |
+| H8 | The logo top left goes home; the header is pinned, with no hamburger menu; each card shows its length. | (10 Jun) | audit ASKS-draft; chat "Voidtv", 2026-10-14 | tests/app-home.test.js (the logo part) | HOLDS | Since 20 Nov 2026 the logo also clears any filter and the search box, so it always shows the whole home page (audit V9). |
 
 ## 10. Spots, promos and motion
 
