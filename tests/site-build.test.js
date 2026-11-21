@@ -155,6 +155,39 @@ test('what the build writes: headers, robots, an empty redirects file, the gate 
   assert.ok(fs.existsSync(path.join(root, 'site', 'show', 'test-show-3', 'index.html')));
 });
 
+// What Cloudflare Pages sends for a path, as its file server does it (pages-shared asset-server handler, as wrangler 4.151 ships it):
+// the file, <path>.html or <path>/index.html; else the nearest 404.html up the folder tree, with 404 (and no-store, forced on every 404);
+// else, with no 404.html at the top, index.html with 200 (the single-page fallback the home page's own routes need).
+function pagesAnswer(site, urlPath) {
+  const has = (p) => { const f = path.join(site, p); return fs.existsSync(f) && fs.statSync(f).isFile(); };
+  for (const p of [urlPath, urlPath + '.html', urlPath.replace(/\/?$/, '/index.html')]) if (has(p)) return { status: 200, file: p };
+  let cwd = urlPath;
+  while (cwd) { cwd = cwd.slice(0, cwd.lastIndexOf('/')); if (has(cwd + '/404.html')) return { status: 404, file: cwd + '/404.html' }; }
+  return { status: 200, file: '/index.html' };
+}
+
+test('a missing file answers 404, not the home page; every page route still gets its page (20 Nov 2026, the trivia pictures)', () => {
+  const root = tree();
+  assert.equal(build(root).status, 0);
+  const site = path.join(root, 'site');
+  assert.ok(!fs.existsSync(path.join(site, '404.html')), 'no 404.html at the top: unknown pages keep the home page');
+  for (const d of ['assets', 'data']) assert.match(read(root, `site/${d}/404.html`), /Not found/);
+  // Files that do not exist: a real 404 from the folder's own 404.html.
+  for (const p of ['/assets/brand/bg/trivianight.webp', '/assets/brand/bg/factsnight-m.webp', '/assets/nope.js', '/data/shows/no-such-show.json', '/data/pp/9999.json'])
+    assert.deepEqual(pagesAnswer(site, p), { status: 404, file: '/' + p.split('/')[1] + '/404.html' }, p);
+  // Files that do exist are sent as they are.
+  for (const p of ['/assets/player/voidplayer.js', '/data/shows/test-show-3.json']) assert.deepEqual(pagesAnswer(site, p), { status: 200, file: p }, p);
+  // The home page's own routes (scripts/lib/app.js) and unknown pages still get the home page, with 200.
+  for (const p of ['/me', '/about/', '/promos', '/cash', '/privacy', '/takedown', '/person/12', '/tv', '/tv/news', '/show/not-built-yet', '/no-such-page'])
+    assert.deepEqual(pagesAnswer(site, p), { status: 200, file: '/index.html' }, p);
+  assert.deepEqual(pagesAnswer(site, '/show/test-show-3'), { status: 200, file: '/show/test-show-3/index.html' });
+  // No page lives in a folder that gets a 404.html (the folders PLAY, the phone remote and Trivia add are named in site.js).
+  const dirs = JSON.parse(fs.readFileSync(path.join(REPO, 'scripts', 'site.js'), 'utf8').match(/const FILE_DIRS = (\[[^\]]*\])/)[1].replace(/'/g, '"'));
+  for (const d of ['assets', 'data', 'play/engine', 'play/cards', 'play/library', 'trivia/src']) assert.ok(dirs.includes(d), d + ' gets a 404.html');
+  const pages = ['/me', '/about', '/promos', '/cash', '/privacy', '/takedown', '/person/1', '/tv/x', '/show/x', '/play/', '/play/game', '/play/pad', '/join', '/remote/', '/trivia/', '/trivia/phone'];
+  for (const d of dirs) for (const p of pages) assert.ok(!(p + '/').startsWith('/' + d + '/'), `${p} is a page, so ${d}/ must not get a 404.html`);
+});
+
 test('still refuses to build under 100 shows (the VOIDtv profile)', () => {
   const root = tree({ shows: 10, profile: 'voidtv' });
   const r = build(root, { profile: 'voidtv' });

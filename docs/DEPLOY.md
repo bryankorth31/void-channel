@@ -258,6 +258,12 @@ site, not from the build log. A `version.txt` from before 18 Oct 2026 has only t
 - `_routes.json` -- which paths run as Functions (see "The one switch")
 - `version.txt` -- see above
 - `robots.txt` -- allows the site, disallows `/data/` so search engines read the pages and not the JSON behind them
+- `assets/404.html`, `data/404.html` and one in each folder of PLAY, Trivia and the phone remote that holds only files --
+  a missing file there answers 404 with `Cache-Control: no-store` (Pages sends the nearest `404.html` up the folder tree
+  and forces no-store on every 404). There is no `404.html` at the top on purpose: an unknown page still gets the home
+  page, which routes `/me`, `/tv/...`, `/show/...` itself. Before this (20 Nov 2026) a picture asked for minutes before
+  its build went live got the home page with 200 OK, and `/assets/*` kept that for a day. The folder list is
+  `FILE_DIRS` in `scripts/site.js`; never put a page in one of them.
 
 ## Security headers
 

@@ -222,10 +222,13 @@ test('routes: /privacy and /takedown work as direct visits, with or without a tr
   assert.match(SCRIPT, /else if\(state\.view==='privacy'\)keepTracks\(privacyPage\);else if\(state\.view==='takedown'\)keepTracks\(takedownPage\)/);
 });
 
-test('a direct visit to /privacy or /takedown is served like /about: Pages answers an unknown path with index.html, and the site writes no 404.html or redirect rule that would change that', () => {
+// The file folders (assets/, data/, ...) get a 404.html of their own so a missing file is a real 404; tests/site-build.test.js walks
+// a built site the way Pages does and checks that no page sits under one. Here: nothing writes the top-level one.
+test('a direct visit to /privacy or /takedown is served like /about: Pages answers an unknown page with index.html, and the site writes no top-level 404.html or redirect rule that would change that', () => {
   const site = read('scripts/site.js');
-  assert.match(site, /Pages serves index\.html for unknown paths on its/);
-  assert.doesNotMatch(site, /writeFileSync\([^)]*404\.html/);
+  assert.match(site, /Pages serves index\.html for unknown pages on its/);
+  assert.doesNotMatch(site, /path\.join\(OUT, '404\.html'\)/);
+  assert.match(site, /path\.join\(OUT, d, '404\.html'\)/);
   assert.match(site, /fs\.writeFileSync\(path\.join\(OUT, '_redirects'\), '# No rules on purpose/);
 });
 

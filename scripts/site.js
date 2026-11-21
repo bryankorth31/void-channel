@@ -111,8 +111,8 @@ for (const s of data.shows) {
 }
 // No rules on purpose. Pages rejects a rule whose source is an absolute address ("Only relative URLs are allowed"), so the old
 // www line never worked (audit F-004, CF-025); www is redirected by functions/_middleware.js while the password is on and by a
-// Cloudflare Redirect Rule on the zone afterwards (docs/DEPLOY.md, opening day). Pages serves index.html for unknown paths on its
-// own (no 404.html ships), and a /show/* 200 rule would shadow the prerendered /show/<slug>/index.html pages that carry the share-card meta.
+// Cloudflare Redirect Rule on the zone afterwards (docs/DEPLOY.md, opening day). Pages serves index.html for unknown pages on its
+// own (no 404.html at the top; the file folders get their own, below), and a /show/* 200 rule would shadow the prerendered /show/<slug>/index.html pages that carry the share-card meta.
 fs.writeFileSync(path.join(OUT, '_redirects'), '# No rules on purpose: see scripts/site.js and docs/DEPLOY.md (www is redirected by the middleware and by a Cloudflare rule).\n');
 // Pages Functions live beside the output: the password gate (functions/_middleware.js) only runs
 // when the SITE_PASSWORD variable is set on the Pages project.
@@ -186,6 +186,16 @@ const brandSrc = path.join(ROOT, 'assets', 'brand');
 if (fs.existsSync(brandSrc)) fs.cpSync(brandSrc, path.join(OUT, 'assets', 'brand'), { recursive: true, filter: (p) => { const parts = path.relative(brandSrc, p).split(path.sep); return !parts.includes('src') && !parts.includes('sheets'); } }); // the 2K originals and design sheets stay out of the site
 // Browsers, search engines and feed readers ask for /favicon.ico on their own; without the file they got the home page.
 if (fs.existsSync(path.join(brandSrc, 'favicon.ico'))) fs.copyFileSync(path.join(brandSrc, 'favicon.ico'), path.join(OUT, 'favicon.ico'));
+// A missing file answers a real 404, not the home page. With no 404.html at the top, Pages answers an unknown path with index.html
+// and 200 OK, which the home page needs (it routes /me, /about, /tv/..., /show/... itself). But for a file that answer is poison:
+// /assets/* keeps a 200 for a day, so two trivia pictures asked for minutes before the build that added them went live got the
+// home page, and the edge kept serving it after the pictures existed (20 Nov 2026). Before that fallback Pages looks for the nearest
+// 404.html up the folder tree, and every 404 it sends carries Cache-Control: no-store whatever _headers says (Cloudflare's Pages file
+// server, as wrangler ships it). So each folder that holds only files gets a small 404.html of its own. No page lives in these
+// folders; tests/site-build.test.js walks the built site the way Pages does to keep it so.
+const FILE_DIRS = ['assets', 'data', 'play/src', 'play/engine', 'play/cards', 'play/library', 'play/cheats', 'play/skin', 'play/shelf', 'remote/src', 'trivia/src', 'trivia/bank', 'trivia/timed'];
+const NOT_FOUND_PAGE = '<!doctype html><meta charset="utf-8"><title>Not found</title><p>Not found.</p>\n';
+for (const d of FILE_DIRS) if (fs.existsSync(path.join(OUT, d))) fs.writeFileSync(path.join(OUT, d, '404.html'), NOT_FOUND_PAGE);
 // Caching plus the security headers for static files (the same set functions/_middleware.js puts on every Function answer).
 fs.writeFileSync(path.join(OUT, '_headers'), guards.headersFile());
 // The smallest service worker that lets browsers offer Install app (Bryan, 25 Oct 2026). It caches nothing: pages and data always come
