@@ -47,7 +47,7 @@ test('the build carries only kids cards, their engines and our own pictures', { 
     for (const f of cards) assert.equal(JSON.parse(fs.readFileSync(path.join(out, 'games', 'cards', f), 'utf8')).kids, true, f);
     const all = fs.readdirSync(path.join(PLAY, 'cards')).filter((f) => f.endsWith('.json'));
     assert.ok(all.length > cards.length, 'the rest of PLAY stays off kids');
-    for (const f of fs.readdirSync(path.join(out, 'games', 'engine'))) assert.ok(r.engines.some((e) => f.startsWith(e + '.')), f + ' is an engine a kids card uses');
+    for (const f of fs.readdirSync(path.join(out, 'games', 'engine'))) assert.ok(r.engines.some((e) => f.startsWith(e + '.') || e === f + '/'), f + ' is an engine a kids card uses');
     for (const d of ['drafts', 'library', 'cheats', 'tools', 'rooms']) assert.equal(fs.existsSync(path.join(out, 'games', d)), false, d + ' is not copied');
     assert.equal(fs.existsSync(path.join(out, 'games', 'shelf', 'index.json')), false, 'no PLAY shelf list, so no other game can be found');
     assert.equal(fs.readdirSync(path.join(out, 'games', 'art')).length, kids.length - 1, 'our own pictures, where PLAY\'s kids page looks (art/<id>.jpg)');

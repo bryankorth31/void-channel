@@ -75,6 +75,12 @@ const GAMES = {
   'the-chessmaster-game-gear': ['think', 'Play chess', 'The Chessmaster'],
   'checkers-2600': ['think', 'Play checkers', 'Checkers'],
   'mario-paint-snes': ['make', 'Draw, stamp and make music', 'Mario Paint'],
+  // Flash and Windows 3.1 (Bryan, 20 Nov 2026: "we need to be able to play these formats"; the play-new-formats branch):
+  'sesame-street-journey-to-ernie-flash-2002': ['little', 'Find Ernie', 'Journey to Ernie'],
+  'sesame-street-letters-to-big-bird-flash': ['little', 'Letters for Big Bird', 'Letters to Big Bird'],
+  'sesame-street-elmo-goes-to-the-doctor-flash': ['little', 'A visit to the doctor', 'Elmo Goes to the Doctor'],
+  'dora-the-explorer-find-boots-flash-2000': ['little', 'Help find Boots', 'Dora: Find Boots'],
+  'reader-rabbit-1-windows-1997': ['words', 'Build words in the factory', 'Reader Rabbit 1'],
 };
 
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -206,9 +212,10 @@ function buildGames(out, root, opts = {}) {
   const engines = new Set();
   for (const g of games) {
     const name = g.card.core.replace(/[-.]/g, '\\$&');
-    const m = new RegExp("(?:'" + name + "'|\\b" + name + "):\\s*\\{\\s*engine:\\s*'engine/([a-z0-9.{}-]+)\\.js'").exec(cardsJs);
-    if (!m || m[1].includes('{')) throw new Error('kids games: no single engine file for core ' + g.card.core + ' (' + g.card.id + ')');
-    engines.add(m[1]);
+    const m = new RegExp("(?:'" + name + "'|\\b" + name + "):\\s*\\{[^}]*?engine:\\s*'engine/([a-z0-9./{}_-]+)\\.js'").exec(cardsJs);
+    if (!m || m[1].includes('{') || m[1].includes('..')) throw new Error('kids games: no single engine file for core ' + g.card.core + ' (' + g.card.id + ')');
+    // An engine in its own folder (Ruffle: engine/ruffle/, its WebAssembly under a hashed name) goes as the whole folder.
+    engines.add(m[1].includes('/') ? m[1].split('/')[0] + '/' : m[1]);
   }
   // The build stamp: the files a visitor loads, so the same PLAY gives the same stamp.
   const hash = crypto.createHash('sha1');
@@ -220,7 +227,12 @@ function buildGames(out, root, opts = {}) {
   fs.mkdirSync(path.join(dst, 'engine'), { recursive: true });
   // Each engine, and its licence text where the engine is not GPL (PLAY serves it beside the engine: snes9x, mGBA,
   // Genesis Plus GX, Handy).
-  for (const e of engines) for (const ext of ['.js', '.wasm', '.LICENSE.txt']) {
+  for (const e of [...engines].filter((x) => x.endsWith('/'))) {
+    const d = path.join(play, 'engine', e);
+    if (!fs.existsSync(d)) throw new Error('kids games: engine folder missing: ' + d);
+    fs.cpSync(d, path.join(dst, 'engine', e), { recursive: true });
+  }
+  for (const e of [...engines].filter((x) => !x.endsWith('/'))) for (const ext of ['.js', '.wasm', '.LICENSE.txt']) {
     const f = path.join(play, 'engine', e + ext);
     if (fs.existsSync(f)) fs.copyFileSync(f, path.join(dst, 'engine', e + ext));
     else if (ext !== '.LICENSE.txt') throw new Error('kids games: engine file missing: ' + f);
