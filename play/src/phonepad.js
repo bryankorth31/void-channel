@@ -233,9 +233,15 @@
     for (const n of ['Back', 'Start']) if (n in w) keys.push({ n, t: w[n] === 'Menu' ? 'Menu' : n === 'Back' ? 'Select' : 'Start', w: '', at: 'pill' });
     return Object.assign({}, c, { keys, cols: few ? Math.max(1, face.length) : 3, rows: few ? Math.max(1, face.length) : 3 });
   }
+  let drawn = '';
   function draw(c) {
-    c = modern(c); card = c;
+    c = modern(c);
     $('game').textContent = c.title || '';
+    // The same buttons as are drawn already (the screen sends its card again to a phone that joins again): nothing is
+    // rebuilt, so the fingers still down stay where they are and what they hold is kept.
+    const same = JSON.stringify(c) === drawn;
+    drawn = JSON.stringify(c); card = c;
+    if (same) { $('note').hidden = true; $('pad').hidden = false; measure(); return; }
     for (const id of ['face', 'mid', 'left', 'right']) $(id).textContent = '';
     const face = $('face');
     face.className = 'face' + (c.shape ? ' s-' + c.shape : '') + ' g' + (c.cols || 3);
@@ -288,8 +294,11 @@
   }
   const move = (e) => { const f = fingers.get(e.pointerId); if (f) { place(e, f); refresh(); } };
   const up = (e) => { if (fingers.delete(e.pointerId)) refresh(); };
-  // Everything is let go at once: the page hides or loses focus, the phone turns, the connection drops, or the browser
-  // says no finger is down. No button is left held on the big screen.
+  // Everything is let go at once: the page hides or loses focus, the phone turns, or the browser says no finger is down.
+  // No button is left held on the big screen. A connection that drops is another matter: the screen lets go by itself
+  // (it hears the phone leave, or hears nothing for 0.8 s), and the fingers still down are kept, so that when the phone
+  // is back a thumb that never moved is holding again (the auditor, 21 Nov 2026: by the relay alone, a 6 s network cut
+  // with the thumb on Right left Right unpressed for good, since a finger that does not move sends no new touch).
   function letGo() { if (!fingers.size && !held.size) return; fingers.clear(); refresh(); }
   document.addEventListener('pointerdown', down);
   document.addEventListener('pointermove', move);
@@ -338,7 +347,9 @@
     };
     sock.onclose = (e) => {
       if (sock !== ws) return;   // an old connection this page already replaced
-      ws = null; letGo(); resetLink(); showPath();
+      ws = null; resetLink(); showPath();
+      // The room is over for this phone (ended, or one of the answers below): nothing is held. A dropped connection keeps its fingers.
+      if (ended || [4404, 4409, 4423, 4403, 4411, 4410, 4408].includes(e.code)) letGo();
       if (ended) return;
       if (e.code === 4404) { note('No room with that code', 'The code changes each time. Check the big screen.', true); return; }
       if (e.code === 4409) { note('This game is full', 'Up to 16 phones can join one screen.', false); return; }
@@ -358,7 +369,7 @@
     // The screen answers every ping. Silence this long means the connection is dead though the browser has not said so:
     // let go, drop it and open a new one (the relay gives this phone its own seat back).
     if (ws && !ended && now() - heardAt > (away ? AWAY_MS : QUIET_MS)) {
-      const dead = ws; ws = null; letGo(); resetLink();
+      const dead = ws; ws = null; resetLink();   // the fingers still down are kept for the new connection
       try { dead.close(); } catch (e) { /* already gone */ }
       note('Reconnecting', 'The connection dropped. Trying again.', false);
       if (!again) again = setTimeout(connect, 200);

@@ -477,6 +477,13 @@ test('the pad page: the handheld\'s own parts, the hub\'s steady rule, no zoom o
   assert.ok(js.includes("for (const ev of ['blur', 'pagehide']) addEventListener(ev, letGo);"));
   assert.ok(js.includes('if (sock !== ws) return;   // an old connection this page already replaced'));
   assert.ok(js.includes("if (e.code === 4411) { ended = true;"), 'a second tab does not fight the first for the seat');
+  // A dropped connection keeps the fingers still down (the screen lets go by itself), so a thumb that never moved holds
+  // again when the phone is back; a room that is over lets go of everything.
+  assert.ok(js.includes("if (ended || [4404, 4409, 4423, 4403, 4411, 4410, 4408].includes(e.code)) letGo();"));
+  assert.ok(js.includes("const dead = ws; ws = null; resetLink();   // the fingers still down are kept for the new connection"));
+  assert.ok(!js.includes('ws = null; letGo();'), 'no drop clears the fingers');
+  assert.ok(js.includes("if (same) { $('note').hidden = true; $('pad').hidden = false; measure(); return; }"), 'nor does the same card sent again');
+  assert.ok(js.includes("if (m.type === 'hello') { tries = 0; lastN = -1;") && js.includes("if (card) { $('note').hidden = true; $('pad').hidden = false; say(); }"), 'and the new connection hears what is held at once');
   assert.ok(js.includes('now() - heardAt > (away ? AWAY_MS : QUIET_MS)'), 'a dead connection is dropped and opened again; a screen changing pages is waited for');
   assert.ok(PP.AWAY_MS > R.LIMITS.pad.screenHoldMs, 'the phone waits longer than the relay holds the room for its screen');
 });
