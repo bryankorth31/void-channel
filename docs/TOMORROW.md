@@ -1,4 +1,43 @@
-# Work plan for 18 October 2026 (Fable, ultracode)
+# Void TV: start here
+
+This is the start file the project sheet names (`C:\Users\bryan\chief-of-staff\WORK-EACH-PROJECT.md`). The top part says
+where voidtv.net and VOIDtv HQ stand; it was last brought up to date on 21 Nov 2026 (build audit of 19 Nov, finding H9:
+until then this file opened as the 18 October work plan, which is kept below as history).
+
+## Where things stand (21 Nov 2026)
+
+- **The site**: voidtv.net is live, open, with no password: 4,245 shows and 71,883 episodes. The library has not grown since
+  26 Oct because every show on the hunt lists has been hunted. What feeds the hunt next is Bryan's decision.
+- **How it runs by itself**: the two-hour publish and the 3:30 AM nightly (`scripts/nightly.js`): hunt, movies, scout,
+  networks, art, people, link check, database mirror, publish, backup, doctor, alert. `docs/RUNBOOK.md` says what every
+  light means and what to press. `docs/HQ.md` is the guide to the HQ app.
+- **Rules that hold the build**: `docs/DECISIONS.md` (Bryan's decisions, each with a test). Read it before changing
+  anything it covers. The whole self-test is `node --test "tests/*.test.js"`.
+- **Many chats share this folder and its master branch.** A commit on master goes to GitHub, and so to voidtv.net, with
+  the next push any chat makes. Commit only your own lines, by path. The Push live button in HQ tests and sends what waits.
+
+### What the 19 Nov 2026 build audit changed (20 and 21 Nov)
+
+| Finding | What is true now | Where |
+|---|---|---|
+| V1, H5, H10 | HQ's top line says what waits to be published and when Publish is holding; a press on Publish ends in a message that stays | `scripts/lib/publishline.js`, HQ.md "Publish" |
+| H1 | The Player Lab's "All card states" page has "Back to the lab" | `player/lab/states.html` |
+| V3, V8, V9 | Live TV has its Browse button; the logo always shows the whole home page; the row arrows have names | `scripts/lib/app.js`, `tests/app-home.test.js` |
+| V4, V5 | The hunts never save or reuse an Archive answer that carries a failure; "(no hits returned)" is a true empty result | `scripts/lib/cachefile.js`, `scripts/cache-check.js` |
+| V6 | The nightly backs the cache up to another drive (`VOID_BACKUP_DIR` in `backend/.env`); the backup light says when the copy is not safe | `scripts/nightly.js`, RUNBOOK "backup" |
+| H2 to H8 | HQ shows every refused press, says how each job ended, and never shows a failed lookup or an old health check as fine | HQ.md "HQ says when something fails or ends" |
+
+### Open, waiting for Bryan's word
+
+- The pink channel buttons' white letters read at 2.9 to 1 (audit, design tells): a darker letter colour was shown to him.
+- Four shows whose names give the hunt no search words (Don't, Bro'Town, The O'Keefes, one Chinese title).
+- The small page items of the 20 Nov full audit and night audit: `audit/full-2026-11-20/HANDOVER-site-split.md`.
+- Two red or yellow lights that are his: the two Red Ice Radio movie picks, and what feeds the hunt next.
+- The older open lists further down this file and in `docs/BACKLOG.md` were not re-checked on 21 Nov.
+
+---
+
+# History: work plan for 18 October 2026 (Fable, ultracode)
 
 Ordered for the most benefit to viewers first. Each package says what "done" means, which parts suit parallel
 agents, and what needs Bryan. Background for every item: `docs/BACKLOG.md`, `docs/SYSTEM-AUDIT.md`,
