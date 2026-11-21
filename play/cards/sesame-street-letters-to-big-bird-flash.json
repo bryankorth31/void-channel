@@ -1,0 +1,42 @@
+{
+  "system": "flash",
+  "core": "ruffle",
+  "players": 1,
+  "controls": {
+    "kind": "pointer",
+    "keys": [],
+    "dpad": false,
+    "keyboard": false,
+    "mouse": true
+  },
+  "actions": [
+    {
+      "do": "Pick",
+      "press": "@click"
+    },
+    {
+      "do": "Point",
+      "press": "@point"
+    },
+    {
+      "do": "Pause",
+      "press": "@menu"
+    }
+  ],
+  "gamepad": {
+    "Start": "@menu"
+  },
+  "genre": [
+    "educational video game"
+  ],
+  "kids": true,
+  "id": "sesame-street-letters-to-big-bird-flash",
+  "title": "Sesame Street: Letters to Big Bird",
+  "publisher": "Sesame Workshop",
+  "archive": {
+    "item": "bigbird_swf",
+    "file": "bird_008.swf",
+    "size": 1393193
+  },
+  "help": "Click or tap. Pick three things on the shelf that start with Big Bird’s letter."
+}

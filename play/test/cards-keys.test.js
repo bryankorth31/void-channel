@@ -52,6 +52,7 @@ test('every card names a core that plays its system, and each core\'s source com
   for (const name of Object.keys(Cards.CORES)) {
     if (name === 'dosbox-pure') continue;   // its commit is in core/dosbox-pure.txt (page.test.js)
     if (Cards.CORES[name].kind === 'mame') continue;   // MAME's own build: its record is core/mame.txt (arcade.test.js)
+    if (Cards.CORES[name].kind === 'ruffle') continue;   // Ruffle's own web build: its record is core/ruffle.txt (formats.test.js)
     assert.ok(recipes[name], name + ' has a recipe in core/cores.js');
     assert.match(recipes[name].commit, /^[0-9a-f]{40}$/, name + ' names an exact commit');
     assert.ok(readme.includes(recipes[name].commit), name + ': core/README.md names the same commit');
@@ -71,6 +72,7 @@ test('the game always comes from the Archive through /cors/, never from voidtv.n
 test('every core a card can name has its engine file in engine/', () => {
   for (const [name, core] of Object.entries(Cards.CORES)) {
     if (core.engine.includes('{engine}')) continue;   // one engine per arcade machine: checked per card in consoles.test.js
+    if (core.kind === 'ruffle') continue;   // its WebAssembly keeps Ruffle's own hashed name: formats.test.js
     assert.ok(fs.existsSync(path.join(ROOT, core.engine)), name + ': ' + core.engine);
     assert.ok(fs.existsSync(path.join(ROOT, core.engine.replace(/\.js$/, '.wasm'))), name + ': its .wasm');
   }

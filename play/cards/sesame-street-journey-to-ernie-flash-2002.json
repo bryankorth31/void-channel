@@ -1,0 +1,43 @@
+{
+  "system": "flash",
+  "core": "ruffle",
+  "players": 1,
+  "controls": {
+    "kind": "pointer",
+    "keys": [],
+    "dpad": false,
+    "keyboard": false,
+    "mouse": true
+  },
+  "actions": [
+    {
+      "do": "Pick",
+      "press": "@click"
+    },
+    {
+      "do": "Point",
+      "press": "@point"
+    },
+    {
+      "do": "Pause",
+      "press": "@menu"
+    }
+  ],
+  "gamepad": {
+    "Start": "@menu"
+  },
+  "genre": [
+    "educational video game"
+  ],
+  "kids": true,
+  "id": "sesame-street-journey-to-ernie-flash-2002",
+  "title": "Sesame Street: Journey to Ernie",
+  "year": 2002,
+  "publisher": "Sesame Workshop",
+  "archive": {
+    "item": "ernie_swf",
+    "file": "journey.swf",
+    "size": 425686
+  },
+  "help": "Click or tap. Find the box Ernie is hiding in: a supermarket hunt, a matching game and colours."
+}

@@ -9,7 +9,9 @@
     // name, licence and source are what the player page shows under every game; terms is the licence text that must
     // travel with a non-GPL core (served beside its engine). noDonation: the core's licence forbids commercial use, so
     // its games carry no donation line anywhere (B, 19 Nov 2026: "Leave it off those").
-    'dosbox-pure': { engine: 'engine/dosbox-pure.js', systems: ['dos'], name: 'DOSBox Pure', licence: 'GPL-2.0',
+    // Windows 3.1 games (Bryan, 20 Nov 2026: "Yes, try it") run in the same DOSBox Pure, on the Internet Archive's own
+    // minimal Windows 3.1 (WINDOWS below), fetched from the Archive at Play like the game; voidtv.net never serves Windows.
+    'dosbox-pure': { engine: 'engine/dosbox-pure.js', systems: ['dos', 'win3'], name: 'DOSBox Pure', licence: 'GPL-2.0',
       source: 'https://github.com/libretro/dosbox-pure/tree/e39497e7c2a32c67c26e6598dd14f6d58c384bfd' },
     'genesis-plus-gx': { engine: 'engine/genesis-plus-gx.js', systems: ['genesis', 'sms', 'gamegear'], name: 'Genesis Plus GX',
       licence: 'non-commercial licence', source: 'https://github.com/libretro/Genesis-Plus-GX/tree/b9c2316441978d4015ba30e9a95d9b0e6f8ee981',
@@ -32,6 +34,23 @@
     // arcade-runner.js (kind 'mame'). Its licence would allow the donation line; Bryan chose none on arcade games.
     mame: { kind: 'mame', engine: 'engine/mame/{engine}.js', systems: ['arcade'], name: 'MAME 0.289', licence: 'GPL-2.0',
       source: 'https://github.com/mamedev/mame/tree/f09e0805da149cb15bd1cd777fbbcc65640d7866', terms: 'engine/mame/COPYING', noDonation: true },
+    // Flash games (Bryan, 20 Nov 2026: "Yes, build Ruffle"): Ruffle's own web build, built here from its source, run by
+    // flash-runner.js (kind 'ruffle'). The game's .swf comes from the Archive. MIT or Apache-2.0, so the donation line stays.
+    ruffle: { kind: 'ruffle', engine: 'engine/ruffle/ruffle.js', systems: ['flash'], name: 'Ruffle 0.8.0', licence: 'MIT or Apache-2.0',
+      source: 'https://github.com/ruffle-rs/ruffle/tree/cd4cb8f45f144d5a9209f496ee09b60ad136b5b3', terms: 'engine/ruffle/LICENSE.md' },
+  };
+
+  // The Windows a Windows 3.1 card starts on: the Internet Archive's own Emularity Windows 3.1 package (item
+  // emularity_win31), the same files its own page boots these games with. shell: the game itself is Windows' only
+  // program (no Program Manager; closing the game ends Windows), the way the Archive's win31.zip starts them. A game
+  // that installs itself first (SETUP) needs Program Manager to come back to: 'win31-progman'.
+  const WINDOWS = {
+    win31: { item: 'emularity_win31', file: 'win31.zip', size: 2790594, shell: true },
+    'win31-progman': { item: 'emularity_win31', file: 'win31_nonshell.zip', size: 2799978, shell: false },
+  };
+  const windowsOf = (card) => {
+    const w = card && card.system === 'win3' && WINDOWS[(card.archive || {}).windows];
+    return w ? { url: 'https://archive.org/cors/' + w.item + '/' + w.file, size: w.size, shell: w.shell } : null;
   };
 
   // A console card ("controls.kind": "pad") presses the console's own buttons, named P1:A, P1:Start and so on (P2: for
@@ -67,6 +86,7 @@
     else if (core.kind === 'mame' && !/^[a-z0-9_]+$/.test(a.driver || '')) bad.push('archive.driver');
     else if (core.kind === 'mame' && !/^[a-z0-9_]+$/.test(a.engine || '')) bad.push('archive.engine');
     else if (!core.systems.includes(card.system)) bad.push('system');
+    else if (card.system === 'win3' && (!WINDOWS[a.windows] || !a.start)) bad.push('archive.windows');
     if (!card.controls || !card.controls.kind) bad.push('controls');
     return bad;
   }
@@ -92,6 +112,9 @@
     if (!Array.isArray(card.actions) || card.actions.length < 3) w.push('actions: list the three to six things a newcomer needs first');
     return w;
   }
+  const POINTER = { '@click': { pad: 'RB', keyboard: 'a click of the mouse', touch: 'a tap' },
+    '@point': { pad: 'the right stick', keyboard: 'the mouse', touch: 'a finger' },
+    '@menu': { pad: 'Start', keyboard: '', touch: 'the Pause button' } };
   const DIGIT = /^Digit(\d)$/;
   function codesOf(a) {
     const list = [].concat(a.press);
@@ -118,6 +141,9 @@
     const codes = codesOf(a);
     const range = a.to ? keyName(codes[0]) + ' to ' + keyName(codes[codes.length - 1]) : null;
     if (codes[0] === '@keyboard') return { pad: PLACES.Y, keyboard: 'type', touch: 'Keyboard' };
+    // A pointer game (Flash, 20 Nov 2026): the mouse, a finger or the gamepad's right stick points, and a click, a tap or RB
+    // picks (play.js padMouse). Pause is Start on any gamepad and the Pause button on screen, on every card.
+    if (POINTER[codes[0]]) return Object.assign({ pointer: true }, POINTER[codes[0]]);
     const map = gamepadMap(card), keys = keyMap(card);
     const pad = [], dirs = new Set();
     for (const [btn, code] of Object.entries(map)) if (codes.includes(code)) (DIRS.includes(btn) ? dirs.add(btn) : pad.push(btn));
@@ -159,7 +185,7 @@
     return (card.actions || []).map((a) => {
       const s = seatsOf(card, a);
       const parts = device ? [s[device]].filter(Boolean)
-        : [s.pad && s.pad + ' on a gamepad', s.keyboard && s.keyboard + ' on the keyboard', s.touch && s.touch + ' on screen'].filter(Boolean);
+        : [s.pad && s.pad + ' on a gamepad', s.keyboard && (s.pointer ? s.keyboard : s.keyboard + ' on the keyboard'), s.touch && s.touch + ' on screen'].filter(Boolean);
       return { do: a.do, how: parts.join(', ') };
     }).filter((l) => l.how);
   }
@@ -176,7 +202,7 @@
     lynx: ['lnx', 'lyx', 'o'] };
   const romExts = (card) => (card && !(card.archive || {}).start && ROM_EXTS[card.system]) || [];
 
-  const api = { check, warnings, gameUrl, itemPage, gameFile, engineOf, CORES, isPad, gamepadMap, keyMap, PAD_GAMEPAD, PAD_KEYBOARD, byLetter, BY_LETTER,
+  const api = { check, warnings, gameUrl, itemPage, gameFile, engineOf, CORES, WINDOWS, windowsOf, isPad, gamepadMap, keyMap, PAD_GAMEPAD, PAD_KEYBOARD, byLetter, BY_LETTER,
     codesOf, seatsOf, actionLines, actionFor, ROM_EXTS, romExts };
   if (typeof module === 'object' && module.exports) module.exports = api;
   else root.PlayCards = api;

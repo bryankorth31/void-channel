@@ -1,0 +1,56 @@
+{
+  "id": "magic-school-bus-solar-system-windows-1994",
+  "title": "The Magic School Bus Explores the Solar System",
+  "year": 1994,
+  "publisher": "Microsoft",
+  "system": "win3",
+  "core": "dosbox-pure",
+  "players": 1,
+  "archive": {
+    "item": "SOLARSYS_WIN",
+    "file": "SOLARSYS.zip",
+    "size": 140708650,
+    "start": "SETUP.EXE",
+    "windows": "win31-progman"
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Enter",
+      "Escape",
+      "Space"
+    ],
+    "dpad": true,
+    "keyboard": true,
+    "mouse": true
+  },
+  "actions": [
+    {
+      "do": "Pick",
+      "press": "Enter"
+    },
+    {
+      "do": "Back out",
+      "press": "Escape"
+    },
+    {
+      "do": "Go on",
+      "press": "Space"
+    }
+  ],
+  "gamepad": {
+    "A": "Enter",
+    "B": "Escape",
+    "X": "Space",
+    "Y": "@keyboard",
+    "Up": "ArrowUp",
+    "Down": "ArrowDown",
+    "Left": "ArrowLeft",
+    "Right": "ArrowRight"
+  },
+  "genre": [
+    "educational video game"
+  ],
+  "help": "Point and click with the mouse, drag on a touch screen, or use the right stick. Find Ms. Frizzle among the planets, ages 6 to 10.",
+  "kids": true
+}

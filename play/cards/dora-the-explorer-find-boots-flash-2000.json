@@ -1,0 +1,43 @@
+{
+  "system": "flash",
+  "core": "ruffle",
+  "players": 1,
+  "controls": {
+    "kind": "pointer",
+    "keys": [],
+    "dpad": false,
+    "keyboard": false,
+    "mouse": true
+  },
+  "actions": [
+    {
+      "do": "Pick",
+      "press": "@click"
+    },
+    {
+      "do": "Point",
+      "press": "@point"
+    },
+    {
+      "do": "Pause",
+      "press": "@menu"
+    }
+  ],
+  "gamepad": {
+    "Start": "@menu"
+  },
+  "genre": [
+    "educational video game"
+  ],
+  "kids": true,
+  "id": "dora-the-explorer-find-boots-flash-2000",
+  "title": "Dora the Explorer: Find Boots",
+  "year": 2000,
+  "publisher": "Nick Jr.",
+  "archive": {
+    "item": "findboots_swf",
+    "file": "game.swf",
+    "size": 637680
+  },
+  "help": "Click or tap. Help Dora find Boots the monkey."
+}

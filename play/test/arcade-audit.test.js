@@ -55,7 +55,7 @@ test('wakeSound resumes the sound context MAME made for itself, and only when it
 test('a key press wakes an arcade game\'s sound before the page hands the key to MAME', () => {
   const js = require('node:fs').readFileSync(require('node:path').join(__dirname, '..', 'src', 'play.js'), 'utf8');
   const body = js.slice(js.indexOf('function keyEvent(e, down) {'), js.indexOf('function arcadeEsc(e) {'));
-  const wake = body.indexOf('runner.wakeSound()'), arcade = body.indexOf('if (isArcade()) return;');
+  const wake = body.indexOf('runner.wakeSound()'), arcade = body.indexOf('if (isArcade() || isFlash()) return;');
   assert.ok(wake > 0 && arcade > 0 && wake < arcade);
 });
 

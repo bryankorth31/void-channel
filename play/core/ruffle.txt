@@ -1,0 +1,8 @@
+core: Ruffle (Flash Player emulator, its own web build; not a libretro core)
+version: 0.8.0 (tag v0.8.0)
+source: https://github.com/ruffle-rs/ruffle
+commit: cd4cb8f45f144d5a9209f496ee09b60ad136b5b3
+licence: MIT or Apache-2.0, at your option (LICENSE.md in its source, served beside the engine as engine/ruffle/LICENSE.md, with the licences of the libraries it uses)
+built with: Rust 1.100.0 (stable-x86_64-pc-windows-msvc, target wasm32-unknown-unknown), wasm-bindgen-cli 0.2.127, Java 21 (Eclipse Adoptium), Node.js 24.19.0, wasm-opt from the Emscripten SDK at commit 708dcbcc9ee23bc7d2dad44fc90db377e38b771c
+build: RUSTUP_TOOLCHAIN=stable-x86_64-pc-windows-msvc RUFFLE=<ruffle folder> bash play/core/build-ruffle.sh (npm run build for ruffle-core, then ruffle-selfhosted)
+served: play/engine/ruffle/ruffle.js (its script, with our one-line notice first), ruffle_web_bg.<hash>.wasm (the player), LICENSE.md

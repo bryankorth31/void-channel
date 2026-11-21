@@ -1,0 +1,42 @@
+{
+  "system": "flash",
+  "core": "ruffle",
+  "players": 1,
+  "controls": {
+    "kind": "pointer",
+    "keys": [],
+    "dpad": false,
+    "keyboard": false,
+    "mouse": true
+  },
+  "actions": [
+    {
+      "do": "Pick",
+      "press": "@click"
+    },
+    {
+      "do": "Point",
+      "press": "@point"
+    },
+    {
+      "do": "Pause",
+      "press": "@menu"
+    }
+  ],
+  "gamepad": {
+    "Start": "@menu"
+  },
+  "genre": [
+    "educational video game"
+  ],
+  "kids": true,
+  "id": "sesame-street-elmo-goes-to-the-doctor-flash",
+  "title": "Sesame Street: Elmo Goes to the Doctor",
+  "publisher": "Sesame Workshop",
+  "archive": {
+    "item": "doctor_swf",
+    "file": "elmodoctor.swf",
+    "size": 868127
+  },
+  "help": "Click or tap. A story with Elmo at the doctor, with things to click on every page."
+}

@@ -17,6 +17,11 @@ when you press Play. Each core is built from its own published source, unchanged
 | mGBA | Game Boy Advance | Mozilla Public License 2.0 | https://github.com/libretro/mgba | `7a12d6d4b9acb14c0ae62c9166b6a2f3d08007f6` |
 | Handy | Atari Lynx | zlib licence | https://github.com/libretro/libretro-handy | `bc55d462f0b2d6b073ea93dc552ebd73cec60fd1` |
 | MAME 0.289 | arcade machines (engines that each hold one or more machine families, in `play/engine/mame/`) | GNU GPL version 2 for MAME as a whole | https://github.com/mamedev/mame | `f09e0805da149cb15bd1cd777fbbcc65640d7866` (in [mame.txt](mame.txt)) |
+| Ruffle 0.8.0 | Flash games (.swf), in `play/engine/ruffle/` | MIT or Apache-2.0, at your option | https://github.com/ruffle-rs/ruffle | `cd4cb8f45f144d5a9209f496ee09b60ad136b5b3` (in [ruffle.txt](ruffle.txt)) |
+
+Windows 3.1 games need no engine of their own: they run in DOSBox Pure on the Internet Archive's own minimal Windows 3.1
+package (item `emularity_win31`), which the player fetches from the Archive at Play, like the game. voidtv.net never
+serves any part of Windows.
 
 The commits for every core but DOSBox Pure also live in [cores.js](cores.js), which is the one place the build reads them from.
 Every core was built with Emscripten 7.0.0 (emcc `777e6e5db7b4990bcaeb1b9998ed642cc84e6629`), installed by the
@@ -77,6 +82,11 @@ Our side of every build is [host.c](host.c), the host's C half, which answers th
 libretro contract (`libretro.h`, MIT licence, from the core's own source).
 
 MAME: follow the build command in [mame.txt](mame.txt) (GNU make and MAME's own genie tool, no recipe in cores.js).
+
+Ruffle: like MAME, its own web build, not a libretro core. With Rust (and its `wasm32-unknown-unknown` target),
+`wasm-bindgen-cli` at the version Ruffle pins, Java and Node.js: `RUFFLE=<your ruffle folder> bash play/core/build-ruffle.sh`.
+The tools and versions we used are in [ruffle.txt](ruffle.txt). It writes `play/engine/ruffle/`: Ruffle's script (with
+our one-line notice first), its WebAssembly under Ruffle's own hashed name, and its `LICENSE.md`.
 
 ## When a core changes
 

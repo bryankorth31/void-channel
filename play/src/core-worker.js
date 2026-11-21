@@ -137,6 +137,39 @@ async function unpack(bytes, start) {
   return program;
 }
 
+// A Windows 3.1 game (Bryan, 20 Nov 2026: "Yes, try it"). The Internet Archive starts these on its own minimal Windows
+// 3.1 package as a second drive; DOSBox Pure takes one drive, so the package goes onto the game's own C: beside it, its
+// settings pointed at C: instead of D:, and a small start file of ours starts Windows. With shell, the game itself is
+// Windows' only program (SYSTEM.INI shell=), as the Archive's win31.zip does with its SETINI step, so a child never
+// meets Program Manager. The game's own files win any clash of names. Returns the start file's path.
+async function addWindows(msg, program) {
+  say('Fetching Windows 3.1 from the Internet Archive');
+  const pack = await gameBytes(msg.windows.url, msg.windows.size);
+  const root = '/game/disk/';
+  const rel = program.slice(root.length), dir = rel.includes('/') ? rel.slice(0, rel.lastIndexOf('/')) : '';
+  const BS = String.fromCharCode(92);   // DOS's backslash
+  const dosPath = 'C:' + BS + rel.split('/').join(BS);
+  for (const e of PlayUnzip.entries(pack)) {
+    let name = PlayUnzip.safe(e.name);
+    if (!name || e.dir || /^(runapp\.bat|setini\.exe)$/i.test(name)) continue;
+    let data = await PlayUnzip.read(pack, e);
+    if (/^iniback\//i.test(name)) {
+      name = 'WINDOWS/' + name.slice(8);
+      let text = new TextDecoder('latin1').decode(data).split('D:' + BS).join('C:' + BS).split('d:' + BS).join('C:' + BS);
+      if (msg.windows.shell && /^WINDOWS\/SYSTEM\.INI$/i.test(name)) text = text.replace(/^shell=.*$/im, 'shell=' + dosPath);
+      data = Uint8Array.from(text, (ch) => ch.charCodeAt(0) & 255);
+    }
+    const full = root + name;
+    if (M.FS.analyzePath(full).exists && !/^WINDOWS\//i.test(name)) continue;
+    M.FS.mkdirTree(full.slice(0, full.lastIndexOf('/')));
+    M.FS.writeFile(full, data);
+  }
+  const lines = ['@echo off', 'path=C:' + BS + ';C:' + BS + 'WINDOWS', 'C:', 'cd ' + BS + dir.split('/').join(BS),
+    'C:' + BS + 'WINDOWS' + BS + 'WIN' + (msg.windows.shell ? '' : ' ' + dosPath)];
+  M.FS.writeFile(root + 'PLAYWIN.BAT', lines.join('\r\n') + '\r\n');
+  return root + 'PLAYWIN.BAT';
+}
+
 // A console game kept inside a .zip: the core gets the one file with the machine's own ending (the largest, if there
 // are several: a zip with a readme or a second region). A zip without one goes to the core as it is.
 async function romFromZip(bytes, exts, fallback) {
@@ -212,6 +245,7 @@ async function start(msg) {
     say('Fetching the game from the Internet Archive');
     const game = await gameBytes(msg.gameUrl, msg.gameSize);
     if (msg.start && /\.zip$/i.test(msg.gameFile)) path = await unpack(game, msg.start);
+    if (msg.windows && msg.start) path = await addWindows(msg, path);
     else if (/\.zip$/i.test(msg.gameFile) && msg.rom && msg.rom.length) path = await romFromZip(game, msg.rom, path);
     else M.FS.writeFile(path, game);
   }

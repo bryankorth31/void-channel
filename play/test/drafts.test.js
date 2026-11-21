@@ -53,7 +53,7 @@ test('audit D-1, D-2 and the boot results: the approve API answers this computer
   assert.ok(serve.includes("'audit', 'play-mode', 'drafts-boot', col + '.json'"));
   assert.ok(fs.readFileSync(path.join(PLAY, 'tools', 'approve.html'), 'utf8').includes("'Boots: first picture at '"));
   const js = fs.readFileSync(path.join(PLAY, 'src', 'play.js'), 'utf8');
-  assert.ok(js.includes("if (!PlayCards.isPad(card)) blankWatch();"));
+  assert.ok(js.includes("if (!PlayCards.isPad(card) && !isFlash()) blankWatch();"));
   assert.ok(js.includes("toast('Older games can take half a minute to start')"));
 });
 

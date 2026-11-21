@@ -24,6 +24,8 @@
     gba: { name: 'Game Boy Advance', shape: 'handheld', color: '#7b6cf6' },
     lynx: { name: 'Atari Lynx', shape: 'handheld', color: '#ff8a3d' },
     arcade: { name: 'Arcade', shape: 'bigbox', color: '#ff4fc8' },
+    win3: { name: 'Windows 3.1', shape: 'bigbox', color: '#3fbfb0' },
+    flash: { name: 'Flash', shape: 'bigbox', color: '#e8383d' },
   };
   const decadeOf = (y) => (y ? Math.floor(y / 10) * 10 : null);
   const decadeName = (d) => (d === null ? 'More games' : d >= 2000 ? 'The ' + d + 's' : 'The ' + String(d).slice(2) + 's');
@@ -33,7 +35,7 @@
   const byPopular = (a, b) => (b.plays || 0) - (a.plays || 0) || (b.year || 0) - (a.year || 0) || a.title.localeCompare(b.title);
 
   // The sets a row can be besides a filter: the machine families, the eras and the lists (pure: tested).
-  const CONSOLE = (g) => g.system !== 'arcade' && g.system !== 'dos';
+  const CONSOLE = (g) => !['arcade', 'dos', 'win3', 'flash'].includes(g.system);
   const SETS = {
     most: { title: 'Most played', has: () => true },
     newer: { title: 'Newer games', has: (g) => g.year >= 1995 },
@@ -96,7 +98,7 @@
   const COUNT = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight'];
   function aboutLine(g) {
     const kind = KIND[(g.genres || [])[0]] || 'a game';
-    let s = kind[0].toUpperCase() + kind.slice(1) + (g.system === 'arcade' ? ' from the arcades' : g.system === 'dos' ? ' for the PC' : ' for the ' + sysOf(g).name);
+    let s = kind[0].toUpperCase() + kind.slice(1) + (g.system === 'arcade' ? ' from the arcades' : g.system === 'dos' ? ' for the PC' : g.system === 'win3' ? ' for Windows' : g.system === 'flash' ? ' for the web, in Flash' : ' for the ' + sysOf(g).name);
     if (g.publisher) s += ', made by ' + g.publisher;
     if (g.year) s += ' in ' + g.year;
     s += '.';

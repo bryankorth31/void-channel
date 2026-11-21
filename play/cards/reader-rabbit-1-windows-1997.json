@@ -1,0 +1,56 @@
+{
+  "id": "reader-rabbit-1-windows-1997",
+  "title": "Reader Rabbit 1",
+  "year": 1997,
+  "publisher": "The Learning Company",
+  "system": "win3",
+  "core": "dosbox-pure",
+  "players": 1,
+  "archive": {
+    "item": "RR1_WIN",
+    "file": "RR1.zip",
+    "size": 21848575,
+    "start": "RR1.EXE",
+    "windows": "win31"
+  },
+  "controls": {
+    "kind": "dos-keys",
+    "keys": [
+      "Enter",
+      "Escape",
+      "Space"
+    ],
+    "dpad": true,
+    "keyboard": true,
+    "mouse": true
+  },
+  "actions": [
+    {
+      "do": "Pick",
+      "press": "Enter"
+    },
+    {
+      "do": "Back out",
+      "press": "Escape"
+    },
+    {
+      "do": "Go on",
+      "press": "Space"
+    }
+  ],
+  "gamepad": {
+    "A": "Enter",
+    "B": "Escape",
+    "X": "Space",
+    "Y": "@keyboard",
+    "Up": "ArrowUp",
+    "Down": "ArrowDown",
+    "Left": "ArrowLeft",
+    "Right": "ArrowRight"
+  },
+  "genre": [
+    "educational video game"
+  ],
+  "help": "Point and click with the mouse, drag on a touch screen, or use the right stick. Reading and spelling games for ages 3 to 7.",
+  "kids": true
+}

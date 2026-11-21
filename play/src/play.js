@@ -191,6 +191,7 @@
     if (!started) return;
     const state = await runner.save();
     if (!state && runner.saveWhy() === 'arcade') return toast('Arcade games cannot be saved yet');
+    if (!state && runner.saveWhy() === 'flash') return toast('Flash games keep their own saves in this browser');
     if (!state) return toast(runner.saveWhy() === 'dos' ? 'This game can be saved once it is past its DOS start menu' : 'The game could not be saved just now');
     try { await PlaySaves.put(card.id, state, build); toast('Saved in this browser'); keepStorage(); } catch (e) { toast('This browser would not keep the save'); }
   }
@@ -476,6 +477,8 @@
   }
 
   const isArcade = () => !!(card && PlayCards.CORES[card.core] && PlayCards.CORES[card.core].kind === 'mame');
+  // A Flash game (Ruffle, src/flash-runner.js): its own player hears the PC keyboard, the mouse and a finger directly.
+  const isFlash = () => !!(card && PlayCards.CORES[card.core] && PlayCards.CORES[card.core].kind === 'ruffle');
 
   // The volume (Bryan, 20 Nov 2026: "add a volume control on the emulator"): 0 to 100, kept in this browser; the speaker
   // mutes and brings back the level before. Squared on the way to the engine, so each step sounds like the same step.
@@ -506,14 +509,14 @@
     phoneScreen();
     $('b-play').hidden = true; $('b-continue').hidden = true; status('Starting');
     deadline = setTimeout(() => fail('The game did not arrive from the Internet Archive in time. Check the connection and press Play to try again.'), DEADLINE_MS);
-    runner = (isArcade() ? PlayArcade : PlayRunner).createRunner({ canvas: $('canvas'), mute: q.get('mute') === '1', volume: gainOf(vol), on: {
+    runner = (isArcade() ? PlayArcade : isFlash() ? PlayFlash : PlayRunner).createRunner({ canvas: $('canvas'), mute: q.get('mute') === '1', volume: gainOf(vol), on: {
       note: (t) => toast(t),
       status, error: (t) => fail(t),
       ready: () => { started = true; applyCheats(); place.sig = ''; place(); setTimeout(toolbarTip, 1500); },
       cheats: (m) => { if (!m.ok) toast('This game\'s engine cannot take cheats'); else if (m.on) toast(m.on === 1 ? 'One cheat on' : m.on + ' cheats on'); },
       firstFrame: () => {
         clearTimeout(deadline); $('cover').hidden = true; $('canvas').focus({ preventScroll: true }); stayAwake(true); armBack();
-        if (!PlayCards.isPad(card)) blankWatch();
+        if (!PlayCards.isPad(card) && !isFlash()) blankWatch();   // a Flash game draws in its own element, not the canvas
         if (resumeState) { const s = resumeState; resumeState = null; runner.load(s).then((ok) => toast(ok ? 'Back where you left off' : 'That spot would not load; starting fresh')); }
       },
       aspect: (a) => { if (Math.abs(a - aspect) > 0.01) { aspect = a; place(); } },
@@ -665,7 +668,7 @@
 
   // The start screen (block B): the item's own picture from the Archive (through /cors/, which this isolated page may
   // load), the title, year, maker and machine, and the first three actions for the input in hand.
-  const SYSTEM_NAMES = { dos: 'PC (DOS)', a2600: 'Atari 2600', nes: 'NES', snes: 'Super Nintendo', genesis: 'Sega Genesis', sms: 'Master System', gamegear: 'Game Gear', gameboy: 'Game Boy', gbcolor: 'Game Boy Color', gba: 'Game Boy Advance', lynx: 'Atari Lynx', arcade: 'Arcade' };
+  const SYSTEM_NAMES = { dos: 'PC (DOS)', a2600: 'Atari 2600', nes: 'NES', snes: 'Super Nintendo', genesis: 'Sega Genesis', sms: 'Master System', gamegear: 'Game Gear', gameboy: 'Game Boy', gbcolor: 'Game Boy Color', gba: 'Game Boy Advance', lynx: 'Atari Lynx', arcade: 'Arcade', win3: 'Windows 3.1', flash: 'Flash' };
   function device() {
     const pads = allPads();
     if (pads.some((p) => p && p.mapping === 'standard')) return 'pad';
@@ -684,7 +687,7 @@
       const li = document.createElement('li'); const b = document.createElement('b'); b.textContent = l.do;
       li.append(b, ': ' + l.how); ul.appendChild(li);
     }
-    if (c.controls && c.controls.mouse && !PlayCards.isPad(c)) {
+    if (c.controls && c.controls.mouse && !PlayCards.isPad(c) && (PlayCards.CORES[c.core] || {}).kind !== 'ruffle') {   // a Flash card's actions say it
       const li = document.createElement('li'); const b = document.createElement('b'); b.textContent = 'Plays with a mouse';
       li.append(b, ': ' + MOUSE_HOW[device()]); ul.insertBefore(li, ul.firstChild);
     }
@@ -708,7 +711,7 @@
       const li = document.createElement('li'); const b = document.createElement('b'); b.textContent = 'Two players';
       li.append(b, ': a second gamepad plays as player 2, and each pad keeps its player all game'); ul.appendChild(li);
     }
-    if (c.controls && c.controls.mouse && !PlayCards.isPad(c)) {
+    if (c.controls && c.controls.mouse && !PlayCards.isPad(c) && (PlayCards.CORES[c.core] || {}).kind !== 'ruffle') {   // a Flash card's actions say it
       const li = document.createElement('li'); const b = document.createElement('b'); b.textContent = 'Mouse';
       li.append(b, ': ' + MOUSE_HOW.keyboard + '; on a touch screen ' + MOUSE_HOW.touch + '; on a gamepad ' + MOUSE_HOW.pad); ul.appendChild(li);
       $('canvas').style.touchAction = 'none';
@@ -751,7 +754,7 @@
     // An arcade game hears the PC keyboard itself (MAME's own key seats); keys our runner sends for the gamepad and the
     // touch pad are not fed back. Esc is caught before MAME sees it (arcadeEsc, below).
     if (runner) runner.wakeSound();   // first, so a key wakes an arcade game's sound too (audit, 20 Nov 2026)
-    if (isArcade()) return;
+    if (isArcade() || isFlash()) return;
     // Keys go to the game unless the pause menu is open and has the focus. A hidden panel never keeps them.
     if (!hub || !started || (!$('menu').hidden && e.target.closest('.menu'))) return;
     if (e.code === 'F11') return;
