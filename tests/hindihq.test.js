@@ -107,6 +107,13 @@ test('HI5: a Hindi job runs inside the Hindi folder with the hindi profile, one 
   write('shelf.js', 'setTimeout(() => {}, 60000);');
   assert.throws(() => hq.run('rm', null), /unknown Hindi job/);
   const j = hq.run('review', null);
+  // The race found 21 Nov 2026 in a full parallel run: the process is gone but HQ has not yet run its exit event. Waiting here
+  // without letting go of the event loop holds that gap open, so a look now must show the job still running, never failed (-1).
+  for (const until = Date.now() + 15000; Date.now() < until;) { try { process.kill(j.pid, 0); } catch (e) { break; } }
+  const gap = hq.jobs().jobs.find((x) => x.id === j.id);
+  assert.equal(gap.running, true, 'a job whose exit event has not run yet is still running');
+  assert.equal(gap.code, null, 'and is not marked failed');
+  assert.throws(() => hq.run('review', null), /already running/, 'and still counts as the one job running');
   for (let i = 0; i < 50 && hq.jobs().jobs.find((x) => x.id === j.id).running; i++) await wait(100);
   const done = hq.jobs().jobs.find((x) => x.id === j.id);
   assert.equal(done.code, 0);
@@ -121,5 +128,17 @@ test('HI5: a Hindi job runs inside the Hindi folder with the hindi profile, one 
   assert.equal(r.body.stopped, true);
   for (let i = 0; i < 40; i++) { try { process.kill(again.pid, 0); await wait(100); } catch (e) { break; } }
   assert.throws(() => process.kill(again.pid, 0), 'the stopped process is gone');
+  await wait(500); // let the killed process's exit event run: it must not turn "stopped" into a failure
+  assert.equal(hq.jobs().jobs.find((x) => x.id === again.id).code, 'stopped', 'a stopped job stays stopped after its exit event');
   try { process.kill(slow.pid); } catch (e) { /* already gone */ }
+});
+
+test('HI5: a job left from before an HQ restart is marked finished (-1) once its process is gone', () => {
+  const pid = require('node:child_process').spawnSync(process.execPath, ['-e', '']).pid; // a process that has already ended
+  fs.mkdirSync(process.env.HQ_STATE_DIR, { recursive: true });
+  const old = { id: 'old1', name: 'review', script: 'profiles/hindi/review.js', pid, started: '2026-11-20T00:00:00.000Z', pstart: null, log: path.join(BASE, 'none.log'), done: null, code: null };
+  fs.writeFileSync(path.join(process.env.HQ_STATE_DIR, 'hq-hindi-jobs.json'), JSON.stringify([old]));
+  const j = hq.jobs().jobs.find((x) => x.id === 'old1');
+  assert.equal(j.running, false, 'no HQ is listening to it, so it is not shown as running');
+  assert.equal(j.code, -1, 'its code is unknown');
 });

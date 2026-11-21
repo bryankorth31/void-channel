@@ -142,11 +142,16 @@ const processInfo = (pid) => new Promise((ok) => {
   execFile('powershell', ['-NoProfile', '-NonInteractive', '-Command', infoScript(pid)], { windowsHide: true, timeout: 15000 }, (err, out) => { try { ok(err || !String(out).trim() ? null : JSON.parse(String(out).trim())); } catch (e) { ok(null); } });
 });
 const scriptIn = (cmd, script) => String(cmd || '').replace(/\//g, '\\').toLowerCase().includes(script.replace(/\//g, '\\').toLowerCase());
+// The jobs this HQ started and is still listening to. Only a job's own exit event finishes it, with its real code: on a busy PC a
+// process can be gone a moment before its exit event runs, and a look in that gap marked a job that ended well as failed (-1).
+// Found 21 Nov 2026 in a full parallel test run (reported by the missing-assets chat). A job left from before an HQ restart has no
+// listener here, so once its process is gone it is still marked finished with -1 (its code is unknown).
+const listening = new Set();
 
 function jobs() {
   const list = loadJobs();
   let changed = false;
-  for (const j of list) if (!j.done && !alive(j.pid)) { j.done = new Date().toISOString(); j.code = j.code == null ? -1 : j.code; changed = true; }
+  for (const j of list) if (!j.done && !listening.has(j.id) && !alive(j.pid)) { j.done = new Date().toISOString(); j.code = j.code == null ? -1 : j.code; changed = true; }
   if (changed) saveJobs(list);
   return { defs: Object.entries(JOBS_DEF).map(([name, d]) => ({ name, what: d.what, script: d.script })), jobs: list.map((j) => ({ ...j, running: !j.done, tail: tail(j.log) })) };
 }
@@ -155,7 +160,7 @@ function run(name, nb) {
   if (!def) throw new Error('unknown Hindi job ' + name);
   if (!fs.existsSync(path.join(HROOT(), def.script))) throw new Error('The Hindi folder is not on this PC, or has no ' + def.script);
   const list = loadJobs();
-  const busy = list.find((j) => !j.done && alive(j.pid));
+  const busy = list.find((j) => !j.done && (listening.has(j.id) || alive(j.pid)));
   if (busy) throw new Error('A Hindi job is already running (' + busy.name + '). Wait for it, or Stop it.');
   fs.mkdirSync(STATE(), { recursive: true });
   const id = Date.now().toString(36) + Math.random().toString(36).slice(2, 5);
@@ -168,7 +173,16 @@ function run(name, nb) {
   child.unref();
   const job = { id, name, script: def.script, pid: child.pid, started: new Date().toISOString(), pstart: null, log, done: null, code: null };
   list.unshift(job); saveJobs(list);
-  child.on('exit', (code) => { const l = loadJobs(), j = l.find((x) => x.id === id); if (j) { j.done = new Date().toISOString(); j.code = code; saveJobs(l); } });
+  // Finished once, by its exit (or by a start that failed, which may bring no exit event). A job Stop ended keeps "stopped": the
+  // exit event of a killed process can come after Stop wrote it, and would otherwise show the job as failed (taskkill's code 1).
+  listening.add(id);
+  const finish = (code) => {
+    if (!listening.delete(id)) return;
+    const l = loadJobs(), j = l.find((x) => x.id === id);
+    if (j) { j.done = j.done || new Date().toISOString(); if (j.code !== 'stopped') j.code = code == null ? -1 : code; saveJobs(l); }
+  };
+  child.on('exit', (code) => finish(code));
+  child.on('error', () => finish(-1));
   processInfo(child.pid).then((info) => { if (info && scriptIn(info.cmd, def.script)) { const l = loadJobs(), j = l.find((x) => x.id === id); if (j && !j.done) { j.pstart = info.created; saveJobs(l); } } });
   return job;
 }
