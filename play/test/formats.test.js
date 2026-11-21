@@ -71,6 +71,14 @@ test('Flash on a phone and in the menu (the auditor\'s notes, 20 Nov 2026): no c
   for (const c of cards.filter((x) => x.system === 'flash')) assert.match(c.help, /Pause with the Pause button\.$/, c.id);
 });
 
+test('Flash paused: the player takes no taps and Ruffle\'s own play button is hidden, until resume (Kids session, 21 Nov 2026)', () => {
+  const src = fs.readFileSync(path.join(PLAY, 'src', 'flash-runner.js'), 'utf8');
+  assert.ok(src.includes("player.style.pointerEvents = on ? 'none' : '';"));
+  assert.ok(src.includes("player.shadowRoot.querySelector('#play-button')"));
+  assert.ok(src.includes('api.suspend(); } catch (e) { /* not yet running */ } still(true); },'), 'pause stills the player');
+  assert.ok(src.includes('resume: () => { paused = false; still(false);'), 'resume gives it back');
+});
+
 test('Flash cards: a .swf from the Archive, pointer actions on every input, on Kids', () => {
   const flash = cards.filter((c) => c.system === 'flash');
   assert.ok(flash.length >= 2);

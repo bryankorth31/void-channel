@@ -195,12 +195,22 @@
       else if (!held && was) fire('pointerup', 0);
     }
 
+    // While paused the player takes no taps or clicks, and Ruffle's own play button (the whole stage, drawn when it is
+    // suspended) is out of sight: a tap beside the Paused panel started the film again under it (the Kids session and
+    // the auditor, 21 Nov 2026). Both come back on resume.
+    function still(on) {
+      if (!player) return;
+      player.style.pointerEvents = on ? 'none' : '';
+      const b = player.shadowRoot && player.shadowRoot.querySelector('#play-button');
+      if (b) b.style.visibility = on ? 'hidden' : '';
+    }
+
     return {
       start, stop, key, mouse,
       prepareSound: () => {},
       pad: () => {}, rewind: () => {}, cheats: () => {},
-      pause: () => { paused = true; try { if (api) api.suspend(); } catch (e) { /* not yet running */ } },
-      resume: () => { paused = false; try { if (api) api.resume(); } catch (e) { /* not yet running */ } },
+      pause: () => { paused = true; try { if (api) api.suspend(); } catch (e) { /* not yet running */ } still(true); },
+      resume: () => { paused = false; still(false); try { if (api) api.resume(); } catch (e) { /* not yet running */ } },
       save: () => Promise.resolve(null),
       load: () => Promise.resolve(false),
       sram: () => Promise.resolve(null),
