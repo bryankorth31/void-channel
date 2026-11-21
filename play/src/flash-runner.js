@@ -56,6 +56,30 @@
       return b;
     }
 
+    // Ruffle's own screens stay out of sight (the PLAY lead, 20 Nov 2026: all four Flash cards are kids games). If the
+    // engine crashes, Ruffle draws its crash panel with links to ruffle.rs and GitHub inside its player; the moment it
+    // appears, the game stops and the page says so in its own words (on Kids, its way back is the kids games). Any other
+    // link Ruffle draws loses its address, so nothing in the player leads off the site.
+    let guard = null;
+    const CRASH = 'This game stopped working in the Flash player. Press Play again to try once more, or pick another game.';
+    function watchScreens() {
+      const sr = player && player.shadowRoot;
+      if (!sr || !root.MutationObserver) return;
+      const look = () => {
+        if (stopped) return;
+        if (sr.querySelector('#panic')) {
+          guard.disconnect();
+          for (const p of sr.querySelectorAll('#panic')) p.remove();
+          on.error && on.error(CRASH);
+          return;
+        }
+        for (const a of sr.querySelectorAll('a[href]')) if (a.getAttribute('href') !== '#') { a.removeAttribute('href'); a.removeAttribute('target'); }
+      };
+      guard = new MutationObserver(look);
+      guard.observe(sr, { childList: true, subtree: true });
+      look();
+    }
+
     // Ruffle's element sits exactly where the canvas is, and moves with it (the page sizes the canvas to the game).
     function lay() {
       if (!player || stopped) return;
@@ -81,6 +105,7 @@
         canvas.style.visibility = 'hidden';
         canvas.insertAdjacentElement('afterend', player);
         api = player.ruffle ? player.ruffle() : player;
+        watchScreens();
         lay();
         if (root.ResizeObserver) { follow = new ResizeObserver(lay); follow.observe(canvas); }
         addEventListener('resize', lay);
@@ -119,6 +144,7 @@
     function stop() {
       stopped = true; clearTimeout(firstTimer);
       if (follow) follow.disconnect();
+      if (guard) guard.disconnect();
       removeEventListener('resize', lay);
       try { if (api && api.suspend) api.suspend(); } catch (e) { /* already gone */ }
       if (player) { try { player.remove(); } catch (e) { /* gone */ } }

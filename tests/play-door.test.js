@@ -37,6 +37,23 @@ test('the site build copies the PLAY pages, scripts, cards, shelf list and engin
   for (const never of ["'test'", "'tools'", "'core'", "'serve.js'"]) assert.ok(!src.includes('fs.cpSync(path.join(P, ' + never), never);
 });
 
+test('the site build ships everything a Flash card needs: Ruffle\'s whole folder and the Flash runner (PLAY lead, 20 Nov 2026)', () => {
+  const src = read('scripts/site.js');
+  // engine/ and src/ are copied whole, folders and all, so Ruffle's hashed WebAssembly and its LICENSE.md go with ruffle.js.
+  assert.ok(src.includes("for (const d of ['src', 'cards', 'engine', 'cheats', 'library', 'skin'].filter((x) => fs.existsSync(path.join(P, x)))) fs.cpSync(path.join(P, d), path.join(dst, d), { recursive: true });"));
+  const Cards = require('../play/src/cards.js');
+  const ruffle = path.join(REPO, 'play', path.dirname(Cards.CORES.ruffle.engine));
+  const files = fs.readdirSync(ruffle);
+  assert.ok(files.includes('ruffle.js') && files.includes('LICENSE.md') && files.some((f) => /^ruffle_web_bg\.[A-Z0-9]+\.wasm$/.test(f)), files.join(', '));
+  // Cloudflare Pages takes at most 25 MiB a file.
+  for (const f of files) assert.ok(fs.statSync(path.join(ruffle, f)).size < 25 * 1024 * 1024, f);
+  assert.ok(fs.existsSync(path.join(REPO, 'play', 'src', 'flash-runner.js')));
+  // The game page loads the runner by a tag the build stamps with its version (?v=), like every other script.
+  const page = read('play/game.html');
+  assert.ok(page.includes('<script src="src/flash-runner.js"></script>'));
+  assert.match('<script src="src/flash-runner.js"></script>'.replace(/(src="src\/[a-z0-9-]+\.js)"/g, '$1?v=abc"'), /flash-runner\.js\?v=abc/);
+});
+
 test('every engine file fits the Pages per-file cap with room to spare', () => {
   const dir = path.join(REPO, 'play', 'engine');
   for (const f of fs.readdirSync(dir)) assert.ok(fs.statSync(path.join(dir, f)).size < 8 * 1024 * 1024, f);

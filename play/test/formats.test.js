@@ -45,6 +45,18 @@ test('Flash: the runner has the page\'s runner surface, never opens a link, and 
   assert.ok(page.indexOf('src/flash-runner.js') > page.indexOf('src/cards.js') && page.indexOf('src/flash-runner.js') < page.indexOf('src/play.js'));
 });
 
+test('Flash: Ruffle\'s crash panel never shows (it links to ruffle.rs and GitHub); the page says it in its own words', () => {
+  const src = fs.readFileSync(path.join(PLAY, 'src', 'flash-runner.js'), 'utf8');
+  const body = src.slice(src.indexOf('function watchScreens()'), src.indexOf('// Ruffle\'s element sits exactly where the canvas is'));
+  assert.ok(body.includes("if (sr.querySelector('#panic')) {"), 'the panel is caught the moment it appears');
+  assert.ok(body.includes("for (const p of sr.querySelectorAll('#panic')) p.remove();"));
+  assert.ok(body.includes('on.error && on.error(CRASH);'), 'the page stops the game and shows its own message');
+  assert.ok(body.includes("a.removeAttribute('href')"), 'any other link Ruffle draws loses its address');
+  assert.ok(body.includes('guard.observe(sr, { childList: true, subtree: true });'));
+  assert.ok(src.includes('        watchScreens();\n        lay();'), 'watching starts before the movie loads');
+  assert.ok(!/ruffle\.rs|github/i.test(src.match(/const CRASH = '([^']*)'/)[1]), 'our message names no other site');
+});
+
 test('Flash cards: a .swf from the Archive, pointer actions on every input, on Kids', () => {
   const flash = cards.filter((c) => c.system === 'flash');
   assert.ok(flash.length >= 2);
