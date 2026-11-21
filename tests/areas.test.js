@@ -27,7 +27,8 @@ test('the list: no Void Cast, every live area complete, the house copy rules', (
   for (const a of A) {
     assert.ok(!ids.has(a.id), 'one line per area: ' + a.id); ids.add(a.id);
     for (const k of ['name', 'line', 'kicker', 'head', 'text', 'go', 'pic']) assert.ok(a[k], a.id + ' has ' + k);
-    assert.ok(a.site === 'main' ? /^\//.test(a.path) : /^https:\/\/[a-z]+\.voidtv\.net\/$/.test(a.url), a.id + ' has an address');
+    // voidtv.net's own areas by path, its sister sites at <name>.voidtv.net, and a house area outside it (lexROM) by its own https address
+    assert.ok(a.site === 'main' ? /^\//.test(a.path) : (a.url === 'https://' + a.site + '.voidtv.net/' || (a.also && /^https:\/\/[a-z0-9.-]+\/$/.test(a.url))), a.id + ' has an address');
     const words = [a.name, a.line, a.kicker, a.head, a.text, a.go].join(' ');
     assert.doesNotMatch(words, /—|–/, a.id + ': no em or en dashes');
     assert.doesNotMatch(words, /classic shows/i, a.id + ': never "classic shows"');

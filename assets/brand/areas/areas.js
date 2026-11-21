@@ -47,6 +47,11 @@
     { id: 'hindi', name: 'voidtv.net hindi', line: 'हिंदी में फ़िल्में और शो', site: 'hindi', url: 'https://hindi.voidtv.net/', live: true,
       kicker: 'हिंदी', head: 'हिंदी में फ़िल्में और शो', text: 'Hindi films and shows, Hindi dubs and Live TV. Free, with an English switch.',
       go: 'Open hindi', pic: '/assets/brand/bg/sign-orange-m.jpg' },
+    // Outside voidtv.net (Bryan, 21 Nov 2026, "yes" to the whole-house plan's question 5: Read joins the house as one line,
+    // linking lexROM where it is). Its card does not say "Also on voidtv.net" (also).
+    { id: 'read', name: 'lexROM', line: 'Books read one word at a time', site: 'lexrom', url: 'https://lexrom.bspokevisuals.com/', live: true,
+      also: 'Also free', kicker: 'Reading', head: 'Read a book one word at a time.', text: 'Free classics, your own books and the news, on the breath. No account.',
+      go: 'Open lexROM', pic: 'https://lexrom.bspokevisuals.com/icon-512.png', picFit: 'contain' },
     // Not open yet: they join the menu and the cards the day live turns true.
     { id: 'westside', name: 'voidtv.net west side', line: 'Films and shows from West Africa', site: 'westside', url: 'https://westside.voidtv.net/', live: false,
       kicker: 'West Africa', head: 'Films and shows from Ghana and Nigeria.', text: 'Kumawood, Ghallywood and Nollywood, free, no account.',
@@ -57,9 +62,11 @@
   var opt = function (k) { return me && me.getAttribute('data-' + k); };
   var host = location.hostname;
   var local = host === 'localhost' || host === '127.0.0.1' || host === '[::1]';
-  // main = voidtv.net itself (and its Pages previews, and a local build); otherwise the first part of the address.
+  // main = voidtv.net itself (and its Pages previews, and a local build); a *.voidtv.net site is the first part of its
+  // address; any other address (lexROM) is "other", so voidtv.net's links stay whole and nothing is marked unless the page
+  // says data-here.
   var site = opt('site') || (host === 'voidtv.net' || host === 'www.voidtv.net' || /\.voidtvsite\.pages\.dev$/.test(host) || local ? 'main'
-    : (/\.voidtv\.net$/.test(host) ? host.split('.')[0] : 'main'));
+    : (/\.voidtv\.net$/.test(host) ? host.split('.')[0] : 'other'));
   var onMain = site === 'main';
   var root = onMain ? '' : MAIN;                  // pictures and voidtv.net paths, from here
   var hereId = function () {
@@ -188,7 +195,7 @@
     el.className = 'va-ad'; el.href = href(a); el.setAttribute('data-va', a.id);
     el.setAttribute('aria-label', a.name + ': ' + a.head + ' ' + a.text);
     el.innerHTML = '<span class="va-pic' + (a.picFit === 'contain' ? ' fit' : '') + '"><img src="' + esc(pic(a)) + '" alt="" loading="lazy" decoding="async"></span>'
-      + '<span class="va-b"><span class="va-fk">Also on voidtv.net &middot; ' + esc(a.kicker) + '</span><span class="va-h">' + esc(a.head) + '</span>'
+      + '<span class="va-b"><span class="va-fk">' + esc(a.also || 'Also on voidtv.net') + ' &middot; ' + esc(a.kicker) + '</span><span class="va-h">' + esc(a.head) + '</span>'
       + '<span class="va-t">' + esc(a.text) + '</span><span class="va-go">&#9654; ' + esc(a.go) + '</span></span>';
     return el;
   }
