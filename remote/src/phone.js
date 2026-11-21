@@ -136,9 +136,16 @@
       };
       box.appendChild(b);
     });
-    if (m.pick != null) $('q-r').textContent = 'Locked in: ' + V.LETTERS[m.pick] + '. The answer comes up on the big screen.';
+    if (m.pick != null) $('q-r').textContent = lockedWords(m.pick);
+    // A new question buzzes the phone: during the show the big screen shows only a small icon, so the phone is where it is.
+    if (m.pick == null && m.n !== buzzed) { buzzed = m.n; if (navigator.vibrate && (!navigator.userActivation || navigator.userActivation.hasBeenActive)) navigator.vibrate([60, 80, 60]); }
+    m.nowKey = nowKey(now);
     $('quiz').hidden = false;
   }
+  let buzzed = null;
+  const nowKey = (n) => (n ? [n.where, n.t, n.s].join('|') : '');
+  const lockedWords = (pick) => 'Locked in: ' + V.LETTERS[pick] + '. ' + (quiz && quiz.pop ? 'The answer comes up here in a moment.' : 'The answer comes up on the big screen.');
+  function quizGone() { quiz = null; $('quiz').hidden = true; }
   function quizResult(m) {
     if (!quiz || quiz.n !== m.n) return;
     [...$('q-a').children].forEach((b, i) => { b.disabled = true; b.classList.toggle('ok', i === m.answer); b.classList.toggle('no', i !== m.answer); });
@@ -147,19 +154,21 @@
     if (!m.right) r.appendChild(document.createTextNode('It was ' + m.a + '. '));
     r.appendChild(document.createTextNode('Your score: ' + m.score.toLocaleString() + (m.of > 1 ? ', ' + ordinal(m.place) + ' of ' + m.of + ' phones' : '') + '.'));
     if (m.src) r.appendChild(el('div', 's', 'Source: ' + m.src));
+    // The result stays a while, then the card goes (the next question, or the show changing, also clears it).
+    const was = quiz; setTimeout(() => { if (quiz === was) quizGone(); }, 45000);
   }
   const ordinal = (n) => n + (n % 100 >= 11 && n % 100 <= 13 ? 'th' : ['th', 'st', 'nd', 'rd'][n % 10] || 'th');
 
   function onMsg(m) {
     if (m.type === 't-q' && m.live && Array.isArray(m.choices)) { drawQuiz(m); return; }
-    if (m.type === 't-got') { if (quiz && quiz.n === m.n) $('q-r').textContent = 'Locked in: ' + V.LETTERS[m.pick] + '. The answer comes up on the big screen.'; return; }
+    if (m.type === 't-got') { if (quiz && quiz.n === m.n) $('q-r').textContent = lockedWords(m.pick); return; }
     if (m.type === 't-res' && m.live) { quizResult(m); return; }
     if (m.type === 'hello') { tries = 0; $('note').classList.remove('on'); $('app').hidden = false; status('Room ' + code); say({ type: 'r-hi' }); return; }
     if (m.type === 'host-away') { status('The big screen is reloading'); return; }
     if (m.type === 'host-back') { status('Room ' + code); say({ type: 'r-hi' }); return; }
     if (m.type === 'host-gone') { ended = true; note('The big screen ended the remote', 'Press Phone remote on the big screen for a new code.'); return; }
     if (m.type === 'r-site') { site = m; $('mark').href = m.home || '/'; document.title = 'Remote | ' + (m.name || 'voidtv.net'); drawSaved(); return; }
-    if (m.type === 'r-now') { now = m; nowAt = Date.now(); drawNow(); if (!m.brk && quiz) { quiz = null; $('quiz').hidden = true; } return; }
+    if (m.type === 'r-now') { now = m; nowAt = Date.now(); drawNow(); if (quiz && quiz.nowKey !== nowKey(m)) quizGone(); return; }
     if (m.type === 'r-list') { const l = V.listTake(parts, m); if (l) { list = l; drawList(); } return; }
     if (m.type === 'r-info') {
       info = m;

@@ -105,7 +105,7 @@
   // gives it: { n, show, q, choices, answer, phase: 'q' | 'a', endsAt (when answers close, ms), msTotal, src }.
   const LETTERS = ['A', 'B', 'C', 'D'];
   function quizAsk(z, now) {
-    const m = { type: 't-q', n: z.n, of: 0, live: true, kick: clip('Trivia: ' + z.show, 60), q: clip(z.q, 300),
+    const m = { type: 't-q', n: z.n, of: 0, live: true, pop: !!z.pop, kick: clip('Trivia: ' + z.show, 60), q: clip(z.q, 300),
       choices: z.choices.slice(0, 4).map((c) => clip(c, 80)), secs: Math.max(0, Math.round((z.endsAt - now) / 1000)), pick: null };
     while (!fits(m) && m.q.length > 40) m.q = clip(m.q, m.q.length - 40);
     return m;
@@ -147,10 +147,25 @@
     return { phones: seats.length, answered, right };
   }
 
+  // POP-UPS DURING THE SHOW (Bryan, 20 Nov 2026: "a small vtv icon we make for trivia to pop up and then on the phone/ device
+  // connected from the ppl the info pops up to not obscure"). The big screen shows only a small icon in a corner; the question
+  // is on the phones. When one opens comes from the clock alone, so everyone on a channel gets it at the same moment: the first
+  // 3 minutes into an episode, then every 5, each open 40 seconds, the result shown 15 more, none in the last minute.
+  const POP = { firstMs: 3 * 60e3, everyMs: 5 * 60e3, openMs: 40e3, resultMs: 15e3, tailMs: 60e3 };
+  // The pop-up at instant t in an episode from st to en: { i, start, close, until } (answers until close, the result until until), or null.
+  function popAt(st, en, t, P) {
+    const p = P || POP;
+    if (!(t >= st + p.firstMs) || t >= en) return null;
+    const i = Math.floor((t - st - p.firstMs) / p.everyMs), start = st + p.firstMs + i * p.everyMs;
+    const close = start + p.openMs, until = close + p.resultMs;
+    if (t >= until || until > en - p.tailMs) return null;
+    return { i, start, close, until };
+  }
+
   // "8:30 pm", "18 min left" and "1:05 left": the times as the phone shows them.
   const leftWords = (sec) => { sec = Math.max(0, Math.round(sec)); const h = Math.floor(sec / 3600), m = Math.floor(sec % 3600 / 60); return h ? h + ' h ' + String(m).padStart(2, '0') + ' min left' : m ? m + ' min left' : 'under a minute left'; };
 
-  const api = { MAX, ACTIONS, SAVED_MAX, clip, readDo, siteMsg, nowMsg, listMsgs, listTake, infoMsg, savedAdd, savedDrop, savedHas, savedRead, size, fits, leftWords, LETTERS, quizAsk, quizAnswer, quizResults, quizCount };
+  const api = { MAX, ACTIONS, SAVED_MAX, clip, readDo, siteMsg, nowMsg, listMsgs, listTake, infoMsg, savedAdd, savedDrop, savedHas, savedRead, size, fits, leftWords, LETTERS, quizAsk, quizAnswer, quizResults, quizCount, POP, popAt };
   if (typeof module === 'object' && module.exports) module.exports = api;
   else root.VoidRemote = api;
 })(typeof self !== 'undefined' ? self : this);

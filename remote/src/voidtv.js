@@ -4,7 +4,7 @@
 // (full hold: a phone can change channel, never start anything early). Loaded only when someone presses Phone remote.
 (function (root) {
   'use strict';
-  /* global TV, TVCUR, TVC_NOW, TVLIB, TVG, SHOWS, BY_SLUG, ME, SITE, DONATE, state, chanNow, viewNow, tvLive, tune, surf, tvNow, go, urlFor, clock */
+  /* global TV, TVCUR, TVC_NOW, TVLIB, TVG, SHOWS, BY_SLUG, ME, SITE, DONATE, TRIVIA, BASE, VP, state, chanNow, viewNow, tvLive, tune, surf, tvNow, go, urlFor, clock */
   if (typeof document === 'undefined' || !root.RemoteScreen) return;
   const has = (f) => typeof f === 'function';
   const chans = () => (typeof TV !== 'undefined' && TV ? TV.filter((c) => !c.adult || ME.adult) : []);
@@ -66,13 +66,74 @@
       if (cmd.a === 'go') { if (typeof BY_SLUG !== 'undefined' && Object.prototype.hasOwnProperty.call(BY_SLUG, cmd.slug)) go(cmd.slug); }
     },
 
-    // Trivia in the breaks: the question the break card shows now (scripts/lib/app.js, tvSpot), as the phones need it.
+    // Trivia, as the phones need it: in a break, the question the break card shows (scripts/lib/app.js, tvSpot); during the
+    // show, a pop-up (remote.js, popAt) with only a small icon on the big screen and the question on the phones.
     quiz() {
       const d = typeof TVC_NOW !== 'undefined' ? TVC_NOW : null, sp = d && d.spot;
-      if (!sp || sp.kind !== 'trivia' || !onTv()) return null;
-      const q = sp.q;
-      return { n: sp.n, show: sp.show, q: q.q, choices: q.choices, answer: q.answer, phase: sp.phase, endsAt: sp.endsAt, msTotal: sp.msTotal, src: q.source || null };
+      if (sp && sp.kind === 'trivia' && onTv()) {
+        popIcon(null);
+        const q = sp.q;
+        return { n: sp.n, show: sp.show, q: q.q, choices: q.choices, answer: q.answer, phase: sp.phase, endsAt: sp.endsAt, msTotal: sp.msTotal, src: q.source || null };
+      }
+      const z = popQuiz();
+      popIcon(z);
+      return z;
     },
   };
+
+  // ---- Pop-ups during the show (Bryan, 20 Nov 2026: "a small vtv icon we make for trivia to pop up and then on the phone/
+  // device connected from the ppl the info pops up to not obscure") ----
+  // Only while phones are in the room (the icon says "look at your phone"), never on kids channels. The question is the clip
+  // chat's line just said, if one is approved for this moment (trivia/src/timed.js), else one about the show as a whole that
+  // gives nothing away (trivia/src/live.js, during), the same for everyone on the channel at that moment.
+  const V = root.VoidRemote;
+  const MOMENTS = {};
+  function popQuiz() {
+    const T = typeof TVCUR !== 'undefined' ? TVCUR : null;
+    if (!onTv() || !T || !T.c || !T.a || !T.x || T.x.k !== 'ep' || !root.RemoteScreen.phones) return null;
+    if (typeof TRIVIA === 'undefined' || !TRIVIA || (has(root.tvKids) && root.tvKids(T.c, T.a))) return null;
+    const c = T.c, a = T.a, s = SHOWS[a.s], t = Date.now();
+    const w = s && V.popAt(a.st, a.st + a.du * 6e4, t);
+    if (!w) return null;
+    const key = c.id + '|' + a.st + '|' + w.i;
+    if (!(key in MOMENTS)) { MOMENTS[key] = null; fetchMoment(key, s, a, T.cur || { se: a.se, n: a.n }); }
+    const m = MOMENTS[key];
+    if (!m) return null;
+    return { n: m.n, show: s.show, q: m.q.q, choices: m.q.choices, answer: m.q.answer, phase: t < w.close ? 'q' : 'a', endsAt: w.close, msTotal: w.close - w.start, src: m.q.source || null, pop: true };
+  }
+  function fetchMoment(key, s, a, cur) {
+    if (Object.keys(MOMENTS).length > 100) for (const k in MOMENTS) if (k !== key) delete MOMENTS[k];
+    const at = typeof VP !== 'undefined' && VP && VP.v ? VP.v.currentTime : NaN;
+    const timed = () => root.jsLoad(['trivia/src/timed.js']).then(() => (root.TriviaTimed && Number.isFinite(at) ? root.TriviaTimed.momentQuestion({ slug: s.slug, season: cur.se, number: cur.n, at }) : null)).catch(() => null);
+    const live = () => root.jsLoad(['trivia/src/game.js', 'trivia/src/live.js']).then(() => root.TriviaLive.liveQuestion({ slug: s.slug, season: a.se, number: a.n, seed: key, during: true }, BASE + 'trivia/bank/'));
+    timed().then((q) => q || live()).then((q) => { if (q && q.choices && q.choices.length >= 2) MOMENTS[key] = { n: root.TriviaLive ? root.TriviaLive.hash(key) % 1e9 : 0, q }; }).catch(() => {});
+  }
+
+  // The icon: small, in the picture's top corner, a slow fade in and out (no flashing). It counts the phones that answered,
+  // then the ones that got it. Clicking it shows the remote's code, so another phone can join. ICON is the one setting for
+  // its look (Bryan picks it).
+  const ICON = '<img src="' + (typeof BASE === 'string' ? BASE : '/') + 'assets/brand/icon-192.png" alt=""><b>?</b>';
+  const ICON_CSS = '.vtv-pop{position:absolute;top:14px;right:14px;z-index:30;width:64px;height:64px;cursor:pointer;opacity:0;transition:opacity .8s ease;pointer-events:none}'
+    + '.vtv-pop.vtv-pop-on{opacity:1;pointer-events:auto}.vtv-pop img{width:100%;height:100%;display:block;border-radius:14px;filter:drop-shadow(0 2px 10px rgba(0,0,0,.6))}'
+    + '.vtv-pop b{position:absolute;right:-6px;bottom:-4px;width:26px;height:26px;border-radius:50%;background:#5fd4ff;color:#07080c;font:800 17px/26px system-ui,sans-serif;text-align:center}'
+    + '.vtv-pop i{position:absolute;left:50%;top:100%;transform:translateX(-50%);margin-top:4px;white-space:nowrap;font:700 12px system-ui,sans-serif;font-style:normal;color:#fff;background:rgba(7,8,12,.75);border-radius:999px;padding:2px 8px}'
+    + '.vtv-pop i:empty{display:none}';
+  let icon = null, iconKey = '';
+  function popIcon(z) {
+    const host = typeof VP !== 'undefined' && VP && VP.root;
+    if (!z || !host || !host.appendChild) { if (icon) icon.classList.remove('vtv-pop-on'); iconKey = ''; return; }
+    if (!icon || icon.parentNode !== host) {
+      if (!document.getElementById('vtv-pop-css')) { const st = document.createElement('style'); st.id = 'vtv-pop-css'; st.textContent = ICON_CSS; document.head.appendChild(st); }
+      if (icon && icon.parentNode) icon.parentNode.removeChild(icon);
+      icon = document.createElement('div'); icon.className = 'vtv-pop'; icon.setAttribute('role', 'status');
+      icon.innerHTML = ICON + '<i></i>'; icon.onclick = () => root.RemoteScreen.show();
+      host.appendChild(icon);
+    }
+    const k = root.RemoteScreen.quizCount(z);
+    const words = !k ? '' : z.phase === 'q' ? k.answered + ' of ' + k.phones + ' answered' : k.right + ' of ' + k.phones + ' got it';
+    const key = z.n + words;
+    if (key !== iconKey) { iconKey = key; icon.querySelector('i').textContent = words; icon.setAttribute('aria-label', 'Trivia on your phone. ' + words); }
+    icon.classList.add('vtv-pop-on');
+  }
   root.SiteRemote = adapter;   // the name every site's adapter takes; the page passes it to RemoteScreen.start
 })(typeof self !== 'undefined' ? self : this);

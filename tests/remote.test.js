@@ -85,6 +85,22 @@ test('trivia in the breaks: the question fits, each phone answers once and in ti
   assert.equal(r2.get(2).score, G.points(true, 27000, 27000)); assert.equal(r2.get(1).score, r2.get(2).score); assert.equal(r2.get(1).place, 1); assert.equal(r2.get(2).place, 1);
 });
 
+test('pop-ups during the show: 3 minutes in, then every 5, open 40 s with the result 15 s more, none in the last minute; the same for everyone', () => {
+  const st = 1000000, en = st + 22 * 60e3, at = (min) => V.popAt(st, en, st + min * 60e3);
+  assert.equal(at(0), null); assert.equal(at(2.99), null);
+  assert.deepEqual(at(3), { i: 0, start: st + 3 * 60e3, close: st + 3 * 60e3 + 40e3, until: st + 3 * 60e3 + 55e3 });
+  assert.equal(at(3.5).i, 0, 'the result is still showing at 3:30');
+  assert.equal(at(4), null, 'and gone by 4:00');
+  assert.equal(at(8.2).i, 1); assert.equal(at(13.1).i, 2); assert.equal(at(18.5).i, 3);
+  assert.equal(at(21.5), null, 'nothing that would run into the last minute');
+  // A 22-minute episode gets four; a 7-minute short gets one; a 3-minute one none.
+  const count = (mins) => { const s = new Set(); for (let t = 0; t < mins * 60e3; t += 1000) { const w = V.popAt(st, st + mins * 60e3, st + t); if (w) s.add(w.i); } return s.size; };
+  assert.equal(count(22), 4); assert.equal(count(7), 1); assert.equal(count(3), 0);
+  assert.equal(V.popAt(st, en, st - 1), null); assert.equal(V.popAt(st, en, en + 1), null);
+  assert.equal(V.quizAsk({ n: 1, show: 'S', q: 'Q', choices: ['a', 'b'], endsAt: 0, pop: true }, 0).pop, true, 'the phone knows the answer comes to it, not the big screen');
+  assert.equal(V.quizAsk({ n: 1, show: 'S', q: 'Q', choices: ['a', 'b'], endsAt: 0 }, 0).pop, false);
+});
+
 test('the remote room: 16 phones, 10 a second, waits 45 s for its screen, and lasts 12 hours', () => {
   assert.ok(R.KINDS.includes('remote'));
   assert.deepEqual(R.LIMITS.remote, { phones: 16, perSecond: 10, screenHoldMs: 45000, lifeMs: 12 * 3600 * 1000 });

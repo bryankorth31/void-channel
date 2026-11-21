@@ -19,6 +19,12 @@ information". And: "also use this for cast, and kids, across the entire voidtv u
   - The cards are 5 to 8, or 13 to 16 when a video spot holds 8 to 11, so trivia never sits next to another spot. A break shorter than that has none, and so does a show with no questions (card 5 stays a fact spot). Never on kids channels.
   - Phones in the room answer it with Trivia Night's own messages (`t-q`, `t-a`, `t-got`, `t-res`) and get points, early answers worth more (Trivia's `points`).
   - The big screen says how many phones answered and how many got it. Scores last the evening, and a reload keeps them.
+- Pop-ups during the show (Bryan, 20 Nov 2026: "a small vtv icon we make for trivia to pop up and then on the phone/ device
+  connected from the ppl the info pops up to not obscure"):
+  - While phones are in the room, a question pops up 3 minutes into an episode and then every 5 minutes, the same moment for everyone on the channel (`popAt` in `src/remote.js`).
+  - The big screen shows only a small icon in the picture's top corner, with "1 of 2 answered" and then "got it", fading out after the result. The question is on the phones, which buzz.
+  - The question is the clip chat's line just said (`trivia/src/timed.js`) when one is approved for that moment. Otherwise it is one about the show as a whole that gives nothing away (`trivia/src/live.js`, during).
+  - Never on kids channels, never in the last minute of an episode. The icon's look is one setting, `ICON` in `src/voidtv.js`.
 
 ## How it is built
 
