@@ -555,6 +555,7 @@ body.muted .spk .off{display:inline}body.muted .spk .on{display:none}
 .cpad.side .cface.s-abc .pk[data-code="P1:Y"]{left:0;bottom:0}
 .cpad.side .cface.s-abc .pk[data-code="P1:B"]{left:calc(50% - var(--db) / 2);top:calc(50% - var(--db) / 2)}
 .cpad.side .cface.s-abc .pk[data-code="P1:A"]{right:0;top:0}
-body.shell .cpad.side .cface.s-abc::before{width:calc((var(--S,150px) - var(--db)) * 1.414 + var(--db) + 16px);height:calc(var(--db) + 16px);transform:translate(-50%,-50%) rotate(-45deg)}
+/* The dish hugs the three buttons, so its round ends stay inside the square (the auditor: cut by the screen's bottom edge). */
+body.shell .cpad.side .cface.s-abc::before{width:calc((var(--S,150px) - var(--db)) * 1.414 + var(--db) + 6px);height:calc(var(--db) + 6px);transform:translate(-50%,-50%) rotate(-45deg)}
 /* The d-pad at the very left edge sideways (Bryan: "the screen and the dpad should scoot 15 px to the left"). */
 .cpad.side .cdpad{left:0}
