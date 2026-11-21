@@ -137,8 +137,8 @@ test('T24: a TV never draws the touch pad; Back opens the menu first and leaves 
 test('audit K3: a big game says how far its download has come, and the 256 MB cap holds with no announced size', () => {
   const w = fs.readFileSync(path.join(PLAY, 'src', 'core-worker.js'), 'utf8');
   for (const bit of ["const reader = r.body.getReader(), parts = [];", "if (got > MAX_DOWNLOAD) { reader.cancel();",
-    "if (size >= 2 * 1048576 && now - told > 250) { told = now; say(fetchLine(got, size)); }",
-    "const game = await gameBytes(msg.gameUrl, msg.gameSize);", "const b = await fetchBytes(url, known);"]) assert.ok(w.includes(bit), bit);
+    "if (size >= 2 * 1048576 && now - told > 250) { told = now; say(fetchLine(got, size, what)); }",
+    "const game = await gameBytes(msg.gameUrl, msg.gameSize);", "const b = await fetchBytes(url, known, what);"]) assert.ok(w.includes(bit), bit);
   assert.match(fs.readFileSync(path.join(PLAY, 'src', 'runner.js'), 'utf8'), /gameSize: card\.archive\.size \|\| 0,/);
 });
 

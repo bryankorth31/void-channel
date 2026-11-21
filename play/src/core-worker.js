@@ -75,15 +75,16 @@ async function keepGame(url, bytes) {
     for (const k of keys.slice(0, Math.max(0, keys.length - KEEP_GAMES))) await c.delete(k);
   } catch (e) { /* no room or no storage: the game still plays */ }
 }
-async function gameBytes(url, known) {
+// what: the words in the progress line ("the game", or "Windows 3.1" for a Windows game's Windows).
+async function gameBytes(url, known, what) {
   const kept = await keptGame(url, known);
   if (kept) return kept;
-  const b = await fetchBytes(url, known);
+  const b = await fetchBytes(url, known, what);
   keepGame(url, b);
   return b;
 }
 
-async function fetchBytes(url, known) {
+async function fetchBytes(url, known, what) {
   let r;
   try { r = await fetch(url, { credentials: 'omit' }); } catch (e) {
     throw new Error('The Internet Archive is not answering right now. Check the connection and press Play to try again.');
@@ -104,14 +105,14 @@ async function fetchBytes(url, known) {
     parts.push(value); got += value.length;
     if (got > MAX_DOWNLOAD) { reader.cancel(); throw new Error('This game is more than ' + MAX_DOWNLOAD / 1048576 + ' MB, more than PLAY can hold in a browser yet.'); }
     const now = Date.now();
-    if (size >= 2 * 1048576 && now - told > 250) { told = now; say(fetchLine(got, size)); }
+    if (size >= 2 * 1048576 && now - told > 250) { told = now; say(fetchLine(got, size, what)); }
   }
   const out = new Uint8Array(got);
   let at = 0;
   for (const p of parts) { out.set(p, at); at += p.length; }
   return out;
 }
-const fetchLine = (got, size) => 'Fetching the game: ' + Math.min(Math.round(got / 1048576), Math.round(size / 1048576)) + ' of ' + Math.round(size / 1048576) + ' MB';
+const fetchLine = (got, size, what) => 'Fetching ' + (what || 'the game') + ': ' + Math.min(Math.round(got / 1048576), Math.round(size / 1048576)) + ' of ' + Math.round(size / 1048576) + ' MB';
 
 function callStr(fn, ...strs) {
   const ptrs = strs.map((s) => { const n = M.lengthBytesUTF8(s) + 1; const p = M._malloc(n); M.stringToUTF8(s, p, n); return p; });
@@ -144,7 +145,7 @@ async function unpack(bytes, start) {
 // meets Program Manager. The game's own files win any clash of names. Returns the start file's path.
 async function addWindows(msg, program) {
   say('Fetching Windows 3.1 from the Internet Archive');
-  const pack = await gameBytes(msg.windows.url, msg.windows.size);
+  const pack = await gameBytes(msg.windows.url, msg.windows.size, 'Windows 3.1');
   const root = '/game/disk/';
   const rel = program.slice(root.length), dir = rel.includes('/') ? rel.slice(0, rel.lastIndexOf('/')) : '';
   const BS = String.fromCharCode(92);   // DOS's backslash

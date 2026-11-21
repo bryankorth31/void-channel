@@ -440,8 +440,13 @@
   }
 
   // If the game has not shown a picture by then, say why in one sentence and offer Play again: never "loading" forever.
+  // The clock is for a game that stopped arriving, not a slow one (the Kids session, 20 Nov 2026: Reader Rabbit's 21 MB
+  // was still coming at 12 MB when a flat minute ran out): every word of progress from the engine before the first
+  // picture ("Fetching the game: 12 of 21 MB") starts the minute again.
   const DEADLINE_MS = 60000;
-  let deadline = 0;
+  let deadline = 0, arriving = false;
+  const NOT_ARRIVED = 'The game did not arrive from the Internet Archive in time. Check the connection and press Play to try again.';
+  function armDeadline() { clearTimeout(deadline); deadline = setTimeout(() => { arriving = false; fail(NOT_ARRIVED); }, DEADLINE_MS); }
 
   // Phones and tablets (plan T22): on a phone, Play goes fullscreen and turns the screen sideways where the browser
   // allows it (Android; an iPhone page cannot), and while a game runs the screen stays awake.
@@ -508,14 +513,14 @@
     stopGame();
     phoneScreen();
     $('b-play').hidden = true; $('b-continue').hidden = true; status('Starting');
-    deadline = setTimeout(() => fail('The game did not arrive from the Internet Archive in time. Check the connection and press Play to try again.'), DEADLINE_MS);
+    arriving = true; armDeadline();
     runner = (isArcade() ? PlayArcade : isFlash() ? PlayFlash : PlayRunner).createRunner({ canvas: $('canvas'), mute: q.get('mute') === '1', volume: gainOf(vol), on: {
       note: (t) => toast(t),
-      status, error: (t) => fail(t),
+      status: (t) => { status(t); if (arriving) armDeadline(); }, error: (t) => { arriving = false; fail(t); },
       ready: () => { started = true; applyCheats(); place.sig = ''; place(); setTimeout(toolbarTip, 1500); },
       cheats: (m) => { if (!m.ok) toast('This game\'s engine cannot take cheats'); else if (m.on) toast(m.on === 1 ? 'One cheat on' : m.on + ' cheats on'); },
       firstFrame: () => {
-        clearTimeout(deadline); $('cover').hidden = true; $('canvas').focus({ preventScroll: true }); stayAwake(true); armBack();
+        arriving = false; clearTimeout(deadline); $('cover').hidden = true; $('canvas').focus({ preventScroll: true }); stayAwake(true); armBack();
         if (!PlayCards.isPad(card) && !isFlash()) blankWatch();   // a Flash game draws in its own element, not the canvas
         if (resumeState) { const s = resumeState; resumeState = null; runner.load(s).then((ok) => toast(ok ? 'Back where you left off' : 'That spot would not load; starting fresh')); }
       },
@@ -641,7 +646,7 @@
 
   // Ends the game for good: the engine stops, nothing it sent late reaches the page, the menu closes.
   function stopGame() {
-    clearTimeout(deadline); clearInterval(autoTimer); clearInterval(cpTimer); stayAwake(false);
+    arriving = false; clearTimeout(deadline); clearInterval(autoTimer); clearInterval(cpTimer); stayAwake(false);
     if (runner) runner.stop();
     runner = null; hub = null; started = false; paused = false;
     padState.fill(0); $('menu').hidden = true; $('b-pause').textContent = 'Pause';

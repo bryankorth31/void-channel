@@ -92,6 +92,18 @@ test('Windows 3.1: the Archive\'s own Windows, fetched from the Archive at Play 
   for (const f of ['win.com', 'krnl386.exe', 'win31.zip', 'win31_nonshell.zip', 'user.exe', 'gdi.exe']) assert.ok(!all.includes(f), f);
 });
 
+test('a slow download is not a failed one: each word of progress before the first picture starts the minute again (Kids session, Reader Rabbit, 20 Nov 2026)', () => {
+  const js = fs.readFileSync(path.join(PLAY, 'src', 'play.js'), 'utf8');
+  assert.ok(js.includes('function armDeadline() { clearTimeout(deadline); deadline = setTimeout(() => { arriving = false; fail(NOT_ARRIVED); }, DEADLINE_MS); }'));
+  assert.ok(js.includes('    arriving = true; armDeadline();\n'), 'Play starts the minute');
+  assert.ok(js.includes('status: (t) => { status(t); if (arriving) armDeadline(); }'), 'progress starts it again');
+  assert.ok(js.includes("arriving = false; clearTimeout(deadline); $('cover').hidden = true;"), 'the first picture ends it');
+  // The worker says progress only when bytes come, so a download that truly stops still fails after a minute.
+  const w = fs.readFileSync(path.join(PLAY, 'src', 'core-worker.js'), 'utf8');
+  assert.ok(w.includes("if (size >= 2 * 1048576 && now - told > 250) { told = now; say(fetchLine(got, size, what)); }"));
+  assert.ok(w.includes("gameBytes(msg.windows.url, msg.windows.size, 'Windows 3.1')"), 'the Windows download says what it is');
+});
+
 test('Windows 3.1: the worker puts Windows on the game\'s own C: drive and starts it with a start file of ours', () => {
   const runner = fs.readFileSync(path.join(PLAY, 'src', 'runner.js'), 'utf8');
   assert.ok(runner.includes('windows: PlayCards.windowsOf ? PlayCards.windowsOf(card) : null'));
