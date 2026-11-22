@@ -497,3 +497,13 @@ test('remodel: no stock photo is shown or shipped, every area has its hue, and t
   assert.ok(nav.includes('<summary title="Every course, by area">Courses</summary>') && nav.includes('id="inst"'), 'the Courses menu and Install inside it');
   assert.ok(/header\.top\{[^}]*flex-wrap:nowrap/.test(body), 'the header may wrap to a second row');
 });
+
+// The flip side of a lecture (flip.js). It lives here, not in tests/uni-flip.test.js, because this file owns the build
+// of the public copy: node runs test files side by side, and two builds into site/ at once fail on Windows (EBUSY).
+test('the public copy carries no flip side unless a unit is marked "flip": true', () => {
+  const marked = fs.readdirSync(path.join(uni.UNI, 'courses')).filter((f) => f.endsWith('.json'))
+    .some((f) => JSON.parse(fs.readFileSync(path.join(uni.UNI, 'courses', f), 'utf8')).units.some((u) => u.flip === true));
+  build('--site');
+  const has = fs.readdirSync(SITE).some((f) => /^flip/.test(f)) || fs.readdirSync(SITE).filter((f) => f.endsWith('.html')).some((f) => /class="flip"/.test(fs.readFileSync(path.join(SITE, f), 'utf8')));
+  if (!marked) assert.ok(!has, 'a flip side reached the public copy with no unit marked for it');
+});
