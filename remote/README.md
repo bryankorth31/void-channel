@@ -105,5 +105,6 @@ He picked two options from pictures: L1 for Live TV and P1 for PLAY.
 
 The rooms Worker (`play/rooms/worker/`) must be deployed with the `remote` kind in it, from Bryan's own terminal, as for the PLAY
 phone controllers. Until then the button says the remote did not open; on the local PLAY server (`node play/serve.js`) it works.
+That server also serves `/remote/`, so PLAY's and Trivia's pages there load `follow.js` with no failed request.
 
 Tests: `node --test tests/remote.test.js`.

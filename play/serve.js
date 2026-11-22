@@ -11,6 +11,8 @@ const path = require('path');
 const PORT = +process.argv[2] || +process.env.PORT || 8789;
 const { pathToFileURL } = require('url');
 const PLAY = __dirname, ASSETS = path.join(__dirname, '..', 'assets'), TRIVIA = path.join(__dirname, '..', 'trivia');
+// The phone remote's scripts (remote/README.md): PLAY's and Trivia's pages load /remote/src/follow.js.
+const REMOTE = path.join(__dirname, '..', 'remote');
 const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.json': 'application/json',
   '.wasm': 'application/wasm', '.png': 'image/png', '.svg': 'image/svg+xml', '.woff2': 'font/woff2', '.ico': 'image/x-icon' };
 const PLAIN = { 'cache-control': 'no-store' };
@@ -31,6 +33,7 @@ http.createServer((req, res) => {
   let root = null;
   if (p.startsWith('/play/')) { root = PLAY; p = p.slice(5); } else if (p.startsWith('/assets/')) { root = ASSETS; p = p.slice(7); }
   else if (p.startsWith('/trivia/')) { root = TRIVIA; p = p.slice(7); }
+  else if (p.startsWith('/remote/')) { root = REMOTE; p = p.slice(7); }
   if (!root) { res.writeHead(404, ISOLATE); return res.end('not found'); }
   if (p.endsWith('/')) p += 'index.html';
   const f = path.join(root, path.normalize(p).replace(/^([/\\])+/, ''));
