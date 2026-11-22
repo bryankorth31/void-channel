@@ -50,6 +50,8 @@ function build(rows, taken) {
     if (!c.archive.size) delete c.archive.size;
     if (c.year > (LAST[r.system] || 9999) || c.year < 1970) c.year = null;   // an upload's date or a slip (1830, 8), not the game's
     c.title = tidyTitle(c.title);
+    // An uploader's "(maker)" after the name: "Grand Theft Auto (DMA Design)".
+    if (r.publisher && c.title.endsWith(' (' + r.publisher + ')')) c.title = c.title.slice(0, -(r.publisher.length + 3));
     // The Archive's play count from the gathering (its search does not return some libraries' items; plays.json wins).
     if (r.plays > 0) c.plays = r.plays;
     if (ids.has(c.id) || names.has(c.system + ' ' + nameKey(c.title)) || Cards.check(c).length) continue;
@@ -186,6 +188,8 @@ const readList = (f) => { try { return JSON.parse(fs.readFileSync(f, 'utf8')).ro
 const readTop = () => readList(process.env.PLAY_TOP || TOP);
 const readMore = () => readList(process.env.PLAY_MORE || MORE);
 const readGenvar = () => readList(process.env.PLAY_GENVAR || GENVAR);
+// The first Grand Theft Autos (Bryan, 22 Nov 2026: "Build and yes"): the assistant's start-checked rows for that row.
+const readGta = () => readList(path.join(AUDIT, 'play-mode', 'consoles', 'gta-rows.json'));
 // The PLAY assistant's facts from Wikidata, by Archive item (22 Nov 2026): players (2 only where Wikidata marks two or
 // more on a home console or arcade machine) and genres in Wikidata's own words. And the rows whose only doubt was a
 // name Wikidata did not know, which it found after all (now-sure.json): they no longer wait for the weed-down.
@@ -204,7 +208,7 @@ function main() {
   const taken = { ids: hand.map((c) => c.id), items: hand.map((c) => c.archive.item), names: hand.map((c) => c.system + ' ' + nameKey(c.title)) };
   fs.rmSync(LIB, { recursive: true, force: true });
   let total = 0;
-  const top = readTop(), more = readMore(), genvar = readGenvar(), facts = FACTS(), sure = NOW_SURE();
+  const top = readTop(), more = readMore(), genvar = readGenvar(), gta = readGta(), facts = FACTS(), sure = NOW_SURE();
   for (const r of [...more, ...genvar]) if (sure.has(r.item)) r.likelyHack = false;
   for (const system of [...new Set(collections().map((c) => c.system))]) {
     // A collection's own rows first (the Archive's curated libraries), then the start-checked batches its lines name:
@@ -212,7 +216,7 @@ function main() {
     const from = collections().filter((c) => c.system === system).map((c) => c.from || '').join(' ');
     const weed = readWeed(system);
     const cards = build(readRows(system).concat(/top150/.test(from) ? topRows(system, top, weed) : [],
-      /more/.test(from) ? topRows(system, more, weed) : [], /genvar/.test(from) ? topRows(system, genvar, weed) : []), taken);
+      /more/.test(from) ? topRows(system, more, weed) : [], /genvar/.test(from) ? topRows(system, genvar, weed) : [], /gta/.test(from) ? topRows(system, gta, weed) : []), taken);
     for (const c of cards) twoByName(withFacts(c, facts[c.archive.item]));
     for (const c of cards) { taken.ids.push(c.id); taken.items.push(c.archive.item); taken.names.push(c.system + ' ' + nameKey(c.title)); }
     for (const b of bundles(system, cards)) {
