@@ -114,7 +114,8 @@
   const SECTIONS = ['setup', 'lobby', 'stage', 'board', 'shelf', 'wager', 'done'];
   function show(which) {
     for (const id of SECTIONS) $(id).hidden = id !== which;
-    $('pause').hidden = which !== 'stage';
+    if (which !== 'stage' && which !== 'board') clearAfter();
+    $('pause').hidden = which !== 'stage' && !(which === 'board' && game && game.opts.secs);
     document.body.classList.toggle('playing', ['stage', 'board', 'lobby', 'shelf', 'wager'].includes(which));
     document.body.classList.toggle('finished', which === 'done');
     $('back').title = which === 'setup' ? 'Back to voidtv.net' : 'End this game and go back to the settings';
@@ -544,7 +545,42 @@
     timer = requestAnimationFrame(tick);
   }
 
+  // MOVING ON BY ITSELF (Bryan, 22 Nov 2026: "on trivia the lag or wait time between questions is to long"). With a clock on, the
+  // answer stays up AFTER_S.reveal seconds and the scores AFTER_S.board seconds, counting down where the hint was, then the game
+  // goes on. Enter still goes on at once; P or Pause holds it. A game set to No clock waits for Enter, as that setting says.
+  const AFTER_S = { reveal: 7, board: 5 };
+  let after = null; // the countdown on screen: { until, left, iv, draw }
+  function clearAfter() { if (after) { clearInterval(after.iv); after = null; } }
+  function autoNext(el, words) {
+    clearAfter();
+    if (!game || game.mode === 'shelf' || !game.opts.secs) return;
+    const kind = phase === 'board' ? 'board' : 'reveal';
+    const a = after = { until: performance.now() + AFTER_S[kind] * 1000, left: 0, iv: 0 };
+    a.draw = () => {
+      const s = Math.max(1, Math.ceil((paused ? a.left : a.until - performance.now()) / 1000));
+      el.textContent = paused ? 'Paused. P or Go on starts the countdown again.' : words(s);
+    };
+    a.iv = setInterval(() => {
+      if (after !== a || paused) return;
+      if (performance.now() >= a.until) { clearAfter(); next(); return; }
+      a.draw();
+    }, 250);
+    a.draw();
+  }
+  // What the countdown says after an answer: where the game goes next, and that Enter goes there now.
+  function revealWords(s) {
+    const last = game.at + 1 >= game.qs.length, phones = game.opts.phones && room.players.size;
+    if (last) return (phones ? 'Final scores in ' : 'The end in ') + s + '. Enter goes on now.';
+    return (phones ? 'Scores in ' : 'Next question in ') + s + '. Enter goes on now.';
+  }
+
   function pause() {
+    if (after && (phase === 'reveal' || phase === 'board')) {
+      if (!paused) { paused = true; after.left = Math.max(0, after.until - performance.now()); $('pause').textContent = 'Go on'; }
+      else { paused = false; after.until = performance.now() + after.left; $('pause').textContent = 'Pause'; }
+      after.draw();
+      return;
+    }
     if (phase !== 'ask' || !game.opts.secs) return;
     if (!paused) { paused = true; leftMs = Math.max(0, endsAt - performance.now()); stopClock(); $('pause').textContent = 'Go on'; $('hint').textContent = 'Paused. P or Go on starts the clock again.'; }
     else { paused = false; endsAt = performance.now() + leftMs; $('pause').textContent = 'Pause'; $('hint').textContent = 'Enter shows the answer early. P pauses.'; tick(); }
@@ -587,6 +623,7 @@
     }
     $('hint').textContent = shelfQ ? (shelfQ.final ? 'Enter to finish.' : 'Enter for the board.')
       : game.at + 1 < game.qs.length ? (game.opts.phones ? 'Enter for the scores.' : 'Enter for the next question.') : (game.opts.phones ? 'Enter for the final scores.' : 'Enter to finish.');
+    autoNext($('hint'), revealWords);
   }
 
   // Closest Without Going Over, scored and told: the year, who was closest, and each phone its own result.
@@ -609,6 +646,7 @@
     }
     drawYear(q, true, line);
     $('hint').textContent = game.at + 1 < game.qs.length ? (game.opts.phones ? 'Enter for the scores.' : 'Enter for the next question.') : (game.opts.phones ? 'Enter for the final scores.' : 'Enter to finish.');
+    autoNext($('hint'), revealWords);
   }
 
   function pointsFor(p, q) {
@@ -637,10 +675,13 @@
     drawRanks($('ranks'), 10);
     $('board-hint').textContent = 'Enter for the next question.';
     show('board');
+    paused = false; $('pause').textContent = 'Pause'; // a pause held over the answer does not carry onto the scores
     send('all', { type: 't-wait', text: 'Next question coming up.' });
+    autoNext($('board-hint'), (n) => 'Next question in ' + n + '. Enter goes on now.');
   }
 
   function next() {
+    clearAfter();
     if (phase === 'ask') return reveal();
     if (game.mode === 'shelf') {
       if (phase === 'wager') return askFinal();

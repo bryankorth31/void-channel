@@ -334,3 +334,17 @@ test('built questions carry their fame (TMDB votes) for the board', () => {
   const qs = JSON.parse(fs.readFileSync(f, 'utf8'));
   assert.ok(qs.filter((q) => q.fame > 0).length / qs.length > 0.9);
 });
+
+test('between questions (Bryan, 22 Nov 2026: "the lag or wait time between questions is to long"): with a clock the answer and the scores count down and move on; No clock waits for Enter', () => {
+  const s = read('trivia/src/host.js');
+  const m = /const AFTER_S = \{ reveal: (\d+), board: (\d+) \};/.exec(s);
+  assert.ok(m, 'the two waits are one setting');
+  assert.ok(+m[1] >= 4 && +m[1] <= 8, 'the answer stays up long enough to read, and no longer: ' + m[1] + ' s');
+  assert.ok(+m[2] >= 3 && +m[2] <= 6, 'the scores, briefly: ' + m[2] + ' s');
+  assert.match(s, /function autoNext\(el, words\) \{\n    clearAfter\(\);\n    if \(!game \|\| game\.mode === 'shelf' \|\| !game\.opts\.secs\) return;/, 'only a game with a clock moves on by itself; the board game waits for its picker');
+  assert.equal((s.match(/autoNext\(\$\('hint'\), revealWords\);/g) || []).length, 2, 'after a question and after a year guess');
+  assert.match(s, /autoNext\(\$\('board-hint'\), /, 'after the scores');
+  assert.match(s, /function next\(\) \{\n    clearAfter\(\);/, 'Enter (or a tap) goes on at once and stops the countdown');
+  assert.match(s, /if \(after && \(phase === 'reveal' \|\| phase === 'board'\)\) \{/, 'P or Pause holds the countdown');
+  assert.match(read('trivia/index.html'), /value="0"> No clock<\/label>/, 'No clock is still there for a host who wants to pace it');
+});
