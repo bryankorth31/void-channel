@@ -96,7 +96,9 @@
     // From the main showing, each machine's best first (Bryan, 22 Nov 2026: he did not want Oregon Trail "and many of
     // the games in the hero to be shown atleast as the first ones").
     for (const g of mainOf(games).slice().sort(byFront)) { if (!by.has(g.system)) by.set(g.system, []); by.get(g.system).push(g); }
-    const tops = oneEach([...by.values()].map((l) => l[0]).sort(byFront)).slice(0, nGames);
+    // Bryan's banner list (play/shelf/front-picks.json) opens it, in his order; each machine's best follows.
+    const picked = mainOf(games).filter((g) => g.banner).sort((x, y) => x.banner - y.banner);
+    const tops = oneEach(picked.concat([...by.values()].map((l) => l[0]).sort(byFront))).slice(0, Math.max(nGames, picked.length));
     const sum = (l) => l.reduce((n, g) => n + (g.plays || 0), 0);
     const machines = [...by.entries()].sort((a, b) => sum(b[1]) - sum(a[1])).slice(0, nMachines)
       .map(([system, l]) => ({ system, name: sysOf({ system }).name, count: l.length, games: l.slice(0, 3) }));

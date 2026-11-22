@@ -65,7 +65,11 @@ test("the hero turns through each machine's most played game, a machine between 
   const index = JSON.parse(fs.readFileSync(path.join(PLAY, 'shelf', 'index.json'), 'utf8'));
   const real = Shelf.heroSlides(index.games);
   assert.equal(real.length, 12);
-  assert.equal(new Set(real.filter((x) => x.g).map((x) => x.g.system)).size, 8, 'eight games, eight machines');
+  // Bryan's banner list (play/shelf/front-picks.json) opens it in his order; the rest is each machine's best.
+  const banner = JSON.parse(fs.readFileSync(path.join(PLAY, 'shelf', 'front-picks.json'), 'utf8')).banner;
+  const firstGames = real.filter((x) => x.g).map((x) => x.g.item);
+  assert.deepEqual(firstGames.slice(0, banner.length), banner);
+  assert.notEqual(real[0].g && real[0].g.title, 'The Oregon Trail');
   assert.equal(Shelf.HERO_MS, 8000);
   const src = fs.readFileSync(path.join(PLAY, 'src', 'shelf.js'), 'utf8');
   assert.ok(src.includes("if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;"), 'no turning by itself for less motion');

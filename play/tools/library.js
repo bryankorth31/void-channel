@@ -135,6 +135,9 @@ function bundles(system, cards) {
 // a row the content screen has not read stays off (build). Pure (tested).
 const TOP = path.join(AUDIT, 'play-mode', 'consoles', 'console-rows.json');
 const MORE = path.join(AUDIT, 'play-mode', 'consoles', 'more-rows.json');
+// The clean Genesis copies from the variations shelf (Bryan, 22 Nov 2026: "Yes, fetch them"): a region mark and no
+// altered mark, one copy a game; the doubtful ones are likelyHack and wait for his weed-down like the rest.
+const GENVAR = path.join(AUDIT, 'play-mode', 'consoles', 'genvar-rows.json');
 function topRows(system, list, weed) {
   const w = weed || { keep: [], drop: [] };
   return (list || []).filter((r) => r.system === system)
@@ -147,6 +150,7 @@ const readWeed = (system) => { try { return JSON.parse(fs.readFileSync(path.join
 const readList = (f) => { try { return JSON.parse(fs.readFileSync(f, 'utf8')).rows || []; } catch (e) { return []; } };
 const readTop = () => readList(process.env.PLAY_TOP || TOP);
 const readMore = () => readList(process.env.PLAY_MORE || MORE);
+const readGenvar = () => readList(process.env.PLAY_GENVAR || GENVAR);
 
 function readRows(system) {
   const f = path.join(ROWS, system + '.jsonl');
@@ -159,14 +163,14 @@ function main() {
   const taken = { ids: hand.map((c) => c.id), items: hand.map((c) => c.archive.item), names: hand.map((c) => c.system + ' ' + nameKey(c.title)) };
   fs.rmSync(LIB, { recursive: true, force: true });
   let total = 0;
-  const top = readTop(), more = readMore();
+  const top = readTop(), more = readMore(), genvar = readGenvar();
   for (const system of [...new Set(collections().map((c) => c.system))]) {
     // A collection's own rows first (the Archive's curated libraries), then the start-checked batches its lines name:
-    // "top150" the top 150, "more" the games to add (21 Nov 2026), "top150+more" both.
+    // "top150" the top 150, "more" the games to add (21 Nov 2026), "top150+more" both, "genvar" the clean Genesis copies.
     const from = collections().filter((c) => c.system === system).map((c) => c.from || '').join(' ');
     const weed = readWeed(system);
     const cards = build(readRows(system).concat(/top150/.test(from) ? topRows(system, top, weed) : [],
-      /more/.test(from) ? topRows(system, more, weed) : []), taken);
+      /more/.test(from) ? topRows(system, more, weed) : [], /genvar/.test(from) ? topRows(system, genvar, weed) : []), taken);
     for (const c of cards) { taken.ids.push(c.id); taken.items.push(c.archive.item); taken.names.push(c.system + ' ' + nameKey(c.title)); }
     for (const b of bundles(system, cards)) {
       const f = path.join(LIB, b.name + '.json');

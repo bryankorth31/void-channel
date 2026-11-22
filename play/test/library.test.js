@@ -13,7 +13,7 @@ const row = (o) => Object.assign({ content: null, system: 'sms', title: 'Fantasy
 test('C1: only Bryan\'s approved collections, each naming its machine and his words', () => {
   const list = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'collections.json'), 'utf8')).collections;
   assert.deepEqual([...new Set(list.map((c) => c.system))].sort(), ['a2600', 'dos', 'gameboy', 'gamegear', 'gba', 'gbcolor', 'genesis', 'lynx', 'nes', 'sms', 'snes']);
-  for (const c of list) assert.match(c.approvedBy, /^Bryan, 2[01] Nov 2026/);
+  for (const c of list) assert.match(c.approvedBy, /^Bryan, 2[012] Nov 2026/);
   assert.deepEqual(list.find((c) => c.system === 'genesis').leaveOut, ['genesisvariations', 'sonicromhacks']);
   // The games to add (Bryan, 21 Nov 2026: "including dos"; "keep all of them, go ahead"): DOS takes the top 150 and the
   // new batch; Genesis, Master System and Game Gear only the new batch (their top-150 file is mostly Sonic hacks).
