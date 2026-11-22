@@ -570,21 +570,9 @@ header.top{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding:
 .instnote{position:absolute;right:16px;top:calc(100% + 8px);z-index:40;width:min(340px,calc(100vw - 32px));padding:16px 18px;background:var(--panel);border:1px solid var(--line);border-radius:10px;box-shadow:0 18px 40px rgba(0,0,0,.5);font-size:15px}.instnote p{margin:8px 0 12px;color:var(--soft)}
 .instnote button{font:inherit;font-size:14px;padding:6px 14px;border-radius:999px;border:1px solid var(--line);background:var(--panel2);color:var(--fg);cursor:pointer}
 .nav a.here{color:var(--gold);font-weight:600}
-.atmos{display:none;position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}html[data-look="bright"] .atmos{display:block}
-.bgimg{position:absolute;inset:-12% 0 -12% 0;background:#07080c center/cover no-repeat;opacity:.55;will-change:transform}
-.bgimg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,8,12,.55) 0%,rgba(7,8,12,.78) 45%,rgba(7,8,12,.96) 100%)}
-.bgimg.academy{background-image:url(img/bg/academy.jpg)}.bgimg.hall{background-image:url(img/bg/hall.jpg)}
-@media (max-width:700px){.bgimg.academy{background-image:url(img/bg/academy-m.jpg)}.bgimg.hall{background-image:url(img/bg/hall-m.jpg)}}
-.column i.stat{opacity:.4;mix-blend-mode:screen;animation:none;-webkit-mask:linear-gradient(180deg,transparent,#000 28%,#000 72%,transparent);mask:linear-gradient(180deg,transparent,#000 28%,#000 72%,transparent)}
-.dust{position:absolute;left:-10%;top:-20%;width:120%;height:140%;pointer-events:none;background:radial-gradient(circle at 12% 18%,rgba(95,212,255,.35) 0 1px,transparent 2px),radial-gradient(circle at 78% 32%,rgba(242,169,59,.3) 0 1px,transparent 2px),radial-gradient(circle at 40% 70%,rgba(95,212,255,.28) 0 1px,transparent 2px),radial-gradient(circle at 88% 82%,rgba(255,255,255,.22) 0 1px,transparent 2px),radial-gradient(circle at 22% 52%,rgba(63,207,90,.22) 0 1px,transparent 2px),radial-gradient(circle at 60% 10%,rgba(255,255,255,.18) 0 1px,transparent 2px),radial-gradient(circle at 70% 58%,rgba(95,212,255,.2) 0 1px,transparent 2px),radial-gradient(circle at 5% 90%,rgba(242,169,59,.2) 0 1px,transparent 2px);background-size:900px 700px,1100px 800px,700px 900px,1300px 1000px,800px 600px,1000px 1100px,1200px 900px,900px 1000px;background-position:0 var(--dy,0px);opacity:.9;will-change:transform,background-position}
-.grain{display:none;position:fixed;left:-50%;top:-50%;width:200%;height:200%;pointer-events:none;z-index:1000;opacity:.045;background:url(img/bg/noise.png) repeat;background-size:160px 160px;mix-blend-mode:screen;animation:grain .6s steps(6) infinite;will-change:transform}html[data-look="bright"] .grain{display:block}
-@keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-4%,-8%)}40%{transform:translate(-12%,4%)}60%{transform:translate(6%,-18%)}80%{transform:translate(-4%,18%)}100%{transform:translate(9%,0)}}
-@media (prefers-reduced-motion:reduce){.dust{display:none}.grain{animation:none}}@media (max-width:700px){.dust{display:none}.grain{animation:none;left:0;top:0;width:100%;height:100%}}
-.atmos~*{position:relative;z-index:1}
+html:not([data-look="bright"]) .vatm{display:none}
+.vatm~*:where(:not(.vatm)){position:relative;z-index:1}
 #colhost{position:relative;z-index:1;overflow:clip}
-.column{display:none;position:absolute;left:0;right:0;top:0;z-index:-1;pointer-events:none;overflow:hidden;will-change:transform}html[data-look="bright"] .column{display:block}
-.column i{position:absolute;left:0;width:100%;display:block;background-size:cover;background-position:center;opacity:.7;-webkit-mask:linear-gradient(180deg,transparent,#000 10%,#000 90%,transparent);mask:linear-gradient(180deg,transparent,#000 10%,#000 90%,transparent);transform-origin:center}
-@media (min-width:701px) and (prefers-reduced-motion:no-preference){.column i:nth-child(-n+6){animation:colkb var(--kbd,70s) ease-in-out infinite alternate}}@keyframes colkb{from{transform:scale(1)}to{transform:scale(1.07)}}
 html[data-look="bright"] #colhost .hero{border-bottom:0}html[data-look="bright"] #colhost .hero>img{display:none}html[data-look="bright"] #colhost .hero::after{background:linear-gradient(90deg,rgba(7,8,12,.9) 0%,rgba(7,8,12,.78) 42%,rgba(7,8,12,.2) 78%,rgba(7,8,12,.1) 100%)}
 html[data-look="bright"] #colhost main>h2,html[data-look="bright"] #colhost .row>h2,html[data-look="bright"] #colhost .who{text-shadow:0 1px 10px rgba(7,8,12,.95),0 0 3px rgba(7,8,12,.9)}html[data-look="bright"] #colhost h2 small,html[data-look="bright"] #colhost .who small{color:var(--soft)}
 footer{max-width:1400px;margin:0 auto;padding:30px 32px 44px;color:var(--dim);font-size:14px;border-top:1px solid var(--line)}
@@ -666,22 +654,17 @@ function top(current, all) {
       + (SHELFBOOKS.length ? '<div><h5>Old books in plain English</h5>' + SHELFBOOKS.map(link).join('') + '</div>' : '');
     links = home + (here ? hereLink(here) : '') + '<details class="navall"><summary>All courses</summary><div class="navlist">' + groups + '</div></details>';
   }
-  // Backgrounds the way voidtv.net uses its own (B, 19 Nov 2026: "i want these used in the same ways as as vtv. the way
-  // the bg moves"). Inner pages: one fixed picture, taller than the window, under a dark veil, that drifts and grows a
-  // little as you scroll. The front page: a column of the pictures down the whole page that scrolls slower than the
-  // content and slowly breathes (built in home()). No movement for people who ask for less motion. The fixed picture
-  // drifts on tablets too (B, 19 Nov 2026: "make the background drift on my tablet too"); voidtv.net keeps it still
-  // on touch screens, and here only a window 700 wide or less keeps it still.
-  const atmos = '<div class="atmos" aria-hidden="true">' + (current === 'home' ? '' : '<div class="bgimg ' + (all.some((o) => o.slug === current) ? 'academy' : 'hall') + '"></div>') + '<div class="dust"></div></div><div class="grain" aria-hidden="true"></div>';
-  const move = '<script>(function(){if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;var light=innerWidth<=700,bg=document.querySelector(".bgimg"),du=document.querySelector(".dust"),q=false;'
-    + 'function frame(){q=false;var y=scrollY,h=Math.max(1,document.documentElement.scrollHeight-innerHeight),f=Math.min(1,y/h),w=Math.sin(y/700),w2=Math.sin(y/430),col=document.querySelector(".column");'
-    + 'if(col)col.style.transform="translate3d(0,"+(y*0.35)+"px,0)";if(light)return;if(bg)bg.style.transform="translate3d(0,"+(-f*60+w*22)+"px,0) scale("+(1.06+f*0.05+w2*0.015)+")";if(du){du.style.setProperty("--dy",(-y*0.55)+"px");du.style.transform="translate3d("+(w*30)+"px,0,0) scale("+(1.02+0.05*w2)+")"}}'
-    + 'window.__par=frame;addEventListener("scroll",function(){if(!q){q=true;requestAnimationFrame(frame)}},{passive:true});addEventListener("resize",frame);frame()})()</script>';
+  // The background (B, 19 Nov 2026: "i want these used in the same ways as as vtv. the way the bg moves", "make the background drift on
+  // my tablet too"; 22 Nov 2026: "i want the bg sittuation to be fixed on all pages") is the one every Void area shares,
+  // voidtv.net's assets/brand/atmos/atmos.js, loaded from there as the menu is, so a fix reaches this site with no rebuild. It gets this
+  // site's own pictures: all four in turn on the front page, the academy behind a course, the hall behind every other page.
+  const far = current === 'home' ? 'hall.jpg,academy.jpg,archives.jpg,desk.jpg' : all.some((o) => o.slug === current) ? 'academy.jpg' : 'hall.jpg';
+  const atmos = '<script src="https://voidtv.net/assets/brand/atmos/atmos.js?v=' + require('../../scripts/lib/areas-v')('atmos/atmos.js') + '" defer data-base="img/bg/" data-far="' + far + '"' + (current === 'home' ? '' : ' data-fit="cover"') + '></script>';
   // Every voidtv.net area (Bryan, 20 Nov 2026, M1): the hamburger drawer from voidtv.net's one list. The menu only, no
   // card: Open Yale's terms (oyc.yale.edu/terms) say no ads on the University while it uses Yale material.
   const AREAS = '<script src="https://voidtv.net/assets/brand/areas/areas.js?v=' + require('../../scripts/lib/areas-v')() + '" defer data-site="university" data-here="university" data-ads="off"></script>';
   return atmos + AREAS + '<header class="top"><span data-void-areas-menu></span><a class="crest" href="index.html">' + CREST + '<span><b>Void University</b><small>Learn from people who did it</small></span></a><nav class="nav">' + links + '</nav>' + INSTALL + DRAFT + '</header>'
-    + '<script>(function(){var h=document.querySelector("header.top"),s=function(){document.documentElement.style.setProperty("--hh",h.offsetHeight+"px")};s();addEventListener("load",s);if(window.ResizeObserver)new ResizeObserver(s).observe(h);else addEventListener("resize",s)})()</script>' + move;
+    + '<script>(function(){var h=document.querySelector("header.top"),s=function(){document.documentElement.style.setProperty("--hh",h.offsetHeight+"px")};s();addEventListener("load",s);if(window.ResizeObserver)new ResizeObserver(s).observe(h);else addEventListener("resize",s)})()</script>';
 }
 const IMG = (() => { try { return JSON.parse(fs.readFileSync(path.join(DIR, 'img', 'images.json'), 'utf8')); } catch (e) { return {}; } })();
 const img = (name) => IMG[name] ? IMG[name].file : '';
@@ -786,24 +769,6 @@ document.querySelectorAll('.rowwrap').forEach(function (w) {
   l.onclick = function () { t.scrollLeft -= t.clientWidth * 0.8; }; r.onclick = function () { t.scrollLeft += t.clientWidth * 0.8; };
   t.addEventListener('scroll', upd); window.addEventListener('resize', upd); upd();
 });
-// The column of pictures behind the page: one picture per screen-wide tile, all the way down, rebuilt when the page
-// changes height. The script in the header moves it at a third of the scroll speed.
-(function () {
-  var host = document.getElementById('colhost'); if (!host) return;
-  var pics = ['hall', 'academy', 'archives', 'desk'], stat = ['static-glitch', 'static-bolt', 'static-dark'], wait = 0, was = '';
-  function build() {
-    var H = host.scrollHeight, W = host.clientWidth || innerWidth, T = Math.round(W * 0.558), sfx = innerWidth <= 700 ? '-m' : '';
-    if (!(T >= 50) || was === H + 'x' + W) return; was = H + 'x' + W;
-    var old = host.querySelector('.column'); if (old) old.remove();
-    var c = document.createElement('div'), n = Math.min(Math.ceil(H / T) + 1, 60), h = '';
-    c.className = 'column'; c.style.height = H + 'px';
-    for (var i = 0; i < n; i++) h += '<i style="top:' + (i * T) + 'px;height:' + T + 'px;background-image:url(img/bg/' + pics[i % pics.length] + sfx + '.jpg);--kbd:' + (64 + (i % 4) * 11) + 's;animation-delay:-' + ((i * 19) % 64) + 's"></i>';
-    for (var k = 0; k < n; k++) h += '<i class="stat" style="top:' + Math.round((k + 1) * T - T / 2) + 'px;height:' + T + 'px;background-image:url(img/bg/' + stat[k % stat.length] + sfx + '.jpg)"></i>';
-    c.innerHTML = h; host.appendChild(c); if (window.__par) window.__par();
-  }
-  build();
-  if (window.ResizeObserver) new ResizeObserver(function () { clearTimeout(wait); wait = setTimeout(build, 250); }).observe(host);
-})();
 // Find a course or a lesson: every word typed must be in the course name, the lesson title or its "why you need this".
 var IDX = ${JSON.stringify(all.flatMap((c) => c.units.map((u) => [c.slug + '.html#u' + u.n, c.name, u.title, (u.needIt || '').toLowerCase()])).concat(SHELFBOOKS.flatMap((b) => b.chapters.map((x) => [b.slug + '.html#c' + x.n, b.title, x.title, (x.why || '').toLowerCase()])))).replace(/</g, '\\u003c')};
 var find = document.getElementById('find'), found = document.getElementById('found');

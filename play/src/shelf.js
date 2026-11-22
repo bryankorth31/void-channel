@@ -409,60 +409,9 @@
   // ---- The hero (VoidTV's .hero-home): one slide at a time, a slow push in, the next after a while. A slide is a game
   // (its picture, name, machine, year, Play) or a machine (three of its games, "See the N games"). Arrows, a swipe or a
   // gamepad turn it by hand; resting on it, a box in hand or a hidden tab holds it still.
-  // ---- VoidTV's atmosphere moves with the scroll (Bryan, 20 Nov 2026: "i want the background to move and scroll like the
-  // voidtv does"): site/index.html's own rule. The picture drifts up as the page goes down, with two slow swells; the void
-  // floats and turns with it. Still on a phone or a touch screen (it costs battery there), and for anyone who asks for less
-  // motion; the grain and the void's turn rest while the tab is hidden.
-  (function atmos() {
-    if (typeof matchMedia === 'undefined' || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    const bg = document.querySelector('.atmos .bgimg'), vd = document.querySelector('.atmos .void');
-    if (!bg) return;
-    const light = () => innerWidth <= 700 || matchMedia('(pointer: coarse)').matches;
-    function frame() {
-      const y = window.scrollY, h = Math.max(1, document.documentElement.scrollHeight - innerHeight), f = Math.min(1, y / h);
-      const w = Math.sin(y / 700), w2 = Math.sin(y / 430);
-      if (light()) { bg.style.transform = ''; if (vd) vd.style.transform = ''; return; }
-      bg.style.transform = 'translate3d(0,' + (-f * 60 + w * 22) + 'px,0) scale(' + (1.06 + f * 0.05 + w2 * 0.015) + ')';
-      if (vd) vd.style.transform = 'translate3d(' + (w2 * 60) + 'px,' + (-f * 120 + w * 90) + 'px,0) rotate(' + (y * 0.06) + 'deg) scale(' + (1.05 + w2 * 0.12) + ')';
-    }
-    let last = -1;
-    (function loop() { const y = window.scrollY; if (y !== last) { last = y; frame(); } requestAnimationFrame(loop); })();
-    addEventListener('resize', () => { last = -1; });
-    document.addEventListener('visibilitychange', () => {
-      for (const e of document.querySelectorAll('.atmos .grain, .atmos .void i')) e.style.animationPlayState = document.hidden ? 'paused' : 'running';
-    });
-  })();
-
-  // ---- VoidTV's column (Bryan, 20 Nov 2026: "the bg needs the cool infinite scrolling paralax effect using the overlapping
-  // opacity with the lightning images"): scripts/lib/app.js column(), as the site draws it. A stack of tiles as tall as the
-  // page scrolls with it over the fixed picture: Bryan's own two pictures take turns, and VoidTV's three static-lightning
-  // pictures sit over the joins, half a tile down, see-through and screened, so the tiles melt into each other. Rebuilt
-  // when the page grows; the first tiles swell slowly on a computer, still for anyone who asks for less motion.
-  (function column() {
-    if (typeof document === 'undefined') return;   // the tests load this file outside a page
-    const main = document.getElementById('shelf');
-    if (!main || typeof ResizeObserver === 'undefined') return;
-    const ART = ['voidarcade-wall', 'voidarcade-player'], STAT = ['static-glitch', 'static-bolt', 'static-dark'];
-    let lastH = 0;
-    function build() {
-      const H = main.scrollHeight;
-      if (Math.abs(H - lastH) < 200) return;
-      lastH = H;
-      const old = main.querySelector(':scope > .column'); if (old) old.remove();
-      if (H < 1200) return;
-      const phone = innerWidth <= 700, sfx = phone ? '-m' : '';
-      const T = Math.round((main.clientWidth || innerWidth) * (phone ? 1.25 : 0.558));
-      if (!(T >= 50)) return;
-      const n = Math.min(Math.ceil(H / T) + 1, 400);
-      const c = document.createElement('div'); c.className = 'column'; c.setAttribute('aria-hidden', 'true'); c.style.height = H + 'px';
-      let h = '';
-      for (let i = 0; i < n; i++) h += '<i class="neon" style="top:' + (i * T) + 'px;height:' + T + 'px;background-image:url(/assets/brand/bg/' + ART[i % ART.length] + sfx + '.webp);--kbd:' + (64 + (i % 4) * 11) + 's;animation-delay:-' + ((i * 19) % 64) + 's"></i>';
-      for (let i = 0; i < n; i++) h += '<i class="stat" style="top:' + Math.round((i + 1) * T - T / 2) + 'px;height:' + T + 'px;background-image:url(/assets/brand/bg/col/' + STAT[i % STAT.length] + sfx + '.jpg)"></i>';
-      c.innerHTML = h; main.prepend(c);
-    }
-    new ResizeObserver(() => build()).observe(main);
-    addEventListener('resize', () => { lastH = 0; build(); });
-  })();
+  // ---- The background (Bryan, 20 Nov 2026: "i want the background to move and scroll like the voidtv does", "the bg needs
+  // the cool infinite scrolling paralax effect using the overlapping opacity with the lightning images") is not drawn here:
+  // it is the one every Void area shares, /assets/brand/atmos/atmos.js, loaded by index.html with his two pictures.
 
   const HERO_MS = 8000;
   // Bryan's voidarcade art (assets/brand/bg/voidarcade-*.webp, from his own pictures, 20 Nov 2026).

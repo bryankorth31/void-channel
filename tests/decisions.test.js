@@ -81,7 +81,8 @@ test('B9: motion honours reduced motion: the swirl, the holding cards and the gr
   const rm = [...SHELL.matchAll(/prefers-reduced-motion:reduce\)\{([^@]*)/g)].map((m) => m[1]).join(' ');
   assert.match(rm, /\.swirl/, 'the Live TV swirl');
   assert.match(rm, /\.tvc-card/, 'the holding cards');
-  assert.match(rm, /\.grain/, 'the grain');
+  // The grain is in the background every area shares (assets/brand/atmos/atmos.js).
+  assert.match(fs.readFileSync(path.join(__dirname, '..', 'assets', 'brand', 'atmos', 'atmos.js'), 'utf8'), /prefers-reduced-motion:reduce\)\{[^}]*\.vatm-grain[^}]*animation:none/, 'the grain');
 });
 
 test('B10: the Live TV screen is the swirl picture with the wordmark and Turn on inside it, and no video', () => {

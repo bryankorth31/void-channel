@@ -5,9 +5,10 @@
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
-module.exports = function areasV() {
+// With a file named (a path under assets/brand, such as 'atmos/atmos.js', the shared background), that file's version instead.
+module.exports = function areasV(file) {
   try {
-    const s = fs.readFileSync(path.join(__dirname, '..', '..', 'assets', 'brand', 'areas', 'areas.js'), 'utf8').replace(/\r\n/g, '\n');
+    const s = fs.readFileSync(path.join(__dirname, '..', '..', 'assets', 'brand', ...String(file || 'areas/areas.js').split('/')), 'utf8').replace(/\r\n/g, '\n');
     return crypto.createHash('sha1').update(s).digest('hex').slice(0, 10);
   } catch (e) { return '1'; }
 };

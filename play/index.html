@@ -13,10 +13,6 @@
 <link rel="stylesheet" href="shelf.css">
 </head>
 <body>
-<!-- The background, as voidtv.net's (Bryan, 20 Nov 2026: "like voidtv.net with the lighting like elements", "i want the
-     background to move and scroll like the voidtv does"): VoidTV's lightning static and its slow void, moved by the scroll
-     (src/shelf.js atmos), and its film grain over everything. -->
-<div class="atmos lo" aria-hidden="true"><div class="bgimg"></div><div class="void"><i></i></div></div>
 <header class="bar">
   <span data-void-areas-menu></span>
   <a class="mark" href="/" aria-label="voidtv.net home"><span class="v">voidtv</span><span class="n">.net</span></a>
@@ -76,6 +72,9 @@
 <script src="src/shelf-phones.js"></script>
 <!-- Every voidtv.net area (Bryan, 20 Nov 2026, M1 + A1): the hamburger drawer and one small card, from one list in /assets/brand/areas/areas.js. -->
 <script src="/assets/brand/areas/areas.js" defer data-here="play" data-ad-into="#rows" data-ad-at="3"></script>
-<div class="atmos hi" aria-hidden="true"><div class="grain"></div></div>
+<!-- The background every Void area shares (Bryan, 20 Nov 2026: "like voidtv.net with the lighting like elements", "i want the
+     background to move and scroll like the voidtv does"; 22 Nov 2026: "i want the bg sittuation to be fixed on all pages"):
+     his two voidarcade pictures, whole, far behind the rows. -->
+<script src="/assets/brand/atmos/atmos.js" data-far="voidarcade-wall.webp,voidarcade-player.webp"></script>
 </body>
 </html>

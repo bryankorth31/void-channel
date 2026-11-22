@@ -51,28 +51,13 @@ input{width:100%;font:600 22px/1 system-ui,sans-serif;background:var(--panel);co
 .donate-cross{width:28px;height:auto;vertical-align:middle;margin-right:6px}
 .cross-link{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;vertical-align:middle}
 .err{color:var(--gold)}
-/* The background, as voidtv.net's (Bryan, 20 Nov 2026: "use these with the other lighting type bg that voidtv uses and treat in
-   the same way with how it scrolls"): his VOID FACTS NIGHT picture, the room with the phones on the desks, in VoidTV's
-   atmosphere layer (scripts/lib/app.js .atmos, trivia.css the same), its values as they are. src/atmos.js moves it with the
-   scroll; on a phone it holds still, as voidtv.net's does. */
-.atmos{position:fixed;inset:0;overflow:hidden;pointer-events:none}
-.atmos.lo{z-index:0}.atmos.hi{z-index:1000}
-.atmos>.bgimg,.atmos>.void,.atmos>.grain{position:absolute}
-.bgimg{inset:-12% 0 -12% 0;background:#07080c url(/assets/brand/bg/factsnight.webp) center/cover no-repeat;opacity:.5;will-change:transform}
-.bgimg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,8,12,.55) 0%,rgba(7,8,12,.78) 45%,rgba(7,8,12,.96) 100%)}
-@media (max-width:700px){.bgimg{background-image:url(/assets/brand/bg/factsnight-m.webp)}}
-.void{right:-18vw;bottom:-22vw;width:64vw;height:64vw;max-width:900px;max-height:900px;opacity:.07;will-change:transform}
-.void i{position:absolute;inset:0;display:block;background:url(/assets/brand/void-soft.webp) center/contain no-repeat;animation:spin 240s linear infinite}
-@keyframes spin{to{transform:rotate(360deg)}}
-.grain{left:-50%;top:-50%;width:200%;height:200%;opacity:.045;background:url(/assets/brand/noise.png) repeat;background-size:160px 160px;mix-blend-mode:screen;animation:grain .6s steps(6) infinite;will-change:transform}
-@keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-4%,-8%)}40%{transform:translate(-12%,4%)}60%{transform:translate(6%,-18%)}80%{transform:translate(-4%,18%)}100%{transform:translate(9%,0)}}
-@media (max-width:700px){.grain{animation:none;left:0;top:0;width:100%;height:100%}}
-@media (prefers-reduced-motion:reduce){.grain,.void i{animation:none}}
+/* The background (Bryan, 20 Nov 2026: "use these with the other lighting type bg that voidtv uses and treat in the same way with
+   how it scrolls"): his VOID FACTS NIGHT picture, the room with the phones on the desks, in the one background every Void area
+   shares (/assets/brand/atmos/atmos.js, at the foot of the page). On a phone it holds still. */
 body>header,body>main{position:relative;z-index:1}
 </style>
 </head>
 <body>
-<div class="atmos lo" aria-hidden="true"><div class="bgimg"></div><div class="void"><i></i></div></div>
 <header class="bar">
   <a class="back" href="/join" title="Join another game" aria-label="Join another game">&larr;</a>
   <a class="mark" href="/" title="voidtv.net home"><span class="v">voidtv</span><span class="n">.net</span></a>
@@ -120,7 +105,6 @@ body>header,body>main{position:relative;z-index:1}
 </main>
 <script src="src/game.js"></script>
 <script src="src/phone.js"></script>
-<script src="src/atmos.js"></script>
-<div class="atmos hi" aria-hidden="true"><div class="grain"></div></div>
+<script src="/assets/brand/atmos/atmos.js" data-far="factsnight.webp" data-fit="cover" data-strength="0.8"></script>
 </body>
 </html>

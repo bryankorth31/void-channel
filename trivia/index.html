@@ -10,10 +10,6 @@
 <link rel="stylesheet" href="trivia.css">
 </head>
 <body>
-<!-- The background, as voidtv.net's (Bryan, 20 Nov 2026: "use these with the other lighting type bg that voidtv uses and treat in
-     the same way with how it scrolls"): his VOID TRIVIA NIGHT picture and VoidTV's slow void, moved by the scroll (src/atmos.js),
-     and its film grain over everything. -->
-<div class="atmos lo" aria-hidden="true"><div class="bgimg"></div><div class="void"><i></i></div></div>
 <header class="bar">
   <span data-void-areas-menu></span>
   <a class="back" id="back" href="/" title="Back to voidtv.net" aria-label="Back to voidtv.net">&larr;</a>
@@ -184,7 +180,8 @@
 <script src="src/host.js"></script>
 <!-- Every voidtv.net area (Bryan, 20 Nov 2026, M1 + A1): the hamburger drawer and one small card, from one list in /assets/brand/areas/areas.js (the build stamps its version). -->
 <script src="/assets/brand/areas/areas.js" defer data-here="trivia"></script>
-<script src="src/atmos.js"></script>
-<div class="atmos hi" aria-hidden="true"><div class="grain"></div></div>
+<!-- The background every Void area shares (Bryan, 20 Nov 2026: "use these with the other lighting type bg that voidtv uses and treat in
+     the same way with how it scrolls"; 22 Nov 2026: "i want the bg sittuation to be fixed on all pages"): his VOID TRIVIA NIGHT picture. -->
+<script src="/assets/brand/atmos/atmos.js" data-far="trivianight.webp" data-fit="cover" data-strength="0.8"></script>
 </body>
 </html>

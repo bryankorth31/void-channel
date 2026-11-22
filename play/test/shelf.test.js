@@ -235,11 +235,11 @@ test('the shelf looks like voidtv.net (Bryan, 20 Nov 2026: "like voidtv.net with
   const fs = require('fs'), path = require('path'), P = path.join(__dirname, '..');
   const css = fs.readFileSync(path.join(P, 'shelf.css'), 'utf8'), js = fs.readFileSync(path.join(P, 'src', 'shelf.js'), 'utf8');
   const html = fs.readFileSync(path.join(P, 'index.html'), 'utf8');
-  assert.ok(html.includes('<div class="atmos lo" aria-hidden="true"><div class="bgimg"></div><div class="void"><i></i></div></div>') && html.includes('<div class="atmos hi" aria-hidden="true"><div class="grain"></div></div>'));
-  assert.ok(css.includes('url(/assets/brand/bg/voidarcade-wall.webp) center 40%/contain no-repeat #07080c;opacity:1') && css.includes('url(/assets/brand/bg/voidarcade-wall-m.webp) 30% 40%/cover'), 'Bryan’s own art behind the page ("use it like that")');
-  // It moves like voidtv.net's (Bryan: "move and scroll like the voidtv does"): the same scroll rule, the grain, the void.
-  assert.ok(js.includes("bg.style.transform = 'translate3d(0,' + (-f * 60 + w * 22) + 'px,0) scale(' + (1.06 + f * 0.05 + w2 * 0.015) + ')';"));
-  assert.ok(css.includes('animation:grain .6s steps(6) infinite') && css.includes('.void i{position:absolute;inset:0;display:block;background:url(/assets/brand/void-soft.webp)'));
+  // The background is the one every Void area shares (tests/atmos.test.js has its rules): his own two pictures, whole ("use it
+  // like that"), and it moves like voidtv.net's (Bryan: "move and scroll like the voidtv does").
+  assert.ok(html.includes('<script src="/assets/brand/atmos/atmos.js" data-far="voidarcade-wall.webp,voidarcade-player.webp"></script>'));
+  assert.ok(!html.includes('data-fit='), 'the whole picture shows, not a crop');
+  assert.ok(!css.includes('.bgimg') && !js.includes('.atmos'), 'no copy of the layer of its own');
   for (const f of ['voidarcade-wall', 'voidarcade-wall-m', 'voidarcade-player', 'voidarcade-player-m']) {
     const p = path.join(P, '..', 'assets', 'brand', 'bg', f + '.webp');
     assert.ok(fs.existsSync(p) && fs.statSync(p).size < 300 * 1024, f);
@@ -251,7 +251,9 @@ test('the shelf looks like voidtv.net (Bryan, 20 Nov 2026: "like voidtv.net with
 test('Bryan, 20 Nov 2026 ("the cool infinite scrolling paralax effect using the overlapping opacity with the lightning images"): VoidTV’s column on the shelf, his pictures and the lightning static', () => {
   const fs = require('fs'), path = require('path'), P = path.join(__dirname, '..');
   const css = fs.readFileSync(path.join(P, 'shelf.css'), 'utf8'), js = fs.readFileSync(path.join(P, 'src', 'shelf.js'), 'utf8');
-  assert.ok(js.includes("const ART = ['voidarcade-wall', 'voidarcade-player'], STAT = ['static-glitch', 'static-bolt', 'static-dark'];"));
-  assert.ok(css.includes('.column .stat{opacity:.4;mix-blend-mode:screen;') && css.includes('.column .neon{opacity:.7;'));
+  // The shared background lays VoidTV's three lightning statics over his pictures, see-through, at another speed.
+  const atmos = fs.readFileSync(path.join(P, '..', 'assets', 'brand', 'atmos', 'atmos.js'), 'utf8');
+  assert.ok(atmos.includes("var MID = ['col/static-glitch.jpg', 'col/static-bolt.jpg', 'col/static-dark.jpg'];") && atmos.includes('.vatm-mid{mix-blend-mode:screen}'));
+  assert.ok(!js.includes('function column') && !css.includes('.column'), 'PLAY keeps no column of its own');
   for (const f of ['static-glitch', 'static-bolt', 'static-dark']) for (const s of ['', '-m']) assert.ok(fs.existsSync(path.join(P, '..', 'assets', 'brand', 'bg', 'col', f + s + '.jpg')), f + s);
 });

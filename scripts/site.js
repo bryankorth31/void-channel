@@ -151,7 +151,8 @@ const brandSrc = path.join(ROOT, 'assets', 'brand');
         }
       } }
     // The area list's version, from the list itself (scripts/lib/areas-v.js), so a changed list is not held in Cloudflare's cache.
-    { const p = path.join(dst, 'index.html'); fs.writeFileSync(p, fs.readFileSync(p, 'utf8').replace('src="/assets/brand/areas/areas.js"', 'src="/assets/brand/areas/areas.js?v=' + require('./lib/areas-v')() + '"')); }
+    { const p = path.join(dst, 'index.html'); fs.writeFileSync(p, fs.readFileSync(p, 'utf8').replace('src="/assets/brand/areas/areas.js"', 'src="/assets/brand/areas/areas.js?v=' + require('./lib/areas-v')() + '"')
+      .replace('src="/assets/brand/atmos/atmos.js"', 'src="/assets/brand/atmos/atmos.js?v=' + require('./lib/areas-v')('atmos/atmos.js') + '"')); }   // and the shared background's, the same way
     fs.copyFileSync(path.join(P, 'LICENSE'), path.join(dst, 'LICENSE.txt'));
     for (const d of ['src', 'cards', 'engine', 'cheats', 'library', 'skin'].filter((x) => fs.existsSync(path.join(P, x)))) fs.cpSync(path.join(P, d), path.join(dst, d), { recursive: true });
     fs.mkdirSync(path.join(dst, 'shelf'), { recursive: true });

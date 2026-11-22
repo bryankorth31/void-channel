@@ -271,27 +271,29 @@ test('scale, sizes: widths are in metres from their sources, said in the unit a 
   for (const words of ['8 thousandths of a millimetre across', '1.82 m tall', '490 m across', '3,470 km across', '12,700 km across', '1.39 million km across', '9.03 billion km across', '4.22 light years<', '100,000 light years across', '2.5 million light years<']) assert.ok(page.includes(words), 'the page does not say: ' + words);
 });
 
-test('backgrounds move the way voidtv.net moves its own: a column behind the front page, a fixed picture behind the rest', () => {
+test('backgrounds are the one every Void area shares: all four pictures behind the front page, one behind the rest', () => {
   build('--site');
   const read = (f) => fs.readFileSync(path.join(SITE, f), 'utf8');
-  for (const f of ['academy.jpg', 'academy-m.jpg', 'hall.jpg', 'hall-m.jpg', 'archives.jpg', 'archives-m.jpg', 'desk.jpg', 'desk-m.jpg', 'static-glitch.jpg', 'static-bolt.jpg', 'static-dark.jpg', 'static-bolt-m.jpg', 'noise.png']) {
+  for (const f of ['academy.jpg', 'academy-m.jpg', 'hall.jpg', 'hall-m.jpg', 'archives.jpg', 'archives-m.jpg', 'desk.jpg', 'desk-m.jpg']) {
     const p = path.join(SITE, 'img', 'bg', f);
     assert.ok(fs.existsSync(p), f + ' is not in the public copy');
     assert.ok(fs.statSync(p).size < 500000, f + ' is too heavy for a page');
   }
   const home = read('index.html');
-  assert.ok(home.includes('id="colhost"') && home.includes("c.className = 'column'"), 'the front page has no picture column');
-  assert.ok(!home.includes('class="bgimg'), 'the front page should carry the column, not the fixed picture, as on voidtv.net');
-  assert.ok(home.includes("stat = ['static-glitch', 'static-bolt', 'static-dark']") && home.includes('class=\"stat\"'), 'the column has no lightning tiles between its pictures');
+  // B, 19 Nov 2026: "i want these used in the same ways as as vtv. the way the bg moves". It is voidtv.net's own file, loaded from there
+  // as the menu is, with this site's pictures; VoidTV's lightning static comes with it, so the copies kept here are gone.
+  const tag = (far, fit) => new RegExp('<script src="https://voidtv\\.net/assets/brand/atmos/atmos\\.js\\?v=[0-9a-f]{10}" defer data-base="img/bg/" data-far="' + far + '"' + (fit ? ' data-fit="cover"' : '') + '></script>');
+  assert.match(home, tag('hall.jpg,academy.jpg,archives.jpg,desk.jpg', false), 'the front page has all four pictures, each whole');
   const course = read('critical-thinking.html');
-  assert.ok(course.includes('class="bgimg academy"'), 'a course page has no fixed picture');
-  assert.ok(read('404.html').includes('class="bgimg hall"'), 'the not-found page has no fixed picture');
+  assert.match(course, tag('academy.jpg', true), 'a course page has the academy behind it');
+  assert.match(read('404.html'), tag('hall.jpg', true), 'the not-found page has the hall behind it');
   for (const h of [home, course]) {
-    assert.ok(h.includes('<div class="dust"></div>') && h.includes('<div class="grain" aria-hidden="true"></div>'), 'the dust and the grain are on every page');
-    assert.ok(h.includes('y*0.35'), 'the column should move at about a third of the scroll speed');
-    assert.ok(h.includes('prefers-reduced-motion: reduce'), 'the movement must stop for people who ask for less motion');
+    assert.ok(!h.includes('class="bgimg') && !h.includes("c.className = 'column'") && !h.includes('y*0.35'), 'no copy of the layer of its own');
+    assert.ok(h.includes('html:not([data-look="bright"]) .vatm{display:none}'), 'only the bright look has the background');
+    assert.ok(h.includes('.vatm~*:where(:not(.vatm)){position:relative;z-index:1}'), 'the page sits over it, and the sticky header keeps its place');
   }
-  assert.ok(!course.includes('pointer: coarse'), 'the fixed picture must drift on a tablet too, so touch screens are not left out');
+  assert.ok(!fs.existsSync(path.join(SITE, 'img', 'bg', 'static-bolt.jpg')) && !fs.existsSync(path.join(SITE, 'img', 'bg', 'noise.png')), 'the lightning static and noise are not copied here any more');
+  // That it drifts on a tablet (B, 19 Nov 2026: "make the background drift on my tablet too") and stops for less motion: tests/atmos.test.js.
   assert.ok(read('credits.html').includes('are our own'), 'the credits page does not say whose the backgrounds are');
 });
 
