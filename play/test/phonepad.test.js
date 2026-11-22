@@ -467,7 +467,7 @@ test('the pad shows the game\'s own buttons: only what the machine has, its lett
 
 test('the pad page: the handheld\'s own parts, the hub\'s steady rule, no zoom or scroll, and every way a finger can vanish lets go', () => {
   const html = fs.readFileSync(path.join(P, 'pad.html'), 'utf8'), js = fs.readFileSync(path.join(P, 'src', 'phonepad.js'), 'utf8');
-  assert.ok(html.includes('<script src="src/hub.js"></script>\n<script src="src/phonepad.js"></script>'), 'the hub\'s steadyDir is loaded for the round pad');
+  assert.ok(html.includes('<script src="src/hub.js"></script>\n<script src="src/padlayout.js"></script>\n<script src="src/phonepad.js"></script>'), 'the hub\'s steadyDir is loaded for the round pad');
   for (const f of html.match(/skin\/[a-z-]+\.(?:webp|svg)/g)) assert.ok(fs.existsSync(path.join(P, f)), f);
   for (const part of ['skin/dpad-well.svg', 'skin/dpad-cross.svg', 'skin/btn-red.webp', 'skin/btn-yellow.webp', 'skin/pill.webp', 'skin/label.webp', 'skin/plastic.webp']) assert.ok(html.includes(part), part);
   assert.ok(html.includes('user-scalable=no') && html.includes('touch-action:none') && html.includes('overscroll-behavior:none') && html.includes('position:fixed'));
@@ -482,7 +482,7 @@ test('the pad page: the handheld\'s own parts, the hub\'s steady rule, no zoom o
   assert.ok(js.includes("if (ended || [4404, 4409, 4423, 4403, 4411, 4410, 4408].includes(e.code)) letGo();"));
   assert.ok(js.includes("const dead = ws; ws = null; resetLink();   // the fingers still down are kept for the new connection"));
   assert.ok(!js.includes('ws = null; letGo();'), 'no drop clears the fingers');
-  assert.ok(js.includes("if (same) { $('note').hidden = true; $('pad').hidden = false; measure(); return; }"), 'nor does the same card sent again');
+  assert.ok(js.includes("if (same) { $('note').hidden = true; $('pad').hidden = false; lay(); measure(); return; }"), 'nor does the same card sent again');
   assert.ok(js.includes("if (m.type === 'hello') { tries = 0; lastN = -1;") && js.includes("if (card) { $('note').hidden = true; $('pad').hidden = false; say(); }"), 'and the new connection hears what is held at once');
   assert.ok(js.includes('now() - heardAt > (away ? AWAY_MS : QUIET_MS)'), 'a dead connection is dropped and opened again; a screen changing pages is waited for');
   assert.ok(PP.AWAY_MS > R.LIMITS.pad.screenHoldMs, 'the phone waits longer than the relay holds the room for its screen');

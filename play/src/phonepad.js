@@ -25,6 +25,8 @@
 //   (Direct or Relay), its delay, and any state the relay dropped.
 (function (root) {
   'use strict';
+  // This script's own build (the site adds ?v= to it), so the layouts file is fetched fresh after a push too.
+  const BUILD = typeof document !== 'undefined' && document.currentScript ? (/[?&]v=([0-9a-f]+)/.exec(document.currentScript.src) || [])[1] || '' : '';
   const Hub = root.PlayHub || (typeof module === 'object' && module.exports ? require('./hub.js') : null);
   // The standard gamepad's button numbers (the same as PlayHub.BUTTONS).
   const BUTTONS = { A: 0, B: 1, X: 2, Y: 3, LB: 4, RB: 5, LT: 6, RT: 7, Back: 8, Start: 9, L3: 10, R3: 11, Up: 12, Down: 13, Left: 14, Right: 15, Home: 16 };
@@ -112,6 +114,8 @@
   const $ = (id) => document.getElementById(id);
   const now = () => performance.now();
   const code = (new URLSearchParams(location.search).get('r') || '').toUpperCase();
+  // Drawn inside the layout editor (play/tools/layout.html): the real pad, with no room to join and nothing asked of the browser.
+  const EDIT = /[?&]edit=1\b/.test(location.search);
   // A random seat token for this tab only (sent only to its room, gone when the tab closes): a phone that drops and
   // comes back within a minute keeps its seat.
   let seatToken = null;
@@ -241,7 +245,7 @@
     // rebuilt, so the fingers still down stay where they are and what they hold is kept.
     const same = JSON.stringify(c) === drawn;
     drawn = JSON.stringify(c); card = c;
-    if (same) { $('note').hidden = true; $('pad').hidden = false; measure(); return; }
+    if (same) { $('note').hidden = true; $('pad').hidden = false; lay(); measure(); return; }
     for (const id of ['face', 'mid', 'left', 'right']) $(id).textContent = '';
     const face = $('face');
     face.className = 'face' + (c.shape ? ' s-' + c.shape : '') + ' g' + (c.cols || 3);
@@ -249,16 +253,42 @@
     for (const k of c.keys) button(k, $(k.at === 'face' ? 'face' : k.at === 'pill' ? 'mid' : k.at));
     $('dpad').style.visibility = c.dpad === false ? 'hidden' : '';
     $('note').hidden = true; $('pad').hidden = false;
-    measure(); letGo();
+    lay(); measure(); letGo();
   }
+  // ---- Where each part sits: from play/layouts.json, set in the layout editor (src/padlayout.js) ----
+  // Bryan, 21 Nov 2026: "i want a mock up of the controllers created for me with all parts moveaple ... so that i can
+  // finetune this layout onece and for all". A part with an entry for this way of holding the phone goes where the entry
+  // says; a part with none keeps the page's own place. draft is a layout the editor is trying (null: the built-in one).
+  const Layout = root.PlayPadLayout || null;
+  const PART_NAMES = { dpad: 'D-pad', face: 'Buttons', l: 'L', r: 'R', select: 'Select', start: 'Start', menu: 'Menu', info: 'Top line' };
+  let layouts = null, draft;
+  const partOf = (el) => (el.dataset.n === 'LB' ? 'l' : el.dataset.n === 'RB' ? 'r' : el.firstChild && el.firstChild.textContent === 'Menu' ? 'menu' : el.dataset.n === 'Back' ? 'select' : 'start');
+  function partEls() {
+    const els = { dpad: $('dpad'), face: $('face'), info: $('top') };
+    for (const el of document.querySelectorAll('#pad .b:not(.f)')) els[partOf(el)] = el;
+    return els;
+  }
+  // The screen without the phone's notch, rounded corners and home bar: parts are placed inside it.
+  function area() {
+    const s = getComputedStyle($('safe')), n = (v) => parseFloat(v) || 0;
+    const l = n(s.paddingLeft), t = n(s.paddingTop);
+    return { x: l, y: t, w: innerWidth - l - n(s.paddingRight), h: innerHeight - t - n(s.paddingBottom) };
+  }
+  function lay() {
+    if (!Layout) return;
+    const set = draft !== undefined ? draft : layouts && layouts.phone && layouts.phone[innerWidth >= innerHeight ? 'side' : 'up'];
+    Layout.apply(area(), partEls(), set || null);
+  }
+  if (Layout) Layout.load('layouts.json' + (BUILD ? '?v=' + BUILD : '')).then((f) => { layouts = f; if (card) { lay(); measure(); } });
+
   // Where every button is now (after drawing, and when the phone turns).
   function measure() {
     boxes = [...document.querySelectorAll('#pad .b')].map((el) => { const r = el.getBoundingClientRect(); return { el, n: el.dataset.n, face: el.classList.contains('f'), round: el.classList.contains('f'), x: r.left, y: r.top, w: r.width, h: r.height }; });
     const d = $('dpad').getBoundingClientRect();
     dpadBox = $('dpad').style.visibility === 'hidden' || !d.width ? null : { x: d.left, y: d.top, size: d.width };
   }
-  addEventListener('resize', measure);
-  addEventListener('orientationchange', () => setTimeout(() => { measure(); letGo(); }, 300));
+  addEventListener('resize', () => { lay(); measure(); });
+  addEventListener('orientationchange', () => setTimeout(() => { lay(); measure(); letGo(); }, 300));
 
   // ---- Touch: one rule for the whole screen ----
   // Each finger is on the round pad (it may slide between directions) or on a button (on the face buttons it may slide
@@ -379,7 +409,27 @@
   // Android can hide the address bar for the pad (an iPhone page cannot): when the first touch lifts, once.
   addEventListener('pointerdown', stayAwake, { once: true });
   addEventListener('pointerup', () => {
+    if (EDIT) return;
     try { const el = document.documentElement; if (document.fullscreenEnabled && !document.fullscreenElement && matchMedia('(pointer: coarse)').matches) el.requestFullscreen({ navigationUI: 'hide' }).catch(() => {}); } catch (e) { /* not on this phone */ }
   }, { once: true });
+  // The layout editor's own door to this page: draw a game's buttons, read where each part is, try a layout.
+  if (EDIT) {
+    api.editor = {
+      draw(c) { drawn = ''; draw(c); },
+      area,
+      // Every part on the pad now: its name, its box inside the area, whether it keeps square, whether an entry placed it.
+      parts() {
+        const a = area();
+        return Object.entries(partEls()).map(([id, el]) => {
+          const r = el.getBoundingClientRect();
+          return { id, name: PART_NAMES[id], square: id === 'dpad' || id === 'face', placed: el.classList.contains('placed'), shown: r.width > 0 && getComputedStyle(el).visibility !== 'hidden',
+            box: { x: r.left - a.x, y: r.top - a.y, w: r.width, h: r.height } };
+        }).filter((p) => p.shown);
+      },
+      // set: a layout to try (null: the built-in one; undefined: what the file says).
+      show(set) { draft = set; lay(); measure(); },
+    };
+    return;
+  }
   connect();
 })(typeof self !== 'undefined' ? self : this);

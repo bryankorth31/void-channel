@@ -131,6 +131,8 @@ const brandSrc = path.join(ROOT, 'assets', 'brand');
   if (fs.existsSync(P)) {
     fs.mkdirSync(dst, { recursive: true });
     for (const f of ['index.html', 'game.html', 'play.css', 'shelf.css', 'pad.html', 'join.html']) fs.copyFileSync(path.join(P, f), path.join(dst, f));
+    // Where each controller's parts sit (play/layouts.json, set by Bryan in play/tools/layout.html; the pads read it).
+    if (fs.existsSync(path.join(P, 'layouts.json'))) fs.copyFileSync(path.join(P, 'layouts.json'), path.join(dst, 'layouts.json'));
     // The join page also answers at /join, the short address people type from the big screen (phone controllers, Trivia Nights).
     fs.copyFileSync(path.join(P, 'join.html'), path.join(OUT, 'join.html'));
     // "Our player's source" names the exact commit this build came from (the GPL source offer points at what is served).

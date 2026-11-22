@@ -67,6 +67,14 @@ body{background:radial-gradient(ellipse at 22% 6%,rgba(205,215,245,.16) 0%,trans
 #note{position:fixed;inset:0;display:grid;place-items:center;text-align:center;padding:24px;z-index:3;text-shadow:0 1px 2px rgba(0,0,0,.6)}
 #note h1{font-size:22px;margin:0 0 10px}#note p{color:var(--dim);margin:0 0 18px}
 #note a{color:var(--acc)}
+/* A part placed from play/layouts.json (src/padlayout.js, set in the layout editor): where and how big the file says. */
+/* grid-area auto: a placed part of the grid is measured from the whole pad, not from the cell it used to sit in. */
+#safe{position:fixed;left:0;top:0;visibility:hidden;pointer-events:none;padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+.placed{position:absolute!important;grid-area:auto!important;margin:0!important;right:auto!important;bottom:auto!important;max-width:none!important;min-width:0!important;min-height:0!important;flex:none!important}
+.face.placed{--side:calc(var(--pw) / .96)}
+.p.placed,.sh.placed{font-size:clamp(10px,calc(var(--ph) * .32),24px);padding:0 4px}
+.p.placed.s3 span,.sh.placed.s3 span{font-size:.8em}
+#top.placed{display:flex;flex-direction:column;justify-content:center;overflow:hidden}
 .turn{display:none}
 /* Upright: everything low, under the thumbs: L and R, then Select, Start and Menu, then the d-pad beside the buttons. */
 @media (orientation:portrait){
@@ -91,8 +99,10 @@ body{background:radial-gradient(ellipse at 22% 6%,rgba(205,215,245,.16) 0%,trans
   <div id="mid"></div>
   <div class="face" id="face"></div>
 </main>
+<div id="safe"></div>
 <div id="note"><div><h1 id="note-h">Joining the game</h1><p id="note-p">One moment.</p><a id="note-a" href="/join" hidden>Type a code</a></div></div>
 <script src="src/hub.js"></script>
+<script src="src/padlayout.js"></script>
 <script src="src/phonepad.js"></script>
 </body>
 </html>

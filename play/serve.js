@@ -26,6 +26,7 @@ http.createServer((req, res) => {
   if (p === '/trivia' || p === '/trivia/phone') p = p === '/trivia' ? '/trivia/' : '/trivia/phone.html';
   if (p === '/api/piece') return piece(req, res);
   if (p === '/api/drafts') return drafts(req, res);
+  if (p === '/api/layout') return layout(req, res);
   if (p === '/' || p === '/play') { res.writeHead(302, { location: '/play/' }); return res.end(); }
   let root = null;
   if (p.startsWith('/play/')) { root = PLAY; p = p.slice(5); } else if (p.startsWith('/assets/')) { root = ASSETS; p = p.slice(7); }
@@ -65,6 +66,32 @@ const { execFile } = require('child_process');
 const DRAFTS = path.join(PLAY, 'drafts');
 const send = (res, code, obj) => { res.writeHead(code, Object.assign({ 'content-type': 'application/json' }, PLAIN)); res.end(JSON.stringify(obj)); };
 const safeName = (x) => typeof x === 'string' && /^[A-Za-z0-9._-]{1,120}$/.test(x);
+// The controller layout editor (play/tools/layout.html, on this PC only) saves here: POST { pad, way, set } puts one
+// layout into play/layouts.json, the file the real pads place their parts from (src/padlayout.js); set null takes it
+// out, and that pad goes back to its built-in layout. Only what a layouts file may hold is written (PadLayout.clean).
+// Nothing reaches voidtv.net until the next push.
+const PadLayout = require('./src/padlayout.js');
+const LAYOUTS = process.env.PLAY_LAYOUTS || path.join(PLAY, 'layouts.json');   // the tests write to a file of their own
+function layout(req, res) {
+  if (!/^(127\.0\.0\.1|localhost)(:\d+)?$/.test(req.headers.host || '')) return send(res, 403, { error: 'This computer only' });
+  if (req.method !== 'POST' || req.headers['sec-fetch-site'] !== 'same-origin') return send(res, 403, { error: 'Only the layout page on this PC may save' });
+  let body = '';
+  req.on('data', (c) => { body += c; if (body.length > 20000) req.destroy(); });
+  req.on('end', () => {
+    let d; try { d = JSON.parse(body); } catch (e) { return send(res, 400, { error: 'Not JSON' }); }
+    if (!d || !PadLayout.PADS.includes(d.pad) || !PadLayout.WAYS.includes(d.way)) return send(res, 400, { error: 'Which pad, and held which way?' });
+    let file = {}; try { file = JSON.parse(fs.readFileSync(LAYOUTS, 'utf8')); } catch (e) { /* none yet */ }
+    file = PadLayout.clean(file);
+    if (d.set === null) { if (file[d.pad]) { delete file[d.pad][d.way]; if (!Object.keys(file[d.pad]).length) delete file[d.pad]; } }
+    else {
+      const one = PadLayout.clean({ [d.pad]: { [d.way]: d.set } });
+      if (!one[d.pad]) return send(res, 400, { error: 'That layout has no part the pads know' });
+      file[d.pad] = Object.assign(file[d.pad] || {}, one[d.pad]);
+    }
+    fs.writeFileSync(LAYOUTS, JSON.stringify(file, null, 2) + '\n');
+    send(res, 200, { ok: true, file });
+  });
+}
 function drafts(req, res) {
   // Audit D-1: this computer's own address only, so a web page that points a borrowed name at 127.0.0.1 gets nothing.
   if (!/^(127\.0\.0\.1|localhost)(:\d+)?$/.test(req.headers.host || '')) return send(res, 403, { error: 'This computer only' });
