@@ -43,7 +43,7 @@ main{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1fr) 292px}
 .h b{position:absolute;left:50%;top:-2px;transform:translate(-50%,-100%);font:700 11px system-ui,sans-serif;color:#07080c;background:var(--acc);border-radius:5px;padding:1px 6px;white-space:nowrap;pointer-events:none;display:none;z-index:2}
 .h:hover b,.h.sel b{display:block}
 .h.sel b{background:var(--pink)}
-.h.low b{top:auto;bottom:-2px;transform:translate(-50%,100%)}
+.h.low b{top:3px;transform:translate(-50%,0)}   /* no room above: the name sits inside the part's top edge */
 .h i{position:absolute;right:-9px;bottom:-9px;width:22px;height:22px;border-radius:50%;background:var(--fg);border:3px solid #07080c;cursor:nwse-resize;touch-action:none}
 .h.sel i{background:var(--pink)}
 .g{position:absolute;background:var(--gold);pointer-events:none}
