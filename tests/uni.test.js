@@ -470,3 +470,30 @@ test('answer on your phones is on the live site: exact question times on the pag
   // making questions never ships: it writes course files
   assert.ok(!fs.existsSync(path.join(SITE, 'screen.js')) && !fs.readdirSync(SITE).some((f) => /make/.test(f)), 'the make side is in the public copy');
 });
+
+test('remodel: no stock photo is shown or shipped, every area has its hue, and the header is one row', () => {
+  build('--site');
+  const read = (f) => fs.readFileSync(path.join(SITE, f), 'utf8');
+  const stock = JSON.parse(fs.readFileSync(path.join(uni.UNI, 'img', 'images.json'), 'utf8'));
+  const notOurs = Object.values(stock).filter((x) => !/^our own/i.test(x.license || '')).map((x) => x.file.replace(/^img\//, ''));
+  assert.ok(notOurs.length > 10, 'the test expects the old stock list to still be recorded');
+  for (const f of fs.readdirSync(SITE).filter((x) => x.endsWith('.html'))) {
+    const h = read(f);
+    for (const p of notOurs) assert.ok(!h.includes('img/' + p), f + ' shows the stock photo ' + p);
+    assert.ok(!/<img[^>]* src=""/.test(h), f + ' has a picture with no file');
+  }
+  for (const p of notOurs) assert.ok(!fs.existsSync(path.join(SITE, 'img', p)), 'the public copy carries the stock photo ' + p);
+  // a hue for every area in the list, all different
+  const src = fs.readFileSync(path.join(uni.UNI, 'build.js'), 'utf8');
+  const hues = list().types.map((t) => { const m = new RegExp("['\"]?" + t + "['\"]?: '(#[0-9a-f]{6})'").exec(src); assert.ok(m, 'no hue for the area ' + t); return m[1]; });
+  assert.strictEqual(new Set(hues).size, hues.length, 'two areas share a hue');
+  const body = read('the-body.html'), money = read('your-money-plainly.html'), home = read('index.html');
+  assert.ok(body.includes('<style>html[data-look]{--area:#ff6b8b}</style>') && money.includes('{--area:#f2a93b}'), 'a course page does not carry its area hue');
+  assert.ok(home.includes('class="ph face"><span>Like '), 'a course card with no picture should show its own everyday line');
+  // one row: the way home, this page, one Courses menu; no link per course in the bar
+  const nav = /<nav class="nav">([\s\S]*?)<\/nav>/.exec(body)[1];
+  const bar = nav.slice(0, nav.indexOf('<details'));
+  assert.strictEqual((bar.match(/<a /g) || []).length, 2, 'the bar holds Home and this page only');
+  assert.ok(nav.includes('<summary title="Every course, by area">Courses</summary>') && nav.includes('id="inst"'), 'the Courses menu and Install inside it');
+  assert.ok(/header\.top\{[^}]*flex-wrap:nowrap/.test(body), 'the header may wrap to a second row');
+});
