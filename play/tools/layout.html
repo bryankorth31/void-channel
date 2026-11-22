@@ -54,6 +54,8 @@ aside h2:first-child{margin-top:2px}
 .row{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:0 0 6px}
 .row label{color:var(--dim);min-width:92px}
 .row select{flex:1;min-width:0}
+#spread[hidden]{display:none}
+#kind:empty{display:none}
 #parts{display:grid;grid-template-columns:1fr 1fr;gap:6px}
 #parts button{justify-content:flex-start;overflow:hidden}
 #parts button.bad{border-color:var(--bad)}
@@ -90,6 +92,7 @@ kbd{font:600 11px ui-monospace,Consolas,monospace;background:#161b2a;border:1px 
   <aside>
     <h2>Looking at</h2>
     <div class="row"><label for="phone-size">Phone</label><select id="phone-size" title="The size of phone the frame shows. The layout is kept in a form that fits every phone; this only changes the one you look at."></select></div>
+    <p class="hint" id="kind"></p>
     <div class="row"><label for="game">Buttons of</label><select id="game" title="Which machine's buttons to draw. The button area keeps one place; its buttons change with the machine."></select></div>
     <h2>Parts</h2>
     <div id="parts"></div>
@@ -106,6 +109,7 @@ kbd{font:600 11px ui-monospace,Consolas,monospace;background:#161b2a;border:1px 
     <div class="row">
       <button id="snap" class="on" title="While dragging, line a part up with the edges and middles of the other parts">Line up: on</button>
       <button id="builtin" title="Throw this layout away and go back to the pad's built-in one. Nothing changes for players until you Save.">Built-in layout</button>
+      <button id="spread" hidden title="Give this layout to the on-screen pads of the other machines too (two, three, four buttons and one), so every game has its parts in the same places">Use for every machine</button>
     </div>
     <h2>Fits these phones</h2>
     <ul id="fits"></ul>

@@ -165,7 +165,7 @@ test('the handheld shell on a phone (Bryan: "Phones, both ways"): the bar steps 
   assert.equal(up.screen.w, 390, 'upright the picture is the full width');
   assert.ok(up.screen.y < L.HEADER, 'and starts above where the bar was');
   const js = read(ROOT, 'src', 'play.js');
-  assert.ok(js.includes('const shell = touch && !padMode && started && Math.min(innerWidth, innerHeight) <= 540;'));
+  assert.ok(js.includes('const shell = touch && !padMode && (started || FRAME) && Math.min(innerWidth, innerHeight) <= 540;'));
   const css = read(ROOT, 'play.css');
   assert.ok(css.includes('body.shell:not(.paused):not(.showbar) .bar{transform:translateY(-100%)'), 'the bar is back while paused');
 });

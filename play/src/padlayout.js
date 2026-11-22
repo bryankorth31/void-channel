@@ -13,9 +13,12 @@
 // touching) gets everything a little smaller, so parts never run into each other.
 (function (root) {
   'use strict';
-  const PADS = ['phone', 'screen'], WAYS = ['side', 'up'];
+  // phone: the phone pad page. screen-...: PLAY's own on-screen pad, one layout for each shape of button area (a
+  // machine with two buttons, four in a diamond, three in a line, one), since a place tuned for one breaks another.
+  const PADS = ['phone', 'screen-diamond', 'screen-abc', 'screen-pair', 'screen-one'], WAYS = ['side', 'up'];
   const round = (v) => Math.round(v * 10000) / 10000;
   const THUMB = 44;   // no button is drawn less tall than this, in pixels
+  const OVER = 0.08;  // how far past an edge a round part's box may go, as a share of its size
   const ROUND = { dpad: true, face: true };
 
   // Pure (tested): a part's box in pixels inside a W by H area, as an entry.
@@ -56,7 +59,7 @@
   // Pure (tested): do two parts run into each other? Round parts (the d-pad, the button area) are judged as circles,
   // so a pill may sit in the empty corner beside one.
   function touch(a, b, idA, idB, slack) {
-    const s = slack === undefined ? 1 : slack;
+    const s = slack === undefined ? 3 : slack;   // edges that meet, or cross by a hair, are not in each other's way
     if (ROUND[idA] && ROUND[idB]) return Math.hypot(a.x + a.w / 2 - b.x - b.w / 2, a.y + a.h / 2 - b.y - b.h / 2) < a.w / 2 + b.w / 2 - s;
     const [c, r] = ROUND[idA] ? [a, b] : ROUND[idB] ? [b, a] : [null, null];
     if (c) {   // a circle against a box: the nearest point of the box to the circle's middle
@@ -69,15 +72,17 @@
   // only: the parts that are on the pad just now (a Nintendo game has no L or R to be in anyone's way).
   function problems(bx, W, H, only) {
     const ids = Object.keys(bx).filter((id) => !only || only.includes(id)), out = [];
-    for (const id of ids) { const b = bx[id]; if (b.x < -1 || b.y < -1 || b.x + b.w > W + 1 || b.y + b.h > H + 1) out.push({ kind: 'off', a: id }); }
+    // A round part's drawing sits inside its box, so its box may pass an edge by a little (the on-screen d-pad's does by design).
+    for (const id of ids) { const b = bx[id], t = ROUND[id] ? b.w * OVER + 1 : 1; if (b.x < -t || b.y < -t || b.x + b.w > W + t || b.y + b.h > H + t) out.push({ kind: 'off', a: id }); }
     for (let i = 0; i < ids.length; i++) for (let j = i + 1; j < ids.length; j++) if (touch(bx[ids[i]], bx[ids[j]], ids[i], ids[j])) out.push({ kind: 'over', a: ids[i], b: ids[j] });
     return out;
   }
   // Pure (tested): the squarest screen (long side over short side) these parts fit with nothing touching and nothing
-  // off the screen, from the shape they were set on down to a square. The editor stores it as fit when it saves.
+  // off the screen, from the shape they were set on down to a square. The editor stores it as fit: the phone the
+  // layout was set on, and every wider one, gets it exactly as set; a squarer one gets it a little smaller.
   function fitOf(parts, shape, tall, only) {
     const at = (s) => { const W = tall ? 1000 : 1000 * s, H = tall ? 1000 * s : 1000; return problems(boxes({ parts }, W, H), W, H, only).length; };
-    if (at(shape)) return round(shape);   // already touching where it was set: nothing narrower is promised
+    if (at(shape)) return round(shape);   // something is wrong where it was set: that screen and wider get it as set, squarer ones smaller
     let good = shape;
     for (let s = shape; s >= 1; s -= 0.01) { if (at(s)) break; good = s; }
     return round(good);
@@ -113,12 +118,23 @@
     for (const [id, el] of Object.entries(els)) {
       if (!el) continue;
       const b = bx[id];
-      if (!b) { if (el.classList.contains('placed')) { el.classList.remove('placed'); for (const p of ['left', 'top', 'width', 'height', '--pw', '--ph']) el.style.removeProperty(p); } continue; }
-      el.classList.add('placed');
-      el.style.left = Math.round(area.x + b.x) + 'px'; el.style.top = Math.round(area.y + b.y) + 'px';
-      el.style.width = Math.round(b.w) + 'px'; el.style.height = Math.round(b.h) + 'px';
-      el.style.setProperty('--pw', Math.round(b.w) + 'px'); el.style.setProperty('--ph', Math.round(b.h) + 'px');
+      if (b) put(el, { x: area.x + b.x, y: area.y + b.y, w: b.w, h: b.h }); else clear(el);
     }
+  }
+  // One element put at a box given in the window's own pixels, whatever box the page measures it from (a part may sit
+  // inside a row or a layer of its own). size false: only moved, its size left to the page.
+  function put(el, r, size) {
+    el.classList.add('placed');
+    const from = el.offsetParent, o = from ? from.getBoundingClientRect() : { left: 0, top: 0 };
+    el.style.left = Math.round(r.x - o.left - (from ? from.clientLeft : 0)) + 'px'; el.style.top = Math.round(r.y - o.top - (from ? from.clientTop : 0)) + 'px';
+    if (size === false) return;
+    el.style.width = Math.round(r.w) + 'px'; el.style.height = Math.round(r.h) + 'px';
+    el.style.setProperty('--pw', Math.round(r.w) + 'px'); el.style.setProperty('--ph', Math.round(r.h) + 'px');
+  }
+  function clear(el) {
+    if (!el.classList.contains('placed')) return;
+    el.classList.remove('placed');
+    for (const p of ['left', 'top', 'width', 'height', '--pw', '--ph']) el.style.removeProperty(p);
   }
   // The file itself, read once (v: the build, so a push reaches a phone at once and not after its cache).
   let got = null;
@@ -127,7 +143,7 @@
     return got;
   }
 
-  const api = { PADS, WAYS, THUMB, toEntry, toBox, shrink, boxes, touch, problems, fitOf, clean, apply, load };
+  const api = { PADS, WAYS, THUMB, OVER, toEntry, toBox, shrink, boxes, touch, problems, fitOf, clean, apply, put, clear, load };
   if (typeof module === 'object' && module.exports) module.exports = api;
   else root.PlayPadLayout = api;
 })(typeof self !== 'undefined' ? self : this);

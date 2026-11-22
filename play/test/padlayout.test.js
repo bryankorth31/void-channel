@@ -65,7 +65,7 @@ test('nothing runs into anything: what is wrong is named, a squarer screen draws
   assert.deepEqual(L.problems(L.boxes(set, 1024, 768), 1024, 768), [], 'and then it fits the tablet too');
   assert.notDeepEqual(L.problems(L.boxes({ parts, fit: 1 }, 1024, 768), 1024, 768), [], 'which it would not at full size');
   // The list the editor shows for each phone.
-  const list = E.fits(parts, false);
+  const list = E.fits(set, false);
   assert.deepEqual(list.map((f) => f.name), E.PHONES.map((p) => p[0]));
   assert.ok(list.every((f) => !f.bad.length), 'every phone fits once the fit is known');
   assert.ok(list.find((f) => f.name === 'Tablet').k < 1 && list.find((f) => f.name === 'iPhone 14 and 15').k === 1);
@@ -81,6 +81,37 @@ test('only what a layouts file may hold gets through: it is served to every visi
   const file = JSON.parse(fs.readFileSync(path.join(P, 'layouts.json'), 'utf8'));
   assert.deepEqual(L.clean(file), file, 'play/layouts.json holds nothing the pads would drop');
   for (const pad of L.PADS) for (const way of L.WAYS) for (const id of Object.keys(((file[pad] || {})[way] || {}).parts || {})) assert.ok(id in E.NAMES, pad + ' ' + way + ' ' + id + ' is a part the editor knows');
+  // The pads there are: the phone pad, and PLAY's own on-screen pad once for each shape of button area.
+  assert.deepEqual(L.PADS, ['phone', 'screen-diamond', 'screen-abc', 'screen-pair', 'screen-one']);
+  const T = require('../src/touchpad.js');
+  for (const shape of new Set(Object.values(T.SYSTEM_SHAPE))) assert.ok(L.PADS.includes('screen-' + shape), 'a layout can be kept for the ' + shape + ' pad');
+  assert.deepEqual(Object.keys(L.clean({ 'screen-pair': { up: { parts: { dpad: good, screen: good, rewind: good, cheats: good } } } })['screen-pair'].up.parts), ['dpad', 'screen', 'rewind', 'cheats']);
+});
+
+test('a round part may pass an edge by a little, edges that cross by a hair are not in the way, and a layout that is wrong everywhere promises no fit', () => {
+  // PLAY's own d-pad sits with its box 10 px past the left edge by design (its drawn ring starts at the edge).
+  const pad = { dpad: { x: -10, y: 215, w: 165, h: 165 }, screen: { x: 163, y: 12, w: 488, h: 367 }, start: { x: 770, y: 82, w: 64, h: 44 } };
+  assert.deepEqual(L.problems(pad, 844, 390), [], 'the built-in sideways pad is not called wrong');
+  assert.deepEqual(L.problems(Object.assign({}, pad, { dpad: { x: -30, y: 215, w: 165, h: 165 } }), 844, 390).map(E.words), ['D-pad is off the screen']);
+  assert.deepEqual(L.problems(Object.assign({}, pad, { start: { x: 790, y: 82, w: 64, h: 44 } }), 844, 390).map(E.words), ['Start is off the screen'], 'a pill may not');
+  assert.deepEqual(L.problems(Object.assign({}, pad, { dpad: { x: 0, y: 190, w: 190, h: 190 } }), 844, 390).map(E.words), ['D-pad and Picture touch']);
+  assert.deepEqual(E.hold({ x: -40, y: 300, w: 165, h: 165 }, 844, 390, true), { x: -165 * L.OVER, y: 390 - 165 + 165 * L.OVER, w: 165, h: 165 }, 'dragged, a round part stops that little way past the edge');
+  // Two parts on top of each other on every screen: making it all smaller would not mend it.
+  const e = (x, y, w, h) => L.toEntry({ x, y, w, h }, 844, 390);
+  const wrong = { dpad: e(0, 190, 190, 190), screen: e(163, 12, 488, 367) };
+  const here = 844 / 390;
+  assert.ok(Math.abs(L.fitOf(wrong, here, false) - here) < 0.001, 'wrong where it was set: that phone and wider get it as set, fault and all');
+  const list = E.fits({ parts: wrong, fit: L.fitOf(wrong, here, false) }, false);
+  assert.ok(list.find((f) => f.name === 'iPhone 14 and 15').bad.includes('D-pad and Picture touch') && list.find((f) => f.name === 'iPhone 14 and 15').k === 1, 'the list names the fault on the phone it was set on');
+  // Only the parts on the pad now are judged, when the editor asks so.
+  assert.ok(E.fits({ parts: wrong, fit: 1 }, false, ['dpad']).every((f) => !f.bad.length));
+  // A layout seen smaller on a squarer phone, taken up for editing there: full size on that phone, the same to the eye.
+  const set = { parts: { dpad: e(16, 90, 280, 280), face: e(548, 90, 280, 280) }, fit: 2.1 };
+  const k = L.shrink(set, 667, 375), seen = L.boxes(set, 667, 375), re = E.rebase(set, k);
+  assert.ok(k < 1);
+  re.fit = 667 / 375;
+  const now = L.boxes(re, 667, 375);
+  for (const id of ['dpad', 'face']) for (const f of ['x', 'y', 'w', 'h']) assert.ok(Math.abs(seen[id][f] - now[id][f]) < 0.01, id + ' ' + f);
 });
 
 test('the editor\'s own rules: a part matched to its partner, lined up with the others, kept on the screen', () => {
@@ -150,6 +181,36 @@ test('the pads read the file, the site carries it, and the editor has what Bryan
   for (const c of controls) assert.match(c, / title="[^"]{12,}"/, 'a hover tip on ' + c.slice(0, 60));
   assert.ok(ed.includes("el.title = p.name + ': drag to move it. Drag the round corner to make it bigger or smaller.';") && ed.includes("grip.title = 'Drag to resize ' + p.name;"), 'and on every part and its corner');
   assert.ok(ed.includes("fetch('/api/layout', { method: 'POST'"), 'Save writes the file the real pads read');
-  assert.ok(ed.includes("src: '../pad.html?edit=1'"), 'the frame holds the real pad page, not a drawing of it');
-  for (const [, id] of [...ed.matchAll(/\['[^']+', '([a-z0-9-]+)'\]/g)]) assert.ok(fs.existsSync(path.join(P, 'cards', id + '.json')), 'the card ' + id + ' is on the shelf');
+  assert.ok(ed.includes("src: () => '../pad.html?edit=1'"), 'the frame holds the real pad page, not a drawing of it');
+  const games = [...ed.matchAll(/\['[^'\]]+', '([a-z0-9-]+)', (true|false)\]/g)];
+  assert.ok(games.length >= 7);
+  const Cards = require('../src/cards.js');
+  for (const [, id, console] of games) {
+    assert.ok(fs.existsSync(path.join(P, 'cards', id + '.json')), 'the card ' + id + ' is on the shelf');
+    assert.equal(Cards.isPad(JSON.parse(fs.readFileSync(path.join(P, 'cards', id + '.json'), 'utf8'))), console === 'true', id + ' is ' + (console === 'true' ? 'a console game' : 'not a console game'));
+  }
+});
+
+test('PLAY\'s own on-screen pad: its parts and the picture go where the file says, an empty file changes nothing, and the editor\'s frame starts no game', () => {
+  const js = fs.readFileSync(path.join(P, 'src', 'play.js'), 'utf8'), css = fs.readFileSync(path.join(P, 'play.css'), 'utf8'), html = fs.readFileSync(path.join(P, 'game.html'), 'utf8');
+  assert.ok(html.includes('<script src="src/touchpad.js"></script>\n<script src="src/padlayout.js"></script>'));
+  // Last in place(), after the style's own placing, so his boxes win and a part with no entry keeps the style's.
+  const place = js.slice(js.indexOf('  function place() {'), js.indexOf('  // ---- Where the on-screen pad\'s parts and the picture sit'));
+  assert.ok(place.trimEnd().endsWith("layParts(ins, shell && floating, set);\n    $('b-touch').setAttribute('aria-pressed', String(touch));\n    if (touch) PlayTouch.fit($('stage'));\n  }"));
+  assert.ok(js.includes("const s = on ? laySet() : null, area = layArea(ins), bx = PadLayout.boxes(s, area.w, area.h);"));
+  assert.ok(js.includes("return (f && f[innerWidth > innerHeight ? 'side' : 'up']) || null;"), 'no layout for this pad and this way: null, and nothing is placed');
+  assert.ok(js.includes("const layKind = () => 'screen-' + (PlayTouch.SYSTEM_SHAPE[card.system] || 'pair');"), 'one layout for each shape of button area');
+  assert.ok(js.includes("if (bx.screen) {") && js.includes("let w = r.w, h = w / aspect; if (h > r.h) { h = r.h; w = h * aspect; }"), 'the picture is fitted into his box at the game\'s own shape');
+  assert.ok(js.includes("document.body.style.setProperty('--barL', Math.round(x) + 'px')"), 'and the bar stays over the picture');
+  assert.ok(css.includes('.cpad .placed{position:absolute!important;right:auto!important;bottom:auto!important;'));
+  // The frame: only inside a frame, and the game is never started there.
+  assert.ok(js.includes("const FRAME = q.get('frame') === 'phone' && window.top !== window;"), 'a link cannot ask a visitor\'s own page for it');
+  assert.ok(js.includes("const isPhone = () => FRAME || (matchMedia('(pointer: coarse)').matches"));
+  assert.ok(js.includes("if (FRAME || !isPhone() || !document.fullscreenEnabled || document.fullscreenElement) return;") && js.includes("if (FRAME || !started || leftFull"), 'no fullscreen is asked for');
+  const frame = js.slice(js.indexOf("    if (FRAME) {\n      hub = PlayHub.createHub("), js.indexOf('    // The footer names this game\'s own engine'));
+  assert.ok(frame.includes("$('cover').hidden = true;") && frame.trimEnd().endsWith('return;\n    }'), 'drawn at once and done');
+  assert.ok(!/begin\(|createRunner|runner\./.test(frame), 'no engine, no download');
+  const ed = fs.readFileSync(path.join(P, 'tools', 'layout-editor.js'), 'utf8');
+  assert.ok(ed.includes("src: (id) => '../game.html?game=' + id + '&frame=phone&mute=1'"), 'the editor shows the real game page');
+  assert.ok(ed.includes("const SHAPES = { 'screen-diamond': 'four buttons', 'screen-abc': 'three buttons', 'screen-pair': 'two buttons', 'screen-one': 'one button' };"));
 });

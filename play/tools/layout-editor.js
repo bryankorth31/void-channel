@@ -8,7 +8,7 @@
   'use strict';
   const L = root.PlayPadLayout || (typeof module === 'object' && module.exports ? require('../src/padlayout.js') : null);
   const NAMES = { dpad: 'D-pad', face: 'Buttons', l: 'L', r: 'R', select: 'Select', start: 'Start', menu: 'Menu', info: 'Top line',
-    rewind: 'Rewind', cheats: 'Cheats' };
+    rewind: 'Rewind', cheats: 'Cheats', screen: 'Picture' };
   const PARTNER = { dpad: 'face', face: 'dpad', l: 'r', r: 'l', select: 'start', start: 'select' };
   // The phones the frame can show (their screens in CSS pixels, long side first), and the widest shape any of them has.
   const PHONES = [['iPhone 14 and 15', 844, 390], ['iPhone Pro Max', 932, 430], ['iPhone SE and 8', 667, 375], ['Small phone', 568, 320], ['Android, tall', 915, 412], ['Tablet', 1024, 768]];
@@ -39,21 +39,29 @@
   function hold(box, W, H, square) {
     let w = Math.max(24, Math.min(box.w, W)), h = Math.max(24, Math.min(box.h, H));
     if (square) w = h = Math.min(w, h, W, H);
-    return { x: Math.max(0, Math.min(box.x, W - w)), y: Math.max(0, Math.min(box.y, H - h)), w, h };
+    // A round part's drawing sits inside its box, so its box may pass an edge by a little.
+    const over = square ? w * L.OVER : 0, lo = over ? -over : 0;
+    return { x: Math.max(lo, Math.min(box.x, W - w + over)), y: Math.max(lo, Math.min(box.y, H - h + over)), w, h };
   }
   // Pure (tested): what is wrong, in words.
   const words = (p) => (p.kind === 'off' ? (NAMES[p.a] || p.a) + ' is off the screen' : (NAMES[p.a] || p.a) + ' and ' + (NAMES[p.b] || p.b) + ' touch');
-  // Pure (tested): how a saved layout sits on each phone: as set, a little smaller, or with something wrong.
-  function fits(parts, tall) {
-    const fit = L.fitOf(parts, WIDEST, tall);
+  // Pure (tested): a layout drawn smaller on this screen (it is squarer than the layout fits at full size), made into
+  // one that is full size here: every gap and size by that much. Editing starts from what is seen.
+  function rebase(set, k) {
+    const parts = {};
+    for (const [id, e] of Object.entries(set.parts)) parts[id] = { ax: e.ax, ay: e.ay, x: e.x * k, y: e.y * k, w: e.w * k, h: e.h * k };
+    return { parts, fit: set.fit };
+  }
+  // Pure (tested): how a layout sits on each phone: as set, a little smaller, or with something wrong.
+  function fits(set, tall, only) {
     return PHONES.map(([name, long, short]) => {
-      const W = tall ? short : long, H = tall ? long : short, set = { parts, fit }, k = L.shrink(set, W, H);
-      const bad = L.problems(L.boxes(set, W, H), W, H);
+      const W = tall ? short : long, H = tall ? long : short, k = L.shrink(set, W, H);
+      const bad = L.problems(L.boxes(set, W, H), W, H, only);
       return { name, size: W + ' x ' + H, k, bad: bad.map(words) };
     });
   }
 
-  const api = { NAMES, PARTNER, PHONES, WIDEST, mirror, snap, hold, words, fits };
+  const api = { NAMES, PARTNER, PHONES, WIDEST, mirror, snap, hold, words, rebase, fits };
   if (typeof module === 'object' && module.exports) { module.exports = api; return; }
   root.PlayLayoutEditor = api;
 
@@ -61,18 +69,24 @@
   const $ = (id) => document.getElementById(id);
   // Each controller that can be set: the page that draws it, its door for the editor, and how a game's card becomes
   // what that page draws.
+  // phone: the phone pad page draws whatever card it is handed, and one layout serves every machine. screen: the game
+  // page itself in its editor frame, loaded anew for each game; its button area is a different shape for each kind of
+  // machine, so each shape has a layout of its own (the frame says which: screen-diamond, screen-pair and so on).
   const PADS = {
-    phone: { name: 'Phone as the game pad', src: '../pad.html?edit=1', door: (w) => w.PlayPhonePad && w.PlayPhonePad.editor,
+    phone: { name: 'Phone as the game pad', src: () => '../pad.html?edit=1', door: (w) => w.PlayPhonePad && w.PlayPhonePad.editor,
       card: (c) => root.PlayPhones.cardFor(c, root.PlayCards.gamepadMap(c), (code) => root.PlayCards.actionFor(c, code) || '') },
+    screen: { name: 'Buttons on the phone\'s own screen', src: (id) => '../game.html?game=' + id + '&frame=phone&mute=1', door: (w) => (w.PlayFrame && w.PlayFrame.ready ? w.PlayFrame : null), consoles: true },
   };
-  const GAMES = [['Super Nintendo: four buttons, L and R', 'donkey-kong-country-snes'], ['Nintendo: B and A', 'big-birds-hide-and-speak-nes'],
-    ['Genesis: A, B and C', 'aladdin-genesis'], ['Game Boy Advance: B, A, L and R', 'curious-george-gba'], ['Atari 2600: one button', 'checkers-2600'],
-    ['Arcade: two buttons, Coin, Start', '1941-counter-attack-arcade'], ['PC game: three keys', 'a-j-s-world-of-discovery-1992']];
-  const st = { file: L.clean(null), pad: 'phone', way: 'side', phone: 0, game: 0, sel: null, snap: true, door: null, parts: [], area: null, scale: 1, works: {}, cards: {} };
-  const key = () => st.pad + '.' + st.way;
+  // [what it is called, the card that stands for it, a console (its buttons are the machine's own)]
+  const GAMES = [['Super Nintendo: four buttons, L and R', 'donkey-kong-country-snes', true], ['Nintendo: B and A', 'big-birds-hide-and-speak-nes', true],
+    ['Genesis: A, B and C', 'aladdin-genesis', true], ['Game Boy Advance: B, A, L and R', 'curious-george-gba', true], ['Atari 2600: one button', 'checkers-2600', true],
+    ['Arcade: two buttons, Coin, Start', '1941-counter-attack-arcade', false], ['PC game: three keys', 'a-j-s-world-of-discovery-1992', false]];
+  const SHAPES = { 'screen-diamond': 'four buttons', 'screen-abc': 'three buttons', 'screen-pair': 'two buttons', 'screen-one': 'one button' };
+  const st = { file: L.clean(null), pad: 'phone', kind: 'phone', way: 'side', phone: 0, game: 0, sel: null, snap: true, door: null, parts: [], area: null, scale: 1, works: {}, cards: {} };
+  const key = () => st.kind + '.' + st.way;
   // The layout being worked on for this pad and this way of holding it: set (null: the built-in one), what was undone, whether it differs from the file.
   function work() {
-    if (!st.works[key()]) { const saved = st.file[st.pad] && st.file[st.pad][st.way]; st.works[key()] = { set: saved ? { parts: JSON.parse(JSON.stringify(saved.parts)), fit: 1 } : null, undo: [], dirty: false }; }
+    if (!st.works[key()]) { const saved = st.file[st.kind] && st.file[st.kind][st.way]; st.works[key()] = { set: saved ? JSON.parse(JSON.stringify(saved)) : null, undo: [], dirty: false }; }
     return st.works[key()];
   }
   const say = (text, kind) => { $('say').textContent = text; $('say').className = kind || ''; };
@@ -95,14 +109,27 @@
     st.area = st.door.area(); st.parts = st.door.parts();
     if (w.set) {
       let added = false;
-      for (const p of st.parts) if (!w.set.parts[p.id]) { w.set.parts[p.id] = L.toEntry(p.box, st.area.w, st.area.h); added = true; }
+      for (const p of st.parts) if (!w.set.parts[p.id]) { w.set.parts[p.id] = entry(p.box); added = true; }
       if (added) { st.door.show(w.set); st.parts = st.door.parts(); }
+      // A part that keeps its own shape inside its box (the on-screen button group, the picture) has its box drawn tight
+      // around it: what is saved is what is seen.
+      for (const p of st.parts) if (p.keep) w.set.parts[p.id] = entry(p.box);
     }
     if (st.sel && !st.parts.some((p) => p.id === st.sel)) st.sel = null;
     draw();
   }
   // After the frame changes size or draws other buttons, the pad page needs a moment to lay itself out before it is read.
   const later = (f) => setTimeout(f, 60);
+  // A box as it is seen on the phone shown, as the entry that draws it so: on a phone the layout is drawn smaller for,
+  // the entry is that much bigger.
+  function entry(box) {
+    const e = L.toEntry(box, st.area.w, st.area.h), k = L.shrink(work().set, st.area.w, st.area.h);
+    return k < 1 ? { ax: e.ax, ay: e.ay, x: e.x / k, y: e.y / k, w: e.w / k, h: e.h / k } : e;
+  }
+  const shape = () => Math.max(st.area.w, st.area.h) / Math.min(st.area.w, st.area.h);
+  // After a change: the phone shown, and every wider one, gets the layout exactly as it stands here; fit is the squarest
+  // screen it still fits at full size, and no squarer than this phone.
+  function refit() { const w = work(); w.set.fit = Math.min(shape(), L.fitOf(w.set.parts, shape(), st.way === 'up')); w.dirty = true; }
 
   // ---- Drawing: a handle over each part, the list, the numbers, the phones it fits ----
   const handles = new Map();
@@ -139,12 +166,12 @@
       $('l-x').textContent = e.ax === 'l' ? 'From the left' : e.ax === 'r' ? 'From the right' : 'Right of middle';
       $('l-y').textContent = e.ay === 't' ? 'From the top' : e.ay === 'b' ? 'From the bottom' : 'Below middle';
       $('n-x').value = Math.round(e.x * u); $('n-y').value = Math.round(e.y * u); $('n-w').value = Math.round(p.box.w); $('n-h').value = Math.round(p.box.h);
-      $('n-h').disabled = p.square; $('mirror').disabled = !PARTNER[p.id] || !st.parts.some((x) => x.id === PARTNER[p.id]);
+      $('n-h').disabled = !!(p.square || p.keep); $('mirror').disabled = !PARTNER[p.id] || !st.parts.some((x) => x.id === PARTNER[p.id]);
     } else for (const id of ['n-x', 'n-y', 'n-w', 'n-h']) $(id).value = '';
     // The phones.
     const ul = $('fits'); ul.textContent = '';
     if (!w.set) { const li = document.createElement('li'); li.textContent = 'The built-in layout. Move any part to start your own.'; ul.appendChild(li); }
-    else for (const f of fits(w.set.parts, st.way === 'up')) {
+    else for (const f of fits(w.set, st.way === 'up')) {
       const li = document.createElement('li'), l = document.createElement('span'), r = document.createElement('span');
       l.textContent = f.name; r.textContent = f.bad.length ? f.bad[0] : f.k < 1 ? Math.round(f.k * 100) + '% size' : 'fits';
       r.className = f.bad.length ? 'bad' : 'ok'; li.title = f.size + (f.bad.length ? ': ' + f.bad.join('; ') : f.k < 1 ? ': a squarer screen, so every part is drawn a little smaller' : ': as you set it');
@@ -171,11 +198,14 @@
     const w = work();
     w.undo.push(JSON.stringify(w.set)); if (w.undo.length > 200) w.undo.shift();
     if (!w.set) { w.set = { parts: {}, fit: 1 }; for (const p of st.parts) w.set.parts[p.id] = L.toEntry(p.box, st.area.w, st.area.h); }
+    // On a phone this layout is drawn smaller for, editing starts from what is seen: it becomes full size here.
+    const k = L.shrink(w.set, st.area.w, st.area.h);
+    if (k < 1) { w.set = rebase(w.set, k); w.set.fit = shape(); }
   }
   function put(id, box) {
     const w = work(), p = st.parts.find((x) => x.id === id);
     w.set.parts[id] = L.toEntry(hold(box, st.area.w, st.area.h, p && p.square), st.area.w, st.area.h);
-    w.dirty = true; $('say').className = '';
+    refit(); $('say').className = '';
     sync();
   }
   function grab(el, id) {
@@ -195,6 +225,8 @@
         if (resize) {
           const d = p.square ? Math.max(dx, dy) : 0;
           nb = { x: b0.x, y: b0.y, w: b0.w + (p.square ? d : dx), h: b0.h + (p.square ? d : dy) };
+          // A part that keeps its own shape (the on-screen button group, the picture) grows and shrinks as a whole.
+          if (p.keep) { const f = Math.max(0.2, (b0.w + dx) / b0.w, (b0.h + dy) / b0.h); nb.w = b0.w * f; nb.h = b0.h * f; }
           // A resized part takes its partner's size when it is nearly that already: the two sides then match.
           const mate = st.parts.find((x) => x.id === PARTNER[id]);
           if (st.snap && mate && Math.abs(nb.w - mate.box.w) <= 6 && Math.abs(nb.h - mate.box.h) <= 6) { nb.w = mate.box.w; nb.h = mate.box.h; }
@@ -217,18 +249,29 @@
   function typed() {
     const p = st.parts.find((x) => x.id === st.sel); if (!p) return;
     const a = st.area, u = Math.min(a.w, a.h), e = L.toEntry(p.box, a.w, a.h), n = (id, was) => { const v = parseFloat($(id).value); return isFinite(v) ? v : was; };
-    const w = n('n-w', p.box.w), h = p.square ? w : n('n-h', p.box.h);
+    const w = n('n-w', p.box.w), h = p.square ? w : p.keep ? w * p.box.h / p.box.w : n('n-h', p.box.h);
     const b = L.toBox({ ax: e.ax, ay: e.ay, x: n('n-x', e.x * u) / u, y: n('n-y', e.y * u) / u, w: w / u, h: h / u }, a.w, a.h, 1);
     begin(); put(p.id, b);
   }
   for (const id of ['n-x', 'n-y', 'n-w', 'n-h']) $(id).addEventListener('change', typed);
   $('mirror').onclick = () => {
     const w = work(), mate = PARTNER[st.sel]; if (!mate) return;
-    begin(); w.set.parts[st.sel] = mirror(w.set.parts[mate]); w.dirty = true; sync();
+    begin(); w.set.parts[st.sel] = mirror(w.set.parts[mate]); refit(); sync();
   };
   $('center').onclick = () => { const p = st.parts.find((x) => x.id === st.sel); if (p) { begin(); put(p.id, { x: (st.area.w - p.box.w) / 2, y: p.box.y, w: p.box.w, h: p.box.h }); } };
   $('snap').onclick = () => { st.snap = !st.snap; $('snap').className = st.snap ? 'on' : ''; $('snap').textContent = 'Line up: ' + (st.snap ? 'on' : 'off'); };
-  $('builtin').onclick = () => { const w = work(); w.undo.push(JSON.stringify(w.set)); w.set = null; w.dirty = !!(st.file[st.pad] && st.file[st.pad][st.way]); st.sel = null; say(w.dirty ? 'Back to the built-in layout. Not saved yet.' : 'The built-in layout.'); sync(); };
+  $('builtin').onclick = () => { const w = work(); w.undo.push(JSON.stringify(w.set)); w.set = null; w.dirty = !!(st.file[st.kind] && st.file[st.kind][st.way]); st.sel = null; say(w.dirty ? 'Back to the built-in layout. Not saved yet.' : 'The built-in layout.'); sync(); };
+  // The on-screen pad keeps a layout for each shape of button area. This one, given to the others too: the d-pad, L, R
+  // and the rest land in the same places for every machine, and each shape's buttons fill the same box.
+  $('spread').onclick = () => {
+    const w = work(); if (!w.set) return;
+    for (const k of Object.keys(SHAPES)) {
+      if (k === st.kind) continue;
+      const was = st.works[k + '.' + st.way] || { set: (st.file[k] && st.file[k][st.way]) || null, undo: [] };
+      st.works[k + '.' + st.way] = { set: JSON.parse(JSON.stringify(w.set)), undo: was.undo.concat([JSON.stringify(was.set)]), dirty: true };
+    }
+    say('This layout is now on the pads of all four button shapes. Not saved yet.'); draw();
+  };
   function undo() { const w = work(); if (!w.undo.length) return; w.set = JSON.parse(w.undo.pop()); w.dirty = true; sync(); }
   $('undo').onclick = undo;
   addEventListener('keydown', (e) => {
@@ -247,7 +290,7 @@
       for (const [k, w] of Object.entries(st.works)) {
         if (!w.dirty) continue;
         const [pad, way] = k.split('.');
-        const set = w.set ? { parts: w.set.parts, fit: L.fitOf(w.set.parts, WIDEST, way === 'up') } : null;
+        const set = w.set ? { parts: w.set.parts, fit: w.set.fit } : null;
         const r = await fetch('/api/layout', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ pad, way, set }) });
         const j = await r.json().catch(() => ({}));
         if (!r.ok) throw new Error(j.error || 'the server said ' + r.status);
@@ -263,15 +306,37 @@
 
   // ---- Choosing what to look at ----
   async function game() {
-    const id = GAMES[st.game][1];
+    const id = GAMES[st.game][1], pad = PADS[st.pad];
+    if (!pad.card) return open();   // the game page is loaded anew for each game
     if (!st.cards[id]) st.cards[id] = await (await fetch('../cards/' + id + '.json')).json();
-    st.door.draw(PADS[st.pad].card(st.cards[id]));
+    st.door.draw(pad.card(st.cards[id]));
     later(sync);
   }
   function open() {
-    st.door = null; for (const el of handles.values()) el.remove(); handles.clear();
-    $('frame').onload = () => { st.door = PADS[st.pad].door($('frame').contentWindow); if (st.door) game(); else say('The pad page did not open its door to the editor.', 'bad'); };
-    $('frame').src = PADS[st.pad].src;
+    const pad = PADS[st.pad], mine = (open.n = (open.n || 0) + 1);
+    st.door = null; for (const el of handles.values()) el.remove(); handles.clear(); guides();
+    $('frame').onload = () => {
+      // The game page reads its card before it can say where its parts are: asked again for a few seconds.
+      let tries = 0;
+      const ask = () => {
+        if (mine !== open.n) return;
+        const door = pad.door($('frame').contentWindow);
+        if (!door) { if (++tries < 80) setTimeout(ask, 100); else say('The pad page did not open its door to the editor.', 'bad'); return; }
+        st.door = door; st.kind = door.kind || st.pad; st.sel = null;
+        $('kind').textContent = SHAPES[st.kind] ? 'This layout is for machines with ' + SHAPES[st.kind] + '. Each shape of button area keeps its own.' : '';
+        $('spread').hidden = !SHAPES[st.kind];
+        if (pad.card) game(); else later(sync);
+      };
+      ask();
+    };
+    $('frame').src = pad.src(GAMES[st.game][1]);
+  }
+  // The games on offer for this pad: the on-screen pad's own buttons are a console's (a PC or arcade game's keys are laid out another way).
+  function games() {
+    const sel = $('game'); sel.textContent = '';
+    GAMES.forEach(([name, , console], i) => { if (!PADS[st.pad].consoles || console) sel.add(new Option(name, i)); });
+    if (![...sel.options].some((o) => +o.value === st.game)) st.game = +sel.options[0].value;
+    sel.value = st.game;
   }
   function turn(way) { st.way = way; st.sel = null; frame(); later(() => { sync(); low(); }); }
   // At true size an upright phone is taller than the window: start at its lower half, where the parts are.
@@ -279,10 +344,10 @@
   $('zoom').onclick = () => { st.full = !st.full; frame(); later(() => { sync(); low(); }); };
   $('way-side').onclick = () => turn('side'); $('way-up').onclick = () => turn('up');
   for (const [id, p] of Object.entries(PADS)) $('pad').add(new Option(p.name, id));
-  $('pad').onchange = () => { st.pad = $('pad').value; st.sel = null; open(); };
+  $('pad').onchange = () => { st.pad = $('pad').value; st.sel = null; games(); open(); };
   PHONES.forEach(([name, long, short], i) => $('phone-size').add(new Option(name + ' (' + long + ' x ' + short + ')', i)));
   $('phone-size').onchange = () => { st.phone = +$('phone-size').value; frame(); later(sync); };
-  GAMES.forEach(([name], i) => $('game').add(new Option(name, i)));
+  games();
   $('game').onchange = () => { st.game = +$('game').value; game(); };
   addEventListener('resize', () => { frame(); later(sync); });
   $('where').textContent = 'Save writes play/layouts.json on this PC. A pad with no saved layout keeps its built-in one.';

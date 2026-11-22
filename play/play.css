@@ -570,3 +570,6 @@ body.shell .cpad.side .cface.s-abc::before{width:calc((var(--S,150px) - var(--db
 body.shell.sidebar .bar{left:var(--barL,0px);right:var(--barR,0px);border-radius:0 0 12px 12px;gap:6px;padding-left:8px;padding-right:8px}
 body.shell.sidebar .bar .tag,body.shell.sidebar #vol,body.shell.sidebar .bar .mark .n,body.shell #b-phones{display:none}   /* a phone is not the big screen */
 body.shell.sidebar .bar .title{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+/* A part of the on-screen pad placed from play/layouts.json (src/padlayout.js; set by Bryan in play/tools/layout.html):
+   where and how big the file says, whatever row or corner the rules above gave it. */
+.cpad .placed{position:absolute!important;right:auto!important;bottom:auto!important;margin:0!important;min-width:0!important;min-height:0!important;max-width:none!important}

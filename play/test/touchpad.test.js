@@ -116,7 +116,7 @@ test('Bryan, 20 Nov 2026: the d-pad from Lexrom, bigger without overlapping; a C
   assert.ok(play.includes("else if (name === 'cheats') { if (cheatList && runner && started) { setPaused(true); showCheats(true); } }"));
   assert.ok(play.includes("document.body.classList.add('has-cheats');"));
   assert.ok(play.includes('PlayTouch.sideFit({') && !play.includes('room - need'), 'the picture stays in the middle (Bryan)');
-  assert.ok(play.includes("if (!started || leftFull || !isPhone() || !document.fullscreenEnabled || document.fullscreenElement) return;"));
+  assert.ok(play.includes("if (FRAME || !started || leftFull || !isPhone() || !document.fullscreenEnabled || document.fullscreenElement) return;"));
   const html = fs.readFileSync(path.join(__dirname, '..', 'game.html'), 'utf8');
   assert.ok(html.includes('id="cover-full"') && html.includes('<link rel="manifest" href="manifest.webmanifest">'));
   const m = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'manifest.webmanifest'), 'utf8'));

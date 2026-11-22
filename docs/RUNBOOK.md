@@ -61,6 +61,18 @@ lights need nothing. The steps below are for the days you have time to make the 
 4. Analytics > Searches: zero-result searches are things people want; Add shows.
 5. A show plays with no sound (B, 16 Nov 2026: Dragon Tales): its copies carry Dolby or DTS sound that browsers cannot play. On the show's page press **Check sound**: HQ reads the start of each file (nothing is downloaded) and switches each silent copy to the Archive's own copy of the same file (`<name>.ia.mp4`, AAC sound), then re-matches the show; Publish now sends it. By hand: `node scripts/sound-check.js --slug <show> --match` (kids: set `VOID_PROFILE=kids` first). Whole catalog: Jobs > Check sound, every show (hours; it remembers what it heard, so it can be stopped and run again). The switches live in `catalog/sound-files.json`; delete a line there and re-match to undo one. Tests: `node --test tests/sound.test.js`.
 
+## Where the controller's parts sit (the layout editor)
+
+Double-click `PLAY-LAYOUT.cmd` in the repo folder (or run `node play/serve.js` and open
+`http://127.0.0.1:8789/play/tools/layout.html`). It works on this PC only.
+
+1. At the top choose the controller: **Phone as the game pad**, or **Buttons on the phone's own screen**. Choose **Sideways** or **Upright**: each has its own layout.
+2. The frame shows the real pad at a real phone's size. Drag a part to move it; drag its round corner to resize it. The arrow keys move the chosen part one pixel (ten with Shift), and the number boxes take exact values.
+3. **Match its partner** gives a part the size and gaps of its opposite number (d-pad and buttons, L and R, Select and Start). **Line up** snaps parts to each other while you drag. **Undo** takes back a move. **Built-in layout** throws yours away.
+4. For the buttons on the phone's own screen, each shape of button area (one, two, three or four buttons) keeps its own layout, and the game picture is a part too. **Use for every machine** copies the one you are looking at to the other shapes.
+5. **Fits these phones** says how the layout sits on each size of phone: "fits", a percentage (a squarer phone draws everything that much smaller), or what is wrong, in words. Parts that touch or leave the screen turn red.
+6. **Save** writes `play/layouts.json`. The pads read that file, so players get your layout after the next push; until then only this PC has it. With nothing saved for a pad, it keeps its built-in layout.
+
 ## The phone as a game pad, on a real phone
 
 The doctor's **phones** light checks the relay. Only a real phone shows the rest; it takes two minutes.

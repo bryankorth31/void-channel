@@ -14,7 +14,11 @@
   const base = new URL('./', location.href);
   // A TV's browser (plan T24): played with its remote or a gamepad, so it never draws the touch pad.
   const isTV = /SMART-TV|SmartTV|Tizen|Web0S|webOS|BRAVIA|Android TV|GoogleTV|CrKey|AFT[A-Z]|Roku|HbbTV/i.test(navigator.userAgent);
-  const touchWanted = q.get('touch') === '1' || (q.get('touch') !== '0' && !isTV && matchMedia('(pointer: coarse)').matches);
+  // Inside the layout editor's frame (play/tools/layout.html; Bryan, 21 Nov 2026: "a mock up of the controllers ... with
+  // all parts moveaple"): this page shows the handheld as on a phone, with the game's own buttons, and never starts the
+  // game. Only inside a frame, so no link can ask a visitor's page for it.
+  const FRAME = q.get('frame') === 'phone' && window.top !== window;
+  const touchWanted = FRAME || q.get('touch') === '1' || (q.get('touch') !== '0' && !isTV && matchMedia('(pointer: coarse)').matches);
   let sramKept = null;
   let card = null, build = null, runner = null, hub = null, pad = null, aspect = 4 / 3, touch = touchWanted, paused = false, started = false, padMode = false, fullMode = false;
 
@@ -69,7 +73,7 @@
 
   function place() {
     // The handheld shell: a phone (its short side up to 540 px) with the touch keys on, while a game plays.
-    const shell = touch && !padMode && started && Math.min(innerWidth, innerHeight) <= 540;
+    const shell = touch && !padMode && (started || FRAME) && Math.min(innerWidth, innerHeight) <= 540;
     const ins = notchSide(insets());
     // The picture may run under the edges (a game's picture under the home bar is fine); keys and the cross may not. Key
     // columns and the room under an upright picture are laid out inside the edges. A console pad sideways floats in its
@@ -137,8 +141,82 @@
       // A phone too small for even that: the d-pad crosses the picture's edge, see-through.
       over.classList.toggle('crossing', fit.S < 110);
     }
+    layParts(ins, shell && floating, set);
     $('b-touch').setAttribute('aria-pressed', String(touch));
     if (touch) PlayTouch.fit($('stage'));
+  }
+
+  // ---- Where the on-screen pad's parts and the picture sit, once Bryan has set them (play/layouts.json) ----
+  // Bryan, 21 Nov 2026: "i want a mock up of the controllers created for me with all parts moveaple ie dpad , button
+  // areas etc so that i can finetune this layout onece and for all since it is now more janky." The editor
+  // (play/tools/layout.html) saves a layout for each shape of pad and each way of holding the phone; this runs last in
+  // place(), so a part with an entry goes where he put it and a part with none keeps the place the style gives it. With
+  // no layout for this pad, nothing here changes anything. The picture is a part too ("they have begun to encroach on
+  // the screen"): where he has placed it, it is fitted into his box at the game's own shape.
+  const PadLayout = window.PlayPadLayout || null;
+  let layouts = null, layDraft;
+  const layKind = () => 'screen-' + (PlayTouch.SYSTEM_SHAPE[card.system] || 'pair');
+  const layArea = (ins) => ({ x: ins.l, y: ins.t, w: innerWidth - ins.l - ins.r, h: innerHeight - ins.t - ins.b });
+  const LAY_PARTS = { dpad: '.cdpad', l: '.csl', r: '.csr', select: '.cselect', start: '.cstart', rewind: '.crewind', cheats: '.ccheats' };
+  function laySet() {
+    if (layDraft !== undefined) return layDraft;
+    const f = layouts && card && layouts[layKind()];
+    return (f && f[innerWidth > innerHeight ? 'side' : 'up']) || null;
+  }
+  function layParts(ins, on, set) {
+    const layer = $('z-over').querySelector('.cpad');
+    if (!PadLayout || !layer) return;
+    const s = on ? laySet() : null, area = layArea(ins), bx = PadLayout.boxes(s, area.w, area.h);
+    const els = {};
+    for (const [id, sel] of Object.entries(LAY_PARTS)) els[id] = layer.querySelector(sel);
+    PadLayout.apply(area, els, s);
+    // The button area: the buttons are sized to fill his box by the style's own rules for this shape (sideways a square
+    // S across, a diamond or a line of three spread over it; upright two buttons across, a diamond three tall, a single
+    // button one and a half wide), then the group, at the size that gave it, sits in the middle of his box.
+    const face = layer.querySelector('.cface');
+    if (face) {
+      const VARS = ['--S', '--b', '--db'];
+      if (bx.face) {
+        const one = face.classList.contains('one'), tri = face.classList.contains('tri'), f = bx.face, side = innerWidth > innerHeight;
+        const S = Math.floor(Math.min(f.w, f.h));
+        const b = Math.max(40, Math.floor(side ? (S - 8) / 2 : one ? S / 1.5 : tri ? Math.min((f.w - 8) / 2, (f.h - 16) / 3) : (S - 8) / 2));
+        face.style.setProperty('--S', S + 'px'); face.style.setProperty('--b', b + 'px'); face.style.setProperty('--db', Math.round(S * 0.38) + 'px');
+        const r = face.getBoundingClientRect();
+        PadLayout.put(face, { x: area.x + f.x + (f.w - r.width) / 2, y: area.y + f.y + (f.h - r.height) / 2 }, false);
+      } else { for (const v of VARS) face.style.removeProperty(v); PadLayout.clear(face); }
+    }
+    // The picture, inside his box at the game's shape; the bar, when a touch brings it back, stays over the picture.
+    if (bx.screen) {
+      const r = bx.screen;
+      let w = r.w, h = w / aspect; if (h > r.h) { h = r.h; w = h * aspect; }
+      const x = area.x + r.x + (r.w - w) / 2, y = area.y + r.y + (r.h - h) / 2;
+      set($('screen'), { x: Math.round(x), y: Math.round(y), w: Math.round(w), h: Math.round(h) });
+      if (innerWidth > innerHeight) { document.body.style.setProperty('--barL', Math.round(x) + 'px'); document.body.style.setProperty('--barR', Math.round(innerWidth - x - w) + 'px'); }
+    }
+  }
+  if (PadLayout) PadLayout.load('layouts.json' + ((document.querySelector('meta[name=play-build]') || {}).content ? '?v=' + document.querySelector('meta[name=play-build]').content : '')).then((f) => { layouts = f; if (card) place(); });
+  // The editor's own door, in its frame only: where every part is, and a layout to try.
+  if (FRAME) {
+    const NAMES = { dpad: 'D-pad', face: 'Buttons', l: 'L', r: 'R', select: 'Select', start: 'Start', rewind: 'Rewind', cheats: 'Cheats', screen: 'Picture' };
+    window.PlayFrame = {
+      ready: false,
+      get kind() { return card ? layKind() : null; },
+      area: () => layArea(notchSide(insets())),
+      parts() {
+        const a = this.area(), layer = $('z-over').querySelector('.cpad'), out = [];
+        const all = Object.assign({ face: '.cface' }, LAY_PARTS);
+        const add = (id, el) => {
+          if (!el) return;
+          const r = el.getBoundingClientRect(), cs = getComputedStyle(el);
+          if (!r.width || cs.display === 'none' || cs.visibility === 'hidden') return;
+          out.push({ id, name: NAMES[id], square: id === 'dpad', keep: id === 'face' || id === 'screen', box: { x: r.left - a.x, y: r.top - a.y, w: r.width, h: r.height } });
+        };
+        if (layer) for (const [id, sel] of Object.entries(all)) add(id, layer.querySelector(sel));
+        add('screen', $('screen'));
+        return out;
+      },
+      show(s) { layDraft = s; place(); },
+    };
   }
 
   // While the menu is open the game hears nothing: every held key is let go first, then the gamepad drives the menu.
@@ -451,9 +529,9 @@
 
   // Phones and tablets (plan T22): on a phone, Play goes fullscreen and turns the screen sideways where the browser
   // allows it (Android; an iPhone page cannot), and while a game runs the screen stays awake.
-  const isPhone = () => matchMedia('(pointer: coarse)').matches && Math.min(screen.width, screen.height) < 600;
+  const isPhone = () => FRAME || (matchMedia('(pointer: coarse)').matches && Math.min(screen.width, screen.height) < 600);
   function phoneScreen() {
-    if (!isPhone() || !document.fullscreenEnabled || document.fullscreenElement) return;
+    if (FRAME || !isPhone() || !document.fullscreenEnabled || document.fullscreenElement) return;
     document.documentElement.requestFullscreen({ navigationUI: 'hide' })
       .then(() => (screen.orientation && screen.orientation.lock ? screen.orientation.lock('landscape') : null))
       .catch(() => {});
@@ -464,7 +542,7 @@
   // fullscreen in Safari; there the start screen says how: Add to Home Screen opens PLAY with no address bar.
   let leftFull = false;
   $('stage').addEventListener('touchend', () => {
-    if (!started || leftFull || !isPhone() || !document.fullscreenEnabled || document.fullscreenElement) return;
+    if (FRAME || !started || leftFull || !isPhone() || !document.fullscreenEnabled || document.fullscreenElement) return;
     document.documentElement.requestFullscreen({ navigationUI: 'hide' }).catch(() => {});
   }, { passive: true });
   const iPhoneSafari = () => /iPhone|iPod/.test(navigator.userAgent) && !navigator.standalone && !document.fullscreenEnabled;
@@ -999,6 +1077,14 @@
     if (isFlash()) for (const k of ['b-save', 'b-load', 'b-file-save', 'b-file-load', 'm-phones', 'b-phones', 'cover-phone']) if ($(k)) $(k).hidden = true;
     controls(c);
     cover(c);
+    // In the editor's frame the handheld is drawn at once, as during play, with every part a game can have (Cheats too);
+    // the game is never started: no download, no engine, no sound, no fullscreen.
+    if (FRAME) {
+      hub = PlayHub.createHub({ send() {}, onAction() {}, onSeat() {}, onRelease() {} });
+      document.body.classList.add('has-cheats'); $('cover').hidden = true;
+      place.sig = ''; place(); window.PlayFrame.ready = true;
+      return;
+    }
     // The footer names this game's own engine, its licence and its exact source (and its licence text when not GPL).
     $('core-name').textContent = core.name; $('core-licence').textContent = core.licence; $('src-core').href = core.source;
     $('core-terms').hidden = !core.terms; if (core.terms) $('core-terms-link').href = core.terms;
