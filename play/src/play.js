@@ -519,7 +519,9 @@
       padWasDown = down;
     }
     lastPoll = performance.now();
-    (pip || window).requestAnimationFrame(poll);
+    // While the picture is out in the browser's own window this tab may be behind another, where it gets no animation
+    // frames: the pads are then read on a timer instead.
+    if (pip && pip.video) setTimeout(poll, 16); else (pip && pip.requestAnimationFrame ? pip : window).requestAnimationFrame(poll);
   }
   let lastPoll = 0;
 
@@ -608,6 +610,7 @@
       ended: () => { arriving = false; fail('The game has ended. Press Play again to start it over, or pick another game.'); },
       ready: () => { started = true; applyCheats(); place.sig = ''; place(); setTimeout(toolbarTip, 1500); },
       cheats: (m) => { if (!m.ok) toast('This game\'s engine cannot take cheats'); else if (m.on) toast(m.on === 1 ? 'One cheat on' : m.on + ' cheats on'); },
+      drawn: popDrawn,
       firstFrame: () => {
         arriving = false; status(''); clearTimeout(deadline); $('cover').hidden = true; $('canvas').focus({ preventScroll: true }); stayAwake(true); armBack();
         if (!PlayCards.isPad(card) && !isFlash()) blankWatch();   // a Flash game draws in its own element, not the canvas
@@ -925,8 +928,34 @@
   // to the same canvas, so nothing restarts and nothing is lost. Keys work in that window, and Esc there brings the
   // game back; gamepads are read from it; the pause menu brings the game back first.
   let pip = null, canvasHome = null;
-  const canPop = () => !!(window.documentPictureInPicture && window.documentPictureInPicture.requestWindow) && !isPhone();
+  // Which window (Bryan, 22 Nov 2026: "not the page as pop upo.. just the game play"): the browser's own video
+  // picture-in-picture by default (only the moving picture, shaped by the browser itself); the page-window kind
+  // (Document Picture-in-Picture) with ?pop=doc, or where video picture-in-picture is missing.
+  const popWay = () => (new URLSearchParams(location.search).get('pop') !== 'doc' && document.pictureInPictureEnabled ? 'video' : 'doc');
+  const canPop = () => (popWay() === 'video' || !!(window.documentPictureInPicture && window.documentPictureInPicture.requestWindow)) && !isPhone();
+  // The other way, to measure (?pop=video): the game's picture copied each frame onto a canvas at its display shape,
+  // streamed into a muted video, and that video put in the browser's own picture-in-picture window, which keeps the
+  // video's shape by itself. Nothing of the page goes in it; input stays on this page.
+  let popVid = null, popCopy = null;
+  function popDrawn() {
+    if (!popCopy) return;
+    const src = document.getElementById('canvas') || (canvasHome && canvasHome.canvas); if (!src) return;
+    const g = popCopy.getContext('2d'); g.imageSmoothingEnabled = false; g.drawImage(src, 0, 0, popCopy.width, popCopy.height);
+  }
+  async function popVideo() {
+    if (document.pictureInPictureElement) { document.exitPictureInPicture().catch(() => {}); return; }
+    popCopy = document.createElement('canvas'); popCopy.height = 480; popCopy.width = Math.round(480 * aspect);
+    popDrawn();
+    popVid = document.createElement('video'); popVid.muted = true; popVid.playsInline = true;
+    popVid.srcObject = popCopy.captureStream(60);
+    try { await popVid.play(); await popVid.requestPictureInPicture(); } catch (e) { popVid = popCopy = null; return; }
+    pip = { close: () => document.exitPictureInPicture().catch(() => {}), video: true };
+    setTimeout(poll, 16);
+    $('b-pop').setAttribute('aria-pressed', 'true');
+    popVid.addEventListener('leavepictureinpicture', () => { pip = null; popVid = popCopy = null; $('b-pop').setAttribute('aria-pressed', 'false'); });
+  }
   async function popOut() {
+    if (popWay() === 'video') return popVideo();
     if (pip) { pip.close(); return; }
     if (!started || !canPop()) return;
     const canvas = $('canvas');

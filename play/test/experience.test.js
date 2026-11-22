@@ -172,5 +172,5 @@ test('pop out (Bryan, 22 Nov 2026: "Go"): the running game moves into a picture-
   assert.ok(js.includes("pip.addEventListener('pagehide', popBack);"), 'closing the window brings the game back');
   assert.ok(js.includes('if (p && pip) pip.close();'), 'the pause menu brings it back first');
   assert.ok(js.includes('if (document.hidden && started && !pip)'), 'no pause when this tab is behind another site while the game is out');
-  assert.ok(js.includes('(pip || window).requestAnimationFrame(poll);'), 'the pads are read on the window that shows the game');
+  assert.ok(js.includes('(pip && pip.requestAnimationFrame ? pip : window).requestAnimationFrame(poll);') && js.includes('if (pip && pip.video) setTimeout(poll, 16);'), 'the pads are read on the window that shows the game');
 });

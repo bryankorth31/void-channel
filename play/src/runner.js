@@ -57,6 +57,7 @@
       ctx.putImageData(new ImageData(new Uint8ClampedArray(m.pixels), m.w, m.h), 0, 0);
       frames++;
       if (frames === 1 && on.firstFrame) on.firstFrame();
+      if (on.drawn) on.drawn();   // a picture-in-picture copy, when one is open
       if (on.aspect) on.aspect(m.aspect || m.w / m.h);
     }
 
