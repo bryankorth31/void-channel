@@ -86,7 +86,7 @@ const LEAVE = {
   checkit_30: 'a PC test program, not a game (the auditor, 22 Nov)', msdos_Beyond_Castle_Wolfenstein_1985: 'its program ends at once in our player (the auditor, 22 Nov)',
   msdos_Duke_Nukems_Penthouse_Paradise_1997: 'adult content: kept out entirely',
   msdos_Duke_Assault_1997: 'a Duke Nukem 3D add-on (held with Duke Nukem 3D)', 'msdos_Duke_it_out_in_D.C._1997': 'a Duke Nukem 3D add-on (held with Duke Nukem 3D)',
-  DUKE3D_DOS: 'held: adult content (Bryan\'s call)', 'grand-theft-auto-1997-dma-design': 'held: crime and adult themes (Bryan\'s call)',
+  DUKE3D_DOS: 'held: adult content (Bryan\'s call)',   // Grand Theft Auto came in on his word for its row (22 Nov 2026: "Build and yes")
 };
 
 // Pure (tested): Wikidata's facts on a card. Two players only where Wikidata says so (the "likelyTwo" guesses stay out);
@@ -117,7 +117,7 @@ function dosCard(r) {
   // The machine is said by the shelf, not the name: "Doom 2 (MS-DOS)", "MS-DOS: Stunts (VGA Graphics and SoundBlaster)",
   // "Duke Nukem 3D (DOS)", "Antarctic Adventure [MS-DOS]" read as a box would print them.
   const title = String(r.title).replace(/^MS-DOS:\s*/i, '').replace(/\s*[([](MS-)?DOS[)\]]/gi, '').replace(/\s+-\s+(MS-)?DOS$/i, '')
-    .replace(/\s*\((EGA|CGA|VGA)[^)]*\)\s*$/i, '').trim();
+    .replace(/\s*\((EGA|CGA|VGA)[^)]*\)\s*$/i, '').replace(/\s*\([^)]*\b(sound ?blaster|sound|graphics)\b[^)]*\)\s*$/i, '').trim();
   const c = Drafts.draft({ identifier: r.item, title, year: r.year, creator: r.publisher }, { name: r.file, size: r.size || 0 }, 'dos', 'top');
   c.archive.start = r.start;
   delete c.draft;

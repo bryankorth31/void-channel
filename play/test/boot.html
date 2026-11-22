@@ -15,7 +15,8 @@
      For engines the player does not list yet: ?card=<id>&core=<name> adds the core to PlayCards.CORES here only;
      &staged=1 reads the card from play/test/staged-cards/ (cards waiting for their engine to be wired in).
      Served by play/serve.js: http://127.0.0.1:8789/play/test/boot.html?card=ms-pac-man-lynx&core=handy
-     It presses buttons by name: &press=Start,A (each held &hold= ms, default 100, 2 seconds apart, after the first picture). -->
+     It presses buttons by name: &press=Start,A (each held &hold= ms, default 100, 2 seconds apart, after the first picture).
+     A game with no card yet: &system=snes&item=<Archive item>&file=<file in it>[&start=<DOS start command>]. -->
 <pre id="out">starting</pre>
 <canvas id="canvas" width="320" height="240"></canvas>
 <script src="../src/keys.js"></script>
@@ -30,7 +31,22 @@
   const show = () => { out.textContent = JSON.stringify(state, null, 1); };
   const t0 = performance.now();
   try {
-    const card = await (await fetch((q.get('staged') ? 'staged-cards/' : '../cards/') + q.get('card') + '.json')).json();
+    // &system=&item=&file=[&start=]: a game with no card yet, for a boot check before its card is written. A minimal
+    // card is made here: the system's engine, the Archive file, plain controls.
+    const CORE_OF = { dos: 'dosbox-pure', genesis: 'genesis-plus-gx', sms: 'genesis-plus-gx', gamegear: 'genesis-plus-gx',
+      snes: 'snes9x', nes: 'fceumm', gameboy: 'gambatte', gbcolor: 'gambatte', a2600: 'stella2014', gba: 'mgba', lynx: 'handy' };
+    const sys = q.get('system');
+    const card = sys ? {
+      id: 'boot-check', title: q.get('item'), system: sys, core: CORE_OF[sys], players: 1,
+      archive: Object.assign({ item: q.get('item'), file: q.get('file') }, q.get('start') ? { start: q.get('start') } : {},
+        // Master System and Game Gear files on the Archive often end in .bin, which the engine reads as a Genesis game:
+        // give it the machine's own ending, as the real cards do (archive.as).
+        { sms: '.sms', gamegear: '.gg' }[sys] && !/\.(sms|gg|zip)$/i.test(q.get('file') || '')
+          ? { as: (q.get('file') || 'game').split('/').pop().replace(/\.[^.]*$/, '') + { sms: '.sms', gamegear: '.gg' }[sys] } : {}),
+      controls: sys === 'dos' ? { kind: 'dos-keys', keys: ['Enter', 'Escape', 'Space'], dpad: true, keyboard: true }
+        : { kind: 'pad', dpad: true, keys: ['P1:A', 'P1:B', 'P1:Start'] },
+    } : await (await fetch((q.get('staged') ? 'staged-cards/' : '../cards/') + q.get('card') + '.json')).json();
+    state.card = card.id + ' ' + card.system + ' ' + card.core;
     const core = q.get('core');
     if (core && !PlayCards.CORES[core]) PlayCards.CORES[core] = { engine: 'engine/' + core + '.js', systems: [card.system] };
     const runner = PlayRunner.createRunner({ canvas: document.getElementById('canvas'), mute: true, on: {
