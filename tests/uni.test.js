@@ -620,3 +620,31 @@ test('explainer, the Colorado River: Reclamation\'s own records close the books,
   for (const f of ['height.png', 'color.jpg']) assert.ok(fs.existsSync(path.join(dir, f)), f);
   assert.ok(b.rivers.length > 20 && b.lakes.powell.cells.length > 150 && b.lakes.mead.cells.length > 150);
 });
+
+test('the front page door (Option A): a real question to guess, Remember it from finished lessons, the questions people get wrong, and only live pieces in the public copy', () => {
+  build();
+  const prev = path.join(uni.UNI, 'site-preview'), page = fs.readFileSync(path.join(prev, 'index.html'), 'utf8');
+  const door = JSON.parse(/var DOORQ = (\[.*?\]), RULESN = (\d+);/.exec(page)[1]);
+  assert.ok(door.length >= 2, 'no questions for the door');
+  for (const q of door) {
+    assert.ok(q.q && q.options.length >= 2 && q.answer >= 0 && q.answer < q.options.length && q.after, 'a door question is not whole');
+    const [slug, n] = q.href.split('.html#u');
+    assert.match(fs.readFileSync(path.join(prev, slug + '.html'), 'utf8'), new RegExp('id="u' + n + '"'), q.href + ' does not open a unit');
+    assert.doesNotMatch(q.after, /\{[a-z]+\}/, 'the gap line was not filled: ' + q.after);
+  }
+  // the explainer's gap is worked out by the same model the page runs: held at today's rate, 427 to 507
+  assert.ok(door.some((q) => /from 427 to 507 ppm/.test(q.after)));
+  // Remember it reads recall.json: every quiz question of every lesson on the site, by course and unit
+  const bank = JSON.parse(fs.readFileSync(path.join(prev, 'recall.json'), 'utf8'));
+  assert.equal(bank['your-money-plainly/1'].q.length, JSON.parse(fs.readFileSync(path.join(uni.UNI, 'courses', 'your-money-plainly.json'), 'utf8')).units.find((u) => u.n === 1).quiz.length);
+  // the questions people get wrong each open their unit; every button on the door has a hover tip in its script
+  for (const m of page.matchAll(/<a class="qcard"[^>]*href="([a-z0-9-]+)\.html#u(\d+)"/g)) assert.match(fs.readFileSync(path.join(prev, m[1] + '.html'), 'utf8'), new RegExp('id="u' + m[2] + '"'));
+  assert.match(page, /b\.title = 'Choose this answer'/);
+  // a lesson marked done remembers when, so its questions come back a day later
+  assert.match(fs.readFileSync(path.join(prev, 'critical-thinking.html'), 'utf8'), /vu:doneAt/);
+  // the public copy: only live pieces at the door and in Remember it
+  build('--site');
+  const pub = fs.readFileSync(path.join(SITE, 'index.html'), 'utf8'), live = new Set(list().courses.filter((c) => c.live).map((c) => c.slug));
+  for (const q of JSON.parse(/var DOORQ = (\[.*?\]), RULESN/.exec(pub)[1])) assert.ok(live.has(q.href.split('.html')[0]), q.href + ' is at the public door but its course is not live');
+  for (const k of Object.keys(JSON.parse(fs.readFileSync(path.join(SITE, 'recall.json'), 'utf8')))) assert.ok(live.has(k.split('/')[0]), k + ' is in the public Remember it but not live');
+});

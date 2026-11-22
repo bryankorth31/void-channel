@@ -377,3 +377,15 @@ the HQ areas chat. Steps 7 to 10 start after the 22 Nov reset.
   tests 35 of 35, selftest 4 of 4, links answer. Checked at 1278x513, 1920x1080, 1316x821, 821x1316: no sideways
   scroll, every control tipped. Not checked: the motion and the water up close at full speed (the hidden preview
   pane runs a few frames a second). Not pushed, not deployed; the block and course are live: false.
+- 22 Nov 2026, the front page as the landing pad (Bryan: "Option A" of docs/LANDING-REVIEW.md). The old headline band
+  is now the door: one real question from a lesson, chosen by the day (the explainers' guesses, with their gap worked
+  out at build time by the same model the page runs, and the scale stages' guesses), each with a short door wording
+  where the lesson's is long; guess, the gap is stated as a plain fact, then "See it happen" opens the lesson. Beside
+  it, Remember it: the quiz questions of lessons the reader marked done come back a day, three days, a week and three
+  weeks later, mixed across lessons, answered in place (recall.json, fetched only once a lesson is done; kept in the
+  browser as vu:recall; marking done now records when, vu:doneAt); one plain line of what you know ("You have
+  finished 3 lessons and found 1 of 23 rules") with Pick up where you left off; a welcome card for a first visit.
+  Under it, Things people get wrong (units carry a "hook" question: six so far) and Learn together (opens a lecture
+  that has Answer on your phones). The public copy carries only live pieces: at the door the two scale-stage guesses,
+  in Remember it only live courses. tests 36 of 36, selftest 4 of 4. Checked at 1278x513, 1316x821, 821x1316 and
+  1920x1080: no sideways scroll. Not pushed, not deployed.

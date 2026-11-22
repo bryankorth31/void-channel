@@ -216,7 +216,8 @@
             "landuse": 1.1
           },
           "years": 50,
-          "after": "Held at today's rate, the CO2 climbs from {from} to {to} ppm in 50 years, and is still climbing at the end. In the MIT study most people expected it to hold."
+          "after": "Held at today's rate, the CO2 climbs from {from} to {to} ppm in 50 years, and is still climbing at the end. In the MIT study most people expected it to hold.",
+          "door": "If the world kept burning fuel at exactly today's rate for 50 years, what would the CO2 in the air do?"
         },
         "rules": [
           {
@@ -563,7 +564,8 @@
           }
         ],
         "aha": "Every partial is the same tub: what goes in, against what comes out."
-      }
+      },
+      "hook": "Why does the CO2 keep rising when emissions stop growing?"
     },
     {
       "n": 2,
@@ -915,7 +917,8 @@
             "deliver": 9
           },
           "years": 20,
-          "after": "At those numbers Lake Mead goes from {from} to {to} million acre-feet in 20 years: more goes out than comes in, every year, so it never levels off."
+          "after": "At those numbers Lake Mead goes from {from} to {to} million acre-feet in 20 years: more goes out than comes in, every year, so it never levels off.",
+          "door": "If the Colorado keeps bringing its recent average, and Arizona, California, Nevada and Mexico keep taking what the deals promise, what happens to Lake Mead?"
         },
         "rules": [
           {
@@ -1451,7 +1454,8 @@
           }
         ],
         "aha": "Every partial is the same tub: what the river brings, against what the deals let out."
-      }
+      },
+      "hook": "Why do Lake Mead and Lake Powell keep falling?"
     }
   ]
 }

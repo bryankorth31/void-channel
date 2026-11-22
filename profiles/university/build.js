@@ -251,6 +251,39 @@ ${top('ifttt', all)}<main><div class="lead"><h1>If this, then that</h1><p>Every 
 </script></body></html>`;
 }
 
+// The front page's door (Bryan, 22 Nov 2026: "Option A"; docs/LANDING-REVIEW.md). Questions people can guess at, from
+// blocks that already ask for a guess: the explainers (their gap worked out here with the same model the page runs)
+// and the scale stages. Hooks: a unit may carry "hook", the question that brings someone to it, for the row of things
+// people get wrong.
+const EXM = require('./explain-model.js');
+function doorQuestions(all) {
+  const out = [];
+  for (const c of all) for (const u of c.units) {
+    if (u.explainer && shipsExplain(u) && u.explainer.guess) {
+      const ex = u.explainer, g = ex.guess, m = EXM.make(ex);
+      const run = m.run(Object.assign({}, ...ex.choices.map((ch) => ({ [ch.id]: ch.start })), g.set), g.years, ex.stores[0].id);
+      out.push({ q: g.door || g.q, options: g.options, answer: g.answer, after: EXM.say(g.after, { from: run[0].value, to: run[run.length - 1].value }), href: c.slug + '.html#u' + u.n, go: 'See it happen: ' + ex.title });
+    }
+    for (const sc of scalesOf(u)) if ((!LIVE || sc.live) && sc.guess) out.push({ q: sc.guess.door || sc.guess.q, options: sc.guess.options, answer: sc.guess.answer, after: sc.guess.after, href: c.slug + '.html#u' + u.n, go: 'See it to scale: ' + sc.title });
+  }
+  return out;
+}
+function hooksOf(all) {
+  const out = [];
+  for (const c of all) for (const u of c.units) if (u.hook) {
+    const where = u.explainer && shipsExplain(u) ? u.explainer.title : u.lab && shipsLab(u) ? u.lab.title : u.title;
+    out.push({ area: c.domain, hook: u.hook, href: c.slug + '.html#u' + u.n, where });
+  }
+  return out;
+}
+// What Remember it asks: every quiz question of the lessons that ship, by course and unit (recall.json, fetched by the
+// front page only once the reader has marked a lesson done).
+function recallBank(all) {
+  const out = {};
+  for (const c of all) for (const u of c.units) if ((u.quiz || []).length) out[c.slug + '/' + u.n] = { course: c.name, title: u.title.replace(/^Draft, not kept yet: /, ''), q: u.quiz.map((q) => ({ q: q.q, choices: q.choices, a: q.a, why: q.why })) };
+  return out;
+}
+
 // Bryan, 15 Nov 2026: "less words". A unit shows its picture, its main piece and its crystal; the rest is one tap away.
 // The mind's mechanisms are a supplement shelf (Bryan, 15 Nov 2026: "the smaller ones like the FOMO ... are
 // supplemental that go for anything"). Any unit lists the mechanisms it leans on; the mechanism shows where it is used.
@@ -573,7 +606,9 @@ document.addEventListener('click', function (e) {
   var b = e.target.closest('.donebtn'); if (!b) return;
   var all = VU.get('vu:done', {}), d = all[SLUG] || [], n = +b.closest('.unit').id.slice(1), i = d.indexOf(n);
   if (i >= 0) d.splice(i, 1); else d.push(n);
-  all[SLUG] = d; VU.set('vu:done', all); paintDone();
+  all[SLUG] = d; VU.set('vu:done', all);
+  var at = VU.get('vu:doneAt', {}); if (i < 0) at[SLUG + '/' + n] = Date.now(); else delete at[SLUG + '/' + n]; VU.set('vu:doneAt', at);
+  paintDone();
 });
 paintDone();
 if ('IntersectionObserver' in window) {
@@ -890,6 +925,21 @@ ${CARDCSS}
 .card .prog{font-style:normal;font-size:12px;color:#8fd6aa}
 @media (max-width:1000px){#find{margin-left:0;flex-basis:100%}}
 .course.off{display:none}
+.door{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px;max-width:1400px;margin:0 auto;padding:22px 32px 6px}
+.door .kick{font-size:14px;font-weight:700;color:var(--acc)}
+.ask{background:linear-gradient(135deg,rgba(255,79,139,.13),rgba(95,212,255,.07)),var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px 28px;box-shadow:0 14px 40px rgba(0,0,0,.35)}
+.ask h1{font-family:var(--head);font-size:34px;line-height:1.14;margin:8px 0 16px;max-width:none}
+.ask .opts{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 12px}.ask .opts button,.mem .mc button,.mem .nextq{font:inherit;font-size:16px;padding:10px 16px;border-radius:10px;border:1px solid var(--line);background:var(--panel2);color:var(--fg);cursor:pointer}
+.ask .opts button:hover:not(:disabled),.mem .mc button:hover:not(:disabled){border-color:var(--acc)}.ask .opts button.real,.mem .mc button.real{border-color:#5fe39a;color:#5fe39a}.ask .opts button.mine:not(.real),.mem .mc button.mine{border-color:#ff8f96;color:#ff8f96}
+.ask .said{margin:0 0 12px;font-size:17px;padding:10px 14px;border-left:3px solid var(--gold);background:rgba(0,0,0,.25);border-radius:0 8px 8px 0}.ask .go{display:inline-block;margin:0 0 10px;padding:10px 18px;border-radius:10px;background:#ff4f8b;color:#fff;font-weight:700;text-decoration:none}.ask .how{margin:0;color:var(--soft);font-size:15px}.ask .go:not([hidden])~.how{display:none}.ask .go[hidden]{display:none}
+.doorside{display:flex;flex-direction:column;gap:14px}.doorside>div{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px 18px}.doorside.known .welcome{display:none}.welcome b{font-family:var(--head);font-size:21px}.welcome p{margin:8px 0 0;color:var(--soft);font-size:15px}
+.mem b{display:block;font-family:var(--head);font-size:19px;margin:2px 0 6px}.mem .kick{color:var(--gold)}.mem small{display:block;color:var(--dim);font-size:13px}.mem .mq{margin:4px 0 8px;font-size:16px}.mem .mc{display:flex;flex-direction:column;gap:6px}.mem .mc button{text-align:left;font-size:15px;padding:8px 12px}.mem .ok{color:#5fe39a}.mem .no{color:#ffb3b8}.mem p{font-size:15px}.mem .nextq{margin-top:4px;font-size:14px;padding:7px 14px}
+.you .line{margin:0 0 6px;font-size:16px}.you #resume{margin:0;padding:0;border:0;background:none}
+.wrong{max-width:1400px;margin:0 auto}.wrong h2{margin-top:22px}.qrow{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;padding:0 20px}
+.qcard{display:flex;flex-direction:column;gap:8px;min-height:140px;padding:16px 18px;border-radius:14px;background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--area);color:var(--fg);text-decoration:none}.qcard:hover{border-color:var(--area)}.qcard small{color:var(--dim);font-size:13px}.qcard b{font-family:var(--head);font-size:19px;line-height:1.22;flex:1}.qcard i{font-style:normal;color:var(--area);font-size:14px;font-weight:600}
+.together{display:flex;flex-wrap:wrap;gap:4px 16px;align-items:baseline;max-width:1360px;margin:16px auto 0;padding:14px 18px;border:1px solid var(--line);border-radius:12px;background:var(--panel);color:var(--fg);text-decoration:none}.together b{font-family:var(--head);font-size:19px}.together span{color:var(--soft);font-size:15px;flex:1 1 420px}.together em{font-style:normal;color:var(--acc);font-weight:600}.together:hover{border-color:var(--acc)}
+@media (max-height:600px) and (min-width:901px){.ask{padding:18px 24px}.ask h1{font-size:26px;margin:6px 0 12px}.ask .opts button{padding:8px 14px;font-size:15px}}
+@media (max-width:900px){.door{grid-template-columns:1fr;padding:16px 16px 4px}.ask h1{font-size:27px}.together{margin:16px 16px 0}}
 .ruleslink{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:baseline;margin:18px 20px 0;padding:14px 18px;border:1px solid var(--gold);border-radius:12px;background:var(--panel);color:var(--fg);text-decoration:none}.ruleslink b{font-family:var(--head);font-size:22px;color:var(--gold)}.ruleslink span{color:var(--soft);font-size:15px}.ruleslink:hover{background:var(--panel2)}
 .areas{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px;padding:0 20px}
 .area{display:block;color:var(--fg);text-decoration:none;position:relative;border-radius:8px;overflow:hidden;aspect-ratio:16/10;border:1px solid var(--line)}
@@ -900,9 +950,9 @@ ${CARDCSS}
 @media(max-width:900px){.hero h1{font-size:36px}.course{width:290px}}
 ${LOOKCSS}${TYPECSS}</style></head><body>
 ${top('home', all)}
-<div id="colhost"><div class="hero">${img('a-mind') ? '<img src="' + img('a-mind') + '" alt="">' : ''}<div><h1>Big ideas, shown with everyday things.</h1><p>Each lesson starts from something you already know, then shows you the bigger idea working the same way. Every course is free, and there is no account to make.</p></div></div>
+<div id="colhost"><div class="door"><div class="ask" id="door"><h1>Big ideas, shown with everyday things.</h1><div class="opts"></div><p class="said" hidden aria-live="polite"></p><a class="go" hidden></a><p class="how">Today's question. Guess first, then see it happen, with the measured numbers.</p></div><div class="doorside" id="doorside"><div class="welcome"><b>Big ideas, shown with everyday things.</b><p>Each lesson starts from something you already know, then shows you the bigger idea working the same way. Every course is free, and there is no account to make.</p></div><div class="mem" id="mem" hidden><b></b><div class="body"></div></div><div class="you" id="you" hidden><div id="resume" hidden></div></div></div></div>${(() => { const h = hooksOf(all); return h.length ? '<section class="wrong"><h2><span>Things people get wrong</span><small>start from the question</small></h2><div class="qrow">' + h.map((x) => '<a class="qcard" style="--area:' + hue(x.area) + '" href="' + esc(x.href) + '" title="Open: ' + esc(x.where) + '"><small>' + esc(x.area) + '</small><b>' + esc(x.hook) + '</b><i>' + esc(x.where) + '</i></a>').join('') + '</div></section>' : ''; })()}${(() => { const c = all.find((o) => o.units.some(shipsAnswer)); const u = c && c.units.find(shipsAnswer); return u ? '<a class="together" href="' + esc(c.slug) + '.html#u' + u.n + '" title="Open a lecture you can take together"><b>Learn together</b><span>Play a lecture on a big screen; everyone answers on their own phone, with no account. For a class, a family or a community night. Open a lecture and press Answer on your phones.</span><em>Start with ' + esc(c.name) + '</em></a>' : ''; })()}
 <main><div class="who"><span>Who is it for?</span><button class="on" data-lv="">Everyone</button><button data-lv="high school">High school</button><button data-lv="young adults">Young adults</button><button data-lv="everyday">Everyday life</button><input type="search" id="find" placeholder="Find a course or a lesson" aria-label="Find a course or a lesson"><small>Everyday life: not for a job in the field, just useful for living, deciding and understanding people.</small></div>
-<div id="found" hidden></div><div id="resume" hidden></div>
+<div id="found" hidden></div>
 ${RULES ? '<a class="ruleslink" href="ifttt.html" title="Every If this, then that rule in the University, by area"><b>If this, then that</b><span>' + RULES + ' rules across ' + new Set(rulesOf(all).map((r) => r.area)).size + ' areas. Make each one happen yourself, then see them all in one place.</span></a>' : ''}
 ${rows}
 ${shelfRow}
@@ -925,6 +975,7 @@ document.querySelectorAll('.rowwrap').forEach(function (w) {
   l.onclick = function () { t.scrollLeft -= t.clientWidth * 0.8; }; r.onclick = function () { t.scrollLeft += t.clientWidth * 0.8; };
   t.addEventListener('scroll', upd); window.addEventListener('resize', upd); upd();
 });
+var DOORQ = ${JSON.stringify(doorQuestions(all)).replace(/</g, '\\u003c')}, RULESN = ${RULES};
 // Find a course or a lesson: every word typed must be in the course name, the lesson title or its "why you need this".
 var IDX = ${JSON.stringify(all.flatMap((c) => c.units.map((u) => [c.slug + '.html#u' + u.n, c.name, u.title, (u.needIt || '').toLowerCase()])).concat(SHELFBOOKS.flatMap((b) => b.chapters.map((x) => [b.slug + '.html#c' + x.n, b.title, x.title, (x.why || '').toLowerCase()])))).replace(/</g, '\\u003c')};
 var find = document.getElementById('find'), found = document.getElementById('found');
@@ -953,6 +1004,80 @@ find.addEventListener('input', function () {
     var i = document.createElement('i'); i.className = 'prog'; i.textContent = d + ' of ' + c.dataset.units + ' done'; c.querySelector('.t').appendChild(i);
   });
 })();
+(function () {
+  var Q = DOORQ, box = document.getElementById('door'); if (!box || !Q.length) return;
+  var day = Math.floor(Date.now() / 864e5), q = Q[day % Q.length];
+  var t = function (tag, cls, s) { var e = document.createElement(tag); if (cls) e.className = cls; if (s != null) e.textContent = s; return e; };
+  box.querySelector('h1').textContent = q.q;
+  var opts = box.querySelector('.opts'), said = box.querySelector('.said'), go = box.querySelector('.go');
+  q.options.forEach(function (o, i) {
+    var b = t('button', null, o); b.type = 'button'; b.title = 'Choose this answer';
+    b.onclick = function () {
+      opts.querySelectorAll('button').forEach(function (x, j) { x.disabled = true; x.classList.toggle('mine', j === i); x.classList.toggle('real', j === q.answer); });
+      said.textContent = 'You said: ' + o.toLowerCase() + '. ' + q.after; said.hidden = false; go.hidden = false;
+    };
+    opts.appendChild(b);
+  });
+  go.href = q.href; go.textContent = q.go; go.title = 'Open the lesson where you can see this happen';
+})();
+(function () {
+  var get = function (k, d) { try { return JSON.parse(localStorage.getItem(k)) || d; } catch (e) { return d; } };
+  var put = function (k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} };
+  var done = get('vu:done', {}), at = get('vu:doneAt', {}), plan = get('vu:recall', {}), found = get('vu:found', []);
+  var units = []; Object.keys(done).forEach(function (s) { (done[s] || []).forEach(function (n) { units.push(s + '/' + n); }); });
+  var side = document.getElementById('doorside'), you = document.getElementById('you'), mem = document.getElementById('mem');
+  var t = function (tag, cls, s) { var e = document.createElement(tag); if (cls) e.className = cls; if (s != null) e.textContent = s; return e; };
+  // one plain line of what you know
+  var bits = [];
+  if (units.length) bits.push('You have finished ' + units.length + (units.length === 1 ? ' lesson' : ' lessons'));
+  if (found.length) bits.push((bits.length ? 'found ' : 'You have found ') + found.length + ' of ' + RULESN + ' rules');
+  if (bits.length) { you.insertBefore(t('p', 'line', bits.join(' and ') + '.'), you.firstChild); you.hidden = false; side.classList.add('known'); }
+  if (!document.getElementById('resume').hidden) { you.hidden = false; side.classList.add('known'); }
+  if (!units.length) return;
+  var DAY = 864e5, STEPS = [1, 3, 7, 21], now = Date.now();
+  fetch('recall.json').then(function (r) { return r.json(); }).then(function (bank) {
+    var due = [], next = Infinity;
+    units.forEach(function (u) {
+      var b = bank[u]; if (!b) return;
+      b.q.forEach(function (q, i) {
+        var k = u + '/' + i, p = plan[k];
+        if (!p) { p = plan[k] = { step: 0, due: (at[u] || now) + DAY }; }
+        if (p.due <= now) due.push({ k: k, u: u, i: i, q: q, b: b }); else next = Math.min(next, p.due);
+      });
+    });
+    put('vu:recall', plan);
+    // mixed: take one from each lesson in turn
+    var by = {}; due.forEach(function (d) { (by[d.u] = by[d.u] || []).push(d); });
+    var mix = [], keys = Object.keys(by), r = 0;
+    while (mix.length < 3 && keys.some(function (k) { return by[k].length; })) { var k = keys[r++ % keys.length]; if (by[k].length) mix.push(by[k].shift()); }
+    mem.hidden = false; side.classList.add('known');
+    var head = mem.querySelector('b'), body = mem.querySelector('.body');
+    if (!mix.length) { head.textContent = 'Remember it: your questions come back ' + new Date(next).toLocaleDateString(undefined, { weekday: 'long' }); body.appendChild(t('p', null, 'Each one returns a day, three days, a week and three weeks after you finish a lesson. Pulling it back out is what makes it stay.')); return; }
+    head.textContent = 'Remember it: ' + mix.length + (mix.length === 1 ? ' question is' : ' questions are') + ' ready';
+    var i = 0;
+    function show() {
+      body.textContent = '';
+      if (i >= mix.length) { body.appendChild(t('p', null, 'That is all for today. They come back again, further apart each time you get one.')); return; }
+      var d = mix[i], q = d.q;
+      body.appendChild(t('small', null, d.b.course + ': ' + d.b.title));
+      body.appendChild(t('p', 'mq', q.q));
+      var c = t('div', 'mc'); body.appendChild(c);
+      q.choices.forEach(function (ch, j) {
+        var b = t('button', null, ch); b.type = 'button'; b.title = 'Choose this answer';
+        b.onclick = function () {
+          c.querySelectorAll('button').forEach(function (x, m) { x.disabled = true; x.classList.toggle('real', m === q.a); x.classList.toggle('mine', m === j && j !== q.a); });
+          var p = plan[d.k], right = j === q.a;
+          p.step = right ? Math.min(p.step + 1, STEPS.length - 1) : 0; p.due = Date.now() + STEPS[p.step] * DAY; put('vu:recall', plan);
+          body.appendChild(t('p', right ? 'ok' : 'no', (right ? 'Right. It comes back in ' : 'Not this time. It comes back tomorrow, and ') + (right ? STEPS[p.step] + ' days.' : 'again after that.') + ' ' + q.why));
+          var more = t('button', 'nextq', i + 1 < mix.length ? 'Next question' : 'Done'); more.type = 'button'; more.title = 'Go on'; more.onclick = function () { i++; show(); }; body.appendChild(more);
+        };
+        c.appendChild(b);
+      });
+    }
+    show();
+  }).catch(function () {});
+})();
+
 </script>
 </body></html>`;
 }
@@ -1054,6 +1179,7 @@ for (const f of APPICONS) fs.copyFileSync(path.join(DIR, 'img', f), path.join(OU
 fs.writeFileSync(path.join(OUT, 'manifest.webmanifest'), JSON.stringify(MANIFEST));
 fs.writeFileSync(path.join(OUT, 'sw.js'), SW);
 fs.writeFileSync(path.join(OUT, 'credits.html'), credits(loaded));
+fs.writeFileSync(path.join(OUT, 'recall.json'), JSON.stringify(recallBank(loaded)));
 if (RULES) fs.writeFileSync(path.join(OUT, 'ifttt.html'), iftttPage(loaded, JSON.parse(fs.readFileSync(path.join(DIR, 'list.json'), 'utf8'))));
 fs.writeFileSync(path.join(OUT, '404.html'), notFound(loaded));
 fs.writeFileSync(path.join(OUT, 'index.html'), home(loaded, JSON.parse(fs.readFileSync(path.join(DIR, 'list.json'), 'utf8'))));
