@@ -180,6 +180,7 @@ test('the main showing fits the machine: its 40, then every other well-known gam
   games.push({ id: 'k', title: 'Known Classic', system: 'nes', item: 'known', plays: 0, genres: [] });
   games.push({ id: 'k2', title: 'Known Classic Japan', system: 'nes', item: 'known-jp', plays: 0, genres: [] });
   const pages = { known: 12, 'known-jp': 12 };
+  for (let i = 0; i < 60; i++) pages['i' + i] = 30;   // better known and more played: they fill the 40 first
   Object.defineProperty(pages, '__known', { value: new Set(['known', 'known-jp']) });
   Object.defineProperty(pages, '__game', { value: { known: 'Q1', 'known-jp': 'Q1' } });
   ShelfTool.markFront(games, pages);
