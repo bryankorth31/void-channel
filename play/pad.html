@@ -74,8 +74,9 @@ body{background:radial-gradient(ellipse at 22% 6%,rgba(205,215,245,.16) 0%,trans
 .face.placed{--side:calc(var(--pw) / .96)}
 .p.placed,.sh.placed{font-size:clamp(10px,calc(var(--ph) * .32),24px);padding:0 4px}
 .p.placed.s3 span,.sh.placed.s3 span{font-size:.8em}
-/* The top line placed: its words start at the top of its box and are never cut (the player and delay line comes later, a third line). */
-#top.placed{display:flex;flex-direction:column;justify-content:flex-start;overflow:visible}
+/* The top line placed: laid out as when it is not (the site's name, the game's name, then the player and the delay on one
+   line), from the top of its box, and never cut or squeezed: as a column of its own the game's name was squeezed to nothing. */
+#top.placed{display:block;overflow:visible}
 .turn{display:none}
 /* Upright: everything low, under the thumbs: L and R, then Select, Start and Menu, then the d-pad beside the buttons. */
 @media (orientation:portrait){

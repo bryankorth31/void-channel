@@ -175,6 +175,7 @@ test('the pads read the file, the site carries it, and the editor has what Bryan
   assert.ok(pad.includes('<script src="src/padlayout.js"></script>\n<script src="src/phonepad.js"></script>'));
   assert.ok(pad.includes('.placed{position:absolute!important;grid-area:auto!important;'), 'a placed part is measured from the whole pad, not from its old cell');
   assert.ok(pad.includes('<div id="safe"></div>'), 'the notch and rounded corners are left clear');
+  assert.ok(pad.includes('#top.placed{display:block;overflow:visible}'), 'the top line keeps all its lines when it is placed: the name of the game is not squeezed out');
   assert.ok(js.includes("Layout.load('layouts.json' + (BUILD ? '?v=' + BUILD : ''))"), 'fetched fresh after every push');
   assert.ok(js.includes("const set = draft !== undefined ? draft : layouts && layouts.phone && layouts.phone[innerWidth >= innerHeight ? 'side' : 'up'];"));
   assert.ok(js.includes('lay(); measure(); letGo();'), 'the parts are placed before the touch areas are measured');
