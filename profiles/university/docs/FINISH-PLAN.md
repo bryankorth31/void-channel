@@ -352,3 +352,12 @@ the HQ areas chat. Steps 7 to 10 start after the 22 Nov reset.
   real sinks are weakening (Raupach 2014), so the real rise is likely faster. tests/uni.test.js 33 of 33, selftest 4
   of 4. Checked in the preview at 1278x513, 1920x1080, 1316x821 and 821x1316: no sideways scroll, every control has a
   hover tip, no errors from the explainer. The course and block are `live: false`. Not pushed, not deployed.
+- 22 Nov 2026, the If this, then that page (Bryan: "id like to bu8ild a ifttt page of many topics to show and be
+  useful on and for many many topics"; then "If this, then that page"). ifttt.html: every rule from every lab and
+  explainer that ships, by area, course and unit, 19 in the preview (16 from the live labs in the public copy). Each
+  "then" stays hidden until the reader makes it happen in its own lab or explainer; a rule found anywhere is
+  remembered in the reader's browser only (vu:found), so the page and a return visit show it found. Filters by area,
+  found and still to find, and a search. Linked from the Courses menu and the front page. Each block carries its key
+  (course/unit/lab or ex). Chains (a then that is the next rule's if) wait for a second climate unit whose rules
+  really follow from the first; none were invented. tests 34 of 34. Checked at 1278x513, 1316x821, 821x1316: no
+  sideways scroll. Not pushed, not deployed; at the next deploy the live site gains the page with the live labs' rules.

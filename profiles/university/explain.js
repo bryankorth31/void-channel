@@ -14,6 +14,11 @@ const still = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 const TONES = { hot: 0xff4f8b, amber: 0xffb347, cold: 0x5fd4ff, green: 0x6fe39a, gold: 0xffc44d, violet: 0x9b8cf0 };
 const css = (hex) => '#' + hex.toString(16).padStart(6, '0');
+// A rule found anywhere is remembered in this browser only (vu:found), so the If this, then that page and a return
+// visit show it found. Nothing leaves the device.
+const FOUND_KEY = 'vu:found';
+const foundSet = () => { try { return new Set(JSON.parse(localStorage.getItem(FOUND_KEY) || '[]')); } catch (e) { return new Set(); } };
+const remember = (key) => { try { const s = foundSet(); s.add(key); localStorage.setItem(FOUND_KEY, JSON.stringify([...s])); } catch (e) { /* storage off: found for this visit only */ } };
 const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
 
 function mount(root) {
@@ -32,7 +37,8 @@ function mount(root) {
   const choices = {}; ex.choices.forEach((c) => { choices[c.id] = c.start; });
   let state = model.start(), mode = 'today', playing = false, speed = 3, seg = { year: state.year, key: '' };
   let runTrace = [], replayYear = ex.clock.from, guessed = null, guessRun = null;
-  const found = ex.rules.map(() => false);
+  const had = foundSet(), key = root.dataset.key || '';
+  const found = ex.rules.map((r, i) => !!key && had.has(key + '/' + i));
   const faders = ex.choices.map((c) => {
     const input = root.querySelector('input[data-choice="' + c.id + '"]'), out = root.querySelector('output[data-choice="' + c.id + '"]');
     input.addEventListener('input', () => { choices[c.id] = Number(input.value); out.textContent = M.fmt(choices[c.id]); if (mode === 'today') mode = 'run'; seg = { year: state.year, key: JSON.stringify(choices) }; paintAll(); });
@@ -144,7 +150,7 @@ function mount(root) {
         const inT = !w.total || (total() >= w.total[0] - 1e-9 && total() <= w.total[1] + 1e-9);
         ok = inC && inT && state.year - seg.year >= (w.years || 1) - 1e-6;
       }
-      if (ok) { found[i] = true; fresh = i; }
+      if (ok) { found[i] = true; fresh = i; if (key) remember(key + '/' + i); }
     });
     if (fresh >= 0) { renderRules(fresh); root.classList.toggle('all', found.every(Boolean)); }
   }

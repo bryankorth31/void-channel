@@ -28,7 +28,7 @@ test('the public copy carries only live courses, and no lab unless a lab is live
   assert.ok(!fs.existsSync(path.join(SITE, 'stale-page.html')), 'a page from an earlier build was left in site/');
   const live = new Set(list().courses.filter((c) => c.live).map((c) => c.slug));
   const pages = fs.readdirSync(SITE).filter((f) => f.endsWith('.html')).map((f) => f.replace(/\.html$/, ''));
-  for (const p of pages) assert.ok(live.has(p) || ['index', 'credits', '404', 'join'].includes(p), p + '.html is in the public copy but not live');
+  for (const p of pages) assert.ok(live.has(p) || ['index', 'credits', '404', 'join', 'ifttt'].includes(p), p + '.html is in the public copy but not live');
   const anyLiveLab = fs.readdirSync(path.join(uni.UNI, 'courses')).some((f) => {
     const c = JSON.parse(fs.readFileSync(path.join(uni.UNI, 'courses', f), 'utf8'));
     return live.has(c.slug) && c.units.some((u) => u.lab && u.lab.live);
@@ -559,4 +559,35 @@ test('explainer on the page: the preview shows it with its scripts and pictures 
   const ex = explainCourse().units[0].explainer, live = ex.live && list().courses.find((c) => c.slug === 'our-climate-plainly').live;
   assert.equal(fs.existsSync(path.join(SITE, 'explain.js')), !!live);
   if (!live) assert.ok(!fs.existsSync(path.join(SITE, 'our-climate-plainly.html')));
+});
+
+test('If this, then that: every rule from every lab and explainer is on the page once, and each opens a unit that has it', () => {
+  build();
+  const prev = path.join(uni.UNI, 'site-preview');
+  const page = fs.readFileSync(path.join(prev, 'ifttt.html'), 'utf8');
+  // every rule that ships, counted straight from the course files
+  const want = [];
+  for (const f of fs.readdirSync(path.join(uni.UNI, 'courses'))) {
+    const c = JSON.parse(fs.readFileSync(path.join(uni.UNI, 'courses', f), 'utf8'));
+    for (const u of c.units) {
+      if (u.lab) (u.lab.rules || []).forEach((r, i) => want.push(c.slug + '/' + u.n + '/lab/' + i));
+      if (u.explainer) (u.explainer.rules || []).forEach((r, i) => want.push(c.slug + '/' + u.n + '/ex/' + i));
+    }
+  }
+  const keys = [...page.matchAll(/<li data-key="([^"]+)">/g)].map((m) => m[1]);
+  assert.deepEqual([...keys].sort(), [...want].sort(), 'the page and the course files list different rules');
+  assert.equal(new Set(keys).size, keys.length, 'a rule is listed twice');
+  // each place links to a page that exists, whose unit carries a lab or explainer with the same key the rules use
+  for (const m of page.matchAll(/<a class="go" href="([a-z0-9-]+)\.html#u(\d+)"/g)) {
+    const f = path.join(prev, m[1] + '.html');
+    assert.ok(fs.existsSync(f), m[1] + '.html is not built');
+    const html = fs.readFileSync(f, 'utf8');
+    assert.match(html, new RegExp('id="u' + m[2] + '"'), m[1] + ' has no unit ' + m[2]);
+    assert.match(html, new RegExp('data-key="' + m[1] + '/' + m[2] + '/(lab|ex)"'), m[1] + ' unit ' + m[2] + ' has no lab or explainer that remembers its rules');
+  }
+  // a then stays hidden until found; every control has a hover tip; the way home is on the page
+  assert.doesNotMatch(page, /<span class="th">/);
+  for (const m of page.matchAll(/<(button|input)\b[^>]*>/g)) if (!/id="(inst|instok|lookpick|typepick)"/.test(m[0])) assert.match(m[0], /title="[^"]+"/, 'no hover tip: ' + m[0].slice(0, 80));
+  assert.match(page, /&#8592; Home/);
+  assert.match(fs.readFileSync(path.join(prev, 'index.html'), 'utf8'), /class="ruleslink" href="ifttt\.html"/);
 });

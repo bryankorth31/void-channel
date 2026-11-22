@@ -23,14 +23,19 @@
 //     rules: [{ if, then, when: { knob: { id: value }, times } }], map: [[thing, idea]], meet }
 (function () {
   const benches = {};
-  const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+  // A rule found anywhere is remembered in this browser only (vu:found), so the If this, then that page and a return
+  // visit show it found. Nothing leaves the device.
+  const FOUND_KEY = 'vu:found';
+  const foundSet = () => { try { return new Set(JSON.parse(localStorage.getItem(FOUND_KEY) || '[]')); } catch (e) { return new Set(); } };
+  const remember = (key) => { try { const s = foundSet(); s.add(key); localStorage.setItem(FOUND_KEY, JSON.stringify([...s])); } catch (e) { /* storage off: found for this visit only */ } };
+    const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
 
   function mount(root) {
     const cfg = JSON.parse(root.dataset.lab), bench = benches[cfg.bench];
     if (!bench || typeof planck === 'undefined') return;
     const canvas = root.querySelector('.lab-stage canvas'), ctx = canvas.getContext('2d');
     const side = root.querySelector('.lab-side'), triesEl = root.querySelector('.lab-tries'), rulesEl = root.querySelector('.lab-rules');
-    const knobs = {}, tries = [], found = cfg.rules.map(() => false);
+    const knobs = {}, tries = [], had = foundSet(), key = root.dataset.key || '', found = cfg.rules.map((r, i) => !!key && had.has(key + '/' + i));
     let live = null, last = null, seed = 0, raf = 0, W = 0, H = 0;
     const G = cfg.guess && bench.guess ? bench.guess : null;
     let guess = null, liveGuess = null, shownGuess = null;
@@ -113,7 +118,7 @@
       guess = null; renderGuess();
       tries.push({ knobs: Object.assign({}, knobs), r }); if (tries.length > 12) tries.shift();
       say.textContent = r.say; renderTries();
-      let fresh = -1; cfg.rules.forEach((rule, i) => { if (!found[i] && met(rule)) { found[i] = true; fresh = i; } });
+      let fresh = -1; cfg.rules.forEach((rule, i) => { if (!found[i] && met(rule)) { found[i] = true; fresh = i; if (key) remember(key + '/' + i); } });
       renderRules(fresh); root.classList.toggle('all', found.every(Boolean));
     }
     function frame() {
@@ -140,7 +145,7 @@
       pick(x, y) { setGuess(G && G.pick ? G.pick(x, y, W, H, knobs) : null); return guess; },
       state: () => ({ knobs: Object.assign({}, knobs), tries: tries.length, found: found.slice(), guess, goOff: go.disabled }),
     };
-    window.addEventListener('resize', size); size(); renderRules(-1); renderGuess();
+    window.addEventListener('resize', size); size(); renderRules(-1); renderGuess(); root.classList.toggle('all', found.every(Boolean));
   }
 
   window.VULab = { bench(name, b) { benches[name] = b; }, mount };

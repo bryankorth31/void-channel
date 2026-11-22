@@ -97,12 +97,12 @@ function scene(u) {
 
 // The lab: something to put your hands on (lab.js; Bryan, 15 Nov 2026: "interactive teaching, analogous teaching,
 // If This Then That labs"). Knobs are the IF, the bench answers, and each rule's THEN shows only once you made it happen.
-function lab(u) {
+function lab(u, c) {
   if (!shipsLab(u)) return ''; // the public copy carries a lab only once it is marked live
   const l = u.lab;
   const map = (l.map || []).map(([a, z]) => '<span><i>' + esc(a) + '</i> = <b>' + esc(z) + '</b></span>').join('');
   const cfg = { bench: l.bench, go: l.go, knobs: l.knobs, rules: l.rules, meet: l.meet, triesNote: l.triesNote, guess: l.guess };
-  return '<div class="lab" data-lab="' + esc(JSON.stringify(cfg)) + '">'
+  return '<div class="lab" data-key="' + esc(ruleKey(c, u, 'lab')) + '" data-lab="' + esc(JSON.stringify(cfg)) + '">'
     + '<div class="lab-top"><span class="lab-kick">Lab: if this, then that</span><b>' + esc(l.title) + '</b><p>' + esc(l.ask) + '</p></div>'
     + '<div class="lab-body"><div class="lab-stage"><canvas></canvas></div><div class="lab-side"></div></div>'
     + '<div class="lab-tries"></div><div class="lab-rules"></div>'
@@ -160,7 +160,7 @@ function scaleOne(sc) {
 // learner drags the choices people argue about, plays the years ahead or replays the measured ones, guesses first and
 // finds the rules. The parts, their words, the faders and the sources are plain HTML here, so all of it reads with no 3D.
 const shipsExplain = (u) => !!(u.explainer && (!LIVE || u.explainer.live));
-function explainBlock(u) {
+function explainBlock(u, c) {
   if (!shipsExplain(u)) return '';
   const ex = u.explainer;
   const srcs = Object.values(ex.sources).map((x) => '<a href="' + esc(x.url) + '" target="_blank" rel="noopener">' + esc(x.by) + ', ' + esc(String(x.year)) + ', ' + esc(x.title) + (x.where ? ', ' + esc(x.where) : '') + '</a>').join('; ');
@@ -168,7 +168,7 @@ function explainBlock(u) {
   const faders = ex.choices.map((c) => '<label class="ex-fader" title="' + esc(c.tip) + '"><span>' + esc(c.name) + ' <output data-choice="' + esc(c.id) + '">' + esc(String(c.start)) + '</output></span><input type="range" data-choice="' + esc(c.id) + '" min="' + c.min + '" max="' + c.max + '" step="' + c.step + '" value="' + c.start + '" aria-label="' + esc(c.name) + '" title="' + esc(c.tip) + '"></label>').join('');
   const g = ex.guess ? '<div class="ex-guess"><b>Guess first</b><p>' + esc(ex.guess.q) + '</p><div class="opts">' + ex.guess.options.map((o, i) => '<button type="button" data-i="' + i + '" title="Choose this answer, then watch it play out">' + esc(o) + '</button>').join('') + '</div></div>' : '';
   const speeds = [[1, 'Slow', 'One year a second'], [3, 'Steady', 'Three years a second'], [10, 'Fast', 'Ten years a second']].map(([v, t, tip]) => '<button type="button" data-speed="' + v + '" title="' + tip + '">' + t + '</button>').join('');
-  return '<div class="ex" data-ex="' + esc(JSON.stringify(ex)) + '">'
+  return '<div class="ex" data-key="' + esc(ruleKey(c, u, 'ex')) + '" data-ex="' + esc(JSON.stringify(ex)) + '">'
     + '<div class="ex-top"><span class="ex-kick">See how it works</span><b>' + esc(ex.title) + '</b><p>' + esc(ex.ask) + '</p></div>'
     + '<div class="ex-body"><div class="ex-main">'
     + '<div class="ex-stage" tabindex="0" aria-label="3D world: ' + esc(ex.title) + '. Drag to turn it, arrow keys also turn it, plus and minus zoom. Press a place to learn what it is."><canvas></canvas><div class="ex-labels"></div><div class="ex-hud" aria-hidden="true"></div><div class="ex-card" hidden></div>' + g + '<p class="ex-hint">Drag to turn the world. Press the stage, then scroll or pinch to zoom. Press the land, the sea or the air to learn what it does.</p></div>'
@@ -183,10 +183,78 @@ function explainBlock(u) {
     + '</div>';
 }
 
+// If this, then that, across the whole University (Bryan, 22 Nov 2026: "id like to bu8ild a ifttt page of many topics to
+// show and be useful on and for many many topics"; his Mind Atlas: "a dominoes or ifttt of the worlds levers"). Every
+// rule from every lab and explainer that ships, by area, course and unit. A rule's "then" shows once the reader has
+// made it happen in its own lab or explainer (remembered in their browser as vu:found, under the rule's key).
+const ruleKey = (c, u, kind) => c.slug + '/' + u.n + '/' + kind;
+function rulesOf(all) {
+  const out = [];
+  for (const c of all) for (const u of c.units) {
+    const blocks = [];
+    if (u.lab && shipsLab(u)) blocks.push(['lab', u.lab, 'lab']);
+    if (u.explainer && shipsExplain(u)) blocks.push(['ex', u.explainer, 'explainer']);
+    for (const [kind, b, word] of blocks) (b.rules || []).forEach((r, i) => out.push({ area: c.domain, course: c.name, slug: c.slug, n: u.n, unit: u.title.replace(/^Draft, not kept yet: /, ''), title: b.title, word, key: ruleKey(c, u, kind) + '/' + i, if: String(r.if).replace(/[,\s]+$/, ''), then: r.then }));
+  }
+  return out;
+}
+function iftttPage(all, list) {
+  const rules = rulesOf(all);
+  const areas = list.types.filter((t) => rules.some((r) => r.area === t));
+  const groups = areas.map((t) => {
+    const mine = rules.filter((r) => r.area === t), places = [...new Set(mine.map((r) => r.slug + '#u' + r.n))];
+    return '<section class="ra" data-area="' + esc(t) + '" style="--area:' + hue(t) + '"><h2>' + esc(t) + '</h2>' + places.map((p) => {
+      const rs = mine.filter((r) => r.slug + '#u' + r.n === p), r0 = rs[0];
+      return '<div class="rp"><a class="go" href="' + esc(r0.slug) + '.html#u' + r0.n + '" title="Open the ' + esc(r0.word) + ' and make these happen yourself"><small>' + esc(r0.course) + ', unit ' + r0.n + '</small><b>' + esc(r0.title || r0.unit) + '</b><span>Go and do it</span></a><ul>'
+        + rs.map((r) => '<li data-key="' + esc(r.key) + '"><b>If</b> ' + esc(r.if) + ', <b>then</b> <span class="th" hidden>' + esc(r.then) + '</span><i class="tbd">make it happen and see.</i></li>').join('') + '</ul></div>';
+    }).join('') + '</section>';
+  }).join('');
+  const chips = '<button type="button" class="on" data-area="" title="Show the rules from every area">Every area</button>' + areas.map((t) => '<button type="button" data-area="' + esc(t) + '" style="--area:' + hue(t) + '" title="Show only the rules from ' + esc(t) + '">' + esc(t) + '</button>').join('');
+  return `<!doctype html><html lang="en" data-look="${LOOK}" data-type="${TYPE}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${APPHEAD}<title>If this, then that | Void University</title>${FONTS}<style>${BASE}
+main{max-width:1100px;margin:0 auto;padding:30px 24px 60px}
+.lead h1{font-family:var(--head);font-size:40px;line-height:1.1;margin:0 0 10px}.lead p{margin:0 0 6px;color:var(--soft);font-size:18px;max-width:760px}
+.tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:18px 0 6px}.tools button{font:inherit;font-size:14px;background:var(--panel);color:var(--fg);border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer}.tools button.on{border-color:var(--area,var(--gold));color:var(--area,var(--gold))}
+#rfind{font:inherit;font-size:15px;margin-left:auto;min-width:240px;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--panel);color:var(--fg)}#rfind:focus{outline:none;border-color:var(--gold)}
+.count{margin:10px 0 0;color:var(--dim);font-size:15px}.count b{color:#5fe39a}
+.ra{margin:26px 0 0}.ra h2{font-family:var(--head);font-size:24px;margin:0 0 10px;padding-bottom:6px;border-bottom:2px solid var(--area)}
+.rp{display:grid;grid-template-columns:260px minmax(0,1fr);gap:14px;margin:0 0 14px;padding:14px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+.rp .go{display:flex;flex-direction:column;gap:3px;text-decoration:none;color:var(--fg);padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--deep);align-self:start}.rp .go:hover{border-color:var(--area)}.rp .go small{color:var(--dim);font-size:13px}.rp .go b{font-family:var(--head);font-size:17px}.rp .go span{color:var(--area);font-size:14px;font-weight:600}
+.rp ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}.rp li{padding:8px 12px;border:1px solid var(--line);border-radius:8px;font-size:16px;background:var(--deep)}.rp li b{color:var(--gold)}.rp li .tbd{color:var(--dim)}.rp li.found{border-color:rgba(95,227,154,.5)}.rp li[hidden],.ra[hidden],.rp[hidden]{display:none}
+@media (max-width:820px){.rp{grid-template-columns:1fr}#rfind{margin-left:0;flex-basis:100%}.lead h1{font-size:32px}}
+${LOOKCSS}${TYPECSS}</style></head><body>
+${top('ifttt', all)}<main><div class="lead"><h1>If this, then that</h1><p>Every rule you can find in the University, by area. Each "then" stays hidden until you make it happen yourself in its lesson. Press a lesson to go and do it.</p></div>
+<div class="tools">${chips}<input type="search" id="rfind" placeholder="Find a rule" aria-label="Find a rule" title="Type a word to show only the rules that use it"></div>
+<div class="tools" role="group" aria-label="Which rules"><button type="button" class="on" data-show="all" title="Show every rule">All rules</button><button type="button" data-show="found" title="Show only the rules you have found">Found</button><button type="button" data-show="open" title="Show only the rules you have not found yet">Still to find</button></div>
+<p class="count" aria-live="polite"></p>${groups}</main>${FOOT()}
+<script>
+(function () {
+  var had = []; try { had = JSON.parse(localStorage.getItem('vu:found') || '[]'); } catch (e) { had = []; }
+  var lis = [].slice.call(document.querySelectorAll('.rp li')), area = '', show = 'all', q = '';
+  lis.forEach(function (li) { if (had.indexOf(li.dataset.key) >= 0) { li.classList.add('found'); li.querySelector('.th').hidden = false; li.querySelector('.tbd').hidden = true; } });
+  function paint() {
+    var n = 0, f = 0;
+    lis.forEach(function (li) {
+      var a = li.closest('.ra').dataset.area, isF = li.classList.contains('found');
+      var on = (!area || a === area) && (show === 'all' || (show === 'found') === isF) && (!q || li.textContent.toLowerCase().indexOf(q) >= 0);
+      li.hidden = !on; if (on) { n++; if (isF) f++; }
+    });
+    document.querySelectorAll('.rp').forEach(function (p) { p.hidden = !p.querySelector('li:not([hidden])'); });
+    document.querySelectorAll('.ra').forEach(function (s) { s.hidden = !s.querySelector('.rp:not([hidden])'); });
+    var all = lis.filter(function (li) { return li.classList.contains('found'); }).length;
+    document.querySelector('.count').innerHTML = '<b>' + all + ' of ' + lis.length + '</b> rules found so far.' + (n !== lis.length ? ' Showing ' + n + '.' : '') + (n === 0 ? ' Nothing matches.' : '');
+  }
+  document.querySelectorAll('[data-area]').forEach(function (b) { if (b.tagName !== 'BUTTON') return; b.onclick = function () { area = b.dataset.area; document.querySelectorAll('button[data-area]').forEach(function (x) { x.classList.toggle('on', x === b); }); paint(); }; });
+  document.querySelectorAll('[data-show]').forEach(function (b) { b.onclick = function () { show = b.dataset.show; document.querySelectorAll('[data-show]').forEach(function (x) { x.classList.toggle('on', x === b); }); paint(); }; });
+  document.getElementById('rfind').oninput = function (e) { q = e.target.value.trim().toLowerCase(); paint(); };
+  paint();
+})();
+</script></body></html>`;
+}
+
 // Bryan, 15 Nov 2026: "less words". A unit shows its picture, its main piece and its crystal; the rest is one tap away.
 // The mind's mechanisms are a supplement shelf (Bryan, 15 Nov 2026: "the smaller ones like the FOMO ... are
 // supplemental that go for anything"). Any unit lists the mechanisms it leans on; the mechanism shows where it is used.
-let MECH = null; const USED = {};
+let MECH = null; const USED = {}; let RULES = 0;
 function links(u, c) {
   if (c.shelf === 'supplement') {
     const used = USED[u.n] || [];
@@ -237,9 +305,9 @@ function unit(u, voices, c) {
     + '<p class="need"><b>Why you need this:</b> ' + esc(needIt(u)) + '</p>'
     + scene(u)
     + links(u, c)
-    + lab(u)
+    + lab(u, c)
     + scaleBlock(u)
-    + explainBlock(u)
+    + explainBlock(u, c)
     + (u.main ? '<div class="pieces">' + piece(u.main.role === 'train' ? { ...u.main, unit: u.n } : u.main, true) + '</div>' : '')
     // Preview only: make questions with a phone while the lecture plays (make/screen.js shows the button once the
     // preview server says this lecture has been heard). The public copy never carries it.
@@ -633,7 +701,7 @@ header.top{display:flex;flex-wrap:nowrap;align-items:center;gap:10px 18px;paddin
 .crest svg{width:34px;height:34px;flex:none}
 .crest span{white-space:nowrap}.crest b{font-family:var(--head);font-weight:700;font-size:19px;letter-spacing:.14em;text-transform:uppercase}
 .crest small{display:block;font-size:12px;color:var(--gold);margin-top:1px}
-.nav{display:flex;gap:4px;flex-wrap:nowrap;margin-left:auto;position:static;align-items:center;min-width:0}.nav>a{white-space:nowrap}.nav a.here{overflow:hidden;text-overflow:ellipsis;min-width:0;max-width:34vw}.navtools{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding-top:12px;border-top:1px solid var(--line)}.navtools:empty{display:none}.navtools .instnote{position:static;width:auto}@media (max-width:900px){.crest small{display:none}}
+.nav{display:flex;gap:4px;flex-wrap:nowrap;margin-left:auto;position:static;align-items:center;min-width:0}.nav>a{white-space:nowrap}.nav a.here{overflow:hidden;text-overflow:ellipsis;min-width:0;max-width:34vw}.navtools{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding-top:12px;border-top:1px solid var(--line)}.navtools:empty{display:none}.navtools .navrules{color:var(--gold);text-decoration:none;font-weight:600;padding:6px 0}.navtools .navrules:hover{text-decoration:underline}.navtools .instnote{position:static;width:auto}@media (max-width:900px){.crest small{display:none}}
 .navall{position:relative}.navall summary{cursor:pointer;list-style:none;font-size:14px;padding:6px 12px;border-radius:6px;color:var(--fg);border:1px solid var(--line)}.navall summary::-webkit-details-marker{display:none}.navall summary:hover{border-color:var(--gold)}
 .navlist{position:absolute;right:0;top:calc(100% + 8px);z-index:30;width:min(640px,calc(100vw - 40px));max-height:70vh;overflow:auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px 18px;padding:16px;background:var(--panel);border:1px solid var(--line);border-radius:10px;box-shadow:0 18px 40px rgba(0,0,0,.5)}
 @media (max-width:1000px){header.top{padding:8px 20px;gap:6px 14px}.navall{position:static}.navlist{left:20px;right:20px;width:auto}}
@@ -727,7 +795,7 @@ function top(current, all) {
     const areas = [...new Set(all.map((o) => o.domain))];
     const groups = areas.map((a) => '<div><h5>' + esc(a) + '</h5>' + all.filter((o) => o.domain === a).map(link).join('') + '</div>').join('')
       + (SHELFBOOKS.length ? '<div><h5>Old books in plain English</h5>' + SHELFBOOKS.map(link).join('') + '</div>' : '');
-    links = home + (here ? hereLink(here) : '') + '<details class="navall"><summary title="Every course, by area">Courses</summary><div class="navlist">' + groups + '<div class="navtools">' + INSTALL + DRAFT + '</div></div></details>';
+    links = home + (here ? hereLink(here) : '') + '<details class="navall"><summary title="Every course, by area">Courses</summary><div class="navlist">' + groups + '<div class="navtools">' + (RULES ? '<a class="navrules" href="ifttt.html" title="Every If this, then that rule in the University, by area">If this, then that: every rule</a>' : '') + INSTALL + DRAFT + '</div></div></details>';
   }
   // The background (B, 19 Nov 2026: "i want these used in the same ways as as vtv. the way the bg moves", "make the background drift on
   // my tablet too"; 22 Nov 2026: "i want the bg sittuation to be fixed on all pages") is the one every Void area shares,
@@ -822,6 +890,7 @@ ${CARDCSS}
 .card .prog{font-style:normal;font-size:12px;color:#8fd6aa}
 @media (max-width:1000px){#find{margin-left:0;flex-basis:100%}}
 .course.off{display:none}
+.ruleslink{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:baseline;margin:18px 20px 0;padding:14px 18px;border:1px solid var(--gold);border-radius:12px;background:var(--panel);color:var(--fg);text-decoration:none}.ruleslink b{font-family:var(--head);font-size:22px;color:var(--gold)}.ruleslink span{color:var(--soft);font-size:15px}.ruleslink:hover{background:var(--panel2)}
 .areas{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px;padding:0 20px}
 .area{display:block;color:var(--fg);text-decoration:none;position:relative;border-radius:8px;overflow:hidden;aspect-ratio:16/10;border:1px solid var(--line)}
 .area img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) brightness(.45)}
@@ -834,6 +903,7 @@ ${top('home', all)}
 <div id="colhost"><div class="hero">${img('a-mind') ? '<img src="' + img('a-mind') + '" alt="">' : ''}<div><h1>Big ideas, shown with everyday things.</h1><p>Each lesson starts from something you already know, then shows you the bigger idea working the same way. Every course is free, and there is no account to make.</p></div></div>
 <main><div class="who"><span>Who is it for?</span><button class="on" data-lv="">Everyone</button><button data-lv="high school">High school</button><button data-lv="young adults">Young adults</button><button data-lv="everyday">Everyday life</button><input type="search" id="find" placeholder="Find a course or a lesson" aria-label="Find a course or a lesson"><small>Everyday life: not for a job in the field, just useful for living, deciding and understanding people.</small></div>
 <div id="found" hidden></div><div id="resume" hidden></div>
+${RULES ? '<a class="ruleslink" href="ifttt.html" title="Every If this, then that rule in the University, by area"><b>If this, then that</b><span>' + RULES + ' rules across ' + new Set(rulesOf(all).map((r) => r.area)).size + ' areas. Make each one happen yourself, then see them all in one place.</span></a>' : ''}
 ${rows}
 ${shelfRow}
 <h2><span>Jump to an area</span></h2><div class="areas">${tiles}</div></main></div>
@@ -968,6 +1038,7 @@ if (LIVE && loaded.some((c) => c.units.some(shipsAnswer))) {
   fs.writeFileSync(path.join(OUT, 'join.html'), fs.readFileSync(path.join(DIR, 'make', 'phone.html'), 'utf8').replace('<!--give-->', () => give).replace('<!--home-->', '<p><a href="index.html" title="Go to the Void University front page">← Void University</a></p>'));
 }
 MECH = loaded.find((c) => c.shelf === 'supplement') || null;
+RULES = rulesOf(loaded).length;
 for (const c of loaded) if (c.shelf !== 'supplement') for (const u of c.units) for (const n of u.mechanisms || []) (USED[n] = USED[n] || []).push({ slug: c.slug, course: c.name, n: u.n, title: u.title });
 fs.mkdirSync(path.join(OUT, 'img'), { recursive: true });
 for (const k of Object.keys(IMG)) if (img(k)) fs.copyFileSync(path.join(DIR, IMG[k].file), path.join(OUT, IMG[k].file)); // our own pictures only
@@ -984,6 +1055,7 @@ for (const f of APPICONS) fs.copyFileSync(path.join(DIR, 'img', f), path.join(OU
 fs.writeFileSync(path.join(OUT, 'manifest.webmanifest'), JSON.stringify(MANIFEST));
 fs.writeFileSync(path.join(OUT, 'sw.js'), SW);
 fs.writeFileSync(path.join(OUT, 'credits.html'), credits(loaded));
+if (RULES) fs.writeFileSync(path.join(OUT, 'ifttt.html'), iftttPage(loaded, JSON.parse(fs.readFileSync(path.join(DIR, 'list.json'), 'utf8'))));
 fs.writeFileSync(path.join(OUT, '404.html'), notFound(loaded));
 fs.writeFileSync(path.join(OUT, 'index.html'), home(loaded, JSON.parse(fs.readFileSync(path.join(DIR, 'list.json'), 'utf8'))));
 for (const b of SHELFBOOKS) {
