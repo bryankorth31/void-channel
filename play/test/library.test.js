@@ -188,3 +188,14 @@ test('the main showing fits the machine: its 40, then every other well-known gam
   assert.ok(!games.find((g) => g.id === 'k2').front, 'its other name does not take a second place');
   assert.equal(games.filter((g) => g.front).length, 41);
 });
+
+test('two players where Wikidata is silent: fighting and two-sided sports on home consoles and arcade, and the series people try first', () => {
+  const card = (system, title) => ({ system, title, players: 1 });
+  assert.equal(Lib.withFacts(card('genesis', 'X'), { genres: ['fighting game'] }).players, 2);
+  assert.equal(Lib.withFacts(card('gameboy', 'X'), { genres: ['fighting game'] }).players, 1, 'a handheld needed a link cable');
+  assert.equal(Lib.withFacts(card('nes', 'X'), { genres: ['boxing video game'] }).players, 1, 'Punch-Out is one player');
+  for (const t of ['NBA Jam', 'Mega Bomberman', 'Micro Machines', 'Puyo Puyo', 'Tecmo Super Bowl II', 'Street Fighter II Special Champion Edition'])
+    assert.equal(Lib.twoByName(card('genesis', t)).players, 2, t);
+  for (const t of ['Fire Fighter', 'F-22 Interceptor', 'Sonic the Hedgehog']) assert.equal(Lib.twoByName(card('genesis', t)).players, 1, t);
+  assert.equal(Lib.twoByName(card('dos', 'NBA Jam')).players, 1, 'not on the PC (keyboard)');
+});

@@ -95,8 +95,22 @@ function withFacts(c, f) {
   if (!f) return c;
   if (f.players === 2 && (c.players || 1) < 2) c.players = 2;
   if (Array.isArray(f.genres) && f.genres.length && !c.genre) c.genre = f.genres.slice(0, 4);
+  // Wikidata leaves most players empty, so NBA Jam and Street Fighter II read 1 (the auditor, 22 Nov 2026). On a home
+  // console or arcade machine a fighting game or a two-sided sport is two players unless said otherwise; a one-player
+  // game given a second seat loses nothing, a two-player game without one does. Not boxing: Punch-Out is one player.
+  if ((c.players || 1) < 2 && TWO_SEAT.includes(c.system) && (f.likelyTwo || (f.genres || []).some((g) => TWO_KIND.test(g)))) c.players = 2;
   return c;
 }
+// Pure (tested): the same by name, for a game Wikidata does not know: leagues, two-sided sports, fighting series and
+// the two-player series people try first (Bomberman, Gauntlet, Micro Machines, Puyo Puyo, Contra). Not "fighter" alone
+// (Fire Fighter, F-22 are one player).
+const TWO_NAME = /\b(nba|nfl|nhl|nhlpa|fifa|madden|mlbpa|pga|soccer|football|hockey|baseball|basketball|tennis|volleyball|super bowl|olympics?|pong|world cup|street fighter|virtua fighter|clay ?fighter|tournament fighters|fatal fury|art of fighting|samurai shodown|mortal kombat|double dragon|bomberman|gauntlet|micro machines|puyo|contra|bubble bobble|space war|combat)\b/i;
+function twoByName(c) {
+  if ((c.players || 1) < 2 && TWO_SEAT.includes(c.system) && TWO_NAME.test(c.title)) c.players = 2;
+  return c;
+}
+const TWO_SEAT = ['genesis', 'nes', 'snes', 'sms', 'a2600', 'arcade'];
+const TWO_KIND = /fighting|basketball|american football|association football|soccer|ice hockey|baseball|volleyball|tennis|wrestling|sports? video game/i;
 
 // Pure (tested): a PC game's card from its row: the drafts tool's DOS card, with the start program the check used.
 function dosCard(r) {
@@ -199,7 +213,7 @@ function main() {
     const weed = readWeed(system);
     const cards = build(readRows(system).concat(/top150/.test(from) ? topRows(system, top, weed) : [],
       /more/.test(from) ? topRows(system, more, weed) : [], /genvar/.test(from) ? topRows(system, genvar, weed) : []), taken);
-    for (const c of cards) withFacts(c, facts[c.archive.item]);
+    for (const c of cards) twoByName(withFacts(c, facts[c.archive.item]));
     for (const c of cards) { taken.ids.push(c.id); taken.items.push(c.archive.item); taken.names.push(c.system + ' ' + nameKey(c.title)); }
     for (const b of bundles(system, cards)) {
       const f = path.join(LIB, b.name + '.json');
@@ -213,4 +227,4 @@ function main() {
 }
 
 if (require.main === module) main();
-module.exports = { build, bundles, topRows, dosCard, finished, tidyTitle, withFacts, LEAVE, LEAVE_FILE, PER };
+module.exports = { build, bundles, topRows, dosCard, finished, tidyTitle, withFacts, twoByName, LEAVE, LEAVE_FILE, PER };
