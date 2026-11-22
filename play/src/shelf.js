@@ -609,6 +609,8 @@
       const list = homeRows(shelfGames);
       rows.append(rowSection(list[0].title, list[0].games, list[0].f, list[0].count), machineRow());
       for (const r of list.slice(1)) rows.append(rowSection(r.title, r.games, r.f, r.count));
+      // What is in the news (play/src/moments-shelf.js, the shared moments engine): its rows go first under the banner.
+      if (root.PlayMoments) root.PlayMoments.place(rows, shelfGames, rowSection, () => turn === shown);
       continueRow().then((sec) => { if (sec && turn === shown) rows.prepend(sec); }).catch(() => {});
       return;
     }
