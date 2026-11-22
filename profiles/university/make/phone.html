@@ -74,6 +74,14 @@ a{color:var(--gold)}
   <div id="eidea" hidden><p class="dim">The idea that set:</p><p id="eideatext"></p><p class="dim" id="eaha"></p></div>
 </section>
 
+<section id="say" hidden>
+  <p class="dim">Say this in your own words:</p>
+  <p id="sidea"></p>
+  <textarea id="stext" rows="4" maxlength="300" aria-label="The idea in your own words" title="Write the idea in your own words"></textarea>
+  <div class="row"><button type="button" id="ssend" title="Send it to the shared screen, without your name">Send, without my name</button></div>
+  <div class="picks" id="scards"></div>
+</section>
+
 <section id="write" hidden>
   <div class="row"><button type="button" id="back" title="Drop this question and carry on with the lecture">← Back to the lecture</button></div>
   <p class="dim" id="at"></p>
@@ -110,7 +118,7 @@ a{color:var(--gold)}
     try { sessionStorage.setItem('vu-make-token', token); } catch (e) {}
   }
   function norm(s) { var c = String(s || '').trim().toUpperCase(); return c.length === 4 && c.split('').every(function (x) { return ALPHA.indexOf(x) >= 0; }) ? c : ''; }
-  function show(id) { ['enter', 'ready', 'write', 'answer', 'eat'].forEach(function (k) { $(k).hidden = k !== id; }); window.scrollTo(0, 0); }
+  function show(id) { ['enter', 'ready', 'write', 'answer', 'eat', 'say'].forEach(function (k) { $(k).hidden = k !== id; }); window.scrollTo(0, 0); }
   function note(text, kind) { $('note').textContent = text || ''; $('note').className = kind || ''; }
   function send(obj) { if (ws && ws.readyState === 1) { ws.send(JSON.stringify(obj)); return true; } note('Not connected to the computer. Wait a moment, or scan the code again.', 'no'); return false; }
 
@@ -171,6 +179,10 @@ a{color:var(--gold)}
   }
   function hear(m) {
     if (m.type === 'hello') { note(''); return; }
+    if (m.type === 'say') { mode = 'say'; study = true; $('kind').textContent = 'Void University: study together'; $('title').textContent = m.title || 'Say it another way'; $('sidea').textContent = m.idea; $('stext').value = ''; $('stext').disabled = false; $('ssend').hidden = false; $('scards').textContent = ''; $('ssend').onclick = function () { var v = $('stext').value.trim(); if (v) send({ type: 'said', text: v.slice(0, 300) }); else note('Write it first, in your own words.', 'no'); }; note(''); show('say'); return; }
+    if (m.type === 'heard' && mode === 'say') { $('stext').disabled = true; $('ssend').hidden = true; note('Sent. The cards show when everyone has written.', 'ok'); return; }
+    if (m.type === 'vote' && mode === 'say') { $('scards').textContent = ''; note('Pick the one that says it most clearly. Yours is marked and cannot be picked.'); return; }
+    if (m.type === 'card' && mode === 'say') { var cb = document.createElement('button'); cb.type = 'button'; cb.textContent = m.text; cb.title = m.mine ? 'This is yours' : 'Pick this one as the clearest'; if (m.mine) { cb.disabled = true; cb.className = 'mine'; } cb.onclick = function () { if (send({ type: 'vote', i: m.i })) { [].forEach.call($('scards').querySelectorAll('button'), function (x) { if (!x.classList.contains('mine')) x.className = ''; }); cb.className = 'right'; note('Picked. You can change it while others choose.', 'ok'); } }; $('scards').appendChild(cb); return; }
     if (m.type === 'eat') { mode = 'eat'; study = true; $('kind').textContent = 'Void University: study together'; $('title').textContent = m.title || 'Pattern Eater'; $('pieces').textContent = ''; $('eidea').hidden = true; $('ehead').textContent = m.n ? 'Your pieces. Send the ones you think belong to the idea on the shared screen. Keep the ones you think do not.' : 'No pieces for you this round. Help the room decide out loud.'; note(''); show('eat'); return; }
     if (m.type === 'piece' && mode === 'eat') { var pb = document.createElement('button'); pb.type = 'button'; pb.textContent = m.text; pb.dataset.id = m.id; pb.title = 'Send this piece to the shared screen'; pb.onclick = function () { if (pb.disabled) return; if (send({ type: 'give', id: m.id })) { pb.disabled = true; note('Sent.'); } }; $('pieces').appendChild(pb); return; }
     if (m.type === 'took' && mode === 'eat') { var tb = $('pieces').querySelector('[data-id="' + m.id + '"]'); if (tb) { tb.className = m.ok ? 'mine' : 'wrong'; tb.disabled = true; } note(m.ok ? 'It fit. It is on the shared screen.' : 'That one cracked the crystal: it is not part of this idea. ' + (m.why || ''), m.ok ? 'ok' : 'no'); return; }

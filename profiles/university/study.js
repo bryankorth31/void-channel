@@ -62,6 +62,8 @@
     if (m.type === 'leave') { S.seats[m.from] = false; people(); tally(); return; }
     var x = m.msg; if (!x || typeof x !== 'object') return;
     if (x.type === 'give' && typeof x.id === 'string') { gave(m.from, x.id); return; }
+    if (x.type === 'said' && S.say && !S.say.shown && typeof x.text === 'string' && x.text.trim()) { S.say.said[m.from] = x.text.trim().slice(0, 300); tell(m.from, { type: 'heard' }); sayCount(); return; }
+    if (x.type === 'vote' && S.say && S.say.shown && Number.isInteger(x.i) && S.say.cards[x.i] && S.say.cards[x.i].from !== String(m.from)) { S.say.votes[m.from] = x.i; paintCards(); sayCount(); return; }
     if (x.type === 'pick' && x.i === S.i && !S.shown && Number.isInteger(x.j) && x.j >= 0 && x.j < 4 && S.picks[m.from] == null) { S.picks[m.from] = x.j; tally(); }
   }
 
@@ -71,7 +73,7 @@
     S.set = x; S.i = -1; S.eat = null;
     $('pick').hidden = true; $('how').hidden = false; $('run').hidden = true; $('eatbox').hidden = true;
     $('howname').textContent = x.b.course + ': ' + x.b.title;
-    $('howguess').hidden = !(x.b.q.length >= 2); $('howeat').hidden = !x.b.crystal;
+    $('howguess').hidden = !(x.b.q.length >= 2); $('howeat').hidden = !x.b.crystal; $('howsay').hidden = !x.b.crystal;
   }
   $('howguess').onclick = function () {
     $('how').hidden = true; $('run').hidden = false;
@@ -80,6 +82,45 @@
     next();
   };
   $('howeat').onclick = function () { $('how').hidden = true; eat(); };
+  $('howsay').onclick = function () { $('how').hidden = true; say2(); };
+  $('eatsay').onclick = function () { $('eatbox').hidden = true; say2(); };
+
+  // ---- Say it another way (Bryan: learned is when you can "ask the answer in another way"). Every phone writes the
+  // idea in its own words; nothing shows until all are in (so nobody copies); then the cards show without names, in a
+  // shuffled order, and each phone picks the one that says it most clearly. Nothing is kept.
+  function say2() {
+    S.say = { said: {}, shown: false, votes: {}, cards: [] };
+    $('saybox').hidden = false; $('sayname').textContent = S.set.b.course + ': ' + S.set.b.title;
+    $('sayidea').textContent = S.set.b.crystal.key; $('cards').textContent = ''; $('saypick').textContent = '';
+    here().forEach(function (k) { tell(+k, { type: 'say', title: S.set.b.title, idea: S.set.b.crystal.key.slice(0, 500) }); });
+    sayCount();
+  }
+  function sayCount() {
+    if (!S.say) return;
+    var n = here().length, w = here().filter(function (k) { return S.say.said[k]; }).length;
+    say(S.say.shown ? Object.keys(S.say.votes).length + ' of ' + n + ' have picked.' : w + ' of ' + n + ' have written.');
+    $('showcards').hidden = S.say.shown || !w;
+    if (!S.say.shown && n && w === n) showCards();
+  }
+  function showCards() {
+    var Y = S.say; if (Y.shown) return; Y.shown = true;
+    Y.cards = shuffle(Object.keys(Y.said).map(function (k) { return { from: k, text: Y.said[k] }; }));
+    paintCards();
+    here().forEach(function (k) {
+      tell(+k, { type: 'vote', n: Y.cards.length });
+      Y.cards.forEach(function (c, i) { tell(+k, { type: 'card', i: i, text: c.text, mine: c.from === k }); });
+    });
+    sayCount();
+  }
+  function paintCards() {
+    var Y = S.say, box = $('cards'); box.textContent = '';
+    var counts = Y.cards.map(function () { return 0; }); Object.keys(Y.votes).forEach(function (k) { counts[Y.votes[k]]++; });
+    var top = Math.max.apply(null, counts.concat([0]));
+    Y.cards.forEach(function (c, i) { var d = t('div', 'card2' + (top && counts[i] === top ? ' pick' : ''), c.text); if (counts[i]) d.appendChild(t('small', null, counts[i] + (counts[i] === 1 ? ' pick' : ' picks'))); box.appendChild(d); });
+    $('saypick').textContent = top ? 'The room\'s pick so far is lit. Nothing here is graded: the point is hearing it said other ways.' : '';
+  }
+  $('showcards').onclick = showCards;
+  $('sayback').onclick = function () { $('saybox').hidden = true; $('pick').hidden = false; S.set = null; S.say = null; };
   $('howback').onclick = function () { $('how').hidden = true; $('pick').hidden = false; S.set = null; };
 
   // ---- Pattern Eater together (Bryan's design, Dec 2025, in plans/research-aha-nucleation-pattern-eater.md): the
@@ -182,7 +223,7 @@
   $('again').onclick = function () { $('run').hidden = true; $('pick').hidden = false; S.set = null; S.i = -1; };
   $('end').onclick = function () {
     try { if (S.ws && S.ws.readyState === 1) { S.ws.send(JSON.stringify({ to: 'all', msg: { type: 'over' } })); S.ws.send(JSON.stringify({ relay: 'end' })); } if (S.ws) S.ws.close(); } catch (e) {}
-    S.ws = null; S.seats = {}; S.code = ''; S.eat = null; people(); $('how').hidden = true; $('eatbox').hidden = true; $('code').textContent = ''; $('qr').textContent = ''; $('addr').textContent = ''; $('open').hidden = false; $('run').hidden = true; $('pick').hidden = false;
+    S.ws = null; S.seats = {}; S.code = ''; S.eat = null; S.say = null; people(); $('how').hidden = true; $('eatbox').hidden = true; $('saybox').hidden = true; $('code').textContent = ''; $('qr').textContent = ''; $('addr').textContent = ''; $('open').hidden = false; $('run').hidden = true; $('pick').hidden = false;
     say('The session is over. Nothing from it was kept.');
   };
   root._study = { state: function () { return { code: S.code, phones: here().length, i: S.i, shown: S.shown, picks: Object.assign({}, S.picks) }; } };

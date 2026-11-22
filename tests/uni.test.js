@@ -691,3 +691,15 @@ test('Pattern Eater together: every lesson crystal is a set the room can build, 
   const phone = fs.readFileSync(path.join(uni.UNI, 'make', 'phone.html'), 'utf8');
   assert.match(phone, /m\.type === 'eat'/); assert.match(phone, /type: 'give'/); assert.match(phone, /id="eat"/);
 });
+
+test('Say it another way in the study room: write privately, cards show only when all are in, no names, your own cannot be picked', () => {
+  build();
+  const prev = path.join(uni.UNI, 'site-preview');
+  const page = fs.readFileSync(path.join(prev, 'study.html'), 'utf8');
+  for (const id of ['howsay', 'eatsay', 'saybox', 'cards', 'showcards']) assert.match(page, new RegExp('id="' + id + '"'), id);
+  const js = fs.readFileSync(path.join(prev, 'study.js'), 'utf8');
+  assert.match(js, /if \(!S\.say\.shown && n && w === n\) showCards\(\)/, 'cards must wait until everyone has written');
+  assert.match(js, /S\.say\.cards\[x\.i\]\.from !== String\(m\.from\)/, 'a phone must not pick its own card');
+  const phone = fs.readFileSync(path.join(uni.UNI, 'make', 'phone.html'), 'utf8');
+  assert.match(phone, /m\.type === 'say'/); assert.match(phone, /type: 'said'/); assert.match(phone, /if \(m\.mine\) \{ cb\.disabled = true/);
+});

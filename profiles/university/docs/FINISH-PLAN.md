@@ -409,3 +409,8 @@ the HQ areas chat. Steps 7 to 10 start after the 22 Nov reset.
   sets it on the screen and on every phone with the lesson's aha line. Deal again re-deals to whoever is in the room.
   recall.json carries each lesson's crystal. Tested with two tabs as phones: a wrong piece cracked it, five right
   pieces from two phones set it. tests 38 of 38, selftest 4 of 4. Not tried with real phones; not pushed or deployed.
+- 22 Nov 2026, Say it another way in the study room (Bryan: "Say it another way"). From a lesson (or right after a
+  Pattern Eater round sets) every phone writes the idea in its own words, up to 300 letters; nothing shows on the
+  shared screen until all have written (or Show what is written); then the cards show without names in a shuffled
+  order, each phone gets them all with its own marked and not pickable, and each picks the clearest; the room's pick
+  lights up. Nothing graded, nothing kept. Tested with two tabs as phones. tests 39 of 39, selftest 4 of 4.
