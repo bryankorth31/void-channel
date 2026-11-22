@@ -161,3 +161,16 @@ test('audit K5 and S7: a played game is kept in the viewer\'s own browser for a 
   // Bryan, 20 Nov 2026 ("the card dimension aspect ratio doesn't fit the artwork"): the back's strip shows the whole picture now.
   assert.ok(fs.readFileSync(path.join(PLAY, 'shelf.css'), 'utf8').includes('.held .back .strip img{width:100%;height:100%;object-fit:contain;'));
 });
+
+test('pop out (Bryan, 22 Nov 2026: "Go"): the running game moves into a picture-in-picture window and back, the same canvas, only where the browser can', () => {
+  const js = fs.readFileSync(path.join(__dirname, '..', 'src', 'play.js'), 'utf8');
+  const html = fs.readFileSync(path.join(__dirname, '..', 'game.html'), 'utf8');
+  assert.ok(html.includes('id="b-pop" class="tool" hidden'), 'hidden until the browser says it can');
+  assert.ok(js.includes("$('b-pop').hidden = !canPop();"));
+  assert.ok(js.includes('documentPictureInPicture.requestWindow'));
+  assert.ok(js.includes('d.body.append(canvas);') && js.includes('canvasHome.parent.insertBefore(canvasHome.canvas, canvasHome.next);'), 'the canvas itself moves: no second engine');
+  assert.ok(js.includes("pip.addEventListener('pagehide', popBack);"), 'closing the window brings the game back');
+  assert.ok(js.includes('if (p && pip) pip.close();'), 'the pause menu brings it back first');
+  assert.ok(js.includes('if (document.hidden && started && !pip)'), 'no pause when this tab is behind another site while the game is out');
+  assert.ok(js.includes('(pip || window).requestAnimationFrame(poll);'), 'the pads are read on the window that shows the game');
+});

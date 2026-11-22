@@ -224,7 +224,8 @@ test('R3: the pages: the join page sends a phone to the room kind, the pad page 
   for (const bit of ['id="b-phones"', 'id="phones-qr"', '<script src="src/qr.js"></script>\n<script src="src/phones.js"></script>\n<script src="src/play.js"></script>']) assert.ok(game.includes(bit), bit);
   const js = fs.readFileSync(path.join(P, 'src', 'play.js'), 'utf8');
   assert.ok(js.includes('hub.pollPads(pads); if (phones) phones.seats((i) => hub.seat(i));'));
-  assert.ok(js.includes("const allPads = () => [...(navigator.getGamepads ? [...navigator.getGamepads()] : []), ...(phones ? phones.pads() : [])];"));
+  // The pads and the phones in one list; while the game is popped out its window is read for the pads.
+  assert.ok(js.includes("const allPads = () => [...(padNav().getGamepads ? [...padNav().getGamepads()] : []), ...(phones ? phones.pads() : [])];"));
   const site = fs.readFileSync(path.join(P, '..', 'scripts', 'site.js'), 'utf8');
   assert.ok(site.includes("'pad.html', 'join.html'"), 'the site build copies the phone pages');
 });

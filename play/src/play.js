@@ -222,6 +222,7 @@
   // While the menu is open the game hears nothing: every held key is let go first, then the gamepad drives the menu.
   function setPaused(p) {
     if (!runner || !started || p === paused) return;
+    if (p && pip) pip.close();   // the menu is on this page: the game comes back from the pop-out first
     if (p) { hub.releaseAll(); PlayTouch.releaseAll(); letGoMouse(); runner.rewind(false); paused = true; runner.pause(); autosave(); stayAwake(false); }
     else { paused = false; runner.resume(); runner.wakeSound(); stayAwake(true); }
     if (p) drawCps();
@@ -450,7 +451,9 @@
   // Phones as gamepads (Bryan, 20 Nov 2026: "Yes, phone controllers"): a phone that scans the code on this screen joins
   // as one more standard gamepad, so it takes a seat, keeps it and drops like a real one (src/phones.js, play/rooms/).
   let phones = null;
-  const allPads = () => [...(navigator.getGamepads ? [...navigator.getGamepads()] : []), ...(phones ? phones.pads() : [])];
+  // While the game is popped out, the pads are read from its window (this tab may be behind another site).
+  const padNav = () => (pip && pip.navigator && pip.navigator.getGamepads ? pip.navigator : navigator);
+  const allPads = () => [...(padNav().getGamepads ? [...padNav().getGamepads()] : []), ...(phones ? phones.pads() : [])];
   const phoneWord = (code) => PlayCards.actionFor(card, code) || (window.PlayTouch && PlayTouch.label ? PlayTouch.label(code) : code);
   const phoneCard = () => PlayPhones.cardFor(card, card ? PlayCards.gamepadMap(card) : {}, phoneWord);
   function phonesList(list) {
@@ -515,8 +518,10 @@
       if (down && !padWasDown && !$('b-play').hidden) (document.activeElement === $('b-continue') ? continueGame() : begin());
       padWasDown = down;
     }
-    requestAnimationFrame(poll);
+    lastPoll = performance.now();
+    (pip || window).requestAnimationFrame(poll);
   }
+  let lastPoll = 0;
 
   // If the game has not shown a picture by then, say why in one sentence and offer Play again: never "loading" forever.
   // The clock is for a game that stopped arriving, not a slow one (the Kids session, 20 Nov 2026: Reader Rabbit's 21 MB
@@ -912,8 +917,52 @@
   addEventListener('keyup', (e) => keyEvent(e, false));
   addEventListener('pointerdown', () => runner && runner.wakeSound(), { passive: true });
   addEventListener('blur', () => hub && hub.releaseAll());
-  document.addEventListener('visibilitychange', () => { if (document.hidden && started) { if (!paused) setPaused(true); else autosave(); } });
+  document.addEventListener('visibilitychange', () => { if (document.hidden && started && !pip) { if (!paused) setPaused(true); else autosave(); } });
   addEventListener('resize', place);
+
+  // ---- Pop out (Bryan, 22 Nov 2026: "Go"; Document Picture-in-Picture, Chrome and Edge on a computer): the running
+  // game moves into a small window that stays on top of other sites and apps, and back. The same engine keeps drawing
+  // to the same canvas, so nothing restarts and nothing is lost. Keys work in that window, and Esc there brings the
+  // game back; gamepads are read from it; the pause menu brings the game back first.
+  let pip = null, canvasHome = null;
+  const canPop = () => !!(window.documentPictureInPicture && window.documentPictureInPicture.requestWindow) && !isPhone();
+  async function popOut() {
+    if (pip) { pip.close(); return; }
+    if (!started || !canPop()) return;
+    const canvas = $('canvas');
+    const aspect = (canvas.width && canvas.height) ? canvas.width / canvas.height : 4 / 3;
+    const width = Math.round(Math.min(560, Math.max(320, innerWidth * 0.33)));
+    try { pip = await documentPictureInPicture.requestWindow({ width, height: Math.round(width / aspect) }); } catch (e) { pip = null; return; }
+    const d = pip.document;
+    d.title = (card && card.title ? card.title + ' | ' : '') + 'PLAY';
+    const st = d.createElement('style');
+    st.textContent = 'html,body{margin:0;height:100%;background:#000;overflow:hidden}canvas{display:block;width:100%;height:100%;object-fit:contain;image-rendering:pixelated;outline:none}';
+    d.head.append(st);
+    canvasHome = { canvas, parent: canvas.parentNode, next: canvas.nextSibling };
+    d.body.append(canvas);
+    $('pop-note').hidden = false;
+    $('b-pop').setAttribute('aria-pressed', 'true');
+    // Esc there only brings the game back (not also the pause menu).
+    pip.addEventListener('keydown', (e) => { if (e.key === 'Escape') { e.preventDefault(); e.stopImmediatePropagation(); pip.close(); } }, true);
+    pip.addEventListener('keyup', (e) => { if (e.key === 'Escape') e.stopImmediatePropagation(); }, true);
+    pip.addEventListener('keydown', arcadeEsc, true); pip.addEventListener('keyup', arcadeEsc, true);
+    pip.addEventListener('keydown', arcadeCoin, true); pip.addEventListener('keyup', arcadeCoin, true);
+    pip.addEventListener('keydown', (e) => keyEvent(e, true)); pip.addEventListener('keyup', (e) => keyEvent(e, false));
+    pip.addEventListener('blur', () => hub && hub.releaseAll());
+    pip.addEventListener('pagehide', popBack);
+    pip.requestAnimationFrame(poll);
+  }
+  function popBack() {
+    // The canvas is in the pop-out's own document now, so it is held, not looked up on this page.
+    if (canvasHome) canvasHome.parent.insertBefore(canvasHome.canvas, canvasHome.next);
+    canvasHome = null; pip = null;
+    $('pop-note').hidden = true;
+    $('b-pop').setAttribute('aria-pressed', 'false');
+    if (hub) hub.releaseAll();
+    place();
+    // The pad loop ran on the window that just closed: start it again here if it stopped.
+    setTimeout(() => { if (performance.now() - lastPoll > 100) requestAnimationFrame(poll); }, 50);
+  }
   // Turning the phone mid-game: nothing stays held down across the change (the keys move under the thumbs).
   addEventListener('orientationchange', () => { if (hub) hub.releaseAll(); PlayTouch.releaseAll(); });
   // The audit (Bryan: "3 of the directional buttons locked down" after a zoom): when the browser takes a touch for itself,
@@ -1019,6 +1068,8 @@
   $('b-touch').onclick = () => { if (padMode) { padMode = false; touch = true; } else touch = !touch; place.sig = ''; place(); };
   // iPhone has no fullscreen for a web page: the button shows only where the browser can do it.
   if (!document.fullscreenEnabled) $('b-full').hidden = true;
+  $('b-pop').hidden = !canPop();
+  $('b-pop').onclick = popOut;
   $('b-full').onclick = () => { leftFull = !!document.fullscreenElement; if (document.fullscreenElement) document.exitFullscreen(); else document.documentElement.requestFullscreen().catch(() => {}); };
   // In fullscreen the game is all there is: the layout follows the change (Esc or Full to leave), the bar comes back
   // while the mouse is at the top of the screen or for 3 seconds after a tap, and a still mouse pointer hides.
