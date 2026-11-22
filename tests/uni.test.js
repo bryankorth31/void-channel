@@ -591,3 +591,32 @@ test('If this, then that: every rule from every lab and explainer is on the page
   assert.match(page, /&#8592; Home/);
   assert.match(fs.readFileSync(path.join(prev, 'index.html'), 'utf8'), /class="ruleslink" href="ifttt\.html"/);
 });
+
+test('explainer, the Colorado River: Reclamation\'s own records close the books, the lakes empty under the deals, and the basin files are there', () => {
+  const ex = explainCourse().units.find((u) => u.n === 2).explainer, m = MODEL.make(ex);
+  assert.deepEqual(uni.explainerProblems(ex), []);
+  // the measured years: river in, minus releases and evaporation, gives Lake Powell's measured change, year by year
+  let gap = 0;
+  for (let y = 2001; y <= 2026; y++) {
+    const p = m.period(y).flows, s0 = ex.history.stores.powell[String(y - 1)], s1 = ex.history.stores.powell[String(y)];
+    gap += s1 - s0 - (p.river - p.release - p.evap);
+  }
+  assert.ok(Math.abs(gap / 26) < 0.05, 'Lake Powell\'s books do not close: ' + gap / 26);
+  // what the deals promise (9 out of Hoover) against the recent river: Lake Mead falls every year to nothing
+  const g = m.run({ river: 8.2, release: 8.23, deliver: 9 }, 20, 'mead');
+  for (let i = 1; i < g.length; i++) assert.ok(g[i].value < g[i - 1].value || g[i].value === 0);
+  assert.equal(g[20].value, 0);
+  // an empty lake lets out only what comes in
+  const s = m.start(); for (let i = 0; i < 12; i++) m.step(s, { river: 8.2, release: 8.23, deliver: 9 }, 1);
+  assert.ok(Math.abs(m.flows(s, { river: 8.2, release: 8.23, deliver: 9 }).deliver - 8.23) < 1e-9);
+  // hold: Hoover lets go what Glen Canyon lets through
+  assert.ok(Math.abs(m.holding('mead', ['deliver'], { river: 8.2, release: 8.23, deliver: 9 }).deliver - 8.23) < 1e-9);
+  // levels read straight off Reclamation's measured pairs, and say when they go below anything measured
+  assert.equal(m.level('mead', 6.83), '1,038 feet');
+  assert.match(m.level('mead', 3), /lower than any level measured/);
+  for (const st of ex.stores) { const c = st.level.curve.slice().sort((a, b) => a[0] - b[0]); for (let i = 1; i < c.length; i++) assert.ok(c[i][1] > c[i - 1][1], st.id + ' level curve does not rise with storage'); }
+  // the basin's files: heights, colour, rivers and both lakes, each lake the size Reclamation measured when full
+  const dir = path.join(uni.UNI, ex.map.dir), b = JSON.parse(fs.readFileSync(path.join(dir, 'basin.json'), 'utf8'));
+  for (const f of ['height.png', 'color.jpg']) assert.ok(fs.existsSync(path.join(dir, f)), f);
+  assert.ok(b.rivers.length > 20 && b.lakes.powell.cells.length > 150 && b.lakes.mead.cells.length > 150);
+});

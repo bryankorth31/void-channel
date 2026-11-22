@@ -361,3 +361,19 @@ the HQ areas chat. Steps 7 to 10 start after the 22 Nov reset.
   (course/unit/lab or ex). Chains (a then that is the next rule's if) wait for a second climate unit whose rules
   really follow from the first; none were invented. tests 34 of 34. Checked at 1278x513, 1316x821, 821x1316: no
   sideways scroll. Not pushed, not deployed; at the next deploy the live site gains the page with the live labs' rules.
+- 22 Nov 2026, explainer 2, the Colorado River (Bryan: "Colorado River"; "Yes, download both"; at the meter line,
+  "Carry on"). Our climate, plainly, unit 2 "The Colorado River: more promised than it carries". A new world kind,
+  "basin": the real ground of the Colorado basin from NOAA ETOPO1 with NASA's July Blue Marble laid over it (both
+  downloaded on Bryan's yes, recorded in living-world/DOWNLOADS.md section E; cut by make/cut-basin.py into
+  img/explain/colorado), the basin's own catchment traced downhill and the rest dimmed, rivers traced (ours), Lake
+  Powell and Lake Mead as water at the level their storage gives, each lake grown on the heights to the area
+  Reclamation measured when full and its bed shaped to the measured area at each level (ours, said on the card), the
+  dry bed showing pale. Water moves along the rivers into Powell, down the Grand Canyon to Mead and on to Mexico, and
+  rises off Powell as evaporation. Numbers: Reclamation's daily records for sites 919 and 921, water years 2000 to
+  2026 (river, releases, evaporation, storage, levels; the books close for Powell to within 3,000 acre-feet a year),
+  and the Law of the River page for the 1922, 1928 and 1944 promises. Engine: a flow may run from one store into
+  another, an empty store lets out only what comes in, the hold line can name the store and choice, lakes have
+  levels read off the measured curve. Guess: the deals' 9 against the recent river empties Lake Mead in about 9 years.
+  tests 35 of 35, selftest 4 of 4, links answer. Checked at 1278x513, 1920x1080, 1316x821, 821x1316: no sideways
+  scroll, every control tipped. Not checked: the motion and the water up close at full speed (the hidden preview
+  pane runs a few frames a second). Not pushed, not deployed; the block and course are live: false.

@@ -251,12 +251,14 @@ function scaleProblems(sc) {
 // An explainer block (explain.js, explain-model.js): a real system as stores, flows and the learner's choices, with the
 // measured years. Every number is measured and carries its source; a part with no words or a fader with no tip is
 // refused, and so is a rate that cannot be worked out from the measured years in the file. Pure.
-const EX_TONES = ['hot', 'amber', 'cold', 'green', 'gold', 'violet'];
+const EX_TONES = ['hot', 'amber', 'cold', 'green', 'gold', 'violet', 'mist', 'deep'];
+const latlonOk = (p) => Array.isArray(p) && p.length === 2 && p.every((x) => typeof x === 'number');
 function explainerProblems(ex) {
   const out = [];
   if (!ex || typeof ex !== 'object') return ['the explainer block is not an object'];
   if (!ex.title || !ex.ask) out.push('needs a title and an ask');
-  if (ex.world !== 'globe') out.push('world must be one the stage can draw: globe');
+  if (!['globe', 'basin'].includes(ex.world)) out.push('world must be one the stage can draw: globe or basin');
+  if (ex.world === 'basin' && !(ex.map && /^img\/explain\/[a-z-]+$/.test(ex.map.dir || '') && fs.existsSync(path.join(UNI, ex.map.dir, 'basin.json')))) out.push('a basin needs its map folder (img/explain/<name>, made by make/cut-basin.py)');
   if (!(ex.each > 0) || !ex.eachWords) out.push('needs "each" (how much one speck is) and its words');
   const ck = ex.clock || {};
   if (!(Number.isInteger(ck.from) && Number.isInteger(ck.now) && Number.isInteger(ck.to) && ck.from < ck.now && ck.now < ck.to)) out.push('the clock needs whole years: from, now and to, in that order');
@@ -271,16 +273,20 @@ function explainerProblems(ex) {
     named(st, 'store');
     if (!(typeof st.start === 'number' && st.start >= 0)) out.push('store ' + st.id + ' has no measured starting value');
     if (!st.unit || !st.unit.name || !(st.unit.per > 0)) out.push('store ' + st.id + ' needs its unit and how many model units one of them is');
+    if (st.level && !(Array.isArray(st.level.curve) && st.level.curve.length >= 2 && st.level.curve.every((p) => Array.isArray(p) && p.length === 2 && p.every((x) => typeof x === 'number')) && typeof st.level.bottom === 'number' && src[st.level.src])) out.push('store ' + st.id + ': a level needs its measured curve of storage and feet, the bottom the stage draws, and its source');
     const h = (ex.history && ex.history.stores && ex.history.stores[st.id]) || {};
     if (h[String(ck.now)] !== undefined && h[String(ck.now)] !== st.start) out.push('store ' + st.id + ' starts at ' + st.start + ' but the measured value for ' + ck.now + ' is ' + h[String(ck.now)]);
   }
   for (const fl of flows) {
     named(fl, 'flow');
     const r = fl.rule || {};
-    if (!!fl.to === !!fl.from) out.push('flow ' + fl.id + ' must go either into a store (to) or out of one (from)');
-    if ((fl.to || fl.from) && !stores.some((x) => x.id === (fl.to || fl.from))) out.push('flow ' + fl.id + ' names a store that is not listed');
+    if (!fl.to && !fl.from) out.push('flow ' + fl.id + ' must go into a store (to), out of one (from), or from one into another');
+    if (fl.to && fl.to === fl.from) out.push('flow ' + fl.id + ' goes from a store into itself');
+    for (const id of [fl.to, fl.from]) if (id && !stores.some((x) => x.id === id)) out.push('flow ' + fl.id + ' names a store that is not listed: ' + id);
     if (!EX_TONES.includes(fl.color)) out.push('flow ' + fl.id + ': color must be one of ' + EX_TONES.join(', '));
-    if (!fl.site || !['land', 'sea'].includes(fl.site.on) || !Array.isArray(fl.site.lat) || fl.site.lat.length !== 2) out.push('flow ' + fl.id + ' needs a site: on land or sea, between two latitudes');
+    const site = fl.site || {};
+    if (ex.world === 'globe' && (!['land', 'sea'].includes(site.on) || !Array.isArray(site.lat) || site.lat.length !== 2)) out.push('flow ' + fl.id + ' needs a site: on land or sea, between two latitudes');
+    if (ex.world === 'basin' && !((site.on === 'into' && latlonOk(site.to)) || (site.on === 'river' && latlonOk(site.from) && latlonOk(site.to)) || (site.on === 'lake' && stores.some((x) => x.lake === site.lake)))) out.push('flow ' + fl.id + ' needs a site the basin can draw: into a point, along the river from one point to another, or off a lake');
     if (r.kind === 'choice') { if (!choices.some((c) => c.id === r.choice)) out.push('flow ' + fl.id + ' is set by a choice that is not listed'); }
     else if (r.kind === 'rate') {
       if (!stores.some((x) => x.id === r.store) || typeof r.above !== 'number' || !r.fit || !Array.isArray(r.fit.period) || typeof r.fit.value !== 'number') out.push('flow ' + fl.id + ': a rate needs its store, the level it grows above, and the measured period and value it is taken from');
@@ -304,6 +310,7 @@ function explainerProblems(ex) {
   const sayKeys = new Set(['year', ...stores.flatMap((x) => [x.id, x.id + 'change', x.id + 'way']), ...flows.map((x) => x.id)]);
   for (const k of ['run', 'replay']) { const t = (ex.say || {})[k]; if (!t) out.push('needs the line under the stage for ' + k); else for (const m of t.matchAll(/\{([a-z]+)\}/gi)) if (!sayKeys.has(m[1])) out.push('the ' + k + ' line names {' + m[1] + '}, which is not a store or flow'); }
   if (!(ex.say || {}).hold) out.push('needs the hold line (what it would take to hold the store where it is)');
+  if (ex.hold && (!stores.some((x) => x.id === ex.hold.store) || !Array.isArray(ex.hold.choices) || ex.hold.choices.some((id) => !choices.some((c) => c.id === id)))) out.push('the hold names a store or choice that is not listed');
   if (ex.guess) {
     const g = ex.guess;
     if (!g.q || !Array.isArray(g.options) || g.options.length < 2) out.push('the guess needs a question and at least two answers');

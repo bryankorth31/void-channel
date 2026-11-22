@@ -12,7 +12,8 @@
   "draftedBy": "Claude, 22 Nov 2026, from Bryan's ask for explainers of the issues people cannot seem to grasp (\"global warming, el nino, water issues\"). Every line here waits for Bryan to keep, change or strike.",
   "why": "Climate is argued about every day, at dinner, at the ballot box and in the price of insurance. Most of the arguing skips how the system actually works. This course gives you the working parts, with the measured numbers, so you can follow any claim back to what is really happening.",
   "outcomes": [
-    "Explain why the CO2 in the air keeps rising while emissions stay steady."
+    "Explain why the CO2 in the air keeps rising while emissions stay steady.",
+    "Explain why Lakes Mead and Powell keep falling, and what it would take to stop them."
   ],
   "units": [
     {
@@ -51,7 +52,8 @@
             "src": [
               "noaa",
               "gcb"
-            ]
+            ],
+            "baseWords": "before coal and oil"
           }
         ],
         "flows": [
@@ -561,6 +563,894 @@
           }
         ],
         "aha": "Every partial is the same tub: what goes in, against what comes out."
+      }
+    },
+    {
+      "n": 2,
+      "title": "The Colorado River: more promised than it carries",
+      "outcome": "Explain why Lakes Mead and Powell keep falling, and what it would take to stop them.",
+      "needIt": "Forty million people and a great deal of the country's winter food depend on the Colorado River, and the deals that share it out promise more water than it has carried since 2000. Who takes the cut is the fight; knowing how the lakes fill and drain lets you follow it.",
+      "why": "Lake Powell and Lake Mead are stores, like a tub. The river fills Powell; Glen Canyon Dam lets water down through the Grand Canyon into Mead; Hoover Dam lets it go to Arizona, California, Nevada and Mexico. The 1922 compact and the 1944 treaty promise 16.5 million acre-feet a year in all, but from 2000 to 2026 the river brought Lake Powell about 8.2 a year. When more is let out than comes in, the lakes fall, year after year, until the shares are cut.",
+      "reachesYou": "Water bills in Phoenix, Las Vegas and Los Angeles, winter vegetables from the Imperial and Yuma valleys, power from Hoover and Glen Canyon dams, and the news every summer about \"record lows\" all come from this one balance of what comes in against what goes out.",
+      "do": "Look up where your own tap water comes from (your water utility's yearly report says). Then find one news story about Colorado River cuts and ask: whose share is being cut, and does the cut bring what goes out down to what the river brings in?",
+      "explainer": {
+        "live": false,
+        "title": "Lake Powell and Lake Mead",
+        "ask": "This is the real ground of the Colorado River basin, the part that drains to the river lit and the rest dimmed. Lake Powell sits high in the canyons, Lake Mead below the Grand Canyon. Guess first, then drag what the river brings, what Glen Canyon Dam lets through and what Hoover Dam lets go, and play the years.",
+        "world": "basin",
+        "map": {
+          "dir": "img/explain/colorado",
+          "lift": 18
+        },
+        "each": 0.04,
+        "eachWords": "40,000 acre-feet of water",
+        "clock": {
+          "from": 2000,
+          "now": 2026,
+          "to": 2056
+        },
+        "stores": [
+          {
+            "id": "mead",
+            "name": "Lake Mead",
+            "start": 6.83,
+            "color": "deep",
+            "lake": "mead",
+            "at": [
+              36.15,
+              -114.4
+            ],
+            "unit": {
+              "name": "million acre-feet",
+              "per": 1
+            },
+            "level": {
+              "curve": [
+                [
+                  6.83,
+                  1037.8
+                ],
+                [
+                  6.99,
+                  1040
+                ],
+                [
+                  8.43,
+                  1060
+                ],
+                [
+                  10,
+                  1080
+                ],
+                [
+                  11.49,
+                  1100
+                ],
+                [
+                  13.54,
+                  1120
+                ],
+                [
+                  15.37,
+                  1140
+                ],
+                [
+                  17.61,
+                  1160
+                ],
+                [
+                  20.1,
+                  1180
+                ],
+                [
+                  22.92,
+                  1200
+                ]
+              ],
+              "bottom": 828,
+              "src": "mead"
+            },
+            "pick": "mead",
+            "words": "The biggest reservoir in the country, behind Hoover Dam. On 30 September 2026 it held 6.83 million acre-feet, at 1,037.8 feet; in 2000 it held 22.44. Below 1,037 feet it is lower than any level measured.",
+            "src": [
+              "mead"
+            ]
+          },
+          {
+            "id": "powell",
+            "name": "Lake Powell",
+            "start": 5.16,
+            "color": "cold",
+            "lake": "powell",
+            "at": [
+              37.35,
+              -110.9
+            ],
+            "unit": {
+              "name": "million acre-feet",
+              "per": 1
+            },
+            "level": {
+              "curve": [
+                [
+                  0.72,
+                  3400
+                ],
+                [
+                  1.25,
+                  3420
+                ],
+                [
+                  1.93,
+                  3440
+                ],
+                [
+                  2.66,
+                  3460
+                ],
+                [
+                  3.55,
+                  3480
+                ],
+                [
+                  4.52,
+                  3500
+                ],
+                [
+                  5.155,
+                  3518.08
+                ],
+                [
+                  6.47,
+                  3540
+                ],
+                [
+                  7.85,
+                  3560
+                ],
+                [
+                  9.88,
+                  3580
+                ],
+                [
+                  11.75,
+                  3600
+                ],
+                [
+                  13.76,
+                  3620
+                ],
+                [
+                  16,
+                  3640
+                ],
+                [
+                  18.51,
+                  3660
+                ],
+                [
+                  21.27,
+                  3680
+                ]
+              ],
+              "bottom": 3373,
+              "src": "powell"
+            },
+            "words": "The reservoir behind Glen Canyon Dam, in the canyons of Utah and Arizona. On 30 September 2026 it held 5.16 million acre-feet, at 3,518 feet; in 2000 it held 20.94. Reclamation warned in 2026 it could fall below 3,490 feet, the lowest level at which the dam can make power.",
+            "src": [
+              "powell",
+              "drought"
+            ]
+          }
+        ],
+        "flows": [
+          {
+            "id": "river",
+            "name": "The river",
+            "to": "powell",
+            "rule": {
+              "kind": "choice",
+              "choice": "river"
+            },
+            "color": "cold",
+            "site": {
+              "on": "into",
+              "to": [
+                36.94,
+                -111.48
+              ]
+            },
+            "at": [
+              39.6,
+              -108.3
+            ],
+            "words": "Rain and snowmelt from the Rockies, gathered by the Green, the Colorado and the San Juan, as it would reach Lake Powell with no dams upstream holding any back (Reclamation's \"unregulated inflow\"). From 2000 to 2026 it averaged 8.2 million acre-feet a year: 15.97 in 2011, 2.64 in 2002, 3.72 in 2026.",
+            "src": [
+              "powell"
+            ]
+          },
+          {
+            "id": "evap",
+            "name": "Evaporation off Lake Powell",
+            "from": "powell",
+            "rule": {
+              "kind": "rate",
+              "store": "powell",
+              "above": 0,
+              "fit": {
+                "period": [
+                  2000,
+                  2026
+                ],
+                "value": 0.371
+              }
+            },
+            "color": "mist",
+            "site": {
+              "on": "lake",
+              "lake": "powell"
+            },
+            "at": [
+              37.1,
+              -111.1
+            ],
+            "words": "Water the desert sun takes off the lake, more when the lake is bigger. Measured at 0.18 to 0.62 million acre-feet a year from 2000 to 2026; on this stage it follows the lake's size at the average measured rate.",
+            "src": [
+              "powell"
+            ]
+          },
+          {
+            "id": "release",
+            "name": "Glen Canyon Dam lets through",
+            "from": "powell",
+            "to": "mead",
+            "rule": {
+              "kind": "choice",
+              "choice": "release"
+            },
+            "color": "cold",
+            "site": {
+              "on": "river",
+              "from": [
+                36.94,
+                -111.48
+              ],
+              "to": [
+                36.1,
+                -114.5
+              ]
+            },
+            "at": [
+              36.3,
+              -112.5
+            ],
+            "words": "What Glen Canyon Dam lets down through the Grand Canyon into Lake Mead. 8.23 million acre-feet in most years from 2000 to 2013; 7.48 in 2024 and 2025; 6.0 in 2026.",
+            "src": [
+              "powell"
+            ]
+          },
+          {
+            "id": "deliver",
+            "name": "Hoover Dam lets go",
+            "from": "mead",
+            "rule": {
+              "kind": "choice",
+              "choice": "deliver"
+            },
+            "color": "hot",
+            "site": {
+              "on": "river",
+              "from": [
+                36.02,
+                -114.74
+              ],
+              "to": [
+                31,
+                -114.67
+              ]
+            },
+            "at": [
+              33.6,
+              -114.5
+            ],
+            "words": "What Hoover Dam lets go down the river to Arizona, California, Nevada and Mexico: 10.98 million acre-feet in 2000, 7.37 in 2026. The 1922 compact gives the Lower Basin 7.5 a year (California 4.4, Arizona 2.8, Nevada 0.3) and the 1944 treaty gives Mexico 1.5.",
+            "src": [
+              "mead",
+              "law"
+            ]
+          }
+        ],
+        "choices": [
+          {
+            "id": "river",
+            "name": "The river brings",
+            "start": 8.2,
+            "min": 2,
+            "max": 17,
+            "step": 0.1,
+            "tip": "Drag to set how much the river brings Lake Powell each year, in million acre-feet. The 2000 to 2026 average was 8.2; 2011 brought 16, 2002 brought 2.6."
+          },
+          {
+            "id": "release",
+            "name": "Glen Canyon lets through",
+            "start": 7.48,
+            "min": 0,
+            "max": 12,
+            "step": 0.01,
+            "tip": "Drag to set how much Glen Canyon Dam lets through to Lake Mead each year, in million acre-feet. 8.23 in most years before 2014; 7.48 in 2024 and 2025."
+          },
+          {
+            "id": "deliver",
+            "name": "Hoover lets go",
+            "start": 7.37,
+            "min": 0,
+            "max": 12,
+            "step": 0.01,
+            "tip": "Drag to set how much Hoover Dam lets go to Arizona, California, Nevada and Mexico each year, in million acre-feet. 7.37 in 2026; the deals promise 9."
+          }
+        ],
+        "hold": {
+          "store": "mead",
+          "choices": [
+            "deliver"
+          ]
+        },
+        "say": {
+          "run": "{year}. The river brings {river} million acre-feet into Lake Powell, {evap} evaporates, and Glen Canyon lets {release} through to Lake Mead. Hoover lets {deliver} go downstream. Lake Mead {meadway} {meadchange} a year, now {mead}; Lake Powell {powellway} {powellchange}, now {powell}.",
+          "replay": "Water year {year}, as measured. The river brought {river} million acre-feet into Lake Powell, {evap} evaporated, Glen Canyon let through {release} and Hoover let go {deliver}. Lake Mead ended the year at {mead}, Lake Powell at {powell}.",
+          "hold": "To hold Lake Mead where it is with these settings, what Hoover lets go would have to come down to about {deliver} million acre-feet a year. The deals promise the Lower Basin states and Mexico 9."
+        },
+        "guess": {
+          "q": "Say the river brings Lake Powell its 2000 to 2026 average every year, Glen Canyon lets through 8.23 as it did in most of those years, and Hoover lets go the 9 million acre-feet a year the 1922 compact and the 1944 treaty promise the Lower Basin and Mexico. What happens to Lake Mead over the next 20 years?",
+          "options": [
+            "It fills back up",
+            "It holds about where it is",
+            "It falls, then levels off",
+            "It falls until there is nothing left to let go"
+          ],
+          "answer": 3,
+          "set": {
+            "river": 8.2,
+            "release": 8.23,
+            "deliver": 9
+          },
+          "years": 20,
+          "after": "At those numbers Lake Mead goes from {from} to {to} million acre-feet in 20 years: more goes out than comes in, every year, so it never levels off."
+        },
+        "rules": [
+          {
+            "if": "the river brings its recent average and Hoover lets go what the deals promise",
+            "then": "Lake Mead falls every year until there is nothing left in it to let go. The promises add up to more than the river has carried since 2000.",
+            "when": {
+              "choices": {
+                "river": [
+                  7.7,
+                  8.7
+                ],
+                "deliver": [
+                  8.8,
+                  9.2
+                ]
+              },
+              "years": 5
+            }
+          },
+          {
+            "if": "a flood year like 2011 comes once",
+            "then": "Lake Powell rises, but one wet year puts back only part of what the dry years took. In 2011 the river brought 16 million acre-feet, and Lake Powell still ended the year 3.35 lower than in 2000. Lake Mead rises only if Glen Canyon lets more of it through.",
+            "when": {
+              "choices": {
+                "river": [
+                  14,
+                  17
+                ]
+              },
+              "years": 1
+            }
+          },
+          {
+            "if": "Hoover lets go only about what Glen Canyon lets through",
+            "then": "Lake Mead about holds. With today's release that is about 7.5 a year, 1.5 million acre-feet less than the deals promise: somebody's share is cut.",
+            "when": {
+              "choices": {
+                "release": [
+                  7.2,
+                  7.8
+                ],
+                "deliver": [
+                  7.2,
+                  7.8
+                ]
+              },
+              "years": 5
+            }
+          },
+          {
+            "if": "you replay the measured years since 2000",
+            "then": "you see both lakes fall from nearly full to near their lowest; the wet years 2011 and 2023 only paused the fall.",
+            "when": {
+              "replay": true
+            }
+          }
+        ],
+        "meet": "A lake is a store. It holds only when what goes out equals what comes in. The deals promise more than the river has carried since 2000, so somebody's share has to be cut; the only question is whose.",
+        "note": "The lakes' storage, levels, releases, evaporation and the river's inflow are Reclamation's daily records, added up by water year (October to September). From 2000 to 2026 the river, the releases and the evaporation account for Lake Powell's measured change to within 3,000 acre-feet a year; for Lake Mead the side streams and its own evaporation about cancel out, so the stage leaves both out. The lake shapes are ours: grown on NOAA's heights from each dam until they cover the area Reclamation measured when full, with each bed shaped to Reclamation's measured area at each level. Below the lowest level ever measured (Lake Mead 1,037 feet, Lake Powell 3,394 feet in 1964) the stage draws the level straight down, and says so. When a store on this stage reaches zero, no more is let out of it.",
+        "history": {
+          "stores": {
+            "mead": {
+              "2000": 22.44,
+              "2001": 19.87,
+              "2002": 17.09,
+              "2003": 15.62,
+              "2004": 13.94,
+              "2005": 15.22,
+              "2006": 13.89,
+              "2007": 12.5,
+              "2008": 12.01,
+              "2009": 10.93,
+              "2010": 10.09,
+              "2011": 12.98,
+              "2012": 13.13,
+              "2013": 12.36,
+              "2014": 10.12,
+              "2015": 9.85,
+              "2016": 9.62,
+              "2017": 10.18,
+              "2018": 9.87,
+              "2019": 10.26,
+              "2020": 10.28,
+              "2021": 9.02,
+              "2022": 7.33,
+              "2023": 8.87,
+              "2024": 8.71,
+              "2025": 8.22,
+              "2026": 6.83
+            },
+            "powell": {
+              "2000": 20.94,
+              "2001": 19.13,
+              "2002": 14.47,
+              "2003": 12.11,
+              "2004": 9.17,
+              "2005": 11.94,
+              "2006": 11.92,
+              "2007": 11.93,
+              "2008": 14.51,
+              "2009": 15.46,
+              "2010": 15.27,
+              "2011": 17.59,
+              "2012": 13.93,
+              "2013": 10.93,
+              "2014": 12.29,
+              "2015": 12.33,
+              "2016": 12.82,
+              "2017": 14.66,
+              "2018": 11.03,
+              "2019": 13.28,
+              "2020": 11.37,
+              "2021": 7.26,
+              "2022": 5.8,
+              "2023": 8.79,
+              "2024": 9.14,
+              "2025": 6.75,
+              "2026": 5.16
+            }
+          },
+          "storesSrc": "mead",
+          "periods": [
+            {
+              "from": 2000,
+              "to": 2000,
+              "name": "water year 2000",
+              "flows": {
+                "river": 6.94,
+                "evap": 0.62,
+                "release": 9.38,
+                "deliver": 10.98
+              }
+            },
+            {
+              "from": 2001,
+              "to": 2001,
+              "name": "water year 2001",
+              "flows": {
+                "river": 6.99,
+                "evap": 0.57,
+                "release": 8.24,
+                "deliver": 10.49
+              }
+            },
+            {
+              "from": 2002,
+              "to": 2002,
+              "name": "water year 2002",
+              "flows": {
+                "river": 2.64,
+                "evap": 0.48,
+                "release": 8.23,
+                "deliver": 10.5
+              }
+            },
+            {
+              "from": 2003,
+              "to": 2003,
+              "name": "water year 2003",
+              "flows": {
+                "river": 6.16,
+                "evap": 0.39,
+                "release": 8.23,
+                "deliver": 9.45
+              }
+            },
+            {
+              "from": 2004,
+              "to": 2004,
+              "name": "water year 2004",
+              "flows": {
+                "river": 5.91,
+                "evap": 0.32,
+                "release": 8.23,
+                "deliver": 9.63
+              }
+            },
+            {
+              "from": 2005,
+              "to": 2005,
+              "name": "water year 2005",
+              "flows": {
+                "river": 12.79,
+                "evap": 0.32,
+                "release": 8.23,
+                "deliver": 7.94
+              }
+            },
+            {
+              "from": 2006,
+              "to": 2006,
+              "name": "water year 2006",
+              "flows": {
+                "river": 8.63,
+                "evap": 0.36,
+                "release": 8.23,
+                "deliver": 9.4
+              }
+            },
+            {
+              "from": 2007,
+              "to": 2007,
+              "name": "water year 2007",
+              "flows": {
+                "river": 8.75,
+                "evap": 0.37,
+                "release": 8.23,
+                "deliver": 9.45
+              }
+            },
+            {
+              "from": 2008,
+              "to": 2008,
+              "name": "water year 2008",
+              "flows": {
+                "river": 12.09,
+                "evap": 0.4,
+                "release": 8.98,
+                "deliver": 9.53
+              }
+            },
+            {
+              "from": 2009,
+              "to": 2009,
+              "name": "water year 2009",
+              "flows": {
+                "river": 10.22,
+                "evap": 0.44,
+                "release": 8.24,
+                "deliver": 9.21
+              }
+            },
+            {
+              "from": 2010,
+              "to": 2010,
+              "name": "water year 2010",
+              "flows": {
+                "river": 8.43,
+                "evap": 0.44,
+                "release": 8.23,
+                "deliver": 9.26
+              }
+            },
+            {
+              "from": 2011,
+              "to": 2011,
+              "name": "water year 2011",
+              "flows": {
+                "river": 15.97,
+                "evap": 0.47,
+                "release": 12.52,
+                "deliver": 9.8
+              }
+            },
+            {
+              "from": 2012,
+              "to": 2012,
+              "name": "water year 2012",
+              "flows": {
+                "river": 4.91,
+                "evap": 0.45,
+                "release": 9.47,
+                "deliver": 9.42
+              }
+            },
+            {
+              "from": 2013,
+              "to": 2013,
+              "name": "water year 2013",
+              "flows": {
+                "river": 5.12,
+                "evap": 0.36,
+                "release": 8.23,
+                "deliver": 9.04
+              }
+            },
+            {
+              "from": 2014,
+              "to": 2014,
+              "name": "water year 2014",
+              "flows": {
+                "river": 10.38,
+                "evap": 0.35,
+                "release": 7.48,
+                "deliver": 9.76
+              }
+            },
+            {
+              "from": 2015,
+              "to": 2015,
+              "name": "water year 2015",
+              "flows": {
+                "river": 10.17,
+                "evap": 0.37,
+                "release": 9,
+                "deliver": 9.25
+              }
+            },
+            {
+              "from": 2016,
+              "to": 2016,
+              "name": "water year 2016",
+              "flows": {
+                "river": 9.62,
+                "evap": 0.38,
+                "release": 9,
+                "deliver": 9.29
+              }
+            },
+            {
+              "from": 2017,
+              "to": 2017,
+              "name": "water year 2017",
+              "flows": {
+                "river": 11.9,
+                "evap": 0.41,
+                "release": 9,
+                "deliver": 8.62
+              }
+            },
+            {
+              "from": 2018,
+              "to": 2018,
+              "name": "water year 2018",
+              "flows": {
+                "river": 4.61,
+                "evap": 0.39,
+                "release": 9,
+                "deliver": 9.24
+              }
+            },
+            {
+              "from": 2019,
+              "to": 2019,
+              "name": "water year 2019",
+              "flows": {
+                "river": 12.95,
+                "evap": 0.36,
+                "release": 9,
+                "deliver": 8.89
+              }
+            },
+            {
+              "from": 2020,
+              "to": 2020,
+              "name": "water year 2020",
+              "flows": {
+                "river": 5.85,
+                "evap": 0.37,
+                "release": 8.23,
+                "deliver": 8.26
+              }
+            },
+            {
+              "from": 2021,
+              "to": 2021,
+              "name": "water year 2021",
+              "flows": {
+                "river": 3.5,
+                "evap": 0.28,
+                "release": 8.23,
+                "deliver": 9.36
+              }
+            },
+            {
+              "from": 2022,
+              "to": 2022,
+              "name": "water year 2022",
+              "flows": {
+                "river": 6.08,
+                "evap": 0.2,
+                "release": 7,
+                "deliver": 8.9
+              }
+            },
+            {
+              "from": 2023,
+              "to": 2023,
+              "name": "water year 2023",
+              "flows": {
+                "river": 13.42,
+                "evap": 0.23,
+                "release": 8.58,
+                "deliver": 7.63
+              }
+            },
+            {
+              "from": 2024,
+              "to": 2024,
+              "name": "water year 2024",
+              "flows": {
+                "river": 7.98,
+                "evap": 0.27,
+                "release": 7.48,
+                "deliver": 7.63
+              }
+            },
+            {
+              "from": 2025,
+              "to": 2025,
+              "name": "water year 2025",
+              "flows": {
+                "river": 4.69,
+                "evap": 0.24,
+                "release": 7.48,
+                "deliver": 7.87
+              }
+            },
+            {
+              "from": 2026,
+              "to": 2026,
+              "name": "water year 2026",
+              "flows": {
+                "river": 3.72,
+                "evap": 0.18,
+                "release": 6,
+                "deliver": 7.37
+              }
+            }
+          ],
+          "periodsSrc": "powell"
+        },
+        "sources": {
+          "mead": {
+            "by": "US Bureau of Reclamation",
+            "year": 2026,
+            "title": "Lake Mead daily storage, elevation and releases",
+            "where": "Upper Colorado hydrologic data, site 921, US government data",
+            "url": "https://www.usbr.gov/uc/water/hydrodata/reservoir_data/921/dashboard.html"
+          },
+          "powell": {
+            "by": "US Bureau of Reclamation",
+            "year": 2026,
+            "title": "Lake Powell daily storage, elevation, area, unregulated inflow, releases and evaporation",
+            "where": "Upper Colorado hydrologic data, site 919, US government data",
+            "url": "https://www.usbr.gov/uc/water/hydrodata/reservoir_data/919/dashboard.html"
+          },
+          "law": {
+            "by": "US Bureau of Reclamation",
+            "year": 2026,
+            "title": "Law of the River",
+            "where": "Lower Colorado Region",
+            "url": "https://www.usbr.gov/lc/region/pao/lawofrvr.html"
+          },
+          "drought": {
+            "by": "US Bureau of Reclamation",
+            "year": 2026,
+            "title": "Colorado River System During Historic Drought",
+            "where": "news release",
+            "url": "https://www.usbr.gov/newsroom/news-release/5326"
+          },
+          "etopo": {
+            "by": "Amante and Eakins, NOAA",
+            "year": 2009,
+            "title": "ETOPO1 1 arc-minute global relief model",
+            "where": "public domain, through NOAA ERDDAP",
+            "url": "https://coastwatch.pfeg.noaa.gov/erddap/griddap/etopo180.html"
+          }
+        }
+      },
+      "quiz": [
+        {
+          "q": "What did the 1922 compact give each half of the Colorado River basin?",
+          "choices": [
+            "Half of whatever the river carries each year",
+            "The right to use 7.5 million acre-feet a year each",
+            "All the water that falls inside its own states",
+            "Whatever is left after Mexico is served"
+          ],
+          "a": 1,
+          "why": "Each basin got a fixed amount, 7.5 million acre-feet a year, not a share of what the river actually carries.",
+          "quote": "each basin having the right to develop and use 7.5 million acre-feet (maf) of river water annually",
+          "src": "law"
+        },
+        {
+          "q": "How is the Lower Basin's 7.5 million acre-feet split?",
+          "choices": [
+            "California 4.4, Arizona 2.8, Nevada 0.3",
+            "An equal third to each state",
+            "Arizona 4.4, California 2.8, Nevada 0.3",
+            "By how many people live in each state"
+          ],
+          "a": 0,
+          "why": "The 1928 act set California's share largest and Nevada's smallest.",
+          "quote": "apportioned the lower basin's 7.5 maf among the states of Arizona (2.8 maf), California (4.4 maf) and Nevada (0.3 maf)",
+          "src": "law"
+        },
+        {
+          "q": "How much did the 1944 treaty promise Mexico each year?",
+          "choices": [
+            "Nothing; it set only how the border runs",
+            "0.5 million acre-feet",
+            "1.5 million acre-feet",
+            "A tenth of whatever reaches the border"
+          ],
+          "a": 2,
+          "why": "With the compact's 15, that brings the promises to 16.5 million acre-feet a year.",
+          "quote": "Committed 1.5 maf of the river's annual flow to Mexico.",
+          "src": "law"
+        },
+        {
+          "q": "What did Reclamation warn in 2026 about Lake Powell?",
+          "choices": [
+            "That it would spill over the dam",
+            "That it may fall below 3,490 feet, the minimum power pool",
+            "That it would refill within two years",
+            "That it was full of sediment"
+          ],
+          "a": 1,
+          "why": "Below 3,490 feet Glen Canyon Dam can no longer make power.",
+          "quote": "projects Lake Powell may decline to below 3,490 feet",
+          "src": "drought"
+        }
+      ],
+      "crystal": {
+        "speed": 0.3,
+        "partials": [
+          "The deals promise 16.5 million acre-feet a year in all.",
+          "From 2000 to 2026 the river brought Lake Powell about 8.2 a year.",
+          "Lake Mead held 22.44 in 2000 and 6.83 in 2026.",
+          "The flood year 2011 brought 16, and Lake Mead still ended lower than in 2000.",
+          "Lake Mead about holds only when Hoover lets go what Glen Canyon lets through."
+        ],
+        "key": "A reservoir holds only when what goes out equals what comes in; the Colorado has been promised more than it carries, so the lakes fall until the shares are cut.",
+        "decoys": [
+          {
+            "text": "A few wet years will fix it.",
+            "why": "The wettest year since 2000 refilled only a part; the promises still exceed the average every year after."
+          },
+          {
+            "text": "The lakes fall because of evaporation.",
+            "why": "Evaporation off Lake Powell was under half a million acre-feet a year; the gap between promises and the river is several million."
+          }
+        ],
+        "aha": "Every partial is the same tub: what the river brings, against what the deals let out."
       }
     }
   ]

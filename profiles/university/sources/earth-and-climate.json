@@ -6,10 +6,27 @@
     {
       "name": "Our climate, plainly",
       "why": "Climate is argued about every day; knowing how the system works, with the measured numbers, lets you follow any claim back to what is really happening.",
-      "levels": ["high school", "young adults", "everyday"],
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
       "spine": "gcb-2025",
-      "uses": ["noaa-mlo-co2", "raupach-2014", "sterman-2007", "nasa-blue-marble", "natural-earth"],
-      "units": ["Steady emissions still fill the air"]
+      "uses": [
+        "noaa-mlo-co2",
+        "raupach-2014",
+        "sterman-2007",
+        "nasa-blue-marble",
+        "natural-earth",
+        "usbr-hydrodata",
+        "usbr-law-of-the-river",
+        "usbr-drought-2026",
+        "noaa-etopo1"
+      ],
+      "units": [
+        "Steady emissions still fill the air",
+        "The Colorado River: more promised than it carries"
+      ]
     }
   ],
   "sources": [
@@ -23,7 +40,11 @@
       "licence": "CC BY 4.0",
       "licenceSeen": "Article page: \"This work is distributed under the Creative Commons Attribution 4.0 License\"",
       "terms": "",
-      "levels": ["high school", "young adults", "everyday"],
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
       "needIt": "The yearly count of how much carbon goes into the air and how much the ocean and land take back, the numbers every climate claim rests on.",
       "notes": "Table 7 (decadal means, 2024 and the 2025 projection) is a picture on the page; read from it by eye on 22 Nov 2026. 1 ppm = 2.124 GtC as stated in the methods."
     },
@@ -37,7 +58,11 @@
       "licence": "US government work",
       "licenceSeen": "File header: \"These data are made freely available to the public and the scientific community\"",
       "terms": "",
-      "levels": ["high school", "young adults", "everyday"],
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
       "needIt": "The measured CO2 in the air, year by year since 1959.",
       "notes": "File created 19 Nov 2026; 1959 to 2025 copied into the explainer."
     },
@@ -51,7 +76,10 @@
       "licence": "CC BY 3.0",
       "licenceSeen": "Biogeosciences article page, Creative Commons Attribution licence",
       "terms": "",
-      "levels": ["young adults", "everyday"],
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
       "needIt": "Defines the sink rate the explainer uses, and shows it has been falling.",
       "notes": ""
     },
@@ -65,7 +93,10 @@
       "licence": "Quoted for teaching; the abstract is on the author's own page",
       "licenceSeen": "Author's page at MIT shows the citation and abstract",
       "terms": "",
-      "levels": ["young adults", "everyday"],
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
       "needIt": "The study that shows most people misread the store and flow behind climate change.",
       "notes": "Only short quotes from the abstract are used."
     },
@@ -79,7 +110,11 @@
       "licence": "NASA imagery, free to use with credit",
       "licenceSeen": "Recorded in the Living World build's DOWNLOADS.md on 15 Nov 2026 from NASA's media guidelines",
       "terms": "",
-      "levels": ["high school", "young adults", "everyday"],
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
       "needIt": "The Earth the explainer is drawn on.",
       "notes": "Cut to 4096 by 2048 for the site (img/explain/earth.jpg)."
     },
@@ -93,9 +128,84 @@
       "licence": "Public domain",
       "licenceSeen": "Natural Earth terms of use: \"All versions of Natural Earth raster + vector map data ... are in the public domain\"",
       "terms": "",
-      "levels": ["high school", "young adults", "everyday"],
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
       "needIt": "Tells land from sea, so each flow rises or sinks in the right place.",
       "notes": "Painted to a half degree grid by the Living World build; shipped as img/explain/land.png."
+    },
+    {
+      "id": "usbr-hydrodata",
+      "kind": "guide",
+      "title": "Upper Colorado hydrologic data: Lake Powell (site 919) and Lake Mead (site 921)",
+      "by": "US Bureau of Reclamation",
+      "year": 2026,
+      "url": "https://www.usbr.gov/uc/water/hydrodata/reservoir_data/919/dashboard.html",
+      "licence": "US government work",
+      "licenceSeen": "Reclamation website, a US government agency; data offered as CSV on the page",
+      "terms": "",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "The measured storage, levels, inflow, releases and evaporation of the two lakes, day by day.",
+      "notes": "Read 22 Nov 2026 in the browser from the CSV links on the dashboards and added up by water year; nothing downloaded."
+    },
+    {
+      "id": "usbr-law-of-the-river",
+      "kind": "guide",
+      "title": "Law of the River",
+      "by": "US Bureau of Reclamation, Lower Colorado Region",
+      "year": 2026,
+      "url": "https://www.usbr.gov/lc/region/pao/lawofrvr.html",
+      "licence": "US government work",
+      "licenceSeen": "Reclamation website",
+      "terms": "",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "What the 1922 compact, the 1928 act and the 1944 treaty promise, in Reclamation's words.",
+      "notes": ""
+    },
+    {
+      "id": "usbr-drought-2026",
+      "kind": "guide",
+      "title": "Colorado River System During Historic Drought (news release)",
+      "by": "US Bureau of Reclamation",
+      "year": 2026,
+      "url": "https://www.usbr.gov/newsroom/news-release/5326",
+      "licence": "US government work",
+      "licenceSeen": "Reclamation newsroom",
+      "terms": "",
+      "levels": [
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "Reclamation's 2026 warning that Lake Powell may fall below its minimum power pool.",
+      "notes": ""
+    },
+    {
+      "id": "noaa-etopo1",
+      "kind": "guide",
+      "title": "ETOPO1 1 arc-minute global relief model (ice surface)",
+      "by": "Amante and Eakins, NOAA",
+      "year": 2009,
+      "url": "https://coastwatch.pfeg.noaa.gov/erddap/griddap/etopo180.html",
+      "licence": "US government work, public domain",
+      "licenceSeen": "NOAA dataset served through ERDDAP",
+      "terms": "",
+      "levels": [
+        "high school",
+        "young adults",
+        "everyday"
+      ],
+      "needIt": "The ground of the Colorado River basin.",
+      "notes": "Cut to 31 to 43.5 N, 116.5 to 104 W on Bryan's yes, 22 Nov 2026 (living-world/DOWNLOADS.md section E); made into the stage's files by make/cut-basin.py."
     }
   ]
 }
