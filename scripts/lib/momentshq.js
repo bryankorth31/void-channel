@@ -4,7 +4,9 @@
 // picks today, from that area's own catalogue.
 const fs = require('fs');
 const path = require('path');
-const M = require('../../assets/brand/moments/moments.js');
+// The engine is read when the tab is used, not when HQ starts: HQ must come up even where assets/ is missing (a test copy).
+let ENGINE = null;
+const engine = () => ENGINE || (ENGINE = require('../../assets/brand/moments/moments.js'));
 
 const ROOT = path.join(__dirname, '..', '..');
 
@@ -26,7 +28,7 @@ function catalogue(area, root) { const c = CATALOGUES[area]; return c ? c(root |
 
 // Where a moment stands today, in words.
 function status(m, now) {
-  const day = M.today(now);
+  const day = engine().today(now);
   if (!m.approved) return 'waiting for your yes';
   if (m.on !== true) return 'switched off';
   if (String(m.end) < day) return 'over';
@@ -40,7 +42,7 @@ function picks(m, opts) {
   for (const [area, rule] of Object.entries((m && m.areas) || {})) {
     const items = catalogue(area, o.root);
     if (!items) { out[area] = null; continue; }
-    const got = M.pick(rule, items), min = rule.min == null ? 2 : +rule.min || 1;
+    const got = engine().pick(rule, items), min = rule.min == null ? 2 : +rule.min || 1;
     out[area] = { count: got.length, min, shows: got.length >= min, first: got.slice(0, 40).map((g) => ({ id: g.id, title: g.title, year: g.year || null, system: g.system || '' })) };
   }
   return out;
@@ -48,14 +50,14 @@ function picks(m, opts) {
 
 function list(opts) {
   const o = opts || {}, d = read(file(o.profile));
-  return { areas: M.AREAS, wired: Object.keys(CATALOGUES), moments: d.moments.map((m) => ({ ...m, status: status(m, o.now), problems: M.problems(m), picks: picks(m, o) })) };
+  return { areas: engine().AREAS, wired: Object.keys(CATALOGUES), moments: d.moments.map((m) => ({ ...m, status: status(m, o.now), problems: engine().problems(m), picks: picks(m, o) })) };
 }
 
 // Save one moment (new, or the one with its id). Refused with every problem in plain words; nothing is half written.
 function save(input, opts) {
   const o = opts || {}, f = file(o.profile), d = read(f);
   const m = clean(input);
-  const p = M.problems(m);
+  const p = engine().problems(m);
   if (p.length) { const e = new Error(p.join(' ')); e.status = 400; throw e; }
   const was = typeof input.was === 'string' && input.was ? input.was : m.id;
   if (was !== m.id && d.moments.some((x) => x.id === m.id)) { const e = new Error('Another moment already has the id "' + m.id + '".'); e.status = 400; throw e; }
@@ -74,7 +76,7 @@ function setOn(id, on, opts) {
   const o = opts || {}, f = file(o.profile), d = read(f), m = d.moments.find((x) => x.id === id);
   if (!m) { const e = new Error('No moment "' + id + '".'); e.status = 404; throw e; }
   m.on = !!on;
-  if (on && !m.approved) m.approved = M.today(o.now);   // switching one on is Bryan's yes
+  if (on && !m.approved) m.approved = engine().today(o.now);   // switching one on is Bryan's yes
   write(f, d);
   return list(o);
 }
@@ -90,7 +92,7 @@ function remove(id, opts) {
 function clean(b) {
   const s = (v, n) => String(v == null ? '' : v).trim().slice(0, n || 300);
   const lines = (v) => (Array.isArray(v) ? v : String(v == null ? '' : v).split(/\r?\n|,/)).map((x) => String(x).trim()).filter(Boolean).slice(0, 400);
-  const m = { id: s(b.id, 41).toLowerCase(), name: s(b.name, 120), on: b.on === true, approved: b.approved === true ? M.today() : s(b.approved, 10) || '',
+  const m = { id: s(b.id, 41).toLowerCase(), name: s(b.name, 120), on: b.on === true, approved: b.approved === true ? engine().today() : s(b.approved, 10) || '',
     start: s(b.start, 10), peak: s(b.peak, 10), end: s(b.end, 10), why: s(b.why, 600), kids: b.kids === true, areas: {} };
   if (!m.peak) delete m.peak;
   if (b.ad && s(b.ad.line)) m.ad = { line: s(b.ad.line, 160), go: s(b.ad.go, 60), area: s(b.ad.area, 10) };
