@@ -145,7 +145,7 @@ const brandSrc = path.join(ROOT, 'assets', 'brand');
         const v = sha.slice(0, 12);
         for (const f of ['index.html', 'game.html', 'pad.html', 'join.html']) {
           const p = path.join(dst, f);
-          let h = fs.readFileSync(p, 'utf8').replace(/(src="src\/[a-z0-9-]+\.js)"/g, '$1?v=' + v + '"').replace(/(href="(?:play|shelf)\.css)"/g, '$1?v=' + v + '"');
+          let h = fs.readFileSync(p, 'utf8').replace(/(src="(?:src|\/remote\/src)\/[a-z0-9-]+\.js)"/g, '$1?v=' + v + '"').replace(/(href="(?:play|shelf)\.css)"/g, '$1?v=' + v + '"');
           if (f === 'game.html') h = h.replace('<head>', '<head>\n<meta name="play-build" content="' + v + '">');
           fs.writeFileSync(p, h);
         }

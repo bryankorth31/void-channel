@@ -239,3 +239,134 @@ test('a phone and a screen talk through the local relay: the screen opens a remo
     tv.close(); phone.close();
   } finally { srv.kill(); }
 });
+
+// ---- Bryan, 22 Nov 2026: "the phone remote needs to have pause on it and also work for searching and interacting with the direct
+// play areas of vtv". From the pictures he picked L1 (Live TV: pause, then catch up, with Back to live) and P1 (PLAY: pick a game
+// on the phone, then the phone is its pad). ----
+
+test('pause, play, back to live, search, areas, games and the hand-over are known actions, each with a checked value', () => {
+  for (const a of ['pause', 'play', 'live', 'hand']) assert.deepEqual(V.readDo({ type: 'r-do', a }), { a });
+  assert.deepEqual(V.readDo({ type: 'r-do', a: 'find', q: '  the love\nboat ' }), { a: 'find', q: 'the love boat' });
+  assert.equal(V.readDo({ type: 'r-do', a: 'find', q: 'x'.repeat(300) }), null, 'a search is short');
+  for (const q of [undefined, '', '   ', 5, {}]) assert.equal(V.readDo({ type: 'r-do', a: 'find', q }), null, String(q));
+  assert.equal(V.readDo({ type: 'r-do', a: 'find', q: 'x'.repeat(100) }).q.length <= 60, true);
+  assert.deepEqual(V.readDo({ type: 'r-do', a: 'area', id: 'play' }), { a: 'area', id: 'play' });
+  assert.deepEqual(V.readDo({ type: 'r-do', a: 'watch', slug: 'the-love-boat' }), { a: 'watch', slug: 'the-love-boat' });
+  // The longest PLAY game id (95 characters) is an id; an address or markup is not.
+  const long = 'super-mario-advance-2-super-mario-world-compatible-with-retroachievements-playable-in-browser-gba';
+  assert.deepEqual(V.readDo({ type: 'r-do', a: 'game', id: long }), { a: 'game', id: long });
+  for (const id of ['<img>', '', 'a b', '//evil', 'x'.repeat(121)]) assert.equal(V.readDo({ type: 'r-do', a: 'game', id }), null, id);
+  // An id is only looked up: PLAY starts a game from the shelf's own list, an area from the menu's own list (remote/src/play.js, screen.js).
+  assert.match(fs.readFileSync(path.join(ROOT, 'remote', 'src', 'play.js'), 'utf8'), /const g = byId\.get\(cmd\.id\); if \(!g\) return;/);
+  assert.match(fs.readFileSync(path.join(ROOT, 'remote', 'src', 'screen.js'), 'utf8'), /root\.VoidAreas\.areas\.find\(\(x\) => x\.id === id && x\.live\)/);
+  assert.equal(V.readDo({ type: 'r-do', a: 'press', id: 'javascript:alert(1)' }), null);
+});
+
+test('the screen\'s buttons: an id or a slug rides along when the button needs one, About still asks about what is on', () => {
+  const n = V.nowMsg({ k: 'page', t: 'Pac-Man', acts: [{ a: 'hand', l: 'Phone as controller' }, { a: 'area', id: 'play', l: 'Back to the games' },
+    { a: 'info', l: 'About' }, { a: 'area', id: '<x>', l: 'bad' }, { a: 'find', l: 'no' }, { a: 'eval', l: 'no' }, { a: 'pause', l: 'Pause' }] });
+  assert.deepEqual(n.acts, [{ a: 'hand', l: 'Phone as controller' }, { a: 'area', id: 'play', l: 'Back to the games' }, { a: 'info', l: 'About' }, { a: 'pause', l: 'Pause' }]);
+  assert.deepEqual(V.nowMsg({ acts: [{ a: 'ch', l: 'CH' }] }).acts, [{ a: 'ch', l: 'CH' }]);
+});
+
+test('a list says what a tap on a row does, and the phone sends exactly that (tune when it says nothing)', () => {
+  const games = V.listMsgs('games', 'Most played', [{ id: 'pac-man-nes', t: 'Pac-Man', s: 'NES · 1988' }], '', 3, 'game');
+  assert.equal(games[0].a, 'game');
+  const l = V.listTake({}, games[0]);
+  assert.deepEqual(V.rowDo(l, l.items[0]), { type: 'r-do', a: 'game', id: 'pac-man-nes' });
+  assert.deepEqual(V.readDo(V.rowDo(l, l.items[0])), { a: 'game', id: 'pac-man-nes' });
+  const shows = V.listTake({}, V.listMsgs('find', 'Found', [{ id: 'the-love-boat', t: 'The Love Boat' }], '', 1, 'go')[0]);
+  assert.deepEqual(V.rowDo(shows, shows.items[0]), { type: 'r-do', a: 'go', slug: 'the-love-boat' });
+  for (const a of [undefined, 'eval', 'find', 'pause']) assert.equal(V.listMsgs('chans', 'On now', [{ id: 'void', t: 'The Void' }], '', 1, a)[0].a, 'tune', String(a));
+  assert.equal(V.listTake({}, Object.assign(V.listMsgs('x', 'x', [{ id: 'a', t: 'a' }], '', 1)[0], { a: 'toString' })).a, 'tune');
+});
+
+test('night audit N10 holds for the hand-over: the phone gets four letters and builds the join address itself', () => {
+  assert.deepEqual(V.handMsg('QANQ', 'the game controller'), { type: 'r-hand', code: 'QANQ', what: 'the game controller' });
+  assert.equal(V.handPath(V.handMsg('QANQ', '')), '/join?r=QANQ');
+  for (const code of ['qanq', 'QAN', 'QANQQ', 'QA1Q', 'https://evil.example/', '../x', null]) {
+    assert.equal(V.handMsg(code, ''), null, String(code));
+    assert.equal(V.handPath({ type: 'r-hand', code }), '', String(code));
+  }
+  assert.equal(V.handPath({ type: 'r-site', code: 'QANQ' }), '');
+  const pj = fs.readFileSync(path.join(ROOT, 'remote', 'src', 'phone.js'), 'utf8');
+  assert.match(pj, /location\.assign\(to\)/); assert.match(pj, /const to = V\.handPath\(m\)/);
+  assert.ok(!/location\.(assign|replace)\([^)]*m\.(url|link|href|home)/.test(pj), 'no address from a message');
+  assert.deepEqual(V.awayMsg('Void University'), { type: 'r-away', name: 'Void University' });
+});
+
+test('pause on Live TV (L1): how far behind the clock, in words that change once a minute, and Back to live past 20 s', () => {
+  assert.equal(V.behind(736, 701), 35); assert.equal(V.behind(700, 705), 0); assert.equal(V.behind(NaN, 3), null);
+  assert.equal(V.BEHIND_S, 20);
+  assert.equal(V.behindWords(35), 'under a minute behind live'); assert.equal(V.behindWords(59), 'under a minute behind live');
+  assert.equal(V.behindWords(61), '1 min behind live'); assert.equal(V.behindWords(250), '4 min behind live');
+  // The adapter offers Play from here and Back to live once behind, and the player's own pause and play do the work.
+  const src = fs.readFileSync(path.join(ROOT, 'remote', 'src', 'voidtv.js'), 'utf8');
+  assert.match(src, /late \? \[\{ a: 'live', l: 'Back to live' \}\]/);
+  assert.match(src, /if \(cmd\.a === 'live'\) \{[^}]*tvPlay\(T\.c, false\)/);
+  assert.match(src, /if \(cmd\.a === 'pause'\) \{ const p = vp\(\); if \(p && !p\.v\.paused\) p\.pause\(\); return; \}/);
+});
+
+test('search: the site\'s own (qHit, shared with the list page), names that start with the words first, past the adult door', () => {
+  const app = fs.readFileSync(path.join(ROOT, 'scripts', 'lib', 'app.js'), 'utf8');
+  assert.match(app, /const qHit=\(s,q\)=>/); assert.match(app, /&&\(!q\|\|qHit\(s,q\)\)\);/);
+  const g = ['Space Panic', 'Ms. Pac-Man', 'Pac-Man', 'Jumper'].map((t) => ({ title: t }));
+  assert.deepEqual(V.rankFind(g, 'pac', 9).map((x) => x.title), ['Pac-Man', 'Ms. Pac-Man', 'Space Panic', 'Jumper']);
+  assert.equal(V.rankFind(g, 'pac', 2).length, 2);
+  assert.deepEqual(V.rankFind([{ show: 'a (b' }, { show: '(b' }], '(b').map((x) => x.show), ['(b', 'a (b'], 'words with signs in them');
+  const vm = require('vm');
+  const src = fs.readFileSync(path.join(ROOT, 'remote', 'src', 'voidtv.js'), 'utf8');
+  const SHOWS = [{ slug: 'b', show: 'Boat People', eps: 2 }, { slug: 'the-love-boat', show: 'The Love Boat', eps: 9 }, { slug: 'boat-ln', show: 'Boat Night', type: 'Late Night', eps: 99 },
+    { slug: 'movie-boat', show: 'Boat', eps: 1, year: 1981 }];
+  const ctx = { self: {}, document: {}, location: { origin: 'https://voidtv.net' }, ME: { adult: false }, SHOWS, BY_SLUG: {}, Intl, Object, JSON, Math, Date, Number, String, Array, Map, Set, RegExp, sessionStorage: { getItem: () => null } };
+  ctx.self = ctx; ctx.self.RemoteScreen = { areaList: () => [] }; ctx.self.VoidRemote = V;
+  vm.createContext(ctx);
+  vm.runInContext('const isAdult=(s)=>!!(s&&(s.adult||s.type===\'Late Night\'));const gated=(s)=>isAdult(s)&&!ME.adult;const qHit=(s,q)=>s.show.toLowerCase().includes(q);' + src, ctx);
+  const f = ctx.self.SiteRemote.find('boat');
+  assert.equal(f.a, 'go'); assert.equal(f.id, 'find');
+  assert.deepEqual(f.items.map((x) => x.id), ['b', 'movie-boat', 'the-love-boat'], 'starts with first, then the most episodes; the Late Night show stays behind the door');
+  assert.equal(f.items[1].s, 'Movie · 1981');
+  assert.match(ctx.self.SiteRemote.find('zzz').title, /^Nothing found/);
+  assert.equal(ctx.self.SiteRemote.find('  '), null);
+});
+
+test('the remote follows the big screen to PLAY and Trivia: each page loads the loader, which loads only for a tab that holds a room', () => {
+  for (const [f, area] of [['play/index.html', 'play'], ['play/game.html', 'play'], ['trivia/index.html', 'trivia']]) {
+    assert.match(fs.readFileSync(path.join(ROOT, f), 'utf8'), new RegExp('<script src="/remote/src/follow\\.js" defer data-area="' + area + '"></script>'), f);
+  }
+  const follow = fs.readFileSync(path.join(ROOT, 'remote', 'src', 'follow.js'), 'utf8');
+  assert.match(follow, /held = sessionStorage\.getItem\('voidtv-remote-room'\)/); assert.match(follow, /if \(!held\) return;/);
+  assert.match(follow, /if \(area !== 'play' && area !== 'trivia'\) return;/);
+  // A push reaches a big screen at once: the build stamps the loader on PLAY's pages and Trivia's, and it passes the stamp on.
+  assert.ok(fs.readFileSync(path.join(ROOT, 'scripts', 'site.js'), 'utf8').includes(String.raw`.replace(/(src="(?:src|\/remote\/src)\/[a-z0-9-]+\.js)"/g, '$1?v=' + v + '"')`));
+  const { stampTrivia } = require('../scripts/trivia/stamp');
+  assert.match(stampTrivia('<script src="/remote/src/follow.js" defer data-area="trivia"></script>', 'abc1234'), /follow\.js\?v=abc1234"/);
+  assert.match(follow, /s\.src = f \+ \(v \? '\?v=' \+ v : ''\)/);
+  // The shelf lends its phone room; the Trivia host tells its open room's code; nothing else of theirs is reached.
+  assert.match(fs.readFileSync(path.join(ROOT, 'play', 'src', 'shelf-phones.js'), 'utf8'), /root\.PlayShelfPhones = \{ open: \(\) => start\(false\), count:/);
+  assert.match(fs.readFileSync(path.join(ROOT, 'trivia', 'src', 'host.js'), 'utf8'), /window\.TriviaHostRoom = \(\) => \(room\.ws && room\.code\) \|\| '';/);
+  for (const f of ['remote/src/follow.js', 'remote/src/play.js', 'remote/src/trivia.js', 'remote/src/party.js']) {
+    assert.ok(!fs.readFileSync(path.join(ROOT, f), 'utf8').includes(String.fromCharCode(0x2014)), f + ' has an em dash');
+  }
+});
+
+test('Trivia: the phone presses only the host\'s own Start, Start the game, Play again and Pause, and only while each shows', () => {
+  const vm = require('vm');
+  const src = fs.readFileSync(path.join(ROOT, 'remote', 'src', 'trivia.js'), 'utf8');
+  const clicked = [];
+  const btn = (id, o) => Object.assign({ id, hidden: false, disabled: false, offsetParent: {}, textContent: '', click() { clicked.push(id); } }, o);
+  const els = { start: btn('start'), begin: btn('begin', { disabled: true }), again: btn('again', { hidden: true }), pause: btn('pause', { textContent: 'Go on' }), lock: btn('lock') };
+  const ctx = { self: {}, document: { getElementById: (id) => els[id] || null }, location: { origin: 'https://voidtv.net' }, Object, String };
+  const handed = [];
+  ctx.self = ctx; ctx.self.RemoteScreen = { areaList: () => [], hand: (seat, code, w) => handed.push([seat, code, w]), area: () => {} };
+  ctx.self.TriviaHostRoom = () => 'EJJN';
+  vm.createContext(ctx); vm.runInContext(src, ctx);
+  const A = ctx.self.SiteRemote;
+  assert.equal(JSON.stringify(A.now().acts.map((x) => x.a + ':' + (x.id || x.l))), JSON.stringify(['hand:Play on this phone', 'press:start', 'play:Go on', 'area:live']));
+  for (const id of ['begin', 'again', 'lock', 'b-phones']) A.act({ a: 'press', id }, 1);
+  assert.deepEqual(clicked, [], 'a hidden, disabled or unlisted button is never pressed');
+  A.act({ a: 'press', id: 'start' }, 1); A.act({ a: 'pause' }, 1); A.act({ a: 'play' }, 1);
+  assert.deepEqual(clicked, ['start', 'pause'], 'Pause while paused does nothing; Go on presses the host\'s own button');
+  A.act({ a: 'hand' }, 3);
+  assert.deepEqual(handed, [[3, 'EJJN', 'Trivia Night']]);
+});

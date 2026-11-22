@@ -12,7 +12,11 @@
   // so the donation link is this site's own setting (scripts/lib/app.js DONATE_URL; tests/remote.test.js keeps them the same),
   // the logo goes home on this site, and a show opens only at its page here (VoidRemote.showPath, from the slug).
   const DONATE_URL = 'https://square.link/u/bJl9PGAC';
-  let sock = null, ended = false, tries = 0, site = null, now = null, nowAt = 0, list = null, info = null, wantSave = '', drawnActs = '';
+  let away = false;   // the big screen said where it went (r-away): the room's end that follows keeps those words
+  let sock = null, ended = false, tries = 0, site = null, now = null, nowAt = 0, info = null, wantSave = '', drawnActs = '';
+  // The screen's lists by id: find (this phone's own search), areas (the shared menu's areas), and the screen's own one (every
+  // channel and what is on it; PLAY's most played games), drawn on the Remote tab.
+  const lists = {};
   const parts = {};
   let saved = V.savedRead((() => { try { return localStorage.getItem(SAVE_KEY); } catch (e) { return '[]'; } })());
   const store = () => { try { localStorage.setItem(SAVE_KEY, JSON.stringify(saved)); } catch (e) { /* private mode: this visit only */ } };
@@ -49,8 +53,9 @@
     let ch = false;
     for (const x of now.acts) {
       if (x.a === 'ch') { ch = true; continue; }
-      const b = el('button', '', x.l); b.type = 'button';
-      b.onclick = () => (x.a === 'info' ? ask(now.slug) : act(x.a));
+      // Pause and Play are the big button (Bryan, 22 Nov 2026: "the phone remote needs to have pause on it").
+      const b = el('button', x.a === 'pause' || x.a === 'play' ? 'pp' : x.a === 'live' ? 'live' : '', x.l); b.type = 'button';
+      b.onclick = () => (x.a === 'info' ? ask(now.slug) : act(x.a, x.id ? { id: x.id } : x.slug ? { slug: x.slug } : null));
       box.appendChild(b);
     }
     if (now.slug) {
@@ -86,18 +91,36 @@
     const x = el('button', '', 'Close'); x.type = 'button'; x.onclick = () => { info = null; drawInfo(); }; acts.appendChild(x);
     box.appendChild(acts); box.hidden = false;
   }
-  function drawList() {
-    if (!list) return;
-    $('list-box').hidden = false; $('list-h').textContent = list.title;
-    const q = $('find').value.trim().toLowerCase(), ul = $('list');
+  // A list's rows as buttons; a tap asks for the row's action (tune a channel, open a show, start a game, open an area). One that
+  // changes the big screen brings the Remote tab up, where the phone shows what is on it now.
+  function rows(ul, l, filter) {
     ul.textContent = '';
-    for (const it of list.items) {
-      if (q && !(it.t + ' ' + it.s).toLowerCase().includes(q)) continue;
-      const li = el('li'), b = el('button', 'row' + (it.id === list.on ? ' on' : '')); b.type = 'button';
-      b.appendChild(el('b', '', it.t)); b.appendChild(el('small', '', it.s));
-      b.onclick = () => act('tune', { id: it.id });
+    for (const it of l.items) {
+      if (filter && !(it.t + ' ' + it.s).toLowerCase().includes(filter)) continue;
+      const li = el('li'), b = el('button', 'row' + (it.id === l.on ? ' on' : '')); b.type = 'button';
+      b.appendChild(el('b', '', it.t)); if (it.s) b.appendChild(el('small', '', it.s));
+      b.onclick = () => { say(V.rowDo(l, it)); if (l.a !== 'tune') tab('r'); };
       li.appendChild(b); ul.appendChild(li);
     }
+  }
+  const mine = () => Object.keys(lists).find((id) => id !== 'find' && id !== 'areas');
+  function drawList() {
+    const l = lists[mine()];
+    $('list-box').hidden = !l;
+    if (!l) return;
+    $('list-h').textContent = l.title;
+    $('find').placeholder = l.a === 'tune' ? 'Find a channel or a show' : 'Find in this list';
+    rows($('list'), l, $('find').value.trim().toLowerCase());
+  }
+  function drawFound() {
+    const l = lists.find;
+    $('f-h').hidden = !l; $('f-h').textContent = l ? l.title : '';
+    if (l) rows($('f-list'), l, ''); else $('f-list').textContent = '';
+  }
+  function drawAreas() {
+    const l = lists.areas;
+    $('tab-a').hidden = !l;
+    if (l) rows($('a-list'), l, '');
   }
   // Saved on this phone: open it here, put it on the big screen, or let it go.
   function drawSaved() {
@@ -121,8 +144,8 @@
     } else give.hidden = true;
   }
   function tab(w) {
-    $('tab-r').setAttribute('aria-selected', String(w === 'r')); $('tab-s').setAttribute('aria-selected', String(w === 's'));
-    $('v-r').hidden = w !== 'r'; $('v-s').hidden = w !== 's';
+    for (const k of ['r', 'f', 'a', 's']) { $('tab-' + k).setAttribute('aria-selected', String(w === k)); $('v-' + k).hidden = w !== k; }
+    if (w === 'f' && !$('q').value) $('q').focus();
   }
 
   // Trivia in the breaks: the question the big screen shows, answered here. One answer a question; the answer comes with the
@@ -171,12 +194,31 @@
     if (m.type === 't-got') { if (quiz && quiz.n === m.n) $('q-r').textContent = lockedWords(m.pick); return; }
     if (m.type === 't-res' && m.live) { quizResult(m); return; }
     if (m.type === 'hello') { tries = 0; $('note').classList.remove('on'); $('app').hidden = false; status('Room ' + code); hi(); return; }
-    if (m.type === 'host-away') { status('The big screen is reloading'); return; }
+    if (m.type === 'host-away') { status('The big screen is changing pages'); return; }
     if (m.type === 'host-back') { status('Room ' + code); hi(); return; }
-    if (m.type === 'host-gone') { ended = true; note('The big screen ended the remote', 'Press Phone remote on the big screen for a new code.'); return; }
-    if (m.type === 'r-site') { site = m; document.title = 'Remote | ' + (m.name || 'voidtv.net'); drawSaved(); return; }
+    if (m.type === 'host-gone') { if (away) return; ended = true; note('The big screen ended the remote', 'Press Phone remote on the big screen for a new code.'); return; }
+    if (m.type === 'r-site') {
+      // The big screen went to another area (PLAY, Trivia): its lists and a search made there are gone; the new ones follow.
+      if (site && site.name !== m.name) { for (const id of Object.keys(lists)) if (id !== 'areas') delete lists[id]; $('q').value = ''; drawList(); drawFound(); }
+      site = m; document.title = 'Remote | ' + (m.name || 'voidtv.net'); drawSaved();
+      // The search box says what it searches on the screen it is on; a screen with no search (Trivia) has no Find tab.
+      $('tab-f').hidden = !m.find; if (m.find) { $('q').placeholder = m.find; $('q').setAttribute('aria-label', m.find); }
+      if (!m.find && !$('v-f').hidden) tab('r');
+      return;
+    }
+    // The hand-over: the area's own phone page, by its room's four letters only (remote.js, handPath; night audit N10).
+    if (m.type === 'r-hand') { const to = V.handPath(m); if (to) { status('Going to ' + (m.what || 'the next page')); location.assign(to); } return; }
+    if (m.type === 'r-away') { ended = true; away = true; note('The big screen went to ' + (m.name || 'another site'), 'The phone remote works on voidtv.net itself: On Demand, Live TV, PLAY and Trivia. On Live TV there, press Phone remote for a new code.'); return; }
     if (m.type === 'r-now') { now = m; nowAt = Date.now(); drawNow(); if (quiz && quiz.nowKey !== nowKey(m)) quizGone(); return; }
-    if (m.type === 'r-list') { const l = V.listTake(parts, m); if (l) { list = l; drawList(); } return; }
+    if (m.type === 'r-list') {
+      const l = V.listTake(parts, m);
+      if (!l) return;
+      if (l.id === 'find') { l.site = site ? site.name : ''; lists.find = l; drawFound(); return; }
+      if (l.id === 'areas') { lists.areas = l; drawAreas(); return; }
+      // The screen's own list: the one it sent last (a screen on another area sends its own: PLAY's games, not channels).
+      for (const id of Object.keys(lists)) if (id !== 'find' && id !== 'areas' && id !== l.id) delete lists[id];
+      lists[l.id] = l; drawList(); return;
+    }
     if (m.type === 'r-info') {
       info = m;
       if (wantSave === m.slug) { wantSave = ''; saved = V.savedAdd(saved, { slug: m.slug, t: m.t, s: m.sub, url: m.url }, Date.now()); store(); drawSaved(); drawNow(); }
@@ -202,7 +244,9 @@
     };
   }
 
-  $('tab-r').onclick = () => tab('r'); $('tab-s').onclick = () => tab('s');
+  $('tab-r').onclick = () => tab('r'); $('tab-f').onclick = () => tab('f'); $('tab-a').onclick = () => tab('a'); $('tab-s').onclick = () => tab('s');
+  // Search: the words go to the big screen, which searches with its own site's search and answers this phone alone.
+  $('f-form').onsubmit = (e) => { e.preventDefault(); const q = $('q').value.trim(); if (!q) return; act('find', { q }); $('q').blur(); };
   $('ch-up').onclick = () => act('ch', { dir: 1 }); $('ch-down').onclick = () => act('ch', { dir: -1 });
   $('find').oninput = drawList;
   // A phone that wakes up asks again (it may have slept through a channel change); a dead socket closes and joins again.

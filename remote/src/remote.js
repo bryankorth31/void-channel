@@ -13,7 +13,14 @@
   const MAX = 1024;
   const ENVELOPE = 40;   // {"to":"all","msg":...} or {"from":16,"msg":...} around the message
   // Actions a phone may ask for, and what each carries. Anything else is dropped unread.
-  const ACTIONS = { ch: 'dir', tune: 'id', now: '', go: 'slug', info: 'slug', tv: '' };
+  // Bryan, 22 Nov 2026: "the phone remote needs to have pause on it and also work for searching and interacting with the direct
+  // play areas of vtv". pause and play hold and go on with the picture; live takes a Live TV picture that was paused back to where
+  // the channel is now (he picked L1 from the pictures: pause, then catch up). find searches the site the screen is on (q: words);
+  // watch plays a show from where this home left off; area takes the screen to one of the areas in the shared menu; game starts a
+  // PLAY game; press presses one of the page's own buttons, from the adapter's own list; hand asks the screen for the area's own
+  // phone page (PLAY's game pad, Trivia's answer page) and the screen answers with r-hand, a room code.
+  const ACTIONS = { ch: 'dir', tune: 'id', now: '', go: 'slug', info: 'slug', tv: '', pause: '', play: '', live: '', find: 'q', watch: 'slug',
+    area: 'id', game: 'id', press: 'id', hand: '' };
   const SAVED_MAX = 100;
 
   // A string as a phone or a screen may show it: plain text, no control characters, at most n characters.
@@ -21,7 +28,10 @@
     const t = String(s == null ? '' : s).replace(/[\u0000-\u001f\u007f]+/g, ' ').replace(/\s+/g, ' ').trim();
     return t.length > n ? t.slice(0, n - 1).replace(/\s+\S*$/, '') + '…' : t;
   }
-  const idOk = (s) => typeof s === 'string' && /^[a-z0-9][a-z0-9._:/-]{0,79}$/i.test(s);
+  // An id or a slug: a channel, a show, an area, a PLAY game (the longest PLAY game id is 95 characters).
+  const idOk = (s) => typeof s === 'string' && /^[a-z0-9][a-z0-9._:/-]{0,119}$/i.test(s);
+  // Search words as a phone typed them: plain text, 1 to 60 characters (the site's own search does the rest).
+  const qOk = (s) => typeof s === 'string' && s.length <= 200 && clip(s, 61).length >= 1;
   const size = (msg) => JSON.stringify(msg).length + ENVELOPE;
   const fits = (msg) => size(msg) <= MAX;
 
@@ -31,12 +41,25 @@
     const need = ACTIONS[m.a];
     if (need === 'dir') return m.dir === 1 || m.dir === -1 ? { a: m.a, dir: m.dir } : null;
     if (need === 'id' || need === 'slug') return idOk(m[need]) ? { a: m.a, [need]: m[need] } : null;
+    if (need === 'q') return qOk(m.q) ? { a: m.a, q: clip(m.q, 60) } : null;
     return { a: m.a };
+  }
+  // A button the screen offers: an action from ACTIONS and its words; an action that carries an id or a slug carries it here too
+  // (Back to the games is area play), checked as a phone's own would be. CH is drawn as the big buttons, so it carries no dir.
+  function actOk(x) {
+    if (!x || !Object.prototype.hasOwnProperty.call(ACTIONS, x.a)) return null;
+    const need = ACTIONS[x.a];
+    if (need === 'q') return null;
+    const b = { a: x.a, l: clip(x.l, 24) };
+    // About carries no slug: the phone asks about what is on now. One that carries one must carry a good one.
+    if ((need === 'id' || need === 'slug') && x[need] !== undefined) { if (!idOk(x[need])) return null; b[need] = x[need]; }
+    return b;
   }
 
   // Who the screen is. donate is the site's own CASH link, or '' where none is shown (Kids: only behind its grown-up check).
+  // find: the words in the phone's search box ("Search shows and movies", "Search games"), '' where the screen has no search.
   function siteMsg(o) {
-    return { type: 'r-site', name: clip(o.name, 40), home: clip(o.home, 120), donate: o.donate ? clip(o.donate, 200) : '', kids: !!o.kids };
+    return { type: 'r-site', name: clip(o.name, 40), home: clip(o.home, 120), donate: o.donate ? clip(o.donate, 200) : '', kids: !!o.kids, find: clip(o.find, 40) };
   }
 
   // What is on now. k: what the screen is showing (tv, show, page). acts: the buttons that make sense now, each { a, l }:
@@ -45,7 +68,7 @@
     const m = { type: 'r-now', k: clip(o.k || 'page', 10), brk: !!o.brk, where: clip(o.where, 50), t: clip(o.t, 80), s: clip(o.s, 90),
       nx: clip(o.nx, 90), left: Number.isFinite(o.left) && o.left > 0 ? Math.round(o.left) : null,
       slug: idOk(o.slug) ? o.slug : '', art: /^https:\/\/[^"'<>\s]{1,200}$/.test(o.art || '') ? o.art : '',
-      acts: (o.acts || []).filter((x) => x && Object.prototype.hasOwnProperty.call(ACTIONS, x.a)).slice(0, 6).map((x) => ({ a: x.a, l: clip(x.l, 24) })) };
+      acts: (o.acts || []).map(actOk).filter(Boolean).slice(0, 6) };
     while (!fits(m) && m.art) m.art = '';
     while (!fits(m) && m.s.length > 10) m.s = clip(m.s, m.s.length - 10);
     return m;
@@ -53,11 +76,13 @@
 
   // A long list (every channel and what is on it) cut into messages that each fit. items: [{ id, t, s }]; on: the id that is
   // playing now. The phone puts the parts together by part and of, and draws the list once every part of this ver is in.
-  function listMsgs(id, title, items, on, ver) {
+  // a: what a tap on a row asks for (tune a channel, go to a show, start a game, open an area); tune when not said.
+  const tapOf = (a) => (Object.prototype.hasOwnProperty.call(ACTIONS, a) && /^(id|slug)$/.test(ACTIONS[a]) ? a : 'tune');
+  function listMsgs(id, title, items, on, ver, a) {
     const rows = items.filter((x) => x && idOk(x.id)).map((x) => ({ id: x.id, t: clip(x.t, 40), s: clip(x.s, 50) }));
     const out = [];
     let cur = [];
-    const head = (part) => ({ type: 'r-list', id, title: clip(title, 40), on: idOk(on) ? on : '', ver: ver | 0, part, of: 0, items: [] });
+    const head = (part) => ({ type: 'r-list', id, a: tapOf(a), title: clip(title, 40), on: idOk(on) ? on : '', ver: ver | 0, part, of: 0, items: [] });
     for (const r of rows) {
       const m = head(out.length); m.items = cur.concat([r]);
       if (cur.length && !fits(Object.assign(m, { of: 999 }))) { out.push(cur); cur = [r]; } else cur.push(r);
@@ -72,7 +97,46 @@
     if (!s || s.ver !== m.ver) s = store[m.id] = { ver: m.ver, of: m.of, parts: [] };
     s.parts[m.part] = m.items || [];
     for (let i = 0; i < s.of; i++) if (!s.parts[i]) return null;
-    return { id: m.id, title: m.title, on: m.on, items: [].concat(...s.parts) };
+    return { id: m.id, a: tapOf(m.a), title: m.title, on: m.on, items: [].concat(...s.parts) };
+  }
+  // A row tapped on the phone: the r-do it sends (the row's id goes as the id or the slug its action takes).
+  const rowDo = (l, it) => ({ type: 'r-do', a: tapOf(l.a), [ACTIONS[tapOf(l.a)]]: it.id });
+
+  // THE HAND-OVER (Bryan picked P1 from the pictures, 22 Nov 2026: pick a game on the phone, then the phone is its pad). An area
+  // with its own phone page (PLAY's game pad, Trivia's answer page) has its own room; the screen tells one phone that room's code
+  // and the phone goes to the join page with it, which asks the relay what kind of room it is and opens voidtv.net's own page
+  // for that kind (play/join.html). So the phone still takes no link from a message (night audit N10): only four letters, the
+  // same a person types at voidtv.net/join. what: the words the phone shows while it goes.
+  const CODE = /^[2-9A-Z]{4}$/;
+  const handMsg = (code, what) => (CODE.test(code || '') ? { type: 'r-hand', code, what: clip(what, 60) } : null);
+  const handPath = (m) => (m && m.type === 'r-hand' && CODE.test(m.code || '') ? '/join?r=' + m.code : '');
+  // The screen is going where the remote cannot follow (an area on its own address: University, Kids, Hindi): the phone says so.
+  const awayMsg = (name) => ({ type: 'r-away', name: clip(name, 40) });
+
+  // PAUSE ON LIVE TV (Bryan picked L1, 22 Nov 2026). Live TV is the clock's: pausing holds this TV's picture only, and Play goes on
+  // from there, behind the channel; the next show still starts at its time. How far behind, in seconds, from where the clock says
+  // the airing is (at) and where this picture is (pos); null when it cannot be told. More than BEHIND_S offers Back to live.
+  const BEHIND_S = 20;
+  const behind = (at, pos) => (Number.isFinite(at) && Number.isFinite(pos) ? Math.max(0, Math.round(at - pos)) : null);
+  // "4 min behind live", "under a minute behind live": in minutes, so the words change once a minute, not with every poll.
+  const behindWords = (sec) => (sec >= 60 ? Math.round(sec / 60) + ' min behind live' : 'under a minute behind live');
+
+  // SEARCH: the shows a search found, best first. hits: the site's own search's answer, in its own order (scripts/lib/app.js,
+  // qHit). Names that start with the words come first, then names with a word that starts with them, then names that have them
+  // inside a word, then the rest (a person, a network, a genre); between equals the site's own order. At most n.
+  function rankFind(hits, q, n) {
+    const w = String(q || '').trim().toLowerCase();
+    // A word of the name that starts with them ("Ms. Pac-Man" for "pac") before one that only has them inside ("Space Panic").
+    const wordAt = (t, j) => j === 0 || !/[a-z0-9]/.test(t[j - 1]);
+    const tier = (s) => {
+      const t = String(s.show || s.title || '').toLowerCase();
+      let i = t.indexOf(w);
+      if (i < 0) return 3;
+      if (i === 0) return 0;
+      for (; i >= 0; i = t.indexOf(w, i + 1)) if (wordAt(t, i)) return 1;
+      return 2;
+    };
+    return hits.map((s, i) => ({ s, i, k: tier(s) })).sort((a, b) => a.k - b.k || a.i - b.i).slice(0, n || 40).map((x) => x.s);
   }
 
   // A show's details for the phone, from one shown on the screen.
@@ -206,7 +270,7 @@
   // "8:30 pm", "18 min left" and "1:05 left": the times as the phone shows them.
   const leftWords = (sec) => { sec = Math.max(0, Math.round(sec)); const h = Math.floor(sec / 3600), m = Math.floor(sec % 3600 / 60); return h ? h + ' h ' + String(m).padStart(2, '0') + ' min left' : m ? m + ' min left' : 'under a minute left'; };
 
-  const api = { MAX, ACTIONS, SAVED_MAX, clip, readDo, siteMsg, nowMsg, listMsgs, listTake, infoMsg, savedAdd, savedDrop, savedHas, savedRead, size, fits, leftWords, LETTERS, quizAsk, quizAnswer, quizResults, quizCount, POP, popAt, zoneOk, tzOff, zoneCity, partyScores, scoreLine, showPath };
+  const api = { MAX, ACTIONS, SAVED_MAX, clip, idOk, readDo, actOk, rowDo, handMsg, handPath, awayMsg, BEHIND_S, behind, behindWords, rankFind, siteMsg, nowMsg, listMsgs, listTake, infoMsg, savedAdd, savedDrop, savedHas, savedRead, size, fits, leftWords, LETTERS, quizAsk, quizAnswer, quizResults, quizCount, POP, popAt, zoneOk, tzOff, zoneCity, partyScores, scoreLine, showPath };
   if (typeof module === 'object' && module.exports) module.exports = api;
   else root.VoidRemote = api;
 })(typeof self !== 'undefined' ? self : this);

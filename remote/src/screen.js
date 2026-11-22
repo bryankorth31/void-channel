@@ -3,9 +3,13 @@
 // phones that join it through a site adapter (remote/src/voidtv.js on voidtv.net). The adapter gives:
 //   site()      { name, home, donate, kids }                  who this screen is
 //   now()       { k, where, t, s, nx, left, slug, art, acts }   what is on now (VoidRemote.nowMsg)
-//   lists()     [{ id, title, items: [{ id, t, s }], on }]      lists to pick from (every channel and what is on it)
+//   lists()     [{ id, title, items: [{ id, t, s }], on, a }]   lists to pick from (every channel and what is on it; the areas);
+//                                                                a: what a tap on a row does (tune, go, game, area)
 //   info(slug)  { slug, t, sub, ppl, about, url } or null       a show's details
-//   act(cmd)    runs one checked action (VoidRemote.readDo)
+//   act(cmd, seat)  runs one checked action (VoidRemote.readDo); seat: the phone that asked (a hand-over answers that phone)
+//   find(q)     { id, title, items, a } or null                 the site's own search, for one phone (optional)
+// The same room follows the big screen from area to area of voidtv.net (remote/src/follow.js): each area's page has its own
+// adapter (voidtv.js for On Demand and Live TV, play.js for PLAY, trivia.js for Trivia) and takes the room back on load.
 // The room stays when the page reloads: its key is kept for this tab only (sessionStorage), as PLAY's game pad room is
 // (play/src/phones.js), and the next load takes it back within 45 seconds, phones still in their seats.
 (function (root) {
@@ -19,7 +23,7 @@
 
   let ad = null, ws = null, room = null, ended = false, opening = null, retry = 0;
   const seats = new Set();
-  let lastNow = '', lastList = '', listVer = 0, timers = [];
+  let lastNow = '', lastList = '', listVer = 0, findVer = 0, timers = [];
   // THE WATCH PARTY (remote/README.md). Other TVs join this room as members (they say p-hi with their zone) and follow this
   // one: it sends them its zone and channel (p-tv), the question's progress (p-quiz) and the one score list (p-score).
   // homes: a phone that scanned another TV's code says which TV (its r-hi carries h), so the list can name its home.
@@ -101,7 +105,7 @@
   function all(to) {
     send(to, V.siteMsg(ad.site()));
     const n = V.nowMsg(ad.now()); send(to, n); if (to === 'all') lastNow = sameKey(n);
-    for (const l of ad.lists()) for (const m of V.listMsgs(l.id, l.title, l.items, l.on, listVer)) send(to, m);
+    for (const l of ad.lists()) for (const m of V.listMsgs(l.id, l.title, l.items, l.on, listVer, l.a)) send(to, m);
     // A phone that joins (or wakes) while a question is open gets it, with its own answer if it gave one.
     const z = quizNow();
     if (to !== 'all' && z && z.phase === 'q' && quizN === z.n) {
@@ -112,7 +116,8 @@
   }
   // The time left is counted down on the phone, so it alone is no reason to send again (it changes every second; sending it
   // each poll made the phone redraw its buttons under a thumb). Anything else that changes goes at once.
-  const sameKey = (n) => JSON.stringify(Object.assign({}, n, { left: null }));
+  // Whether there is a time left at all does count: an episode's comes once the player knows its length, and goes while paused.
+  const sameKey = (n) => JSON.stringify(Object.assign({}, n, { left: n.left === null ? null : 1 }));
   function tick(force) {
     if (!seats.size || !ad) return;
     const n = V.nowMsg(ad.now()), j = sameKey(n);
@@ -121,10 +126,10 @@
   }
   function listTick() {
     if (!seats.size || !ad) return;
-    const ls = ad.lists(), j = JSON.stringify(ls.map((l) => [l.id, l.on, l.items]));
+    const ls = ad.lists(), j = JSON.stringify(ls.map((l) => [l.id, l.on, l.a, l.items]));
     if (j === lastList) return;
     lastList = j; listVer = (listVer + 1) % 1e6;
-    for (const l of ls) for (const m of V.listMsgs(l.id, l.title, l.items, l.on, listVer)) send('all', m);
+    for (const l of ls) for (const m of V.listMsgs(l.id, l.title, l.items, l.on, listVer, l.a)) send('all', m);
   }
 
   function onMessage(e) {
@@ -144,7 +149,13 @@
     const cmd = V.readDo(msg);
     if (!cmd) return;
     if (cmd.a === 'info') { const i = ad.info(cmd.slug); if (i) send(m.from, V.infoMsg(i)); return; }
-    try { ad.act(cmd); } catch (x) { /* a page that cannot do it now: the phone sees nothing change */ }
+    // A search: the answer goes to the phone that asked only, as a list (each phone keeps its own search).
+    if (cmd.a === 'find') {
+      let l = null; try { l = ad.find ? ad.find(cmd.q) : null; } catch (x) { l = null; }
+      if (l) { findVer = (findVer + 1) % 1e6; for (const x of V.listMsgs(l.id || 'find', l.title, l.items, '', findVer, l.a)) send(m.from, x); }
+      return;
+    }
+    try { ad.act(cmd, m.from); } catch (x) { /* a page that cannot do it now: the phone sees nothing change */ }
     setTimeout(() => { tick(); listTick(); partyTick(true); }, 250);   // the page has changed channel: say so at once, not at the next poll
   }
 
@@ -250,8 +261,28 @@
       .catch((e) => { show(); box.querySelector('#vrm-err').textContent = e.message; return null; });
   }
 
-  root.RemoteScreen = { start, end, show, hide, get room() { return room; }, get phones() { return phoneSeats().length; }, get tvs() { return tvs.size; },
-    get party() { return partyMode || tvs.size > 0; }, changed: () => tick(false),
+  // The hand-over: one phone is told the room code of the area's own phone page (V.handMsg); it goes there through /join.
+  const hand = (seat, code, what) => { const msg = V.handMsg(code, what); if (msg && seats.has(seat) && !tvs.has(seat)) { send(seat, msg); return true; } return false; };
+  // The screen goes where the remote cannot follow (another address): the phones are told where, then the room ends.
+  function away(name) { if (ws && ws.readyState === 1) for (const s of phoneSeats()) send(s, V.awayMsg(name)); end(); }
+  // An area from the shared menu (assets/brand/areas/areas.js), on the big screen. Only an area that is open, from this page's own
+  // copy of the list: the phone sends an id, never an address. here(area): the page goes there itself (true), as voidtv.net does
+  // for On Demand and Live TV. An area on voidtv.net is the same tab on the same site, so the room is kept and the next page takes it
+  // back (remote/src/follow.js); one on its own address (University, Kids, Hindi, lexROM) cannot take it, so the remote ends there.
+  function area(id, here) {
+    const A = root.VoidAreas && root.VoidAreas.areas ? root.VoidAreas.areas.find((x) => x.id === id && x.live) : null;
+    if (!A || (here && here(A))) return;
+    if (A.site === 'main' && A.path) { location.assign(A.path); return; }
+    if (A.url && /^https:\/\//.test(A.url)) { away(A.name); location.assign(A.url); }
+  }
+  // The areas as the phone's Areas list: every open one, this one marked.
+  const areaList = (hereId) => {
+    const L = root.VoidAreas && root.VoidAreas.areas ? root.VoidAreas.areas.filter((x) => x.live) : [];
+    return L.length ? [{ id: 'areas', title: 'Areas', a: 'area', on: hereId || '', items: L.map((x) => ({ id: x.id, t: x.name, s: x.line })) }] : [];
+  };
+
+  root.RemoteScreen = { start, end, show, hide, hand, away, area, areaList, get room() { return room; }, get phones() { return phoneSeats().length; }, get tvs() { return tvs.size; },
+    get party() { return partyMode || tvs.size > 0; }, changed: () => { tick(false); listTick(); },
     // For the TV's trivia card: how many phones answered the open question, and how many got it right; the party's score list.
     quizCount: (z) => (z && phoneSeats().length ? V.quizCount(book, phoneSeats(), z) : null),
     scores: () => scores() };

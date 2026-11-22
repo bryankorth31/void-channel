@@ -46,13 +46,55 @@ information". And: "also use this for cast, and kids, across the entire voidtv u
 - Built: `src/party.js` (the joining TV), the party parts of `src/screen.js` (the first TV) and `src/voidtv.js` (zone and channel), and `src/remote.js` (`tzOff`, `zoneCity`, `partyScores`, `scoreLine`).
 - Not yet: the clip chat's spot-it and whodunit rounds on the phones, and the Mystery channel screens. Each waits on Bryan's go.
 
+## Pause, search and the play areas (Bryan, 22 Nov 2026: "the phone remote needs to have pause on it and also work for searching and interacting with the direct play areas of vtv")
+
+He picked two options from pictures: L1 for Live TV and P1 for PLAY.
+
+- **Pause and Play.** On Demand: the player's own pause and play (the same as its button), with the episode's time left and
+  Next episode. A show page with nothing playing offers Play, which starts the show where this home left off.
+- **Pause on Live TV (L1).** Live TV is the clock's, so Pause holds this TV's picture only. Play from here goes on from where it
+  paused, behind the channel. Once more than 20 seconds behind, the phone says how far ("4 min behind live") and offers
+  **Back to live**, which plays what the clock says now. Nothing starts early, and the next show still starts at its time: after a
+  long pause the break is shorter, or this TV joins the next show where the clock is. No pause in a break (the cards are live).
+- **Find tab.** The words go to the big screen, which searches with its own site's search and answers that phone alone. On
+  voidtv.net that is the list page's own `qHit` (`scripts/lib/app.js`), past the adult door, shows and movies; names that start
+  with the words first. A tap opens the result on the big screen, where Play starts it. On PLAY it searches the games.
+- **Areas tab.** Every open area of the shared menu (`assets/brand/areas/areas.js`); a tap puts it on the big screen.
+  - On voidtv.net itself (On Demand, Live TV, PLAY, Trivia) the room follows the big screen: the tab keeps it, and the next page
+    takes it back within 45 seconds (`src/follow.js` on PLAY's shelf and game pages and Trivia's host page, loading the area's
+    adapter only for a tab that holds a room). Live TV after a page change waits for Turn on, as always; the phone says
+    "Live TV is off" and its Turn on does what that button does.
+  - An area on its own address (University, Kids, Hindi, lexROM) cannot take the room: the phone is told where the big screen
+    went (`r-away`), and the remote ends.
+- **PLAY (P1).** The phone shows the most played games and searches them. A tap starts the game on the big screen and the phone
+  becomes its controller: the shelf opens its own phone room (kind `pad`), the screen tells that one phone the room's four letters
+  (`r-hand`), and the phone goes to `/join` with them, which opens PLAY's own pad page. The big screen waits until the phone is in
+  that room (8 s at most), then opens the game, which takes the room back as it does for any phone from the shelf. **Phone as
+  controller** does the same without a game: the pad steers the shelf. On a game page the remote offers Phone as controller,
+  Back to the games and Live TV. The phone's Back button returns from the pad to the remote, still in its seat.
+- **Trivia.** The phone presses the host screen's own buttons, only those and only while the screen shows them: Start, Start the
+  game, Play again, and Pause (Go on while paused). Once a game has its room, **Play on this phone** hands the phone to Trivia's
+  answer page the same way (`r-hand`). A phone answering there cannot also press Start the game; another phone, or the screen, does.
+- Night audit N10 still holds: the phone takes no address from a message. A hand-over carries four letters, the same a person
+  types at voidtv.net/join; the phone builds `/join?r=` itself. An area, a game or a show is an id the screen looks up in its own
+  list.
+- Built: `src/remote.js` (actions, `actOk`, `rowDo`, `handMsg`, `handPath`, `behind`, `rankFind`), `src/screen.js` (`find`, `hand`,
+  `away`, `area`, `areaList`), `src/voidtv.js`, `src/play.js`, `src/trivia.js`, `src/follow.js`, `src/phone.js`, `index.html`;
+  small hooks in `play/src/shelf-phones.js` (`PlayShelfPhones`), `trivia/src/host.js` (`TriviaHostRoom`), the three pages'
+  script tags, and the build stamps (`scripts/site.js`, `scripts/trivia/stamp.js`).
+- Not yet: a "Back to the remote" button on PLAY's pad page and Trivia's answer page (the phone's own Back does it now); pause in
+  a PLAY game from the remote (the pad's Menu pauses it); tried on a real phone and a real TV browser (autoplay after Live TV's
+  Turn on from the phone is the browser's call; every check here was a local build with the local relay, muted).
+
 ## How it is built
 
 - One relay for every phone feature: PLAY's rooms (`play/rooms/`, `/api/room/*`), kind `remote` (16 phones, 10 messages a
   second, 12 hours). The relay keeps nothing.
-- The phone knows no site. It draws what the screen sends: `r-site` (who the screen is), `r-now` (what is on, with the buttons
-  that make sense there), `r-list` (lists, cut to fit 1 KB a message), `r-info` (a show's details). It sends back `r-do`, one
-  action by name: `ch`, `tune`, `now`, `go`, `info`, `tv`. Anything else is dropped. Trivia's `t-` messages ride in the same room.
+- The phone knows no site. It draws what the screen sends: `r-site` (who the screen is, and what its search box searches),
+  `r-now` (what is on, with the buttons that make sense there), `r-list` (lists, cut to fit 1 KB a message, each saying what a
+  tap on a row does), `r-info` (a show's details), `r-hand` (an area's own phone room, by its code), `r-away` (the screen went to
+  another address). It sends back `r-do`, one action by name: `ch`, `tune`, `now`, `go`, `info`, `tv`, `pause`, `play`, `live`,
+  `find`, `watch`, `area`, `game`, `press`, `hand`. Anything else is dropped. Trivia's `t-` messages ride in the same room.
 - `src/remote.js`: the shared, tested parts (messages, checks, the saved list). `src/screen.js`: the big screen's side, the same
   for every site. `src/phone.js` and `index.html`: the phone. `src/voidtv.js`: voidtv.net's adapter, the only part that knows
   voidtv.net (it acts through the page's own tune, surf, tvNow and go, so the schedule stays the clock's).

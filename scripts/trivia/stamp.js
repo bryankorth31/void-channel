@@ -4,12 +4,12 @@
 // 40fa2b960, so a push reaches every browser at once. Pure; tested in tests/trivia-door.test.js.
 'use strict';
 
-// Every stylesheet and script the trivia pages load from this site gets ?v=<stamp>: trivia.css, src/*.js, PLAY's QR maker and
+// Every stylesheet and script the trivia pages load from this site gets ?v=<stamp>: trivia.css, src/*.js, PLAY's QR maker, the phone remote's loader (remote/src/follow.js) and
 // VoidTV's shared scripts under /assets/ (the areas menu and card, cross-promotion chat, 20 Nov 2026).
 function stampTrivia(html, v) {
   if (!/^[0-9a-f]{7,40}$/.test(String(v || ''))) return html;
   return String(html)
-    .replace(/(<script src="(?:src\/[a-z0-9-]+|\/play\/src\/[a-z0-9-]+|\/assets\/[a-z0-9/-]+)\.js)"/g, '$1?v=' + v + '"')
+    .replace(/(<script src="(?:src\/[a-z0-9-]+|\/play\/src\/[a-z0-9-]+|\/remote\/src\/[a-z0-9-]+|\/assets\/[a-z0-9/-]+)\.js)"/g, '$1?v=' + v + '"')
     .replace(/(<link rel="stylesheet" href="trivia\.css)"/g, '$1?v=' + v + '"');
 }
 

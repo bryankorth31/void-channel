@@ -2,9 +2,14 @@
 // It reads the page's own Live TV state (scripts/lib/app.js: TV, TVCUR, SHOWS, chanNow, TVG) and acts through the page's own
 // calls (tune, surf, tvNow, go), so the phone does exactly what the page's buttons do and the schedule stays the clock's
 // (full hold: a phone can change channel, never start anything early). Loaded only when someone presses Phone remote.
+// Bryan, 22 Nov 2026: "the phone remote needs to have pause on it and also work for searching and interacting with the direct play
+// areas of vtv". Pause and Play are the player's own (the page's play button does the same); on Live TV he picked L1 from the
+// pictures: Pause holds this TV's picture only, Play goes on from where it paused, behind the channel, and Back to live takes it
+// to where the clock is. Nothing starts early, and the next show still starts at its time (the break after a long pause is shorter,
+// or this TV joins the next show where the clock is). Search is the site's own (qHit in scripts/lib/app.js).
 (function (root) {
   'use strict';
-  /* global gated, TV, TVCUR, TVC_NOW, TVLIB, TVG, SHOWS, BY_SLUG, ME, SITE, DONATE, TRIVIA, BASE, VP, state, chanNow, viewNow, tvLive, tune, surf, tvNow, go, urlFor, clock */
+  /* global gated, TV, TVCUR, TVC_NOW, TVLIB, TVG, SHOWS, BY_SLUG, ME, SITE, DONATE, TRIVIA, BASE, VP, state, chanNow, viewNow, tvLive, tune, surf, tvNow, tvPlay, go, watch, next, nextEp, qHit, urlFor, clock */
   if (typeof document === 'undefined' || !root.RemoteScreen) return;
   const has = (f) => typeof f === 'function';
   const chans = () => (typeof TV !== 'undefined' && TV ? TV.filter((c) => !c.adult || ME.adult) : []);
@@ -12,9 +17,14 @@
   const epName = (s, se, n) => { for (const z of (s && s.seasons) || []) if (z.season === se) for (const e of z.episodes || []) if (e.n === n) return e.name || ''; return ''; };
   const onTv = () => { const v = has(viewNow) ? viewNow() : ''; return (v === 'tv' || v === 'home') && has(tvLive) && tvLive(); };
   const showUrl = (slug) => location.origin + (has(urlFor) ? urlFor(slug) : '/show/' + slug);
+  // The player as the remote sees it: an episode in it (not the idle player of a show page), and whether it is paused.
+  const vp = () => (typeof VP !== 'undefined' && VP && VP.v && VP.ep ? VP : null);
+  const pp = (p) => (p.v.paused ? { a: 'play', l: 'Play' } : { a: 'pause', l: 'Pause' });
+  const open = (slug) => typeof BY_SLUG !== 'undefined' && Object.prototype.hasOwnProperty.call(BY_SLUG, slug) && !(typeof gated === 'function' ? gated(BY_SLUG[slug]) : BY_SLUG[slug].adult && !ME.adult);
+  const V0 = root.VoidRemote;
 
   const adapter = {
-    site: () => ({ name: typeof SITE === 'string' ? SITE : location.host, home: location.origin, donate: typeof DONATE === 'string' ? DONATE : '', kids: false }),
+    site: () => ({ name: typeof SITE === 'string' ? SITE : location.host, home: location.origin, donate: typeof DONATE === 'string' ? DONATE : '', kids: false, find: 'Search shows and movies' }),
 
     now() {
       const T = typeof TVCUR !== 'undefined' ? TVCUR : null;
@@ -23,21 +33,36 @@
         const nx = TVG.nextAiring(c, TVLIB, a), ns = nx && SHOWS[nx.s];
         const next = nx ? 'Next: ' + clock(nx.st) + ' ' + (ns ? ns.show : '') : '';
         if (x.k === 'ep' && s) {
-          const cur = T.cur || { se: a.se, n: a.n }, name = epName(s, cur.se, cur.n);
+          const cur = T.cur || { se: a.se, n: a.n }, name = epName(s, cur.se, cur.n), p = vp();
+          // Paused, or behind the clock: how far behind, from where the clock says the airing is and where this picture is.
+          const bh = p ? V0.behind((t - a.st) / 1000, p.v.currentTime) : null, late = bh !== null && bh > V0.BEHIND_S;
+          const paused = !!(p && p.v.paused);
           // The time left runs to the next show, as the line under the picture counts it (night audit N13: one meaning on both).
-          return { k: 'tv', where: 'Now on ' + c.name, t: s.show, s: epCode(cur.se, cur.n) + (name ? ' · ' + name : ''), nx: next,
+          return { k: 'tv', where: (paused ? 'Paused on ' : 'Now on ') + c.name, t: s.show,
+            s: epCode(cur.se, cur.n) + (name ? ' · ' + name : '') + (late ? ' · ' + V0.behindWords(bh) : ''), nx: next,
             left: (a.en - t) / 1000, slug: s.slug, art: s.poster || '',
-            acts: [{ a: 'ch', l: 'CH' }, { a: 'info', l: 'About' }] };
+            acts: [{ a: 'ch', l: 'CH' }].concat(p ? [paused ? { a: 'play', l: late ? 'Play from here' : 'Play' } : { a: 'pause', l: 'Pause' }] : [],
+              late ? [{ a: 'live', l: 'Back to live' }] : [], [{ a: 'info', l: 'About' }]) };
         }
         // A break: the cards, or a short between shows. Watch it now plays the coming show On Demand, as the card's button does.
         return { k: 'tv', brk: true, where: 'Break on ' + c.name, t: ns ? 'Up next: ' + ns.show : 'A short break', s: nx ? 'Starts at ' + clock(nx.st) : '',
           nx: '', left: nx ? (nx.st - t) / 1000 : null, slug: ns ? ns.slug : '', art: (ns && ns.poster) || '',
           acts: [{ a: 'ch', l: 'CH' }].concat(ns ? [{ a: 'now', l: 'Watch it now' }, { a: 'info', l: 'About' }] : []) };
       }
+      // Live TV, not turned on yet (a page load waits for Turn on): the phone's Turn on does what that button does.
+      if (onTv() && !(T && T.c)) return { k: 'page', where: 'Live TV', t: 'Live TV is off', s: 'Turn it on from this phone.', acts: [{ a: 'tv', l: 'Turn on' }] };
       const s = state && state.show;
       if (s && !state.view) {
+        // An episode in the player: what it is, Pause or Play, the next one. The time left is the episode's, and stops while paused.
+        const p = vp(), c = p && p._cur && p._cur.slug === s.slug ? p._cur : null;
+        const se = c && s.seasons && s.seasons[c.se], ep = se && se.episodes && se.episodes[c.e];
+        if (c && ep) {
+          return { k: 'show', where: p.v.paused ? 'Paused, On Demand' : 'On Demand', t: s.show, s: epCode(se.season, ep.n) + (ep.name ? ' · ' + ep.name : ''),
+            left: p.v.paused || !p.duration ? null : p.duration - p.currentTime, slug: s.slug, art: s.poster || '',
+            acts: [pp(p)].concat(has(nextEp) && nextEp() ? [{ a: 'press', id: 'next', l: 'Next episode' }] : [], [{ a: 'info', l: 'About' }, { a: 'tv', l: 'Live TV' }]) };
+        }
         return { k: 'show', where: 'On Demand', t: s.show, s: [s.year, s.network, s.eps ? s.eps + ' episodes' : ''].filter(Boolean).join(' · '),
-          slug: s.slug, art: s.poster || '', acts: [{ a: 'info', l: 'About' }, { a: 'tv', l: 'Live TV' }] };
+          slug: s.slug, art: s.poster || '', acts: [{ a: 'watch', slug: s.slug, l: 'Play' }, { a: 'info', l: 'About' }, { a: 'tv', l: 'Live TV' }] };
       }
       return { k: 'page', where: typeof SITE === 'string' ? SITE : '', t: 'Pick a channel', s: 'The big screen is not on Live TV right now.',
         acts: [{ a: 'tv', l: 'Live TV' }] };
@@ -48,7 +73,17 @@
       const L = chans(); if (!L.length) return [];
       const t = Date.now();
       const items = L.map((c) => { const n = chanNow(c, t), s = n && SHOWS[n.a.s]; return { id: c.id, t: c.name, s: s ? s.show : '' }; });
-      return [{ id: 'chans', title: 'On now', items, on: onTv() ? state.chan : '' }];
+      return [{ id: 'chans', title: 'On now', items, on: onTv() ? state.chan : '' }].concat(root.RemoteScreen.areaList(onTv() ? 'live' : 'ondemand'));
+    },
+
+    // The site's own search (qHit, as the list page asks it), past the adult door, the most episodes first as the list page sorts;
+    // names that start with the words, then names that have them, then the rest (remote.js, rankFind).
+    find(q) {
+      const w = String(q || '').trim().toLowerCase();
+      if (!w || typeof qHit !== 'function' || typeof SHOWS === 'undefined') return null;
+      const hits = SHOWS.filter((s) => s && s.slug && !(typeof gated === 'function' ? gated(s) : s.adult && !ME.adult) && qHit(s, w)).sort((a, b) => (b.eps || 0) - (a.eps || 0));
+      const items = V0.rankFind(hits, w, 40).map((s) => ({ id: s.slug, t: s.show, s: [/^movie-/.test(s.slug) ? 'Movie' : '', s.year, s.network].filter(Boolean).join(' · ') }));
+      return { id: 'find', title: items.length ? 'Found: "' + String(q).trim() + '"' : 'Nothing found for "' + String(q).trim() + '"', a: 'go', items };
     },
 
     info(slug) {
@@ -65,7 +100,17 @@
       if (cmd.a === 'tune') { if (!chans().some((c) => c.id === cmd.id)) return; if (onTv()) tune(cmd.id); else toTv(cmd.id); return; }
       if (cmd.a === 'now') { if (onTv()) tvNow(); return; }
       if (cmd.a === 'tv') { toTv(state.chan); return; }
-      if (cmd.a === 'go') { if (typeof BY_SLUG !== 'undefined' && Object.prototype.hasOwnProperty.call(BY_SLUG, cmd.slug)) go(cmd.slug); }
+      if (cmd.a === 'go') { if (open(cmd.slug)) go(cmd.slug); return; }
+      // Pause and Play: the player's own (the same as its play button). Play on a show page with nothing in the player starts the
+      // show where this home left off (watch), as the page's own Play does.
+      if (cmd.a === 'pause') { const p = vp(); if (p && !p.v.paused) p.pause(); return; }
+      if (cmd.a === 'play') { const p = vp(); if (p) { if (p.v.paused) p.play(); } else if (state.show && !state.view && open(state.show.slug)) watch(state.show.slug); return; }
+      if (cmd.a === 'watch') { if (open(cmd.slug)) watch(cmd.slug); return; }
+      // Back to live: the channel plays what the clock says now (tvPlay at this moment, as a channel change does).
+      if (cmd.a === 'live') { const T = typeof TVCUR !== 'undefined' ? TVCUR : null; if (onTv() && T && T.c && has(tvPlay)) tvPlay(T.c, false); return; }
+      if (cmd.a === 'press') { if (cmd.id === 'next' && has(nextEp) && nextEp() && has(next)) next(); return; }
+      // An area of the shared menu: On Demand and Live TV are this page's own; any other goes through the menu's list.
+      if (cmd.a === 'area') root.RemoteScreen.area(cmd.id, (A) => { if (A.id === 'live') { toTv(state.chan); return true; } if (A.id === 'ondemand') { go(''); return true; } return false; });
     },
 
     // Trivia, as the phones need it: in a break, the question the break card shows (scripts/lib/app.js, tvSpot); during the

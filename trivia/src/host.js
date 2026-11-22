@@ -125,6 +125,8 @@
   // ---------- the phone room ----------
 
   const room = { ws: null, code: null, join: null, locked: false, players: new Map() };
+  // The phone remote (remote/src/trivia.js) asks for the open room's four letters, to hand a phone to the answer page.
+  window.TriviaHostRoom = () => (room.ws && room.code) || '';
   const send = (to, msg) => { if (room.ws && room.ws.readyState === 1) room.ws.send(JSON.stringify({ to, msg })); };
   const nameOf = (p) => p.name || 'Player ' + p.seat;
 

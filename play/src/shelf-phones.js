@@ -44,5 +44,8 @@
   }
   // The shelf's gamepad loop reads these with the real gamepads (src/shelf.js).
   root.PlayShelfPads = () => (phones ? phones.pads() : []);
+  // The phone remote (remote/src/play.js; Bryan, 22 Nov 2026, P1: pick a game on the phone, then the phone is its pad): the shelf's
+  // phone room, opened if it is not open yet (its panel stays as it is), and how many phones are in it.
+  root.PlayShelfPhones = { open: () => start(false), count: () => (phones ? phones.list().length : 0) };
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })(typeof self !== 'undefined' ? self : this);
