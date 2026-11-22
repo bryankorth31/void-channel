@@ -12,10 +12,27 @@ const row = (o) => Object.assign({ content: null, system: 'sms', title: 'Fantasy
 
 test('C1: only Bryan\'s approved collections, each naming its machine and his words', () => {
   const list = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'collections.json'), 'utf8')).collections;
-  assert.deepEqual([...new Set(list.map((c) => c.system))].sort(), ['a2600', 'gameboy', 'gamegear', 'gba', 'gbcolor', 'genesis', 'lynx', 'nes', 'sms', 'snes']);
-  for (const c of list) assert.match(c.approvedBy, /^Bryan, 20 Nov 2026/);
+  assert.deepEqual([...new Set(list.map((c) => c.system))].sort(), ['a2600', 'dos', 'gameboy', 'gamegear', 'gba', 'gbcolor', 'genesis', 'lynx', 'nes', 'sms', 'snes']);
+  for (const c of list) assert.match(c.approvedBy, /^Bryan, 2[01] Nov 2026/);
   assert.deepEqual(list.find((c) => c.system === 'genesis').leaveOut, ['genesisvariations', 'sonicromhacks']);
-  assert.ok(!list.some((c) => c.system === 'dos'), 'DOS waits for the content screen');
+  // The games to add (Bryan, 21 Nov 2026: "including dos"; "keep all of them, go ahead"): DOS takes the top 150 and the
+  // new batch; Genesis, Master System and Game Gear only the new batch (their top-150 file is mostly Sonic hacks).
+  assert.equal(list.find((c) => c.system === 'dos').from, 'top150+more');
+  for (const s of ['genesis', 'sms', 'gamegear']) assert.ok(list.some((c) => c.system === s && c.from === 'more'), s);
+  assert.ok(!list.some((c) => ['genesis', 'sms', 'gamegear'].includes(c.system) && /top150/.test(c.from || '')), 'no Sega top-150 file');
+});
+
+test('games to add: a PC game gets the DOS card with its start program; mods, fan works and held games stay off', () => {
+  const dos = (o) => Object.assign({ content: null, system: 'dos', title: 'Commander Keen 4: Secret of the Oracle', item: 'keen4', file: 'keen4.zip', size: 500000, start: 'KEEN4E.EXE', year: 1991, publisher: 'id Software', source: 'curated', boot: { ok: true } }, o);
+  const [c] = Lib.build([dos()], { ids: [], items: [] });
+  assert.equal(c.system, 'dos'); assert.equal(c.core, 'dosbox-pure'); assert.equal(c.archive.start, 'KEEN4E.EXE');
+  assert.equal(c.controls.kind, 'dos-keys'); assert.ok(c.controls.mouse && c.controls.keyboard); assert.ok(!('draft' in c));
+  assert.equal(Lib.build([dos({ start: '' })], { ids: [], items: [] }).length, 0, 'no start program, no card');
+  for (const t of ['Sonic Doom - Doom 2 Mod + others', 'Wolfenstein 3D "Lost Episode" patch', 'DOOM level: Tech Gone Bad (e1m8b.wad)', 'Sonic.exe Agustin Bazan 683 Edition', 'Sonic 1 EXE'])
+    assert.equal(Lib.finished(dos({ title: t, item: 'x' })), false, t);
+  assert.equal(Lib.finished(dos({ held: true })), false, 'horror or gambling waits on Bryan');
+  assert.equal(Lib.build([dos({ item: 'DUKE3D_DOS', title: 'Duke Nukem 3D' })], { ids: [], items: [] }).length, 0, 'held by name');
+  for (const why of Object.values(Lib.LEAVE)) assert.ok(why.length > 5);
 });
 
 test('C2: a game that started becomes a card with its machine\'s controls; one that did not stays off', () => {
