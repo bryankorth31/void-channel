@@ -28,7 +28,7 @@ test('the public copy carries only live courses, and no lab unless a lab is live
   assert.ok(!fs.existsSync(path.join(SITE, 'stale-page.html')), 'a page from an earlier build was left in site/');
   const live = new Set(list().courses.filter((c) => c.live).map((c) => c.slug));
   const pages = fs.readdirSync(SITE).filter((f) => f.endsWith('.html')).map((f) => f.replace(/\.html$/, ''));
-  for (const p of pages) assert.ok(live.has(p) || ['index', 'credits', '404', 'join', 'ifttt'].includes(p), p + '.html is in the public copy but not live');
+  for (const p of pages) assert.ok(live.has(p) || ['index', 'credits', '404', 'join', 'ifttt', 'study'].includes(p), p + '.html is in the public copy but not live');
   const anyLiveLab = fs.readdirSync(path.join(uni.UNI, 'courses')).some((f) => {
     const c = JSON.parse(fs.readFileSync(path.join(uni.UNI, 'courses', f), 'utf8'));
     return live.has(c.slug) && c.units.some((u) => u.lab && u.lab.live);
@@ -647,4 +647,30 @@ test('the front page door (Option A): a real question to guess, Remember it from
   const pub = fs.readFileSync(path.join(SITE, 'index.html'), 'utf8'), live = new Set(list().courses.filter((c) => c.live).map((c) => c.slug));
   for (const q of JSON.parse(/var DOORQ = (\[.*?\]), RULESN/.exec(pub)[1])) assert.ok(live.has(q.href.split('.html')[0]), q.href + ' is at the public door but its course is not live');
   for (const k of Object.keys(JSON.parse(fs.readFileSync(path.join(SITE, 'recall.json'), 'utf8')))) assert.ok(live.has(k.split('/')[0]), k + ' is in the public Remember it but not live');
+});
+
+test('Study together and the Tools row: the room page, its sets with their sources, the phone\'s study mode, and a way to the tools from every page', () => {
+  build();
+  const prev = path.join(uni.UNI, 'site-preview');
+  const page = fs.readFileSync(path.join(prev, 'study.html'), 'utf8');
+  assert.match(page, /<script src="make\/qr\.js"><\/script><script src="study\.js"><\/script>/);
+  assert.match(page, /&#8592; Home/, 'no way back from the study room');
+  for (const m of page.matchAll(/<(button|input)\b[^>]*>/g)) if (!/id="(inst|instok|lookpick|typepick)"/.test(m[0])) assert.match(m[0], /title="[^"]+"/, 'no hover tip: ' + m[0].slice(0, 80));
+  assert.ok(fs.existsSync(path.join(prev, 'study.js')));
+  // every question in a set carries its quote and where it is from, for the shared screen
+  const bank = JSON.parse(fs.readFileSync(path.join(prev, 'recall.json'), 'utf8'));
+  assert.equal(bank['our-climate-plainly/1'].q[0].from, 'Sterman and Booth Sweeney, 2007');
+  for (const b of Object.values(bank)) for (const q of b.q) assert.ok(q.from, b.title + ': a question with no source line');
+  // the phone page knows the study room: a private guess, the source said as a fact, no score
+  const phone = fs.readFileSync(path.join(uni.UNI, 'make', 'phone.html'), 'utf8');
+  assert.match(phone, /m\.mode === 'study'/);
+  assert.match(phone, /The source says something else/);
+  // the Tools row and the header link on every page
+  const home = fs.readFileSync(path.join(prev, 'index.html'), 'utf8');
+  assert.match(home, /<section class="tools" id="tools">[\s\S]*href="study\.html"[\s\S]*href="ifttt\.html"/);
+  for (const f of fs.readdirSync(prev).filter((x) => x.endsWith('.html'))) assert.match(fs.readFileSync(path.join(prev, f), 'utf8'), /href="index\.html#tools"/, f + ': no way to the tools');
+  // the public copy carries the room, the phone page at /join and the QR maker
+  build('--site');
+  for (const f of ['study.html', 'study.js', 'join.html', 'qr.js', 'recall.json']) assert.ok(fs.existsSync(path.join(SITE, f)), f + ' is not in the public copy');
+  assert.match(fs.readFileSync(path.join(SITE, 'study.html'), 'utf8'), /<script src="qr\.js"><\/script>/);
 });

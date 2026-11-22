@@ -389,3 +389,15 @@ the HQ areas chat. Steps 7 to 10 start after the 22 Nov reset.
   that has Answer on your phones). The public copy carries only live pieces: at the door the two scale-stage guesses,
   in Remember it only live courses. tests 36 of 36, selftest 4 of 4. Checked at 1278x513, 1316x821, 821x1316 and
   1920x1080: no sideways scroll. Not pushed, not deployed.
+- 22 Nov 2026, Study together and the Tools row (Bryan: "i want this to be a side room ppl can use on void u. i want
+  v u to be more hemn a place to mfind lectures. i want it to be a place of tools"; "Yes, build both"). study.html
+  and study.js: a room for one shared screen and everyone's phones, on the lesson rooms the University already
+  opens on voidtv.net's relay (no change to PLAY). Pick any lesson with questions (71 in the preview, live lessons
+  only in the public copy); each question goes to every phone; each phone locks in a guess privately; when all are in
+  (or Show how the room split) the screen shows the split and the source settles it with its quote; each phone is
+  told plainly, no score; End the session tells the phones and keeps nothing. The phone page gained a study mode.
+  recall.json now carries each question's quote and where it is from. The front page has a Tools row (Study
+  together, See how it works, If this, then that, Mind Gym, Body Atlas), and the Courses menu links to Tools and the
+  room (the header bar stays Home and the page's name, as the remodel set). Tested with two browser tabs as phones on
+  the preview server: join, private picks, the split, the source on screen and phone, end. tests 37 of 37, selftest
+  4 of 4; no sideways scroll at 821x1316, 1278x513, 1920x1080. Not tried with real phones. Not pushed, not deployed.

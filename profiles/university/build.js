@@ -268,6 +268,19 @@ function doorQuestions(all) {
   }
   return out;
 }
+// The Tools row (Bryan, 22 Nov 2026: "i want it to be a place of tools"): what you do, not only watch. Each tool
+// links to where it lives; the practice sites (Mind Gym, Body Atlas) open in a new tab.
+function toolsRow(all) {
+  const ex = []; for (const c of all) for (const u of c.units) if (u.explainer && shipsExplain(u)) ex.push({ c, u });
+  const nq = Object.values(recallBank(all)).filter((b) => b.q.length >= 2).length;
+  const tool = (href, mark, name, line, more, ext) => '<a class="tool" href="' + esc(href) + '"' + (ext ? ' target="_blank" rel="noopener"' : '') + ' title="' + esc(name + ': ' + line) + '"><span class="mark ' + mark + '"></span><b>' + esc(name) + '</b><span>' + esc(line) + '</span><i>' + esc(more) + '</i></a>';
+  const cards = [];
+  if (nq) cards.push(tool('study.html', 'm-study', 'Study together', 'One shared screen, everyone\'s phones. Guess first, see how the room split, let the source settle it.', 'Open a room, ' + nq + ' lessons to study'));
+  if (ex.length) cards.push(tool(ex[0].c.slug + '.html#u' + ex[0].u.n, 'm-earth', 'See how it works', 'Real systems in 3D: ' + ex.map((x) => x.u.explainer.title.replace(/^The /, 'the ')).join(', ') + '. Drag the choices, play the years.', ex.length + (ex.length === 1 ? ' explainer' : ' explainers')));
+  if (RULES) cards.push(tool('ifttt.html', 'm-rules', 'If this, then that', 'Every rule you can make happen yourself, across every topic. Find them, then see them all.', RULES + ' rules'));
+  for (const g of PRACTICE.filter((x) => x.live)) cards.push(tool(g.url, 'm-practice', g.name, g.what || '', g.rooms.length + ' ' + (g.word || 'room') + (g.rooms.length === 1 ? '' : 's'), true));
+  return cards.length ? '<section class="tools" id="tools"><h2><span>Tools</span><small>things to do, not only watch</small></h2><div class="toolrow">' + cards.join('') + '</div></section>' : '';
+}
 function hooksOf(all) {
   const out = [];
   for (const c of all) for (const u of c.units) if (u.hook) {
@@ -276,12 +289,51 @@ function hooksOf(all) {
   }
   return out;
 }
+// Where a quiz answer's quote comes from, said plainly for the study room's screen.
+function quoteFrom(c, u, q) {
+  if (q.src && u.explainer && u.explainer.sources[q.src]) { const x = u.explainer.sources[q.src]; return x.by + ', ' + x.year; }
+  if (q.lesson) return 'the lesson in Body Atlas';
+  if (q.ref) return 'the book';
+  if (typeof q.t === 'number') return (u.main && u.main.title ? u.main.title : 'the lecture') + ', at ' + clock(q.t);
+  return c.name;
+}
 // What Remember it asks: every quiz question of the lessons that ship, by course and unit (recall.json, fetched by the
 // front page only once the reader has marked a lesson done).
 function recallBank(all) {
   const out = {};
-  for (const c of all) for (const u of c.units) if ((u.quiz || []).length) out[c.slug + '/' + u.n] = { course: c.name, title: u.title.replace(/^Draft, not kept yet: /, ''), q: u.quiz.map((q) => ({ q: q.q, choices: q.choices, a: q.a, why: q.why })) };
+  for (const c of all) for (const u of c.units) if ((u.quiz || []).length) out[c.slug + '/' + u.n] = { course: c.name, title: u.title.replace(/^Draft, not kept yet: /, ''), q: u.quiz.map((q) => ({ q: q.q, choices: q.choices, a: q.a, why: q.why, quote: q.quote || '', from: quoteFrom(c, u, q) })) };
   return out;
+}
+
+// Study together: a room for one shared screen and everyone's phones (Bryan, 22 Nov 2026: "i want this to be a side
+// room ppl can use on void u. i want v u to be more hemn a place to mfind lectures. i want it to be a place of tools").
+// study.js runs it; the phones run the phone page in its study mode; the sets are the lessons' own questions.
+function studyPage(all) {
+  return `<!doctype html><html lang="en" data-look="${LOOK}" data-type="${TYPE}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${APPHEAD}<title>Study together | Void University</title>${FONTS}<style>${BASE}
+main{max-width:1200px;margin:0 auto;padding:26px 24px 60px}
+.lead h1{font-family:var(--head);font-size:38px;line-height:1.1;margin:0 0 8px}.lead p{margin:0 0 16px;color:var(--soft);font-size:18px;max-width:780px}
+.room{display:grid;grid-template-columns:260px minmax(0,1fr);gap:20px;align-items:start}
+.door2,.panel{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px}
+.door2 .qrbox{background:#fff;border-radius:10px;padding:8px;line-height:0;min-height:20px}.door2 .qrbox:empty{display:none}.door2 .qrbox svg{width:100%;height:auto;display:block}
+.door2 .code{font-family:var(--head);font-size:30px;letter-spacing:.06em;color:var(--acc);margin:10px 0 2px}.door2 p{margin:6px 0;font-size:14px;color:var(--soft);overflow-wrap:anywhere}
+.btn2{font:inherit;font-size:16px;padding:11px 18px;border-radius:12px;border:1px solid var(--line);background:var(--panel2);color:var(--fg);cursor:pointer}.btn2:hover{border-color:var(--acc)}.btn2.go{background:#ff4f8b;border-color:#ff4f8b;color:#fff;font-weight:700}
+#state{font-weight:600;color:var(--fg)}#count{color:var(--gold);font-weight:600}
+#find2{font:inherit;font-size:15px;width:100%;padding:9px 14px;border-radius:999px;border:1px solid var(--line);background:var(--panel2);color:var(--fg);margin:0 0 12px}
+.setgroup h3{font-family:var(--head);font-size:17px;margin:14px 0 6px}.setgroup{display:flex;flex-direction:column;gap:6px}
+.setbtn{display:flex;justify-content:space-between;gap:12px;text-align:left;font:inherit;font-size:15px;padding:9px 12px;border-radius:10px;border:1px solid var(--line);background:var(--panel2);color:var(--fg);cursor:pointer}.setbtn:hover{border-color:var(--acc)}.setbtn small{color:var(--dim);white-space:nowrap}.setbtn[hidden]{display:none}
+#setname{color:var(--dim);font-size:14px;margin:0 0 4px}#qn{color:var(--acc);font-size:14px;font-weight:600;margin:0}#qtext{font-family:var(--head);font-size:28px;line-height:1.2;margin:6px 0 14px}
+.bar{display:grid;grid-template-columns:minmax(0,260px) 1fr 34px;gap:12px;align-items:center;margin:8px 0;font-size:16px}.bar .track{height:26px;border-radius:8px;background:var(--panel2);overflow:hidden}.bar .track i{display:block;height:100%;background:#5fd4ff;transition:width .6s}.bar.real .bt{color:#5fe39a;font-weight:700}.bar.real .track i{background:#5fe39a}
+#source{margin:14px 0 0;padding:12px 14px;border-left:3px solid var(--gold);background:rgba(0,0,0,.25);border-radius:0 10px 10px 0}#srcline{margin:0 0 6px;font-size:17px}#srcquote{margin:0;color:var(--soft);font-size:15px;font-style:italic}
+.acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+[hidden]{display:none!important}
+@media (max-width:900px){.room{grid-template-columns:1fr}.lead h1{font-size:30px}#qtext{font-size:23px}.bar{grid-template-columns:minmax(0,1fr) 90px 28px}}
+${LOOKCSS}${TYPECSS}</style></head><body>
+${top('study', all)}<main id="study"><div class="lead"><h1>Study together</h1><p>One shared screen and everyone's phones. Pick a lesson; each question goes to every phone; everyone guesses privately; then the room sees how it split and the source settles it. No names, no scores, and nothing is kept.</p></div>
+<div class="room"><div class="door2"><button type="button" class="btn2 go" id="open" title="Open a room the phones can join">Open a room</button><div class="qrbox" id="qr" aria-hidden="true"></div><div class="code" id="code"></div><p id="addr"></p><p id="count">0 phones in the room</p><p id="state" role="status">Open a room, then scan its code with your phones.</p><button type="button" class="btn2" id="other" hidden title="If a phone cannot open the page, this computer may have another address on your network">Phone cannot open it? Try another address</button><button type="button" class="btn2" id="end" title="End the session: the phones are told, and nothing is kept">End the session</button></div>
+<div class="panel"><div id="pick"><h2 style="margin:0 0 10px">Pick a lesson to study</h2><input type="search" id="find" placeholder="Find a lesson" aria-label="Find a lesson" title="Type a word to find a lesson"><div id="sets"></div></div>
+<div id="run" hidden><p id="setname"></p><p id="qn"></p><p id="qtext"></p><div id="bars"></div><div id="source" hidden><p id="srcline"></p><p id="srcquote"></p></div>
+<div class="acts"><button type="button" class="btn2" id="reveal" title="Stop waiting and show how the room split">Show how the room split</button><button type="button" class="btn2 go" id="next" hidden title="Send the next question to the phones">Next question</button><button type="button" class="btn2" id="again" hidden title="Choose another lesson to study">Pick another lesson</button></div></div></div></div>
+</main>${FOOT()}<script src="${LIVE ? 'qr.js' : 'make/qr.js'}"></script><script src="study.js"></script></body></html>`;
 }
 
 // Bryan, 15 Nov 2026: "less words". A unit shows its picture, its main piece and its crystal; the rest is one tap away.
@@ -830,7 +882,7 @@ function top(current, all) {
     const areas = [...new Set(all.map((o) => o.domain))];
     const groups = areas.map((a) => '<div><h5>' + esc(a) + '</h5>' + all.filter((o) => o.domain === a).map(link).join('') + '</div>').join('')
       + (SHELFBOOKS.length ? '<div><h5>Old books in plain English</h5>' + SHELFBOOKS.map(link).join('') + '</div>' : '');
-    links = home + (here ? hereLink(here) : '') + '<details class="navall"><summary title="Every course, by area">Courses</summary><div class="navlist">' + groups + '<div class="navtools">' + (RULES ? '<a class="navrules" href="ifttt.html" title="Every If this, then that rule in the University, by area">If this, then that: every rule</a>' : '') + INSTALL + DRAFT + '</div></div></details>';
+    links = home + (here ? hereLink(here) : '') + '<details class="navall"><summary title="Every course, by area">Courses</summary><div class="navlist">' + groups + '<div class="navtools"><a class="navrules" href="index.html#tools" title="Tools to learn by doing: study together, the explainers, If this, then that">Tools</a><a class="navrules" href="study.html" title="One shared screen and everyone\'s phones">Study together</a>' + (RULES ? '<a class="navrules" href="ifttt.html" title="Every If this, then that rule in the University, by area">If this, then that: every rule</a>' : '') + INSTALL + DRAFT + '</div></div></details>';
   }
   // The background (B, 19 Nov 2026: "i want these used in the same ways as as vtv. the way the bg moves", "make the background drift on
   // my tablet too"; 22 Nov 2026: "i want the bg sittuation to be fixed on all pages") is the one every Void area shares,
@@ -935,7 +987,7 @@ ${CARDCSS}
 .doorside{display:flex;flex-direction:column;gap:14px}.doorside>div{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px 18px}.doorside.known .welcome{display:none}.welcome b{font-family:var(--head);font-size:21px}.welcome p{margin:8px 0 0;color:var(--soft);font-size:15px}
 .mem b{display:block;font-family:var(--head);font-size:19px;margin:2px 0 6px}.mem .kick{color:var(--gold)}.mem small{display:block;color:var(--dim);font-size:13px}.mem .mq{margin:4px 0 8px;font-size:16px}.mem .mc{display:flex;flex-direction:column;gap:6px}.mem .mc button{text-align:left;font-size:15px;padding:8px 12px}.mem .ok{color:#5fe39a}.mem .no{color:#ffb3b8}.mem p{font-size:15px}.mem .nextq{margin-top:4px;font-size:14px;padding:7px 14px}
 .you .line{margin:0 0 6px;font-size:16px}.you #resume{margin:0;padding:0;border:0;background:none}
-.wrong{max-width:1400px;margin:0 auto}.wrong h2{margin-top:22px}.qrow{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;padding:0 20px}
+.tools{max-width:1400px;margin:0 auto}.tools h2{margin-top:22px}.toolrow{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;padding:0 20px}\n.tool{display:grid;grid-template-columns:52px 1fr;gap:3px 14px;align-items:start;padding:16px 18px;border-radius:14px;background:var(--panel);border:1px solid var(--line);color:var(--fg);text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.3)}.tool:hover{border-color:var(--acc)}.tool .mark{grid-row:1 / span 3;width:52px;height:52px;border-radius:14px;border:1px solid var(--line)}.tool b{font-family:var(--head);font-size:19px}.tool span:not(.mark){color:var(--soft);font-size:14px}.tool i{font-style:normal;color:var(--acc);font-size:13px;font-weight:600}\n.m-study{background:repeating-linear-gradient(90deg,#fff 0 6px,#0b0d14 6px 9px),repeating-linear-gradient(0deg,#fff 0 6px,#0b0d14 6px 9px);background-blend-mode:multiply}.m-earth{background:url(img/explain/earth.jpg) 30% 40%/240% auto;border-radius:50%!important}.m-rules{background:linear-gradient(135deg,#ff4f8b 0 48%,transparent 48% 52%,#5fd4ff 52%)}.m-practice{background:radial-gradient(circle at 50% 40%,#ffc44d,#ff4f8b 60%,#6a2c8a)}\n.wrong{max-width:1400px;margin:0 auto}.wrong h2{margin-top:22px}.qrow{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;padding:0 20px}
 .qcard{display:flex;flex-direction:column;gap:8px;min-height:140px;padding:16px 18px;border-radius:14px;background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--area);color:var(--fg);text-decoration:none}.qcard:hover{border-color:var(--area)}.qcard small{color:var(--dim);font-size:13px}.qcard b{font-family:var(--head);font-size:19px;line-height:1.22;flex:1}.qcard i{font-style:normal;color:var(--area);font-size:14px;font-weight:600}
 .together{display:flex;flex-wrap:wrap;gap:4px 16px;align-items:baseline;max-width:1360px;margin:16px auto 0;padding:14px 18px;border:1px solid var(--line);border-radius:12px;background:var(--panel);color:var(--fg);text-decoration:none}.together b{font-family:var(--head);font-size:19px}.together span{color:var(--soft);font-size:15px;flex:1 1 420px}.together em{font-style:normal;color:var(--acc);font-weight:600}.together:hover{border-color:var(--acc)}
 @media (max-height:600px) and (min-width:901px){.ask{padding:18px 24px}.ask h1{font-size:26px;margin:6px 0 12px}.ask .opts button{padding:8px 14px;font-size:15px}}
@@ -950,7 +1002,7 @@ ${CARDCSS}
 @media(max-width:900px){.hero h1{font-size:36px}.course{width:290px}}
 ${LOOKCSS}${TYPECSS}</style></head><body>
 ${top('home', all)}
-<div id="colhost"><div class="door"><div class="ask" id="door"><h1>Big ideas, shown with everyday things.</h1><div class="opts"></div><p class="said" hidden aria-live="polite"></p><a class="go" hidden></a><p class="how">Today's question. Guess first, then see it happen, with the measured numbers.</p></div><div class="doorside" id="doorside"><div class="welcome"><b>Big ideas, shown with everyday things.</b><p>Each lesson starts from something you already know, then shows you the bigger idea working the same way. Every course is free, and there is no account to make.</p></div><div class="mem" id="mem" hidden><b></b><div class="body"></div></div><div class="you" id="you" hidden><div id="resume" hidden></div></div></div></div>${(() => { const h = hooksOf(all); return h.length ? '<section class="wrong"><h2><span>Things people get wrong</span><small>start from the question</small></h2><div class="qrow">' + h.map((x) => '<a class="qcard" style="--area:' + hue(x.area) + '" href="' + esc(x.href) + '" title="Open: ' + esc(x.where) + '"><small>' + esc(x.area) + '</small><b>' + esc(x.hook) + '</b><i>' + esc(x.where) + '</i></a>').join('') + '</div></section>' : ''; })()}${(() => { const c = all.find((o) => o.units.some(shipsAnswer)); const u = c && c.units.find(shipsAnswer); return u ? '<a class="together" href="' + esc(c.slug) + '.html#u' + u.n + '" title="Open a lecture you can take together"><b>Learn together</b><span>Play a lecture on a big screen; everyone answers on their own phone, with no account. For a class, a family or a community night. Open a lecture and press Answer on your phones.</span><em>Start with ' + esc(c.name) + '</em></a>' : ''; })()}
+<div id="colhost"><div class="door"><div class="ask" id="door"><h1>Big ideas, shown with everyday things.</h1><div class="opts"></div><p class="said" hidden aria-live="polite"></p><a class="go" hidden></a><p class="how">Today's question. Guess first, then see it happen, with the measured numbers.</p></div><div class="doorside" id="doorside"><div class="welcome"><b>Big ideas, shown with everyday things.</b><p>Each lesson starts from something you already know, then shows you the bigger idea working the same way. Every course is free, and there is no account to make.</p></div><div class="mem" id="mem" hidden><b></b><div class="body"></div></div><div class="you" id="you" hidden><div id="resume" hidden></div></div></div></div>${toolsRow(all)}${(() => { const h = hooksOf(all); return h.length ? '<section class="wrong"><h2><span>Things people get wrong</span><small>start from the question</small></h2><div class="qrow">' + h.map((x) => '<a class="qcard" style="--area:' + hue(x.area) + '" href="' + esc(x.href) + '" title="Open: ' + esc(x.where) + '"><small>' + esc(x.area) + '</small><b>' + esc(x.hook) + '</b><i>' + esc(x.where) + '</i></a>').join('') + '</div></section>' : ''; })()}${(() => { const c = all.find((o) => o.units.some(shipsAnswer)); const u = c && c.units.find(shipsAnswer); return u ? '<a class="together" href="' + esc(c.slug) + '.html#u' + u.n + '" title="Open a lecture you can take together"><b>Learn together</b><span>Play a lecture on a big screen; everyone answers on their own phone, with no account. For a class, a family or a community night. Open a lecture and press Answer on your phones.</span><em>Start with ' + esc(c.name) + '</em></a>' : ''; })()}
 <main><div class="who"><span>Who is it for?</span><button class="on" data-lv="">Everyone</button><button data-lv="high school">High school</button><button data-lv="young adults">Young adults</button><button data-lv="everyday">Everyday life</button><input type="search" id="find" placeholder="Find a course or a lesson" aria-label="Find a course or a lesson"><small>Everyday life: not for a job in the field, just useful for living, deciding and understanding people.</small></div>
 <div id="found" hidden></div>
 ${RULES ? '<a class="ruleslink" href="ifttt.html" title="Every If this, then that rule in the University, by area"><b>If this, then that</b><span>' + RULES + ' rules across ' + new Set(rulesOf(all).map((r) => r.area)).size + ' areas. Make each one happen yourself, then see them all in one place.</span></a>' : ''}
@@ -1155,7 +1207,7 @@ if (loaded.some((c) => c.units.some(shipsExplain))) {
 // Answer on your phones, in the public copy (Bryan, 21 Nov 2026: "Yes, build it"): the screen's script, PLAY's own QR
 // maker, and the phone page at /join, which is where the relay on voidtv.net sends a phone that scans the code.
 // Making questions stays in the preview on Bryan's PC: it writes course files, and the live site has nowhere to write.
-if (LIVE && loaded.some((c) => c.units.some(shipsAnswer))) {
+if (LIVE) { // the study room needs the phone page and the QR maker in every public copy
   shipJs(path.join(DIR, 'make', 'answer-screen.js'), path.join(OUT, 'answer.js'));
   shipJs(path.join(DIR, '..', '..', 'play', 'src', 'qr.js'), path.join(OUT, 'qr.js'));
   const give = 'If you found this service helpful, please think of donating to keep it running and to make more services like this possible. Every donation goes to CASH (cashvalues.org) and feeds its mission in the real world. <a href="' + DONATE + '" target="_blank" rel="noopener">Donate to CASH</a>';
@@ -1180,6 +1232,8 @@ fs.writeFileSync(path.join(OUT, 'manifest.webmanifest'), JSON.stringify(MANIFEST
 fs.writeFileSync(path.join(OUT, 'sw.js'), SW);
 fs.writeFileSync(path.join(OUT, 'credits.html'), credits(loaded));
 fs.writeFileSync(path.join(OUT, 'recall.json'), JSON.stringify(recallBank(loaded)));
+fs.writeFileSync(path.join(OUT, 'study.html'), studyPage(loaded));
+shipJs(path.join(DIR, 'study.js'), path.join(OUT, 'study.js'));
 if (RULES) fs.writeFileSync(path.join(OUT, 'ifttt.html'), iftttPage(loaded, JSON.parse(fs.readFileSync(path.join(DIR, 'list.json'), 'utf8'))));
 fs.writeFileSync(path.join(OUT, '404.html'), notFound(loaded));
 fs.writeFileSync(path.join(OUT, 'index.html'), home(loaded, JSON.parse(fs.readFileSync(path.join(DIR, 'list.json'), 'utf8'))));
