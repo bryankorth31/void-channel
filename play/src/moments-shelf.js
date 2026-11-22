@@ -39,7 +39,25 @@
     }).catch(() => []);
   }
 
-  const api = { shape, rowsFrom, place };
+  // The banner opens on each moment that has an ad line and a row today (Bryan, 22 Nov 2026, layout B: "banner + row"). The
+  // slide is voidtv.net's own look: no game picture or the game's lettering behind it, the ad line in our type (the PLAY lead:
+  // the no-Rockstar-art line covers VoidTV's own promos). It is added at run time; shelf/front-picks.json is never edited.
+  // Its button goes to the moment's row. (pure given the moments: tested)
+  function slidesFrom(moments, games, opts) {
+    return rowsFrom(moments, games, opts).filter((r) => r.ad && r.ad.line).map((r) => {
+      const ys = r.games.map((g) => g.year).filter(Boolean), lo = Math.min(...ys), hi = Math.max(...ys);
+      const when = !ys.length ? '' : lo === hi ? ', from ' + lo : ', ' + lo + ' to ' + hi;
+      return { moment: r.id, kicker: 'In the news', title: r.ad.line, line: r.title + when + ', free to play here.', go: r.ad.go || 'Play them', to: '[data-moment="' + r.id + '"]' };
+    });
+  }
+  // The moments as last read (the banner is drawn at once, so it takes what has arrived; wait() holds the first draw for it).
+  let loaded = null;
+  if (root.VoidMoments && root.VoidMoments.ready) root.VoidMoments.ready.then((ms) => { loaded = ms; });
+  const slides = (games) => (loaded ? slidesFrom(loaded, games) : []);
+  // The shelf's first draw waits for the moments at most ms (a slow or missing list never holds PLAY's page longer).
+  const wait = (ms) => (root.VoidMoments && root.VoidMoments.ready ? Promise.race([root.VoidMoments.ready, new Promise((ok) => setTimeout(ok, ms))]) : Promise.resolve());
+
+  const api = { shape, rowsFrom, place, slidesFrom, slides, wait };
   if (typeof module === 'object' && module.exports) { module.exports = api; return; }
   root.PlayMoments = api;
 })(typeof self !== 'undefined' ? self : this);

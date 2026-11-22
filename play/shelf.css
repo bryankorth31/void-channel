@@ -40,6 +40,7 @@ body.home .shelf{padding-top:6px}
 .hero-home .slides{position:absolute;inset:0}
 .hero-home .s{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease;pointer-events:none}
 .hero-home .s.on{opacity:1}
+.hero-home .s.moment{background:radial-gradient(120% 90% at 85% 20%,rgba(255,79,200,.22),transparent 60%),radial-gradient(90% 80% at 10% 100%,rgba(242,169,59,.16),transparent 60%),#0b0c12}   /* a moment's slide: our own colours, no game picture (moments-shelf.js) */
 .hero-home .bg{position:absolute;left:-6%;top:-6%;width:112%;height:112%;object-fit:cover;filter:blur(26px) saturate(1.4) brightness(.5);transform:scale(1.04)}
 .hero-home .s.on .bg{animation:kb 10s linear forwards}
 @keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.1)}}

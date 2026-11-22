@@ -50,3 +50,24 @@ test('the page loads the engine and moments-shelf before the shelf, and the shel
   const home = js.slice(js.indexOf('if (home) {'), js.indexOf('let games = shelfGames.filter'));
   assert.ok(home.includes('PlayMoments.place(rows, shelfGames, rowSection'), 'from the home branch, with every game on the shelf');
 });
+
+test('layout B (Bryan, 22 Nov 2026): the banner opens on the moment, in our own look, and its button goes to the row', () => {
+  const games = shelf.filter((g) => /grand theft auto/i.test(g.title));
+  const s = PM.slidesFrom(moments, games, { engine, now });
+  const gta = moments.find((m) => m.id === 'gta');
+  if (PM.rowsFrom(moments, games, { engine, now }).length === 0) { assert.equal(s.length, 0, 'no row, no slide'); return; }
+  assert.equal(s.length, 1);
+  assert.equal(s[0].title, gta.ad.line, "Bryan's line, big");
+  assert.equal(s[0].go, gta.ad.go);
+  assert.equal(s[0].to, '[data-moment="gta"]', 'the button goes to the moment row');
+  assert.match(s[0].line, /^The first Grand Theft Autos, 1997 to 2004, free to play here\.$/);
+  assert.equal(s[0].g, undefined, 'no game behind it: no picture, no lettering');
+  assert.equal(PM.slidesFrom(moments, games, { engine, now, kids: true }).length, 0);
+  const noAd = moments.map((m) => ({ ...m, ad: undefined }));
+  assert.equal(PM.slidesFrom(noAd, games, { engine, now }).length, 0, 'a moment with no ad line keeps the usual banner');
+  const js = fs.readFileSync(path.join(REPO, 'play', 'src', 'shelf.js'), 'utf8');
+  assert.ok(js.includes('heroList = (root.PlayMoments ? root.PlayMoments.slides(shelfGames) : []).concat(heroSlides(shelfGames))'), 'added at run time, first');
+  assert.ok(/if \(s\.moment\) \{ slides\.append\(el\('div', 's moment'\)\); continue; \}/.test(js), 'the moment slide has no picture');
+  assert.ok(js.includes('root.PlayMoments.wait(1500)'), 'the first draw waits for the moments at most 1.5 s');
+  assert.ok(!/front-picks/.test(fs.readFileSync(path.join(REPO, 'play', 'src', 'moments-shelf.js'), 'utf8').replace(/\/\/.*$/gm, '')), 'moments-shelf never touches the banner list');
+});

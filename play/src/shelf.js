@@ -437,7 +437,8 @@
   function hero() {
     const h = document.getElementById('hero');
     if (!h || !shelfGames.length) return;
-    heroList = heroSlides(shelfGames);
+    // A moment in the news opens the banner (play/src/moments-shelf.js), before Bryan's list and the rule's slides.
+    heroList = (root.PlayMoments ? root.PlayMoments.slides(shelfGames) : []).concat(heroSlides(shelfGames));
     if (!heroList.length) return;
     // Bryan's voidarcade art is not in the hero (20 Nov 2026, on seeing it: "no. i want to have the hero treated like the
     // hero in voidtv.net. how its playing live tv"); the hero shows the games until that is built. ART stays for later.
@@ -445,6 +446,7 @@
     h.textContent = '';
     const slides = el('div', 'slides');
     for (const s of heroList) {
+      if (s.moment) { slides.append(el('div', 's moment')); continue; }   // our own look: no game picture behind the ad line
       const one = el('div', 's' + (s.art ? ' art ' + s.art : ''));
       if (s.art) {
         const bg = new Image(); bg.alt = ''; bg.className = 'bg'; bg.decoding = 'async';
@@ -500,7 +502,12 @@
     copy.textContent = '';
     copy.append(el('span', 'hline', 'PLAY · old games from the Internet Archive, free, no account'));
     h.classList.toggle('art-on', !!s.art);
-    if (s.art) {
+    if (s.moment) {
+      copy.append(el('span', 'kicker', s.kicker), el('h2', 'ht', s.title), el('p', 'ov', s.line));
+      const acts = el('div', 'acts'), go = el('a', 'btn gold', s.go); go.href = '#rows';
+      go.addEventListener('click', (e) => { e.preventDefault(); const r = document.querySelector(s.to) || document.querySelector('.shelf .row'); if (!r) return; r.scrollIntoView({ behavior: 'smooth', block: 'start' }); const b = r.querySelector('.box'); if (b) b.focus({ preventScroll: true }); });
+      acts.append(go); copy.append(acts);
+    } else if (s.art) {
       copy.append(el('span', 'kicker', s.kicker), el('p', 'ov', s.line));
       const acts = el('div', 'acts');
       const go = el('a', 'btn gold', 'Pick a game'); go.href = '#rows';
@@ -750,7 +757,8 @@
     readFilter, writeFilter, matches, choices, byPopular, homeRows, listRows, heroSlides, aboutLine, playsText, viewTitle };
   if (typeof module === 'object' && module.exports) { module.exports = api; return; }
   root.PlayShelf = api;
-  fetch('shelf/index.json', { cache: 'no-store' }).then((r) => r.json()).then(render)
+  // The first draw waits up to 1.5 s for the moments in the news, so the banner can open on one (moments-shelf.js).
+  Promise.all([fetch('shelf/index.json', { cache: 'no-store' }).then((r) => r.json()), root.PlayMoments ? root.PlayMoments.wait(1500) : null]).then(([index]) => render(index))
     .catch(() => { document.getElementById('rows').innerHTML = '<p class="loading">The shelf did not load. Try again in a moment.</p>'; });
   // Back goes where the visitor came from on this site; from outside (or nothing), to the home page.
   try { const back = document.getElementById('back'); if (back && document.referrer && new URL(document.referrer).origin === location.origin) back.addEventListener('click', (e) => { e.preventDefault(); history.back(); }); } catch (e) { /* the link still goes home */ }
