@@ -130,3 +130,21 @@ test('the audit: an adult word in the title, or a personal upload with no year a
 test('the audit: a prototype named at the end of its Archive item ("...InfogramesM4proto") stays off', () => {
   assert.equal(Lib.build([row({ system: 'gamegear', title: 'Spirou', item: 'gg_Spirou_1996InfogramesM4proto', file: 'Spirou 1996InfogramesM4proto.bin', size: 524288, year: 1996 })], { ids: [], items: [] }).length, 0);
 });
+
+test('the main showing: each machine\'s best 40 by fame and plays, one copy a game; rows and banner draw on them, See all on every game', () => {
+  // Bryan, 22 Nov 2026: "clean the main showing of games down to the most known or played or quality of the games"; "Yes, best 40 each".
+  const games = [];
+  for (let i = 0; i < 60; i++) games.push({ id: 'g' + i, title: 'Game ' + i, system: 'snes', item: 'i' + i, plays: i * 10, genres: [] });
+  games.push({ id: 'dup', title: 'Game 59 (USA)', system: 'snes', item: 'dup', plays: 1, genres: [] });
+  ShelfTool.markFront(games, { i0: 40, dup: 40 });
+  const front = games.filter((g) => g.front);
+  assert.equal(front.length, ShelfTool.FRONT);
+  assert.ok(games.find((g) => g.id === 'g0').front, 'a famous game with no plays still makes the main showing');
+  assert.ok(!games.find((g) => g.id === 'g1').front, 'an unknown game with few plays does not');
+  const Shelf = require('../src/shelf.js');
+  const rows = Shelf.homeRows(games);
+  assert.equal(rows[0].count, games.length, 'See all counts every game');
+  assert.ok(rows[0].games.every((g) => g.front), 'the row shows only the main showing');
+  assert.equal(new Set(rows[0].games.map((g) => g.title.replace(/ \(USA\)$/, ''))).size, rows[0].games.length, 'one box a game');
+  assert.ok(Shelf.heroSlides(games).filter((s) => s.g).every((s) => s.g.front), 'the banner draws on the main showing');
+});

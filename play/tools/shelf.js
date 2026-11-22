@@ -95,7 +95,34 @@ function buildIndex(cards, status, plays = loadPlays()) {
     libHow[c.system] = { help: (c.help || '').replace(/ This copy is a personal upload.*$/, ''),
       how: Object.fromEntries(['pad', 'keyboard', 'touch'].map((d) => [d, Cards.actionLines(c, d).filter((l) => l.how).slice(0, 3).map((l) => [l.do, l.how])])) };
   }
+  markFront(games, loadFame());
   return Object.keys(libHow).length ? { built: status.checked, libHow, games } : { built: status.checked, games };
+}
+
+// The main showing (Bryan, 22 Nov 2026: "clean the main showing of games down to the most known or played or quality
+// of the games"; "Yes, best 40 each"): each machine's FRONT best games carry front, their score, and the front page,
+// its rows and its banner show only those; every other game stays in See all and the search. Score, the PLAY assistant's
+// rule: 60 for fame (Wikipedia languages with a page on the game, up to 40) plus 40 for the share of the machine's games
+// it out-plays at the Archive. One copy a game: a second upload of the same name does not take a second place.
+// Pure (tested): games gain front.
+const FRONT = 40;
+const FAME = path.join(SHELF, 'fame.json');
+function loadFame() { try { return JSON.parse(fs.readFileSync(FAME, 'utf8')).pages || {}; } catch (e) { return {}; } }
+function markFront(games, pages) {
+  const by = new Map();
+  for (const g of games) { delete g.front; if (!by.has(g.system)) by.set(g.system, []); by.get(g.system).push(g); }
+  for (const list of by.values()) {
+    const plays = list.map((g) => g.plays || 0).sort((a, b) => a - b);
+    const lower = (p) => { let lo = 0, hi = plays.length; while (lo < hi) { const m = (lo + hi) >> 1; if (plays[m] < p) lo = m + 1; else hi = m; } return lo; };
+    const score = (g) => 60 * Math.min(pages[g.item] || 0, 40) / 40 + 40 * lower(g.plays || 0) / Math.max(1, plays.length);
+    const seen = new Set();
+    for (const g of list.map((x) => [x, score(x)]).sort((a, b) => b[1] - a[1] || a[0].title.localeCompare(b[0].title)).map(([x, s]) => Object.assign(x, { __s: s }))) {
+      const key = String(g.title).toLowerCase().replace(/\b(the|ms-?dos|dos)\b/g, '').replace(/[^a-z0-9]+/g, '');
+      if (seen.size < FRONT && !seen.has(key)) { seen.add(key); g.front = Math.round(g.__s * 10) / 10 || 0.1; }
+      delete g.__s;
+    }
+  }
+  return games;
 }
 
 // The big games the voidtv.net pass-through may read in pieces (plan T21, functions/api/piece.js): a card marks
@@ -172,5 +199,5 @@ async function main() {
 const indexText = (index) => '{' + Object.entries(index).filter(([k]) => k !== 'games').map(([k, v]) => JSON.stringify(k) + ':' + JSON.stringify(v)).join(',')
   + ',"games":[\n' + index.games.map((g) => JSON.stringify(g)).join(',\n') + '\n]}\n';
 
-module.exports = { indexText, buildIndex, buildStream, streamModule, loadCards, ask, loadPlays, playsText };
+module.exports = { indexText, buildIndex, markFront, FRONT, buildStream, streamModule, loadCards, ask, loadPlays, playsText };
 if (require.main === module) main().catch((e) => { console.error(String(e.message || e)); process.exit(1); });
