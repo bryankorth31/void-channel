@@ -40,7 +40,7 @@ function build(rows, taken) {
     if (!r || !('content' in r) || (r.content && r.content.flag)) continue;
     // Finished games only (Bryan, 20 Nov 2026: "Yes, that rule"): no unfinished homebrew, demos, prototypes, test
     // builds, hacks or picture cartridges. A doubtful game comes in only when Bryan kept it on his weed-down page.
-    if (!finished(r) || LEAVE[r.item]) continue;
+    if (!finished(r) || LEAVE[r.item] || LEAVE_FILE[r.item]) continue;
     if (!(r.boot ? r.boot.ok : r.ok) || !r.item || !r.file || !(Cons.MACHINES[r.system] || r.system === 'dos') || items.has(r.item)) continue;
     // A PC (DOS) game needs its start program, which the start-up check found (or repaired); it gets the hand-made DOS
     // cards' keys, keyboard and mouse, by the drafts tool's rule.
@@ -48,7 +48,8 @@ function build(rows, taken) {
     const c = r.system === 'dos' ? dosCard(r) : Cons.card({ system: r.system, title: r.title, item: r.item, source: r.source },
       { name: r.file, size: r.size || 0, start: r.start || '' }, { year: r.year, creator: r.publisher });
     if (!c.archive.size) delete c.archive.size;
-    if (c.year > (LAST[r.system] || 9999)) c.year = null;   // an upload's date, not the game's
+    if (c.year > (LAST[r.system] || 9999) || c.year < 1970) c.year = null;   // an upload's date or a slip (1830, 8), not the game's
+    c.title = tidyTitle(c.title);
     // The Archive's play count from the gathering (its search does not return some libraries' items; plays.json wins).
     if (r.plays > 0) c.plays = r.plays;
     if (ids.has(c.id) || names.has(c.system + ' ' + nameKey(c.title)) || Cards.check(c).length) continue;
@@ -56,6 +57,15 @@ function build(rows, taken) {
     ids.add(c.id); items.add(r.item); names.add(c.system + ' ' + nameKey(c.title)); out.push(c);
   }
   return out.sort((a, b) => a.title.localeCompare(b.title));
+}
+
+// The auditor's list of items left off, with reasons, in a file Bryan can edit (22 Nov 2026).
+const LEAVE_FILE = (() => { try { return JSON.parse(fs.readFileSync(path.join(__dirname, 'library-leave.json'), 'utf8')).leave || {}; } catch (e) { return {}; } })();
+// Pure (tested): an uploader's notes off a title, as a box would print it ("Space Hulk (Launches Properly)", "Ice Hockey
+// NES ROM", "Lemmings (Original levels only)", "Codebreaker Code Breaker", "Gtar").
+function tidyTitle(t) {
+  return String(t).replace(/\s*\((launches properly|original levels only)\)/i, '').replace(/\s+(NES|SNES|GBA|GB|Genesis)?\s*ROM$/i, '')
+    .replace(/^Codebreaker Code Breaker$/i, 'Code Breaker').replace(/^Gtar$/, 'Guitar').replace(/\s+DOS$/, '').trim();
 }
 
 // A game's name for spotting a second copy: no case, no spaces or marks, no machine word, "The" not counted.
@@ -185,4 +195,4 @@ function main() {
 }
 
 if (require.main === module) main();
-module.exports = { build, bundles, topRows, dosCard, finished, LEAVE, PER };
+module.exports = { build, bundles, topRows, dosCard, finished, tidyTitle, LEAVE, LEAVE_FILE, PER };

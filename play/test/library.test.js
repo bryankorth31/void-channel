@@ -148,3 +148,14 @@ test('the main showing: each machine\'s best 40 by fame and plays, one copy a ga
   assert.equal(new Set(rows[0].games.map((g) => g.title.replace(/ \(USA\)$/, ''))).size, rows[0].games.length, 'one box a game');
   assert.ok(Shelf.heroSlides(games).filter((s) => s.g).every((s) => s.g.front), 'the banner draws on the main showing');
 });
+
+test('the auditor\'s left-off list is read from a file with a reason each, and an uploader\'s notes come off a title', () => {
+  for (const [item, why] of Object.entries(Lib.LEAVE_FILE)) { assert.ok(item.length > 1); assert.ok(why.length > 5, item); }
+  const one = Object.keys(Lib.LEAVE_FILE)[0];
+  const r = { content: null, system: 'dos', title: 'X', item: one, file: 'x.zip', size: 1, start: 'X.EXE', year: 1990, publisher: 'P', source: 'curated', boot: { ok: true } };
+  assert.equal(Lib.build([r], { ids: [], items: [] }).length, 0);
+  assert.equal(Lib.tidyTitle('Space Hulk (Launches Properly)'), 'Space Hulk');
+  assert.equal(Lib.tidyTitle('Ice Hockey NES ROM'), 'Ice Hockey');
+  assert.equal(Lib.tidyTitle('Lemmings (Original levels only)'), 'Lemmings');
+  assert.equal(Lib.tidyTitle('Mega Man X'), 'Mega Man X');
+});
