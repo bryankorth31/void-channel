@@ -86,14 +86,24 @@
   // How far (x, y) is from a button's edge (0 or less: on it).
   const offBy = (k, x, y) => (k.round ? Math.hypot(x - k.x - k.w / 2, y - k.y - k.h / 2) - k.w / 2
     : Math.hypot(Math.max(k.x - x, 0, x - (k.x + k.w)), Math.max(k.y - y, 0, y - (k.y + k.h))));
-  function keyAt(boxes, x, y, only) {
-    let best = null, near = REACH;
+  function keyAt(boxes, x, y, only, reach) {
+    let best = null, near = reach === undefined ? REACH : reach;
     for (const k of boxes) {
       if (only && !only(k)) continue;
       const d = offBy(k, x, y);
       if (d < near) { near = d; best = k; }
     }
     return best;
+  }
+  // Pure (tested): is a touch at (x, y) the round pad's? On the pad itself, always. In the ring just outside it (a thumb
+  // a little off: RING of its half-width more), it is the pad's unless the touch is on a button: a button laid close to
+  // the pad keeps its own taps. Bryan's own sideways layout (22 Nov 2026) has Start and Menu close beside the pad; on a
+  // narrower phone their left edges came inside the ring, and the pad would have taken a thumb meant for them.
+  const RING = 0.14;
+  function onPad(pad, boxes, x, y) {
+    if (!pad) return false;
+    const c = pad.size / 2, d = Math.hypot(x - pad.x - c, y - pad.y - c);
+    return d < c || (d < c * (1 + RING) && !keyAt(boxes, x, y, null, 0.01));
   }
   // Pure (tested): the button a finger is on after it slid to (x, y). cur is the button it was on (null once it slid off
   // everything). On the face buttons a thumb rolls: onto the next one (the first is let go), or it stays on its button
@@ -106,7 +116,7 @@
     return cur && offBy(cur, x, y) <= cur.w ? cur : null;
   }
 
-  const api = { BUTTONS, SLOW_MS, GAP_MS, BEAT_MS, REST_MS, QUIET_MS, AWAY_MS, REACH, PART, DIRECT_OK_MS, bits, aim, dirs, delayText, pathText, pieces, gather, waitFor, beatDue, keyAt, slide };
+  const api = { BUTTONS, SLOW_MS, GAP_MS, BEAT_MS, REST_MS, QUIET_MS, AWAY_MS, REACH, RING, PART, DIRECT_OK_MS, bits, aim, dirs, delayText, pathText, pieces, gather, waitFor, beatDue, keyAt, onPad, slide };
   if (typeof module === 'object' && module.exports) { module.exports = api; return; }
   root.PlayPhonePad = api;
 
@@ -317,7 +327,7 @@
   function down(e) {
     if (!card || $('pad').hidden) return;
     const f = {};
-    if (dpadBox) { const c = dpadBox.size / 2; if (Math.hypot(e.clientX - dpadBox.x - c, e.clientY - dpadBox.y - c) < c * 1.14) { f.pad = true; f.sector = null; f.dirs = []; } }
+    if (onPad(dpadBox, boxes, e.clientX, e.clientY)) { f.pad = true; f.sector = null; f.dirs = []; }
     place(e, f);
     if (f.none) return;
     fingers.set(e.pointerId, f); refresh();

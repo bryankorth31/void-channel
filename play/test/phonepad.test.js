@@ -113,6 +113,15 @@ test('a touch near a button presses it; a thumb sliding over the face buttons mo
   assert.equal(PP.keyAt(boxes, 100, 90).n, 'Start', 'between a pill and a face button: the nearer one');
   assert.equal(PP.keyAt(boxes, 100, 90, (k) => k.face).n, 'A', 'but a thumb that started on a face button stays on face buttons');
   assert.equal(PP.keyAt(boxes, 100, 50).n, 'Start', 'just past the pill');
+  // The round pad and a button laid close beside it (Bryan's own sideways layout on a narrower phone): on the pad it is
+  // the pad's; in the ring just outside, a touch on the button is the button's and a touch on nothing is still the pad's.
+  const pad = { x: 0, y: 100, size: 200 }, pill = [{ n: 'Start', x: 196, y: 150, w: 100, h: 44 }];
+  assert.equal(PP.onPad(pad, pill, 100, 200), true, 'the middle of the pad');
+  assert.equal(PP.onPad(pad, pill, 190, 172), true, 'on the pad, though the pill\'s box is a hair away');
+  assert.equal(PP.onPad(pad, pill, 206, 190), false, 'in the ring, on the pill: the pill\'s');
+  assert.equal(PP.onPad(pad, pill, 100, 90), true, 'in the ring, on nothing: the pad\'s, a thumb a little off');
+  assert.equal(PP.onPad(pad, pill, 100, 70), false, 'past the ring: not the pad\'s');
+  assert.equal(PP.onPad(null, pill, 100, 200), false, 'a game with no arrows has no pad');
   // A thumb rolling (the auditor's question on the fix): from A onto B lets go of A and presses B; a little drift off a
   // button keeps it; clearly off everything holds nothing; back onto a face button holds again.
   const [A, B, START] = boxes;
