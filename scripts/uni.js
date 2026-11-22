@@ -7,6 +7,7 @@
 //   node scripts/uni.js rewrite <area> <source>   print the whole prompt to rewrite an old book into plain English
 //   node scripts/uni.js draft <slug> <unit>       the local model (Ollama) drafts a unit from its heard lecture; only word for word quotes are kept
 //   node scripts/uni.js draft <slug> all          draft every unit still to do whose lecture has been heard
+//   node scripts/uni.js flip <slug> <unit>        the flip side of a heard lecture: every stretch with the question it answers, the teacher's own words and their times (flip/<slug>-<unit>.json and .md)
 //   node scripts/uni.js keep <slug> <unit>        move a whole draft from drafts/ into the course
 //   node scripts/uni.js shelf plan <area> <id>    an old book from the source list: fetch its Archive scan, find its chapters (writes shelf/<id>.json)
 //   node scripts/uni.js shelf write <id> <n|all>  the local model rewrites a chapter into plain English beside the original
@@ -91,6 +92,12 @@ const [cmd, ...args] = process.argv.slice(2);
     console.log(r.unit.scene ? 'Scene: ' + r.unit.scene.analogy : 'No scene yet.');
     for (const x of r.notes) console.log('- ' + x);
     console.log(r.ok ? 'Read it, change any line, then: node scripts/uni.js keep ' + r.slug + ' ' + r.n : 'Run the draft again, or write the missing parts into the file by hand.');
+  } else if (cmd === 'flip') {
+    const r = await require('./lib/uni-flip').flip(args[0], args[1], (m) => console.log(m));
+    const k = r.counts;
+    console.log(k.stretches + ' stretches: ' + k.asked + ' with a question and the teacher\'s own words, ' + k.housekeeping + ' housekeeping, ' + k.noQuestion + ' with no question that passed.');
+    console.log(k.names + ' things named, ' + k.shows + ' moments the University already holds something for, ' + k.needed + ' stretches marked as an answer that will be needed.');
+    console.log('Read it: ' + r.path.replace(/\.json$/, '.md') + ' (every word with its time is in the .json beside it)');
   } else if (cmd === 'keep') {
     const r = uni.keepDraft(args[0], args[1]);
     console.log('Unit ' + r.n + ' is in courses/' + r.slug + '.json (' + r.units + ' units). Next: node scripts/uni.js times ' + r.slug + ', then build.');
@@ -127,6 +134,7 @@ const [cmd, ...args] = process.argv.slice(2);
     const run = (file, more = []) => { try { execFileSync(process.execPath, [...more, file], { cwd: root, stdio: 'pipe' }); return ''; } catch (e) { return String(e.stdout || '') + String(e.stderr || e.message); } };
     const parts = [
       ['Tests (tests/uni.test.js)', () => run(path.join(root, 'tests', 'uni.test.js'), ['--test'])],
+      ['Flip side tests (tests/uni-flip.test.js)', () => run(path.join(root, 'tests', 'uni-flip.test.js'), ['--test'])],
       ['Lab physics (test-lab.js)', () => run(path.join(uni.UNI, 'test-lab.js'))],
       ['Preview build (build.js)', () => run(path.join(uni.UNI, 'build.js'))],
       ['Course checks without the web (licences, dashes, quiz quotes, times)', async () => (await uni.check(() => {}, { links: false })).problems.filter((x) => x.level !== 'note').map((x) => x.where + ': ' + x.what).join('\n')],
