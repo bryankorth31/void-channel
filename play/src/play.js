@@ -930,13 +930,14 @@
     if (pip) { pip.close(); return; }
     if (!started || !canPop()) return;
     const canvas = $('canvas');
-    const aspect = (canvas.width && canvas.height) ? canvas.width / canvas.height : 4 / 3;
+    // The window takes the game's own shape (Bryan, 22 Nov 2026: "not a full screen with empty sides"): the shape the
+    // page shows it at (aspect: 4:3 for most consoles, 10:9 for the Game Boy), so the picture fills it edge to edge.
     const width = Math.round(Math.min(560, Math.max(320, innerWidth * 0.33)));
     try { pip = await documentPictureInPicture.requestWindow({ width, height: Math.round(width / aspect) }); } catch (e) { pip = null; return; }
     const d = pip.document;
     d.title = (card && card.title ? card.title + ' | ' : '') + 'PLAY';
     const st = d.createElement('style');
-    st.textContent = 'html,body{margin:0;height:100%;background:#000;overflow:hidden}canvas{display:block;width:100%;height:100%;object-fit:contain;image-rendering:pixelated;outline:none}';
+    st.textContent = 'html,body{margin:0;height:100%;background:#000;overflow:hidden}canvas{position:absolute;display:block;image-rendering:pixelated;outline:none}';
     d.head.append(st);
     canvasHome = { canvas, parent: canvas.parentNode, next: canvas.nextSibling };
     d.body.append(canvas);
@@ -950,11 +951,36 @@
     pip.addEventListener('keydown', (e) => keyEvent(e, true)); pip.addEventListener('keyup', (e) => keyEvent(e, false));
     pip.addEventListener('blur', () => hub && hub.releaseAll());
     pip.addEventListener('pagehide', popBack);
+    pip.addEventListener('resize', popFit);
+    pip.addEventListener('keydown', popSnapNow, true);
+    pip.addEventListener('pointerdown', popSnapNow, true);
+    popFit();
     pip.requestAnimationFrame(poll);
+  }
+  // The picture at the game's shape inside the window, never stretched; and the window brought back to that shape when it
+  // is resized off it, where the browser lets a page do so (Chrome lets a picture-in-picture window resize itself only
+  // when it can; if not, the picture stays at its shape and the rest of the window is black).
+  let popSnap = 0;
+  function popFit() {
+    if (!pip || !canvasHome) return;
+    const W = pip.innerWidth, H = pip.innerHeight;
+    let w = W, h = w / aspect; if (h > H) { h = H; w = h * aspect; }
+    const c = canvasHome.canvas.style;
+    c.width = w + 'px'; c.height = h + 'px'; c.left = ((W - w) / 2) + 'px'; c.top = ((H - h) / 2) + 'px';
+    popOff = Math.abs(W - w) > 2 || Math.abs(H - h) > 2 ? [Math.round(w), Math.round(h)] : null;
+    if (popOff) { clearTimeout(popSnap); popSnap = setTimeout(popSnapNow, 250); }
+  }
+  // Chrome lets the window resize itself only right after a key or a click in it (measured 22 Nov 2026: a resize from a
+  // timer is refused). So it is tried once the dragging stops, and again at the next key or click there, which while
+  // playing is almost at once.
+  let popOff = null;
+  function popSnapNow() {
+    if (!pip || !popOff) return;
+    try { pip.resizeTo(popOff[0] + (pip.outerWidth - pip.innerWidth), popOff[1] + (pip.outerHeight - pip.innerHeight)); } catch (e) { /* not allowed now */ }
   }
   function popBack() {
     // The canvas is in the pop-out's own document now, so it is held, not looked up on this page.
-    if (canvasHome) canvasHome.parent.insertBefore(canvasHome.canvas, canvasHome.next);
+    if (canvasHome) { const c = canvasHome.canvas; c.style.width = c.style.height = c.style.left = c.style.top = ''; canvasHome.parent.insertBefore(c, canvasHome.next); }
     canvasHome = null; pip = null;
     $('pop-note').hidden = true;
     $('b-pop').setAttribute('aria-pressed', 'false');
