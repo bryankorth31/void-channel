@@ -40,8 +40,8 @@ const builtCourses = () => fs.readdirSync(COURSES).filter((f) => f.endsWith('.js
 function unitNeeds(u, c = {}) {
   const need = [];
   if (!u.needIt) need.push('why you need this');
-  if (!u.scene && !u.lab && !u.scale) need.push('scene');
-  if (!u.main && c.shelf !== 'supplement') need.push('main piece');
+  if (!u.scene && !u.lab && !u.scale && !u.explainer) need.push('scene');
+  if (!u.main && !u.explainer && c.shelf !== 'supplement') need.push('main piece'); // an explainer is a unit's main piece
   if (c.kind === 'found' && !(u.quiz || []).length) need.push('quiz');
   if (c.shelf !== 'supplement' && !u.crystal) need.push('crystal');
   return need;
@@ -248,6 +248,79 @@ function scaleProblems(sc) {
   return out;
 }
 
+// An explainer block (explain.js, explain-model.js): a real system as stores, flows and the learner's choices, with the
+// measured years. Every number is measured and carries its source; a part with no words or a fader with no tip is
+// refused, and so is a rate that cannot be worked out from the measured years in the file. Pure.
+const EX_TONES = ['hot', 'amber', 'cold', 'green', 'gold', 'violet'];
+function explainerProblems(ex) {
+  const out = [];
+  if (!ex || typeof ex !== 'object') return ['the explainer block is not an object'];
+  if (!ex.title || !ex.ask) out.push('needs a title and an ask');
+  if (ex.world !== 'globe') out.push('world must be one the stage can draw: globe');
+  if (!(ex.each > 0) || !ex.eachWords) out.push('needs "each" (how much one speck is) and its words');
+  const ck = ex.clock || {};
+  if (!(Number.isInteger(ck.from) && Number.isInteger(ck.now) && Number.isInteger(ck.to) && ck.from < ck.now && ck.now < ck.to)) out.push('the clock needs whole years: from, now and to, in that order');
+  const src = ex.sources || {};
+  for (const [k, x] of Object.entries(src)) if (!x.title || !x.by || !x.year || !/^https:\/\//.test(x.url || '')) out.push('source ' + k + ' needs a title, who wrote it, a year and an https link');
+  const hasSrc = (p) => Array.isArray(p.src) && p.src.length && p.src.every((k) => src[k]);
+  const stores = Array.isArray(ex.stores) ? ex.stores : [], flows = Array.isArray(ex.flows) ? ex.flows : [], choices = Array.isArray(ex.choices) ? ex.choices : [];
+  if (!stores.length) out.push('needs at least one store');
+  const ids = new Set();
+  const named = (p, what) => { if (!p.id || !/^[a-z]+$/.test(p.id)) out.push(what + ' needs a plain id of small letters: ' + p.id); if (ids.has(p.id)) out.push(what + ' id used twice: ' + p.id); ids.add(p.id); if (!p.name || p.name.length > 28) out.push(what + ' ' + p.id + ' needs a name of 28 letters or fewer'); if (!p.words) out.push(what + ' ' + p.id + ' has no words saying what it is'); if (!hasSrc(p)) out.push(what + ' ' + p.id + ' has no source'); };
+  for (const st of stores) {
+    named(st, 'store');
+    if (!(typeof st.start === 'number' && st.start >= 0)) out.push('store ' + st.id + ' has no measured starting value');
+    if (!st.unit || !st.unit.name || !(st.unit.per > 0)) out.push('store ' + st.id + ' needs its unit and how many model units one of them is');
+    const h = (ex.history && ex.history.stores && ex.history.stores[st.id]) || {};
+    if (h[String(ck.now)] !== undefined && h[String(ck.now)] !== st.start) out.push('store ' + st.id + ' starts at ' + st.start + ' but the measured value for ' + ck.now + ' is ' + h[String(ck.now)]);
+  }
+  for (const fl of flows) {
+    named(fl, 'flow');
+    const r = fl.rule || {};
+    if (!!fl.to === !!fl.from) out.push('flow ' + fl.id + ' must go either into a store (to) or out of one (from)');
+    if ((fl.to || fl.from) && !stores.some((x) => x.id === (fl.to || fl.from))) out.push('flow ' + fl.id + ' names a store that is not listed');
+    if (!EX_TONES.includes(fl.color)) out.push('flow ' + fl.id + ': color must be one of ' + EX_TONES.join(', '));
+    if (!fl.site || !['land', 'sea'].includes(fl.site.on) || !Array.isArray(fl.site.lat) || fl.site.lat.length !== 2) out.push('flow ' + fl.id + ' needs a site: on land or sea, between two latitudes');
+    if (r.kind === 'choice') { if (!choices.some((c) => c.id === r.choice)) out.push('flow ' + fl.id + ' is set by a choice that is not listed'); }
+    else if (r.kind === 'rate') {
+      if (!stores.some((x) => x.id === r.store) || typeof r.above !== 'number' || !r.fit || !Array.isArray(r.fit.period) || typeof r.fit.value !== 'number') out.push('flow ' + fl.id + ': a rate needs its store, the level it grows above, and the measured period and value it is taken from');
+      else { const h = (ex.history && ex.history.stores && ex.history.stores[r.store]) || {}; let n = 0; for (let y = r.fit.period[0]; y <= r.fit.period[1]; y++) if (typeof h[String(y)] === 'number') n++; if (n < r.fit.period[1] - r.fit.period[0] + 1) out.push('flow ' + fl.id + ': the measured years ' + r.fit.period.join(' to ') + ' are not all in the file, so its rate cannot be worked out'); }
+    } else out.push('flow ' + fl.id + ': rule kind must be choice or rate');
+  }
+  for (const c of choices) {
+    if (!c.id || !c.name) out.push('a choice needs an id and a name');
+    if (!c.tip) out.push('choice ' + c.id + ' has no hover tip');
+    if (!(c.min <= c.start && c.start <= c.max && c.step > 0)) out.push('choice ' + c.id + ' needs min, start and max in order and a step');
+    if (!flows.some((fl) => fl.rule && fl.rule.kind === 'choice' && fl.rule.choice === c.id)) out.push('choice ' + c.id + ' sets no flow');
+  }
+  const per = (ex.history && ex.history.periods) || [];
+  if (!ex.history || !src[ex.history.storesSrc] || !src[ex.history.periodsSrc]) out.push('the measured years need their sources (storesSrc and periodsSrc)');
+  for (let y = ck.from; y <= ck.now; y++) {
+    const p = per.filter((x) => y >= x.from && y <= x.to);
+    if (p.length !== 1) { out.push('the year ' + y + ' needs exactly one measured period of flows (it has ' + p.length + ')'); break; }
+    for (const fl of flows) if (typeof p[0].flows[fl.id] !== 'number') { out.push('the period ' + p[0].name + ' has no measured value for ' + fl.id); break; }
+    for (const st of stores) if (typeof ((ex.history.stores || {})[st.id] || {})[String(y)] !== 'number') { out.push('store ' + st.id + ' has no measured value for ' + y); break; }
+  }
+  const sayKeys = new Set(['year', ...stores.flatMap((x) => [x.id, x.id + 'change', x.id + 'way']), ...flows.map((x) => x.id)]);
+  for (const k of ['run', 'replay']) { const t = (ex.say || {})[k]; if (!t) out.push('needs the line under the stage for ' + k); else for (const m of t.matchAll(/\{([a-z]+)\}/gi)) if (!sayKeys.has(m[1])) out.push('the ' + k + ' line names {' + m[1] + '}, which is not a store or flow'); }
+  if (!(ex.say || {}).hold) out.push('needs the hold line (what it would take to hold the store where it is)');
+  if (ex.guess) {
+    const g = ex.guess;
+    if (!g.q || !Array.isArray(g.options) || g.options.length < 2) out.push('the guess needs a question and at least two answers');
+    else if (!(Number.isInteger(g.answer) && g.answer >= 0 && g.answer < g.options.length)) out.push('the right answer of the guess is not one of its answers');
+    if (!g.after || !(g.years > 0) || !g.set || Object.keys(g.set).some((k) => !choices.some((c) => c.id === k))) out.push('the guess needs its years, the choices it sets, and the line shown after it');
+  }
+  const rules = Array.isArray(ex.rules) ? ex.rules : [];
+  if (!rules.length) out.push('needs at least one rule to find');
+  for (const r of rules) {
+    if (!r.if || !r.then || !r.when) { out.push('a rule needs if, then and when'); continue; }
+    const w = r.when;
+    if (!w.replay && !w.choices && !w.total) out.push('rule "' + r.if.slice(0, 40) + '" can never be found: its when names no choices, no total and no replay');
+    for (const k of Object.keys(w.choices || {})) if (!choices.some((c) => c.id === k)) out.push('rule "' + r.if.slice(0, 40) + '" names a choice that is not listed: ' + k);
+  }
+  return out;
+}
+
 // A quiz quote from a practice site's lesson: the lesson's step must still say it, word for word. Pure.
 function lessonQuoteProblem(lesson, q) {
   const step = (lesson.chapters || []).flatMap((c) => c.steps || []).find((x) => x.id === q.step);
@@ -293,6 +366,11 @@ async function check(log = () => {}, opt = {}) {
   for (const c of builtCourses()) for (const u of c.units) for (const sc of scalesOf(u)) {
     for (const what of scaleProblems(sc)) problems.push({ where: c.slug + ' unit ' + u.n + ' scale', what });
     for (const x of Object.values((sc && sc.sources) || {})) if (/^https:\/\//.test(x.url || '')) urls.set(x.url, c.slug + ' unit ' + u.n + ' scale');
+  }
+  for (const c of builtCourses()) for (const u of c.units) if (u.explainer) {
+    for (const what of explainerProblems(u.explainer)) problems.push({ where: c.slug + ' unit ' + u.n + ' explainer', what });
+    for (const x of Object.values(u.explainer.sources || {})) if (/^https:\/\//.test(x.url || '')) urls.set(x.url, c.slug + ' unit ' + u.n + ' explainer');
+    for (const [i, q] of (u.quiz || []).entries()) if (q.src && !(u.explainer.sources || {})[q.src]) problems.push({ where: c.slug + ' unit ' + u.n + ' quiz ' + (i + 1), what: 'quotes a source the explainer does not list: ' + q.src });
   }
   for (const b of shelfBooks()) { walkText('shelf/' + b.source + '.json', b.chapters.map((c) => [c.title, c.why, c.passages.map((x) => [x.plain, x.warnings])])); if (b.scan) urls.set(b.scan, 'shelf/' + b.source + '.json'); }
   for (const r of readJson(path.join(UNI, 'shelf', 'warnings.json'), { rules: [] }).rules || []) { walkText('shelf/warnings.json ' + r.id, [r.warning, r.source]); if (/^https:\/\//.test(r.url || '')) urls.set(r.url, 'shelf/warnings.json ' + r.id); else problems.push({ where: 'shelf/warnings.json ' + r.id, what: 'a warning needs an https page' }); }
@@ -1086,4 +1164,4 @@ function addQuestion(slug, n, m) {
   return { item: r.item, where: x.kept ? 'unit' : 'draft', count: x.u.quiz.length };
 }
 
-module.exports = { overview, scaffold, setLive, brief, rewriteBrief, check, media, hearLectures, retime, locate, search, transcript, unitNeeds, slugify, UNI, SRC, draft, keepDraft, gateDraft, sceneFrom, shelfPlan, shelfWrite, shelfChapters, gatePlain, setShelfLive, shelfBooks, classFrom, lectures, scaleProblems, scalesOf, linesAt, madeQuestion, makeUnits, makeLines, addQuestion, lessonQuoteProblem, quizEnds, endsFor, stampEnds };
+module.exports = { explainerProblems, overview, scaffold, setLive, brief, rewriteBrief, check, media, hearLectures, retime, locate, search, transcript, unitNeeds, slugify, UNI, SRC, draft, keepDraft, gateDraft, sceneFrom, shelfPlan, shelfWrite, shelfChapters, gatePlain, setShelfLive, shelfBooks, classFrom, lectures, scaleProblems, scalesOf, linesAt, madeQuestion, makeUnits, makeLines, addQuestion, lessonQuoteProblem, quizEnds, endsFor, stampEnds };

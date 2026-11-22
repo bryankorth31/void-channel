@@ -497,3 +497,66 @@ test('remodel: no stock photo is shown or shipped, every area has its hue, and t
   assert.ok(nav.includes('<summary title="Every course, by area">Courses</summary>') && nav.includes('id="inst"'), 'the Courses menu and Install inside it');
   assert.ok(/header\.top\{[^}]*flex-wrap:nowrap/.test(body), 'the header may wrap to a second row');
 });
+
+// Explainers (22 Nov 2026): a real system as stores, flows and the learner's choices, built from measured years.
+const explainCourse = () => JSON.parse(fs.readFileSync(path.join(uni.UNI, 'courses', 'our-climate-plainly.json'), 'utf8'));
+const MODEL = require(path.join(uni.UNI, 'explain-model.js'));
+
+test('explainer: every number is measured with its source, and a part with no words, a fader with no tip or a rate with missing years is refused', () => {
+  const ex = explainCourse().units[0].explainer;
+  assert.deepEqual(uni.explainerProblems(ex), []);
+  const bad = (change, want) => { const x = JSON.parse(JSON.stringify(ex)); change(x); assert.match(uni.explainerProblems(x).join(' | '), want); };
+  bad((x) => { x.flows[0].src = ['nowhere']; }, /flow fossil has no source/);
+  bad((x) => { delete x.stores[0].words; }, /store air has no words/);
+  bad((x) => { delete x.choices[0].tip; }, /choice fossil has no hover tip/);
+  bad((x) => { delete x.history.stores.air['2019']; }, /cannot be worked out/);
+  bad((x) => { x.history.periods.pop(); }, /needs exactly one measured period/);
+  bad((x) => { x.stores[0].start = 400; }, /measured value for 2025 is 427\.35/);
+  bad((x) => { x.say.run += ' {nothing}'; }, /names \{nothing\}/);
+  bad((x) => { x.rules[0].when = {}; }, /can never be found/);
+  // the numbers are the sources' own: Global Carbon Budget 2025 Table 7 and NOAA's Mauna Loa annual means
+  const p = Object.fromEntries(ex.history.periods.map((x) => [x.name, x.flows]));
+  assert.deepEqual(p['the 2015 to 2024 mean'], { fossil: 9.8, landuse: 1.4, ocean: 3.2, land: 2.4 });
+  assert.deepEqual(p['2024'], { fossil: 10.3, landuse: 1.3, ocean: 3.4, land: 1.9 });
+  assert.equal(ex.history.stores.air['1959'], 315.98);
+  assert.equal(ex.history.stores.air['2025'], 427.35);
+});
+
+test('explainer model: the rates come from the measured years, and the store behaves as the research says', () => {
+  const ex = explainCourse().units[0].explainer, m = MODEL.make(ex);
+  // at the mean of the measured years it was fitted on, each sink takes back exactly its measured amount
+  let sum = 0; for (let y = 2015; y <= 2024; y++) sum += ex.history.stores.air[String(y)];
+  const at = { year: 2020, level: { air: (sum / 10) * 2.124 } };
+  const fl = m.flows(at, { fossil: 0, landuse: 0 });
+  assert.ok(Math.abs(fl.ocean - 3.2) < 1e-9 && Math.abs(fl.land - 2.4) < 1e-9, 'the sinks are not the measured ones at the fit');
+  // emissions held where they are: the air keeps filling every single year (Sterman and Booth Sweeney 2007)
+  const held = m.run({ fossil: 10.4, landuse: 1.1 }, 50, 'air');
+  for (let i = 1; i < held.length; i++) assert.ok(held[i].value > held[i - 1].value, 'the air stopped rising in ' + held[i].year);
+  assert.ok(Math.abs(held[50].value - 506.8) < 0.5, 'held at today it ends at ' + held[50].value);
+  // emissions equal to what comes out: the air holds
+  const hold = m.holding('air'), tot = hold.fossil + hold.landuse;
+  assert.ok(tot > 0.5 * 11.5 && tot < 0.6 * 11.5, 'holding needs about half of today: ' + tot);
+  const flat = m.run(hold, 30, 'air'); assert.ok(Math.abs(flat[30].value - 427.35) < 0.01);
+  // no emissions: it falls, a few ppm a year, not all at once
+  const none = m.run({ fossil: 0, landuse: 0 }, 10, 'air');
+  assert.ok(none[1].value < 427.35 && none[1].value > 420 && none[10].value > 380);
+  // the line under the stage fills from the world and says nothing it was not given
+  assert.equal(MODEL.say('{year}: {air} ppm, {nope}', { year: '2030', air: 441.2 }), '2030: 441 ppm, {nope}');
+});
+
+test('explainer on the page: the preview shows it with its scripts and pictures beside it; the public copy carries it only once live', () => {
+  build();
+  const prev = path.join(uni.UNI, 'site-preview');
+  const page = fs.readFileSync(path.join(prev, 'our-climate-plainly.html'), 'utf8');
+  assert.match(page, /data-ex=/);
+  assert.match(page, /<script src="explain-model\.js"><\/script><script type="module" src="explain\.js"><\/script>/);
+  assert.match(page, /essd\.copernicus\.org\/articles\/18\/3211\/2026/, 'the source link is not on the card');
+  for (const f of ['explain.js', 'explain-model.js', 'three.module.min.js', 'img/explain/earth.jpg', 'img/explain/land.png']) assert.ok(fs.existsSync(path.join(prev, f)), f + ' is not beside the page that needs it');
+  // every fader and button the block writes has a hover tip
+  const block = page.slice(page.indexOf('<div class="ex"'), page.indexOf('<div class="ex-rules">'));
+  for (const m of block.matchAll(/<(button|input)\b[^>]*>/g)) assert.match(m[0], /title="[^"]+"/, 'no hover tip: ' + m[0].slice(0, 80));
+  build('--site');
+  const ex = explainCourse().units[0].explainer, live = ex.live && list().courses.find((c) => c.slug === 'our-climate-plainly').live;
+  assert.equal(fs.existsSync(path.join(SITE, 'explain.js')), !!live);
+  if (!live) assert.ok(!fs.existsSync(path.join(SITE, 'our-climate-plainly.html')));
+});

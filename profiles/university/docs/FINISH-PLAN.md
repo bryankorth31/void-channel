@@ -336,3 +336,19 @@ the HQ areas chat. Steps 7 to 10 start after the 22 Nov reset.
   no sideways scroll, no broken picture, no console errors. Not done yet: the picture engine and the pictures
   themselves (38 live units), the labelled boxes in the scenes (UNI-02), the VOID ACADEMY sign, channel cards. Not
   pushed, not deployed.
+- 22 Nov 2026, explainers (Bryan: "i want thatr machine etc explainer to be incluiseded and usd in university now",
+  then "global warming, el nino, water issues ie colorado river. i want less "thing" and more issues or delemas ...
+  issues ppl cant seem to grasp", then "Yes, carbon bathtub"). Plan: chief-of-staff\plans\PLAN-university-explainers.md.
+  Built: one explainer engine for issues that are a store filling and draining (explain-model.js, the same code the
+  tests run; explain.js, the 3D stage on three.js; build.js explainBlock; uni.js explainerProblems). A unit's
+  `explainer` block names stores, flows, the learner's choices (faders), the measured years and the sources; a rate
+  is worked out from the measured years in the file, never typed in. First file: a new area, Earth and climate, and
+  a new course, Our climate, plainly, unit 1 "Steady emissions still fill the air": the Earth from space (NASA Blue
+  Marble, reused from Living World), the carbon in the air as specks (pale before coal and oil, pink added, each a
+  quarter of a billion tonnes), fuel and forest clearing rising from the land, the ocean and land taking back.
+  Numbers: Global Carbon Budget 2025 (Table 7) and NOAA Mauna Loa 1959 to 2025. Guess first (held at today's rate for
+  50 years: 427 to 507 ppm), four rules to find, replay of the measured years, the line under the stage, a trace and
+  a balance of in and out, a quiz quoting the sources, a crystal. The stage runs to 2075 only and its card says the
+  real sinks are weakening (Raupach 2014), so the real rise is likely faster. tests/uni.test.js 33 of 33, selftest 4
+  of 4. Checked in the preview at 1278x513, 1920x1080, 1316x821 and 821x1316: no sideways scroll, every control has a
+  hover tip, no errors from the explainer. The course and block are `live: false`. Not pushed, not deployed.

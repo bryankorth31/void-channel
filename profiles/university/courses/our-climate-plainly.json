@@ -1,0 +1,567 @@
+{
+  "slug": "our-climate-plainly",
+  "name": "Our climate, plainly",
+  "domain": "Earth and climate",
+  "kind": "authored",
+  "status": "draft",
+  "levels": [
+    "high school",
+    "young adults",
+    "everyday"
+  ],
+  "draftedBy": "Claude, 22 Nov 2026, from Bryan's ask for explainers of the issues people cannot seem to grasp (\"global warming, el nino, water issues\"). Every line here waits for Bryan to keep, change or strike.",
+  "why": "Climate is argued about every day, at dinner, at the ballot box and in the price of insurance. Most of the arguing skips how the system actually works. This course gives you the working parts, with the measured numbers, so you can follow any claim back to what is really happening.",
+  "outcomes": [
+    "Explain why the CO2 in the air keeps rising while emissions stay steady."
+  ],
+  "units": [
+    {
+      "n": 1,
+      "title": "Steady emissions still fill the air",
+      "outcome": "Explain why the CO2 in the air keeps rising while emissions stay steady, and how far emissions must fall just to hold it.",
+      "needIt": "Most people, MIT graduate students included, think holding emissions steady holds the CO2 in the air steady. It does not, and every climate argument you hear turns on that one fact.",
+      "why": "The air holds carbon the way a tub holds water. What goes in each year is what we burn and clear; what comes out is what the ocean and land plants take back. The ocean and land take back only about half, so the air keeps filling even if what we put in stops growing. Waiting until harm shows, then holding emissions steady, would not stop the rise.",
+      "reachesYou": "Every promise to \"hold emissions steady\", \"cap\" them or reach a target by some year is a promise about the tap, not the tub. Knowing the difference lets you tell a plan that stops the rise from one that only slows it.",
+      "do": "Find one climate pledge in the news this week, from a country, a company or a city. Ask one question of it: does it cut what goes in below what the ocean and land take back, or does it only slow the growth?",
+      "explainer": {
+        "live": false,
+        "title": "The carbon in the air",
+        "ask": "Every speck around the Earth is a quarter of a billion tonnes of carbon in the air. The pale ones were there before people burned coal and oil; the pink ones are what we added. Guess first, then drag what the world burns and clears, play the years, and watch what the air does.",
+        "world": "globe",
+        "each": 0.25,
+        "eachWords": "a quarter of a billion tonnes of carbon",
+        "clock": {
+          "from": 1959,
+          "now": 2025,
+          "to": 2075
+        },
+        "stores": [
+          {
+            "id": "air",
+            "name": "The air",
+            "start": 427.35,
+            "base": 278,
+            "unit": {
+              "name": "ppm",
+              "per": 2.124,
+              "words": "parts per million"
+            },
+            "pick": "air",
+            "words": "Carbon dioxide in the air, measured since 1958 on Mauna Loa in Hawaii. One part per million of it is 2.124 billion tonnes of carbon. Before coal and oil it was about 278 parts per million.",
+            "src": [
+              "noaa",
+              "gcb"
+            ]
+          }
+        ],
+        "flows": [
+          {
+            "id": "fossil",
+            "name": "Burning fuel",
+            "to": "air",
+            "rule": {
+              "kind": "choice",
+              "choice": "fossil"
+            },
+            "color": "hot",
+            "site": {
+              "on": "land",
+              "lat": [
+                -40,
+                60
+              ]
+            },
+            "at": [
+              35,
+              100
+            ],
+            "words": "Coal, oil and gas burned, and cement made, every year, in billions of tonnes of carbon. 10.3 in 2024, still rising about one percent a year.",
+            "src": [
+              "gcb"
+            ]
+          },
+          {
+            "id": "landuse",
+            "name": "Clearing forests",
+            "to": "air",
+            "rule": {
+              "kind": "choice",
+              "choice": "landuse"
+            },
+            "color": "amber",
+            "site": {
+              "on": "land",
+              "lat": [
+                -20,
+                12
+              ]
+            },
+            "at": [
+              -5,
+              -60
+            ],
+            "words": "Forests cut and burned to farm and build, less the regrowth, in billions of tonnes of carbon a year. 1.3 in 2024; the paper calls this estimate persistently uncertain.",
+            "src": [
+              "gcb"
+            ]
+          },
+          {
+            "id": "ocean",
+            "name": "The ocean takes back",
+            "from": "air",
+            "rule": {
+              "kind": "rate",
+              "store": "air",
+              "above": 278,
+              "fit": {
+                "period": [
+                  2015,
+                  2024
+                ],
+                "value": 3.2
+              }
+            },
+            "color": "cold",
+            "site": {
+              "on": "sea",
+              "lat": [
+                -60,
+                65
+              ]
+            },
+            "at": [
+              -30,
+              -150
+            ],
+            "pick": "sea",
+            "words": "Sea water takes carbon dioxide out of the air, more the more there is above the old level. 3.2 billion tonnes of carbon a year on average from 2015 to 2024. On this stage it keeps taking back at that measured rate.",
+            "src": [
+              "gcb",
+              "raupach"
+            ]
+          },
+          {
+            "id": "land",
+            "name": "Plants and soils take back",
+            "from": "air",
+            "rule": {
+              "kind": "rate",
+              "store": "air",
+              "above": 278,
+              "fit": {
+                "period": [
+                  2015,
+                  2024
+                ],
+                "value": 2.4
+              }
+            },
+            "color": "green",
+            "site": {
+              "on": "land",
+              "lat": [
+                -45,
+                62
+              ]
+            },
+            "at": [
+              55,
+              40
+            ],
+            "pick": "land",
+            "words": "Forests, grass and soils grow on the extra carbon dioxide and hold some of it. 2.4 billion tonnes of carbon a year on average from 2015 to 2024, swinging a lot from year to year with droughts and fires.",
+            "src": [
+              "gcb",
+              "raupach"
+            ]
+          }
+        ],
+        "choices": [
+          {
+            "id": "fossil",
+            "name": "Fuel burned",
+            "start": 10.4,
+            "min": 0,
+            "max": 20,
+            "step": 0.1,
+            "tip": "Drag to set how much coal, oil and gas the world burns each year, in billions of tonnes of carbon. Today: 10.4."
+          },
+          {
+            "id": "landuse",
+            "name": "Forest cleared",
+            "start": 1.1,
+            "min": 0,
+            "max": 4,
+            "step": 0.1,
+            "tip": "Drag to set how much forest is cleared each year, in billions of tonnes of carbon. Today: 1.1."
+          }
+        ],
+        "say": {
+          "run": "{year}. Burning fuel puts in {fossil} and clearing forest {landuse} billion tonnes of carbon a year. The ocean takes back {ocean} and plants and soils {land}. The air keeps the rest, so its CO2 {airway} {airchange} ppm a year. Now {air} ppm.",
+          "replay": "{year}, as measured. The world burned {fossil} and cleared {landuse} billion tonnes of carbon a year; the ocean took back {ocean} and land {land}. CO2 on Mauna Loa: {air} ppm.",
+          "hold": "To hold the air where it is today, what goes in would have to fall to what comes out: about {total} billion tonnes a year, roughly half of today's {now}."
+        },
+        "guess": {
+          "q": "Say the world kept burning fuel and clearing forest at exactly today's rate, no more and no less, for the next 50 years. What happens to the CO2 in the air?",
+          "options": [
+            "It falls back",
+            "It stays about where it is",
+            "It keeps climbing"
+          ],
+          "answer": 2,
+          "set": {
+            "fossil": 10.4,
+            "landuse": 1.1
+          },
+          "years": 50,
+          "after": "Held at today's rate, the CO2 climbs from {from} to {to} ppm in 50 years, and is still climbing at the end. In the MIT study most people expected it to hold."
+        },
+        "rules": [
+          {
+            "if": "the world holds its emissions where they are today",
+            "then": "the CO2 in the air keeps climbing, year after year, because more goes in than the ocean and land take back.",
+            "when": {
+              "choices": {
+                "fossil": [
+                  10,
+                  10.8
+                ],
+                "landuse": [
+                  0.9,
+                  1.3
+                ]
+              },
+              "years": 20
+            }
+          },
+          {
+            "if": "emissions fall to about half of today's",
+            "then": "the air roughly holds. Half is about what the ocean and land take back now, so only there does the air stop filling.",
+            "when": {
+              "total": [
+                5.4,
+                7
+              ],
+              "years": 20
+            }
+          },
+          {
+            "if": "emissions stop altogether",
+            "then": "the CO2 falls, but slowly: it takes decades, because the ocean and land take back only a little of the extra each year.",
+            "when": {
+              "total": [
+                0,
+                0.5
+              ],
+              "years": 30
+            }
+          },
+          {
+            "if": "you replay the measured years since 1959",
+            "then": "you see the ocean and land take back more every decade, and emissions grow faster still, so the air never stops filling.",
+            "when": {
+              "replay": true
+            }
+          }
+        ],
+        "meet": "The air is a store. It rises whenever more goes in than comes out, however steady the inflow. Holding emissions steady is not holding the climate steady.",
+        "note": "On this stage the ocean and land keep taking back carbon at the rate measured from 2015 to 2024, and the stage runs 50 years ahead. Measurements show that rate has been falling for decades (Raupach and others, 2014), so the real rise would likely be faster than shown here. Run from 1959 on the measured emissions, the same rate ends 2025 about 16 ppm too high, which is that falling rate showing. Over longer times the ocean fills and takes back less, which is why the stage stops at 2075.",
+        "history": {
+          "stores": {
+            "air": {
+              "1959": 315.98,
+              "1960": 316.91,
+              "1961": 317.64,
+              "1962": 318.45,
+              "1963": 318.99,
+              "1964": 319.62,
+              "1965": 320.04,
+              "1966": 321.37,
+              "1967": 322.18,
+              "1968": 323.05,
+              "1969": 324.62,
+              "1970": 325.68,
+              "1971": 326.32,
+              "1972": 327.46,
+              "1973": 329.68,
+              "1974": 330.19,
+              "1975": 331.13,
+              "1976": 332.03,
+              "1977": 333.84,
+              "1978": 335.41,
+              "1979": 336.84,
+              "1980": 338.76,
+              "1981": 340.12,
+              "1982": 341.48,
+              "1983": 343.15,
+              "1984": 344.87,
+              "1985": 346.35,
+              "1986": 347.61,
+              "1987": 349.31,
+              "1988": 351.69,
+              "1989": 353.2,
+              "1990": 354.45,
+              "1991": 355.7,
+              "1992": 356.54,
+              "1993": 357.21,
+              "1994": 358.96,
+              "1995": 360.97,
+              "1996": 362.74,
+              "1997": 363.88,
+              "1998": 366.84,
+              "1999": 368.54,
+              "2000": 369.71,
+              "2001": 371.32,
+              "2002": 373.45,
+              "2003": 375.98,
+              "2004": 377.7,
+              "2005": 379.98,
+              "2006": 382.09,
+              "2007": 384.02,
+              "2008": 385.83,
+              "2009": 387.64,
+              "2010": 390.1,
+              "2011": 391.85,
+              "2012": 394.06,
+              "2013": 396.74,
+              "2014": 398.81,
+              "2015": 401.01,
+              "2016": 404.41,
+              "2017": 406.76,
+              "2018": 408.72,
+              "2019": 411.65,
+              "2020": 414.21,
+              "2021": 416.41,
+              "2022": 418.53,
+              "2023": 421.08,
+              "2024": 424.61,
+              "2025": 427.35
+            }
+          },
+          "storesSrc": "noaa",
+          "periods": [
+            {
+              "from": 1959,
+              "to": 1969,
+              "name": "the 1960s mean",
+              "flows": {
+                "fossil": 3,
+                "landuse": 1.9,
+                "ocean": 1.3,
+                "land": 0.9
+              }
+            },
+            {
+              "from": 1970,
+              "to": 1979,
+              "name": "the 1970s mean",
+              "flows": {
+                "fossil": 4.7,
+                "landuse": 1.7,
+                "ocean": 1.6,
+                "land": 1.6
+              }
+            },
+            {
+              "from": 1980,
+              "to": 1989,
+              "name": "the 1980s mean",
+              "flows": {
+                "fossil": 5.4,
+                "landuse": 1.7,
+                "ocean": 2.1,
+                "land": 1.4
+              }
+            },
+            {
+              "from": 1990,
+              "to": 1999,
+              "name": "the 1990s mean",
+              "flows": {
+                "fossil": 6.4,
+                "landuse": 1.7,
+                "ocean": 2.3,
+                "land": 2
+              }
+            },
+            {
+              "from": 2000,
+              "to": 2009,
+              "name": "the 2000s mean",
+              "flows": {
+                "fossil": 7.8,
+                "landuse": 1.7,
+                "ocean": 2.6,
+                "land": 2.2
+              }
+            },
+            {
+              "from": 2010,
+              "to": 2014,
+              "name": "the 2010s mean",
+              "flows": {
+                "fossil": 9.5,
+                "landuse": 1.6,
+                "ocean": 3.1,
+                "land": 2.5
+              }
+            },
+            {
+              "from": 2015,
+              "to": 2023,
+              "name": "the 2015 to 2024 mean",
+              "flows": {
+                "fossil": 9.8,
+                "landuse": 1.4,
+                "ocean": 3.2,
+                "land": 2.4
+              }
+            },
+            {
+              "from": 2024,
+              "to": 2024,
+              "name": "2024",
+              "flows": {
+                "fossil": 10.3,
+                "landuse": 1.3,
+                "ocean": 3.4,
+                "land": 1.9
+              }
+            },
+            {
+              "from": 2025,
+              "to": 2025,
+              "name": "the 2025 projection",
+              "flows": {
+                "fossil": 10.4,
+                "landuse": 1.1,
+                "ocean": 3.2,
+                "land": 3.4
+              }
+            }
+          ],
+          "periodsSrc": "gcb"
+        },
+        "sources": {
+          "gcb": {
+            "by": "Friedlingstein and others",
+            "year": 2026,
+            "title": "Global Carbon Budget 2025",
+            "where": "Earth System Science Data 18, Table 7, CC BY 4.0",
+            "url": "https://essd.copernicus.org/articles/18/3211/2026/"
+          },
+          "noaa": {
+            "by": "NOAA Global Monitoring Laboratory and Scripps Institution of Oceanography",
+            "year": 2026,
+            "title": "Mauna Loa CO2 annual mean data",
+            "where": "US government data, free to the public",
+            "url": "https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_annmean_mlo.txt"
+          },
+          "raupach": {
+            "by": "Raupach and others",
+            "year": 2014,
+            "title": "The declining uptake rate of atmospheric CO2 by land and ocean sinks",
+            "where": "Biogeosciences 11, CC BY 3.0",
+            "url": "https://bg.copernicus.org/articles/11/3453/2014/"
+          },
+          "sterman": {
+            "by": "Sterman and Booth Sweeney",
+            "year": 2007,
+            "title": "Understanding public complacency about climate change",
+            "where": "Climatic Change 80",
+            "url": "https://www.mit.edu/~jsterman/Understanding_public.html"
+          }
+        }
+      },
+      "quiz": [
+        {
+          "q": "In the MIT study, what did most of the highly educated adults believe?",
+          "choices": [
+            "That emissions have already started to fall",
+            "That the CO2 in the air can hold steady while more goes in than comes out",
+            "That the ocean takes back all of our emissions",
+            "That CO2 leaves the air within a few years"
+          ],
+          "a": 1,
+          "why": "They expected a steady inflow to give a steady level. A store only holds steady when what goes in equals what comes out.",
+          "quote": "most subjects believe atmospheric GHG concentrations can be stabilized while emissions into the atmosphere continuously exceed the removal of GHGs from it",
+          "src": "sterman"
+        },
+        {
+          "q": "When does the CO2 in the air stop rising?",
+          "choices": [
+            "When emissions stop growing",
+            "When emissions equal what is removed",
+            "When emissions fall a little",
+            "When a target year arrives"
+          ],
+          "a": 1,
+          "why": "Only then does the inflow match the outflow. Today what goes in is about twice what comes out.",
+          "quote": "GHG concentrations will therefore continue to rise even if emissions fall, stabilizing only when emissions equal removal",
+          "src": "sterman"
+        },
+        {
+          "q": "By the 2025 estimate, how far is the CO2 in the air above where it was in 1750?",
+          "choices": [
+            "About 5 percent",
+            "About 20 percent",
+            "About 53 percent",
+            "About three times"
+          ],
+          "a": 2,
+          "why": "From about 278 parts per million to about 425.6.",
+          "quote": "atmospheric CO2 concentration increasing by 2.1 ppm reaching 425.6 ppm, 53 % above the pre-industrial level",
+          "src": "gcb"
+        },
+        {
+          "q": "Have the ocean and land kept pace with the extra CO2 in the air?",
+          "choices": [
+            "Yes, they take back a growing share",
+            "No, they grew more slowly than the extra CO2",
+            "They have stopped taking any back",
+            "They now give CO2 back"
+          ],
+          "a": 1,
+          "why": "They take back more in tonnes each decade, but less for each tonne of extra CO2 in the air.",
+          "quote": "implying that CO2 sinks increased more slowly than excess CO2",
+          "src": "raupach"
+        },
+        {
+          "q": "Were fossil emissions still growing in 2024?",
+          "choices": [
+            "No, they fell by a tenth",
+            "No, they held exactly level",
+            "Yes, by about 1 percent",
+            "Yes, by about 10 percent"
+          ],
+          "a": 2,
+          "why": "Up 1.1 percent on 2023, to 10.3 billion tonnes of carbon.",
+          "quote": "For the year 2024, EFOS increased by 1.1 % relative to 2023",
+          "src": "gcb"
+        }
+      ],
+      "crystal": {
+        "speed": 0.3,
+        "partials": [
+          "The ocean and land take back about half of what we put in each year.",
+          "In 2024 fossil emissions still grew, by about one percent.",
+          "Holding emissions at today's rate, the CO2 climbs for decades.",
+          "At about half of today's emissions, the air stops filling.",
+          "With no emissions at all, the CO2 comes down over decades, not years."
+        ],
+        "key": "The CO2 in the air is a store: it rises whenever more goes in than comes out, however steady the inflow.",
+        "decoys": [
+          {
+            "text": "If emissions stop growing, the CO2 stops growing.",
+            "why": "The inflow would still be about twice the outflow, so the air would keep filling."
+          },
+          {
+            "text": "The ocean and land will soak up whatever we add.",
+            "why": "They take back about half, and less for each extra tonne as the decades pass."
+          }
+        ],
+        "aha": "Every partial is the same tub: what goes in, against what comes out."
+      }
+    }
+  ]
+}

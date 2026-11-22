@@ -1,0 +1,101 @@
+{
+  "area": "Earth and climate",
+  "checked": "2026-11-22",
+  "notes": "Area added 22 Nov 2026 for the explainers of issues people misread (Bryan: \"global warming, el nino, water issues\"). Every source below was opened on its own page that day. The Earth picture and the land outline are reused from the Living World build, downloaded there on Bryan's yes on 15 Nov 2026.",
+  "courses": [
+    {
+      "name": "Our climate, plainly",
+      "why": "Climate is argued about every day; knowing how the system works, with the measured numbers, lets you follow any claim back to what is really happening.",
+      "levels": ["high school", "young adults", "everyday"],
+      "spine": "gcb-2025",
+      "uses": ["noaa-mlo-co2", "raupach-2014", "sterman-2007", "nasa-blue-marble", "natural-earth"],
+      "units": ["Steady emissions still fill the air"]
+    }
+  ],
+  "sources": [
+    {
+      "id": "gcb-2025",
+      "kind": "guide",
+      "title": "Global Carbon Budget 2025",
+      "by": "Friedlingstein and others (Global Carbon Project)",
+      "year": 2026,
+      "url": "https://essd.copernicus.org/articles/18/3211/2026/",
+      "licence": "CC BY 4.0",
+      "licenceSeen": "Article page: \"This work is distributed under the Creative Commons Attribution 4.0 License\"",
+      "terms": "",
+      "levels": ["high school", "young adults", "everyday"],
+      "needIt": "The yearly count of how much carbon goes into the air and how much the ocean and land take back, the numbers every climate claim rests on.",
+      "notes": "Table 7 (decadal means, 2024 and the 2025 projection) is a picture on the page; read from it by eye on 22 Nov 2026. 1 ppm = 2.124 GtC as stated in the methods."
+    },
+    {
+      "id": "noaa-mlo-co2",
+      "kind": "guide",
+      "title": "Mauna Loa CO2 annual mean data",
+      "by": "NOAA Global Monitoring Laboratory and Scripps Institution of Oceanography",
+      "year": 2026,
+      "url": "https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_annmean_mlo.txt",
+      "licence": "US government work",
+      "licenceSeen": "File header: \"These data are made freely available to the public and the scientific community\"",
+      "terms": "",
+      "levels": ["high school", "young adults", "everyday"],
+      "needIt": "The measured CO2 in the air, year by year since 1959.",
+      "notes": "File created 19 Nov 2026; 1959 to 2025 copied into the explainer."
+    },
+    {
+      "id": "raupach-2014",
+      "kind": "guide",
+      "title": "The declining uptake rate of atmospheric CO2 by land and ocean sinks",
+      "by": "Raupach and others",
+      "year": 2014,
+      "url": "https://bg.copernicus.org/articles/11/3453/2014/",
+      "licence": "CC BY 3.0",
+      "licenceSeen": "Biogeosciences article page, Creative Commons Attribution licence",
+      "terms": "",
+      "levels": ["young adults", "everyday"],
+      "needIt": "Defines the sink rate the explainer uses, and shows it has been falling.",
+      "notes": ""
+    },
+    {
+      "id": "sterman-2007",
+      "kind": "guide",
+      "title": "Understanding public complacency about climate change: adults' mental models of climate change violate conservation of matter",
+      "by": "Sterman and Booth Sweeney",
+      "year": 2007,
+      "url": "https://www.mit.edu/~jsterman/Understanding_public.html",
+      "licence": "Quoted for teaching; the abstract is on the author's own page",
+      "licenceSeen": "Author's page at MIT shows the citation and abstract",
+      "terms": "",
+      "levels": ["young adults", "everyday"],
+      "needIt": "The study that shows most people misread the store and flow behind climate change.",
+      "notes": "Only short quotes from the abstract are used."
+    },
+    {
+      "id": "nasa-blue-marble",
+      "kind": "guide",
+      "title": "Blue Marble Next Generation with topography and bathymetry (January)",
+      "by": "NASA Earth Observatory, Reto Stockli",
+      "year": 2005,
+      "url": "https://earthobservatory.nasa.gov/features/BlueMarble",
+      "licence": "NASA imagery, free to use with credit",
+      "licenceSeen": "Recorded in the Living World build's DOWNLOADS.md on 15 Nov 2026 from NASA's media guidelines",
+      "terms": "",
+      "levels": ["high school", "young adults", "everyday"],
+      "needIt": "The Earth the explainer is drawn on.",
+      "notes": "Cut to 4096 by 2048 for the site (img/explain/earth.jpg)."
+    },
+    {
+      "id": "natural-earth",
+      "kind": "guide",
+      "title": "Natural Earth 1:10m bathymetry (used as the land and sea outline)",
+      "by": "Natural Earth",
+      "year": 2026,
+      "url": "https://www.naturalearthdata.com/about/terms-of-use/",
+      "licence": "Public domain",
+      "licenceSeen": "Natural Earth terms of use: \"All versions of Natural Earth raster + vector map data ... are in the public domain\"",
+      "terms": "",
+      "levels": ["high school", "young adults", "everyday"],
+      "needIt": "Tells land from sea, so each flow rises or sinks in the right place.",
+      "notes": "Painted to a half degree grid by the Living World build; shipped as img/explain/land.png."
+    }
+  ]
+}

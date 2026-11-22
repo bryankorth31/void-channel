@@ -155,6 +155,34 @@ function scaleOne(sc) {
     + '</div>';
 }
 
+// The explainer: a real system built in 3D from its data file (explain.js, explain-model.js; Bryan, 22 Nov 2026: "i want
+// less "thing" and more issues or delemas ... issues ppl cant seem to grasp"). Stores fill and drain from flows; the
+// learner drags the choices people argue about, plays the years ahead or replays the measured ones, guesses first and
+// finds the rules. The parts, their words, the faders and the sources are plain HTML here, so all of it reads with no 3D.
+const shipsExplain = (u) => !!(u.explainer && (!LIVE || u.explainer.live));
+function explainBlock(u) {
+  if (!shipsExplain(u)) return '';
+  const ex = u.explainer;
+  const srcs = Object.values(ex.sources).map((x) => '<a href="' + esc(x.url) + '" target="_blank" rel="noopener">' + esc(x.by) + ', ' + esc(String(x.year)) + ', ' + esc(x.title) + (x.where ? ', ' + esc(x.where) : '') + '</a>').join('; ');
+  const partRow = (p, isStore) => '<li><button type="button" data-part="' + esc(p.id) + '" title="What is ' + esc(p.name.toLowerCase()) + '? Press to see it on the world"><i class="t-' + esc(isStore ? 'store' : p.color) + '"></i><b>' + esc(p.name) + '</b><span class="v"></span></button><p>' + esc(p.words) + '</p></li>';
+  const faders = ex.choices.map((c) => '<label class="ex-fader" title="' + esc(c.tip) + '"><span>' + esc(c.name) + ' <output data-choice="' + esc(c.id) + '">' + esc(String(c.start)) + '</output></span><input type="range" data-choice="' + esc(c.id) + '" min="' + c.min + '" max="' + c.max + '" step="' + c.step + '" value="' + c.start + '" aria-label="' + esc(c.name) + '" title="' + esc(c.tip) + '"></label>').join('');
+  const g = ex.guess ? '<div class="ex-guess"><b>Guess first</b><p>' + esc(ex.guess.q) + '</p><div class="opts">' + ex.guess.options.map((o, i) => '<button type="button" data-i="' + i + '" title="Choose this answer, then watch it play out">' + esc(o) + '</button>').join('') + '</div></div>' : '';
+  const speeds = [[1, 'Slow', 'One year a second'], [3, 'Steady', 'Three years a second'], [10, 'Fast', 'Ten years a second']].map(([v, t, tip]) => '<button type="button" data-speed="' + v + '" title="' + tip + '">' + t + '</button>').join('');
+  return '<div class="ex" data-ex="' + esc(JSON.stringify(ex)) + '">'
+    + '<div class="ex-top"><span class="ex-kick">See how it works</span><b>' + esc(ex.title) + '</b><p>' + esc(ex.ask) + '</p></div>'
+    + '<div class="ex-body"><div class="ex-main">'
+    + '<div class="ex-stage" tabindex="0" aria-label="3D world: ' + esc(ex.title) + '. Drag to turn it, arrow keys also turn it, plus and minus zoom. Press a place to learn what it is."><canvas></canvas><div class="ex-labels"></div><div class="ex-hud" aria-hidden="true"></div><div class="ex-card" hidden></div>' + g + '<p class="ex-hint">Drag to turn the world. Press the stage, then scroll or pinch to zoom. Press the land, the sea or the air to learn what it does.</p></div>'
+    + '<p class="ex-gap" hidden aria-live="polite"></p><p class="ex-say" aria-live="polite"></p></div>'
+    + '<div class="ex-side"><div class="ex-col"><div class="ex-faders">' + faders + '</div>'
+    + '<div class="ex-play"><button type="button" data-do="play" class="ex-go" title="Run the world forward a year at a time with your settings">Play the years ahead</button><button type="button" data-do="replay" title="Replay the measured years from ' + ex.clock.from + ' to ' + ex.clock.now + '">Replay ' + ex.clock.from + ' to ' + ex.clock.now + '</button><button type="button" data-do="today" title="Go back to ' + ex.clock.now + ' with today\'s settings">Back to today</button><span class="ex-speed">' + speeds + '</span></div></div><div class="ex-col">'
+    + '<canvas class="ex-trace" aria-label="The ' + esc(ex.stores[0].name.toLowerCase()) + ' over the years: measured in white, your run in pink"></canvas><div class="ex-balance"></div></div><div class="ex-col">'
+    + '<ol class="ex-parts">' + ex.stores.map((p) => partRow(p, true)).join('') + ex.flows.map((p) => partRow(p, false)).join('') + '</ol></div></div></div>'
+    + '<div class="ex-rules"></div>'
+    + (ex.note ? '<p class="ex-note">' + esc(ex.note) + '</p>' : '')
+    + '<p class="ex-src">Where the numbers come from: ' + srcs + '. Each speck is ' + esc(ex.eachWords) + '.' + (ex.world === 'globe' ? ' The Earth picture is NASA Earth Observatory\'s Blue Marble (Reto Stockli); land and sea from Natural Earth.' : '') + '</p>'
+    + '</div>';
+}
+
 // Bryan, 15 Nov 2026: "less words". A unit shows its picture, its main piece and its crystal; the rest is one tap away.
 // The mind's mechanisms are a supplement shelf (Bryan, 15 Nov 2026: "the smaller ones like the FOMO ... are
 // supplemental that go for anything"). Any unit lists the mechanisms it leans on; the mechanism shows where it is used.
@@ -181,10 +209,10 @@ const shipsAnswer = (u) => !!(u.main && u.main.item && (u.quiz || []).some((q) =
 // Our own quiz, written from the lecture; every answer quotes the line it comes from (checked word for word).
 function quiz(u) {
   if (!(u.quiz || []).length) return '';
-  return '<details class="quiz"><summary><h3>Check yourself</h3><span>' + u.quiz.length + ' questions, each answer quotes the ' + (u.reading ? 'book' : u.main && u.main.role === 'train' ? 'lesson' : 'lecture') + '</span></summary>' + u.quiz.map((q, i) => '<div class="qq" data-a="' + q.a + '"><p><b>' + (i + 1) + '.</b> ' + esc(q.q) + '</p><div class="qc">'
+  return '<details class="quiz"><summary><h3>Check yourself</h3><span>' + u.quiz.length + ' questions, each answer quotes the ' + (u.explainer ? 'sources' : u.reading ? 'book' : u.main && u.main.role === 'train' ? 'lesson' : 'lecture') + '</span></summary>' + u.quiz.map((q, i) => '<div class="qq" data-a="' + q.a + '"><p><b>' + (i + 1) + '.</b> ' + esc(q.q) + '</p><div class="qc">'
     + q.choices.map((ch, j) => '<button data-j="' + j + '">' + esc(ch) + '</button>').join('') + '</div>'
     + '<p class="qh" role="status" hidden>Not quite. You have one more try.</p>'
-    + '<div class="qa" hidden><p class="qr"></p><p>' + esc(q.why) + '</p><blockquote>"' + esc(q.quote) + '"' + (q.lesson ? '<a class="qt" href="' + esc(q.ref) + '" target="_blank" rel="noopener">From the lesson: open it</a>' : q.ref ? '<a class="qt" href="' + esc(q.ref) + '">From the book: open the chapter</a>' : '<button class="qt" data-t="' + q.t + '"' + (q.e ? ' data-e="' + q.e + '"' : '') + '>From the lecture, at ' + clock(q.t) + '</button>') + '</blockquote></div></div>').join('')
+    + '<div class="qa" hidden><p class="qr"></p><p>' + esc(q.why) + '</p><blockquote>"' + esc(q.quote) + '"' + (q.src && u.explainer && u.explainer.sources[q.src] ? '<a class="qt" href="' + esc(u.explainer.sources[q.src].url) + '" target="_blank" rel="noopener">From ' + esc(u.explainer.sources[q.src].by) + ', ' + esc(String(u.explainer.sources[q.src].year)) + ': open it</a>' : q.lesson ? '<a class="qt" href="' + esc(q.ref) + '" target="_blank" rel="noopener">From the lesson: open it</a>' : q.ref ? '<a class="qt" href="' + esc(q.ref) + '">From the book: open the chapter</a>' : '<button class="qt" data-t="' + q.t + '"' + (q.e ? ' data-e="' + q.e + '"' : '') + '>From the lecture, at ' + clock(q.t) + '</button>') + '</blockquote></div></div>').join('')
     + '<div class="qs" hidden></div></details>';
 }
 
@@ -211,6 +239,7 @@ function unit(u, voices, c) {
     + links(u, c)
     + lab(u)
     + scaleBlock(u)
+    + explainBlock(u)
     + (u.main ? '<div class="pieces">' + piece(u.main.role === 'train' ? { ...u.main, unit: u.n } : u.main, true) + '</div>' : '')
     // Preview only: make questions with a phone while the lecture plays (make/screen.js shows the button once the
     // preview server says this lecture has been heard). The public copy never carries it.
@@ -359,6 +388,32 @@ footer{max-width:1500px;margin:0 auto;padding:10px 32px 40px;color:var(--dim);fo
 .scale-list button:hover,.scale-list button.on{border-color:var(--gold)}.scale-list i{width:14px;height:14px;border-radius:3px;grid-row:1 / span 2}.scale-list b{font-size:15px;font-weight:600}.scale-list .v{grid-column:2;font-size:13px;color:var(--dim)}.scale-list button.ghost i{opacity:.35}
 .scale-note,.scale-src{margin:12px 0 0;font-size:14px;color:var(--dim)}.scale-src a{color:var(--acc)}
 @media (max-width:1000px){.scale-body{grid-template-columns:1fr}.scale-list{max-height:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}}
+.ex{background:var(--deep);border:1px solid var(--line);border-radius:12px;padding:16px 18px 18px;margin:0 0 18px}
+.ex-kick{display:block;font-size:14px;color:var(--acc);font-weight:700}.ex-top b{display:block;font-family:var(--head);font-size:24px;margin:2px 0 4px}.ex-top p{margin:0 0 12px;color:var(--soft);max-width:860px}
+.ex-body{display:flex;flex-direction:column;gap:14px}
+.ex-stage{position:relative;border-radius:10px;background:#020308;aspect-ratio:16/9;max-height:74vh;margin:0 auto;width:100%;overflow:hidden;border:1px solid #1b2030;outline:none}.ex-stage:focus-visible,.ex-stage.live{border-color:#5fd4ff}
+.ex-stage canvas{display:block;width:100%;height:100%;touch-action:none;cursor:grab}.ex-stage canvas:active{cursor:grabbing}.ex-stage.flat canvas{display:none}.ex-stage.flat{aspect-ratio:auto;padding:18px}
+.ex-labels{position:absolute;inset:0;pointer-events:none;overflow:hidden}.ex-labels button{position:absolute;left:0;top:0;pointer-events:auto;font:inherit;font-size:13px;font-weight:600;color:#f6f7fb;background:rgba(5,6,12,.7);border:1px solid #2b3045;border-radius:999px;padding:3px 10px;cursor:pointer;white-space:nowrap;backdrop-filter:blur(4px)}.ex-labels button:hover,.ex-labels button.on{border-color:#ffc44d;color:#ffc44d}
+.ex-hud{position:absolute;left:14px;top:12px;pointer-events:none;display:flex;flex-direction:column;gap:0;color:#f6f7fb;text-shadow:0 2px 12px #000}.ex-hud b{font-family:var(--head);font-size:30px;line-height:1}.ex-hud span{font-size:22px;font-weight:700}.ex-hud small{font-size:13px;color:#c8cde0}.ex-hud em{font-style:normal;font-size:13px;color:#ff8fb8}.ex-hud i{font-style:normal;font-size:12px;color:#a9c4ff}
+.ex-card{position:absolute;right:12px;top:12px;width:min(320px,calc(100% - 24px));max-height:calc(100% - 24px);overflow:auto;background:rgba(8,10,18,.9);border:1px solid #2b3045;border-radius:10px;padding:12px 14px;color:#e8eaf4;backdrop-filter:blur(6px)}.ex-card b{display:block;font-size:17px;margin:0 0 4px;color:#fff}.ex-card p{margin:0 0 6px;font-size:14px}.ex-card small{display:block;font-size:12px;color:#a6abc0;margin-bottom:6px}
+.ex-card .ex-x,.ex-guess button,.ex-play button{font:inherit;font-size:14px;padding:7px 12px;border-radius:8px;border:1px solid var(--line);background:var(--panel);color:var(--fg);cursor:pointer}.ex-card .ex-x{padding:3px 10px;font-size:13px}
+.ex-guess{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:10px;padding:22px 26px;background:radial-gradient(ellipse at 30% 50%,rgba(2,3,8,.55),rgba(2,3,8,.92));color:#f6f7fb;overflow:auto}.ex-guess[hidden]{display:none}.ex-guess>b{font-size:14px;color:#ffc44d}.ex-guess p{margin:0;font-size:19px;max-width:640px}.ex-guess .opts{display:flex;flex-wrap:wrap;gap:8px}.ex-guess button{background:#14161f;color:#f6f7fb;border-color:#2b2f41;font-size:15px;padding:9px 15px}.ex-guess button:hover{border-color:#5fd4ff}
+.ex-hint{position:absolute;left:10px;right:10px;bottom:8px;margin:0;font-size:13px;color:#a6abc0;pointer-events:none;text-align:center}.ex-stage.live .ex-hint{display:none}.ex-stage.flat .ex-hint{position:static;font-size:15px;color:#dcdfec;text-align:left}
+.ex:not(.opened) .ex-labels,.ex:not(.opened) .ex-hud,.ex:not(.opened) .ex-hint{visibility:hidden}
+.ex-say{margin:10px 0 0;min-height:3.2em;color:var(--soft);font-size:16px}.ex-gap{margin:10px 0 0;padding:10px 14px;border-left:3px solid #ffc44d;background:var(--panel);border-radius:0 8px 8px 0;font-size:16px}
+.ex-side{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;align-items:start}.ex-col{display:flex;flex-direction:column;gap:12px;min-width:0}.ex-faders{display:flex;flex-direction:column;gap:10px}
+.ex-fader{display:flex;flex-direction:column;gap:4px;font-size:14px;color:var(--soft)}.ex-fader span{display:flex;justify-content:space-between}.ex-fader output{font-weight:700;color:var(--fg)}
+.ex-fader input{width:100%;accent-color:#ff4f8b;height:26px;cursor:pointer}.ex-fader input:disabled{cursor:default;opacity:.7}
+.ex-play{display:flex;flex-wrap:wrap;gap:6px}.ex-play button:hover{border-color:#5fd4ff}.ex-play .ex-go{background:#ff4f8b;border-color:#ff4f8b;color:#fff;font-weight:700}.ex-play button.on{border-color:#ffc44d;color:#ffc44d}
+.ex-speed{display:flex;gap:4px;margin-left:auto}.ex-speed button{padding:5px 9px;font-size:13px}.ex-speed button.on{border-color:#5fd4ff;color:#5fd4ff}
+.ex-trace{width:100%;height:150px;display:block;background:#05070d;border:1px solid var(--line);border-radius:8px}
+.ex-balance{display:flex;flex-direction:column;gap:6px}.ex-bal span{display:flex;justify-content:space-between;font-size:13px;color:var(--soft)}.ex-bal b{color:var(--fg)}.ex-bar{display:flex;height:10px;border-radius:5px;overflow:hidden;background:#0b0e18}.ex-bar i{display:block;height:100%}.ex-balance p{margin:0;font-size:12px;color:var(--dim)}
+.ex-parts{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:3px}.ex-parts button{width:100%;display:grid;grid-template-columns:12px minmax(0,1fr) auto;gap:9px;align-items:center;text-align:left;font:inherit;font-size:14px;background:var(--panel);color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:6px 10px;cursor:pointer}.ex-parts button:hover,.ex-parts button.on{border-color:#ffc44d}.ex-parts .v{font-size:13px;color:var(--dim)}
+.ex-parts i{width:12px;height:12px;border-radius:50%}.ex-parts p{margin:4px 2px 8px;font-size:14px;color:var(--soft)}.ex.js .ex-parts p{display:none}
+.t-store{background:linear-gradient(90deg,#a9c4ff 50%,#ff4f8b 50%)}.t-hot{background:#ff4f8b}.t-amber{background:#ffb347}.t-cold{background:#5fd4ff}.t-green{background:#6fe39a}.t-gold{background:#ffc44d}.t-violet{background:#9b8cf0}
+.ex-rules{margin:14px 0 0}.ex-h{display:block;font-size:14px;font-weight:700;color:var(--gold);margin:0 0 6px}.ex-rules ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px}.ex-rules li{padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:var(--panel);font-size:15px}.ex-rules li.found{border-color:rgba(95,227,154,.5)}.ex-rules li.fresh{box-shadow:0 0 0 2px rgba(95,227,154,.5)}.ex-rules li b{color:var(--gold)}.ex-rules li i{color:var(--dim)}.ex-meet{margin:10px 0 0;font-weight:600;color:#5fe39a}
+.ex-note,.ex-src{margin:12px 0 0;font-size:14px;color:var(--dim)}.ex-src a{color:var(--acc)}
+@media (max-width:1000px){.ex-body{grid-template-columns:1fr}.ex-speed{margin-left:0}}
 .lab{background:var(--deep);border:1px solid rgba(212,176,106,.45);border-radius:12px;padding:16px 18px 18px;margin:0 0 18px}
 .lab-kick{display:block;font-size:14px;color:var(--gold);font-weight:700}
 .lab-top b{display:block;font-family:var(--head);font-size:24px;font-weight:600;margin:2px 0}
@@ -413,7 +468,7 @@ ${(c.channels || []).length ? '<h3 style="margin:0 0 12px">Channels for this cou
 ${c.units.map((u) => unit(u, c.voices, c)).join('\n')}
 </main></div>
 ${FOOT()}
-<script src="crystal.js"></script><script src="scene.js"></script>${c.units.some(shipsLab) ? '<script src="planck.min.js"></script><script src="lab.js"></script>' + [...new Set(c.units.filter(shipsLab).map((u) => u.lab.bench))].map((n) => '<script src="lab-' + esc(n) + '.js"></script>').join('') : ''}${c.units.some(shipsScale) ? '<script type="module" src="scale.js"></script>' : ''}
+<script src="crystal.js"></script><script src="scene.js"></script>${c.units.some(shipsLab) ? '<script src="planck.min.js"></script><script src="lab.js"></script>' + [...new Set(c.units.filter(shipsLab).map((u) => u.lab.bench))].map((n) => '<script src="lab-' + esc(n) + '.js"></script>').join('') : ''}${c.units.some(shipsScale) ? '<script type="module" src="scale.js"></script>' : ''}${c.units.some(shipsExplain) ? '<script src="explain-model.js"></script><script type="module" src="explain.js"></script>' : ''}
 <script>
 function seek(el, t) {
   var v = el.closest('.unit').querySelector('video, audio'); if (!v) return;
@@ -693,7 +748,7 @@ const IMG = (() => { try { return JSON.parse(fs.readFileSync(path.join(DIR, 'img
 const img = (name) => (IMG[name] && /^our own/i.test(IMG[name].license || '') ? IMG[name].file : '');
 // One hue for each area, so Money, Body, Mind and the rest differ at a glance: the unit's top edge and number, the row's
 // mark, the glow on a card with no picture yet.
-const AREAHUE = { Money: '#f2a93b', Food: '#ff8a3d', Home: '#ffd166', Body: '#ff6b8b', Mind: '#5fd4ff', Words: '#7ee0c3', 'Law and rights': '#8fa8ff', 'Work and trades': '#f59e6c', Machines: '#9ad1ff', Making: '#c4f06a', Land: '#5fe39a', 'Civics and history': '#e6c067', 'Faith and philosophy': '#a78bfa', Family: '#ff8fd0', Emergencies: '#ff5c5c' };
+const AREAHUE = { Money: '#f2a93b', Food: '#ff8a3d', Home: '#ffd166', Body: '#ff6b8b', Mind: '#5fd4ff', Words: '#7ee0c3', 'Law and rights': '#8fa8ff', 'Work and trades': '#f59e6c', Machines: '#9ad1ff', Making: '#c4f06a', Land: '#5fe39a', 'Civics and history': '#e6c067', 'Faith and philosophy': '#a78bfa', Family: '#ff8fd0', Emergencies: '#ff5c5c', 'Earth and climate': '#19c6b0' };
 const hue = (area) => AREAHUE[area] || '#5fd4ff';
 // The top of a card: its own picture, or its own words on the area's colour.
 const ph = (pic, words, lazy) => (pic ? '<div class="ph"><img' + (lazy ? ' loading="lazy"' : '') + ' src="' + pic + '" alt=""></div>' : '<div class="ph face"><span>' + esc(words || '') + '</span></div>');
@@ -835,7 +890,7 @@ function credits(all) {
   const rows = Object.keys(IMG).filter((k) => img(k)).map((k) => { const x = IMG[k]; return '<tr><td><img src="' + esc(x.file) + '" alt=""></td><td>' + esc(x.title || 'Untitled') + '</td><td>' + esc(x.creator || 'unknown') + '</td><td>' + esc(x.license) + '</td><td><a href="' + esc(x.page) + '" target="_blank" rel="noopener">' + esc(x.source) + '</a></td></tr>'; }).join('');
   return `<!doctype html><html lang="en" data-look="${LOOK}" data-type="${TYPE}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${APPHEAD}<title>Photo credits | Void University</title>${FONTS}<style>${BASE}
 main{max-width:1100px;margin:0 auto;padding:30px 32px}h1{font-family:var(--head)}table{width:100%;border-collapse:collapse;font-size:14px}td{border-bottom:1px solid var(--line);padding:8px;vertical-align:middle}td img{width:96px;height:60px;object-fit:cover;border-radius:4px;display:block}${LOOKCSS}${TYPECSS}</style></head><body>
-${top('credits', all)}<main><h1>Picture credits</h1><p>The pictures on this site are our own. The Body picture is the whole body standing in Body Atlas, and its body parts are BodyParts3D (CC BY 4.0).</p><table>${rows}</table><h1>Backgrounds</h1><p>The pictures of the classroom and the archive room behind the pages are our own, made for Void University. The lightning, the static and the film grain over them are Void TV's own.</p><h1>Phones</h1><p>The QR code maker and the relay that passes questions between a screen and its phones are Void TV PLAY's own.</p><h1>Typefaces</h1><p>Atkinson Hyperlegible Next (Braille Institute), Bricolage Grotesque, Inter, Fraunces, Literata and Schibsted Grotesk are used under the SIL Open Font License and are served from this site.</p>${all.some((c) => c.units.some(shipsLab)) ? '<h1>Lab physics</h1><p>Things in the labs fall, roll and bounce using Planck.js by Erin Catto and Ali Shakiba, free to use under the <a href="planck-LICENSE.txt">MIT licence</a>. The labs themselves are our own work.</p>' : ''}${all.some((c) => c.units.some(shipsScale)) ? '<h1>3D stages</h1><p>The 3D scale stages are drawn with three.js by the three.js authors, free to use under the <a href="three-LICENSE.txt">MIT licence</a>. The stages and what they show are our own work; each one names the papers its numbers come from.</p>' : ''}</main>${FOOT()}</body></html>`;
+${top('credits', all)}<main><h1>Picture credits</h1><p>The pictures on this site are our own. The Body picture is the whole body standing in Body Atlas, and its body parts are BodyParts3D (CC BY 4.0).</p><table>${rows}</table><h1>Backgrounds</h1><p>The pictures of the classroom and the archive room behind the pages are our own, made for Void University. The lightning, the static and the film grain over them are Void TV's own.</p><h1>Phones</h1><p>The QR code maker and the relay that passes questions between a screen and its phones are Void TV PLAY's own.</p><h1>Typefaces</h1><p>Atkinson Hyperlegible Next (Braille Institute), Bricolage Grotesque, Inter, Fraunces, Literata and Schibsted Grotesk are used under the SIL Open Font License and are served from this site.</p>${all.some((c) => c.units.some(shipsLab)) ? '<h1>Lab physics</h1><p>Things in the labs fall, roll and bounce using Planck.js by Erin Catto and Ali Shakiba, free to use under the <a href="planck-LICENSE.txt">MIT licence</a>. The labs themselves are our own work.</p>' : ''}${all.some((c) => c.units.some(shipsExplain)) ? '<h1>The Earth</h1><p>The Earth in the explainers is NASA Earth Observatory\'s Blue Marble Next Generation with topography and bathymetry, by Reto Stockli; NASA imagery is free to use with credit. Land and sea are told apart with Natural Earth\'s map data, which is in the public domain. The explainers are drawn with three.js (<a href="three-LICENSE.txt">MIT licence</a>) and are our own work; each names the papers and agencies its numbers come from.</p>' : ''}${all.some((c) => c.units.some(shipsScale)) ? '<h1>3D stages</h1><p>The 3D scale stages are drawn with three.js by the three.js authors, free to use under the <a href="three-LICENSE.txt">MIT licence</a>. The stages and what they show are our own work; each one names the papers its numbers come from.</p>' : ''}</main>${FOOT()}</body></html>`;
 }
 
 // A wrong address: wrangler.jsonc serves 404.html for it. Links start from the site root, since the wrong address can be
@@ -893,6 +948,15 @@ if (loaded.some((c) => c.units.some(shipsScale))) {
   shipJs(path.join(DIR, 'scale.js'), path.join(OUT, 'scale.js'));
   fs.copyFileSync(path.join(DIR, 'vendor', 'three.module.min.js'), path.join(OUT, 'three.module.min.js'));
   fs.copyFileSync(path.join(DIR, 'vendor', 'three-LICENSE.txt'), path.join(OUT, 'three-LICENSE.txt'));
+}
+// The explainer, its model, the drawing library and the Earth pictures go along only when a page shows one.
+if (loaded.some((c) => c.units.some(shipsExplain))) {
+  shipJs(path.join(DIR, 'explain.js'), path.join(OUT, 'explain.js'));
+  shipJs(path.join(DIR, 'explain-model.js'), path.join(OUT, 'explain-model.js'));
+  fs.copyFileSync(path.join(DIR, 'vendor', 'three.module.min.js'), path.join(OUT, 'three.module.min.js'));
+  fs.copyFileSync(path.join(DIR, 'vendor', 'three-LICENSE.txt'), path.join(OUT, 'three-LICENSE.txt'));
+  fs.mkdirSync(path.join(OUT, 'img', 'explain'), { recursive: true });
+  for (const f of fs.readdirSync(path.join(DIR, 'img', 'explain'))) fs.copyFileSync(path.join(DIR, 'img', 'explain', f), path.join(OUT, 'img', 'explain', f));
 }
 // Answer on your phones, in the public copy (Bryan, 21 Nov 2026: "Yes, build it"): the screen's script, PLAY's own QR
 // maker, and the phone page at /join, which is where the relay on voidtv.net sends a phone that scans the code.
