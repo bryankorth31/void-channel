@@ -275,9 +275,14 @@ async function start(msg) {
   } else {
     say('Fetching the game from the Internet Archive');
     const game = await gameBytes(msg.gameUrl, msg.gameSize);
-    if (msg.start && /\.zip$/i.test(msg.gameFile)) path = await unpack(game, msg.start);
-    if (msg.windows && msg.start) path = await addWindows(msg, path);
-    else if (/\.zip$/i.test(msg.gameFile) && msg.rom && msg.rom.length) path = await romFromZip(game, msg.rom, path);
+    // One branch a kind of game. A DOS game's zip is unpacked and its own program started; a Windows 3.1 game is that
+    // plus Windows. Nothing after the unpack writes the zip again: ae9bea18c put the Windows step between "if" and its
+    // "else", so every plain DOS game fell to the last line and the whole zip overwrote its program (Oregon Trail sat at
+    // the DOSBox text, 20 to 22 Nov 2026; found by the auditor).
+    if (msg.start && /\.zip$/i.test(msg.gameFile)) {
+      path = await unpack(game, msg.start);
+      if (msg.windows) path = await addWindows(msg, path);
+    } else if (/\.zip$/i.test(msg.gameFile) && msg.rom && msg.rom.length) path = await romFromZip(game, msg.rom, path);
     else M.FS.writeFile(path, game);
   }
   // The game's settings go in before the core starts, so a core that reads them when it starts (ScummVM) has them.

@@ -130,7 +130,7 @@ test('Windows 3.1: the worker puts Windows on the game\'s own C: drive and start
   const runner = fs.readFileSync(path.join(PLAY, 'src', 'runner.js'), 'utf8');
   assert.ok(runner.includes('windows: PlayCards.windowsOf ? PlayCards.windowsOf(card) : null'));
   const w = fs.readFileSync(path.join(PLAY, 'src', 'core-worker.js'), 'utf8');
-  assert.ok(w.includes('if (msg.windows && msg.start) path = await addWindows(msg, path);'));
+  assert.ok(w.includes('if (msg.windows) path = await addWindows(msg, path);'), 'inside the unpack branch (see the DOS test below)');
   const body = w.slice(w.indexOf('async function addWindows('), w.indexOf('// A console game kept inside a .zip'));
   assert.ok(body.includes("'WINDOWS/' + name.slice(8)"), 'the settings go into C:\\WINDOWS');
   assert.ok(body.includes(".split('D:' + BS).join('C:' + BS)"), 'their D: becomes C:');
@@ -147,4 +147,11 @@ test('Windows 3.1: WinG\'s display answer for our DOSBox Pure is seeded, so a ga
   assert.match(key, /^SVGA256\.DRV640x480x8\(0,12\)v4\.0\.0\.58-[0-9A-F]{4}-1\.0\.0\.37$/);
   assert.match(answer, /^[A-Z0-9]{66}$/);
   assert.ok(w.includes("if (/^WINDOWS\\/WIN\\.INI$/i.test(name) && !text.includes(WING_SEEN)) text = text.replace("), 'written under [WinG] in WIN.INI');
+});
+
+test('a DOS game\'s unpacked program is never overwritten by its zip (the 20 to 22 Nov fault: every DOS game sat at the DOSBox text)', () => {
+  const w = require('fs').readFileSync(require('path').join(__dirname, '..', 'src', 'core-worker.js'), 'utf8');
+  // The unpack and the Windows step share one branch; the plain write is only for a game with no start program.
+  assert.match(w, /if \(msg\.start && \/\\.zip\$\/i\.test\(msg\.gameFile\)\) \{\s*path = await unpack\(game, msg\.start\);\s*if \(msg\.windows\) path = await addWindows\(msg, path\);\s*\} else if/);
+  assert.doesNotMatch(w, /path = await unpack\(game, msg\.start\);\s*if \(msg\.windows && msg\.start\)/);
 });
