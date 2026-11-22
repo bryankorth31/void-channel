@@ -1,4 +1,4 @@
-// Moments: VoidTV reorganizing around what is in the news (Bryan, 22 Nov 2026: "a way to capitalize off current events and
+// Moments: voidtv.net reorganizing around what is in the news (Bryan, 22 Nov 2026: "a way to capitalize off current events and
 // allow reorganizing around them ie gta ... for movies and tv and all things. we have the archive of history to use to
 // build relevant rows or pages, ads"). One engine for every area, like the area menu (assets/brand/areas/areas.js).
 //
