@@ -266,3 +266,4 @@ html,body{overflow-x:clip}
    behind it): a lighter grey for the count and a soft dark edge on the heading's words. */
 .row h2{text-shadow:0 1px 3px rgba(7,8,12,.9),0 0 10px rgba(7,8,12,.7)}
 .row h2 small{color:#b9bccb}
+.row .mabout{margin:-4px 0 10px;max-width:760px;color:#b9bccb;font:400 13px/1.45 system-ui,sans-serif;text-shadow:0 1px 3px rgba(7,8,12,.9)}   /* a moment row's why (play/src/moments-shelf.js) */

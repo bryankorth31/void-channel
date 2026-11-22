@@ -31,6 +31,8 @@
         const sec = rowSection(r.title, r.games, null, r.games.length);
         sec.classList.add('moment-row');
         sec.dataset.moment = r.id;
+        // Why the row is there today, in one short line under its title (the PLAY lead, 22 Nov 2026): the rule's about.
+        if (r.about) { const h = sec.querySelector('h2'), p = document.createElement('p'); p.className = 'mabout'; p.textContent = r.about; if (h) h.after(p); else sec.prepend(p); }
         rowsEl.insertBefore(sec, first);
       }
       return made;
