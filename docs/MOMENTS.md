@@ -49,8 +49,17 @@ While it is on, each area of voidtv.net that reads moments shows a row of what V
 
 | Area | Reads moments |
 |---|---|
-| PLAY games | the front page row (waits on Bryan's layout pick and the PLAY lead) |
-| On Demand shows and movies, Live TV, Trivia, University | not yet: their rules can be written and are kept for when they do |
+| PLAY games | live since 22 Nov 2026: the banner opens on the moment (our own look, the ad line large, a button to the row), then the row first under it (Bryan's layout B) |
+| On Demand shows and movies | the voidtv.net home page (Bryan's layout B): a gold card with the ad line right under Live TV, which stays first, then the row. The card's button and the row's See all open the moment's own list, /?moment=<id>, which the other filters can narrow. The shows rule picks from the series, the movies rule from the films; one row draws on both. Never the 18+ shelf, never a show the viewer turned down, never on Kids |
+| Live TV, Trivia, University | not yet: their rules can be written and are kept for when they do |
+
+HQ's Preview counts On Demand picks from the list visitors get (voidtv.net/data/index.js, the same file the home page reads), or
+the last local build when the site cannot be reached; it reads that list once every 10 minutes at most.
+
+**Christmas** is saved switched off (Bryan, 22 Nov 2026: "engine only, no moment"), 1 to 31 December, peak the 25th, with his line
+"Before streaming, there was Christmas TV." Its rule picks titles with Christmas, Santa, Rudolph, Frosty, Grinch, Scrooge,
+Nutcracker, Mistletoe or Yuletide, and leaves out Noel's House Party by name (a BBC show, not a Christmas one). Switching it on in
+HQ is his yes; Publish now sends it, and it shows from 1 December by itself.
 
 Finding moments (news, anniversaries from Wikidata, release calendars) is a later, optional step: suggestions will wait in
 HQ for Bryan's yes and never show before it.

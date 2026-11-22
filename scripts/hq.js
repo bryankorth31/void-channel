@@ -479,9 +479,9 @@ const server = http.createServer(async (req, res) => {
     if (p.startsWith('/api/moments')) {
       const b = req.method === 'POST' ? await body(req) : {};
       try {
-        if (p === '/api/moments' && req.method === 'GET') return send(res, 200, momentshq.list());
+        if (p === '/api/moments' && req.method === 'GET') { await momentshq.warm(); return send(res, 200, momentshq.list()); }   // warm: On Demand's list, read once every 10 minutes
         if (p === '/api/moments' && req.method === 'POST') return send(res, 200, momentshq.save(b));
-        if (p === '/api/moments/preview' && req.method === 'POST') { const m = momentshq.clean(b); return send(res, 200, { problems: require('../assets/brand/moments/moments.js').problems(m), picks: momentshq.picks(m) }); }
+        if (p === '/api/moments/preview' && req.method === 'POST') { await momentshq.warm(); const m = momentshq.clean(b); return send(res, 200, { problems: require('../assets/brand/moments/moments.js').problems(m), picks: momentshq.picks(m) }); }
         if (p === '/api/moments/switch' && req.method === 'POST') return send(res, 200, momentshq.setOn(String(b.id || ''), b.on === true));
         if (p === '/api/moments/remove' && req.method === 'POST') return send(res, 200, momentshq.remove(String(b.id || '')));
       } catch (e) { return send(res, e.status || 500, { error: e.message }); }

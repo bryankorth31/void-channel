@@ -5,13 +5,13 @@
 let MOMENTS = null, MOMENT_EDIT = null;
 const MOMENT_FIELDS = [['items', 'Archive items', 'one a line, the part after archive.org/details/'], ['titles', 'Title words', 'one a line; whole words, so "auto" does not catch "Autobahn"'],
   ['wikidata', 'Wikidata ids', 'one a line, like Q94501'], ['people', 'People', 'one a line'], ['series', 'Series', 'one a line'],
-  ['genres', 'Only these genres', 'one a line; empty = any'], ['systems', 'Only these machines (PLAY)', 'one a line, like dos, gba, snes; empty = any'], ['not', 'Never these', 'one a line: items to leave out']];
+  ['genres', 'Only these genres', 'one a line; empty = any'], ['systems', 'Only these machines or kinds', 'one a line: PLAY machines (dos, gba, snes) or On Demand kinds (TV Movies, Specials); empty = any'], ['not', 'Never these', 'one a line: items to leave out']];
 const AREA_NAMES = { play: 'PLAY games', shows: 'On Demand shows', movies: 'On Demand movies', live: 'Live TV', trivia: 'Trivia', uni: 'University' };
 
 async function moments(m) {
   MOMENTS = await api('/api/moments');
   const rows = MOMENTS.moments.map((x, i) => {
-    const pk = Object.entries(x.picks || {}).map(([a, p]) => esc(AREA_NAMES[a] || a) + ': ' + (p == null ? '<span class="dim">not wired yet</span>' : p.shows ? '<span class="green">' + p.count + ' picked</span>' : '<span class="gold">' + p.count + ' picked, row needs ' + p.min + '</span>')).join('<br>');
+    const pk = Object.entries(x.picks || {}).map(([a, p]) => esc(AREA_NAMES[a] || a) + ': ' + (p == null ? '<span class="dim">' + (MOMENTS.wired.includes(a) ? 'list not reached' : 'not wired yet') + '</span>' : p.shows ? '<span class="green">' + p.count + ' picked</span>' : '<span class="gold">' + p.count + ' picked, row needs ' + p.min + '</span>')).join('<br>');
     const st = x.status === 'showing' ? 'green' : x.status === 'switched off' || x.status === 'over' ? 'dim' : 'gold';
     return '<tr><td><b>' + esc(x.name) + '</b><br><small class="dim">' + esc(x.id) + (x.kids ? ' · also on Kids' : '') + '</small>' + (x.problems.length ? '<br><small class="red">' + esc(x.problems.join(' ')) + '</small>' : '') + '</td>'
       + '<td>' + esc(x.start) + ' to ' + esc(x.end) + (x.peak ? '<br><small class="dim">peak ' + esc(x.peak) + '</small>' : '') + '</td>'
@@ -21,6 +21,7 @@ async function moments(m) {
   m.innerHTML = '<h2 style="margin-top:0">Moments <small>what is in the news, and the rows and ad line each area shows for it</small></h2>'
     + '<p class="dim" style="max-width:860px">A moment shows on voidtv.net while it is switched on and today is from its start to its end; it turns itself on and off by those dates. Each area picks from its own catalogue by the rule you give it. After a change, press <b>Publish now</b> at the top to send it to the site.</p>'
     + '<div class="row"><button class="gold" onclick="momentEdit(-1)">New moment</button></div>'
+    + (MOMENTS.onDemandFrom ? '<p class="dim">On Demand picks are counted from the shows and films on ' + esc(MOMENTS.onDemandFrom) + '.</p>' : '')
     + (rows ? '<table><tr><th>Moment</th><th>Dates</th><th>Now</th><th>What it picks today</th><th>Ad line</th><th></th></tr>' + rows + '</table>' : '<p class="dim">No moments yet.</p>')
     + '<div id="medit"></div>';
   if (MOMENT_EDIT) momentForm(MOMENT_EDIT);
@@ -88,7 +89,7 @@ async function momentPreview() {
     const d = await api('/api/moments/preview', momentRead());
     for (const box of document.querySelectorAll('#medit [data-area]')) {
       const p = d.picks[box.dataset.area], el = box.querySelector('.mprev');
-      el.innerHTML = p == null ? 'This area does not read moments yet.' : '<b class="' + (p.shows ? 'green' : 'gold') + '">' + p.count + ' picked' + (p.shows ? '' : ', the row needs ' + p.min) + '</b>' + (p.first.length ? ': ' + p.first.map((g) => esc(g.title) + ' <span class="dim">(' + esc([g.system, g.year].filter(Boolean).join(', ')) + ')</span>').join(' · ') : '');
+      el.innerHTML = p == null ? (MOMENTS.wired.includes(box.dataset.area) ? 'The list of shows and films could not be read: is the internet on?' : 'This area does not read moments yet.') : '<b class="' + (p.shows ? 'green' : 'gold') + '">' + p.count + ' picked' + (p.shows ? '' : ', the row needs ' + p.min) + '</b>' + (p.first.length ? ': ' + p.first.map((g) => esc(g.title) + ' <span class="dim">(' + esc([g.system, g.year].filter(Boolean).join(', ')) + ')</span>').join(' · ') : '');
     }
     if (d.problems.length) $('#m-msg').textContent = d.problems.join(' ');
   } catch (e) { $('#m-msg').textContent = e.message; }

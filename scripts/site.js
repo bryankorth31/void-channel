@@ -44,6 +44,12 @@ console.log(GATED
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(path.join(OUT, 'data', 'shows'), { recursive: true });
 const data = assemble();
+// Moments (HQ > Moments, catalog/moments.json): the ones on, approved and not over go beside their engine in assets/brand/moments,
+// and every page that loads the engine asks for it with this version, so a moment switched in HQ is not held in Cloudflare's cache.
+const momentsPub = require('./lib/moments-pub');
+const MOMENTS = momentsPub.publicMoments(path.join(PROFILE.catalogDir, 'moments.json'));
+const MOMENTS_V = momentsPub.version(MOMENTS);
+data.momentsV = MOMENTS_V;   // the voidtv.net pages load the engine with it (scripts/lib/app.js page())
 const MIN_SHOWS = PROFILE.name === 'voidtv' ? 100 : 1; // VOIDtv ships thousands; a small profile (public access, a demo) is legitimately tiny
 if (data.shows.length < MIN_SHOWS) { console.error('SITE WOULD SHIP WITH ' + data.shows.length + ' SHOWS: the list or the catalog did not load; refusing to build'); process.exit(1); }
 // Catalog shrink (audit CF-018). The counts the site last went out with: on this PC catalog/cache/publish-state.json (the numbers publish.js
@@ -119,11 +125,6 @@ fs.writeFileSync(path.join(OUT, '_redirects'), '# No rules on purpose: see scrip
 const fnSrc = path.join(ROOT, 'functions');
 if (fs.existsSync(fnSrc)) fs.cpSync(fnSrc, path.join(OUT, 'functions'), { recursive: true });
 const brandSrc = path.join(ROOT, 'assets', 'brand');
-// Moments (HQ > Moments, catalog/moments.json): the ones on, approved and not over go beside their engine in assets/brand/moments,
-// and every page that loads the engine asks for it with this version, so a moment switched in HQ is not held in Cloudflare's cache.
-const momentsPub = require('./lib/moments-pub');
-const MOMENTS = momentsPub.publicMoments(path.join(PROFILE.catalogDir, 'moments.json'));
-const MOMENTS_V = momentsPub.version(MOMENTS);
 // The VOID player (player/): one script bundle and one stylesheet, cached with the rest of /assets.
 { const P = path.join(ROOT, 'player', 'src'); const dst = path.join(OUT, 'assets', 'player'); fs.mkdirSync(dst, { recursive: true });
   fs.writeFileSync(path.join(dst, 'voidplayer.js'), ['core.js', 'icons.js', 'player.js'].map((f) => fs.readFileSync(path.join(P, f), 'utf8')).join('\n;\n'));

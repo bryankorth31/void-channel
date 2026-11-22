@@ -17,7 +17,31 @@ function read(f) {
 function write(f, d) { fs.writeFileSync(f, JSON.stringify(d, null, 2) + '\n'); }
 
 // Each area's catalogue in the engine's one shape. An area not wired yet answers null (HQ says so instead of "0 picked").
+// On Demand's shows and films: the list visitors get (voidtv.net's data/index.js, the same file the home page reads), or the last
+// local site build when the site cannot be reached; read once every 10 minutes at most. Building it from the catalog here took
+// 4.7 minutes (scripts/lib/app.js assemble()), too slow for a Preview button. The 18+ shelf is left out. The series answer the
+// shows rule, the films (movie-...) the movies rule. warm() reads it; list() and picks() use what was read.
+let OD = null, OD_AT = 0, OD_FROM = '';
+function parseIndex(text) {
+  const S = JSON.parse(String(text).slice(String(text).indexOf('=') + 1).replace(/;\s*$/, ''));
+  return S.filter((x) => !x.adult).map((x) => ({ id: x.slug, title: x.show, year: +x.year || null, genres: (x.genres || []).concat(x.tags || []),
+    people: x.people ? String(x.people).split(', ') : [], system: x.type }));
+}
+async function warm(opts) {
+  const o = opts || {};
+  if (o.index) { OD = parseIndex(o.index); OD_AT = Date.now(); OD_FROM = 'given'; return OD_FROM; }   // tests hand the list in
+  if (OD && Date.now() - OD_AT < 600000) return OD_FROM;
+  const P = o.profile || require('./profile');
+  try {
+    const r = await fetch(String(P.domain || 'https://voidtv.net').replace(/\/$/, '') + '/data/index.js', { signal: AbortSignal.timeout(15000) });
+    if (r.ok) { OD = parseIndex(await r.text()); OD_AT = Date.now(); OD_FROM = 'voidtv.net'; return OD_FROM; }
+  } catch (e) { /* offline: the local build below */ }
+  try { OD = parseIndex(fs.readFileSync(path.join(P.siteDir, 'data', 'index.js'), 'utf8')); OD_AT = Date.now(); OD_FROM = 'the last local site build'; } catch (e) { /* none */ }
+  return OD_FROM;
+}
 const CATALOGUES = {
+  shows: () => (OD ? OD.filter((g) => !g.id.startsWith('movie-')) : null),
+  movies: () => (OD ? OD.filter((g) => g.id.startsWith('movie-')) : null),
   play: (root) => {
     let s = null;
     try { s = JSON.parse(fs.readFileSync(path.join(root, 'play', 'shelf', 'index.json'), 'utf8')); } catch (e) { return null; }
@@ -50,7 +74,7 @@ function picks(m, opts) {
 
 function list(opts) {
   const o = opts || {}, d = read(file(o.profile));
-  return { areas: engine().AREAS, wired: Object.keys(CATALOGUES), moments: d.moments.map((m) => ({ ...m, status: status(m, o.now), problems: engine().problems(m), picks: picks(m, o) })) };
+  return { areas: engine().AREAS, wired: Object.keys(CATALOGUES), onDemandFrom: OD_FROM, moments: d.moments.map((m) => ({ ...m, status: status(m, o.now), problems: engine().problems(m), picks: picks(m, o) })) };
 }
 
 // Save one moment (new, or the one with its id). Refused with every problem in plain words; nothing is half written.
@@ -112,4 +136,4 @@ function clean(b) {
   return m;
 }
 
-module.exports = { list, save, setOn, remove, picks, status, clean, file };
+module.exports = { list, save, setOn, remove, picks, status, clean, file, warm };

@@ -15,7 +15,7 @@
 // Each must stay a self-contained function: no outside names, and no line comments after code (scripts/site.js
 // refuses a page whose script has them).
 function listQuery(st) {
-  const keys = ['type', 'tag', 'genre', 'network', 'decade', 'q', 'sort'];
+  const keys = ['moment', 'type', 'tag', 'genre', 'network', 'decade', 'q', 'sort'];
   const out = [];
   for (const k of keys) {
     const v = String((st && st[k]) || '').trim();
@@ -26,7 +26,7 @@ function listQuery(st) {
 }
 
 function listRead(search, sorts) {
-  const out = { type: '', tag: '', genre: '', network: '', decade: '', q: '', sort: 'eps' };
+  const out = { moment: '', type: '', tag: '', genre: '', network: '', decade: '', q: '', sort: 'eps' };
   let p = null;
   try { p = new URLSearchParams(search || ''); } catch (e) { return out; }
   for (const k of Object.keys(out)) {

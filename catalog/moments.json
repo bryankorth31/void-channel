@@ -52,6 +52,69 @@
         "area": "play"
       },
       "source": "Bryan, 22 Nov 2026, in the PLAY lead chat; the rows from the PLAY assistant (audit/play-mode/consoles/gta-rows.json)"
+    },
+    {
+      "id": "christmas",
+      "name": "Christmas",
+      "on": false,
+      "approved": "",
+      "start": "2026-12-01",
+      "peak": "2026-12-25",
+      "end": "2026-12-31",
+      "why": "Christmas is the most watched holiday on TV; voidtv.net carries over 100 Christmas films and specials.",
+      "kids": false,
+      "areas": {
+        "shows": {
+          "title": "Christmas on voidtv.net",
+          "about": "The Christmas TV movies, specials and Christmas Carols voidtv.net carries, free.",
+          "match": {
+            "titles": [
+              "christmas",
+              "santa",
+              "rudolph",
+              "frosty",
+              "grinch",
+              "scrooge",
+              "nutcracker",
+              "mistletoe",
+              "yuletide"
+            ],
+            "not": [
+              "noels-house-party"
+            ]
+          },
+          "sort": "year",
+          "min": 4
+        },
+        "movies": {
+          "title": "Christmas on voidtv.net",
+          "about": "The Christmas TV movies, specials and Christmas Carols voidtv.net carries, free.",
+          "match": {
+            "titles": [
+              "christmas",
+              "santa",
+              "rudolph",
+              "frosty",
+              "grinch",
+              "scrooge",
+              "nutcracker",
+              "mistletoe",
+              "yuletide"
+            ],
+            "not": [
+              "noels-house-party"
+            ]
+          },
+          "sort": "year",
+          "min": 4
+        }
+      },
+      "ad": {
+        "line": "Before streaming, there was Christmas TV.",
+        "go": "See them all",
+        "area": "movies"
+      },
+      "source": "Bryan, 22 Nov 2026, in the Moments chat: layout B, engine only (no moment switched on), ad line \"Before streaming\". Saved switched off; he switches it on in HQ > Moments."
     }
   ]
 }

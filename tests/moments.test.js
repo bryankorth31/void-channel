@@ -170,3 +170,64 @@ test('the build publishes only moments that are on, approved, sound and not over
   assert.equal(pub.stamp('<script src="/assets/brand/moments/moments.js"></script>', 'abc'), '<script src="/assets/brand/moments/moments.js?v=abc"></script>');
   assert.deepEqual(pub.publicMoments(path.join(profile.catalogDir, 'none.json')), { moments: [] });
 });
+
+// 5. On Demand (Bryan, 22 Nov 2026: layout B, "gold card + row"; "engine only, no moment"; the Christmas line "Before streaming").
+test('rowsMany: one row from the shows rule and the movies rule, one copy each, the ad from either part, a moment alone for its page', () => {
+  const now = at('2026-12-10');
+  const series = [{ id: 'christmas-in-rockefeller-center', title: 'Christmas In Rockefeller Center', year: 1997 }, { id: 'friends', title: 'Friends', year: 1994 }];
+  const films = [{ id: 'movie-1', title: 'A Christmas Carol', year: 2004 }, { id: 'movie-2', title: 'Christmas in Connecticut', year: 1992 }, { id: 'movie-3', title: 'Heat', year: 1995 }];
+  const rule = { title: 'Christmas on voidtv.net', match: { titles: ['christmas'] } };
+  const m = base({ id: 'xmas', start: '2026-12-01', end: '2026-12-31', ad: { line: 'Before streaming, there was Christmas TV.', area: 'movies' }, areas: { shows: rule, movies: { ...rule, title: 'Films' } } });
+  const parts = [{ area: 'shows', items: series }, { area: 'movies', items: films }];
+  const r = M.rowsMany([m], parts, { now });
+  assert.equal(r.length, 1);
+  assert.equal(r[0].title, 'Christmas on voidtv.net', 'the first part names the row');
+  assert.deepEqual(r[0].items.map((g) => g.id), ['christmas-in-rockefeller-center', 'movie-2', 'movie-1'], 'shows first, then films, each by its rule');
+  assert.deepEqual(r[0].ad, { line: 'Before streaming, there was Christmas TV.', go: '' }, 'the ad named for movies still rides the merged row');
+  assert.equal(M.rowsMany([m], parts, { now: at('2026-11-30') }).length, 0, 'not before its start');
+  assert.equal(M.rowsMany([m], [{ area: 'shows', items: series }], { now }).length, 0, 'one show is under the min of 2');
+  assert.equal(M.rowsMany([m], [{ area: 'shows', items: series }], { now, only: 'xmas' }).length, 1, 'its own page shows even one');
+  assert.equal(M.rowsMany([m, base({ id: 'other', start: '2026-12-01', end: '2026-12-31', areas: { shows: rule } })], parts, { now, only: 'other' })[0].id, 'other');
+});
+
+test('the Christmas moment is saved switched off, waiting for Bryan, and picks Christmas titles once he switches it on', () => {
+  const x = DATA.moments.find((m) => m.id === 'christmas');
+  assert.ok(x, 'saved');
+  assert.equal(x.on, false, 'Bryan: engine only, no moment switched on');
+  assert.equal(x.approved, '', 'not approved yet: HQ shows "waiting for your yes"');
+  assert.equal(x.ad.line, 'Before streaming, there was Christmas TV.');
+  assert.equal(x.kids, false);
+  assert.equal(M.rowsMany(DATA.moments, [{ area: 'movies', items: [] }], { now: at('2026-12-10') }).filter((r) => r.id === 'christmas').length, 0, 'off: nothing shows');
+  const on = { ...x, on: true, approved: '2026-11-22' };
+  const films = ['A Christmas Carol', 'The Year Without a Santa Claus', 'Christmas in Connecticut', 'A Nutcracker Christmas', 'Heat'].map((t, i) => ({ id: 'movie-' + i, title: t, year: 1990 + i }));
+  const shows = [{ id: 'noels-house-party', title: "Noel's House Party", year: 1991 }, { id: 'christmas-in-rockefeller-center', title: 'Christmas In Rockefeller Center', year: 1997 }];
+  const r = M.rowsMany([on], [{ area: 'shows', items: shows }, { area: 'movies', items: films }], { now: at('2026-12-10') });
+  assert.equal(r.length, 1);
+  assert.deepEqual(r[0].items.map((g) => g.title), ['Christmas In Rockefeller Center', 'A Christmas Carol', 'The Year Without a Santa Claus', 'Christmas in Connecticut', 'A Nutcracker Christmas'], "Noel's House Party is left out by name, Heat by its title");
+  assert.equal(M.rowsMany([on], [{ area: 'movies', items: films }], { now: at('2027-01-01') }).length, 0, 'over after 31 December');
+});
+
+test('the voidtv.net home page: the engine loads on voidtv.net only, the card and row sit right under Live TV, Clear leaves a moment list', () => {
+  const APP = fs.readFileSync(path.join(REPO, 'scripts', 'lib', 'app.js'), 'utf8');
+  assert.ok(APP.includes("const momentsScript = PROFILE.name === 'voidtv' && mode !== 'embed' && data.momentsV ?"), 'never on Kids or the one-file preview');
+  assert.ok(APP.includes('const indexScript = momentsScript + areasScript'), 'before the page script that reads it');
+  assert.ok(APP.includes("<div id=\"onnow\">'+onNowHtml()+'</div>'+momentHome();"), 'right under Live TV and On now (Live TV stays first)');
+  assert.ok(APP.includes("goHome(){for(const k of ['moment',"), 'the logo and Clear leave a moment list');
+  assert.ok(APP.includes('let r=(state.moment?momentList():SHOWS).filter(s=>!gated(s)'), 'a moment list keeps the 18+ door and narrows by the other filters');
+  assert.ok(/momentParts\(\)\{const ok=SHOWS\.filter\(s=>!gated\(s\)&&!hidden\(s\)\)/.test(APP), 'never the 18+ shelf or a show the viewer turned down');
+  const SITE = fs.readFileSync(path.join(REPO, 'scripts', 'site.js'), 'utf8');
+  assert.ok(SITE.indexOf('data.momentsV = MOMENTS_V') > SITE.indexOf('const data = assemble()') && SITE.indexOf('data.momentsV = MOMENTS_V') < SITE.indexOf('const shell = '), 'the version is set before any page is written');
+});
+
+test('HQ reads On Demand from the list visitors get, handed in here', async () => {
+  const index = 'const SHOWS=' + JSON.stringify([
+    { show: 'Christmas In Rockefeller Center', slug: 'christmas-in-rockefeller-center', type: 'Specials', year: '1997' },
+    { show: 'A Christmas Carol', slug: 'movie-1', type: 'TV Movies', year: '2004' },
+    { show: 'Christmas After Dark', slug: 'movie-2', type: 'TV Movies', year: '2001', adult: 1 },
+  ]) + ';';
+  assert.equal(await hq.warm({ index }), 'given');
+  const x = { ...DATA.moments.find((m) => m.id === 'christmas') };
+  const p = hq.picks(x);
+  assert.equal(p.shows.count, 1);
+  assert.equal(p.movies.count, 1, 'the 18+ film is never counted');
+});

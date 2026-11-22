@@ -10,7 +10,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { listQuery, listRead, listSource } = require('../scripts/lib/app-list');
 
-const BLANK = { type: '', tag: '', genre: '', network: '', decade: '', q: '', sort: 'eps' };
+const BLANK = { moment: '', type: '', tag: '', genre: '', network: '', decade: '', q: '', sort: 'eps' };
 const SORTS = ['eps', 'rating', 'year', 'old', 'added', 'az'];
 
 test('no filter gives no query string, and the default sort is not written', () => {
@@ -45,8 +45,9 @@ test('a sort nobody offers falls back to the default, and a long value is cut', 
   assert.equal(listRead('?q=' + 'x'.repeat(500), SORTS).q.length, 80);
 });
 
-test('what is written reads back the same', () => {
-  for (const st of [BLANK, { ...BLANK, type: 'Late Night' }, { ...BLANK, tag: '90s Sitcoms', genre: 'Comedy', network: 'A&E', decade: '1990s', q: 'law & order', sort: 'old' }]) {
+test('what is written reads back the same (a moment list too: ?moment=christmas)', () => {
+  assert.equal(listQuery({ ...BLANK, moment: 'christmas' }), '?moment=christmas');
+  for (const st of [BLANK, { ...BLANK, type: 'Late Night' }, { ...BLANK, tag: '90s Sitcoms', genre: 'Comedy', network: 'A&E', decade: '1990s', q: 'law & order', sort: 'old' }, { ...BLANK, moment: 'christmas' }, { ...BLANK, moment: 'christmas', type: 'TV Movies', sort: 'az' }]) {
     assert.deepEqual(listRead(listQuery(st), SORTS), st);
   }
 });

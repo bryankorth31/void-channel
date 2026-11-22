@@ -76,15 +76,28 @@
 
   // An area's moment rows today: [{ id, name, title, about, ad, items }], at most opts.max (2), each with at least its
   // rule's min (2) items. The ad is the moment's own line when its ad belongs to this area (or names none). (pure)
-  function rows(moments, area, items, opts) {
+  function rows(moments, area, items, opts) { return rowsMany(moments, [{ area, items }], opts); }
+
+  // One row a moment drawn from several areas at once (On Demand's home row takes its shows rule over the series and its
+  // movies rule over the films): the picks of each part in turn, one copy of each item, the first part's title and about,
+  // the smallest min of the rules it has. opts.only = a moment id: that moment alone (its own page), with min 1. (pure)
+  function rowsMany(moments, parts, opts) {
     const o = opts || {}, max = o.max == null ? 2 : o.max, out = [];
     for (const m of active(moments, o)) {
-      const rule = m.areas && m.areas[area];
-      if (!rule) continue;
-      const got = pick(rule, items), min = rule.min == null ? 2 : Math.max(1, +rule.min || 1);
-      if (got.length < min) continue;
-      const ad = m.ad && m.ad.line && (!m.ad.area || m.ad.area === area) ? { line: String(m.ad.line), go: String(m.ad.go || '') } : null;
-      out.push({ id: m.id, name: m.name, title: String(rule.title || m.name || ''), about: String(rule.about || ''), ad, items: got });
+      if (o.only && m.id !== o.only) continue;
+      let title = '', about = '', min = Infinity, has = false, ad = null;
+      const items = [], seen = new Set();
+      for (const part of Array.isArray(parts) ? parts : []) {
+        const rule = m.areas && m.areas[part.area];
+        if (!rule) continue;
+        has = true;
+        if (!title) { title = String(rule.title || m.name || ''); about = String(rule.about || ''); }
+        min = Math.min(min, rule.min == null ? 2 : Math.max(1, +rule.min || 1));
+        for (const g of pick(rule, part.items)) { const k = String(g.id != null ? g.id : g.item); if (!seen.has(k)) { seen.add(k); items.push(g); } }
+        if (!ad && m.ad && m.ad.line && (!m.ad.area || m.ad.area === part.area)) ad = { line: String(m.ad.line), go: String(m.ad.go || '') };
+      }
+      if (!has || items.length < (o.only ? 1 : min)) continue;
+      out.push({ id: m.id, name: m.name, title, about, ad, items });
       if (out.length >= max) break;
     }
     return out;
@@ -116,7 +129,7 @@
     return p;
   }
 
-  const api = { AREAS, today, words, isOn, active, pick, rows, problems };
+  const api = { AREAS, today, words, isOn, active, pick, rows, rowsMany, problems };
   if (typeof module === 'object' && module.exports) { module.exports = api; return; }
   // In a page: the approved moments sit beside this file (the site build writes moments.json there, with the same ?v= as
   // this script, so a change in HQ reaches visitors at once). VoidMoments.ready gives the list; [] when there is none.
@@ -125,5 +138,7 @@
   const base = (function () { try { return new URL('.', document.currentScript.src).href; } catch (e) { return '/assets/brand/moments/'; } })();
   api.ready = fetch(base + 'moments.json' + v).then((r) => (r.ok ? r.json() : { moments: [] })).then((d) => (d && Array.isArray(d.moments) ? d.moments : [])).catch(() => []);
   api.rowsFor = (area, items, opts) => api.ready.then((ms) => rows(ms, area, items, opts));
+  api.loaded = null;
+  api.ready.then((ms) => { api.loaded = ms; });
   root.VoidMoments = api;
 })(typeof self !== 'undefined' ? self : this);
