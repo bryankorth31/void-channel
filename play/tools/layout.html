@@ -28,8 +28,9 @@ header h1{font-size:15px;margin:0 6px 0 2px}
 header .grow{flex:1}
 #say{color:var(--dim);overflow:hidden;text-overflow:ellipsis}
 #say.ok{color:var(--ok)}#say.bad{color:var(--bad)}
-main{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1fr) 292px}
-#stage{position:relative;overflow:hidden;display:grid;place-items:center;background:radial-gradient(ellipse at 50% 40%,#12141d 0%,#07080c 75%)}
+/* One row, no taller than the window: an upright phone at full height must not stretch it (the frame is drawn smaller to fit). */
+main{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1fr) 292px;grid-template-rows:minmax(0,1fr)}
+#stage{position:relative;overflow:hidden;min-height:0;display:grid;place-items:center;background:radial-gradient(ellipse at 50% 40%,#12141d 0%,#07080c 75%)}
 #stage.full{overflow:auto;place-items:start center;padding:14px 0}
 #fit{position:relative}
 #phone{position:absolute;left:0;top:0;transform-origin:0 0;border:10px solid #1b1e2a;border-radius:34px;background:#000;box-shadow:0 0 0 2px #2c3144,0 18px 40px rgba(0,0,0,.6);overflow:hidden}

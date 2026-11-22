@@ -129,6 +129,16 @@ test('the editor\'s own rules: a part matched to its partner, lined up with the 
   assert.deepEqual(s.lines, [{ h: 200 }]);
   assert.deepEqual(E.snap({ x: 384, y: 100, w: 80, h: 40 }, [other], 844, 390, 5).box.x, 382, 'its middle on the middle of the screen');
   assert.deepEqual(E.snap({ x: 300, y: 120, w: 80, h: 40 }, [other], 844, 390, 5).lines, []);
+  // The frame is drawn to fit the window, whole: in Bryan's 1278 by 513 window (a 986 by 469 stage beside the panel)
+  // every phone, sideways and upright, with its rim, is inside the stage (the Void polish lead found upright running
+  // off the bottom); and it is never drawn bigger than life.
+  for (const [name, long, short] of E.PHONES) for (const [W, H] of [[long, short], [short, long]]) {
+    const s = E.scaleFor(986, 469, W, H);
+    assert.ok(s <= 1 && (W + 20) * s <= 986 - 28 + 0.01 && (H + 20) * s <= 469 - 28 + 0.01, name + ' ' + W + ' x ' + H + ' at ' + s.toFixed(2));
+  }
+  assert.equal(E.scaleFor(986, 469, 844, 390), 1, 'a phone sideways is shown at its true size there');
+  assert.ok(E.scaleFor(986, 469, 390, 844) < 0.52, 'upright it is drawn at about half size');
+  assert.equal(E.scaleFor(3000, 2000, 844, 390), 1);
   // Kept on the screen, and never smaller than a thumb can find; a round part stays round.
   assert.deepEqual(E.hold({ x: -30, y: 380, w: 100, h: 46 }, 844, 390, false), { x: 0, y: 344, w: 100, h: 46 });
   assert.deepEqual(E.hold({ x: 10, y: 10, w: 5, h: 5 }, 844, 390, false), { x: 10, y: 10, w: 24, h: 24 });
@@ -181,6 +191,10 @@ test('the pads read the file, the site carries it, and the editor has what Bryan
   for (const c of controls) assert.match(c, / title="[^"]{12,}"/, 'a hover tip on ' + c.slice(0, 60));
   assert.ok(ed.includes("el.title = p.name + ': drag to move it. Drag the round corner to make it bigger or smaller.';") && ed.includes("grip.title = 'Drag to resize ' + p.name;"), 'and on every part and its corner');
   assert.ok(ed.includes("fetch('/api/layout', { method: 'POST'"), 'Save writes the file the real pads read');
+  assert.ok(html.includes('grid-template-rows:minmax(0,1fr)}'), 'the stage is never taller than the window');
+  assert.ok(ed.includes("$('fit').style.width = $('fit').style.height = '0px';\n    const stage = $('stage').getBoundingClientRect();"), 'the room is measured with the phone taken out of it');
+  assert.ok(ed.includes("if (!st.note) say([bad.length ? words(bad[0]) + '.' : '', dirty ? 'Not saved yet.' : ''].filter(Boolean).join(' '), bad.length ? 'bad' : '');"), 'the line at the top is said afresh after every change, Undo too');
+  assert.ok(ed.includes("return JSON.stringify(now) !== JSON.stringify(saved);"), 'a layout taken back to what was saved is not unsaved');
   assert.ok(ed.includes("src: () => '../pad.html?edit=1'"), 'the frame holds the real pad page, not a drawing of it');
   const games = [...ed.matchAll(/\['[^'\]]+', '([a-z0-9-]+)', (true|false)\]/g)];
   assert.ok(games.length >= 7);

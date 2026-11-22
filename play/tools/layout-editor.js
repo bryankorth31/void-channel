@@ -43,6 +43,9 @@
     const over = square ? w * L.OVER : 0, lo = over ? -over : 0;
     return { x: Math.max(lo, Math.min(box.x, W - w + over)), y: Math.max(lo, Math.min(box.y, H - h + over)), w, h };
   }
+  // Pure (tested): how much smaller the phone is drawn so that the whole of it, with its 10 px rim, fits the room the
+  // stage has (the Void polish lead, 22 Nov 2026: upright ran off the bottom of a 513 px tall window). Never bigger than life.
+  const scaleFor = (roomW, roomH, W, H) => Math.max(0.1, Math.min(1, (roomW - 28) / (W + 20), (roomH - 28) / (H + 20)));
   // Pure (tested): what is wrong, in words.
   const words = (p) => (p.kind === 'off' ? (NAMES[p.a] || p.a) + ' is off the screen' : (NAMES[p.a] || p.a) + ' and ' + (NAMES[p.b] || p.b) + ' touch');
   // Pure (tested): a layout drawn smaller on this screen (it is squarer than the layout fits at full size), made into
@@ -61,7 +64,7 @@
     });
   }
 
-  const api = { NAMES, PARTNER, PHONES, WIDEST, mirror, snap, hold, words, rebase, fits };
+  const api = { NAMES, PARTNER, PHONES, WIDEST, mirror, snap, hold, scaleFor, words, rebase, fits };
   if (typeof module === 'object' && module.exports) { module.exports = api; return; }
   root.PlayLayoutEditor = api;
 
@@ -90,13 +93,18 @@
     return st.works[key()];
   }
   const say = (text, kind) => { $('say').textContent = text; $('say').className = kind || ''; };
+  // A note that stays over the standing line until the next change (begin() clears it).
+  const note = (text, kind) => { st.note = true; say(text, kind); };
   const size = () => { const [, long, short] = PHONES[st.phone]; return st.way === 'side' ? [long, short] : [short, long]; };
 
   // The frame at the phone's own size, drawn smaller when the window is: what you see keeps its true shape.
   function frame() {
-    const [W, H] = size(), stage = $('stage').getBoundingClientRect();
-    st.scale = st.full ? 1 : Math.min(1, (stage.width - 28) / (W + 20), (stage.height - 28) / (H + 20));
+    const [W, H] = size();
     $('stage').classList.toggle('full', !!st.full); $('zoom').className = st.full ? 'on' : '';
+    // The room is measured with the phone taken out of it, so the phone as it was drawn before cannot stretch it.
+    $('fit').style.width = $('fit').style.height = '0px';
+    const stage = $('stage').getBoundingClientRect();
+    st.scale = st.full ? 1 : scaleFor(stage.width, stage.height, W, H);
     $('phone').style.width = W + 20 + 'px'; $('phone').style.height = H + 20 + 'px'; $('phone').style.transform = 'scale(' + st.scale + ')';
     $('fit').style.width = (W + 20) * st.scale + 'px'; $('fit').style.height = (H + 20) * st.scale + 'px';
   }
@@ -129,7 +137,15 @@
   const shape = () => Math.max(st.area.w, st.area.h) / Math.min(st.area.w, st.area.h);
   // After a change: the phone shown, and every wider one, gets the layout exactly as it stands here; fit is the squarest
   // screen it still fits at full size, and no squarer than this phone.
-  function refit() { const w = work(); w.set.fit = Math.min(shape(), L.fitOf(w.set.parts, shape(), st.way === 'up')); w.dirty = true; }
+  function refit() { const w = work(); w.set.fit = Math.min(shape(), L.fitOf(w.set.parts, shape(), st.way === 'up')); }
+  // Does a layout being worked on differ from what the file holds? Only one he has touched can: taken back to what was
+  // saved (Undo), it is not unsaved any more.
+  function unsaved(k) {
+    const w = st.works[k], [kind, way] = k.split('.');
+    if (!w || !w.touched) return false;
+    const saved = (st.file[kind] && st.file[kind][way]) || null, now = w.set ? (L.clean({ [kind]: { [way]: w.set } })[kind] || {})[way] || null : null;
+    return JSON.stringify(now) !== JSON.stringify(saved);
+  }
 
   // ---- Drawing: a handle over each part, the list, the numbers, the phones it fits ----
   const handles = new Map();
@@ -178,10 +194,12 @@
       li.append(l, r); ul.appendChild(li);
     }
     $('undo').disabled = !w.undo.length;
-    const dirty = Object.values(st.works).some((x) => x.dirty);
+    const dirty = Object.keys(st.works).some(unsaved);
     $('save').disabled = !dirty;
     $('way-side').className = st.way === 'side' ? 'on' : ''; $('way-up').className = st.way === 'up' ? 'on' : '';
-    if (dirty && !$('say').classList.contains('bad')) say(bad.length ? words(bad[0]) + '. Not saved yet.' : 'Not saved yet.', bad.length ? 'bad' : '');
+    // The line at the top says how things stand now, every time: what is wrong, whether anything is unsaved. A note of
+    // its own (Saved, or why a save failed) stays until the next change.
+    if (!st.note) say([bad.length ? words(bad[0]) + '.' : '', dirty ? 'Not saved yet.' : ''].filter(Boolean).join(' '), bad.length ? 'bad' : '');
   }
   function guides(lines) {
     for (const g of [...$('over').querySelectorAll('.g')]) g.remove();
@@ -196,6 +214,7 @@
   // The first change takes the built-in layout in as it stands, every part of it, so nothing jumps.
   function begin() {
     const w = work();
+    w.touched = true; st.note = false;
     w.undo.push(JSON.stringify(w.set)); if (w.undo.length > 200) w.undo.shift();
     if (!w.set) { w.set = { parts: {}, fit: 1 }; for (const p of st.parts) w.set.parts[p.id] = L.toEntry(p.box, st.area.w, st.area.h); }
     // On a phone this layout is drawn smaller for, editing starts from what is seen: it becomes full size here.
@@ -205,7 +224,7 @@
   function put(id, box) {
     const w = work(), p = st.parts.find((x) => x.id === id);
     w.set.parts[id] = L.toEntry(hold(box, st.area.w, st.area.h, p && p.square), st.area.w, st.area.h);
-    refit(); $('say').className = '';
+    refit();
     sync();
   }
   function grab(el, id) {
@@ -260,7 +279,7 @@
   };
   $('center').onclick = () => { const p = st.parts.find((x) => x.id === st.sel); if (p) { begin(); put(p.id, { x: (st.area.w - p.box.w) / 2, y: p.box.y, w: p.box.w, h: p.box.h }); } };
   $('snap').onclick = () => { st.snap = !st.snap; $('snap').className = st.snap ? 'on' : ''; $('snap').textContent = 'Line up: ' + (st.snap ? 'on' : 'off'); };
-  $('builtin').onclick = () => { const w = work(); w.undo.push(JSON.stringify(w.set)); w.set = null; w.dirty = !!(st.file[st.kind] && st.file[st.kind][st.way]); st.sel = null; say(w.dirty ? 'Back to the built-in layout. Not saved yet.' : 'The built-in layout.'); sync(); };
+  $('builtin').onclick = () => { const w = work(); w.undo.push(JSON.stringify(w.set)); w.set = null; w.touched = true; st.note = false; st.sel = null; sync(); };
   // The on-screen pad keeps a layout for each shape of button area. This one, given to the others too: the d-pad, L, R
   // and the rest land in the same places for every machine, and each shape's buttons fill the same box.
   $('spread').onclick = () => {
@@ -268,11 +287,11 @@
     for (const k of Object.keys(SHAPES)) {
       if (k === st.kind) continue;
       const was = st.works[k + '.' + st.way] || { set: (st.file[k] && st.file[k][st.way]) || null, undo: [] };
-      st.works[k + '.' + st.way] = { set: JSON.parse(JSON.stringify(w.set)), undo: was.undo.concat([JSON.stringify(was.set)]), dirty: true };
+      st.works[k + '.' + st.way] = { set: JSON.parse(JSON.stringify(w.set)), undo: was.undo.concat([JSON.stringify(was.set)]), touched: true };
     }
-    say('This layout is now on the pads of all four button shapes. Not saved yet.'); draw();
+    w.touched = true; note('This layout is now on the pads of all four button shapes. Not saved yet.'); draw();
   };
-  function undo() { const w = work(); if (!w.undo.length) return; w.set = JSON.parse(w.undo.pop()); w.dirty = true; sync(); }
+  function undo() { const w = work(); if (!w.undo.length) return; w.set = JSON.parse(w.undo.pop()); w.touched = true; st.note = false; sync(); }
   $('undo').onclick = undo;
   addEventListener('keydown', (e) => {
     if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
@@ -288,21 +307,21 @@
     $('save').disabled = true;
     try {
       for (const [k, w] of Object.entries(st.works)) {
-        if (!w.dirty) continue;
+        if (!unsaved(k)) continue;
         const [pad, way] = k.split('.');
         const set = w.set ? { parts: w.set.parts, fit: w.set.fit } : null;
         const r = await fetch('/api/layout', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ pad, way, set }) });
         const j = await r.json().catch(() => ({}));
         if (!r.ok) throw new Error(j.error || 'the server said ' + r.status);
-        st.file = L.clean(j.file); w.dirty = false;
+        st.file = L.clean(j.file); w.touched = false;
       }
-      say('Saved to play/layouts.json. Players get it after the next push.', 'ok');
+      note('Saved to play/layouts.json. Players get it after the next push.', 'ok');
     } catch (e) {
-      say('Not saved: ' + (/^(127\.0\.0\.1|localhost)$/.test(location.hostname) ? e.message : 'Save works on this PC only, from the local PLAY server (node play/serve.js).'), 'bad');
+      note('Not saved: ' + (/^(127\.0\.0\.1|localhost)$/.test(location.hostname) ? e.message : 'Save works on this PC only, from the local PLAY server (node play/serve.js).'), 'bad');
     }
     draw();
   };
-  addEventListener('beforeunload', (e) => { if (Object.values(st.works).some((w) => w.dirty)) { e.preventDefault(); e.returnValue = ''; } });
+  addEventListener('beforeunload', (e) => { if (Object.keys(st.works).some(unsaved)) { e.preventDefault(); e.returnValue = ''; } });
 
   // ---- Choosing what to look at ----
   async function game() {

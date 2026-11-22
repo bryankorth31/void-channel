@@ -1082,6 +1082,8 @@
     if (FRAME) {
       hub = PlayHub.createHub({ send() {}, onAction() {}, onSeat() {}, onRelease() {} });
       document.body.classList.add('has-cheats'); $('cover').hidden = true;
+      // The bar belongs to play, not to the layout: in the frame it would only sit over the picture with its words squeezed.
+      for (const e of document.querySelectorAll('.bar')) e.style.display = 'none';
       place.sig = ''; place(); window.PlayFrame.ready = true;
       return;
     }
