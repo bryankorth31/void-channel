@@ -566,9 +566,6 @@ test('a finished publish job says how it ended: held, with what to press; a run 
   }
 });
 
-// ---- the stop logic itself, against sleepers this test starts and ends -----------------------------------------
-
-test('stop: a job whose process is still the one HQ launched is stopped, and only that process', { skip: !WIN && 'Windows only' }, async () => {
 // Audit 19 Nov 2026, H6: a lookup that failed read "No builder jobs running" and "none found", as if it had worked.
 test('a lookup that fails is said as a failure beside the list (processesError), never as an empty list; the next good one clears it', { skip: !WIN && 'the lookups are Windows ones' }, async () => {
   const { start } = require(HQ_FILE);
@@ -594,6 +591,9 @@ test('a lookup that fails is said as a failure beside the list (processesError),
   }
 });
 
+// ---- the stop logic itself, against sleepers this test starts and ends -----------------------------------------
+
+test('stop: a job whose process is still the one HQ launched is stopped, and only that process', { skip: !WIN && 'Windows only' }, async () => {
   const { stopHqJob, processInfo } = require(HQ_FILE).stop;
   const target = spawn(process.execPath, ['-e', 'setTimeout(()=>{},60000)', 'C:\\fake\\scripts\\art.js'], { stdio: 'ignore', windowsHide: true });
   const bystander = spawn(process.execPath, ['-e', 'setTimeout(()=>{},60000)', 'C:\\fake\\scripts\\art.js'], { stdio: 'ignore', windowsHide: true });
