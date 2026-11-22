@@ -177,6 +177,19 @@ function chapters(u) {
 }
 // A unit whose lecture plays on the page and whose questions carry a time can be taken on phones (Answer on your
 // phones): the page stops at each question's line and sends it to the phones in the room.
+// The flip side of a heard lecture (flip.js; the data is made by: node scripts/uni.js flip <course> <unit>). The
+// preview shows every one that has been made; the public copy only a unit marked "flip": true in its course file.
+const flipFile = (c, u) => path.join(DIR, 'flip', c.slug + '-' + u.n + '.json');
+const shipsFlip = (c, u) => !!(u.main && u.main.item && (!LIVE || u.flip === true) && fs.existsSync(flipFile(c, u)));
+// What the page needs of it, and no more: each stretch's times, question, the teacher's words, what is named, what
+// the University holds, why it is needed, and every word with its own time.
+const flipData = (c, u) => {
+  const j = JSON.parse(fs.readFileSync(flipFile(c, u), 'utf8'));
+  return { title: j.title, seconds: j.seconds, stretches: j.stretches.map((s) => ({
+    n: s.n, s: s.start, e: s.end, q: s.q || '', hk: !!s.housekeeping, a: s.answer ? [s.answer.quote, s.answer.t, s.answer.e] : null,
+    names: s.names.map((x) => [x.text, x.kind, x.t, x.held ? 1 : 0]), shows: s.shows.map((x) => [x.kind, x.name, x.note || '', x.link || '', x.t]),
+    need: s.needed, low: s.low.map((x) => s.words.findIndex((w) => w[1] === x.t && w[0] === x.word)).filter((i) => i >= 0), w: s.words })) };
+};
 const shipsAnswer = (u) => !!(u.main && u.main.item && (u.quiz || []).some((q) => typeof q.t === 'number'));
 // Our own quiz, written from the lecture; every answer quotes the line it comes from (checked word for word).
 function quiz(u) {
@@ -214,6 +227,7 @@ function unit(u, voices, c) {
     + (u.main ? '<div class="pieces">' + piece(u.main.role === 'train' ? { ...u.main, unit: u.n } : u.main, true) + '</div>' : '')
     // Preview only: make questions with a phone while the lecture plays (make/screen.js shows the button once the
     // preview server says this lecture has been heard). The public copy never carries it.
+    + (shipsFlip(c, u) ? '<div class="flip" hidden data-flip="flip-' + esc(c.slug) + '-' + u.n + '.json" data-mark="img/vtv-mark.png"></div>' : '')
     + (!LIVE && u.main && u.main.item ? '<div class="makebar" hidden><button type="button" class="makebtn" title="Shows a QR code. Scan it with your phone, then mark moments in the lecture and write a question for each. The questions join Check yourself.">Make questions with your phone</button></div>' : '')
     + reader(u)
     + chapters(u)
@@ -413,7 +427,7 @@ ${(c.channels || []).length ? '<h3 style="margin:0 0 12px">Channels for this cou
 ${c.units.map((u) => unit(u, c.voices, c)).join('\n')}
 </main></div>
 ${FOOT()}
-<script src="crystal.js"></script><script src="scene.js"></script>${c.units.some(shipsLab) ? '<script src="planck.min.js"></script><script src="lab.js"></script>' + [...new Set(c.units.filter(shipsLab).map((u) => u.lab.bench))].map((n) => '<script src="lab-' + esc(n) + '.js"></script>').join('') : ''}${c.units.some(shipsScale) ? '<script type="module" src="scale.js"></script>' : ''}
+<script src="crystal.js"></script><script src="scene.js"></script>${c.units.some((u) => shipsFlip(c, u)) ? '<script src="flip.js"></script>' : ''}${c.units.some(shipsLab) ? '<script src="planck.min.js"></script><script src="lab.js"></script>' + [...new Set(c.units.filter(shipsLab).map((u) => u.lab.bench))].map((n) => '<script src="lab-' + esc(n) + '.js"></script>').join('') : ''}${c.units.some(shipsScale) ? '<script type="module" src="scale.js"></script>' : ''}
 <script>
 function seek(el, t) {
   var v = el.closest('.unit').querySelector('video, audio'); if (!v) return;
@@ -902,6 +916,12 @@ if (LIVE && loaded.some((c) => c.units.some(shipsAnswer))) {
   shipJs(path.join(DIR, '..', '..', 'play', 'src', 'qr.js'), path.join(OUT, 'qr.js'));
   const give = 'If you found this service helpful, please think of donating to keep it running and to make more services like this possible. Every donation goes to CASH (cashvalues.org) and feeds its mission in the real world. <a href="' + DONATE + '" target="_blank" rel="noopener">Donate to CASH</a>';
   fs.writeFileSync(path.join(OUT, 'join.html'), fs.readFileSync(path.join(DIR, 'make', 'phone.html'), 'utf8').replace('<!--give-->', () => give).replace('<!--home-->', '<p><a href="index.html" title="Go to the Void University front page">← Void University</a></p>'));
+}
+if (loaded.some((c) => c.units.some((u) => shipsFlip(c, u)))) {
+  shipJs(path.join(DIR, 'flip.js'), path.join(OUT, 'flip.js'));
+  fs.mkdirSync(path.join(OUT, 'img'), { recursive: true });
+  fs.copyFileSync(path.join(DIR, 'img', 'vtv-mark.png'), path.join(OUT, 'img', 'vtv-mark.png'));
+  for (const c of loaded) for (const u of c.units) if (shipsFlip(c, u)) fs.writeFileSync(path.join(OUT, 'flip-' + c.slug + '-' + u.n + '.json'), JSON.stringify(flipData(c, u)));
 }
 MECH = loaded.find((c) => c.shelf === 'supplement') || null;
 for (const c of loaded) if (c.shelf !== 'supplement') for (const u of c.units) for (const n of u.mechanisms || []) (USED[n] = USED[n] || []).push({ slug: c.slug, course: c.name, n: u.n, title: u.title });

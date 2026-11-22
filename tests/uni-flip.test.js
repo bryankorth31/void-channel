@@ -88,3 +88,30 @@ test('a whole lecture: questions, what the University holds, what is needed, uns
   assert.match(page, /\[hat\]/);
   assert.ok(!/[—–]/.test(page), 'a dash in the readable page');
 });
+
+// The page side (profiles/university/flip.js) and what build.js ships of it.
+const fs = require('fs');
+const path = require('path');
+const { execFileSync } = require('child_process');
+const uni = require('../scripts/lib/uni');
+const page = require('../profiles/university/flip.js');
+
+test('the page finds the stretch and the word the clock is in', () => {
+  const S = [{ s: 0, e: 10, w: [['a', 0, 1], ['b', 1, 2], ['c', 4, 5]] }, { s: 12, e: 20, w: [['d', 12, 13]] }];
+  assert.strictEqual(page.stretchAt(S, 0), 0);
+  assert.strictEqual(page.stretchAt(S, 11), 0, 'a pause between stretches belongs to the one before it');
+  assert.strictEqual(page.stretchAt(S, 12), 1);
+  assert.strictEqual(page.stretchAt(S, 999), 1);
+  assert.strictEqual(page.wordAt(S[0], 0.5), 0);
+  assert.strictEqual(page.wordAt(S[0], 3), 1, 'a silence keeps the last word said');
+  assert.strictEqual(page.wordAt(S[1], 5), -1, 'no word is lit before the first one is said');
+});
+
+test('the public copy carries no flip side unless a unit is marked "flip": true', () => {
+  const marked = fs.readdirSync(path.join(uni.UNI, 'courses')).filter((f) => f.endsWith('.json'))
+    .some((f) => JSON.parse(fs.readFileSync(path.join(uni.UNI, 'courses', f), 'utf8')).units.some((u) => u.flip === true));
+  execFileSync(process.execPath, [path.join(uni.UNI, 'build.js'), '--site'], { stdio: 'pipe' });
+  const site = path.join(uni.UNI, 'site');
+  const has = fs.readdirSync(site).some((f) => /^flip/.test(f)) || fs.readdirSync(site).filter((f) => f.endsWith('.html')).some((f) => /class="flip"/.test(fs.readFileSync(path.join(site, f), 'utf8')));
+  if (!marked) assert.ok(!has, 'a flip side reached the public copy with no unit marked for it');
+});
