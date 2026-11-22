@@ -839,7 +839,7 @@ function bindEpisodeEvents(p){const v=p.v;
  v.addEventListener('ended',()=>{const c=p._cur;if(c){track('end',{slug:c.slug,ep:c.epk,pos:v.currentTime,dur:v.duration||0});enjoyAsk(c.slug,true)}});
  v.addEventListener('play',()=>{const c=p._cur;if(!c||!state.show||state.show.slug!==c.slug||state.se!==c.se||state.e!==c.e)return;const r=ME.history[c.slug];if(!r||r.se!==c.se||r.e!==c.e)remember()});
  v.addEventListener('timeupdate',()=>{const c=p._cur;if(!c)return;const t=Date.now();if(t-(p._lastSave||0)>5000){p._lastSave=t;const r=ME.history[c.slug];if(r&&r.se===c.se&&r.e===c.e&&v.readyState>=2){r.pos=Math.floor(v.currentTime);r.at=t;saveMe()}}})}
-function canReuse(s){const h=$('vph');return !!(VP&&VP._slug===s.slug&&h&&VP.root&&h.contains(VP.root)&&document.querySelector('.show .player .vcol'))}
+function canReuse(s){const h=$('vph');return !!(VP&&VP._slug===s.slug&&h&&VP.root&&vpIn(h)&&document.querySelector('.show .player .vcol'))}
 function swapEpisode(s,se,ep){const sh=document.querySelector('.show'),hero=sh.querySelector('.hero');if(hero)hero.remove();
  const had=document.activeElement&&document.activeElement.closest&&document.activeElement.closest('.now');
  const now=sh.querySelector('.now');if(now)now.outerHTML=nowRow(se,ep,s);
@@ -881,6 +881,10 @@ async function degPath(target){let adj;if(!GRAPH_LOADED){const out=$('degp');if(
  const chain=[];for(let c=target;c;c=prev[c])chain.unshift(c);if(!GRAPH_LOADED)await Promise.all(chain.map((sl)=>BY_SLUG[sl]?ensure(BY_SLUG[sl]).catch(()=>null):null));const via={};chain.forEach((sl,i)=>{if(i){const a=chain[i-1];via[sl]=(((LINKS[a]||{})[sl])||((LINKS[sl]||{})[a])||[])[0]}});let h='<div class="path">';chain.forEach((sl,i)=>{if(i){const id=via[sl];const p=PEOPLE[id];h+='<span class="v" onclick="person('+id+')">→ '+esc(p?p.name:'?')+' →</span>'}h+='<span class="s" onclick="go(\\''+sl+'\\')">'+esc(BY_SLUG[sl].show)+'</span>'});h+='</div><div class="g" style="color:var(--dim);font-size:12px;margin-top:4px">'+(chain.length-1)+' hop'+(chain.length===2?'':'s')+' · every show on the path plays here</div>';out.innerHTML=h}
 // LIVE TV. What is on comes from the schedule in scripts/lib/tvgrid.js; the text below IS that file, so the page, the guide and the tests run the same code: dayparts, strips, airings with real start and end times on the viewer's own clock.
 const TVG=${TVGRID_SRC};
+// Is the player on that part of the page? Popped out (player/src/popout.js) it still counts where its place is kept, so Live TV
+// goes on in the pop-out window from one programme to the next instead of building a new player on the page. A function
+// declaration, so the show page's canReuse (above) can call it too.
+function vpIn(h){return !!(VP&&h&&(VP.isIn?VP.isIn(h):h.contains(VP.root)))}
 let TV_TOKEN=0;
 // episodes that failed in the last hour, per channel: the airing gives its place to another episode of the same show, and a dead episode cannot loop (Bryan, 20 Oct 2026)
 const TV_DEAD={};const tvKey=(c,a)=>c.id+':'+a.s+':'+a.se+'x'+a.n;const tvDead=(c,a)=>TV_DEAD[tvKey(c,a)]>Date.now()-36e5;
@@ -894,7 +898,7 @@ const clock=(ms)=>new Date(ms).toLocaleTimeString([],{hour:'numeric',minute:'2-d
 // Change channel on the player that is already on the page: same player, same video, same fullscreen, no render(). The page
 // pieces tvPage draws around it (guide, title, the bar under the video) are updated in place; what plays and when is tvPlay's, as always.
 // False when there is no player on the Live TV page to switch (not turned on yet, other page): tune then falls back to render().
-function tuneHere(id){const host=$('vph'),g=document.querySelector('.guide'),home=viewNow()==='home';if(!tvLive()||!TV||!VP||!host||(!home&&!g)||!host.contains(VP.root))return false;
+function tuneHere(id){const host=$('vph'),g=document.querySelector('.guide'),home=viewNow()==='home';if(!tvLive()||!TV||!VP||!host||(!home&&!g)||!vpIn(host))return false;
  const chans=TV.filter(c=>!c.adult||ME.adult),cur=chans.find(c=>c.id===id);if(!cur)return false;const now=chanNow(cur);if(!now)return false;const s=SHOWS[now.a.s];
  if(!home){gdTune(cur.id);document.title=cur.name+' · '+SITE}osd(cur,now.a,s,null);tvSwirlFlash();if(VP.flashChannel)VP.flashChannel(cur.name);tvPlay(cur);return true}
 function tune(id){if(window.PartyGuest&&PartyGuest.holds(id))return;track('tune',{slug:id});state.chan=id;state.tvOn=true;keepChan(id);const home=viewNow()==='home';if(!home)history.replaceState(null,'',urlFor('tv/'+id));if(!tuneHere(id)){if(home){HTV.forced=true;homeTvStart()}else render()}window.scrollTo(0,0)}
@@ -953,7 +957,7 @@ async function tvPlay(c,fromEnd,tries){const host=$('vph');if(!host)return;const
  if(x.k==='ep'&&(!ep||tvDead(c,a))){const w=tvSwap(c,a,s,off);se=w&&s.seasons.find(z=>z.season===w.se);ep=w&&w.ep}
  if(!ep||(ep.min&&off>=ep.min*60-20))return skip();
  osd(c,a,SHOWS[a.s],x.k==='ep'?ep:null);track('tvplay',{slug:c.id,x:s.slug+' '+se.season+'x'+ep.n});TVCUR={c,a,x,cur:{s:piece.s,se:se.season,n:ep.n}};
- if(!VP||!host.contains(VP.root))VP=tvMk(host);if(!VP)return;
+ if(!VP||!vpIn(host))VP=tvMk(host);if(!VP)return;
  VP._ctx={slug:s.slug,ep:se.season+'x'+ep.n,item:ep.item||''};VP.load({id:c.id+'/'+s.slug+'/'+se.season+'x'+ep.n,title:s.show+' · '+ep.name,show:c.name,files:filesFor(ep),artwork:s.poster||''},{startAt:off>5?off:0,autoplay:!!state.tvOn})}
 // THE HOLDING CARDS (B, 21 Oct 2026: "short motion graphics that say things like go grab a snack, <show> will be on next, many more like
 // this so as not to be repetitive", chained and stretched to fit). Live HTML over the picture, never a video file. The card on screen is
@@ -1021,9 +1025,9 @@ function tvCard(c,a,until,t){const nx=TVG.nextAiring(c,TVLIB,a),ns=nx&&SHOWS[nx.
  const line=TVC_LINES[(seed+k*7)%TVC_LINES.length].split('{show}').join(show).split('{time}').join(at||'soon').split('{channel}').join(c.name);
  return tvSpot(c,a,until,t,{k,line,look:TVC_LOOKS[(seed+k)%TVC_LOOKS.length],show,at,left:nx?Math.max(0,(nx.st-t)/1000):0},seed,ns)}
 let TVC_TIMER=0,TVC_NOW=null;
-function tvCardsOff(){if(TVC_TIMER){clearInterval(TVC_TIMER);TVC_TIMER=0}TVC_NOW=null;const el=document.querySelector('.tvc');if(el&&el.remove)el.remove()}
+function tvCardsOff(){if(TVC_TIMER){clearInterval(TVC_TIMER);TVC_TIMER=0}TVC_NOW=null;const el=(VP&&VP.root&&VP.root.querySelector&&VP.root.querySelector('.tvc'))||document.querySelector('.tvc');if(el&&el.remove)el.remove()}
 function tvCards(c,x,token){const host=$('vph');if(!host)return;tvCardsOff();TVCUR={c,a:x.a,x};
- if(!VP||!host.contains(VP.root))VP=tvMk(host);if(!VP)return;if(VP.idle)VP.idle();osd(c,x.a,SHOWS[x.a.s],null);
+ if(!VP||!vpIn(host))VP=tvMk(host);if(!VP)return;if(VP.idle)VP.idle();osd(c,x.a,SHOWS[x.a.s],null);
  let el=null,shown=-1;
  const tick=()=>{if(token!==TV_TOKEN||!tvLive()){if(token===TV_TOKEN)tvCardsOff();else clearInterval(iv);return}
   const t=Date.now();if(t>=x.until){tvCardsOff();tvPlay(c,true);return}

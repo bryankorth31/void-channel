@@ -127,8 +127,9 @@ if (fs.existsSync(fnSrc)) fs.cpSync(fnSrc, path.join(OUT, 'functions'), { recurs
 const brandSrc = path.join(ROOT, 'assets', 'brand');
 // The VOID player (player/): one script bundle and one stylesheet, cached with the rest of /assets.
 { const P = path.join(ROOT, 'player', 'src'); const dst = path.join(OUT, 'assets', 'player'); fs.mkdirSync(dst, { recursive: true });
-  fs.writeFileSync(path.join(dst, 'voidplayer.js'), ['core.js', 'icons.js', 'player.js'].map((f) => fs.readFileSync(path.join(P, f), 'utf8')).join('\n;\n'));
-  fs.copyFileSync(path.join(P, 'player.css'), path.join(dst, 'player.css')); }
+  fs.writeFileSync(path.join(dst, 'voidplayer.js'), ['core.js', 'icons.js', 'popout.js', 'player.js'].map((f) => fs.readFileSync(path.join(P, f), 'utf8')).join('\n;\n'));
+  fs.copyFileSync(path.join(P, 'player.css'), path.join(dst, 'player.css'));
+  fs.copyFileSync(path.join(P, 'popout.js'), path.join(dst, 'popout.js')); } // the pop-out alone, for PLAY's pages
 // PLAY (play/, plan T19): the shelf and the game player at /play/. Only what a visitor's browser loads is copied: the two pages,
 // their styles and scripts, the game cards, the shelf list and the engines we built; the build tools, tests and core sources stay
 // in the repo (play/core/README.md says where to get each engine's exact source). No game file is copied: games come from the
