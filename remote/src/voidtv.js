@@ -35,7 +35,7 @@
         if (x.k === 'ep' && s) {
           const cur = T.cur || { se: a.se, n: a.n }, name = epName(s, cur.se, cur.n), p = vp();
           // Paused, or behind the clock: how far behind, from where the clock says the airing is and where this picture is.
-          const bh = p ? V0.behind((t - a.st) / 1000, p.v.currentTime) : null, late = bh !== null && bh > V0.BEHIND_S;
+          const bh = p ? V0.behind((t - a.st) / 1000, p.v.currentTime, p.v.readyState >= 2) : null, late = bh !== null && bh > V0.BEHIND_S;
           const paused = !!(p && p.v.paused);
           // The time left runs to the next show, as the line under the picture counts it (night audit N13: one meaning on both).
           return { k: 'tv', where: (paused ? 'Paused on ' : 'Now on ') + c.name, t: s.show,
