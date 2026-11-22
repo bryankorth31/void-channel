@@ -1,0 +1,57 @@
+{
+  "about": "Moments: VoidTV reorganizing around what is in the news (Bryan, 22 Nov 2026). Kept in HQ > Moments; the rules are in assets/brand/moments/moments.js. A moment shows when on is true, approved has the day Bryan said yes, and today is from start to end. Each area's rule picks from that area's own catalogue; the ad line goes with the area it names. Publish now sends a change here to voidtv.net.",
+  "moments": [
+    {
+      "id": "gta",
+      "name": "A new Grand Theft Auto",
+      "on": true,
+      "approved": "2026-11-22",
+      "start": "2026-11-22",
+      "peak": "2026-11-22",
+      "end": "2027-01-31",
+      "why": "A new Grand Theft Auto is the biggest game news of the year; PLAY carries the first ones, from 1997 to 2004, free.",
+      "kids": false,
+      "areas": {
+        "play": {
+          "title": "The first Grand Theft Autos",
+          "about": "Where the series began: the 1997 PC game by DMA Design, its two Game Boy Color versions, and the 2004 Game Boy Advance game.",
+          "match": {
+            "items": [
+              "grand-theft-auto-1997-dma-design",
+              "grand-theft-auto-game-boy-gbc-enhanced",
+              "gta2rom",
+              "grand_theft-auto-advance"
+            ],
+            "titles": [
+              "grand theft auto"
+            ],
+            "wikidata": [
+              "Q94501",
+              "Q105265216",
+              "Q94460",
+              "Q648099"
+            ],
+            "years": [
+              1997,
+              2004
+            ]
+          },
+          "order": [
+            "grand-theft-auto-1997-dma-design",
+            "grand-theft-auto-game-boy-gbc-enhanced",
+            "gta2rom",
+            "grand_theft-auto-advance"
+          ],
+          "sort": "year",
+          "min": 2
+        }
+      },
+      "ad": {
+        "line": "Before the world only played 1 game...",
+        "go": "Play the first ones",
+        "area": "play"
+      },
+      "source": "Bryan, 22 Nov 2026, in the PLAY lead chat; the rows from the PLAY assistant (audit/play-mode/consoles/gta-rows.json)"
+    }
+  ]
+}

@@ -119,6 +119,11 @@ fs.writeFileSync(path.join(OUT, '_redirects'), '# No rules on purpose: see scrip
 const fnSrc = path.join(ROOT, 'functions');
 if (fs.existsSync(fnSrc)) fs.cpSync(fnSrc, path.join(OUT, 'functions'), { recursive: true });
 const brandSrc = path.join(ROOT, 'assets', 'brand');
+// Moments (HQ > Moments, catalog/moments.json): the ones on, approved and not over go beside their engine in assets/brand/moments,
+// and every page that loads the engine asks for it with this version, so a moment switched in HQ is not held in Cloudflare's cache.
+const momentsPub = require('./lib/moments-pub');
+const MOMENTS = momentsPub.publicMoments(path.join(PROFILE.catalogDir, 'moments.json'));
+const MOMENTS_V = momentsPub.version(MOMENTS);
 // The VOID player (player/): one script bundle and one stylesheet, cached with the rest of /assets.
 { const P = path.join(ROOT, 'player', 'src'); const dst = path.join(OUT, 'assets', 'player'); fs.mkdirSync(dst, { recursive: true });
   fs.writeFileSync(path.join(dst, 'voidplayer.js'), ['core.js', 'icons.js', 'player.js'].map((f) => fs.readFileSync(path.join(P, f), 'utf8')).join('\n;\n'));
@@ -153,6 +158,7 @@ const brandSrc = path.join(ROOT, 'assets', 'brand');
     // The area list's version, from the list itself (scripts/lib/areas-v.js), so a changed list is not held in Cloudflare's cache.
     { const p = path.join(dst, 'index.html'); fs.writeFileSync(p, fs.readFileSync(p, 'utf8').replace('src="/assets/brand/areas/areas.js"', 'src="/assets/brand/areas/areas.js?v=' + require('./lib/areas-v')() + '"')
       .replace('src="/assets/brand/atmos/atmos.js"', 'src="/assets/brand/atmos/atmos.js?v=' + require('./lib/areas-v')('atmos/atmos.js') + '"')); }   // and the shared background's, the same way
+    { const p = path.join(dst, 'index.html'); fs.writeFileSync(p, momentsPub.stamp(fs.readFileSync(p, 'utf8'), MOMENTS_V)); }   // and the moments engine's, from the engine and the moments together (scripts/lib/moments-pub.js)
     fs.copyFileSync(path.join(P, 'LICENSE'), path.join(dst, 'LICENSE.txt'));
     for (const d of ['src', 'cards', 'engine', 'cheats', 'library', 'skin'].filter((x) => fs.existsSync(path.join(P, x)))) fs.cpSync(path.join(P, d), path.join(dst, d), { recursive: true });
     fs.mkdirSync(path.join(dst, 'shelf'), { recursive: true });
@@ -190,6 +196,7 @@ const brandSrc = path.join(ROOT, 'assets', 'brand');
   } }
 if (fs.existsSync(brandSrc)) fs.cpSync(brandSrc, path.join(OUT, 'assets', 'brand'), { recursive: true, filter: (p) => { const parts = path.relative(brandSrc, p).split(path.sep); return !parts.includes('src') && !parts.includes('sheets'); } }); // the 2K originals and design sheets stay out of the site
 // Browsers, search engines and feed readers ask for /favicon.ico on their own; without the file they got the home page.
+if (fs.existsSync(path.join(OUT, 'assets', 'brand', 'moments'))) fs.writeFileSync(path.join(OUT, 'assets', 'brand', 'moments', 'moments.json'), JSON.stringify(MOMENTS));
 if (fs.existsSync(path.join(brandSrc, 'favicon.ico'))) fs.copyFileSync(path.join(brandSrc, 'favicon.ico'), path.join(OUT, 'favicon.ico'));
 // A missing file answers a real 404, not the home page. With no 404.html at the top, Pages answers an unknown path with index.html
 // and 200 OK, which the home page needs (it routes /me, /about, /tv/..., /show/... itself). But for a file that answer is poison:
