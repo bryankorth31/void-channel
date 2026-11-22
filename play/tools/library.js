@@ -114,7 +114,8 @@ function dosCard(r) {
 // prototypes, betas, test builds, picture cartridges, hacks (the assistant's hack screen); and, until Bryan says,
 // gambling and horror. Bryan's Keep on his weed-down page (r.weed === 'keep') lets a doubtful game in; Drop never.
 const UNFINISHED = /\b(wip|demo|beta|test|kernel|sample|pd|pda)\b|proto(type)?\b|\bv0 \d|\b19xx\b|point-of-purchase|greeting cart|^image\b|\(hack\)|\bhack\b/i;
-const HELD = /casino|poker|slots?\b|blackjack|black jack|roulette|gambl|halloween|chainsaw/i;   // gambling and horror: Bryan's call
+// Gambling and horror were held until Bryan's word, 22 Nov 2026: "Horror and gambling are okay in these" (PLAY only;
+// nothing from a collection goes on Kids). Gore, drugs and the rest he has not ruled on stay in library-leave.json.
 // Each machine's last commercial year: a later date is a homebrew, a hack or an upload date (the audit).
 const LAST = { a2600: 1992, nes: 1995, snes: 1999, gameboy: 2003, gbcolor: 2003, gba: 2008, lynx: 1995, genesis: 1998, sms: 1998, gamegear: 1997, dos: 1999 };   // DOS: a later date is homebrew or a fan port (Super Mario 64 MS-DOS Port, 2020)   // the Master System lived on in Brazil (Tec Toy) to 1998
 // Mods, patches and level packs of another game are not finished games of their own (the games-to-add batch, 21 Nov
@@ -125,8 +126,8 @@ function finished(r) {
   const name = [r.title, r.item, r.file].join(' ').replace(/[_.\-]+/g, ' ');
   if (r.weed === 'drop') return false;
   if (r.weed === 'keep') return true;
-  if (r.held) return false;   // horror or gambling, marked by the assistant's screen: Bryan's call
-  if (UNFINISHED.test(name) || HELD.test(name) || FAN.test(name)) return false;
+  if (r.held) return false;   // a row the assistant's screen still holds for Bryan's word
+  if (UNFINISHED.test(name) || FAN.test(name)) return false;
   if (r.likelyHack) return false;
   // The content screen's words, read again from the title itself (the audit: NBA Jam XXX), and a personal upload with
   // no year and no maker (half of those were hacks: Pokemon Prism, SMB 3 MIX); Bryan's weed-down keeps the real ones.
