@@ -321,3 +321,18 @@ the HQ areas chat. Steps 7 to 10 start after the 22 Nov reset.
   preview flow again with a stand-in phone. Not checked, and it cannot be before a deploy: the live path itself,
   since the relay accepts only the University's real address. Check after the deploy: open a Human nature lecture
   on the live site, press Answer on your phones, scan with a phone.
+- 22 Nov 2026, the remodel, step 1 (Bryan, 21 Nov in the polish chat: "the stale stco images in university and the
+  coloring of areas is flat and stale"; 22 Nov here: "The images are out dated and stale", "I'm wanting younger modern
+  images that go with the edgy voidtv aesthetic", "And then it will be your job to continue the build to finish").
+  Worked from audit/polish-2026-11-22/findings-uni.md (UNI-01, 03, 04, 05, 08). Stock photos: no page shows one and
+  the public copy does not carry them; `img()` gives only our own pictures. A course card with no picture yet shows
+  its own everyday line ("Like five neighbors and a shared jar") on its area's colour; mechanism cards are compact
+  with no picture slot. Colour, in Bright night: three clear surface steps, shadows and a top light on cards, units
+  and pieces, Void TV's own gold and pink, a see-through header, and one hue per area (15, all different) on the
+  unit's top edge and number, the row mark, the card and the course headline. The navy and brass left-overs are
+  gone from the crest, the Why you need this box, the quiz and the lab. Header: one row at every width (72 px at
+  1278x513, 55 px at 821x1316; it was 126 and 190): the way home, this page, one Courses menu with Install inside.
+  The scene and the crystal no longer run taller than the window. Checked in the preview at 1278x513 and 821x1316:
+  no sideways scroll, no broken picture, no console errors. Not done yet: the picture engine and the pictures
+  themselves (38 live units), the labelled boxes in the scenes (UNI-02), the VOID ACADEMY sign, channel cards. Not
+  pushed, not deployed.

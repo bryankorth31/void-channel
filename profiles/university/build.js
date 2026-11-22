@@ -407,7 +407,7 @@ details.more summary:hover{color:var(--fg)}
 ${LOOKCSS}${TYPECSS}</style></head><body>
 ${top(c.slug, all)}
 <div class="wrap"><nav><h4>Units</h4>${toc}<p class="donecount"></p></nav><main>
-<div class="hero" style="background-image:linear-gradient(90deg,rgba(11,18,32,.96) 40%,rgba(11,18,32,.6)),url(${img('c-' + c.slug) || img('a-' + c.domain.toLowerCase().replace(/[^a-z0-9]+/g, '-'))});background-size:cover;background-position:center"><div class="dom">${esc(c.domain)}, ${c.size === 'class' ? 'a class built from an old book' : c.kind === 'found' ? 'built from a free course' : 'a course we wrote'}</div><h1>${esc(c.name)}</h1><p>${esc(c.why)}</p>${c.source ? '<p class="src">From <a href="' + esc(c.source.url) + '" target="_blank" rel="noopener">' + esc(c.source.title) + '</a>, ' + esc(c.source.by) + '. ' + licence(c.source.licence) + '.' + (c.planned > c.units.length ? ' ' + c.units.length + ' of ' + c.planned + ' lectures are ready so far. The rest are being added one at a time, so the numbers in the list skip.' : '') + '</p>' : ''}<p class="lv">${LEVELS(c)}</p>
+<style>html[data-look]{--area:${hue(c.domain)}}</style><div class="hero"${(img('c-' + c.slug) || img('a-' + c.domain.toLowerCase().replace(/[^a-z0-9]+/g, '-'))) ? ' style="background-image:linear-gradient(90deg,rgba(7,8,12,.96) 40%,rgba(7,8,12,.6)),url(' + (img('c-' + c.slug) || img('a-' + c.domain.toLowerCase().replace(/[^a-z0-9]+/g, '-'))) + ');background-size:cover;background-position:center"' : ''}><div class="dom">${esc(c.domain)}, ${c.size === 'class' ? 'a class built from an old book' : c.kind === 'found' ? 'built from a free course' : 'a course we wrote'}</div><h1>${esc(c.name)}</h1><p>${esc(c.why)}</p>${c.source ? '<p class="src">From <a href="' + esc(c.source.url) + '" target="_blank" rel="noopener">' + esc(c.source.title) + '</a>, ' + esc(c.source.by) + '. ' + licence(c.source.licence) + '.' + (c.planned > c.units.length ? ' ' + c.units.length + ' of ' + c.planned + ' lectures are ready so far. The rest are being added one at a time, so the numbers in the list skip.' : '') + '</p>' : ''}<p class="lv">${LEVELS(c)}</p>
 ${(() => { const outs = (c.outcomes || []).length ? c.outcomes : c.units.map((u) => u.outcome).filter(Boolean); return outs.length ? '<details class="more"><summary>By the end you will be able to...</summary><ol>' + outs.map((o) => '<li>' + esc(o) + '</li>').join('') + '</ol></details>' : ''; })()}</div>
 ${(c.channels || []).length ? '<h3 style="margin:0 0 12px">Channels for this course</h3><div class="chans">' + c.channels.map(chan).join('') + '</div>' : ''}
 ${c.units.map((u) => unit(u, c.voices, c)).join('\n')}
@@ -472,7 +472,7 @@ if ('IntersectionObserver' in window) {
 const LOOK = (() => { try { return JSON.parse(fs.readFileSync(path.join(DIR, 'profile.json'), 'utf8')).look || 'classic'; } catch (e) { return 'classic'; } })();
 const LOOKS = { classic: 'Navy and brass (the first look)', bright: 'Bright night', daylight: 'Daylight' };
 const LOOKCSS = `
-html[data-look="bright"]{--bg:#0b0c12;--panel:#14161f;--panel2:#1c1f2b;--line:#2b2f41;--fg:#f6f7fb;--dim:#a6abc0;--acc:#5fd4ff;--gold:#ffc44d;--pink:#ff6fb5;--ink:#0b0c12;--soft:#dcdfec;--line2:#353a50;--panel3:#191c27;--dim2:#b9bed0;--chip:#1d2233;--deep:#07080c;--head:Inter,system-ui,sans-serif;--radius:14px}
+html[data-look="bright"]{--bg:#07080c;--panel:#0f1118;--panel2:#171a28;--line:rgba(255,255,255,.09);--fg:#f6f7fb;--dim:#a6abc0;--acc:#5fd4ff;--gold:#f2a93b;--pink:#ff4fc8;--ink:#07080c;--soft:#dcdfec;--line2:rgba(255,255,255,.18);--panel3:#141726;--dim2:#b9bed0;--chip:#1f2437;--deep:#05060a;--area:#5fd4ff;--lift1:0 8px 22px rgba(0,0,0,.5);--lift2:0 18px 44px rgba(0,0,0,.6);--inset:inset 0 1px 0 rgba(255,255,255,.07);--head:Inter,system-ui,sans-serif;--radius:14px}
 html[data-look="daylight"]{--bg:#f4f6fb;--panel:#ffffff;--panel2:#eef1f8;--line:#d7dcea;--fg:#141926;--dim:#5a6377;--acc:#1f55e6;--gold:#9a5b00;--pink:#c2255c;--ink:#ffffff;--soft:#2f3647;--line2:#c5cbdc;--panel3:#f1f4fa;--dim2:#4f586b;--chip:#e6ebf7;--deep:#ffffff;--head:Inter,system-ui,sans-serif;--radius:14px}
 html[data-look="bright"] h1,html[data-look="bright"] h2,html[data-look="bright"] .crest b,html[data-look="bright"] .sc-say,html[data-look="bright"] .who>span,html[data-look="bright"] #resume a,
 html[data-look="daylight"] h1,html[data-look="daylight"] h2,html[data-look="daylight"] .crest b,html[data-look="daylight"] .sc-say,html[data-look="daylight"] .who>span,html[data-look="daylight"] #resume a{font-family:var(--head);font-weight:800;letter-spacing:-.015em}
@@ -502,7 +502,28 @@ html[data-look="daylight"] .r-read{background:#fff1d6;color:#7a5200}html[data-lo
 html[data-look="daylight"] .hero::after{background:linear-gradient(180deg,rgba(11,18,32,.25) 0%,rgba(11,18,32,.72) 100%)}
 html[data-look="daylight"] .hero .dom{color:#ffd98a}
 html[data-look="daylight"] .arrow{background:#fff;color:#141926;border-color:var(--line);box-shadow:0 4px 14px rgba(20,25,38,.18)}
-html[data-look="bright"] .hero::after{background:linear-gradient(180deg,rgba(11,12,18,.1) 0%,rgba(11,12,18,.6) 60%,var(--bg) 100%)}
+html[data-look="bright"] .hero::after{background:linear-gradient(180deg,rgba(7,8,12,.1) 0%,rgba(7,8,12,.6) 60%,var(--bg) 100%)}
+html[data-look="bright"] header.top{background:rgba(7,8,12,.88);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+html[data-look="bright"] .crest svg path:first-child{fill:#10131f;stroke:var(--acc)}html[data-look="bright"] .crest svg path{stroke:var(--acc)}html[data-look="bright"] .crest svg circle{stroke:var(--pink)}
+html[data-look="bright"] .card,html[data-look="bright"] .unit{box-shadow:var(--lift1),var(--inset)}html[data-look="bright"] .card:hover{box-shadow:var(--lift2),var(--inset)}
+html[data-look="bright"] .unit{border-top:3px solid var(--area);background:linear-gradient(180deg,color-mix(in srgb,var(--area) 9%,var(--panel)) 0,var(--panel) 240px)}
+html[data-look="bright"] .uh .n{color:var(--area);text-shadow:0 0 18px color-mix(in srgb,var(--area) 55%,transparent)}
+html[data-look="bright"] .piece,html[data-look="bright"] .quiz,html[data-look="bright"] .sc,html[data-look="bright"] .lab,html[data-look="bright"] .cx,html[data-look="bright"] .scale{box-shadow:var(--inset),0 4px 14px rgba(0,0,0,.4)}
+html[data-look="bright"] .quiz{background:var(--panel2)}
+html[data-look="bright"] .need{background:color-mix(in srgb,var(--gold) 10%,var(--panel2));color:var(--soft);border-left-color:var(--gold)}
+html[data-look="bright"] .lab{border-color:color-mix(in srgb,var(--area) 45%,transparent)}
+html[data-look="bright"] .sc-stage,html[data-look="bright"] .cx-stage{background:radial-gradient(ellipse at center,color-mix(in srgb,var(--area) 11%,#0a0c14) 0%,#05060a 75%)}
+html[data-look="bright"] .hero:not(#colhost .hero){background:radial-gradient(90% 150% at 0% 0%,color-mix(in srgb,var(--area) 24%,transparent),transparent 62%),radial-gradient(70% 120% at 100% 100%,color-mix(in srgb,var(--pink) 12%,transparent),transparent 60%),var(--panel);box-shadow:var(--lift1),var(--inset);border-top:3px solid var(--area)}
+html[data-look="bright"] .hero:not(#colhost .hero) .dom{color:var(--area)}
+html[data-look="bright"] .row>h2>span::before{content:'';display:inline-block;width:6px;height:.85em;border-radius:3px;margin-right:12px;vertical-align:-.05em;background:var(--area);box-shadow:0 0 14px var(--area)}
+html[data-look="bright"] .card.course{border-top:3px solid var(--area)}html[data-look="bright"] .card small{color:var(--area)}
+html[data-look="bright"] .card .ph.face{display:flex;align-items:flex-end;aspect-ratio:3/2;padding:18px;background:radial-gradient(120% 100% at 15% 0%,color-mix(in srgb,var(--area) 42%,transparent),transparent 62%),radial-gradient(90% 90% at 100% 100%,color-mix(in srgb,var(--pink) 20%,transparent),transparent 60%),var(--deep)}
+html[data-look="bright"] .card .ph.face span{font-family:var(--head);font-weight:800;font-size:21px;line-height:1.18;letter-spacing:-.01em;color:var(--fg);text-shadow:0 2px 14px rgba(0,0,0,.6)}
+html[data-look="bright"] .card.mini{border-left:3px solid var(--area)}
+html[data-look="bright"] .area{background:radial-gradient(120% 120% at 10% 0%,color-mix(in srgb,var(--area) 45%,transparent),transparent 65%),var(--panel);border-top:3px solid var(--area);box-shadow:var(--lift1),var(--inset)}
+html[data-look="bright"] .qc button,html[data-look="bright"] .chap button,html[data-look="bright"] .donebtn,html[data-look="bright"] .qt{background:linear-gradient(180deg,#1b2233,#131826);border-color:var(--line2)}html[data-look="bright"] .qc button:hover:not(:disabled),html[data-look="bright"] .chap button:hover,html[data-look="bright"] .donebtn:hover,html[data-look="bright"] .qt:hover{border-color:var(--acc);box-shadow:0 0 16px rgba(95,212,255,.22)}
+html[data-look="bright"] .navlist{background:var(--panel2);box-shadow:var(--lift2),var(--inset)}
+.sc-stage{max-height:calc(100vh - var(--hh,64px) - 190px)}.cx-stage{height:min(360px,calc(100vh - var(--hh,64px) - 190px))}
 `;
 // Install on a phone or tablet (Bryan, 19 Nov 2026: "the whole pwa"; "Yes, do it here"). Every page names the manifest and the
 // home-screen icons (img/, drawn by make-icons.js), so iPhone and iPad Safari add it as an app with the crest, and Chrome and
@@ -552,12 +573,12 @@ const BASE = `:root{--bg:#0b1220;--panel:#111a2c;--panel2:#17223a;--line:#24304a
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:calc(var(--hh,64px) + 14px)}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 var(--body)}a{color:var(--acc)}
 .serif{font-family:var(--head)}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms !important;animation-duration:.01ms !important;animation-iteration-count:1 !important}.card:hover,.card:focus-visible{transform:none}.card:hover .ph img{transform:none}}
-header.top{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding:14px 32px;border-bottom:1px solid var(--line);background:var(--deep);position:sticky;top:0;z-index:50}
+header.top{display:flex;flex-wrap:nowrap;align-items:center;gap:10px 18px;padding:10px 32px;border-bottom:1px solid var(--line);background:var(--deep);position:sticky;top:0;z-index:50}
 .crest{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--fg)}
 .crest svg{width:34px;height:34px;flex:none}
 .crest span{white-space:nowrap}.crest b{font-family:var(--head);font-weight:700;font-size:19px;letter-spacing:.14em;text-transform:uppercase}
 .crest small{display:block;font-size:12px;color:var(--gold);margin-top:1px}
-.nav{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto;position:static;align-items:center}
+.nav{display:flex;gap:4px;flex-wrap:nowrap;margin-left:auto;position:static;align-items:center;min-width:0}.nav>a{white-space:nowrap}.nav a.here{overflow:hidden;text-overflow:ellipsis;min-width:0;max-width:34vw}.navtools{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding-top:12px;border-top:1px solid var(--line)}.navtools:empty{display:none}.navtools .instnote{position:static;width:auto}@media (max-width:900px){.crest small{display:none}}
 .navall{position:relative}.navall summary{cursor:pointer;list-style:none;font-size:14px;padding:6px 12px;border-radius:6px;color:var(--fg);border:1px solid var(--line)}.navall summary::-webkit-details-marker{display:none}.navall summary:hover{border-color:var(--gold)}
 .navlist{position:absolute;right:0;top:calc(100% + 8px);z-index:30;width:min(640px,calc(100vw - 40px));max-height:70vh;overflow:auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px 18px;padding:16px;background:var(--panel);border:1px solid var(--line);border-radius:10px;box-shadow:0 18px 40px rgba(0,0,0,.5)}
 @media (max-width:1000px){header.top{padding:8px 20px;gap:6px 14px}.navall{position:static}.navlist{left:20px;right:20px;width:auto}}
@@ -646,13 +667,12 @@ function top(current, all) {
   const link = (o) => (o.slug === current ? hereLink(o) : '<a href="' + esc(o.slug) + '.html">' + esc(o.name) + '</a>');
   const everything = all.concat(SHELFBOOKS);
   let links;
-  if (everything.length <= 6) links = home + all.map(link).join('');
-  else {
+  {
     const here = everything.find((o) => o.slug === current);
     const areas = [...new Set(all.map((o) => o.domain))];
     const groups = areas.map((a) => '<div><h5>' + esc(a) + '</h5>' + all.filter((o) => o.domain === a).map(link).join('') + '</div>').join('')
       + (SHELFBOOKS.length ? '<div><h5>Old books in plain English</h5>' + SHELFBOOKS.map(link).join('') + '</div>' : '');
-    links = home + (here ? hereLink(here) : '') + '<details class="navall"><summary>All courses</summary><div class="navlist">' + groups + '</div></details>';
+    links = home + (here ? hereLink(here) : '') + '<details class="navall"><summary title="Every course, by area">Courses</summary><div class="navlist">' + groups + '<div class="navtools">' + INSTALL + DRAFT + '</div></div></details>';
   }
   // The background (B, 19 Nov 2026: "i want these used in the same ways as as vtv. the way the bg moves", "make the background drift on
   // my tablet too"; 22 Nov 2026: "i want the bg sittuation to be fixed on all pages") is the one every Void area shares,
@@ -663,17 +683,28 @@ function top(current, all) {
   // Every voidtv.net area (Bryan, 20 Nov 2026, M1): the hamburger drawer from voidtv.net's one list. The menu only, no
   // card: Open Yale's terms (oyc.yale.edu/terms) say no ads on the University while it uses Yale material.
   const AREAS = '<script src="https://voidtv.net/assets/brand/areas/areas.js?v=' + require('../../scripts/lib/areas-v')() + '" defer data-site="university" data-here="university" data-ads="off"></script>';
-  return atmos + AREAS + '<header class="top"><span data-void-areas-menu></span><a class="crest" href="index.html">' + CREST + '<span><b>Void University</b><small>Learn from people who did it</small></span></a><nav class="nav">' + links + '</nav>' + INSTALL + DRAFT + '</header>'
+  return atmos + AREAS + '<header class="top"><span data-void-areas-menu></span><a class="crest" href="index.html">' + CREST + '<span><b>Void University</b><small>Learn from people who did it</small></span></a><nav class="nav">' + links + '</nav></header>'
     + '<script>(function(){var h=document.querySelector("header.top"),s=function(){document.documentElement.style.setProperty("--hh",h.offsetHeight+"px")};s();addEventListener("load",s);if(window.ResizeObserver)new ResizeObserver(s).observe(h);else addEventListener("resize",s)})()</script>';
 }
 const IMG = (() => { try { return JSON.parse(fs.readFileSync(path.join(DIR, 'img', 'images.json'), 'utf8')); } catch (e) { return {}; } })();
-const img = (name) => IMG[name] ? IMG[name].file : '';
+// Only our own pictures are shown (Bryan, 21 Nov 2026: "the stale stco images in university"; 22 Nov: "I'm wanting younger
+// modern images that go with the edgy voidtv aesthetic"). The stock photos gathered on 15 Nov stay in img/ and images.json
+// until each is replaced, but no page shows them and the public copy does not carry them.
+const img = (name) => (IMG[name] && /^our own/i.test(IMG[name].license || '') ? IMG[name].file : '');
+// One hue for each area, so Money, Body, Mind and the rest differ at a glance: the unit's top edge and number, the row's
+// mark, the glow on a card with no picture yet.
+const AREAHUE = { Money: '#f2a93b', Food: '#ff8a3d', Home: '#ffd166', Body: '#ff6b8b', Mind: '#5fd4ff', Words: '#7ee0c3', 'Law and rights': '#8fa8ff', 'Work and trades': '#f59e6c', Machines: '#9ad1ff', Making: '#c4f06a', Land: '#5fe39a', 'Civics and history': '#e6c067', 'Faith and philosophy': '#a78bfa', Family: '#ff8fd0', Emergencies: '#ff5c5c' };
+const hue = (area) => AREAHUE[area] || '#5fd4ff';
+// The top of a card: its own picture, or its own words on the area's colour.
+const ph = (pic, words, lazy) => (pic ? '<div class="ph"><img' + (lazy ? ' loading="lazy"' : '') + ' src="' + pic + '" alt=""></div>' : '<div class="ph face"><span>' + esc(words || '') + '</span></div>');
+// A course in one line of its own: the everyday thing its first lesson teaches with.
+const like = (c) => { const u = (c.units || []).find((x) => x.scene && x.scene.analogy); if (!u) return ''; const a = String(u.scene.analogy); return 'Like ' + (/^[A-Z][a-z ]/.test(a) ? a[0].toLowerCase() + a.slice(1) : a); };
 // Open Yale's terms (read 15 Nov 2026 at oyc.yale.edu/terms): credit the teacher and Yale, link the course page, and
 // include the Creative Commons licence. So every CC licence on a page links to its own deed.
 const licence = (l) => { const m = /CC (BY(?:-NC)?(?:-SA|-ND)?) (\d\.\d)/.exec(String(l || '')); return m ? '<a href="https://creativecommons.org/licenses/' + m[1].toLowerCase() + '/' + m[2] + '/" target="_blank" rel="noopener license">' + esc(l) + '</a>' : esc(l); };
 const LEVELNAME = { 'high school': 'High school', 'young adults': 'Young adults', everyday: 'Everyday life' };
 const LEVELS = (c) => (c.levels || []).map((l) => '<span>' + esc(LEVELNAME[l] || l) + '</span>').join('');
-const FOOT = () => `<footer>Free, no account. Lessons play from the Internet Archive; each piece names its source and licence. Photos are public domain (CC0); <a href="credits.html">who took them</a>.<br>
+const FOOT = () => `<footer>Free, no account. Lessons play from the Internet Archive; each piece names its source and licence. <a href="credits.html">Picture and type credits</a>.<br>
 If you found this service helpful, please think of donating to keep it running and to make more services like this possible. Every donation goes to CASH (cashvalues.org) and feeds its mission in the real world. <a href="${DONATE}" target="_blank" rel="noopener">Donate to CASH</a></footer>`;
 function chan(x) {
   return '<a class="card chan" href="' + esc(x.url) + '" target="_blank" rel="noopener"><div class="ph"><img loading="lazy" src="' + esc(x.thumb) + '" alt=""></div><div class="t"><small>Channel, ' + esc(x.count) + '</small><b>' + esc(x.name) + '</b><span>' + esc(x.what) + '</span></div></a>';
@@ -681,11 +712,11 @@ function chan(x) {
 function home(all, list) {
   const full = all.filter((c) => c.shelf !== 'supplement');
   const sup = all.filter((c) => c.shelf === 'supplement');
-  const card = (c) => '<a class="card course" data-slug="' + esc(c.slug) + '" data-units="' + c.units.length + '" data-lv="' + esc((c.levels || []).join('|')) + '" href="' + esc(c.slug) + '.html"><div class="ph"><img src="' + (img('c-' + c.slug) || img('a-' + c.domain.toLowerCase().replace(/[^a-z0-9]+/g, '-'))) + '" alt=""></div><div class="t"><small>' + esc(c.domain) + ', ' + (c.planned > c.units.length ? c.units.length + ' of ' + c.planned + ' units' : c.units.length + (c.units.length === 1 ? ' unit' : ' units')) + '</small><b>' + esc(c.name) + '</b><span>' + esc(String(c.why).split('. ')[0].replace(/\.$/, '')) + '.</span></div></a>';
-  const mini = (c, u) => '<a class="card mini" href="' + esc(c.slug) + '.html#u' + u.n + '"><div class="ph"><img loading="lazy" src="' + img('m' + u.n) + '" alt=""></div><div class="t"><b>' + esc(u.title) + '</b><span>' + esc(u.scene ? u.scene.analogy : '') + '</span></div></a>';
-  const row = (title, note, cards, id) => '<section class="row"' + (id ? ' id="' + id + '"' : '') + '><h2><span>' + esc(title) + '</span>' + (note ? '<small>' + esc(note) + '</small>' : '') + '</h2><div class="rowwrap"><button class="arrow l" aria-label="Back">&#8249;</button><div class="track">' + cards + '</div><button class="arrow r" aria-label="More">&#8250;</button></div></section>';
+  const card = (c) => '<a class="card course" data-slug="' + esc(c.slug) + '" data-units="' + c.units.length + '" data-lv="' + esc((c.levels || []).join('|')) + '" href="' + esc(c.slug) + '.html">' + ph(img('c-' + c.slug) || img('a-' + c.domain.toLowerCase().replace(/[^a-z0-9]+/g, '-')), like(c)) + '<div class="t"><small>' + esc(c.domain) + ', ' + (c.planned > c.units.length ? c.units.length + ' of ' + c.planned + ' units' : c.units.length + (c.units.length === 1 ? ' unit' : ' units')) + '</small><b>' + esc(c.name) + '</b><span>' + esc(String(c.why).split('. ')[0].replace(/\.$/, '')) + '.</span></div></a>';
+  const mini = (c, u) => '<a class="card mini" href="' + esc(c.slug) + '.html#u' + u.n + '">' + (img('m' + u.n) ? ph(img('m' + u.n), '', true) : '') + '<div class="t"><b>' + esc(u.title) + '</b><span>' + esc(u.scene ? u.scene.analogy : '') + '</span></div></a>';
+  const row = (title, note, cards, id, area) => '<section class="row"' + (id ? ' id="' + id + '"' : '') + (area ? ' style="--area:' + hue(area) + '"' : '') + '><h2><span>' + esc(title) + '</span>' + (note ? '<small>' + esc(note) + '</small>' : '') + '</h2><div class="rowwrap"><button class="arrow l" aria-label="Back">&#8249;</button><div class="track">' + cards + '</div><button class="arrow r" aria-label="More">&#8250;</button></div></section>';
   // A practice site sits in its area's row as one more card, for every level, and opens in a new tab.
-  const gymCard = (g) => '<a class="card course" data-lv="high school|young adults|everyday" href="' + esc(g.url) + '" target="_blank" rel="noopener"><div class="ph"><img src="' + img('a-' + g.area.toLowerCase().replace(/[^a-z0-9]+/g, '-')) + '" alt=""></div><div class="t"><small>' + esc(g.area) + ', practice, ' + g.rooms.length + ' rooms</small><b>' + esc(g.name) + '</b><span>' + esc(g.what) + '</span></div></a>';
+  const gymCard = (g) => '<a class="card course" data-lv="high school|young adults|everyday" href="' + esc(g.url) + '" target="_blank" rel="noopener">' + ph(img('a-' + g.area.toLowerCase().replace(/[^a-z0-9]+/g, '-')), g.rooms.length + ' ' + (g.word || 'room') + 's to practise in') + '<div class="t"><small>' + esc(g.area) + ', practice, ' + g.rooms.length + ' rooms</small><b>' + esc(g.name) + '</b><span>' + esc(g.what) + '</span></div></a>';
   const areaId = (t) => 'area-' + t.toLowerCase().replace(/[^a-z0-9]+/g, '-');
   const seen = new Set();
   const chans = (cs) => cs.flatMap((c) => c.channels || []).filter((x) => !seen.has(x.url) && seen.add(x.url));
@@ -695,16 +726,16 @@ function home(all, list) {
     const ss = t === 'Mind' ? sup : [];
     const ch = chans(cs.concat(ss));
     const gyms = PRACTICE.filter((g) => g.live && g.area === t);
-    return row(t, cs.length + (cs.length === 1 ? ' course' : ' courses'), cs.map(card).join('') + gyms.map(gymCard).join(''), areaId(t))
-      + ss.map((c) => row(c.name, 'short pieces any course can use', c.units.map((u) => mini(c, u)).join(''))).join('')
-      + (ch.length ? row('Channels for ' + t, 'whole series on the Internet Archive that go with these courses', ch.map(chan).join('')) : '');
+    return row(t, cs.length + (cs.length === 1 ? ' course' : ' courses'), cs.map(card).join('') + gyms.map(gymCard).join(''), areaId(t), t)
+      + ss.map((c) => row(c.name, 'short pieces any course can use', c.units.map((u) => mini(c, u)).join(''), '', t)).join('')
+      + (ch.length ? row('Channels for ' + t, 'whole series on the Internet Archive that go with these courses', ch.map(chan).join(''), '', t) : '');
   }).join('');
-  const shelfRow = SHELFBOOKS.length ? row('Old books in plain English', 'useful old how-to, with the printed words beside it', SHELFBOOKS.map((b) => '<a class="card course" data-lv="' + esc((b.levels || []).join('|')) + '" href="' + esc(b.slug) + '.html"><div class="ph"><img src="' + img('a-' + String(b.area).toLowerCase().replace(/[^a-z0-9]+/g, '-')) + '" alt=""></div><div class="t"><small>' + esc(b.area) + ', printed ' + esc(String(b.year)) + ', ' + b.chapters.length + ' chapters</small><b>' + esc(b.title) + '</b><span>' + esc(b.needIt) + '</span></div></a>').join('')) : '';
+  const shelfRow = SHELFBOOKS.length ? row('Old books in plain English', 'useful old how-to, with the printed words beside it', SHELFBOOKS.map((b) => '<a class="card course" data-lv="' + esc((b.levels || []).join('|')) + '" href="' + esc(b.slug) + '.html">' + ph(img('a-' + String(b.area).toLowerCase().replace(/[^a-z0-9]+/g, '-')), 'An old book, in plain English') + '<div class="t"><small>' + esc(b.area) + ', printed ' + esc(String(b.year)) + ', ' + b.chapters.length + ' chapters</small><b>' + esc(b.title) + '</b><span>' + esc(b.needIt) + '</span></div></a>').join('')) : '';
   // One tile for each area that has a course, and the tile opens that area's row. An area with nothing in it yet is
   // not shown: a tile that leads nowhere is a placeholder.
   const tiles = list.types.map((t) => {
     const n = full.filter((c) => c.domain === t).length; // same count as the row: the mechanisms shelf is not a course
-    return n ? '<a class="area has" href="#' + areaId(t) + '"><img loading="lazy" src="' + img('a-' + t.toLowerCase().replace(/[^a-z0-9]+/g, '-')) + '" alt=""><div><b>' + esc(t) + '</b><small>' + n + (n === 1 ? ' course' : ' courses') + '</small></div></a>' : '';
+    return n ? '<a class="area has" style="--area:' + hue(t) + '" href="#' + areaId(t) + '">' + (img('a-' + t.toLowerCase().replace(/[^a-z0-9]+/g, '-')) ? '<img loading="lazy" src="' + img('a-' + t.toLowerCase().replace(/[^a-z0-9]+/g, '-')) + '" alt="">' : '') + '<div><b>' + esc(t) + '</b><small>' + n + (n === 1 ? ' course' : ' courses') + '</small></div></a>' : '';
   }).join('');
   return `<!doctype html><html lang="en" data-look="${LOOK}" data-type="${TYPE}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${APPHEAD}
 <title>Void University</title>
@@ -745,7 +776,7 @@ ${CARDCSS}
 @media(max-width:900px){.hero h1{font-size:36px}.course{width:290px}}
 ${LOOKCSS}${TYPECSS}</style></head><body>
 ${top('home', all)}
-<div id="colhost"><div class="hero"><img src="${img('a-mind')}" alt=""><div><h1>Big ideas, shown with everyday things.</h1><p>Each lesson starts from something you already know, then shows you the bigger idea working the same way. Every course is free, and there is no account to make.</p></div></div>
+<div id="colhost"><div class="hero">${img('a-mind') ? '<img src="' + img('a-mind') + '" alt="">' : ''}<div><h1>Big ideas, shown with everyday things.</h1><p>Each lesson starts from something you already know, then shows you the bigger idea working the same way. Every course is free, and there is no account to make.</p></div></div>
 <main><div class="who"><span>Who is it for?</span><button class="on" data-lv="">Everyone</button><button data-lv="high school">High school</button><button data-lv="young adults">Young adults</button><button data-lv="everyday">Everyday life</button><input type="search" id="find" placeholder="Find a course or a lesson" aria-label="Find a course or a lesson"><small>Everyday life: not for a job in the field, just useful for living, deciding and understanding people.</small></div>
 <div id="found" hidden></div><div id="resume" hidden></div>
 ${rows}
@@ -801,10 +832,10 @@ find.addEventListener('input', function () {
 </body></html>`;
 }
 function credits(all) {
-  const rows = Object.keys(IMG).map((k) => { const x = IMG[k]; return '<tr><td><img src="' + esc(x.file) + '" alt=""></td><td>' + esc(x.title || 'Untitled') + '</td><td>' + esc(x.creator || 'unknown') + '</td><td>' + esc(x.license) + '</td><td><a href="' + esc(x.page) + '" target="_blank" rel="noopener">' + esc(x.source) + '</a></td></tr>'; }).join('');
+  const rows = Object.keys(IMG).filter((k) => img(k)).map((k) => { const x = IMG[k]; return '<tr><td><img src="' + esc(x.file) + '" alt=""></td><td>' + esc(x.title || 'Untitled') + '</td><td>' + esc(x.creator || 'unknown') + '</td><td>' + esc(x.license) + '</td><td><a href="' + esc(x.page) + '" target="_blank" rel="noopener">' + esc(x.source) + '</a></td></tr>'; }).join('');
   return `<!doctype html><html lang="en" data-look="${LOOK}" data-type="${TYPE}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${APPHEAD}<title>Photo credits | Void University</title>${FONTS}<style>${BASE}
 main{max-width:1100px;margin:0 auto;padding:30px 32px}h1{font-family:var(--head)}table{width:100%;border-collapse:collapse;font-size:14px}td{border-bottom:1px solid var(--line);padding:8px;vertical-align:middle}td img{width:96px;height:60px;object-fit:cover;border-radius:4px;display:block}${LOOKCSS}${TYPECSS}</style></head><body>
-${top('credits', all)}<main><h1>Photo credits</h1><p>Every photo here is public domain (CC0), found through Openverse, except the Body picture: that one is our own, the whole body standing in Body Atlas, and its body parts are BodyParts3D (CC BY 4.0). We list who took each one anyway, with a link to where it came from.</p><table>${rows}</table><h1>Backgrounds</h1><p>The pictures of the classroom and the archive room behind the pages are our own, made for Void University. The lightning, the static and the film grain over them are Void TV's own.</p><h1>Phones</h1><p>The QR code maker and the relay that passes questions between a screen and its phones are Void TV PLAY's own.</p><h1>Typefaces</h1><p>Atkinson Hyperlegible Next (Braille Institute), Bricolage Grotesque, Inter, Fraunces, Literata and Schibsted Grotesk are used under the SIL Open Font License and are served from this site.</p>${all.some((c) => c.units.some(shipsLab)) ? '<h1>Lab physics</h1><p>Things in the labs fall, roll and bounce using Planck.js by Erin Catto and Ali Shakiba, free to use under the <a href="planck-LICENSE.txt">MIT licence</a>. The labs themselves are our own work.</p>' : ''}${all.some((c) => c.units.some(shipsScale)) ? '<h1>3D stages</h1><p>The 3D scale stages are drawn with three.js by the three.js authors, free to use under the <a href="three-LICENSE.txt">MIT licence</a>. The stages and what they show are our own work; each one names the papers its numbers come from.</p>' : ''}</main>${FOOT()}</body></html>`;
+${top('credits', all)}<main><h1>Picture credits</h1><p>The pictures on this site are our own. The Body picture is the whole body standing in Body Atlas, and its body parts are BodyParts3D (CC BY 4.0).</p><table>${rows}</table><h1>Backgrounds</h1><p>The pictures of the classroom and the archive room behind the pages are our own, made for Void University. The lightning, the static and the film grain over them are Void TV's own.</p><h1>Phones</h1><p>The QR code maker and the relay that passes questions between a screen and its phones are Void TV PLAY's own.</p><h1>Typefaces</h1><p>Atkinson Hyperlegible Next (Braille Institute), Bricolage Grotesque, Inter, Fraunces, Literata and Schibsted Grotesk are used under the SIL Open Font License and are served from this site.</p>${all.some((c) => c.units.some(shipsLab)) ? '<h1>Lab physics</h1><p>Things in the labs fall, roll and bounce using Planck.js by Erin Catto and Ali Shakiba, free to use under the <a href="planck-LICENSE.txt">MIT licence</a>. The labs themselves are our own work.</p>' : ''}${all.some((c) => c.units.some(shipsScale)) ? '<h1>3D stages</h1><p>The 3D scale stages are drawn with three.js by the three.js authors, free to use under the <a href="three-LICENSE.txt">MIT licence</a>. The stages and what they show are our own work; each one names the papers its numbers come from.</p>' : ''}</main>${FOOT()}</body></html>`;
 }
 
 // A wrong address: wrangler.jsonc serves 404.html for it. Links start from the site root, since the wrong address can be
@@ -875,7 +906,7 @@ if (LIVE && loaded.some((c) => c.units.some(shipsAnswer))) {
 MECH = loaded.find((c) => c.shelf === 'supplement') || null;
 for (const c of loaded) if (c.shelf !== 'supplement') for (const u of c.units) for (const n of u.mechanisms || []) (USED[n] = USED[n] || []).push({ slug: c.slug, course: c.name, n: u.n, title: u.title });
 fs.mkdirSync(path.join(OUT, 'img'), { recursive: true });
-for (const k of Object.keys(IMG)) fs.copyFileSync(path.join(DIR, IMG[k].file), path.join(OUT, IMG[k].file));
+for (const k of Object.keys(IMG)) if (img(k)) fs.copyFileSync(path.join(DIR, IMG[k].file), path.join(OUT, IMG[k].file)); // our own pictures only
 // The font sheets and the files they name: every typeface in the preview (it has the picker), only the chosen one in the public copy.
 fs.mkdirSync(path.join(OUT, 'fonts'), { recursive: true });
 for (const k of (LIVE ? [TYPES[TYPE] ? TYPE : 'inter'] : Object.keys(TYPES))) {
