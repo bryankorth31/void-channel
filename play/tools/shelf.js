@@ -106,11 +106,24 @@ function buildIndex(cards, status, plays = loadPlays()) {
 // Wikipedia languages with a page on it, fame.json), then the most played at the Archive not yet taken. Bryan's own list
 // (front-picks.json: always, never; by Archive item) is read first, so one line puts a game in or keeps it out.
 // front is the game's score, best first in the rows: 100 x (0.7 x max(F, P) + 0.3 x min(F, P)), F = min(pages, 20) / 20,
-// P = the share of the machine's games it out-plays. Pure (tested): games gain front.
+// P = the share of the machine's games it out-plays. After the 40, every other well-known game of the machine joins,
+// best score first, so the number fits the machine (Bryan, 22 Nov 2026: "increase the number of that console or system
+// to fit the games"): well known = fame.json lists the item as known (Wikidata has that very name on that machine with
+// a page in 10 or more languages). Two names or copies of one game (fame.json's game: the Wikidata entry) count once.
+// Pure (tested): games gain front.
 const FRONT = 40;
 const FAME = path.join(SHELF, 'fame.json');
 const PICKS = path.join(SHELF, 'front-picks.json');
-function loadFame() { try { return JSON.parse(fs.readFileSync(FAME, 'utf8')).pages || {}; } catch (e) { return {}; } }
+// pages by item, with the known items and each item's game attached (fame.json; a plain { item: pages } still works).
+function loadFame() {
+  try {
+    const j = JSON.parse(fs.readFileSync(FAME, 'utf8'));
+    const pages = Object.assign({}, j.pages || {});
+    Object.defineProperty(pages, '__known', { value: new Set(j.known || []) });
+    Object.defineProperty(pages, '__game', { value: j.game || {} });
+    return pages;
+  } catch (e) { return {}; }
+}
 function loadPicks() { try { const j = JSON.parse(fs.readFileSync(PICKS, 'utf8')); return { always: j.always || [], never: j.never || [], banner: j.banner || [] }; } catch (e) { return { always: [], never: [], banner: [] }; } }
 const gameKey = (t) => String(t).toLowerCase().replace(/\([^)]*\)/g, '').replace(/\b(the|ms-?dos|dos)\b/g, '').replace(/[^a-z0-9]+/g, '');
 function markFront(games, pages, picks = { always: [], never: [] }) {
@@ -125,7 +138,9 @@ function markFront(games, pages, picks = { always: [], never: [] }) {
     const ok = list.filter((g) => !never.has(g.item));
     const known = ok.slice().sort((a, b) => (pages[b.item] || 0) - (pages[a.item] || 0) || (b.plays || 0) - (a.plays || 0) || a.title.localeCompare(b.title));
     const played = ok.slice().sort((a, b) => (b.plays || 0) - (a.plays || 0) || (pages[b.item] || 0) - (pages[a.item] || 0) || a.title.localeCompare(b.title));
-    const taken = new Set(), take = (g) => { const k = gameKey(g.title); if (taken.has(k)) return false; taken.add(k); g.front = Math.round(score(g) * 10) / 10 || 0.1; return true; };
+    const gameOf = pages.__game || {}, isKnown = pages.__known || new Set();
+    const keyOf = (g) => gameOf[g.item] || gameKey(g.title);
+    const taken = new Set(), take = (g) => { const k = keyOf(g); if (taken.has(k)) return false; taken.add(k); g.front = Math.round(score(g) * 10) / 10 || 0.1; return true; };
     for (const g of ok) if (always.has(g.item) || g.banner) take(g);
     let i = 0, j = 0;
     while (taken.size < FRONT && (i < known.length || j < played.length)) {
@@ -135,6 +150,8 @@ function markFront(games, pages, picks = { always: [], never: [] }) {
       while (j < played.length && !take(played[j])) j++;
       j++;
     }
+    // Then the rest of the machine's well-known games, best score first.
+    for (const g of ok.filter((x) => isKnown.has(x.item) && !x.front).sort((a, b) => score(b) - score(a) || a.title.localeCompare(b.title))) take(g);
   }
   return games;
 }

@@ -172,3 +172,18 @@ test('Wikidata\'s facts on a card: two players only where it says so, its genres
   assert.ok(Shelf.genresOf(['flight simulator']).includes('Strategy and simulation'));
   assert.ok(Shelf.genresOf(['Metroidvania']).includes('Action'));
 });
+
+test('the main showing fits the machine: its 40, then every other well-known game; two names of one game count once', () => {
+  // Bryan, 22 Nov 2026: "Then increase the number of that console or system to fit the games".
+  const games = [];
+  for (let i = 0; i < 60; i++) games.push({ id: 'g' + i, title: 'Game ' + i, system: 'nes', item: 'i' + i, plays: 1000 - i, genres: [] });
+  games.push({ id: 'k', title: 'Known Classic', system: 'nes', item: 'known', plays: 0, genres: [] });
+  games.push({ id: 'k2', title: 'Known Classic Japan', system: 'nes', item: 'known-jp', plays: 0, genres: [] });
+  const pages = { known: 12, 'known-jp': 12 };
+  Object.defineProperty(pages, '__known', { value: new Set(['known', 'known-jp']) });
+  Object.defineProperty(pages, '__game', { value: { known: 'Q1', 'known-jp': 'Q1' } });
+  ShelfTool.markFront(games, pages);
+  assert.ok(games.find((g) => g.id === 'k').front, 'a well-known game joins after the 40');
+  assert.ok(!games.find((g) => g.id === 'k2').front, 'its other name does not take a second place');
+  assert.equal(games.filter((g) => g.front).length, 41);
+});
