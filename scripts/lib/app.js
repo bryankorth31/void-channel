@@ -1140,7 +1140,7 @@ function swirlUntilReady(ov,src0,max,done){if(!ov)return;const t0=Date.now();cle
  const hook=()=>{if(!v&&VP&&VP.v&&VP.v.addEventListener){v=VP.v;v.addEventListener('playing',onPlay);v.addEventListener('timeupdate',check)}};
  function check(){hook();if(ov._src!==(v&&v.currentSrc)){ov._src=v&&v.currentSrc;ov._lt=null}
   if(v&&!played&&!v.paused&&!v.seeking&&v.readyState>=3&&ov._lt!=null&&v.currentTime>ov._lt&&(!src0||v.currentSrc!==src0))played=true;if(v)ov._lt=v.currentTime;
-  const ready=played&&!!v&&!v.paused&&(!src0||v.currentSrc!==src0);if(ready&&VP&&VP.root){VP._started=true;VP.root.classList.remove('vpx-wait')}if(ready||document.querySelector('.tvc')||Date.now()-t0>max||!document.body.contains(ov))end()}
+  const ready=played&&!!v&&!v.paused&&(!src0||v.currentSrc!==src0);if(ready&&VP&&VP.root){VP._started=true;VP.root.classList.remove('vpx-wait')}if(ready||(VP&&VP.root&&VP.root.querySelector&&VP.root.querySelector('.tvc'))||document.querySelector('.tvc')||Date.now()-t0>max||!document.body.contains(ov))end()}
  hook();ov._w=setInterval(check,100)}
 function introOut(box){const ov=box&&box.querySelector('.swirl-ov.intro');if(ov)swirlUntilReady(ov,'',15000,()=>ov.remove())}
 const stillWanted=()=>typeof matchMedia==='function'&&matchMedia('(prefers-reduced-motion: reduce)').matches;

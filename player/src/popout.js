@@ -49,6 +49,9 @@
     const win = await root.documentPictureInPicture.requestWindow(sizeFor(o.aspect, root.screen && root.screen.availWidth));
     const doc = win.document;
     copyStyles(document, doc);
+    // The page's own marks on html and body (a theme, a site's class, the view), so rules like "body.kids .vpx" still apply.
+    const marks = (from, to) => { for (const a of Array.from(from.attributes)) if (a.name === 'class' || a.name === 'lang' || a.name === 'dir' || a.name.startsWith('data-')) to.setAttribute(a.name, a.value); };
+    marks(document.documentElement, doc.documentElement); marks(document.body, doc.body);
     const st = doc.createElement('style');
     st.textContent = 'html,body{margin:0;width:100%;height:100%;background:#000;overflow:hidden}' + (o.css || '');
     doc.head.appendChild(st);
@@ -74,6 +77,7 @@
     cur = null;
     el.classList.remove('vpop-in');
     if (holder.parentNode) holder.parentNode.replaceChild(el, holder);
+    else el.remove(); // out of every document, so a video in it stops (the owner's close hook pauses it as well)
     if (o.onClose) o.onClose();
   }
 

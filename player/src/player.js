@@ -232,9 +232,12 @@
         P.open(this.root, {
           aspect, title: (this.ep && this.ep.title) || 'voidtv.net', holderClass: 'vpx vpx-holder',
           holder: '<span>Playing in the pop-out window.</span><button type="button">Bring it back</button>',
-          onKey: (e) => this._key(e, true),
+          onKey: (e) => { if (!this.root.contains(e.target)) this._key(e, true); }, // keys on the player itself are its own listener's, as on the page
           onOpen: () => { this._pop = true; this._popUi(true); const h = P.holder(), hb = h && h.querySelector('button'); if (hb) hb.onclick = () => P.close(); },
-          onClose: () => { this._pop = false; this._popUi(false); this._fit(); },
+          onClose: () => {
+            this._pop = false; this._popUi(false); this._fit();
+            if (!this.root.isConnected) { try { this.v.pause(); } catch (e) { /* gone */ } } // its place on the page is gone: never sound with no controls
+          },
         }).catch(() => { /* the browser said no (no click behind it): the page stays as it is */ });
       }
     }
