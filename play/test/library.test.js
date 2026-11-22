@@ -159,3 +159,16 @@ test('the auditor\'s left-off list is read from a file with a reason each, and a
   assert.equal(Lib.tidyTitle('Lemmings (Original levels only)'), 'Lemmings');
   assert.equal(Lib.tidyTitle('Mega Man X'), 'Mega Man X');
 });
+
+test('Wikidata\'s facts on a card: two players only where it says so, its genres where the card has none', () => {
+  const c = { players: 1, archive: { item: 'x' } };
+  Lib.withFacts(c, { players: 2, genres: ['beat \'em up', 'action game'] });
+  assert.equal(c.players, 2); assert.deepEqual(c.genre, ['beat \'em up', 'action game']);
+  const d = { players: 1, genre: ['platform game'] };
+  Lib.withFacts(d, { likelyTwo: 'fighting game', genres: ['racing video game'] });
+  assert.equal(d.players, 1, 'a guess is not a fact'); assert.deepEqual(d.genre, ['platform game'], 'the card\'s own genre stays');
+  const Shelf = require('../src/shelf.js');
+  assert.ok(Shelf.genresOf(['ice hockey video game']).includes('Sports and racing'));
+  assert.ok(Shelf.genresOf(['flight simulator']).includes('Strategy and simulation'));
+  assert.ok(Shelf.genresOf(['Metroidvania']).includes('Action'));
+});

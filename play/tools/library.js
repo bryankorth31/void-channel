@@ -89,6 +89,15 @@ const LEAVE = {
   DUKE3D_DOS: 'held: adult content (Bryan\'s call)', 'grand-theft-auto-1997-dma-design': 'held: crime and adult themes (Bryan\'s call)',
 };
 
+// Pure (tested): Wikidata's facts on a card. Two players only where Wikidata says so (the "likelyTwo" guesses stay out);
+// its genres where the card has none.
+function withFacts(c, f) {
+  if (!f) return c;
+  if (f.players === 2 && (c.players || 1) < 2) c.players = 2;
+  if (Array.isArray(f.genres) && f.genres.length && !c.genre) c.genre = f.genres.slice(0, 4);
+  return c;
+}
+
 // Pure (tested): a PC game's card from its row: the drafts tool's DOS card, with the start program the check used.
 function dosCard(r) {
   // The machine is said by the shelf, not the name: "Doom 2 (MS-DOS)", "MS-DOS: Stunts (VGA Graphics and SoundBlaster)",
@@ -162,6 +171,12 @@ const readList = (f) => { try { return JSON.parse(fs.readFileSync(f, 'utf8')).ro
 const readTop = () => readList(process.env.PLAY_TOP || TOP);
 const readMore = () => readList(process.env.PLAY_MORE || MORE);
 const readGenvar = () => readList(process.env.PLAY_GENVAR || GENVAR);
+// The PLAY assistant's facts from Wikidata, by Archive item (22 Nov 2026): players (2 only where Wikidata marks two or
+// more on a home console or arcade machine) and genres in Wikidata's own words. And the rows whose only doubt was a
+// name Wikidata did not know, which it found after all (now-sure.json): they no longer wait for the weed-down.
+const readJson = (f, d) => { try { return JSON.parse(fs.readFileSync(f, 'utf8')); } catch (e) { return d; } };
+const FACTS = () => readJson(path.join(AUDIT, 'play-mode', 'consoles', 'facts-rows.json'), {});
+const NOW_SURE = () => { const j = readJson(path.join(AUDIT, 'play-mode', 'consoles', 'now-sure.json'), []); return new Set((Array.isArray(j) ? j : j.items || j.rows || []).map((x) => (typeof x === 'string' ? x : x.item))); };
 
 function readRows(system) {
   const f = path.join(ROWS, system + '.jsonl');
@@ -174,7 +189,8 @@ function main() {
   const taken = { ids: hand.map((c) => c.id), items: hand.map((c) => c.archive.item), names: hand.map((c) => c.system + ' ' + nameKey(c.title)) };
   fs.rmSync(LIB, { recursive: true, force: true });
   let total = 0;
-  const top = readTop(), more = readMore(), genvar = readGenvar();
+  const top = readTop(), more = readMore(), genvar = readGenvar(), facts = FACTS(), sure = NOW_SURE();
+  for (const r of [...more, ...genvar]) if (sure.has(r.item)) r.likelyHack = false;
   for (const system of [...new Set(collections().map((c) => c.system))]) {
     // A collection's own rows first (the Archive's curated libraries), then the start-checked batches its lines name:
     // "top150" the top 150, "more" the games to add (21 Nov 2026), "top150+more" both, "genvar" the clean Genesis copies.
@@ -182,6 +198,7 @@ function main() {
     const weed = readWeed(system);
     const cards = build(readRows(system).concat(/top150/.test(from) ? topRows(system, top, weed) : [],
       /more/.test(from) ? topRows(system, more, weed) : [], /genvar/.test(from) ? topRows(system, genvar, weed) : []), taken);
+    for (const c of cards) withFacts(c, facts[c.archive.item]);
     for (const c of cards) { taken.ids.push(c.id); taken.items.push(c.archive.item); taken.names.push(c.system + ' ' + nameKey(c.title)); }
     for (const b of bundles(system, cards)) {
       const f = path.join(LIB, b.name + '.json');
@@ -195,4 +212,4 @@ function main() {
 }
 
 if (require.main === module) main();
-module.exports = { build, bundles, topRows, dosCard, finished, tidyTitle, LEAVE, LEAVE_FILE, PER };
+module.exports = { build, bundles, topRows, dosCard, finished, tidyTitle, withFacts, LEAVE, LEAVE_FILE, PER };

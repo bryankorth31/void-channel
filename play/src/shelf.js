@@ -293,12 +293,13 @@
   // Plan G2: Wikidata's genres are fine-grained ("side-scrolling beat 'em up"), so the shelf files them under a few plain
   // ones. A game can sit under two (boxing is Action and Sports). Pure: tested in play/test/shelf.test.js.
   const GENRES = [
-    ['Action', /beat 'em up|hack and slash|fighting|boxing|shoot|run and gun|action game/i],
+    // Wikidata's own words for the games added 22 Nov (the PLAY assistant's facts: vehicular combat, Metroidvania, wrestling).
+    ['Action', /beat 'em up|hack and slash|fighting|boxing|shoot|run and gun|action game|vehicular combat|metroidvania|wrestling/i],
     ['Platform', /platform/i],
-    ['Puzzle and maze', /puzzle|maze/i],
+    ['Puzzle and maze', /puzzle|maze|breakout|pinball|board game|chess|trivia|game show/i],
     ['Adventure', /adventure|role-playing|text-based|interactive fiction/i],
-    ['Strategy and simulation', /strateg|simulation|management/i],
-    ['Sports and racing', /sport|boxing|racing|football|soccer|golf|tennis/i],
+    ['Strategy and simulation', /strateg|simulation|simulator|management/i],
+    ['Sports and racing', /sport|boxing|racing|football|soccer|golf|tennis|hockey|basketball|baseball|athletics|skateboarding|volleyball|wrestling/i],
     ['Learning', /educational|learning/i],
   ];
   const genresOf = (labels) => GENRES.filter(([, re]) => (labels || []).some((l) => re.test(l))).map(([n]) => n);
