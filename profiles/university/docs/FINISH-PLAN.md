@@ -401,3 +401,11 @@ the HQ areas chat. Steps 7 to 10 start after the 22 Nov reset.
   room (the header bar stays Home and the page's name, as the remodel set). Tested with two browser tabs as phones on
   the preview server: join, private picks, the split, the source on screen and phone, end. tests 37 of 37, selftest
   4 of 4; no sideways scroll at 821x1316, 1278x513, 1920x1080. Not tried with real phones. Not pushed, not deployed.
+- 22 Nov 2026, Pattern Eater together in the study room (Bryan: "Pattern Eater together"; his design from Dec 2025,
+  plans/research-aha-nucleation-pattern-eater.md). A lesson with a crystal can be studied as Pattern Eater: its true
+  pieces and its wrong whole answers are dealt out to the phones; people send the ones they think belong; a wrong one
+  cracks the crystal on the shared screen and dissolves, and the phone is told why; the next right piece rebuilds
+  it; when every true piece is in, the screen asks the room to say out loud what idea just set, then Show the idea
+  sets it on the screen and on every phone with the lesson's aha line. Deal again re-deals to whoever is in the room.
+  recall.json carries each lesson's crystal. Tested with two tabs as phones: a wrong piece cracked it, five right
+  pieces from two phones set it. tests 38 of 38, selftest 4 of 4. Not tried with real phones; not pushed or deployed.

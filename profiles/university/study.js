@@ -16,12 +16,12 @@
   // ---- the sets: every lesson with questions, read from recall.json (the same file Remember it reads)
   fetch('recall.json').then(function (r) { return r.json(); }).then(function (bank) {
     var list = $('sets'), courses = {};
-    Object.keys(bank).forEach(function (k) { var b = bank[k]; if (!b.q || b.q.length < 2) return; (courses[b.course] = courses[b.course] || []).push({ key: k, b: b }); });
+    Object.keys(bank).forEach(function (k) { var b = bank[k]; if ((!b.q || b.q.length < 2) && !b.crystal) return; (courses[b.course] = courses[b.course] || []).push({ key: k, b: b }); });
     Object.keys(courses).sort().forEach(function (c) {
       var g = t('div', 'setgroup'); g.appendChild(t('h3', null, c));
       courses[c].forEach(function (x) {
-        var b = t('button', 'setbtn', x.b.title); b.type = 'button'; b.title = 'Study this lesson together: ' + x.b.q.length + ' questions';
-        b.appendChild(t('small', null, x.b.q.length + ' questions'));
+        var b = t('button', 'setbtn', x.b.title); b.type = 'button'; b.title = 'Study this lesson together';
+        b.appendChild(t('small', null, [x.b.q.length >= 2 ? x.b.q.length + ' questions' : '', x.b.crystal ? 'Pattern Eater' : ''].filter(Boolean).join(', ')));
         b.onclick = function () { choose(x); };
         g.appendChild(b);
       });
@@ -61,16 +61,70 @@
     if (m.type === 'join') { S.seats[m.from] = true; people(); tell(m.from, { type: 'unit', mode: 'study', title: S.set ? S.set.b.title : 'Study together' }); if (S.i >= 0 && !S.shown) ask(m.from); return; }
     if (m.type === 'leave') { S.seats[m.from] = false; people(); tally(); return; }
     var x = m.msg; if (!x || typeof x !== 'object') return;
+    if (x.type === 'give' && typeof x.id === 'string') { gave(m.from, x.id); return; }
     if (x.type === 'pick' && x.i === S.i && !S.shown && Number.isInteger(x.j) && x.j >= 0 && x.j < 4 && S.picks[m.from] == null) { S.picks[m.from] = x.j; tally(); }
   }
 
   // ---- a set, one question at a time
+  // a lesson can be studied two ways: guess first on its questions, or Pattern Eater on its crystal
   function choose(x) {
-    S.set = x; S.i = -1;
-    $('pick').hidden = true; $('run').hidden = false;
-    $('setname').textContent = x.b.course + ': ' + x.b.title;
-    here().forEach(function (k) { tell(+k, { type: 'unit', mode: 'study', title: x.b.title }); });
+    S.set = x; S.i = -1; S.eat = null;
+    $('pick').hidden = true; $('how').hidden = false; $('run').hidden = true; $('eatbox').hidden = true;
+    $('howname').textContent = x.b.course + ': ' + x.b.title;
+    $('howguess').hidden = !(x.b.q.length >= 2); $('howeat').hidden = !x.b.crystal;
+  }
+  $('howguess').onclick = function () {
+    $('how').hidden = true; $('run').hidden = false;
+    $('setname').textContent = S.set.b.course + ': ' + S.set.b.title;
+    here().forEach(function (k) { tell(+k, { type: 'unit', mode: 'study', title: S.set.b.title }); });
     next();
+  };
+  $('howeat').onclick = function () { $('how').hidden = true; eat(); };
+  $('howback').onclick = function () { $('how').hidden = true; $('pick').hidden = false; S.set = null; };
+
+  // ---- Pattern Eater together (Bryan's design, Dec 2025, in plans/research-aha-nucleation-pattern-eater.md): the
+  // lesson's true pieces and its wrong "whole answers" are dealt out to the phones; people send the ones they think
+  // belong; a wrong one cracks the crystal and dissolves, the next right one rebuilds it; when every true piece is in,
+  // the room says out loud what idea just set before the screen shows it.
+  function shuffle(a) { for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)), x = a[i]; a[i] = a[j]; a[j] = x; } return a; }
+  function eat() {
+    var cr = S.set.b.crystal;
+    var pieces = cr.partials.map(function (p, i) { return { id: 'p' + i, text: p, ok: true }; }).concat(cr.decoys.map(function (d, i) { return { id: 'd' + i, text: d.text, ok: false, why: d.why }; }));
+    S.eat = { pieces: shuffle(pieces), placed: [], cracked: null, set: false, need: cr.partials.length };
+    $('eatbox').hidden = false; $('eatname').textContent = S.set.b.course + ': ' + S.set.b.title;
+    deal(); paintEat();
+  }
+  function deal() {
+    var E = S.eat, seats = here(), left = E.pieces.filter(function (p) { return !E.placed.some(function (q) { return q.id === p.id; }) && !p.gone; });
+    var hands = {}; seats.forEach(function (k) { hands[k] = []; });
+    left.forEach(function (p, i) { if (seats.length) hands[seats[i % seats.length]].push(p); });
+    seats.forEach(function (k) {
+      tell(+k, { type: 'eat', title: S.set.b.title, n: hands[k].length });
+      hands[k].forEach(function (p) { tell(+k, { type: 'piece', id: p.id, text: p.text.slice(0, 400) }); });
+    });
+    say(seats.length ? 'The pieces are on the phones. Send the ones that belong.' : 'Join with phones first, then deal the pieces again.');
+  }
+  function paintEat() {
+    var E = S.eat, L = $('eatleft'), R = $('eatright'); L.textContent = ''; R.textContent = '';
+    E.placed.forEach(function (p, i) { (i % 2 ? R : L).appendChild(t('div', 'chip in', p.text)); });
+    var gem = $('gem'); gem.className = 'gem' + (E.cracked ? ' cracked' : '') + (E.set ? ' set' : '');
+    gem.textContent = E.set ? S.set.b.crystal.key : E.cracked ? 'Cracked' : 'Not set yet';
+    $('eatline').textContent = E.set ? (S.set.b.crystal.aha || '') : E.cracked ? 'That cracked it: "' + E.cracked.text.replace(/[.!?]$/, '') + '." ' + (E.cracked.why || 'It is not part of this idea.') + ' The next piece that belongs rebuilds it.' : E.placed.length === E.need ? 'Every piece is in. Before you look: say out loud, in your own words, what idea just set.' : E.placed.length + ' of ' + E.need + ' pieces in. Someone holds the rest.';
+    $('showidea').hidden = E.set || E.placed.length < E.need;
+  }
+  $('showidea').onclick = function () {
+    var E = S.eat; E.set = true; paintEat();
+    here().forEach(function (k) { tell(+k, { type: 'set', idea: S.set.b.crystal.key.slice(0, 500), aha: (S.set.b.crystal.aha || '').slice(0, 400) }); });
+    say('It set. Say it another way, each of you, out loud.');
+  };
+  $('redeal').onclick = function () { if (S.eat) deal(); };
+  $('eatback').onclick = function () { $('eatbox').hidden = true; $('pick').hidden = false; S.set = null; S.eat = null; };
+  function gave(seat, id) {
+    var E = S.eat; if (!E || E.set) return;
+    var p = E.pieces.filter(function (x) { return x.id === id; })[0]; if (!p || p.gone || E.placed.indexOf(p) >= 0) return;
+    if (p.ok) { E.placed.push(p); E.cracked = null; tell(seat, { type: 'took', id: id, ok: true }); }
+    else { p.gone = true; E.cracked = p; tell(seat, { type: 'took', id: id, ok: false, why: (p.why || '').slice(0, 400) }); }
+    paintEat();
   }
   function q() { return S.set.b.q[S.i]; }
   function ask(seat) {
@@ -128,7 +182,7 @@
   $('again').onclick = function () { $('run').hidden = true; $('pick').hidden = false; S.set = null; S.i = -1; };
   $('end').onclick = function () {
     try { if (S.ws && S.ws.readyState === 1) { S.ws.send(JSON.stringify({ to: 'all', msg: { type: 'over' } })); S.ws.send(JSON.stringify({ relay: 'end' })); } if (S.ws) S.ws.close(); } catch (e) {}
-    S.ws = null; S.seats = {}; S.code = ''; people(); $('code').textContent = ''; $('qr').textContent = ''; $('addr').textContent = ''; $('open').hidden = false; $('run').hidden = true; $('pick').hidden = false;
+    S.ws = null; S.seats = {}; S.code = ''; S.eat = null; people(); $('how').hidden = true; $('eatbox').hidden = true; $('code').textContent = ''; $('qr').textContent = ''; $('addr').textContent = ''; $('open').hidden = false; $('run').hidden = true; $('pick').hidden = false;
     say('The session is over. Nothing from it was kept.');
   };
   root._study = { state: function () { return { code: S.code, phones: here().length, i: S.i, shown: S.shown, picks: Object.assign({}, S.picks) }; } };

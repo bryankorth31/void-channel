@@ -68,6 +68,12 @@ a{color:var(--gold)}
   <p class="dim" id="await">Watch the lecture on the big screen. Each question comes here when the lecture reaches it.</p>
 </section>
 
+<section id="eat" hidden>
+  <p class="dim" id="ehead">Your pieces. Send the ones you think belong to the idea on the shared screen.</p>
+  <div class="picks" id="pieces"></div>
+  <div id="eidea" hidden><p class="dim">The idea that set:</p><p id="eideatext"></p><p class="dim" id="eaha"></p></div>
+</section>
+
 <section id="write" hidden>
   <div class="row"><button type="button" id="back" title="Drop this question and carry on with the lecture">← Back to the lecture</button></div>
   <p class="dim" id="at"></p>
@@ -104,7 +110,7 @@ a{color:var(--gold)}
     try { sessionStorage.setItem('vu-make-token', token); } catch (e) {}
   }
   function norm(s) { var c = String(s || '').trim().toUpperCase(); return c.length === 4 && c.split('').every(function (x) { return ALPHA.indexOf(x) >= 0; }) ? c : ''; }
-  function show(id) { ['enter', 'ready', 'write', 'answer'].forEach(function (k) { $(k).hidden = k !== id; }); window.scrollTo(0, 0); }
+  function show(id) { ['enter', 'ready', 'write', 'answer', 'eat'].forEach(function (k) { $(k).hidden = k !== id; }); window.scrollTo(0, 0); }
   function note(text, kind) { $('note').textContent = text || ''; $('note').className = kind || ''; }
   function send(obj) { if (ws && ws.readyState === 1) { ws.send(JSON.stringify(obj)); return true; } note('Not connected to the computer. Wait a moment, or scan the code again.', 'no'); return false; }
 
@@ -165,6 +171,10 @@ a{color:var(--gold)}
   }
   function hear(m) {
     if (m.type === 'hello') { note(''); return; }
+    if (m.type === 'eat') { mode = 'eat'; study = true; $('kind').textContent = 'Void University: study together'; $('title').textContent = m.title || 'Pattern Eater'; $('pieces').textContent = ''; $('eidea').hidden = true; $('ehead').textContent = m.n ? 'Your pieces. Send the ones you think belong to the idea on the shared screen. Keep the ones you think do not.' : 'No pieces for you this round. Help the room decide out loud.'; note(''); show('eat'); return; }
+    if (m.type === 'piece' && mode === 'eat') { var pb = document.createElement('button'); pb.type = 'button'; pb.textContent = m.text; pb.dataset.id = m.id; pb.title = 'Send this piece to the shared screen'; pb.onclick = function () { if (pb.disabled) return; if (send({ type: 'give', id: m.id })) { pb.disabled = true; note('Sent.'); } }; $('pieces').appendChild(pb); return; }
+    if (m.type === 'took' && mode === 'eat') { var tb = $('pieces').querySelector('[data-id="' + m.id + '"]'); if (tb) { tb.className = m.ok ? 'mine' : 'wrong'; tb.disabled = true; } note(m.ok ? 'It fit. It is on the shared screen.' : 'That one cracked the crystal: it is not part of this idea. ' + (m.why || ''), m.ok ? 'ok' : 'no'); return; }
+    if (m.type === 'set' && mode === 'eat') { $('eideatext').textContent = m.idea; $('eaha').textContent = m.aha || ''; $('eidea').hidden = false; note(''); return; }
     if (m.type === 'unit' && m.mode === 'study') { mode = 'answer'; study = true; $('kind').textContent = 'Void University: study together'; $('title').textContent = m.title || 'Study together'; if (!asking) { $('await').hidden = false; $('await').textContent = 'Waiting for the shared screen to ask the first question.'; show('answer'); } return; }
     if (m.type === 'unit' && m.mode === 'answer') { mode = 'answer'; $('kind').textContent = 'Void University: answer on your phone'; total = +m.of || 0; $('title').textContent = m.title || 'The lecture'; if (!asking) { $('await').hidden = false; score(); show('answer'); } return; }
     if (m.type === 'over') { finish(); return; }

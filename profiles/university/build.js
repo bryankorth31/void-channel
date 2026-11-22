@@ -272,7 +272,7 @@ function doorQuestions(all) {
 // links to where it lives; the practice sites (Mind Gym, Body Atlas) open in a new tab.
 function toolsRow(all) {
   const ex = []; for (const c of all) for (const u of c.units) if (u.explainer && shipsExplain(u)) ex.push({ c, u });
-  const nq = Object.values(recallBank(all)).filter((b) => b.q.length >= 2).length;
+  const nq = Object.values(recallBank(all)).filter((b) => b.q.length >= 2 || b.crystal).length;
   const tool = (href, mark, name, line, more, ext) => '<a class="tool" href="' + esc(href) + '"' + (ext ? ' target="_blank" rel="noopener"' : '') + ' title="' + esc(name + ': ' + line) + '"><span class="mark ' + mark + '"></span><b>' + esc(name) + '</b><span>' + esc(line) + '</span><i>' + esc(more) + '</i></a>';
   const cards = [];
   if (nq) cards.push(tool('study.html', 'm-study', 'Study together', 'One shared screen, everyone\'s phones. Guess first, see how the room split, let the source settle it.', 'Open a room, ' + nq + ' lessons to study'));
@@ -301,7 +301,11 @@ function quoteFrom(c, u, q) {
 // front page only once the reader has marked a lesson done).
 function recallBank(all) {
   const out = {};
-  for (const c of all) for (const u of c.units) if ((u.quiz || []).length) out[c.slug + '/' + u.n] = { course: c.name, title: u.title.replace(/^Draft, not kept yet: /, ''), q: u.quiz.map((q) => ({ q: q.q, choices: q.choices, a: q.a, why: q.why, quote: q.quote || '', from: quoteFrom(c, u, q) })) };
+  for (const c of all) for (const u of c.units) {
+    const cr = u.crystal && (u.crystal.partials || []).length >= 3 && u.crystal.key ? { partials: u.crystal.partials, key: u.crystal.key, decoys: (u.crystal.decoys || []).map((d) => ({ text: d.text, why: d.why || '' })), aha: u.crystal.aha || '' } : null;
+    if (!(u.quiz || []).length && !cr) continue;
+    out[c.slug + '/' + u.n] = { course: c.name, title: u.title.replace(/^Draft, not kept yet: /, ''), q: (u.quiz || []).map((q) => ({ q: q.q, choices: q.choices, a: q.a, why: q.why, quote: q.quote || '', from: quoteFrom(c, u, q) })), ...(cr ? { crystal: cr } : {}) };
+  }
   return out;
 }
 
@@ -325,13 +329,16 @@ main{max-width:1200px;margin:0 auto;padding:26px 24px 60px}
 .bar{display:grid;grid-template-columns:minmax(0,260px) 1fr 34px;gap:12px;align-items:center;margin:8px 0;font-size:16px}.bar .track{height:26px;border-radius:8px;background:var(--panel2);overflow:hidden}.bar .track i{display:block;height:100%;background:#5fd4ff;transition:width .6s}.bar.real .bt{color:#5fe39a;font-weight:700}.bar.real .track i{background:#5fe39a}
 #source{margin:14px 0 0;padding:12px 14px;border-left:3px solid var(--gold);background:rgba(0,0,0,.25);border-radius:0 10px 10px 0}#srcline{margin:0 0 6px;font-size:17px}#srcquote{margin:0;color:var(--soft);font-size:15px;font-style:italic}
 .acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.eatgrid{display:grid;grid-template-columns:1fr 230px 1fr;gap:16px;align-items:center;margin:14px 0}.eatcol{display:flex;flex-direction:column;gap:8px}.chip.in{padding:9px 11px;border-radius:10px;border:1px solid #5fd4ff;color:#cfeeff;background:rgba(95,212,255,.08);font-size:14px;animation:drop .5s ease}
+.gem{width:210px;height:210px;margin:0 auto;clip-path:polygon(25% 5%,75% 5%,100% 50%,75% 95%,25% 95%,0 50%);background:linear-gradient(135deg,rgba(159,230,255,.25),rgba(47,140,255,.18));display:grid;place-items:center;text-align:center;padding:26px;font-family:var(--head);font-size:15px;color:var(--dim);transition:background .6s,transform .4s}.gem.set{background:linear-gradient(135deg,#9fe6ff,#2f8cff 60%,#ff4f8b);color:#041018;transform:scale(1.06)}.gem.cracked{background:repeating-linear-gradient(120deg,rgba(255,143,150,.35) 0 6px,rgba(20,10,14,.9) 6px 14px);color:#ffb3b8;animation:shake .4s}
+#eatline{font-size:17px;margin:6px 0 0}@keyframes drop{from{opacity:0;transform:translateY(-8px)}to{opacity:1}}@keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}@media (prefers-reduced-motion:reduce){.chip.in,.gem.cracked{animation:none}}@media (max-width:900px){.eatgrid{grid-template-columns:1fr}.gem{width:170px;height:170px}}
 [hidden]{display:none!important}
 @media (max-width:900px){.room{grid-template-columns:1fr}.lead h1{font-size:30px}#qtext{font-size:23px}.bar{grid-template-columns:minmax(0,1fr) 90px 28px}}
 ${LOOKCSS}${TYPECSS}</style></head><body>
 ${top('study', all)}<main id="study"><div class="lead"><h1>Study together</h1><p>One shared screen and everyone's phones. Pick a lesson; each question goes to every phone; everyone guesses privately; then the room sees how it split and the source settles it. No names, no scores, and nothing is kept.</p></div>
 <div class="room"><div class="door2"><button type="button" class="btn2 go" id="open" title="Open a room the phones can join">Open a room</button><div class="qrbox" id="qr" aria-hidden="true"></div><div class="code" id="code"></div><p id="addr"></p><p id="count">0 phones in the room</p><p id="state" role="status">Open a room, then scan its code with your phones.</p><button type="button" class="btn2" id="other" hidden title="If a phone cannot open the page, this computer may have another address on your network">Phone cannot open it? Try another address</button><button type="button" class="btn2" id="end" title="End the session: the phones are told, and nothing is kept">End the session</button></div>
 <div class="panel"><div id="pick"><h2 style="margin:0 0 10px">Pick a lesson to study</h2><input type="search" id="find" placeholder="Find a lesson" aria-label="Find a lesson" title="Type a word to find a lesson"><div id="sets"></div></div>
-<div id="run" hidden><p id="setname"></p><p id="qn"></p><p id="qtext"></p><div id="bars"></div><div id="source" hidden><p id="srcline"></p><p id="srcquote"></p></div>
+<div id="how" hidden><p id="howname" style="color:var(--dim);margin:0 0 6px"></p><h2 style="margin:0 0 12px">How do you want to study it?</h2><div class="acts"><button type="button" class="btn2 go" id="howguess" title="Each question goes to every phone; everyone guesses privately; then the room sees how it split">Guess first</button><button type="button" class="btn2 go" id="howeat" title="The pieces go to the phones; the room builds the idea together; a wrong piece cracks it">Pattern Eater</button><button type="button" class="btn2" id="howback" title="Choose another lesson">Pick another lesson</button></div></div><div id="eatbox" hidden><p id="eatname" style="color:var(--dim);margin:0 0 4px"></p><p style="color:var(--acc);font-weight:600;margin:0">Pattern Eater: send the pieces that belong. A wrong one cracks it; the next right one rebuilds it.</p><div class="eatgrid"><div class="eatcol" id="eatleft"></div><div class="gem" id="gem">Not set yet</div><div class="eatcol" id="eatright"></div></div><p id="eatline"></p><div class="acts"><button type="button" class="btn2 go" id="showidea" hidden title="Show the idea that just set, after the room has said it out loud">Show the idea</button><button type="button" class="btn2" id="redeal" title="Deal the pieces still out again, to the phones in the room now">Deal again</button><button type="button" class="btn2" id="eatback" title="Choose another lesson">Pick another lesson</button></div></div><div id="run" hidden><p id="setname"></p><p id="qn"></p><p id="qtext"></p><div id="bars"></div><div id="source" hidden><p id="srcline"></p><p id="srcquote"></p></div>
 <div class="acts"><button type="button" class="btn2" id="reveal" title="Stop waiting and show how the room split">Show how the room split</button><button type="button" class="btn2 go" id="next" hidden title="Send the next question to the phones">Next question</button><button type="button" class="btn2" id="again" hidden title="Choose another lesson to study">Pick another lesson</button></div></div></div></div>
 </main>${FOOT()}<script src="${LIVE ? 'qr.js' : 'make/qr.js'}"></script><script src="study.js"></script></body></html>`;
 }

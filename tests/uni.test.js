@@ -674,3 +674,20 @@ test('Study together and the Tools row: the room page, its sets with their sourc
   for (const f of ['study.html', 'study.js', 'join.html', 'qr.js', 'recall.json']) assert.ok(fs.existsSync(path.join(SITE, f)), f + ' is not in the public copy');
   assert.match(fs.readFileSync(path.join(SITE, 'study.html'), 'utf8'), /<script src="qr\.js"><\/script>/);
 });
+
+test('Pattern Eater together: every lesson crystal is a set the room can build, and the phone holds and sends pieces', () => {
+  build();
+  const prev = path.join(uni.UNI, 'site-preview');
+  const bank = JSON.parse(fs.readFileSync(path.join(prev, 'recall.json'), 'utf8'));
+  const cr = bank['critical-thinking/1'].crystal;
+  const src = JSON.parse(fs.readFileSync(path.join(uni.UNI, 'courses', 'critical-thinking.json'), 'utf8')).units.find((u) => u.n === 1).crystal;
+  assert.deepEqual(cr.partials, src.partials);
+  assert.equal(cr.key, src.key);
+  assert.deepEqual(cr.decoys.map((d) => d.text), src.decoys.map((d) => d.text));
+  const page = fs.readFileSync(path.join(prev, 'study.html'), 'utf8');
+  for (const id of ['howguess', 'howeat', 'gem', 'showidea', 'redeal']) assert.match(page, new RegExp('id="' + id + '"[^>]*'), id);
+  const js = fs.readFileSync(path.join(prev, 'study.js'), 'utf8');
+  assert.match(js, /type: 'piece'/); assert.match(js, /type: 'set'/);
+  const phone = fs.readFileSync(path.join(uni.UNI, 'make', 'phone.html'), 'utf8');
+  assert.match(phone, /m\.type === 'eat'/); assert.match(phone, /type: 'give'/); assert.match(phone, /id="eat"/);
+});
