@@ -205,7 +205,10 @@
       if (b) b.style.visibility = on ? 'hidden' : '';
     }
 
+    // The canvas Ruffle draws on (inside its player), for the pop-out window to stream (play.js popVideo).
+    const drawCanvas = () => (player && player.shadowRoot ? player.shadowRoot.querySelector('canvas') : null);
     return {
+      drawCanvas,
       start, stop, key, mouse,
       prepareSound: () => {},
       pad: () => {}, rewind: () => {}, cheats: () => {},

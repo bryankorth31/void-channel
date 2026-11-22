@@ -371,7 +371,7 @@
     clearInterval(cpTimer); cps = []; playS = 0;
     if (!PlayCards.isPad(card) || !window.PlayCheckpoints) return;
     cpTimer = setInterval(async () => {
-      if (!started || paused || document.hidden || !runner) return;
+      if (!started || paused || (document.hidden && !pip) || !runner) return;   // a popped-out game keeps its go-back points
       playS++;
       if (playS % PlayCheckpoints.EVERY_S || cpBusy) return;
       cpBusy = true;
@@ -612,6 +612,7 @@
       cheats: (m) => { if (!m.ok) toast('This game\'s engine cannot take cheats'); else if (m.on) toast(m.on === 1 ? 'One cheat on' : m.on + ' cheats on'); },
       drawn: popDrawn,
       firstFrame: () => {
+        $('b-pop').hidden = !canPop();
         arriving = false; status(''); clearTimeout(deadline); $('cover').hidden = true; $('canvas').focus({ preventScroll: true }); stayAwake(true); armBack();
         if (!PlayCards.isPad(card) && !isFlash()) blankWatch();   // a Flash game draws in its own element, not the canvas
         if (resumeState) { const s = resumeState; resumeState = null; runner.load(s).then((ok) => toast(ok ? 'Back where you left off' : 'That spot would not load; starting fresh')); }
@@ -629,7 +630,7 @@
     const tc = touchCore(card);
     pointerMode = !!(tc && touch); pointerId = null;
     runner.start(pointerMode ? Object.assign({}, card, { vars: Object.assign({}, card.vars, tc.vars) }) : card, base, build.commit.slice(0, 12) + HOST_V, sramKept);
-    autoTimer = setInterval(() => { if (started && !paused && !document.hidden) autosave(); }, AUTO_EVERY_MS);
+    autoTimer = setInterval(() => { if (started && !paused && (!document.hidden || pip)) autosave(); }, AUTO_EVERY_MS);
     cpStart();
     place.sig = ''; place();
   }
@@ -944,10 +945,16 @@
   }
   async function popVideo() {
     if (document.pictureInPictureElement) { document.exitPictureInPicture().catch(() => {}); return; }
-    popCopy = document.createElement('canvas'); popCopy.height = 480; popCopy.width = Math.round(480 * aspect);
-    popDrawn();
+    if (!started || !runner) return;
+    // Flash (Ruffle's own canvas) and arcade (a WebGL canvas, which reads back blank) are streamed straight from the
+    // canvas they draw on, at its own shape (the PLAY auditor, 22 Nov 2026: Flash's window was all black). Every other
+    // engine draws a frame at a time on #canvas, which is copied at the game's display shape.
+    const own = isFlash() ? (runner.drawCanvas && runner.drawCanvas()) : isArcade() ? $('canvas') : null;
+    let stream;
+    if (own) { popCopy = null; stream = own.captureStream(60); }
+    else { popCopy = document.createElement('canvas'); popCopy.height = 480; popCopy.width = Math.round(480 * aspect); popDrawn(); stream = popCopy.captureStream(60); }
     popVid = document.createElement('video'); popVid.muted = true; popVid.playsInline = true;
-    popVid.srcObject = popCopy.captureStream(60);
+    popVid.srcObject = stream;
     try { await popVid.play(); await popVid.requestPictureInPicture(); } catch (e) { popVid = popCopy = null; return; }
     pip = { close: () => document.exitPictureInPicture().catch(() => {}), video: true };
     setTimeout(poll, 16);
@@ -1123,8 +1130,7 @@
   $('b-touch').onclick = () => { if (padMode) { padMode = false; touch = true; } else touch = !touch; place.sig = ''; place(); };
   // iPhone has no fullscreen for a web page: the button shows only where the browser can do it.
   if (!document.fullscreenEnabled) $('b-full').hidden = true;
-  $('b-pop').hidden = !canPop();
-  $('b-pop').onclick = popOut;
+  $('b-pop').onclick = popOut;   // shown once the game draws (firstFrame): before Play there is nothing to pop out
   $('b-full').onclick = () => { leftFull = !!document.fullscreenElement; if (document.fullscreenElement) document.exitFullscreen(); else document.documentElement.requestFullscreen().catch(() => {}); };
   // In fullscreen the game is all there is: the layout follows the change (Esc or Full to leave), the bar comes back
   // while the mouse is at the top of the screen or for 3 seconds after a tap, and a still mouse pointer hides.
