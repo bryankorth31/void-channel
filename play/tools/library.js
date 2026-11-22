@@ -73,6 +73,7 @@ const LEAVE = {
   doomII: 'a second copy of Doom II (Doom-2 stays)', 'WOLF3D-MS-DOS': 'a second copy of Wolfenstein 3D (msdos_Wolfenstein_3D_1992 stays)',
   freedos_edit_09a_: 'a text editor, not a game', DUKE1EXT: 'a level add-on for Duke Nukem', Dos_Mario: 'a fan-made Mario clone (Wiering, 1994)',
   duke_bin: 'Duke Nukem 3D on the Genesis (held with Duke Nukem 3D)',
+  checkit_30: 'a PC test program, not a game (the auditor, 22 Nov)', msdos_Beyond_Castle_Wolfenstein_1985: 'its program ends at once in our player (the auditor, 22 Nov)',
   msdos_Duke_Nukems_Penthouse_Paradise_1997: 'adult content: kept out entirely',
   msdos_Duke_Assault_1997: 'a Duke Nukem 3D add-on (held with Duke Nukem 3D)', 'msdos_Duke_it_out_in_D.C._1997': 'a Duke Nukem 3D add-on (held with Duke Nukem 3D)',
   DUKE3D_DOS: 'held: adult content (Bryan\'s call)', 'grand-theft-auto-1997-dma-design': 'held: crime and adult themes (Bryan\'s call)',
