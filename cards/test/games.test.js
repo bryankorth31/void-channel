@@ -9,23 +9,7 @@ const T = require('../src/table.js');
 const CE = require('../games/crazy-eights.js');
 const H = require('../games/hearts.js');
 
-// A table set by hand. set: the zones to fill. Cards not named go under `rest` (the pack unless told otherwise);
-// only: the pack is just the cards named (a small table for one rule).
-function rig(game, n, set, more) {
-  const o = more || {};
-  const s = T.create(game, { players: n, rand: C.seeded(1), opts: o.opts }).state;
-  const named = Object.values(set).flat();
-  for (const id of Object.keys(s.zones)) s.zones[id] = [];
-  for (const id of Object.keys(set)) s.zones[id] = set[id].slice();
-  if (o.only) s.pack = named.slice();
-  else { const rest = o.rest || 'draw'; s.zones[rest] = s.pack.filter((c) => !named.includes(c)).concat(s.zones[rest]); }
-  Object.assign(s.pub, o.pub);
-  if (o.turn !== undefined) s.turn = [].concat(o.turn);
-  if (o.phase) s.phase = o.phase;
-  return s;
-}
-const yes = (game, s, p, m) => { const r = T.move(game, s, p, m, C.seeded(3)); assert.ok(r.ok, r.error + ' ' + (r.bug || '')); return r; };
-const no = (game, s, p, m, re) => { const r = T.move(game, s, p, m); assert.equal(r.ok, false, 'should be refused: ' + JSON.stringify(m)); assert.ok(!r.bug, r.bug); assert.match(r.error, re); assert.equal(r.state, s); };
+const { rig, yes, no, playOut } = require('./helper.js');
 
 // ---------- Crazy Eights ----------
 test('Crazy Eights deals 7 each to two players and 5 each to more, and turns up a card that is not an eight', () => {
@@ -225,81 +209,26 @@ test('Hearts: taking all 26 points gives them to everyone else, and the lowest s
   assert.deepEqual(s.turn, []);
 });
 
-// ---------- Whole games by chance, held against the privacy rule ----------
-// Written apart from the engine's own list (T.hidden), so a fault in the engine's idea of "hidden" is caught too.
-const SECRET = {
-  'crazy-eights': (s, v) => { const out = [...s.zones.draw, ...s.zones.discard.slice(0, -1)]; for (let q = 0; q < s.n; q++) if (q !== v) out.push(...s.zones['hand:' + q]); return out; },
-  hearts: (s, v) => { const out = [...s.zones.draw]; for (let q = 0; q < s.n; q++) { out.push(...s.zones['won:' + q]); if (q !== v) out.push(...s.zones['hand:' + q], ...s.zones['pass:' + q]); } return out; },
+// ---------- Whole games by chance, held against the privacy rule (the kit: test/helper.js) ----------
+// What is secret from whom is written here, apart from the engine's own list, so a fault in the engine's idea of
+// "hidden" is caught too.
+const SPEC = {
+  'crazy-eights': {
+    secret: (s, v) => { const out = [...s.zones.draw, ...s.zones.discard.slice(0, -1)]; for (let q = 0; q < s.n; q++) if (q !== v) out.push(...s.zones['hand:' + q]); return out; },
+    open: (s) => s.zones.discard.slice(-1),
+    faceUp: 'discard',
+  },
+  hearts: {
+    secret: (s, v) => { const out = [...s.zones.draw]; for (let q = 0; q < s.n; q++) { out.push(...s.zones['won:' + q]); if (q !== v) out.push(...s.zones['hand:' + q], ...s.zones['pass:' + q]); } return out; },
+    open: (s) => s.zones.trick.slice(),
+    faceUp: 'trick',
+  },
 };
-const OPEN = { 'crazy-eights': (s) => s.zones.discard.slice(-1), hearts: (s) => s.zones.trick.slice() };
-const FACE_UP = { 'crazy-eights': 'discard', hearts: 'trick' };   // where a player lays a card for all to see
-const quoted = (text, card) => text.includes('"' + card + '"');
-
-function holdPrivate(game, before, r) {
-  const s = r.state, pub = JSON.stringify(T.view(game, s, null)) + ' ' + game.status(s);
-  assert.ok(pub.length < 950, 'the public table fits one relay message: ' + pub.length);
-  for (let v = -1; v < s.n; v++) {
-    const viewer = v < 0 ? null : v;
-    const mine = viewer === null ? '' : JSON.stringify(T.mine(game, s, viewer));
-    assert.ok(mine.length < 950, 'a hand fits one relay message: ' + mine.length);
-    const text = viewer === null ? pub : pub + mine + JSON.stringify(T.view(game, s, viewer));
-    const secret = SECRET[game.id](s, viewer);
-    for (const c of secret) assert.ok(!quoted(text, c), 'card ' + c + ' reached ' + (viewer === null ? 'the big screen' : 'player ' + viewer) + ' at move ' + s.seq);
-    assert.deepEqual(T.hidden(game, s, viewer).slice().sort(), secret.slice().sort());
-  }
-  // Events go to everyone. A face in one must have been on the table for all to see before the move or after it, or
-  // have been laid face up by its own holder in this very move (the last card of a trick is played and taken at once).
-  const open = new Set([...OPEN[game.id](before), ...OPEN[game.id](s)]);
-  for (const e of r.events) {
-    if (e.ev === 'move') {
-      if (e.to === FACE_UP[game.id] && e.from === 'hand:' + e.by) for (const c of e.cards || []) open.add(c);
-      for (const c of e.cards || []) assert.ok(open.has(c), 'event showed ' + c + ' at move ' + s.seq);
-      continue;
-    }
-    const text = JSON.stringify(e);
-    for (const c of s.pack) assert.ok(!quoted(text, c), 'a ' + e.ev + ' event named card ' + c);
-  }
-}
-
-// One whole game: whoever may act makes a move the hints allow, picked by chance. Now and then someone also tries
-// what they may not (a card that does not fit, someone else's card, a move out of turn) and must be refused.
-function playOut(game, n, seed, opts) {
-  const rand = C.seeded(seed), pick = (list) => list[Math.floor(rand() * list.length)];
-  let state = T.create(game, { players: n, rand, opts }).state;
-  holdPrivate(game, state, { state, events: [] });
-  let moves = 0;
-  while (!state.over) {
-    assert.ok(++moves < 20000, 'the game ends');
-    const p = pick(state.turn), h = T.hints(game, state, p);
-    assert.ok(h, 'a player whose turn it is has hints');
-    if (rand() < 0.15) {
-      const others = state.zones['hand:' + ((p + 1) % n)], out = Array.from({ length: n }, (_, q) => q).filter((q) => !state.turn.includes(q));
-      const bad = [];
-      if (others.length) bad.push([p, { type: h.play.type, cards: h.play.min === 3 ? others.slice(0, 3) : [others[0]] }]);
-      const unfit = state.zones['hand:' + p].filter((c) => !h.play.cards.includes(c));
-      if (unfit.length && h.play.min === 1) bad.push([p, { type: h.play.type, cards: [unfit[0]] }]);
-      if (out.length) bad.push([out[0], { type: h.play.type, cards: state.zones['hand:' + out[0]].slice(0, h.play.min) }]);
-      for (const [q, m] of bad) { const r = T.move(game, state, q, m, rand); assert.equal(r.ok, false, JSON.stringify(m)); assert.ok(!r.bug, r.bug); assert.equal(r.state, state); }
-    }
-    const options = h.buttons.map((b) => ({ type: b.type }));
-    if (h.play.cards.length >= h.play.min) {
-      const cards = C.shuffle(h.play.cards, rand).slice(0, h.play.min), m = { type: h.play.type, cards };
-      if (h.play.choose && h.play.choose.cards.includes(cards[0])) m[h.play.choose.field] = pick(h.play.choose.from);
-      options.push(m, m);   // playing is twice as likely as a button, so a game does not only draw
-    }
-    assert.ok(options.length, 'there is always something a player may do');
-    const r = T.move(game, state, p, pick(options), rand);
-    assert.ok(r.ok, r.error + ' ' + (r.bug || ''));
-    holdPrivate(game, state, r);
-    state = r.state;
-  }
-  return state;
-}
 
 test('Crazy Eights: 60 whole games by chance, 2 to 7 players, both draw rules: no screen is ever given a hidden card', () => {
   for (let n = 2; n <= 7; n++) {
     for (let seed = 1; seed <= 10; seed++) {
-      const end = playOut(CE, n, seed * 100 + n, { draws: seed % 2 });
+      const end = playOut(CE, n, seed * 100 + n, { draws: seed % 2 }, SPEC['crazy-eights']);
       assert.ok(end.over.winners.length >= 1);
       assert.equal(end.over.left.length, n);
       for (const w of end.over.winners) assert.equal(end.over.left[w], Math.min(...end.over.left));
@@ -310,7 +239,7 @@ test('Crazy Eights: 60 whole games by chance, 2 to 7 players, both draw rules: n
 test('Hearts: 18 whole games by chance, 3 to 5 players: no screen is ever given a hidden card, and the scores add up', () => {
   for (const n of [3, 4, 5]) {
     for (let seed = 1; seed <= 6; seed++) {
-      const end = playOut(H, n, seed * 100 + n, { target: 40 });
+      const end = playOut(H, n, seed * 100 + n, { target: 40 }, SPEC.hearts);
       const total = end.over.scores.reduce((a, b) => a + b, 0), deals = end.pub.round + 1;
       assert.ok(Math.max(...end.over.scores) >= 40);
       assert.ok(total === deals * 26 || (total > deals * 26 && (total - deals * 26) % (26 * (n - 2)) === 0), 'each deal gives 26 points, or 26 to each other player on a moon: ' + total + ' over ' + deals);

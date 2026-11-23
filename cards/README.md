@@ -67,4 +67,53 @@ A game is one object. The engine does the rest.
 - `hints` tells a phone which cards may be played, how many to pick, any extra choice (an eight's suit) and which
   buttons to show, so one hand page can serve every game.
 
+## What a phone is told it may do
+
+`hints(s, p)` answers for a player who may act now. One hand page serves every game from this:
+
+```js
+{ play: { type, label, cards, min, max, choose } | null, buttons: [{ type, label }] }
+```
+
+- `play` is the move made with cards: `cards` are the ones that may be picked now, `min` and `max` how many, `label`
+  the words on the button. `null` when the only moves now are buttons.
+- `choose` is one more choice the move needs, or `null`: `{ cards, field, from, kind, title }`.
+  `cards`: the choice is asked only when one of these is picked (`null`: always). `field`: where the answer goes in the
+  move. `from`: the answers, each a plain value or `{ v, label }`. `kind`: `'suit'`, `'player'`, `'rank'` or
+  `'option'`, so the phone can draw it well. `title`: the question.
+- `buttons` are moves with no cards (Draw a card, Pass, Knock).
+- Where a pick must also fit a pattern (a run in Rummy), list every card that could be part of one; `can` has the last
+  word and says why not.
+
+## Names the pages go by
+
+The table page and the hand page draw any game that keeps to these names:
+
+- Zones: `draw` (the pack, face down), `discard` (the pile, its top card showing), `hand` (each player's private
+  hand), `trick` (cards played to a trick, in the order played from `s.pub.led`), `won` (each player's taken cards,
+  face down), `laid` (each player's cards laid face up: books, sets, runs).
+- `s.pub.scores`: one number for each player, when the game keeps score.
+- `game.labels`: words for a zone a phone should name, such as `{ pass: 'Your pass' }`.
+- `t.end({ winners: [players], note })`: `winners` always; `note` is one optional line for the screen
+  ("Sam is the Old Maid").
+- Every message to a phone must fit in 1,000 bytes, so keep `s.pub` small: numbers and short words, never a history.
+
+## Testing a game
+
+Each game has its own test file, `test/<game id>.test.js`, using the kit in `test/helper.js`:
+
+- `rig(game, players, zones, more)` sets a table by hand; `yes(game, s, p, move)` and `no(game, s, p, move, /why/)` make
+  one move that must be allowed or refused.
+- `playOut(game, players, seed, opts, spec)` plays a whole game by chance and holds every view and event against the
+  privacy rule. `spec` is written by the game's own test, apart from the engine: `secret(s, viewer)` lists every card the
+  viewer may not see, `open(s)` every card face up for all, and `faceUp` names the zone a card is laid in for all to see.
+
+A game is done when its own rules are each tested by hand-set tables, and whole games by chance pass for every number
+of players it takes.
+
+## The wire
+
+`src/dealer.js` carries a table over the phone relay (`play/rooms/`, kind `cards`); the messages are listed at its top.
+`serve.js` runs it all on this computer: `node cards/serve.js`, then open `http://127.0.0.1:8791/cards/`.
+
 Games must be traditional or our own. Never a copy of a commercial game's name, cards, art or wording.
