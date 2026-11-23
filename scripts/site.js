@@ -44,6 +44,12 @@ console.log(GATED
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(path.join(OUT, 'data', 'shows'), { recursive: true });
 const data = assemble();
+// Moments (HQ > Moments, catalog/moments.json): the ones on, approved and not over go beside their engine in assets/brand/moments,
+// and every page that loads the engine asks for it with this version, so a moment switched in HQ is not held in Cloudflare's cache.
+const momentsPub = require('./lib/moments-pub');
+const MOMENTS = momentsPub.publicMoments(path.join(PROFILE.catalogDir, 'moments.json'));
+const MOMENTS_V = momentsPub.version(MOMENTS);
+data.momentsV = MOMENTS_V;   // the voidtv.net pages load the engine with it (scripts/lib/app.js page())
 const MIN_SHOWS = PROFILE.name === 'voidtv' ? 100 : 1; // VOIDtv ships thousands; a small profile (public access, a demo) is legitimately tiny
 if (data.shows.length < MIN_SHOWS) { console.error('SITE WOULD SHIP WITH ' + data.shows.length + ' SHOWS: the list or the catalog did not load; refusing to build'); process.exit(1); }
 // Catalog shrink (audit CF-018). The counts the site last went out with: on this PC catalog/cache/publish-state.json (the numbers publish.js
@@ -121,8 +127,9 @@ if (fs.existsSync(fnSrc)) fs.cpSync(fnSrc, path.join(OUT, 'functions'), { recurs
 const brandSrc = path.join(ROOT, 'assets', 'brand');
 // The VOID player (player/): one script bundle and one stylesheet, cached with the rest of /assets.
 { const P = path.join(ROOT, 'player', 'src'); const dst = path.join(OUT, 'assets', 'player'); fs.mkdirSync(dst, { recursive: true });
-  fs.writeFileSync(path.join(dst, 'voidplayer.js'), ['core.js', 'icons.js', 'player.js'].map((f) => fs.readFileSync(path.join(P, f), 'utf8')).join('\n;\n'));
-  fs.copyFileSync(path.join(P, 'player.css'), path.join(dst, 'player.css')); }
+  fs.writeFileSync(path.join(dst, 'voidplayer.js'), ['core.js', 'icons.js', 'popout.js', 'player.js'].map((f) => fs.readFileSync(path.join(P, f), 'utf8')).join('\n;\n'));
+  fs.copyFileSync(path.join(P, 'player.css'), path.join(dst, 'player.css'));
+  fs.copyFileSync(path.join(P, 'popout.js'), path.join(dst, 'popout.js')); } // the pop-out alone, for PLAY's pages
 // PLAY (play/, plan T19): the shelf and the game player at /play/. Only what a visitor's browser loads is copied: the two pages,
 // their styles and scripts, the game cards, the shelf list and the engines we built; the build tools, tests and core sources stay
 // in the repo (play/core/README.md says where to get each engine's exact source). No game file is copied: games come from the
@@ -153,6 +160,7 @@ const brandSrc = path.join(ROOT, 'assets', 'brand');
     // The area list's version, from the list itself (scripts/lib/areas-v.js), so a changed list is not held in Cloudflare's cache.
     { const p = path.join(dst, 'index.html'); fs.writeFileSync(p, fs.readFileSync(p, 'utf8').replace('src="/assets/brand/areas/areas.js"', 'src="/assets/brand/areas/areas.js?v=' + require('./lib/areas-v')() + '"')
       .replace('src="/assets/brand/atmos/atmos.js"', 'src="/assets/brand/atmos/atmos.js?v=' + require('./lib/areas-v')('atmos/atmos.js') + '"')); }   // and the shared background's, the same way
+    { const p = path.join(dst, 'index.html'); fs.writeFileSync(p, momentsPub.stamp(fs.readFileSync(p, 'utf8'), MOMENTS_V)); }   // and the moments engine's, from the engine and the moments together (scripts/lib/moments-pub.js)
     fs.copyFileSync(path.join(P, 'LICENSE'), path.join(dst, 'LICENSE.txt'));
     for (const d of ['src', 'cards', 'engine', 'cheats', 'library', 'skin'].filter((x) => fs.existsSync(path.join(P, x)))) fs.cpSync(path.join(P, d), path.join(dst, d), { recursive: true });
     fs.mkdirSync(path.join(dst, 'shelf'), { recursive: true });
@@ -188,8 +196,30 @@ const brandSrc = path.join(ROOT, 'assets', 'brand');
       for (const f of ['index.html', 'phone.html']) fs.writeFileSync(path.join(dst, f), stampTrivia(fs.readFileSync(path.join(dst, f), 'utf8'), sha.slice(0, 12)));
     }
   } }
+// Card games (cards/, B, 22 Nov 2026: "card and party games that ppl can 'play' using their phones"; put live on his "please
+// deploy", 23 Nov 2026): the big screen's table at /cards/, the phone's hand at /cards/hand, their styles, the card system's
+// scripts and the games' rule files. voidtv.net only. The relay, the QR maker and the name filter are PLAY's and Trivia's
+// (/api/room/*, /play/src/qr.js, /trivia/src/words.js); the tests, the local server and the notes stay in the repo.
+{ const K = path.join(ROOT, 'cards'), dst = path.join(OUT, 'cards');
+  if (PROFILE.name === 'voidtv' && fs.existsSync(path.join(K, 'index.html'))) {
+    for (const d of ['src', 'games']) {
+      fs.mkdirSync(path.join(dst, d), { recursive: true });
+      for (const f of fs.readdirSync(path.join(K, d)).filter((x) => x.endsWith('.js'))) fs.copyFileSync(path.join(K, d, f), path.join(dst, d, f));
+    }
+    for (const f of fs.readdirSync(K).filter((x) => x.endsWith('.css'))) fs.copyFileSync(path.join(K, f), path.join(dst, f));
+    // The build's commit on every stylesheet and script the two pages load from /cards/, so a push reaches a returning browser
+    // at once instead of after its 4-hour cache (the same stamp PLAY and Trivia use).
+    let sha = process.env.CF_PAGES_COMMIT_SHA || '';
+    if (!sha) { try { sha = require('child_process').execSync('git rev-parse HEAD', { cwd: ROOT, stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim(); } catch (e) { sha = ''; } }
+    const v = /^[0-9a-f]{40}$/.test(sha) ? sha.slice(0, 12) : '';
+    for (const f of ['index.html', 'hand.html']) {
+      const h = fs.readFileSync(path.join(K, f), 'utf8');
+      fs.writeFileSync(path.join(dst, f), v ? h.replace(/((?:src|href)="\/cards\/[a-z0-9/-]+\.(?:js|css))"/g, '$1?v=' + v + '"') : h);
+    }
+  } }
 if (fs.existsSync(brandSrc)) fs.cpSync(brandSrc, path.join(OUT, 'assets', 'brand'), { recursive: true, filter: (p) => { const parts = path.relative(brandSrc, p).split(path.sep); return !parts.includes('src') && !parts.includes('sheets'); } }); // the 2K originals and design sheets stay out of the site
 // Browsers, search engines and feed readers ask for /favicon.ico on their own; without the file they got the home page.
+if (fs.existsSync(path.join(OUT, 'assets', 'brand', 'moments'))) fs.writeFileSync(path.join(OUT, 'assets', 'brand', 'moments', 'moments.json'), JSON.stringify(MOMENTS));
 if (fs.existsSync(path.join(brandSrc, 'favicon.ico'))) fs.copyFileSync(path.join(brandSrc, 'favicon.ico'), path.join(OUT, 'favicon.ico'));
 // A missing file answers a real 404, not the home page. With no 404.html at the top, Pages answers an unknown path with index.html
 // and 200 OK, which the home page needs (it routes /me, /about, /tv/..., /show/... itself). But for a file that answer is poison:
@@ -198,7 +228,7 @@ if (fs.existsSync(path.join(brandSrc, 'favicon.ico'))) fs.copyFileSync(path.join
 // 404.html up the folder tree, and every 404 it sends carries Cache-Control: no-store whatever _headers says (Cloudflare's Pages file
 // server, as wrangler ships it). So each folder that holds only files gets a small 404.html of its own. No page lives in these
 // folders; tests/site-build.test.js walks the built site the way Pages does to keep it so.
-const FILE_DIRS = ['assets', 'data', 'play/src', 'play/engine', 'play/cards', 'play/library', 'play/cheats', 'play/skin', 'play/shelf', 'remote/src', 'trivia/src', 'trivia/bank', 'trivia/timed'];
+const FILE_DIRS = ['assets', 'data', 'play/src', 'play/engine', 'play/cards', 'play/library', 'play/cheats', 'play/skin', 'play/shelf', 'remote/src', 'trivia/src', 'trivia/bank', 'trivia/timed', 'cards/src', 'cards/games'];
 const NOT_FOUND_PAGE = '<!doctype html><meta charset="utf-8"><title>Not found</title><p>Not found.</p>\n';
 for (const d of FILE_DIRS) if (fs.existsSync(path.join(OUT, d))) fs.writeFileSync(path.join(OUT, d, '404.html'), NOT_FOUND_PAGE);
 // Caching plus the security headers for static files (the same set functions/_middleware.js puts on every Function answer).

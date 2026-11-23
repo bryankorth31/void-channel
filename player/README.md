@@ -24,6 +24,24 @@ Double-click **`player\LAB.cmd`**. It starts a small local server and opens the 
 
 After "Both servers dead", reload the lab page; that test poisons the server cache for the session.
 
+## Pop out
+
+Bryan, 22 Nov 2026: "in the same way id like the playr from vtv to b e treated the same so i can bring it along in the corner
+up front as i use the web", "my shows can be playing while i work as a pop". The picture-in-picture button and **P** pop the
+picture out into a small window that floats over every other window (`popOut()` in `src/player.js`).
+
+- First choice: the video's own picture-in-picture. Only the moving picture, and the browser keeps the window at the picture's
+  shape (Chrome: 380x286 for 4:3, 512x288 for 16:9). It is the same `<video>`, so a channel change, Back to live, the next
+  episode and the phone remote all carry on in it.
+- With captions showing, or in a Live TV break (no picture to hand over), the whole screen moves instead (`src/popout.js`,
+  Document Picture-in-Picture, Chrome and Edge only, https or localhost): captions, the break cards and the control bar on hover.
+  Its place on the page keeps a box with Bring it back. Live TV finds a popped-out player through `vpIn()` in
+  `scripts/lib/app.js`.
+- Measured in Edge 157 with the tab hidden: with sound, the window stayed open and playing for 9 minutes and more. Muted or
+  silent, the browser closed it and paused the video within 8 to 43 seconds. So a pop-out left muted does not last behind
+  other windows.
+- Firefox gives pages no way to ask: the button is hidden there (`vpx-nopop`); Firefox's own button on the video still works.
+
 ## Commands
 
 ```

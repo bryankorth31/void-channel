@@ -25,7 +25,7 @@ test('the page: console games take one a minute of play, the pause menu shows th
   const js = fs.readFileSync(path.join(__dirname, '..', 'src', 'play.js'), 'utf8');
   const html = fs.readFileSync(path.join(__dirname, '..', 'game.html'), 'utf8');
   assert.ok(js.includes('if (!PlayCards.isPad(card) || !window.PlayCheckpoints) return;'), 'console games only');
-  assert.ok(js.includes('if (!started || paused || document.hidden || !runner) return;'), 'paused or hidden time does not count');
+  assert.ok(js.includes('if (!started || paused || (document.hidden && !pip) || !runner) return;'), 'paused or hidden time does not count, except while the game is popped out');
   assert.ok(js.includes("toast(ok ? 'Back ' + words.replace(' back', '') : 'That checkpoint would not load', ok ? undo : null);"), 'with Undo');
   assert.ok(html.includes('<div id="cp-list" class="menu-row cp-list"></div>'), 'in a menu row, so a gamepad reaches them');
   assert.ok(html.includes('<script src="src/checkpoints.js"></script>'));

@@ -462,6 +462,7 @@ html{-webkit-tap-highlight-color:transparent}
 .home-tv .hl{color:var(--dim);font-size:13px;margin:8px 2px 0}.home-tv .hl a{color:var(--acc);cursor:pointer}
 .onnow{display:flex;gap:12px;overflow-x:auto;padding:4px 20px 12px;scrollbar-width:none}
 .ontile{flex:0 0 210px;background:var(--panel);border:0;border-radius:8px;overflow:hidden;color:var(--fg);text-align:left;padding:0;cursor:pointer;font:inherit;box-shadow:inset 0 -3px 0 var(--c,transparent)}
+a.ontile{text-decoration:none}
 .ontile img,.ontile .p{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:var(--panel2)}.ontile b{display:block;padding:7px 10px 0;font-size:14px}.ontile small{display:block;padding:2px 10px 10px;color:var(--dim);font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 @media(max-width:700px){.home-tv .tv{padding:0 10px 4px}.home-tv .snd{left:50%;top:78%;transform:translate(-50%,-50%);font-size:18px;padding:14px 24px}.onnow{padding:4px 12px 12px}.ontile{flex-basis:170px}}
 @media (prefers-reduced-motion:reduce){.tv .swirl img,.tv .swirl .wm{animation:none}.tv .swirl .wm{transform:translate(-50%,-50%) scale(1.12);opacity:1}}
@@ -547,13 +548,15 @@ video{width:100%;max-height:70vh;background:#000;border-radius:8px;outline:none}
 footer{position:relative;z-index:1;color:var(--fg);font-size:13px;padding:20px;border-top:1px solid var(--line);margin-top:20px}
 .enjoy{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:60;width:min(360px,calc(100vw - 32px));background:var(--panel,#11131a);border:1px solid var(--line);border-radius:14px;padding:14px 40px 14px 16px;box-shadow:0 10px 40px rgba(0,0,0,.5);display:flex;flex-wrap:wrap;gap:10px;align-items:center;transition:opacity .5s}.enjoy.out{opacity:0}.enjoy b{flex:1 1 auto}.enjoy p{margin:0;font-size:13px;line-height:1.45;color:var(--dim,#aab)}.enjoy-x{position:absolute;top:6px;right:8px;background:none;border:0;color:var(--dim,#aab);font-size:20px;cursor:pointer;padding:2px 6px}
 @media(max-width:860px){.player{grid-template-columns:1fr;grid-template-rows:none}.player>.vcol,.player>.eps,.player>.inep{grid-column:auto;grid-row:auto}.player>.inep{order:3;margin-top:4px}.eps{max-height:48vh}.hero .t b{font-size:19px}}
+.mcard{display:flex;align-items:center;gap:18px;margin:16px 20px 4px;padding:16px 20px;border:1px solid var(--gold);border-radius:14px;background:radial-gradient(120% 140% at 90% 0%,rgba(220,32,169,.2),transparent 60%),radial-gradient(90% 120% at 0% 100%,rgba(242,169,59,.14),transparent 60%),rgba(11,12,18,.86)}.mcard .mk{display:block;color:var(--gold);font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}.mcard b{display:block;font-family:Unbounded,system-ui,sans-serif;font-weight:700;font-size:clamp(18px,2.4vw,26px);line-height:1.15;margin:4px 0 6px}.mcard small{color:var(--dim);font-size:13px}.mcard .btn{margin-left:auto;white-space:nowrap}.mabout{margin:-4px 20px 8px;color:var(--dim);font-size:13px;max-width:760px}
+@media(max-width:600px){.mcard{flex-direction:column;align-items:flex-start;margin:12px 10px 4px;padding:14px 16px}.mcard .btn{margin-left:0}.mabout{margin:-4px 12px 8px}}
 `;
 
 // Browser code. MODE 'embed': all data inline. MODE 'split': index inline, shows + graph fetched from BASE.
 // ROUTES 'hash' (#slug) or 'path' (/show/slug, needs a host that serves index.html for unknown paths).
 const JS = `
 const BY_SLUG=Object.fromEntries(SHOWS.map(s=>[s.slug,s]));
-const state={q:'',type:'',genre:'',network:'',decade:'',tag:'',sort:'eps',show:null,se:0,e:0,open:null,openCtx:null,person:null,view:'',personId:null,chan:'void',tvOn:false,menu:null};
+const state={q:'',type:'',genre:'',network:'',decade:'',tag:'',moment:'',sort:'eps',show:null,se:0,e:0,open:null,openCtx:null,person:null,view:'',personId:null,chan:'void',tvOn:false,menu:null};
 const $=(id)=>document.getElementById(id);
 const esc=(s)=>String(s==null?'':s).replace(/[&<>"]/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const decade=(y)=>y?Math.floor(+y/10)*10+'s':'';
@@ -583,6 +586,22 @@ meSync();
 const hidden=(s)=>ME.likes[s.slug]===-1;
 const isAdult=(s)=>!!(s&&(s.adult||s.type==='Late Night'||(s.tags||[]).includes('Late Night')));
 const gated=(s)=>isAdult(s)&&!ME.adult;
+/* What is in the news (moments: assets/brand/moments/moments.js, kept in HQ > Moments; Bryan, 22 Nov 2026, layout B: "gold card + row").
+   Under Live TV, which stays first: a gold card with the moment's ad line, then its row; the card's button opens the moment's own list
+   (?moment=<id>). A moment's shows rule picks from the series and its movies rule from the films, never the 18+ shelf or a show the
+   viewer turned down. Nothing shows until HQ switches a moment on and it is in its dates. */
+let MOMENTS=null;
+function momentParts(){const ok=SHOWS.filter(s=>!gated(s)&&!hidden(s)).map(s=>({id:s.slug,title:s.show,year:+s.year||null,genres:(s.genres||[]).concat(s.tags||[]),people:s.people?String(s.people).split(', '):[],system:s.type,s}));return [{area:'shows',items:ok.filter(x=>x.id.indexOf('movie-')!==0)},{area:'movies',items:ok.filter(x=>x.id.indexOf('movie-')===0)}]}
+function momentRows(o){return MOMENTS&&window.VoidMoments&&VoidMoments.rowsMany?VoidMoments.rowsMany(MOMENTS,momentParts(),o):[]}
+function momentName(id){const m=(MOMENTS||[]).find(x=>x.id===id);if(!m)return '';const a=m.areas||{};return (a.shows&&a.shows.title)||(a.movies&&a.movies.title)||m.name||''}
+function momentKind(list){const n=list.length,f=list.filter(s=>s.slug.indexOf('movie-')===0).length;return f===n?(n===1?'film':'films'):f?'shows and films':(n===1?'show':'shows')}
+function momentHome(){let h='';for(const r of momentRows()){const list=r.items.map(x=>x.s),n=list.length;
+ if(r.ad)h+='<section class="mcard"><div class="mtxt"><span class="mk">In the news</span><b>'+esc(r.ad.line)+'</b><small>'+n+' '+momentKind(list)+', free, no account</small></div><button type="button" class="btn gold" data-m="'+esc(r.id)+'" onclick="momentOpen(this.dataset.m)">'+esc(r.ad.go||'See them all')+'</button></section>';
+ h+=shelf(r.title,list,'moment-'+r.id,n).replace('</h2>','<button type="button" class="all" data-m="'+esc(r.id)+'" onclick="momentOpen(this.dataset.m)">See all ›</button></h2>'+(r.about?'<p class="mabout">'+esc(r.about)+'</p>':''))}
+ return h}
+function momentOpen(id){Object.assign(state,{type:'',tag:'',genre:'',network:'',decade:'',q:'',moment:id,menu:null});const q=$('q');if(q)q.value='';listSync();render();window.scrollTo(0,0)}
+function momentList(){const r=momentRows({only:state.moment,max:1})[0];return r?r.items.map(x=>x.s):[]}
+if(window.VoidMoments&&VoidMoments.ready)VoidMoments.ready.then(ms=>{MOMENTS=ms;if(ms.length&&!state.show&&!state.view)render()});
 function adultGate(then){const then0=then;then=()=>{then0()};const old=$('gate');if(old)old.remove();const g=document.createElement('div');g.id='gate';g.innerHTML='<div class="gatebox"><img src="'+BASE+'assets/brand/ui/doors/latenight.png" alt=""><b>Late Night</b><p>The after-dark shelf: HBO and Showtime documentary series, Cinemax, the Playboy years. Adults only. By entering you confirm you are 18 or older.</p><div class="acts"><button class="btn gold" id="gate-yes">I am 18 or older, enter</button><button class="btn ghost" id="gate-no">Not now</button></div></div>';document.body.appendChild(g);
  $('gate-yes').onclick=()=>{ME.adult=Date.now();saveMe();g.remove();then&&then()};$('gate-no').onclick=()=>{if(!$('main').firstChild||(state.show&&gated(state.show))){state.show=null;go('',true)}g.remove();if(state.show&&gated(state.show))go('')};g.onclick=(e)=>{if(e.target===g)$('gate-no').click()}}
 function leaveAdult(){ME.adult=0;saveMe();state.type=state.type==='Late Night'?'':state.type;go('')}
@@ -644,8 +663,8 @@ function mePage(){const cont=histShows(),mine=listShows(),liked=likedShows(),hid
 function counts(key){const m={};for(const s of SHOWS){const v=(key==='genres'||key==='tags')?(s[key]||[]):[s[key]];for(const x of v)if(x)m[x]=(m[x]||0)+1}return Object.entries(m).sort((a,b)=>b[1]-a[1])}
 // The site's search: a show is found by its name, genre, network, tags or people (q in lower case). The phone remote's search asks the same (remote/src/voidtv.js).
 const qHit=(s,q)=>s.show.toLowerCase().includes(q)||s.genres.join(' ').toLowerCase().includes(q)||(s.network||'').toLowerCase().includes(q)||(s.tags||[]).join(' ').toLowerCase().includes(q)||(s.people||'').toLowerCase().includes(q);
-function filtered(){const q=state.q.trim().toLowerCase();let r=SHOWS.filter(s=>!gated(s)&&(!state.type||s.type===state.type)&&(!state.genre||s.genres.includes(state.genre))&&(!state.network||s.network===state.network)&&(!state.decade||decade(s.year)===state.decade)&&(!state.tag||(s.tags||[]).includes(state.tag))&&(!q||qHit(s,q)));
- const by={eps:(a,b)=>b.eps-a.eps,rating:(a,b)=>(b.rating||0)-(a.rating||0)||b.eps-a.eps,year:(a,b)=>(+b.year||0)-(+a.year||0),old:(a,b)=>(+a.year||9999)-(+b.year||9999),az:(a,b)=>a.show.localeCompare(b.show),added:(a,b)=>(b.added||'').localeCompare(a.added||'')};return r.sort(by[state.sort]||by.eps)}
+function filtered(){const q=state.q.trim().toLowerCase();let r=(state.moment?momentList():SHOWS).filter(s=>!gated(s)&&(!state.type||s.type===state.type)&&(!state.genre||s.genres.includes(state.genre))&&(!state.network||s.network===state.network)&&(!state.decade||decade(s.year)===state.decade)&&(!state.tag||(s.tags||[]).includes(state.tag))&&(!q||qHit(s,q)));
+ if(state.moment&&state.sort==='eps')return r;const by={eps:(a,b)=>b.eps-a.eps,rating:(a,b)=>(b.rating||0)-(a.rating||0)||b.eps-a.eps,year:(a,b)=>(+b.year||0)-(+a.year||0),old:(a,b)=>(+a.year||9999)-(+b.year||9999),az:(a,b)=>a.show.localeCompare(b.show),added:(a,b)=>(b.added||'').localeCompare(a.added||'')};return r.sort(by[state.sort]||by.eps)}
 function sel(key,label,opts){return '<select onchange="state.'+key+'=this.value;render()"><option value="">'+label+'</option>'+opts.map(([v,n])=>'<option value="'+esc(v)+'"'+(state[key]===v?' selected':'')+'>'+esc(v)+(n?' ('+n+')':'')+'</option>').join('')+'</select>'}
 function meta(s){return [s.network,s.year,s.genres.join(' · '),s.rating?'★ '+s.rating:'',s.eps+' episode'+(s.eps===1?'':'s'),s.runtime?s.runtime+' min':''].filter(Boolean).join('  ·  ')}
 function hue(str){let h=0;for(const c of String(str))h=(h*31+c.charCodeAt(0))%360;return h}
@@ -681,25 +700,27 @@ function keepTracks(fn){const pos={};document.querySelectorAll('.track').forEach
 /* A list has its own address (audit of 20 Nov 2026, A4): the filters and the search ride in the query string, so Back stays on the site and a list can be bookmarked or shared. listSync writes the address after a change; fromAddress reads it at the start and on Back or Forward. */
 ${LIST_SRC}
 function listUrl(){return (ROUTES==='path'?'/':location.pathname)+listQuery(state)+(ROUTES==='path'?'':'#')}
-function listTitle(){const n=state.type||state.tag||state.genre||state.network||state.decade||(state.q.trim()?'Search':'');return (n?n+' · ':'')+SITE}
+function listTitle(){const n=(state.moment&&momentName(state.moment))||state.type||state.tag||state.genre||state.network||state.decade||(state.q.trim()?'Search':'');return (n?n+' · ':'')+SITE}
 function listSync(replace){if(state.show||state.view)return;if(listQuery(state)!==location.search)history[replace?'replaceState':'pushState'](null,'',listUrl());document.title=listTitle()}
 function listFromUrl(){const f=listRead(location.search,SORTS.map(x=>x[0]));if(f.type==='Late Night'&&!ME.adult)f.type='';if(!listQuery(f))f.sort=state.sort;Object.assign(state,f);const q=$('q');if(q&&q.value.trim()!==state.q)q.value=state.q}
 function fromAddress(){const s=slugFromUrl();if(!s)listFromUrl();go(s,true)}
 function typed(){if(state.show||state.view){go('');return}listSync(/[?&]q=/.test(location.search));render()}
 /* A search or filter that finds nothing says so, and a search offers the titles one typing slip away (audit of 20 Nov 2026, A10). The 18+ shows stay out while the door is closed. */
 ${NEAR_SRC}
-function noMatch(){const q=state.q.trim(),filt=[state.type,state.tag,state.genre,state.network,state.decade].filter(Boolean);if(!q)return '<div class="nomatch"><p>No shows fit '+(filt.length>1?'these filters together':'this filter')+'. Press Clear to start over.</p></div>';const pool=SHOWS.filter(s=>!gated(s)),near=nearTitles(q,pool.map(s=>s.show),6).map(i=>pool[i]);return '<div class="nomatch"><p>Nothing matches <b>“'+esc(q)+'”</b>'+(filt.length?' in '+esc(filt.join(', ')):'')+'. '+(near.length?'Closest titles:':'Check the spelling, or press Clear and browse.')+'</p></div>'+(near.length?'<div class="grid">'+near.map(s=>card(s,'grid')).join('')+'</div>':'')}
-function browse(){let list=filtered();if(!state.q)list=list.filter(s=>!hidden(s));const any=state.type||state.genre||state.network||state.decade||state.tag||state.q;
+function noMatch(){if(state.moment)return '<div class="nomatch"><p>Nothing to show for this one right now: it may be over. Press Clear to go back.</p></div>';const q=state.q.trim(),filt=[state.type,state.tag,state.genre,state.network,state.decade].filter(Boolean);if(!q)return '<div class="nomatch"><p>No shows fit '+(filt.length>1?'these filters together':'this filter')+'. Press Clear to start over.</p></div>';const pool=SHOWS.filter(s=>!gated(s)),near=nearTitles(q,pool.map(s=>s.show),6).map(i=>pool[i]);return '<div class="nomatch"><p>Nothing matches <b>“'+esc(q)+'”</b>'+(filt.length?' in '+esc(filt.join(', ')):'')+'. '+(near.length?'Closest titles:':'Check the spelling, or press Clear and browse.')+'</p></div>'+(near.length?'<div class="grid">'+near.map(s=>card(s,'grid')).join('')+'</div>':'')}
+function browse(){let list=filtered();if(!state.q)list=list.filter(s=>!hidden(s));const any=state.type||state.genre||state.network||state.decade||state.tag||state.q||state.moment;
  const bar=filterBar(list);
  let h='';
  if(any){
   if(state.q&&state.q.length>=3&&state.q!==state.lastQ){clearTimeout(state.qT);const q=state.q,n=list.length;state.qT=setTimeout(()=>{state.lastQ=q;track('search',{q,n})},1200)}
-  h=bar+'<div class="chips">'+[['type',state.type],['tag',state.tag],['genre',state.genre],['network',state.network],['decade',state.decade]].filter(x=>x[1]).map(([k,v])=>'<span class="chip on" onclick="pick(\\''+k+'\\',\\'\\')">'+esc(v)+' ✕</span>').join('')+(state.q?'<span class="chip on" onclick="pick(\\'q\\',\\'\\')">“'+esc(state.q)+'” ✕</span>':'')+'</div>';
-  const sig=[state.type,state.tag,state.genre,state.network,state.decade,state.q,state.sort].join('|');if(sig!==state.gridSig){state.gridSig=sig;state.gridN=0}const N=state.gridN||60;
+  h=bar+'<div class="chips">'+[['moment',state.moment&&momentName(state.moment)],['type',state.type],['tag',state.tag],['genre',state.genre],['network',state.network],['decade',state.decade]].filter(x=>x[1]).map(([k,v])=>'<span class="chip on" onclick="pick(\\''+k+'\\',\\'\\')">'+esc(v)+' ✕</span>').join('')+(state.q?'<span class="chip on" onclick="pick(\\'q\\',\\'\\')">“'+esc(state.q)+'” ✕</span>':'')+'</div>';
+  const sig=[state.moment,state.type,state.tag,state.genre,state.network,state.decade,state.q,state.sort].join('|');if(sig!==state.gridSig){state.gridSig=sig;state.gridN=0}const N=state.gridN||60;
   h+=!list.length?noMatch():'<div class="grid">'+list.slice(0,N).map(s=>card(s,'grid')).join('')+'</div>'+(list.length>N?'<p class="moreline"><button class="btn" onclick="state.gridN='+(N+60)+';render()">Show '+Math.min(60,list.length-N)+' more of '+list.length+'</button></p>':'');
  } else {
   // 1. Live TV first (B, 25 Oct 2026: the home page opens on a channel already playing, nothing in the way; the wall of 158 featured shows is gone)
-  h+='<section class="home-tv" id="htv"></section><div id="onnow">'+onNowHtml()+'</div>';
+  h+='<section class="home-tv" id="htv"></section><div id="onnow">'+onNowHtml()+'</div>'+momentHome();
+  // Play together (decision H9) right after, so a moment that is on keeps its place under Live TV (B, 22 Nov 2026, layout B)
+  h+=togetherHome();
   // 2. yours
   const cont=histShows().slice(0,30);if(cont.length)h+=shelf('Continue watching',cont,'continue');
   const mine=listShows();if(mine.length)h+=shelf('My List',mine,'list');
@@ -821,7 +842,7 @@ function bindEpisodeEvents(p){const v=p.v;
  v.addEventListener('ended',()=>{const c=p._cur;if(c){track('end',{slug:c.slug,ep:c.epk,pos:v.currentTime,dur:v.duration||0});enjoyAsk(c.slug,true)}});
  v.addEventListener('play',()=>{const c=p._cur;if(!c||!state.show||state.show.slug!==c.slug||state.se!==c.se||state.e!==c.e)return;const r=ME.history[c.slug];if(!r||r.se!==c.se||r.e!==c.e)remember()});
  v.addEventListener('timeupdate',()=>{const c=p._cur;if(!c)return;const t=Date.now();if(t-(p._lastSave||0)>5000){p._lastSave=t;const r=ME.history[c.slug];if(r&&r.se===c.se&&r.e===c.e&&v.readyState>=2){r.pos=Math.floor(v.currentTime);r.at=t;saveMe()}}})}
-function canReuse(s){const h=$('vph');return !!(VP&&VP._slug===s.slug&&h&&VP.root&&h.contains(VP.root)&&document.querySelector('.show .player .vcol'))}
+function canReuse(s){const h=$('vph');return !!(VP&&VP._slug===s.slug&&h&&VP.root&&vpIn(h)&&document.querySelector('.show .player .vcol'))}
 function swapEpisode(s,se,ep){const sh=document.querySelector('.show'),hero=sh.querySelector('.hero');if(hero)hero.remove();
  const had=document.activeElement&&document.activeElement.closest&&document.activeElement.closest('.now');
  const now=sh.querySelector('.now');if(now)now.outerHTML=nowRow(se,ep,s);
@@ -863,6 +884,10 @@ async function degPath(target){let adj;if(!GRAPH_LOADED){const out=$('degp');if(
  const chain=[];for(let c=target;c;c=prev[c])chain.unshift(c);if(!GRAPH_LOADED)await Promise.all(chain.map((sl)=>BY_SLUG[sl]?ensure(BY_SLUG[sl]).catch(()=>null):null));const via={};chain.forEach((sl,i)=>{if(i){const a=chain[i-1];via[sl]=(((LINKS[a]||{})[sl])||((LINKS[sl]||{})[a])||[])[0]}});let h='<div class="path">';chain.forEach((sl,i)=>{if(i){const id=via[sl];const p=PEOPLE[id];h+='<span class="v" onclick="person('+id+')">→ '+esc(p?p.name:'?')+' →</span>'}h+='<span class="s" onclick="go(\\''+sl+'\\')">'+esc(BY_SLUG[sl].show)+'</span>'});h+='</div><div class="g" style="color:var(--dim);font-size:12px;margin-top:4px">'+(chain.length-1)+' hop'+(chain.length===2?'':'s')+' · every show on the path plays here</div>';out.innerHTML=h}
 // LIVE TV. What is on comes from the schedule in scripts/lib/tvgrid.js; the text below IS that file, so the page, the guide and the tests run the same code: dayparts, strips, airings with real start and end times on the viewer's own clock.
 const TVG=${TVGRID_SRC};
+// Is the player on that part of the page? Popped out (player/src/popout.js) it still counts where its place is kept, so Live TV
+// goes on in the pop-out window from one programme to the next instead of building a new player on the page. A function
+// declaration, so the show page's canReuse (above) can call it too.
+function vpIn(h){return !!(VP&&h&&(VP.isIn?VP.isIn(h):h.contains(VP.root)))}
 let TV_TOKEN=0;
 // episodes that failed in the last hour, per channel: the airing gives its place to another episode of the same show, and a dead episode cannot loop (Bryan, 20 Oct 2026)
 const TV_DEAD={};const tvKey=(c,a)=>c.id+':'+a.s+':'+a.se+'x'+a.n;const tvDead=(c,a)=>TV_DEAD[tvKey(c,a)]>Date.now()-36e5;
@@ -876,7 +901,7 @@ const clock=(ms)=>new Date(ms).toLocaleTimeString([],{hour:'numeric',minute:'2-d
 // Change channel on the player that is already on the page: same player, same video, same fullscreen, no render(). The page
 // pieces tvPage draws around it (guide, title, the bar under the video) are updated in place; what plays and when is tvPlay's, as always.
 // False when there is no player on the Live TV page to switch (not turned on yet, other page): tune then falls back to render().
-function tuneHere(id){const host=$('vph'),g=document.querySelector('.guide'),home=viewNow()==='home';if(!tvLive()||!TV||!VP||!host||(!home&&!g)||!host.contains(VP.root))return false;
+function tuneHere(id){const host=$('vph'),g=document.querySelector('.guide'),home=viewNow()==='home';if(!tvLive()||!TV||!VP||!host||(!home&&!g)||!vpIn(host))return false;
  const chans=TV.filter(c=>!c.adult||ME.adult),cur=chans.find(c=>c.id===id);if(!cur)return false;const now=chanNow(cur);if(!now)return false;const s=SHOWS[now.a.s];
  if(!home){gdTune(cur.id);document.title=cur.name+' · '+SITE}osd(cur,now.a,s,null);tvSwirlFlash();if(VP.flashChannel)VP.flashChannel(cur.name);tvPlay(cur);return true}
 function tune(id){if(window.PartyGuest&&PartyGuest.holds(id))return;track('tune',{slug:id});state.chan=id;state.tvOn=true;keepChan(id);const home=viewNow()==='home';if(!home)history.replaceState(null,'',urlFor('tv/'+id));if(!tuneHere(id)){if(home){HTV.forced=true;homeTvStart()}else render()}window.scrollTo(0,0)}
@@ -935,7 +960,7 @@ async function tvPlay(c,fromEnd,tries){const host=$('vph');if(!host)return;const
  if(x.k==='ep'&&(!ep||tvDead(c,a))){const w=tvSwap(c,a,s,off);se=w&&s.seasons.find(z=>z.season===w.se);ep=w&&w.ep}
  if(!ep||(ep.min&&off>=ep.min*60-20))return skip();
  osd(c,a,SHOWS[a.s],x.k==='ep'?ep:null);track('tvplay',{slug:c.id,x:s.slug+' '+se.season+'x'+ep.n});TVCUR={c,a,x,cur:{s:piece.s,se:se.season,n:ep.n}};
- if(!VP||!host.contains(VP.root))VP=tvMk(host);if(!VP)return;
+ if(!VP||!vpIn(host))VP=tvMk(host);if(!VP)return;
  VP._ctx={slug:s.slug,ep:se.season+'x'+ep.n,item:ep.item||''};VP.load({id:c.id+'/'+s.slug+'/'+se.season+'x'+ep.n,title:s.show+' · '+ep.name,show:c.name,files:filesFor(ep),artwork:s.poster||''},{startAt:off>5?off:0,autoplay:!!state.tvOn})}
 // THE HOLDING CARDS (B, 21 Oct 2026: "short motion graphics that say things like go grab a snack, <show> will be on next, many more like
 // this so as not to be repetitive", chained and stretched to fit). Live HTML over the picture, never a video file. The card on screen is
@@ -1003,9 +1028,9 @@ function tvCard(c,a,until,t){const nx=TVG.nextAiring(c,TVLIB,a),ns=nx&&SHOWS[nx.
  const line=TVC_LINES[(seed+k*7)%TVC_LINES.length].split('{show}').join(show).split('{time}').join(at||'soon').split('{channel}').join(c.name);
  return tvSpot(c,a,until,t,{k,line,look:TVC_LOOKS[(seed+k)%TVC_LOOKS.length],show,at,left:nx?Math.max(0,(nx.st-t)/1000):0},seed,ns)}
 let TVC_TIMER=0,TVC_NOW=null;
-function tvCardsOff(){if(TVC_TIMER){clearInterval(TVC_TIMER);TVC_TIMER=0}TVC_NOW=null;const el=document.querySelector('.tvc');if(el&&el.remove)el.remove()}
+function tvCardsOff(){if(TVC_TIMER){clearInterval(TVC_TIMER);TVC_TIMER=0}TVC_NOW=null;const el=(VP&&VP.root&&VP.root.querySelector&&VP.root.querySelector('.tvc'))||document.querySelector('.tvc');if(el&&el.remove)el.remove()}
 function tvCards(c,x,token){const host=$('vph');if(!host)return;tvCardsOff();TVCUR={c,a:x.a,x};
- if(!VP||!host.contains(VP.root))VP=tvMk(host);if(!VP)return;if(VP.idle)VP.idle();osd(c,x.a,SHOWS[x.a.s],null);
+ if(!VP||!vpIn(host))VP=tvMk(host);if(!VP)return;if(VP.idle)VP.idle();osd(c,x.a,SHOWS[x.a.s],null);
  let el=null,shown=-1;
  const tick=()=>{if(token!==TV_TOKEN||!tvLive()){if(token===TV_TOKEN)tvCardsOff();else clearInterval(iv);return}
   const t=Date.now();if(t>=x.until){tvCardsOff();tvPlay(c,true);return}
@@ -1118,13 +1143,15 @@ function swirlUntilReady(ov,src0,max,done){if(!ov)return;const t0=Date.now();cle
  const hook=()=>{if(!v&&VP&&VP.v&&VP.v.addEventListener){v=VP.v;v.addEventListener('playing',onPlay);v.addEventListener('timeupdate',check)}};
  function check(){hook();if(ov._src!==(v&&v.currentSrc)){ov._src=v&&v.currentSrc;ov._lt=null}
   if(v&&!played&&!v.paused&&!v.seeking&&v.readyState>=3&&ov._lt!=null&&v.currentTime>ov._lt&&(!src0||v.currentSrc!==src0))played=true;if(v)ov._lt=v.currentTime;
-  const ready=played&&!!v&&!v.paused&&(!src0||v.currentSrc!==src0);if(ready&&VP&&VP.root){VP._started=true;VP.root.classList.remove('vpx-wait')}if(ready||document.querySelector('.tvc')||Date.now()-t0>max||!document.body.contains(ov))end()}
+  const ready=played&&!!v&&!v.paused&&(!src0||v.currentSrc!==src0);if(ready&&VP&&VP.root){VP._started=true;VP.root.classList.remove('vpx-wait')}if(ready||(VP&&VP.root&&VP.root.querySelector&&VP.root.querySelector('.tvc'))||document.querySelector('.tvc')||Date.now()-t0>max||!document.body.contains(ov))end()}
  hook();ov._w=setInterval(check,100)}
 function introOut(box){const ov=box&&box.querySelector('.swirl-ov.intro');if(ov)swirlUntilReady(ov,'',15000,()=>ov.remove())}
 const stillWanted=()=>typeof matchMedia==='function'&&matchMedia('(prefers-reduced-motion: reduce)').matches;
 function tvSwirlFlash(){const root=VP&&VP.root;if(stillWanted()||!root||typeof root.insertBefore!=='function'||typeof document.createElement!=='function')return;let el=root.querySelector('.swirl-ov.flash');
  if(!el){el=document.createElement('div');el.className='swirl swirl-ov flash gone';el.setAttribute('aria-hidden','true');el.innerHTML='<img src="'+swirlSrc()+'" alt="">';root.insertBefore(el,root.querySelector('.vpx-chname'))}
  el.classList.remove('gone');swirlUntilReady(el,VP.v&&VP.v.currentSrc||'',15000)}
+// Play together (B, 23 Nov 2026, picked C from pictures: "C, Play together row"; decision H9): under On now, the rooms where the TV is the table and the phones are in your hands, in On now's own tiles. voidtv.net itself only (the phone remote's rule), never Kids or an embed.
+function togetherHome(){if(!REMOTE_ON)return '';const t=(href,img,name,line,c)=>'<a class="ontile" href="'+BASE+href+'" style="--c:'+c+'"><img loading="lazy" src="'+BASE+img+'" alt=""><b>'+name+'</b><small>'+line+'</small></a>';return '<div id="together"><h2>Play together<small>the TV is the table, the phones are in your hands</small></h2><div class="onnow">'+t('cards/','assets/brand/bg/cardtable-m.webp','Card games','Spades, Hearts, Rummy and more','#4ade80')+t('trivia/','assets/brand/bg/trivianight-m.webp','Trivia Night','Questions on the TV, answers on phones','#ffd23f')+t('play/','assets/brand/bg/voidarcade-wall-m.webp','Games','Old games, your phone is the controller','#ff4fc8')+'</div></div>'}
 function onNowHtml(){if(!TV)return '';const now=Date.now();const tiles=TV.filter(c=>!c.adult).slice(0,40).map(c=>{const n=chanNow(c,now),s=n&&SHOWS[n.a.s];if(!s)return '';const art=s.backdrop||s.poster;return '<button class="ontile" onclick="tune(\\''+c.id+'\\')" style="--c:'+(CGM[chanCg(c)]||CGM.other||{}).c+'">'+(art?'<img loading="lazy" src="'+esc(art)+'" alt="">':'<span class="p"></span>')+'<b>'+esc(c.name)+'</b><small>'+esc(s.show)+'</small></button>'}).join('');return tiles?'<h2>On now<small>tap a channel to watch it</small></h2><div class="onnow">'+tiles+'</div>':''}
 async function homeTvStart(){const el=$('htv');if(!el)return;
  if(!TV){el.innerHTML='<div class="loading"><span class="signal"></span><span>Searching the Void for a signal…</span></div>';try{await ensureTV()}catch(_){el.innerHTML='';return}}
@@ -1237,7 +1264,7 @@ function loadFailCard(e){const bar='<div class="acts" style="display:flex;gap:8p
 function retryShow(){const s=state.show;if(s)go(s.slug,true)}
 // An address for a show this site does not list (a removed show, a stale link, a mangled address): the home page and one line.
 function missingShow(slug){state.show=null;state.view='';state.seView=null;history.replaceState(null,'',urlFor(''));document.title=SITE;render();window.scrollTo(0,0);const m=$('main');if(m)m.insertAdjacentHTML('afterbegin','<p class="g" role="status" style="margin:0;padding:16px 20px 0">That show is not here any more.</p>');track('act',{x:'show-missing:'+String(slug).slice(0,60)})}
-function goHome(){for(const k of ['type','tag','genre','network','decade','q'])state[k]='';const q=$('q');if(q)q.value='';go('')}
+function goHome(){for(const k of ['moment','type','tag','genre','network','decade','q'])state[k]='';const q=$('q');if(q)q.value='';go('')}
 async function go(slug,replace){state.person=null;state.open=null;state.menu=null;const qs0=new URLSearchParams(location.search);if(qs0.has('dbg'))state.dbg=true;if(slug==='about'){state.show=null;state.view='about';history[replace?'replaceState':'pushState'](null,'',urlFor('about'));document.title='About · '+SITE;render();window.scrollTo(0,0);return}if(slug==='promos'){state.show=null;state.view='promos';history[replace?'replaceState':'pushState'](null,'',urlFor('promos'));document.title='Promos · '+SITE;render();window.scrollTo(0,0);return}if(slug==='cash'){state.show=null;state.view='cash';history[replace?'replaceState':'pushState'](null,'',urlFor('cash'));document.title='CASH · '+SITE;render();window.scrollTo(0,0);return}if(slug==='privacy'){state.show=null;state.view='privacy';history[replace?'replaceState':'pushState'](null,'',urlFor('privacy'));document.title='Privacy · '+SITE;render();window.scrollTo(0,0);return}if(slug==='takedown'){state.show=null;state.view='takedown';history[replace?'replaceState':'pushState'](null,'',urlFor('takedown'));document.title='Takedown and corrections · '+SITE;render();window.scrollTo(0,0);return}if(slug==='tv'||(slug&&slug.startsWith('tv/'))){state.show=null;state.view='tv';if(slug.length>3)state.chan=safeDecode(slug.slice(3));history[replace?'replaceState':'pushState'](null,'',urlFor(slug));render();window.scrollTo(0,0);return}if(slug&&slug.startsWith('person/')){state.show=null;state.view='person';state.personId=+slug.slice(7);history[replace?'replaceState':'pushState'](null,'',urlFor(slug));render();window.scrollTo(0,0);if(!GRAPH_LOADED){await ensurePerson(state.personId);render()}return}if(slug==='me'&&!BY_SLUG.me){state.show=null;state.view='me';history[replace?'replaceState':'pushState'](null,'',urlFor('me'));document.title='Mine · '+SITE;render();window.scrollTo(0,0);return}state.view='';if(!slug){state.show=null;history[replace?'replaceState':'pushState'](null,'',listUrl());document.title=listTitle();render();if(!replace){window.scrollTo(0,0);blip()}return}const s=Object.prototype.hasOwnProperty.call(BY_SLUG,slug)?BY_SLUG[slug]:null;if(!s){missingShow(slug);return}if(gated(s)){adultGate(()=>go(slug,replace));return}state.show=s;state.seView=null;state.loadErr=null;if(s.seasons){const r0=resume(s);state.se=r0.se;state.e=r0.e}else{state.se=0;state.e=0}history[replace?'replaceState':'pushState'](null,'',urlFor(slug));document.title=s.show+' · '+SITE;render();window.scrollTo(0,0);try{await ensure(s)}catch(err){if(state.show===s){state.loadErr={slug:s.slug,kind:(err&&err.kind)||'network',gate:!!(err&&err.gate)};track('error',{slug:s.slug,x:'show-load:'+state.loadErr.kind+(err&&err.status?':'+err.status:''),cause:state.loadErr.gate?'gate':state.loadErr.kind});render()}return}if(state.show!==s)return;const r=resume(s);state.se=r.se;state.e=r.e;const qs=qs0;if(qs.get('s')&&qs.get('e')){const si=s.seasons.findIndex(x=>x.season===+qs.get('s'));const ei=si>=0?s.seasons[si].episodes.findIndex(x=>x.n===+qs.get('e')):-1;if(si>=0&&ei>=0){state.se=si;state.e=ei;state.seekTo=+qs.get('t')||0}history.replaceState(null,'',urlFor(slug))}state.seView=null;render();if(!replace)blip()}
 function play(se,e){state.se=se;state.e=e;state.seView=se;remember();showView(true)}
 function next(){const s=state.show;if(!s||!s.seasons||!s.seasons[state.se])return;if(state.e+1<s.seasons[state.se].episodes.length)play(state.se,state.e+1);else if(state.se+1<s.seasons.length)play(state.se+1,0)}
@@ -1247,7 +1274,7 @@ function bgReel(view){const v=document.querySelector('.bgvid');if(!v)return;cons
 // The background is the one every Void area shares (assets/brand/atmos/atmos.js). Each view opens on its own picture, and the void
 // shows on the home page only, as before.
 function atmosView(){const A=window.VoidAtmos;if(!A)return;const v=document.body.dataset.view;A.set({start:({home:0,grid:1,show:2,person:2,tv:0,me:2})[v]||0,void:v==='home'})}
-function render(){const any=state.type||state.genre||state.network||state.decade||state.tag||state.q;document.body.dataset.view=state.show?'show':state.view==='me'?'me':state.view==='person'?'person':state.view==='tv'?'tv':any?'grid':'home';bgReel(document.body.dataset.view);document.body.dataset.era=(state.show?state.show.type:state.type)==='Classic TV'?'classic':'';if(state.show)showView(false);else if(state.view==='me')keepTracks(mePage);else if(state.view==='person')keepTracks(personPage);else if(state.view==='tv')tvPage();else if(state.view==='about')keepTracks(aboutPage);else if(state.view==='cash')keepTracks(cashPage);else if(state.view==='privacy')keepTracks(privacyPage);else if(state.view==='takedown')keepTracks(takedownPage);else if(state.view==='promos')keepTracks(promosPage);else keepTracks(browse);watchTracks();promoFill();atmosView();const rk=location.pathname+'|'+document.body.dataset.view;if(rk!==state.lastRk){state.lastRk=rk;track('view',{slug:state.show?state.show.slug:(state.view==='person'?'p'+state.personId:''),x:state.type||state.tag||''})}}
+function render(){const any=state.type||state.genre||state.network||state.decade||state.tag||state.q||state.moment;document.body.dataset.view=state.show?'show':state.view==='me'?'me':state.view==='person'?'person':state.view==='tv'?'tv':any?'grid':'home';bgReel(document.body.dataset.view);document.body.dataset.era=(state.show?state.show.type:state.type)==='Classic TV'?'classic':'';if(state.show)showView(false);else if(state.view==='me')keepTracks(mePage);else if(state.view==='person')keepTracks(personPage);else if(state.view==='tv')tvPage();else if(state.view==='about')keepTracks(aboutPage);else if(state.view==='cash')keepTracks(cashPage);else if(state.view==='privacy')keepTracks(privacyPage);else if(state.view==='takedown')keepTracks(takedownPage);else if(state.view==='promos')keepTracks(promosPage);else keepTracks(browse);watchTracks();promoFill();atmosView();const rk=location.pathname+'|'+document.body.dataset.view;if(rk!==state.lastRk){state.lastRk=rk;track('view',{slug:state.show?state.show.slug:(state.view==='person'?'p'+state.personId:''),x:state.type||state.tag||''})}}
 document.addEventListener('keydown',(k)=>{if(k.ctrlKey||k.metaKey||k.altKey)return;if(k.target.matches&&k.target.matches('input:not([type=range]),select,textarea,[contenteditable]'))return;if(k.key==='/'){k.preventDefault();$('q').focus();return}if(state.view==='tv'&&(k.key==='g'||k.key==='G')&&$('gd')){k.preventDefault();$('gd').focus();$('gd').scrollIntoView({block:'center'});return}if(state.view==='tv'&&(k.key==='ArrowUp'||k.key==='ArrowDown')){if(k.target.closest&&k.target.closest('.gd'))return;k.preventDefault();surf(k.key==='ArrowUp'?-1:1);return}if(k.key==='Escape'&&state.show&&!document.fullscreenElement)go('')});
 addEventListener('resize',()=>{if(state.view==='tv'&&$('gdBody')&&(innerWidth<700?'list':'grid')!==GD.mode)gdBuild(false)});
 window.addEventListener('popstate',fromAddress);
@@ -1269,7 +1296,9 @@ function page({ data, mode = 'embed', routes = 'hash', base = '/', meta = {} }) 
   // pages"). It comes before the page's own script, so the first view can ask for its picture. Never on kids: that page is plain paper on
   // purpose until Bryan says otherwise. A sister site loads voidtv.net's copy, as it does the menu, so a fix reaches every site at once.
   const atmosScript = PROFILE.name === 'kids' || mode === 'embed' ? '' : `<script src="${PROFILE.name === 'voidtv' ? base : 'https://voidtv.net/'}assets/brand/atmos/atmos.js?v=${require('./areas-v')('atmos/atmos.js')}"></script>`;
-  const indexScript = areasScript + `<script src="${base}assets/player/voidplayer.js?v=${PLAYER_V}"></script>` + (mode === 'embed' ? '' : `<script src="${base}data/index.js"></script>`);
+  // Moments in the news (assets/brand/moments/moments.js), with the version the site build makes from the engine and the list together.
+  const momentsScript = PROFILE.name === 'voidtv' && mode !== 'embed' && data.momentsV ? `<script src="${base}assets/brand/moments/moments.js?v=${data.momentsV}"></script>` : '';
+  const indexScript = momentsScript + areasScript + `<script src="${base}assets/player/voidplayer.js?v=${PLAYER_V}"></script>` + (mode === 'embed' ? '' : `<script src="${base}data/index.js"></script>`);
   const hx = (v) => String(v == null ? '' : v).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   const title = hx(meta.title ? `${meta.title} · ${SITE_NAME}` : SITE_NAME);
   const desc = meta.description || 'TV shows from 1990 to now, and the classics behind one door: every episode in order, every one of them plays. From the Internet Archive.';

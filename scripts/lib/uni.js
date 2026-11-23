@@ -1171,4 +1171,4 @@ function addQuestion(slug, n, m) {
   return { item: r.item, where: x.kept ? 'unit' : 'draft', count: x.u.quiz.length };
 }
 
-module.exports = { explainerProblems, overview, scaffold, setLive, brief, rewriteBrief, check, media, hearLectures, retime, locate, search, transcript, unitNeeds, slugify, UNI, SRC, draft, keepDraft, gateDraft, sceneFrom, shelfPlan, shelfWrite, shelfChapters, gatePlain, setShelfLive, shelfBooks, classFrom, lectures, scaleProblems, scalesOf, linesAt, madeQuestion, makeUnits, makeLines, addQuestion, lessonQuoteProblem, quizEnds, endsFor, stampEnds };
+module.exports = { explainerProblems, overview, scaffold, setLive, brief, rewriteBrief, check, media, hearLectures, retime, locate, search, transcript, unitNeeds, slugify, UNI, SRC, draft, keepDraft, gateDraft, sceneFrom, shelfPlan, shelfWrite, shelfChapters, gatePlain, setShelfLive, shelfBooks, classFrom, lectures, scaleProblems, scalesOf, linesAt, madeQuestion, makeUnits, makeLines, addQuestion, lessonQuoteProblem, quizEnds, endsFor, stampEnds, tokens, askOllama };

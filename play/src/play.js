@@ -222,10 +222,12 @@
   // While the menu is open the game hears nothing: every held key is let go first, then the gamepad drives the menu.
   function setPaused(p) {
     if (!runner || !started || p === paused) return;
+    if (p && pip) pip.close();   // the menu is on this page: the game comes back from the pop-out first
     if (p) { hub.releaseAll(); PlayTouch.releaseAll(); letGoMouse(); runner.rewind(false); paused = true; runner.pause(); autosave(); stayAwake(false); }
     else { paused = false; runner.resume(); runner.wakeSound(); stayAwake(true); }
     if (p) drawCps();
     $('menu').hidden = !p; $('b-pause').textContent = p ? 'Resume' : 'Pause';
+    try { if (navigator.mediaSession && navigator.mediaSession.metadata) navigator.mediaSession.playbackState = p ? 'paused' : 'playing'; } catch (e) { /* no media session */ }
     document.body.classList.toggle('paused', p);
     // The engine credits and source offer move from the start screen into the pause menu once a game is on.
     if (p && $('credits').parentElement !== $('menu')) $('menu').appendChild($('credits'));
@@ -370,7 +372,7 @@
     clearInterval(cpTimer); cps = []; playS = 0;
     if (!PlayCards.isPad(card) || !window.PlayCheckpoints) return;
     cpTimer = setInterval(async () => {
-      if (!started || paused || document.hidden || !runner) return;
+      if (!started || paused || (document.hidden && !pip) || !runner) return;   // a popped-out game keeps its go-back points
       playS++;
       if (playS % PlayCheckpoints.EVERY_S || cpBusy) return;
       cpBusy = true;
@@ -450,7 +452,9 @@
   // Phones as gamepads (Bryan, 20 Nov 2026: "Yes, phone controllers"): a phone that scans the code on this screen joins
   // as one more standard gamepad, so it takes a seat, keeps it and drops like a real one (src/phones.js, play/rooms/).
   let phones = null;
-  const allPads = () => [...(navigator.getGamepads ? [...navigator.getGamepads()] : []), ...(phones ? phones.pads() : [])];
+  // While the game is popped out, the pads are read from its window (this tab may be behind another site).
+  const padNav = () => (pip && pip.navigator && pip.navigator.getGamepads ? pip.navigator : navigator);
+  const allPads = () => [...(padNav().getGamepads ? [...padNav().getGamepads()] : []), ...(phones ? phones.pads() : [])];
   const phoneWord = (code) => PlayCards.actionFor(card, code) || (window.PlayTouch && PlayTouch.label ? PlayTouch.label(code) : code);
   const phoneCard = () => PlayPhones.cardFor(card, card ? PlayCards.gamepadMap(card) : {}, phoneWord);
   function phonesList(list) {
@@ -515,8 +519,12 @@
       if (down && !padWasDown && !$('b-play').hidden) (document.activeElement === $('b-continue') ? continueGame() : begin());
       padWasDown = down;
     }
-    requestAnimationFrame(poll);
+    lastPoll = performance.now();
+    // While the picture is out in the browser's own window this tab may be behind another, where it gets no animation
+    // frames: the pads are then read on a timer instead.
+    if (pip && pip.video) setTimeout(poll, 16); else (pip && pip.requestAnimationFrame ? pip : window).requestAnimationFrame(poll);
   }
+  let lastPoll = 0;
 
   // If the game has not shown a picture by then, say why in one sentence and offer Play again: never "loading" forever.
   // The clock is for a game that stopped arriving, not a slow one (the Kids session, 20 Nov 2026: Reader Rabbit's 21 MB
@@ -593,7 +601,7 @@
     phoneScreen();
     $('b-play').hidden = true; $('b-continue').hidden = true; status('Starting');
     arriving = true; armDeadline();
-    runner = (isArcade() ? PlayArcade : isFlash() ? PlayFlash : PlayRunner).createRunner({ canvas: $('canvas'), mute: q.get('mute') === '1', volume: gainOf(vol), on: {
+    runner = (isArcade() ? PlayArcade : isFlash() ? PlayFlash : PlayRunner).createRunner({ canvas: $('canvas'), mute: q.get('mute') === '1', volume: gainOf(vol), mediaOut: canPop() && popWay() === 'video', on: {
       note: (t) => toast(t),
       // Progress words belong to the start screen, until the first picture (the auditor: "Reading the disc: N MB so far"
       // stayed for the whole game); a message that matters later comes as a toast or an error.
@@ -603,7 +611,9 @@
       ended: () => { arriving = false; fail('The game has ended. Press Play again to start it over, or pick another game.'); },
       ready: () => { started = true; applyCheats(); place.sig = ''; place(); setTimeout(toolbarTip, 1500); },
       cheats: (m) => { if (!m.ok) toast('This game\'s engine cannot take cheats'); else if (m.on) toast(m.on === 1 ? 'One cheat on' : m.on + ' cheats on'); },
+      drawn: popDrawn,
       firstFrame: () => {
+        $('b-pop').hidden = !canPop(); autoPop(true);
         arriving = false; status(''); clearTimeout(deadline); $('cover').hidden = true; $('canvas').focus({ preventScroll: true }); stayAwake(true); armBack();
         if (!PlayCards.isPad(card) && !isFlash()) blankWatch();   // a Flash game draws in its own element, not the canvas
         if (resumeState) { const s = resumeState; resumeState = null; runner.load(s).then((ok) => toast(ok ? 'Back where you left off' : 'That spot would not load; starting fresh')); }
@@ -621,7 +631,7 @@
     const tc = touchCore(card);
     pointerMode = !!(tc && touch); pointerId = null;
     runner.start(pointerMode ? Object.assign({}, card, { vars: Object.assign({}, card.vars, tc.vars) }) : card, base, build.commit.slice(0, 12) + HOST_V, sramKept);
-    autoTimer = setInterval(() => { if (started && !paused && !document.hidden) autosave(); }, AUTO_EVERY_MS);
+    autoTimer = setInterval(() => { if (started && !paused && (!document.hidden || pip)) autosave(); }, AUTO_EVERY_MS);
     cpStart();
     place.sig = ''; place();
   }
@@ -758,7 +768,7 @@
 
   // Ends the game for good: the engine stops, nothing it sent late reaches the page, the menu closes.
   function stopGame() {
-    arriving = false; clearTimeout(deadline); clearInterval(autoTimer); clearInterval(cpTimer); stayAwake(false);
+    arriving = false; clearTimeout(deadline); clearInterval(autoTimer); clearInterval(cpTimer); stayAwake(false); autoPop(false);
     // A stopped game lets the mouse go (the auditor, 21 Nov 2026: after a game ended itself the picture still held the
     // mouse, so a click on Play again went to the picture). It is taken again only by a click on a running game.
     if (document.pointerLockElement === cv && document.exitPointerLock) document.exitPointerLock();
@@ -912,8 +922,141 @@
   addEventListener('keyup', (e) => keyEvent(e, false));
   addEventListener('pointerdown', () => runner && runner.wakeSound(), { passive: true });
   addEventListener('blur', () => hub && hub.releaseAll());
-  document.addEventListener('visibilitychange', () => { if (document.hidden && started) { if (!paused) setPaused(true); else autosave(); } });
+  // Leaving the page pauses the game (and saves), unless it has popped out: Chrome's automatic pop-out comes at that
+  // moment too, so the pause waits a moment for it (Bryan's recording, 22 Nov 2026: the pause came first).
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden || !started || pip) return;
+    setTimeout(() => { if (document.hidden && started && !pip) { if (!paused) setPaused(true); else autosave(); } }, 800);
+  });
   addEventListener('resize', place);
+
+  // ---- Pop out (Bryan, 22 Nov 2026: "Go"; Document Picture-in-Picture, Chrome and Edge on a computer): the running
+  // game moves into a small window that stays on top of other sites and apps, and back. The same engine keeps drawing
+  // to the same canvas, so nothing restarts and nothing is lost. Keys work in that window, and Esc there brings the
+  // game back; gamepads are read from it; the pause menu brings the game back first.
+  let pip = null, canvasHome = null;
+  // Which window (Bryan, 22 Nov 2026: "not the page as pop upo.. just the game play"): the browser's own video
+  // picture-in-picture by default (only the moving picture, shaped by the browser itself); the page-window kind
+  // (Document Picture-in-Picture) with ?pop=doc, or where video picture-in-picture is missing.
+  const popWay = () => (new URLSearchParams(location.search).get('pop') !== 'doc' && document.pictureInPictureEnabled ? 'video' : 'doc');
+  const canPop = () => (popWay() === 'video' || !!(window.documentPictureInPicture && window.documentPictureInPicture.requestWindow)) && !isPhone();
+  // The other way, to measure (?pop=video): the game's picture copied each frame onto a canvas at its display shape,
+  // streamed into a muted video, and that video put in the browser's own picture-in-picture window, which keeps the
+  // video's shape by itself. Nothing of the page goes in it; input stays on this page.
+  let popVid = null, popCopy = null;
+  function popDrawn() {
+    if (!popCopy) return;
+    const src = document.getElementById('canvas') || (canvasHome && canvasHome.canvas); if (!src) return;
+    const g = popCopy.getContext('2d'); g.imageSmoothingEnabled = false; g.drawImage(src, 0, 0, popCopy.width, popCopy.height);
+  }
+  async function popVideo() {
+    if (document.pictureInPictureElement) { document.exitPictureInPicture().catch(() => {}); return; }
+    if (!started || !runner) return;
+    // Flash (Ruffle's own canvas) and arcade (a WebGL canvas, which reads back blank) are streamed straight from the
+    // canvas they draw on, at its own shape (the PLAY auditor, 22 Nov 2026: Flash's window was all black). Every other
+    // engine draws a frame at a time on #canvas, which is copied at the game's display shape.
+    const own = isFlash() ? (runner.drawCanvas && runner.drawCanvas()) : isArcade() ? $('canvas') : null;
+    let stream;
+    if (own) { popCopy = null; stream = own.captureStream(60); }
+    else { popCopy = document.createElement('canvas'); popCopy.height = 480; popCopy.width = Math.round(480 * aspect); popDrawn(); stream = popCopy.captureStream(60); }
+    // The game's sound goes with it (Bryan, 22 Nov 2026: "No, I wanted sound"): it plays from the pop-out's video only.
+    const sound = runner.soundStream ? runner.soundStream() : null;
+    if (sound) for (const t of sound.getAudioTracks()) stream.addTrack(t);
+    popVid = document.createElement('video'); popVid.muted = !sound; popVid.playsInline = true;
+    popVid.srcObject = stream;
+    // On the page, unseen (Bryan, 22 Nov 2026: "It closed again" after a few minutes in other apps): Chrome closed a
+    // picture-in-picture video that was on no page some 10 s after the window was minimized; on the page it stayed open
+    // (measured on voidtv.net, 3 minutes minimized). It comes off the page when the game comes back.
+    popVid.className = 'pop-feed'; document.body.appendChild(popVid);
+    const home = () => { if (runner && runner.soundHome) runner.soundHome(); };
+    const drop = () => { if (popVid) popVid.remove(); };
+    try { await popVid.play(); await popVid.requestPictureInPicture(); } catch (e) { drop(); popVid = popCopy = null; home(); return; }
+    pip = { close: () => document.exitPictureInPicture().catch(() => {}), video: true };
+    setTimeout(poll, 16);
+    $('b-pop').setAttribute('aria-pressed', 'true');
+    popVid.addEventListener('leavepictureinpicture', () => { home(); drop(); pip = null; popVid = popCopy = null; $('b-pop').setAttribute('aria-pressed', 'false'); });
+  }
+  // The pop-out follows you (Bryan, 22 Nov 2026: "started it and then switched to claude....didnt switch wth me"): Chrome's
+  // automatic picture-in-picture calls this when you leave a page that is playing sound, as the picture in a video call
+  // follows you to another tab. It pops the running game out as the Pop out button does; coming back closes it. Not
+  // while paused (the menu is on the page) or already out; nothing where the browser does not offer it.
+  function autoPop(on) {
+    try {
+      if (!navigator.mediaSession || !navigator.mediaSession.setActionHandler) return;
+      const go = on && canPop() && popWay() === 'video';
+      navigator.mediaSession.setActionHandler('enterpictureinpicture', go ? () => { if (started && !paused && !pip) popOut(); } : null);
+      if (go && window.MediaMetadata) navigator.mediaSession.metadata = new MediaMetadata({ title: (card && card.title) || 'PLAY', artist: 'PLAY on voidtv.net' });
+      // Chrome's media controls and a keyboard's media keys pause and resume the game itself (not only its sound); in
+      // the pop-out they do nothing, as the menu is on the page.
+      navigator.mediaSession.setActionHandler('pause', go ? () => { if (!pip) setPaused(true); } : null);
+      navigator.mediaSession.setActionHandler('play', go ? () => { if (!pip) setPaused(false); } : null);
+      navigator.mediaSession.playbackState = go ? 'playing' : 'none';
+    } catch (e) { /* this browser has no automatic picture-in-picture */ }
+  }
+  async function popOut() {
+    if (popWay() === 'video') return popVideo();
+    if (pip) { pip.close(); return; }
+    if (!started || !canPop()) return;
+    const canvas = $('canvas');
+    // The window takes the game's own shape (Bryan, 22 Nov 2026: "not a full screen with empty sides"): the shape the
+    // page shows it at (aspect: 4:3 for most consoles, 10:9 for the Game Boy), so the picture fills it edge to edge.
+    const width = Math.round(Math.min(560, Math.max(320, innerWidth * 0.33)));
+    try { pip = await documentPictureInPicture.requestWindow({ width, height: Math.round(width / aspect) }); } catch (e) { pip = null; return; }
+    const d = pip.document;
+    d.title = (card && card.title ? card.title + ' | ' : '') + 'PLAY';
+    const st = d.createElement('style');
+    st.textContent = 'html,body{margin:0;height:100%;background:#000;overflow:hidden}canvas{position:absolute;display:block;image-rendering:pixelated;outline:none}';
+    d.head.append(st);
+    canvasHome = { canvas, parent: canvas.parentNode, next: canvas.nextSibling };
+    d.body.append(canvas);
+    $('pop-note').hidden = false;
+    $('b-pop').setAttribute('aria-pressed', 'true');
+    // Esc there only brings the game back (not also the pause menu).
+    pip.addEventListener('keydown', (e) => { if (e.key === 'Escape') { e.preventDefault(); e.stopImmediatePropagation(); pip.close(); } }, true);
+    pip.addEventListener('keyup', (e) => { if (e.key === 'Escape') e.stopImmediatePropagation(); }, true);
+    pip.addEventListener('keydown', arcadeEsc, true); pip.addEventListener('keyup', arcadeEsc, true);
+    pip.addEventListener('keydown', arcadeCoin, true); pip.addEventListener('keyup', arcadeCoin, true);
+    pip.addEventListener('keydown', (e) => keyEvent(e, true)); pip.addEventListener('keyup', (e) => keyEvent(e, false));
+    pip.addEventListener('blur', () => hub && hub.releaseAll());
+    pip.addEventListener('pagehide', popBack);
+    pip.addEventListener('resize', popFit);
+    pip.addEventListener('keydown', popSnapNow, true);
+    pip.addEventListener('pointerdown', popSnapNow, true);
+    popFit();
+    pip.requestAnimationFrame(poll);
+  }
+  // The picture at the game's shape inside the window, never stretched; and the window brought back to that shape when it
+  // is resized off it, where the browser lets a page do so (Chrome lets a picture-in-picture window resize itself only
+  // when it can; if not, the picture stays at its shape and the rest of the window is black).
+  let popSnap = 0;
+  function popFit() {
+    if (!pip || !canvasHome) return;
+    const W = pip.innerWidth, H = pip.innerHeight;
+    let w = W, h = w / aspect; if (h > H) { h = H; w = h * aspect; }
+    const c = canvasHome.canvas.style;
+    c.width = w + 'px'; c.height = h + 'px'; c.left = ((W - w) / 2) + 'px'; c.top = ((H - h) / 2) + 'px';
+    popOff = Math.abs(W - w) > 2 || Math.abs(H - h) > 2 ? [Math.round(w), Math.round(h)] : null;
+    if (popOff) { clearTimeout(popSnap); popSnap = setTimeout(popSnapNow, 250); }
+  }
+  // Chrome lets the window resize itself only right after a key or a click in it (measured 22 Nov 2026: a resize from a
+  // timer is refused). So it is tried once the dragging stops, and again at the next key or click there, which while
+  // playing is almost at once.
+  let popOff = null;
+  function popSnapNow() {
+    if (!pip || !popOff) return;
+    try { pip.resizeTo(popOff[0] + (pip.outerWidth - pip.innerWidth), popOff[1] + (pip.outerHeight - pip.innerHeight)); } catch (e) { /* not allowed now */ }
+  }
+  function popBack() {
+    // The canvas is in the pop-out's own document now, so it is held, not looked up on this page.
+    if (canvasHome) { const c = canvasHome.canvas; c.style.width = c.style.height = c.style.left = c.style.top = ''; canvasHome.parent.insertBefore(c, canvasHome.next); }
+    canvasHome = null; pip = null;
+    $('pop-note').hidden = true;
+    $('b-pop').setAttribute('aria-pressed', 'false');
+    if (hub) hub.releaseAll();
+    place();
+    // The pad loop ran on the window that just closed: start it again here if it stopped.
+    setTimeout(() => { if (performance.now() - lastPoll > 100) requestAnimationFrame(poll); }, 50);
+  }
   // Turning the phone mid-game: nothing stays held down across the change (the keys move under the thumbs).
   addEventListener('orientationchange', () => { if (hub) hub.releaseAll(); PlayTouch.releaseAll(); });
   // The audit (Bryan: "3 of the directional buttons locked down" after a zoom): when the browser takes a touch for itself,
@@ -1019,6 +1162,19 @@
   $('b-touch').onclick = () => { if (padMode) { padMode = false; touch = true; } else touch = !touch; place.sig = ''; place(); };
   // iPhone has no fullscreen for a web page: the button shows only where the browser can do it.
   if (!document.fullscreenEnabled) $('b-full').hidden = true;
+  $('b-pop').onclick = popOut;   // shown once the game draws (firstFrame): before Play there is nothing to pop out
+  // A key for it (Bryan, 23 Nov 2026: "BUILD", after his browser would not pop a game out by itself on a tab switch):
+  // one press before switching away, and the game follows with its sound. Alt+P in every game; plain P in a console
+  // game, whose buttons sit on other keys (a PC or arcade game takes P for itself). Pressed again, it brings the game back.
+  // Caught before the game's own keys; never while typing in a box, while paused, or where the button is not offered.
+  addEventListener('keydown', (e) => {
+    if (e.code !== 'KeyP' || !e.isTrusted || e.repeat || e.ctrlKey || e.metaKey || !started || paused || $('b-pop').hidden) return;
+    if (/^(INPUT|TEXTAREA|SELECT)$/.test((e.target && e.target.tagName) || '')) return;
+    const plain = !e.altKey && !e.shiftKey && PlayCards.isPad(card) && !(PlayCards.keyMap(card) || {}).KeyP;
+    if (!e.altKey && !plain) return;
+    e.preventDefault(); e.stopImmediatePropagation();
+    popOut();
+  }, true);
   $('b-full').onclick = () => { leftFull = !!document.fullscreenElement; if (document.fullscreenElement) document.exitFullscreen(); else document.documentElement.requestFullscreen().catch(() => {}); };
   // In fullscreen the game is all there is: the layout follows the change (Esc or Full to leave), the bar comes back
   // while the mouse is at the top of the screen or for 3 seconds after a tap, and a still mouse pointer hides.

@@ -30,6 +30,8 @@
     let worker = null, audio = null, node = null, rate = 0, frames = 0, stopped = false;
     // The volume (Bryan, 20 Nov 2026: "add a volume control on the emulator"): a gain between the sound and the speakers.
     let gain = null, level = opts.volume == null ? 1 : opts.volume;
+    let soundOut = null;                    // the pop-out's sound, while the game is out (soundStream)
+    let mediaEl = null;                     // the hidden audio element that plays the sound on a computer (opts.mediaOut)
     let sramWait = null, sramSetWait = null;
     let why = '';                           // why the last save failed, when the engine said ('dos': still at DOS)
     let asking = null;                      // the one save or load waiting for its answer: { done, timer }
@@ -46,7 +48,17 @@
           if (stopped || !audio) return;
           node = new AudioWorkletNode(audio, 'play-sound', { outputChannelCount: [2] });
           gain = audio.createGain(); gain.gain.value = level;
-          node.connect(gain); gain.connect(audio.destination);
+          node.connect(gain);
+          // On a computer (opts.mediaOut), the sound reaches the speakers through a hidden audio element on the page
+          // (Bryan, 22 Nov 2026, a recording: leaving the page paused the game, Chrome never popped it out). Chrome offers
+          // its automatic pop-out to a page playing sound through a media element, not straight from the audio engine.
+          // If the element cannot play, the sound goes straight to the speakers as before.
+          if (opts.mediaOut && audio.createMediaStreamDestination && typeof document !== 'undefined') {
+            soundOut = audio.createMediaStreamDestination(); gain.connect(soundOut);
+            mediaEl = document.createElement('audio'); mediaEl.className = 'pop-feed'; mediaEl.srcObject = soundOut.stream;
+            document.body.appendChild(mediaEl);
+            mediaEl.play().catch(() => { if (!mediaEl) return; mediaEl.remove(); mediaEl = null; try { gain.disconnect(soundOut); } catch (e) { /* not joined */ } gain.connect(audio.destination); });
+          } else gain.connect(audio.destination);
           if (rate) node.port.postMessage({ rate });
         }).catch(() => { node = null; on.status && on.status('Sound is off on this device'); });
       } catch (e) { audio = null; node = null; }
@@ -57,6 +69,7 @@
       ctx.putImageData(new ImageData(new Uint8ClampedArray(m.pixels), m.w, m.h), 0, 0);
       frames++;
       if (frames === 1 && on.firstFrame) on.firstFrame();
+      if (on.drawn) on.drawn();   // a picture-in-picture copy, when one is open
       if (on.aspect) on.aspect(m.aspect || m.w / m.h);
     }
 
@@ -116,6 +129,7 @@
       if (worker) { worker.onmessage = null; worker.onerror = null; worker.terminate(); worker = null; }
       if (asking) { clearTimeout(asking.timer); const d = asking.done; asking = null; d(null); }
       while (queue.length) queue.shift().done(null);
+      if (mediaEl) { try { mediaEl.pause(); } catch (e) { /* gone */ } mediaEl.srcObject = null; mediaEl.remove(); mediaEl = null; }
       if (audio) { try { audio.close(); } catch (e) { /* already closed */ } audio = null; node = null; }
     }
 
@@ -144,6 +158,25 @@
       saveWhy: () => why,
       wakeSound: () => { if (audio && audio.state === 'suspended') audio.resume(); },
       volume: (v) => { level = v; if (gain) gain.gain.value = v; },
+      // The pop-out (Bryan, 22 Nov 2026: "No, I wanted sound"): while the game is out, its sound (after the volume) goes
+      // into the pop-out's video and only there, so it plays once, from the small window; and the browser keeps an
+      // audible picture-in-picture open with its tab behind others (a silent one was closed 8 to 43 s after). null: no
+      // sound to give (muted, or not started yet). soundHome() puts it back on the speakers.
+      soundStream: () => {
+        if (!audio || !gain || !audio.createMediaStreamDestination) return null;
+        // Played by the hidden element: the pop-out's video plays the same sound, so the element goes quiet meanwhile.
+        if (mediaEl) { mediaEl.muted = true; return soundOut.stream; }
+        if (!soundOut) soundOut = audio.createMediaStreamDestination();
+        try { gain.disconnect(audio.destination); } catch (e) { /* already off the speakers */ }
+        gain.connect(soundOut);
+        return soundOut.stream;
+      },
+      soundHome: () => {
+        if (mediaEl) { mediaEl.muted = false; return; }
+        if (!soundOut || !gain || !audio) return;
+        try { gain.disconnect(soundOut); } catch (e) { /* not in the pop-out */ }
+        try { gain.connect(audio.destination); } catch (e) { /* the sound has closed */ }
+      },
     };
   }
   root.PlayRunner = { createRunner };

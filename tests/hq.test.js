@@ -53,8 +53,15 @@ cp.spawn = function (cmd, args, opts) {
 // The script is art.js on purpose: HQ lists and stops it, but scripts/doctor.js (jobs light) and scripts/nightly.js (two Archive
 // jobs at once) count only hunt.js, hunt-movies.js and scout.js, so a sleeper left running during a real doctor or nightly pass
 // can never look like an Archive job.
+// A sleeper lives as long as this test file runs, not for a set time. It used to end by itself after 60 seconds, and the
+// jobs seeded in before() are not stopped until some 30 seconds of tests later on a quiet PC: on a busy one that took 72 to
+// 87 seconds (measured 22 Nov 2026), the sleepers had already ended, and HQ rightly answered "That job had already ended"
+// where two tests expected a stop and a refusal. Now a sleeper waits on a pipe from this process and ends when the pipe
+// closes: when after() ends it by its handle, or when this process is gone, however it went. So none is ever left behind,
+// and none ends early. The 30 minutes is only a last stop.
+const SLEEP = "process.stdin.resume();for(const e of ['end','close','error'])process.stdin.on(e,()=>process.exit());setTimeout(()=>process.exit(),1800000)";
 const kids = [];
-const fixture = (script = 'C:\\fake\\scripts\\art.js') => { const k = spawn(process.execPath, ['-e', 'setTimeout(()=>{},60000)', ...(script ? [script] : [])], { stdio: 'ignore', windowsHide: true }); kids.push(k); return k; };
+const fixture = (script = 'C:\\fake\\scripts\\art.js') => { const k = spawn(process.execPath, ['-e', SLEEP, ...(script ? [script] : [])], { stdio: ['pipe', 'ignore', 'ignore'], windowsHide: true }); kids.push(k); return k; };
 
 function canBind(port) {
   return new Promise((ok) => {
@@ -63,16 +70,35 @@ function canBind(port) {
     s.listen(port, '127.0.0.1', () => s.close(() => ok(true)));
   });
 }
+// Does anything take a connection on 127.0.0.1 at this port? Being able to bind it does not say no: on Windows a port
+// another program holds on every address (0.0.0.0) can still be bound on 127.0.0.1. On 22 Nov 2026 another project's
+// server sat on 0.0.0.0:8790 and 8791; canBind called both free, so the test HQ started on 8790 on top of it, and the
+// "nothing listening" probe test was handed 8791, where that server answered (it failed every run that evening).
+// No answer within two seconds counts as taken: the careful side.
+function answers(port) {
+  return new Promise((ok) => {
+    const c = net.connect({ port, host: '127.0.0.1' });
+    const done = (v) => { c.destroy(); ok(v); };
+    c.setTimeout(2000, () => done(true));
+    c.once('connect', () => done(true));
+    c.once('error', () => done(false));
+  });
+}
+// A free port: nothing answers on it, and it can be bound.
 async function freePort(not = []) {
-  for (let p = 8790; p <= 8799; p++) if (!not.includes(p) && await canBind(p)) return p;
+  for (let p = 8790; p <= 8799; p++) if (!not.includes(p) && !(await answers(p)) && await canBind(p)) return p;
   throw new Error('no free port in 8790-8799');
 }
 
+// Every call opens its own connection (agent: false). With a shared one, a call made more than 5 seconds after the last could
+// fail with ECONNRESET: HQ, like any Node server, closes a connection left idle that long, and this process cannot see that
+// while it is held inside processInfo (a PowerShell call that blocks it, and takes that long on a busy PC), so the next call
+// went out on the closed connection. Seen once in three full runs under load, 22 Nov 2026.
 function call(port, method, urlPath, { headers = {}, body } = {}) {
   return new Promise((ok, no) => {
     const data = body === undefined ? '' : typeof body === 'string' ? body : JSON.stringify(body);
     const sent = Object.fromEntries(Object.entries(headers).filter(([, v]) => v !== undefined)); // a header set to undefined means "leave it out"
-    const req = http.request({ host: '127.0.0.1', port, path: urlPath, method, headers: { ...(data ? { 'content-length': Buffer.byteLength(data) } : {}), ...sent }, timeout: 15000 }, (res) => {
+    const req = http.request({ agent: false, host: '127.0.0.1', port, path: urlPath, method, headers: { ...(data ? { 'content-length': Buffer.byteLength(data) } : {}), ...sent }, timeout: 15000 }, (res) => {
       let text = '';
       res.on('data', (c) => { text += c; });
       res.on('end', () => { let json = null; try { json = JSON.parse(text); } catch (e) { /* not json */ } ok({ status: res.statusCode, text, json, headers: res.headers }); });
@@ -92,7 +118,11 @@ const ping = (headers) => call(port, 'POST', '/api/ping', { body: {}, headers: {
 before(async () => {
   port = await freePort();
   // Seed the jobs file HQ will load, as an earlier HQ run would have left it.
-  const { processInfo } = require(HQ_FILE).stop;
+  // The two reads below happen while every test file is starting at once. On a PC with all its cores busy one of them once
+  // took longer than the 15 seconds processInfo allows, and all 46 tests here were lost to it (22 Nov 2026, one full run in
+  // five under a made load). This is only the setting up, so a read that timed out is tried again, three times at most.
+  const { processInfo: readOnce } = require(HQ_FILE).stop;
+  const processInfo = (pid) => { for (let tries = 1; ; tries++) { try { return readOnce(pid); } catch (e) { if (tries >= 3) throw e; } } };
   seed = { good1: fixture(), good2: fixture(), stale: fixture() };
   await wait(600);
   const dead = spawn(process.execPath, ['-e', '0', 'C:\\fake\\scripts\\art.js'], { stdio: 'ignore', windowsHide: true });
@@ -404,6 +434,7 @@ test('Stop refuses what is not a node builder job even when the start time is ri
 });
 
 test('a job HQ started itself (here: reloaded from the jobs file) is stopped from its stored start time, by id or by number', { skip: !WIN && 'Windows only' }, async () => {
+  assert.ok(alive(seed.good1.pid) && alive(seed.good2.pid) && alive(seed.stale.pid), 'the seeded sleepers are still running when this test starts (they must outlive the tests before it)');
   const byId = await stopCall('/api/jobs/seedgood1/stop', {});
   assert.equal(byId.status, 200);
   assert.equal(byId.json.stopped, true);
@@ -416,6 +447,7 @@ test('a job HQ started itself (here: reloaded from the jobs file) is stopped fro
 });
 
 test('a reloaded job whose stored start time does not match the live process is refused (409), left running, and marked finished', { skip: !WIN && 'Windows only' }, async () => {
+  assert.ok(alive(seed.stale.pid), 'the seeded sleeper is still running when this test starts');
   const r = await stopCall('/api/jobs/seedstale/stop', {});
   assert.equal(r.status, 409);
   assert.match(r.json.error, /no longer that job/);
@@ -549,9 +581,6 @@ test('a finished publish job says how it ended: held, with what to press; a run 
   }
 });
 
-// ---- the stop logic itself, against sleepers this test starts and ends -----------------------------------------
-
-test('stop: a job whose process is still the one HQ launched is stopped, and only that process', { skip: !WIN && 'Windows only' }, async () => {
 // Audit 19 Nov 2026, H6: a lookup that failed read "No builder jobs running" and "none found", as if it had worked.
 test('a lookup that fails is said as a failure beside the list (processesError), never as an empty list; the next good one clears it', { skip: !WIN && 'the lookups are Windows ones' }, async () => {
   const { start } = require(HQ_FILE);
@@ -577,6 +606,9 @@ test('a lookup that fails is said as a failure beside the list (processesError),
   }
 });
 
+// ---- the stop logic itself, against sleepers this test starts and ends -----------------------------------------
+
+test('stop: a job whose process is still the one HQ launched is stopped, and only that process', { skip: !WIN && 'Windows only' }, async () => {
   const { stopHqJob, processInfo } = require(HQ_FILE).stop;
   const target = spawn(process.execPath, ['-e', 'setTimeout(()=>{},60000)', 'C:\\fake\\scripts\\art.js'], { stdio: 'ignore', windowsHide: true });
   const bystander = spawn(process.execPath, ['-e', 'setTimeout(()=>{},60000)', 'C:\\fake\\scripts\\art.js'], { stdio: 'ignore', windowsHide: true });

@@ -52,8 +52,18 @@
   const HOME_ROWS = [{ s: 'most' }, { s: 'newer' }, { s: '90s' }, { s: 'nintendo' }, { s: 'sega' }, { g: 'Action' }, { g: 'Adventure' },
     { g: 'Sports and racing' }, { s: 'classic' }, { g: 'Platform' }, { g: 'Puzzle and maze' }, { p: '2' }, { s: 'handheld' }, { s: 'atari' },
     { m: 'dos' }, { g: 'Strategy and simulation' }, { s: 'kids' }];
+  // The main showing (Bryan, 22 Nov 2026: "clean the main showing of games down to the most known or played or quality
+  // of the games"; "Yes, best 40 each"): the front page's rows and banner draw only on each machine's best 40, marked
+  // front by play/tools/shelf.js with their score, best first; a row's count and See all still open every game.
+  const byFront = (a, b) => (b.front || 0) - (a.front || 0) || byPopular(a, b);
+  const mainOf = (games) => (games.some((g) => g.front) ? games.filter((g) => g.front) : games);
+  // One box a game in a row: Mortal Kombat on the Genesis and the Game Gear is one game there, its best copy (pure).
+  const nameKey = (t) => String(t).toLowerCase().replace(/\([^)]*\)/g, '').replace(/\b(the|ms-?dos|dos)\b/g, '').replace(/[^a-z0-9]+/g, '');
+  const oneEach = (list) => { const seen = new Set(); return list.filter((g) => { const k = nameKey(g.title); if (seen.has(k)) return false; seen.add(k); return true; }); };
   function homeRows(games) {
-    return HOME_ROWS.map((f) => ({ f, title: viewTitle(f), games: games.filter((g) => matches(g, f)).sort(byPopular) })).filter((r) => r.games.length);
+    const main = mainOf(games);
+    return HOME_ROWS.map((f) => ({ f, title: viewTitle(f), games: oneEach(main.filter((g) => matches(g, f)).sort(byFront)), count: games.filter((g) => matches(g, f)).length }))
+      .filter((r) => r.games.length);
   }
 
   // A list's own rows, like VoidTV's pages for one kind of show (pure: tested): a machine, a family, a kind or a decade
@@ -83,8 +93,12 @@
   // two games, the machines most played first. A slide is { g } for a game or { system, name, count, games } for a machine.
   function heroSlides(games, nGames = 8, nMachines = 4) {
     const by = new Map();
-    for (const g of games.slice().sort(byPopular)) { if (!by.has(g.system)) by.set(g.system, []); by.get(g.system).push(g); }
-    const tops = [...by.values()].map((l) => l[0]).sort(byPopular).slice(0, nGames);
+    // From the main showing, each machine's best first (Bryan, 22 Nov 2026: he did not want Oregon Trail "and many of
+    // the games in the hero to be shown atleast as the first ones").
+    for (const g of mainOf(games).slice().sort(byFront)) { if (!by.has(g.system)) by.set(g.system, []); by.get(g.system).push(g); }
+    // Bryan's banner list (play/shelf/front-picks.json) opens it, in his order; each machine's best follows.
+    const picked = mainOf(games).filter((g) => g.banner).sort((x, y) => x.banner - y.banner);
+    const tops = oneEach(picked.concat([...by.values()].map((l) => l[0]).sort(byFront))).slice(0, Math.max(nGames, picked.length));
     const sum = (l) => l.reduce((n, g) => n + (g.plays || 0), 0);
     const machines = [...by.entries()].sort((a, b) => sum(b[1]) - sum(a[1])).slice(0, nMachines)
       .map(([system, l]) => ({ system, name: sysOf({ system }).name, count: l.length, games: l.slice(0, 3) }));
@@ -279,12 +293,13 @@
   // Plan G2: Wikidata's genres are fine-grained ("side-scrolling beat 'em up"), so the shelf files them under a few plain
   // ones. A game can sit under two (boxing is Action and Sports). Pure: tested in play/test/shelf.test.js.
   const GENRES = [
-    ['Action', /beat 'em up|hack and slash|fighting|boxing|shoot|run and gun|action game/i],
+    // Wikidata's own words for the games added 22 Nov (the PLAY assistant's facts: vehicular combat, Metroidvania, wrestling).
+    ['Action', /beat 'em up|hack and slash|fighting|boxing|shoot|run and gun|action game|vehicular combat|metroidvania|wrestling/i],
     ['Platform', /platform/i],
-    ['Puzzle and maze', /puzzle|maze/i],
+    ['Puzzle and maze', /puzzle|maze|breakout|pinball|board game|chess|trivia|game show/i],
     ['Adventure', /adventure|role-playing|text-based|interactive fiction/i],
-    ['Strategy and simulation', /strateg|simulation|management/i],
-    ['Sports and racing', /sport|boxing|racing|football|soccer|golf|tennis/i],
+    ['Strategy and simulation', /strateg|simulation|simulator|management/i],
+    ['Sports and racing', /sport|boxing|racing|football|soccer|golf|tennis|hockey|basketball|baseball|athletics|skateboarding|volleyball|wrestling/i],
     ['Learning', /educational|learning/i],
   ];
   const genresOf = (labels) => GENRES.filter(([, re]) => (labels || []).some((l) => re.test(l))).map(([n]) => n);
@@ -422,7 +437,8 @@
   function hero() {
     const h = document.getElementById('hero');
     if (!h || !shelfGames.length) return;
-    heroList = heroSlides(shelfGames);
+    // A moment in the news opens the banner (play/src/moments-shelf.js), before Bryan's list and the rule's slides.
+    heroList = (root.PlayMoments ? root.PlayMoments.slides(shelfGames) : []).concat(heroSlides(shelfGames));
     if (!heroList.length) return;
     // Bryan's voidarcade art is not in the hero (20 Nov 2026, on seeing it: "no. i want to have the hero treated like the
     // hero in voidtv.net. how its playing live tv"); the hero shows the games until that is built. ART stays for later.
@@ -430,6 +446,7 @@
     h.textContent = '';
     const slides = el('div', 'slides');
     for (const s of heroList) {
+      if (s.moment) { slides.append(el('div', 's moment')); continue; }   // our own look: no game picture behind the ad line
       const one = el('div', 's' + (s.art ? ' art ' + s.art : ''));
       if (s.art) {
         const bg = new Image(); bg.alt = ''; bg.className = 'bg'; bg.decoding = 'async';
@@ -485,7 +502,12 @@
     copy.textContent = '';
     copy.append(el('span', 'hline', 'PLAY · old games from the Internet Archive, free, no account'));
     h.classList.toggle('art-on', !!s.art);
-    if (s.art) {
+    if (s.moment) {
+      copy.append(el('span', 'kicker', s.kicker), el('h2', 'ht', s.title), el('p', 'ov', s.line));
+      const acts = el('div', 'acts'), go = el('a', 'btn gold', s.go); go.href = '#rows';
+      go.addEventListener('click', (e) => { e.preventDefault(); const r = document.querySelector(s.to) || document.querySelector('.shelf .row'); if (!r) return; r.scrollIntoView({ behavior: 'smooth', block: 'start' }); const b = r.querySelector('.box'); if (b) b.focus({ preventScroll: true }); });
+      acts.append(go); copy.append(acts);
+    } else if (s.art) {
       copy.append(el('span', 'kicker', s.kicker), el('p', 'ov', s.line));
       const acts = el('div', 'acts');
       const go = el('a', 'btn gold', 'Pick a game'); go.href = '#rows';
@@ -523,9 +545,11 @@
     if (f) { const see = el('a', 'see', 'See all ›'); see.href = writeFilter(f); see.onclick = (e) => { e.preventDefault(); open(f); }; h.append(see); }
     const wrap = el('div', 'rowwrap'), track = el('div', 'track');
     for (const g of list.slice(0, ROW_CAP)) track.append(box(g));
-    if (f && list.length > ROW_CAP) {
+    // The end card counts every game the row's See all opens, not only the ones the main showing put in the row.
+    const total = Math.max(count || 0, list.length), showing = Math.min(list.length, ROW_CAP);
+    if (f && total > showing) {
       const end = el('a', 'box endcard'); end.href = writeFilter(f);
-      end.append(el('b', '', '+' + (list.length - ROW_CAP)), el('span', '', 'See all ' + list.length));
+      end.append(el('b', '', '+' + (total - showing)), el('span', '', 'See all ' + total));
       end.onclick = (e) => { e.preventDefault(); open(f); };
       track.append(end);
     }
@@ -590,8 +614,10 @@
     if (!shelfGames.length) { rows.innerHTML = '<p class="loading">No games on the shelf right now.</p>'; return; }
     if (home) {
       const list = homeRows(shelfGames);
-      rows.append(rowSection(list[0].title, list[0].games, list[0].f, list[0].games.length), machineRow());
-      for (const r of list.slice(1)) rows.append(rowSection(r.title, r.games, r.f, r.games.length));
+      rows.append(rowSection(list[0].title, list[0].games, list[0].f, list[0].count), machineRow());
+      for (const r of list.slice(1)) rows.append(rowSection(r.title, r.games, r.f, r.count));
+      // What is in the news (play/src/moments-shelf.js, the shared moments engine): its rows go first under the banner.
+      if (root.PlayMoments) root.PlayMoments.place(rows, shelfGames, rowSection, () => turn === shown);
       continueRow().then((sec) => { if (sec && turn === shown) rows.prepend(sec); }).catch(() => {});
       return;
     }
@@ -731,7 +757,8 @@
     readFilter, writeFilter, matches, choices, byPopular, homeRows, listRows, heroSlides, aboutLine, playsText, viewTitle };
   if (typeof module === 'object' && module.exports) { module.exports = api; return; }
   root.PlayShelf = api;
-  fetch('shelf/index.json', { cache: 'no-store' }).then((r) => r.json()).then(render)
+  // The first draw waits up to 1.5 s for the moments in the news, so the banner can open on one (moments-shelf.js).
+  Promise.all([fetch('shelf/index.json', { cache: 'no-store' }).then((r) => r.json()), root.PlayMoments ? root.PlayMoments.wait(1500) : null]).then(([index]) => render(index))
     .catch(() => { document.getElementById('rows').innerHTML = '<p class="loading">The shelf did not load. Try again in a moment.</p>'; });
   // Back goes where the visitor came from on this site; from outside (or nothing), to the home page.
   try { const back = document.getElementById('back'); if (back && document.referrer && new URL(document.referrer).origin === location.origin) back.addEventListener('click', (e) => { e.preventDefault(); history.back(); }); } catch (e) { /* the link still goes home */ }

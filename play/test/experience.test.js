@@ -68,7 +68,7 @@ test('block D: every console card gets its machine\'s pad shape, and every face 
 test('C1: play saves itself every 30 seconds too, since a closing page cannot finish a save', () => {
   const js = fs.readFileSync(path.join(PLAY, 'src', 'play.js'), 'utf8');
   assert.match(js, /const AUTO_EVERY_MS = 30000;/);
-  assert.ok(js.includes("autoTimer = setInterval(() => { if (started && !paused && !document.hidden) autosave(); }, AUTO_EVERY_MS);"));
+  assert.ok(js.includes("autoTimer = setInterval(() => { if (started && !paused && (!document.hidden || pip)) autosave(); }, AUTO_EVERY_MS);"), 'also while popped out, with this tab behind another');
   assert.ok(js.includes("clearInterval(autoTimer)"));
 });
 
@@ -160,4 +160,66 @@ test('audit K5 and S7: a played game is kept in the viewer\'s own browser for a 
     'const game = await gameBytes(msg.gameUrl, msg.gameSize);']) assert.ok(w.includes(bit), bit);
   // Bryan, 20 Nov 2026 ("the card dimension aspect ratio doesn't fit the artwork"): the back's strip shows the whole picture now.
   assert.ok(fs.readFileSync(path.join(PLAY, 'shelf.css'), 'utf8').includes('.held .back .strip img{width:100%;height:100%;object-fit:contain;'));
+});
+
+test('pop out (Bryan, 22 Nov 2026: "Go"): the running game moves into a picture-in-picture window and back, the same canvas, only where the browser can', () => {
+  const js = fs.readFileSync(path.join(__dirname, '..', 'src', 'play.js'), 'utf8');
+  const html = fs.readFileSync(path.join(__dirname, '..', 'game.html'), 'utf8');
+  assert.ok(html.includes('id="b-pop" class="tool" hidden'), 'hidden until the browser says it can');
+  assert.ok(js.includes("$('b-pop').hidden = !canPop();") && js.indexOf("$('b-pop').hidden = !canPop();") > js.indexOf('firstFrame: () => {'), 'shown once the game draws');
+  assert.ok(js.includes('documentPictureInPicture.requestWindow'));
+  assert.ok(js.includes('d.body.append(canvas);') && js.includes('canvasHome.parent.insertBefore(c, canvasHome.next);') && js.includes("pip.addEventListener('resize', popFit);"), 'the canvas itself moves: no second engine');
+  assert.ok(js.includes("pip.addEventListener('pagehide', popBack);"), 'closing the window brings the game back');
+  assert.ok(js.includes('if (p && pip) pip.close();'), 'the pause menu brings it back first');
+  assert.ok(js.includes('if (document.hidden && started && !pip)'), 'no pause when this tab is behind another site while the game is out');
+  assert.ok(js.includes('(pip && pip.requestAnimationFrame ? pip : window).requestAnimationFrame(poll);') && js.includes('if (pip && pip.video) setTimeout(poll, 16);'), 'the pads are read on the window that shows the game');
+});
+
+test('the pop-out carries the game\'s sound (Bryan, 22 Nov 2026: "No, I wanted sound"): once, from the small window, and back', () => {
+  const js = fs.readFileSync(path.join(PLAY, 'src', 'play.js'), 'utf8'), runner = fs.readFileSync(path.join(PLAY, 'src', 'runner.js'), 'utf8');
+  // The runner hands the sound after the volume to a stream and takes it off the speakers; soundHome puts it back.
+  assert.ok(runner.includes('if (!soundOut) soundOut = audio.createMediaStreamDestination();'));
+  assert.ok(runner.includes('try { gain.disconnect(audio.destination); } catch (e) { /* already off the speakers */ }\n        gain.connect(soundOut);'), 'off the speakers while out: it plays once');
+  assert.ok(runner.includes('try { gain.disconnect(soundOut); } catch (e) { /* not in the pop-out */ }\n        try { gain.connect(audio.destination); }'), 'back on the speakers after');
+  // The pop-out's video takes the sound track and is muted only when there is none (a muted game, or sound not started).
+  assert.ok(js.includes('if (sound) for (const t of sound.getAudioTracks()) stream.addTrack(t);'));
+  assert.ok(js.includes("popVid = document.createElement('video'); popVid.muted = !sound;"));
+  assert.ok(js.includes('catch (e) { drop(); popVid = popCopy = null; home(); return; }'), 'a pop-out that fails gives the sound back and leaves the page');
+  assert.ok(js.includes("popVid.addEventListener('leavepictureinpicture', () => { home(); drop();"), 'so does closing it');
+  // On the page, unseen (Bryan: "It closed again"): a video on no page was closed by Chrome 10 s after the window was minimized.
+  assert.ok(js.includes("popVid.className = 'pop-feed'; document.body.appendChild(popVid);"));
+  assert.ok(js.includes('const drop = () => { if (popVid) popVid.remove(); };'), 'and it comes off the page when the game comes back');
+  const css = fs.readFileSync(path.join(PLAY, 'play.css'), 'utf8');
+  assert.ok(css.includes('.pop-feed{position:fixed;left:0;top:0;width:1px;height:1px;opacity:0;pointer-events:none}'));
+});
+
+test('the pop-out follows you (Bryan, 22 Nov 2026: "switched to claude....didnt switch wth me"): Chrome\'s automatic picture-in-picture', () => {
+  const js = fs.readFileSync(path.join(PLAY, 'src', 'play.js'), 'utf8');
+  // While a game runs, leaving the page pops it out as the button does; not while paused or already out.
+  assert.ok(js.includes("navigator.mediaSession.setActionHandler('enterpictureinpicture', go ? () => { if (started && !paused && !pip) popOut(); } : null);"));
+  assert.ok(js.includes("$('b-pop').hidden = !canPop(); autoPop(true);"), 'offered from the first picture');
+  assert.ok(js.includes('stayAwake(false); autoPop(false);'), 'and taken back when the game stops');
+  assert.ok(js.includes("const go = on && canPop() && popWay() === 'video';"), 'only where the browser\'s own picture-in-picture is used, never on a phone');
+});
+
+test('on a computer the sound plays through a hidden audio element, so Chrome offers its automatic pop-out (Bryan, his recording, 22 Nov 2026)', () => {
+  const js = fs.readFileSync(path.join(PLAY, 'src', 'play.js'), 'utf8'), runner = fs.readFileSync(path.join(PLAY, 'src', 'runner.js'), 'utf8');
+  assert.ok(js.includes("mediaOut: canPop() && popWay() === 'video', on: {"), 'only where the pop-out is the video kind: a computer');
+  assert.ok(runner.includes("mediaEl = document.createElement('audio'); mediaEl.className = 'pop-feed'; mediaEl.srcObject = soundOut.stream;"));
+  assert.ok(runner.includes("gain.connect(audio.destination); });"), 'an element that cannot play gives the sound back to the speakers');
+  assert.ok(runner.includes('if (mediaEl) { mediaEl.muted = true; return soundOut.stream; }') && runner.includes('if (mediaEl) { mediaEl.muted = false; return; }'), 'one sound: the element is quiet while the pop-out plays it');
+  assert.ok(runner.includes('mediaEl.srcObject = null; mediaEl.remove(); mediaEl = null;'), 'gone when the game stops');
+  // Leaving the page: the pause waits a moment for the automatic pop-out; media keys pause the game itself.
+  assert.ok(js.includes("setTimeout(() => { if (document.hidden && started && !pip) { if (!paused) setPaused(true); else autosave(); } }, 800);"));
+  assert.ok(js.includes("navigator.mediaSession.setActionHandler('pause', go ? () => { if (!pip) setPaused(true); } : null);"));
+  assert.ok(js.includes("navigator.mediaSession.playbackState = p ? 'paused' : 'playing';"));
+});
+
+test('a key for Pop out (Bryan, 23 Nov 2026: "BUILD"): Alt+P in every game, P alone in a console game', () => {
+  const js = fs.readFileSync(path.join(PLAY, 'src', 'play.js'), 'utf8'), html = fs.readFileSync(path.join(PLAY, 'game.html'), 'utf8');
+  assert.ok(js.includes("if (e.code !== 'KeyP' || !e.isTrusted || e.repeat || e.ctrlKey || e.metaKey || !started || paused || $('b-pop').hidden) return;"), 'only a real press, in a running game, where the button is offered');
+  assert.ok(js.includes("const plain = !e.altKey && !e.shiftKey && PlayCards.isPad(card) && !(PlayCards.keyMap(card) || {}).KeyP;"), 'P alone only where the game does not use P');
+  assert.ok(js.includes('if (!e.altKey && !plain) return;') && js.includes('e.preventDefault(); e.stopImmediatePropagation();\n    popOut();\n  }, true);'), 'caught before the game, and it does what the button does');
+  assert.ok(js.includes('if (/^(INPUT|TEXTAREA|SELECT)$/.test((e.target && e.target.tagName) || \'\')) return;'), 'never while typing in a box');
+  assert.ok(html.includes('Alt+P does it too (P alone in a console game).'), 'the button says so');
 });

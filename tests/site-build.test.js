@@ -29,7 +29,7 @@ let n = 0;
 // A copy of the build with `shows` grids. profile 'tiny' (any size) or the default voidtv profile (refuses under 100 shows).
 function tree({ shows = 12, profile = 'tiny' } = {}) {
   const root = path.join(TMP, 'case' + (++n));
-  for (const f of ['scripts/site.js', 'scripts/lib/app.js', 'scripts/lib/areas-v.js', 'scripts/lib/app-fetch.js', 'scripts/lib/app-me.js', 'scripts/lib/app-near.js', 'scripts/lib/app-list.js', 'scripts/lib/tvgrid.js', 'scripts/lib/tvweek.js', 'scripts/lib/profile.js', 'scripts/lib/siteguards.js', 'player/tools/rank-sources.js', 'player/src/core.js', 'player/src/icons.js', 'player/src/player.js', 'player/src/player.css']) write(root, f, fs.readFileSync(path.join(REPO, f), 'utf8'));
+  for (const f of ['scripts/site.js', 'scripts/lib/app.js', 'scripts/lib/areas-v.js', 'scripts/lib/moments-pub.js', 'assets/brand/moments/moments.js', 'scripts/lib/app-fetch.js', 'scripts/lib/app-me.js', 'scripts/lib/app-near.js', 'scripts/lib/app-list.js', 'scripts/lib/tvgrid.js', 'scripts/lib/tvweek.js', 'scripts/lib/profile.js', 'scripts/lib/siteguards.js', 'player/tools/rank-sources.js', 'player/src/core.js', 'player/src/icons.js', 'player/src/popout.js', 'player/src/player.js', 'player/src/player.css']) write(root, f, fs.readFileSync(path.join(REPO, f), 'utf8'));
   fs.cpSync(path.join(REPO, 'functions'), path.join(root, 'functions'), { recursive: true });
   write(root, 'scripts/show-list.json', JSON.stringify({ types: ['Drama'], shows: [] }));
   if (profile !== 'voidtv') write(root, `profiles/${profile}/profile.json`, JSON.stringify({ siteName: 'Tiny', domain: 'https://tiny.test' }));
@@ -183,8 +183,8 @@ test('a missing file answers 404, not the home page; every page route still gets
   assert.deepEqual(pagesAnswer(site, '/show/test-show-3'), { status: 200, file: '/show/test-show-3/index.html' });
   // No page lives in a folder that gets a 404.html (the folders PLAY, the phone remote and Trivia add are named in site.js).
   const dirs = JSON.parse(fs.readFileSync(path.join(REPO, 'scripts', 'site.js'), 'utf8').match(/const FILE_DIRS = (\[[^\]]*\])/)[1].replace(/'/g, '"'));
-  for (const d of ['assets', 'data', 'play/engine', 'play/cards', 'play/library', 'trivia/src']) assert.ok(dirs.includes(d), d + ' gets a 404.html');
-  const pages = ['/me', '/about', '/promos', '/cash', '/privacy', '/takedown', '/person/1', '/tv/x', '/show/x', '/play/', '/play/game', '/play/pad', '/join', '/remote/', '/trivia/', '/trivia/phone'];
+  for (const d of ['assets', 'data', 'play/engine', 'play/cards', 'play/library', 'trivia/src', 'cards/src', 'cards/games']) assert.ok(dirs.includes(d), d + ' gets a 404.html');
+  const pages = ['/me', '/about', '/promos', '/cash', '/privacy', '/takedown', '/person/1', '/tv/x', '/show/x', '/play/', '/play/game', '/play/pad', '/join', '/remote/', '/trivia/', '/trivia/phone', '/cards/', '/cards/hand'];
   for (const d of dirs) for (const p of pages) assert.ok(!(p + '/').startsWith('/' + d + '/'), `${p} is a page, so ${d}/ must not get a 404.html`);
 });
 

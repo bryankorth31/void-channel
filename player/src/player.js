@@ -16,6 +16,9 @@
   const store = { get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }, set(k, v) { try { localStorage.setItem(k, v); } catch (e) { /* private mode */ } } };
   const sstore = { get(k) { try { return sessionStorage.getItem(k); } catch (e) { return null; } }, set(k, v) { try { sessionStorage.setItem(k, v); } catch (e) { /* private mode */ } } };
   const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  // The pop-out (popout.js): Document Picture-in-Picture where the browser has it, else the video's own picture-in-picture.
+  const canPop = () => !!(root.VoidPopout && root.VoidPopout.supported());
+  const popLabel = (on) => (on ? 'Back to the page (P)' : 'Pop out: the picture floats on top while you use other sites (P)');
   const fmt = (t) => { t = Math.max(0, t | 0); const h = (t / 3600) | 0, m = ((t % 3600) / 60) | 0, x = t % 60; return (h ? h + ':' + String(m).padStart(2, '0') : m) + ':' + String(x).padStart(2, '0'); };
 
   const DEFAULTS = {
@@ -208,8 +211,49 @@
         this._timers.add(iv);
       });
     }
+    // POP OUT (Bryan, 22 Nov 2026: "so i can bring it along in the corner up front as i use the web", "my shows can be playing
+    // while i work as a pop"; for PLAY's: "just the game play", "not a full screen with empty sides"). The picture alone, in a
+    // window that floats over every other window. It is this one <video>, so Live TV going on to the next programme, a break, Back
+    // to live, the next episode On Demand and the phone remote all carry on in it.
+    // - The video's own picture-in-picture first: nothing but the moving picture, and the browser keeps the window at the picture's
+    //   shape, also when the next show is 4:3 and this one was 16:9 (measured in Chrome: 380x286, then 512x288).
+    // - With captions showing, the window that can show them (Chrome draws no captions in a video's picture-in-picture): the whole
+    //   screen moves there (popout.js, Document Picture-in-Picture), captions, the cards and the bar on hover with it.
+    popOut() {
+      const v = this.v, P = root.VoidPopout;
+      if (this._pop) { P.close(); return; }
+      if (document.pictureInPictureElement) { document.exitPictureInPicture().catch(() => {}); return; }
+      const cc = Array.from(v.textTracks || []).some((t) => t.mode === 'showing');
+      const vpip = !!(document.pictureInPictureEnabled && v.requestPictureInPicture && !v.disablePictureInPicture);
+      // A Live TV break has no picture to hand the browser (readyState 0): the screen with its cards moves instead.
+      if (vpip && (v.readyState >= 1 || !canPop()) && !(cc && canPop())) { v.requestPictureInPicture().catch(() => { /* the browser said no (no click behind it) */ }); return; }
+      if (canPop()) {
+        const aspect = v.videoWidth && v.videoHeight ? v.videoWidth / v.videoHeight : 16 / 9;
+        P.open(this.root, {
+          aspect, title: (this.ep && this.ep.title) || 'voidtv.net', holderClass: 'vpx vpx-holder',
+          holder: '<span>Playing in the pop-out window.</span><button type="button">Bring it back</button>',
+          onKey: (e) => { if (!this.root.contains(e.target)) this._key(e, true); }, // keys on the player itself are its own listener's, as on the page
+          onOpen: () => { this._pop = true; this._popUi(true); const h = P.holder(), hb = h && h.querySelector('button'); if (hb) hb.onclick = () => P.close(); },
+          onClose: () => {
+            this._pop = false; this._popUi(false); this._fit();
+            if (!this.root.isConnected) { try { this.v.pause(); } catch (e) { /* gone */ } } // its place on the page is gone: never sound with no controls
+          },
+        }).catch(() => { /* the browser said no (no click behind it): the page stays as it is */ });
+      }
+    }
+    // Can this browser pop the picture out at all? (Firefox has only its own button on the video, no way for a page to ask.)
+    _canPopOut() { return !!((document.pictureInPictureEnabled && this.v.requestPictureInPicture) || canPop()); }
+    _popUi(on) { const b = this.root.querySelector('[data-a=pip]'); if (b) { b.setAttribute('aria-label', popLabel(on)); b.title = popLabel(on); b.classList.toggle('vpx-on', on); } }
+    // Is this player on that part of the page? Popped out, it still counts as where its place is kept.
+    isIn(host) {
+      if (!host) return false;
+      if (host.contains(this.root)) return true;
+      const h = this._pop && root.VoidPopout && root.VoidPopout.holder();
+      return !!(h && host.contains(h));
+    }
     _cancelUpNext() { if (this._upFinish) this._upFinish(false); }
     destroy() {
+      if (this._pop && root.VoidPopout) root.VoidPopout.close(); // the window goes with the player
       this._token = (this._token || 0) + 1; // a load() still waiting for the server lookup checks this token when it wakes and gives up; without it the destroyed player's detached video would get a source and start by itself
       this._emitSummary();
       this.ep = null;
@@ -254,13 +298,15 @@
         + b('mute', 'volume', 'Mute (M)') + '<input class="vpx-vol" type="range" min="0" max="100" step="1" value="100" aria-label="Volume">'
         + b('cc', 'captions', 'Captions (C)') + '<button type="button" data-a="speed" class="vpx-speed" aria-label="Playback speed" title="Playback speed">1×</button>'
         + (this.o.syncButton ? '<button type="button" data-a="avsync" aria-label="Out of sync? Tell us the picture and the sound do not match" title="Picture and sound out of sync? Tell us">Out of sync?</button>' : '')
-        + b('pip', 'pip', 'Picture in picture')
+        + b('pip', 'pip', popLabel(false))
         + (tv ? ch('chprev', 'Previous channel', chev('M15 5l-7 7 7 7'), true) + ch('chnext', 'Next channel', chev('M9 5l7 7-7 7'), false) : (this.o.onNext ? b('next', 'next', 'Next episode (N)') : '')) // on Live TV "next" would only change the channel, which these two buttons already do
         + b('fs', 'fullscreen', 'Fullscreen (F)')
         + '</div></div>';
       container.appendChild(r);
       this.root = r;
+      if (canPop()) r.classList.add('vpx-dpip');
       this.v = r.querySelector('video');
+      if (!this._canPopOut()) r.classList.add('vpx-nopop'); // no way to pop out here: no button
       const q = (s) => r.querySelector(s);
       this.ui = { seek: q('.vpx-seek input'), played: q('.vpx-played'), buf: q('.vpx-buf'), time: q('.vpx-time'), vol: q('.vpx-vol'), status: q('.vpx-status'), statusT: q('.vpx-status-t'), card: q('.vpx-card'), flash: q('.vpx-flash'), title: q('.vpx-title'), stats: q('.vpx-stats'), chname: q('.vpx-chname'), speed: q('.vpx-speed'), sync: q('[data-a=avsync]'), mute: q('[data-a=mute]'), cc: q('[data-a=cc]'), fs: q('[data-a=fs]') };
       const sv = store.get(this.o.storageKey + ':vol');
@@ -326,8 +372,8 @@
       this._on(v, 'seeked', () => { this._lastT = v.currentTime; }); // a finished seek is a jump, not frames moving (the loading look waits for real playback)
       // The page going off screen, hidden or into picture-in-picture, and back: no frame callbacks then is not throttling (the core is told when it happens)
       this._on(document, 'visibilitychange', () => this.core.event('away', now()));
-      this._on(v, 'enterpictureinpicture', () => this.core.event('away', now()));
-      this._on(v, 'leavepictureinpicture', () => this.core.event('away', now()));
+      this._on(v, 'enterpictureinpicture', () => { this._popUi(true); this.core.event('away', now()); });
+      this._on(v, 'leavepictureinpicture', () => { this._popUi(false); this.core.event('away', now()); });
       this._on(v, 'pause', () => this._icons());
       this._on(v, 'volumechange', () => this._syncVol());
       this._on(v, 'timeupdate', () => this._progress());
@@ -519,7 +565,7 @@
       if (a === 'cc') return this._captions();
       if (a === 'avsync') { this.markOutOfSync(); return; }
       if (a === 'speed') { const r = [1, 1.25, 1.5, 1.75, 2, 0.75]; v.playbackRate = r[(r.indexOf(v.playbackRate) + 1) % r.length]; this.ui.speed.textContent = v.playbackRate + '×'; this.ui.speed.classList.toggle('vpx-on', v.playbackRate !== 1); return; }
-      if (a === 'pip') { if (document.pictureInPictureElement) document.exitPictureInPicture().catch(() => {}); else if (v.requestPictureInPicture) v.requestPictureInPicture().catch(() => {}); return; }
+      if (a === 'pip') return this.popOut();
       if (a === 'next') { if (this.o.onNext) this.o.onNext(this); return; }
       if (a === 'chnext' || a === 'chprev') return this._chan(a === 'chnext' ? 'next' : 'prev');
       if (a === 'fs') {
@@ -555,6 +601,7 @@
       else if (k === 'f' || k === 'F') this._do('fs');
       else if (k === 'm' || k === 'M') this._do('mute');
       else if (k === 'c' || k === 'C') this._captions();
+      else if (k === 'p' || k === 'P') this.popOut();
       else if ((k === 'n' || k === 'N' || k === 'MediaTrackNext') && this.o.onNext) this.o.onNext(this);
       else if (k === 'MediaTrackPrevious' && this.o.onPrev) this.o.onPrev(this);
       else if (this.o.channelButtons && (k === 'ChannelUp' || k === 'PageUp')) this._chan('next'); // TV remotes: CH+ and CH- (some send PageUp and PageDown)

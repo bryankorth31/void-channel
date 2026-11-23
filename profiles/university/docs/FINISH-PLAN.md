@@ -414,3 +414,9 @@ the HQ areas chat. Steps 7 to 10 start after the 22 Nov reset.
   shared screen until all have written (or Show what is written); then the cards show without names in a shuffled
   order, each phone gets them all with its own marked and not pickable, and each picks the clearest; the room's pick
   lights up. Nothing graded, nothing kept. Tested with two tabs as phones. tests 39 of 39, selftest 4 of 4.
+- 23 Nov 2026, The body, unit 5: the rolled ankle. Bryan typed here on 20 Nov "also want more lessons"; on 23 Nov
+  he told the Body Atlas chat "tell the university chat to add the ankle lesson" (relayed), after Body Atlas put its
+  fifth lesson live. Unit 5 opens ?lesson=ankle with the way back (unit=5), has its everyday scene (a tent when the
+  first guy rope snaps), a crystal and five questions; each quote was checked word for word against the live
+  lesson file. The Body Atlas entry in list.json has the ankle as its fifth room. The course is live, so the unit
+  reaches the site at the next University deploy. Not pushed, not deployed.

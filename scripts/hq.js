@@ -37,6 +37,7 @@ const kidshq = require('./lib/kidshq'); // the Kids area: the kids show list (pr
 const hindihq = require('./lib/hindihq'); // the Hindi area: hindi.voidtv.net's list, keep or drop, the friends' picks, jobs in the Hindi folder
 const uni = require('./lib/uni'); // the University tab: Void University's sources, courses and the recipe (profiles/university)
 const promos = require('./lib/promos'); // the Motion and Promos tabs: motion editor, site placements, share copies
+const momentshq = require('./lib/momentshq'); // the Moments tab: what is in the news, and the rows and ad line each area shows (catalog/moments.json)
 promos.init({ nodeBin, cache: CACHE });
 const FILES = {
   list: PROFILE.listFile,
@@ -473,6 +474,19 @@ const server = http.createServer(async (req, res) => {
     if (p === '/api/kids/decide' && req.method === 'POST') { const b = await body(req); return send(res, 200, kidshq.decide(String(b.name || ''), String(b.d || ''), b.note)); }
     if (p === '/api/kids/add' && req.method === 'POST') { const b = await body(req); return send(res, 200, kidshq.add({ name: b.name, type: String(b.type || ''), year: b.year, network: b.network, tvmaze: b.tvmaze })); }
     // ---- Hindi area (scripts/lib/hindihq.js; B, 20 Nov 2026: "this needs area inside voidtv hq please , a tab"). Its page code is scripts/hq/hindi.js. ----
+    // ---- Moments (scripts/lib/momentshq.js; Bryan, 22 Nov 2026). Its page code is scripts/hq/moments.js. A refused save answers 400 with every problem in words. ----
+    if (p === '/hq/moments.js') return send(res, 200, fs.readFileSync(path.join(__dirname, 'hq', 'moments.js'), 'utf8'), MIME['.js']);
+    if (p.startsWith('/api/moments')) {
+      const b = req.method === 'POST' ? await body(req) : {};
+      try {
+        if (p === '/api/moments' && req.method === 'GET') { await momentshq.warm(); return send(res, 200, momentshq.list()); }   // warm: On Demand's list, read once every 10 minutes
+        if (p === '/api/moments' && req.method === 'POST') return send(res, 200, momentshq.save(b));
+        if (p === '/api/moments/preview' && req.method === 'POST') { await momentshq.warm(); const m = momentshq.clean(b); return send(res, 200, { problems: require('../assets/brand/moments/moments.js').problems(m), picks: momentshq.picks(m) }); }
+        if (p === '/api/moments/switch' && req.method === 'POST') return send(res, 200, momentshq.setOn(String(b.id || ''), b.on === true));
+        if (p === '/api/moments/remove' && req.method === 'POST') return send(res, 200, momentshq.remove(String(b.id || '')));
+      } catch (e) { return send(res, e.status || 500, { error: e.message }); }
+      return send(res, 404, { error: 'no such moments call' });
+    }
     if (p === '/hq/hindi.js') return send(res, 200, fs.readFileSync(path.join(__dirname, 'hq', 'hindi.js'), 'utf8'), MIME['.js']);
     if (p === '/api/hindi') return send(res, 200, hindihq.overview());
     if (p === '/api/hindi/titles') return send(res, 200, { rows: hindihq.titles(), tally: hindihq.tally() });

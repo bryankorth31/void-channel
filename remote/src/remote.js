@@ -116,8 +116,10 @@
   // PAUSE ON LIVE TV (Bryan picked L1, 22 Nov 2026). Live TV is the clock's: pausing holds this TV's picture only, and Play goes on
   // from there, behind the channel; the next show still starts at its time. How far behind, in seconds, from where the clock says
   // the airing is (at) and where this picture is (pos); null when it cannot be told. More than BEHIND_S offers Back to live.
+  // shown: the picture has a frame. While a file loads or the player switches to a backup copy the position still reads 0, and
+  // the phone said "6 min behind live" for a picture that was about to start at the clock (seen on voidtv.net, 22 Nov 2026).
   const BEHIND_S = 20;
-  const behind = (at, pos) => (Number.isFinite(at) && Number.isFinite(pos) ? Math.max(0, Math.round(at - pos)) : null);
+  const behind = (at, pos, shown = true) => (shown && Number.isFinite(at) && Number.isFinite(pos) ? Math.max(0, Math.round(at - pos)) : null);
   // "4 min behind live", "under a minute behind live": in minutes, so the words change once a minute, not with every poll.
   const behindWords = (sec) => (sec >= 60 ? Math.round(sec / 60) + ' min behind live' : 'under a minute behind live');
 

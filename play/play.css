@@ -573,3 +573,8 @@ body.shell.sidebar .bar .title{min-width:0;overflow:hidden;text-overflow:ellipsi
 /* A part of the on-screen pad placed from play/layouts.json (src/padlayout.js; set by Bryan in play/tools/layout.html):
    where and how big the file says, whatever row or corner the rules above gave it. */
 .cpad .placed{position:absolute!important;right:auto!important;bottom:auto!important;margin:0!important;min-width:0!important;min-height:0!important;max-width:none!important}
+.pop-note[hidden]{display:none}
+.pop-note{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;margin:0;color:var(--muted,#8a8fa3);font-size:15px}
+/* The pop-out's video sits on the page but is never seen (play.js popVideo): Chrome keeps such a picture-in-picture open
+   with the window minimized. */
+.pop-feed{position:fixed;left:0;top:0;width:1px;height:1px;opacity:0;pointer-events:none}

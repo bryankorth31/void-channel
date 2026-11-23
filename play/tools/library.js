@@ -15,10 +15,13 @@ const fs = require('fs');
 const path = require('path');
 const Cons = require('./console-cards.js');
 const Cards = require('../src/cards.js');
+const Drafts = require('./drafts.js');
 
 const PLAY = path.join(__dirname, '..');
 const ROOT = path.join(PLAY, '..');
-const ROWS = process.env.PLAY_ROWS || path.join(ROOT, 'audit', 'play-mode', 'collections');   // PLAY_ROWS: another folder, for a trial
+// PLAY_AUDIT: the audit folder (not in git, so a worktree points this at the main checkout's).
+const AUDIT = process.env.PLAY_AUDIT || path.join(ROOT, 'audit');
+const ROWS = process.env.PLAY_ROWS || path.join(AUDIT, 'play-mode', 'collections');   // PLAY_ROWS: another folder, for a trial
 const LIB = path.join(PLAY, 'library');
 const PER = 500;
 
@@ -27,6 +30,8 @@ const collections = () => JSON.parse(fs.readFileSync(path.join(PLAY, 'collection
 // Pure (tested): the cards for one system's rows, given the ids and items the hand-made cards already hold.
 function build(rows, taken) {
   const ids = new Set(taken.ids), items = new Set(taken.items), out = [];
+  // A game the shelf has by name already (another upload of it) is a second copy: the first card stays.
+  const names = new Set(taken.names || []);   // '<system> <nameKey(title)>'
   for (const r of rows) {
     // The start-up check's answer: the assistant's rows carry it as boot: { ok, why, at }; a plain ok is read too.
     // The content screen (the assistant's content-screen.js; adult and abusive titles were found in the 2600 library):
@@ -35,35 +40,110 @@ function build(rows, taken) {
     if (!r || !('content' in r) || (r.content && r.content.flag)) continue;
     // Finished games only (Bryan, 20 Nov 2026: "Yes, that rule"): no unfinished homebrew, demos, prototypes, test
     // builds, hacks or picture cartridges. A doubtful game comes in only when Bryan kept it on his weed-down page.
-    if (!finished(r)) continue;
-    if (!(r.boot ? r.boot.ok : r.ok) || !r.item || !r.file || !Cons.MACHINES[r.system] || items.has(r.item)) continue;
-    const c = Cons.card({ system: r.system, title: r.title, item: r.item, source: r.source },
+    if (!finished(r) || LEAVE[r.item] || LEAVE_FILE[r.item]) continue;
+    if (!(r.boot ? r.boot.ok : r.ok) || !r.item || !r.file || !(Cons.MACHINES[r.system] || r.system === 'dos') || items.has(r.item)) continue;
+    // A PC (DOS) game needs its start program, which the start-up check found (or repaired); it gets the hand-made DOS
+    // cards' keys, keyboard and mouse, by the drafts tool's rule.
+    if (r.system === 'dos' && !r.start) continue;
+    const c = r.system === 'dos' ? dosCard(r) : Cons.card({ system: r.system, title: r.title, item: r.item, source: r.source },
       { name: r.file, size: r.size || 0, start: r.start || '' }, { year: r.year, creator: r.publisher });
     if (!c.archive.size) delete c.archive.size;
-    if (c.year > (LAST[r.system] || 9999)) c.year = null;   // an upload's date, not the game's
+    if (c.year > (LAST[r.system] || 9999) || c.year < 1970) c.year = null;   // an upload's date or a slip (1830, 8), not the game's
+    c.title = tidyTitle(c.title);
+    // An uploader's "(maker)" after the name: "Grand Theft Auto (DMA Design)".
+    if (r.publisher && c.title.endsWith(' (' + r.publisher + ')')) c.title = c.title.slice(0, -(r.publisher.length + 3));
     // The Archive's play count from the gathering (its search does not return some libraries' items; plays.json wins).
     if (r.plays > 0) c.plays = r.plays;
-    if (ids.has(c.id) || Cards.check(c).length) continue;
+    if (ids.has(c.id) || names.has(c.system + ' ' + nameKey(c.title)) || Cards.check(c).length) continue;
     c.added = 'Whole collections (Bryan, 20 Nov 2026: "Pull those shelves in"); started in the PLAY start-up check';
-    ids.add(c.id); items.add(r.item); out.push(c);
+    ids.add(c.id); items.add(r.item); names.add(c.system + ' ' + nameKey(c.title)); out.push(c);
   }
   return out.sort((a, b) => a.title.localeCompare(b.title));
+}
+
+// The auditor's list of items left off, with reasons, in a file Bryan can edit (22 Nov 2026).
+const LEAVE_FILE = (() => { try { return JSON.parse(fs.readFileSync(path.join(__dirname, 'library-leave.json'), 'utf8')).leave || {}; } catch (e) { return {}; } })();
+// Pure (tested): an uploader's notes off a title, as a box would print it ("Space Hulk (Launches Properly)", "Ice Hockey
+// NES ROM", "Lemmings (Original levels only)", "Codebreaker Code Breaker", "Gtar").
+function tidyTitle(t) {
+  return String(t).replace(/\s*\((launches properly|original levels only)\)/i, '').replace(/\s+(NES|SNES|GBA|GB|Genesis)?\s*ROM$/i, '')
+    .replace(/^Codebreaker Code Breaker$/i, 'Code Breaker').replace(/^Gtar$/, 'Guitar').replace(/\s+DOS$/, '').trim();
+}
+
+// A game's name for spotting a second copy: no case, no spaces or marks, no machine word, "The" not counted.
+const nameKey = (t) => String(t).toLowerCase().replace(/\b(ms-?dos|dos|the)\b/g, '').replace(/[^a-z0-9]+/g, '');
+
+// Items kept off by name, read by the PLAY lead from the games-to-add batch (22 Nov 2026), each with its reason. Fan
+// works and copies of games the shelf already has fail the finished-games rule; a game with adult content waits on
+// Bryan's word, as gambling and horror do.
+const LEAVE = {
+  fluttershy_bin: 'a Sonic 3 hack', '3Dblastdirectorscut': 'a Sonic 3D Blast hack', wolf_bin: 'a fan port of Wolfenstein 3D to the Genesis',
+  msdos_ASCII_DOOM_1999: 'a fan game', 'msdos_Doom_-_The_Roguelike_2005': 'a fan game', doomeng_dos: 'a DOOM engine build, not a game',
+  'msdos_Commander_Keen_7_-_The_Keys_of_Krodacia_2006': 'a fan-made Keen', 'msdos_Commander_Keen_8_-_Dead_in_the_Desert_2009': 'a fan-made Keen',
+  'msdos_Commander_Keen_9_-_Battle_of_the_Brains_2011': 'a fan-made Keen', msdos_The_Lost_Episodes_of_Doom_1995: 'a DOOM level pack',
+  msdos_Wolfendoom_2000: 'a DOOM mod', xmaswolf: 'a Wolfenstein 3D mod', gayblade: 'a Windows 3.1 game, not DOS', micro95_3mb: 'a Windows 95 program',
+  doomII: 'a second copy of Doom II (Doom-2 stays)', 'WOLF3D-MS-DOS': 'a second copy of Wolfenstein 3D (msdos_Wolfenstein_3D_1992 stays)',
+  freedos_edit_09a_: 'a text editor, not a game', DUKE1EXT: 'a level add-on for Duke Nukem', Dos_Mario: 'a fan-made Mario clone (Wiering, 1994)',
+  duke_bin: 'Duke Nukem 3D on the Genesis (held with Duke Nukem 3D)',
+  checkit_30: 'a PC test program, not a game (the auditor, 22 Nov)', msdos_Beyond_Castle_Wolfenstein_1985: 'its program ends at once in our player (the auditor, 22 Nov)',
+  msdos_Duke_Nukems_Penthouse_Paradise_1997: 'adult content: kept out entirely',
+  msdos_Duke_Assault_1997: 'a Duke Nukem 3D add-on (held with Duke Nukem 3D)', 'msdos_Duke_it_out_in_D.C._1997': 'a Duke Nukem 3D add-on (held with Duke Nukem 3D)',
+  DUKE3D_DOS: 'held: adult content (Bryan\'s call)',   // Grand Theft Auto came in on his word for its row (22 Nov 2026: "Build and yes")
+};
+
+// Pure (tested): Wikidata's facts on a card. Two players only where Wikidata says so (the "likelyTwo" guesses stay out);
+// its genres where the card has none.
+function withFacts(c, f) {
+  if (!f) return c;
+  if (f.players === 2 && (c.players || 1) < 2) c.players = 2;
+  if (Array.isArray(f.genres) && f.genres.length && !c.genre) c.genre = f.genres.slice(0, 4);
+  // Wikidata leaves most players empty, so NBA Jam and Street Fighter II read 1 (the auditor, 22 Nov 2026). On a home
+  // console or arcade machine a fighting game or a two-sided sport is two players unless said otherwise; a one-player
+  // game given a second seat loses nothing, a two-player game without one does. Not boxing: Punch-Out is one player.
+  if ((c.players || 1) < 2 && TWO_SEAT.includes(c.system) && (f.likelyTwo || (f.genres || []).some((g) => TWO_KIND.test(g)))) c.players = 2;
+  return c;
+}
+// Pure (tested): the same by name, for a game Wikidata does not know: leagues, two-sided sports, fighting series and
+// the two-player series people try first (Bomberman, Gauntlet, Micro Machines, Puyo Puyo, Contra). Not "fighter" alone
+// (Fire Fighter, F-22 are one player).
+const TWO_NAME = /\b(nba|nfl|nhl|nhlpa|fifa|madden|mlbpa|pga|soccer|football|hockey|baseball|basketball|tennis|volleyball|super bowl|olympics?|pong|world cup|street fighter|virtua fighter|clay ?fighter|tournament fighters|fatal fury|art of fighting|samurai shodown|mortal kombat|double dragon|bomberman|gauntlet|micro machines|puyo|contra|bubble bobble|space war|combat)\b/i;
+function twoByName(c) {
+  if ((c.players || 1) < 2 && TWO_SEAT.includes(c.system) && TWO_NAME.test(c.title)) c.players = 2;
+  return c;
+}
+const TWO_SEAT = ['genesis', 'nes', 'snes', 'sms', 'a2600', 'arcade'];
+const TWO_KIND = /fighting|basketball|american football|association football|soccer|ice hockey|baseball|volleyball|tennis|wrestling|sports? video game/i;
+
+// Pure (tested): a PC game's card from its row: the drafts tool's DOS card, with the start program the check used.
+function dosCard(r) {
+  // The machine is said by the shelf, not the name: "Doom 2 (MS-DOS)", "MS-DOS: Stunts (VGA Graphics and SoundBlaster)",
+  // "Duke Nukem 3D (DOS)", "Antarctic Adventure [MS-DOS]" read as a box would print them.
+  const title = String(r.title).replace(/^MS-DOS:\s*/i, '').replace(/\s*[([](MS-)?DOS[)\]]/gi, '').replace(/\s+-\s+(MS-)?DOS$/i, '')
+    .replace(/\s*\((EGA|CGA|VGA)[^)]*\)\s*$/i, '').replace(/\s*\([^)]*\b(sound ?blaster|sound|graphics)\b[^)]*\)\s*$/i, '').trim();
+  const c = Drafts.draft({ identifier: r.item, title, year: r.year, creator: r.publisher }, { name: r.file, size: r.size || 0 }, 'dos', 'top');
+  c.archive.start = r.start;
+  delete c.draft;
+  return c;
 }
 
 // Pure (tested): whether a row is a finished game the shelf may take. Not: unfinished homebrew (WIP), demos,
 // prototypes, betas, test builds, picture cartridges, hacks (the assistant's hack screen); and, until Bryan says,
 // gambling and horror. Bryan's Keep on his weed-down page (r.weed === 'keep') lets a doubtful game in; Drop never.
 const UNFINISHED = /\b(wip|demo|beta|test|kernel|sample|pd|pda)\b|proto(type)?\b|\bv0 \d|\b19xx\b|point-of-purchase|greeting cart|^image\b|\(hack\)|\bhack\b/i;
-const HELD = /casino|poker|slots?\b|blackjack|black jack|roulette|gambl|halloween|chainsaw/i;   // gambling and horror: Bryan's call
+// Gambling and horror were held until Bryan's word, 22 Nov 2026: "Horror and gambling are okay in these" (PLAY only;
+// nothing from a collection goes on Kids). Gore, drugs and the rest he has not ruled on stay in library-leave.json.
 // Each machine's last commercial year: a later date is a homebrew, a hack or an upload date (the audit).
-const LAST = { a2600: 1992, nes: 1995, snes: 1999, gameboy: 2003, gbcolor: 2003, gba: 2008, lynx: 1995, genesis: 1998, sms: 1998, gamegear: 1997 };   // the Master System lived on in Brazil (Tec Toy) to 1998
-const FAN = /\b(polish|translat\w*|unlocked|pirate|bootleg|among us|fan made|fanmade)\b/i;
+const LAST = { a2600: 1992, nes: 1995, snes: 1999, gameboy: 2003, gbcolor: 2003, gba: 2008, lynx: 1995, genesis: 1998, sms: 1998, gamegear: 1997, dos: 1999 };   // DOS: a later date is homebrew or a fan port (Super Mario 64 MS-DOS Port, 2020)   // the Master System lived on in Brazil (Tec Toy) to 1998
+// Mods, patches and level packs of another game are not finished games of their own (the games-to-add batch, 21 Nov
+// 2026: "Sonic Doom - Doom 2 Mod", a Wolfenstein "Lost Episode" patch, a DOOM level); nor are the Sonic.exe fan games.
+const FAN = /\b(polish|translat\w*|unlocked|pirate|bootleg|among us|fan made|fanmade|mod|patch|wads?|level pack|megawad|total conversion|doom level|fan port|ms-?dos port|pc port)\b|\.wad\b|\.exe\b|\bexe\b/i;
 function finished(r) {
   // The title, the Archive item and the file name, with _ - . read as spaces (the audit: "a-team_prototype" slipped by).
   const name = [r.title, r.item, r.file].join(' ').replace(/[_.\-]+/g, ' ');
   if (r.weed === 'drop') return false;
   if (r.weed === 'keep') return true;
-  if (UNFINISHED.test(name) || HELD.test(name) || FAN.test(name)) return false;
+  if (r.held) return false;   // a row the assistant's screen still holds for Bryan's word
+  if (UNFINISHED.test(name) || FAN.test(name)) return false;
   if (r.likelyHack) return false;
   // The content screen's words, read again from the title itself (the audit: NBA Jam XXX), and a personal upload with
   // no year and no maker (half of those were hacks: Pokemon Prism, SMB 3 MIX); Bryan's weed-down keeps the real ones.
@@ -86,19 +166,36 @@ function bundles(system, cards) {
 }
 
 // The top 150 a machine (Bryan, 20 Nov 2026: "im more of the mind to have top 150"): the assistant's start-checked batch,
-// one file for every machine. A game there started (it is in rows, not in failed); DOS waits for Bryan's content screen,
-// and a likely hack waits for his weed-down. Pure (tested).
-const TOP = path.join(ROOT, 'audit', 'play-mode', 'consoles', 'console-rows.json');
+// one file for every machine, and the games to add after it (Bryan, 21 Nov 2026: "start adding more of the games from
+// all of the consoles including dos, that were based on popularity and review"; "keep all of them, go ahead"), in
+// consoles/more-rows.json. A game there started (it is in rows, not in failed); a likely hack waits for his weed-down;
+// a row the content screen has not read stays off (build). Pure (tested).
+const TOP = path.join(AUDIT, 'play-mode', 'consoles', 'console-rows.json');
+const MORE = path.join(AUDIT, 'play-mode', 'consoles', 'more-rows.json');
+// The clean Genesis copies from the variations shelf (Bryan, 22 Nov 2026: "Yes, fetch them"): a region mark and no
+// altered mark, one copy a game; the doubtful ones are likelyHack and wait for his weed-down like the rest.
+const GENVAR = path.join(AUDIT, 'play-mode', 'consoles', 'genvar-rows.json');
 function topRows(system, list, weed) {
   const w = weed || { keep: [], drop: [] };
-  return (list || []).filter((r) => r.system === system && r.system !== 'dos')
+  return (list || []).filter((r) => r.system === system)
     .map((r) => Object.assign({}, r, { publisher: r.maker, boot: { ok: true, from: 'top-150 start-up check' },
       weed: (w.drop || []).includes(r.item) ? 'drop' : (w.keep || []).includes(r.item) ? 'keep' : undefined }));
 }
 // Bryan's choices from his weed-down page (audit/play-mode/weed/<system>.html, "Copy my choices"), saved as
 // audit/play-mode/weed/choices-<system>.json: { system, keep: [items], drop: [items] }.
-const readWeed = (system) => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'audit', 'play-mode', 'weed', 'choices-' + system + '.json'), 'utf8')); } catch (e) { return null; } };
-const readTop = () => { try { return JSON.parse(fs.readFileSync(process.env.PLAY_TOP || TOP, 'utf8')).rows || []; } catch (e) { return []; } };
+const readWeed = (system) => { try { return JSON.parse(fs.readFileSync(path.join(AUDIT, 'play-mode', 'weed', 'choices-' + system + '.json'), 'utf8')); } catch (e) { return null; } };
+const readList = (f) => { try { return JSON.parse(fs.readFileSync(f, 'utf8')).rows || []; } catch (e) { return []; } };
+const readTop = () => readList(process.env.PLAY_TOP || TOP);
+const readMore = () => readList(process.env.PLAY_MORE || MORE);
+const readGenvar = () => readList(process.env.PLAY_GENVAR || GENVAR);
+// The first Grand Theft Autos (Bryan, 22 Nov 2026: "Build and yes"): the assistant's start-checked rows for that row.
+const readGta = () => readList(path.join(AUDIT, 'play-mode', 'consoles', 'gta-rows.json'));
+// The PLAY assistant's facts from Wikidata, by Archive item (22 Nov 2026): players (2 only where Wikidata marks two or
+// more on a home console or arcade machine) and genres in Wikidata's own words. And the rows whose only doubt was a
+// name Wikidata did not know, which it found after all (now-sure.json): they no longer wait for the weed-down.
+const readJson = (f, d) => { try { return JSON.parse(fs.readFileSync(f, 'utf8')); } catch (e) { return d; } };
+const FACTS = () => readJson(path.join(AUDIT, 'play-mode', 'consoles', 'facts-rows.json'), {});
+const NOW_SURE = () => { const j = readJson(path.join(AUDIT, 'play-mode', 'consoles', 'now-sure.json'), []); return new Set((Array.isArray(j) ? j : j.items || j.rows || []).map((x) => (typeof x === 'string' ? x : x.item))); };
 
 function readRows(system) {
   const f = path.join(ROWS, system + '.jsonl');
@@ -108,15 +205,20 @@ function readRows(system) {
 
 function main() {
   const hand = fs.readdirSync(path.join(PLAY, 'cards')).filter((f) => f.endsWith('.json')).map((f) => JSON.parse(fs.readFileSync(path.join(PLAY, 'cards', f), 'utf8')));
-  const taken = { ids: hand.map((c) => c.id), items: hand.map((c) => c.archive.item) };
+  const taken = { ids: hand.map((c) => c.id), items: hand.map((c) => c.archive.item), names: hand.map((c) => c.system + ' ' + nameKey(c.title)) };
   fs.rmSync(LIB, { recursive: true, force: true });
   let total = 0;
-  const top = readTop();
+  const top = readTop(), more = readMore(), genvar = readGenvar(), gta = readGta(), facts = FACTS(), sure = NOW_SURE();
+  for (const r of [...more, ...genvar]) if (sure.has(r.item)) r.likelyHack = false;
   for (const system of [...new Set(collections().map((c) => c.system))]) {
-    // A collection's own rows first (the Archive's curated libraries), then the top 150 for the same machine.
-    const fromTop = collections().some((c) => c.system === system && c.from === 'top150');
-    const cards = build(readRows(system).concat(fromTop ? topRows(system, top, readWeed(system)) : []), taken);
-    for (const c of cards) { taken.ids.push(c.id); taken.items.push(c.archive.item); }
+    // A collection's own rows first (the Archive's curated libraries), then the start-checked batches its lines name:
+    // "top150" the top 150, "more" the games to add (21 Nov 2026), "top150+more" both, "genvar" the clean Genesis copies.
+    const from = collections().filter((c) => c.system === system).map((c) => c.from || '').join(' ');
+    const weed = readWeed(system);
+    const cards = build(readRows(system).concat(/top150/.test(from) ? topRows(system, top, weed) : [],
+      /more/.test(from) ? topRows(system, more, weed) : [], /genvar/.test(from) ? topRows(system, genvar, weed) : [], /gta/.test(from) ? topRows(system, gta, weed) : []), taken);
+    for (const c of cards) twoByName(withFacts(c, facts[c.archive.item]));
+    for (const c of cards) { taken.ids.push(c.id); taken.items.push(c.archive.item); taken.names.push(c.system + ' ' + nameKey(c.title)); }
     for (const b of bundles(system, cards)) {
       const f = path.join(LIB, b.name + '.json');
       fs.mkdirSync(path.dirname(f), { recursive: true });
@@ -129,4 +231,4 @@ function main() {
 }
 
 if (require.main === module) main();
-module.exports = { build, bundles, topRows, PER };
+module.exports = { build, bundles, topRows, dosCard, finished, tidyTitle, withFacts, twoByName, LEAVE, LEAVE_FILE, PER };

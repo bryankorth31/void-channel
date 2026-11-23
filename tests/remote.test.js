@@ -297,6 +297,8 @@ test('night audit N10 holds for the hand-over: the phone gets four letters and b
 
 test('pause on Live TV (L1): how far behind the clock, in words that change once a minute, and Back to live past 20 s', () => {
   assert.equal(V.behind(736, 701), 35); assert.equal(V.behind(700, 705), 0); assert.equal(V.behind(NaN, 3), null);
+  // A picture still loading (or switching to a backup copy) reads 0: not behind, no Back to live until it has a frame.
+  assert.equal(V.behind(360, 0, false), null); assert.equal(V.behind(360, 350, true), 10);
   assert.equal(V.BEHIND_S, 20);
   assert.equal(V.behindWords(35), 'under a minute behind live'); assert.equal(V.behindWords(59), 'under a minute behind live');
   assert.equal(V.behindWords(61), '1 min behind live'); assert.equal(V.behindWords(250), '4 min behind live');

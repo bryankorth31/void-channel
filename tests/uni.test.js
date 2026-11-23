@@ -703,3 +703,11 @@ test('Say it another way in the study room: write privately, cards show only whe
   const phone = fs.readFileSync(path.join(uni.UNI, 'make', 'phone.html'), 'utf8');
   assert.match(phone, /m\.type === 'say'/); assert.match(phone, /type: 'said'/); assert.match(phone, /if \(m\.mine\) \{ cb\.disabled = true/);
 });
+
+test('the public copy carries no flip side unless a unit is marked "flip": true', () => {
+  const marked = fs.readdirSync(path.join(uni.UNI, 'courses')).filter((f) => f.endsWith('.json'))
+    .some((f) => JSON.parse(fs.readFileSync(path.join(uni.UNI, 'courses', f), 'utf8')).units.some((u) => u.flip === true));
+  build('--site');
+  const has = fs.readdirSync(SITE).some((f) => /^flip/.test(f)) || fs.readdirSync(SITE).filter((f) => f.endsWith('.html')).some((f) => /class="flip"/.test(fs.readFileSync(path.join(SITE, f), 'utf8')));
+  if (!marked) assert.ok(!has, 'a flip side reached the public copy with no unit marked for it');
+});

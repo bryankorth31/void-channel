@@ -12,10 +12,27 @@ const row = (o) => Object.assign({ content: null, system: 'sms', title: 'Fantasy
 
 test('C1: only Bryan\'s approved collections, each naming its machine and his words', () => {
   const list = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'collections.json'), 'utf8')).collections;
-  assert.deepEqual([...new Set(list.map((c) => c.system))].sort(), ['a2600', 'gameboy', 'gamegear', 'gba', 'gbcolor', 'genesis', 'lynx', 'nes', 'sms', 'snes']);
-  for (const c of list) assert.match(c.approvedBy, /^Bryan, 20 Nov 2026/);
+  assert.deepEqual([...new Set(list.map((c) => c.system))].sort(), ['a2600', 'dos', 'gameboy', 'gamegear', 'gba', 'gbcolor', 'genesis', 'lynx', 'nes', 'sms', 'snes']);
+  for (const c of list) assert.match(c.approvedBy, /^Bryan, 2[012] Nov 2026/);
   assert.deepEqual(list.find((c) => c.system === 'genesis').leaveOut, ['genesisvariations', 'sonicromhacks']);
-  assert.ok(!list.some((c) => c.system === 'dos'), 'DOS waits for the content screen');
+  // The games to add (Bryan, 21 Nov 2026: "including dos"; "keep all of them, go ahead"): DOS takes the top 150 and the
+  // new batch; Genesis, Master System and Game Gear only the new batch (their top-150 file is mostly Sonic hacks).
+  assert.equal(list.find((c) => c.system === 'dos').from, 'top150+more');
+  for (const s of ['genesis', 'sms', 'gamegear']) assert.ok(list.some((c) => c.system === s && c.from === 'more'), s);
+  assert.ok(!list.some((c) => ['genesis', 'sms', 'gamegear'].includes(c.system) && /top150/.test(c.from || '')), 'no Sega top-150 file');
+});
+
+test('games to add: a PC game gets the DOS card with its start program; mods, fan works and held games stay off', () => {
+  const dos = (o) => Object.assign({ content: null, system: 'dos', title: 'Commander Keen 4: Secret of the Oracle', item: 'keen4', file: 'keen4.zip', size: 500000, start: 'KEEN4E.EXE', year: 1991, publisher: 'id Software', source: 'curated', boot: { ok: true } }, o);
+  const [c] = Lib.build([dos()], { ids: [], items: [] });
+  assert.equal(c.system, 'dos'); assert.equal(c.core, 'dosbox-pure'); assert.equal(c.archive.start, 'KEEN4E.EXE');
+  assert.equal(c.controls.kind, 'dos-keys'); assert.ok(c.controls.mouse && c.controls.keyboard); assert.ok(!('draft' in c));
+  assert.equal(Lib.build([dos({ start: '' })], { ids: [], items: [] }).length, 0, 'no start program, no card');
+  for (const t of ['Sonic Doom - Doom 2 Mod + others', 'Wolfenstein 3D "Lost Episode" patch', 'DOOM level: Tech Gone Bad (e1m8b.wad)', 'Sonic.exe Agustin Bazan 683 Edition', 'Sonic 1 EXE'])
+    assert.equal(Lib.finished(dos({ title: t, item: 'x' })), false, t);
+  assert.equal(Lib.finished(dos({ held: true })), false, 'horror or gambling waits on Bryan');
+  assert.equal(Lib.build([dos({ item: 'DUKE3D_DOS', title: 'Duke Nukem 3D' })], { ids: [], items: [] }).length, 0, 'held by name');
+  for (const why of Object.values(Lib.LEAVE)) assert.ok(why.length > 5);
 });
 
 test('C2: a game that started becomes a card with its machine\'s controls; one that did not stays off', () => {
@@ -112,4 +129,73 @@ test('the audit: an adult word in the title, or a personal upload with no year a
 
 test('the audit: a prototype named at the end of its Archive item ("...InfogramesM4proto") stays off', () => {
   assert.equal(Lib.build([row({ system: 'gamegear', title: 'Spirou', item: 'gg_Spirou_1996InfogramesM4proto', file: 'Spirou 1996InfogramesM4proto.bin', size: 524288, year: 1996 })], { ids: [], items: [] }).length, 0);
+});
+
+test('the main showing: each machine\'s best 40 by fame and plays, one copy a game; rows and banner draw on them, See all on every game', () => {
+  // Bryan, 22 Nov 2026: "clean the main showing of games down to the most known or played or quality of the games"; "Yes, best 40 each".
+  const games = [];
+  for (let i = 0; i < 60; i++) games.push({ id: 'g' + i, title: 'Game ' + i, system: 'snes', item: 'i' + i, plays: i * 10, genres: [] });
+  games.push({ id: 'dup', title: 'Game 59 (USA)', system: 'snes', item: 'dup', plays: 1, genres: [] });
+  ShelfTool.markFront(games, { i0: 40, dup: 40 });
+  const front = games.filter((g) => g.front);
+  assert.equal(front.length, ShelfTool.FRONT);
+  assert.ok(games.find((g) => g.id === 'g0').front, 'a famous game with no plays still makes the main showing');
+  assert.ok(!games.find((g) => g.id === 'g1').front, 'an unknown game with few plays does not');
+  const Shelf = require('../src/shelf.js');
+  const rows = Shelf.homeRows(games);
+  assert.equal(rows[0].count, games.length, 'See all counts every game');
+  assert.ok(rows[0].games.every((g) => g.front), 'the row shows only the main showing');
+  assert.equal(new Set(rows[0].games.map((g) => g.title.replace(/ \(USA\)$/, ''))).size, rows[0].games.length, 'one box a game');
+  assert.ok(Shelf.heroSlides(games).filter((s) => s.g).every((s) => s.g.front), 'the banner draws on the main showing');
+});
+
+test('the auditor\'s left-off list is read from a file with a reason each, and an uploader\'s notes come off a title', () => {
+  for (const [item, why] of Object.entries(Lib.LEAVE_FILE)) { assert.ok(item.length > 1); assert.ok(why.length > 5, item); }
+  const one = Object.keys(Lib.LEAVE_FILE)[0];
+  const r = { content: null, system: 'dos', title: 'X', item: one, file: 'x.zip', size: 1, start: 'X.EXE', year: 1990, publisher: 'P', source: 'curated', boot: { ok: true } };
+  assert.equal(Lib.build([r], { ids: [], items: [] }).length, 0);
+  assert.equal(Lib.tidyTitle('Space Hulk (Launches Properly)'), 'Space Hulk');
+  assert.equal(Lib.tidyTitle('Ice Hockey NES ROM'), 'Ice Hockey');
+  assert.equal(Lib.tidyTitle('Lemmings (Original levels only)'), 'Lemmings');
+  assert.equal(Lib.tidyTitle('Mega Man X'), 'Mega Man X');
+});
+
+test('Wikidata\'s facts on a card: two players only where it says so, its genres where the card has none', () => {
+  const c = { players: 1, archive: { item: 'x' } };
+  Lib.withFacts(c, { players: 2, genres: ['beat \'em up', 'action game'] });
+  assert.equal(c.players, 2); assert.deepEqual(c.genre, ['beat \'em up', 'action game']);
+  const d = { players: 1, genre: ['platform game'] };
+  Lib.withFacts(d, { likelyTwo: 'fighting game', genres: ['racing video game'] });
+  assert.equal(d.players, 1, 'a guess is not a fact'); assert.deepEqual(d.genre, ['platform game'], 'the card\'s own genre stays');
+  const Shelf = require('../src/shelf.js');
+  assert.ok(Shelf.genresOf(['ice hockey video game']).includes('Sports and racing'));
+  assert.ok(Shelf.genresOf(['flight simulator']).includes('Strategy and simulation'));
+  assert.ok(Shelf.genresOf(['Metroidvania']).includes('Action'));
+});
+
+test('the main showing fits the machine: its 40, then every other well-known game; two names of one game count once', () => {
+  // Bryan, 22 Nov 2026: "Then increase the number of that console or system to fit the games".
+  const games = [];
+  for (let i = 0; i < 60; i++) games.push({ id: 'g' + i, title: 'Game ' + i, system: 'nes', item: 'i' + i, plays: 1000 - i, genres: [] });
+  games.push({ id: 'k', title: 'Known Classic', system: 'nes', item: 'known', plays: 0, genres: [] });
+  games.push({ id: 'k2', title: 'Known Classic Japan', system: 'nes', item: 'known-jp', plays: 0, genres: [] });
+  const pages = { known: 12, 'known-jp': 12 };
+  for (let i = 0; i < 60; i++) pages['i' + i] = 30;   // better known and more played: they fill the 40 first
+  Object.defineProperty(pages, '__known', { value: new Set(['known', 'known-jp']) });
+  Object.defineProperty(pages, '__game', { value: { known: 'Q1', 'known-jp': 'Q1' } });
+  ShelfTool.markFront(games, pages);
+  assert.ok(games.find((g) => g.id === 'k').front, 'a well-known game joins after the 40');
+  assert.ok(!games.find((g) => g.id === 'k2').front, 'its other name does not take a second place');
+  assert.equal(games.filter((g) => g.front).length, 41);
+});
+
+test('two players where Wikidata is silent: fighting and two-sided sports on home consoles and arcade, and the series people try first', () => {
+  const card = (system, title) => ({ system, title, players: 1 });
+  assert.equal(Lib.withFacts(card('genesis', 'X'), { genres: ['fighting game'] }).players, 2);
+  assert.equal(Lib.withFacts(card('gameboy', 'X'), { genres: ['fighting game'] }).players, 1, 'a handheld needed a link cable');
+  assert.equal(Lib.withFacts(card('nes', 'X'), { genres: ['boxing video game'] }).players, 1, 'Punch-Out is one player');
+  for (const t of ['NBA Jam', 'Mega Bomberman', 'Micro Machines', 'Puyo Puyo', 'Tecmo Super Bowl II', 'Street Fighter II Special Champion Edition'])
+    assert.equal(Lib.twoByName(card('genesis', t)).players, 2, t);
+  for (const t of ['Fire Fighter', 'F-22 Interceptor', 'Sonic the Hedgehog']) assert.equal(Lib.twoByName(card('genesis', t)).players, 1, t);
+  assert.equal(Lib.twoByName(card('dos', 'NBA Jam')).players, 1, 'not on the PC (keyboard)');
 });
