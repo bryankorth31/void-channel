@@ -30,6 +30,7 @@
     let worker = null, audio = null, node = null, rate = 0, frames = 0, stopped = false;
     // The volume (Bryan, 20 Nov 2026: "add a volume control on the emulator"): a gain between the sound and the speakers.
     let gain = null, level = opts.volume == null ? 1 : opts.volume;
+    let soundOut = null;                    // the pop-out's sound, while the game is out (soundStream)
     let sramWait = null, sramSetWait = null;
     let why = '';                           // why the last save failed, when the engine said ('dos': still at DOS)
     let asking = null;                      // the one save or load waiting for its answer: { done, timer }
@@ -145,6 +146,22 @@
       saveWhy: () => why,
       wakeSound: () => { if (audio && audio.state === 'suspended') audio.resume(); },
       volume: (v) => { level = v; if (gain) gain.gain.value = v; },
+      // The pop-out (Bryan, 22 Nov 2026: "No, I wanted sound"): while the game is out, its sound (after the volume) goes
+      // into the pop-out's video and only there, so it plays once, from the small window; and the browser keeps an
+      // audible picture-in-picture open with its tab behind others (a silent one was closed 8 to 43 s after). null: no
+      // sound to give (muted, or not started yet). soundHome() puts it back on the speakers.
+      soundStream: () => {
+        if (!audio || !gain || !audio.createMediaStreamDestination) return null;
+        if (!soundOut) soundOut = audio.createMediaStreamDestination();
+        try { gain.disconnect(audio.destination); } catch (e) { /* already off the speakers */ }
+        gain.connect(soundOut);
+        return soundOut.stream;
+      },
+      soundHome: () => {
+        if (!soundOut || !gain || !audio) return;
+        try { gain.disconnect(soundOut); } catch (e) { /* not in the pop-out */ }
+        try { gain.connect(audio.destination); } catch (e) { /* the sound has closed */ }
+      },
     };
   }
   root.PlayRunner = { createRunner };

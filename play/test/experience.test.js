@@ -174,3 +174,16 @@ test('pop out (Bryan, 22 Nov 2026: "Go"): the running game moves into a picture-
   assert.ok(js.includes('if (document.hidden && started && !pip)'), 'no pause when this tab is behind another site while the game is out');
   assert.ok(js.includes('(pip && pip.requestAnimationFrame ? pip : window).requestAnimationFrame(poll);') && js.includes('if (pip && pip.video) setTimeout(poll, 16);'), 'the pads are read on the window that shows the game');
 });
+
+test('the pop-out carries the game\'s sound (Bryan, 22 Nov 2026: "No, I wanted sound"): once, from the small window, and back', () => {
+  const js = fs.readFileSync(path.join(PLAY, 'src', 'play.js'), 'utf8'), runner = fs.readFileSync(path.join(PLAY, 'src', 'runner.js'), 'utf8');
+  // The runner hands the sound after the volume to a stream and takes it off the speakers; soundHome puts it back.
+  assert.ok(runner.includes('if (!soundOut) soundOut = audio.createMediaStreamDestination();'));
+  assert.ok(runner.includes('try { gain.disconnect(audio.destination); } catch (e) { /* already off the speakers */ }\n        gain.connect(soundOut);'), 'off the speakers while out: it plays once');
+  assert.ok(runner.includes('try { gain.disconnect(soundOut); } catch (e) { /* not in the pop-out */ }\n        try { gain.connect(audio.destination); }'), 'back on the speakers after');
+  // The pop-out's video takes the sound track and is muted only when there is none (a muted game, or sound not started).
+  assert.ok(js.includes('if (sound) for (const t of sound.getAudioTracks()) stream.addTrack(t);'));
+  assert.ok(js.includes("popVid = document.createElement('video'); popVid.muted = !sound;"));
+  assert.ok(js.includes('catch (e) { popVid = popCopy = null; home(); return; }'), 'a pop-out that fails gives the sound back');
+  assert.ok(js.includes("popVid.addEventListener('leavepictureinpicture', () => { home();"), 'so does closing it');
+});

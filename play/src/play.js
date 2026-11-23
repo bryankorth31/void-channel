@@ -953,13 +953,17 @@
     let stream;
     if (own) { popCopy = null; stream = own.captureStream(60); }
     else { popCopy = document.createElement('canvas'); popCopy.height = 480; popCopy.width = Math.round(480 * aspect); popDrawn(); stream = popCopy.captureStream(60); }
-    popVid = document.createElement('video'); popVid.muted = true; popVid.playsInline = true;
+    // The game's sound goes with it (Bryan, 22 Nov 2026: "No, I wanted sound"): it plays from the pop-out's video only.
+    const sound = runner.soundStream ? runner.soundStream() : null;
+    if (sound) for (const t of sound.getAudioTracks()) stream.addTrack(t);
+    popVid = document.createElement('video'); popVid.muted = !sound; popVid.playsInline = true;
     popVid.srcObject = stream;
-    try { await popVid.play(); await popVid.requestPictureInPicture(); } catch (e) { popVid = popCopy = null; return; }
+    const home = () => { if (runner && runner.soundHome) runner.soundHome(); };
+    try { await popVid.play(); await popVid.requestPictureInPicture(); } catch (e) { popVid = popCopy = null; home(); return; }
     pip = { close: () => document.exitPictureInPicture().catch(() => {}), video: true };
     setTimeout(poll, 16);
     $('b-pop').setAttribute('aria-pressed', 'true');
-    popVid.addEventListener('leavepictureinpicture', () => { pip = null; popVid = popCopy = null; $('b-pop').setAttribute('aria-pressed', 'false'); });
+    popVid.addEventListener('leavepictureinpicture', () => { home(); pip = null; popVid = popCopy = null; $('b-pop').setAttribute('aria-pressed', 'false'); });
   }
   async function popOut() {
     if (popWay() === 'video') return popVideo();
