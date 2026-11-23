@@ -1,0 +1,17 @@
+/* VoidTV cards: the look both card pages share (the phone's hand and the big-screen table). Licence: GPL-2.0-or-later.
+   The colours are VoidTV's own (play/join.html): near-black, cyan, the brand pink, gold for whose turn it is. */
+:root{--bg:#07080c;--panel:#141722;--line:#2a3046;--fg:#e8e8ee;--dim:#8a8fa3;--acc:#5fd4ff;--pink:#ff4fc8;--gold:#f3c969;
+  --felt:#123c2e;--felt-line:#1d6b50;--card:#fdfdfb;--ink:#14161c;--red:#c8102e}
+
+/* A card, drawn by src/face.js. It is 5em wide and 7em tall: a page sizes a card by setting its font-size. */
+.vc{position:relative;flex:none;width:5em;height:7em;box-sizing:border-box;border-radius:.45em;background:var(--card);color:var(--ink);
+  border:.06em solid #9aa0b0;font-family:Georgia,'Times New Roman',serif;font-weight:700;line-height:1;user-select:none;-webkit-user-select:none}
+.vc-red{color:var(--red)}
+.vc-corner{position:absolute;left:.36em;top:.32em;display:flex;flex-direction:column;align-items:center;gap:.06em}
+.vc-corner b{font-size:1.3em;letter-spacing:-.05em}
+.vc-corner i{font-style:normal;font-size:1.05em}
+.vc-big{position:absolute;right:.38em;bottom:.28em;font-size:2.7em;font-weight:400}
+.vc-joker .vc-big{color:var(--pink)}
+.vc-other .vc-big{inset:.5em;right:.5em;bottom:.5em;display:flex;align-items:center;justify-content:center;text-align:center;font:600 .72em/1.25 system-ui,Segoe UI,Roboto,sans-serif}
+/* Face down: VoidTV's own back, dark with pink stripes. */
+.vc-back{background-color:#2a1d4a;border:.12em solid var(--pink);background-image:repeating-linear-gradient(45deg,rgba(255,79,200,.24) 0 .34em,transparent .34em .9em)}
