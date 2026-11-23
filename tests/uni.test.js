@@ -614,4 +614,14 @@ test('real objects on the lit table: every object a scene names is in the librar
   assert.deepStrictEqual(gate.states.map((s) => [s.to.left.open || 0, !!s.to.left.snapped]), [[0, false], [-0.55, true], [0, true], [1, true], [0, true]]);
   assert.deepStrictEqual(kinds(bench, ['left', 'right', 'thing']), ['prop', 'prop', 'prop']);
   assert.ok(bench.states[0].to.left.on === 'thing' && bench.states[0].to.right.on === 'thing' && bench.states[1].to.left.swell && bench.states[3].to.right.squeezed);
+  // Your money, plainly (Bryan, 22 Nov 2026: "Yes, money lessons"): the lessons whose analogy is a thing act with it
+  const money = (re) => scenePlan.plan(allScenes().find((x) => re.test(x.sc.analogy)).sc);
+  const jar = money(/shared jar/);
+  assert.deepStrictEqual(jar.states.map((s) => [s.to.jar.coins || 0, !!s.to.h3.burnt, !!s.to.h3.rebuilt]), [[0, false, false], [20, false, false], [20, true, false], [0, true, true], [0, true, true]]);
+  const pizza = money(/slices of a pizza/);
+  assert.deepStrictEqual(pizza.states.map((s) => [s.to.pizza.slices, s.to.pizza.mine]), [[8, 2], [16, 4], [16, 4], [20, 4], [20, 4]]);
+  assert.ok(money(/coin flip/).states[1].to.coin.up && !money(/coin flip/).states[2].to.coin.up);
+  assert.deepStrictEqual(money(/classroom/).states.map((s) => s.to.tch.coins), [10, 10, 1, 1, 1, 1]);
+  assert.ok(money(/Two boxes/).states[2].to.a.turned && !money(/Two boxes/).states[1].to.a.turned);
+  assert.deepStrictEqual(['basket', 'jar'].map((n) => money(/groceries go up/).kind[n === 'basket' ? 'bas' : 'jar']), ['prop', 'prop']);
 });

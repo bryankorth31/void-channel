@@ -342,7 +342,8 @@ function object(a, kind) {
   const lib = kind === 'prop' ? PROPS[a.prop] : null;
   const thing = lib ? lib.build(a, { S, env: envMap() }) : null;
   const group = new THREE.Group(), mats = [];
-  if (thing) thing.group.traverse((n) => { if (n.material) [].concat(n.material).forEach((m) => mats.push(m)); });
+  // each material keeps its own see-through (glass stays glass); fading multiplies it
+  if (thing) thing.group.traverse((n) => { if (n.material) [].concat(n.material).forEach((m) => mats.push({ m, t: m.transparent, o: m.opacity })); });
   const strMat = new THREE.MeshStandardMaterial({ color: 0xd8cdb5, roughness: 0.95, transparent: true });
   let str = null, key = '';
   return {
@@ -350,7 +351,7 @@ function object(a, kind) {
     paint: (k, f) => tag.paint(k, f),
     fade(o) {
       tag.fade(o); strMat.opacity = o;
-      mats.forEach((m) => { const t = o < 0.999; if (m.transparent !== t) { m.transparent = t; m.needsUpdate = true; } m.opacity = o; });
+      mats.forEach((b) => { const t = b.t || o < 0.999; if (b.m.transparent !== t) { b.m.transparent = t; b.m.needsUpdate = true; } b.m.opacity = b.o * o; });
     },
     // the string from the tag's hole to where it ties on, both in world space, hanging a little slack
     tie(from, to) {
