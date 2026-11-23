@@ -214,3 +214,12 @@ test('on a computer the sound plays through a hidden audio element, so Chrome of
   assert.ok(js.includes("navigator.mediaSession.setActionHandler('pause', go ? () => { if (!pip) setPaused(true); } : null);"));
   assert.ok(js.includes("navigator.mediaSession.playbackState = p ? 'paused' : 'playing';"));
 });
+
+test('a key for Pop out (Bryan, 23 Nov 2026: "BUILD"): Alt+P in every game, P alone in a console game', () => {
+  const js = fs.readFileSync(path.join(PLAY, 'src', 'play.js'), 'utf8'), html = fs.readFileSync(path.join(PLAY, 'game.html'), 'utf8');
+  assert.ok(js.includes("if (e.code !== 'KeyP' || !e.isTrusted || e.repeat || e.ctrlKey || e.metaKey || !started || paused || $('b-pop').hidden) return;"), 'only a real press, in a running game, where the button is offered');
+  assert.ok(js.includes("const plain = !e.altKey && !e.shiftKey && PlayCards.isPad(card) && !(PlayCards.keyMap(card) || {}).KeyP;"), 'P alone only where the game does not use P');
+  assert.ok(js.includes('if (!e.altKey && !plain) return;') && js.includes('e.preventDefault(); e.stopImmediatePropagation();\n    popOut();\n  }, true);'), 'caught before the game, and it does what the button does');
+  assert.ok(js.includes('if (/^(INPUT|TEXTAREA|SELECT)$/.test((e.target && e.target.tagName) || \'\')) return;'), 'never while typing in a box');
+  assert.ok(html.includes('Alt+P does it too (P alone in a console game).'), 'the button says so');
+});

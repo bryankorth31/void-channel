@@ -1163,6 +1163,18 @@
   // iPhone has no fullscreen for a web page: the button shows only where the browser can do it.
   if (!document.fullscreenEnabled) $('b-full').hidden = true;
   $('b-pop').onclick = popOut;   // shown once the game draws (firstFrame): before Play there is nothing to pop out
+  // A key for it (Bryan, 23 Nov 2026: "BUILD", after his browser would not pop a game out by itself on a tab switch):
+  // one press before switching away, and the game follows with its sound. Alt+P in every game; plain P in a console
+  // game, whose buttons sit on other keys (a PC or arcade game takes P for itself). Pressed again, it brings the game back.
+  // Caught before the game's own keys; never while typing in a box, while paused, or where the button is not offered.
+  addEventListener('keydown', (e) => {
+    if (e.code !== 'KeyP' || !e.isTrusted || e.repeat || e.ctrlKey || e.metaKey || !started || paused || $('b-pop').hidden) return;
+    if (/^(INPUT|TEXTAREA|SELECT)$/.test((e.target && e.target.tagName) || '')) return;
+    const plain = !e.altKey && !e.shiftKey && PlayCards.isPad(card) && !(PlayCards.keyMap(card) || {}).KeyP;
+    if (!e.altKey && !plain) return;
+    e.preventDefault(); e.stopImmediatePropagation();
+    popOut();
+  }, true);
   $('b-full').onclick = () => { leftFull = !!document.fullscreenElement; if (document.fullscreenElement) document.exitFullscreen(); else document.documentElement.requestFullscreen().catch(() => {}); };
   // In fullscreen the game is all there is: the layout follows the change (Esc or Full to leave), the bar comes back
   // while the mouse is at the top of the screen or for 3 seconds after a tap, and a still mouse pointer hides.
