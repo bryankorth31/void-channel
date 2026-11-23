@@ -7,7 +7,11 @@
 (function (root) {
   'use strict';
   const ALPHABET = '23456789ACDEFGHJKMNPQRTUVWXY';   // no 0, O, 1, I, L, B, S or Z: easy to read off a projector
-  const KINDS = ['pad', 'trivia', 'lesson', 'remote', 'talk'];   // lesson: Void University, a phone as the note pad during a lecture (Bryan, 20 Nov 2026)
+  const KINDS = ['pad', 'trivia', 'lesson', 'remote', 'talk', 'cards'];   // lesson: Void University, a phone as the note pad during a lecture (Bryan, 20 Nov 2026)
+  // cards: card and party games, each phone holding a private hand (Bryan, 22 Nov 2026: "i want to creaqte card and party
+  // games that ppl canm 'play' using therephones as we have with qr"); cards/README.md. The big screen's page is the dealer
+  // and sends each phone only its own hand (to: seat), so the relay is as blind here as for every other kind. A tap now and
+  // then; the room waits for its screen's next page (a reload of the table) as a game pad's does.
   // talk: Void TV Kids' Watch and Talk (Bryan, 21 Nov 2026: "Start now"; profiles/kids/docs/PLAN-kids-watch-and-talk.md). While a
   // child watches, a grown-up's own phone gets the talk-about-it questions; the phone sends back only pause and play. One or two
   // grown-ups' phones; the kids tablet locks the room once a phone is in. Opened only from kids.voidtv.net (workers/kids/rooms.js
@@ -24,7 +28,8 @@
     pad: { phones: 16, perSecond: 60, screenHoldMs: 45 * 1000 }, trivia: { phones: 200, perSecond: 5, screenHoldMs: 0 },
     lesson: { phones: 40, perSecond: 10, screenHoldMs: 0 },   // a teacher's phone or a class's; notes, not button presses
     remote: { phones: 16, perSecond: 10, screenHoldMs: 45 * 1000, lifeMs: 12 * 60 * 60 * 1000 },
-    talk: { phones: 2, perSecond: 5, screenHoldMs: 45 * 1000 } };   // a pause or play now and then; the kids page may change, so it waits 45 s
+    talk: { phones: 2, perSecond: 5, screenHoldMs: 45 * 1000 },   // a pause or play now and then; the kids page may change, so it waits 45 s
+    cards: { phones: 16, perSecond: 10, screenHoldMs: 45 * 1000 } };   // a card played now and then; the table's page may reload, so it waits 45 s
   const CLOSE = { noRoom: 4404, full: 4409, hostGone: 4410, tooBig: 4413, ended: 4408, locked: 4423, removed: 4403, replaced: 4411 };
   // A phone's own seat token: random, kept in that phone's tab only, so a phone that drops gets its seat back.
   const goodToken = (t) => typeof t === 'string' && /^[A-Za-z0-9_-]{16,64}$/.test(t);

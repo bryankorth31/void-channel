@@ -34,7 +34,16 @@ test('the list: no Void Cast, every live area complete, the house copy rules', (
     assert.doesNotMatch(words, /classic shows/i, a.id + ': never "classic shows"');
     assert.doesNotMatch(words, /VOIDtv|VoidTV|Void TV|Voidtv/, a.id + ': the name is voidtv.net');
   }
-  for (const id of ['ondemand', 'live', 'play', 'trivia', 'university', 'kids', 'hindi']) assert.ok(A.find((a) => a.id === id && a.live), id + ' is listed and live');
+  for (const id of ['ondemand', 'live', 'play', 'trivia', 'cards', 'university', 'kids', 'hindi']) assert.ok(A.find((a) => a.id === id && a.live), id + ' is listed and live');
+  // Every picture a voidtv.net area names is a file in the site (Card games, 23 Nov 2026: its picture is new).
+  for (const a of A) if (/^\//.test(a.pic)) assert.ok(fs.existsSync(path.join(REPO, a.pic)), a.id + ': its picture ' + a.pic + ' is in the repo');
+});
+
+test('the card games page knows it is the Card games area', () => {
+  const V = (p) => { const w = {}; vm.runInNewContext(SRC, { window: w, location: { hostname: 'voidtv.net', pathname: p }, document: { currentScript: null, readyState: 'loading', addEventListener() {} }, localStorage: { getItem() { return null; }, setItem() {} }, Math }); return w.VoidAreas; };
+  const A = V('/cards/');
+  assert.equal(A.areas.find((a) => a.id === 'cards').path, '/cards/');
+  assert.match(SRC, /if \(\/\^\\\/cards\(\\\/\|\$\)\/\.test\(p\)\) return 'cards';/);
 });
 
 test('where it loads: voidtv.net, PLAY, Trivia, University; never kids', () => {

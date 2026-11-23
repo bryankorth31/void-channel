@@ -462,6 +462,7 @@ html{-webkit-tap-highlight-color:transparent}
 .home-tv .hl{color:var(--dim);font-size:13px;margin:8px 2px 0}.home-tv .hl a{color:var(--acc);cursor:pointer}
 .onnow{display:flex;gap:12px;overflow-x:auto;padding:4px 20px 12px;scrollbar-width:none}
 .ontile{flex:0 0 210px;background:var(--panel);border:0;border-radius:8px;overflow:hidden;color:var(--fg);text-align:left;padding:0;cursor:pointer;font:inherit;box-shadow:inset 0 -3px 0 var(--c,transparent)}
+a.ontile{text-decoration:none}
 .ontile img,.ontile .p{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:var(--panel2)}.ontile b{display:block;padding:7px 10px 0;font-size:14px}.ontile small{display:block;padding:2px 10px 10px;color:var(--dim);font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 @media(max-width:700px){.home-tv .tv{padding:0 10px 4px}.home-tv .snd{left:50%;top:78%;transform:translate(-50%,-50%);font-size:18px;padding:14px 24px}.onnow{padding:4px 12px 12px}.ontile{flex-basis:170px}}
 @media (prefers-reduced-motion:reduce){.tv .swirl img,.tv .swirl .wm{animation:none}.tv .swirl .wm{transform:translate(-50%,-50%) scale(1.12);opacity:1}}
@@ -718,6 +719,8 @@ function browse(){let list=filtered();if(!state.q)list=list.filter(s=>!hidden(s)
  } else {
   // 1. Live TV first (B, 25 Oct 2026: the home page opens on a channel already playing, nothing in the way; the wall of 158 featured shows is gone)
   h+='<section class="home-tv" id="htv"></section><div id="onnow">'+onNowHtml()+'</div>'+momentHome();
+  // Play together (decision H9) right after, so a moment that is on keeps its place under Live TV (B, 22 Nov 2026, layout B)
+  h+=togetherHome();
   // 2. yours
   const cont=histShows().slice(0,30);if(cont.length)h+=shelf('Continue watching',cont,'continue');
   const mine=listShows();if(mine.length)h+=shelf('My List',mine,'list');
@@ -1147,6 +1150,8 @@ const stillWanted=()=>typeof matchMedia==='function'&&matchMedia('(prefers-reduc
 function tvSwirlFlash(){const root=VP&&VP.root;if(stillWanted()||!root||typeof root.insertBefore!=='function'||typeof document.createElement!=='function')return;let el=root.querySelector('.swirl-ov.flash');
  if(!el){el=document.createElement('div');el.className='swirl swirl-ov flash gone';el.setAttribute('aria-hidden','true');el.innerHTML='<img src="'+swirlSrc()+'" alt="">';root.insertBefore(el,root.querySelector('.vpx-chname'))}
  el.classList.remove('gone');swirlUntilReady(el,VP.v&&VP.v.currentSrc||'',15000)}
+// Play together (B, 23 Nov 2026, picked C from pictures: "C, Play together row"; decision H9): under On now, the rooms where the TV is the table and the phones are in your hands, in On now's own tiles. voidtv.net itself only (the phone remote's rule), never Kids or an embed.
+function togetherHome(){if(!REMOTE_ON)return '';const t=(href,img,name,line,c)=>'<a class="ontile" href="'+BASE+href+'" style="--c:'+c+'"><img loading="lazy" src="'+BASE+img+'" alt=""><b>'+name+'</b><small>'+line+'</small></a>';return '<div id="together"><h2>Play together<small>the TV is the table, the phones are in your hands</small></h2><div class="onnow">'+t('cards/','assets/brand/bg/cardtable-m.webp','Card games','Spades, Hearts, Rummy and more','#4ade80')+t('trivia/','assets/brand/bg/trivianight-m.webp','Trivia Night','Questions on the TV, answers on phones','#ffd23f')+t('play/','assets/brand/bg/voidarcade-wall-m.webp','Games','Old games, your phone is the controller','#ff4fc8')+'</div></div>'}
 function onNowHtml(){if(!TV)return '';const now=Date.now();const tiles=TV.filter(c=>!c.adult).slice(0,40).map(c=>{const n=chanNow(c,now),s=n&&SHOWS[n.a.s];if(!s)return '';const art=s.backdrop||s.poster;return '<button class="ontile" onclick="tune(\\''+c.id+'\\')" style="--c:'+(CGM[chanCg(c)]||CGM.other||{}).c+'">'+(art?'<img loading="lazy" src="'+esc(art)+'" alt="">':'<span class="p"></span>')+'<b>'+esc(c.name)+'</b><small>'+esc(s.show)+'</small></button>'}).join('');return tiles?'<h2>On now<small>tap a channel to watch it</small></h2><div class="onnow">'+tiles+'</div>':''}
 async function homeTvStart(){const el=$('htv');if(!el)return;
  if(!TV){el.innerHTML='<div class="loading"><span class="signal"></span><span>Searching the Void for a signal…</span></div>';try{await ensureTV()}catch(_){el.innerHTML='';return}}

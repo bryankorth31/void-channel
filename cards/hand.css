@@ -1,0 +1,84 @@
+/* VoidTV cards: the phone's hand page. Licence: GPL-2.0-or-later (play/LICENSE).
+   Colours come from the variables in cards.css. Hand B: the cards in rows, none ever scrolled. */
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;overflow:hidden;position:fixed;inset:0;width:100%;background:var(--bg);color:var(--fg);
+  font:16px/1.35 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;-webkit-tap-highlight-color:transparent;
+  -webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+[hidden]{display:none!important}
+h1{font-size:24px;margin:0 0 8px}
+h2{font-size:22px;margin:0 0 10px}
+p{color:var(--dim);margin:0 0 12px}
+ul{list-style:none;margin:0;padding:0;color:var(--fg)}
+li{margin:4px 0}
+.err{color:var(--gold)}
+
+.centre{position:absolute;inset:0;display:flex;flex-direction:column;align-items:stretch;justify-content:center;text-align:center;
+  max-width:460px;margin:0 auto;padding:max(16px,env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) max(16px,env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left))}
+.centre input{width:100%;font:600 22px/1 system-ui,sans-serif;background:var(--panel);color:var(--fg);border:1px solid var(--line);
+  border-radius:12px;padding:14px;margin-bottom:10px;-webkit-user-select:text;user-select:text;text-align:center}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 14px;font:600 15px system-ui,sans-serif;
+  color:var(--fg);background:transparent;border:1px solid var(--line);border-radius:12px;text-decoration:none;cursor:pointer}
+.centre .btn{display:flex;width:100%;margin-top:10px;font-size:18px}
+.btn.solid{background:var(--acc);border-color:var(--acc);color:#07080c;font-weight:700}
+.btn:disabled{opacity:.4;cursor:default}
+.btn:active:not(:disabled){transform:scale(.97)}
+
+/* The playing page: top strip, the other players, the hand, any private rows, the bottom bar. */
+#game{position:fixed;inset:0;display:flex;flex-direction:column;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+#top{flex:none;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;padding:8px 12px 4px;border-bottom:1px solid var(--line)}
+.topl{min-width:0}
+.mark{font-weight:700;font-size:12px;color:var(--fg)}
+.mark .n{color:var(--pink)}
+.room{color:var(--dim);font-weight:400;margin-left:6px}
+.turn{font-size:22px;font-weight:700;line-height:1.2;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.turn.mine{color:var(--gold)}
+.status{font-size:13px;color:var(--dim);max-height:2.8em;overflow:hidden}
+.pile{display:flex;gap:2px;align-items:flex-start;flex:none;font-size:8px}
+.pile.trick{font-size:5px}
+
+#others{flex:none;display:flex;gap:6px 12px;flex-wrap:wrap;padding:6px 12px;font-size:14px;color:var(--fg)}
+#others span{white-space:nowrap}
+#others.noted{font-size:13px;gap:2px 10px}
+#others .turnp{color:var(--gold);font-weight:700}
+#others .away{opacity:.45}
+
+#handbox{position:relative;flex:1;min-height:0;touch-action:none;overflow:hidden}
+#nohand{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--dim)}
+.hc{position:absolute;left:0;top:0;width:5em;height:7em;border-radius:.45em;touch-action:none;
+  transition:transform .18s ease-out,opacity .18s;will-change:transform}
+.hc.dim{opacity:.55}
+.hc.sel{box-shadow:0 0 0 .14em var(--acc)}
+.hc.fresh{box-shadow:0 0 0 .14em var(--gold)}
+.hc.lift{z-index:20;transition:none;box-shadow:0 0 0 .14em var(--pink),0 .6em 1.2em rgba(0,0,0,.6);opacity:1}
+
+#privs{flex:none;padding:0 12px}
+.priv{display:flex;align-items:center;gap:8px;padding:4px 0;font-size:5px}
+.priv b{font:600 12px system-ui,sans-serif;color:var(--dim);min-width:54px}
+.priv .cs{display:flex;gap:2px;flex-wrap:wrap}
+
+#bar{flex:none;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;padding:8px 12px;border-top:1px solid var(--line);background:var(--bg)}
+.barl{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+#hint-btns{display:contents}
+/* The moves made with cards (Play, or Lay down, Lay off, Discard): on the right, the main one last. When they do not fit
+   beside the helpers they take a row of their own. */
+#moves{display:flex;gap:8px;margin-left:auto}
+#moves .btn{min-width:96px;padding:0 12px}
+
+#toast{position:absolute;left:12px;right:12px;bottom:calc(70px + env(safe-area-inset-bottom));z-index:40;background:var(--panel);color:var(--gold);
+  border:1px solid var(--gold);border-radius:12px;padding:10px 14px;text-align:center;font-weight:600}
+
+.panel{position:absolute;inset:0;z-index:50;display:flex;flex-direction:column;align-items:stretch;justify-content:center;text-align:center;
+  background:rgba(7,8,12,.94);padding:20px max(20px,env(safe-area-inset-right)) 20px max(20px,env(safe-area-inset-left))}
+.panel p{font-size:18px}
+#choose-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-bottom:12px}
+#choose-list .btn{min-height:64px;font-size:20px;flex-direction:column;line-height:1.1}
+/* A long list (a bid of nil to 13) goes in fixed columns, so all of it shows at once on a short phone. */
+#choose-list[data-cols="3"]{grid-template-columns:repeat(3,1fr)}
+#choose-list[data-cols="4"]{grid-template-columns:repeat(4,1fr);gap:8px}
+#choose-list[data-cols="4"] .btn{min-height:56px;padding:0 4px}
+#choose-list .btn.red{color:var(--red);background:var(--card);border-color:var(--card)}
+#choose-list .btn.black{color:var(--ink);background:var(--card);border-color:var(--card)}
+#choose-list .mark2{font-size:30px}
+#over h2{font-size:34px;color:var(--gold)}

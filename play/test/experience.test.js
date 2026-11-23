@@ -201,3 +201,25 @@ test('the pop-out follows you (Bryan, 22 Nov 2026: "switched to claude....didnt 
   assert.ok(js.includes('stayAwake(false); autoPop(false);'), 'and taken back when the game stops');
   assert.ok(js.includes("const go = on && canPop() && popWay() === 'video';"), 'only where the browser\'s own picture-in-picture is used, never on a phone');
 });
+
+test('on a computer the sound plays through a hidden audio element, so Chrome offers its automatic pop-out (Bryan, his recording, 22 Nov 2026)', () => {
+  const js = fs.readFileSync(path.join(PLAY, 'src', 'play.js'), 'utf8'), runner = fs.readFileSync(path.join(PLAY, 'src', 'runner.js'), 'utf8');
+  assert.ok(js.includes("mediaOut: canPop() && popWay() === 'video', on: {"), 'only where the pop-out is the video kind: a computer');
+  assert.ok(runner.includes("mediaEl = document.createElement('audio'); mediaEl.className = 'pop-feed'; mediaEl.srcObject = soundOut.stream;"));
+  assert.ok(runner.includes("gain.connect(audio.destination); });"), 'an element that cannot play gives the sound back to the speakers');
+  assert.ok(runner.includes('if (mediaEl) { mediaEl.muted = true; return soundOut.stream; }') && runner.includes('if (mediaEl) { mediaEl.muted = false; return; }'), 'one sound: the element is quiet while the pop-out plays it');
+  assert.ok(runner.includes('mediaEl.srcObject = null; mediaEl.remove(); mediaEl = null;'), 'gone when the game stops');
+  // Leaving the page: the pause waits a moment for the automatic pop-out; media keys pause the game itself.
+  assert.ok(js.includes("setTimeout(() => { if (document.hidden && started && !pip) { if (!paused) setPaused(true); else autosave(); } }, 800);"));
+  assert.ok(js.includes("navigator.mediaSession.setActionHandler('pause', go ? () => { if (!pip) setPaused(true); } : null);"));
+  assert.ok(js.includes("navigator.mediaSession.playbackState = p ? 'paused' : 'playing';"));
+});
+
+test('a key for Pop out (Bryan, 23 Nov 2026: "BUILD"): Alt+P in every game, P alone in a console game', () => {
+  const js = fs.readFileSync(path.join(PLAY, 'src', 'play.js'), 'utf8'), html = fs.readFileSync(path.join(PLAY, 'game.html'), 'utf8');
+  assert.ok(js.includes("if (e.code !== 'KeyP' || !e.isTrusted || e.repeat || e.ctrlKey || e.metaKey || !started || paused || $('b-pop').hidden) return;"), 'only a real press, in a running game, where the button is offered');
+  assert.ok(js.includes("const plain = !e.altKey && !e.shiftKey && PlayCards.isPad(card) && !(PlayCards.keyMap(card) || {}).KeyP;"), 'P alone only where the game does not use P');
+  assert.ok(js.includes('if (!e.altKey && !plain) return;') && js.includes('e.preventDefault(); e.stopImmediatePropagation();\n    popOut();\n  }, true);'), 'caught before the game, and it does what the button does');
+  assert.ok(js.includes('if (/^(INPUT|TEXTAREA|SELECT)$/.test((e.target && e.target.tagName) || \'\')) return;'), 'never while typing in a box');
+  assert.ok(html.includes('Alt+P does it too (P alone in a console game).'), 'the button says so');
+});
