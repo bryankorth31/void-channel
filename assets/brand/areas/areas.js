@@ -52,15 +52,20 @@
     { id: 'hindi', name: 'voidtv.net hindi', line: 'हिंदी में फ़िल्में और शो', site: 'hindi', url: 'https://hindi.voidtv.net/', live: true,
       kicker: 'हिंदी', head: 'हिंदी में फ़िल्में और शो', text: 'Hindi films and shows, Hindi dubs and Live TV. Free, with an English switch.',
       go: 'Open hindi', pic: '/assets/brand/bg/sign-orange-m.jpg' },
+    // West Side and Spanish have been online since 22 Nov 2026 (Bryan: "Yes, put them online") but were missing here, so no other
+    // room led to them and they led to none (Bryan, 23 Nov 2026, "Yes, both", to the same menu as Hindi).
+    { id: 'westside', name: 'voidtv.net west side', line: 'Films and shows from West Africa', site: 'westside', url: 'https://westside.voidtv.net/', live: true,
+      kicker: 'West Africa', head: 'Films and shows from Ghana and Nigeria.', text: 'Kumawood, Ghallywood and Nollywood, free, no account.',
+      go: 'Open west side', pic: '/assets/brand/bg/sign-pink-m.jpg' },
+    { id: 'espanol', name: 'voidtv.net español', line: 'Películas y series en español', site: 'espanol', url: 'https://espanol.voidtv.net/', live: true,
+      kicker: 'Español', head: 'Películas y series en español.', text: 'Spanish films and shows, and dubs, Latin American first. Free, no account.',
+      go: 'Abrir español', pic: '/assets/brand/bg/watcher-purple-m.jpg' },
     // Outside voidtv.net (Bryan, 21 Nov 2026, "yes" to the whole-house plan's question 5: Read joins the house as one line,
     // linking lexROM where it is). Its card does not say "Also on voidtv.net" (also).
     { id: 'read', name: 'lexROM', line: 'Books read one word at a time', site: 'lexrom', url: 'https://lexrom.bspokevisuals.com/', live: true,
       also: 'Also free', kicker: 'Reading', head: 'Read a book one word at a time.', text: 'Free classics, your own books and the news, on the breath. No account.',
-      go: 'Open lexROM', pic: 'https://lexrom.bspokevisuals.com/icon-512.png', picFit: 'contain' },
-    // Not open yet: they join the menu and the cards the day live turns true.
-    { id: 'westside', name: 'voidtv.net west side', line: 'Films and shows from West Africa', site: 'westside', url: 'https://westside.voidtv.net/', live: false,
-      kicker: 'West Africa', head: 'Films and shows from Ghana and Nigeria.', text: 'Kumawood, Ghallywood and Nollywood, free, no account.',
-      go: 'Open west side', pic: '/assets/brand/bg/sign-pink-m.jpg' }
+      go: 'Open lexROM', pic: 'https://lexrom.bspokevisuals.com/icon-512.png', picFit: 'contain' }
+    // An area not open yet goes here with live: false; it joins the menu and the cards the day live turns true.
   ];
 
   var me = document.currentScript;
