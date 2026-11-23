@@ -12,36 +12,46 @@
 //   too, their turn is skipped. A player who holds cards while nobody else does draws a card instead of asking (when
 //   the pack has any), and then the turn passes; when the pack is empty, their turn is skipped.
 // - The game ends when all 13 books are laid. The player with the most books wins, and a tie is shared.
+// Go Fish (pairs), the family way, is the same game with a set of two: any two of a kind are laid at once (three of a
+// kind lays one pair and keeps the third), and it ends when all 26 pairs are laid. It is its own game in the list.
 (function (root) {
   'use strict';
   const C = root.VoidCards || require('../src/cards.js');
   const hand = (s, p) => s.zones['hand:' + p];
-  const BOOKS = 13;
+  // How many cards make a set: 4 (a book) in Go Fish, 2 (a pair) in Go Fish (pairs), the family way (Bryan, 23 Nov 2026:
+  // "pairs as its own game"). The game ends when every card of the pack is laid in sets.
+  const size = (s) => (s.opts.size === 2 ? 2 : 4);
+  const sets = (s) => s.pack.length / size(s);
   const total = (s) => s.pub.books.reduce((a, b) => a + b, 0);
   // The other players who hold at least one card, so there is someone to ask.
   const askable = (s, p) => { const out = []; for (let q = 0; q < s.n; q++) if (q !== p && hand(s, q).length) out.push(q); return out; };
 
-  // Lay every whole book a player holds, face up, and count it. A rank is only ever a letter, never a card.
+  // Lay every whole set a player holds (a book of four, or each pair), face up, and count it. Each set is its own group
+  // on the table (s.pub.cuts), so the table shows how many. (A line for each seat as well did not fit: with six players
+  // the public table passed one relay message.) A rank is only ever a letter, never a card.
   function layBooks(t, p) {
-    const s = t.s;
+    const s = t.s, k = size(s);
     for (const r of C.RANKS) {
-      const four = hand(s, p).filter((c) => C.rankOf(c) === r);
-      if (four.length !== 4) continue;
-      t.move(four, 'hand:' + p, 'laid:' + p, { by: p });
-      s.pub.books[p]++;
+      const of = hand(s, p).filter((c) => C.rankOf(c) === r);
+      while (of.length >= k) {
+        t.move(of.splice(0, k), 'hand:' + p, 'laid:' + p, { by: p });
+        s.pub.books[p]++;
+        s.pub.cuts['laid:' + p].push(k);
+      }
     }
   }
 
   function finish(t) {
     const books = t.s.pub.books.slice(), top = Math.max(...books);
-    t.end({ winners: books.map((b, p) => (b === top ? p : -1)).filter((p) => p >= 0), books });
+    // The count of each player's books or pairs goes out as their score, so the table's end panel lists them.
+    t.end({ winners: books.map((b, p) => (b === top ? p : -1)).filter((p) => p >= 0), scores: books });
   }
 
   // Hand the turn to player `first`, doing for them what the rules do without being asked: a player with no cards draws
   // one, and a player who cannot act at all is skipped. Ends the game when all the books are laid.
   function settle(t, first) {
     const s = t.s;
-    if (total(s) >= BOOKS) return finish(t);
+    if (total(s) >= sets(s)) return finish(t);
     let p = first;
     for (let i = 0; i < s.n; i++) {
       t.turn(p);
@@ -62,7 +72,8 @@
       const s = t.s;
       t.shuffle('draw');
       t.deal('draw', 'hand', s.n <= 3 ? 7 : 5);
-      s.pub = { books: Array.from({ length: s.n }, () => 0), last: null };
+      s.pub = { books: Array.from({ length: s.n }, () => 0), last: null, cuts: {} };
+      for (let p = 0; p < s.n; p++) s.pub.cuts['laid:' + p] = [];
       s.phase = 'play';
       for (let p = 0; p < s.n; p++) layBooks(t, p);
       settle(t, (s.opts.first || 0) % s.n);
@@ -128,7 +139,10 @@
     },
     labels: { laid: 'Books' },
   };
+  // Go Fish (pairs): the same game, a set is any two of a kind (Bryan, 23 Nov 2026: "pairs as its own game"). It sits
+  // beside Go Fish in the table's list of games.
+  const pairs = Object.assign({}, game, { id: 'go-fish-pairs', name: 'Go Fish (pairs)', options: { first: 0, size: 2 }, labels: { laid: 'Pairs' } });
 
-  if (typeof module === 'object' && module.exports) module.exports = game;
-  else (root.VoidGames = root.VoidGames || {})[game.id] = game;
+  if (typeof module === 'object' && module.exports) { module.exports = game; game.pairs = pairs; }
+  else { root.VoidGames = root.VoidGames || {}; root.VoidGames[game.id] = game; root.VoidGames[pairs.id] = pairs; }
 })(typeof self !== 'undefined' ? self : this);

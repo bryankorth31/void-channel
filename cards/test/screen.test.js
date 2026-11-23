@@ -204,3 +204,17 @@ test('the donation words appear once, in screen.js, and the link goes where the 
 test('no dash characters in the page files', () => {
   for (const f of [['cards', 'index.html'], ['cards', 'src', 'screen.js'], ['cards', 'table.css']]) assert.ok(!new RegExp('[' + String.fromCharCode(8211, 8212) + ']').test(read(...f)), f.join('/'));
 });
+
+test('laidScale: a few groups keep the usual size; a table full of pairs or books gets smaller cards, never taller than 14 units', () => {
+  const g = (k, n) => Array.from({ length: n }, () => Array(k).fill('x'));
+  assert.equal(S.laidScale(g(3, 2), 31), 0.7, 'two sets of three: the usual size');
+  assert.equal(S.laidScale([], 31), 0.7);
+  const tall = (groups, max, sc) => { const room = max / sc; let rows = 1, x = 0; for (const grp of groups) { const w = 5.7 + (grp.length - 1) * 2.3; if (x && x + 2 + w > room) { rows++; x = w; } else x += (x ? 2 : 0) + w; } return (rows * 8.8 - 1.1) * sc; };
+  for (const [k, n] of [[2, 13], [2, 26], [4, 7], [4, 13], [3, 6]]) for (const max of [22, 31]) {
+    const sc = S.laidScale(g(k, n), max);
+    assert.ok(sc <= 0.7 && sc >= 0.3, k + 'x' + n);
+    if (sc > 0.3) assert.ok(tall(g(k, n), max, sc) <= 14, k + ' cards a group, ' + n + ' groups, in ' + max + ': ' + sc);
+  }
+  assert.ok(S.laidScale(g(2, 13), 31) < 0.7, 'thirteen pairs come down a size');
+  assert.ok(S.laidScale(g(4, 13), 31) <= S.laidScale(g(2, 13), 31), 'books of four need at least as much room as pairs');
+});

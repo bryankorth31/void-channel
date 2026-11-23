@@ -175,7 +175,7 @@ test('Go Fish ends when all 13 books are laid, and the most books wins', () => {
   const set = { 'laid:0': books(['A', '2', '3', '4', '5', '6', '7']), 'laid:1': books(['8', '9', 'T', 'J', 'Q']), 'hand:0': ['KH'], 'hand:1': ['KS', 'KD', 'KC'] };
   const s = rig(G, 2, set, { pub: pub(2, [7, 5]), turn: 0, only: true });
   const r = yes(G, s, 0, ask(['KH'], 1));
-  assert.deepEqual(r.state.over, { winners: [0], books: [8, 5] });
+  assert.deepEqual(r.state.over, { winners: [0], scores: [8, 5] });
   assert.deepEqual(r.state.turn, []);
   assert.equal(r.events[r.events.length - 1].ev, 'over');
   assert.equal(G.status(r.state), 'Game over.');
@@ -191,7 +191,7 @@ test('Go Fish: a tie for the most books is shared', () => {
   const set = { 'laid:0': books(['A', '2', '3', '4', '5']), 'laid:1': books(['6', '7', '8', '9', 'T']), 'laid:2': books(['J', 'Q']), 'hand:0': ['KS', 'KD', 'KC'], 'hand:1': [], 'hand:2': ['KH'] };
   const s = rig(G, 3, set, { pub: pub(3, [5, 5, 2]), turn: 2, only: true });
   const r = yes(G, s, 2, ask(['KH'], 0));
-  assert.deepEqual(r.state.over, { winners: [0, 1], books: [5, 5, 3] });
+  assert.deepEqual(r.state.over, { winners: [0, 1], scores: [5, 5, 3] });
 });
 
 // ---------- Whole games by chance, held against the privacy rule (the kit: test/helper.js) ----------
@@ -212,9 +212,69 @@ test('Go Fish: 30 whole games by chance, 2 to 6 players: no screen is ever given
         assert.equal(end.zones['hand:' + p].length, 0);
       }
       assert.equal(end.zones.draw.length, 0);
-      assert.deepEqual(end.over.books, end.pub.books);
+      assert.deepEqual(end.over.scores, end.pub.books, 'each count is that player\'s score on the end panel');
       assert.ok(end.over.winners.length >= 1);
-      for (const w of end.over.winners) assert.equal(end.over.books[w], Math.max(...end.over.books));
+      for (const w of end.over.winners) assert.equal(end.over.scores[w], Math.max(...end.over.scores));
+    }
+  }
+});
+
+// ---------- Go Fish (pairs): the same game, a set is any two of a kind (Bryan, 23 Nov 2026: "pairs as its own game") ----------
+const P = G.pairs;
+const ppub = (n, books) => ({ books: books || Array.from({ length: n }, () => 0), last: null, cuts: Object.fromEntries(Array.from({ length: n }, (_, q) => ['laid:' + q, []])) });
+
+test('Go Fish (pairs) is its own game beside Go Fish, with the same moves and a set of two', () => {
+  assert.equal(P.id, 'go-fish-pairs');
+  assert.equal(P.name, 'Go Fish (pairs)');
+  assert.deepEqual(P.options, { first: 0, size: 2 });
+  assert.equal(P.labels.laid, 'Pairs');
+  assert.equal(P.moves, G.moves, 'the same rules, not a copy');
+  assert.equal(G.id, 'go-fish', 'Go Fish itself is unchanged');
+  assert.equal(G.options.size, undefined, 'Go Fish keeps books of four');
+});
+
+test('Go Fish (pairs): a pair dealt is laid at once; three of a kind lays one pair and keeps one; each pair is its own group', () => {
+  const made = T.create(P, { players: 2, rand: C.seeded(7) }).state;
+  for (let p = 0; p < 2; p++) {
+    const ranks = made.zones['hand:' + p].map(C.rankOf);
+    assert.equal(new Set(ranks).size, ranks.length, 'no pair is left in a hand after the deal');
+    assert.equal(made.zones['laid:' + p].length, 2 * made.pub.books[p]);
+    assert.deepEqual(made.pub.cuts['laid:' + p], Array(made.pub.books[p]).fill(2), 'one group of two for each pair');
+  }
+  // A hit that makes three of a kind: one pair goes down, the third card stays.
+  const s = rig(P, 2, { 'hand:0': ['7H', '7S', '2C'], 'hand:1': ['7D', 'KS'] }, { pub: ppub(2), turn: 0 });
+  const r = yes(P, s, 0, ask(['7H'], 1));
+  assert.equal(r.state.zones['laid:0'].length, 2);
+  assert.equal(r.state.zones['hand:0'].filter((c) => C.rankOf(c) === '7').length, 1, 'the third 7 stays in hand');
+  assert.deepEqual(r.state.pub.cuts['laid:0'], [2]);
+  assert.equal(r.state.pub.books[0], 1);
+  assert.deepEqual(r.state.turn, [0], 'a hit asks again');
+});
+
+test('Go Fish (pairs) ends when all 26 pairs are laid, and the most pairs wins; Go Fish books are groups of four', () => {
+  const all = C.standard(), byRank = (r) => all.filter((c) => C.rankOf(c) === r);
+  const laid0 = [], laid1 = [];
+  for (const r of ['A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q']) { laid0.push(...byRank(r).slice(0, 2)); laid1.push(...byRank(r).slice(2)); }
+  laid0.push('KH', 'KS');
+  const s = rig(P, 2, { 'laid:0': laid0, 'laid:1': laid1, 'hand:0': ['KD'], 'hand:1': ['KC'] }, { pub: Object.assign(ppub(2, [13, 12])), turn: 0, only: true });
+  const r = yes(P, s, 0, ask(['KD'], 1));
+  assert.deepEqual(r.state.over, { winners: [0], scores: [14, 12] });
+  const b = rig(G, 2, { 'hand:0': ['7H', '7S', '7D'], 'hand:1': ['7C', 'KS'] }, { pub: ppub(2), turn: 0 });
+  assert.deepEqual(yes(G, b, 0, ask(['7H'], 1)).state.pub.cuts['laid:0'], [4], 'a book of four is one group');
+});
+
+test('Go Fish (pairs): 30 whole games by chance, 2 to 6 players: no screen is ever given a hidden card, and the pairs add up', () => {
+  for (let n = 2; n <= 6; n++) {
+    for (let seed = 1; seed <= 6; seed++) {
+      const end = playOut(P, n, seed * 100 + n, {}, SPEC);
+      assert.equal(end.pub.books.reduce((a, b) => a + b, 0), 26);
+      for (let p = 0; p < n; p++) {
+        assert.equal(end.zones['laid:' + p].length, 2 * end.pub.books[p]);
+        assert.deepEqual(end.pub.cuts['laid:' + p], Array(end.pub.books[p]).fill(2));
+        assert.equal(end.zones['hand:' + p].length, 0);
+      }
+      assert.equal(end.zones.draw.length, 0);
+      for (const w of end.over.winners) assert.equal(end.over.scores[w], Math.max(...end.over.scores));
     }
   }
 });

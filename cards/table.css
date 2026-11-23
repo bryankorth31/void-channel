@@ -47,9 +47,13 @@ button{font:inherit;color:inherit;cursor:pointer}
 .groups{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.8) calc(var(--u)*1.4);align-items:center}
 .group{display:flex;padding:calc(var(--u)*.25);border:calc(var(--u)*.12) solid rgba(255,255,255,.16);border-radius:calc(var(--u)*.6);background:rgba(0,0,0,.18)}
 .group .cardbox+.cardbox{margin-left:-2.7em}
-.laid{position:absolute;transform:translateY(-50%)}
+/* Beside a plate everything is sized in the cards' own em, so the page can shrink a player's whole set of groups at once
+   (--ls, from laidScale in src/screen.js: .7 of a unit for a few groups, less for a table full of pairs or books). */
+.laid{position:absolute;transform:translateY(-50%);font-size:calc(var(--u)*var(--ls,.7))}
 .laid.laid-right{justify-content:flex-end}
-.laid .cardbox.small{font-size:calc(var(--u)*.7)}
+.laid .cardbox.small{font-size:1em}
+.laid.groups{gap:1.1em 2em}
+.laid .group{padding:.36em;border-width:.17em;border-radius:.86em}
 .melds{justify-content:center;max-width:calc(var(--u)*36)}
 .melds .cardbox.small,.centre .melds .cardbox.small{font-size:calc(var(--u)*.85)}
 .slot{width:5em;height:7em;box-sizing:border-box;font-size:calc(var(--u)*1.3);border:calc(var(--u)*.2) dashed var(--line);border-radius:.45em}

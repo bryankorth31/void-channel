@@ -128,7 +128,25 @@
     return { side: right ? 'right' : 'left', edge: Math.round(edge * 100) / 100, max: middle ? 31 : 22 };
   }
 
-  const api = { seatSpots, plateBox, turnLine, winnerLine, trickSeat, heldTrick, trickCards, joinHost, cutGroups, hasNotes, seatNote, seatSide, centreItems, laidGroups, laidAnchor, DONATE_URL };
+  // How big the cards beside a plate are, as a share of the stage unit: the largest size at which all of a player's groups
+  // fit within 14 units of height (a plate's own height and a little more), wrapping in the width they are given (max).
+  // A few groups keep the usual size; a Go Fish table full of pairs or books gets smaller cards, never a tower of rows.
+  // The widths are in a card's em: a card is 5 wide and 7 tall, each further card in a group shows 2.3, a group's frame
+  // adds 0.7, the gap between groups is 2, and a row with its gap is 8.8 tall.
+  function laidScale(groups, max) {
+    for (const sc of [0.7, 0.6, 0.5, 0.42, 0.36, 0.3]) {
+      const room = max / sc;
+      let rows = 1, x = 0;
+      for (const g of groups || []) {
+        const w = 5.7 + (g.length - 1) * 2.3;
+        if (x && x + 2 + w > room) { rows++; x = w; } else x += (x ? 2 : 0) + w;
+      }
+      if ((rows * 8.8 - 1.1) * sc <= 14) return sc;
+    }
+    return 0.3;
+  }
+
+  const api = { laidScale, seatSpots, plateBox, turnLine, winnerLine, trickSeat, heldTrick, trickCards, joinHost, cutGroups, hasNotes, seatNote, seatSide, centreItems, laidGroups, laidAnchor, DONATE_URL };
   if (typeof module === 'object' && module.exports) module.exports = api;
   else root.VoidScreen = api;
 
@@ -277,6 +295,7 @@
       if (groups.length) {
         const at = laidAnchor(spot), row = drawGroups(groups, 'laid');
         row.style.top = spot.y + '%'; row.style.maxWidth = at.max + '%';
+        row.style.setProperty('--ls', String(laidScale(groups, at.max)));
         row.style[at.side] = at.edge + '%';
         if (at.side === 'right') row.classList.add('laid-right');
         stage.append(row);

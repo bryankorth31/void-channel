@@ -12,7 +12,8 @@ that says what may happen. A card was only the first kind of private thing.
 | Game | Players | Seen played on the pages |
 |---|---|---|
 | Crazy Eights | 2 to 7 | Yes, a whole game |
-| Go Fish | 2 to 6 | Yes, the first asks |
+| Go Fish | 2 to 6 | Yes, the first asks. Books of four; since 23 Nov 2026 each book shows as its own group by the player's name |
+| Go Fish (pairs) | 2 to 6 | Yes (23 Nov 2026, three phones, a whole game). The family way: any two of a kind go down, the most pairs wins. Bryan, 23 Nov 2026: "pairs as its own game" |
 | Hearts | 3 to 5 | Yes (22 and 23 Nov 2026): three phones, the pass of three cards and tricks; four phones, the pass left, a whole round of 13 tricks (26 points shared out, as it should be), then the next deal with the pass to the right. Five players not played; the game's end (100 points) not played |
 | Spades | 4, partners | Yes (22 and 23 Nov 2026, four phones): all four bid, one Nil; a whole deal of 13 tricks, the scores on the plates (negative ones too), then the next deal with the next player bidding first. Play to 500 not played |
 | Rummy | 2 | Yes (22 and 23 Nov 2026, two phones): draw, take the top card, lay down sets and runs, lay off, discard, the groups on the table, and a win with the points the loser still held. More than two players and the pack turning over not played |
