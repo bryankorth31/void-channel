@@ -1,13 +1,15 @@
 // MATCH DRY RUN: proves what the matcher changes by running the old and the new match.js over the whole list, read-only.
 //
 //   node tests/match-dryrun.js --catalog <catalog folder> --before <old match.js> [--out <report file>]
-//        [--after <other new match.js>] [--only <slug>] [--no-top] [--no-repeat] [--no-before]
+//        [--after <other new match.js>] [--only <slug>] [--no-top] [--no-repeat] [--no-before] [--overrides <file>]
 //
 //   --catalog    the catalog to read (candidates/, cache/, shows/, overrides.json). Nothing in it is ever written.
 //   --before     a copy of the old matcher:  git show master:scripts/match.js > <temp file>
 //   --out        also save the report to this file
 //   --after      run this file as the new matcher instead of scripts/match.js (for trying a rule on and off)
 //   --only       run one show (by slug) instead of the whole list
+//   --overrides  the new matcher reads this file in place of the catalog's overrides.json (to count aliases before they are committed);
+//                the old matcher still reads the catalog's own, and the file on disk is never touched
 //   --no-top     skip the "100 biggest shows" table
 //   --no-repeat  skip the second pass of the new matcher (the one that proves a repeat run writes nothing)
 //   --no-before  skip the old matcher entirely (quick runs while trying a rule)
@@ -30,7 +32,7 @@ const argv = process.argv.slice(2);
 const arg = (name) => { const i = argv.indexOf(name); return i >= 0 ? argv[i + 1] : null; };
 const flag = (name) => argv.includes(name);
 const WATCH = (arg('--watch') || 'naruto shippuden,monster jam,body language guy,unsolved mysteries iceberg').split(',').map((s) => s.trim().toLowerCase()).filter(Boolean);
-const catalogArg = arg('--catalog'), beforeArg = arg('--before'), outArg = arg('--out'), afterArg = arg('--after'), onlySlug = arg('--only');
+const catalogArg = arg('--catalog'), beforeArg = arg('--before'), outArg = arg('--out'), afterArg = arg('--after'), onlySlug = arg('--only'), overridesArg = arg('--overrides');
 if (!catalogArg || (!beforeArg && !flag('--no-before'))) { console.error('usage: node tests/match-dryrun.js --catalog <catalog folder> --before <old match.js> [--out <file>] [--after <file>] [--only <slug>] [--no-top] [--no-repeat] [--no-before]'); process.exit(2); }
 const CATALOG = path.resolve(catalogArg);
 for (const d of ['candidates', 'cache', 'shows']) if (!realFs.existsSync(path.join(CATALOG, d))) { console.error('not a catalog folder (no ' + d + '/): ' + CATALOG); process.exit(2); }
@@ -90,6 +92,8 @@ const slugOf = AFTER.slug;
 // The old matcher runs main() as soon as it loads, so its last line is swapped for an export; everything else is untouched.
 const BEFORE = flag('--no-before') ? null : (() => {
   const src = realFs.readFileSync(path.resolve(beforeArg), 'utf8');
+  // Since the matcher runs main() only when started directly ("if (require.main === module) main();") and exports its own functions, a copy of it loads as it is.
+  if (/\nif \(require\.main === module\) main\(\);\s*\nmodule\.exports = \{/.test(src)) return compile(src, '__before_match__.js');
   if (!/\nmain\(\);\s*$/.test(src)) throw new Error('--before file does not end with main(); is it the old scripts/match.js?');
   return compile(src.replace(/\nmain\(\);\s*$/, '\nmodule.exports = { matchShow, namesOtherShow, otherShowCores };\n'), '__before_match__.js');
 })();
@@ -112,6 +116,7 @@ const whyType = (why) => /^self-listed/.test(why) ? 'self-listed (order from fil
 // ---------------------------------------------------------------- one pass over the list
 function runPass(label, mod, shipped, { keepOverlay = false } = {}) {
   if (!keepOverlay) { overlay.clear(); deleted.clear(); }
+  if (overridesArg && label !== 'before') overlay.set(keyOf(path.join(CATALOG, 'overrides.json')), realReadFileSync(path.resolve(overridesArg), 'utf8')); // held in memory only, like every write here
   const t0 = Date.now(), snap = { ...attempts.byName };
   const shows = new Map(), eps = new Map(), picks = [], errors = [], types = new Map(), watch = new Map(WATCH.map((w) => [w, 0])), drops = []; // drops: grids the matcher says it removed or emptied (the old matcher says nothing)
   let identical = 0, compared = 0, ran = 0, addresses = 0;

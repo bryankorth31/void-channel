@@ -127,13 +127,15 @@ function makeOtherShows(shows) {
     .map((o) => ({ ...o, needle: ' ' + o.core + ' ' }));
 }
 const OTHER_SHOWS = makeOtherShows(LIST.shows);
-// One is the other, or contains it as whole words ("star trek" and "star trek enterprise" are one family, not a wrong show).
-const sameWords = (a, b) => a === b || (' ' + a + ' ').includes(' ' + b + ' ') || (' ' + b + ' ').includes(' ' + a + ' ');
+// The other title is this show's own name or a part of it, as whole words: "star trek" inside "star trek enterprise" is the show's own family, not a wrong show.
+// The rule ran both ways until 23 Nov 2026, so a listed title that only CONTAINS this show's name counted as family too ("Happy Tree Friends" under Friends, voidverse
+// audit A26; Bryan: "Yes, the matcher"). A longer title that holds this show's name is another show.
+const partOfMine = (other, mine) => other === mine || (' ' + mine + ' ').includes(' ' + other + ' ');
 // The titles of other shows (not this one, not its aliases, not its family) that the text names. `aliases` are normalised;
 // `list` is the detector's list of titles (makeOtherShows), the whole show list unless a test or self-test passes its own.
 function otherShowCores(text, show, aliases = [], list = OTHER_SHOWS) {
   const t = forOtherShow(text), mine = [norm(show).replace(/^the /, ''), ...aliases];
-  return list.filter((o) => t.includes(o.needle) && !mine.some((m) => sameWords(o.core, m))).map((o) => o.core);
+  return list.filter((o) => t.includes(o.needle) && !mine.some((m) => partOfMine(o.core, m))).map((o) => o.core);
 }
 function namesOtherShow(text, show, aliases = [], list = OTHER_SHOWS) { return otherShowCores(text, show, aliases, list).length > 0; }
 // Other names a show goes by, for the matcher's own tests. catalog/overrides.json aliases (set from HQ) add to these.
@@ -194,9 +196,35 @@ function closesName(rest, nets = []) {
   while (i < 2 && i < toks.length - 1 && NAME_FILLER.has(toks[i])) i++;
   return NAME_TAIL.test(toks[i]) || (/^(?:s|e|\d+x)$/.test(toks[i]) && /^\d+$/.test(toks[i + 1] || '')); // "S 2", "1x 4": SxxEyy written with a space
 }
+// What stands BEFORE the name can tie it to a longer title as well (23 Nov 2026, voidverse audit A26; Bryan: "Yes, the matcher"). closesName read only what follows, so
+// "Garfield and Friends Season 6" named Friends ("Friends" then "Season") and 17 of its episodes played Garfield at LIVE. The name is the END of a longer title when a
+// joining word stands straight before it (an article may come between) with an ordinary word before that: "Garfield and Friends", "Barney & Friends", "Tales of the
+// Unexpected", "Lost in Space" under Space. Other words before the name still do not matter ("MTV TRL Total Request Live Archive", "PBS Zork Show"): uploaders put
+// channels and labels there. A separator between ends the tie ("Cartoons and more - Friends"), and so does a lead word before the joining word ("Best of the Zork Show",
+// "All of Friends"). Tested the way closesName is, on lower-cased text with the punctuation kept.
+const NAME_JOIN = new Set(['and', 'of', 'with', 'for', 'in', 'on', 'to', 'from', 'vs', 'versus', 'meets']);
+const NAME_ARTICLE = new Set(['the', 'a', 'an']);
+const NAME_LEAD = new Set(['best', 'most', 'rest', 'more', 'lots', 'some', 'episodes', 'seasons']); // "Best of", "Episodes of": a collection of the show itself, not a longer title
+const NAME_BREAK = new RegExp(NAME_SEP.source + '|' + NAME_DASH.source + '|' + NAME_MARK.source + '|' + NAME_PUNCT.source, 'g');
+function opensName(before) {
+  const run = /[^a-z0-9]*$/.exec(before)[0];
+  if (run.length === before.length) return true; // the name starts the text
+  const gap = run.replace(/_/g, ' ');
+  if (NAME_SEP.test(gap) || NAME_DASH.test(gap) || NAME_MARK.test(gap) || NAME_PUNCT.test(gap)) return true; // a separator stands before it
+  let seg = before.slice(0, before.length - run.length).replace(/_/g, ' '), m, cut = 0;
+  NAME_BREAK.lastIndex = 0;
+  while ((m = NAME_BREAK.exec(seg))) { cut = m.index + m[0].length; if (m[0].length === 0) NAME_BREAK.lastIndex++; } // only the words since the last separator count
+  const toks = seg.slice(cut).split(/[^a-z0-9]+/).filter(Boolean);
+  let i = toks.length - 1;
+  while (i >= 0 && NAME_ARTICLE.has(toks[i])) i--;
+  if (i < 1 || !NAME_JOIN.has(toks[i])) return true; // no joining word straight before the name
+  const w = toks[i - 1];
+  return NAME_FILLER.has(w) || NAME_LEAD.has(w) || NAME_TAIL.test(w); // "All of", "Best of", "Complete of": still the show itself
+}
 // cores: the show's normalised name (without a leading "the") and its normalised aliases. nets: the show's own network or web channel, normalised, from its TVmaze record
 // (never any other network): it may follow the name like a separator, so "Dimension 20 Dropout" names Dimension 20.
-// 'names': the name stands as whole words and closes; 'longer': the name is there as whole words but only ever runs on into another word (a longer title); 'none'.
+// 'names': the name stands as whole words, closes, and is not tied to a longer title by what stands before it; 'longer': the name is there as whole words but only
+// ever inside a longer title, running on into another word ("Naruto Shippuden") or out of one ("Garfield and Friends"); 'none'.
 function titleNaming(text, cores, nets = []) {
   const t = String(text == null ? '' : text).toLowerCase().replace(/&/g, ' and ').replace(/['\u2019`]/g, '');
   let found = false;
@@ -204,7 +232,12 @@ function titleNaming(text, cores, nets = []) {
     if (!core) continue;
     const re = nameRe(core);
     let m;
-    while ((m = re.exec(t))) { found = true; if (closesName(t.slice(m.index + m[0].length), nets)) return 'names'; if (m[0].length === 0) re.lastIndex++; }
+    while ((m = re.exec(t))) {
+      found = true;
+      const start = m.index + (/^[^a-z0-9]/.test(m[0]) ? 1 : 0); // the pattern takes the one character before the name with it
+      if (closesName(t.slice(m.index + m[0].length), nets) && opensName(t.slice(0, start))) return 'names';
+      if (m[0].length === 0) re.lastIndex++;
+    }
   }
   return found ? 'longer' : 'none';
 }
@@ -365,6 +398,12 @@ function decideGrid(entry, cand, tv, ctx) {
     const itemNamesOther = namesOtherShow(item.title || '', show, aliases);
     const itemTitled = namesShow(item.title || '') || idNamesShow(item.id); // the upload itself says it is this show
     const itemLonger = titleNaming(item.title || '', [core, ...aliases], nets) === 'longer'; // its title runs on into a longer title ("Naruto Shippuden"): an episode name that merely looks alike proves nothing, unless the file's own name also names the show
+    // The upload's title carries the show's name only inside a longer title ("The Lost History of Flat Earth" under Lost, "Garfield and Friends" under Friends): it is
+    // another work, and its files are this show's only when a file's OWN name names the show as a title does. Until 23 Nov 2026 only a title match was held to this, so
+    // an episode number or a date in such a file went LIVE (audit A26). A gate, not a score: a cut of 0.4 left those files at REVIEW, which still ships. An upload whose
+    // title does name the show, or does not mention it at all, is judged as before; a file Bryan accepted in HQ is his call. An exact airdate is evidence of its own and is
+    // judged as before too: an as-aired tape ("ER NBC WOC 2001 10 18", a show with its original commercials) has a title that runs on, and its date is the episode's.
+    const otherWork = (f) => itemLonger && !namesTitle(f.name, [core, ...aliases], nets);
     const unmatched = []; // episode-band files this item could not place by number or title
     const itemEx = seriesExclude({ title: item.title, item: item.id, collection: item.collection }, exOwn);
     for (const f of item.files) {
@@ -383,7 +422,7 @@ function decideGrid(entry, cand, tv, ctx) {
       // 0. A date in the name: an exact airdate places the file; a date from before the show existed means it is another show's file (Late Night with Conan O'Brien under Conan).
       const fd = fileDate(f.name) || fileDate(item.title || '');
       let dateHit = false;
-      if (fd && byDate.has(fd)) { candidates.push({ ep: byDate.get(fd), base: 0.75, why: 'airdate in filename' }); dateHit = true; }
+      if (fd && byDate.has(fd)) { candidates.push({ ep: byDate.get(fd), base: 0.75, why: 'airdate in filename', dated: true }); dateHit = true; }
       else if (fd && firstYear && +fd.slice(0, 4) < firstYear) { dateRejected++; tags.set(f, 'before-premiere'); continue; }
       // 1. S/E in the filename
       if (f.ep && f.ep.season != null && byKey.has(`${f.ep.season}x${f.ep.episode}`)) {
@@ -407,14 +446,15 @@ function decideGrid(entry, cand, tv, ctx) {
       const pen = { other: false, notNamed: false }; let placedAny = false;
       const tagWhy = () => ({ other: pen.other, react: REACT.test(tagText(f.name)) || REACT.test(tagText(item.title || '')), foreign: langRisk(f.name) || langRisk(item.title), notNamed: pen.notNamed });
       if (!candidates.length) {
-        if (f.band === 'episode' && !fileNamesOther) unmatched.push(f);
-        pen.other = fileNamesOther || (itemNamesOther && !namesShow(f.name)); pen.notNamed = !namesShow(f.name) && !itemTitled;
+        if (f.band === 'episode' && !fileNamesOther && !otherWork(f)) unmatched.push(f);
+        pen.other = fileNamesOther || (itemNamesOther && !namesShow(f.name)) || otherWork(f); pen.notNamed = !namesShow(f.name) && !itemTitled;
         tags.set(f, rejectionTag(tagWhy())); continue;
       }
       for (const c of candidates) {
         let conf = c.base;
         if (f.nameHit && namesShow(f.name)) conf += 0.15; else if (itemNamesMe) conf += 0.1; // the hunter's nameHit is a substring test of its own, so it is checked again as whole words
         conf += f.band === 'episode' ? 0.15 : 0.05;
+        if (otherWork(f) && !c.dated) { pen.other = true; if (!isAccepted(item, f)) continue; } // a file of a longer-titled upload that does not itself name the show: never a match (audit A26)
         if (!namesShow(f.name) && !itemTitled) { pen.notNamed = true; if (!isAccepted(item, f)) continue; } // only the description mentioned us (a spin-off, a same-cast show, a dump): never a match (audit M4), unless B accepted it
         // Reaction and review channels upload "S01E01 - Title - Group Reaction": the right name, the wrong video (B caught Sunny and FMA, 2026-10-14).
         if (REACT.test(f.name) || REACT.test(item.title || '')) conf -= 0.7;
@@ -671,5 +711,5 @@ function main() {
   console.log(`\nWrote ${rows.length} grids to catalog/shows/ and docs/COVERAGE.md`);
 }
 if (require.main === module) main();
-module.exports = { norm, tagText, slug, noEmail, namesTitle, titleNaming, closesName, REACT, QUALITY_RE, OTHER_SHOWS, BUILTIN_ALIASES, makeOtherShows, forOtherShow, otherShowCores, namesOtherShow, variantKey, rejectionTag, stripShow, isJunkItem, isJunkFile, isExtras, inRuntimeBand, episodeNumberOf,
+module.exports = { norm, tagText, slug, noEmail, namesTitle, titleNaming, closesName, opensName, REACT, QUALITY_RE, OTHER_SHOWS, BUILTIN_ALIASES, makeOtherShows, forOtherShow, otherShowCores, namesOtherShow, variantKey, rejectionTag, stripShow, isJunkItem, isJunkFile, isExtras, inRuntimeBand, episodeNumberOf,
   fallbackCand, gridFor, selfGrid, placeOf, applyTitles, matchShow, fileDate, placedIn, droppedBy, mergeDropped, droppedLines, saveDropped, keepLive };
