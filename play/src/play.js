@@ -974,7 +974,16 @@
     pip = { close: () => document.exitPictureInPicture().catch(() => {}), video: true };
     setTimeout(poll, 16);
     $('b-pop').setAttribute('aria-pressed', 'true');
-    popVid.addEventListener('leavepictureinpicture', () => { home(); drop(); pip = null; popVid = popCopy = null; $('b-pop').setAttribute('aria-pressed', 'false'); });
+    popVid.addEventListener('leavepictureinpicture', () => { home(); drop(); pip = null; popVid = popCopy = null; $('b-pop').setAttribute('aria-pressed', 'false'); popGone(); });
+  }
+  // The pop-out went away and nobody can see the page either (its tab is behind another, or its window is minimized or
+  // covered): the game stops there, as it does when a page with no pop-out is hidden, so it is found where it was left
+  // and its sound does not play from a page out of sight. Whoever shut the small window, a hand or the browser (the PLAY
+  // auditor, 23 Nov 2026: two games lost theirs 45 s after the main window was minimized and ran on unseen. Bryan:
+  // "Yes, build it"). The same short wait as leaving the page: the small window's own "back to tab" button shows the
+  // page a moment after it closes the window, and then the game plays on there.
+  function popGone() {
+    setTimeout(() => { if (document.hidden && started && !pip && !paused) setPaused(true); }, 800);
   }
   // The pop-out follows you (Bryan, 22 Nov 2026: "started it and then switched to claude....didnt switch wth me"): Chrome's
   // automatic picture-in-picture calls this when you leave a page that is playing sound, as the picture in a video call
@@ -1056,6 +1065,7 @@
     place();
     // The pad loop ran on the window that just closed: start it again here if it stopped.
     setTimeout(() => { if (performance.now() - lastPoll > 100) requestAnimationFrame(poll); }, 50);
+    popGone();
   }
   // Turning the phone mid-game: nothing stays held down across the change (the keys move under the thumbs).
   addEventListener('orientationchange', () => { if (hub) hub.releaseAll(); PlayTouch.releaseAll(); });

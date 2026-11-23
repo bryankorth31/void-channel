@@ -186,6 +186,11 @@ test('the pop-out carries the game\'s sound (Bryan, 22 Nov 2026: "No, I wanted s
   assert.ok(js.includes("popVid = document.createElement('video'); popVid.muted = !sound;"));
   assert.ok(js.includes('catch (e) { drop(); popVid = popCopy = null; home(); return; }'), 'a pop-out that fails gives the sound back and leaves the page');
   assert.ok(js.includes("popVid.addEventListener('leavepictureinpicture', () => { home(); drop();"), 'so does closing it');
+  // The pop-out gone and the page out of sight (the PLAY auditor, 23 Nov 2026; Bryan: "Yes, build it"): the game pauses
+  // there, after the same short wait as leaving the page, in both ways of popping out. Not while the page shows.
+  assert.ok(js.includes("setTimeout(() => { if (document.hidden && started && !pip && !paused) setPaused(true); }, 800);"), 'the rule');
+  assert.ok(js.includes("$('b-pop').setAttribute('aria-pressed', 'false'); popGone(); });"), 'when the video pop-out leaves');
+  assert.match(js, /function popBack\(\) \{[\s\S]*?popGone\(\);\r?\n  \}/, 'and when the window pop-out closes');
   // On the page, unseen (Bryan: "It closed again"): a video on no page was closed by Chrome 10 s after the window was minimized.
   assert.ok(js.includes("popVid.className = 'pop-feed'; document.body.appendChild(popVid);"));
   assert.ok(js.includes('const drop = () => { if (popVid) popVid.remove(); };'), 'and it comes off the page when the game comes back');
