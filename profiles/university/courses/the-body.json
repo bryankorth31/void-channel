@@ -366,45 +366,79 @@
           {
             "id": "left",
             "type": "card",
-            "x": 40,
-            "y": 40,
-            "w": 250,
-            "h": 100,
+            "prop": "tap",
+            "x": 60,
+            "y": 90,
+            "w": 110,
+            "h": 110,
             "label": "The tap",
             "color": "blue",
             "o": 0,
-            "size": 22
+            "size": 22,
+            "tagW": 190,
+            "tag": [
+              0,
+              115
+            ]
           },
           {
             "id": "right",
             "type": "card",
-            "x": 510,
-            "y": 40,
-            "w": 250,
-            "h": 100,
+            "prop": "plant",
+            "x": 620,
+            "y": 80,
+            "w": 130,
+            "h": 130,
             "label": "The plant",
             "color": "blue",
             "o": 0,
-            "size": 22
+            "size": 22,
+            "tagW": 190,
+            "tag": [
+              0,
+              120
+            ]
           },
           {
             "id": "thing",
-            "type": "stamp",
-            "x": 340,
-            "y": 20,
-            "w": 120,
-            "label": "THE HOSE",
+            "type": "card",
+            "prop": "hose",
+            "x": 150,
+            "y": 115,
+            "w": 480,
+            "h": 60,
+            "ends": [
+              87,
+              80
+            ],
+            "label": "The hose",
             "color": "gold",
             "o": 0,
-            "s": 0.4,
-            "size": 18
+            "size": 20,
+            "tagW": 190,
+            "tag": [
+              0,
+              120
+            ]
+          },
+          {
+            "id": "tyre",
+            "type": "card",
+            "prop": "tyre",
+            "x": 330,
+            "y": 100,
+            "w": 130,
+            "h": 90,
+            "label": "",
+            "color": "fg",
+            "o": 0
           },
           {
             "id": "act",
             "type": "stamp",
-            "x": 340,
-            "y": 160,
-            "w": 120,
+            "x": 470,
+            "y": 0,
+            "w": 100,
             "label": "PINCHED",
             "color": "fg",
             "o": 0,
@@ -415,7 +449,7 @@
             "id": "line",
             "type": "text",
             "x": 400,
-            "y": 325,
+            "y": 335,
             "label": "Move the tyre now, not tonight.",
             "color": "pink",
             "size": 22,
@@ -434,8 +468,7 @@
                 "o": 1
               },
               "thing": {
-                "o": 1,
-                "s": 1
+                "o": 1
               }
             }
           },
@@ -447,6 +480,12 @@
                 "o": 1,
                 "s": 1,
                 "shake": true
+              },
+              "tyre": {
+                "o": 1
+              },
+              "thing": {
+                "pinched": true
               }
             }
           },
@@ -468,6 +507,9 @@
             "set": {
               "line": {
                 "o": 1
+              },
+              "right": {
+                "wilted": true
               }
             }
           },
@@ -486,8 +528,8 @@
                 "color": "green"
               },
               "thing": {
-                "label": "THE HIP",
-                "size": 18
+                "label": "The hip",
+                "size": 20
               },
               "act": {
                 "label": "OUT",
@@ -635,45 +677,56 @@
           {
             "id": "left",
             "type": "card",
-            "x": 40,
-            "y": 40,
-            "w": 250,
-            "h": 100,
+            "prop": "gate",
+            "x": 230,
+            "y": 130,
+            "w": 260,
+            "h": 40,
             "label": "The gate",
             "color": "blue",
             "o": 0,
-            "size": 22
+            "size": 22,
+            "tagW": 190,
+            "tag": [
+              -20,
+              120
+            ]
           },
           {
             "id": "right",
             "type": "card",
-            "x": 510,
-            "y": 40,
-            "w": 250,
-            "h": 100,
+            "prop": "gatepost",
+            "x": 490,
+            "y": 130,
+            "w": 20,
+            "h": 40,
             "label": "The gatepost",
             "color": "blue",
             "o": 0,
-            "size": 22
+            "size": 22,
+            "tagW": 190,
+            "tag": [
+              60,
+              120
+            ]
           },
           {
             "id": "thing",
-            "type": "stamp",
-            "x": 340,
-            "y": 20,
-            "w": 120,
-            "label": "THE LATCH",
+            "type": "card",
+            "tie": "left.latch",
+            "x": 700,
+            "y": 190,
+            "label": "The latch",
             "color": "gold",
             "o": 0,
-            "s": 0.4,
-            "size": 14
+            "size": 20
           },
           {
             "id": "act",
             "type": "stamp",
-            "x": 340,
-            "y": 160,
-            "w": 120,
+            "x": 60,
+            "y": 20,
+            "w": 100,
             "label": "SNAPS",
             "color": "fg",
             "o": 0,
@@ -684,7 +737,7 @@
             "id": "line",
             "type": "text",
             "x": 400,
-            "y": 325,
+            "y": 335,
             "label": "It closed again. It just will not stay.",
             "color": "pink",
             "size": 22,
@@ -703,8 +756,7 @@
                 "o": 1
               },
               "thing": {
-                "o": 1,
-                "s": 1
+                "o": 1
               }
             }
           },
@@ -716,6 +768,10 @@
                 "o": 1,
                 "s": 1,
                 "shake": true
+              },
+              "left": {
+                "open": -0.55,
+                "snapped": true
               }
             }
           },
@@ -724,7 +780,8 @@
             "dur": 2.6,
             "set": {
               "left": {
-                "sub": "swings shut, looks fine"
+                "sub": "swings shut, looks fine",
+                "open": 0
               },
               "right": {
                 "sub": "nothing holds it now"
@@ -737,6 +794,9 @@
             "set": {
               "line": {
                 "o": 1
+              },
+              "left": {
+                "open": 1
               }
             }
           },
@@ -747,7 +807,8 @@
               "left": {
                 "label": "The shin bone",
                 "size": 22,
-                "color": "gold"
+                "color": "gold",
+                "open": 0
               },
               "right": {
                 "label": "The thigh bone",
@@ -755,8 +816,10 @@
                 "color": "green"
               },
               "thing": {
-                "label": "THE ACL",
-                "size": 18
+                "label": "The ACL",
+                "sub": "torn",
+                "size": 20,
+                "color": "pink"
               },
               "act": {
                 "label": "TEARS",
@@ -902,47 +965,67 @@
         ],
         "actors": [
           {
+            "id": "thing",
+            "type": "card",
+            "prop": "bench",
+            "x": 240,
+            "y": 60,
+            "w": 320,
+            "h": 75,
+            "label": "The bench",
+            "color": "gold",
+            "o": 0,
+            "size": 20,
+            "tagW": 170,
+            "tag": [
+              -250,
+              40
+            ]
+          },
+          {
             "id": "left",
             "type": "card",
-            "x": 40,
-            "y": 40,
-            "w": 250,
-            "h": 100,
+            "prop": "bag",
+            "x": 270,
+            "y": 77,
+            "w": 110,
+            "h": 40,
+            "on": "thing",
             "label": "The big bag",
             "color": "blue",
             "o": 0,
-            "size": 22
+            "size": 22,
+            "tagW": 190,
+            "tag": [
+              -20,
+              130
+            ]
           },
           {
             "id": "right",
             "type": "card",
-            "x": 510,
-            "y": 40,
-            "w": 250,
-            "h": 100,
+            "prop": "figure",
+            "x": 440,
+            "y": 27,
+            "w": 80,
+            "h": 140,
+            "on": "thing",
             "label": "The person beside it",
             "color": "blue",
             "o": 0,
-            "size": 18
-          },
-          {
-            "id": "thing",
-            "type": "stamp",
-            "x": 340,
-            "y": 20,
-            "w": 120,
-            "label": "THE BENCH",
-            "color": "gold",
-            "o": 0,
-            "s": 0.4,
-            "size": 14
+            "size": 18,
+            "tagW": 200,
+            "tag": [
+              60,
+              135
+            ]
           },
           {
             "id": "act",
             "type": "stamp",
-            "x": 340,
-            "y": 160,
-            "w": 120,
+            "x": 650,
+            "y": 40,
+            "w": 100,
             "label": "SPREADS",
             "color": "fg",
             "o": 0,
@@ -953,7 +1036,7 @@
             "id": "line",
             "type": "text",
             "x": 400,
-            "y": 325,
+            "y": 335,
             "label": "I did not move. I just have less room.",
             "color": "pink",
             "size": 22,
@@ -972,8 +1055,7 @@
                 "o": 1
               },
               "thing": {
-                "o": 1,
-                "s": 1
+                "o": 1
               }
             }
           },
@@ -985,6 +1067,10 @@
                 "o": 1,
                 "s": 1,
                 "shake": true
+              },
+              "left": {
+                "swell": true,
+                "x": 300
               }
             }
           },
@@ -1006,6 +1092,10 @@
             "set": {
               "line": {
                 "o": 1
+              },
+              "right": {
+                "squeezed": true,
+                "x": 470
               }
             }
           },
@@ -1024,8 +1114,8 @@
                 "color": "green"
               },
               "thing": {
-                "label": "THE BELLY",
-                "size": 14
+                "label": "The belly",
+                "size": 20
               },
               "act": {
                 "label": "SWELLS",

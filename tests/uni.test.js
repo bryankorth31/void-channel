@@ -604,4 +604,14 @@ test('real objects on the lit table: every object a scene names is in the librar
   const cups = scenePlan.plan(allScenes().find((x) => /cup-and-ball/.test(x.sc.analogy)).sc);
   assert.deepStrictEqual(['a', 'b', 'c'].map((id) => cups.kind[id]), ['prop', 'prop', 'prop']);
   assert.ok(cups.states[3].to.c.lifted && !cups.states[3].to.b.lifted && cups.states[5].to.b.lifted && !cups.states[5].to.c.lifted);
+  // The body 2 to 4 (Bryan, 22 Nov 2026: "Yes, next three"): each analogy is acted by its own objects
+  const body = (re) => scenePlan.plan(allScenes().find((x) => re.test(x.sc.analogy)).sc);
+  const kinds = (p, ids) => ids.map((id) => p.kind[id]);
+  const hose = body(/garden hose/), gate = body(/gate held by a latch/), bench = body(/small bench/);
+  assert.deepStrictEqual(kinds(hose, ['left', 'right', 'thing', 'tyre']), ['prop', 'prop', 'prop', 'prop']);
+  assert.ok(hose.states[1].to.thing.pinched && hose.states[1].to.tyre.o === 1 && !hose.states[2].to.right.wilted && hose.states[3].to.right.wilted);
+  assert.deepStrictEqual(kinds(gate, ['left', 'right', 'thing']), ['prop', 'prop', 'label']);
+  assert.deepStrictEqual(gate.states.map((s) => [s.to.left.open || 0, !!s.to.left.snapped]), [[0, false], [-0.55, true], [0, true], [1, true], [0, true]]);
+  assert.deepStrictEqual(kinds(bench, ['left', 'right', 'thing']), ['prop', 'prop', 'prop']);
+  assert.ok(bench.states[0].to.left.on === 'thing' && bench.states[0].to.right.on === 'thing' && bench.states[1].to.left.swell && bench.states[3].to.right.squeezed);
 });

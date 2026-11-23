@@ -402,14 +402,15 @@ function world(sc, plan) {
   });
   // A scene with real objects is seen from lower down, the way you look at things standing on a table.
   const standing = sc.actors.some((a) => plan.kind[a.id] === 'prop');
+  const tall = Math.max(0, ...Object.values(objs).filter((o) => o.thing).map((o) => o.thing.top || 0));
   // Where the camera stands at the end of step i: everything on the table in frame, leaning a little toward the step.
   function pose(i) {
     const f = plan.frame(i), b = f.box, fo = f.focus;
     const c = new THREE.Vector3(wx((b[0] + b[2]) / 2), 0, wz((b[1] + b[3]) / 2)), fc = new THREE.Vector3(wx((fo[0] + fo[2]) / 2), 0, wz((fo[1] + fo[3]) / 2));
     const tgt = c.clone().lerp(fc, 0.2);
     const hx = Math.max(wx(b[2]) - tgt.x, tgt.x - wx(b[0])), hz = Math.max(wz(b[3]) - tgt.z, tgt.z - wz(b[1]));
-    const span = Math.max((2 * hx) / camera.aspect * 1.12, 2 * hz * (standing ? 1 : 1.35), 1.7) + (standing ? 0.7 : 0.4);
-    if (standing) tgt.y = 0.35;
+    const span = Math.max((2 * hx) / camera.aspect * 1.12, 2 * hz * (standing ? 1 : 1.35), 1.7) + (standing ? 0.5 + tall * 0.4 : 0.4);
+    if (standing) tgt.y = Math.min(0.8, 0.2 + tall * 0.3);
     return { tgt, dist: span / (2 * Math.tan((camera.fov * Math.PI) / 360)), light: c.clone().lerp(fc, 0.45) };
   }
   const v3 = (A, B, k, e) => { const a = A[k] == null ? B[k] : A[k], b = B[k] == null ? a : B[k]; return a == null ? 0 : lerp(a, b, e); };
@@ -481,16 +482,21 @@ function world(sc, plan) {
       const at = (St, all) => {
         const base = St.on && objs[St.on] && objs[St.on].thing;
         if (base) {
-          const bS = all[St.on], r = o.thing.radius || 0, cup = base.cup || 0;
-          return new THREE.Vector3(wx(bS.x + (bS.w || 100) / 2), base.top - (r && cup ? r - Math.sqrt(Math.max(0, r * r - cup * cup)) : 0), wz(bS.y + (bS.h || 100) / 2));
+          // it stands where its own box says, at the height of the top of what it rests on
+          const r = o.thing.radius || 0, cup = base.cup || 0;
+          return new THREE.Vector3(wx(St.x + (St.w || 100) / 2), base.top - (r && cup ? r - Math.sqrt(Math.max(0, r * r - cup * cup)) : 0), wz(St.y + (St.h || 100) / 2));
         }
         return new THREE.Vector3(wx(St.x + (St.w || 100) / 2), 0, wz(St.y + (St.h || 100) / 2));
       };
       const pA = at(A, s.from), pB = at(B, s.to), p = pA.clone().lerp(pB, e);
       if ((A.on || null) !== (B.on || null)) p.y += Math.sin(Math.PI * e) * 0.25;
-      o.thing.group.position.set(p.x, p.y + drop, p.z);
-      const r = o.thing.radius;
-      o.thing.group.rotation.set(r ? (p.z - pA.z) / r : 0, wob, r ? -(p.x - pA.x) / r : 0); // a ball rolls as it goes
+      // a wheel or a ball rolls in along the table instead of dropping onto it, and turns as it goes
+      const rolls = o.thing.rollsIn && arriving;
+      if (rolls) p.x -= (1 - e) * 2.5;
+      o.thing.group.position.set(p.x, p.y + (rolls ? 0 : drop), p.z);
+      o.thing.group.rotation.set(0, wob, 0);
+      const r = o.thing.radius, sp = o.thing.spin;
+      if (sp && r) sp.rotation.set((p.z - pA.z) / r, 0, -(p.x - (rolls ? pA.x - 2.5 : pA.x)) / r);
       o.thing.update(A, B, e);
       o.thing.group.visible = seen;
     }
