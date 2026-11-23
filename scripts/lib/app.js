@@ -501,7 +501,8 @@ h2{margin:18px 20px 8px;font-size:17px;font-family:Unbounded,system-ui,sans-seri
 .genres button{background:var(--panel);border:1px solid var(--line);color:var(--fg);padding:16px 10px;border-radius:10px;cursor:pointer}
 .genres button:hover{border-color:var(--acc)}.genres small{display:block;color:var(--dim);margin-top:3px}
 .show{padding:0 20px 24px}
-.back{background:none;border:0;color:var(--acc);cursor:pointer;padding:12px 0}
+/* button.back, not .back: the arrow inside it is <i class="ico back">, and a plain .back rule (later than .ico, same weight) took away the colour the arrow's mask paints with, so only the word showed (Bryan, 23 Nov 2026: "fix the back arrow"). */
+button.back{background:none;border:0;color:var(--acc);cursor:pointer;padding:12px 0}
 .hero{position:relative;border-radius:10px;overflow:hidden;background:var(--panel);min-height:160px}
 .hero img{width:100%;max-height:300px;object-fit:cover;display:block;opacity:.5}
 .hero .t{position:absolute;left:20px;bottom:16px;right:20px}.hero .t b{font-family:Unbounded,system-ui,sans-serif;font-weight:800;font-size:24px;line-height:1.1;display:block}.hero .t p{margin:6px 0 0;max-width:760px;font-size:14px}.hero .g{color:var(--dim);font-size:12px;margin-top:4px}
@@ -569,7 +570,11 @@ let ME_BASE=null,ME_RAW=null;
 ${ME_SRC}
 const ME_WROTE={};
 const ME=(()=>{let raw=null,m=null;try{raw=localStorage.getItem(ME_KEY);m=JSON.parse(raw||'null')}catch(_){}ME_RAW=raw;m=meClean(m);ME_BASE=meCopy(m);
- try{const keys=[];for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k&&k.startsWith('voidtv:')&&!['voidtv:me','voidtv:sid','voidtv:vol','voidtv:enjoy'].includes(k))keys.push(k)}for(const k of keys){const sl=k.slice(7);try{if(!m.history[sl]){const r=JSON.parse(localStorage.getItem(k)||'null');if(r&&r.se!=null)m.history[sl]={se:r.se,e:r.e,at:0,pos:0}}}catch(e){}localStorage.removeItem(k)}}catch(_){}
+ // The old-key sweep moves the per-show records of before 13 Oct (voidtv:<slug> holding {se,e}) into voidtv:me and removes
+ // only those. It used to remove every other voidtv: key too, so the last channel (voidtv:chan) was wiped at every load and
+ // the home page always opened on The Void (Bryan, 23 Nov 2026: "fix the ... channel memory"). Any key that is not an old
+ // record now stays.
+ try{const keys=[];for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k&&k.startsWith('voidtv:')&&!['voidtv:me','voidtv:sid','voidtv:vol','voidtv:chan','voidtv:enjoy'].includes(k))keys.push(k)}for(const k of keys){const sl=k.slice(7);try{const r=JSON.parse(localStorage.getItem(k)||'null');if(r&&typeof r==='object'&&r.se!=null){if(!m.history[sl])m.history[sl]={se:r.se,e:r.e,at:0,pos:0};localStorage.removeItem(k)}}catch(e){}}}catch(_){}
  return m})();
 function mePlaying(slug,se,e){const c=VP&&VP._cur;return !!(c&&c.slug===slug&&c.se===se&&c.e===e&&VP.v&&!VP.v.paused)}
 function meSync(){let raw=null;try{raw=localStorage.getItem(ME_KEY)}catch(_){return false}
