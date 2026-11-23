@@ -521,7 +521,7 @@ const allScenes = () => fs.readdirSync(path.join(uni.UNI, 'courses')).filter((f)
 test('the lit table: every piece of every scene becomes a thing on the table, and a renamed piece turns over', () => {
   const scenes = allScenes();
   assert.ok(scenes.length >= 38, 'fewer scenes than the 38 the lit table was built for');
-  const KINDS = ['card', 'tag', 'bar', 'sticker', 'ball', 'slip', 'tape', 'thread'];
+  const KINDS = ['card', 'tag', 'bar', 'sticker', 'ball', 'slip', 'tape', 'thread', 'prop', 'label'];
   for (const { where, sc } of scenes) {
     const p = scenePlan.plan(sc);
     assert.strictEqual(p.states.length, sc.beats.length, where);
@@ -575,6 +575,33 @@ test('the lit table ships with every page that has a scene: the engine, its rule
       const has = withScene.some((x) => x.f === f);
       assert.strictEqual(h.includes('<script src="scene-plan.js"></script><script type="module" src="scene.js"></script>'), has, f + (has ? ' has a scene but no lit table' : ' loads the lit table with no scene'));
     }
-    if (withScene.length) for (const need of ['scene.js', 'scene-plan.js', 'three.module.min.js', 'three-LICENSE.txt', 'fonts/bricolage-grotesque-latin.woff2', 'fonts/fraunces-latin.woff2']) assert.ok(fs.existsSync(path.join(out, need)), need + ' is not shipped beside the scenes in ' + path.basename(out));
+    if (withScene.length) for (const need of ['scene.js', 'scene-plan.js', 'scene-props.js', 'three.module.min.js', 'three-LICENSE.txt', 'fonts/bricolage-grotesque-latin.woff2', 'fonts/fraunces-latin.woff2']) assert.ok(fs.existsSync(path.join(out, need)), need + ' is not shipped beside the scenes in ' + path.basename(out));
   }
+});
+
+test('real objects on the lit table: every object a scene names is in the library, tied and rested on real objects', () => {
+  // Bryan, 22 Nov 2026: "A, objects with tags". The objects are modelled in scene-props.js; a scene names them.
+  const lib = fs.readFileSync(path.join(uni.UNI, 'scene-props.js'), 'utf8');
+  const names = new Set([...lib.slice(lib.indexOf('export const PROPS')).matchAll(/^  '?([a-z][a-z-]*)'?: \{$/gm)].map((m) => m[1]));
+  assert.ok(names.has('golf-ball') && names.has('tee') && names.has('cup'), 'the object library lost an object');
+  assert.ok(!/fetch\(|GLTFLoader|\.glb|\.gltf|\.obj['"]/.test(lib), 'an object is loaded from a file instead of modelled in code');
+  for (const { where, sc } of allScenes()) {
+    const p = scenePlan.plan(sc), ids = new Set(sc.actors.map((a) => a.id));
+    const isProp = (id) => p.kind[id] === 'prop';
+    for (const a of sc.actors) {
+      if (a.prop && a.prop !== 'tag') assert.ok(names.has(a.prop), where + ': ' + a.id + ' names an object the library does not have: ' + a.prop);
+      if (a.tie) assert.ok(isProp(String(a.tie).split('.')[0]), where + ': ' + a.id + ' is tied to something that is not an object');
+    }
+    p.states.forEach((s, i) => { for (const id in s.to) if (s.to[id].on) assert.ok(ids.has(s.to[id].on) && isProp(s.to[id].on) && isProp(id), where + ': ' + id + ' rests on something that is not an object, step ' + (i + 1)); });
+  }
+  // the golf ball lesson: the tee chips on step 2, the ball leaves the tee on step 4, and the tags turn on step 5
+  const golf = allScenes().find((x) => /golf ball on a tee/.test(x.sc.analogy)).sc, g = scenePlan.plan(golf);
+  assert.deepStrictEqual(['left', 'right', 'thing'].map((id) => g.kind[id]), ['prop', 'prop', 'label']);
+  assert.deepStrictEqual(g.states.map((s) => !!s.to.right.chipped), [false, true, true, true, true]);
+  assert.deepStrictEqual(g.states.map((s) => s.to.left.on || null), ['right', 'right', 'right', null, null]);
+  assert.deepStrictEqual(['left', 'right', 'thing'].map((id) => g.faces[id].map((f, i) => (f.turned ? i + 1 : 0)).filter(Boolean)), [[5], [5], [5]]);
+  // the cup game: three brass cups; the one you point to lifts empty, and the ball is under the other
+  const cups = scenePlan.plan(allScenes().find((x) => /cup-and-ball/.test(x.sc.analogy)).sc);
+  assert.deepStrictEqual(['a', 'b', 'c'].map((id) => cups.kind[id]), ['prop', 'prop', 'prop']);
+  assert.ok(cups.states[3].to.c.lifted && !cups.states[3].to.b.lifted && cups.states[5].to.b.lifted && !cups.states[5].to.c.lifted);
 });

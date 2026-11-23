@@ -390,7 +390,8 @@
             "w": 140,
             "h": 100,
             "label": "Cup",
-            "color": "dim"
+            "color": "dim",
+            "prop": "cup"
           },
           {
             "id": "b",
@@ -400,7 +401,8 @@
             "w": 140,
             "h": 100,
             "label": "Cup",
-            "color": "blue"
+            "color": "blue",
+            "prop": "cup"
           },
           {
             "id": "c",
@@ -410,13 +412,14 @@
             "w": 140,
             "h": 100,
             "label": "Cup",
-            "color": "dim"
+            "color": "dim",
+            "prop": "cup"
           },
           {
             "id": "ball",
             "type": "stamp",
             "x": 380,
-            "y": 262,
+            "y": 40,
             "w": 40,
             "label": "",
             "color": "gold"
@@ -449,7 +452,7 @@
             "dur": 2.2,
             "set": {
               "ball": {
-                "y": 180,
+                "y": 160,
                 "o": 0
               }
             }
@@ -488,7 +491,8 @@
             "set": {
               "c": {
                 "color": "gold",
-                "shake": true
+                "shake": true,
+                "lifted": true
               },
               "stamp": {
                 "o": 1,
@@ -529,16 +533,20 @@
                 "o": 0
               },
               "b": {
-                "color": "green"
+                "color": "green",
+                "lifted": true
               },
               "ball": {
                 "x": 590,
-                "y": 262,
+                "y": 160,
                 "o": 1
               },
               "stamp": {
                 "label": "FOUND IT",
                 "color": "green"
+              },
+              "c": {
+                "lifted": false
               }
             }
           }

@@ -9,6 +9,7 @@
 // course with many scenes never runs out of 3D contexts. A scene's world is built when it comes near the screen and
 // let go when it is far away; its last frame stays on its canvas. With no WebGL the words and steps still work.
 import * as THREE from './three.module.min.js';
+import { PROPS } from './scene-props.js';
 
 const P = window.VUScenePlan;
 const S = 0.01; // scene units (800 x 360) to metres on the table
@@ -322,6 +323,48 @@ function thread(a) {
   };
 }
 
+// ----- real objects (scene-props.js), each with a paper tag tied on by a string
+// A soft room of warm and cool light, blurred once for the page, so brass and gloss have something to reflect.
+let ENV;
+function envMap() {
+  if (ENV !== undefined) return ENV;
+  try {
+    const room = new THREE.Scene(); room.background = new THREE.Color(0x1a130d);
+    const panel = (w, h, col, k, pos) => { const m = new THREE.Mesh(new THREE.PlaneGeometry(w, h), new THREE.MeshBasicMaterial({ color: new THREE.Color(col).multiplyScalar(k), side: THREE.DoubleSide })); m.position.set(pos[0], pos[1], pos[2]); m.lookAt(0, 0, 0); room.add(m); };
+    panel(6, 6, 0xffd9a8, 6, [-2, 8, 3]); panel(10, 4, 0x31405a, 3, [0, 3, -9]); panel(30, 30, 0x3a2414, 1, [0, -1, 0.01]);
+    ENV = new THREE.PMREMGenerator(GL.r).fromScene(room, 0.04).texture;
+  } catch (e) { ENV = null; }
+  return ENV;
+}
+function object(a, kind) {
+  const tw = (a.tagW || 170) * S, th = (a.tagH || 85) * S;
+  const tag = paper(a, 'tag', tw, th);
+  const lib = kind === 'prop' ? PROPS[a.prop] : null;
+  const thing = lib ? lib.build(a, { S, env: envMap() }) : null;
+  const group = new THREE.Group(), mats = [];
+  if (thing) thing.group.traverse((n) => { if (n.material) [].concat(n.material).forEach((m) => mats.push(m)); });
+  const strMat = new THREE.MeshStandardMaterial({ color: 0xd8cdb5, roughness: 0.95, transparent: true });
+  let str = null, key = '';
+  return {
+    kind, tag, thing, group, w: tw, h: th, hole: new THREE.Vector3(-tw / 2 + th * 0.22, 0.02, 0),
+    paint: (k, f) => tag.paint(k, f),
+    fade(o) {
+      tag.fade(o); strMat.opacity = o;
+      mats.forEach((m) => { const t = o < 0.999; if (m.transparent !== t) { m.transparent = t; m.needsUpdate = true; } m.opacity = o; });
+    },
+    // the string from the tag's hole to where it ties on, both in world space, hanging a little slack
+    tie(from, to) {
+      const k = [from.x, from.y, from.z, to.x, to.y, to.z].map((n) => n.toFixed(3)).join();
+      if (k === key) return; key = k;
+      if (str) { group.remove(str); str.geometry.dispose(); }
+      const mid = from.clone().lerp(to, 0.5); mid.y += Math.min(0.2, from.distanceTo(to) * 0.1);
+      const q = from.clone().lerp(mid, 0.5); q.y = mid.y * 0.7 + from.y * 0.3;
+      str = new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3([from, q, mid, to]), 48, 0.008, 6), strMat);
+      str.castShadow = true; group.add(str);
+    },
+  };
+}
+
 // ----- a scene's world: its table, its lamp, its things and its camera
 function world(sc, plan) {
   const st = plan.states;
@@ -347,6 +390,7 @@ function world(sc, plan) {
     else if (k === 'ball') o = ball(a);
     else if (k === 'tape') o = tape(a);
     else if (k === 'bar') o = bar(a, st);
+    else if (k === 'prop' || k === 'label') { o = object(a, k); scene.add(o.tag.group); if (o.thing) scene.add(o.thing.group); }
     else if (k === 'slip') {
       // sized by its longest words, so a slip never shrinks its words when they change
       const longest = st.map((s) => s.to[a.id]).reduce((m, v) => (String(v.label || '').length > String(m.label || '').length ? v : m), a);
@@ -356,13 +400,16 @@ function world(sc, plan) {
     // later pieces lie on top of earlier ones, as they were painted in the flat scenes
     o.kind = k; o.stack = sc.actors.indexOf(a) * 0.006; scene.add(o.group); objs[a.id] = o;
   });
+  // A scene with real objects is seen from lower down, the way you look at things standing on a table.
+  const standing = sc.actors.some((a) => plan.kind[a.id] === 'prop');
   // Where the camera stands at the end of step i: everything on the table in frame, leaning a little toward the step.
   function pose(i) {
     const f = plan.frame(i), b = f.box, fo = f.focus;
     const c = new THREE.Vector3(wx((b[0] + b[2]) / 2), 0, wz((b[1] + b[3]) / 2)), fc = new THREE.Vector3(wx((fo[0] + fo[2]) / 2), 0, wz((fo[1] + fo[3]) / 2));
     const tgt = c.clone().lerp(fc, 0.2);
     const hx = Math.max(wx(b[2]) - tgt.x, tgt.x - wx(b[0])), hz = Math.max(wz(b[3]) - tgt.z, tgt.z - wz(b[1]));
-    const span = Math.max((2 * hx) / camera.aspect * 1.12, 2 * hz * 1.35, 1.7) + 0.4;
+    const span = Math.max((2 * hx) / camera.aspect * 1.12, 2 * hz * (standing ? 1 : 1.35), 1.7) + (standing ? 0.7 : 0.4);
+    if (standing) tgt.y = 0.35;
     return { tgt, dist: span / (2 * Math.tan((camera.fov * Math.PI) / 360)), light: c.clone().lerp(fc, 0.45) };
   }
   const v3 = (A, B, k, e) => { const a = A[k] == null ? B[k] : A[k], b = B[k] == null ? a : B[k]; return a == null ? 0 : lerp(a, b, e); };
@@ -374,6 +421,7 @@ function world(sc, plan) {
       const v = {};
       ['x', 'y', 'w', 'h', 'o', 's', 'x2', 'y2', 'draw'].forEach((k) => { v[k] = v3(A, B, k, e); });
       if (o.thread) { o.shape(v); o.lay(v.draw, v.o); o.mat.color.set(THREAD[e < 0.5 ? A.color : B.color] || THREAD.dim); continue; }
+      if (o.kind === 'prop' || o.kind === 'label') { place(id, o, A, B, v, beat, prog, e, s); continue; }
       const fp = plan.faces[id][beat];
       const fA = { label: A.label, sub: A.sub, color: A.color, size: A.size }, fB = { label: B.label, sub: B.sub, color: B.color, size: B.size };
       if (o.bar) { fA.w = A.w; fB.w = B.w; }
@@ -397,13 +445,65 @@ function world(sc, plan) {
       o.fade(Math.max(0, Math.min(1, v.o)));
       o.group.visible = v.o > 0.01 && !(o.kind === 'slip' && !A.label && !B.label);
     }
+    // strings last, once every object stands where it is this frame
+    for (const id in objs) {
+      const o = objs[id];
+      if (o.kind !== 'prop' && o.kind !== 'label') continue;
+      let to = null, shown = o.tag.group.visible;
+      if (o.kind === 'prop' && o.thing) { o.thing.group.updateMatrixWorld(); to = o.thing.group.localToWorld(o.thing.anchor('tie')); shown = shown && o.thing.group.visible; }
+      if (o.kind === 'label') {
+        const tie = String(sc.actors.find((a) => a.id === id).tie).split('.'), t = objs[tie[0]];
+        if (t && t.thing) { t.thing.group.updateMatrixWorld(); to = t.thing.group.localToWorld(t.thing.anchor(tie[1] || 'tie')); shown = shown && t.thing.group.visible; }
+      }
+      o.group.visible = !!to && shown;
+      if (!o.group.visible) continue;
+      o.tag.group.updateMatrixWorld();
+      o.tie(o.tag.group.localToWorld(o.hole.clone()), to);
+    }
     const Pp = pose(Math.max(0, beat - 1)), Q = pose(beat), first = beat === 0;
     const tgt = first ? Q.tgt : Pp.tgt.clone().lerp(Q.tgt, e), dist = first ? Q.dist : lerp(Pp.dist, Q.dist, e);
     const lt = first ? Q.light : Pp.light.clone().lerp(Q.light, e);
-    const tilt = 0.95, yaw = -0.16 + (beat + e) * 0.012;
-    camera.position.set(tgt.x + Math.sin(yaw) * Math.cos(tilt) * dist, Math.sin(tilt) * dist, tgt.z + Math.cos(yaw) * Math.cos(tilt) * dist);
+    const tilt = standing ? 0.6 : 0.95, yaw = -0.16 + (beat + e) * 0.012;
+    camera.position.set(tgt.x + Math.sin(yaw) * Math.cos(tilt) * dist, tgt.y + Math.sin(tilt) * dist, tgt.z + Math.cos(yaw) * Math.cos(tilt) * dist);
     camera.lookAt(tgt);
     key.position.set(lt.x - 0.6, 7, lt.z + 1); key.target.position.copy(lt);
+  }
+  // An object and its tag. The object stands in its piece's box, or rests "on" another object; the tag lies where the
+  // data puts it and turns over like any card.
+  function place(id, o, A, B, v, beat, prog, e, s) {
+    const fp = plan.faces[id][beat];
+    const fA = { label: A.label, sub: A.sub, color: A.color, size: A.size }, fB = { label: B.label, sub: B.sub, color: B.color, size: B.size };
+    if (fp.turned) { o.paint(fp.from, fA); o.paint(fp.face, fB); } else o.paint(fp.face, e < 0.5 ? fA : fB);
+    const arriving = A.o < 0.05 && B.o >= 0.05, leaving = A.o >= 0.05 && B.o < 0.05;
+    const drop = arriving ? (1 - e) * 0.9 : leaving ? e * 0.5 : 0, seen = v.o > 0.01;
+    const wob = B.shake ? Math.sin(prog * Math.PI * 9) * 0.09 * (1 - prog) : 0;
+    if (o.thing) {
+      const at = (St, all) => {
+        const base = St.on && objs[St.on] && objs[St.on].thing;
+        if (base) {
+          const bS = all[St.on], r = o.thing.radius || 0, cup = base.cup || 0;
+          return new THREE.Vector3(wx(bS.x + (bS.w || 100) / 2), base.top - (r && cup ? r - Math.sqrt(Math.max(0, r * r - cup * cup)) : 0), wz(bS.y + (bS.h || 100) / 2));
+        }
+        return new THREE.Vector3(wx(St.x + (St.w || 100) / 2), 0, wz(St.y + (St.h || 100) / 2));
+      };
+      const pA = at(A, s.from), pB = at(B, s.to), p = pA.clone().lerp(pB, e);
+      if ((A.on || null) !== (B.on || null)) p.y += Math.sin(Math.PI * e) * 0.25;
+      o.thing.group.position.set(p.x, p.y + drop, p.z);
+      const r = o.thing.radius;
+      o.thing.group.rotation.set(r ? (p.z - pA.z) / r : 0, wob, r ? -(p.x - pA.x) / r : 0); // a ball rolls as it goes
+      o.thing.update(A, B, e);
+      o.thing.group.visible = seen;
+    }
+    let tx, tz;
+    if (o.kind === 'label') { tx = wx(v.x); tz = wz(v.y); }
+    else { const off = B.tag || A.tag || [0, (v.h || 100) / 2 + 60]; tx = wx(v.x + (v.w || 100) / 2 + off[0]); tz = wz(v.y + (v.h || 100) / 2 + off[1]); }
+    let turn = fp.face === 1 ? Math.PI : 0, lift = 0;
+    if (fp.turned) { const t = ease(Math.min(1, prog * 1.25)); turn = (fp.from === 1 ? Math.PI : 0) + Math.PI * t * (fp.face === 1 ? 1 : -1); lift = Math.sin(Math.PI * t) * Math.min(0.6, Math.max(o.w, o.h) * 0.45); }
+    o.tag.group.position.set(tx, o.stack + drop + lift, tz);
+    o.tag.group.rotation.set(0, (id.charCodeAt(0) % 5 - 2) * 0.05 + wob, turn);
+    o.tag.group.scale.setScalar(Math.max(0.01, v.s));
+    o.fade(Math.max(0, Math.min(1, v.o)));
+    o.tag.group.visible = seen && !!(A.label || A.sub || B.label || B.sub);
   }
   function dispose() {
     scene.traverse((n) => {
@@ -435,7 +535,11 @@ function mount(root) {
   let W = null, near = false, building = null;
   async function build() {
     if (W || building || !GL) return building;
-    building = fonts().then(() => { if (near && !W) W = world(sc, plan); building = null; paint(); });
+    building = fonts().then(() => {
+      // a scene that cannot be built shows its words and steps, and never stops the others
+      if (near && !W) { try { W = world(sc, plan); } catch (e) { console.error(e); root.classList.add('no3d'); } }
+      building = null; paint();
+    });
     return building;
   }
   function paint() {

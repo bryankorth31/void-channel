@@ -70,47 +70,59 @@
         ],
         "actors": [
           {
-            "id": "left",
-            "type": "card",
-            "x": 40,
-            "y": 40,
-            "w": 250,
-            "h": 100,
-            "label": "The golf ball",
-            "color": "blue",
-            "o": 0,
-            "size": 22
-          },
-          {
             "id": "right",
             "type": "card",
-            "x": 510,
-            "y": 40,
-            "w": 250,
-            "h": 100,
+            "prop": "tee",
+            "x": 300,
+            "y": 110,
+            "w": 240,
+            "h": 170,
             "label": "The tee",
             "color": "blue",
             "o": 0,
-            "size": 22
+            "size": 22,
+            "tagW": 190,
+            "tag": [
+              -230,
+              -30
+            ]
+          },
+          {
+            "id": "left",
+            "type": "card",
+            "prop": "golf-ball",
+            "x": 370,
+            "y": 145,
+            "w": 100,
+            "h": 100,
+            "on": "right",
+            "label": "The golf ball",
+            "color": "blue",
+            "o": 0,
+            "size": 22,
+            "tagW": 190,
+            "tag": [
+              230,
+              -50
+            ]
           },
           {
             "id": "thing",
-            "type": "stamp",
-            "x": 340,
-            "y": 20,
-            "w": 120,
-            "label": "THE RIM",
+            "type": "card",
+            "tie": "right.chip",
+            "x": 180,
+            "y": 265,
+            "label": "The rim",
             "color": "gold",
             "o": 0,
-            "s": 0.4,
-            "size": 18
+            "size": 20
           },
           {
             "id": "act",
             "type": "stamp",
-            "x": 340,
-            "y": 160,
-            "w": 120,
+            "x": 30,
+            "y": 15,
+            "w": 100,
             "label": "CHIPS",
             "color": "fg",
             "o": 0,
@@ -120,8 +132,8 @@
           {
             "id": "line",
             "type": "text",
-            "x": 400,
-            "y": 325,
+            "x": 300,
+            "y": 340,
             "label": "It sat fine until the edge chipped.",
             "color": "pink",
             "size": 22,
@@ -140,8 +152,7 @@
                 "o": 1
               },
               "thing": {
-                "o": 1,
-                "s": 1
+                "o": 1
               }
             }
           },
@@ -153,6 +164,9 @@
                 "o": 1,
                 "s": 1,
                 "shake": true
+              },
+              "right": {
+                "chipped": true
               }
             }
           },
@@ -174,6 +188,15 @@
             "set": {
               "line": {
                 "o": 1
+              },
+              "left": {
+                "on": null,
+                "x": 600,
+                "y": 150,
+                "tag": [
+                  0,
+                  95
+                ]
               }
             }
           },
@@ -192,8 +215,10 @@
                 "color": "green"
               },
               "thing": {
-                "label": "LABRUM",
-                "size": 18
+                "label": "The labrum",
+                "sub": "torn off",
+                "size": 18,
+                "color": "pink"
               },
               "act": {
                 "label": "TEARS OFF",

@@ -913,7 +913,7 @@ if (loaded.some((c) => c.units.some(shipsScale))) shipJs(path.join(DIR, 'scale.j
 // The lit table (Bryan, 22 Nov 2026: "A, lit table"): the scene engine, its rules, and the two typefaces printed on the
 // things on the table, which ship whatever type the page itself is set in.
 if (loaded.some((c) => c.units.some((u) => u.scene))) {
-  for (const f of ['scene.js', 'scene-plan.js']) shipJs(path.join(DIR, f), path.join(OUT, f));
+  for (const f of ['scene.js', 'scene-plan.js', 'scene-props.js']) shipJs(path.join(DIR, f), path.join(OUT, f));
   fs.mkdirSync(path.join(OUT, 'fonts'), { recursive: true });
   for (const f of ['bricolage-grotesque-latin.woff2', 'fraunces-latin.woff2']) fs.copyFileSync(path.join(DIR, 'fonts', f), path.join(OUT, 'fonts', f));
 }
