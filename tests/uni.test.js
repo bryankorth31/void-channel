@@ -803,6 +803,19 @@ test('the crystal is a bottle of supercooled water on the lit table, shipped wit
   }
 });
 
+test('draft lessons get real objects too: every object a draft scene names is in the library', () => {
+  // Bryan, 23 Nov 2026: "Yes, drafts next". The drafts given objects so far; each names only objects the library has.
+  const lib = fs.readFileSync(path.join(uni.UNI, 'scene-props.js'), 'utf8'), dir = path.join(uni.UNI, 'drafts');
+  const done = ['human-nature-1', 'human-nature-3', 'human-nature-4', 'human-nature-5', 'human-nature-6'];
+  for (const f of fs.readdirSync(dir).filter((x) => x.endsWith('.json'))) {
+    const sc = (JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')).unit || {}).scene; if (!sc) continue;
+    const props = sc.actors.filter((a) => a.prop);
+    for (const a of props) assert.ok(new RegExp('\n  ' + a.prop + ': \{').test(lib), f + ': no object called ' + a.prop);
+    for (const a of sc.actors.filter((x) => x.tie)) assert.ok(props.some((p) => p.id === String(a.tie).split('.')[0]), f + ': ' + a.id + ' is tied to nothing');
+    if (done.includes(f.replace('.json', ''))) { assert.ok(props.length >= 2, f + ' is still on paper'); assert.ok(!sc.actors.some((a) => a.type === 'stamp' || a.type === 'arrow'), f + ' still has flat stamps or arrows'); }
+  }
+});
+
 test('real objects on the lit table: every object a scene names is in the library, tied and rested on real objects', () => {
   // Bryan, 22 Nov 2026: "A, objects with tags". The objects are modelled in scene-props.js; a scene names them.
   const lib = fs.readFileSync(path.join(uni.UNI, 'scene-props.js'), 'utf8');

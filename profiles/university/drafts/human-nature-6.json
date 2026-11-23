@@ -158,56 +158,123 @@
         {
           "id": "left",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "scoreboard",
+          "score": "21-24",
           "label": "Hard game",
           "color": "blue",
+          "size": 22,
+          "x": 165,
+          "y": -5,
+          "w": 170,
+          "h": 110,
+          "tagW": 150,
+          "tagH": 70,
+          "tag": [
+            -170,
+            30
+          ]
+        },
+        {
+          "id": "bR",
+          "type": "card",
           "o": 0,
-          "size": 22
+          "prop": "scoreboard",
+          "score": "21-24",
+          "label": "",
+          "x": 475,
+          "y": -5,
+          "w": 170,
+          "h": 110
+        },
+        {
+          "id": "refL",
+          "type": "card",
+          "o": 0,
+          "prop": "figure",
+          "pose": "stand",
+          "look": "ref",
+          "turn": 0.4,
+          "label": "",
+          "x": 160,
+          "y": 130,
+          "w": 50,
+          "h": 130
+        },
+        {
+          "id": "thing",
+          "type": "card",
+          "o": 0,
+          "prop": "figure",
+          "pose": "stand",
+          "look": "dark",
+          "turn": -0.4,
+          "label": "The players",
+          "color": "gold",
+          "size": 18,
+          "x": 285,
+          "y": 135,
+          "w": 50,
+          "h": 130,
+          "tagW": 150,
+          "tagH": 70,
+          "tag": [
+            0,
+            105
+          ]
         },
         {
           "id": "right",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "figure",
+          "pose": "stand",
+          "look": "ref",
+          "turn": 0.4,
           "label": "Crooked referee",
           "color": "blue",
-          "o": 0,
-          "size": 18
+          "size": 18,
+          "x": 475,
+          "y": 130,
+          "w": 50,
+          "h": 130,
+          "tagW": 180,
+          "tagH": 70,
+          "tag": [
+            -10,
+            110
+          ]
         },
         {
-          "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "THE PLAYERS",
-          "color": "gold",
+          "id": "cash",
+          "type": "card",
           "o": 0,
-          "s": 0.4,
-          "size": 14
+          "prop": "bill",
+          "label": "",
+          "x": 365,
+          "y": 210,
+          "w": 130,
+          "h": 60
         },
         {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "PLAY ON",
-          "color": "fg",
+          "id": "pR",
+          "type": "card",
           "o": 0,
-          "s": 0.4,
-          "size": 18
+          "prop": "figure",
+          "pose": "stand",
+          "look": "dark",
+          "turn": -0.4,
+          "label": "",
+          "x": 600,
+          "y": 135,
+          "w": 50,
+          "h": 130
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
+          "y": 348,
           "label": "Hardship hurts. Betrayal breaks.",
           "color": "pink",
           "size": 22,
@@ -222,12 +289,14 @@
             "left": {
               "o": 1
             },
-            "right": {
+            "bR": {
               "o": 1
             },
             "thing": {
-              "o": 1,
-              "s": 1
+              "o": 1
+            },
+            "pR": {
+              "o": 1
             }
           }
         },
@@ -235,9 +304,8 @@
           "say": "In one, the referee is fair.",
           "dur": 2.4,
           "set": {
-            "act": {
+            "refL": {
               "o": 1,
-              "s": 1,
               "shake": true
             }
           }
@@ -247,10 +315,8 @@
           "dur": 2.6,
           "set": {
             "left": {
-              "sub": "tired but whole"
-            },
-            "right": {
-              "sub": "stop trusting the game"
+              "sub": "tired but whole",
+              "score": "27-24"
             }
           }
         },
@@ -258,6 +324,19 @@
           "say": "In the other, the referee cheats, and something breaks.",
           "dur": 2.6,
           "set": {
+            "right": {
+              "o": 1,
+              "sub": "and they stop trusting the game"
+            },
+            "cash": {
+              "o": 1
+            },
+            "pR": {
+              "slump": true
+            },
+            "bR": {
+              "score": "3-24"
+            },
             "line": {
               "o": 1
             }
@@ -278,13 +357,11 @@
               "color": "green"
             },
             "thing": {
-              "label": "SOLDIERS",
+              "label": "Soldiers",
               "size": 18
             },
-            "act": {
-              "label": "ENDURE",
-              "size": 18,
-              "color": "pink"
+            "pR": {
+              "slump": true
             },
             "line": {
               "label": "Betrayal of what is right injures the soul.",

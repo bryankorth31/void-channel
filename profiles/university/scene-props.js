@@ -342,22 +342,26 @@ export const PROPS = {
       // "pose": "stand": the figure stands on its own feet, arms down, turned "turn" radians (0 faces you)
       if (a.pose === 'stand') {
         // "look": "suit" dresses it: navy cloth, black shoes, a white collar and a red tie; the head and hands stay wood
-        const suit = a.look === 'suit', navy = new THREE.MeshStandardMaterial({ color: 0x1f2a44, roughness: 0.75 }), black = new THREE.MeshStandardMaterial({ color: 0x111113, roughness: 0.3, envMap: ctx.env, envMapIntensity: 0.6 });
-        const dress = (m, k) => { if (suit && k !== 'skin') m.material = k === 'shoe' ? black : navy; return m; };
+        // "look": "ref" puts it in a referee's black and white stripes, black trousers and shoes
+        const suit = a.look === 'suit', ref = a.look === 'ref', navy = new THREE.MeshStandardMaterial({ color: 0x1f2a44, roughness: 0.75 }), black = new THREE.MeshStandardMaterial({ color: 0x111113, roughness: 0.3, envMap: ctx.env, envMapIntensity: 0.6 });
+        let stripes = null;
+        if (ref) { const c = document.createElement('canvas'); c.width = 128; c.height = 16; const g = c.getContext('2d'); for (let i = 0; i < 8; i++) { g.fillStyle = i % 2 ? '#141414' : '#f2f0ea'; g.fillRect(i * 16, 0, 16, 16); } const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; stripes = new THREE.MeshStandardMaterial({ map: t, roughness: 0.8 }); }
+        const trousers = new THREE.MeshStandardMaterial({ color: 0x161618, roughness: 0.8 });
+        const dress = (m, k) => { if (suit && k !== 'skin') m.material = k === 'shoe' ? black : navy; if (ref && k !== 'skin') m.material = k === 'shoe' ? black : k === 'leg' ? trousers : stripes; return m; };
         [-1, 1].forEach((sd) => {
           dress(part(new THREE.BoxGeometry(0.09 * s, 0.05 * s, 0.17 * s), sd * 0.07 * s, 0.025 * s, 0.03 * s), 'shoe');
-          dress(part(cap(0.055 * s, 0.17 * s), sd * 0.07 * s, 0.17 * s, 0), 'cloth');
-          dress(part(ball(0.06 * s), sd * 0.07 * s, 0.3 * s, 0), 'cloth');
-          dress(part(cap(0.07 * s, 0.16 * s), sd * 0.075 * s, 0.4 * s, 0), 'cloth');
-          dress(part(ball(0.045 * s), sd * 0.15 * s, 0.78 * s, 0), 'cloth');
-          dress(part(cap(0.038 * s, 0.14 * s), sd * 0.16 * s, 0.67 * s, 0, 0, sd * 0.08), 'cloth');
-          dress(part(ball(0.034 * s), sd * 0.17 * s, 0.57 * s, 0), 'cloth');
-          dress(part(cap(0.033 * s, 0.13 * s), sd * 0.175 * s, 0.47 * s, 0.01 * s, 0.08, 0), 'cloth');
+          dress(part(cap(0.055 * s, 0.17 * s), sd * 0.07 * s, 0.17 * s, 0), 'leg');
+          dress(part(ball(0.06 * s), sd * 0.07 * s, 0.3 * s, 0), 'leg');
+          dress(part(cap(0.07 * s, 0.16 * s), sd * 0.075 * s, 0.4 * s, 0), 'leg');
+          dress(part(ball(0.045 * s), sd * 0.15 * s, 0.78 * s, 0), 'arm');
+          dress(part(cap(0.038 * s, 0.14 * s), sd * 0.16 * s, 0.67 * s, 0, 0, sd * 0.08), 'arm');
+          dress(part(ball(0.034 * s), sd * 0.17 * s, 0.57 * s, 0), 'arm');
+          dress(part(cap(0.033 * s, 0.13 * s), sd * 0.175 * s, 0.47 * s, 0.01 * s, 0.08, 0), 'arm');
           part(ball(0.036 * s), sd * 0.175 * s, 0.37 * s, 0.02 * s);
         });
-        dress(part(cap(0.1 * s, 0.1 * s), 0, 0.51 * s, 0, 0, Math.PI / 2), 'cloth');
-        dress(part(ball(0.065 * s), 0, 0.59 * s, 0), 'cloth');
-        dress(part(cap(0.11 * s, 0.08 * s), 0, 0.71 * s, 0), 'cloth');
+        dress(part(cap(0.1 * s, 0.1 * s), 0, 0.51 * s, 0, 0, Math.PI / 2), 'leg');
+        dress(part(ball(0.065 * s), 0, 0.59 * s, 0), 'torso');
+        dress(part(cap(0.11 * s, 0.08 * s), 0, 0.71 * s, 0), 'torso');
         part(cap(0.035 * s, 0.04 * s), 0, 0.85 * s, 0);
         const hd = part(ball(0.08 * s), 0, 0.95 * s, 0.01 * s); hd.scale.set(0.85, 1.15, 0.95);
         if (suit) {
@@ -368,7 +372,12 @@ export const PROPS = {
         const group = new THREE.Group(); group.add(body);
         return {
           group, top: 1.05 * s, anchor: () => new THREE.Vector3(0.1 * s, 0.5 * s, 0.08 * s).applyAxisAngle(new THREE.Vector3(0, 1, 0), a.turn || 0),
-          update(A, B, e) { const ta = (A && A.turn != null ? A.turn : a.turn) || 0, tb = (B && B.turn != null ? B.turn : ta); body.rotation.y = lerp(ta, tb, e); },
+          // "tremble": true shakes it at the knees; "slump": true folds it forward, beaten
+          update(A, B, e) {
+            const ta = (A && A.turn != null ? A.turn : a.turn) || 0, tb = (B && B.turn != null ? B.turn : ta); body.rotation.y = lerp(ta, tb, e);
+            const tr = lerp(flag(A, 'tremble'), flag(B, 'tremble'), e), sl = lerp(flag(A, 'slump'), flag(B, 'slump'), smooth(e));
+            body.rotation.z = Math.sin(e * 90) * 0.035 * tr; body.rotation.x = 0.42 * sl; body.position.y = -0.04 * s * sl;
+          },
         };
       }
       // pelvis on the seat, thighs forward, shins down to the floor in front of the seat
@@ -478,7 +487,8 @@ export const PROPS = {
       const appleMat = new THREE.MeshStandardMaterial({ color: 0xb3262a, roughness: 0.4, envMap: ctx.env, envMapIntensity: 0.4 });
       [[0.18, 0.12], [0.3, -0.05], [0.08, -0.12]].forEach(([x, z]) => { const ap = shadowed(new THREE.Mesh(new THREE.SphereGeometry(0.085 * s, 20, 14), appleMat)); ap.position.set(x * s, H * 0.92, z * s); group.add(ap); });
       const milk = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.16 * s, 0.42 * s, 0.16 * s), new THREE.MeshStandardMaterial({ color: 0xf2f2ee, roughness: 0.6 }))); milk.position.set(-0.32 * s, H * 0.75, 0.12 * s); group.add(milk);
-      return { group, top: H + W * 0.42, anchor: () => new THREE.Vector3(W * 0.3, H * 0.5, D / 2), update() {} };
+      // something put "on" it rests among the groceries at the rim, not up on the handle
+      return { group, top: H * 0.95, anchor: () => new THREE.Vector3(W * 0.3, H * 0.5, D / 2), update() {} };
     },
   },
   // A pizza on a board, cut into "slices" equal slices; your "mine" slices are pulled a little way out from the rest;
@@ -863,6 +873,8 @@ export const PROPS = {
       const sign = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.44 * L, 0.11 * L, 0.012 * L), [edgeMat, edgeMat, edgeMat, edgeMat, signMat, signMat])); sign.position.set(-0.06 * L, 0.51 * L, 0); car.add(sign);
       const foot = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.2 * L, 0.012 * L, 0.05 * L), edgeMat)); foot.position.set(0, -0.058 * L, 0); sign.add(foot);
       const learner = (v) => (v && v.learner != null ? !!v.learner : !!a.learner);
+      // "look": "wreck" leaves it on its roof by the road, its paint dulled and scuffed
+      if (a.look === 'wreck') { car.rotation.z = Math.PI + 0.08; car.rotation.y = 0.5; car.position.y = 0.46 * L; paint.color.set(0x4e1612); paint.roughness = 0.75; paint.clearcoat = 0.1; }
       const group = new THREE.Group(); group.add(car);
       return { group, top: 0.45 * L + (a.learner != null ? 0.1 * L : 0), anchor: () => new THREE.Vector3(-0.15 * L, 0.34 * L, (Wd * 0.4 + 0.02 * L) * 0.97).applyAxisAngle(new THREE.Vector3(0, 1, 0), -0.42), update(A, B, e) { sign.visible = e < 0.5 ? learner(A) : learner(B); } };
     },
@@ -1059,11 +1071,17 @@ export const PROPS = {
     build(a, ctx) {
       const s = Math.min(a.w || 180, a.h || 180) * ctx.S, W = 0.95 * s, H = 0.48 * s, D = 0.12 * s, lift = 0.14 * s;
       const c = document.createElement('canvas'); c.width = 760; c.height = 384; const g = c.getContext('2d');
-      g.fillStyle = '#0d0d0f'; g.fillRect(0, 0, 760, 384);
-      g.fillStyle = '#e8e4da'; g.font = '700 46px "VU Print"'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText('HOME', 190, 62); g.fillText('AWAY', 570, 62);
-      const [h, w] = String(a.score || '0-0').split('-');
-      g.shadowColor = '#ff9a1f'; g.shadowBlur = 24; g.fillStyle = '#ffb02e'; g.font = '800 200px "VU Print"'; g.fillText(h, 190, 230); g.fillText(w, 570, 230);
-      g.shadowBlur = 0; g.fillStyle = '#2a2a2e'; g.fillRect(378, 100, 4, 250);
+      // the score can change from step to step ("score" on a step), and the figures are lit again
+      let shown = null;
+      const paint = (score) => {
+        shown = score; g.shadowBlur = 0;
+        g.fillStyle = '#0d0d0f'; g.fillRect(0, 0, 760, 384);
+        g.fillStyle = '#e8e4da'; g.font = '700 46px "VU Print"'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText('HOME', 190, 62); g.fillText('AWAY', 570, 62);
+        const [h, w] = String(score || '0-0').split('-');
+        g.shadowColor = '#ff9a1f'; g.shadowBlur = 24; g.fillStyle = '#ffb02e'; g.font = '800 200px "VU Print"'; g.fillText(h, 190, 230); g.fillText(w, 570, 230);
+        g.shadowBlur = 0; g.fillStyle = '#2a2a2e'; g.fillRect(378, 100, 4, 250);
+      };
+      paint(a.score);
       const tx = new THREE.CanvasTexture(c); tx.colorSpace = THREE.SRGBColorSpace;
       const shell = new THREE.MeshStandardMaterial({ color: 0x1a1a1d, metalness: 0.4, roughness: 0.5, envMap: ctx.env, envMapIntensity: 0.5 });
       const face = new THREE.MeshStandardMaterial({ map: tx, emissive: 0xffffff, emissiveMap: tx, emissiveIntensity: 0.9, roughness: 0.35 });
@@ -1072,7 +1090,7 @@ export const PROPS = {
       [-1, 1].forEach((sd) => { const leg = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.04 * s, lift + 0.05 * s, 0.04 * s), shell)); leg.position.set(sd * W * 0.38, (lift + 0.05 * s) / 2, 0); group.add(leg); const ft = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.06 * s, 0.025 * s, D * 1.8), shell)); ft.position.set(sd * W * 0.38, 0.0125 * s, 0); group.add(ft); });
       const glow = new THREE.PointLight(0xffa030, 0, 2 * s, 2); glow.position.set(0, lift + H / 2, D / 2 + 0.3 * s); group.add(glow);
       const seen = (v) => (v && v.o != null ? v.o : 1);
-      return { group, top: lift + H, anchor: () => new THREE.Vector3(W * 0.38, 0.03 * s, D * 0.9), update(A, B, e) { glow.intensity = 0.8 * lerp(seen(A), seen(B), e); } };
+      return { group, top: lift + H, anchor: () => new THREE.Vector3(W * 0.38, 0.03 * s, D * 0.9), update(A, B, e) { glow.intensity = 0.8 * lerp(seen(A), seen(B), e); const want = (e < 0.5 ? A : B).score || a.score; if (want !== shown) { paint(want); tx.needsUpdate = true; } } };
     },
   },
   // An amber pill bottle with a white ridged cap and a printed label ("front"), two capsules spilled beside it.
@@ -1288,6 +1306,155 @@ export const PROPS = {
       const group = new THREE.Group(); group.add(ring, light);
       const seen = (v) => (v && v.o != null ? v.o : 1);
       return { group, top: 0.1 * s, anchor: () => new THREE.Vector3(R, 0.08 * s, 0), update(A, B, e) { light.intensity = 2.5 * lerp(seen(A), seen(B), e); ring.rotation.z = e * 0.3; } };
+    },
+  },
+  // A shopping list on a sheet torn from a notepad: ruled blue lines, a red margin, the items written by hand
+  // ("items", split by "|"), the ones bought crossed off ("done": how many).
+  list: {
+    build(a, ctx) {
+      const W = (a.w || 160) * ctx.S * 0.62, D = W * 1.35;
+      const items = String(a.items || 'Milk|Eggs|Bread|Apples|Rice|Spinach').split('|');
+      const c = document.createElement('canvas'); c.width = 600; c.height = 810; const g = c.getContext('2d');
+      noise(g, 600, 810, '#f8f5e8', 5);
+      g.strokeStyle = 'rgba(70,120,190,0.45)'; g.lineWidth = 2; for (let y = 150; y < 800; y += 82) { g.beginPath(); g.moveTo(0, y); g.lineTo(600, y); g.stroke(); }
+      g.strokeStyle = 'rgba(200,60,60,0.55)'; g.beginPath(); g.moveTo(70, 0); g.lineTo(70, 810); g.stroke();
+      // the torn top edge, where it came off the pad
+      g.fillStyle = '#1b130c'; for (let x = 0; x < 600; x += 10) g.fillRect(x, 0, 10, 4 + rnd() * 8);
+      g.fillStyle = '#20324f'; g.textBaseline = 'alphabetic'; g.font = 'italic 600 60px "VU Hand"'; g.fillText('List', 96, 120);
+      g.font = 'italic 500 56px "VU Hand"';
+      items.forEach((t, i) => { const y = 140 + (i + 1) * 82 - 14; g.fillText(t, 100, y); if (i < (a.done || 0)) { g.strokeStyle = '#20324f'; g.lineWidth = 4; g.beginPath(); g.moveTo(92, y - 18); g.lineTo(110 + g.measureText(t).width, y - 22); g.stroke(); } });
+      const tx = new THREE.CanvasTexture(c); tx.colorSpace = THREE.SRGBColorSpace; tx.anisotropy = 8;
+      const geo = new THREE.PlaneGeometry(W, D, 10, 14), p = geo.attributes.position;
+      for (let i = 0; i < p.count; i++) { const u = p.getX(i) / W + 0.5, v = p.getY(i) / D + 0.5; p.setZ(i, 0.008 * Math.sin(Math.PI * u) + 0.02 * W * v * v); }
+      geo.computeVertexNormals(); geo.rotateX(-Math.PI / 2);
+      const m = shadowed(new THREE.Mesh(geo, new THREE.MeshStandardMaterial({ map: tx, roughness: 0.9, side: THREE.DoubleSide }))); m.position.y = 0.004; m.rotation.y = 0.06;
+      const group = new THREE.Group(); group.add(m);
+      return { group, top: 0.02, anchor: () => new THREE.Vector3(W * 0.4, 0.01, D * 0.3), update() {} };
+    },
+  },
+  // A bag of crisps: a puffed foil pillow crimped at both ends, printed red and yellow with CRUNCH and a crisp.
+  chips: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 110, a.h || 140) * ctx.S, W = 0.6 * s, H = 0.82 * s, T = 0.2 * s;
+      const c = document.createElement('canvas'); c.width = 480; c.height = 660; const g = c.getContext('2d');
+      const bg = g.createLinearGradient(0, 0, 480, 660); bg.addColorStop(0, '#d8241c'); bg.addColorStop(1, '#8e120d'); g.fillStyle = bg; g.fillRect(0, 0, 480, 660);
+      g.fillStyle = '#c9c9c9'; g.fillRect(0, 0, 480, 46); g.fillRect(0, 614, 480, 46);
+      for (let x = 0; x < 480; x += 12) { g.fillStyle = 'rgba(0,0,0,0.18)'; g.fillRect(x, 0, 5, 46); g.fillRect(x, 614, 5, 46); }
+      g.fillStyle = '#ffd23a'; g.beginPath(); g.ellipse(240, 220, 200, 92, -0.12, 0, 7); g.fill();
+      g.fillStyle = '#7a0d0a'; g.font = '800 104px "VU Print"'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.save(); g.translate(240, 220); g.rotate(-0.12); g.fillText('CRUNCH', 0, 6); g.restore();
+      g.fillStyle = '#fff'; g.font = '700 34px "VU Print"'; g.fillText('SEA SALT', 240, 338);
+      // a crisp, golden and curled
+      g.fillStyle = '#f0b545'; g.beginPath(); g.ellipse(240, 480, 120, 78, 0.3, 0, 7); g.fill(); g.fillStyle = 'rgba(160,90,20,0.45)'; for (let i = 0; i < 14; i++) { g.beginPath(); g.arc(160 + rnd() * 160, 430 + rnd() * 100, 4 + rnd() * 6, 0, 7); g.fill(); }
+      const tx = new THREE.CanvasTexture(c); tx.colorSpace = THREE.SRGBColorSpace; tx.anisotropy = 8;
+      const foil = new THREE.MeshPhysicalMaterial({ map: tx, metalness: 0.35, roughness: 0.32, clearcoat: 0.7, envMap: ctx.env, envMapIntensity: 1.1 });
+      const geo = new THREE.PlaneGeometry(W, H, 24, 32), p = geo.attributes.position;
+      const back = geo.clone();
+      // puffed in the middle, flat and crinkled at the crimped ends
+      const puff = (q, sign) => { for (let i = 0; i < q.count; i++) { const u = q.getX(i) / W + 0.5, v = q.getY(i) / H + 0.5, end = v < 0.08 || v > 0.92 ? 0 : 1; const z = sign * T / 2 * Math.pow(Math.sin(Math.PI * u), 0.6) * Math.pow(Math.sin(Math.PI * Math.min(1, Math.max(0, (v - 0.06) / 0.88))), 0.5) * end; q.setZ(i, z + (rnd() - 0.5) * 0.004 * s); q.setX(i, q.getX(i) * (1 - 0.06 * end * Math.sin(Math.PI * v))); } };
+      puff(p, 1); puff(back.attributes.position, -1); geo.computeVertexNormals(); back.computeVertexNormals();
+      const front = shadowed(new THREE.Mesh(geo, foil)), rear = shadowed(new THREE.Mesh(back, new THREE.MeshStandardMaterial({ color: 0xa4170f, metalness: 0.3, roughness: 0.4, side: THREE.BackSide })));
+      const bag = new THREE.Group(); bag.add(front, rear); bag.rotation.x = -Math.PI / 2 + 0.12; bag.rotation.z = 0.2; bag.position.y = T / 2;
+      const group = new THREE.Group(); group.add(bag);
+      return { group, top: T, anchor: () => new THREE.Vector3(W * 0.42, T * 0.5, H * 0.2), update() {} };
+    },
+  },
+  // A car's steering wheel on its column, rising out of a slice of dashboard, tipped toward you. "turn": how far it
+  // is turned, in radians (minus turns it to the left). Anchors: 'left' and 'right', where two hands would hold it.
+  wheel: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 150, a.h || 150) * ctx.S, R = 0.36 * s;
+      const leather = new THREE.MeshPhysicalMaterial({ color: 0x1d1b1a, roughness: 0.55, clearcoat: 0.2, envMap: ctx.env, envMapIntensity: 0.5 });
+      const metal = new THREE.MeshStandardMaterial({ color: 0x9aa0a6, metalness: 0.9, roughness: 0.3, envMap: ctx.env });
+      const dashMat = new THREE.MeshStandardMaterial({ color: 0x2a2a2d, roughness: 0.8 });
+      const group = new THREE.Group();
+      // the dashboard: a low rounded block behind the wheel, with two dials
+      const dash = shadowed(new THREE.Mesh(new THREE.BoxGeometry(1.15 * s, 0.26 * s, 0.34 * s), dashMat)); dash.position.set(0, 0.13 * s, -0.3 * s); group.add(dash);
+      const hood = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(0.17 * s, 0.17 * s, 1.15 * s, 24, 1, false, 0, Math.PI), dashMat)); hood.rotation.z = Math.PI / 2; hood.position.set(0, 0.26 * s, -0.3 * s); hood.scale.set(1, 1, 1); group.add(hood);
+      [-0.13, 0.13].forEach((x) => { const d = new THREE.Mesh(new THREE.CircleGeometry(0.07 * s, 32), new THREE.MeshStandardMaterial({ color: 0x0c0c0e, emissive: 0xff9a3c, emissiveIntensity: 0.15 })); d.position.set(x * s, 0.27 * s, -0.12 * s); d.rotation.x = -0.6; group.add(d); });
+      const tilt = new THREE.Group(); tilt.position.set(0, 0.42 * s, 0.02 * s); tilt.rotation.x = -0.55; group.add(tilt);
+      const col = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(0.045 * s, 0.06 * s, 0.4 * s, 20), dashMat)); col.rotation.x = Math.PI / 2; col.position.z = -0.2 * s; tilt.add(col);
+      const spin = new THREE.Group(); tilt.add(spin);
+      const rim = shadowed(new THREE.Mesh(new THREE.TorusGeometry(R, 0.045 * s, 16, 72), leather)); spin.add(rim);
+      // three spokes and the hub with its horn pad
+      [Math.PI / 2 + Math.PI, Math.PI / 2 + Math.PI * 1.67, Math.PI / 2 + Math.PI * 0.33].forEach((an, i) => { const sp = shadowed(new THREE.Mesh(new THREE.BoxGeometry(R * 0.9, 0.05 * s, 0.03 * s), i ? leather : metal)); sp.position.set(Math.cos(an) * R * 0.5, Math.sin(an) * R * 0.5, 0); sp.rotation.z = an; spin.add(sp); });
+      const hub = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(0.12 * s, 0.13 * s, 0.07 * s, 32), leather)); hub.rotation.x = Math.PI / 2; hub.position.z = 0.02 * s; spin.add(hub);
+      const badge = new THREE.Mesh(new THREE.CircleGeometry(0.035 * s, 24), metal); badge.position.z = 0.06 * s; spin.add(badge);
+      const turn = (v) => (v && v.turn != null ? v.turn : a.turn || 0);
+      const grip = (sd) => new THREE.Vector3(sd * R, 0, 0.03 * s);
+      return {
+        group, top: 0.42 * s + R,
+        anchor: (n) => { group.updateMatrixWorld(); const p = n === 'left' ? grip(-1) : n === 'right' ? grip(1) : new THREE.Vector3(0, -R, 0.03 * s); return group.worldToLocal(spin.localToWorld(p)); },
+        update(A, B, e) { spin.rotation.z = -lerp(turn(A), turn(B), smooth(e)); },
+      };
+    },
+  },
+  // A glass skywalk: a walkway of glass reaching out from the top of a cliff over a long drop, glass sides and steel
+  // rails, and far below, on the table, a little town of roofs and trees. Anchor 'glass' is the middle of the glass.
+  skywalk: {
+    build(a, ctx) {
+      const s = (a.w || 320) * ctx.S, P = 0.5 * s, L = 0.55 * s, Wd = 0.2 * s, T = 0.02 * s, C = 0.32 * s;
+      // layered sandstone: grainy, with darker bands of strata running across it
+      const rc = document.createElement('canvas'); rc.width = rc.height = 256; const rg = rc.getContext('2d'); noise(rg, 256, 256, '#6e6a63', 40);
+      for (let y = 0; y < 256; y += 6 + rnd() * 14) { rg.fillStyle = 'rgba(' + (rnd() < 0.5 ? '40,38,36' : '150,145,135') + ',' + (0.12 + rnd() * 0.2) + ')'; rg.fillRect(0, y, 256, 2 + rnd() * 5); }
+      const rt = new THREE.CanvasTexture(rc); rt.colorSpace = THREE.SRGBColorSpace; rt.wrapS = rt.wrapT = THREE.RepeatWrapping;
+      const rock = new THREE.MeshStandardMaterial({ map: rt, roughness: 0.95 });
+      const steel = new THREE.MeshStandardMaterial({ color: 0xb8bcc0, metalness: 0.9, roughness: 0.25, envMap: ctx.env });
+      const glassM = new THREE.MeshPhysicalMaterial({ color: 0xbfe6f0, roughness: 0.04, transparent: true, opacity: 0.28, envMap: ctx.env, envMapIntensity: 1.6, depthWrite: false, side: THREE.DoubleSide });
+      const group = new THREE.Group();
+      // the cliff: one mass of grey rock, its faces broken into ledges and bulges, wider at the foot
+      const cx = L / 2 + C / 2;
+      const cg = new THREE.BoxGeometry(C, P, Wd * 2.4, 10, 14, 10), cp = cg.attributes.position;
+      const bump = (y) => Math.sin(y / P * 23) * 0.012 * s + Math.sin(y / P * 7.3) * 0.02 * s;
+      for (let k = 0; k < cp.count; k++) {
+        const x = cp.getX(k), y = cp.getY(k), z = cp.getZ(k), foot = (0.5 - y / P) * 0.12 * s;
+        const out = bump(y) + (rnd() - 0.5) * 0.018 * s + Math.max(0, foot);
+        if (Math.abs(x) > C / 2 - 1e-4) cp.setX(k, x + Math.sign(x) * out); if (Math.abs(z) > Wd * 1.2 - 1e-4) cp.setZ(k, z + Math.sign(z) * out);
+        if (y > P / 2 - 1e-4) cp.setY(k, y + (rnd() - 0.5) * 0.01 * s);
+      }
+      cg.computeVertexNormals();
+      const cliff = shadowed(new THREE.Mesh(cg, rock)); cliff.position.set(cx, P / 2, 0); group.add(cliff);
+      // the walkway reaches out from the cliff top; a steel beam frames its glass floor
+      const floor = new THREE.Mesh(new THREE.BoxGeometry(L, T, Wd), glassM); floor.position.set(0, P - T / 2, 0); floor.renderOrder = 2; group.add(floor);
+      [-1, 1].forEach((sd) => {
+        const beam = shadowed(new THREE.Mesh(new THREE.BoxGeometry(L + 0.04 * s, 0.025 * s, 0.015 * s), steel)); beam.position.set(-0.01 * s, P - 0.02 * s, sd * Wd / 2); group.add(beam);
+        const side = new THREE.Mesh(new THREE.PlaneGeometry(L, 0.11 * s), glassM); side.position.set(0, P + 0.055 * s, sd * Wd / 2); side.renderOrder = 2; group.add(side);
+        const rail = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(0.006 * s, 0.006 * s, L, 12), steel)); rail.rotation.z = Math.PI / 2; rail.position.set(0, P + 0.115 * s, sd * Wd / 2); group.add(rail);
+      });
+      const endRail = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(0.006 * s, 0.006 * s, Wd, 12), steel)); endRail.rotation.x = Math.PI / 2; endRail.position.set(-L / 2, P + 0.115 * s, 0); group.add(endRail);
+      const endGlass = new THREE.Mesh(new THREE.PlaneGeometry(Wd, 0.11 * s), glassM); endGlass.rotation.y = Math.PI / 2; endGlass.position.set(-L / 2, P + 0.055 * s, 0); endGlass.renderOrder = 2; group.add(endGlass);
+      // the town far below, under and beyond the glass
+      const roofs = [0x7a3b2e, 0x5d4a3a, 0x8a5a3c], walls = [0xcfc3a8, 0xa8b8c0, 0xd2b0a2];
+      for (let i = 0; i < 10; i++) {
+        const x = -L * 0.75 + rnd() * L * 1.1, z = (rnd() - 0.5) * Wd * 3, hs = 0.025 * s + rnd() * 0.02 * s;
+        const hse = shadowed(new THREE.Mesh(new THREE.BoxGeometry(hs, hs * 0.8, hs * 0.9), new THREE.MeshStandardMaterial({ color: walls[i % 3], roughness: 0.8 }))); hse.position.set(x, hs * 0.4, z); group.add(hse);
+        const rf = shadowed(new THREE.Mesh(new THREE.ConeGeometry(hs * 0.75, hs * 0.5, 4), new THREE.MeshStandardMaterial({ color: roofs[i % 3], roughness: 0.7 }))); rf.position.set(x, hs * 1.05, z); rf.rotation.y = Math.PI / 4; group.add(rf);
+      }
+      for (let i = 0; i < 16; i++) { const t = shadowed(new THREE.Mesh(new THREE.ConeGeometry(0.012 * s, 0.045 * s, 8), new THREE.MeshStandardMaterial({ color: 0x2f5a2a, roughness: 0.9 }))); t.position.set(-L * 0.8 + rnd() * L * 1.2, 0.022 * s, (rnd() - 0.5) * Wd * 3.2); group.add(t); }
+      return { group, top: P, anchor: (n) => (n === 'glass' ? new THREE.Vector3(-L * 0.2, P, Wd / 2) : new THREE.Vector3(cx, P * 0.4, Wd * 1.2)), update() {} };
+    },
+  },
+  // A phone pouch of black padded nylon, its corners rounded, a zip along the top and a red pull, PHONE on a woven
+  // label; "shut": true runs the pull along and zips it closed.
+  pouch: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 120, a.h || 160) * ctx.S, W = 0.62 * s, H = 0.95 * s, T = 0.05 * s, rc = 0.1 * s;
+      const nylon = new THREE.MeshPhysicalMaterial({ color: 0x232428, roughness: 0.8, sheen: 0.8, sheenColor: 0x6a6e78, sheenRoughness: 0.6 });
+      const sh = new THREE.Shape(); sh.moveTo(-W / 2 + rc, -H / 2); sh.lineTo(W / 2 - rc, -H / 2); sh.quadraticCurveTo(W / 2, -H / 2, W / 2, -H / 2 + rc); sh.lineTo(W / 2, H / 2 - rc); sh.quadraticCurveTo(W / 2, H / 2, W / 2 - rc, H / 2); sh.lineTo(-W / 2 + rc, H / 2); sh.quadraticCurveTo(-W / 2, H / 2, -W / 2, H / 2 - rc); sh.lineTo(-W / 2, -H / 2 + rc); sh.quadraticCurveTo(-W / 2, -H / 2, -W / 2 + rc, -H / 2);
+      const geo = new THREE.ExtrudeGeometry(sh, { depth: T, bevelEnabled: true, bevelThickness: 0.035 * s, bevelSize: 0.03 * s, bevelSegments: 8, curveSegments: 16 });
+      geo.rotateX(-Math.PI / 2);
+      const body = shadowed(new THREE.Mesh(geo, nylon)); body.position.y = 0.035 * s; body.rotation.y = -0.12;
+      const topY = T + 0.035 * s;
+      const teeth = new THREE.Mesh(new THREE.BoxGeometry(W * 0.86, 0.006 * s, 0.016 * s), new THREE.MeshStandardMaterial({ color: 0x9a9da2, metalness: 0.9, roughness: 0.35, envMap: ctx.env })); teeth.position.set(0, topY + 0.002 * s, -H * 0.38); body.add(teeth);
+      const pull = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.06 * s, 0.012 * s, 0.11 * s), new THREE.MeshStandardMaterial({ color: 0xb3261e, roughness: 0.5 }))); body.add(pull);
+      const lc = document.createElement('canvas'); lc.width = 320; lc.height = 110; const lg = lc.getContext('2d'); lg.fillStyle = '#d9d4c7'; lg.fillRect(0, 0, 320, 110); lg.strokeStyle = '#8c8676'; lg.lineWidth = 6; lg.strokeRect(8, 8, 304, 94); lg.fillStyle = '#1c1d20'; lg.font = '800 60px "VU Print"'; lg.textAlign = 'center'; lg.textBaseline = 'middle'; lg.fillText('PHONE', 160, 58);
+      const lt = new THREE.CanvasTexture(lc); lt.colorSpace = THREE.SRGBColorSpace;
+      const label = new THREE.Mesh(new THREE.PlaneGeometry(W * 0.66, W * 0.23), new THREE.MeshStandardMaterial({ map: lt, roughness: 0.8 })); label.rotation.x = -Math.PI / 2; label.position.set(0, topY + 0.003 * s, H * 0.12); body.add(label);
+      const group = new THREE.Group(); group.add(body);
+      const shut = (v) => (v && v.shut != null ? !!v.shut : !!a.shut);
+      return {
+        group, top: topY + 0.035 * s, anchor: () => new THREE.Vector3(W * 0.45, topY * 0.6, H * 0.3),
+        update(A, B, e) { const k = lerp(shut(A) ? 1 : 0, shut(B) ? 1 : 0, smooth(e)); pull.position.set(-W * 0.42 + W * 0.84 * k, topY + 0.008 * s, -H * 0.38); },
+      };
     },
   },
 };
