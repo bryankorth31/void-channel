@@ -184,6 +184,11 @@ test('the pop-out carries the game\'s sound (Bryan, 22 Nov 2026: "No, I wanted s
   // The pop-out's video takes the sound track and is muted only when there is none (a muted game, or sound not started).
   assert.ok(js.includes('if (sound) for (const t of sound.getAudioTracks()) stream.addTrack(t);'));
   assert.ok(js.includes("popVid = document.createElement('video'); popVid.muted = !sound;"));
-  assert.ok(js.includes('catch (e) { popVid = popCopy = null; home(); return; }'), 'a pop-out that fails gives the sound back');
-  assert.ok(js.includes("popVid.addEventListener('leavepictureinpicture', () => { home();"), 'so does closing it');
+  assert.ok(js.includes('catch (e) { drop(); popVid = popCopy = null; home(); return; }'), 'a pop-out that fails gives the sound back and leaves the page');
+  assert.ok(js.includes("popVid.addEventListener('leavepictureinpicture', () => { home(); drop();"), 'so does closing it');
+  // On the page, unseen (Bryan: "It closed again"): a video on no page was closed by Chrome 10 s after the window was minimized.
+  assert.ok(js.includes("popVid.className = 'pop-feed'; document.body.appendChild(popVid);"));
+  assert.ok(js.includes('const drop = () => { if (popVid) popVid.remove(); };'), 'and it comes off the page when the game comes back');
+  const css = fs.readFileSync(path.join(PLAY, 'play.css'), 'utf8');
+  assert.ok(css.includes('.pop-feed{position:fixed;left:0;top:0;width:1px;height:1px;opacity:0;pointer-events:none}'));
 });

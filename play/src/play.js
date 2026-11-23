@@ -958,12 +958,17 @@
     if (sound) for (const t of sound.getAudioTracks()) stream.addTrack(t);
     popVid = document.createElement('video'); popVid.muted = !sound; popVid.playsInline = true;
     popVid.srcObject = stream;
+    // On the page, unseen (Bryan, 22 Nov 2026: "It closed again" after a few minutes in other apps): Chrome closed a
+    // picture-in-picture video that was on no page some 10 s after the window was minimized; on the page it stayed open
+    // (measured on voidtv.net, 3 minutes minimized). It comes off the page when the game comes back.
+    popVid.className = 'pop-feed'; document.body.appendChild(popVid);
     const home = () => { if (runner && runner.soundHome) runner.soundHome(); };
-    try { await popVid.play(); await popVid.requestPictureInPicture(); } catch (e) { popVid = popCopy = null; home(); return; }
+    const drop = () => { if (popVid) popVid.remove(); };
+    try { await popVid.play(); await popVid.requestPictureInPicture(); } catch (e) { drop(); popVid = popCopy = null; home(); return; }
     pip = { close: () => document.exitPictureInPicture().catch(() => {}), video: true };
     setTimeout(poll, 16);
     $('b-pop').setAttribute('aria-pressed', 'true');
-    popVid.addEventListener('leavepictureinpicture', () => { home(); pip = null; popVid = popCopy = null; $('b-pop').setAttribute('aria-pressed', 'false'); });
+    popVid.addEventListener('leavepictureinpicture', () => { home(); drop(); pip = null; popVid = popCopy = null; $('b-pop').setAttribute('aria-pressed', 'false'); });
   }
   async function popOut() {
     if (popWay() === 'video') return popVideo();
