@@ -218,7 +218,7 @@ test('R3: the pages: the join page sends a phone to the room kind, the pad page 
   const fs = require('fs'), path = require('path');
   const P = path.join(__dirname, '..');
   const join = fs.readFileSync(path.join(P, 'join.html'), 'utf8');
-  assert.ok(join.includes("const PAGES = { pad: '/play/pad.html?r=', trivia: '/trivia/phone?r=', remote: '/remote/?r=' };"));
+  assert.ok(join.includes("const PAGES = { pad: '/play/pad.html?r=', trivia: '/trivia/phone?r=', remote: '/remote/?r=', cards: '/cards/hand?r=' };"));
   assert.ok(join.includes("const ALPHABET = '" + R.ALPHABET + "';"), 'the join page knows the same codes');
   const game = fs.readFileSync(path.join(P, 'game.html'), 'utf8');
   for (const bit of ['id="b-phones"', 'id="phones-qr"', '<script src="src/qr.js"></script>\n<script src="src/phones.js"></script>\n<script src="src/play.js"></script>']) assert.ok(game.includes(bit), bit);
