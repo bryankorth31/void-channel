@@ -696,7 +696,8 @@ export const PROPS = {
     build(a, ctx) {
       const s = Math.min(a.w || 130, a.h || 130) * ctx.S, R = 0.3 * s, H = 0.5 * s;
       const tin = new THREE.MeshStandardMaterial({ color: 0xc4c7ca, metalness: 0.9, roughness: 0.35, envMap: ctx.env, envMapIntensity: 1 });
-      const paintMat = new THREE.MeshStandardMaterial({ color: 0x3f7fb5, roughness: 0.25, envMap: ctx.env, envMapIntensity: 0.4 });
+      // "tint": another colour of paint, white for a primer
+      const paintMat = new THREE.MeshStandardMaterial({ color: a.tint != null ? a.tint : 0x3f7fb5, roughness: 0.25, envMap: ctx.env, envMapIntensity: 0.4 });
       const group = new THREE.Group();
       const can = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(R, R, H, 48, 1, true), tin)); can.position.y = H / 2; group.add(can);
       const band = new THREE.Mesh(new THREE.CylinderGeometry(R + 0.003, R + 0.003, H * 0.5, 48, 1, true), new THREE.MeshStandardMaterial({ color: 0xece6d6, roughness: 0.7 })); band.position.y = H * 0.45; group.add(band);
@@ -1990,6 +1991,157 @@ export const PROPS = {
         anchor: (n) => (n === 'pole' ? apex.clone().multiplyScalar(0.6) : n === 'ground' ? new THREE.Vector3(-0.38 * s, 0.04, 0.34 * s) : apex.clone().lerp(pegs[0], 0.6)),
         update(A, B, e) { setTo(lerp(tilt(A), tilt(B), smooth(e)), e < 0.5 ? snap(A) : snap(B)); },
       };
+    },
+  },
+  // A cast-iron frying pan with a long handle. "food": what is cooking in it, "eggs", "veg", "steak" or nothing.
+  pan: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 140, a.h || 140) * ctx.S, R = 0.36 * s;
+      const iron = new THREE.MeshStandardMaterial({ color: 0x232326, metalness: 0.6, roughness: 0.45, envMap: ctx.env, envMapIntensity: 0.6 });
+      const prof = [[0, 0.01], [R * 0.9, 0.01], [R, 0.08 * s], [R * 0.97, 0.085 * s], [R * 0.86, 0.025 * s], [0, 0.025 * s]].map(([x, y]) => new THREE.Vector2(x, y));
+      const group = new THREE.Group();
+      const body = shadowed(new THREE.Mesh(new THREE.LatheGeometry(prof, 64), iron)); group.add(body);
+      const handle = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.5 * s, 0.035 * s, 0.06 * s), iron)); handle.position.set(R + 0.24 * s, 0.075 * s, 0); handle.rotation.z = 0.12; group.add(handle);
+      const food = new THREE.Group(); food.position.y = 0.03 * s; group.add(food);
+      const white = new THREE.MeshStandardMaterial({ color: 0xf6f2e8, roughness: 0.4 }), yolk = new THREE.MeshStandardMaterial({ color: 0xf2a81c, roughness: 0.3 }), meat = new THREE.MeshStandardMaterial({ color: 0x6a3420, roughness: 0.7 });
+      const veg = [0x3d7a2a, 0xe0802a, 0xc8281e, 0xe8d24a].map((c) => new THREE.MeshStandardMaterial({ color: c, roughness: 0.6 }));
+      let shown = null;
+      const cook = (kind) => {
+        if (kind === shown) return; shown = kind;
+        while (food.children.length) food.remove(food.children[0]);
+        if (kind === 'eggs') [[-0.1, 0.06], [0.12, -0.05]].forEach(([x, z]) => { const w = new THREE.Mesh(new THREE.CylinderGeometry(0.12 * s, 0.12 * s, 0.01 * s, 24), white); w.scale.z = 0.85; w.position.set(x * s, 0, z * s); food.add(w); const y = new THREE.Mesh(new THREE.SphereGeometry(0.045 * s, 16, 10), yolk); y.scale.y = 0.5; y.position.set(x * s, 0.01 * s, z * s); food.add(y); });
+        if (kind === 'veg') for (let i = 0; i < 22; i++) { const v = new THREE.Mesh(new THREE.BoxGeometry(0.05 * s, 0.025 * s, 0.05 * s), veg[i % 4]); v.position.set((rnd() - 0.5) * 0.45 * s, 0.01 * s, (rnd() - 0.5) * 0.45 * s); v.rotation.y = rnd() * 3; food.add(v); }
+        if (kind === 'steak') { const m = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(0.16 * s, 0.15 * s, 0.04 * s, 20), meat)); m.scale.z = 0.7; m.position.y = 0.015 * s; food.add(m); }
+      };
+      cook(a.food || '');
+      return { group, top: 0.09 * s, anchor: () => new THREE.Vector3(R * 0.8, 0.05 * s, R * 0.6), update(A, B, e) { cook(((e < 0.5 ? A : B) || {}).food || a.food || ''); } };
+    },
+  },
+  // A big kitchen range: cream enamel, four burners on top, two oven doors with windows and a row of knobs.
+  stove: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 180, a.h || 180) * ctx.S, W = 0.9 * s, H = 0.8 * s, D = 0.55 * s;
+      const enamel = new THREE.MeshPhysicalMaterial({ color: 0xe8dfc8, roughness: 0.25, clearcoat: 0.8, envMap: ctx.env, envMapIntensity: 0.6 });
+      const black = new THREE.MeshStandardMaterial({ color: 0x18181a, roughness: 0.4 }), chrome = new THREE.MeshStandardMaterial({ color: 0xd0d4d8, metalness: 1, roughness: 0.2, envMap: ctx.env });
+      const group = new THREE.Group();
+      const body = shadowed(new THREE.Mesh(new THREE.BoxGeometry(W, H, D), enamel)); body.position.y = H / 2; group.add(body);
+      const top = shadowed(new THREE.Mesh(new THREE.BoxGeometry(W, 0.02 * s, D), black)); top.position.y = H + 0.01 * s; group.add(top);
+      [[-1, -1], [1, -1], [-1, 1], [1, 1]].forEach(([x, z]) => { const b = new THREE.Mesh(new THREE.TorusGeometry(0.09 * s, 0.012 * s, 8, 24), chrome); b.rotation.x = Math.PI / 2; b.position.set(x * W * 0.24, H + 0.025 * s, z * D * 0.22); group.add(b); });
+      [-1, 1].forEach((sd) => { const door = shadowed(new THREE.Mesh(new THREE.BoxGeometry(W * 0.42, H * 0.5, 0.02 * s), enamel)); door.position.set(sd * W * 0.23, H * 0.36, D / 2 + 0.01 * s); group.add(door); const win = new THREE.Mesh(new THREE.PlaneGeometry(W * 0.3, H * 0.22), new THREE.MeshPhysicalMaterial({ color: 0x1a1210, roughness: 0.05, envMap: ctx.env, envMapIntensity: 1.2 })); win.position.set(sd * W * 0.23, H * 0.4, D / 2 + 0.021 * s); group.add(win); const bar = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(0.01 * s, 0.01 * s, W * 0.36, 10), chrome)); bar.rotation.z = Math.PI / 2; bar.position.set(sd * W * 0.23, H * 0.64, D / 2 + 0.05 * s); group.add(bar); });
+      for (let i = 0; i < 6; i++) { const k = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(0.025 * s, 0.025 * s, 0.03 * s, 16), black)); k.rotation.x = Math.PI / 2; k.position.set(-W * 0.38 + i * W * 0.152, H * 0.88, D / 2 + 0.015 * s); group.add(k); }
+      const glow = new THREE.PointLight(0xff8a30, 0, 1.2 * s, 2); glow.position.set(0, H * 0.4, D / 2 + 0.3 * s); group.add(glow);
+      // "lit": true warms the oven windows
+      const on = (v) => (v && v.lit != null ? !!v.lit : !!a.lit);
+      return { group, top: H + 0.02 * s, anchor: () => new THREE.Vector3(W * 0.42, H * 0.2, D / 2), update(A, B, e) { glow.intensity = 1.2 * lerp(on(A) ? 1 : 0, on(B) ? 1 : 0, e); } };
+    },
+  },
+  // A piece of plastered wall on two feet. "state": "wet" (dark and glistening, a drip running), "dry", "primed"
+  // (flat white) or "painted" (a warm colour, even).
+  wall: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 160, a.h || 160) * ctx.S, W = 0.85 * s, H = 0.85 * s, T = 0.06 * s;
+      const face = new THREE.MeshPhysicalMaterial({ color: 0xb8aa94, roughness: 0.9, clearcoat: 0 });
+      const edge = new THREE.MeshStandardMaterial({ color: 0x9a8c78, roughness: 0.9 });
+      const group = new THREE.Group();
+      const slab = shadowed(new THREE.Mesh(new THREE.BoxGeometry(W, H, T), [edge, edge, edge, edge, face, edge])); slab.position.y = H / 2 + 0.03 * s; group.add(slab);
+      [-1, 1].forEach((sd) => { const f = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.08 * s, 0.03 * s, 0.25 * s), edge)); f.position.set(sd * W * 0.38, 0.015 * s, 0); group.add(f); });
+      const drips = new THREE.Group(); group.add(drips);
+      for (let i = 0; i < 4; i++) { const d = new THREE.Mesh(new THREE.CapsuleGeometry(0.012 * s, 0.12 * s + rnd() * 0.15 * s, 4, 8), new THREE.MeshPhysicalMaterial({ color: 0x5a4c3c, roughness: 0.1, clearcoat: 1 })); d.position.set(-W * 0.3 + i * W * 0.2, H * 0.4, T / 2 + 0.004 * s); drips.add(d); }
+      const looks = { wet: [0x6e6252, 0.15, 1], dry: [0xc8bba4, 0.95, 0], primed: [0xf2f0ea, 0.8, 0], painted: [0x3f7fb5, 0.45, 0.4] };
+      const set = (k) => { const L = looks[k] || looks.dry; face.color.set(L[0]); face.roughness = L[1]; face.clearcoat = L[2]; drips.visible = k === 'wet'; };
+      set(a.state || 'dry');
+      return { group, top: H + 0.03 * s, anchor: () => new THREE.Vector3(W * 0.42, H * 0.3, T / 2), update(A, B, e) { set(((e < 0.5 ? A : B) || {}).state || a.state || 'dry'); } };
+    },
+  },
+  // A paint roller: a blue nap on its frame and a wooden handle, laid on the table.
+  roller: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 120, a.h || 120) * ctx.S;
+      const nap = new THREE.MeshStandardMaterial({ color: a.tint != null ? a.tint : 0x3f7fb5, roughness: 1 });
+      const steel = new THREE.MeshStandardMaterial({ color: 0xc8ccd0, metalness: 0.9, roughness: 0.3, envMap: ctx.env });
+      const group = new THREE.Group();
+      const roll = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(0.08 * s, 0.08 * s, 0.4 * s, 24), nap)); roll.rotation.z = Math.PI / 2; roll.position.set(0, 0.08 * s, 0); group.add(roll);
+      const pts = [new THREE.Vector3(0.22 * s, 0.08 * s, 0), new THREE.Vector3(0.26 * s, 0.08 * s, 0), new THREE.Vector3(0.26 * s, 0.06 * s, 0.15 * s), new THREE.Vector3(0.1 * s, 0.05 * s, 0.3 * s)];
+      const frame = shadowed(new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts), 20, 0.008 * s, 8), steel)); group.add(frame);
+      const handle = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(0.025 * s, 0.03 * s, 0.25 * s, 16), new THREE.MeshStandardMaterial({ map: birch(), roughness: 0.6 }))); handle.rotation.x = Math.PI / 2; handle.rotation.z = 0.5; handle.position.set(0.02 * s, 0.04 * s, 0.4 * s); group.add(handle);
+      group.rotation.y = 0.3;
+      return { group, top: 0.16 * s, anchor: () => new THREE.Vector3(0.2 * s, 0.08 * s, 0.1 * s), update() {} };
+    },
+  },
+  // The back of a car with its boot open, and luggage: a suitcase, a cool box, a duffel and two cartons. "packed":
+  // 0 leaves them in a heap beside it, 1 fits them in. Anchor 'load' is the open boot.
+  trunk: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 260, a.h || 260) * ctx.S, W = 0.62 * s, D = 0.42 * s, H = 0.22 * s;
+      const paint = new THREE.MeshPhysicalMaterial({ color: 0x4a6a8a, metalness: 0.5, roughness: 0.35, clearcoat: 1, envMap: ctx.env, envMapIntensity: 1.1 });
+      const carpet = new THREE.MeshStandardMaterial({ color: 0x232326, roughness: 1 }), black = new THREE.MeshStandardMaterial({ color: 0x141416, roughness: 0.8 });
+      const group = new THREE.Group();
+      const car = new THREE.Group(); car.position.set(0.12 * s, 0, -0.08 * s); group.add(car);
+      const floor = shadowed(new THREE.Mesh(new THREE.BoxGeometry(W, 0.02 * s, D), carpet)); floor.position.y = 0.17 * s; car.add(floor);
+      [[W, 0.24 * s, 0.03 * s, 0, 0.2 * s, -D / 2], [0.03 * s, H + 0.08 * s, D, -W / 2, 0.24 * s, 0], [0.03 * s, H + 0.08 * s, D, W / 2, 0.24 * s, 0], [W, 0.1 * s, 0.03 * s, 0, 0.22 * s, D / 2]].forEach(([w, h, d, x, y, z]) => { const m = shadowed(new THREE.Mesh(new THREE.BoxGeometry(w, h, d), paint)); m.position.set(x, y, z); car.add(m); });
+      const bumper = shadowed(new THREE.Mesh(new THREE.BoxGeometry(W + 0.06 * s, 0.07 * s, 0.06 * s), black)); bumper.position.set(0, 0.13 * s, D / 2 + 0.02 * s); car.add(bumper);
+      [-1, 1].forEach((sd) => { const t = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(0.09 * s, 0.09 * s, 0.07 * s, 24), black)); t.rotation.z = Math.PI / 2; t.position.set(sd * (W / 2 - 0.05 * s), 0.09 * s, -D * 0.25); car.add(t); });
+      const lid = shadowed(new THREE.Mesh(new THREE.BoxGeometry(W, 0.02 * s, D * 0.9), paint)); lid.position.set(0, 0.47 * s, -D * 0.2); lid.rotation.x = 1.0; car.add(lid);
+      [-1, 1].forEach((sd) => { const l = new THREE.Mesh(new THREE.BoxGeometry(0.06 * s, 0.04 * s, 0.01 * s), new THREE.MeshStandardMaterial({ color: 0x8a1010, emissive: 0x6a0808, emissiveIntensity: 0.6 })); l.position.set(sd * (W / 2 - 0.05 * s), 0.3 * s, D / 2 + 0.016 * s); car.add(l); });
+      // the luggage, each with a spot in the heap and a spot in the boot
+      const items = [
+        [new THREE.BoxGeometry(0.34 * s, 0.11 * s, 0.24 * s), 0x2a4a6a, [-0.25 * s, 0.055 * s, 0.3 * s, 0.3], [-0.12 * s, 0.235 * s, -0.08 * s, 0]],
+        [new THREE.BoxGeometry(0.2 * s, 0.13 * s, 0.14 * s), 0xc8281e, [0.05 * s, 0.065 * s, 0.38 * s, -0.4], [0.18 * s, 0.245 * s, -0.1 * s, 0]],
+        [new THREE.CapsuleGeometry(0.05 * s, 0.18 * s, 6, 12), 0x3a5a2a, [-0.42 * s, 0.05 * s, 0.12 * s, 1.2], [-0.02 * s, 0.33 * s, -0.06 * s, Math.PI / 2]],
+        [new THREE.BoxGeometry(0.14 * s, 0.1 * s, 0.14 * s), 0xb98d58, [-0.12 * s, 0.17 * s, 0.32 * s, 0.6], [0.2 * s, 0.24 * s, 0.07 * s, 0]],
+        [new THREE.BoxGeometry(0.12 * s, 0.09 * s, 0.12 * s), 0xb98d58, [-0.3 * s, 0.045 * s, -0.08 * s, 0.2], [-0.2 * s, 0.225 * s, 0.09 * s, 0]],
+      ].map(([geo, col, heap, fit]) => { const m = shadowed(new THREE.Mesh(geo, new THREE.MeshStandardMaterial({ color: col, roughness: 0.6 }))); if (geo.type === 'CapsuleGeometry') m.rotation.z = Math.PI / 2; group.add(m); return { m, heap, fit: [fit[0] + 0.12 * s, fit[1], fit[2] - 0.08 * s, fit[3]], cap: geo.type === 'CapsuleGeometry' }; });
+      const place = (k) => items.forEach(({ m, heap, fit, cap }, i) => { const t = smooth(Math.min(1, Math.max(0, k * 1.6 - i * 0.15))); m.position.set(lerp(heap[0], fit[0], t), lerp(heap[1], fit[1], t) + Math.sin(Math.PI * t) * 0.12 * s, lerp(heap[2], fit[2], t)); m.rotation.y = lerp(heap[3], fit[3], t); if (cap) m.rotation.z = Math.PI / 2; });
+      place(num(a, 'packed'));
+      return { group, top: 0.5 * s, anchor: (n) => (n === 'load' ? new THREE.Vector3(0.3 * s, 0.3 * s, 0.12 * s) : new THREE.Vector3(-0.35 * s, 0.05 * s, 0.35 * s)), update(A, B, e) { place(lerp(num(A, 'packed'), num(B, 'packed'), e)); } };
+    },
+  },
+  // A child's wooden bed with a pillow, a sleeping head on it, and blankets: "blankets" of them, one or a heap.
+  bed: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 160, a.h || 160) * ctx.S, L = 0.95 * s, W = 0.5 * s;
+      const wood = new THREE.MeshStandardMaterial({ map: weathered('#9a6a40'), roughness: 0.6 });
+      const group = new THREE.Group();
+      const frame = board(L, 0.08 * s, W, wood); frame.position.y = 0.12 * s; group.add(frame);
+      [-1, 1].forEach((sd) => { const hb = board(0.04 * s, sd < 0 ? 0.38 * s : 0.24 * s, W, wood); hb.position.set(sd * L / 2, sd < 0 ? 0.19 * s : 0.12 * s, 0); group.add(hb); });
+      [[-1, -1], [-1, 1], [1, -1], [1, 1]].forEach(([x, z]) => { const lg = board(0.05 * s, 0.1 * s, 0.05 * s, wood); lg.position.set(x * (L / 2 - 0.03 * s), 0.05 * s, z * (W / 2 - 0.03 * s)); group.add(lg); });
+      const sheet = shadowed(new THREE.Mesh(new THREE.BoxGeometry(L * 0.94, 0.06 * s, W * 0.94), new THREE.MeshStandardMaterial({ color: 0xf2efe6, roughness: 0.9 }))); sheet.position.y = 0.19 * s; group.add(sheet);
+      const pillow = shadowed(new THREE.Mesh(new THREE.CapsuleGeometry(0.06 * s, 0.26 * s, 6, 16), new THREE.MeshStandardMaterial({ color: 0xffffff, roughness: 0.85 }))); pillow.rotation.x = Math.PI / 2; pillow.scale.set(1.6, 1, 0.6); pillow.position.set(-L * 0.36, 0.25 * s, 0); group.add(pillow);
+      const head = shadowed(new THREE.Mesh(new THREE.SphereGeometry(0.065 * s, 20, 14), new THREE.MeshStandardMaterial({ map: birch(), roughness: 0.55 }))); head.position.set(-L * 0.3, 0.3 * s, 0); group.add(head);
+      const cols = [0x8a2a2a, 0x2a4a7a, 0x3a6a3a, 0xb8902a, 0x6a3a7a];
+      const covers = [];
+      for (let i = 0; i < 10; i++) { const b = shadowed(new THREE.Mesh(new THREE.BoxGeometry(L * 0.66, 0.025 * s, W * 0.98), new THREE.MeshStandardMaterial({ color: cols[i % 5], roughness: 0.95 }))); b.position.set(L * 0.13, 0.235 * s + i * 0.026 * s, 0); b.rotation.y = (rnd() - 0.5) * 0.06; b.visible = false; group.add(b); covers.push(b); }
+      return { group, top: 0.5 * s, anchor: (n) => (n === 'head' ? head.position.clone() : new THREE.Vector3(L * 0.42, 0.15 * s, W / 2)), update(A, B, e) { const n = Math.round(lerp(num(A, 'blankets'), num(B, 'blankets'), e)); covers.forEach((c, i) => { c.visible = i < n; }); } };
+    },
+  },
+  // A paper sack of flour, its top rolled over, printed FLOUR. "stale": true greys it, the paper stained and old.
+  flour: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 100, a.h || 140) * ctx.S, W = 0.42 * s, H = 0.7 * s, D = 0.26 * s;
+      const c = document.createElement('canvas'); c.width = 256; c.height = 420; const g = c.getContext('2d');
+      noise(g, 256, 420, a.stale ? '#b9ad94' : '#f1ead8', 10);
+      if (a.stale) for (let i = 0; i < 18; i++) { g.fillStyle = 'rgba(110,90,50,' + rnd() * 0.25 + ')'; g.beginPath(); g.arc(rnd() * 256, rnd() * 420, 6 + rnd() * 22, 0, 7); g.fill(); }
+      g.fillStyle = a.stale ? '#6a5a3a' : '#a3281c'; g.fillRect(0, 150, 256, 110); g.fillStyle = '#fff'; g.font = '800 56px "VU Print"'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText('FLOUR', 128, 206);
+      g.fillStyle = a.stale ? '#5a4a30' : '#3a2a1a'; g.font = '600 24px "VU Print"'; g.fillText(a.stale ? 'BEST BY 2019' : 'STONE MILLED', 128, 300);
+      const tx = new THREE.CanvasTexture(c); tx.colorSpace = THREE.SRGBColorSpace;
+      const paper = new THREE.MeshStandardMaterial({ map: tx, roughness: 0.95 }), plain = new THREE.MeshStandardMaterial({ color: a.stale ? 0xb0a48a : 0xece4d0, roughness: 0.95 });
+      const geo = new THREE.BoxGeometry(W, H, D, 4, 6, 3), p = geo.attributes.position; for (let i = 0; i < p.count; i++) { const y = p.getY(i) / H + 0.5; p.setX(i, p.getX(i) * (1 + 0.06 * Math.sin(Math.PI * y))); p.setZ(i, p.getZ(i) * (1 + 0.12 * Math.sin(Math.PI * y))); } geo.computeVertexNormals();
+      const sack = shadowed(new THREE.Mesh(geo, [plain, plain, plain, plain, paper, plain])); sack.position.y = H / 2;
+      const roll = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(0.03 * s, 0.03 * s, W, 12), plain)); roll.rotation.z = Math.PI / 2; roll.position.y = H + 0.02 * s;
+      const group = new THREE.Group(); group.add(sack, roll); group.rotation.y = a.stale ? -0.2 : 0.2;
+      return { group, top: H + 0.05 * s, anchor: () => new THREE.Vector3(W * 0.5, H * 0.2, D / 2), update() {} };
+    },
+  },
+  // A loaf of bread on a board. "good": true is tall and golden with a split crust; otherwise flat, pale and dense.
+  loaf: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 120, a.h || 120) * ctx.S, good = a.good !== false;
+      const crust = new THREE.MeshStandardMaterial({ color: good ? 0xb8742c : 0xc8b08a, roughness: 0.75 });
+      const group = new THREE.Group();
+      const brd = board(0.6 * s, 0.03 * s, 0.4 * s, new THREE.MeshStandardMaterial({ map: weathered('#b08a5c'), roughness: 0.7 })); brd.position.y = 0.015 * s; group.add(brd);
+      const loaf = shadowed(new THREE.Mesh(new THREE.SphereGeometry(0.2 * s, 32, 20), crust)); loaf.scale.set(1.25, good ? 0.75 : 0.32, 0.8); loaf.position.y = 0.03 * s + (good ? 0.1 : 0.04) * s; group.add(loaf);
+      if (good) for (let i = 0; i < 3; i++) { const cut = new THREE.Mesh(new THREE.BoxGeometry(0.03 * s, 0.01 * s, 0.22 * s), new THREE.MeshStandardMaterial({ color: 0xe8c890, roughness: 0.8 })); cut.position.set(-0.1 * s + i * 0.1 * s, 0.275 * s, 0); cut.rotation.y = 0.5; group.add(cut); }
+      return { group, top: 0.3 * s, anchor: () => new THREE.Vector3(0.28 * s, 0.03 * s, 0.18 * s), update() {} };
     },
   },
 };

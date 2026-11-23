@@ -135,89 +135,84 @@
         {
           "id": "s0",
           "type": "card",
-          "x": 22.5,
-          "y": 90,
-          "w": 170,
-          "h": 100,
+          "o": 0,
+          "prop": "wall",
+          "state": "wet",
           "label": "Wet wall",
           "color": "blue",
-          "o": 0,
-          "size": 20
+          "size": 20,
+          "x": 50,
+          "y": 60,
+          "w": 160,
+          "h": 160,
+          "tagW": 160,
+          "tag": [
+            0,
+            115
+          ]
         },
         {
           "id": "s1",
           "type": "card",
-          "x": 217.5,
-          "y": 90,
-          "w": 170,
-          "h": 100,
+          "o": 0,
+          "prop": "alarm",
+          "time": 9,
           "label": "Wait",
           "color": "blue",
-          "o": 0,
-          "size": 20
-        },
-        {
-          "id": "a1",
-          "type": "arrow",
-          "x": 198.5,
-          "y": 140,
-          "x2": 211.5,
-          "y2": 140,
-          "color": "dim",
-          "o": 0,
-          "draw": 0
+          "size": 22,
+          "x": 255,
+          "y": 90,
+          "w": 110,
+          "h": 120,
+          "tagW": 140,
+          "tag": [
+            0,
+            100
+          ]
         },
         {
           "id": "s2",
           "type": "card",
-          "x": 412.5,
-          "y": 90,
-          "w": 170,
-          "h": 100,
+          "o": 0,
+          "prop": "paint",
+          "tint": 15921386,
           "label": "Prime",
           "color": "blue",
-          "o": 0,
-          "size": 20
-        },
-        {
-          "id": "a2",
-          "type": "arrow",
-          "x": 393.5,
-          "y": 140,
-          "x2": 406.5,
-          "y2": 140,
-          "color": "dim",
-          "o": 0,
-          "draw": 0
+          "size": 22,
+          "x": 420,
+          "y": 105,
+          "w": 120,
+          "h": 120,
+          "tagW": 140,
+          "tag": [
+            0,
+            95
+          ]
         },
         {
           "id": "s3",
           "type": "card",
-          "x": 607.5,
-          "y": 90,
-          "w": 170,
-          "h": 100,
+          "o": 0,
+          "prop": "roller",
+          "tint": 4161461,
           "label": "Paint",
           "color": "blue",
-          "o": 0,
-          "size": 20
-        },
-        {
-          "id": "a3",
-          "type": "arrow",
-          "x": 588.5,
-          "y": 140,
-          "x2": 601.5,
-          "y2": 140,
-          "color": "dim",
-          "o": 0,
-          "draw": 0
+          "size": 22,
+          "x": 590,
+          "y": 105,
+          "w": 130,
+          "h": 130,
+          "tagW": 140,
+          "tag": [
+            0,
+            95
+          ]
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 270,
+          "y": 350,
           "label": "Rushing it means doing it twice.",
           "color": "pink",
           "size": 22,
@@ -241,11 +236,11 @@
           "set": {
             "s1": {
               "o": 1,
-              "sub": "let it dry out"
+              "sub": "let it dry out",
+              "time": 15
             },
-            "a1": {
-              "o": 1,
-              "draw": 1
+            "s0": {
+              "state": "dry"
             }
           }
         },
@@ -257,9 +252,8 @@
               "o": 1,
               "sub": "feed the surface"
             },
-            "a2": {
-              "o": 1,
-              "draw": 1
+            "s0": {
+              "state": "primed"
             }
           }
         },
@@ -271,9 +265,8 @@
               "o": 1,
               "sub": "now it holds"
             },
-            "a3": {
-              "o": 1,
-              "draw": 1
+            "s0": {
+              "state": "painted"
             },
             "line": {
               "o": 1
