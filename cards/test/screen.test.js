@@ -229,3 +229,36 @@ test('hand.html loads the card blocks, the rules card and every game before the 
   assert.equal(src[src.length - 1], '/cards/src/hand.js');
   assert.ok(!/\son[a-z]+\s*=/i.test(html), 'no inline event handlers');
 });
+
+// The voidverse audit's sweep of Card games (23 Nov 2026), fixed on Bryan's "Yes, fix them".
+test('the table page is titled with the brand\'s full name, voidtv.net (decision B1)', () => {
+  assert.match(read('cards', 'index.html'), /<title>Card games on voidtv\.net<\/title>/);
+});
+
+test('the game arrows have a name and a hover tip, and so do Deal and Practice hand', () => {
+  const js = read('cards', 'src', 'screen.js');
+  assert.match(js, /button\('‹', \(\) => pickBy\(-1\), 'arrow', 'Previous game'\)/);
+  assert.match(js, /button\('›', \(\) => pickBy\(1\), 'arrow', 'Next game'\)/);
+  assert.ok(js.includes("b.title = tip; if (!/\\w/.test(text)) b.setAttribute('aria-label', tip);"), 'a symbol button is named by its tip');
+  assert.match(js, /button\('Deal', deal, 'big-button', '[^']+'\)/);
+  assert.match(js, /button\('Practice hand', practiceDeal, 'big-button quiet', '[^']+'\)/);
+});
+
+test('the table opens its room at once and asks whether rooms are set up only when the room did not open (no 404 on every open)', () => {
+  const js = read('cards', 'src', 'screen.js');
+  const tail = js.slice(js.lastIndexOf('render();\n  document.body.focus();'));
+  assert.match(tail, /openRoom\(\);/);
+  assert.ok(!/fetch\(/.test(tail), 'nothing is fetched before the room is opened');
+  const close = js.slice(js.indexOf('ws.onclose'), js.indexOf('ws.onclose') + 700);
+  assert.match(close, /if \(problem \|\| opened\)/);
+  assert.match(close, /fetch\('\/api\/room\/2222'/);
+  assert.match(close, /r\.status === 503 \? NOT_SET_UP : CLOSED/);
+});
+
+test('the phone\'s wordmark: "voidtv" pink and ".net" blue, the site header\'s colours (decision B2)', () => {
+  const css = read('cards', 'hand.css'), base = read('cards', 'cards.css'), html = read('cards', 'hand.html');
+  assert.match(html, /<div class="mark"><span class="v">voidtv<\/span><span class="n">\.net<\/span>/);
+  assert.match(css, /\.mark \.v\{color:var\(--pink\)\}/);
+  assert.match(base, /--pink:#ff4fc8/, 'the site\'s brand pink');
+  assert.match(css, /\.mark \.n\{color:#5fe3ff\}/, 'the site\'s brand blue');
+});

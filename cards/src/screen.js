@@ -185,10 +185,12 @@
     return e;
   }
   const plural = (k, one, many) => k + ' ' + (k === 1 ? one : many);
-  function button(text, onClick, cls) {
+  // tip: a name a screen reader reads and the words shown on hover, for a button whose face is a symbol or needs a word more.
+  function button(text, onClick, cls, tip) {
     const b = el('button', cls || '', text);
     b.type = 'button';
     b.addEventListener('click', onClick);
+    if (tip) { b.title = tip; if (!/\w/.test(text)) b.setAttribute('aria-label', tip); }
     return b;
   }
   function qr(cls) {
@@ -244,13 +246,13 @@
     else names.append(el('div', 'lobby-empty', 'Waiting for players'));
     const g = s.game, range = g.min === g.max ? g.min + ' players' : g.min + ' to ' + g.max + ' players';
     const pick = el('div', 'lobby-pick');
-    pick.append(button('‹', () => pickBy(-1), 'arrow'), el('div', 'lobby-game', g.name), button('›', () => pickBy(1), 'arrow'));
+    pick.append(button('‹', () => pickBy(-1), 'arrow', 'Previous game'), el('div', 'lobby-game', g.name), button('›', () => pickBy(1), 'arrow', 'Next game'));
     right.append(names, pick, el('div', 'lobby-range', range));
     // The rules card for the game being picked (Bryan, 23 Nov 2026, "Rules B"): four pictures, each with a line.
     const card = root.VoidRules.draw(root.VoidGames[g.id]);
     if (card) { const box = el('div', 'lobby-rules'); box.append(el('div', 'lobby-rules-h', 'How to play'), card); right.append(box); }
     const go = el('div', 'lobby-buttons');
-    go.append(button('Deal', deal, 'big-button'), button('Practice hand', practiceDeal, 'big-button quiet'));
+    go.append(button('Deal', deal, 'big-button', 'Deal this game to everyone who has joined'), button('Practice hand', practiceDeal, 'big-button quiet', 'Play a hand with tips; the table plays the empty seats'));
     right.append(go, el('div', 'lobby-hint', 'A practice hand has tips. The table plays the empty seats.'), el('div', 'lobby-note', note));
     stage.append(left, right);
   }
@@ -439,7 +441,7 @@
   });
 
   function openRoom() {
-    let ws;
+    let ws, opened = false;
     try { ws = new WebSocket((location.protocol === 'https:' ? 'wss://' : 'ws://') + location.host + '/api/room/open?kind=cards'); }
     catch (e) { problem = CLOSED; render(); return; }
     socket = ws;
@@ -449,13 +451,20 @@
       if (m.type === 'room') { room.code = m.code; room.join = m.join; render(); return; }
       dealer.relay(m);
     };
-    ws.onclose = () => { room.code = null; room.join = null; if (!problem) problem = CLOSED; render(); };
+    ws.onopen = () => { opened = true; };
+    ws.onclose = () => {
+      room.code = null; room.join = null;
+      if (problem || opened) { if (!problem) problem = CLOSED; render(); return; }
+      // The room never opened. Is the room service on this site at all? A 503 means it has not been set up. (Asked only now:
+      // asking first, as the page did, left a red 404 for the made-up room in the console on every open, found by the
+      // voidverse audit's sweep, 23 Nov 2026.)
+      fetch('/api/room/2222', { cache: 'no-store' })
+        .then((r) => { problem = r.status === 503 ? NOT_SET_UP : CLOSED; render(); })
+        .catch(() => { problem = CLOSED; render(); });
+    };
   }
 
   render();
   document.body.focus();
-  // Is the room service on? Phones need it. A 503 means this site has not set it up.
-  fetch('/api/room/2222', { cache: 'no-store' })
-    .then((r) => { if (r.status === 503) { problem = NOT_SET_UP; render(); } else openRoom(); })
-    .catch(() => openRoom());
+  openRoom();
 })(typeof self !== 'undefined' ? self : this);
