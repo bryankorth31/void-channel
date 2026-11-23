@@ -72,7 +72,29 @@ table reads each phone's secret pick, and can show how it works afterwards.
 | Charades, and draw and guess | The word, on the actor's phone only | Word lists of our own; a drawing pad |
 | Secret roles: the Werewolf kind, and Wink Murder for families | Your role | A role face; a narrator on the table |
 | Fictionary | The meaning you made up | Old public-domain dictionary words; a vote |
-| Snakes and Ladders, Ludo | Your dice | A board on the table, drawn by us |
+
+## Board games
+
+Bryan, 23 Nov 2026: "chess, checkers etc". Not built. They fit the table as it is, because nothing in them is hidden: the
+rule file keeps the whole board in the public state, and a move is "from here to there". The big screen shows the board;
+each phone shows the same board from its own player's side, to move from. Each one still needs its rules written by us
+from the traditional game (no code copied from any chess or checkers program) and a board face for the phone and the
+table, which is a new look, so pictures first. Two players at the start; a computer opponent would be a much bigger
+piece, and he has not asked for one.
+
+| Game | Players | Notes |
+|---|---|---|
+| Chess | 2 | The full traditional rules, castling and taking in passing included |
+| Checkers | 2 | The common rules: forced jumps, kings |
+| Reversi | 2 | By that name, never the trademarked one |
+| Four in a row | 2 | A board on its side; drop a disc in a column |
+| Backgammon | 2 | Dice on the table; the board's points and the bar |
+| Nine Men's Morris | 2 | Mills take a piece |
+| Mancala | 2 | Sowing seeds round the pits |
+| Chinese checkers | 2 to 6 | A star board |
+| Tic-tac-toe | 2 | The smallest; good for little ones |
+| Dots and boxes | 2 to 4 | Draw a line, close a box, go again |
+| Snakes and Ladders, Ludo | 2 to 4 | Dice; a board on the table, drawn by us (moved here from "Not cards") |
 
 ## What stays the same
 
