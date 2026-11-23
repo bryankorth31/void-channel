@@ -70,8 +70,23 @@ function canBind(port) {
     s.listen(port, '127.0.0.1', () => s.close(() => ok(true)));
   });
 }
+// Does anything take a connection on 127.0.0.1 at this port? Being able to bind it does not say no: on Windows a port
+// another program holds on every address (0.0.0.0) can still be bound on 127.0.0.1. On 22 Nov 2026 another project's
+// server sat on 0.0.0.0:8790 and 8791; canBind called both free, so the test HQ started on 8790 on top of it, and the
+// "nothing listening" probe test was handed 8791, where that server answered (it failed every run that evening).
+// No answer within two seconds counts as taken: the careful side.
+function answers(port) {
+  return new Promise((ok) => {
+    const c = net.connect({ port, host: '127.0.0.1' });
+    const done = (v) => { c.destroy(); ok(v); };
+    c.setTimeout(2000, () => done(true));
+    c.once('connect', () => done(true));
+    c.once('error', () => done(false));
+  });
+}
+// A free port: nothing answers on it, and it can be bound.
 async function freePort(not = []) {
-  for (let p = 8790; p <= 8799; p++) if (!not.includes(p) && await canBind(p)) return p;
+  for (let p = 8790; p <= 8799; p++) if (!not.includes(p) && !(await answers(p)) && await canBind(p)) return p;
   throw new Error('no free port in 8790-8799');
 }
 
