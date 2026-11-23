@@ -285,3 +285,31 @@ test('Play with friends: a row of Card games and Trivia Night, first on the home
   assert.deepEqual(made('kids.voidtv.net'), { kind: 'fragment' }, 'nothing on Kids');
   assert.equal(made('voidtv.net').cls, 'row friends-row', 'the row on voidtv.net');
 });
+
+// The polish review of 22 Nov 2026, PLAY-01 (critical): in Bryan's 1278x513 window a click on "Machine: All" slid the search
+// box and the four buttons out of sight and left one choice in reach. The list was a child of the row, which scrolls
+// sideways in a short window. Root fix: the list is a layer of its own, placed from its button, sized to the room.
+test('PLAY-01: a filter list is its own layer, opens where there is room, and takes columns before it scrolls', () => {
+  const html = fs.readFileSync(path.join(PLAY, 'index.html'), 'utf8');
+  const css = fs.readFileSync(path.join(PLAY, 'shelf.css'), 'utf8');
+  const js = fs.readFileSync(path.join(PLAY, 'src', 'shelf.js'), 'utf8');
+  const row = html.slice(html.indexOf('<div class="filters" id="filters"'), html.indexOf('<div id="rows">'));
+  assert.ok(row.indexOf('id="pick"') > row.indexOf('</div>'), 'the list comes after the row closes, never inside it');
+  assert.match(css, /\.pick\{position:fixed;[^}]*display:grid;grid-auto-flow:column;[^}]*overflow:auto;overscroll-behavior:contain;/);
+  assert.ok(!/\.pick\{[^}]*max-height:min\(60vh/.test(css), 'no fixed share of the window: the room is measured');
+  assert.match(css, /\.opt\{[^}]*white-space:nowrap;/);
+  // His window: the button's foot at 284 of 513, the top bar's at 52. 16 machines, 40 px each, 14 px of edges.
+  const his = Shelf.pickRoom(16, 40, 14, 513 - 8 - (284 + 6), (244 - 6) - (52 + 8));
+  assert.deepEqual(his, { up: false, room: 215, rows: 5 }, 'under the button, five rows of room: 16 choices take four columns of four');
+  // A tall hero above and little under (1316x821): over the button, where eight rows fit.
+  assert.deepEqual(Shelf.pickRoom(16, 40, 14, 184, 524), { up: true, room: 524, rows: 12 });
+  // Everything fits under the button: it opens there even when there is more room above.
+  assert.equal(Shelf.pickRoom(2, 40, 14, 184, 524).up, false);
+  // Hardly any room either way: still one row, and the list scrolls.
+  assert.deepEqual(Shelf.pickRoom(16, 40, 14, 20, 10), { up: false, room: 54, rows: 1 });
+  for (const bit of ["chip.scrollIntoView({ block: 'nearest', inline: 'nearest' });", "s.maxHeight = room + 'px'; s.maxWidth = (W - 2 * EDGE) + 'px';",
+    "s.left = Math.max(EDGE, Math.min(r.left, W - EDGE - pick.offsetWidth)) + 'px';", "s.top = (up ? r.top - GAP - pick.offsetHeight : r.bottom + GAP) + 'px';",
+    "if (cols === 1 || pick.offsetWidth <= W - 2 * EDGE) break;", "addEventListener('scroll', again, true);",
+    "if (pickOpen() && !(e.target.closest && e.target.closest('#pick, #filters .chip'))) closePick(false);",
+    "if (!pick.hidden && pick.dataset.for === k) { closePick(); return; }"]) assert.ok(js.includes(bit), bit);
+});
