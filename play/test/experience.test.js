@@ -192,3 +192,12 @@ test('the pop-out carries the game\'s sound (Bryan, 22 Nov 2026: "No, I wanted s
   const css = fs.readFileSync(path.join(PLAY, 'play.css'), 'utf8');
   assert.ok(css.includes('.pop-feed{position:fixed;left:0;top:0;width:1px;height:1px;opacity:0;pointer-events:none}'));
 });
+
+test('the pop-out follows you (Bryan, 22 Nov 2026: "switched to claude....didnt switch wth me"): Chrome\'s automatic picture-in-picture', () => {
+  const js = fs.readFileSync(path.join(PLAY, 'src', 'play.js'), 'utf8');
+  // While a game runs, leaving the page pops it out as the button does; not while paused or already out.
+  assert.ok(js.includes("navigator.mediaSession.setActionHandler('enterpictureinpicture', go ? () => { if (started && !paused && !pip) popOut(); } : null);"));
+  assert.ok(js.includes("$('b-pop').hidden = !canPop(); autoPop(true);"), 'offered from the first picture');
+  assert.ok(js.includes('stayAwake(false); autoPop(false);'), 'and taken back when the game stops');
+  assert.ok(js.includes("const go = on && canPop() && popWay() === 'video';"), 'only where the browser\'s own picture-in-picture is used, never on a phone');
+});

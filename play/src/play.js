@@ -612,7 +612,7 @@
       cheats: (m) => { if (!m.ok) toast('This game\'s engine cannot take cheats'); else if (m.on) toast(m.on === 1 ? 'One cheat on' : m.on + ' cheats on'); },
       drawn: popDrawn,
       firstFrame: () => {
-        $('b-pop').hidden = !canPop();
+        $('b-pop').hidden = !canPop(); autoPop(true);
         arriving = false; status(''); clearTimeout(deadline); $('cover').hidden = true; $('canvas').focus({ preventScroll: true }); stayAwake(true); armBack();
         if (!PlayCards.isPad(card) && !isFlash()) blankWatch();   // a Flash game draws in its own element, not the canvas
         if (resumeState) { const s = resumeState; resumeState = null; runner.load(s).then((ok) => toast(ok ? 'Back where you left off' : 'That spot would not load; starting fresh')); }
@@ -767,7 +767,7 @@
 
   // Ends the game for good: the engine stops, nothing it sent late reaches the page, the menu closes.
   function stopGame() {
-    arriving = false; clearTimeout(deadline); clearInterval(autoTimer); clearInterval(cpTimer); stayAwake(false);
+    arriving = false; clearTimeout(deadline); clearInterval(autoTimer); clearInterval(cpTimer); stayAwake(false); autoPop(false);
     // A stopped game lets the mouse go (the auditor, 21 Nov 2026: after a game ended itself the picture still held the
     // mouse, so a click on Play again went to the picture). It is taken again only by a click on a running game.
     if (document.pointerLockElement === cv && document.exitPointerLock) document.exitPointerLock();
@@ -969,6 +969,19 @@
     setTimeout(poll, 16);
     $('b-pop').setAttribute('aria-pressed', 'true');
     popVid.addEventListener('leavepictureinpicture', () => { home(); drop(); pip = null; popVid = popCopy = null; $('b-pop').setAttribute('aria-pressed', 'false'); });
+  }
+  // The pop-out follows you (Bryan, 22 Nov 2026: "started it and then switched to claude....didnt switch wth me"): Chrome's
+  // automatic picture-in-picture calls this when you leave a page that is playing sound, as the picture in a video call
+  // follows you to another tab. It pops the running game out as the Pop out button does; coming back closes it. Not
+  // while paused (the menu is on the page) or already out; nothing where the browser does not offer it.
+  function autoPop(on) {
+    try {
+      if (!navigator.mediaSession || !navigator.mediaSession.setActionHandler) return;
+      const go = on && canPop() && popWay() === 'video';
+      navigator.mediaSession.setActionHandler('enterpictureinpicture', go ? () => { if (started && !paused && !pip) popOut(); } : null);
+      if (go && window.MediaMetadata) navigator.mediaSession.metadata = new MediaMetadata({ title: (card && card.title) || 'PLAY', artist: 'PLAY on voidtv.net' });
+      navigator.mediaSession.playbackState = go ? 'playing' : 'none';
+    } catch (e) { /* this browser has no automatic picture-in-picture */ }
   }
   async function popOut() {
     if (popWay() === 'video') return popVideo();
