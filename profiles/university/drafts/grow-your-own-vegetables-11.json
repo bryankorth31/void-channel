@@ -144,56 +144,64 @@
         {
           "id": "left",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "shelf",
+          "books": 0,
           "label": "No books",
           "color": "blue",
-          "o": 0,
-          "size": 22
+          "size": 22,
+          "x": 80,
+          "y": 40,
+          "w": 200,
+          "h": 200,
+          "tagW": 150,
+          "tag": [
+            0,
+            110
+          ]
         },
         {
           "id": "right",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "shelf",
+          "books": 12,
           "label": "One shelf",
           "color": "blue",
-          "o": 0,
-          "size": 22
+          "size": 22,
+          "x": 470,
+          "y": 40,
+          "w": 200,
+          "h": 200,
+          "tagW": 150,
+          "tag": [
+            0,
+            110
+          ]
         },
         {
           "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "READING",
+          "type": "card",
+          "o": 0,
+          "prop": "book",
+          "label": "Reading",
           "color": "gold",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
-        },
-        {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "START",
-          "color": "fg",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
+          "size": 18,
+          "x": 315,
+          "y": 170,
+          "w": 130,
+          "h": 130,
+          "tagW": 140,
+          "tag": [
+            0,
+            85
+          ]
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
+          "y": 352,
           "label": "A little, well used, beats none.",
           "color": "pink",
           "size": 22,
@@ -212,8 +220,7 @@
               "o": 1
             },
             "thing": {
-              "o": 1,
-              "s": 1
+              "o": 1
             }
           }
         },
@@ -221,9 +228,7 @@
           "say": "You could still start with one shelf.",
           "dur": 2.4,
           "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
+            "right": {
               "shake": true
             }
           }
@@ -264,13 +269,8 @@
               "color": "green"
             },
             "thing": {
-              "label": "FRESH FOOD",
-              "size": 14
-            },
-            "act": {
-              "label": "TEND",
-              "size": 18,
-              "color": "pink"
+              "label": "Fresh food",
+              "size": 18
             },
             "line": {
               "label": "A few plants are better than none.",

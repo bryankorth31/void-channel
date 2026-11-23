@@ -177,66 +177,63 @@
         {
           "id": "s0",
           "type": "card",
-          "x": 30,
-          "y": 90,
-          "w": 220,
-          "h": 100,
+          "o": 0,
+          "prop": "scraps",
           "label": "Leftovers",
           "color": "blue",
-          "o": 0,
-          "size": 20
+          "size": 22,
+          "x": 85,
+          "y": 125,
+          "w": 130,
+          "h": 130,
+          "tagW": 150,
+          "tag": [
+            0,
+            95
+          ]
         },
         {
           "id": "s1",
           "type": "card",
-          "x": 290,
-          "y": 90,
-          "w": 220,
-          "h": 100,
+          "o": 0,
+          "prop": "pot",
+          "full": false,
           "label": "Into the pot",
           "color": "blue",
-          "o": 0,
-          "size": 20
-        },
-        {
-          "id": "a1",
-          "type": "arrow",
-          "x": 256,
-          "y": 140,
-          "x2": 284,
-          "y2": 140,
-          "color": "dim",
-          "o": 0,
-          "draw": 0
+          "size": 20,
+          "x": 325,
+          "y": 95,
+          "w": 150,
+          "h": 150,
+          "tagW": 160,
+          "tag": [
+            0,
+            110
+          ]
         },
         {
           "id": "s2",
           "type": "card",
-          "x": 550,
-          "y": 90,
-          "w": 220,
-          "h": 100,
+          "o": 0,
+          "prop": "bowl",
           "label": "Tomorrow's meal",
           "color": "blue",
-          "o": 0,
-          "size": 17
-        },
-        {
-          "id": "a2",
-          "type": "arrow",
-          "x": 516,
-          "y": 140,
-          "x2": 544,
-          "y2": 140,
-          "color": "dim",
-          "o": 0,
-          "draw": 0
+          "size": 18,
+          "x": 592.5,
+          "y": 137.5,
+          "w": 115,
+          "h": 115,
+          "tagW": 180,
+          "tag": [
+            0,
+            92
+          ]
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 270,
+          "y": 352,
           "label": "Waste is food in the wrong place.",
           "color": "pink",
           "size": 22,
@@ -260,11 +257,8 @@
           "set": {
             "s1": {
               "o": 1,
+              "full": true,
               "sub": "nothing thrown away"
-            },
-            "a1": {
-              "o": 1,
-              "draw": 1
             }
           }
         },
@@ -275,10 +269,6 @@
             "s2": {
               "o": 1,
               "sub": "made from waste"
-            },
-            "a2": {
-              "o": 1,
-              "draw": 1
             },
             "line": {
               "o": 1

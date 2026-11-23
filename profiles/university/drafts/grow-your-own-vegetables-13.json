@@ -141,56 +141,105 @@
         {
           "id": "left",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "treadmill",
+          "mins": 0,
           "label": "Treadmill",
           "color": "blue",
+          "size": 22,
+          "x": 65,
+          "y": 80,
+          "w": 210,
+          "h": 210,
+          "tagW": 150,
+          "tag": [
+            0,
+            110
+          ]
+        },
+        {
+          "id": "runner",
+          "type": "card",
           "o": 0,
-          "size": 22
+          "prop": "figure",
+          "pose": "stand",
+          "look": "dark",
+          "turn": -1.57,
+          "on": "left",
+          "label": "",
+          "x": 165,
+          "y": 137.5,
+          "w": 40,
+          "h": 95
+        },
+        {
+          "id": "thing",
+          "type": "card",
+          "o": 0,
+          "prop": "shoe",
+          "label": "Exercise",
+          "color": "gold",
+          "size": 18,
+          "x": 300,
+          "y": 150,
+          "w": 110,
+          "h": 110,
+          "tagW": 140,
+          "tag": [
+            0,
+            80
+          ]
+        },
+        {
+          "id": "home",
+          "type": "card",
+          "o": 0,
+          "prop": "house",
+          "label": "",
+          "x": 625,
+          "y": 45,
+          "w": 130,
+          "h": 130
+        },
+        {
+          "id": "friend",
+          "type": "card",
+          "o": 0,
+          "prop": "figure",
+          "pose": "stand",
+          "label": "",
+          "x": 620.875,
+          "y": 107.5,
+          "w": 38.25,
+          "h": 85,
+          "turn": -0.8
         },
         {
           "id": "right",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "figure",
+          "pose": "stand",
           "label": "Walk to a friend",
+          "x": 449.75,
+          "y": 215,
+          "w": 40.5,
+          "h": 90,
+          "look": "dark",
+          "turn": 1,
           "color": "blue",
-          "o": 0,
-          "size": 18
-        },
-        {
-          "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "EXERCISE",
-          "color": "gold",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
-        },
-        {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "WALK",
-          "color": "fg",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
+          "size": 20,
+          "tagW": 180,
+          "tag": [
+            0,
+            85
+          ]
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
+          "y": 350,
           "label": "A goal makes the work light.",
           "color": "pink",
           "size": 22,
@@ -205,12 +254,20 @@
             "left": {
               "o": 1
             },
-            "right": {
+            "runner": {
               "o": 1
             },
             "thing": {
-              "o": 1,
-              "s": 1
+              "o": 1
+            },
+            "home": {
+              "o": 1
+            },
+            "friend": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
             }
           }
         },
@@ -218,10 +275,17 @@
           "say": "Either way, you walk.",
           "dur": 2.4,
           "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
+            "runner": {
               "shake": true
+            },
+            "left": {
+              "mins": 10
+            },
+            "right": {
+              "x": 500,
+              "y": 195,
+              "w": 40,
+              "h": 90
             }
           }
         },
@@ -230,10 +294,15 @@
           "dur": 2.6,
           "set": {
             "left": {
+              "mins": 30,
               "sub": "you count the minutes"
             },
             "right": {
-              "sub": "you forget the effort"
+              "sub": "you forget the effort",
+              "x": 545,
+              "y": 170,
+              "w": 40,
+              "h": 90
             }
           }
         },
@@ -241,6 +310,16 @@
           "say": "Walking to a friend, you forget you are working.",
           "dur": 2.6,
           "set": {
+            "right": {
+              "x": 580,
+              "y": 140,
+              "w": 40,
+              "h": 90,
+              "tag": [
+                -120,
+                90
+              ]
+            },
             "line": {
               "o": 1
             }
@@ -261,13 +340,8 @@
               "color": "green"
             },
             "thing": {
-              "label": "HEALTH",
+              "label": "Health",
               "size": 18
-            },
-            "act": {
-              "label": "WORK",
-              "size": 18,
-              "color": "pink"
             },
             "line": {
               "label": "A definite object keeps the mind busy.",
