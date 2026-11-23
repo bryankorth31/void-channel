@@ -80,7 +80,8 @@ A game is one object. The engine does the rest.
 - `choose` is one more choice the move needs, or `null`: `{ cards, field, from, kind, title }`.
   `cards`: the choice is asked only when one of these is picked (`null`: always). `field`: where the answer goes in the
   move. `from`: the answers, each a plain value or `{ v, label }`. `kind`: `'suit'`, `'player'`, `'rank'` or
-  `'option'`, so the phone can draw it well. `title`: the question.
+  `'option'`, so the phone can draw it well. `title`: the question. For `'player'`, `v` is the player's place and the
+  phone shows that player's own name (a rule file never knows names).
 - `buttons` are moves with no cards (Draw a card, Pass, Knock).
 - Where a pick must also fit a pattern (a run in Rummy), list every card that could be part of one; `can` has the last
   word and says why not.
