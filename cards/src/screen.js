@@ -249,7 +249,7 @@
     const taken = trickCards(v, held);
     for (const t of taken) {
       if (!spots[t.seat]) continue;
-      const at = toward(spots[t.seat], 0.62);
+      const at = toward(spots[t.seat], 0.58);
       stage.append(place(cardIn('cardbox trick', F.card(t.card)), at.x, at.y));
     }
     const heldNow = !!(held && taken.length && !(zones.trick && zones.trick.cards && zones.trick.cards.length));
@@ -261,15 +261,15 @@
       const mine = v.turn.includes(i), takes = heldNow && held.won === i;
       const plate = el('div', 'plate' + (mine ? ' turn' : '') + (takes ? ' takes' : '') + (p && !p.here ? ' away' : '') + (n > 8 ? ' tight' : '') + (side !== null ? ' side side' + (side % 4) : ''));
       plate.dataset.seat = i;
-      const meta = [];
-      if (hand) meta.push(plural(hand.n, 'card', 'cards'));
-      if (v.pub && Array.isArray(v.pub.scores) && v.pub.scores[i] !== undefined) meta.push('score ' + v.pub.scores[i]);
+      // The cards held and the score are two lines: "13 cards, score -70" does not fit a plate (found in the browser with Spades).
+      const score = v.pub && Array.isArray(v.pub.scores) && v.pub.scores[i] !== undefined ? 'score ' + v.pub.scores[i] : '';
       const tags = [];
       if (won && won.n > 0 && !line && !takes) tags.push(won.n + ' taken');   // the plate holds about 16 letters: the count waits while "takes it" shows
       if (p && !p.here) tags.push('away');
       if (takes) tags.push('takes it');
       if (mine) tags.push('to play');
-      plate.append(el('div', 'pname', nameAt(s.players, i)), el('div', 'pmeta', meta.join(', ')));
+      plate.append(el('div', 'pname', nameAt(s.players, i)), el('div', 'pmeta', hand ? plural(hand.n, 'card', 'cards') : ''));
+      if (score) plate.append(el('div', 'pscore', score));
       if (hasNotes(v)) plate.append(el('div', 'pnote', line));
       plate.append(el('div', 'ptags', tags.join(', ')));
       stage.append(place(plate, spot.x, spot.y));
@@ -289,13 +289,15 @@
   // ---------- game over ----------
   function drawOver(stage, s) {
     const v = s.view, over = v.over || {}, panel = el('div', 'over');
-    panel.append(el('div', 'over-win', winnerLine(v, s.players)));
+    // A game that ends with no winner (Conquian, the pack run out) still has a headline, as on the phone.
+    panel.append(el('div', 'over-win', winnerLine(v, s.players) || 'Game over'));
     if (over.note) panel.append(el('div', 'over-note', over.note));
     const rows = el('div', 'over-rows');
     for (let i = 0; i < v.n; i++) {
       const bits = [];
       if (Array.isArray(over.left) && over.left[i] !== undefined) bits.push(plural(over.left[i], 'point left', 'points left'));
       if (Array.isArray(over.scores) && over.scores[i] !== undefined) bits.push('score ' + over.scores[i]);
+      if (!bits.length) continue;   // a game with nothing to say about a player leaves them out of the list
       const row = el('div', 'over-row');
       row.append(el('span', 'over-name', nameAt(s.players, i)), el('span', 'over-what', bits.join(', ')));
       rows.append(row);
