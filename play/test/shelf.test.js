@@ -276,4 +276,12 @@ test('Play with friends: a row of Card games and Trivia Night, first on the home
   // Only PLAY's front page loads the shelf (Kids lives on its own branch and site, and loads none of it).
   const pages = fs.readdirSync(PLAY).filter((f) => f.endsWith('.html') && fs.readFileSync(path.join(PLAY, f), 'utf8').includes('src/shelf.js'));
   assert.deepEqual(pages, ['index.html']);
+  // And if Kids' PLAY ever takes this file, the row stays off there: on a kids.* address friendsRow() adds nothing.
+  const fn = js.slice(js.indexOf('  function friendsRow() {'), js.indexOf('\n  function machineRow() {'));
+  const made = (host) => require('vm').runInNewContext('(' + fn.trim().replace(/^function friendsRow\(\)/, 'function ()') + ')()', {
+    location: { hostname: host }, FRIENDS: [], Image: function () { return {}; },
+    document: { createDocumentFragment: () => ({ kind: 'fragment' }) },
+    el: (tag, cls) => ({ kind: 'el', tag, cls, append() {}, style: { setProperty() {} }, setAttribute() {}, classList: { add() {} } }) });
+  assert.deepEqual(made('kids.voidtv.net'), { kind: 'fragment' }, 'nothing on Kids');
+  assert.equal(made('voidtv.net').cls, 'row friends-row', 'the row on voidtv.net');
 });

@@ -580,6 +580,8 @@
     ['/trivia/', '/assets/brand/bg/trivianight-m.webp', 'Trivia Night', 'Questions on the TV, answers on phones', '#ffd23f'],
   ];
   function friendsRow() {
+    // Never on Kids: if Kids' PLAY ever takes this file, the row stays off there (an empty fragment adds nothing).
+    if (/^kids\./.test(location.hostname)) return document.createDocumentFragment();
     const sec = el('section', 'row friends-row');
     const h = el('h2', '', 'Play with friends'); h.append(el('small', '', 'the TV is the table, phones are the hands'));
     sec.append(h);
