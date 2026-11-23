@@ -572,6 +572,30 @@
     };
     return b;
   }
+  // Play with friends (Bryan, 23 Nov 2026, picked from pictures: "P3, Play with friends"): the rooms where the TV is the
+  // table and the phones are the hands, in the shelf's own boxes. First on the home shelf; Continue playing and the news
+  // rows still go above it. Only PLAY's own page loads this file, so it never reaches Kids.
+  const FRIENDS = [
+    ['/cards/', '/assets/brand/bg/cardtable-m.webp', 'Card games', 'Spades, Hearts, Rummy and more', '#4ade80'],
+    ['/trivia/', '/assets/brand/bg/trivianight-m.webp', 'Trivia Night', 'Questions on the TV, answers on phones', '#ffd23f'],
+  ];
+  function friendsRow() {
+    const sec = el('section', 'row friends-row');
+    const h = el('h2', '', 'Play with friends'); h.append(el('small', '', 'the TV is the table, phones are the hands'));
+    sec.append(h);
+    const track = el('div', 'track');
+    for (const [href, pic, title, meta, color] of FRIENDS) {
+      const a = el('a', 'box bigbox'); a.href = href; a.style.setProperty('--sys', color); a.setAttribute('aria-label', title + ', ' + meta);
+      const art = el('span', 'art');
+      const img = new Image(); img.alt = ''; img.loading = 'lazy'; img.decoding = 'async'; img.src = pic;
+      img.onerror = () => { img.remove(); art.classList.add('none'); };
+      art.append(img, el('span', 'fallback', title));
+      const label = el('span', 'label'); label.append(el('span', 'title', title), el('span', 'meta', meta));
+      a.append(art, label); track.append(a);
+    }
+    const wrap = el('div', 'rowwrap'); wrap.append(track); sec.append(wrap);
+    return sec;
+  }
   function machineRow() {
     const counts = new Map();
     for (const g of shelfGames) counts.set(g.system, (counts.get(g.system) || 0) + 1);
@@ -614,7 +638,7 @@
     if (!shelfGames.length) { rows.innerHTML = '<p class="loading">No games on the shelf right now.</p>'; return; }
     if (home) {
       const list = homeRows(shelfGames);
-      rows.append(rowSection(list[0].title, list[0].games, list[0].f, list[0].count), machineRow());
+      rows.append(friendsRow(), rowSection(list[0].title, list[0].games, list[0].f, list[0].count), machineRow());
       for (const r of list.slice(1)) rows.append(rowSection(r.title, r.games, r.f, r.count));
       // What is in the news (play/src/moments-shelf.js, the shared moments engine): its rows go first under the banner.
       if (root.PlayMoments) root.PlayMoments.place(rows, shelfGames, rowSection, () => turn === shown);

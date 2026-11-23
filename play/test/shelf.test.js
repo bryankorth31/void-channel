@@ -261,3 +261,19 @@ test('Bryan, 20 Nov 2026 ("the cool infinite scrolling paralax effect using the 
   assert.ok(!js.includes('function column') && !css.includes('.column'), 'PLAY keeps no column of its own');
   for (const f of ['static-glitch', 'static-bolt', 'static-dark']) for (const s of ['', '-m']) assert.ok(fs.existsSync(path.join(P, '..', 'assets', 'brand', 'bg', 'col', f + s + '.jpg')), f + s);
 });
+
+// Bryan, 23 Nov 2026, picked from pictures: "P3, Play with friends". The rooms where the TV is the table and the phones
+// are the hands, first on the home shelf (Continue playing and the news rows still go above it).
+test('Play with friends: a row of Card games and Trivia Night, first on the home shelf, in the shelf\'s own boxes', () => {
+  const js = fs.readFileSync(path.join(PLAY, 'src', 'shelf.js'), 'utf8').replace(/\r\n/g, '\n');
+  assert.ok(js.includes('rows.append(friendsRow(), rowSection(list[0].title, list[0].games, list[0].f, list[0].count), machineRow());'), 'first on the home shelf');
+  const table = js.slice(js.indexOf('const FRIENDS = ['), js.indexOf('];', js.indexOf('const FRIENDS = [')));
+  const rows = [...table.matchAll(/\['([^']+)', '([^']+)', '([^']+)', '([^']+)', '(#[0-9a-f]{6})'\]/g)].map((m) => m.slice(1));
+  assert.deepEqual(rows.map((r) => [r[0], r[2]]), [['/cards/', 'Card games'], ['/trivia/', 'Trivia Night']]);
+  for (const r of rows) assert.ok(fs.existsSync(path.join(PLAY, '..', r[1])), r[1] + ' is in the repo');
+  assert.ok(js.includes("const a = el('a', 'box bigbox'); a.href = href;"), 'the shelf\'s own big boxes');
+  assert.doesNotMatch(table, new RegExp('[' + String.fromCharCode(8211, 8212) + ']'), 'no em or en dashes');
+  // Only PLAY's front page loads the shelf (Kids lives on its own branch and site, and loads none of it).
+  const pages = fs.readdirSync(PLAY).filter((f) => f.endsWith('.html') && fs.readFileSync(path.join(PLAY, f), 'utf8').includes('src/shelf.js'));
+  assert.deepEqual(pages, ['index.html']);
+});
