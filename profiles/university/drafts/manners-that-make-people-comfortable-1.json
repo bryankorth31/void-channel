@@ -157,68 +157,86 @@
       ],
       "actors": [
         {
+          "id": "host",
+          "type": "card",
+          "o": 0,
+          "prop": "figure",
+          "pose": "stand",
+          "label": "",
+          "x": 214.125,
+          "y": 92.5,
+          "w": 51.75,
+          "h": 115,
+          "look": "dark",
+          "turn": 0.9
+        },
+        {
+          "id": "guest",
+          "type": "card",
+          "o": 0,
+          "prop": "figure",
+          "pose": "stand",
+          "label": "",
+          "x": 554.125,
+          "y": 87.5,
+          "w": 51.75,
+          "h": 115,
+          "turn": -0.9
+        },
+        {
           "id": "s0",
           "type": "card",
-          "x": 30,
-          "y": 90,
-          "w": 220,
-          "h": 100,
+          "o": 0,
+          "prop": "dish",
           "label": "Offer it",
           "color": "blue",
-          "o": 0,
-          "size": 20
+          "size": 22,
+          "x": 260,
+          "y": 165,
+          "w": 140,
+          "h": 140,
+          "tagW": 130,
+          "tag": [
+            -150,
+            40
+          ]
         },
         {
           "id": "s1",
           "type": "card",
-          "x": 290,
-          "y": 90,
-          "w": 220,
-          "h": 100,
+          "o": 0,
+          "prop": "placecard",
+          "text": "Roast potatoes",
           "label": "Say what it is",
           "color": "blue",
-          "o": 0,
-          "size": 17
-        },
-        {
-          "id": "a1",
-          "type": "arrow",
-          "x": 256,
-          "y": 140,
-          "x2": 284,
-          "y2": 140,
-          "color": "dim",
-          "o": 0,
-          "draw": 0
+          "size": 20,
+          "x": 410,
+          "y": 230,
+          "w": 120,
+          "h": 120,
+          "tagW": 170,
+          "tag": [
+            190,
+            0
+          ]
         },
         {
           "id": "s2",
           "type": "card",
-          "x": 550,
-          "y": 90,
-          "w": 220,
-          "h": 100,
+          "o": 0,
+          "tie": "host.tie",
+          "x": 110,
+          "y": 70,
           "label": "Then let go",
           "color": "blue",
-          "o": 0,
-          "size": 20
-        },
-        {
-          "id": "a2",
-          "type": "arrow",
-          "x": 516,
-          "y": 140,
-          "x2": 544,
-          "y2": 140,
-          "color": "dim",
-          "o": 0,
-          "draw": 0
+          "size": 20,
+          "tagW": 160
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 270,
+          "y": 352,
           "label": "The honored person is served first.",
           "color": "pink",
           "size": 22,
@@ -230,9 +248,23 @@
           "say": "You offer the dish to the guest first.",
           "dur": 2.6,
           "set": {
+            "host": {
+              "o": 1
+            },
+            "guest": {
+              "o": 1
+            },
             "s0": {
               "o": 1,
-              "sub": "to the guest first"
+              "sub": "to the guest first",
+              "x": 390,
+              "y": 155,
+              "w": 140,
+              "h": 140,
+              "tag": [
+                -170,
+                60
+              ]
             }
           }
         },
@@ -243,10 +275,6 @@
             "s1": {
               "o": 1,
               "sub": "so they know"
-            },
-            "a1": {
-              "o": 1,
-              "draw": 1
             }
           }
         },
@@ -258,9 +286,12 @@
               "o": 1,
               "sub": "and step back"
             },
-            "a2": {
-              "o": 1,
-              "draw": 1
+            "host": {
+              "x": 144,
+              "y": 82.5,
+              "w": 52,
+              "h": 115,
+              "turn": 0.3
             },
             "line": {
               "o": 1

@@ -141,56 +141,95 @@
         {
           "id": "left",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
-          "h": 100,
-          "label": "Plain handshake",
-          "color": "blue",
           "o": 0,
-          "size": 18
+          "prop": "figure",
+          "pose": "stand",
+          "label": "Plain handshake",
+          "x": 104.125,
+          "y": 112.5,
+          "w": 51.75,
+          "h": 115,
+          "look": "dark",
+          "turn": 1.2,
+          "color": "blue",
+          "size": 20,
+          "tagW": 180,
+          "tag": [
+            60,
+            115
+          ]
+        },
+        {
+          "id": "p2",
+          "type": "card",
+          "o": 0,
+          "prop": "figure",
+          "pose": "stand",
+          "label": "",
+          "x": 224.125,
+          "y": 112.5,
+          "w": 51.75,
+          "h": 115,
+          "turn": -1.2
+        },
+        {
+          "id": "p3",
+          "type": "card",
+          "o": 0,
+          "prop": "figure",
+          "pose": "stand",
+          "label": "",
+          "x": 494.125,
+          "y": 112.5,
+          "w": 51.75,
+          "h": 115,
+          "look": "dark",
+          "turn": 1.2
         },
         {
           "id": "right",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
-          "h": 100,
-          "label": "Stranger's hug",
-          "color": "blue",
           "o": 0,
-          "size": 22
+          "prop": "figure",
+          "pose": "stand",
+          "label": "Stranger's hug",
+          "x": 644.125,
+          "y": 112.5,
+          "w": 51.75,
+          "h": 115,
+          "turn": -1.2,
+          "color": "blue",
+          "size": 20,
+          "tagW": 170,
+          "tag": [
+            -40,
+            115
+          ]
         },
         {
           "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "HELLO",
+          "type": "card",
+          "o": 0,
+          "prop": "placecard",
+          "text": "Hello",
+          "label": "Hello",
           "color": "gold",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
-        },
-        {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "GREET",
-          "color": "fg",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
+          "size": 18,
+          "x": 345,
+          "y": 65,
+          "w": 110,
+          "h": 110,
+          "tagW": 120,
+          "tag": [
+            0,
+            80
+          ]
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
+          "y": 350,
           "label": "Match the greeting to how well you know them.",
           "color": "pink",
           "size": 18,
@@ -205,12 +244,17 @@
             "left": {
               "o": 1
             },
+            "p2": {
+              "o": 1
+            },
+            "p3": {
+              "o": 1
+            },
             "right": {
               "o": 1
             },
             "thing": {
-              "o": 1,
-              "s": 1
+              "o": 1
             }
           }
         },
@@ -218,9 +262,17 @@
           "say": "Each chooses a greeting.",
           "dur": 2.4,
           "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
+            "left": {
+              "x": 124,
+              "y": 112.5,
+              "w": 52,
+              "h": 115
+            },
+            "p3": {
+              "x": 599,
+              "y": 112.5,
+              "w": 52,
+              "h": 115,
               "shake": true
             }
           }
@@ -233,7 +285,8 @@
               "sub": "both feel at ease"
             },
             "right": {
-              "sub": "one feels trapped"
+              "sub": "one feels trapped",
+              "tremble": true
             }
           }
         },
@@ -241,6 +294,10 @@
           "say": "Too much, too soon, makes one squirm.",
           "dur": 2.6,
           "set": {
+            "right": {
+              "tremble": true,
+              "turn": -2
+            },
             "line": {
               "o": 1
             }
@@ -258,16 +315,12 @@
             "right": {
               "label": "Hello!",
               "size": 22,
-              "color": "green"
+              "color": "green",
+              "tremble": true
             },
             "thing": {
-              "label": "FIRST WORDS",
-              "size": 14
-            },
-            "act": {
-              "label": "SAY",
-              "size": 18,
-              "color": "pink"
+              "label": "First words",
+              "size": 18
             },
             "line": {
               "label": "Formal for strangers, hello for friends.",

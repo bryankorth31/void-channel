@@ -141,56 +141,58 @@
         {
           "id": "left",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "pipe",
+          "kinked": 0,
           "label": "Straight pipe",
           "color": "blue",
-          "o": 0,
-          "size": 22
+          "size": 22,
+          "x": 110,
+          "y": 75,
+          "w": 220,
+          "h": 220,
+          "tagW": 170,
+          "tag": [
+            0,
+            100
+          ]
         },
         {
           "id": "right",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "pipe",
+          "kind": "elbow",
           "label": "Elbow joint",
           "color": "blue",
-          "o": 0,
-          "size": 22
+          "size": 22,
+          "x": 470,
+          "y": 75,
+          "w": 220,
+          "h": 220,
+          "tagW": 160,
+          "tag": [
+            0,
+            100
+          ]
         },
         {
           "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "THE BEND",
+          "type": "card",
+          "o": 0,
+          "tie": "right.tie",
+          "x": 420,
+          "y": 75,
+          "label": "The bend",
           "color": "gold",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
-        },
-        {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "TURN",
-          "color": "fg",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
+          "size": 18,
+          "tagW": 140
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
+          "y": 350,
           "label": "Shape it for how it has to move.",
           "color": "pink",
           "size": 22,
@@ -209,8 +211,7 @@
               "o": 1
             },
             "thing": {
-              "o": 1,
-              "s": 1
+              "o": 1
             }
           }
         },
@@ -218,9 +219,7 @@
           "say": "A straight piece will not bend.",
           "dur": 2.4,
           "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
+            "left": {
               "shake": true
             }
           }
@@ -230,6 +229,7 @@
           "dur": 2.6,
           "set": {
             "left": {
+              "kinked": 1,
               "sub": "kinks at the corner"
             },
             "right": {
@@ -261,13 +261,8 @@
               "color": "green"
             },
             "thing": {
-              "label": "ELBOW",
+              "label": "Elbow",
               "size": 18
-            },
-            "act": {
-              "label": "EASE IN",
-              "size": 18,
-              "color": "pink"
             },
             "line": {
               "label": "Fullness shapes the sleeve to the arm.",
