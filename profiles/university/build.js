@@ -340,8 +340,10 @@ footer{max-width:1500px;margin:0 auto;padding:10px 32px 40px;color:var(--dim);fo
 .cx-after small{color:var(--dim)}
 .sc{background:var(--deep);border:1px solid var(--line);border-radius:12px;padding:14px 18px 16px;margin:0 0 18px}
 .sc-like{font-size:14px;color:var(--pink);font-weight:700}
-.sc-stage{margin-top:8px;border-radius:10px;background:radial-gradient(ellipse at center,#0e1a24 0%,#07090f 75%);aspect-ratio:800/360;overflow:hidden}
-.sc-stage svg{display:block;width:100%;height:100%;font-family:system-ui,Segoe UI,Roboto,sans-serif}
+.sc-stage{position:relative;margin-top:8px;border-radius:10px;background:radial-gradient(ellipse at 50% 55%,#24160c 0%,#070605 72%);aspect-ratio:800/360;overflow:hidden}
+.sc-stage canvas{position:absolute;inset:0;display:block;width:100%;height:100%}
+.sc-stage::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 45%,transparent 55%,rgba(0,0,0,.5) 100%)}
+.sc.no3d .sc-stage{display:none}
 .sc-say{min-height:40px;margin:12px 2px 6px;font-family:var(--head);font-size:22px;font-weight:500;text-align:center}
 .sc-ctrl{display:flex;align-items:center;justify-content:center;gap:10px}
 .sc-ctrl button{font:inherit;font-size:15px;background:var(--panel2);color:var(--fg);border:1px solid var(--line2);border-radius:10px;padding:8px 16px;cursor:pointer;min-width:44px;min-height:40px}
@@ -427,7 +429,7 @@ ${(c.channels || []).length ? '<h3 style="margin:0 0 12px">Channels for this cou
 ${c.units.map((u) => unit(u, c.voices, c)).join('\n')}
 </main></div>
 ${FOOT()}
-<script src="crystal.js"></script><script src="scene.js"></script>${c.units.some((u) => shipsFlip(c, u)) ? '<script src="flip.js"></script>' : ''}${c.units.some(shipsLab) ? '<script src="planck.min.js"></script><script src="lab.js"></script>' + [...new Set(c.units.filter(shipsLab).map((u) => u.lab.bench))].map((n) => '<script src="lab-' + esc(n) + '.js"></script>').join('') : ''}${c.units.some(shipsScale) ? '<script type="module" src="scale.js"></script>' : ''}
+<script src="crystal.js"></script>${c.units.some((u) => u.scene) ? '<script src="scene-plan.js"></script><script type="module" src="scene.js"></script>' : ''}${c.units.some((u) => shipsFlip(c, u)) ? '<script src="flip.js"></script>' : ''}${c.units.some(shipsLab) ? '<script src="planck.min.js"></script><script src="lab.js"></script>' + [...new Set(c.units.filter(shipsLab).map((u) => u.lab.bench))].map((n) => '<script src="lab-' + esc(n) + '.js"></script>').join('') : ''}${c.units.some(shipsScale) ? '<script type="module" src="scale.js"></script>' : ''}
 <script>
 function seek(el, t) {
   var v = el.closest('.unit').querySelector('video, audio'); if (!v) return;
@@ -871,7 +873,6 @@ const shipJs = (from, to) => fs.writeFileSync(to, fs.readFileSync(from, 'utf8').
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT, { recursive: true });
 shipJs(path.join(DIR, 'crystal.js'), path.join(OUT, 'crystal.js'));
-shipJs(path.join(DIR, 'scene.js'), path.join(OUT, 'scene.js'));
 // A lab is on a page when the unit has one; the public copy carries only labs marked live.
 const shipsLab = (u) => !!(u.lab && (!LIVE || u.lab.live));
 const shipsScale = (u) => scalesOf(u).some((sc) => !LIVE || sc.live);
@@ -902,11 +903,19 @@ if (loaded.some((c) => c.units.some(shipsLab))) {
   for (const f of fs.readdirSync(DIR).filter((f) => used.has(f))) shipJs(path.join(DIR, f), path.join(OUT, f));
   for (const f of ['planck.min.js', 'planck-LICENSE.txt']) fs.copyFileSync(path.join(DIR, 'vendor', f), path.join(OUT, f));
 }
-// The scale stage and its drawing library go along only when a page shows a scale.
-if (loaded.some((c) => c.units.some(shipsScale))) {
-  shipJs(path.join(DIR, 'scale.js'), path.join(OUT, 'scale.js'));
+// The drawing library goes along when a page shows a scale or a scene.
+const shipsThree = (c) => c.units.some((u) => shipsScale(u) || u.scene);
+if (loaded.some(shipsThree)) {
   fs.copyFileSync(path.join(DIR, 'vendor', 'three.module.min.js'), path.join(OUT, 'three.module.min.js'));
   fs.copyFileSync(path.join(DIR, 'vendor', 'three-LICENSE.txt'), path.join(OUT, 'three-LICENSE.txt'));
+}
+if (loaded.some((c) => c.units.some(shipsScale))) shipJs(path.join(DIR, 'scale.js'), path.join(OUT, 'scale.js'));
+// The lit table (Bryan, 22 Nov 2026: "A, lit table"): the scene engine, its rules, and the two typefaces printed on the
+// things on the table, which ship whatever type the page itself is set in.
+if (loaded.some((c) => c.units.some((u) => u.scene))) {
+  for (const f of ['scene.js', 'scene-plan.js']) shipJs(path.join(DIR, f), path.join(OUT, f));
+  fs.mkdirSync(path.join(OUT, 'fonts'), { recursive: true });
+  for (const f of ['bricolage-grotesque-latin.woff2', 'fraunces-latin.woff2']) fs.copyFileSync(path.join(DIR, 'fonts', f), path.join(OUT, 'fonts', f));
 }
 // Answer on your phones, in the public copy (Bryan, 21 Nov 2026: "Yes, build it"): the screen's script, PLAY's own QR
 // maker, and the phone page at /join, which is where the relay on voidtv.net sends a phone that scans the code.

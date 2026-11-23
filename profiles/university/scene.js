@@ -1,151 +1,501 @@
-// Void University scene engine (15 Nov 2026). Bryan: "less words ... more diagram picture animated thing that shows
-// the process", and "use analogies, one to ones that people can recognize from other areas of life". So a scene acts
-// out an everyday analogy in a few beats, then the analogy's labels turn into the idea's labels in place: the bill
-// becomes the claim, the receipt becomes the evidence. One engine for every unit and every course; a scene is data.
+// Void University scene engine, the lit table (22 Nov 2026; Bryan picked "A, lit table" from three pictures, after
+// "alll of the explaination visuals on university ... are rudimentary"). Every unit's existing `scene` block is acted
+// out with real things on a wooden table under a lamp, drawn with three.js (vendor, MIT): paper cards and hang tags,
+// stickers that slap down, threads with pins, masking tape. When a step renames a piece it turns over, so the analogy
+// is on the front and the idea on the back of the same thing. scene-plan.js holds the rules (what each piece becomes,
+// when it turns, what stays in frame); this file draws them. The picture is a pure function of (step, progress).
 //
-// Scene data (a unit's `scene` block in the course file):
-//   { analogy, actors: [{ id, type, x, y, w, h, label, sub, color, o }], beats: [{ say, dur, set: { id: {...} } }] }
-//   types: card (rounded box, label, sub), slot (dashed box), text, stamp (round badge), arrow (x,y to x2,y2; draw 0..1)
-//   any beat may set: x y w h o (opacity) s (scale) label sub color dash shake (true wobbles during that beat) draw
-// The picture at any moment is a pure function of (beat, progress), so it can be stepped, scrubbed or recorded.
-(function () {
-  const NS = 'http://www.w3.org/2000/svg';
-  const W = 800, H = 360;
-  const COL = { blue: '#5fd4ff', gold: '#f2a93b', pink: '#ff4fc8', green: '#5fe39a', dim: '#5a6078', fg: '#e8e8ee' };
-  const col = (c) => COL[c] || c || COL.fg;
-  const ease = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
-  const lerp = (a, b, t) => a + (b - a) * t;
-  const el = (tag, attrs, parent) => {
-    const n = document.createElementNS(NS, tag);
-    for (const k in attrs) n.setAttribute(k, attrs[k]);
-    if (parent) parent.appendChild(n);
-    return n;
+// One WebGL renderer serves the whole page: each scene draws into it and copies the frame to its own canvas, so a
+// course with many scenes never runs out of 3D contexts. A scene's world is built when it comes near the screen and
+// let go when it is far away; its last frame stays on its canvas. With no WebGL the words and steps still work.
+import * as THREE from './three.module.min.js';
+
+const P = window.VUScenePlan;
+const S = 0.01; // scene units (800 x 360) to metres on the table
+const wx = (x) => (x - P.W / 2) * S, wz = (y) => (y - P.H / 2) * S;
+const INK = { blue: '#1d3d78', gold: '#8a5d0c', pink: '#c0142c', green: '#1c7444', dim: '#5d5a55', fg: '#2a2724' };
+const PAPER = { blue: ['#3d6fc4', '#28508f'], gold: ['#e2a537', '#b97d17'], pink: ['#d8243f', '#a3122a'], green: ['#2f9a5c', '#1d7343'], dim: ['#8f8a83', '#6d6862'], fg: ['#d9d2c4', '#b9b1a2'] };
+const THREAD = { blue: 0x2c4f8f, gold: 0xb48323, pink: 0xb3122a, green: 0x2a8a52, dim: 0x8d8780, fg: 0x6b6560 };
+const BALL = { blue: 0x2f62c0, gold: 0xe0a43a, pink: 0xd42a48, green: 0x2f9a5c, dim: 0x9a958e, fg: 0xd9d2c4 };
+const ink = (c) => INK[c] || INK.fg;
+const ease = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
+const lerp = (a, b, t) => a + (b - a) * t;
+const still = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
+const PX = 300; // canvas pixels per metre on printed faces
+const PRINT = 'VU Print', HAND = 'VU Hand';
+
+// ----- the printing type, loaded from the site's own font files whatever type the page itself uses
+let fontsReady = null;
+function fonts() {
+  if (fontsReady) return fontsReady;
+  const add = (family, file, desc) => {
+    try { const f = new FontFace(family, 'url(' + new URL('fonts/' + file, import.meta.url) + ')', desc); document.fonts.add(f); return f.load().catch(() => null); }
+    catch (e) { return Promise.resolve(null); }
   };
+  fontsReady = Promise.all([
+    add(PRINT, 'bricolage-grotesque-latin.woff2', { weight: '200 800' }),
+    add(HAND, 'fraunces-latin.woff2', { weight: '100 900' }),
+    add(HAND, 'fraunces-latin.woff2', { weight: '100 900', style: 'italic' }),
+  ]);
+  return fontsReady;
+}
 
-  // Cumulative state after each beat: beat 0 is the actors as declared, beat i merges beat i's `set`.
-  function states(sc) {
-    let cur = {};
-    sc.actors.forEach((a) => { cur[a.id] = Object.assign({ o: 1, s: 1, draw: 1 }, a); });
-    const out = [];
-    sc.beats.forEach((b) => {
-      const next = {};
-      for (const id in cur) next[id] = Object.assign({}, cur[id], { shake: false });
-      for (const id in b.set || {}) next[id] = Object.assign(next[id] || {}, b.set[id]);
-      out.push({ from: cur, to: next });
-      cur = next;
-    });
-    return out;
+// ----- one renderer for the page
+let GL;
+function gl() {
+  if (GL !== undefined) return GL;
+  try {
+    const canvas = document.createElement('canvas');
+    const r = new THREE.WebGLRenderer({ canvas, antialias: true, powerPreference: 'high-performance' });
+    r.outputColorSpace = THREE.SRGBColorSpace;
+    r.toneMapping = THREE.ACESFilmicToneMapping; r.toneMappingExposure = 1.05;
+    r.shadowMap.enabled = true; r.shadowMap.type = THREE.PCFSoftShadowMap;
+    GL = { r, canvas, wood: null, table: null };
+  } catch (e) { GL = null; }
+  return GL;
+}
+
+function noiseFill(g, w, h, base, amt, seed) {
+  g.fillStyle = base; g.fillRect(0, 0, w, h);
+  let s = seed || 7;
+  const rnd = () => ((s = (s * 16807) % 2147483647) / 2147483647);
+  if (amt) {
+    const img = g.getImageData(0, 0, w, h), d = img.data;
+    for (let i = 0; i < d.length; i += 4) { const n = (rnd() - 0.5) * amt; d[i] += n; d[i + 1] += n; d[i + 2] += n; }
+    g.putImageData(img, 0, 0);
   }
+  return rnd;
+}
+// The table: dark planks with their grain, drawn once for the page.
+function table() {
+  if (GL.table) return GL.table;
+  const c = document.createElement('canvas'); c.width = 2048; c.height = 1024;
+  const g = c.getContext('2d');
+  const rnd = noiseFill(g, c.width, c.height, '#3a2516', 10, 11);
+  const planks = 6, ph = c.height / planks;
+  for (let p = 0; p < planks; p++) {
+    const tone = 0.82 + rnd() * 0.3;
+    g.fillStyle = 'rgba(' + Math.round(96 * tone) + ',' + Math.round(60 * tone) + ',' + Math.round(34 * tone) + ',0.55)';
+    g.fillRect(0, p * ph, c.width, ph);
+    for (let k = 0; k < 70; k++) {
+      const y0 = p * ph + rnd() * ph, amp = 2 + rnd() * 7, f = 0.002 + rnd() * 0.006, ph0 = rnd() * 6;
+      g.strokeStyle = 'rgba(' + (rnd() < 0.5 ? '30,16,8' : '140,96,58') + ',' + (0.08 + rnd() * 0.16) + ')';
+      g.lineWidth = 0.6 + rnd() * 2.2;
+      g.beginPath();
+      for (let x = 0; x <= c.width; x += 16) { const y = y0 + Math.sin(x * f + ph0) * amp + Math.sin(x * f * 3.1) * amp * 0.3; if (x) g.lineTo(x, y); else g.moveTo(x, y); }
+      g.stroke();
+    }
+    g.fillStyle = 'rgba(10,5,2,0.75)'; g.fillRect(0, p * ph, c.width, 3);
+    g.fillStyle = 'rgba(170,120,80,0.10)'; g.fillRect(0, p * ph + 3, c.width, 2);
+  }
+  const t = new THREE.CanvasTexture(c);
+  t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; t.wrapS = t.wrapT = THREE.RepeatWrapping; t.repeat.set(1, 3);
+  GL.table = { geo: new THREE.PlaneGeometry(16, 10), mat: new THREE.MeshStandardMaterial({ map: t, roughness: 0.62, metalness: 0 }) };
+  return GL.table;
+}
 
-  function mount(root) {
-    const sc = JSON.parse(root.dataset.scene);
-    const st = states(sc);
-    const svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H, role: 'img', 'aria-label': sc.analogy || 'scene' });
-    root.querySelector('.sc-stage').appendChild(svg);
-    const say = root.querySelector('.sc-say');
-    const dots = root.querySelector('.sc-dots');
-    const playBtn = root.querySelector('.sc-play');
-    sc.beats.forEach((_, i) => {
-      const d = document.createElement('button');
-      d.type = 'button'; d.setAttribute('aria-label', 'Step ' + (i + 1));
-      d.onclick = () => { stop(); go(i, 1); };
-      dots.appendChild(d);
-    });
+// ----- printed faces
+function fit(g, text, family, weight, size, max) {
+  do { g.font = weight + ' ' + size + 'px "' + family + '"'; size -= 2; } while (g.measureText(text).width > max && size > 10);
+  return size + 2;
+}
+function paperShape(g, w, h, kind) {
+  g.beginPath();
+  if (kind === 'tag') { const cut = h * 0.22; g.moveTo(cut, 0); g.lineTo(w, 0); g.lineTo(w, h); g.lineTo(cut, h); g.lineTo(0, h - cut); g.lineTo(0, cut); }
+  else { const r = Math.min(w, h) * (kind === 'slip' ? 0.06 : 0.08); g.moveTo(r, 0); g.arcTo(w, 0, w, h, r); g.arcTo(w, h, 0, h, r); g.arcTo(0, h, 0, 0, r); g.arcTo(0, 0, w, 0, r); }
+  g.closePath();
+}
+// One face of a card, tag or slip: card stock, an ink rule, the big word and the small line. The front is printed; the
+// back, where a renamed piece shows its new words, is set in a book face.
+function paperFace(c, f, kind, back) {
+  const g = c.getContext('2d'), w = c.width, h = c.height;
+  g.clearRect(0, 0, w, h);
+  g.save();
+  paperShape(g, w, h, kind); g.clip();
+  noiseFill(g, w, h, f.color === 'dim' ? (back ? '#dcd8cf' : '#e2ded6') : (back ? '#e9e2d2' : '#f1ebdd'), 0, 17);
+  g.globalAlpha = 0.05; g.strokeStyle = '#6b5a40';
+  let s = 23; const rnd = () => ((s = (s * 16807) % 2147483647) / 2147483647);
+  for (let i = 0; i < (w * h) / 1400; i++) { const x = rnd() * w, y = rnd() * h; g.beginPath(); g.moveTo(x, y); g.lineTo(x + rnd() * 18 - 9, y + rnd() * 6 - 3); g.stroke(); }
+  g.globalAlpha = 1;
+  const rule = kind === 'tag' ? h * 0.42 : kind === 'slip' ? h * 0.18 : Math.min(h * 0.16, w * 0.06);
+  if (kind === 'slip') { /* a slip carries words only */ }
+  else if (!f.label && !f.sub) { g.strokeStyle = ink(f.color); g.lineWidth = Math.max(3, Math.min(w, h) * 0.02); const m = Math.min(w, h) * 0.08; g.strokeRect(m, m, w - 2 * m, h - 2 * m); }
+  else { g.fillStyle = ink(f.color); g.fillRect(rule, h * 0.14, Math.max(4, h * 0.035), h * 0.72); }
+  const left = kind === 'slip' ? w / 2 : rule + Math.max(4, h * 0.035) + h * 0.12;
+  const room = kind === 'slip' ? w - h * 0.5 : w - left - h * 0.1;
+  g.textAlign = kind === 'slip' ? 'center' : 'left'; g.textBaseline = 'middle';
+  const fam = back ? HAND : PRINT, wt = back ? 600 : 800;
+  const scale = kind === 'slip' ? 1 : (f.size || 22) / 22; // a slip is already cut to its type size
+  if (f.label) {
+    g.fillStyle = back ? '#1f1b17' : ink(f.color);
+    const big = Math.round(h * (f.sub ? 0.34 : 0.42) * Math.min(1.25, Math.max(0.7, scale)) * (back ? 0.9 : 1));
+    fit(g, f.label, fam, wt, big, room);
+    g.fillText(f.label, left, f.sub ? h * 0.4 : h * 0.52);
+  }
+  if (f.sub) {
+    g.fillStyle = back ? '#3b342c' : '#4a443d';
+    fit(g, f.sub, back ? HAND : PRINT, back ? 'italic 500' : 500, Math.round(h * 0.18), room);
+    g.fillText(f.sub, left, h * 0.72);
+  }
+  g.restore();
+  if (kind === 'tag') {
+    g.globalCompositeOperation = 'destination-out';
+    g.beginPath(); g.arc(h * 0.22, h * 0.5, h * 0.07, 0, Math.PI * 2); g.fill();
+    g.globalCompositeOperation = 'source-over';
+    g.strokeStyle = 'rgba(150,130,100,0.9)'; g.lineWidth = h * 0.035;
+    g.beginPath(); g.arc(h * 0.22, h * 0.5, h * 0.105, 0, Math.PI * 2); g.stroke();
+  }
+}
+// A bar: a strip of coloured paper, its words at the near end. Drawn at its longest; the strip shows as much as it is long.
+function barFace(c, f) {
+  const g = c.getContext('2d'), w = c.width, h = c.height;
+  g.clearRect(0, 0, w, h);
+  const col = PAPER[f.color] || PAPER.fg;
+  const grad = g.createLinearGradient(0, 0, 0, h); grad.addColorStop(0, col[0]); grad.addColorStop(1, col[1]);
+  g.fillStyle = grad; g.fillRect(0, 0, w, h);
+  let s = 41; const rnd = () => ((s = (s * 16807) % 2147483647) / 2147483647);
+  g.globalAlpha = 0.07; g.fillStyle = '#000';
+  for (let i = 0; i < (w * h) / 300; i++) g.fillRect(rnd() * w, rnd() * h, 1.5, 1.5);
+  g.globalAlpha = 1;
+  if (f.label) {
+    g.fillStyle = f.color === 'fg' ? '#2a2724' : '#fff8ee'; g.textBaseline = 'middle'; g.textAlign = 'left';
+    const hh = Math.min(h, f.h0 * PX * S);
+    fit(g, f.label, PRINT, 800, Math.round(hh * 0.4), f.w * PX * S - hh * 0.3);
+    g.fillText(f.label, hh * 0.25, hh * 0.52);
+  }
+}
+function stickerFace(c, f) {
+  const g = c.getContext('2d'), n = c.width, R = n / 2;
+  g.clearRect(0, 0, n, n);
+  const col = { gold: ['#f2b33a', '#c9861a'], green: ['#2fa865', '#1c7444'], blue: ['#3d6fc4', '#1d3d78'], dim: ['#9b958c', '#6d6862'], fg: ['#e8e1d3', '#bdb4a3'] }[f.color] || ['#e3263f', '#a90f24'];
+  const grad = g.createRadialGradient(R * 0.8, R * 0.7, R * 0.1, R, R, R);
+  grad.addColorStop(0, col[0]); grad.addColorStop(1, col[1]);
+  g.fillStyle = grad; g.fillRect(0, 0, n, n);
+  const fg = f.color === 'fg' ? '#2a2724' : '#fff';
+  g.strokeStyle = fg; g.globalAlpha = 0.85; g.lineWidth = n * 0.012;
+  g.beginPath(); g.arc(R, R, R * 0.74, 0, Math.PI * 2); g.stroke(); g.globalAlpha = 1;
+  g.fillStyle = fg; g.textAlign = 'center'; g.textBaseline = 'middle';
+  const words = String(f.label || '').split(' ');
+  const lines = words.length > 1 ? [words.slice(0, -1).join(' '), words[words.length - 1]] : words;
+  lines.forEach((t, i) => { fit(g, t, PRINT, 800, Math.round(n * (lines.length > 1 ? 0.22 : 0.2)), n * 0.6); g.fillText(t, R, R + (i - (lines.length - 1) / 2) * n * 0.22); });
+}
+function pencilFace(c, f) {
+  const g = c.getContext('2d'), w = c.width, h = c.height;
+  g.clearRect(0, 0, w, h);
+  if (!f.label) return;
+  g.fillStyle = 'rgba(225,215,195,0.8)'; g.textAlign = 'center'; g.textBaseline = 'middle';
+  fit(g, f.label, HAND, 'italic 500', Math.round(h * 0.3), w * 0.8);
+  g.fillText(f.label, w / 2, h / 2);
+}
 
-    // One group per actor, rebuilt cheaply each frame from the interpolated state.
-    const nodes = {};
-    sc.actors.forEach((a) => { nodes[a.id] = el('g', {}, svg); });
+function canvasTex(w, h) {
+  const c = document.createElement('canvas'); c.width = Math.max(8, Math.round(w)); c.height = Math.max(8, Math.round(h));
+  const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8;
+  return { c, t };
+}
+const capPx = (w, h) => { const k = Math.min(1, 1400 / Math.max(w, h)); return [w * k, h * k]; };
 
-    function draw(id, A, B, p, beatP) {
-      const g = nodes[id];
-      while (g.firstChild) g.removeChild(g.firstChild);
+// ----- the things on the table. Each has a group, paint(face, words) and fade(opacity).
+function paper(a, kind, w, h) {
+  const group = new THREE.Group();
+  const [cw, ch] = capPx(w * PX, h * PX);
+  const faces = [0, 1].map((k) => {
+    const { c, t } = canvasTex(cw, ch);
+    const geo = new THREE.PlaneGeometry(w, h, kind === 'slip' ? 12 : 28, 8);
+    const p = geo.attributes.position;
+    for (let i = 0; i < p.count; i++) { const u = p.getX(i) / w, v = p.getY(i) / h; p.setZ(i, (kind === 'slip' ? 0.008 : 0.018) * u * u * 4 + 0.008 * v * v * 4); }
+    geo.computeVertexNormals(); geo.rotateX(-Math.PI / 2);
+    if (k === 1) geo.rotateZ(Math.PI);
+    const mat = new THREE.MeshStandardMaterial({ map: t, roughness: 0.86, transparent: true, alphaTest: 0.02 });
+    const mesh = new THREE.Mesh(geo, mat); mesh.castShadow = true; mesh.receiveShadow = true;
+    mesh.position.y = k === 0 ? 0.002 : -0.002; group.add(mesh);
+    return { c, t, mat, key: null };
+  });
+  const mats = faces.map((f) => f.mat);
+  if (kind === 'tag') {
+    const hx = -w / 2 + h * 0.22;
+    const pts = [[hx, 0.01, 0], [hx - 0.05, 0.012, -0.03], [hx - 0.12, 0.008, -0.02], [hx - 0.16, 0.006, 0.04], [hx - 0.13, 0.005, 0.09]].map((q) => new THREE.Vector3(q[0], q[1], q[2]));
+    const str = new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts), 40, 0.006, 6), new THREE.MeshStandardMaterial({ color: 0xd8cdb5, roughness: 0.95, transparent: true }));
+    str.castShadow = true; group.add(str); mats.push(str.material);
+  }
+  return {
+    group, w, h,
+    paint(k, f) { const key = JSON.stringify(f); if (faces[k].key === key) return; faces[k].key = key; paperFace(faces[k].c, f, kind, k === 1); faces[k].t.needsUpdate = true; },
+    fade(o) { mats.forEach((m) => { m.opacity = o; }); },
+  };
+}
+function bar(a, st) {
+  const all = [a].concat(st.map((s) => s.to[a.id]));
+  const W = Math.max(...all.map((v) => v.w || 0)) * S, H = Math.max(...all.map((v) => v.h || 0)) * S;
+  const group = new THREE.Group();
+  const [cw, ch] = capPx(W * PX, H * PX);
+  const { c, t } = canvasTex(cw, ch);
+  const geo = new THREE.BoxGeometry(1, 0.006, 1);
+  const mat = new THREE.MeshStandardMaterial({ map: t, roughness: 0.9, transparent: true });
+  const side = new THREE.MeshStandardMaterial({ color: 0x2a2018, roughness: 0.9, transparent: true });
+  const mesh = new THREE.Mesh(geo, [side, side, mat, side, side, side]); mesh.castShadow = true; mesh.receiveShadow = true;
+  mesh.position.y = 0.004; group.add(mesh);
+  let key = null;
+  return {
+    group, w: W, h: H, bar: true, mesh,
+    size(w, h) {
+      mesh.scale.set(Math.max(0.001, w * S), 1, Math.max(0.001, h * S));
+      t.repeat.set(w * S / W, h * S / H); t.offset.set(0, 1 - h * S / H);
+    },
+    paint(k, f) { const kk = JSON.stringify(f); if (kk === key) return; key = kk; barFace(c, Object.assign({ h0: a.h || 60 }, f)); t.needsUpdate = true; },
+    fade(o) { mat.opacity = o; side.opacity = o; },
+  };
+}
+function sticker(a) {
+  const r = (a.w || 70) * S / 2, spikes = 28;
+  const shape = new THREE.Shape();
+  for (let i = 0; i <= spikes * 2; i++) { const t = (i / (spikes * 2)) * Math.PI * 2, rr = i % 2 ? r * 0.93 : r; const x = Math.cos(t) * rr, y = Math.sin(t) * rr; if (i) shape.lineTo(x, y); else shape.moveTo(x, y); }
+  const group = new THREE.Group();
+  const px = Math.min(768, Math.max(256, Math.round(2 * r * PX * 1.6)));
+  const faces = [0, 1].map((k) => {
+    const { c, t } = canvasTex(px, px);
+    t.repeat.set(1 / (2 * r), 1 / (2 * r)); t.offset.set(0.5, 0.5);
+    const geo = new THREE.ShapeGeometry(shape, 6); geo.rotateX(-Math.PI / 2);
+    if (k === 1) geo.rotateZ(Math.PI);
+    const mat = new THREE.MeshPhysicalMaterial({ map: t, roughness: 0.32, clearcoat: 1, clearcoatRoughness: 0.18, transparent: true });
+    const mesh = new THREE.Mesh(geo, mat); mesh.castShadow = true; mesh.receiveShadow = true;
+    mesh.position.y = k === 0 ? 0.004 : -0.004; group.add(mesh);
+    return { c, t, mat, key: null };
+  });
+  return {
+    group, w: 2 * r, h: 2 * r, round: true,
+    paint(k, f) { const key = JSON.stringify(f); if (faces[k].key === key) return; faces[k].key = key; stickerFace(faces[k].c, f); faces[k].t.needsUpdate = true; },
+    fade(o) { faces.forEach((f) => { f.mat.opacity = o; }); },
+  };
+}
+function ball(a) {
+  const r = (a.w || 40) * S / 2;
+  const mat = new THREE.MeshPhysicalMaterial({ color: BALL[a.color] || BALL.gold, roughness: 0.38, clearcoat: 0.6, transparent: true });
+  const mesh = new THREE.Mesh(new THREE.SphereGeometry(r, 40, 24), mat); mesh.castShadow = true; mesh.position.y = r;
+  const group = new THREE.Group(); group.add(mesh);
+  return { group, w: 2 * r, h: 2 * r, round: true, paint(k, f) { mat.color.set(BALL[f.color] || BALL.gold); }, fade(o) { mat.opacity = o; } };
+}
+function tape(a) {
+  const group = new THREE.Group();
+  const mat = new THREE.MeshStandardMaterial({ color: 0xd8c79c, roughness: 0.95, transparent: true, opacity: 0.92 });
+  const w = (a.w || 100) * S, h = (a.h || 60) * S, t = 0.05;
+  [[0, -h / 2, w + 0.04, t], [0, h / 2, w + 0.04, t], [-w / 2, 0, t, h], [w / 2, 0, t, h]].forEach(([x, z, sw, sh]) => {
+    const m = new THREE.Mesh(new THREE.BoxGeometry(sw, 0.002, sh), mat); m.position.set(x, 0.001, z); m.receiveShadow = true; group.add(m);
+  });
+  const { c, t: tex } = canvasTex(...capPx(w * PX, h * PX));
+  const words = new THREE.MeshBasicMaterial({ map: tex, transparent: true, depthWrite: false });
+  const plane = new THREE.Mesh(new THREE.PlaneGeometry(w, h), words); plane.rotation.x = -Math.PI / 2; plane.position.y = 0.002; group.add(plane);
+  let key = null;
+  return {
+    group, w, h,
+    paint(k, f) { const kk = f.label || ''; if (kk === key) return; key = kk; pencilFace(c, f); tex.needsUpdate = true; },
+    fade(o) { mat.opacity = 0.92 * o; words.opacity = o; },
+  };
+}
+function thread(a) {
+  const group = new THREE.Group();
+  const mat = new THREE.MeshStandardMaterial({ color: THREAD[a.color] || THREAD.dim, roughness: 0.9, transparent: true });
+  const pin = new THREE.Group();
+  const head = new THREE.Mesh(new THREE.SphereGeometry(0.05, 24, 16), new THREE.MeshPhysicalMaterial({ color: 0xb08a3e, metalness: 1, roughness: 0.28 }));
+  head.position.y = 0.075; head.castShadow = true; pin.add(head);
+  const needle = new THREE.Mesh(new THREE.CylinderGeometry(0.004, 0.002, 0.07, 8), new THREE.MeshStandardMaterial({ color: 0xcfd2d6, metalness: 1, roughness: 0.3 }));
+  needle.position.y = 0.035; pin.add(needle);
+  group.add(pin);
+  let mesh = null, key = '';
+  return {
+    group, mat, thread: true,
+    shape(v) {
+      const k = [v.x, v.y, v.x2, v.y2].map((n) => Math.round(n)).join();
+      if (k === key) return; key = k;
+      if (mesh) { group.remove(mesh); mesh.geometry.dispose(); }
+      const A = new THREE.Vector3(wx(v.x), 0.04, wz(v.y)), B = new THREE.Vector3(wx(v.x2), 0.04, wz(v.y2));
+      const d = B.clone().sub(A), n = new THREE.Vector3(-d.z, 0, d.x).normalize().multiplyScalar(Math.min(0.25, d.length() * 0.08));
+      const pts = [0, 0.25, 0.5, 0.75, 1].map((t, i) => A.clone().lerp(B, t).add(n.clone().multiplyScalar(Math.sin(t * Math.PI) * (i % 2 ? 1 : 0.6))));
+      mesh = new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts), 120, 0.013, 8), mat);
+      mesh.castShadow = true; group.add(mesh);
+      pin.position.copy(B);
+    },
+    lay(draw, o) {
+      if (mesh) mesh.geometry.setDrawRange(0, Math.floor(120 * Math.max(0, Math.min(1, draw))) * 8 * 6);
+      mat.opacity = o; pin.visible = draw > 0.96 && o > 0.5; group.visible = o > 0.01 && draw > 0.001;
+    },
+  };
+}
+
+// ----- a scene's world: its table, its lamp, its things and its camera
+function world(sc, plan) {
+  const st = plan.states;
+  const scene = new THREE.Scene();
+  scene.background = new THREE.Color(0x070605);
+  scene.fog = new THREE.Fog(0x070605, 7, 18);
+  const camera = new THREE.PerspectiveCamera(30, 2, 0.1, 60);
+  const tb = table();
+  const top = new THREE.Mesh(tb.geo, tb.mat); top.rotation.x = -Math.PI / 2; top.receiveShadow = true; scene.add(top);
+  scene.add(new THREE.HemisphereLight(0xc9d6ff, 0x2a1a10, 0.35));
+  const key = new THREE.SpotLight(0xffe0b0, 190, 0, 0.72, 0.9, 2);
+  key.castShadow = true; key.shadow.mapSize.set(1536, 1536); key.shadow.bias = -0.0004; key.shadow.normalBias = 0.02; key.shadow.radius = 4;
+  scene.add(key, key.target);
+  const rim = new THREE.DirectionalLight(0x8fb6ff, 0.55); rim.position.set(-3, 2.5, -5); scene.add(rim);
+  const fill = new THREE.PointLight(0xffb070, 3, 9, 2); fill.position.set(4, 1.4, 3); scene.add(fill);
+
+  const objs = {};
+  sc.actors.forEach((a) => {
+    const k = plan.kind[a.id];
+    let o;
+    if (k === 'thread') o = thread(a);
+    else if (k === 'sticker') o = sticker(a);
+    else if (k === 'ball') o = ball(a);
+    else if (k === 'tape') o = tape(a);
+    else if (k === 'bar') o = bar(a, st);
+    else if (k === 'slip') {
+      // sized by its longest words, so a slip never shrinks its words when they change
+      const longest = st.map((s) => s.to[a.id]).reduce((m, v) => (String(v.label || '').length > String(m.label || '').length ? v : m), a);
+      const z = P.slipSize(longest); o = paper(a, 'slip', z.w * S, z.h * S);
+    }
+    else o = paper(a, k, (a.w || 200) * S, (a.h || 100) * S);
+    // later pieces lie on top of earlier ones, as they were painted in the flat scenes
+    o.kind = k; o.stack = sc.actors.indexOf(a) * 0.006; scene.add(o.group); objs[a.id] = o;
+  });
+  // Where the camera stands at the end of step i: everything on the table in frame, leaning a little toward the step.
+  function pose(i) {
+    const f = plan.frame(i), b = f.box, fo = f.focus;
+    const c = new THREE.Vector3(wx((b[0] + b[2]) / 2), 0, wz((b[1] + b[3]) / 2)), fc = new THREE.Vector3(wx((fo[0] + fo[2]) / 2), 0, wz((fo[1] + fo[3]) / 2));
+    const tgt = c.clone().lerp(fc, 0.2);
+    const hx = Math.max(wx(b[2]) - tgt.x, tgt.x - wx(b[0])), hz = Math.max(wz(b[3]) - tgt.z, tgt.z - wz(b[1]));
+    const span = Math.max((2 * hx) / camera.aspect * 1.12, 2 * hz * 1.35, 1.7) + 0.4;
+    return { tgt, dist: span / (2 * Math.tan((camera.fov * Math.PI) / 360)), light: c.clone().lerp(fc, 0.45) };
+  }
+  const v3 = (A, B, k, e) => { const a = A[k] == null ? B[k] : A[k], b = B[k] == null ? a : B[k]; return a == null ? 0 : lerp(a, b, e); };
+
+  function draw(beat, prog) {
+    const s = st[beat], e = ease(prog);
+    for (const id in objs) {
+      const o = objs[id], A = s.from[id], B = s.to[id];
       const v = {};
-      ['x', 'y', 'w', 'h', 'o', 's', 'x2', 'y2', 'draw'].forEach((k) => {
-        const a = A[k] == null ? B[k] : A[k], b = B[k] == null ? a : B[k];
-        v[k] = a == null ? 0 : lerp(a, b, p);
-      });
-      if (v.o <= 0.01) return;
-      const color = p < 0.5 ? (A.color || B.color) : (B.color || A.color);
-      const shake = B.shake ? Math.sin(beatP * Math.PI * 10) * 6 * (1 - beatP) : 0;
-      const cx = v.x + (v.w || 0) / 2 + shake, cy = v.y + (v.h || 0) / 2;
-      g.setAttribute('opacity', v.o);
-      g.setAttribute('transform', 'translate(' + cx + ' ' + cy + ') scale(' + v.s + ') translate(' + -cx + ' ' + -cy + ')');
-      const type = B.type || A.type;
-      // Labels cross-fade when they change: the analogy's word fades out as the idea's word fades in.
-      const label = (key, x, y, size, weight, fill) => {
-        key = key || 'label';
-        const pairs = A[key] !== B[key] && A[key] != null
-          ? [[A[key], 1 - Math.min(1, p * 2)], [B[key], Math.max(0, p * 2 - 1)]] : [[B[key], 1]];
-        // Each word keeps its own size while it fades: the old one its old size, the new one its new size.
-        const base = { label: { card: 22, slot: 22, text: 22, stamp: 18 }[type] || 22, sub: 15 }[key];
-        pairs.forEach(([t, op], k) => {
-          if (!t || op <= 0) return;
-          const own = key === 'sub' ? size : ((pairs.length === 2 && k === 0 ? A.size : B.size) || base);
-          const n = el('text', { x: x, y: y, 'text-anchor': 'middle', 'dominant-baseline': 'middle', 'font-size': own,
-            'font-weight': weight, fill: fill, opacity: op }, g);
-          n.textContent = t;
-        });
-      };
-      if (type === 'arrow') {
-        const x2 = lerp(v.x, v.x2, v.draw), y2 = lerp(v.y, v.y2, v.draw);
-        el('line', { x1: v.x, y1: v.y, x2: x2, y2: y2, stroke: col(color), 'stroke-width': 3, 'stroke-linecap': 'round' }, g);
-        if (v.draw > 0.9) {
-          const ang = Math.atan2(v.y2 - v.y, v.x2 - v.x);
-          const hx = (s) => x2 - 12 * Math.cos(ang + s), hy = (s) => y2 - 12 * Math.sin(ang + s);
-          el('path', { d: 'M' + hx(0.5) + ' ' + hy(0.5) + ' L' + x2 + ' ' + y2 + ' L' + hx(-0.5) + ' ' + hy(-0.5), stroke: col(color), 'stroke-width': 3, fill: 'none', 'stroke-linecap': 'round' }, g);
-        }
-        return;
-      }
-      if (type === 'text') { label(null, v.x, v.y, B.size || 22, 600, col(color)); return; }
-      if (type === 'stamp') {
-        const r = (v.w || 70) / 2;
-        el('circle', { cx: v.x + r, cy: v.y + r, r: r, fill: 'none', stroke: col(color), 'stroke-width': 4 }, g);
-        label(null, v.x + r, v.y + r, B.size || 18, 800, col(color));
-        return;
-      }
-      const dashed = type === 'slot' || B.dash;
-      el('rect', { x: v.x, y: v.y, width: v.w, height: v.h, rx: 12, fill: dashed ? 'rgba(255,255,255,0.02)' : '#161926',
-        stroke: col(color), 'stroke-width': dashed ? 2 : 2.5, 'stroke-dasharray': dashed ? '8 7' : 'none' }, g);
-      label(null, v.x + v.w / 2, v.y + v.h / 2 - (B.sub ? 12 : 0), B.size || 22, 700, col(color));
-      if (A.sub || B.sub) label('sub', v.x + v.w / 2, v.y + v.h / 2 + 18, 15, 400, '#aab0c2');
+      ['x', 'y', 'w', 'h', 'o', 's', 'x2', 'y2', 'draw'].forEach((k) => { v[k] = v3(A, B, k, e); });
+      if (o.thread) { o.shape(v); o.lay(v.draw, v.o); o.mat.color.set(THREAD[e < 0.5 ? A.color : B.color] || THREAD.dim); continue; }
+      const fp = plan.faces[id][beat];
+      const fA = { label: A.label, sub: A.sub, color: A.color, size: A.size }, fB = { label: B.label, sub: B.sub, color: B.color, size: B.size };
+      if (o.bar) { fA.w = A.w; fB.w = B.w; }
+      if (fp.turned) { o.paint(fp.from, fA); o.paint(fp.face, fB); } else o.paint(fp.face, e < 0.5 ? fA : fB);
+      if (o.bar) o.size(v.w, v.h);
+      let cx, cz;
+      if (o.kind === 'slip') { cx = wx(v.x); cz = wz(v.y); }
+      else if (o.round) { cx = wx(v.x + (v.w || 70) / 2); cz = wz(v.y + (v.w || 70) / 2); }
+      else { cx = wx(v.x + (v.w || 0) / 2); cz = wz(v.y + (v.h || 0) / 2); }
+      // A piece coming onto the table drops into place; one leaving lifts away. A piece that stays but is dimmed
+      // (o between 0 and 1 in the data) lies where it is, faded.
+      const arriving = A.o < 0.05 && B.o >= 0.05, leaving = A.o >= 0.05 && B.o < 0.05;
+      const drop = arriving ? (1 - e) * 0.9 : leaving ? e * 0.5 : 0;
+      let turn = fp.face === 1 ? Math.PI : 0, lift = 0;
+      if (fp.turned) { const t = ease(Math.min(1, prog * 1.25)); turn = (fp.from === 1 ? Math.PI : 0) + Math.PI * t * (fp.face === 1 ? 1 : -1); lift = Math.sin(Math.PI * t) * Math.min(0.6, Math.max(o.w, o.h) * 0.45); }
+      const wob = B.shake ? Math.sin(prog * Math.PI * 9) * 0.09 * (1 - prog) : 0;
+      const slap = o.round && o.kind === 'sticker' && arriving && prog > 0.5 ? 1 + Math.sin(Math.min(1, prog * 1.4) * Math.PI) * 0.12 : 1;
+      o.group.position.set(cx, o.stack + drop + lift, cz);
+      o.group.rotation.set(0, (id.charCodeAt(0) % 5 - 2) * 0.025 + wob, turn);
+      o.group.scale.setScalar(Math.max(0.01, v.s) * slap);
+      o.fade(Math.max(0, Math.min(1, v.o)));
+      o.group.visible = v.o > 0.01 && !(o.kind === 'slip' && !A.label && !B.label);
     }
+    const Pp = pose(Math.max(0, beat - 1)), Q = pose(beat), first = beat === 0;
+    const tgt = first ? Q.tgt : Pp.tgt.clone().lerp(Q.tgt, e), dist = first ? Q.dist : lerp(Pp.dist, Q.dist, e);
+    const lt = first ? Q.light : Pp.light.clone().lerp(Q.light, e);
+    const tilt = 0.95, yaw = -0.16 + (beat + e) * 0.012;
+    camera.position.set(tgt.x + Math.sin(yaw) * Math.cos(tilt) * dist, Math.sin(tilt) * dist, tgt.z + Math.cos(yaw) * Math.cos(tilt) * dist);
+    camera.lookAt(tgt);
+    key.position.set(lt.x - 0.6, 7, lt.z + 1); key.target.position.copy(lt);
+  }
+  function dispose() {
+    scene.traverse((n) => {
+      if (n.isMesh && n.geometry !== tb.geo) n.geometry.dispose();
+      const ms = n.material ? [].concat(n.material) : [];
+      ms.forEach((m) => { if (m === tb.mat) return; if (m.map) m.map.dispose(); m.dispose(); });
+    });
+    key.shadow.map && key.shadow.map.dispose();
+  }
+  return { scene, camera, objs, draw, dispose };
+}
 
-    let beat = 0, prog = 0, playing = false, last = 0, raf = 0;
-    function go(i, p) {
-      beat = Math.max(0, Math.min(st.length - 1, i)); prog = Math.max(0, Math.min(1, p));
-      const s = st[beat], e = ease(prog);
-      for (const id in nodes) draw(id, s.from[id] || {}, s.to[id] || {}, e, prog);
-      say.textContent = sc.beats[beat].say || '';
-      [...dots.children].forEach((d, k) => d.classList.toggle('on', k <= beat));
-      root.classList.toggle('done', beat === st.length - 1 && prog >= 1);
-    }
-    function tick(t) {
-      if (!playing) return;
-      const dt = last ? (t - last) / 1000 : 0; last = t;
-      prog += dt / (sc.beats[beat].dur || 2.4);
-      if (prog >= 1) {
-        if (beat < st.length - 1) { go(beat, 1); beat += 1; prog = 0; }
-        else { go(beat, 1); stop(); return; }
-      }
-      go(beat, prog);
-      raf = requestAnimationFrame(tick);
-    }
-    function play() {
-      if (beat === st.length - 1 && prog >= 1) go(0, 0);
-      playing = true; last = 0; playBtn.textContent = 'Pause'; raf = requestAnimationFrame(tick);
-    }
-    function stop() { playing = false; cancelAnimationFrame(raf); playBtn.textContent = beat === st.length - 1 && prog >= 1 ? 'Watch again' : 'Play'; }
-    playBtn.onclick = () => (playing ? stop() : play());
-    root.querySelector('.sc-back').onclick = () => { stop(); if (beat > 0) go(beat - 1, 1); else go(0, 0); };
-    root.querySelector('.sc-next').onclick = () => { stop(); if (prog < 1) go(beat, 1); else go(beat + 1, 1); };
-    go(0, 0);
-    root._sc = { go: go, beats: st.length };
-    // Starts by itself the first time it scrolls into view; after that the viewer drives it.
-    if ('IntersectionObserver' in window) {
-      const io = new IntersectionObserver((es) => { if (es[0].isIntersecting) { io.disconnect(); play(); } }, { threshold: 0.6 });
-      io.observe(root);
-    }
+function mount(root) {
+  const sc = JSON.parse(root.dataset.scene);
+  const plan = P.plan(sc), st = plan.states;
+  const stage = root.querySelector('.sc-stage');
+  const view = document.createElement('canvas');
+  view.setAttribute('role', 'img'); view.setAttribute('aria-label', sc.analogy || 'scene');
+  stage.appendChild(view);
+  const say = root.querySelector('.sc-say'), dots = root.querySelector('.sc-dots'), playBtn = root.querySelector('.sc-play');
+  sc.beats.forEach((_, i) => {
+    const d = document.createElement('button');
+    d.type = 'button'; d.setAttribute('aria-label', 'Step ' + (i + 1));
+    d.onclick = () => { stop(); go(i, 1); };
+    dots.appendChild(d);
+  });
+  if (!gl()) root.classList.add('no3d');
+
+  let W = null, near = false, building = null;
+  async function build() {
+    if (W || building || !GL) return building;
+    building = fonts().then(() => { if (near && !W) W = world(sc, plan); building = null; paint(); });
+    return building;
+  }
+  function paint() {
+    if (!W || !GL) return;
+    const r = stage.getBoundingClientRect();
+    if (r.width < 2 || r.height < 2) return;
+    const dpr = Math.min(2, window.devicePixelRatio || 1);
+    const pw = Math.round(r.width * dpr), ph = Math.round(r.height * dpr);
+    if (view.width !== pw || view.height !== ph) { view.width = pw; view.height = ph; }
+    GL.r.setPixelRatio(dpr); GL.r.setSize(r.width, r.height, false);
+    W.camera.aspect = r.width / r.height; W.camera.updateProjectionMatrix();
+    W.draw(beat, prog);
+    GL.r.render(W.scene, W.camera);
+    view.getContext('2d').drawImage(GL.canvas, 0, 0, pw, ph);
   }
 
-  document.querySelectorAll('.sc[data-scene]').forEach(mount);
-})();
+  let beat = 0, prog = 0, playing = false, last = 0, raf = 0, hold = 0;
+  function go(i, p) {
+    beat = Math.max(0, Math.min(st.length - 1, i)); prog = Math.max(0, Math.min(1, p));
+    say.textContent = sc.beats[beat].say || '';
+    [...dots.children].forEach((d, k) => d.classList.toggle('on', k <= beat));
+    root.classList.toggle('done', beat === st.length - 1 && prog >= 1);
+    paint();
+  }
+  function tick(t) {
+    if (!playing) return;
+    const dt = last ? (t - last) / 1000 : 0; last = t;
+    const dur = sc.beats[beat].dur || 2.4;
+    if (still()) { hold += dt; if (prog < 1) go(beat, 1); if (hold >= dur) { hold = 0; if (beat < st.length - 1) go(beat + 1, 1); else { stop(); return; } } }
+    else {
+      prog += dt / dur;
+      if (prog >= 1) { if (beat < st.length - 1) { beat += 1; prog = 0; } else { go(beat, 1); stop(); return; } }
+      go(beat, prog);
+    }
+    raf = requestAnimationFrame(tick);
+  }
+  function play() {
+    if (beat === st.length - 1 && prog >= 1) go(0, 0);
+    playing = true; last = 0; hold = 0; playBtn.textContent = 'Pause'; raf = requestAnimationFrame(tick);
+  }
+  function stop() { playing = false; cancelAnimationFrame(raf); playBtn.textContent = beat === st.length - 1 && prog >= 1 ? 'Watch again' : 'Play'; }
+  playBtn.onclick = () => (playing ? stop() : play());
+  root.querySelector('.sc-back').onclick = () => { stop(); if (beat > 0) go(beat - 1, 1); else go(0, 0); };
+  root.querySelector('.sc-next').onclick = () => { stop(); if (prog < 1) go(beat, 1); else go(beat + 1, 1); };
+  go(0, 0);
+  root._sc = { go, beats: st.length, plan, state: () => ({ beat, prog, built: !!W }), ready: () => { near = true; return W ? Promise.resolve() : build(); } };
+
+  if (typeof ResizeObserver === 'function') new ResizeObserver(() => paint()).observe(stage);
+  if (typeof IntersectionObserver === 'function') {
+    // Built when it comes near the screen; let go when it is far off and still (its last frame stays on its canvas).
+    new IntersectionObserver((es) => {
+      near = es[es.length - 1].isIntersecting;
+      if (near) build();
+      else if (W && !playing) { W.dispose(); W = null; }
+    }, { rootMargin: '900px 0px' }).observe(root);
+    // Starts by itself the first time it is well in view; after that the viewer drives it.
+    const io = new IntersectionObserver((es) => { if (es[0].isIntersecting) { io.disconnect(); play(); } }, { threshold: 0.6 });
+    io.observe(root);
+  } else { near = true; build(); }
+}
+
+// One scene that cannot start never stops the others on the page.
+document.querySelectorAll('.sc[data-scene]').forEach((root) => { try { mount(root); } catch (e) { root.classList.add('no3d'); console.error(e); } });

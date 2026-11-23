@@ -432,7 +432,9 @@ test('public pages name no workers.dev address and ask Google for nothing: Mind 
   const css = fs.readFileSync(path.join(SITE, 'fonts', type + '.css'), 'utf8');
   const files = [...new Set([...css.matchAll(/url\(([^)]+)\)/g)].map((m) => m[1]))];
   assert.ok(files.length >= 2 && files.every((x) => /^[a-z0-9-]+\.woff2$/.test(x) && fs.existsSync(path.join(SITE, 'fonts', x))), 'a font file the sheet names is not on the site');
-  assert.deepEqual(fs.readdirSync(path.join(SITE, 'fonts')).filter((x) => x.endsWith('.woff2')).sort(), files.slice().sort(), 'the public copy carries only the chosen typeface');
+  // ...and, beside scenes, the two faces printed on the things on the lit table (scene.js), also from the site itself
+  const table = fs.existsSync(path.join(SITE, 'scene.js')) ? ['bricolage-grotesque-latin.woff2', 'fraunces-latin.woff2'] : [];
+  assert.deepEqual(fs.readdirSync(path.join(SITE, 'fonts')).filter((x) => x.endsWith('.woff2')).sort(), [...new Set(files.concat(table))].sort(), 'the public copy carries only the chosen typeface');
 });
 
 test('the preview server answers only to this computer\'s own names, so a page under a borrowed name cannot use it', () => {
@@ -506,4 +508,73 @@ test('the public copy carries no flip side unless a unit is marked "flip": true'
   build('--site');
   const has = fs.readdirSync(SITE).some((f) => /^flip/.test(f)) || fs.readdirSync(SITE).filter((f) => f.endsWith('.html')).some((f) => /class="flip"/.test(fs.readFileSync(path.join(SITE, f), 'utf8')));
   if (!marked) assert.ok(!has, 'a flip side reached the public copy with no unit marked for it');
+});
+
+// The lit table (Bryan, 22 Nov 2026: "A, lit table"): every unit's existing scene block is acted out with real things
+// on a lit table (scene.js on three.js), by the rules in scene-plan.js, which the page and these tests share.
+const scenePlan = require(path.join(uni.UNI, 'scene-plan.js'));
+const allScenes = () => fs.readdirSync(path.join(uni.UNI, 'courses')).filter((f) => f.endsWith('.json')).flatMap((f) => {
+  const c = JSON.parse(fs.readFileSync(path.join(uni.UNI, 'courses', f), 'utf8'));
+  return c.units.filter((u) => u.scene).map((u) => ({ where: c.slug + ' unit ' + u.n, sc: u.scene }));
+});
+
+test('the lit table: every piece of every scene becomes a thing on the table, and a renamed piece turns over', () => {
+  const scenes = allScenes();
+  assert.ok(scenes.length >= 38, 'fewer scenes than the 38 the lit table was built for');
+  const KINDS = ['card', 'tag', 'bar', 'sticker', 'ball', 'slip', 'tape', 'thread'];
+  for (const { where, sc } of scenes) {
+    const p = scenePlan.plan(sc);
+    assert.strictEqual(p.states.length, sc.beats.length, where);
+    for (const a of sc.actors) {
+      assert.ok(KINDS.includes(p.kind[a.id]), where + ': ' + a.id + ' is not a thing on the table');
+      p.faces[a.id].forEach((f, i) => {
+        const A = p.states[i].from[a.id], B = p.states[i].to[a.id];
+        // a piece turns over only when it is on the table and its words change; a bar measures, it never turns
+        if (f.turned) {
+          assert.ok(A.o >= 0.5 && (A.label || A.sub) && (B.label || B.sub), where + ': ' + a.id + ' turns over off the table or blank, step ' + (i + 1));
+          assert.notStrictEqual(f.face, f.from, where + ': a turn that lands on the same face');
+          assert.notStrictEqual(p.kind[a.id], 'bar', where + ': a bar turned over');
+        } else assert.strictEqual(f.face, f.from, where + ': ' + a.id + ' changed face without turning');
+      });
+    }
+    // the camera keeps every piece that is on the table in frame at the end of every step
+    p.states.forEach((s, i) => {
+      const box = p.frame(i).box;
+      for (const id in s.to) {
+        if (!scenePlan.shown(s.to[id], p.kind[id])) continue;
+        const e = scenePlan.extent(s.to[id], p.kind[id]);
+        assert.ok(e[0] >= box[0] - 0.01 && e[1] >= box[1] - 0.01 && e[2] <= box[2] + 0.01 && e[3] <= box[3] + 0.01, where + ': ' + id + ' out of frame at step ' + (i + 1));
+      }
+    });
+  }
+  // the lesson Bryan picked from: the price cards are hang tags, the sale is a sticker, the arrows are threads, and the
+  // three tags turn over to the idea's names together, on the step that renames them
+  const sale = scenes.find((x) => x.sc.analogy === 'A sale price after the price went up');
+  const p = scenePlan.plan(sale.sc);
+  assert.deepStrictEqual(['t1', 't2', 't3', 'big', 'r1', 'r2'].map((id) => p.kind[id]), ['tag', 'tag', 'tag', 'sticker', 'thread', 'thread']);
+  const turnAt = (id) => p.faces[id].map((f, i) => (f.turned ? i + 1 : 0)).filter(Boolean);
+  assert.deepStrictEqual(['t1', 't2', 't3', 'big'].map(turnAt), [[5], [5], [5], [5]]);
+  // a stamp that never has words is a ball (the cup-and-ball game); a card that grows is a strip of paper
+  const cups = scenePlan.plan(scenes.find((x) => /cup-and-ball/.test(x.sc.analogy)).sc);
+  assert.strictEqual(cups.kind.ball, 'ball');
+  const paint = scenePlan.plan(scenes.find((x) => /Painting the room/.test(x.sc.analogy)).sc);
+  assert.strictEqual(paint.kind.bar, 'bar');
+});
+
+test('the lit table ships with every page that has a scene: the engine, its rules, three.js and its two typefaces', () => {
+  const src = fs.readFileSync(path.join(uni.UNI, 'scene.js'), 'utf8');
+  assert.ok(/import \* as THREE from '\.\/three\.module\.min\.js'/.test(src), 'scene.js no longer draws with three.js');
+  assert.ok(!/createElementNS|<svg|'svg'/.test(src), 'scene.js draws flat SVG boxes again');
+  assert.ok(/new THREE\.WebGLRenderer/.test(src) && (src.match(/new THREE\.WebGLRenderer/g) || []).length === 1, 'one renderer for the page, not one per scene');
+  for (const flag of [[], ['--site']]) {
+    build(...flag);
+    const out = path.join(uni.UNI, flag.length ? 'site' : 'site-preview');
+    const pages = fs.readdirSync(out).filter((f) => f.endsWith('.html')).map((f) => ({ f, h: fs.readFileSync(path.join(out, f), 'utf8') }));
+    const withScene = pages.filter((x) => x.h.includes('class="sc" data-scene='));
+    for (const { f, h } of pages) {
+      const has = withScene.some((x) => x.f === f);
+      assert.strictEqual(h.includes('<script src="scene-plan.js"></script><script type="module" src="scene.js"></script>'), has, f + (has ? ' has a scene but no lit table' : ' loads the lit table with no scene'));
+    }
+    if (withScene.length) for (const need of ['scene.js', 'scene-plan.js', 'three.module.min.js', 'three-LICENSE.txt', 'fonts/bricolage-grotesque-latin.woff2', 'fonts/fraunces-latin.woff2']) assert.ok(fs.existsSync(path.join(out, need)), need + ' is not shipped beside the scenes in ' + path.basename(out));
+  }
 });
