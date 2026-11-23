@@ -1990,26 +1990,42 @@
           {
             "id": "A",
             "type": "card",
-            "x": 40,
-            "y": 40,
-            "w": 300,
-            "h": 130,
+            "x": 100,
+            "y": 10,
+            "w": 180,
+            "h": 170,
             "label": "Yogurt A",
             "sub": "90% fat free!",
             "color": "green",
-            "o": 0
+            "o": 0,
+            "prop": "yogurt",
+            "look": "green",
+            "front": "90% FAT FREE",
+            "tagW": 210,
+            "tag": [
+              0,
+              130
+            ]
           },
           {
             "id": "B",
             "type": "card",
-            "x": 460,
-            "y": 40,
-            "w": 300,
-            "h": 130,
+            "x": 520,
+            "y": 10,
+            "w": 180,
+            "h": 170,
             "label": "Yogurt B",
             "sub": "10% fat",
             "color": "gold",
-            "o": 0
+            "o": 0,
+            "prop": "yogurt",
+            "look": "gold",
+            "front": "10% FAT",
+            "tagW": 210,
+            "tag": [
+              0,
+              130
+            ]
           },
           {
             "id": "eq",
@@ -2036,8 +2052,8 @@
             "type": "arrow",
             "x": 360,
             "y": 270,
-            "x2": 230,
-            "y2": 178,
+            "x2": 200,
+            "y2": 228,
             "color": "pink",
             "o": 0,
             "draw": 0
@@ -2045,9 +2061,9 @@
           {
             "id": "st",
             "type": "stamp",
-            "x": 560,
-            "y": 210,
-            "w": 130,
+            "x": 480,
+            "y": 255,
+            "w": 100,
             "label": "HEALTHY!",
             "color": "pink",
             "o": 0,
@@ -2177,14 +2193,20 @@
           {
             "id": "smp",
             "type": "card",
-            "x": 40,
-            "y": 40,
-            "w": 240,
-            "h": 100,
+            "x": 80,
+            "y": 20,
+            "w": 160,
+            "h": 130,
             "label": "Free sample",
             "sub": "one tiny cheese cube",
             "color": "green",
-            "o": 0
+            "o": 0,
+            "prop": "sample",
+            "tagW": 210,
+            "tag": [
+              0,
+              125
+            ]
           },
           {
             "id": "clk",
@@ -2201,7 +2223,7 @@
             "id": "you",
             "type": "stamp",
             "x": 60,
-            "y": 240,
+            "y": 270,
             "w": 76,
             "label": "YOU",
             "color": "blue",
@@ -2210,8 +2232,8 @@
           {
             "id": "feel",
             "type": "text",
-            "x": 470,
-            "y": 172,
+            "x": 560,
+            "y": 60,
             "label": "\"I should buy something...\"",
             "color": "pink",
             "size": 21,
@@ -2220,22 +2242,28 @@
           {
             "id": "big",
             "type": "card",
-            "x": 460,
-            "y": 220,
-            "w": 300,
-            "h": 100,
+            "x": 500,
+            "y": 120,
+            "w": 220,
+            "h": 140,
             "label": "$24 of cheese",
             "sub": "you did not want",
             "color": "gold",
-            "o": 0
+            "o": 0,
+            "prop": "cheese",
+            "tagW": 210,
+            "tag": [
+              0,
+              120
+            ]
           },
           {
             "id": "buy",
             "type": "arrow",
             "x": 144,
-            "y": 272,
-            "x2": 452,
-            "y2": 272,
+            "y": 305,
+            "x2": 495,
+            "y2": 300,
             "color": "gold",
             "o": 0,
             "draw": 0
@@ -2260,7 +2288,8 @@
             "set": {
               "smp": {
                 "o": 0.45,
-                "sub": "eaten"
+                "sub": "eaten",
+                "eaten": true
               }
             }
           },
@@ -3109,14 +3138,20 @@
           {
             "id": "plan",
             "type": "card",
-            "x": 40,
-            "y": 40,
-            "w": 320,
+            "x": 60,
+            "y": 30,
+            "w": 130,
             "h": 110,
             "label": "The plan",
             "sub": "\"Paint the room: 1 hour\"",
             "color": "blue",
-            "o": 0
+            "o": 0,
+            "prop": "paint",
+            "tagW": 240,
+            "tag": [
+              0,
+              110
+            ]
           },
           {
             "id": "s1",
@@ -3152,7 +3187,7 @@
             "id": "bar",
             "type": "card",
             "x": 40,
-            "y": 210,
+            "y": 250,
             "w": 90,
             "h": 80,
             "label": "1 hr",

@@ -624,4 +624,11 @@ test('real objects on the lit table: every object a scene names is in the librar
   assert.deepStrictEqual(money(/classroom/).states.map((s) => s.to.tch.coins), [10, 10, 1, 1, 1, 1]);
   assert.ok(money(/Two boxes/).states[2].to.a.turned && !money(/Two boxes/).states[1].to.a.turned);
   assert.deepStrictEqual(['basket', 'jar'].map((n) => money(/groceries go up/).kind[n === 'basket' ? 'bas' : 'jar']), ['prop', 'prop']);
+  // Mind and human nature, batch 1 (Bryan, 22 Nov 2026: "Yes, mind lessons")
+  const flip = money(/last slice of pizza/);
+  assert.deepStrictEqual(flip.states.map((s) => [!!s.to.coin.up, s.to.coin.face || 'heads']), [[false, 'heads'], [true, 'heads'], [false, 'tails'], [false, 'heads'], [false, 'heads'], [false, 'heads'], [false, 'heads']]);
+  assert.strictEqual(flip.kind.mirror, 'prop');
+  assert.deepStrictEqual(money(/5:30 alarm/).states.map((s) => s.to.clock.time), [23, 5.5, 5.67, 5.67, 5.5]);
+  assert.deepStrictEqual(['A', 'B'].map((id) => money(/fat free/).kind[id]), ['prop', 'prop']);
+  assert.ok(money(/free sample/).states[1].to.smp.eaten && money(/free sample/).kind.big === 'prop' && money(/Painting the room/).kind.plan === 'prop');
 });

@@ -438,7 +438,8 @@ export const PROPS = {
       return { group, top: H + W * 0.42, anchor: () => new THREE.Vector3(W * 0.3, H * 0.5, D / 2), update() {} };
     },
   },
-  // A pizza on a board, cut into "slices" equal slices; your "mine" slices are pulled a little way out from the rest.
+  // A pizza on a board, cut into "slices" equal slices; your "mine" slices are pulled a little way out from the rest;
+  // "left": only that many slices are still on the board.
   pizza: {
     build(a, ctx) {
       const R = Math.min(a.w || 190, a.h || 190) * ctx.S * 0.48, T = 0.06;
@@ -453,11 +454,12 @@ export const PROPS = {
       const boardMat = new THREE.MeshStandardMaterial({ map: weathered('#b08a5c'), roughness: 0.7 });
       const brd = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(R * 1.12, R * 1.12, 0.05, 64), boardMat)); brd.position.y = 0.025; group.add(brd);
       const holder = new THREE.Group(); holder.position.y = 0.05; group.add(holder);
-      let built = -1, mineN = -1;
+      let built = -1, mineN = -1, left = 0, leftN = -1;
       const cut = (n, mine) => {
-        if (n === built && mine === mineN) return; built = n; mineN = mine;
+        if (n === built && mine === mineN && left === leftN) return; built = n; mineN = mine; leftN = left;
         while (holder.children.length) { const m = holder.children.pop(); m.geometry.dispose(); }
         for (let i = 0; i < n; i++) {
+          if (left && i >= left) break;
           const t0 = (i / n) * Math.PI * 2, dt = (Math.PI * 2) / n;
           const m = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(R, R, T, Math.max(4, Math.round(64 / n)), 1, false, t0 + 0.004, dt - 0.008), [crust, face, crust]));
           const mid = t0 + dt / 2, out = i < mine ? 0.3 * R : 0;
@@ -466,11 +468,12 @@ export const PROPS = {
       };
       return {
         group, top: 0.12, anchor: () => new THREE.Vector3(R * 0.55, 0.08, R * 0.75),
-        update(A, B, e) { const S = e < 0.5 ? A : B; cut(num(S, 'slices') || 8, num(S, 'mine')); },
+        update(A, B, e) { const S = e < 0.5 ? A : B; left = num(S, 'left'); cut(num(S, 'slices') || 8, num(S, 'mine')); },
       };
     },
   },
-  // A large silver coin. "up": true tosses it into the air, turning over and over.
+  // A large silver coin, heads (a star) up. "up": true tosses it into the air, turning over and over; "face": "tails"
+  // lands it showing the 1, and a change of face flips it.
   coin: {
     build(a, ctx) {
       const r = Math.min(a.w || 100, a.h || 100) * ctx.S * 0.36, t = 0.05;
@@ -491,8 +494,9 @@ export const PROPS = {
         group, top: t, anchor: () => new THREE.Vector3(r * 0.7, t, r * 0.7),
         update(A, B, e) {
           const u = lerp(flag(A, 'up'), flag(B, 'up'), e), moving = flag(A, 'up') !== flag(B, 'up');
-          spin.position.y = t / 2 + u * 1.1 * Math.max(r * 3, 0.8) + (moving ? Math.sin(Math.PI * e) * 0.3 : 0);
-          coin.rotation.x = u * 0.9 + (moving ? e * Math.PI * 6 : 0);
+          const fa = A && A.face === 'tails' ? 1 : 0, fb = B && B.face === 'tails' ? 1 : 0, turning = fa !== fb;
+          spin.position.y = t / 2 + u * 1.1 * Math.max(r * 3, 0.8) + (moving || turning ? Math.sin(Math.PI * e) * 0.6 : 0);
+          coin.rotation.x = u * 0.9 + lerp(fa, fb, e) * Math.PI + (moving ? e * Math.PI * 6 : turning ? e * Math.PI * 4 : 0);
         },
       };
     },
@@ -530,6 +534,125 @@ export const PROPS = {
         group, top: H, anchor: () => new THREE.Vector3(W * 0.35, 0.15 * s, D / 2),
         update(A, B, e) { spin.rotation.y = lerp(flag(A, 'turned'), flag(B, 'turned'), e) * Math.PI; spin.position.y = H / 2 + Math.sin(Math.PI * Math.abs(flag(B, 'turned') - flag(A, 'turned')) * e) * 0.2; },
       };
+    },
+  },
+  // A round mirror on a little wooden stand, tipped back, facing you. Its glass reflects the room.
+  mirror: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 120, a.h || 120) * ctx.S, R = 0.42 * s;
+      const wood = new THREE.MeshStandardMaterial({ map: weathered('#6e4a2c'), roughness: 0.6 });
+      const group = new THREE.Group(), face = new THREE.Group(); face.position.y = 0.1 * s + R * 1.05; face.rotation.x = -0.15; group.add(face);
+      face.add(shadowed(new THREE.Mesh(new THREE.TorusGeometry(R, 0.05 * s, 16, 64), wood)));
+      const glass = new THREE.Mesh(new THREE.CircleGeometry(R * 0.99, 64), new THREE.MeshStandardMaterial({ color: 0xffffff, metalness: 1, roughness: 0.04, envMap: ctx.env, envMapIntensity: 3 }));
+      glass.position.z = 0.005; face.add(glass);
+      const back = shadowed(new THREE.Mesh(new THREE.CircleGeometry(R, 48), wood)); back.rotation.y = Math.PI; back.position.z = -0.01; face.add(back);
+      const post = board(0.05 * s, R * 1.2, 0.05 * s, wood); post.position.set(0, (R * 1.2) / 2, -0.12 * s); post.rotation.x = 0.25; group.add(post);
+      const foot = board(0.5 * s, 0.05 * s, 0.32 * s, wood); foot.position.y = 0.025 * s; group.add(foot);
+      return { group, top: face.position.y + R, anchor: () => new THREE.Vector3(R * 0.5, 0.05 * s, 0.14 * s), update() {} };
+    },
+  },
+  // A twin-bell alarm clock. "time": the hour it shows (5.5 is half past five).
+  alarm: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 140, a.h || 140) * ctx.S, R = 0.3 * s, D = 0.16 * s;
+      const enamel = new THREE.MeshStandardMaterial({ color: 0x9b1f1f, metalness: 0.3, roughness: 0.35, envMap: ctx.env, envMapIntensity: 0.8 });
+      const chrome = new THREE.MeshStandardMaterial({ color: 0xd6d9dc, metalness: 1, roughness: 0.2, envMap: ctx.env, envMapIntensity: 1.4 });
+      const group = new THREE.Group(), body = new THREE.Group(); body.position.y = 0.09 * s + R; group.add(body);
+      const can = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(R, R, D, 48), enamel)); can.rotation.x = Math.PI / 2; body.add(can);
+      const c = document.createElement('canvas'); c.width = c.height = 256; const g = c.getContext('2d');
+      g.fillStyle = '#f4efe2'; g.fillRect(0, 0, 256, 256); g.fillStyle = '#222'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.font = '600 30px "VU Print"';
+      for (let h = 1; h <= 12; h++) { const an = (h / 12) * Math.PI * 2; g.fillText(String(h), 128 + Math.sin(an) * 96, 128 - Math.cos(an) * 96); }
+      for (let m = 0; m < 60; m++) { const an = (m / 60) * Math.PI * 2, r0 = m % 5 ? 116 : 110; g.fillRect(128 + Math.sin(an) * r0 - 1, 128 - Math.cos(an) * r0 - 1, 2, 2); }
+      const dial = new THREE.CanvasTexture(c); dial.colorSpace = THREE.SRGBColorSpace;
+      const face = new THREE.Mesh(new THREE.CircleGeometry(R * 0.86, 48), new THREE.MeshStandardMaterial({ map: dial, roughness: 0.5 })); face.position.z = D / 2 + 0.002; body.add(face);
+      const rim = shadowed(new THREE.Mesh(new THREE.TorusGeometry(R * 0.9, 0.025 * s, 10, 48), chrome)); rim.position.z = D / 2; body.add(rim);
+      const hand = (len, w) => { const h = new THREE.Group(); const m = new THREE.Mesh(new THREE.BoxGeometry(w, len, 0.006), new THREE.MeshStandardMaterial({ color: 0x111111 })); m.position.y = len / 2; h.add(m); h.position.z = D / 2 + 0.008; body.add(h); return h; };
+      const hr = hand(R * 0.45, 0.03 * s), mn = hand(R * 0.7, 0.02 * s);
+      [-1, 1].forEach((sd) => {
+        const bell = shadowed(new THREE.Mesh(new THREE.SphereGeometry(0.15 * s, 24, 12, 0, Math.PI * 2, 0, Math.PI / 2), chrome)); bell.position.set(sd * 0.2 * s, R + 0.06 * s, 0); bell.rotation.z = -sd * 0.5; body.add(bell);
+        const leg = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(0.025 * s, 0.035 * s, 0.13 * s, 10), chrome)); leg.position.set(sd * 0.18 * s, -R - 0.02 * s, 0); leg.rotation.z = sd * 0.35; body.add(leg);
+      });
+      const hammer = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(0.012 * s, 0.012 * s, 0.14 * s, 8), chrome)); hammer.position.set(0, R + 0.1 * s, 0); body.add(hammer);
+      return {
+        group, top: body.position.y + R + 0.2 * s, anchor: () => new THREE.Vector3(R * 0.6, 0.06 * s, D / 2),
+        update(A, B, e) {
+          const t = lerp(num(A, 'time') || num(B, 'time'), num(B, 'time') || num(A, 'time'), e);
+          hr.rotation.z = -((t % 12) / 12) * Math.PI * 2; mn.rotation.z = -((t % 1) * Math.PI * 2);
+          hammer.rotation.z = B && B.shake ? Math.sin(e * 60) * 0.5 : 0;
+        },
+      };
+    },
+  },
+  // A pot of yogurt with a foil lid and a printed band; its front reads "front".
+  yogurt: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 140, a.h || 140) * ctx.S, r0 = 0.2 * s, r1 = 0.28 * s, H = 0.42 * s;
+      const prof = [[0, 0], [r0, 0], [r1, H], [r1 + 0.01 * s, H + 0.015 * s], [0, H + 0.015 * s]].map(([x, y]) => new THREE.Vector2(x, y));
+      const group = new THREE.Group();
+      group.add(shadowed(new THREE.Mesh(new THREE.LatheGeometry(prof, 48), new THREE.MeshStandardMaterial({ color: 0xf6f4ee, roughness: 0.4 }))));
+      // printed three times round the band, as pots are, so it reads from wherever you stand
+      const c = document.createElement('canvas'); c.width = 1536; c.height = 256; const g = c.getContext('2d');
+      const tone = a.look === 'gold' ? ['#f3c64a', '#7a4a06'] : ['#9ad08a', '#1d5c2a'];
+      g.fillStyle = tone[0]; g.fillRect(0, 0, 1536, 256); g.fillStyle = '#fff'; g.fillRect(0, 0, 1536, 30); g.fillRect(0, 226, 1536, 30);
+      g.fillStyle = tone[1]; g.textAlign = 'center'; g.textBaseline = 'middle';
+      let fs = 74; do { g.font = '800 ' + fs + 'px "VU Print"'; fs -= 4; } while (g.measureText(String(a.front || '')).width > 440 && fs > 20);
+      [256, 768, 1280].forEach((x) => g.fillText(String(a.front || ''), x, 132));
+      const tx = new THREE.CanvasTexture(c); tx.colorSpace = THREE.SRGBColorSpace; tx.anisotropy = 8;
+      const band = [[r0 + (r1 - r0) * 0.2 + 0.004, H * 0.2], [r0 + (r1 - r0) * 0.85 + 0.004, H * 0.85]].map(([x, y]) => new THREE.Vector2(x, y));
+      group.add(new THREE.Mesh(new THREE.LatheGeometry(band, 64, -Math.PI, Math.PI * 2), new THREE.MeshStandardMaterial({ map: tx, roughness: 0.45 })));
+      const foil = new THREE.Mesh(new THREE.CircleGeometry(r1 + 0.012 * s, 48), new THREE.MeshStandardMaterial({ color: 0xc8ccd0, metalness: 1, roughness: 0.35, envMap: ctx.env })); foil.rotation.x = -Math.PI / 2; foil.position.y = H + 0.017 * s; group.add(foil);
+      return { group, top: H + 0.02 * s, anchor: () => new THREE.Vector3(r1 * 0.7, H * 0.15, r1 * 0.7), update() {} };
+    },
+  },
+  // A free sample: a cube of cheese on a toothpick, on a small paper plate. "eaten": true leaves only the toothpick.
+  sample: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 120, a.h || 120) * ctx.S;
+      const group = new THREE.Group();
+      const plate = [[0, 0], [0.22 * s, 0], [0.3 * s, 0.04 * s], [0.29 * s, 0.045 * s], [0.21 * s, 0.01 * s], [0, 0.01 * s]].map(([x, y]) => new THREE.Vector2(x, y));
+      group.add(shadowed(new THREE.Mesh(new THREE.LatheGeometry(plate, 40), new THREE.MeshStandardMaterial({ color: 0xf3f0e8, roughness: 0.9 }))));
+      const cube = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.12 * s, 0.1 * s, 0.12 * s), new THREE.MeshStandardMaterial({ color: 0xf2c94c, roughness: 0.6 }))); cube.position.y = 0.06 * s; group.add(cube);
+      const pick = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(0.006 * s, 0.006 * s, 0.22 * s, 6), new THREE.MeshStandardMaterial({ color: 0xd8b88a, roughness: 0.8 }))); group.add(pick);
+      return {
+        group, top: 0.25 * s, anchor: () => new THREE.Vector3(0.24 * s, 0.03 * s, 0.12 * s),
+        update(A, B, e) {
+          const k = lerp(flag(A, 'eaten'), flag(B, 'eaten'), e);
+          cube.visible = k < 0.5; pick.position.set(0, lerp(0.15 * s, 0.02 * s, k), 0); pick.rotation.z = lerp(0, Math.PI / 2 - 0.2, k);
+        },
+      };
+    },
+  },
+  // A wedge of cheese with its rind, a few holes on the cut face.
+  cheese: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 160, a.h || 160) * ctx.S, R = 0.55 * s, H = 0.32 * s;
+      const sh = new THREE.Shape(); sh.moveTo(0, 0); sh.absarc(0, 0, R, -0.45, 0.45, false); sh.lineTo(0, 0);
+      [[0.25, 0.04], [0.38, -0.08], [0.31, 0.12]].forEach(([x, y]) => { const hole = new THREE.Path(); hole.absarc(x * s, y * s, 0.035 * s, 0, Math.PI * 2, true); sh.holes.push(hole); });
+      const geo = new THREE.ExtrudeGeometry(sh, { depth: H, bevelEnabled: true, bevelThickness: 0.01 * s, bevelSize: 0.01 * s, bevelSegments: 2, curveSegments: 24 });
+      geo.rotateX(-Math.PI / 2);
+      const m = shadowed(new THREE.Mesh(geo, [new THREE.MeshStandardMaterial({ color: 0xf2cd5c, roughness: 0.55 }), new THREE.MeshStandardMaterial({ color: 0xc98f2e, roughness: 0.7 })]));
+      m.rotation.y = Math.PI / 2 + 0.3; m.position.set(-0.1 * s, 0, 0.25 * s);
+      const group = new THREE.Group(); group.add(m);
+      return { group, top: H, anchor: () => new THREE.Vector3(0.1 * s, H * 0.3, 0.3 * s), update() {} };
+    },
+  },
+  // A tin of paint with its lid off, a drip down the side, and a brush laid across the top.
+  paint: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 130, a.h || 130) * ctx.S, R = 0.3 * s, H = 0.5 * s;
+      const tin = new THREE.MeshStandardMaterial({ color: 0xc4c7ca, metalness: 0.9, roughness: 0.35, envMap: ctx.env, envMapIntensity: 1 });
+      const paintMat = new THREE.MeshStandardMaterial({ color: 0x3f7fb5, roughness: 0.25, envMap: ctx.env, envMapIntensity: 0.4 });
+      const group = new THREE.Group();
+      const can = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(R, R, H, 48, 1, true), tin)); can.position.y = H / 2; group.add(can);
+      const band = new THREE.Mesh(new THREE.CylinderGeometry(R + 0.003, R + 0.003, H * 0.5, 48, 1, true), new THREE.MeshStandardMaterial({ color: 0xece6d6, roughness: 0.7 })); band.position.y = H * 0.45; group.add(band);
+      const top = new THREE.Mesh(new THREE.CircleGeometry(R * 0.96, 48), paintMat); top.rotation.x = -Math.PI / 2; top.position.y = H * 0.92; group.add(top);
+      const lip = shadowed(new THREE.Mesh(new THREE.TorusGeometry(R, 0.015 * s, 8, 48), tin)); lip.rotation.x = Math.PI / 2; lip.position.y = H; group.add(lip);
+      const drip = shadowed(new THREE.Mesh(new THREE.CapsuleGeometry(0.025 * s, 0.16 * s, 6, 10), paintMat)); drip.position.set(R * 0.3, H * 0.82, R * 0.96); group.add(drip);
+      const brush = new THREE.Group(); brush.position.set(0, H + 0.03 * s, 0); brush.rotation.y = 0.5; group.add(brush);
+      const handle = board(0.6 * s, 0.04 * s, 0.07 * s, new THREE.MeshStandardMaterial({ map: birch(), roughness: 0.6 })); handle.position.x = -0.12 * s; brush.add(handle);
+      const ferrule = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.1 * s, 0.06 * s, 0.12 * s), tin)); ferrule.position.x = 0.22 * s; brush.add(ferrule);
+      const bristles = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.12 * s, 0.05 * s, 0.12 * s), paintMat)); bristles.position.x = 0.33 * s; brush.add(bristles);
+      return { group, top: H + 0.08 * s, anchor: () => new THREE.Vector3(R * 0.6, H * 0.3, R * 0.85), update() {} };
     },
   },
 };
