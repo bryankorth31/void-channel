@@ -219,7 +219,8 @@ export const PROPS = {
         const stalk = new THREE.Group(); arm.add(stalk);
         const stem = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(0.012 * s, 0.016 * s, len, 6), stemMat)); stem.position.y = len / 2; stalk.add(stem);
         const leaf = shadowed(new THREE.Mesh(new THREE.SphereGeometry(1, 16, 10), leafMat)); leaf.scale.set(0.1 * s, 0.012 * s, 0.2 * s); leaf.position.set(0, len, 0.12 * s); leaf.rotation.x = -0.4; stalk.add(leaf);
-        stalk.rotation.x = rise; leaves.push({ stalk, rise });
+        const berry = new THREE.Group(); [0, 1, 2].forEach((k) => { const b = shadowed(new THREE.Mesh(new THREE.SphereGeometry(0.055 * s, 12, 8), new THREE.MeshStandardMaterial({ color: 0xd8202a, roughness: 0.3, emissive: 0x400406 }))); b.position.set((k - 1) * 0.04 * s, len * 0.75 - (k % 2) * 0.03 * s, 0.05 * s); berry.add(b); }); stalk.add(berry);
+        stalk.rotation.x = rise; leaves.push({ stalk, rise, berry });
       }
       return {
         group, top: 1.1 * s, anchor: () => new THREE.Vector3(-0.3 * s, 0.35 * s, 0.32 * s),
@@ -227,6 +228,8 @@ export const PROPS = {
           const w = lerp(flag(A, 'wilted'), flag(B, 'wilted'), e);
           leaves.forEach((l) => { l.stalk.rotation.x = lerp(l.rise, 1.25, w); l.stalk.scale.setScalar(1 - 0.18 * w); });
           leafMat.color.copy(green).lerp(dry, w);
+          // "berries": true hangs red fruit on it
+          const fr = flag(e < 0.5 ? A : B, 'berries'); leaves.forEach((l, i) => { l.berry.visible = !!fr; });
         },
       };
     },
@@ -877,10 +880,11 @@ export const PROPS = {
       const sign = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.44 * L, 0.11 * L, 0.012 * L), [edgeMat, edgeMat, edgeMat, edgeMat, signMat, signMat])); sign.position.set(-0.06 * L, 0.51 * L, 0); car.add(sign);
       const foot = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.2 * L, 0.012 * L, 0.05 * L), edgeMat)); foot.position.set(0, -0.058 * L, 0); sign.add(foot);
       const learner = (v) => (v && v.learner != null ? !!v.learner : !!a.learner);
+      // "warm": true glows its windows orange, the inside warmed by the sun through the glass
       // "look": "wreck" leaves it on its roof by the road, its paint dulled and scuffed
       if (a.look === 'wreck') { car.rotation.z = Math.PI + 0.08; car.rotation.y = 0.5; car.position.y = 0.46 * L; paint.color.set(0x4e1612); paint.roughness = 0.75; paint.clearcoat = 0.1; }
       const group = new THREE.Group(); group.add(car);
-      return { group, top: 0.45 * L + (a.learner != null ? 0.1 * L : 0), anchor: () => new THREE.Vector3(-0.15 * L, 0.34 * L, (Wd * 0.4 + 0.02 * L) * 0.97).applyAxisAngle(new THREE.Vector3(0, 1, 0), -0.42), update(A, B, e) { sign.visible = e < 0.5 ? learner(A) : learner(B); } };
+      return { group, top: 0.45 * L + (a.learner != null ? 0.1 * L : 0), anchor: () => new THREE.Vector3(-0.15 * L, 0.34 * L, (Wd * 0.4 + 0.02 * L) * 0.97).applyAxisAngle(new THREE.Vector3(0, 1, 0), -0.42), update(A, B, e) { sign.visible = e < 0.5 ? learner(A) : learner(B); const k = lerp(flag(A, 'warm'), flag(B, 'warm'), e); [glass, glassD].forEach((m) => { m.emissive.set(0xff7a2a); m.emissiveIntensity = 0.9 * k; }); } };
     },
   },
   // A twenty: a paper note printed in green with fine wavy lines, bowed a little as paper lies.
@@ -1693,8 +1697,10 @@ export const PROPS = {
       const cracked = new THREE.Mesh(new THREE.ShapeGeometry(hole), glassM); cracked.position.copy(panes[2].position); cracked.renderOrder = 2; group.add(cracked);
       const shards = new THREE.Group(); group.add(shards);
       for (let k = 0; k < 14; k++) { const sh = new THREE.Shape(); const r = 0.015 * s + rnd() * 0.03 * s; sh.moveTo(0, 0); sh.lineTo(r, rnd() * r * 0.5); sh.lineTo(rnd() * r, r); sh.closePath(); const m = new THREE.Mesh(new THREE.ShapeGeometry(sh), glassM); m.rotation.x = -Math.PI / 2; m.rotation.z = rnd() * 6; m.position.set((rnd() - 0.5) * ww, k < 4 ? wy + 0.002 * s : 0.003 * s, k < 4 ? T / 2 + 0.03 * s : T / 2 + 0.05 * s + rnd() * 0.25 * s); shards.add(m); }
-      const broken = (v) => (v && v.broken != null ? !!v.broken : !!a.broken);
-      return { group, top: H, anchor: (n) => (n === 'pane' ? new THREE.Vector3(-ww / 4, wy + wh / 4, T / 2) : new THREE.Vector3(W * 0.42, 0.1 * s, T / 2)), update(A, B, e) { const b = broken(e < 0.5 ? A : B); panes[2].visible = !b; cracked.visible = b; shards.visible = b; } };
+      const broken = (v) => (v && v.broken != null ? !!v.broken : !!a.broken), open = (v) => (v && v.open != null ? !!v.open : !!a.open);
+      // "open": true slides the lower sash up a little, so air comes in under it
+      const lowY = panes[2].position.y;
+      return { group, top: H, anchor: (n) => (n === 'pane' ? new THREE.Vector3(-ww / 4, wy + wh / 4, T / 2) : new THREE.Vector3(W * 0.42, 0.1 * s, T / 2)), update(A, B, e) { const b = broken(e < 0.5 ? A : B); panes[2].visible = !b; cracked.visible = b; shards.visible = b; const k = lerp(open(A) ? 1 : 0, open(B) ? 1 : 0, smooth(e)); panes[2].position.y = lowY + k * wh * 0.22; panes[3].position.y = lowY + k * wh * 0.22; panes[2].position.z = panes[3].position.z = T * 0.2 + k * 0.012 * s; } };
     },
   },
   // A baseball: white leather with its red stitching.
@@ -1815,8 +1821,11 @@ export const PROPS = {
       for (let i = 0; i < 6; i++) { const b = new THREE.Mesh(new THREE.SphereGeometry(0.03 * s + rnd() * 0.03 * s, 10, 6), i % 2 ? brown : red); b.scale.y = 0.25; b.position.set((rnd() - 0.5) * 0.4 * s, 0.02 * s, (rnd() - 0.5) * 0.4 * s); mess.add(b); }
       const fork = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.4 * s, 0.01 * s, 0.03 * s), new THREE.MeshStandardMaterial({ color: 0xc8ccd0, metalness: 0.9, roughness: 0.3, envMap: ctx.env }))); fork.position.set(0.05 * s, 0.03 * s, 0.1 * s); fork.rotation.y = 0.5; mess.add(fork);
       const group = new THREE.Group(); group.add(m, mess);
-      const dirty = (v) => (v && v.dirty != null ? !!v.dirty : !!a.dirty);
-      return { group, top: 0.06 * s, anchor: () => new THREE.Vector3(0.45 * s, 0.03 * s, 0.2 * s), update(A, B, e) { mess.visible = dirty(e < 0.5 ? A : B); } };
+      // "crust": true dries the mess on hard and dark, with spots of mould, a week old
+      const crust = new THREE.Group(); const dried = new THREE.MeshStandardMaterial({ color: 0x3a2410, roughness: 1 }), mould = new THREE.MeshStandardMaterial({ color: 0x7a9a5a, roughness: 1 });
+      for (let i = 0; i < 9; i++) { const b = new THREE.Mesh(new THREE.SphereGeometry(0.04 * s + rnd() * 0.04 * s, 10, 6), i % 3 ? dried : mould); b.scale.y = 0.2; b.position.set((rnd() - 0.5) * 0.5 * s, 0.022 * s, (rnd() - 0.5) * 0.5 * s); crust.add(b); } group.add(crust);
+      const dirty = (v) => (v && v.dirty != null ? !!v.dirty : !!a.dirty), crusted = (v) => (v && v.crust != null ? !!v.crust : !!a.crust);
+      return { group, top: 0.06 * s, anchor: () => new THREE.Vector3(0.45 * s, 0.03 * s, 0.2 * s), update(A, B, e) { const v = e < 0.5 ? A : B; mess.visible = dirty(v); crust.visible = crusted(v); } };
     },
   },
   // A round cake on a glass stand, white icing and a strawberry on top, a knife beside it. "split": where it is cut,
@@ -2142,6 +2151,141 @@ export const PROPS = {
       const loaf = shadowed(new THREE.Mesh(new THREE.SphereGeometry(0.2 * s, 32, 20), crust)); loaf.scale.set(1.25, good ? 0.75 : 0.32, 0.8); loaf.position.y = 0.03 * s + (good ? 0.1 : 0.04) * s; group.add(loaf);
       if (good) for (let i = 0; i < 3; i++) { const cut = new THREE.Mesh(new THREE.BoxGeometry(0.03 * s, 0.01 * s, 0.22 * s), new THREE.MeshStandardMaterial({ color: 0xe8c890, roughness: 0.8 })); cut.position.set(-0.1 * s + i * 0.1 * s, 0.275 * s, 0); cut.rotation.y = 0.5; group.add(cut); }
       return { group, top: 0.3 * s, anchor: () => new THREE.Vector3(0.28 * s, 0.03 * s, 0.18 * s), update() {} };
+    },
+  },
+  // A kitchen sponge, yellow with a green scouring side, a little soap foam on it.
+  sponge: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 80, a.h || 80) * ctx.S;
+      const group = new THREE.Group();
+      const geo = (h) => { const g = new THREE.BoxGeometry(0.5 * s, h, 0.32 * s, 6, 2, 4), p = g.attributes.position; for (let i = 0; i < p.count; i++) { p.setX(i, p.getX(i) * (1 - 0.06 * Math.abs(p.getZ(i)) / (0.16 * s))); p.setY(i, p.getY(i) + (rnd() - 0.5) * 0.004 * s); } g.computeVertexNormals(); return g; };
+      const soft = shadowed(new THREE.Mesh(geo(0.14 * s), new THREE.MeshStandardMaterial({ color: 0xf0c83a, roughness: 1 }))); soft.position.y = 0.11 * s; group.add(soft);
+      const scour = shadowed(new THREE.Mesh(geo(0.04 * s), new THREE.MeshStandardMaterial({ color: 0x2f7a3a, roughness: 1 }))); scour.position.y = 0.02 * s; group.add(scour);
+      const foam = new THREE.MeshStandardMaterial({ color: 0xffffff, roughness: 0.3, transparent: true, opacity: 0.85 });
+      for (let i = 0; i < 7; i++) { const b = new THREE.Mesh(new THREE.SphereGeometry(0.02 * s + rnd() * 0.025 * s, 12, 8), foam); b.position.set((rnd() - 0.5) * 0.35 * s, 0.19 * s, (rnd() - 0.5) * 0.2 * s); group.add(b); }
+      group.rotation.y = 0.4;
+      return { group, top: 0.2 * s, anchor: () => new THREE.Vector3(0.24 * s, 0.1 * s, 0.14 * s), update() {} };
+    },
+  },
+  // A wall thermometer on a little stand: a glass tube with a red column, degrees marked. "temp": what it reads (0 to 40).
+  thermometer: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 60, a.h || 150) * ctx.S, H = 1.1 * s;
+      const c = document.createElement('canvas'); c.width = 128; c.height = 512; const g = c.getContext('2d'); noise(g, 128, 512, '#f2efe6', 4);
+      g.fillStyle = '#2a2a2a'; g.font = '600 22px "VU Print"'; g.textAlign = 'right'; g.textBaseline = 'middle';
+      for (let t = 0; t <= 40; t += 10) { const y = 450 - t * 9.5; g.fillText(String(t), 46, y); g.fillRect(52, y - 1, 18, 3); }
+      for (let t = 0; t <= 40; t += 2) { const y = 450 - t * 9.5; g.fillRect(58, y - 0.5, 10, 1.5); }
+      const tx = new THREE.CanvasTexture(c); tx.colorSpace = THREE.SRGBColorSpace;
+      const group = new THREE.Group();
+      const board = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.3 * s, H, 0.03 * s), [0, 0, 0, 0, 1, 0].map((k) => (k ? new THREE.MeshStandardMaterial({ map: tx, roughness: 0.6 }) : new THREE.MeshStandardMaterial({ color: 0xd8d2c4, roughness: 0.6 }))))); board.position.y = H / 2 + 0.05 * s; board.rotation.x = -0.12; group.add(board);
+      const foot = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.34 * s, 0.05 * s, 0.25 * s), new THREE.MeshStandardMaterial({ color: 0x5a4030, roughness: 0.6 }))); foot.position.y = 0.025 * s; group.add(foot);
+      const tube = new THREE.Mesh(new THREE.CylinderGeometry(0.02 * s, 0.02 * s, H * 0.84, 12), new THREE.MeshPhysicalMaterial({ color: 0xffffff, roughness: 0.05, transparent: true, opacity: 0.35, envMap: ctx.env })); tube.position.set(0.05 * s, H * 0.5, 0.03 * s); board.add(tube); tube.position.y = 0;
+      const red = new THREE.MeshStandardMaterial({ color: 0xc81e16, emissive: 0x6a0808, emissiveIntensity: 0.5, roughness: 0.3 });
+      const bulb = new THREE.Mesh(new THREE.SphereGeometry(0.04 * s, 16, 12), red); bulb.position.set(0.05 * s, -H * 0.44, 0.03 * s); board.add(bulb);
+      const col = new THREE.Mesh(new THREE.CylinderGeometry(0.011 * s, 0.011 * s, 1, 10), red); board.add(col);
+      const read = (t) => { const y0 = -H * 0.42, len = Math.max(0.001, (t / 40) * H * 0.72 + 0.03 * s); col.scale.y = len; col.position.set(0.05 * s, y0 + len / 2, 0.03 * s); };
+      read(num(a, 'temp'));
+      return { group, top: H + 0.05 * s, anchor: () => new THREE.Vector3(0.16 * s, 0.2 * s, 0.1 * s), update(A, B, e) { read(lerp(num(A, 'temp'), num(B, 'temp'), e)); } };
+    },
+  },
+  // A baby's feeding bottle: clear plastic, milk inside, a soft teat under a cap ring.
+  bottle: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 60, a.h || 120) * ctx.S, R = 0.16 * s, H = 0.62 * s;
+      const group = new THREE.Group();
+      const milk = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(R * 0.92, R * 0.92, H * 0.6, 32), new THREE.MeshStandardMaterial({ color: 0xf6f3ea, roughness: 0.4 }))); milk.position.y = H * 0.3 + 0.005; group.add(milk);
+      const shell = new THREE.Mesh(new THREE.CylinderGeometry(R, R, H, 32, 1, true), new THREE.MeshPhysicalMaterial({ color: 0xffffff, roughness: 0.08, transparent: true, opacity: 0.25, envMap: ctx.env, envMapIntensity: 1.2, depthWrite: false })); shell.position.y = H / 2; shell.renderOrder = 2; group.add(shell);
+      const ring = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(R * 1.02, R * 1.02, 0.08 * s, 32), new THREE.MeshStandardMaterial({ color: 0x8ab8e0, roughness: 0.4 }))); ring.position.y = H + 0.04 * s; group.add(ring);
+      const teat = shadowed(new THREE.Mesh(new THREE.SphereGeometry(R * 0.6, 20, 12, 0, Math.PI * 2, 0, Math.PI / 2), new THREE.MeshStandardMaterial({ color: 0xe8c890, roughness: 0.5, transparent: true, opacity: 0.85 }))); teat.scale.y = 1.7; teat.position.y = H + 0.08 * s; group.add(teat);
+      return { group, top: H + 0.2 * s, anchor: () => new THREE.Vector3(R, H * 0.3, R * 0.5), update() {} };
+    },
+  },
+  // A diner menu standing open on the table: two tall laminated pages of dishes and prices.
+  menu: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 150, a.h || 150) * ctx.S, W = 0.45 * s, H = 0.72 * s;
+      const page = (side) => {
+        const c = document.createElement('canvas'); c.width = 320; c.height = 512; const g = c.getContext('2d'); noise(g, 320, 512, '#f4efe2', 4);
+        g.fillStyle = '#a3281c'; g.fillRect(0, 0, 320, 58); g.fillStyle = '#fff'; g.font = '800 34px "VU Print"'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText(side ? 'DINNERS' : 'BREAKFAST', 160, 31);
+        g.textAlign = 'left'; g.font = '500 15px "VU Print"'; g.fillStyle = '#2a2a2a';
+        for (let i = 0; i < 24; i++) { const y = 80 + i * 17.5; g.fillStyle = '#2a2a2a'; g.fillRect(16, y - 3, 90 + rnd() * 110, 5); g.fillRect(268, y - 3, 34, 5); }
+        const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; return t;
+      };
+      const group = new THREE.Group();
+      [-1, 1].forEach((sd) => { const m = shadowed(new THREE.Mesh(new THREE.BoxGeometry(W, H, 0.008 * s), [0, 0, 0, 0, 1, 0].map((k) => (k ? new THREE.MeshPhysicalMaterial({ map: page(sd > 0), roughness: 0.2, clearcoat: 1 }) : new THREE.MeshStandardMaterial({ color: 0x8a1d1d }))))); m.position.set(sd * W * 0.47, H / 2, sd * W * 0.12); m.rotation.y = -sd * 0.28; group.add(m); });
+      return { group, top: H, anchor: () => new THREE.Vector3(W * 0.9, H * 0.25, W * 0.25), update() {} };
+    },
+  },
+  // A silver cloche over a plate: you cannot see what the special is.
+  cloche: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 120, a.h || 120) * ctx.S, R = 0.36 * s;
+      const silver = new THREE.MeshStandardMaterial({ color: 0xd8dbde, metalness: 1, roughness: 0.15, envMap: ctx.env, envMapIntensity: 1.5 });
+      const group = new THREE.Group();
+      const plate = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(R * 1.2, R * 1.1, 0.02 * s, 48), new THREE.MeshStandardMaterial({ color: 0xf4f2ec, roughness: 0.3 }))); plate.position.y = 0.01 * s; group.add(plate);
+      const dome = shadowed(new THREE.Mesh(new THREE.SphereGeometry(R, 40, 20, 0, Math.PI * 2, 0, Math.PI / 2), silver)); dome.scale.y = 0.75; dome.position.y = 0.02 * s; group.add(dome);
+      const knob = shadowed(new THREE.Mesh(new THREE.SphereGeometry(0.05 * s, 16, 12), silver)); knob.position.y = 0.02 * s + R * 0.75 + 0.03 * s; group.add(knob);
+      return { group, top: R * 0.8, anchor: () => new THREE.Vector3(R * 0.9, 0.05 * s, R * 0.6), update() {} };
+    },
+  },
+  // A burger and fries on a plate: a sesame bun, the patty, cheese and lettuce, and a pile of fries.
+  burger: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 130, a.h || 130) * ctx.S, R = 0.16 * s;
+      const group = new THREE.Group();
+      const plate = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(0.42 * s, 0.38 * s, 0.02 * s, 48), new THREE.MeshStandardMaterial({ color: 0xf4f2ec, roughness: 0.3 }))); plate.position.y = 0.01 * s; group.add(plate);
+      const bun = new THREE.MeshStandardMaterial({ color: 0xc8843a, roughness: 0.7 });
+      const stack = new THREE.Group(); stack.position.set(-0.1 * s, 0.02 * s, 0); group.add(stack);
+      const layer = (geo, mat, y) => { const m = shadowed(new THREE.Mesh(geo, mat)); m.position.y = y; stack.add(m); };
+      layer(new THREE.CylinderGeometry(R, R * 0.95, 0.05 * s, 32), bun, 0.025 * s);
+      layer(new THREE.CylinderGeometry(R * 1.05, R * 1.05, 0.05 * s, 32), new THREE.MeshStandardMaterial({ color: 0x5a3018, roughness: 0.8 }), 0.075 * s);
+      layer(new THREE.BoxGeometry(R * 1.8, 0.008 * s, R * 1.8), new THREE.MeshStandardMaterial({ color: 0xf0b030, roughness: 0.5 }), 0.104 * s);
+      layer(new THREE.CylinderGeometry(R * 1.1, R * 1.1, 0.012 * s, 16), new THREE.MeshStandardMaterial({ color: 0x5aa03a, roughness: 0.7 }), 0.115 * s);
+      const top = shadowed(new THREE.Mesh(new THREE.SphereGeometry(R, 32, 16, 0, Math.PI * 2, 0, Math.PI / 2), bun)); top.scale.y = 0.7; top.position.y = 0.12 * s; stack.add(top);
+      for (let i = 0; i < 10; i++) { const seed = new THREE.Mesh(new THREE.SphereGeometry(0.008 * s, 6, 4), new THREE.MeshStandardMaterial({ color: 0xf6ead0 })); const an = rnd() * 6.3, r = rnd() * R * 0.7; seed.position.set(Math.cos(an) * r, 0.12 * s + Math.sqrt(Math.max(0, R * R - r * r)) * 0.7, Math.sin(an) * r); stack.add(seed); }
+      const fry = new THREE.MeshStandardMaterial({ color: 0xe8b84a, roughness: 0.6 });
+      for (let i = 0; i < 16; i++) { const f = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.022 * s, 0.022 * s, 0.18 * s), fry)); f.position.set(0.18 * s + (rnd() - 0.5) * 0.14 * s, 0.03 * s + rnd() * 0.04 * s, (rnd() - 0.5) * 0.14 * s); f.rotation.set((rnd() - 0.5) * 0.5, rnd() * 3, (rnd() - 0.5) * 0.5); group.add(f); }
+      return { group, top: 0.24 * s, anchor: () => new THREE.Vector3(0.38 * s, 0.03 * s, 0.15 * s), update() {} };
+    },
+  },
+  // A green metal watering can with a long spout and a rose on the end.
+  can: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 120, a.h || 120) * ctx.S, R = 0.17 * s, H = 0.36 * s;
+      const green = new THREE.MeshStandardMaterial({ color: 0x2f6b3a, metalness: 0.5, roughness: 0.4, envMap: ctx.env, envMapIntensity: 0.7 });
+      const group = new THREE.Group();
+      const body = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(R * 0.85, R, H, 32), green)); body.position.y = H / 2; group.add(body);
+      const lid = shadowed(new THREE.Mesh(new THREE.SphereGeometry(R * 0.85, 32, 12, 0, Math.PI * 2, 0, Math.PI / 2), green)); lid.scale.y = 0.35; lid.position.y = H; group.add(lid);
+      const sp = new THREE.CatmullRomCurve3([new THREE.Vector3(R * 0.8, H * 0.25, 0), new THREE.Vector3(R * 1.7, H * 0.6, 0), new THREE.Vector3(R * 2.5, H * 1.05, 0)]);
+      const spout = shadowed(new THREE.Mesh(new THREE.TubeGeometry(sp, 20, 0.022 * s, 10), green)); group.add(spout);
+      const rose = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(0.05 * s, 0.025 * s, 0.05 * s, 20), green)); rose.position.set(R * 2.55, H * 1.08, 0); rose.rotation.z = -0.9; group.add(rose);
+      const handle = shadowed(new THREE.Mesh(new THREE.TorusGeometry(R * 0.9, 0.018 * s, 8, 24, Math.PI), green)); handle.position.set(-R * 0.1, H * 0.7, 0); handle.rotation.z = 0.4; group.add(handle);
+      group.rotation.y = -0.4;
+      return { group, top: H * 1.4, anchor: () => new THREE.Vector3(-R, H * 0.3, R * 0.6), update() {} };
+    },
+  },
+  // A punnet of strawberries: a small woven chip basket heaped with red berries.
+  punnet: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 100, a.h || 100) * ctx.S, W = 0.5 * s, H = 0.18 * s;
+      const chip = new THREE.MeshStandardMaterial({ map: birch(), roughness: 0.8, side: THREE.DoubleSide });
+      const group = new THREE.Group();
+      const box = shadowed(new THREE.Mesh(new THREE.BoxGeometry(W, H, W * 0.8, 1, 1, 1), chip)); box.position.y = H / 2; group.add(box);
+      const berry = new THREE.MeshStandardMaterial({ color: 0xc81e2a, roughness: 0.35, envMap: ctx.env, envMapIntensity: 0.5 }), leaf = new THREE.MeshStandardMaterial({ color: 0x3d7a2a, roughness: 0.6 });
+      for (let i = 0; i < 14; i++) { const b = shadowed(new THREE.Mesh(new THREE.ConeGeometry(0.05 * s, 0.09 * s, 12), berry)); b.rotation.x = Math.PI + (rnd() - 0.5) * 0.8; b.rotation.z = (rnd() - 0.5) * 0.8; b.position.set((rnd() - 0.5) * W * 0.8, H + 0.02 * s + rnd() * 0.05 * s, (rnd() - 0.5) * W * 0.6); group.add(b); const l = new THREE.Mesh(new THREE.ConeGeometry(0.03 * s, 0.015 * s, 5), leaf); l.position.copy(b.position); l.position.y += 0.045 * s; group.add(l); }
+      return { group, top: H + 0.1 * s, anchor: () => new THREE.Vector3(W / 2, H / 2, W * 0.4), update() {} };
+    },
+  },
+  // The sun: a glowing ball high over the table, lighting what is below it with warm light.
+  sun: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 80, a.h || 80) * ctx.S, R = 0.3 * s, Y = 1.3 * s;
+      const group = new THREE.Group();
+      const ball = new THREE.Mesh(new THREE.SphereGeometry(R, 32, 20), new THREE.MeshBasicMaterial({ color: 0xffd86a })); ball.position.y = Y; group.add(ball);
+      const halo = new THREE.Mesh(new THREE.SphereGeometry(R * 1.6, 32, 20), new THREE.MeshBasicMaterial({ color: 0xffb030, transparent: true, opacity: 0.22, depthWrite: false })); halo.position.y = Y; group.add(halo);
+      const light = new THREE.PointLight(0xffd080, 6, 6 * s, 1.5); light.position.y = Y; group.add(light);
+      // its height is not counted as the top, so the camera frames the table and not the sky
+      return { group, top: 0.5 * s, anchor: () => new THREE.Vector3(R * 0.7, Y - R * 0.7, R * 0.7), update() {} };
     },
   },
 };

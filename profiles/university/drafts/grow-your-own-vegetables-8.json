@@ -156,58 +156,64 @@
       ],
       "actors": [
         {
+          "id": "thing",
+          "type": "card",
+          "o": 0,
+          "prop": "menu",
+          "label": "Menu",
+          "color": "gold",
+          "size": 18,
+          "x": 325,
+          "y": 50,
+          "w": 150,
+          "h": 150,
+          "tagW": 130,
+          "tag": [
+            0,
+            110
+          ]
+        },
+        {
           "id": "left",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "cloche",
           "label": "Fancy special",
           "color": "blue",
-          "o": 0,
-          "size": 22
+          "size": 22,
+          "x": 115,
+          "y": 135,
+          "w": 140,
+          "h": 140,
+          "tagW": 170,
+          "tag": [
+            0,
+            100
+          ]
         },
         {
           "id": "right",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "burger",
           "label": "What everyone orders",
           "color": "blue",
-          "o": 0,
-          "size": 18
-        },
-        {
-          "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "MENU",
-          "color": "gold",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
-        },
-        {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "CHOOSE",
-          "color": "fg",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
+          "size": 18,
+          "x": 540,
+          "y": 130,
+          "w": 150,
+          "h": 150,
+          "tagW": 220,
+          "tag": [
+            0,
+            100
+          ]
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
+          "y": 350,
           "label": "Popular for a reason.",
           "color": "pink",
           "size": 22,
@@ -219,15 +225,14 @@
           "say": "A menu with a hundred dishes.",
           "dur": 2.4,
           "set": {
+            "thing": {
+              "o": 1
+            },
             "left": {
               "o": 1
             },
             "right": {
               "o": 1
-            },
-            "thing": {
-              "o": 1,
-              "s": 1
             }
           }
         },
@@ -235,9 +240,7 @@
           "say": "You have to choose one.",
           "dur": 2.4,
           "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
+            "thing": {
               "shake": true
             }
           }
@@ -278,13 +281,8 @@
               "color": "green"
             },
             "thing": {
-              "label": "CATALOG",
+              "label": "Catalog",
               "size": 18
-            },
-            "act": {
-              "label": "PICK",
-              "size": 18,
-              "color": "pink"
             },
             "line": {
               "label": "Every dealer sells the standard kinds.",
