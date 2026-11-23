@@ -806,7 +806,7 @@ test('the crystal is a bottle of supercooled water on the lit table, shipped wit
 test('draft lessons get real objects too: every object a draft scene names is in the library', () => {
   // Bryan, 23 Nov 2026: "Yes, drafts next". The drafts given objects so far; each names only objects the library has.
   const lib = fs.readFileSync(path.join(uni.UNI, 'scene-props.js'), 'utf8'), dir = path.join(uni.UNI, 'drafts');
-  const done = ['human-nature-1', 'human-nature-3', 'human-nature-4', 'human-nature-5', 'human-nature-6'];
+  const done = ['human-nature-1', 'human-nature-3', 'human-nature-4', 'human-nature-5', 'human-nature-6', 'human-nature-7', 'human-nature-8', 'human-nature-9', 'human-nature-10', 'human-nature-12'];
   for (const f of fs.readdirSync(dir).filter((x) => x.endsWith('.json'))) {
     const sc = (JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')).unit || {}).scene; if (!sc) continue;
     const props = sc.actors.filter((a) => a.prop);

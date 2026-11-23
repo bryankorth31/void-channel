@@ -151,61 +151,63 @@
       ],
       "actors": [
         {
+          "id": "thing",
+          "type": "card",
+          "o": 0,
+          "prop": "jam",
+          "label": "The jam",
+          "color": "gold",
+          "size": 20,
+          "x": 80,
+          "y": 40,
+          "w": 640,
+          "h": 90,
+          "tagW": 150,
+          "tag": [
+            -290,
+            95
+          ]
+        },
+        {
           "id": "left",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "tie": "thing.front",
+          "x": 650,
+          "y": 230,
           "label": "The traffic",
           "color": "blue",
-          "o": 0,
-          "size": 22
+          "size": 22,
+          "tagW": 170
         },
         {
           "id": "right",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "radio",
+          "playing": false,
+          "song": "FM 98.1",
           "label": "Your reaction",
           "color": "blue",
-          "o": 0,
-          "size": 22
-        },
-        {
-          "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "THE JAM",
-          "color": "gold",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
-        },
-        {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "SIT IN",
-          "color": "fg",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
+          "size": 20,
+          "x": 205,
+          "y": 190,
+          "w": 130,
+          "h": 130,
+          "tagW": 180,
+          "tag": [
+            185,
+            35
+          ]
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
+          "y": 348,
           "label": "Shout at the cars, or put on some music.",
           "color": "pink",
-          "size": 22,
+          "size": 18,
           "o": 0
         }
       ],
@@ -214,15 +216,14 @@
           "say": "You are stuck in traffic.",
           "dur": 2.4,
           "set": {
+            "thing": {
+              "o": 1
+            },
             "left": {
               "o": 1
             },
             "right": {
               "o": 1
-            },
-            "thing": {
-              "o": 1,
-              "s": 1
             }
           }
         },
@@ -230,9 +231,7 @@
           "say": "Nothing you do moves the cars.",
           "dur": 2.4,
           "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
+            "thing": {
               "shake": true
             }
           }
@@ -253,6 +252,9 @@
           "say": "How you sit in it is.",
           "dur": 2.6,
           "set": {
+            "right": {
+              "playing": true
+            },
             "line": {
               "o": 1
             }
@@ -273,13 +275,8 @@
               "color": "green"
             },
             "thing": {
-              "label": "EVENTS",
+              "label": "Events",
               "size": 18
-            },
-            "act": {
-              "label": "JUDGE",
-              "size": 18,
-              "color": "pink"
             },
             "line": {
               "label": "Epictetus: it is our judgments that upset us.",
