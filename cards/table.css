@@ -106,6 +106,18 @@ button{font:inherit;color:inherit;cursor:pointer}
 .over-buttons{display:flex;justify-content:center;gap:calc(var(--u)*1.5);margin-top:calc(var(--u)*1.2)}
 .donate{margin-top:calc(var(--u)*1.2);font-size:calc(var(--u)*1.2);line-height:1.35;color:var(--dim)}
 .donate a{color:var(--acc)}
+/* The game has just ended: the panel comes in once the last card has landed, and each winner's plate keeps a gold ring.
+   Nothing blinks or pulses (decision B9). */
+.plate.won{border-color:var(--gold);box-shadow:0 0 0 calc(var(--u)*.3) var(--gold),0 0 calc(var(--u)*2.4) rgba(243,201,105,.45)}
+.over.arrive{animation:over-in .6s cubic-bezier(.2,.75,.25,1) .5s both}
+.stage.arrive .plate.won{animation:won-in 1.2s ease-out .3s both}
+@keyframes over-in{from{opacity:0;transform:translate(-50%,-44%)}to{opacity:1;transform:translate(-50%,-50%)}}
+@keyframes won-in{from{box-shadow:0 0 0 0 rgba(243,201,105,0),0 0 0 0 rgba(243,201,105,0)}}
+
+/* Cards in the air (src/motion.js): over everything, catching no taps. */
+.flights{position:fixed;inset:0;z-index:30;pointer-events:none;overflow:hidden}
+.flight{position:fixed;width:5em;height:7em;will-change:transform,opacity}
+@media (prefers-reduced-motion:reduce){.over.arrive,.stage.arrive .plate.won{animation:none}}
 
 /* Words that say something is wrong with the phone room. */
 .problem{position:absolute;left:0;right:0;top:0;padding:calc(var(--u)*.8) calc(var(--u)*2);text-align:center;font-size:calc(var(--u)*1.8);background:var(--pink);color:var(--ink);font-weight:700}

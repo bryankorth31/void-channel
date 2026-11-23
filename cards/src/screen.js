@@ -243,14 +243,15 @@
 
     // The middle, from centreItems: the pack, sets and runs on the table, the pile or the card on offer, the waste, and a
     // suit that was called.
-    const mid = el('div', 'centre');
+    // Each place in the middle carries its zone's name (data-zone), so a card in motion can find where it flies from or to.
+    const mid = el('div', 'centre'), at = (e, zone) => { e.dataset.zone = zone; return e; };
     for (const it of centreItems(v)) {
       const item = el('div', 'centre-item' + (it.kind === 'groups' ? ' centre-groups' : ''));
-      if (it.kind === 'pack') item.append(cardIn('cardbox big', F.back()), el('div', 'count', it.n + ' left'));
-      else if (it.kind === 'groups') item.append(drawGroups(it.groups, 'melds'), el('div', 'count', plural(it.groups.length, 'set or run', 'sets and runs')));
-      else if (it.kind === 'pile') item.append(cardIn('cardbox big', F.card(it.card)));
-      else if (it.kind === 'offer') item.append(it.card ? cardIn('cardbox big offer', F.card(it.card)) : el('div', 'slot'), el('div', 'count', it.card ? 'On offer' : 'Nothing on offer'));
-      else if (it.kind === 'waste') item.append(it.top ? cardIn('cardbox mid', F.card(it.top)) : el('div', 'slot slot-mid'), el('div', 'count', it.n + ' passed'));
+      if (it.kind === 'pack') item.append(at(cardIn('cardbox big', F.back()), 'draw'), el('div', 'count', it.n + ' left'));
+      else if (it.kind === 'groups') item.append(at(drawGroups(it.groups, 'melds'), it.id), el('div', 'count', plural(it.groups.length, 'set or run', 'sets and runs')));
+      else if (it.kind === 'pile') item.append(at(cardIn('cardbox big', F.card(it.card)), 'discard'));
+      else if (it.kind === 'offer') item.append(at(it.card ? cardIn('cardbox big offer', F.card(it.card)) : el('div', 'slot'), 'offer'), el('div', 'count', it.card ? 'On offer' : 'Nothing on offer'));
+      else if (it.kind === 'waste') item.append(at(it.top ? cardIn('cardbox mid', F.card(it.top)) : el('div', 'slot slot-mid'), 'waste'), el('div', 'count', it.n + ' passed'));
       mid.append(item);
     }
     const top = zones.discard && zones.discard.top;
@@ -276,8 +277,8 @@
     // lines, and who is to play. A side's plates are tinted alike when the game has partners. Then the cards laid face up.
     spots.forEach((spot, i) => {
       const p = s.players[i], hand = zones['hand:' + i], won = zones['won:' + i], side = seatSide(v, i), line = seatNote(v, i);
-      const mine = v.turn.includes(i), takes = heldNow && held.won === i;
-      const plate = el('div', 'plate' + (mine ? ' turn' : '') + (takes ? ' takes' : '') + (p && !p.here ? ' away' : '') + (n > 8 ? ' tight' : '') + (side !== null ? ' side side' + (side % 4) : ''));
+      const mine = v.turn.includes(i), takes = heldNow && held.won === i, winner = !!(v.over && Array.isArray(v.over.winners) && v.over.winners.includes(i));
+      const plate = el('div', 'plate' + (mine ? ' turn' : '') + (takes ? ' takes' : '') + (winner ? ' won' : '') + (p && !p.here ? ' away' : '') + (n > 8 ? ' tight' : '') + (side !== null ? ' side side' + (side % 4) : ''));
       plate.dataset.seat = i;
       // The cards held and the score are two lines: "13 cards, score -70" does not fit a plate (found in the browser with Spades).
       const score = v.pub && Array.isArray(v.pub.scores) && v.pub.scores[i] !== undefined ? 'score ' + v.pub.scores[i] : '';
@@ -306,8 +307,10 @@
   }
 
   // ---------- game over ----------
-  function drawOver(stage, s) {
+  // fresh: the game has just ended, so the panel comes in calmly (once; it is drawn again when a phone joins).
+  function drawOver(stage, s, fresh) {
     const v = s.view, over = v.over || {}, panel = el('div', 'over');
+    if (fresh && !root.VoidMotion.still()) { panel.classList.add('arrive'); stage.classList.add('arrive'); }
     // A game that ends with no winner (Conquian, the pack run out) still has a headline, as on the phone.
     panel.append(el('div', 'over-win', winnerLine(v, s.players) || 'Game over'));
     if (over.note) panel.append(el('div', 'over-note', over.note));
@@ -340,43 +343,41 @@
     stage.append(corner);
   }
 
+  let lastPhase = '';
   function render() {
     const s = dealer.snapshot(), stage = el('div', 'stage');
     if (s.phase === 'lobby' || !s.view) drawLobby(stage, s);
     else {
       drawTable(stage, s);
       drawCorner(stage, s);
-      if (s.phase === 'over') drawOver(stage, s);
+      if (s.phase === 'over') drawOver(stage, s, lastPhase !== 'over');
     }
+    lastPhase = s.phase;
     if (problem) stage.append(el('div', 'problem', problem));
     app.textContent = '';
     app.append(stage);
   }
 
-  // A card just laid face up grows in from its player's plate toward where it now lies.
-  function grow(ev) {
-    const seat = app.querySelector('.plate[data-seat="' + ev.by + '"]');
-    let card = null;
-    for (const c of app.querySelectorAll('[data-card]')) if (c.dataset.card === ev.cards[0]) card = c;
-    if (!seat || !card) return;
-    const a = seat.getBoundingClientRect(), b = card.getBoundingClientRect();
-    card.style.transition = 'none';
-    card.style.transform = 'translate(' + (a.left + a.width / 2 - b.left - b.width / 2) + 'px,' + (a.top + a.height / 2 - b.top - b.height / 2) + 'px) scale(.3)';
-    card.getBoundingClientRect();
-    card.style.transition = 'transform 300ms ease-out';
-    card.style.transform = '';
-  }
   // The last trick is held on the table for a moment after it is taken, so the cards in front of the seats and the winner can
-  // be seen. A card played to the next trick ends the hold at once (trickCards draws the live trick first).
+  // be seen; then it goes to the player who took it (src/motion.js). A card played to the next trick, or a new deal, ends
+  // the hold at once.
   let held = null, heldTimer = 0;
-  const HOLD_MS = 2600;
+  const HOLD_MS = 2600, M = root.VoidMotion;
+  function letGo() {
+    if (!held) return;
+    const won = held.won;
+    held = null; clearTimeout(heldTimer);
+    M.sweep(app, won);
+  }
+  // Every change of the game: the page is drawn again, then whatever the change's events moved flies from where it was.
   function changed(events) {
     note = '';
-    const h = heldTrick(events);
-    if (h) { held = h; clearTimeout(heldTimer); heldTimer = setTimeout(() => { held = null; render(); }, HOLD_MS); }
-    else if (events && events.some((e) => e && e.ev === 'deal')) { held = null; clearTimeout(heldTimer); }
+    const before = M.snap(app), h = heldTrick(events);
+    if (h) { held = h; clearTimeout(heldTimer); heldTimer = setTimeout(() => { letGo(); render(); }, HOLD_MS); }
+    else if (held && (events || []).some((e) => e && (e.ev === 'deal' || (e.ev === 'move' && (e.to === 'trick' || e.to === 'draw'))))) letGo();
     render();
-    for (const ev of events || []) if (ev && ev.ev === 'move' && ev.cards && ev.cards.length && ev.by !== undefined) grow(ev);
+    const v = dealer.snapshot().view;
+    M.run(M.plan(events, v ? v.n : 0), before, app);
   }
 
   document.addEventListener('keydown', (e) => {

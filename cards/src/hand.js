@@ -285,10 +285,11 @@
     return !!(hints() && me !== null && table && table.v && !table.v.over && table.v.turn.includes(me));
   };
 
-  // Make an element for every card in the hand, keep the old ones so they can slide, and drop the ones that left.
+  // Make an element for every card in the hand, keep the old ones so they can slide, and let the ones that left go. Returns
+  // the cards that are new.
   function syncCards() {
-    const box = $('handbox');
-    for (const [id, el] of els) if (!order.includes(id)) { el.remove(); els.delete(id); }
+    const box = $('handbox'), added = [];
+    for (const [id, el] of els) if (!order.includes(id)) { els.delete(id); leave(el); }
     for (const id of order) {
       if (els.has(id)) continue;
       const el = document.createElement('div');
@@ -296,8 +297,37 @@
       el.appendChild(F.card(id));
       box.appendChild(el);
       els.set(id, el);
+      added.push(id);
     }
     $('nohand').hidden = order.length > 0;
+    return added;
+  }
+  // Motion on the phone (Bryan, 23 Nov 2026, with the big screen's in src/motion.js): CSS only, nothing that flashes, and
+  // none at all on a phone that asks for reduced motion (decision B9).
+  const still = () => { try { return matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) { return false; } };
+  // A card that left the hand (played, laid down, given away) lifts off it and goes up, toward the big screen.
+  function leave(el) {
+    if (still()) { el.remove(); return; }
+    el.classList.add('gone');
+    el.style.transform += ' translateY(-140%) scale(.85)';
+    el.style.opacity = '0';
+    setTimeout(() => el.remove(), 460);
+  }
+  // New cards come in from above, from the big screen: a new hand one card after another, as it is dealt; a card or two
+  // drawn, at once. They start where they will lie, only higher, so they drop into place.
+  function enter(ids) {
+    const dealt = ids.length > 3;
+    ids.forEach((id, k) => {
+      const el = els.get(id), p = slot(lay, order.indexOf(id)), d = dealt ? k * 45 : 0;
+      el.style.fontSize = (lay.cardW / 5) + 'px';
+      el.style.transition = 'none';
+      el.style.transform = 'translate(' + p.x + 'px,' + (-lay.cardH * 1.2) + 'px)';
+      el.style.opacity = '0';
+      void el.offsetWidth;
+      el.style.transition = 'transform .45s cubic-bezier(.2,.75,.25,1) ' + d + 'ms, opacity .2s linear ' + d + 'ms';
+      el.style.opacity = '';
+      setTimeout(() => { el.style.transition = ''; }, 480 + d);
+    });
   }
   function measure() {
     const r = $('handbox').getBoundingClientRect();
@@ -318,7 +348,12 @@
     const ok = myTurn() ? pickable(hints()) : null;   // a card no move of this turn lists is dimmed
     order.forEach((id, i) => { if (id !== except && els.has(id)) placeOne(id, i, ok); });
   }
-  function drawHand() { syncCards(); measure(); placeAll(drag && drag.moving ? drag.id : null); }
+  function drawHand() {
+    const added = syncCards();
+    measure();
+    if (added.length && lay && !still()) enter(added);
+    placeAll(drag && drag.moving ? drag.id : null);
+  }
 
   // ----- Dragging and tapping -----
   function point(e) { const r = $('handbox').getBoundingClientRect(); return { x: e.clientX - r.left, y: e.clientY - r.top }; }
@@ -413,6 +448,7 @@
       }
       mv.hidden = !mv.childNodes.length;
     }
+    $('bar').classList.toggle('myturn', myTurn());   // a soft gold light along the bar while it is this player's turn
     for (const el of $('bar').querySelectorAll('button[data-key]')) {
       const it = items.find((i) => i.key === el.dataset.key);
       el.disabled = !(it && it.enabled);

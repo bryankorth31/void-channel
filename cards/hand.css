@@ -52,13 +52,19 @@ li{margin:4px 0}
 .hc.sel{box-shadow:0 0 0 .14em var(--acc)}
 .hc.fresh{box-shadow:0 0 0 .14em var(--gold)}
 .hc.lift{z-index:20;transition:none;box-shadow:0 0 0 .14em var(--pink),0 .6em 1.2em rgba(0,0,0,.6);opacity:1}
+/* A card that has left the hand lifts away upward (src/hand.js, leave). */
+.hc.gone{z-index:15;pointer-events:none;transition:transform .42s cubic-bezier(.4,0,.8,.4),opacity .42s ease-in}
 
 #privs{flex:none;padding:0 12px}
 .priv{display:flex;align-items:center;gap:8px;padding:4px 0;font-size:5px}
 .priv b{font:600 12px system-ui,sans-serif;color:var(--dim);min-width:54px}
 .priv .cs{display:flex;gap:2px;flex-wrap:wrap}
 
-#bar{flex:none;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;padding:8px 12px;border-top:1px solid var(--line);background:var(--bg)}
+#bar{flex:none;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;padding:8px 12px;border-top:1px solid var(--line);background:var(--bg);
+  transition:box-shadow .5s ease-out,border-color .5s ease-out}
+/* Your turn: a soft gold light along the bar, there for the whole turn (it does not blink). */
+#bar.myturn{border-top-color:var(--gold);box-shadow:inset 0 2px 0 var(--gold),0 -14px 26px -16px rgba(243,201,105,.7)}
+@media (prefers-reduced-motion:reduce){.hc,.hc.gone,#bar{transition:none}}
 .barl{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 #hint-btns{display:contents}
 /* The moves made with cards (Play, or Lay down, Lay off, Discard): on the right, the main one last. When they do not fit

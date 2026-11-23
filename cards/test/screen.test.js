@@ -171,11 +171,12 @@ test('laidAnchor: groups start at the plate\'s inner edge, never under the plate
 test('index.html loads the scripts in the order the page needs', () => {
   const html = read('cards', 'index.html');
   const src = [...html.matchAll(/<script[^>]*\ssrc="([^"]+)"/g)].map((m) => m[1]);
-  // The engine first, then every game there is a rule file for (a new game is one more line), then the page's own script.
+  // The engine first, then every game there is a rule file for (a new game is one more line), then the motion and the
+  // page's own script.
   const games = require('fs').readdirSync(require('path').join(__dirname, '..', 'games')).filter((f) => f.endsWith('.js')).map((f) => '/cards/games/' + f);
   assert.deepEqual(src.slice(0, 6), ['/play/src/qr.js', '/trivia/src/words.js', '/cards/src/cards.js', '/cards/src/table.js', '/cards/src/dealer.js', '/cards/src/face.js']);
-  assert.deepEqual(src.slice(6, -1).slice().sort(), games.slice().sort(), 'every game in cards/games is loaded by the table page, and nothing else');
-  assert.equal(src[src.length - 1], '/cards/src/screen.js');
+  assert.deepEqual(src.slice(6, -2).slice().sort(), games.slice().sort(), 'every game in cards/games is loaded by the table page, and nothing else');
+  assert.deepEqual(src.slice(-2), ['/cards/src/motion.js', '/cards/src/screen.js']);
   const css = [...html.matchAll(/<link[^>]*\shref="([^"]+)"/g)].map((m) => m[1]);
   assert.deepEqual(css, ['/cards/cards.css', '/cards/table.css']);
   assert.ok(!/\son[a-z]+\s*=/i.test(html), 'no inline event handlers');
@@ -202,7 +203,7 @@ test('the donation words appear once, in screen.js, and the link goes where the 
 });
 
 test('no dash characters in the page files', () => {
-  for (const f of [['cards', 'index.html'], ['cards', 'src', 'screen.js'], ['cards', 'table.css']]) assert.ok(!new RegExp('[' + String.fromCharCode(8211, 8212) + ']').test(read(...f)), f.join('/'));
+  for (const f of [['cards', 'index.html'], ['cards', 'src', 'screen.js'], ['cards', 'src', 'motion.js'], ['cards', 'table.css']]) assert.ok(!new RegExp('[' + String.fromCharCode(8211, 8212) + ']').test(read(...f)), f.join('/'));
 });
 
 test('laidScale: a few groups keep the usual size; a table full of pairs or books gets smaller cards, never taller than 14 units', () => {

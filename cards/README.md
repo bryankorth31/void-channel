@@ -19,6 +19,12 @@ Also built: the phone's hand page (`hand.html`, `src/hand.js`), the big-screen t
 the dealer that carries a table over the phone relay (`src/dealer.js`, `play/rooms/`). Their looks are Bryan's picks from
 pictures: hand B (the rows) and table A (the round table). `games/` also holds Go Fish, Spades, Rummy and Conquian.
 
+The motion on the big screen is `src/motion.js`: after each change, every card the change's events moved flies from where it
+was to where it went (dealt, drawn, played, laid down, given, taken), face down unless its event carried its face, and a
+trick that was taken goes to its taker after its moment on the table. The phone's motion is in `src/hand.js` (new cards
+drop in, a card that leaves lifts away, a gold light on the bar for your turn). Both are CSS only, nothing flashes, and
+nothing moves on a device that asks for reduced motion (decision B9).
+
 ## The privacy rule
 
 A hand must stay private. So no screen is ever drawn from the game's state. Each is drawn from a view:
