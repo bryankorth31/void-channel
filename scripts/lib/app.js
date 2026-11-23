@@ -356,6 +356,8 @@ header .mine-link{cursor:pointer;color:var(--fg);font-size:14px;padding:7px 12px
 .gd-row{position:absolute;left:0;right:0;border-bottom:1px solid var(--line)}
 .gb{position:absolute;top:3px;bottom:4px;padding:5px 8px;overflow:hidden;background:var(--panel2);border:1px solid #2a3150;border-radius:6px;box-sizing:border-box;cursor:pointer}
 .gb{box-shadow:inset 4px 0 0 var(--c,transparent);background:color-mix(in srgb,var(--c,#161926) 14%,var(--panel2))}
+/* A block that began left of the view keeps its name in view: --l is the block's own left edge, --sx how far the guide is scrolled, so its text starts beside the channel column, not under it. */
+.gb{padding-left:max(8px,calc(var(--sx,0px) - var(--l,0px) + 8px))}
 .gb.gdim,.gd-lr.gdim{opacity:.15}
 .gd-lr{box-shadow:inset 4px 0 0 var(--c,transparent)}
 .cgd{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:1px;flex:none}
@@ -501,7 +503,8 @@ h2{margin:18px 20px 8px;font-size:17px;font-family:Unbounded,system-ui,sans-seri
 .genres button{background:var(--panel);border:1px solid var(--line);color:var(--fg);padding:16px 10px;border-radius:10px;cursor:pointer}
 .genres button:hover{border-color:var(--acc)}.genres small{display:block;color:var(--dim);margin-top:3px}
 .show{padding:0 20px 24px}
-.back{background:none;border:0;color:var(--acc);cursor:pointer;padding:12px 0}
+/* button.back, not .back: the arrow inside it is <i class="ico back">, and a plain .back rule (later than .ico, same weight) took away the colour the arrow's mask paints with, so only the word showed (Bryan, 23 Nov 2026: "fix the back arrow"). */
+button.back{background:none;border:0;color:var(--acc);cursor:pointer;padding:12px 0}
 .hero{position:relative;border-radius:10px;overflow:hidden;background:var(--panel);min-height:160px}
 .hero img{width:100%;max-height:300px;object-fit:cover;display:block;opacity:.5}
 .hero .t{position:absolute;left:20px;bottom:16px;right:20px}.hero .t b{font-family:Unbounded,system-ui,sans-serif;font-weight:800;font-size:24px;line-height:1.1;display:block}.hero .t p{margin:6px 0 0;max-width:760px;font-size:14px}.hero .g{color:var(--dim);font-size:12px;margin-top:4px}
@@ -569,7 +572,11 @@ let ME_BASE=null,ME_RAW=null;
 ${ME_SRC}
 const ME_WROTE={};
 const ME=(()=>{let raw=null,m=null;try{raw=localStorage.getItem(ME_KEY);m=JSON.parse(raw||'null')}catch(_){}ME_RAW=raw;m=meClean(m);ME_BASE=meCopy(m);
- try{const keys=[];for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k&&k.startsWith('voidtv:')&&!['voidtv:me','voidtv:sid','voidtv:vol','voidtv:enjoy'].includes(k))keys.push(k)}for(const k of keys){const sl=k.slice(7);try{if(!m.history[sl]){const r=JSON.parse(localStorage.getItem(k)||'null');if(r&&r.se!=null)m.history[sl]={se:r.se,e:r.e,at:0,pos:0}}}catch(e){}localStorage.removeItem(k)}}catch(_){}
+ // The old-key sweep moves the per-show records of before 13 Oct (voidtv:<slug> holding {se,e}) into voidtv:me and removes
+ // only those. It used to remove every other voidtv: key too, so the last channel (voidtv:chan) was wiped at every load and
+ // the home page always opened on The Void (Bryan, 23 Nov 2026: "fix the ... channel memory"). Any key that is not an old
+ // record now stays.
+ try{const keys=[];for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k&&k.startsWith('voidtv:')&&!['voidtv:me','voidtv:sid','voidtv:vol','voidtv:chan','voidtv:enjoy'].includes(k))keys.push(k)}for(const k of keys){const sl=k.slice(7);try{const r=JSON.parse(localStorage.getItem(k)||'null');if(r&&typeof r==='object'&&r.se!=null){if(!m.history[sl])m.history[sl]={se:r.se,e:r.e,at:0,pos:0};localStorage.removeItem(k)}}catch(e){}}}catch(_){}
  return m})();
 function mePlaying(slug,se,e){const c=VP&&VP._cur;return !!(c&&c.slug===slug&&c.se===se&&c.e===e&&VP.v&&!VP.v.paused)}
 function meSync(){let raw=null;try{raw=localStorage.getItem(ME_KEY)}catch(_){return false}
@@ -671,7 +678,7 @@ function hue(str){let h=0;for(const c of String(str))h=(h*31+c.charCodeAt(0))%36
 function genPoster(s){const words=s.show.replace(/^(the|a|an) /i,'').split(/\\s+/);const ini=words.slice(0,2).map(w=>w[0]||'').join('').toUpperCase();return '<div class="p gen" style="--h:'+hue(s.network||s.show)+'"><b>'+esc(ini)+'</b><span>'+esc(s.show)+'</span><small>'+esc([s.network,s.year].filter(Boolean).join(' · '))+'</small></div>'}
 function card(s,ctx){const total=s.eps;const open=state.open===s.slug;return '<div class="card'+(open?' open':'')+'" style="--c:'+cgc(s)+'" data-slug="'+s.slug+'" tabindex="0" onclick="go(\\''+s.slug+'\\')" onkeydown="if(event.key===\\'Enter\\')go(\\''+s.slug+'\\')">'
  +'<button class="more" title="Details" onclick="event.stopPropagation();toggle(\\''+s.slug+'\\',\\''+ctx+'\\')">'+(open?'<i class="ico arrow-up sm"></i>':'<i class="ico chevron-down sm"></i>')+'</button>'
- +(s.poster?'<div class="p"><img loading="lazy" src="'+s.poster+'" alt=""></div>':genPoster(s))+'<div class="t"><b>'+esc(s.show)+'</b><small>'+esc(s.network||'')+(s.year?' · '+s.year:'')+' · '+total+' ep'+(total===1?'':'s')+(s.rating?' · ★ '+s.rating:'')+'</small></div>'
+ +(s.poster?'<div class="p"><img loading="lazy" src="'+s.poster+'" alt=""></div>':genPoster(s))+'<div class="t"><b>'+esc(s.show)+'</b><small>'+esc(s.network||'')+(s.year?' · '+s.year:'')+' · '+total+'&nbsp;ep'+(total===1?'':'s')+(s.rating?' · ★&nbsp;'+s.rating:'')+'</small></div>'
  +(ctx==='grid'?'<div class="indetail"><p>'+esc(s.overview||'No description yet.')+'</p><p class="g">'+esc(meta(s))+'</p></div>':'')+'</div>'}
 function detail(s){return '<div class="detail">'+(s.poster?'<img src="'+s.poster+'" alt="">':'<div></div>')+'<div><b>'+esc(s.show)+'</b><p>'+esc(s.overview||'No description yet.')+'</p><div class="g">'+esc(meta(s))+'</div><div class="acts"><button class="btn" onclick="go(\\''+s.slug+'\\')"><i class="ico play"></i>Play</button><button class="btn" onclick="state.open=null;render()"><i class="ico close sm"></i>Close</button><span class="mine" data-slug="'+s.slug+'">'+acts(s)+'</span></div></div></div>'}
 function toggle(slug,ctx){state.open=state.open===slug?null:slug;state.openCtx=ctx;render();if(state.open&&ctx!=='grid'){const d=document.querySelector('.detail');if(d)d.scrollIntoView({block:'nearest',behavior:'smooth'})}}
@@ -1080,15 +1087,15 @@ function gdChanCell(c,i,now){const n=TVG.chanNow(c,TVLIB,now),s=n&&SHOWS[n.a.s];
 // One box per block: a show's episodes packed into one half hour of TVG's 30-minute grid share it, from g0 to g1.
 const gdG=(a)=>[a.g0!=null?a.g0:a.st,a.g1!=null?a.g1:a.en];
 const gdEps=(c,a)=>{const g=gdG(a),n=TVG.airingsBetween(c,TVLIB,g[0],g[1]).length;return code(a)+(n>1?' · '+n+' episodes':'')};
-function gdBlocks(c,ci,tA,tB,now){const z=GD.z,fo=GD.fo;let h='',drawn=-1;for(const a of TVG.airingsBetween(c,TVLIB,tA,tB)){const s=SHOWS[a.s],g=gdG(a);if(!s||g[0]===drawn)continue;drawn=g[0];const b=TVG.blockBox(a,GD.t0,z.ppm),on=g[0]<=now&&now<g[1],foc=fo&&fo.ci===ci&&fo.t>=g[0]&&fo.t<g[1];h+='<div class="gb'+(g[1]<=now?' gpast':'')+(on?' gnow':'')+(TVG.blockHit(a,GD.f.q,gdName)?' ghit':'')+(foc?' gfoc':'')+(gdDim(s)?' gdim':'')+'" style="left:'+b.left+'px;width:'+b.width+'px;--c:'+cgc(s)+'" data-c="'+ci+'" data-t="'+g[0]+'" title="'+esc(s.show+' · '+gdEps(c,a)+' · '+clock(g[0])+' to '+clock(g[1]))+'"><b>'+esc(s.show)+'</b><small>'+code(a)+' · '+clock(g[0])+'</small></div>'}return h}
+function gdBlocks(c,ci,tA,tB,now){const z=GD.z,fo=GD.fo;let h='',drawn=-1;for(const a of TVG.airingsBetween(c,TVLIB,tA,tB)){const s=SHOWS[a.s],g=gdG(a);if(!s||g[0]===drawn)continue;drawn=g[0];const b=TVG.blockBox(a,GD.t0,z.ppm),on=g[0]<=now&&now<g[1],foc=fo&&fo.ci===ci&&fo.t>=g[0]&&fo.t<g[1];h+='<div class="gb'+(g[1]<=now?' gpast':'')+(on?' gnow':'')+(TVG.blockHit(a,GD.f.q,gdName)?' ghit':'')+(foc?' gfoc':'')+(gdDim(s)?' gdim':'')+'" style="left:'+b.left+'px;width:'+b.width+'px;--c:'+cgc(s)+';--l:'+b.left+'px" data-c="'+ci+'" data-t="'+g[0]+'" title="'+esc(s.show+' · '+gdEps(c,a)+' · '+clock(g[0])+' to '+clock(g[1]))+'"><b>'+esc(s.show)+'</b><small>'+code(a)+' · '+clock(g[0])+'</small></div>'}return h}
 function gdTicks(tA,tB){const z=GD.z;return TVG.halfHours(tA,tB).map(k=>{const lab=k.mid?'<b>'+esc(gdDay(k.t))+'</b>':k.m===0?new Date(k.t).toLocaleTimeString([],{hour:'numeric'}):':30';return '<div class="gd-tk'+(k.mid?' mid':k.m===0?' hr':'')+'" style="left:'+Math.round(TVG.xOf(k.t,GD.t0,z.ppm))+'px">'+lab+'</div>'}).join('')}
-function gdDraw(){const S=GD.s;if(!S||GD.mode!=='grid')return;const z=GD.z,L=GD.list,now=Date.now(),Wt=gdWt(S,z),x0=S.scrollLeft,y0=S.scrollTop;
+function gdDraw(){const S=GD.s;if(!S||GD.mode!=='grid')return;const z=GD.z,L=GD.list,now=Date.now(),Wt=gdWt(S,z),x0=S.scrollLeft,y0=S.scrollTop;S.style.setProperty('--sx',x0+'px');
  const tA=Math.max(GD.t0,TVG.tOf(x0-Wt,GD.t0,z.ppm)),tB=Math.min(GD.t1,TVG.tOf(x0+2*Wt,GD.t0,z.ppm)),r=TVG.rowSpan(y0,Math.max(z.row*2,(S.clientHeight||500)-z.head),z.row,L.length,3);
  GD.win={x0,y0,r0:r[0],r1:r[1],tA,tB};let cc='',rr='';
  for(let i=r[0];i<r[1];i++){cc+=gdChanCell(L[i],i,now);rr+='<div class="gd-row" style="top:'+(i*z.row)+'px;height:'+z.row+'px">'+gdBlocks(L[i],i,tA,tB,now)+'</div>'}
  $('gdChans').innerHTML=cc;$('gdRows').innerHTML=rr+(now>=GD.t0&&now<GD.t1?'<div class="gd-now" style="left:'+Math.round(TVG.xOf(now,GD.t0,z.ppm))+'px"></div>':'');$('gdRuler').innerHTML=gdTicks(tA,tB);
  const cn=$('gdCorner');if(cn)cn.innerHTML='<b>'+esc(gdDay(TVG.tOf(x0,GD.t0,z.ppm)))+'</b><small>'+L.length+' channel'+(L.length===1?'':'s')+'</small>'}
-function gdScrollNow(){const S=GD.s,w=GD.win,z=GD.z;if(!S||!w)return;if(Math.abs(S.scrollLeft-w.x0)>gdWt(S,z)*0.6||Math.abs(S.scrollTop-w.y0)>z.row*2)gdDraw()}
+function gdScrollNow(){const S=GD.s,w=GD.win,z=GD.z;if(!S||!w)return;S.style.setProperty('--sx',S.scrollLeft+'px');if(Math.abs(S.scrollLeft-w.x0)>gdWt(S,z)*0.6||Math.abs(S.scrollTop-w.y0)>z.row*2)gdDraw()}
 function gdScroll(){if(GD.raf)return;GD.raf=requestAnimationFrame(()=>{GD.raf=0;gdScrollNow()})}
 function gdScrollTo(t){const S=GD.s,z=GD.z;if(!S)return;S.scrollLeft=Math.max(0,TVG.xOf(t,GD.t0,z.ppm)-gdWt(S,z)*0.15);if(GD.fo)GD.fo.t=Math.max(GD.t0,Math.min(GD.t1-1,t));gdDraw()}
 function gdJumpTo(n){const now=Date.now();let t;if(n===0)t=now;else if(n===1)t=TVG.localAt(now,now>TVG.localAt(now,0,1380)?1:0,1200);else if(n===2)t=TVG.localAt(now,1,480);else t=TVG.localAt(now,n-10,1200);

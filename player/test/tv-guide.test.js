@@ -46,7 +46,7 @@ function world() {
 
 // ---- the page stand-in
 class El {
-  constructor(id, reg) { this.id = id; this.reg = reg; this._h = ''; this.scrollLeft = 0; this.scrollTop = 0; this.clientWidth = 1100; this.clientHeight = 620; this.hidden = false; this.className = ''; this.textContent = ''; this.dataset = {}; }
+  constructor(id, reg) { this.id = id; this.reg = reg; this._h = ''; this.scrollLeft = 0; this.scrollTop = 0; this.clientWidth = 1100; this.clientHeight = 620; this.hidden = false; this.className = ''; this.textContent = ''; this.dataset = {}; this.style = { p: {}, setProperty(k, v) { this.p[k] = String(v); } }; }
   get innerHTML() { return this._h; }
   set innerHTML(v) { this._h = String(v); if (this.id === 'gdBody') for (const m of this._h.matchAll(/id="([A-Za-z]+)"/g)) this.reg.make(m[1]); }
   focus() { this.reg.focused = this.id; }
@@ -87,7 +87,7 @@ function guided(opts) {
   p.h.gdInit(cur.id);
   return p;
 }
-const blocks = (html) => [...html.matchAll(/<div class="gb([^"]*)" style="left:([-\d.]+)px;width:([-\d.]+)px(?:;--c:#[0-9a-f]{6})?" data-c="(\d+)" data-t="(\d+)"/g)].map((m) => ({ cls: m[1].trim().split(/\s+/).filter(Boolean), left: +m[2], width: +m[3], ci: +m[4], t: +m[5] }));
+const blocks = (html) => [...html.matchAll(/<div class="gb([^"]*)" style="left:([-\d.]+)px;width:([-\d.]+)px(?:;--c:#[0-9a-f]{6})?(?:;--l:([-\d.]+)px)?" data-c="(\d+)" data-t="(\d+)"/g)].map((m) => ({ cls: m[1].trim().split(/\s+/).filter(Boolean), left: +m[2], width: +m[3], l: m[4] == null ? null : +m[4], ci: +m[5], t: +m[6] }));
 const key = (k) => { const e = { key: k, target: { matches: () => false }, prevented: false, stopped: false }; e.preventDefault = () => { e.prevented = true; }; e.stopPropagation = () => { e.stopped = true; }; return e; };
 
 test('guide: what the blocks say is what playback says: for every channel in view the block on the clock is the airing chanNow returns, and its box holds the clock', () => {
@@ -360,4 +360,36 @@ test('guide: each block wears the color of its kind, the legend lists the kinds,
   assert.match(p.reg.els.gdLegend.innerHTML, /data-g="comedy" aria-pressed="true"/);
   p.sandbox.gdCg('comedy');
   assert.ok(marks(rows()).every((b) => !b.dim), 'tapped again: all lit');
+});
+
+// Bryan's window, 23 Nov 2026 (voidverse audit TV-01): a show that began before the left edge of the view lost its name
+// under the channel column ("ng Story", "y Susan"). The name now starts at the view's left edge, by one rule in the page's
+// style: padding-left = max(8px, --sx - --l + 8px), where --l is the block's own left edge and --sx the guide's scroll.
+test('guide: a show that began left of the view keeps its name beside the channel column', () => {
+  const rule = '.gb{padding-left:max(8px,calc(var(--sx,0px) - var(--l,0px) + 8px))}';
+  assert.ok(APP.includes(rule), 'the rule is in the page style');
+  assert.ok(APP.indexOf(rule) > APP.indexOf('.gb{position:absolute;top:3px;bottom:4px;padding:5px 8px;'), 'after the plain padding, so it wins; a browser that cannot read max() keeps the plain padding');
+  const pad = (sx, l) => Math.max(8, sx - l + 8); // the rule, in numbers
+  const p = guided();
+  const { GD } = p, S = GD.s, sx = () => parseFloat(S.style.p['--sx']);
+  const b1 = blocks(p.reg.els.gdRows.innerHTML);
+  assert.ok(b1.length > 20 && b1.every((b) => b.l === b.left), 'every block carries its own left edge');
+  assert.equal(S.style.p['--sx'], S.scrollLeft + 'px', 'a draw tells the style how far the guide is scrolled');
+  const on = b1.filter((b) => b.cls.includes('gnow'));
+  assert.ok(on.length > 0, 'shows are on now');
+  // A small move to the right (no redraw) puts the start of every show on now left of the view.
+  const html = p.reg.els.gdRows.innerHTML, last = Math.max(...on.map((b) => b.left));
+  S.scrollLeft = last + 40; p.h.gdScrollNow();
+  assert.equal(p.reg.els.gdRows.innerHTML, html, 'the move was small: nothing was redrawn');
+  assert.equal(S.style.p['--sx'], S.scrollLeft + 'px', 'and the style has the new scroll all the same');
+  const cut = on.filter((b) => b.left < sx() && b.left + b.width > sx() + 8);
+  assert.ok(cut.length > 0, 'shows on now begin left of the view and are still showing');
+  for (const b of cut) {
+    const at = b.left + pad(sx(), b.left); // where the name starts, on the guide's own ruler
+    assert.equal(at, sx() + 8, 'the name starts 8px inside the view, not under the channel column');
+    assert.ok(at < b.left + b.width, 'and inside its own box');
+  }
+  // A block that starts in view is never moved.
+  const inView = b1.filter((b) => b.left >= sx());
+  assert.ok(inView.length > 0 && inView.every((b) => pad(sx(), b.left) === 8), 'in view: the name sits at the block\'s own edge');
 });

@@ -376,6 +376,7 @@
     q.value = filter.q || '';
     q.oninput = () => { filter.q = q.value.trim(); if (!filter.q) delete filter.q; changed(); };
     for (const b of row.querySelectorAll('.chip')) b.onclick = () => openPick(b);
+    watchPick();
     chipLabels();
   }
   function chipLabels() {
@@ -400,26 +401,72 @@
   }
   function openPick(chip) {
     const pick = document.getElementById('pick'), k = chip.dataset.f;
+    if (!pick.hidden && pick.dataset.for === k) { closePick(); return; }     // its own button again shuts it
     pick.textContent = '';
     for (const [v, label] of choices(shelfGames, k)) {
       const o = el('button', 'opt' + (v === (filter[k] || '') ? ' on' : ''), label); o.type = 'button';
       o.onclick = () => { if (v) filter[k] = v; else delete filter[k]; closePick(); changed(); };
       pick.appendChild(o);
     }
-    pick.style.left = Math.max(0, Math.min(chip.offsetLeft, chip.parentElement.clientWidth - 220)) + 'px';
-    pick.style.top = (chip.offsetTop + chip.offsetHeight + 6) + 'px';
     pick.hidden = false; pick.dataset.for = k;
-    (pick.querySelector('.opt.on') || pick.querySelector('.opt')).focus();
+    chip.scrollIntoView({ block: 'nearest', inline: 'nearest' });   // in a short window the row scrolls sideways: the whole button first
+    placePick();
+    const on = pick.querySelector('.opt.on') || pick.querySelector('.opt');
+    on.focus({ preventScroll: true }); on.scrollIntoView({ block: 'nearest', inline: 'nearest' });
   }
-  function closePick() {
+  // Where the open list goes, from its button's place in the window (the list is fixed over the page, shelf.css .pick):
+  // under the button when every choice fits there in one column, otherwise on the side with more room, under the top bar
+  // and inside the window's edges. Choices that do not fit that room take more columns, as many as the window is wide
+  // enough for; only what still does not fit scrolls inside the list. One rule for all four lists (PLAY-01).
+  function pickRoom(n, rowH, frame, below, above) {     // n choices, each rowH tall, in a list whose edges take frame
+    const up = n * rowH + frame > below && above > below, room = Math.max(rowH + frame, up ? above : below);
+    return { up, room, rows: Math.max(1, Math.floor((room - frame) / rowH)) };
+  }
+  function placePick() {
+    const pick = document.getElementById('pick');
+    const chip = pick && !pick.hidden && document.querySelector('#filters .chip[data-f="' + pick.dataset.for + '"]');
+    if (!chip || !pick.children.length) return;
+    const EDGE = 8, GAP = 6, W = document.documentElement.clientWidth, H = innerHeight, r = chip.getBoundingClientRect();
+    const bar = document.querySelector('.bar'), top = (bar ? Math.max(0, bar.getBoundingClientRect().bottom) : 0) + EDGE;
+    if (r.bottom < top || r.top > H - EDGE || r.right < EDGE || r.left > W - EDGE) { closePick(false); return; }   // its button has left the window
+    const n = pick.children.length, s = pick.style;
+    s.maxHeight = s.maxWidth = 'none'; s.gridTemplateRows = 'repeat(' + n + ',auto)';
+    const rowH = pick.firstElementChild.offsetHeight || 40, frame = Math.max(0, pick.offsetHeight - n * rowH);
+    const { up, room, rows } = pickRoom(n, rowH, frame, H - EDGE - (r.bottom + GAP), (r.top - GAP) - top);
+    for (let cols = Math.ceil(n / rows); cols >= 1; cols--) {
+      s.gridTemplateRows = 'repeat(' + Math.ceil(n / cols) + ',auto)';
+      if (cols === 1 || pick.offsetWidth <= W - 2 * EDGE) break;
+    }
+    s.maxHeight = room + 'px'; s.maxWidth = (W - 2 * EDGE) + 'px';
+    s.left = Math.max(EDGE, Math.min(r.left, W - EDGE - pick.offsetWidth)) + 'px';
+    s.top = (up ? r.top - GAP - pick.offsetHeight : r.bottom + GAP) + 'px';
+  }
+  // Shut the list. From a choice, Esc or B the focus goes back to its button; from a click elsewhere it stays where it went.
+  function closePick(refocus) {
     const pick = document.getElementById('pick');
     if (!pick || pick.hidden) return false;
     pick.hidden = true;
     const chip = document.querySelector('#filters .chip[data-f="' + pick.dataset.for + '"]');
-    if (chip) chip.focus();
+    if (chip && refocus !== false) chip.focus();
     return true;
   }
   const pickOpen = () => { const p = document.getElementById('pick'); return !!(p && !p.hidden); };
+  // The open list keeps its place by its button while the page or the row scrolls or the window changes size, and a
+  // press anywhere else shuts it.
+  let pickWatched = false;
+  function watchPick() {
+    if (pickWatched) return; pickWatched = true;
+    let due = 0;
+    const again = (e) => {
+      if (!pickOpen() || (e && e.target === document.getElementById('pick')) || due) return;
+      due = requestAnimationFrame(() => { due = 0; placePick(); });
+    };
+    addEventListener('resize', again);
+    addEventListener('scroll', again, true);     // the page's scroll and the row's own (scroll does not bubble: caught going down)
+    addEventListener('pointerdown', (e) => {
+      if (pickOpen() && !(e.target.closest && e.target.closest('#pick, #filters .chip'))) closePick(false);
+    }, true);
+  }
 
   // ---- The hero (VoidTV's .hero-home): one slide at a time, a slow push in, the next after a while. A slide is a game
   // (its picture, name, machine, year, Play) or a machine (three of its games, "See the N games"). Arrows, a swipe or a
@@ -572,6 +619,32 @@
     };
     return b;
   }
+  // Play with friends (Bryan, 23 Nov 2026, picked from pictures: "P3, Play with friends"): the rooms where the TV is the
+  // table and the phones are the hands, in the shelf's own boxes. First on the home shelf; Continue playing and the news
+  // rows still go above it. Only PLAY's own page loads this file, so it never reaches Kids.
+  const FRIENDS = [
+    ['/cards/', '/assets/brand/bg/cardtable-m.webp', 'Card games', 'Spades, Hearts, Rummy and more', '#4ade80'],
+    ['/trivia/', '/assets/brand/bg/trivianight-m.webp', 'Trivia Night', 'Questions on the TV, answers on phones', '#ffd23f'],
+  ];
+  function friendsRow() {
+    // Never on Kids: if Kids' PLAY ever takes this file, the row stays off there (an empty fragment adds nothing).
+    if (/^kids\./.test(location.hostname)) return document.createDocumentFragment();
+    const sec = el('section', 'row friends-row');
+    const h = el('h2', '', 'Play with friends'); h.append(el('small', '', 'the TV is the table, phones are the hands'));
+    sec.append(h);
+    const track = el('div', 'track');
+    for (const [href, pic, title, meta, color] of FRIENDS) {
+      const a = el('a', 'box bigbox'); a.href = href; a.style.setProperty('--sys', color); a.setAttribute('aria-label', title + ', ' + meta);
+      const art = el('span', 'art');
+      const img = new Image(); img.alt = ''; img.loading = 'lazy'; img.decoding = 'async'; img.src = pic;
+      img.onerror = () => { img.remove(); art.classList.add('none'); };
+      art.append(img, el('span', 'fallback', title));
+      const label = el('span', 'label'); label.append(el('span', 'title', title), el('span', 'meta', meta));
+      a.append(art, label); track.append(a);
+    }
+    const wrap = el('div', 'rowwrap'); wrap.append(track); sec.append(wrap);
+    return sec;
+  }
   function machineRow() {
     const counts = new Map();
     for (const g of shelfGames) counts.set(g.system, (counts.get(g.system) || 0) + 1);
@@ -614,7 +687,7 @@
     if (!shelfGames.length) { rows.innerHTML = '<p class="loading">No games on the shelf right now.</p>'; return; }
     if (home) {
       const list = homeRows(shelfGames);
-      rows.append(rowSection(list[0].title, list[0].games, list[0].f, list[0].count), machineRow());
+      rows.append(friendsRow(), rowSection(list[0].title, list[0].games, list[0].f, list[0].count), machineRow());
       for (const r of list.slice(1)) rows.append(rowSection(r.title, r.games, r.f, r.count));
       // What is in the news (play/src/moments-shelf.js, the shared moments engine): its rows go first under the banner.
       if (root.PlayMoments) root.PlayMoments.place(rows, shelfGames, rowSection, () => turn === shown);
@@ -754,7 +827,7 @@
   const TV = /SMART-TV|SmartTV|Tizen|Web0S|webOS|BRAVIA|Android TV|GoogleTV|CrKey|AFT[A-Z]|Roku|HbbTV/i;
 
   const api = { PAGE_FIRST, PAGE_MORE, ROW_CAP, HERO_MS, SYSTEMS, SETS, HOME_ROWS, decadeName, backLines, IDLE_MS, TOUR_MS, GENRES, genresOf,
-    readFilter, writeFilter, matches, choices, byPopular, homeRows, listRows, heroSlides, aboutLine, playsText, viewTitle };
+    readFilter, writeFilter, matches, choices, byPopular, homeRows, listRows, heroSlides, aboutLine, playsText, viewTitle, pickRoom };
   if (typeof module === 'object' && module.exports) { module.exports = api; return; }
   root.PlayShelf = api;
   // The first draw waits up to 1.5 s for the moments in the news, so the banner can open on one (moments-shelf.js).
