@@ -656,4 +656,13 @@ test('real objects on the lit table: every object a scene names is in the librar
   // three pulls: nothing, nothing, three sevens and the lamp; then it keeps spinning to nothing
   assert.deepStrictEqual(slot.states.map((s) => [s.to.slot.stop.join(''), !!s.to.slot.win]), [['142', false], ['263', false], ['000', true], ['514', false], ['514', false], ['514', false], ['514', false]]);
   assert.deepStrictEqual(slot.states.map((s) => s.to.phone.screen), ['feed', 'feed', 'feed', 'feed', 'likes', 'likes', 'quiet']);
+  // Batch 4 (Bryan, 23 Nov 2026: "Yes, next batch")
+  assert.deepStrictEqual(kinds(money(/bill and its receipt/), ['bill', 'rec', 'slot']), ['prop', 'prop', 'tape']);
+  const gps = money(/recalculating/);
+  assert.deepStrictEqual(kinds(gps, ['car', 'blk', 'home']), ['prop', 'prop', 'prop']);
+  assert.ok(gps.states[3].to.car.y > gps.states[2].to.car.y && gps.states[5].to.car.x > gps.states[3].to.car.x, 'the car takes the new road, then drives on toward home');
+  assert.strictEqual(money(/shoes that pinch/).kind.shoe, 'prop');
+  assert.deepStrictEqual(money(/phone plan/).states.map((s) => s.to.old.screen), ['note', 'note', 'note', 'note', 'note', 'note', 'call']);
+  // the new driver's STUDENT DRIVER board: on in week one, off by year five, on again for any new skill
+  assert.deepStrictEqual(money(/new driver/).states.map((s) => s.to.drv.learner), [true, true, true, false, true, true]);
 });

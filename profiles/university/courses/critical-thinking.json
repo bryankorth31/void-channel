@@ -128,7 +128,14 @@
             "label": "The bill",
             "sub": "You owe $80",
             "color": "gold",
-            "o": 0
+            "o": 0,
+            "prop": "invoice",
+            "amount": "$80.00",
+            "tagW": 190,
+            "tag": [
+              240,
+              0
+            ]
           },
           {
             "id": "slot",
@@ -151,7 +158,14 @@
             "label": "The receipt",
             "sub": "Groceries, 12 Nov, $80",
             "color": "green",
-            "o": 0
+            "o": 0,
+            "prop": "receipt",
+            "amount": "$80.00",
+            "tagW": 190,
+            "tag": [
+              240,
+              0
+            ]
           },
           {
             "id": "link",
@@ -167,8 +181,8 @@
           {
             "id": "stamp",
             "type": "stamp",
-            "x": 600,
-            "y": 135,
+            "x": 610,
+            "y": 320,
             "w": 110,
             "label": "WAIT",
             "color": "gold",
@@ -1759,18 +1773,25 @@
         "actors": [
           {
             "id": "car",
-            "type": "stamp",
-            "x": 40,
-            "y": 150,
-            "w": 64,
+            "type": "card",
+            "x": 20,
+            "y": 140,
+            "w": 130,
             "label": "YOU",
             "color": "blue",
-            "size": 14
+            "size": 14,
+            "prop": "car",
+            "h": 70,
+            "tagW": 100,
+            "tag": [
+              0,
+              70
+            ]
           },
           {
             "id": "r1",
             "type": "arrow",
-            "x": 110,
+            "x": 160,
             "y": 182,
             "x2": 630,
             "y2": 182,
@@ -1791,25 +1812,36 @@
           {
             "id": "home",
             "type": "card",
-            "x": 640,
-            "y": 140,
-            "w": 140,
-            "h": 84,
+            "x": 650,
+            "y": 110,
+            "w": 120,
+            "h": 110,
             "label": "Home",
-            "color": "green"
+            "color": "green",
+            "prop": "house",
+            "tagW": 150,
+            "tag": [
+              0,
+              105
+            ]
           },
           {
             "id": "blk",
             "type": "card",
-            "x": 420,
-            "y": 140,
-            "w": 120,
+            "x": 400,
+            "y": 150,
+            "w": 140,
             "h": 84,
             "label": "Closed",
             "color": "gold",
             "o": 0,
-            "s": 0.5,
-            "size": 20
+            "size": 20,
+            "prop": "barrier",
+            "tagW": 150,
+            "tag": [
+              -90,
+              95
+            ]
           },
           {
             "id": "re",
@@ -1826,8 +1858,8 @@
             "type": "arrow",
             "x": 110,
             "y": 290,
-            "x2": 700,
-            "y2": 236,
+            "x2": 690,
+            "y2": 225,
             "color": "green",
             "o": 0,
             "draw": 0
@@ -1894,7 +1926,7 @@
                 "draw": 1
               },
               "car": {
-                "y": 258
+                "y": 230
               }
             }
           },
@@ -1926,8 +1958,8 @@
                 "s": 1
               },
               "car": {
-                "x": 560,
-                "y": 258
+                "x": 480,
+                "y": 215
               }
             }
           }

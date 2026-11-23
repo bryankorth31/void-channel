@@ -846,8 +846,18 @@ export const PROPS = {
         const t = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(rw, rw, 0.07 * L, 32), rubber)); t.rotation.x = Math.PI / 2; w.add(t);
         const hub = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(rw * 0.55, rw * 0.55, 0.075 * L, 24), chrome)); hub.rotation.x = Math.PI / 2; w.add(hub);
       });
+      // "learner": true puts a STUDENT DRIVER board on the roof
+      const sc = document.createElement('canvas'); sc.width = 512; sc.height = 128; const sg = sc.getContext('2d');
+      sg.fillStyle = '#f2c230'; sg.fillRect(0, 0, 512, 128); sg.strokeStyle = '#1a1a1a'; sg.lineWidth = 8; sg.strokeRect(8, 8, 496, 112);
+      sg.fillStyle = '#1a1a1a'; sg.font = '800 58px "VU Print"'; sg.textAlign = 'center'; sg.textBaseline = 'middle'; sg.fillText('STUDENT DRIVER', 256, 68);
+      const st = new THREE.CanvasTexture(sc); st.colorSpace = THREE.SRGBColorSpace;
+      const signMat = new THREE.MeshStandardMaterial({ map: st, roughness: 0.6 }), edgeMat = new THREE.MeshStandardMaterial({ color: 0xf2c230, roughness: 0.6 });
+      // the board stands along the roof, so it reads from the side
+      const sign = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.44 * L, 0.11 * L, 0.012 * L), [edgeMat, edgeMat, edgeMat, edgeMat, signMat, signMat])); sign.position.set(-0.06 * L, 0.51 * L, 0); car.add(sign);
+      const foot = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.2 * L, 0.012 * L, 0.05 * L), edgeMat)); foot.position.set(0, -0.058 * L, 0); sign.add(foot);
+      const learner = (v) => (v && v.learner != null ? !!v.learner : !!a.learner);
       const group = new THREE.Group(); group.add(car);
-      return { group, top: 0.45 * L, anchor: () => new THREE.Vector3(-0.15 * L, 0.34 * L, (Wd * 0.4 + 0.02 * L) * 0.97).applyAxisAngle(new THREE.Vector3(0, 1, 0), -0.42), update() {} };
+      return { group, top: 0.45 * L + (a.learner != null ? 0.1 * L : 0), anchor: () => new THREE.Vector3(-0.15 * L, 0.34 * L, (Wd * 0.4 + 0.02 * L) * 0.97).applyAxisAngle(new THREE.Vector3(0, 1, 0), -0.42), update(A, B, e) { sign.visible = e < 0.5 ? learner(A) : learner(B); } };
     },
   },
   // A twenty: a paper note printed in green with fine wavy lines, bowed a little as paper lies.
@@ -981,13 +991,22 @@ export const PROPS = {
       const tx = new THREE.CanvasTexture(c); tx.colorSpace = THREE.SRGBColorSpace;
       const paint = (mode) => {
         g.fillStyle = '#12151a'; g.fillRect(0, 0, 360, 740);
-        g.fillStyle = '#1f2b3b'; g.fillRect(0, 0, 360, 92); g.fillStyle = '#fff'; g.font = '700 30px "VU Print"'; g.textAlign = 'left'; g.textBaseline = 'middle'; g.fillText('Feed', 24, 60);
+        g.fillStyle = '#1f2b3b'; g.fillRect(0, 0, 360, 92); g.fillStyle = '#fff'; g.font = '700 30px "VU Print"'; g.textAlign = 'left'; g.textBaseline = 'middle'; g.fillText(mode === 'note' ? 'Account' : 'Feed', 24, 60);
         g.strokeStyle = '#8a94a0'; g.lineWidth = 5; g.beginPath(); g.arc(180, 130, 16, 0.5, 5.6); g.stroke();
         for (let k = 0; k < 3; k++) { const y = 170 + k * 185; g.fillStyle = '#1e232b'; g.fillRect(16, y, 328, 170); g.fillStyle = ['#4f7cac', '#c08a3e', '#6a9a5b'][k]; g.beginPath(); g.arc(50, y + 34, 20, 0, 7); g.fill(); g.fillStyle = '#58606b'; g.fillRect(82, y + 22, 170, 12); g.fillRect(82, y + 42, 110, 10); g.fillStyle = ['#2c3e57', '#4a3a2a', '#2e4434'][k]; g.fillRect(28, y + 72, 304, 84); }
         if (mode === 'likes') {
           g.fillStyle = '#e0245e'; g.fillRect(20, 270, 320, 180);
           g.fillStyle = '#fff'; g.beginPath(); g.moveTo(180, 345); g.bezierCurveTo(120, 300, 140, 262, 180, 288); g.bezierCurveTo(220, 262, 240, 300, 180, 345); g.fill();
           g.textAlign = 'center'; g.font = '800 54px "VU Print"'; g.fillText('3 likes', 180, 400); g.textAlign = 'left';
+        }
+        if (mode === 'note') {
+          g.fillStyle = '#12151a'; g.fillRect(0, 92, 360, 648); g.fillStyle = '#9fb3c8'; g.font = '700 30px "VU Print"'; g.textAlign = 'center'; g.fillText('Your plan', 180, 190);
+          g.fillStyle = '#fff'; g.font = '800 120px "VU Print"'; g.fillText(String(a.note || ''), 180, 340); g.fillStyle = '#c9d4df'; g.font = '600 40px "VU Print"'; g.fillText(String(a.noteSub || ''), 180, 430);
+          g.fillStyle = '#58606b'; g.font = '500 26px "VU Print"'; g.fillText(String(a.noteFoot || ''), 180, 520); g.textAlign = 'left';
+        }
+        if (mode === 'call') {
+          g.fillStyle = '#1d6b3f'; g.fillRect(0, 0, 360, 740); g.fillStyle = '#fff'; g.textAlign = 'center'; g.font = '700 40px "VU Print"'; g.fillText('Calling...', 180, 250);
+          g.beginPath(); g.arc(180, 520, 56, 0, 7); g.fillStyle = '#e0473c'; g.fill(); g.fillStyle = '#fff'; g.fillRect(150, 512, 60, 16); g.font = '600 34px "VU Print"'; g.fillText(String(a.note ? 'Switching plan' : ''), 180, 330); g.textAlign = 'left';
         }
         if (mode === 'quiet') {
           g.fillStyle = '#2e6b45'; g.fillRect(20, 280, 320, 170);
@@ -1067,6 +1086,101 @@ export const PROPS = {
       const capsule = (x, z, ry) => { const g2 = new THREE.Group(); [[0xc4161c, 1], [0xf4f1ea, -1]].forEach(([col, sd]) => { const h = new THREE.Mesh(new THREE.CapsuleGeometry(0.03 * s, 0.05 * s, 6, 12), new THREE.MeshPhysicalMaterial({ color: col, roughness: 0.25, clearcoat: 1 })); h.scale.set(1, 0.5, 1); h.position.y = sd * 0.024 * s; shadowed(h); g2.add(h); }); g2.rotation.set(0, ry, Math.PI / 2); g2.position.set(x, 0.03 * s, z); group.add(g2); };
       capsule(R * 1.9, R * 0.8, 0.4); capsule(R * 1.5, R * 1.6, -0.9);
       return { group, top: H + 0.09 * s, anchor: () => new THREE.Vector3(-R * 0.6, 0.05 * s, R * 0.8), update() {} };
+    },
+  },
+  // A bill on letter paper: a printed heading, a few lines of charges and the amount due ("amount").
+  invoice: {
+    build(a, ctx) {
+      const W = (a.w || 250) * ctx.S * 0.62, D = W * 0.78;
+      const c = document.createElement('canvas'); c.width = 800; c.height = 624; const g = c.getContext('2d');
+      noise(g, 800, 624, '#f7f5ef', 6);
+      g.fillStyle = '#1f2a44'; g.fillRect(0, 0, 800, 90); g.fillStyle = '#fff'; g.font = '800 54px "VU Print"'; g.textBaseline = 'middle'; g.fillText('INVOICE', 40, 48);
+      g.fillStyle = '#1f2a44'; g.font = '500 26px "VU Print"'; g.fillText('Bill to: You', 40, 140); g.fillText('No. 20417', 600, 140);
+      g.strokeStyle = '#c9c5bb'; g.lineWidth = 2;
+      [190, 250, 310, 370].forEach((y, i) => { g.beginPath(); g.moveTo(40, y + 22); g.lineTo(760, y + 22); g.stroke(); g.fillStyle = '#8a857c'; g.fillRect(40, y - 8, [300, 240, 280, 200][i], 14); g.fillRect(660, y - 8, 90, 14); });
+      g.fillStyle = '#1f2a44'; g.font = '800 46px "VU Print"'; g.fillText('AMOUNT DUE', 40, 500); g.textAlign = 'right'; g.fillStyle = '#b3121f'; g.fillText(String(a.amount || '$80.00'), 760, 500);
+      const tx = new THREE.CanvasTexture(c); tx.colorSpace = THREE.SRGBColorSpace; tx.anisotropy = 8;
+      const geo = new THREE.PlaneGeometry(W, D, 16, 12), p = geo.attributes.position;
+      for (let i = 0; i < p.count; i++) { const u = p.getX(i) / W + 0.5, v = p.getY(i) / D + 0.5; p.setZ(i, 0.01 * Math.sin(Math.PI * v) + 0.025 * W * u * u * v); }
+      geo.computeVertexNormals(); geo.rotateX(-Math.PI / 2);
+      const m = shadowed(new THREE.Mesh(geo, new THREE.MeshStandardMaterial({ map: tx, roughness: 0.9, side: THREE.DoubleSide }))); m.position.y = 0.004; m.rotation.y = 0.05;
+      const group = new THREE.Group(); group.add(m);
+      return { group, top: 0.02, anchor: () => new THREE.Vector3(W * 0.42, 0.01, D * 0.3), update() {} };
+    },
+  },
+  // A till receipt on thin thermal paper, its far end curling up: the shop, the items and the total.
+  receipt: {
+    build(a, ctx) {
+      const L = (a.w || 250) * ctx.S * 0.82, W = L * 0.3;
+      const c = document.createElement('canvas'); c.width = 1200; c.height = 360; const g = c.getContext('2d');
+      noise(g, 1200, 360, '#f4f2ec', 5);
+      g.fillStyle = '#2a2a2a'; g.textBaseline = 'middle';
+      g.font = '800 44px "VU Print"'; g.textAlign = 'center'; g.fillText('CORNER GROCER', 170, 90); g.font = '500 26px "VU Print"'; g.fillText('12 NOV  10:42', 170, 150); g.fillText('THANK YOU', 170, 280);
+      g.textAlign = 'left'; g.font = '500 30px "VU Print"';
+      [['MILK', '3.49'], ['BREAD', '2.99'], ['EGGS', '4.20'], ['APPLES', '5.10'], ['CHICKEN', '14.80'], ['RICE', '6.42'], ['MORE', '43.00']].forEach(([n, v], i) => { const x = 360 + Math.floor(i / 4) * 330, y = 70 + (i % 4) * 60; g.fillText(n, x, y); g.textAlign = 'right'; g.fillText(v, x + 290, y); g.textAlign = 'left'; });
+      g.setLineDash([8, 8]); g.beginPath(); g.moveTo(1000, 30); g.lineTo(1000, 330); g.stroke(); g.setLineDash([]);
+      g.font = '800 40px "VU Print"'; g.save(); g.translate(1100, 180); g.rotate(-Math.PI / 2); g.textAlign = 'center'; g.fillText('TOTAL ' + String(a.amount || '$80.00'), 0, 0); g.restore();
+      const tx = new THREE.CanvasTexture(c); tx.colorSpace = THREE.SRGBColorSpace; tx.anisotropy = 8;
+      const geo = new THREE.PlaneGeometry(L, W, 60, 4), p = geo.attributes.position;
+      for (let i = 0; i < p.count; i++) {
+        const u = p.getX(i) / L + 0.5;
+        // the last fifth curls up and back on itself
+        const t = Math.max(0, (u - 0.85) / 0.15), R = W * 0.4, an = t * 1.5;
+        if (t > 0) { p.setX(i, 0.35 * L + Math.sin(an) * R); p.setZ(i, (1 - Math.cos(an)) * R); }
+        else p.setZ(i, 0.004 * Math.sin(u * 9));
+      }
+      geo.computeVertexNormals(); geo.rotateX(-Math.PI / 2);
+      const m = shadowed(new THREE.Mesh(geo, new THREE.MeshStandardMaterial({ map: tx, roughness: 0.85, side: THREE.DoubleSide }))); m.position.y = 0.004; m.rotation.y = -0.04;
+      const group = new THREE.Group(); group.add(m);
+      return { group, top: W * 0.7, anchor: () => new THREE.Vector3(-L * 0.42, 0.01, W * 0.3), update() {} };
+    },
+  },
+  // A road barricade: two boards striped orange and white on folding legs, the top one lettered ROAD CLOSED.
+  barrier: {
+    build(a, ctx) {
+      const s = (a.w || 120) * ctx.S, W = 0.95 * s, H = 0.5 * s;
+      const stripes = (word) => {
+        const c = document.createElement('canvas'); c.width = 1024; c.height = 128; const g = c.getContext('2d');
+        g.fillStyle = '#f4f1ea'; g.fillRect(0, 0, 1024, 128); g.fillStyle = '#e8601c';
+        for (let x = -128; x < 1100; x += 128) { g.beginPath(); g.moveTo(x, 128); g.lineTo(x + 64, 128); g.lineTo(x + 192, 0); g.lineTo(x + 128, 0); g.closePath(); g.fill(); }
+        if (word) { g.fillStyle = '#f4f1ea'; g.fillRect(250, 18, 524, 92); g.fillStyle = '#1a1a1a'; g.font = '800 70px "VU Print"'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText(word, 512, 68); }
+        const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; return t;
+      };
+      const edge = new THREE.MeshStandardMaterial({ color: 0xe8e3d8, roughness: 0.6 });
+      const plank = (y, word) => { const m = new THREE.MeshStandardMaterial({ map: stripes(word), roughness: 0.45, envMap: ctx.env, envMapIntensity: 0.3 }); const b = shadowed(new THREE.Mesh(new THREE.BoxGeometry(W, 0.12 * s, 0.025 * s), [edge, edge, edge, edge, m, m])); b.position.set(0, y, 0.03 * s); return b; };
+      const group = new THREE.Group();
+      group.add(plank(H * 0.88, 'ROAD CLOSED'), plank(H * 0.5, ''));
+      const legMat = new THREE.MeshStandardMaterial({ color: 0x8c8f93, metalness: 0.6, roughness: 0.4, envMap: ctx.env });
+      [-1, 1].forEach((sd) => [-1, 1].forEach((fb) => { const l = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.03 * s, H * 1.05, 0.03 * s), legMat)); l.position.set(sd * W * 0.4, H * 0.5, fb * 0.07 * s); l.rotation.x = fb * 0.28; group.add(l); }));
+      return { group, top: H, anchor: () => new THREE.Vector3(W * 0.4, 0.04 * s, 0.17 * s), update() {} };
+    },
+  },
+  // A sneaker in navy suede on a white sole, laced, its collar open at the heel.
+  shoe: {
+    build(a, ctx) {
+      const L = (a.w || 200) * ctx.S * 0.8;
+      const wid = (u) => 0.36 * L * (0.78 + 0.22 * Math.sin(Math.PI * Math.min(1, u * 1.1)));
+      const hgt = (u) => 0.34 * L * (1 - 0.68 * smooth((u - 0.4) / 0.55));
+      // the footprint: a rounded heel, a waist, a wide ball and a round toe
+      const fp = new THREE.Shape(), n = 48;
+      for (let i = 0; i <= n; i++) { const an = (i / n) * Math.PI * 2, u = (1 - Math.cos(an)) / 2, z = Math.sin(an) * wid(u) / 2 * (1 - 0.12 * Math.exp(-((u - 0.42) * (u - 0.42)) / 0.01)), x = (u - 0.5) * L; if (i) fp.lineTo(x, z); else fp.moveTo(x, z); }
+      const sg = new THREE.ExtrudeGeometry(fp, { depth: 0.05 * L, bevelEnabled: true, bevelThickness: 0.01 * L, bevelSize: 0.01 * L, bevelSegments: 3, curveSegments: 8 }); sg.rotateX(Math.PI / 2); sg.translate(0, 0.06 * L, 0);
+      const rubber = new THREE.MeshStandardMaterial({ color: 0xf1eee6, roughness: 0.6 });
+      const suede = new THREE.MeshStandardMaterial({ color: 0x2d4170, roughness: 0.85 });
+      const shoe = new THREE.Group(); shoe.rotation.y = -0.35;
+      shoe.add(shadowed(new THREE.Mesh(sg, rubber)));
+      const up = new THREE.SphereGeometry(1, 64, 24, 0, Math.PI * 2, 0, Math.PI / 2), q = up.attributes.position;
+      for (let i = 0; i < q.count; i++) { const x = q.getX(i), y = q.getY(i), z = q.getZ(i), u = (x + 1) / 2; q.setXYZ(i, x * L * 0.49, 0.055 * L + y * hgt(u), z * wid(u) * 0.47); }
+      up.computeVertexNormals();
+      shoe.add(shadowed(new THREE.Mesh(up, suede)));
+      const surf = (u) => 0.055 * L + hgt(u) * Math.sqrt(Math.max(0, 1 - (2 * u - 1) * (2 * u - 1)));
+      const collar = new THREE.Mesh(new THREE.CircleGeometry(1, 32), new THREE.MeshStandardMaterial({ color: 0x15151a, roughness: 0.9 })); collar.rotation.x = -Math.PI / 2; collar.rotation.y = -0.35; collar.scale.set(0.12 * L, 0.085 * L, 1); collar.position.set(-0.26 * L, surf(0.24) - 0.012 * L, 0); shoe.add(collar);
+      const lip = shadowed(new THREE.Mesh(new THREE.TorusGeometry(1, 0.06, 8, 32), suede)); lip.rotation.x = -Math.PI / 2; lip.rotation.y = -0.35; lip.scale.set(0.12 * L, 0.085 * L, 0.12 * L); lip.position.copy(collar.position); shoe.add(lip);
+      const lace = new THREE.MeshStandardMaterial({ color: 0xf5f3ee, roughness: 0.7 });
+      for (let k = 0; k < 5; k++) { const u = 0.4 + k * 0.055, b = shadowed(new THREE.Mesh(new THREE.CapsuleGeometry(0.008 * L, wid(u) * 0.36, 4, 8), lace)); b.rotation.x = Math.PI / 2; b.position.set((u - 0.5) * L, surf(u) - 0.002 * L, 0); shoe.add(b); }
+      const toe = shadowed(new THREE.Mesh(new THREE.SphereGeometry(1, 32, 12, 0, Math.PI * 2, 0, Math.PI / 2), rubber)); toe.scale.set(0.1 * L, 0.05 * L, wid(0.95) * 0.46); toe.position.set(0.4 * L, 0.06 * L, 0); shoe.add(toe);
+      const group = new THREE.Group(); group.add(shoe);
+      return { group, top: 0.4 * L, anchor: () => new THREE.Vector3(-0.3 * L, 0.04 * L, 0.18 * L).applyAxisAngle(new THREE.Vector3(0, 1, 0), -0.35), update() {} };
     },
   },
 };

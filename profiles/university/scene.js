@@ -402,8 +402,9 @@ function world(sc, plan) {
     o.kind = k; o.stack = sc.actors.indexOf(a) * 0.006; scene.add(o.group); objs[a.id] = o;
   });
   // A scene with real objects is seen from lower down, the way you look at things standing on a table.
-  const standing = sc.actors.some((a) => plan.kind[a.id] === 'prop');
+  // (objects that only lie flat, like paper, are still best seen from above)
   const tall = Math.max(0, ...Object.values(objs).filter((o) => o.thing).map((o) => o.thing.top || 0));
+  const standing = sc.actors.some((a) => plan.kind[a.id] === 'prop') && tall > 0.15;
   // Where the camera stands at the end of step i: everything on the table in frame, leaning a little toward the step.
   function pose(i) {
     const f = plan.frame(i), b = f.box, fo = f.focus;

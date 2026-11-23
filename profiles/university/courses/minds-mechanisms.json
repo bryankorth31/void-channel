@@ -324,14 +324,20 @@
           {
             "id": "shoe",
             "type": "card",
-            "x": 30,
-            "y": 30,
-            "w": 220,
-            "h": 100,
+            "x": 40,
+            "y": 0,
+            "w": 200,
+            "h": 110,
             "label": "New shoes",
             "sub": "$120, no returns",
             "color": "blue",
-            "o": 0
+            "o": 0,
+            "prop": "shoe",
+            "tagW": 190,
+            "tag": [
+              0,
+              80
+            ]
           },
           {
             "id": "pain",
@@ -360,8 +366,8 @@
           {
             "id": "say",
             "type": "text",
-            "x": 400,
-            "y": 182,
+            "x": 470,
+            "y": 205,
             "label": "\"They're actually really comfy.\"",
             "color": "pink",
             "size": 24,
@@ -1898,14 +1904,24 @@
           {
             "id": "old",
             "type": "card",
-            "x": 40,
-            "y": 50,
-            "w": 270,
-            "h": 120,
+            "x": 100,
+            "y": 10,
+            "w": 160,
+            "h": 160,
             "label": "Your plan",
             "sub": "$80 a month, since 2015",
             "color": "blue",
-            "o": 0
+            "o": 0,
+            "prop": "phone",
+            "screen": "note",
+            "note": "$80",
+            "noteSub": "a month",
+            "noteFoot": "since 2015",
+            "tagW": 190,
+            "tag": [
+              195,
+              30
+            ]
           },
           {
             "id": "new",
@@ -1944,10 +1960,10 @@
           {
             "id": "go",
             "type": "arrow",
-            "x": 316,
-            "y": 110,
-            "x2": 482,
-            "y2": 110,
+            "x": 300,
+            "y": 205,
+            "x2": 560,
+            "y2": 178,
             "color": "green",
             "o": 0,
             "draw": 0
@@ -2049,6 +2065,9 @@
               },
               "meh": {
                 "o": 0
+              },
+              "old": {
+                "screen": "call"
               }
             }
           }
@@ -3112,6 +3131,19 @@
             "color": "pink",
             "size": 24,
             "o": 0
+          },
+          {
+            "id": "drv",
+            "type": "card",
+            "prop": "car",
+            "learner": true,
+            "x": 30,
+            "y": 0,
+            "w": 160,
+            "h": 80,
+            "label": "",
+            "color": "fg",
+            "o": 0
           }
         ],
         "beats": [
@@ -3132,6 +3164,9 @@
                 "o": 1
               },
               "cf": {
+                "o": 1
+              },
+              "drv": {
                 "o": 1
               }
             }
@@ -3175,6 +3210,9 @@
               "q": {
                 "label": "\"Still learning.\"",
                 "color": "green"
+              },
+              "drv": {
+                "learner": false
               }
             }
           },
@@ -3197,6 +3235,9 @@
               "q": {
                 "label": "\"How hard can it be?\"",
                 "color": "pink"
+              },
+              "drv": {
+                "learner": true
               }
             }
           },
