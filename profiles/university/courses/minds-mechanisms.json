@@ -59,13 +59,19 @@
             "id": "tk",
             "type": "card",
             "x": 30,
-            "y": 30,
-            "w": 200,
-            "h": 96,
+            "y": 0,
+            "w": 170,
+            "h": 80,
             "label": "Ticket",
             "sub": "$15, already paid",
             "color": "gold",
-            "o": 0
+            "o": 0,
+            "prop": "ticket",
+            "tagW": 190,
+            "tag": [
+              0,
+              95
+            ]
           },
           {
             "id": "film",
@@ -114,21 +120,27 @@
           {
             "id": "exit",
             "type": "card",
-            "x": 620,
-            "y": 200,
+            "x": 630,
+            "y": 10,
             "w": 150,
-            "h": 130,
+            "h": 150,
             "label": "Exit",
             "color": "green",
-            "o": 0
+            "o": 0,
+            "prop": "door",
+            "tagW": 170,
+            "tag": [
+              0,
+              115
+            ]
           },
           {
             "id": "go",
             "type": "arrow",
             "x": 200,
             "y": 300,
-            "x2": 612,
-            "y2": 300,
+            "x2": 640,
+            "y2": 215,
             "color": "green",
             "o": 0,
             "draw": 0
@@ -136,8 +148,8 @@
           {
             "id": "st",
             "type": "stamp",
-            "x": 640,
-            "y": 20,
+            "x": 645,
+            "y": 255,
             "w": 120,
             "label": "SUNK",
             "color": "gold",
@@ -190,7 +202,8 @@
                 "shake": true
               },
               "tk": {
-                "sub": "gone either way"
+                "sub": "gone either way",
+                "torn": true
               },
               "st": {
                 "o": 1,
@@ -224,6 +237,9 @@
               "time": {
                 "label": "0:30",
                 "color": "dim"
+              },
+              "exit": {
+                "open": true
               }
             }
           },
@@ -309,14 +325,20 @@
           {
             "id": "shoe",
             "type": "card",
-            "x": 30,
-            "y": 30,
-            "w": 220,
-            "h": 100,
+            "x": 40,
+            "y": 0,
+            "w": 200,
+            "h": 110,
             "label": "New shoes",
             "sub": "$120, no returns",
             "color": "blue",
-            "o": 0
+            "o": 0,
+            "prop": "shoe",
+            "tagW": 190,
+            "tag": [
+              0,
+              80
+            ]
           },
           {
             "id": "pain",
@@ -345,8 +367,8 @@
           {
             "id": "say",
             "type": "text",
-            "x": 400,
-            "y": 182,
+            "x": 470,
+            "y": 205,
             "label": "\"They're actually really comfy.\"",
             "color": "pink",
             "size": 24,
@@ -532,34 +554,40 @@
           {
             "id": "cab",
             "type": "card",
-            "x": 250,
+            "x": 220,
             "y": 50,
-            "w": 300,
-            "h": 220,
+            "w": 360,
+            "h": 160,
             "label": "",
-            "color": "dim"
+            "color": "dim",
+            "prop": "elevator",
+            "shut": 0,
+            "dir": "",
+            "tagW": 170,
+            "tag": [
+              250,
+              60
+            ]
           },
           {
             "id": "dl",
             "type": "card",
-            "x": 100,
-            "y": 50,
-            "w": 150,
-            "h": 220,
+            "x": 300,
+            "y": 285,
             "label": "",
             "color": "blue",
-            "size": 18
+            "size": 18,
+            "tie": "cab.left"
           },
           {
             "id": "dr",
             "type": "card",
-            "x": 550,
-            "y": 50,
-            "w": 150,
-            "h": 220,
+            "x": 500,
+            "y": 285,
             "label": "",
             "color": "blue",
-            "size": 18
+            "size": 18,
+            "tie": "cab.right"
           },
           {
             "id": "up",
@@ -577,7 +605,7 @@
             "id": "yell",
             "type": "text",
             "x": 400,
-            "y": 312,
+            "y": 355,
             "label": "\"Hold the door!\"",
             "color": "pink",
             "size": 22,
@@ -585,13 +613,23 @@
           },
           {
             "id": "you",
-            "type": "stamp",
-            "x": 20,
-            "y": 135,
-            "w": 76,
+            "type": "card",
+            "x": 320,
+            "y": 205,
+            "w": 40,
             "label": "YOU",
             "color": "blue",
-            "size": 15
+            "size": 15,
+            "prop": "figure",
+            "pose": "stand",
+            "look": "dark",
+            "turn": 0.4,
+            "h": 70,
+            "tagW": 100,
+            "tag": [
+              0,
+              70
+            ]
           },
           {
             "id": "need",
@@ -608,11 +646,8 @@
             "say": "The elevator doors start to close.",
             "dur": 2.2,
             "set": {
-              "dl": {
-                "x": 175
-              },
-              "dr": {
-                "x": 475
+              "cab": {
+                "shut": 0.3
               }
             }
           },
@@ -621,8 +656,10 @@
             "dur": 2.2,
             "set": {
               "you": {
-                "x": 362,
-                "y": 192
+                "x": 380,
+                "y": 35,
+                "turn": 3.141592653589793,
+                "label": ""
               },
               "yell": {
                 "o": 1
@@ -633,18 +670,16 @@
             "say": "Doors shut. It goes up.",
             "dur": 2.2,
             "set": {
-              "dl": {
-                "x": 250
-              },
-              "dr": {
-                "x": 400
-              },
               "up": {
                 "o": 1,
                 "s": 1
               },
               "yell": {
                 "o": 0
+              },
+              "cab": {
+                "shut": 1,
+                "dir": "up"
               }
             }
           },
@@ -695,19 +730,16 @@
             "dur": 2.8,
             "set": {
               "dl": {
-                "x": 100,
-                "label": "",
-                "color": "blue"
+                "label": ""
               },
               "dr": {
-                "x": 550,
-                "label": "",
-                "color": "blue"
+                "label": ""
               },
               "you": {
-                "x": 20,
-                "y": 135,
-                "color": "blue"
+                "x": 320,
+                "y": 205,
+                "turn": 0.4,
+                "label": "YOU"
               },
               "yell": {
                 "o": 0
@@ -722,7 +754,9 @@
               },
               "cab": {
                 "label": "Next one",
-                "color": "green"
+                "color": "green",
+                "shut": 0,
+                "dir": ""
               }
             }
           }
@@ -808,15 +842,21 @@
           },
           {
             "id": "keys",
-            "type": "stamp",
-            "x": 442,
-            "y": 232,
-            "w": 48,
+            "type": "card",
+            "x": 440,
+            "y": 205,
+            "w": 110,
             "label": "KEYS",
             "color": "gold",
             "o": 0,
-            "s": 0.4,
-            "size": 11
+            "size": 18,
+            "prop": "keys",
+            "h": 90,
+            "tagW": 140,
+            "tag": [
+              0,
+              95
+            ]
           },
           {
             "id": "you",
@@ -896,8 +936,7 @@
             "dur": 2.4,
             "set": {
               "keys": {
-                "o": 1,
-                "s": 1
+                "o": 1
               },
               "coat": {
                 "color": "gold",
@@ -928,7 +967,7 @@
               },
               "keys": {
                 "label": "FACT",
-                "size": 12
+                "size": 18
               },
               "think": {
                 "label": "\"See? I was right.\""
@@ -990,14 +1029,20 @@
             "id": "stk",
             "type": "card",
             "x": 30,
-            "y": 40,
-            "w": 230,
-            "h": 104,
+            "y": 30,
+            "w": 220,
+            "h": 110,
             "label": "$30,000",
             "sub": "the sticker",
             "color": "gold",
             "o": 0,
-            "size": 26
+            "size": 26,
+            "prop": "car",
+            "tagW": 200,
+            "tag": [
+              0,
+              125
+            ]
           },
           {
             "id": "go",
@@ -1031,20 +1076,22 @@
             "sub": "your great deal",
             "color": "pink",
             "o": 0,
-            "size": 26
+            "size": 26,
+            "prop": "tag"
           },
           {
             "id": "worth",
             "type": "card",
-            "x": 30,
-            "y": 220,
+            "x": 300,
+            "y": 230,
             "w": 230,
             "h": 104,
             "label": "$22,000",
             "sub": "what it is worth",
             "color": "dim",
             "o": 0,
-            "size": 26
+            "size": 26,
+            "prop": "tag"
           },
           {
             "id": "st",
@@ -1182,33 +1229,45 @@
           {
             "id": "find",
             "type": "card",
-            "x": 40,
-            "y": 30,
-            "w": 300,
-            "h": 96,
+            "x": 180,
+            "y": 10,
+            "w": 200,
+            "h": 90,
             "label": "Find $20",
             "sub": "nice",
             "color": "green",
             "o": 0,
-            "size": 24
+            "size": 24,
+            "prop": "bill",
+            "tagW": 170,
+            "tag": [
+              -190,
+              0
+            ]
           },
           {
             "id": "lose",
             "type": "card",
-            "x": 460,
-            "y": 30,
-            "w": 300,
-            "h": 96,
+            "x": 420,
+            "y": 10,
+            "w": 200,
+            "h": 90,
             "label": "Lose $20",
             "sub": "ruins your day",
             "color": "gold",
             "o": 0,
-            "size": 24
+            "size": 24,
+            "prop": "bill",
+            "tagW": 170,
+            "tag": [
+              190,
+              0
+            ]
           },
           {
             "id": "fb",
             "type": "card",
-            "x": 140,
+            "x": 230,
             "y": 150,
             "w": 100,
             "h": 60,
@@ -1220,7 +1279,7 @@
           {
             "id": "lb",
             "type": "card",
-            "x": 560,
+            "x": 470,
             "y": 150,
             "w": 100,
             "h": 60,
@@ -1375,31 +1434,43 @@
           {
             "id": "sh",
             "type": "card",
-            "x": 30,
-            "y": 30,
-            "w": 230,
+            "x": 20,
+            "y": 20,
+            "w": 180,
             "h": 100,
             "label": "Shark",
             "sub": "on the news all week",
             "color": "gold",
-            "o": 0
+            "o": 0,
+            "prop": "shark",
+            "tagW": 170,
+            "tag": [
+              175,
+              0
+            ]
           },
           {
             "id": "cr",
             "type": "card",
-            "x": 30,
+            "x": 20,
             "y": 200,
-            "w": 230,
+            "w": 180,
             "h": 100,
             "label": "The drive there",
             "sub": "never on the news",
             "color": "dim",
-            "o": 0
+            "o": 0,
+            "prop": "car",
+            "tagW": 170,
+            "tag": [
+              175,
+              0
+            ]
           },
           {
             "id": "sf",
             "type": "card",
-            "x": 290,
+            "x": 390,
             "y": 40,
             "w": 60,
             "h": 80,
@@ -1411,7 +1482,7 @@
           {
             "id": "cf",
             "type": "card",
-            "x": 290,
+            "x": 390,
             "y": 210,
             "w": 60,
             "h": 80,
@@ -1423,7 +1494,7 @@
           {
             "id": "sn",
             "type": "text",
-            "x": 680,
+            "x": 700,
             "y": 80,
             "label": "about 1 death a year",
             "color": "fg",
@@ -1433,7 +1504,7 @@
           {
             "id": "cn",
             "type": "text",
-            "x": 680,
+            "x": 700,
             "y": 250,
             "label": "about 40,000 a year",
             "color": "gold",
@@ -1443,7 +1514,7 @@
           {
             "id": "note",
             "type": "text",
-            "x": 680,
+            "x": 700,
             "y": 165,
             "label": "United States",
             "color": "dim",
@@ -1468,7 +1539,7 @@
             "set": {
               "sf": {
                 "o": 1,
-                "w": 290,
+                "w": 200,
                 "label": "scared"
               }
             }
@@ -1534,7 +1605,7 @@
                 "color": "dim"
               },
               "cf": {
-                "w": 290,
+                "w": 200,
                 "label": "real risk",
                 "color": "gold"
               },
@@ -1584,82 +1655,124 @@
           {
             "id": "A",
             "type": "card",
-            "x": 40,
-            "y": 30,
-            "w": 300,
-            "h": 130,
+            "x": 230,
+            "y": 0,
+            "w": 180,
+            "h": 140,
             "label": "Place A",
             "color": "dim",
-            "o": 0
+            "o": 0,
+            "prop": "house",
+            "look": "shop",
+            "awning": "#a3281c",
+            "tagW": 170,
+            "tag": [
+              -235,
+              0
+            ]
           },
           {
             "id": "B",
             "type": "card",
-            "x": 460,
-            "y": 30,
-            "w": 300,
-            "h": 130,
+            "x": 520,
+            "y": 0,
+            "w": 180,
+            "h": 140,
             "label": "Place B",
             "color": "dim",
-            "o": 0
+            "o": 0,
+            "prop": "house",
+            "look": "shop",
+            "awning": "#2f6b45",
+            "tagW": 190,
+            "tag": [
+              0,
+              125
+            ]
           },
           {
             "id": "p0",
-            "type": "stamp",
-            "x": 380,
-            "y": 300,
-            "w": 34,
+            "type": "card",
+            "x": 360,
+            "y": 269,
+            "w": 40,
             "label": "",
             "color": "blue",
-            "o": 0
+            "o": 0,
+            "prop": "figure",
+            "pose": "stand",
+            "turn": 1.9,
+            "h": 62
           },
           {
             "id": "p1",
-            "type": "stamp",
-            "x": 388,
-            "y": 300,
-            "w": 34,
+            "type": "card",
+            "x": 360,
+            "y": 269,
+            "w": 40,
             "label": "",
             "color": "blue",
-            "o": 0
+            "o": 0,
+            "prop": "figure",
+            "pose": "stand",
+            "turn": 1.9,
+            "h": 62
           },
           {
             "id": "p2",
-            "type": "stamp",
-            "x": 396,
-            "y": 300,
-            "w": 34,
+            "type": "card",
+            "x": 360,
+            "y": 269,
+            "w": 40,
             "label": "",
             "color": "blue",
-            "o": 0
+            "o": 0,
+            "prop": "figure",
+            "pose": "stand",
+            "turn": 1.9,
+            "h": 62
           },
           {
             "id": "p3",
-            "type": "stamp",
-            "x": 404,
-            "y": 300,
-            "w": 34,
+            "type": "card",
+            "x": 360,
+            "y": 269,
+            "w": 40,
             "label": "",
             "color": "blue",
-            "o": 0
+            "o": 0,
+            "prop": "figure",
+            "pose": "stand",
+            "turn": 1.9,
+            "h": 62
           },
           {
             "id": "you",
-            "type": "stamp",
-            "x": 520,
-            "y": 250,
-            "w": 72,
+            "type": "card",
+            "x": 430,
+            "y": 254,
+            "w": 40,
             "label": "YOU",
             "color": "blue",
-            "size": 14
+            "size": 14,
+            "prop": "figure",
+            "pose": "stand",
+            "look": "dark",
+            "turn": 0,
+            "h": 62,
+            "tagW": 110,
+            "tag": [
+              0,
+              70
+            ]
           },
           {
             "id": "go",
             "type": "arrow",
-            "x": 520,
-            "y": 260,
-            "x2": 560,
-            "y2": 170,
+            "x": 500,
+            "y": 255,
+            "x2": 575,
+            "y2": 140,
             "color": "green",
             "o": 0,
             "draw": 0
@@ -1684,8 +1797,8 @@
             "set": {
               "p0": {
                 "o": 1,
-                "x": 70,
-                "y": 190
+                "x": 285,
+                "y": 119
               }
             }
           },
@@ -1695,18 +1808,18 @@
             "set": {
               "p1": {
                 "o": 1,
-                "x": 120,
-                "y": 190
+                "x": 242,
+                "y": 141
               },
               "p2": {
                 "o": 1,
-                "x": 170,
-                "y": 190
+                "x": 199,
+                "y": 163
               },
               "p3": {
                 "o": 1,
-                "x": 220,
-                "y": 190
+                "x": 156,
+                "y": 185
               },
               "A": {
                 "sub": "line out the door",
@@ -1719,8 +1832,9 @@
             "dur": 2.2,
             "set": {
               "you": {
-                "x": 268,
-                "y": 180
+                "x": 113,
+                "y": 207,
+                "turn": 1.9
               }
             }
           },
@@ -1754,16 +1868,17 @@
             "dur": 2.8,
             "set": {
               "you": {
-                "x": 560,
-                "y": 220
+                "x": 460,
+                "y": 231,
+                "turn": 2.3
               },
               "go": {
                 "o": 1,
                 "draw": 1,
-                "x": 600,
-                "y": 222,
-                "x2": 610,
-                "y2": 166
+                "x": 500,
+                "y": 255,
+                "x2": 575,
+                "y2": 140
               }
             }
           }
@@ -1802,14 +1917,24 @@
           {
             "id": "old",
             "type": "card",
-            "x": 40,
-            "y": 50,
-            "w": 270,
-            "h": 120,
+            "x": 100,
+            "y": 10,
+            "w": 160,
+            "h": 160,
             "label": "Your plan",
             "sub": "$80 a month, since 2015",
             "color": "blue",
-            "o": 0
+            "o": 0,
+            "prop": "phone",
+            "screen": "note",
+            "note": "$80",
+            "noteSub": "a month",
+            "noteFoot": "since 2015",
+            "tagW": 190,
+            "tag": [
+              195,
+              30
+            ]
           },
           {
             "id": "new",
@@ -1848,10 +1973,10 @@
           {
             "id": "go",
             "type": "arrow",
-            "x": 316,
-            "y": 110,
-            "x2": 482,
-            "y2": 110,
+            "x": 300,
+            "y": 205,
+            "x2": 560,
+            "y2": 178,
             "color": "green",
             "o": 0,
             "draw": 0
@@ -1953,6 +2078,9 @@
               },
               "meh": {
                 "o": 0
+              },
+              "old": {
+                "screen": "call"
               }
             }
           }
@@ -1991,26 +2119,42 @@
           {
             "id": "A",
             "type": "card",
-            "x": 40,
-            "y": 40,
-            "w": 300,
-            "h": 130,
+            "x": 100,
+            "y": 10,
+            "w": 180,
+            "h": 170,
             "label": "Yogurt A",
             "sub": "90% fat free!",
             "color": "green",
-            "o": 0
+            "o": 0,
+            "prop": "yogurt",
+            "look": "green",
+            "front": "90% FAT FREE",
+            "tagW": 210,
+            "tag": [
+              0,
+              130
+            ]
           },
           {
             "id": "B",
             "type": "card",
-            "x": 460,
-            "y": 40,
-            "w": 300,
-            "h": 130,
+            "x": 520,
+            "y": 10,
+            "w": 180,
+            "h": 170,
             "label": "Yogurt B",
             "sub": "10% fat",
             "color": "gold",
-            "o": 0
+            "o": 0,
+            "prop": "yogurt",
+            "look": "gold",
+            "front": "10% FAT",
+            "tagW": 210,
+            "tag": [
+              0,
+              130
+            ]
           },
           {
             "id": "eq",
@@ -2037,8 +2181,8 @@
             "type": "arrow",
             "x": 360,
             "y": 270,
-            "x2": 230,
-            "y2": 178,
+            "x2": 200,
+            "y2": 228,
             "color": "pink",
             "o": 0,
             "draw": 0
@@ -2046,9 +2190,9 @@
           {
             "id": "st",
             "type": "stamp",
-            "x": 560,
-            "y": 210,
-            "w": 130,
+            "x": 480,
+            "y": 255,
+            "w": 100,
             "label": "HEALTHY!",
             "color": "pink",
             "o": 0,
@@ -2178,14 +2322,20 @@
           {
             "id": "smp",
             "type": "card",
-            "x": 40,
-            "y": 40,
-            "w": 240,
-            "h": 100,
+            "x": 80,
+            "y": 20,
+            "w": 160,
+            "h": 130,
             "label": "Free sample",
             "sub": "one tiny cheese cube",
             "color": "green",
-            "o": 0
+            "o": 0,
+            "prop": "sample",
+            "tagW": 210,
+            "tag": [
+              0,
+              125
+            ]
           },
           {
             "id": "clk",
@@ -2202,7 +2352,7 @@
             "id": "you",
             "type": "stamp",
             "x": 60,
-            "y": 240,
+            "y": 270,
             "w": 76,
             "label": "YOU",
             "color": "blue",
@@ -2211,8 +2361,8 @@
           {
             "id": "feel",
             "type": "text",
-            "x": 470,
-            "y": 172,
+            "x": 560,
+            "y": 60,
             "label": "\"I should buy something...\"",
             "color": "pink",
             "size": 21,
@@ -2221,22 +2371,28 @@
           {
             "id": "big",
             "type": "card",
-            "x": 460,
-            "y": 220,
-            "w": 300,
-            "h": 100,
+            "x": 500,
+            "y": 120,
+            "w": 220,
+            "h": 140,
             "label": "$24 of cheese",
             "sub": "you did not want",
             "color": "gold",
-            "o": 0
+            "o": 0,
+            "prop": "cheese",
+            "tagW": 210,
+            "tag": [
+              0,
+              120
+            ]
           },
           {
             "id": "buy",
             "type": "arrow",
             "x": 144,
-            "y": 272,
-            "x2": 452,
-            "y2": 272,
+            "y": 305,
+            "x2": 495,
+            "y2": 300,
             "color": "gold",
             "o": 0,
             "draw": 0
@@ -2261,7 +2417,8 @@
             "set": {
               "smp": {
                 "o": 0.45,
-                "sub": "eaten"
+                "sub": "eaten",
+                "eaten": true
               }
             }
           },
@@ -2376,7 +2533,7 @@
             "id": "ad",
             "type": "text",
             "x": 560,
-            "y": 50,
+            "y": 30,
             "label": "\"Doctors trust this pill.\"",
             "color": "pink",
             "size": 22,
@@ -2385,14 +2542,21 @@
           {
             "id": "pill",
             "type": "card",
-            "x": 460,
-            "y": 90,
-            "w": 300,
-            "h": 100,
+            "x": 430,
+            "y": 120,
+            "w": 150,
+            "h": 150,
             "label": "Miracle pill",
             "sub": "$59.99",
             "color": "gold",
-            "o": 0
+            "o": 0,
+            "prop": "pills",
+            "front": "MIRACLE",
+            "tagW": 200,
+            "tag": [
+              -200,
+              30
+            ]
           },
           {
             "id": "you",
@@ -2409,8 +2573,8 @@
             "type": "arrow",
             "x": 204,
             "y": 270,
-            "x2": 520,
-            "y2": 198,
+            "x2": 450,
+            "y2": 225,
             "color": "gold",
             "o": 0,
             "draw": 0
@@ -2419,7 +2583,7 @@
             "id": "st",
             "type": "stamp",
             "x": 600,
-            "y": 225,
+            "y": 240,
             "w": 120,
             "label": "TRUSTED",
             "color": "pink",
@@ -2554,14 +2718,20 @@
           {
             "id": "shelf",
             "type": "card",
-            "x": 40,
-            "y": 40,
-            "w": 320,
-            "h": 140,
+            "x": 190,
+            "y": 20,
+            "w": 180,
+            "h": 160,
             "label": "The hat",
             "sub": "10 in stock",
             "color": "dim",
-            "o": 0
+            "o": 0,
+            "prop": "hat",
+            "tagW": 180,
+            "tag": [
+              -190,
+              20
+            ]
           },
           {
             "id": "tag",
@@ -2766,15 +2936,22 @@
           },
           {
             "id": "score",
-            "type": "stamp",
-            "x": 330,
-            "y": 190,
-            "w": 140,
+            "type": "card",
+            "x": 290,
+            "y": 205,
+            "w": 220,
             "label": "24-21",
             "color": "fg",
             "o": 0,
-            "s": 0.4,
-            "size": 26
+            "size": 26,
+            "prop": "scoreboard",
+            "score": "24-21",
+            "h": 130,
+            "tagW": 150,
+            "tag": [
+              -220,
+              30
+            ]
           },
           {
             "id": "bet",
@@ -2967,6 +3144,19 @@
             "color": "pink",
             "size": 24,
             "o": 0
+          },
+          {
+            "id": "drv",
+            "type": "card",
+            "prop": "car",
+            "learner": true,
+            "x": 30,
+            "y": 0,
+            "w": 160,
+            "h": 80,
+            "label": "",
+            "color": "fg",
+            "o": 0
           }
         ],
         "beats": [
@@ -2987,6 +3177,9 @@
                 "o": 1
               },
               "cf": {
+                "o": 1
+              },
+              "drv": {
                 "o": 1
               }
             }
@@ -3030,6 +3223,9 @@
               "q": {
                 "label": "\"Still learning.\"",
                 "color": "green"
+              },
+              "drv": {
+                "learner": false
               }
             }
           },
@@ -3052,6 +3248,9 @@
               "q": {
                 "label": "\"How hard can it be?\"",
                 "color": "pink"
+              },
+              "drv": {
+                "learner": true
               }
             }
           },
@@ -3110,14 +3309,20 @@
           {
             "id": "plan",
             "type": "card",
-            "x": 40,
-            "y": 40,
-            "w": 320,
+            "x": 60,
+            "y": 30,
+            "w": 130,
             "h": 110,
             "label": "The plan",
             "sub": "\"Paint the room: 1 hour\"",
             "color": "blue",
-            "o": 0
+            "o": 0,
+            "prop": "paint",
+            "tagW": 240,
+            "tag": [
+              0,
+              110
+            ]
           },
           {
             "id": "s1",
@@ -3153,7 +3358,7 @@
             "id": "bar",
             "type": "card",
             "x": 40,
-            "y": 210,
+            "y": 250,
             "w": 90,
             "h": 80,
             "label": "1 hr",
@@ -3285,32 +3490,50 @@
           {
             "id": "slot",
             "type": "card",
-            "x": 40,
-            "y": 40,
-            "w": 320,
-            "h": 150,
+            "x": 60,
+            "y": 0,
+            "w": 200,
+            "h": 160,
             "label": "Slot machine",
             "sub": "pull the lever",
             "color": "gold",
-            "o": 0
+            "o": 0,
+            "prop": "slot",
+            "stop": [
+              3,
+              5,
+              6
+            ],
+            "tagW": 200,
+            "tag": [
+              0,
+              120
+            ]
           },
           {
             "id": "phone",
             "type": "card",
-            "x": 440,
-            "y": 40,
-            "w": 320,
-            "h": 150,
+            "x": 480,
+            "y": 0,
+            "w": 200,
+            "h": 160,
             "label": "Your phone",
             "sub": "pull to refresh",
             "color": "blue",
-            "o": 0
+            "o": 0,
+            "prop": "phone",
+            "screen": "feed",
+            "tagW": 200,
+            "tag": [
+              0,
+              120
+            ]
           },
           {
             "id": "n",
             "type": "text",
             "x": 200,
-            "y": 225,
+            "y": 320,
             "label": "pulls: 1",
             "color": "dim",
             "size": 20,
@@ -3336,7 +3559,12 @@
             "set": {
               "slot": {
                 "o": 1,
-                "sub": "nothing"
+                "sub": "nothing",
+                "stop": [
+                  1,
+                  4,
+                  2
+                ]
               },
               "n": {
                 "o": 1
@@ -3349,7 +3577,12 @@
             "set": {
               "slot": {
                 "sub": "nothing again",
-                "shake": true
+                "shake": true,
+                "stop": [
+                  2,
+                  6,
+                  3
+                ]
               },
               "n": {
                 "label": "pulls: 2"
@@ -3362,7 +3595,13 @@
             "set": {
               "slot": {
                 "sub": "WIN! $5",
-                "color": "green"
+                "color": "green",
+                "stop": [
+                  0,
+                  0,
+                  0
+                ],
+                "win": true
               },
               "st": {
                 "o": 1,
@@ -3379,7 +3618,13 @@
             "set": {
               "slot": {
                 "sub": "pull... pull... pull...",
-                "color": "gold"
+                "color": "gold",
+                "stop": [
+                  5,
+                  1,
+                  4
+                ],
+                "win": false
               },
               "st": {
                 "o": 0,
@@ -3398,7 +3643,8 @@
               "phone": {
                 "o": 1,
                 "sub": "nothing... nothing... 3 likes!",
-                "shake": true
+                "shake": true,
+                "screen": "likes"
               },
               "n": {
                 "x": 600,
@@ -3433,7 +3679,8 @@
             "set": {
               "phone": {
                 "sub": "notifications off",
-                "color": "green"
+                "color": "green",
+                "screen": "quiet"
               },
               "st": {
                 "label": "UNHOOKED",
@@ -3559,27 +3806,38 @@
         ],
         "actors": [
           {
-            "id": "glow",
-            "type": "stamp",
-            "x": 120,
-            "y": 18,
-            "w": 120,
-            "label": "",
-            "color": "gold",
-            "o": 0,
-            "s": 0.4
-          },
-          {
             "id": "sp",
             "type": "card",
-            "x": 40,
-            "y": 150,
-            "w": 280,
-            "h": 130,
+            "x": 160,
+            "y": 155,
+            "w": 40,
+            "h": 120,
             "label": "Salesperson",
             "sub": "great smile, sharp suit",
             "color": "pink",
-            "o": 0
+            "o": 0,
+            "prop": "figure",
+            "pose": "stand",
+            "look": "suit",
+            "turn": 0.3,
+            "tagW": 200,
+            "tag": [
+              0,
+              100
+            ]
+          },
+          {
+            "id": "glow",
+            "type": "card",
+            "x": 150,
+            "y": 185,
+            "w": 60,
+            "label": "",
+            "color": "gold",
+            "o": 0,
+            "prop": "halo",
+            "on": "sp",
+            "h": 60
           },
           {
             "id": "q1",
@@ -3633,8 +3891,7 @@
             "dur": 2.2,
             "set": {
               "glow": {
-                "o": 1,
-                "s": 1
+                "o": 1
               }
             }
           },
@@ -3704,8 +3961,7 @@
             "dur": 3,
             "set": {
               "glow": {
-                "o": 0,
-                "s": 0.4
+                "o": 0
               },
               "q1": {
                 "sub": "checked",

@@ -432,7 +432,9 @@ test('public pages name no workers.dev address and ask Google for nothing: Mind 
   const css = fs.readFileSync(path.join(SITE, 'fonts', type + '.css'), 'utf8');
   const files = [...new Set([...css.matchAll(/url\(([^)]+)\)/g)].map((m) => m[1]))];
   assert.ok(files.length >= 2 && files.every((x) => /^[a-z0-9-]+\.woff2$/.test(x) && fs.existsSync(path.join(SITE, 'fonts', x))), 'a font file the sheet names is not on the site');
-  assert.deepEqual(fs.readdirSync(path.join(SITE, 'fonts')).filter((x) => x.endsWith('.woff2')).sort(), files.slice().sort(), 'the public copy carries only the chosen typeface');
+  // ...and, beside scenes, the two faces printed on the things on the lit table (scene.js), also from the site itself
+  const table = fs.existsSync(path.join(SITE, 'scene.js')) ? ['bricolage-grotesque-latin.woff2', 'fraunces-latin.woff2'] : [];
+  assert.deepEqual(fs.readdirSync(path.join(SITE, 'fonts')).filter((x) => x.endsWith('.woff2')).sort(), [...new Set(files.concat(table))].sort(), 'the public copy carries only the chosen typeface');
 });
 
 test('the preview server answers only to this computer\'s own names, so a page under a borrowed name cannot use it', () => {
@@ -710,4 +712,176 @@ test('the public copy carries no flip side unless a unit is marked "flip": true'
   build('--site');
   const has = fs.readdirSync(SITE).some((f) => /^flip/.test(f)) || fs.readdirSync(SITE).filter((f) => f.endsWith('.html')).some((f) => /class="flip"/.test(fs.readFileSync(path.join(SITE, f), 'utf8')));
   if (!marked) assert.ok(!has, 'a flip side reached the public copy with no unit marked for it');
+});
+
+// The lit table (Bryan, 22 Nov 2026: "A, lit table"): every unit's existing scene block is acted out with real things
+// on a lit table (scene.js on three.js), by the rules in scene-plan.js, which the page and these tests share.
+const scenePlan = require(path.join(uni.UNI, 'scene-plan.js'));
+const allScenes = () => fs.readdirSync(path.join(uni.UNI, 'courses')).filter((f) => f.endsWith('.json')).flatMap((f) => {
+  const c = JSON.parse(fs.readFileSync(path.join(uni.UNI, 'courses', f), 'utf8'));
+  return c.units.filter((u) => u.scene).map((u) => ({ where: c.slug + ' unit ' + u.n, sc: u.scene }));
+});
+
+test('the lit table: every piece of every scene becomes a thing on the table, and a renamed piece turns over', () => {
+  const scenes = allScenes();
+  assert.ok(scenes.length >= 38, 'fewer scenes than the 38 the lit table was built for');
+  const KINDS = ['card', 'tag', 'bar', 'sticker', 'ball', 'slip', 'tape', 'thread', 'prop', 'label'];
+  for (const { where, sc } of scenes) {
+    const p = scenePlan.plan(sc);
+    assert.strictEqual(p.states.length, sc.beats.length, where);
+    for (const a of sc.actors) {
+      assert.ok(KINDS.includes(p.kind[a.id]), where + ': ' + a.id + ' is not a thing on the table');
+      p.faces[a.id].forEach((f, i) => {
+        const A = p.states[i].from[a.id], B = p.states[i].to[a.id];
+        // a piece turns over only when it is on the table and its words change; a bar measures, it never turns
+        if (f.turned) {
+          assert.ok(A.o >= 0.5 && (A.label || A.sub) && (B.label || B.sub), where + ': ' + a.id + ' turns over off the table or blank, step ' + (i + 1));
+          assert.notStrictEqual(f.face, f.from, where + ': a turn that lands on the same face');
+          assert.notStrictEqual(p.kind[a.id], 'bar', where + ': a bar turned over');
+        } else assert.strictEqual(f.face, f.from, where + ': ' + a.id + ' changed face without turning');
+      });
+    }
+    // the camera keeps every piece that is on the table in frame at the end of every step
+    p.states.forEach((s, i) => {
+      const box = p.frame(i).box;
+      for (const id in s.to) {
+        if (!scenePlan.shown(s.to[id], p.kind[id])) continue;
+        const e = scenePlan.extent(s.to[id], p.kind[id]);
+        assert.ok(e[0] >= box[0] - 0.01 && e[1] >= box[1] - 0.01 && e[2] <= box[2] + 0.01 && e[3] <= box[3] + 0.01, where + ': ' + id + ' out of frame at step ' + (i + 1));
+      }
+    });
+  }
+  // the lesson Bryan picked from: the price cards are hang tags, the sale is a sticker, the arrows are threads, and the
+  // three tags turn over to the idea's names together, on the step that renames them
+  const sale = scenes.find((x) => x.sc.analogy === 'A sale price after the price went up');
+  const p = scenePlan.plan(sale.sc);
+  assert.deepStrictEqual(['t1', 't2', 't3', 'big', 'r1', 'r2'].map((id) => p.kind[id]), ['tag', 'tag', 'tag', 'sticker', 'thread', 'thread']);
+  const turnAt = (id) => p.faces[id].map((f, i) => (f.turned ? i + 1 : 0)).filter(Boolean);
+  assert.deepStrictEqual(['t1', 't2', 't3', 'big'].map(turnAt), [[5], [5], [5], [5]]);
+  // a stamp that never has words is a ball (the cup-and-ball game); a card that grows is a strip of paper
+  const cups = scenePlan.plan(scenes.find((x) => /cup-and-ball/.test(x.sc.analogy)).sc);
+  assert.strictEqual(cups.kind.ball, 'ball');
+  const paint = scenePlan.plan(scenes.find((x) => /Painting the room/.test(x.sc.analogy)).sc);
+  assert.strictEqual(paint.kind.bar, 'bar');
+});
+
+test('the lit table ships with every page that has a scene: the engine, its rules, three.js and its two typefaces', () => {
+  const src = fs.readFileSync(path.join(uni.UNI, 'scene.js'), 'utf8');
+  assert.ok(/import \* as THREE from '\.\/three\.module\.min\.js'/.test(src), 'scene.js no longer draws with three.js');
+  assert.ok(!/createElementNS|<svg|'svg'/.test(src), 'scene.js draws flat SVG boxes again');
+  assert.ok(/new THREE\.WebGLRenderer/.test(src) && (src.match(/new THREE\.WebGLRenderer/g) || []).length === 1, 'one renderer for the page, not one per scene');
+  for (const flag of [[], ['--site']]) {
+    build(...flag);
+    const out = path.join(uni.UNI, flag.length ? 'site' : 'site-preview');
+    const pages = fs.readdirSync(out).filter((f) => f.endsWith('.html')).map((f) => ({ f, h: fs.readFileSync(path.join(out, f), 'utf8') }));
+    const withScene = pages.filter((x) => x.h.includes('class="sc" data-scene='));
+    for (const { f, h } of pages) {
+      const has = withScene.some((x) => x.f === f);
+      assert.strictEqual(h.includes('<script src="scene-plan.js"></script><script type="module" src="scene.js"></script>'), has, f + (has ? ' has a scene but no lit table' : ' loads the lit table with no scene'));
+    }
+    if (withScene.length) for (const need of ['scene.js', 'scene-plan.js', 'scene-props.js', 'three.module.min.js', 'three-LICENSE.txt', 'fonts/bricolage-grotesque-latin.woff2', 'fonts/fraunces-latin.woff2']) assert.ok(fs.existsSync(path.join(out, need)), need + ' is not shipped beside the scenes in ' + path.basename(out));
+  }
+});
+
+test('real objects on the lit table: every object a scene names is in the library, tied and rested on real objects', () => {
+  // Bryan, 22 Nov 2026: "A, objects with tags". The objects are modelled in scene-props.js; a scene names them.
+  const lib = fs.readFileSync(path.join(uni.UNI, 'scene-props.js'), 'utf8');
+  const names = new Set([...lib.slice(lib.indexOf('export const PROPS')).matchAll(/^  '?([a-z][a-z-]*)'?: \{$/gm)].map((m) => m[1]));
+  assert.ok(names.has('golf-ball') && names.has('tee') && names.has('cup'), 'the object library lost an object');
+  assert.ok(!/fetch\(|GLTFLoader|\.glb|\.gltf|\.obj['"]/.test(lib), 'an object is loaded from a file instead of modelled in code');
+  for (const { where, sc } of allScenes()) {
+    const p = scenePlan.plan(sc), ids = new Set(sc.actors.map((a) => a.id));
+    const isProp = (id) => p.kind[id] === 'prop';
+    for (const a of sc.actors) {
+      if (a.prop && a.prop !== 'tag') assert.ok(names.has(a.prop), where + ': ' + a.id + ' names an object the library does not have: ' + a.prop);
+      if (a.tie) assert.ok(isProp(String(a.tie).split('.')[0]), where + ': ' + a.id + ' is tied to something that is not an object');
+    }
+    p.states.forEach((s, i) => { for (const id in s.to) if (s.to[id].on) assert.ok(ids.has(s.to[id].on) && isProp(s.to[id].on) && isProp(id), where + ': ' + id + ' rests on something that is not an object, step ' + (i + 1)); });
+  }
+  // the golf ball lesson: the tee chips on step 2, the ball leaves the tee on step 4, and the tags turn on step 5
+  const golf = allScenes().find((x) => /golf ball on a tee/.test(x.sc.analogy)).sc, g = scenePlan.plan(golf);
+  assert.deepStrictEqual(['left', 'right', 'thing'].map((id) => g.kind[id]), ['prop', 'prop', 'label']);
+  assert.deepStrictEqual(g.states.map((s) => !!s.to.right.chipped), [false, true, true, true, true]);
+  assert.deepStrictEqual(g.states.map((s) => s.to.left.on || null), ['right', 'right', 'right', null, null]);
+  assert.deepStrictEqual(['left', 'right', 'thing'].map((id) => g.faces[id].map((f, i) => (f.turned ? i + 1 : 0)).filter(Boolean)), [[5], [5], [5]]);
+  // the cup game: three brass cups; the one you point to lifts empty, and the ball is under the other
+  const cups = scenePlan.plan(allScenes().find((x) => /cup-and-ball/.test(x.sc.analogy)).sc);
+  assert.deepStrictEqual(['a', 'b', 'c'].map((id) => cups.kind[id]), ['prop', 'prop', 'prop']);
+  assert.ok(cups.states[3].to.c.lifted && !cups.states[3].to.b.lifted && cups.states[5].to.b.lifted && !cups.states[5].to.c.lifted);
+  // The body 2 to 4 (Bryan, 22 Nov 2026: "Yes, next three"): each analogy is acted by its own objects
+  const body = (re) => scenePlan.plan(allScenes().find((x) => re.test(x.sc.analogy)).sc);
+  const kinds = (p, ids) => ids.map((id) => p.kind[id]);
+  const hose = body(/garden hose/), gate = body(/gate held by a latch/), bench = body(/small bench/);
+  assert.deepStrictEqual(kinds(hose, ['left', 'right', 'thing', 'tyre']), ['prop', 'prop', 'prop', 'prop']);
+  assert.ok(hose.states[1].to.thing.pinched && hose.states[1].to.tyre.o === 1 && !hose.states[2].to.right.wilted && hose.states[3].to.right.wilted);
+  assert.deepStrictEqual(kinds(gate, ['left', 'right', 'thing']), ['prop', 'prop', 'label']);
+  assert.deepStrictEqual(gate.states.map((s) => [s.to.left.open || 0, !!s.to.left.snapped]), [[0, false], [-0.55, true], [0, true], [1, true], [0, true]]);
+  assert.deepStrictEqual(kinds(bench, ['left', 'right', 'thing']), ['prop', 'prop', 'prop']);
+  assert.ok(bench.states[0].to.left.on === 'thing' && bench.states[0].to.right.on === 'thing' && bench.states[1].to.left.swell && bench.states[3].to.right.squeezed);
+  // Your money, plainly (Bryan, 22 Nov 2026: "Yes, money lessons"): the lessons whose analogy is a thing act with it
+  const money = (re) => scenePlan.plan(allScenes().find((x) => re.test(x.sc.analogy)).sc);
+  const jar = money(/shared jar/);
+  assert.deepStrictEqual(jar.states.map((s) => [s.to.jar.coins || 0, !!s.to.h3.burnt, !!s.to.h3.rebuilt]), [[0, false, false], [20, false, false], [20, true, false], [0, true, true], [0, true, true]]);
+  const pizza = money(/slices of a pizza/);
+  assert.deepStrictEqual(pizza.states.map((s) => [s.to.pizza.slices, s.to.pizza.mine]), [[8, 2], [16, 4], [16, 4], [20, 4], [20, 4]]);
+  assert.ok(money(/coin flip/).states[1].to.coin.up && !money(/coin flip/).states[2].to.coin.up);
+  assert.deepStrictEqual(money(/classroom/).states.map((s) => s.to.tch.coins), [10, 10, 1, 1, 1, 1]);
+  assert.ok(money(/Two boxes/).states[2].to.a.turned && !money(/Two boxes/).states[1].to.a.turned);
+  assert.deepStrictEqual(['basket', 'jar'].map((n) => money(/groceries go up/).kind[n === 'basket' ? 'bas' : 'jar']), ['prop', 'prop']);
+  // Mind and human nature, batch 1 (Bryan, 22 Nov 2026: "Yes, mind lessons")
+  const flip = money(/last slice of pizza/);
+  assert.deepStrictEqual(flip.states.map((s) => [!!s.to.coin.up, s.to.coin.face || 'heads']), [[false, 'heads'], [true, 'heads'], [false, 'tails'], [false, 'heads'], [false, 'heads'], [false, 'heads'], [false, 'heads']]);
+  assert.strictEqual(flip.kind.mirror, 'prop');
+  assert.deepStrictEqual(money(/5:30 alarm/).states.map((s) => s.to.clock.time), [23, 5.5, 5.67, 5.67, 5.5]);
+  assert.deepStrictEqual(['A', 'B'].map((id) => money(/fat free/).kind[id]), ['prop', 'prop']);
+  assert.ok(money(/free sample/).states[1].to.smp.eaten && money(/free sample/).kind.big === 'prop' && money(/Painting the room/).kind.plan === 'prop');
+  // Mind lessons, batch 2 (Bryan, 23 Nov 2026: "Yes, next batch")
+  const movie = money(/bad movie/);
+  assert.deepStrictEqual(movie.states.map((s) => [!!s.to.tk.torn, !!s.to.exit.open]), [[false, false], [false, false], [false, false], [true, false], [true, false], [true, true], [true, true], [true, true]]);
+  assert.deepStrictEqual(kinds(movie, ['tk', 'exit']), ['prop', 'prop']);
+  const keys = money(/your keys/);
+  assert.ok(keys.kind.keys === 'prop' && keys.states[2].to.keys.o === 0 && keys.states[3].to.keys.o === 1);
+  const car = money(/sticker on a car/);
+  assert.deepStrictEqual(kinds(car, ['stk', 'deal', 'worth']), ['prop', 'tag', 'tag']);
+  assert.deepStrictEqual(kinds(money(/Finding \$20/), ['find', 'lose', 'lb']), ['prop', 'prop', 'bar']);
+  const line = money(/restaurant with the line/), sc = allScenes().find((x) => /restaurant with the line/.test(x.sc.analogy)).sc;
+  assert.deepStrictEqual(kinds(line, ['A', 'B', 'p0', 'p1', 'p2', 'p3', 'you']), Array(7).fill('prop'));
+  assert.ok(['p0', 'p1', 'p2', 'p3', 'you'].every((id) => sc.actors.find((a) => a.id === id).pose === 'stand'), 'the people in the line stand');
+  // the four who queue stand in a line at A's door, and you end up beside B
+  const ends = ['p0', 'p1', 'p2', 'p3'].map((id) => line.states[2].to[id]);
+  assert.ok(ends.every((v, i) => v.o === 1 && (i === 0 || v.x < ends[i - 1].x)), 'the line runs out from A');
+  assert.ok(line.states[3].to.you.x < ends[3].x && line.states[6].to.you.x > 400, 'you join the end of the line, then go to B');
+  // Mind lessons, batch 3 (Bryan, 23 Nov 2026: "Yes, next batch")
+  assert.deepStrictEqual(kinds(money(/Afraid of sharks/), ['sh', 'cr', 'sf', 'cf']), ['prop', 'prop', 'bar', 'bar']);
+  assert.strictEqual(money(/lab coat/).kind.pill, 'prop');
+  assert.strictEqual(money(/Only 2 left/).kind.shelf, 'prop');
+  assert.strictEqual(money(/after the game/).kind.score, 'prop');
+  const slot = money(/slot machine/);
+  // three pulls: nothing, nothing, three sevens and the lamp; then it keeps spinning to nothing
+  assert.deepStrictEqual(slot.states.map((s) => [s.to.slot.stop.join(''), !!s.to.slot.win]), [['142', false], ['263', false], ['000', true], ['514', false], ['514', false], ['514', false], ['514', false]]);
+  assert.deepStrictEqual(slot.states.map((s) => s.to.phone.screen), ['feed', 'feed', 'feed', 'feed', 'likes', 'likes', 'quiet']);
+  // Batch 4 (Bryan, 23 Nov 2026: "Yes, next batch")
+  assert.deepStrictEqual(kinds(money(/bill and its receipt/), ['bill', 'rec', 'slot']), ['prop', 'prop', 'tape']);
+  const gps = money(/recalculating/);
+  assert.deepStrictEqual(kinds(gps, ['car', 'blk', 'home']), ['prop', 'prop', 'prop']);
+  assert.ok(gps.states[3].to.car.y > gps.states[2].to.car.y && gps.states[5].to.car.x > gps.states[3].to.car.x, 'the car takes the new road, then drives on toward home');
+  assert.strictEqual(money(/shoes that pinch/).kind.shoe, 'prop');
+  assert.deepStrictEqual(money(/phone plan/).states.map((s) => s.to.old.screen), ['note', 'note', 'note', 'note', 'note', 'note', 'call']);
+  // the new driver's STUDENT DRIVER board: on in week one, off by year five, on again for any new skill
+  assert.deepStrictEqual(money(/new driver/).states.map((s) => s.to.drv.learner), [true, true, true, false, true, true]);
+  // The last four (Bryan, 23 Nov 2026: "Yes, last four")
+  const lift = money(/closing elevator/);
+  assert.deepStrictEqual(kinds(lift, ['cab', 'dl', 'dr', 'you']), ['prop', 'label', 'label', 'prop']);
+  assert.deepStrictEqual(lift.states.map((s) => [s.to.cab.shut, s.to.cab.dir || '']), [[0.3, ''], [0.3, ''], [1, 'up'], [1, 'up'], [1, 'up'], [0, '']]);
+  assert.ok(lift.states[1].to.you.y < 60 && lift.states[5].to.you.y > 150, 'you step into the cab, and back out for the next one');
+  const halo = money(/salesperson/);
+  assert.ok(halo.kind.sp === 'prop' && halo.kind.glow === 'prop' && halo.states[1].to.glow.on === 'sp', 'the halo rests over the salesperson');
+  assert.deepStrictEqual(halo.states.map((s) => s.to.glow.o), [0, 1, 1, 1, 1, 0]);
+  assert.strictEqual(money(/movie trailer/).kind.tl, 'prop');
+  assert.deepStrictEqual(kinds(money(/rumor at work/), ['you', 'c3', 'c2', 'c1']), ['prop', 'prop', 'prop', 'prop']);
+  // every lesson is now acted with real objects, but the two about numbers, not things, and the sale price, whose
+  // objects are the hang tags themselves
+  const paper = allScenes().filter(({ sc }) => !sc.actors.some((a) => a.prop && a.prop !== 'tag')).map(({ sc }) => sc.analogy).sort();
+  // the tent (The body, a lesson that reached master after the lit table was built) waits for its objects
+  assert.deepStrictEqual(paper, ['A gym with a cheap first two months', 'A sale price after the price went up', 'A tent in the wind when the first guy rope snaps', 'One student, or a whole school'], 'lessons still on paper: ' + paper.join('; '));
 });
