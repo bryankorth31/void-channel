@@ -1509,7 +1509,8 @@ export const PROPS = {
       const paints = [0x2b5fa8, 0xd9d6cf, 0x2f6b3a, 0x8a1d1d, 0x1d1d20, 0xc7a23a];
       const brake = new THREE.MeshStandardMaterial({ color: 0x5a0000, emissive: 0xff2010, emissiveIntensity: 1.6 });
       const n = 6, cl = L / n * 0.82;
-      for (let i = 0; i < n; i++) {
+      // "cars": 0 leaves the road empty
+      for (let i = 0; i < (a.cars === 0 ? 0 : n); i++) {
         for (const lane of [-1, 1]) {
           if (lane === 1 && i % 2) continue;
           // each one is the same die-cast car as the lessons use, in its own colour, nose to the front of the line
@@ -1587,6 +1588,133 @@ export const PROPS = {
       const loaf = shadowed(new THREE.Mesh(new THREE.CapsuleGeometry(0.06 * s, 0.16 * s, 8, 16), new THREE.MeshStandardMaterial({ color: 0xc58b4a, roughness: 0.8 }))); loaf.rotation.set(0, 0.9, Math.PI / 2); loaf.position.set(0.05 * s, 0.06 * s, -0.12 * s); group.add(loaf);
       const milk = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.08 * s, 0.2 * s, 0.08 * s), new THREE.MeshStandardMaterial({ color: 0xf2f2ee, roughness: 0.6 }))); milk.rotation.set(Math.PI / 2, 0, 0.4); milk.position.set(0.2 * s, 0.04 * s, 0.1 * s); group.add(milk);
       return { group, top: 0.22 * s, anchor: () => new THREE.Vector3(0.2 * s, 0.03 * s, 0.2 * s), update() {} };
+    },
+  },
+  // Change on a little tray: a folded note and a few coins, gold and silver.
+  change: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 110, a.h || 110) * ctx.S;
+      const group = new THREE.Group();
+      const tray = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(0.42 * s, 0.38 * s, 0.04 * s, 48), new THREE.MeshStandardMaterial({ color: 0x2a2a2d, roughness: 0.4, metalness: 0.3, envMap: ctx.env }))); tray.position.y = 0.02 * s; group.add(tray);
+      const note = PROPS.bill.build({ w: 0.55 * s / ctx.S }, ctx).group; note.scale.setScalar(0.9); note.position.set(-0.04 * s, 0.04 * s, -0.04 * s); note.rotation.y = 0.4; group.add(note);
+      const gold = new THREE.MeshStandardMaterial({ color: 0xc9a23c, metalness: 1, roughness: 0.3, envMap: ctx.env, envMapIntensity: 1.2 }), silver = new THREE.MeshStandardMaterial({ color: 0xc8ccd0, metalness: 1, roughness: 0.3, envMap: ctx.env, envMapIntensity: 1.2 });
+      [[0.14, 0.1], [0.2, -0.06], [0.05, 0.18], [-0.18, 0.14]].forEach(([x, z], i) => { const c = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(0.07 * s, 0.07 * s, 0.014 * s, 32), i % 2 ? gold : silver)); c.position.set(x * s, 0.055 * s + i * 0.004 * s, z * s); c.rotation.x = (rnd() - 0.5) * 0.1; group.add(c); });
+      return { group, top: 0.08 * s, anchor: () => new THREE.Vector3(0.36 * s, 0.03 * s, 0.2 * s), update() {} };
+    },
+  },
+  // A moving carton: brown corrugated board, taped across the top, THIS SIDE UP and arrows printed on its side.
+  carton: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 100, a.h || 100) * ctx.S, W = 0.8 * s, H = 0.62 * s, D = 0.62 * s;
+      const c = document.createElement('canvas'); c.width = 256; c.height = 200; const g = c.getContext('2d'); noise(g, 256, 200, '#b98d58', 14);
+      g.fillStyle = 'rgba(60,40,20,0.85)'; g.font = '800 26px "VU Print"'; g.textAlign = 'center'; g.fillText('THIS SIDE UP', 128, 170);
+      g.beginPath(); [[90, 40], [166, 40]].forEach(([x, y]) => { g.moveTo(x, y + 60); g.lineTo(x, y + 18); g.lineTo(x - 14, y + 32); g.moveTo(x, y + 18); g.lineTo(x + 14, y + 32); }); g.strokeStyle = 'rgba(60,40,20,0.85)'; g.lineWidth = 6; g.stroke();
+      const side = new THREE.CanvasTexture(c); side.colorSpace = THREE.SRGBColorSpace;
+      const plain = new THREE.MeshStandardMaterial({ color: 0xb98d58, roughness: 0.9 }), print = new THREE.MeshStandardMaterial({ map: side, roughness: 0.9 });
+      const box = shadowed(new THREE.Mesh(new THREE.BoxGeometry(W, H, D), [plain, plain, plain, plain, print, plain])); box.position.y = H / 2;
+      const tape = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.14 * s, 0.004 * s, D + 0.004 * s), new THREE.MeshStandardMaterial({ color: 0xc7a46a, roughness: 0.35, transparent: true, opacity: 0.85 }))); tape.position.y = H + 0.002 * s;
+      const group = new THREE.Group(); group.add(box, tape);
+      return { group, top: H, anchor: () => new THREE.Vector3(W * 0.42, H * 0.3, D / 2), update() {} };
+    },
+  },
+  // A big red push button on a yellow box. "pressed": true pushes the cap down and lights it.
+  button: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 100, a.h || 100) * ctx.S, W = 0.6 * s, H = 0.32 * s;
+      const yellow = new THREE.MeshStandardMaterial({ color: 0xf0b62a, roughness: 0.45 });
+      const group = new THREE.Group();
+      const box = shadowed(new THREE.Mesh(new THREE.BoxGeometry(W, H, W), yellow)); box.position.y = H / 2; group.add(box);
+      const collar = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(0.2 * s, 0.22 * s, 0.05 * s, 40), new THREE.MeshStandardMaterial({ color: 0x1b1b1d, roughness: 0.4 }))); collar.position.y = H + 0.025 * s; group.add(collar);
+      const capMat = new THREE.MeshPhysicalMaterial({ color: 0xc81e16, roughness: 0.25, clearcoat: 1, emissive: 0xff2010, emissiveIntensity: 0, envMap: ctx.env, envMapIntensity: 0.8 });
+      const capGeo = new THREE.SphereGeometry(0.17 * s, 32, 16, 0, Math.PI * 2, 0, Math.PI / 2); capGeo.scale(1, 0.55, 1);
+      const cap = shadowed(new THREE.Mesh(capGeo, capMat)); group.add(cap);
+      const light = new THREE.PointLight(0xff3020, 0, 1.5 * s, 2); light.position.y = H + 0.2 * s; group.add(light);
+      const pressed = (v) => (v && v.pressed != null ? !!v.pressed : !!a.pressed);
+      return { group, top: H + 0.15 * s, anchor: () => new THREE.Vector3(W * 0.45, H * 0.4, W / 2), update(A, B, e) { const k = lerp(pressed(A) ? 1 : 0, pressed(B) ? 1 : 0, smooth(e)); cap.position.y = H + 0.05 * s - 0.04 * s * k; capMat.emissiveIntensity = 1.2 * k; light.intensity = 1.5 * k; } };
+    },
+  },
+  // A little tram on a stretch of track: two steel rails on wooden sleepers and a green and cream car with windows.
+  // "x": how far along the track the car has run, 0 at the left end to 1 at the right.
+  trolley: {
+    build(a, ctx) {
+      const s = (a.w || 320) * ctx.S, L = 0.95 * s, G = 0.08 * s;
+      const group = new THREE.Group();
+      const sleeper = new THREE.MeshStandardMaterial({ map: weathered('#6a5038'), roughness: 0.9 }), steel = new THREE.MeshStandardMaterial({ color: 0xa8acb0, metalness: 0.9, roughness: 0.3, envMap: ctx.env });
+      for (let i = 0; i < 18; i++) { const sl = board(0.03 * s, 0.012 * s, G * 2.2, sleeper); sl.position.set(-L / 2 + (i + 0.5) * L / 18, 0.006 * s, 0); group.add(sl); }
+      [-1, 1].forEach((sd) => { const r = shadowed(new THREE.Mesh(new THREE.BoxGeometry(L, 0.01 * s, 0.008 * s), steel)); r.position.set(0, 0.017 * s, sd * G / 2); group.add(r); });
+      const car = new THREE.Group(); group.add(car);
+      const green = new THREE.MeshPhysicalMaterial({ color: 0x2f6b4a, roughness: 0.4, clearcoat: 0.6, envMap: ctx.env, envMapIntensity: 0.6 }), cream = new THREE.MeshStandardMaterial({ color: 0xe8dcc0, roughness: 0.6 });
+      const cl = 0.2 * s, ch = 0.11 * s, cw = G * 1.6;
+      const lower = shadowed(new THREE.Mesh(new THREE.BoxGeometry(cl, ch * 0.5, cw), green)); lower.position.y = 0.035 * s + ch * 0.25; car.add(lower);
+      const upper = shadowed(new THREE.Mesh(new THREE.BoxGeometry(cl, ch * 0.45, cw), cream)); upper.position.y = 0.035 * s + ch * 0.72; car.add(upper);
+      const roof = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(cw * 0.6, cw * 0.6, cl * 1.02, 20, 1, false, 0, Math.PI), green)); roof.rotation.z = Math.PI / 2; roof.scale.set(1, 1, 0.35); roof.position.y = 0.035 * s + ch * 0.95; car.add(roof);
+      const glass = new THREE.MeshPhysicalMaterial({ color: 0x18222b, roughness: 0.05, envMap: ctx.env, envMapIntensity: 1.4 });
+      for (let k = 0; k < 4; k++) [-1, 1].forEach((sd) => { const w = new THREE.Mesh(new THREE.PlaneGeometry(cl * 0.17, ch * 0.3), glass); w.position.set(-cl * 0.36 + k * cl * 0.24, 0.035 * s + ch * 0.74, sd * (cw / 2 + 0.001)); if (sd < 0) w.rotation.y = Math.PI; car.add(w); });
+      const pos = (v) => (v && v.x0 != null ? v.x0 : a.x0 || 0);
+      return {
+        group, top: 0.05 * s + ch, anchor: (n) => (n === 'end' ? new THREE.Vector3(L / 2, 0.02 * s, G) : car.position.clone().add(new THREE.Vector3(cl * 0.4, ch * 0.5, cw / 2))),
+        update(A, B, e) { car.position.x = -L / 2 + cl / 2 + (L - cl) * lerp(pos(A), pos(B), smooth(e)); },
+      };
+    },
+  },
+  // A sash window in a short piece of brick wall, white frame, four panes. "broken": true shatters a lower pane, its
+  // shards lying on the sill and the table, with a jagged hole.
+  window: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 200, a.h || 200) * ctx.S, W = 0.9 * s, H = 0.8 * s, T = 0.12 * s, ww = 0.48 * s, wh = 0.56 * s, wy = 0.14 * s;
+      const c = document.createElement('canvas'); c.width = 256; c.height = 256; const g = c.getContext('2d'); g.fillStyle = '#d8cfc0'; g.fillRect(0, 0, 256, 256);
+      for (let r = 0; r < 16; r++) for (let k = -1; k < 9; k++) { g.fillStyle = 'rgb(' + (140 + rnd() * 40) + ',' + (58 + rnd() * 20) + ',' + (40 + rnd() * 14) + ')'; g.fillRect(k * 32 + (r % 2) * 16 + 1, r * 16 + 1, 30, 14); }
+      const brick = new THREE.CanvasTexture(c); brick.colorSpace = THREE.SRGBColorSpace; brick.wrapS = brick.wrapT = THREE.RepeatWrapping; brick.repeat.set(2, 2);
+      const wallMat = new THREE.MeshStandardMaterial({ map: brick, roughness: 0.9 }), white = new THREE.MeshStandardMaterial({ color: 0xf0ede6, roughness: 0.5 });
+      const group = new THREE.Group();
+      // the wall in four pieces around the opening
+      const part = (w, h, x, y) => { const m = shadowed(new THREE.Mesh(new THREE.BoxGeometry(w, h, T), wallMat)); m.position.set(x, y, 0); group.add(m); };
+      part(W, wy, 0, wy / 2); part(W, H - wy - wh, 0, wy + wh + (H - wy - wh) / 2); part((W - ww) / 2, wh, -(W + ww) / 4, wy + wh / 2); part((W - ww) / 2, wh, (W + ww) / 4, wy + wh / 2);
+      const bar = (w, h, x, y) => { const m = shadowed(new THREE.Mesh(new THREE.BoxGeometry(w, h, 0.03 * s), white)); m.position.set(x, y, T * 0.2); group.add(m); };
+      bar(ww, 0.025 * s, 0, wy); bar(ww, 0.025 * s, 0, wy + wh); bar(0.025 * s, wh, -ww / 2, wy + wh / 2); bar(0.025 * s, wh, ww / 2, wy + wh / 2); bar(ww, 0.02 * s, 0, wy + wh / 2); bar(0.015 * s, wh, 0, wy + wh / 2);
+      const sill = shadowed(new THREE.Mesh(new THREE.BoxGeometry(ww + 0.06 * s, 0.02 * s, 0.08 * s), white)); sill.position.set(0, wy - 0.01 * s, T / 2 + 0.03 * s); group.add(sill);
+      const glassM = new THREE.MeshPhysicalMaterial({ color: 0xcfe6f2, roughness: 0.05, transparent: true, opacity: 0.25, envMap: ctx.env, envMapIntensity: 1.5, depthWrite: false, side: THREE.DoubleSide });
+      const pw = ww / 2 - 0.02 * s, ph = wh / 2 - 0.02 * s, panes = [];
+      [[-1, 1], [1, 1], [-1, -1], [1, -1]].forEach(([sx, sy]) => { const p = new THREE.Mesh(new THREE.PlaneGeometry(pw, ph), glassM); p.position.set(sx * ww / 4, wy + wh / 2 + sy * wh / 4, T * 0.2); p.renderOrder = 2; group.add(p); panes.push(p); });
+      // the broken pane: a ring of glass around a jagged hole, and shards on the sill and the table
+      const hole = new THREE.Shape(); hole.moveTo(-pw / 2, -ph / 2); hole.lineTo(pw / 2, -ph / 2); hole.lineTo(pw / 2, ph / 2); hole.lineTo(-pw / 2, ph / 2); hole.closePath();
+      const jag = new THREE.Path(); for (let k = 0; k < 14; k++) { const an = k / 14 * Math.PI * 2, r = (k % 2 ? 0.25 : 0.42) * Math.min(pw, ph) * (0.8 + rnd() * 0.3); const x = Math.cos(an) * r, y = Math.sin(an) * r; k ? jag.lineTo(x, y) : jag.moveTo(x, y); } jag.closePath(); hole.holes.push(jag);
+      const cracked = new THREE.Mesh(new THREE.ShapeGeometry(hole), glassM); cracked.position.copy(panes[2].position); cracked.renderOrder = 2; group.add(cracked);
+      const shards = new THREE.Group(); group.add(shards);
+      for (let k = 0; k < 14; k++) { const sh = new THREE.Shape(); const r = 0.015 * s + rnd() * 0.03 * s; sh.moveTo(0, 0); sh.lineTo(r, rnd() * r * 0.5); sh.lineTo(rnd() * r, r); sh.closePath(); const m = new THREE.Mesh(new THREE.ShapeGeometry(sh), glassM); m.rotation.x = -Math.PI / 2; m.rotation.z = rnd() * 6; m.position.set((rnd() - 0.5) * ww, k < 4 ? wy + 0.002 * s : 0.003 * s, k < 4 ? T / 2 + 0.03 * s : T / 2 + 0.05 * s + rnd() * 0.25 * s); shards.add(m); }
+      const broken = (v) => (v && v.broken != null ? !!v.broken : !!a.broken);
+      return { group, top: H, anchor: (n) => (n === 'pane' ? new THREE.Vector3(-ww / 4, wy + wh / 4, T / 2) : new THREE.Vector3(W * 0.42, 0.1 * s, T / 2)), update(A, B, e) { const b = broken(e < 0.5 ? A : B); panes[2].visible = !b; cracked.visible = b; shards.visible = b; } };
+    },
+  },
+  // A baseball: white leather with its red stitching.
+  baseball: {
+    build(a, ctx) {
+      const R = Math.min(a.w || 30, a.h || 30) * ctx.S * 0.5;
+      const c = document.createElement('canvas'); c.width = 512; c.height = 256; const g = c.getContext('2d'); noise(g, 512, 256, '#f2ede2', 8);
+      g.strokeStyle = '#b3261e'; g.lineWidth = 3;
+      for (const off of [0, 256]) { g.beginPath(); for (let x = 0; x <= 256; x += 4) { const y = 128 + Math.sin((x / 256) * Math.PI * 2) * 60 * (off ? -1 : 1); x ? g.lineTo(off + x, y) : g.moveTo(off + x, y); } g.stroke(); for (let x = 6; x < 256; x += 12) { const y = 128 + Math.sin((x / 256) * Math.PI * 2) * 60 * (off ? -1 : 1); g.beginPath(); g.moveTo(off + x - 4, y - 6); g.lineTo(off + x + 4, y + 6); g.stroke(); } }
+      const tx = new THREE.CanvasTexture(c); tx.colorSpace = THREE.SRGBColorSpace;
+      const ball = shadowed(new THREE.Mesh(new THREE.SphereGeometry(R, 40, 28), new THREE.MeshStandardMaterial({ map: tx, roughness: 0.6 }))); ball.position.y = R; ball.rotation.set(0.4, 0.8, 0.2);
+      const group = new THREE.Group(); group.add(ball);
+      return { group, top: 2 * R, radius: R, spin: ball, anchor: () => new THREE.Vector3(R * 0.7, R, R * 0.7), update() {} };
+    },
+  },
+  // A wooden signpost with one arrow board lettered "text".
+  signpost: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 120, a.h || 120) * ctx.S, P = 0.8 * s;
+      const wood = new THREE.MeshStandardMaterial({ map: weathered('#8a6a48'), roughness: 0.8 });
+      const group = new THREE.Group();
+      const post = board(0.05 * s, P, 0.05 * s, wood); post.position.y = P / 2; group.add(post);
+      const base = board(0.2 * s, 0.03 * s, 0.2 * s, wood); base.position.y = 0.015 * s; group.add(base);
+      const c = document.createElement('canvas'); c.width = 512; c.height = 128; const g = c.getContext('2d'); noise(g, 512, 128, '#e8dcc0', 10);
+      g.fillStyle = '#2f4a2a'; g.font = '800 64px "VU Print"'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText(String(a.text || 'PARK'), 230, 68);
+      const face = new THREE.MeshStandardMaterial({ map: new THREE.CanvasTexture(c), roughness: 0.7 }); face.map.colorSpace = THREE.SRGBColorSpace;
+      const sh = new THREE.Shape(); const bw = 0.62 * s, bh = 0.15 * s; sh.moveTo(-bw / 2, -bh / 2); sh.lineTo(bw / 2 - bh / 2, -bh / 2); sh.lineTo(bw / 2, 0); sh.lineTo(bw / 2 - bh / 2, bh / 2); sh.lineTo(-bw / 2, bh / 2); sh.closePath();
+      const geo = new THREE.ExtrudeGeometry(sh, { depth: 0.02 * s, bevelEnabled: false }); geo.translate(0, 0, -0.01 * s);
+      const uv = geo.attributes.uv, p = geo.attributes.position; for (let i = 0; i < uv.count; i++) uv.setXY(i, p.getX(i) / bw + 0.5, p.getY(i) / bh + 0.5);
+      const arm = shadowed(new THREE.Mesh(geo, [face, wood])); arm.position.set(bw * 0.35, P * 0.82, 0.03 * s); group.add(arm);
+      return { group, top: P, anchor: () => new THREE.Vector3(0.03 * s, P * 0.3, 0.03 * s), update() {} };
     },
   },
 };

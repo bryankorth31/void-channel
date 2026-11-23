@@ -173,58 +173,95 @@
       ],
       "actors": [
         {
+          "id": "shopL",
+          "type": "card",
+          "o": 0,
+          "prop": "house",
+          "look": "shop",
+          "awning": "#a3281c",
+          "label": "",
+          "x": 95,
+          "y": 10,
+          "w": 150,
+          "h": 150
+        },
+        {
+          "id": "shopR",
+          "type": "card",
+          "o": 0,
+          "prop": "house",
+          "look": "shop",
+          "awning": "#2f6b3a",
+          "label": "",
+          "x": 555,
+          "y": 10,
+          "w": 150,
+          "h": 150
+        },
+        {
           "id": "left",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
-          "h": 100,
-          "label": "Honest for profit",
-          "color": "blue",
           "o": 0,
-          "size": 18
+          "prop": "figure",
+          "pose": "stand",
+          "label": "Honest for profit",
+          "x": 237.5,
+          "y": 165,
+          "w": 45,
+          "h": 100,
+          "turn": -0.5,
+          "color": "blue",
+          "size": 18,
+          "tagW": 190,
+          "tag": [
+            -80,
+            105
+          ]
         },
         {
           "id": "right",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
-          "h": 100,
-          "label": "Honest on principle",
-          "color": "blue",
           "o": 0,
-          "size": 18
+          "prop": "figure",
+          "pose": "stand",
+          "label": "Honest on principle",
+          "x": 517.5,
+          "y": 165,
+          "w": 45,
+          "h": 100,
+          "look": "dark",
+          "turn": 0.5,
+          "color": "blue",
+          "size": 18,
+          "tagW": 200,
+          "tag": [
+            80,
+            105
+          ]
         },
         {
           "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "YOUR CHANGE",
+          "type": "card",
+          "o": 0,
+          "prop": "change",
+          "label": "Your change",
           "color": "gold",
-          "o": 0,
-          "s": 0.4,
-          "size": 14
-        },
-        {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "COUNT",
-          "color": "fg",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
+          "size": 18,
+          "x": 345,
+          "y": 130,
+          "w": 110,
+          "h": 110,
+          "tagW": 160,
+          "tag": [
+            0,
+            95
+          ]
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
+          "y": 350,
           "label": "Same act. Different reason.",
           "color": "pink",
           "size": 22,
@@ -236,6 +273,12 @@
           "say": "Two shopkeepers give correct change.",
           "dur": 2.4,
           "set": {
+            "shopL": {
+              "o": 1
+            },
+            "shopR": {
+              "o": 1
+            },
             "left": {
               "o": 1
             },
@@ -243,8 +286,7 @@
               "o": 1
             },
             "thing": {
-              "o": 1,
-              "s": 1
+              "o": 1
             }
           }
         },
@@ -252,9 +294,7 @@
           "say": "You cannot tell them apart.",
           "dur": 2.4,
           "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
+            "thing": {
               "shake": true
             }
           }
@@ -295,13 +335,8 @@
               "color": "green"
             },
             "thing": {
-              "label": "MORAL WORTH",
-              "size": 14
-            },
-            "act": {
-              "label": "LIES IN",
-              "size": 18,
-              "color": "pink"
+              "label": "Moral worth",
+              "size": 18
             },
             "line": {
               "label": "Kant: the worth is in the will, not the result.",

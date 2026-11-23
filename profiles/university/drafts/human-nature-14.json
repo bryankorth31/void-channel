@@ -168,58 +168,107 @@
       ],
       "actors": [
         {
+          "id": "youL",
+          "type": "card",
+          "o": 0,
+          "prop": "figure",
+          "pose": "stand",
+          "label": "",
+          "x": 121.875,
+          "y": 127.5,
+          "w": 56.25,
+          "h": 125,
+          "look": "dark",
+          "turn": 0.3
+        },
+        {
           "id": "left",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
-          "h": 100,
-          "label": "Ask for help",
-          "color": "blue",
           "o": 0,
-          "size": 22
+          "prop": "figure",
+          "pose": "stand",
+          "label": "Ask for help",
+          "x": 271.875,
+          "y": 127.5,
+          "w": 56.25,
+          "h": 125,
+          "turn": -0.3,
+          "color": "blue",
+          "size": 22,
+          "tagW": 170,
+          "tag": [
+            0,
+            110
+          ]
+        },
+        {
+          "id": "boxL",
+          "type": "card",
+          "o": 0,
+          "prop": "carton",
+          "label": "",
+          "x": 177.5,
+          "y": 227.5,
+          "w": 95,
+          "h": 95
+        },
+        {
+          "id": "youR",
+          "type": "card",
+          "o": 0,
+          "prop": "figure",
+          "pose": "stand",
+          "label": "",
+          "x": 461.875,
+          "y": 127.5,
+          "w": 56.25,
+          "h": 125,
+          "look": "dark",
+          "turn": 0.3
+        },
+        {
+          "id": "thing",
+          "type": "card",
+          "o": 0,
+          "prop": "figure",
+          "pose": "stand",
+          "label": "A person",
+          "x": 611.875,
+          "y": 127.5,
+          "w": 56.25,
+          "h": 125,
+          "turn": -0.3,
+          "color": "gold",
+          "size": 18,
+          "tagW": 150,
+          "tag": [
+            70,
+            110
+          ]
         },
         {
           "id": "right",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "carton",
           "label": "Use them",
           "color": "blue",
-          "o": 0,
-          "size": 22
-        },
-        {
-          "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "A PERSON",
-          "color": "gold",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
-        },
-        {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "NEED",
-          "color": "fg",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
+          "size": 22,
+          "x": 517.5,
+          "y": 227.5,
+          "w": 95,
+          "h": 95,
+          "tagW": 150,
+          "tag": [
+            -150,
+            40
+          ]
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
+          "y": 350,
           "label": "A person is not a spare part.",
           "color": "pink",
           "size": 22,
@@ -231,15 +280,17 @@
           "say": "You need something done.",
           "dur": 2.4,
           "set": {
-            "left": {
+            "youL": {
+              "o": 1
+            },
+            "youR": {
+              "o": 1
+            },
+            "boxL": {
               "o": 1
             },
             "right": {
               "o": 1
-            },
-            "thing": {
-              "o": 1,
-              "s": 1
             }
           }
         },
@@ -247,9 +298,12 @@
           "say": "Another person could get you there.",
           "dur": 2.4,
           "set": {
-            "act": {
+            "left": {
               "o": 1,
-              "s": 1,
+              "shake": true
+            },
+            "thing": {
+              "o": 1,
               "shake": true
             }
           }
@@ -258,11 +312,12 @@
           "say": "You can ask, and they may refuse.",
           "dur": 2.6,
           "set": {
-            "left": {
-              "sub": "they can say no"
+            "youL": {
+              "turn": 1.4
             },
-            "right": {
-              "sub": "they are just a tool"
+            "left": {
+              "turn": -1.4,
+              "sub": "they can say no"
             }
           }
         },
@@ -270,6 +325,21 @@
           "say": "Or you can simply use them.",
           "dur": 2.6,
           "set": {
+            "right": {
+              "on": "thing",
+              "x": 592.5,
+              "y": 142.5,
+              "w": 95,
+              "h": 95,
+              "tag": [
+                -170,
+                90
+              ],
+              "sub": "they are just a tool"
+            },
+            "youR": {
+              "turn": 2.9
+            },
             "line": {
               "o": 1
             }
@@ -290,13 +360,8 @@
               "color": "green"
             },
             "thing": {
-              "label": "HUMANITY",
+              "label": "Humanity",
               "size": 18
-            },
-            "act": {
-              "label": "TREAT",
-              "size": 18,
-              "color": "pink"
             },
             "line": {
               "label": "Kant: never treat a person merely as a means.",
