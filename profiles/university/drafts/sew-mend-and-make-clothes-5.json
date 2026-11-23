@@ -128,58 +128,61 @@
       ],
       "actors": [
         {
+          "id": "thing",
+          "type": "card",
+          "o": 0,
+          "prop": "jam",
+          "cars": 0,
+          "label": "Ride",
+          "color": "gold",
+          "size": 18,
+          "x": 40,
+          "y": 100,
+          "w": 720,
+          "h": 100,
+          "tagW": 120,
+          "tag": [
+            -300,
+            120
+          ]
+        },
+        {
           "id": "left",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "car",
+          "heading": 0,
+          "oddWheel": true,
           "label": "Fine car",
           "color": "blue",
-          "o": 0,
-          "size": 22
+          "size": 22,
+          "x": 75,
+          "y": 92.5,
+          "w": 230,
+          "h": 115,
+          "tagW": 140,
+          "tag": [
+            -90,
+            125
+          ]
         },
         {
           "id": "right",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "tie": "left.wheel",
+          "x": 690,
+          "y": 290,
           "label": "One wrong wheel",
           "color": "blue",
-          "o": 0,
-          "size": 18
-        },
-        {
-          "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "RIDE",
-          "color": "gold",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
-        },
-        {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "DRIVE",
-          "color": "fg",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
+          "size": 20,
+          "tagW": 190
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
+          "y": 350,
           "label": "One part off, and all of it is off.",
           "color": "pink",
           "size": 22,
@@ -191,15 +194,14 @@
           "say": "A fine car, parked.",
           "dur": 2.4,
           "set": {
+            "thing": {
+              "o": 1
+            },
             "left": {
               "o": 1
             },
             "right": {
               "o": 1
-            },
-            "thing": {
-              "o": 1,
-              "s": 1
             }
           }
         },
@@ -207,10 +209,11 @@
           "say": "Then you drive it.",
           "dur": 2.4,
           "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
-              "shake": true
+            "left": {
+              "x": 265,
+              "y": 92.5,
+              "w": 230,
+              "h": 115
             }
           }
         },
@@ -230,6 +233,13 @@
           "say": "One wrong wheel spoils everything.",
           "dur": 2.6,
           "set": {
+            "left": {
+              "x": 445,
+              "y": 92.5,
+              "w": 230,
+              "h": 115,
+              "shake": true
+            },
             "line": {
               "o": 1
             }
@@ -250,13 +260,8 @@
               "color": "green"
             },
             "thing": {
-              "label": "STYLE",
+              "label": "Style",
               "size": 18
-            },
-            "act": {
-              "label": "MOVE",
-              "size": 18,
-              "color": "pink"
             },
             "line": {
               "label": "A poorly made sleeve ruins the style.",

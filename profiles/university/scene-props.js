@@ -88,6 +88,30 @@ function turf(w, d) {
   return group;
 }
 
+// A pair of glasses frames, "width" across, facing +z: two rims ("round", "square" or upswept "cat"), a bridge, and
+// the two arms folding back.
+function specs(kind, color, width, ctx) {
+  const mat = new THREE.MeshPhysicalMaterial({ color, roughness: 0.25, clearcoat: 1, envMap: ctx.env, envMapIntensity: 0.6 });
+  const r = width * 0.22, t = width * 0.022, g = new THREE.Group();
+  const rim = () => {
+    const pts = [];
+    for (let i = 0; i <= 48; i++) {
+      const an = (i / 48) * Math.PI * 2; let x = Math.cos(an) * r, y = Math.sin(an) * r * 0.8;
+      if (kind === 'square') { x = Math.sign(x) * Math.min(Math.abs(x) * 1.25, r); y = Math.sign(y) * Math.min(Math.abs(y) * 1.25, r * 0.75); }
+      if (kind === 'cat' && y > 0) { y *= 1 + 0.6 * Math.max(0, x / r); x *= 1 + 0.15 * Math.max(0, x / r); }
+      pts.push(new THREE.Vector3(x, y, 0));
+    }
+    return new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts, true), 64, t, 8, true), mat);
+  };
+  [-1, 1].forEach((sd) => {
+    const m = rim(); m.position.x = sd * (r + width * 0.04); if (sd < 0) m.scale.x = -1; g.add(m);
+    const lens = new THREE.Mesh(new THREE.CircleGeometry(r * 0.95, 32), new THREE.MeshPhysicalMaterial({ color: 0xffffff, roughness: 0.05, transparent: true, opacity: 0.12, envMap: ctx.env, envMapIntensity: 1.5, depthWrite: false })); lens.scale.y = 0.8; lens.position.x = sd * (r + width * 0.04); g.add(lens);
+    const arm = new THREE.Mesh(new THREE.BoxGeometry(t * 1.2, t * 1.6, width * 0.75), mat); arm.position.set(sd * (2 * r + width * 0.04), r * 0.2, -width * 0.37); g.add(arm);
+  });
+  const bridge = new THREE.Mesh(new THREE.TorusGeometry(width * 0.045, t * 0.8, 6, 12, Math.PI), mat); bridge.position.y = r * 0.15; g.add(bridge);
+  return g;
+}
+
 export const PROPS = {
   // A golf ball. Its size is the piece's width.
   'golf-ball': {
@@ -865,10 +889,13 @@ export const PROPS = {
         const hl = new THREE.Mesh(new THREE.SphereGeometry(0.03 * L, 16, 10), new THREE.MeshStandardMaterial({ color: 0xfff6e0, emissive: 0xfff1d0, emissiveIntensity: 0.6, roughness: 0.1 })); hl.scale.set(0.5, 1, 1); hl.position.set(0.5 * L, 0.21 * L, sd * Wd * 0.33); car.add(hl);
         const tl = new THREE.Mesh(new THREE.BoxGeometry(0.012 * L, 0.04 * L, 0.08 * L), new THREE.MeshStandardMaterial({ color: 0xa01010, emissive: 0x600000, roughness: 0.2 })); tl.position.set(-0.505 * L, 0.24 * L, sd * Wd * 0.34); car.add(tl);
       });
+      // "oddWheel": true puts on one wrong wheel, smaller and rusty, at the front on your side
+      let oddW = null;
       [[xw, 1], [xw, -1], [-xw, 1], [-xw, -1]].forEach(([x, sd]) => {
         const w = new THREE.Group(); w.position.set(x, rw, sd * (Wd / 2 - 0.035 * L)); car.add(w);
         const t = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(rw, rw, 0.07 * L, 32), rubber)); t.rotation.x = Math.PI / 2; w.add(t);
         const hub = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(rw * 0.55, rw * 0.55, 0.075 * L, 24), chrome)); hub.rotation.x = Math.PI / 2; w.add(hub);
+        if (a.oddWheel && x > 0 && sd > 0) { w.scale.setScalar(0.7); w.position.y = rw * 0.7; hub.material = new THREE.MeshStandardMaterial({ color: 0x7a4a2a, roughness: 0.8, metalness: 0.3 }); oddW = w; }
       });
       // "learner": true puts a STUDENT DRIVER board on the roof
       const sc = document.createElement('canvas'); sc.width = 512; sc.height = 128; const sg = sc.getContext('2d');
@@ -884,7 +911,7 @@ export const PROPS = {
       // "look": "wreck" leaves it on its roof by the road, its paint dulled and scuffed
       if (a.look === 'wreck') { car.rotation.z = Math.PI + 0.08; car.rotation.y = 0.5; car.position.y = 0.46 * L; paint.color.set(0x4e1612); paint.roughness = 0.75; paint.clearcoat = 0.1; }
       const group = new THREE.Group(); group.add(car);
-      return { group, top: 0.45 * L + (a.learner != null ? 0.1 * L : 0), anchor: () => new THREE.Vector3(-0.15 * L, 0.34 * L, (Wd * 0.4 + 0.02 * L) * 0.97).applyAxisAngle(new THREE.Vector3(0, 1, 0), -0.42), update(A, B, e) { sign.visible = e < 0.5 ? learner(A) : learner(B); const k = lerp(flag(A, 'warm'), flag(B, 'warm'), e); [glass, glassD].forEach((m) => { m.emissive.set(0xff7a2a); m.emissiveIntensity = 0.9 * k; }); } };
+      return { group, top: 0.45 * L + (a.learner != null ? 0.1 * L : 0), anchor: (n) => (n === 'wheel' && oddW ? (group.updateMatrixWorld(), group.worldToLocal(oddW.localToWorld(new THREE.Vector3(0, 0, 0.05 * L)))) : new THREE.Vector3(-0.15 * L, 0.34 * L, (Wd * 0.4 + 0.02 * L) * 0.97).applyAxisAngle(new THREE.Vector3(0, 1, 0), -0.42)), update(A, B, e) { sign.visible = e < 0.5 ? learner(A) : learner(B); const k = lerp(flag(A, 'warm'), flag(B, 'warm'), e); [glass, glassD].forEach((m) => { m.emissive.set(0xff7a2a); m.emissiveIntensity = 0.9 * k; }); } };
     },
   },
   // A twenty: a paper note printed in green with fine wavy lines, bowed a little as paper lies.
@@ -1949,6 +1976,10 @@ export const PROPS = {
       const back = shadowed(new THREE.Mesh(new THREE.CapsuleGeometry(0.08 * s, W - 0.16 * s, 8, 16), cloth)); back.rotation.z = Math.PI / 2; back.scale.set(1, 1, 1); back.position.set(0, 0.55 * s, -0.2 * s); back.scale.set(4.2, 1, 1); back.rotation.set(-0.2, 0, Math.PI / 2); group.add(back);
       const head = shadowed(new THREE.Mesh(new THREE.CapsuleGeometry(0.06 * s, 0.14 * s, 8, 16), cloth)); head.rotation.z = Math.PI / 2; head.position.set(0, 0.98 * s, -0.28 * s); group.add(head);
       [-1, 1].forEach((sd) => { const post = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(0.008 * s, 0.008 * s, 0.08 * s, 8), new THREE.MeshStandardMaterial({ color: 0xc8ccd0, metalness: 0.9, roughness: 0.3 }))); post.position.set(sd * 0.05 * s, 0.9 * s, -0.27 * s); group.add(post); });
+      // "recline": how far the backrest leans back (radians), set by whoever drove last; a lever on the side
+      const hinge = new THREE.Group(); hinge.position.set(0, 0.3 * s, -0.16 * s); group.add(hinge);
+      group.children.filter((m) => m !== hinge && m !== cushion && m !== base).forEach((m) => hinge.attach(m));
+      const lever = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.03 * s, 0.03 * s, 0.14 * s), new THREE.MeshStandardMaterial({ color: 0x18181a, roughness: 0.5 }))); lever.position.set(W * 0.47, 0.14 * s, 0.12 * s); lever.rotation.x = 0.3; group.add(lever);
       const webbing = new THREE.MeshStandardMaterial({ color: 0x1a1a1c, roughness: 0.7 });
       const strap = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.05 * s, 1, 0.008 * s), webbing)); group.add(strap);
       const buckle = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.05 * s, 0.07 * s, 0.03 * s), new THREE.MeshStandardMaterial({ color: 0xb8bcc0, metalness: 0.9, roughness: 0.25, envMap: ctx.env }))); buckle.position.set(-W * 0.42, 0.33 * s, 0.05 * s); group.add(buckle);
@@ -1962,7 +1993,7 @@ export const PROPS = {
       };
       const on = (v) => (v && v.buckled != null ? !!v.buckled : !!a.buckled);
       place(on(a) ? 1 : 0);
-      return { group, top: 0.27 * s, anchor: (n) => (n === 'buckle' ? buckle.position.clone() : new THREE.Vector3(W * 0.5, 0.15 * s, 0.25 * s)), update(A, B, e) { place(lerp(on(A) ? 1 : 0, on(B) ? 1 : 0, smooth(e))); } };
+      return { group, top: 0.27 * s, anchor: (n) => (n === 'lever' ? lever.position.clone() : n === 'buckle' ? buckle.position.clone() : new THREE.Vector3(W * 0.5, 0.15 * s, 0.25 * s)), update(A, B, e) { place(lerp(on(A) ? 1 : 0, on(B) ? 1 : 0, smooth(e))); hinge.rotation.x = -lerp(num(A, 'recline') || num(a, 'recline'), B && B.recline != null ? B.recline : num(A, 'recline') || num(a, 'recline'), smooth(e)); } };
     },
   },
   // A bell tent on a patch of grass: a canvas cone hung from one pole and held up by three guy ropes to pegs, front,
@@ -2465,6 +2496,100 @@ export const PROPS = {
       [-1, 1].forEach((sd) => { const t = new THREE.Mesh(new THREE.PlaneGeometry(L * 0.9, W * 0.7), tissue); t.position.set(0, H + 0.01 * s, sd * (W / 2 + 0.12 * s)); t.rotation.x = -Math.PI / 2 + sd * 0.4; group.add(t); });
       const lid = shadowed(new THREE.Mesh(new THREE.BoxGeometry(L * 1.03, 0.05 * s, W * 1.03), card)); lid.position.set(0.1 * s, 0.025 * s, -W * 1.35); lid.rotation.y = 0.3; group.add(lid);
       return { group, top: H, anchor: () => new THREE.Vector3(L / 2, H * 0.4, W / 2), update() {} };
+    },
+  },
+  // A display stand of glasses frames: a slanted board on a foot holding three pairs, the front one red cat-eye.
+  rack: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 150, a.h || 150) * ctx.S, W = 0.6 * s, H = 0.7 * s;
+      const group = new THREE.Group();
+      const board = shadowed(new THREE.Mesh(new THREE.BoxGeometry(W, H, 0.03 * s), new THREE.MeshStandardMaterial({ color: 0xe8e2d4, roughness: 0.6 }))); board.position.set(0, H / 2 + 0.04 * s, 0); board.rotation.x = -0.25; group.add(board);
+      const foot = shadowed(new THREE.Mesh(new THREE.BoxGeometry(W * 0.7, 0.04 * s, 0.3 * s), new THREE.MeshStandardMaterial({ color: 0x2a2a2d, roughness: 0.5 }))); foot.position.y = 0.02 * s; group.add(foot);
+      [['cat', 0xc81e2a, 0.78], ['square', 0x1a1a1c, 0.5], ['round', 0x8a5a2a, 0.22]].forEach(([k, col, y]) => { const g = specs(k, col, 0.5 * s, ctx); g.position.set(0, H * y + 0.04 * s, 0.05 * s); g.rotation.x = -0.25; group.add(g); });
+      return { group, top: H, anchor: (n) => new THREE.Vector3(0.18 * s, H * 0.8, 0.12 * s), update() {} };
+    },
+  },
+  // A wooden display head on a neck and base, the kind glasses are tried on. "wear": the frames it has on
+  // ("cat", "round", "square", or none).
+  head: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 120, a.h || 160) * ctx.S;
+      const wood = new THREE.MeshStandardMaterial({ map: birch(), roughness: 0.5, envMap: ctx.env, envMapIntensity: 0.3 });
+      const group = new THREE.Group();
+      const base = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(0.16 * s, 0.18 * s, 0.05 * s, 32), new THREE.MeshStandardMaterial({ color: 0x2a2a2d, roughness: 0.5 }))); base.position.y = 0.025 * s; group.add(base);
+      const neck = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(0.07 * s, 0.09 * s, 0.32 * s, 24), wood)); neck.position.y = 0.21 * s; group.add(neck);
+      const skull = shadowed(new THREE.Mesh(new THREE.SphereGeometry(0.16 * s, 32, 24), wood)); skull.scale.set(0.85, 1.12, 0.95); skull.position.y = 0.52 * s; group.add(skull);
+      const nose = shadowed(new THREE.Mesh(new THREE.ConeGeometry(0.03 * s, 0.07 * s, 12), wood)); nose.rotation.x = Math.PI / 2; nose.position.set(0, 0.5 * s, 0.155 * s); group.add(nose);
+      [-1, 1].forEach((sd) => { const ear = shadowed(new THREE.Mesh(new THREE.SphereGeometry(0.035 * s, 12, 8), wood)); ear.scale.set(0.5, 1, 0.8); ear.position.set(sd * 0.135 * s, 0.53 * s, 0); group.add(ear); });
+      const frames = {};
+      [['cat', 0xc81e2a], ['round', 0x8a5a2a], ['square', 0x1a1a1c]].forEach(([k, col]) => { const g = specs(k, col, 0.34 * s, ctx); g.position.set(0, 0.55 * s, 0.155 * s); g.visible = false; group.add(g); frames[k] = g; });
+      const wear = (v) => (v && v.wear != null ? v.wear : a.wear || '');
+      return { group, top: 0.7 * s, anchor: () => new THREE.Vector3(0.12 * s, 0.25 * s, 0.1 * s), update(A, B, e) { const k = wear(e < 0.5 ? A : B); for (const n in frames) frames[n].visible = n === k; } };
+    },
+  },
+  // A steam iron: a chrome sole plate, a body with a water window and a handle. "hot": true glows the plate red.
+  iron: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 120, a.h || 120) * ctx.S, L = 0.5 * s;
+      const sh = new THREE.Shape(); sh.moveTo(-L / 2, -0.15 * s); sh.lineTo(L * 0.2, -0.15 * s); sh.quadraticCurveTo(L / 2 + 0.05 * s, -0.08 * s, L / 2 + 0.05 * s, 0); sh.quadraticCurveTo(L / 2 + 0.05 * s, 0.08 * s, L * 0.2, 0.15 * s); sh.lineTo(-L / 2, 0.15 * s); sh.closePath();
+      const plateMat = new THREE.MeshStandardMaterial({ color: 0xd0d4d8, metalness: 1, roughness: 0.2, envMap: ctx.env, emissive: 0xff3a10, emissiveIntensity: 0 });
+      const plate = shadowed(new THREE.Mesh(new THREE.ExtrudeGeometry(sh, { depth: 0.03 * s, bevelEnabled: false }), plateMat)); plate.rotation.x = -Math.PI / 2;
+      const body = shadowed(new THREE.Mesh(new THREE.ExtrudeGeometry(sh, { depth: 0.1 * s, bevelEnabled: true, bevelThickness: 0.03 * s, bevelSize: 0.03 * s, bevelSegments: 4 }), new THREE.MeshPhysicalMaterial({ color: 0x2b5fa8, roughness: 0.3, clearcoat: 1, envMap: ctx.env, envMapIntensity: 0.7 }))); body.rotation.x = -Math.PI / 2; body.scale.set(0.92, 0.85, 1); body.position.y = 0.04 * s;
+      const handle = shadowed(new THREE.Mesh(new THREE.TorusGeometry(0.17 * s, 0.03 * s, 10, 24, Math.PI), new THREE.MeshStandardMaterial({ color: 0x1a1a1c, roughness: 0.5 }))); handle.position.set(-0.02 * s, 0.17 * s, 0);
+      const group = new THREE.Group(); group.add(plate, body, handle); group.rotation.y = 0.3;
+      const hot = (v) => (v && v.hot != null ? !!v.hot : !!a.hot);
+      return { group, top: 0.35 * s, anchor: () => new THREE.Vector3(-L / 2, 0.08 * s, 0.15 * s), update(A, B, e) { plateMat.emissiveIntensity = 0.8 * lerp(hot(A) ? 1 : 0, hot(B) ? 1 : 0, e); } };
+    },
+  },
+  // A folded cotton towel, thick terry with a woven band.
+  towel: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 140, a.h || 140) * ctx.S, W = 0.6 * s, D = 0.42 * s;
+      const c = document.createElement('canvas'); c.width = c.height = 256; const g = c.getContext('2d'); noise(g, 256, 256, '#d8e4ea', 30); g.fillStyle = 'rgba(40,80,120,0.6)'; g.fillRect(0, 190, 256, 20);
+      const tx = new THREE.CanvasTexture(c); tx.colorSpace = THREE.SRGBColorSpace;
+      const group = new THREE.Group();
+      for (let i = 0; i < 3; i++) { const geo = new THREE.BoxGeometry(W, 0.05 * s, D, 8, 1, 6), p = geo.attributes.position; for (let k = 0; k < p.count; k++) p.setY(k, p.getY(k) + 0.008 * s * Math.sin(p.getX(k) * 30) * (p.getY(k) > 0 ? 1 : 0)); geo.computeVertexNormals(); const m = shadowed(new THREE.Mesh(geo, new THREE.MeshStandardMaterial({ map: tx, roughness: 1 }))); m.position.y = 0.025 * s + i * 0.05 * s; m.rotation.y = (rnd() - 0.5) * 0.06; group.add(m); }
+      return { group, top: 0.15 * s, anchor: () => new THREE.Vector3(W / 2, 0.08 * s, D / 2), update() {} };
+    },
+  },
+  // A silk shirt folded flat: ivory with a soft sheen, a collar and a row of pearl buttons. "scorched": true leaves an
+  // iron-shaped brown burn on it.
+  shirt: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 160, a.h || 160) * ctx.S, W = 0.62 * s, D = 0.78 * s;
+      const silk = new THREE.MeshPhysicalMaterial({ color: 0xf2eadc, roughness: 0.35, sheen: 1, sheenColor: 0xfff6e0, sheenRoughness: 0.3 });
+      const group = new THREE.Group();
+      const body = shadowed(new THREE.Mesh(new THREE.BoxGeometry(W, 0.03 * s, D, 6, 1, 8), silk)); body.position.y = 0.015 * s; group.add(body);
+      [-1, 1].forEach((sd) => { const c = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.16 * s, 0.015 * s, 0.1 * s), silk)); c.position.set(sd * 0.08 * s, 0.035 * s, -D / 2 + 0.06 * s); c.rotation.y = sd * 0.5; group.add(c); });
+      for (let i = 0; i < 5; i++) { const b = new THREE.Mesh(new THREE.CylinderGeometry(0.014 * s, 0.014 * s, 0.006 * s, 12), new THREE.MeshStandardMaterial({ color: 0xffffff, roughness: 0.2, envMap: ctx.env })); b.position.set(0, 0.033 * s, -D / 2 + 0.16 * s + i * 0.13 * s); group.add(b); }
+      const sh = new THREE.Shape(); const L = 0.3 * s; sh.moveTo(-L / 2, -0.1 * s); sh.lineTo(L * 0.2, -0.1 * s); sh.quadraticCurveTo(L / 2, -0.05 * s, L / 2, 0); sh.quadraticCurveTo(L / 2, 0.05 * s, L * 0.2, 0.1 * s); sh.lineTo(-L / 2, 0.1 * s); sh.closePath();
+      const burn = new THREE.Mesh(new THREE.ShapeGeometry(sh), new THREE.MeshStandardMaterial({ color: 0x6a3a1a, roughness: 0.9, transparent: true, opacity: 0.85 })); burn.rotation.x = -Math.PI / 2; burn.rotation.z = 0.3; burn.position.set(0.06 * s, 0.032 * s, 0.08 * s); group.add(burn);
+      const scorched = (v) => (v && v.scorched != null ? !!v.scorched : !!a.scorched);
+      return { group, top: 0.04 * s, anchor: () => new THREE.Vector3(W / 2, 0.02 * s, D * 0.3), update(A, B, e) { burn.visible = scorched(e < 0.5 ? A : B); } };
+    },
+  },
+  // A small chest with one drawer. "open": true slides the drawer out. "cheap": true makes it chipboard inside, rough,
+  // stapled and gapped; otherwise solid wood with dovetail joints at the corners.
+  drawer: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 160, a.h || 160) * ctx.S, W = 0.7 * s, H = 0.32 * s, D = 0.5 * s;
+      const face = new THREE.MeshStandardMaterial({ map: weathered('#8a5e3a'), roughness: 0.5 });
+      const inside = a.cheap ? new THREE.MeshStandardMaterial({ color: 0xb8a078, roughness: 1 }) : new THREE.MeshStandardMaterial({ map: weathered('#c8a070'), roughness: 0.6 });
+      const group = new THREE.Group();
+      [[W, 0.03 * s, D, 0, H], [W, 0.03 * s, D, 0, 0.015 * s], [0.03 * s, H, D, -W / 2, H / 2], [0.03 * s, H, D, W / 2, H / 2], [W, H, 0.02 * s, 0, H / 2]].forEach(([w, h, d, x, y], i) => { const m = board(w, h, d, face); m.position.set(x, y, i === 4 ? -D / 2 : 0); group.add(m); });
+      const box = new THREE.Group(); group.add(box);
+      const dw = W - 0.07 * s, dh = H - 0.08 * s, dd = D - 0.04 * s;
+      const front = board(dw + 0.03 * s, dh + 0.03 * s, 0.03 * s, face); front.position.set(0, H / 2, D / 2); box.add(front);
+      const knob = shadowed(new THREE.Mesh(new THREE.SphereGeometry(0.025 * s, 16, 12), new THREE.MeshStandardMaterial({ color: 0xb8902a, metalness: 1, roughness: 0.3, envMap: ctx.env }))); knob.position.set(0, H / 2, D / 2 + 0.03 * s); box.add(knob);
+      [[dw, 0.015 * s, dd, 0, 0.06 * s, 0], [0.015 * s, dh * 0.8, dd, -dw / 2, H * 0.45, 0], [0.015 * s, dh * 0.8, dd, dw / 2, H * 0.45, 0], [dw, dh * 0.8, 0.015 * s, 0, H * 0.45, -dd / 2]].forEach(([w, h, d, x, y, z]) => { const m = shadowed(new THREE.Mesh(new THREE.BoxGeometry(w, h, d), inside)); m.position.set(x, y, z); box.add(m); });
+      if (a.cheap) {
+        for (let i = 0; i < 8; i++) { const st = new THREE.Mesh(new THREE.BoxGeometry(0.03 * s, 0.004 * s, 0.006 * s), new THREE.MeshStandardMaterial({ color: 0x9a9ea2, metalness: 1, roughness: 0.3 })); st.position.set((i % 2 ? 1 : -1) * (dw / 2 - 0.02 * s), 0.07 * s, -dd / 2 + 0.05 * s + Math.floor(i / 2) * dd * 0.25); st.rotation.y = rnd() * 0.4; box.add(st); }
+        const gap = new THREE.Mesh(new THREE.BoxGeometry(0.004 * s, dh * 0.5, 0.004 * s), new THREE.MeshBasicMaterial({ color: 0x1a1008 })); gap.position.set(-dw / 2 + 0.004 * s, H * 0.4, -dd / 2 + 0.01 * s); box.add(gap);
+      } else {
+        [-1, 1].forEach((sd) => { for (let k = 0; k < 3; k++) { const t = new THREE.Mesh(new THREE.BoxGeometry(0.016 * s, 0.025 * s, 0.02 * s), new THREE.MeshStandardMaterial({ map: weathered('#9a6a40'), roughness: 0.6 })); t.position.set(sd * dw / 2, 0.1 * s + k * 0.045 * s, -dd / 2 + 0.005 * s); box.add(t); } });
+      }
+      const open = (v) => (v && v.open != null ? !!v.open : !!a.open);
+      return { group, top: H + 0.03 * s, anchor: (n) => (n === 'inside' ? box.position.clone().add(new THREE.Vector3(0, H * 0.4, 0)) : new THREE.Vector3(W * 0.42, H * 0.3, D / 2)), update(A, B, e) { box.position.z = 0.32 * s * lerp(open(A) ? 1 : 0, open(B) ? 1 : 0, smooth(e)); } };
     },
   },
 };
