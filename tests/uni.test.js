@@ -433,7 +433,8 @@ test('public pages name no workers.dev address and ask Google for nothing: Mind 
   const files = [...new Set([...css.matchAll(/url\(([^)]+)\)/g)].map((m) => m[1]))];
   assert.ok(files.length >= 2 && files.every((x) => /^[a-z0-9-]+\.woff2$/.test(x) && fs.existsSync(path.join(SITE, 'fonts', x))), 'a font file the sheet names is not on the site');
   // ...and, beside scenes, the two faces printed on the things on the lit table (scene.js), also from the site itself
-  const table = fs.existsSync(path.join(SITE, 'scene.js')) ? ['bricolage-grotesque-latin.woff2', 'fraunces-latin.woff2'] : [];
+  // (and the hand on the crystal's slips, crystal-bottle.js)
+  const table = (fs.existsSync(path.join(SITE, 'scene.js')) ? ['bricolage-grotesque-latin.woff2', 'fraunces-latin.woff2'] : []).concat(fs.existsSync(path.join(SITE, 'crystal-bottle.js')) ? ['fraunces-latin.woff2'] : []);
   assert.deepEqual(fs.readdirSync(path.join(SITE, 'fonts')).filter((x) => x.endsWith('.woff2')).sort(), [...new Set(files.concat(table))].sort(), 'the public copy carries only the chosen typeface');
 });
 
@@ -780,6 +781,25 @@ test('the lit table ships with every page that has a scene: the engine, its rule
       assert.strictEqual(h.includes('<script src="scene-plan.js"></script><script type="module" src="scene.js"></script>'), has, f + (has ? ' has a scene but no lit table' : ' loads the lit table with no scene'));
     }
     if (withScene.length) for (const need of ['scene.js', 'scene-plan.js', 'scene-props.js', 'three.module.min.js', 'three-LICENSE.txt', 'fonts/bricolage-grotesque-latin.woff2', 'fonts/fraunces-latin.woff2']) assert.ok(fs.existsSync(path.join(out, need)), need + ' is not shipped beside the scenes in ' + path.basename(out));
+  }
+});
+
+test('the crystal is a bottle of supercooled water on the lit table, shipped with every page that has a crystal', () => {
+  // Bryan, 23 Nov 2026: "still simple" about the flat crystal, then "A, the bottle".
+  const lib = fs.readFileSync(path.join(uni.UNI, 'crystal-bottle.js'), 'utf8'), cx = fs.readFileSync(path.join(uni.UNI, 'crystal.js'), 'utf8');
+  assert.ok(lib.includes("import * as THREE from './three.module.min.js'") && lib.includes('LatheGeometry'), 'the bottle is no longer turned glass drawn with three.js');
+  assert.strictEqual(lib.split('new THREE.WebGLRenderer').length - 1, 1, 'one renderer for all the crystals on a page');
+  assert.ok(lib.includes('export async function bottleView') && cx.includes("'crystal-bottle.js'"), 'crystal.js does not load the bottle');
+  // the growth rules stay in crystal.js; the bottle only draws what they say
+  for (const k of ['function grow()', 'function heat()', 'function heatStep()', 'function finish()']) assert.ok(cx.includes(k), 'crystal.js lost ' + k);
+  for (const k of ['wrong', 'inc', 'bnd', 'aha', 'broken', 'picked', 'heating']) assert.ok(lib.includes(k), 'the bottle does not show ' + k);
+  for (const flag of [[], ['--site']]) {
+    build(...flag);
+    const out = path.join(uni.UNI, flag.length ? 'site' : 'site-preview');
+    const any = fs.readdirSync(out).filter((f) => f.endsWith('.html')).some((f) => fs.readFileSync(path.join(out, f), 'utf8').includes('class="cx" data-cfg='));
+    if (any) for (const need of ['crystal-bottle.js', 'three.module.min.js', 'three-LICENSE.txt', 'fonts/fraunces-latin.woff2']) assert.ok(fs.existsSync(path.join(out, need)), need + ' does not go with the crystals in ' + path.basename(out));
+    else assert.ok(!fs.existsSync(path.join(out, 'crystal-bottle.js')), 'the bottle ships with no crystal in ' + path.basename(out));
+    if (any) assert.ok(fs.readFileSync(path.join(out, 'credits.html'), 'utf8').includes('the bottle in Make it set are drawn with three.js'), 'the credits do not name three.js for the bottle');
   }
 });
 

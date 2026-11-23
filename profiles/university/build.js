@@ -67,7 +67,7 @@ function crystal(c, u) {
   const chip = (t) => '<div class="cx-chip">' + esc(t) + '</div>';
   const cfg = { id: c.slug + '-' + u.n, speed: x.speed, aha: x.aha };
   return '<div class="cx" data-cfg="' + esc(JSON.stringify(cfg)) + '">'
-    + '<h3>Make it set</h3><p class="cx-lead">Five partials from this unit are floating in a supercooled liquid. Everything is here, and nothing has set. One more piece is the nucleation point. Pick it and watch what happens. There is no score.</p>'
+    + '<h3>Make it set</h3><p class="cx-lead">Five partials from this unit lie on slips beside a bottle of supercooled water. Everything is here, and nothing has set. One more piece is the nucleation point. Pick it and watch what happens. There is no score.</p>'
     + '<div class="cx-stage"><canvas></canvas>'
     + '<div class="cx-col l">' + [0, 2, 4].map((i) => chip(x.partials[i])).join('') + '</div>'
     + '<div class="cx-col r">' + [1, 3].map((i) => chip(x.partials[i])).join('') + '</div></div>'
@@ -506,6 +506,10 @@ footer{max-width:1500px;margin:0 auto;padding:10px 32px 40px;color:var(--dim);fo
 .cx-lead{margin:2px 0 12px;color:var(--soft);font-size:15px;max-width:900px}
 .cx-stage{position:relative;height:360px;border-radius:10px;overflow:hidden;background:radial-gradient(ellipse at center,#0e1a24 0%,#07090f 70%)}
 .cx-stage canvas{position:absolute;inset:0;width:100%;height:100%}
+.cx.d3 .cx-stage{background:#070605}
+.cx.d3 .cx-col{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%)}
+/* on a phone the slips on the table are too small to read, so the same pieces are laid out under the bottle as paper slips */
+@media (max-width:600px){.cx.d3 .cx-stage{height:auto;padding-top:300px}.cx.d3 .cx-stage canvas{height:300px;bottom:auto}.cx.d3 .cx-col{position:static;width:auto;height:auto;clip-path:none;overflow:visible;padding:0 10px 10px;gap:8px;justify-content:flex-start}.cx.d3 .cx-col.l{padding-top:10px}.cx.d3 .cx-chip{background:#efe6cf;color:#2a2a2a;font:italic 600 16px "VU Hand",Georgia,serif;border:0;border-radius:3px;box-shadow:0 2px 6px rgba(0,0,0,.5);animation:none}.cx.d3 .cx-chip.set{color:#123a5c}.cx.d3 .cx-chip.bad{color:#8a4f0e}}
 .cx-col{position:absolute;top:0;bottom:0;width:min(240px,26%);display:flex;flex-direction:column;justify-content:space-around;padding:10px;pointer-events:none}
 .cx-col.l{left:0}.cx-col.r{right:0}
 .cx-chip{background:rgba(22,25,38,.85);border:1px dashed var(--line2);border-radius:10px;padding:8px 10px;font-size:13px;line-height:1.35;color:var(--dim2);transition:all .6s ease;animation:drift 6s ease-in-out infinite alternate}
@@ -1160,7 +1164,7 @@ function credits(all) {
   const rows = Object.keys(IMG).filter((k) => img(k)).map((k) => { const x = IMG[k]; return '<tr><td><img src="' + esc(x.file) + '" alt=""></td><td>' + esc(x.title || 'Untitled') + '</td><td>' + esc(x.creator || 'unknown') + '</td><td>' + esc(x.license) + '</td><td><a href="' + esc(x.page) + '" target="_blank" rel="noopener">' + esc(x.source) + '</a></td></tr>'; }).join('');
   return `<!doctype html><html lang="en" data-look="${LOOK}" data-type="${TYPE}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${APPHEAD}<title>Photo credits | Void University</title>${FONTS}<style>${BASE}
 main{max-width:1100px;margin:0 auto;padding:30px 32px}h1{font-family:var(--head)}table{width:100%;border-collapse:collapse;font-size:14px}td{border-bottom:1px solid var(--line);padding:8px;vertical-align:middle}td img{width:96px;height:60px;object-fit:cover;border-radius:4px;display:block}${LOOKCSS}${TYPECSS}</style></head><body>
-${top('credits', all)}<main><h1>Picture credits</h1><p>The pictures on this site are our own. The Body picture is the whole body standing in Body Atlas, and its body parts are BodyParts3D (CC BY 4.0).</p><table>${rows}</table><h1>Backgrounds</h1><p>The pictures of the classroom and the archive room behind the pages are our own, made for Void University. The lightning, the static and the film grain over them are Void TV's own.</p><h1>Phones</h1><p>The QR code maker and the relay that passes questions between a screen and its phones are Void TV PLAY's own.</p><h1>Typefaces</h1><p>Atkinson Hyperlegible Next (Braille Institute), Bricolage Grotesque, Inter, Fraunces, Literata and Schibsted Grotesk are used under the SIL Open Font License and are served from this site.</p>${all.some((c) => c.units.some(shipsLab)) ? '<h1>Lab physics</h1><p>Things in the labs fall, roll and bounce using Planck.js by Erin Catto and Ali Shakiba, free to use under the <a href="planck-LICENSE.txt">MIT licence</a>. The labs themselves are our own work.</p>' : ''}${all.some((c) => c.units.some(shipsExplain)) ? '<h1>The Earth</h1><p>The Earth in the explainers is NASA Earth Observatory\'s Blue Marble Next Generation with topography and bathymetry, by Reto Stockli; NASA imagery is free to use with credit. Land and sea are told apart with Natural Earth\'s map data, which is in the public domain. The explainers are drawn with three.js (<a href="three-LICENSE.txt">MIT licence</a>) and are our own work; each names the papers and agencies its numbers come from.</p>' : ''}${all.some((c) => c.units.some(shipsScale)) ? '<h1>3D stages</h1><p>The 3D scale stages are drawn with three.js by the three.js authors, free to use under the <a href="three-LICENSE.txt">MIT licence</a>. The stages and what they show are our own work; each one names the papers its numbers come from.</p>' : ''}</main>${FOOT()}</body></html>`;
+${top('credits', all)}<main><h1>Picture credits</h1><p>The pictures on this site are our own. The Body picture is the whole body standing in Body Atlas, and its body parts are BodyParts3D (CC BY 4.0).</p><table>${rows}</table><h1>Backgrounds</h1><p>The pictures of the classroom and the archive room behind the pages are our own, made for Void University. The lightning, the static and the film grain over them are Void TV's own.</p><h1>Phones</h1><p>The QR code maker and the relay that passes questions between a screen and its phones are Void TV PLAY's own.</p><h1>Typefaces</h1><p>Atkinson Hyperlegible Next (Braille Institute), Bricolage Grotesque, Inter, Fraunces, Literata and Schibsted Grotesk are used under the SIL Open Font License and are served from this site.</p>${all.some((c) => c.units.some(shipsLab)) ? '<h1>Lab physics</h1><p>Things in the labs fall, roll and bounce using Planck.js by Erin Catto and Ali Shakiba, free to use under the <a href="planck-LICENSE.txt">MIT licence</a>. The labs themselves are our own work.</p>' : ''}${all.some((c) => c.units.some(shipsExplain)) ? '<h1>The Earth</h1><p>The Earth in the explainers is NASA Earth Observatory\'s Blue Marble Next Generation with topography and bathymetry, by Reto Stockli; NASA imagery is free to use with credit. Land and sea are told apart with Natural Earth\'s map data, which is in the public domain. The explainers are drawn with three.js (<a href="three-LICENSE.txt">MIT licence</a>) and are our own work; each names the papers and agencies its numbers come from.</p>' : ''}${all.some((c) => c.units.some((u) => u.scene || u.crystal)) ? '<h1>The lit table</h1><p>The lesson scenes and the bottle in Make it set are drawn with three.js by the three.js authors, free to use under the <a href="three-LICENSE.txt">MIT licence</a>. Every object on the table is modelled in our own code.</p>' : ''}${all.some((c) => c.units.some(shipsScale)) ? '<h1>3D stages</h1><p>The 3D scale stages are drawn with three.js by the three.js authors, free to use under the <a href="three-LICENSE.txt">MIT licence</a>. The stages and what they show are our own work; each one names the papers its numbers come from.</p>' : ''}</main>${FOOT()}</body></html>`;
 }
 
 // A wrong address: wrangler.jsonc serves 404.html for it. Links start from the site root, since the wrong address can be
@@ -1212,8 +1216,15 @@ if (loaded.some((c) => c.units.some(shipsLab))) {
   for (const f of fs.readdirSync(DIR).filter((f) => used.has(f))) shipJs(path.join(DIR, f), path.join(OUT, f));
   for (const f of ['planck.min.js', 'planck-LICENSE.txt']) fs.copyFileSync(path.join(DIR, 'vendor', f), path.join(OUT, f));
 }
-// The drawing library goes along when a page shows a scale or a scene.
-const shipsThree = (c) => c.units.some((u) => shipsScale(u) || u.scene);
+// The crystal's bottle (Bryan, 23 Nov 2026: "A, the bottle") and the hand its slips are written in go with every
+// page that has a crystal; the drawing library goes below.
+if (loaded.some((c) => c.units.some((u) => u.crystal))) {
+  shipJs(path.join(DIR, 'crystal-bottle.js'), path.join(OUT, 'crystal-bottle.js'));
+  fs.mkdirSync(path.join(OUT, 'fonts'), { recursive: true });
+  fs.copyFileSync(path.join(DIR, 'fonts', 'fraunces-latin.woff2'), path.join(OUT, 'fonts', 'fraunces-latin.woff2'));
+}
+// The drawing library goes along when a page shows a scale, a scene or a crystal.
+const shipsThree = (c) => c.units.some((u) => shipsScale(u) || u.scene || u.crystal);
 if (loaded.some(shipsThree)) {
   fs.copyFileSync(path.join(DIR, 'vendor', 'three.module.min.js'), path.join(OUT, 'three.module.min.js'));
   fs.copyFileSync(path.join(DIR, 'vendor', 'three-LICENSE.txt'), path.join(OUT, 'three-LICENSE.txt'));

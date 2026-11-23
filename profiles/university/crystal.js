@@ -11,8 +11,14 @@
 //   - a wrong seed starts a second, misaligned grain; where grains meet the crystal cracks (a grain boundary);
 //   - annealing (heat, then slow cooling) lets the larger grain absorb the smaller and pushes impurities out;
 //     a wrong core cannot be annealed away, so the crystal melts back and you choose again.
+//
+// Drawn as a bottle of supercooled water on the lit table (crystal-bottle.js; Bryan, 23 Nov 2026: "A, the bottle"),
+// with the flat drawing below kept for a screen that cannot draw in 3D.
 (function () {
   const SQ3 = Math.sqrt(3);
+  const SRC = (document.currentScript && document.currentScript.src) || '';
+  let bottle = null;
+  const bottleLib = () => bottle || (bottle = import(SRC ? new URL('crystal-bottle.js', SRC).href : './crystal-bottle.js').catch(() => null));
   const COL = { a: [95, 212, 255], b: [255, 79, 200], inc: [70, 74, 92] };
 
   function mount(root, cfg) {
@@ -29,6 +35,9 @@
 
     let W = 0, H = 0, R = 6, cols = 0, rows = 0, cells, born, frontier, mols = [];
     let solidN = 0, mode = 'liquid', wrong = null, heatT = 0, tick = 0, center = { x: 0, y: 0 }, lim = { rx: 0, ry: 0 };
+    // the bottle, once it has loaded; the piece picked; how many cells the liquid holds; flaws and breaks counted now and then
+    let view = null, picked = null, insideN = 1, tally = { inc: 0, bnd: 0 };
+    const still = () => !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
 
     function size() {
       const dpr = window.devicePixelRatio || 1;
@@ -54,7 +63,8 @@
 
     function reset(msg = true) {
       cells = new Uint8Array(cols * rows); born = new Float32Array(cols * rows); frontier = new Set();
-      mode = 'liquid'; wrong = null; heatT = 0;
+      mode = 'liquid'; wrong = null; heatT = 0; picked = null; tally = { inc: 0, bnd: 0 };
+      insideN = 0; for (let i = 0; i < cells.length; i++) if (inside(i)) insideN++; insideN = Math.max(1, insideN);
       mols = Array.from({ length: Math.round(W * H / 2600) }, () => ({ x: Math.random() * W, y: Math.random() * H, vx: 0, vy: 0 }));
       chips.forEach((c) => { c.classList.remove('set', 'bad'); c.style.transform = ''; });
       root.classList.remove('aha', 'broken');
@@ -68,6 +78,7 @@
     function pick(btn) {
       if (mode !== 'liquid') return;
       const ok = btn.dataset.key === '1';
+      picked = { text: btn.textContent, ok };
       btn.classList.add(ok ? 'picked' : 'wrongpick');
       choices.querySelectorAll('button').forEach((b) => { b.disabled = true; });
       const c0 = cellAt(center.x, center.y);
@@ -167,6 +178,13 @@
       if (tick % 10 === 0) { root.dataset.mode = mode; root.dataset.tick = tick; }
       if (mode === 'growing') grow();
       if (mode === 'heating') heatStep();
+      if (view) {
+        // the bottle: how much of the liquid each grain has set, the flaws and the break, every few frames
+        let a = 0, b = 0; for (let i = 0; i < cells.length; i++) { if (cells[i] === 1) a++; else if (cells[i] === 2) b++; }
+        if (mode === 'liquid') tally = { inc: 0, bnd: 0 }; else if (tick % 10 === 0) tally = counts();
+        view.draw({ mode, a: a / insideN, b: b / insideN, inc: tally.inc, bnd: tally.bnd, wrong: !!wrong, picked, aha: root.classList.contains('aha'), broken: root.classList.contains('broken'), still: still() }, ctx, W, H);
+        return;
+      }
       ctx.clearRect(0, 0, W, H);
       // the liquid: molecules drifting, fewer as they join the crystal
       if (mode === 'liquid') solidN = 0; else if (tick % 15 === 0) solidN = counts().sol;
@@ -205,7 +223,7 @@
     function hex(x, y, r) { ctx.beginPath(); for (let k = 0; k < 6; k++) { const a = Math.PI / 6 + k * Math.PI / 3; const px = x + r * Math.cos(a), py = y + r * Math.sin(a); k ? ctx.lineTo(px, py) : ctx.moveTo(px, py); } ctx.closePath(); }
 
     // for checks: run frames without the screen (a hidden page gets no animation frames)
-    root._cx = { step: (k = 1) => { for (let i = 0; i < k; i++) step(); return mode; } };
+    root._cx = { step: (k = 1) => { for (let i = 0; i < k; i++) step(); return mode; }, bottle: () => !!view };
     choices.addEventListener('click', (e) => { const b = e.target.closest('button'); if (b) pick(b); });
     heatBtn.addEventListener('click', heat);
     resetBtn.addEventListener('click', () => reset(true));
@@ -220,6 +238,9 @@
     new IntersectionObserver((es) => { visible = es[0].isIntersecting; if (visible && !running) { running = true; requestAnimationFrame(draw); } }).observe(canvas);
     new ResizeObserver(() => { if (canvas.clientWidth !== W) { size(); say('Supercooled: every partial is here, and nothing has set. Pick the piece that makes it set.'); } }).observe(canvas);
     size(); say('Supercooled: every partial is here, and nothing has set. Pick the piece that makes it set.');
+    bottleLib().then((m) => m && m.bottleView(canvas, chips.map((c) => c.textContent.trim())))
+      .then((v) => { if (v) { view = v; root.classList.add('d3'); if (!running) step(); } })
+      .catch(() => {});
   }
 
   window.VoidCrystal = { mount };
