@@ -219,6 +219,32 @@ test('the voidtv.net home page: the engine loads on voidtv.net only, the card an
   assert.ok(SITE.indexOf('data.momentsV = MOMENTS_V') > SITE.indexOf('const data = assemble()') && SITE.indexOf('data.momentsV = MOMENTS_V') < SITE.indexOf('const shell = '), 'the version is set before any page is written');
 });
 
+test('a moment page with nothing here says where the moment lives, never "it may be over" while it is on (Bryan, 23 Nov 2026: "Line and button")', () => {
+  const vm = require('node:vm');
+  const APP = fs.readFileSync(path.join(REPO, 'scripts', 'lib', 'app.js'), 'utf8');
+  const line = (start) => { const at0 = APP.indexOf('\n' + start); assert.ok(at0 > 0, 'the page has ' + start); return APP.slice(at0 + 1, APP.indexOf('\n', at0 + 1)); };
+  const src = [line('const MOMENT_ROOMS='), line('function momentElse('), line('function noMatch(')].join('\n');
+  const day = (d) => ({ VoidMoments: { active: (ms) => M.active(ms, { now: at(d) }) } });
+  const page = (moments, d) => {
+    const w = day(d);
+    const ctx = vm.createContext({ MOMENTS: moments, window: w, VoidMoments: w.VoidMoments, state: { moment: '', q: '' }, esc: (s) => String(s).replace(/[&<>"]/g, (c) => '&#' + c.charCodeAt(0) + ';') });
+    vm.runInContext(src, ctx);
+    return (id) => { ctx.state.moment = id; return vm.runInContext('noMatch()', ctx); };
+  };
+  const gta = DATA.moments.find((m) => m.id === 'gta');
+  const on = page([gta], '2026-12-01')('gta');
+  assert.match(on, /This one is on <b>PLAY<\/b>\./);
+  assert.match(on, /<a class="btn gold" href="\/play\/">Play the first ones<\/a>/, 'the button is the moment\'s own ad words and goes to PLAY');
+  assert.ok(!/may be over/.test(on));
+  assert.match(page([gta], '2027-02-01')('gta'), /This one is over\./, 'after its end it says it is over');
+  assert.match(page([gta], '2026-12-01')('nope'), /This one is over\./, 'a moment not in the published list is over or off');
+  assert.equal(page(null, '2026-12-01')('gta'), '', 'nothing while the list is still loading (the page draws again when it lands)');
+  const noAd = { ...gta, ad: null };
+  assert.match(page([noAd], '2026-12-01')('gta'), />Go to PLAY<\/a>/, 'with no ad words the button says where it goes');
+  const nowhere = { ...gta, areas: { live: { title: 'x', match: { titles: ['x'] } } } };
+  assert.match(page([nowhere], '2026-12-01')('gta'), /Nothing to show for this one here yet\./, 'a room with no page of its own yet is not linked');
+});
+
 test('HQ reads On Demand from the list visitors get, handed in here', async () => {
   const index = 'const SHOWS=' + JSON.stringify([
     { show: 'Christmas In Rockefeller Center', slug: 'christmas-in-rockefeller-center', type: 'Specials', year: '1997' },
