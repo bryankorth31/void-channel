@@ -79,6 +79,21 @@ test('the Browse back buttons still call go(\'\'): coming back from a show keeps
   for (const b of backs) assert.ok(!b.includes('goHome'), b);
 });
 
+// H9 (23 Nov 2026, "C, Play together row"): the rooms where the TV is the table and the phones are in your hands.
+test('H9: a "Play together" row under On now, with Card games, Trivia Night and Games, on voidtv.net itself only', () => {
+  assert.match(lineAt("h+='<section class=\"home-tv\""), /<div id="onnow">'\+onNowHtml\(\)\+'<\/div>'\+togetherHome\(\)\+momentHome\(\);/, 'right under On now');
+  const fn = lineAt('function togetherHome(){');
+  const run = (remoteOn) => vm.runInNewContext(fn + '\ntogetherHome();', { REMOTE_ON: remoteOn, BASE: '/' });
+  assert.equal(run(false), '', 'nothing where the phone remote is off: another site, Kids, an embed');
+  const html = run(true);
+  assert.match(html, /<h2>Play together<small>/);
+  const tiles = [...html.matchAll(/<a class="ontile" href="([^"]+)"[^>]*><img loading="lazy" src="([^"]+)" alt=""><b>([^<]+)<\/b><small>([^<]+)<\/small><\/a>/g)].map((m) => m.slice(1));
+  assert.deepEqual(tiles.map((t) => [t[0], t[2]]), [['/cards/', 'Card games'], ['/trivia/', 'Trivia Night'], ['/play/', 'Games']]);
+  for (const t of tiles) assert.ok(fs.existsSync(path.join(__dirname, '..', t[1])), t[1] + ' is in the repo');
+  assert.doesNotMatch(html, /[–—]/, 'no em or en dashes');
+  assert.match(APP, /\na\.ontile\{text-decoration:none\}\n/, 'a link tile looks like the On now tiles');
+});
+
 test('V8: the two arrows on every home row have a hover tip and a name', () => {
   const arrows = APP.match(/<button class="arrow [lr]"[^>]*>/g) || [];
   assert.equal(arrows.length, 2, 'one left and one right arrow in the row template');
