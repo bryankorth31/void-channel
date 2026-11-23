@@ -647,4 +647,13 @@ test('real objects on the lit table: every object a scene names is in the librar
   const ends = ['p0', 'p1', 'p2', 'p3'].map((id) => line.states[2].to[id]);
   assert.ok(ends.every((v, i) => v.o === 1 && (i === 0 || v.x < ends[i - 1].x)), 'the line runs out from A');
   assert.ok(line.states[3].to.you.x < ends[3].x && line.states[6].to.you.x > 400, 'you join the end of the line, then go to B');
+  // Mind lessons, batch 3 (Bryan, 23 Nov 2026: "Yes, next batch")
+  assert.deepStrictEqual(kinds(money(/Afraid of sharks/), ['sh', 'cr', 'sf', 'cf']), ['prop', 'prop', 'bar', 'bar']);
+  assert.strictEqual(money(/lab coat/).kind.pill, 'prop');
+  assert.strictEqual(money(/Only 2 left/).kind.shelf, 'prop');
+  assert.strictEqual(money(/after the game/).kind.score, 'prop');
+  const slot = money(/slot machine/);
+  // three pulls: nothing, nothing, three sevens and the lamp; then it keeps spinning to nothing
+  assert.deepStrictEqual(slot.states.map((s) => [s.to.slot.stop.join(''), !!s.to.slot.win]), [['142', false], ['263', false], ['000', true], ['514', false], ['514', false], ['514', false], ['514', false]]);
+  assert.deepStrictEqual(slot.states.map((s) => s.to.phone.screen), ['feed', 'feed', 'feed', 'feed', 'likes', 'likes', 'quiet']);
 });

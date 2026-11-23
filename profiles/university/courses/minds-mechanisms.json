@@ -1415,31 +1415,43 @@
           {
             "id": "sh",
             "type": "card",
-            "x": 30,
-            "y": 30,
-            "w": 230,
+            "x": 20,
+            "y": 20,
+            "w": 180,
             "h": 100,
             "label": "Shark",
             "sub": "on the news all week",
             "color": "gold",
-            "o": 0
+            "o": 0,
+            "prop": "shark",
+            "tagW": 170,
+            "tag": [
+              175,
+              0
+            ]
           },
           {
             "id": "cr",
             "type": "card",
-            "x": 30,
+            "x": 20,
             "y": 200,
-            "w": 230,
+            "w": 180,
             "h": 100,
             "label": "The drive there",
             "sub": "never on the news",
             "color": "dim",
-            "o": 0
+            "o": 0,
+            "prop": "car",
+            "tagW": 170,
+            "tag": [
+              175,
+              0
+            ]
           },
           {
             "id": "sf",
             "type": "card",
-            "x": 290,
+            "x": 390,
             "y": 40,
             "w": 60,
             "h": 80,
@@ -1451,7 +1463,7 @@
           {
             "id": "cf",
             "type": "card",
-            "x": 290,
+            "x": 390,
             "y": 210,
             "w": 60,
             "h": 80,
@@ -1463,7 +1475,7 @@
           {
             "id": "sn",
             "type": "text",
-            "x": 680,
+            "x": 700,
             "y": 80,
             "label": "about 1 death a year",
             "color": "fg",
@@ -1473,7 +1485,7 @@
           {
             "id": "cn",
             "type": "text",
-            "x": 680,
+            "x": 700,
             "y": 250,
             "label": "about 40,000 a year",
             "color": "gold",
@@ -1483,7 +1495,7 @@
           {
             "id": "note",
             "type": "text",
-            "x": 680,
+            "x": 700,
             "y": 165,
             "label": "United States",
             "color": "dim",
@@ -1508,7 +1520,7 @@
             "set": {
               "sf": {
                 "o": 1,
-                "w": 290,
+                "w": 200,
                 "label": "scared"
               }
             }
@@ -1574,7 +1586,7 @@
                 "color": "dim"
               },
               "cf": {
-                "w": 290,
+                "w": 200,
                 "label": "real risk",
                 "color": "gold"
               },
@@ -2489,7 +2501,7 @@
             "id": "ad",
             "type": "text",
             "x": 560,
-            "y": 50,
+            "y": 30,
             "label": "\"Doctors trust this pill.\"",
             "color": "pink",
             "size": 22,
@@ -2498,14 +2510,21 @@
           {
             "id": "pill",
             "type": "card",
-            "x": 460,
-            "y": 90,
-            "w": 300,
-            "h": 100,
+            "x": 430,
+            "y": 120,
+            "w": 150,
+            "h": 150,
             "label": "Miracle pill",
             "sub": "$59.99",
             "color": "gold",
-            "o": 0
+            "o": 0,
+            "prop": "pills",
+            "front": "MIRACLE",
+            "tagW": 200,
+            "tag": [
+              -200,
+              30
+            ]
           },
           {
             "id": "you",
@@ -2522,8 +2541,8 @@
             "type": "arrow",
             "x": 204,
             "y": 270,
-            "x2": 520,
-            "y2": 198,
+            "x2": 450,
+            "y2": 225,
             "color": "gold",
             "o": 0,
             "draw": 0
@@ -2532,7 +2551,7 @@
             "id": "st",
             "type": "stamp",
             "x": 600,
-            "y": 225,
+            "y": 240,
             "w": 120,
             "label": "TRUSTED",
             "color": "pink",
@@ -2667,14 +2686,20 @@
           {
             "id": "shelf",
             "type": "card",
-            "x": 40,
-            "y": 40,
-            "w": 320,
-            "h": 140,
+            "x": 190,
+            "y": 20,
+            "w": 180,
+            "h": 160,
             "label": "The hat",
             "sub": "10 in stock",
             "color": "dim",
-            "o": 0
+            "o": 0,
+            "prop": "hat",
+            "tagW": 180,
+            "tag": [
+              -190,
+              20
+            ]
           },
           {
             "id": "tag",
@@ -2879,15 +2904,22 @@
           },
           {
             "id": "score",
-            "type": "stamp",
-            "x": 330,
-            "y": 190,
-            "w": 140,
+            "type": "card",
+            "x": 290,
+            "y": 205,
+            "w": 220,
             "label": "24-21",
             "color": "fg",
             "o": 0,
-            "s": 0.4,
-            "size": 26
+            "size": 26,
+            "prop": "scoreboard",
+            "score": "24-21",
+            "h": 130,
+            "tagW": 150,
+            "tag": [
+              -220,
+              30
+            ]
           },
           {
             "id": "bet",
@@ -3404,32 +3436,50 @@
           {
             "id": "slot",
             "type": "card",
-            "x": 40,
-            "y": 40,
-            "w": 320,
-            "h": 150,
+            "x": 60,
+            "y": 0,
+            "w": 200,
+            "h": 160,
             "label": "Slot machine",
             "sub": "pull the lever",
             "color": "gold",
-            "o": 0
+            "o": 0,
+            "prop": "slot",
+            "stop": [
+              3,
+              5,
+              6
+            ],
+            "tagW": 200,
+            "tag": [
+              0,
+              120
+            ]
           },
           {
             "id": "phone",
             "type": "card",
-            "x": 440,
-            "y": 40,
-            "w": 320,
-            "h": 150,
+            "x": 480,
+            "y": 0,
+            "w": 200,
+            "h": 160,
             "label": "Your phone",
             "sub": "pull to refresh",
             "color": "blue",
-            "o": 0
+            "o": 0,
+            "prop": "phone",
+            "screen": "feed",
+            "tagW": 200,
+            "tag": [
+              0,
+              120
+            ]
           },
           {
             "id": "n",
             "type": "text",
             "x": 200,
-            "y": 225,
+            "y": 320,
             "label": "pulls: 1",
             "color": "dim",
             "size": 20,
@@ -3455,7 +3505,12 @@
             "set": {
               "slot": {
                 "o": 1,
-                "sub": "nothing"
+                "sub": "nothing",
+                "stop": [
+                  1,
+                  4,
+                  2
+                ]
               },
               "n": {
                 "o": 1
@@ -3468,7 +3523,12 @@
             "set": {
               "slot": {
                 "sub": "nothing again",
-                "shake": true
+                "shake": true,
+                "stop": [
+                  2,
+                  6,
+                  3
+                ]
               },
               "n": {
                 "label": "pulls: 2"
@@ -3481,7 +3541,13 @@
             "set": {
               "slot": {
                 "sub": "WIN! $5",
-                "color": "green"
+                "color": "green",
+                "stop": [
+                  0,
+                  0,
+                  0
+                ],
+                "win": true
               },
               "st": {
                 "o": 1,
@@ -3498,7 +3564,13 @@
             "set": {
               "slot": {
                 "sub": "pull... pull... pull...",
-                "color": "gold"
+                "color": "gold",
+                "stop": [
+                  5,
+                  1,
+                  4
+                ],
+                "win": false
               },
               "st": {
                 "o": 0,
@@ -3517,7 +3589,8 @@
               "phone": {
                 "o": 1,
                 "sub": "nothing... nothing... 3 likes!",
-                "shake": true
+                "shake": true,
+                "screen": "likes"
               },
               "n": {
                 "x": 600,
@@ -3552,7 +3625,8 @@
             "set": {
               "phone": {
                 "sub": "notifications off",
-                "color": "green"
+                "color": "green",
+                "screen": "quiet"
               },
               "st": {
                 "label": "UNHOOKED",
