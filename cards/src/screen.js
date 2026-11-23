@@ -50,12 +50,85 @@
     if (!view || !view.pub || !Number.isInteger(view.pub.led) || !(view.n > 0)) return null;
     return (view.pub.led + i) % view.n;
   }
+  // The trick that has just been taken, from the events of one move: its cards, who led it and who won it; or null. A game
+  // says it with { ev: 'trick', won, led } (see cards/README.md); the cards are in the move of the trick to the taker, which
+  // carries them because every card of a trick lies face up (an event shows only what everyone could see).
+  function heldTrick(events) {
+    let done = null, cards = null;
+    for (const e of Array.isArray(events) ? events : []) {
+      if (!e || typeof e !== 'object') continue;
+      if (e.ev === 'trick' && Number.isInteger(e.won) && Number.isInteger(e.led)) done = e;
+      else if (e.ev === 'move' && e.from === 'trick' && Array.isArray(e.cards) && e.cards.length > 1) cards = e.cards;
+    }
+    return done && cards ? { cards: cards.slice(), led: done.led, won: done.won } : null;
+  }
+  // What lies in front of the seats, as [{ card, seat }]: the trick being played, else the one just taken (held for a moment
+  // so the last card and the winner can be seen), else nothing.
+  function trickCards(view, held) {
+    const z = view && view.zones && view.zones.trick, live = z && Array.isArray(z.cards) ? z.cards : [], n = view && view.n > 0 ? view.n : 0;
+    if (live.length) return live.map((card, i) => ({ card, seat: trickSeat(view, i) })).filter((x) => x.seat !== null);
+    if (held && n) return held.cards.map((card, i) => ({ card, seat: (held.led + i) % n }));
+    return [];
+  }
   // "voidtv.net/join" from the join address the relay gives.
   function joinHost(joinUrl) {
     try { return new URL(joinUrl).host + '/join'; } catch (e) { return 'voidtv.net/join'; }
   }
 
-  const api = { seatSpots, plateBox, turnLine, winnerLine, trickSeat, joinHost, DONATE_URL };
+  // A zone that holds several groups (sets and runs) cut into them. sizes is the game's own list for the zone, from
+  // s.pub.cuts: the size of each group in order. A size that is not a whole number above 0 is skipped; cards past the
+  // last cut make one more group; with no sizes at all the whole zone is one group.
+  function cutGroups(cards, sizes) {
+    const list = Array.isArray(cards) ? cards : [], out = [];
+    let at = 0;
+    for (const k of Array.isArray(sizes) ? sizes : []) {
+      if (!Number.isInteger(k) || k < 1 || at >= list.length) continue;
+      out.push(list.slice(at, at + k));
+      at += k;
+    }
+    if (at < list.length) out.push(list.slice(at));
+    return out;
+  }
+  // The one line a game gives for a player's seat ("Bid 3, took 2"), or ''. hasNotes: does this game give lines at all.
+  const hasNotes = (view) => !!(view && view.pub && Array.isArray(view.pub.notes));
+  function seatNote(view, i) {
+    const x = hasNotes(view) ? view.pub.notes[i] : '';
+    return typeof x === 'string' ? x.trim() : '';
+  }
+  // A player's side when the game has partners ([0, 1, 0, 1]), or null.
+  function seatSide(view, i) {
+    const t = view && view.pub && Array.isArray(view.pub.teams) ? view.pub.teams[i] : null;
+    return Number.isInteger(t) && t >= 0 ? t : null;
+  }
+  // What the middle of the table shows, in the order it is drawn, from the public view alone: the pack, any zone of the
+  // table that is cut into groups (Rummy's sets and runs), the pile's top card or else the card on offer (Conquian, an empty
+  // place when nothing is on offer), and the waste pile with its top card.
+  function centreItems(view) {
+    const z = (view && view.zones) || {}, cuts = (view && view.pub && view.pub.cuts) || {}, out = [];
+    if (z.draw && z.draw.n > 0) out.push({ kind: 'pack', n: z.draw.n });
+    for (const id of Object.keys(cuts)) {
+      if (id.includes(':') || !z[id] || !Array.isArray(z[id].cards) || !z[id].cards.length) continue;
+      out.push({ kind: 'groups', id, groups: cutGroups(z[id].cards, cuts[id]) });
+    }
+    if (z.discard && z.discard.top) out.push({ kind: 'pile', card: z.discard.top });
+    else if (z.offer) out.push({ kind: 'offer', card: Array.isArray(z.offer.cards) && z.offer.cards.length ? z.offer.cards[0] : null });
+    if (z.waste && z.waste.n > 0) out.push({ kind: 'waste', top: z.waste.top || null, n: z.waste.n });
+    return out;
+  }
+  // The cards a player has laid face up, as groups (their zone laid:p, cut by the game's cuts), or [].
+  function laidGroups(view, i) {
+    const id = 'laid:' + i, z = view && view.zones && view.zones[id];
+    if (!z || !Array.isArray(z.cards) || !z.cards.length) return [];
+    return cutGroups(z.cards, view.pub && view.pub.cuts && view.pub.cuts[id]);
+  }
+  // Where a player's laid groups sit beside their plate, in percent of the stage: on the plate's inner side (towards the
+  // middle column, to the right for a seat in the middle column), starting 1 off the plate's edge, wrapping inside max.
+  function laidAnchor(spot) {
+    const right = spot.x > 52, edge = right ? 100 - spot.x + 6.5 : spot.x + 6.5, middle = Math.abs(spot.x - 50) <= 12;
+    return { side: right ? 'right' : 'left', edge: Math.round(edge * 100) / 100, max: middle ? 31 : 22 };
+  }
+
+  const api = { seatSpots, plateBox, turnLine, winnerLine, trickSeat, heldTrick, trickCards, joinHost, cutGroups, hasNotes, seatNote, seatSide, centreItems, laidGroups, laidAnchor, DONATE_URL };
   if (typeof module === 'object' && module.exports) module.exports = api;
   else root.VoidScreen = api;
 
@@ -134,24 +207,35 @@
   }
   const toward = (spot, k) => ({ x: 50 + (spot.x - 50) * k, y: 50 + (spot.y - 50) * k });
   function place(e, x, y) { e.style.left = x + '%'; e.style.top = y + '%'; return e; }
+  // Groups of small cards (sets and runs) with a gap between groups: each group a row of overlapped cards, in a box that
+  // wraps. cls is 'laid' (beside a plate) or 'melds' (in the middle of the felt).
+  function drawGroups(groups, cls) {
+    const box = el('div', cls + ' groups'), F = root.VoidFace;
+    for (const g of groups) {
+      const row = el('div', 'group');
+      for (const id of g) row.append(cardIn('cardbox small', F.card(id)));
+      box.append(row);
+    }
+    return box;
+  }
 
   function drawTable(stage, s) {
     const v = s.view, n = v.n, spots = seatSpots(n), zones = v.zones, F = root.VoidFace, C = root.VoidCards;
     stage.append(el('div', 'turnline', turnLine(v, s.players)), el('div', 'felt'));
 
-    // The middle: the pack, the pile, and a suit that was called.
+    // The middle, from centreItems: the pack, sets and runs on the table, the pile or the card on offer, the waste, and a
+    // suit that was called.
     const mid = el('div', 'centre');
-    if (zones.draw && zones.draw.n > 0) {
-      const pack = el('div', 'centre-item');
-      pack.append(cardIn('cardbox big', F.back()), el('div', 'count', zones.draw.n + ' left'));
-      mid.append(pack);
+    for (const it of centreItems(v)) {
+      const item = el('div', 'centre-item' + (it.kind === 'groups' ? ' centre-groups' : ''));
+      if (it.kind === 'pack') item.append(cardIn('cardbox big', F.back()), el('div', 'count', it.n + ' left'));
+      else if (it.kind === 'groups') item.append(drawGroups(it.groups, 'melds'), el('div', 'count', plural(it.groups.length, 'set or run', 'sets and runs')));
+      else if (it.kind === 'pile') item.append(cardIn('cardbox big', F.card(it.card)));
+      else if (it.kind === 'offer') item.append(it.card ? cardIn('cardbox big offer', F.card(it.card)) : el('div', 'slot'), el('div', 'count', it.card ? 'On offer' : 'Nothing on offer'));
+      else if (it.kind === 'waste') item.append(it.top ? cardIn('cardbox mid', F.card(it.top)) : el('div', 'slot slot-mid'), el('div', 'count', it.n + ' passed'));
+      mid.append(item);
     }
     const top = zones.discard && zones.discard.top;
-    if (top) {
-      const pile = el('div', 'centre-item');
-      pile.append(cardIn('cardbox big', F.card(top)));
-      mid.append(pile);
-    }
     const suit = v.pub && v.pub.suit;
     if (suit && top && C.suitOf(top) !== suit && F.GLYPH[suit]) {
       const mark = el('div', 'centre-item');
@@ -160,35 +244,42 @@
     }
     stage.append(mid);
 
-    // The trick: each card in front of the seat that played it.
-    const trick = zones.trick && zones.trick.cards;
-    if (trick) {
-      trick.forEach((id, i) => {
-        const seat = trickSeat(v, i);
-        if (seat === null || !spots[seat]) return;
-        const at = toward(spots[seat], 0.7);
-        stage.append(place(cardIn('cardbox trick', F.card(id)), at.x, at.y));
-      });
+    // The trick: each card in front of the seat that played it. A trick just taken stays for a moment (see changed), so the
+    // last card and the winner can be seen, and no card is drawn that the public table does not show.
+    const taken = trickCards(v, held);
+    for (const t of taken) {
+      if (!spots[t.seat]) continue;
+      const at = toward(spots[t.seat], 0.62);
+      stage.append(place(cardIn('cardbox trick', F.card(t.card)), at.x, at.y));
     }
+    const heldNow = !!(held && taken.length && !(zones.trick && zones.trick.cards && zones.trick.cards.length));
 
-    // A plate, and any cards laid face up, for each player.
+    // A plate for each player: name, cards and score, the game's own line for the seat ("Bid 3, took 2") when it gives
+    // lines, and who is to play. A side's plates are tinted alike when the game has partners. Then the cards laid face up.
     spots.forEach((spot, i) => {
-      const p = s.players[i], hand = zones['hand:' + i], won = zones['won:' + i], laid = zones['laid:' + i];
-      const mine = v.turn.includes(i), plate = el('div', 'plate' + (mine ? ' turn' : '') + (p && !p.here ? ' away' : '') + (n > 8 ? ' tight' : ''));
+      const p = s.players[i], hand = zones['hand:' + i], won = zones['won:' + i], side = seatSide(v, i), line = seatNote(v, i);
+      const mine = v.turn.includes(i), takes = heldNow && held.won === i;
+      const plate = el('div', 'plate' + (mine ? ' turn' : '') + (takes ? ' takes' : '') + (p && !p.here ? ' away' : '') + (n > 8 ? ' tight' : '') + (side !== null ? ' side side' + (side % 4) : ''));
       plate.dataset.seat = i;
       const meta = [];
       if (hand) meta.push(plural(hand.n, 'card', 'cards'));
       if (v.pub && Array.isArray(v.pub.scores) && v.pub.scores[i] !== undefined) meta.push('score ' + v.pub.scores[i]);
       const tags = [];
-      if (won && won.n > 0) tags.push(won.n + ' taken');
+      if (won && won.n > 0 && !line && !takes) tags.push(won.n + ' taken');   // the plate holds about 16 letters: the count waits while "takes it" shows
       if (p && !p.here) tags.push('away');
+      if (takes) tags.push('takes it');
       if (mine) tags.push('to play');
-      plate.append(el('div', 'pname', nameAt(s.players, i)), el('div', 'pmeta', meta.join(', ')), el('div', 'ptags', tags.join(', ')));
+      plate.append(el('div', 'pname', nameAt(s.players, i)), el('div', 'pmeta', meta.join(', ')));
+      if (hasNotes(v)) plate.append(el('div', 'pnote', line));
+      plate.append(el('div', 'ptags', tags.join(', ')));
       stage.append(place(plate, spot.x, spot.y));
-      if (laid && laid.cards && laid.cards.length) {
-        const row = el('div', 'laid');
-        for (const id of laid.cards) row.append(cardIn('cardbox small', F.card(id)));
-        stage.append(place(row, spot.x + (spot.x > 52 ? -10.5 : 10.5), spot.y));
+      const groups = laidGroups(v, i);
+      if (groups.length) {
+        const at = laidAnchor(spot), row = drawGroups(groups, 'laid');
+        row.style.top = spot.y + '%'; row.style.maxWidth = at.max + '%';
+        row.style[at.side] = at.edge + '%';
+        if (at.side === 'right') row.classList.add('laid-right');
+        stage.append(row);
       }
     });
 
@@ -254,8 +345,15 @@
     card.style.transition = 'transform 300ms ease-out';
     card.style.transform = '';
   }
+  // The last trick is held on the table for a moment after it is taken, so the cards in front of the seats and the winner can
+  // be seen. A card played to the next trick ends the hold at once (trickCards draws the live trick first).
+  let held = null, heldTimer = 0;
+  const HOLD_MS = 2600;
   function changed(events) {
     note = '';
+    const h = heldTrick(events);
+    if (h) { held = h; clearTimeout(heldTimer); heldTimer = setTimeout(() => { held = null; render(); }, HOLD_MS); }
+    else if (events && events.some((e) => e && e.ev === 'deal')) { held = null; clearTimeout(heldTimer); }
     render();
     for (const ev of events || []) if (ev && ev.ev === 'move' && ev.cards && ev.cards.length && ev.by !== undefined) grow(ev);
   }

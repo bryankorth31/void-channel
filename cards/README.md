@@ -15,8 +15,9 @@ One engine, and each game is a rule file on top of it. A big screen shows the ta
 | `games/hearts.js` | Hearts, 3 to 5 players. Here to prove the engine is not built for one game. |
 | `test/` | `node --test "cards/test/*.test.js"` |
 
-Not built yet: the phone's hand page, the big-screen table page, and the part that carries a table over the phone relay
-(`play/rooms/`). The pages wait on Bryan's pick from the pictures.
+Also built: the phone's hand page (`hand.html`, `src/hand.js`), the big-screen table page (`index.html`, `src/screen.js`) and
+the dealer that carries a table over the phone relay (`src/dealer.js`, `play/rooms/`). Their looks are Bryan's picks from
+pictures: hand B (the rows) and table A (the round table). `games/` also holds Go Fish, Spades, Rummy and Conquian.
 
 ## The privacy rule
 
@@ -103,6 +104,9 @@ The table page and the hand page draw any game that keeps to these names:
 - `s.pub.cuts`: for a zone that holds several groups (sets and runs laid on the table), the size of each group in
   order, by zone id: `{ melds: [3, 4, 3] }` means the zone's first 3 cards are one group, the next 4 another. The
   cards themselves stay in the zone, so the public table stays small.
+- `t.say({ ev: 'trick', won, led })` when a trick is taken (`won`: the taker, `led`: who led it). The table page then keeps the
+  four cards in front of their seats for a moment and shows who takes them. The cards come from the move that carries the trick
+  to the taker, which names them because a trick lies face up. Spades and Hearts say it.
 - A card's id may be in `s.pub` only while that card lies face up on the table. What one player alone must remember
   (the card they took and may not throw straight back) goes in `s.own[p]`, even if everyone saw it happen.
 - `game.labels`: words for a zone a phone should name, such as `{ pass: 'Your pass' }`.

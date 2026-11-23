@@ -86,7 +86,71 @@
     return { type: 'c-move', move };
   }
 
-  const api = { layout, slot, indexAt, keyRecord, nextSelection, canSend, turnLine, winnerLine, moveMessage, KEY_NAME, SEAT_NAME };
+  // ----- What the bottom bar offers (hints are the game's own words, see cards/README.md "What a phone is told it may do") -----
+  // Every move made with cards that this turn offers: the ones in hints.plays, then hints.play last (the main one).
+  function cardMoves(h) {
+    if (!h) return [];
+    const list = Array.isArray(h.plays) ? h.plays.filter(Boolean) : [];
+    return h.play ? list.concat([h.play]) : list;
+  }
+  // How many cards a tap may pick up to: the most any move of the turn takes, and at least one.
+  function pickLimit(h) {
+    return Math.max(1, ...cardMoves(h).map((m) => (m.max === undefined ? 1 : m.max)));
+  }
+  // The cards worth tapping now: every card some move lists. null when no card is held back (nothing is dimmed).
+  function pickable(h) {
+    const moves = cardMoves(h), out = [];
+    if (!moves.length || moves.some((m) => !Array.isArray(m.cards))) return null;
+    for (const m of moves) for (const c of m.cards) if (!out.includes(c)) out.push(c);
+    return out;
+  }
+  // The bar's buttons for a turn, in the order they are drawn: first the moves with no cards (Draw a card, Pass, Bid),
+  // then the moves made with cards, the main one last. A card move is lit only when the number of cards picked fits its
+  // own min and max. Nothing at all when it is not this player's turn.
+  function barItems(h, selected, myTurn) {
+    if (!h || !myTurn) return [];
+    const out = [];
+    for (const b of Array.isArray(h.buttons) ? h.buttons : []) {
+      out.push({ key: 'button:' + b.type, kind: 'button', type: b.type, label: String(b.label || b.type), choose: b.choose || null, enabled: true, main: false });
+    }
+    const moves = cardMoves(h);
+    moves.forEach((m, i) => {
+      out.push({ key: 'move:' + m.type, kind: 'move', type: m.type, label: String(m.label || 'Play'), choose: m.choose || null, enabled: canSend(selected, m, true), main: i === moves.length - 1 });
+    });
+    return out;
+  }
+  // The question to ask before this button's move goes out, or null. A button asks it always; a move made with cards asks
+  // it when the choice names no cards, or one of the cards picked is among the ones it names (an eight asks for a suit).
+  function choiceFor(item, selected) {
+    const ch = item && item.choose;
+    if (!ch) return null;
+    if (item.kind === 'button' || !Array.isArray(ch.cards)) return ch;
+    return (selected || []).some((c) => ch.cards.includes(c)) ? ch : null;
+  }
+  // The message for a bar button pressed: a button sends no cards, a card move sends the cards picked; extra is the answer.
+  function itemMessage(item, selected, extra) {
+    return moveMessage(item.type, item.kind === 'move' ? selected : null, extra);
+  }
+  // How a question's answers are laid out: a long list (a bid of nil to 13) goes four to a row so the whole of it fits a phone.
+  const choiceColumns = (count) => (count > 6 ? 4 : count > 3 ? 3 : 2);
+  // What the phone's small pile at the top shows: the trick being played, else the top of the pile, else the card on offer
+  // (Conquian), as { cards, trick }. Only cards the public table shows.
+  function pileView(v) {
+    const z = (v && v.zones) || {}, trick = z.trick, disc = z.discard, offer = z.offer;
+    if (trick && Array.isArray(trick.cards) && trick.cards.length) return { cards: trick.cards.slice(-6), trick: true };
+    if (disc && disc.top) return { cards: [disc.top], trick: false };
+    if (offer && Array.isArray(offer.cards) && offer.cards.length) return { cards: [offer.cards[0]], trick: false };
+    return { cards: [], trick: false };
+  }
+  // The line about another player at the top of the phone: their name, how many cards they hold, and the game's own line
+  // for their seat ("Bid 3, took 2") when it has one.
+  function otherLine(v, roster, i) {
+    const z = v && v.zones && v.zones['hand:' + i], note = v && v.pub && Array.isArray(v.pub.notes) ? v.pub.notes[i] : '';
+    return nameAt(roster, i) + (z ? ' ' + z.n : '') + (note ? ' · ' + note : '');
+  }
+
+  const api = { layout, slot, indexAt, keyRecord, nextSelection, canSend, turnLine, winnerLine, moveMessage,
+    cardMoves, pickLimit, pickable, barItems, choiceFor, itemMessage, choiceColumns, pileView, otherLine, KEY_NAME, SEAT_NAME };
   if (typeof module === 'object' && module.exports) module.exports = api;
   else root.VoidHand = api;
 
@@ -240,18 +304,19 @@
     lay = layout(order.length, Math.max(1, r.width - 2 * PAD), Math.max(1, r.height - 2 * PAD), GAP);
     lay.left += PAD; lay.top += PAD;
   }
-  function placeOne(id, i) {
-    const el = els.get(id), p = slot(lay, i), play = hints() && hints().play;
+  function placeOne(id, i, ok) {
+    const el = els.get(id), p = slot(lay, i);
     const up = selected.includes(id) ? -lay.cardH * 0.14 : 0;
     el.style.fontSize = (lay.cardW / 5) + 'px';
     el.style.transform = 'translate(' + p.x + 'px,' + (p.y + up) + 'px)';
     el.classList.toggle('sel', selected.includes(id));
     el.classList.toggle('fresh', fresh.has(id));
-    el.classList.toggle('dim', !!(myTurn() && play && Array.isArray(play.cards) && !play.cards.includes(id)));
+    el.classList.toggle('dim', !!(ok && !ok.includes(id)));
   }
   function placeAll(except) {
     if (!lay) return;
-    order.forEach((id, i) => { if (id !== except && els.has(id)) placeOne(id, i); });
+    const ok = myTurn() ? pickable(hints()) : null;   // a card no move of this turn lists is dimmed
+    order.forEach((id, i) => { if (id !== except && els.has(id)) placeOne(id, i, ok); });
   }
   function drawHand() { syncCards(); measure(); placeAll(drag && drag.moving ? drag.id : null); }
 
@@ -281,7 +346,7 @@
     drag = null;
     if (el) el.classList.remove('lift');
     if (d.moving) { saveRecord(); }
-    else if (e.type === 'pointerup') { selected = nextSelection(selected, d.id, hints() && hints().play ? hints().play.max : 1); }
+    else if (e.type === 'pointerup') { selected = nextSelection(selected, d.id, pickLimit(hints())); }
     placeAll(); drawBar();
   }
   function reorder(fn) { order = fn(order); saveRecord(); placeAll(); }
@@ -294,23 +359,26 @@
     turn.textContent = turnLine(v, roster, me);
     turn.classList.toggle('mine', !!(v && me !== null && v.turn.includes(me)));
     $('status').textContent = (table && table.status) || '';
-    const pile = $('pile');
+    const pile = $('pile'), pv = pileView(v);
     pile.textContent = '';
-    const trick = v && v.zones && v.zones.trick, disc = v && v.zones && v.zones.discard;
-    pile.classList.toggle('trick', !!(trick && trick.cards && trick.cards.length));
-    if (trick && trick.cards && trick.cards.length) for (const c of trick.cards.slice(-6)) pile.appendChild(F.card(c));
-    else if (disc && disc.top) pile.appendChild(F.card(disc.top));
+    pile.classList.toggle('trick', pv.trick);
+    for (const c of pv.cards) pile.appendChild(F.card(c));
     const others = $('others');
     others.textContent = '';
     if (!v) return;
+    const notes = !!(v.pub && Array.isArray(v.pub.notes) && v.pub.notes.some(Boolean));
+    others.classList.toggle('noted', notes);
     for (let i = 0; i < v.n; i++) {
       if (i === me) continue;
-      const z = v.zones['hand:' + i], s = document.createElement('span');
-      s.textContent = nameAt(roster, i) + (z ? ' ' + z.n : '');
+      const s = document.createElement('span');
+      s.textContent = otherLine(v, roster, i);
       if (v.turn.includes(i)) s.className = 'turnp';
       if (roster && roster.players && roster.players[i] && roster.players[i].here === false) s.classList.add('away');
       others.appendChild(s);
     }
+    // This player's own line from the game ("Bid 3, took 1"), after the others.
+    const own = notes && me !== null && v.pub.notes[me];
+    if (own) { const s = document.createElement('span'); s.textContent = 'You · ' + own; others.appendChild(s); }
   }
   function drawPrivs() {
     const box = $('privs'), me = meSeat();
@@ -328,19 +396,28 @@
       box.appendChild(row);
     }
   }
+  // The buttons are made again only when the turn offers different ones; a tap on a card only lights or dims them, so a
+  // button is not replaced under a finger that is pressing it.
+  let barSig = '';
   function drawBar() {
-    const h = hints(), turn = myTurn(), play = h && h.play, main = $('b-main'), hb = $('hint-btns');
-    hb.textContent = '';
-    if (turn && h && Array.isArray(h.buttons)) {
-      for (const b of h.buttons) {
+    const items = barItems(hints(), selected, myTurn()), mv = $('moves'), hb = $('hint-btns');
+    const sig = items.map((i) => i.key + '|' + i.label + '|' + (i.main ? 1 : 0)).join('\n');
+    if (sig !== barSig) {
+      barSig = sig;
+      hb.textContent = ''; mv.textContent = '';
+      for (const it of items) {
         const el = document.createElement('button');
-        el.type = 'button'; el.className = 'btn'; el.textContent = String(b.label || b.type);
-        el.addEventListener('click', () => send(moveMessage(b.type)));
-        hb.appendChild(el);
+        el.type = 'button'; el.className = 'btn' + (it.main ? ' solid' : ''); el.textContent = it.label; el.dataset.key = it.key;
+        el.addEventListener('click', () => press(it.key));
+        (it.kind === 'button' ? hb : mv).appendChild(el);
       }
+      mv.hidden = !mv.childNodes.length;
     }
-    main.hidden = !(turn && play);
-    if (play) { main.textContent = play.label || 'Play'; main.disabled = !canSend(selected, play, turn); }
+    for (const el of $('bar').querySelectorAll('button[data-key]')) {
+      const it = items.find((i) => i.key === el.dataset.key);
+      el.disabled = !(it && it.enabled);
+    }
+    if (choosing && !items.length) { $('choose').hidden = true; choosing = false; }   // the turn moved on while a question was open
   }
   function overPanel() {
     const v = table && table.v, over = !!(v && v.over);
@@ -354,24 +431,26 @@
     }
   }
 
-  // ----- The main button and the extra choice -----
-  function sendPlay(extra) {
-    const play = hints() && hints().play;
-    if (!play) return;
-    send(moveMessage(play.type, selected, extra));
+  // ----- A bar button and the extra choice -----
+  // Every button of the bar, those with no cards (Draw a card, Pass, Bid) and those made with cards (Play, Lay down, Discard),
+  // goes through here. A button that asks a question opens the same panel whichever kind it is, then sends its answer.
+  function sendItem(it, extra) {
+    send(itemMessage(it, selected, extra));
     try { if (navigator.vibrate) navigator.vibrate(12); } catch (e) { /* not on this phone */ }
   }
-  function onMain() {
-    const play = hints() && hints().play;
-    if (!play || !canSend(selected, play, myTurn())) return;
-    const ch = play.choose;
-    if (ch && (!ch.cards || selected.some((c) => ch.cards.includes(c)))) { openChoose(ch); return; }
-    sendPlay();
+  function press(key) {
+    if (choosing) return;
+    const it = barItems(hints(), selected, myTurn()).find((i) => i.key === key);
+    if (!it || !it.enabled) return;
+    const ch = choiceFor(it, selected);
+    if (ch) { openChoose(ch, it); return; }
+    sendItem(it);
   }
-  function openChoose(ch) {
+  function openChoose(ch, it) {
     $('choose-h').textContent = ch.title || 'Choose';
     const list = $('choose-list');
     list.textContent = '';
+    list.dataset.cols = String(choiceColumns((ch.from || []).length));
     for (const entry of ch.from || []) {
       const val = entry !== null && typeof entry === 'object' ? entry.v : entry;
       const b = document.createElement('button');
@@ -387,7 +466,7 @@
       } else {
         b.textContent = entry !== null && typeof entry === 'object' && entry.label !== undefined ? String(entry.label) : String(val);
       }
-      b.addEventListener('click', () => { $('choose').hidden = true; choosing = false; sendPlay({ field: ch.field, value: val }); });
+      b.addEventListener('click', () => { $('choose').hidden = true; choosing = false; sendItem(it, { field: ch.field, value: val }); });
       list.appendChild(b);
     }
     $('choose').hidden = false; choosing = true;
@@ -429,7 +508,6 @@
   $('skip').addEventListener('click', () => { $('name-err').textContent = ''; askName = false; render(); });
   $('b-suit').addEventListener('click', () => reorder(C.bySuit));
   $('b-rank').addEventListener('click', () => reorder(C.byRank));
-  $('b-main').addEventListener('click', onMain);
   $('choose-back').addEventListener('click', () => { $('choose').hidden = true; choosing = false; });
   const box = $('handbox');
   box.addEventListener('pointerdown', onDown);

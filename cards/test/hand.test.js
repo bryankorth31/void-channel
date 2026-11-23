@@ -106,3 +106,127 @@ test('a move goes to the table as a c-move: a button with no cards, a play with 
   const js = require('fs').readFileSync(require('path').join(__dirname, '..', 'src', 'hand.js'), 'utf8');
   assert.equal((js.match(/send\(\{ type: (?!'c-hi'|'c-name')/g) || []).length, 0);
 });
+
+// ---- the bar for a game that asks a question, offers several card moves, or may be played with no cards (Spades, Rummy, Conquian)
+const rummyHints = () => ({
+  play: { type: 'discard', label: 'Discard', cards: ['5H', '7C', 'KD'], min: 1, max: 1, choose: null },
+  plays: [
+    { type: 'meld', label: 'Lay down', cards: ['5H', '5C', '5D', '7C', 'KD'], min: 3, max: 13, choose: null },
+    { type: 'layoff', label: 'Lay off', cards: ['5H', '5C', '5D', '7C', 'KD'], min: 1, max: 13,
+      choose: { cards: null, field: 'on', from: [{ v: 0, label: 'Fives' }], kind: 'option', title: 'On which set or run?' } },
+  ],
+  buttons: [],
+});
+const bidHints = () => ({ play: null, buttons: [{ type: 'bid', label: 'Bid', choose: { field: 'n', from: [{ v: 0, label: 'Nil' }, { v: 1, label: '1' }], kind: 'option', title: 'How many books?' } }] });
+const conquianHints = () => ({
+  play: { type: 'use', label: 'Use the card', cards: ['AH', '2H'], min: 0, max: 10, choose: { cards: null, field: 'on', from: [{ v: 'new', label: 'A new set or run' }], kind: 'option', title: 'Use it where?' } },
+  buttons: [{ type: 'pass', label: 'Pass' }],
+});
+
+test('cardMoves: the moves with cards, the main one (hints.play) last', () => {
+  assert.deepEqual(H.cardMoves(rummyHints()).map((m) => m.type), ['meld', 'layoff', 'discard']);
+  assert.deepEqual(H.cardMoves({ play: { type: 'play' } }).map((m) => m.type), ['play']);
+  assert.deepEqual(H.cardMoves({ plays: [{ type: 'a' }, null, { type: 'b' }], play: null }).map((m) => m.type), ['a', 'b']);
+  assert.deepEqual(H.cardMoves(bidHints()), []);
+  assert.deepEqual(H.cardMoves(null), []);
+});
+
+test('pickLimit: a tap may pick up to the most any move of the turn takes', () => {
+  assert.equal(H.pickLimit(rummyHints()), 13, 'Lay down takes up to 13, so the player can pick a whole set');
+  assert.equal(H.pickLimit({ play: { type: 'play', min: 1, max: 1 } }), 1);
+  assert.equal(H.pickLimit(conquianHints()), 10);
+  assert.equal(H.pickLimit(bidHints()), 1);
+  assert.equal(H.pickLimit(null), 1);
+  assert.equal(H.pickLimit({ play: { type: 'play' } }), 1, 'a move that names no max takes one');
+});
+
+test('pickable: every card some move lists; null when nothing is held back', () => {
+  assert.deepEqual(H.pickable(rummyHints()), ['5H', '5C', '5D', '7C', 'KD']);
+  assert.deepEqual(H.pickable({ play: { type: 'play', cards: ['QS'], min: 1, max: 1 } }), ['QS']);
+  assert.equal(H.pickable(bidHints()), null);
+  assert.equal(H.pickable(null), null);
+  assert.equal(H.pickable({ play: { type: 'play', min: 1, max: 1 } }), null, 'a move with no list of cards holds none back');
+});
+
+test('barItems: Rummy after drawing offers Lay down, Lay off and Discard, each lit by its own min and max', () => {
+  const none = H.barItems(rummyHints(), [], true);
+  assert.deepEqual(none.map((i) => [i.key, i.label, i.kind, i.enabled, i.main]), [
+    ['move:meld', 'Lay down', 'move', false, false], ['move:layoff', 'Lay off', 'move', false, false], ['move:discard', 'Discard', 'move', false, true]]);
+  const one = H.barItems(rummyHints(), ['5H'], true);
+  assert.deepEqual(one.map((i) => i.enabled), [false, true, true], 'one card: Lay off and Discard, not Lay down (needs 3)');
+  const three = H.barItems(rummyHints(), ['5H', '5C', '5D'], true);
+  assert.deepEqual(three.map((i) => i.enabled), [true, true, false], 'three cards: Lay down and Lay off, not Discard (exactly 1)');
+  assert.equal(H.barItems(rummyHints(), ['5H', '5C', '5D'], false).length, 0, 'nothing on the bar when it is not your turn');
+  assert.equal(H.barItems(null, [], true).length, 0);
+});
+
+test('barItems: buttons with no cards come first and are always lit; a bid button carries its question', () => {
+  const items = H.barItems(bidHints(), [], true);
+  assert.equal(items.length, 1);
+  assert.deepEqual([items[0].key, items[0].kind, items[0].enabled, items[0].main], ['button:bid', 'button', true, false]);
+  assert.equal(items[0].choose.title, 'How many books?');
+  const c = H.barItems(conquianHints(), [], true);
+  assert.deepEqual(c.map((i) => i.key), ['button:pass', 'move:use']);
+  assert.equal(c[1].main, true);
+});
+
+test('a move with a min of 0 is lit with nothing picked (Conquian: Use the card)', () => {
+  const use = H.barItems(conquianHints(), [], true).find((i) => i.type === 'use');
+  assert.equal(use.enabled, true);
+  assert.equal(H.canSend([], conquianHints().play, true), true);
+  assert.equal(H.canSend([], conquianHints().play, false), false, 'but never out of turn');
+  assert.equal(H.barItems(conquianHints(), new Array(11).fill('x'), true).find((i) => i.type === 'use').enabled, false, 'and not above its max');
+  assert.deepEqual(H.itemMessage(use, [], { field: 'on', value: 'new' }), { type: 'c-move', move: { type: 'use', cards: [], on: 'new' } }, 'it goes out with an empty list of cards, as the table asks');
+});
+
+test('choiceFor: a button always asks; a move with cards asks when its choice names no cards or one of them is picked', () => {
+  const [bid] = H.barItems(bidHints(), [], true);
+  assert.equal(H.choiceFor(bid, []).title, 'How many books?');
+  const eights = { kind: 'move', choose: { cards: ['8S', '8H'], field: 'suit', from: ['S', 'H'], kind: 'suit', title: 'Which suit?' } };
+  assert.equal(H.choiceFor(eights, ['8S']).title, 'Which suit?');
+  assert.equal(H.choiceFor(eights, ['QD']), null, 'an ordinary card needs no question');
+  const lay = H.barItems(rummyHints(), ['5H'], true).find((i) => i.type === 'layoff');
+  assert.equal(H.choiceFor(lay, ['5H']).title, 'On which set or run?', 'a choice that names no cards is always asked');
+  assert.equal(H.choiceFor(H.barItems(rummyHints(), ['5H'], true).find((i) => i.type === 'discard'), ['5H']), null);
+  assert.equal(H.choiceFor(null, []), null);
+});
+
+test('itemMessage: a button sends no cards, a move sends what was picked, and the answer to a question rides along', () => {
+  const [bid] = H.barItems(bidHints(), ['5H'], true);
+  assert.deepEqual(H.itemMessage(bid, ['5H'], { field: 'n', value: 0 }), { type: 'c-move', move: { type: 'bid', n: 0 } }, 'Nil is a 0, and no card goes with a button');
+  assert.deepEqual(H.itemMessage(bid, [], { field: 'n', value: 3 }), { type: 'c-move', move: { type: 'bid', n: 3 } });
+  const lay = H.barItems(rummyHints(), ['5H', '5C'], true).find((i) => i.type === 'layoff');
+  assert.deepEqual(H.itemMessage(lay, ['5H', '5C'], { field: 'on', value: 0 }), { type: 'c-move', move: { type: 'layoff', cards: ['5H', '5C'], on: 0 } });
+  const pass = H.barItems(conquianHints(), [], true).find((i) => i.type === 'pass');
+  assert.deepEqual(H.itemMessage(pass, ['AH'], null), { type: 'c-move', move: { type: 'pass' } });
+});
+
+test('choiceColumns: a long list goes in more columns', () => {
+  assert.equal(H.choiceColumns(2), 2);
+  assert.equal(H.choiceColumns(4), 3);
+  assert.equal(H.choiceColumns(14), 4, 'a bid of nil to 13');
+});
+
+test('pileView: the trick, else the top of the pile, else the card on offer', () => {
+  assert.deepEqual(H.pileView({ zones: { trick: { n: 2, cards: ['QS', '2C'] }, discard: { n: 3, top: 'TH' } } }), { cards: ['QS', '2C'], trick: true });
+  assert.deepEqual(H.pileView({ zones: { trick: { n: 0, cards: [] }, discard: { n: 3, top: 'TH' } } }), { cards: ['TH'], trick: false });
+  assert.deepEqual(H.pileView({ zones: { offer: { n: 1, cards: ['7H'] }, waste: { n: 4, top: '2C' } } }), { cards: ['7H'], trick: false });
+  assert.deepEqual(H.pileView({ zones: { offer: { n: 0, cards: [] } } }), { cards: [], trick: false });
+  assert.deepEqual(H.pileView(null), { cards: [], trick: false });
+  assert.equal(H.pileView({ zones: { trick: { n: 9, cards: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'] } } }).cards.length, 6);
+});
+
+test('otherLine: a name, its cards, and the game line for the seat', () => {
+  const v = { zones: { 'hand:0': { n: 13 }, 'hand:2': { n: 11 } }, pub: { notes: ['Bid 3, took 1', '', 'Nil'] } };
+  assert.equal(H.otherLine(v, roster, 0), 'Ann 13 · Bid 3, took 1');
+  assert.equal(H.otherLine(v, roster, 1), 'Bo', 'no hand zone and no line: the name alone');
+  assert.equal(H.otherLine(v, roster, 2), 'Cy 11 · Nil');
+  assert.equal(H.otherLine({ zones: { 'hand:0': { n: 5 } }, pub: {} }, roster, 0), 'Ann 5', 'a game with no lines');
+});
+
+test('the page builds every bar button from barItems and sends every move through itemMessage', () => {
+  const js = require('fs').readFileSync(require('path').join(__dirname, '..', 'src', 'hand.js'), 'utf8');
+  assert.ok(/send\(itemMessage\(it, selected, extra\)\)/.test(js));
+  assert.ok(!/send\(moveMessage/.test(js), 'no button sends a move by hand');
+  assert.ok(!new RegExp('[' + String.fromCharCode(8211, 8212) + ']').test(js), 'no dash characters in the page file');
+});

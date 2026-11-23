@@ -66,6 +66,108 @@ test('joinHost: the host from the join address, with /join', () => {
   assert.equal(S.joinHost(undefined), 'voidtv.net/join');
 });
 
+test('heldTrick: the events of the move that takes a trick give its cards, who led and who won; no other move does', () => {
+  const four = ['KD', '9D', '2D', 'AD'];
+  const events = [
+    { ev: 'move', from: 'hand:3', to: 'trick', n: 1, cards: ['AD'], by: 3 },
+    { ev: 'trick', won: 3, led: 0 },
+    { ev: 'move', from: 'trick', to: 'won:3', n: 4, cards: four },
+  ];
+  assert.deepEqual(S.heldTrick(events), { cards: four, led: 0, won: 3 });
+  assert.notEqual(S.heldTrick(events).cards, four, 'a copy, not the event\'s own list');
+  assert.equal(S.heldTrick(events.slice(0, 1)), null, 'a card played to the trick takes nothing');
+  assert.equal(S.heldTrick([events[1]]), null, 'no cards in the events: nothing to hold');
+  assert.equal(S.heldTrick([{ ev: 'move', from: 'trick', to: 'won:3', n: 4 }, events[1]]), null, 'a move that does not carry the cards (they were not all face up) holds nothing');
+  assert.equal(S.heldTrick([{ ev: 'trick', won: 'x', led: 0 }, events[2]]), null);
+  assert.equal(S.heldTrick(undefined), null);
+  assert.equal(S.heldTrick([null, 4, 'x']), null);
+});
+
+test('trickCards: the trick being played in front of the seats that played it, else the one just taken, else nothing', () => {
+  const live = { n: 4, pub: { led: 2 }, zones: { trick: { n: 2, cards: ['QS', '2C'] } } };
+  assert.deepEqual(S.trickCards(live, null), [{ card: 'QS', seat: 2 }, { card: '2C', seat: 3 }]);
+  const empty = { n: 4, pub: { led: 1 }, zones: { trick: { n: 0, cards: [] } } };
+  const held = { cards: ['KD', '9D', '2D', 'AD'], led: 1, won: 0 };
+  assert.deepEqual(S.trickCards(empty, held), [{ card: 'KD', seat: 1 }, { card: '9D', seat: 2 }, { card: '2D', seat: 3 }, { card: 'AD', seat: 0 }], 'the taken trick lies in front of the four seats, counted from whoever led it');
+  assert.deepEqual(S.trickCards(live, held), [{ card: 'QS', seat: 2 }, { card: '2C', seat: 3 }], 'a card played to the next trick ends the hold');
+  assert.deepEqual(S.trickCards(empty, null), []);
+  assert.deepEqual(S.trickCards({ n: 4, pub: {}, zones: {} }, held), [{ card: 'KD', seat: 1 }, { card: '9D', seat: 2 }, { card: '2D', seat: 3 }, { card: 'AD', seat: 0 }], 'a game with no trick zone shows only what was held');
+  assert.deepEqual(S.trickCards(null, held), []);
+  assert.deepEqual(S.trickCards({ n: 4, pub: { led: null }, zones: { trick: { n: 1, cards: ['QS'] } } }, null), [], 'a trick whose leader is not known is not placed');
+});
+
+test('cutGroups: a zone cut into its groups by the sizes the game gives', () => {
+  const cards = ['5H', '5C', '5D', 'AS', '2S', '3S', '4S'];
+  assert.deepEqual(S.cutGroups(cards, [3, 4]), [['5H', '5C', '5D'], ['AS', '2S', '3S', '4S']]);
+  assert.deepEqual(S.cutGroups(cards, []), [cards], 'no cuts: the whole zone is one group');
+  assert.deepEqual(S.cutGroups(cards, undefined), [cards]);
+  assert.deepEqual(S.cutGroups(cards, [3]), [['5H', '5C', '5D'], ['AS', '2S', '3S', '4S']], 'cards past the last cut make one more group');
+  assert.deepEqual(S.cutGroups(cards, [3, 9]), [['5H', '5C', '5D'], ['AS', '2S', '3S', '4S']], 'a cut larger than what is left takes what is left');
+  assert.deepEqual(S.cutGroups(cards, [0, -1, 2.5, 'x', 3, 4]), [['5H', '5C', '5D'], ['AS', '2S', '3S', '4S']], 'sizes that are not whole numbers above 0 are skipped');
+  assert.deepEqual(S.cutGroups([], [3]), []);
+  assert.deepEqual(S.cutGroups(null, [3]), []);
+  assert.deepEqual(S.cutGroups(['AH', '2H', '3H'], [3, 3, 3]), [['AH', '2H', '3H']], 'cuts past the cards make no empty groups');
+});
+
+test('seatNote and seatSide: the game line for a seat and the side it plays for', () => {
+  const v = { pub: { notes: ['Bid 3, took 2', '', 'Nil, took 0'], teams: [0, 1, 0, 1] } };
+  assert.equal(S.seatNote(v, 0), 'Bid 3, took 2');
+  assert.equal(S.seatNote(v, 1), '');
+  assert.equal(S.seatNote(v, 7), '');
+  assert.equal(S.seatNote({ pub: {} }, 0), '');
+  assert.equal(S.seatNote({ pub: { notes: [4] } }, 0), '', 'only words');
+  assert.equal(S.hasNotes(v), true);
+  assert.equal(S.hasNotes({ pub: {} }), false);
+  assert.deepEqual([0, 1, 2, 3].map((i) => S.seatSide(v, i)), [0, 1, 0, 1]);
+  assert.equal(S.seatSide({ pub: {} }, 0), null);
+  assert.equal(S.seatSide({ pub: { teams: ['a'] } }, 0), null);
+});
+
+test('centreItems: the pack, then sets and runs, then the pile or the card on offer, then the waste', () => {
+  // Rummy: the pack, the melds in groups, the top of the pile.
+  const rummy = { zones: { draw: { n: 20 }, discard: { n: 2, top: '9C' }, melds: { n: 7, cards: ['5H', '5C', '5D', 'AS', '2S', '3S', '4S'] }, 'hand:0': { n: 7 } }, pub: { cuts: { melds: [3, 4] } } };
+  assert.deepEqual(S.centreItems(rummy), [
+    { kind: 'pack', n: 20 },
+    { kind: 'groups', id: 'melds', groups: [['5H', '5C', '5D'], ['AS', '2S', '3S', '4S']] },
+    { kind: 'pile', card: '9C' }]);
+  // No sets yet, and an empty pack: only the pile.
+  assert.deepEqual(S.centreItems({ zones: { draw: { n: 0 }, discard: { n: 1, top: '9C' }, melds: { n: 0, cards: [] } }, pub: { cuts: { melds: [] } } }), [{ kind: 'pile', card: '9C' }]);
+  // Conquian: the pack, the card on offer drawn where the pile's top card goes, the waste with its top card.
+  const conquian = { zones: { draw: { n: 17 }, offer: { n: 1, cards: ['7H'] }, waste: { n: 3, top: 'KC' }, 'laid:0': { n: 3, cards: ['AH', '2H', '3H'] } }, pub: { cuts: { 'laid:0': [3], 'laid:1': [] } } };
+  assert.deepEqual(S.centreItems(conquian), [{ kind: 'pack', n: 17 }, { kind: 'offer', card: '7H' }, { kind: 'waste', top: 'KC', n: 3 }],
+    'a player\'s laid cards (a zone with a colon) are not in the middle');
+  assert.deepEqual(S.centreItems({ zones: { draw: { n: 17 }, offer: { n: 0, cards: [] }, waste: { n: 0 } }, pub: { cuts: {} } }), [{ kind: 'pack', n: 17 }, { kind: 'offer', card: null }], 'nothing on offer is an empty place, an empty waste is not drawn');
+  // A game with neither (Crazy Eights, Spades): as before.
+  assert.deepEqual(S.centreItems({ zones: { draw: { n: 30 }, discard: { n: 4, top: 'QD' } }, pub: {} }), [{ kind: 'pack', n: 30 }, { kind: 'pile', card: 'QD' }]);
+  assert.deepEqual(S.centreItems({ zones: { draw: { n: 0 }, trick: { n: 2, cards: ['QS', '2C'] } }, pub: {} }), []);
+  assert.deepEqual(S.centreItems(null), []);
+});
+
+test('laidGroups: a player\'s laid cards as groups, cut by the game, or one group when it gives no cuts', () => {
+  const v = { zones: { 'laid:0': { n: 7, cards: ['5H', '5C', '5D', 'AS', '2S', '3S', '4S'] }, 'laid:1': { n: 0, cards: [] } }, pub: { cuts: { 'laid:0': [3, 4] } } };
+  assert.deepEqual(S.laidGroups(v, 0), [['5H', '5C', '5D'], ['AS', '2S', '3S', '4S']]);
+  assert.deepEqual(S.laidGroups(v, 1), []);
+  assert.deepEqual(S.laidGroups(v, 2), []);
+  const books = { zones: { 'laid:1': { n: 8, cards: ['2H', '2S', '2C', '2D', '3H', '3S', '3C', '3D'] } }, pub: {} };
+  assert.equal(S.laidGroups(books, 1).length, 1, 'with no cuts (Go Fish books) the laid cards are one row, as before');
+});
+
+test('laidAnchor: groups start at the plate\'s inner edge, never under the plate, and stay clear of the small code', () => {
+  for (let n = 2; n <= 8; n++) {
+    const box = S.plateBox(n);
+    for (const spot of S.seatSpots(n)) {
+      const at = S.laidAnchor(spot);
+      assert.ok(at.max > 0 && at.edge >= 0);
+      const left = at.side === 'left' ? at.edge : 100 - at.edge - at.max, right = left + at.max;
+      assert.ok(at.side === 'left' ? left >= spot.x + box.w / 2 : right <= spot.x - box.w / 2, 'n=' + n + ' groups beside the plate, not under it');
+      assert.ok(left >= 0 && right <= 100, 'n=' + n + ' on the screen');
+      assert.ok(!(right > 89.5 && spot.y + 5 > 76), 'n=' + n + ' clear of the small code in the bottom right');
+    }
+  }
+  assert.equal(S.laidAnchor({ x: 50, y: 82 }).side, 'left', 'a seat in the middle column sends its groups to the right of the plate (anchored on the left edge)');
+  assert.equal(S.laidAnchor({ x: 89, y: 50 }).side, 'right');
+});
+
 test('index.html loads the scripts in the order the page needs', () => {
   const html = read('cards', 'index.html');
   const src = [...html.matchAll(/<script[^>]*\ssrc="([^"]+)"/g)].map((m) => m[1]);

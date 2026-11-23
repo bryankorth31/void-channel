@@ -13,10 +13,12 @@ that says what may happen. A card was only the first kind of private thing.
 |---|---|---|
 | Crazy Eights | 2 to 7 | Yes, a whole game |
 | Go Fish | 2 to 6 | Yes, the first asks |
-| Hearts | 3 to 5 | No. Its rules are tested; its table drawing is unseen |
-| Spades | 4, partners | No. The pages cannot yet show a bid button that asks a question |
-| Rummy | 2 to 6 | No. The pages cannot yet show several card moves in a turn, or sets and runs in groups |
-| Conquian | 2 | No. Same as Rummy |
+| Hearts | 3 | Yes (22 Nov 2026, three phones): the pass of three cards, then tricks, with each trick held on the table a moment. Four and five players not played |
+| Spades | 4, partners | Yes (22 Nov 2026, four phones): all four bid, one Nil, then tricks; bids and books on the plates, partners tinted. A whole deal and the score were not played out |
+| Rummy | 2 | Yes (22 Nov 2026, two phones): draw, take the top card, lay down a set and a run, lay off, discard, the groups on the table. A win, the pack turning over and more than two players not played |
+| Conquian | 2 | Yes (22 Nov 2026, two phones): turn a card, use it in a new set or run, pass, discard, the offer, the waste and each player's groups on the table, and Use the card with nothing picked. Using the card on a group already laid was refused by the rules in every try (the cards never fitted), so that move going through was not seen; a win was not played |
+
+All of that was in headless browsers on this PC. No real phone has been used yet.
 
 Spades as built: bid your books, nil is 100 either way, ten bags cost 100, first side to 500, and a side that sinks
 to 200 below nothing loses. No jokers. Rummy as built: sets and runs, lay off on anyone's, the card taken from the
