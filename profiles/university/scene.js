@@ -511,7 +511,9 @@ function world(sc, plan) {
     o.tag.group.rotation.set(0, (id.charCodeAt(0) % 5 - 2) * 0.05 + wob, turn);
     o.tag.group.scale.setScalar(Math.max(0.01, v.s));
     o.fade(Math.max(0, Math.min(1, v.o)));
-    o.tag.group.visible = seen && !!(A.label || A.sub || B.label || B.sub);
+    // a tag whose words go blank goes with them, halfway through the step
+    const said = (v) => !!(v.label || v.sub);
+    o.tag.group.visible = seen && (fp.turned ? said(A) || said(B) : e < 0.5 ? said(A) : said(B));
   }
   function dispose() {
     scene.traverse((n) => {

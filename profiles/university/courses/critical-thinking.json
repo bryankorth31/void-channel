@@ -1527,19 +1527,28 @@
           },
           {
             "id": "tl",
-            "type": "text",
-            "x": 400,
-            "y": 338,
+            "type": "card",
+            "x": 640,
+            "y": 265,
             "label": "The trailer",
             "color": "pink",
             "size": 18,
-            "o": 0
+            "o": 0,
+            "prop": "tv",
+            "screen": "NOW SHOWING|TRAILER",
+            "w": 150,
+            "h": 110,
+            "tagW": 170,
+            "tag": [
+              -175,
+              50
+            ]
           },
           {
             "id": "st",
             "type": "stamp",
-            "x": 640,
-            "y": 200,
+            "x": 30,
+            "y": 230,
             "w": 130,
             "label": "MUST SEE!",
             "color": "pink",
@@ -2060,59 +2069,92 @@
           {
             "id": "you",
             "type": "card",
-            "x": 630,
-            "y": 130,
-            "w": 160,
-            "h": 100,
+            "x": 690,
+            "y": 137.5,
             "label": "You",
-            "color": "blue"
+            "color": "blue",
+            "prop": "figure",
+            "pose": "stand",
+            "turn": -0.9,
+            "look": "dark",
+            "w": 40,
+            "h": 85,
+            "tagW": 170,
+            "tag": [
+              0,
+              95
+            ]
           },
           {
             "id": "c3",
             "type": "card",
-            "x": 430,
-            "y": 130,
-            "w": 160,
-            "h": 100,
+            "x": 490,
+            "y": 137.5,
             "label": "Cousin",
             "sub": "\"He got fired!\"",
             "color": "gold",
             "o": 0,
-            "size": 20
+            "size": 20,
+            "prop": "figure",
+            "pose": "stand",
+            "turn": -0.9,
+            "w": 40,
+            "h": 85,
+            "tagW": 170,
+            "tag": [
+              0,
+              95
+            ]
           },
           {
             "id": "c2",
             "type": "card",
-            "x": 230,
-            "y": 130,
-            "w": 160,
-            "h": 100,
+            "x": 290,
+            "y": 137.5,
             "label": "Coworker",
             "sub": "\"I heard he left\"",
             "color": "gold",
             "o": 0,
-            "size": 20
+            "size": 20,
+            "prop": "figure",
+            "pose": "stand",
+            "turn": -0.9,
+            "w": 40,
+            "h": 85,
+            "tagW": 170,
+            "tag": [
+              0,
+              95
+            ]
           },
           {
             "id": "c1",
             "type": "card",
-            "x": 30,
-            "y": 130,
-            "w": 160,
-            "h": 100,
+            "x": 90,
+            "y": 137.5,
             "label": "Who was there",
             "sub": "\"He quit.\"",
             "color": "green",
             "o": 0,
-            "size": 18
+            "size": 18,
+            "prop": "figure",
+            "pose": "stand",
+            "turn": -0.9,
+            "w": 40,
+            "h": 85,
+            "tagW": 170,
+            "tag": [
+              0,
+              95
+            ]
           },
           {
             "id": "a3",
             "type": "arrow",
-            "x": 626,
-            "y": 180,
-            "x2": 594,
-            "y2": 180,
+            "x": 685,
+            "y": 205,
+            "x2": 535,
+            "y2": 205,
             "color": "gold",
             "o": 0,
             "draw": 0
@@ -2120,10 +2162,10 @@
           {
             "id": "a2",
             "type": "arrow",
-            "x": 426,
-            "y": 180,
-            "x2": 394,
-            "y2": 180,
+            "x": 485,
+            "y": 205,
+            "x2": 335,
+            "y2": 205,
             "color": "gold",
             "o": 0,
             "draw": 0
@@ -2131,10 +2173,10 @@
           {
             "id": "a1",
             "type": "arrow",
-            "x": 226,
-            "y": 180,
-            "x2": 194,
-            "y2": 180,
+            "x": 285,
+            "y": 205,
+            "x2": 135,
+            "y2": 205,
             "color": "gold",
             "o": 0,
             "draw": 0
@@ -2143,9 +2185,9 @@
             "id": "dir",
             "type": "arrow",
             "x": 700,
-            "y": 240,
+            "y": 340,
             "x2": 120,
-            "y2": 300,
+            "y2": 340,
             "color": "green",
             "o": 0,
             "draw": 0

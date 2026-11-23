@@ -553,34 +553,40 @@
           {
             "id": "cab",
             "type": "card",
-            "x": 250,
+            "x": 220,
             "y": 50,
-            "w": 300,
-            "h": 220,
+            "w": 360,
+            "h": 160,
             "label": "",
-            "color": "dim"
+            "color": "dim",
+            "prop": "elevator",
+            "shut": 0,
+            "dir": "",
+            "tagW": 170,
+            "tag": [
+              250,
+              60
+            ]
           },
           {
             "id": "dl",
             "type": "card",
-            "x": 100,
-            "y": 50,
-            "w": 150,
-            "h": 220,
+            "x": 300,
+            "y": 285,
             "label": "",
             "color": "blue",
-            "size": 18
+            "size": 18,
+            "tie": "cab.left"
           },
           {
             "id": "dr",
             "type": "card",
-            "x": 550,
-            "y": 50,
-            "w": 150,
-            "h": 220,
+            "x": 500,
+            "y": 285,
             "label": "",
             "color": "blue",
-            "size": 18
+            "size": 18,
+            "tie": "cab.right"
           },
           {
             "id": "up",
@@ -598,7 +604,7 @@
             "id": "yell",
             "type": "text",
             "x": 400,
-            "y": 312,
+            "y": 355,
             "label": "\"Hold the door!\"",
             "color": "pink",
             "size": 22,
@@ -606,13 +612,23 @@
           },
           {
             "id": "you",
-            "type": "stamp",
-            "x": 20,
-            "y": 135,
-            "w": 76,
+            "type": "card",
+            "x": 320,
+            "y": 205,
+            "w": 40,
             "label": "YOU",
             "color": "blue",
-            "size": 15
+            "size": 15,
+            "prop": "figure",
+            "pose": "stand",
+            "look": "dark",
+            "turn": 0.4,
+            "h": 70,
+            "tagW": 100,
+            "tag": [
+              0,
+              70
+            ]
           },
           {
             "id": "need",
@@ -629,11 +645,8 @@
             "say": "The elevator doors start to close.",
             "dur": 2.2,
             "set": {
-              "dl": {
-                "x": 175
-              },
-              "dr": {
-                "x": 475
+              "cab": {
+                "shut": 0.3
               }
             }
           },
@@ -642,8 +655,10 @@
             "dur": 2.2,
             "set": {
               "you": {
-                "x": 362,
-                "y": 192
+                "x": 380,
+                "y": 35,
+                "turn": 3.141592653589793,
+                "label": ""
               },
               "yell": {
                 "o": 1
@@ -654,18 +669,16 @@
             "say": "Doors shut. It goes up.",
             "dur": 2.2,
             "set": {
-              "dl": {
-                "x": 250
-              },
-              "dr": {
-                "x": 400
-              },
               "up": {
                 "o": 1,
                 "s": 1
               },
               "yell": {
                 "o": 0
+              },
+              "cab": {
+                "shut": 1,
+                "dir": "up"
               }
             }
           },
@@ -716,19 +729,16 @@
             "dur": 2.8,
             "set": {
               "dl": {
-                "x": 100,
-                "label": "",
-                "color": "blue"
+                "label": ""
               },
               "dr": {
-                "x": 550,
-                "label": "",
-                "color": "blue"
+                "label": ""
               },
               "you": {
-                "x": 20,
-                "y": 135,
-                "color": "blue"
+                "x": 320,
+                "y": 205,
+                "turn": 0.4,
+                "label": "YOU"
               },
               "yell": {
                 "o": 0
@@ -743,7 +753,9 @@
               },
               "cab": {
                 "label": "Next one",
-                "color": "green"
+                "color": "green",
+                "shut": 0,
+                "dir": ""
               }
             }
           }
@@ -3792,27 +3804,38 @@
         ],
         "actors": [
           {
-            "id": "glow",
-            "type": "stamp",
-            "x": 120,
-            "y": 18,
-            "w": 120,
-            "label": "",
-            "color": "gold",
-            "o": 0,
-            "s": 0.4
-          },
-          {
             "id": "sp",
             "type": "card",
-            "x": 40,
-            "y": 150,
-            "w": 280,
-            "h": 130,
+            "x": 160,
+            "y": 155,
+            "w": 40,
+            "h": 120,
             "label": "Salesperson",
             "sub": "great smile, sharp suit",
             "color": "pink",
-            "o": 0
+            "o": 0,
+            "prop": "figure",
+            "pose": "stand",
+            "look": "suit",
+            "turn": 0.3,
+            "tagW": 200,
+            "tag": [
+              0,
+              100
+            ]
+          },
+          {
+            "id": "glow",
+            "type": "card",
+            "x": 150,
+            "y": 185,
+            "w": 60,
+            "label": "",
+            "color": "gold",
+            "o": 0,
+            "prop": "halo",
+            "on": "sp",
+            "h": 60
           },
           {
             "id": "q1",
@@ -3866,8 +3889,7 @@
             "dur": 2.2,
             "set": {
               "glow": {
-                "o": 1,
-                "s": 1
+                "o": 1
               }
             }
           },
@@ -3937,8 +3959,7 @@
             "dur": 3,
             "set": {
               "glow": {
-                "o": 0,
-                "s": 0.4
+                "o": 0
               },
               "q1": {
                 "sub": "checked",

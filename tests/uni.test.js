@@ -665,4 +665,18 @@ test('real objects on the lit table: every object a scene names is in the librar
   assert.deepStrictEqual(money(/phone plan/).states.map((s) => s.to.old.screen), ['note', 'note', 'note', 'note', 'note', 'note', 'call']);
   // the new driver's STUDENT DRIVER board: on in week one, off by year five, on again for any new skill
   assert.deepStrictEqual(money(/new driver/).states.map((s) => s.to.drv.learner), [true, true, true, false, true, true]);
+  // The last four (Bryan, 23 Nov 2026: "Yes, last four")
+  const lift = money(/closing elevator/);
+  assert.deepStrictEqual(kinds(lift, ['cab', 'dl', 'dr', 'you']), ['prop', 'label', 'label', 'prop']);
+  assert.deepStrictEqual(lift.states.map((s) => [s.to.cab.shut, s.to.cab.dir || '']), [[0.3, ''], [0.3, ''], [1, 'up'], [1, 'up'], [1, 'up'], [0, '']]);
+  assert.ok(lift.states[1].to.you.y < 60 && lift.states[5].to.you.y > 150, 'you step into the cab, and back out for the next one');
+  const halo = money(/salesperson/);
+  assert.ok(halo.kind.sp === 'prop' && halo.kind.glow === 'prop' && halo.states[1].to.glow.on === 'sp', 'the halo rests over the salesperson');
+  assert.deepStrictEqual(halo.states.map((s) => s.to.glow.o), [0, 1, 1, 1, 1, 0]);
+  assert.strictEqual(money(/movie trailer/).kind.tl, 'prop');
+  assert.deepStrictEqual(kinds(money(/rumor at work/), ['you', 'c3', 'c2', 'c1']), ['prop', 'prop', 'prop', 'prop']);
+  // every lesson is now acted with real objects, but the two about numbers, not things, and the sale price, whose
+  // objects are the hang tags themselves
+  const paper = allScenes().filter(({ sc }) => !sc.actors.some((a) => a.prop && a.prop !== 'tag')).map(({ sc }) => sc.analogy).sort();
+  assert.deepStrictEqual(paper, ['A gym with a cheap first two months', 'A sale price after the price went up', 'One student, or a whole school'], 'lessons still on paper: ' + paper.join('; '));
 });

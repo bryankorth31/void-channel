@@ -341,22 +341,29 @@ export const PROPS = {
       const body = new THREE.Group();
       // "pose": "stand": the figure stands on its own feet, arms down, turned "turn" radians (0 faces you)
       if (a.pose === 'stand') {
+        // "look": "suit" dresses it: navy cloth, black shoes, a white collar and a red tie; the head and hands stay wood
+        const suit = a.look === 'suit', navy = new THREE.MeshStandardMaterial({ color: 0x1f2a44, roughness: 0.75 }), black = new THREE.MeshStandardMaterial({ color: 0x111113, roughness: 0.3, envMap: ctx.env, envMapIntensity: 0.6 });
+        const dress = (m, k) => { if (suit && k !== 'skin') m.material = k === 'shoe' ? black : navy; return m; };
         [-1, 1].forEach((sd) => {
-          part(new THREE.BoxGeometry(0.09 * s, 0.05 * s, 0.17 * s), sd * 0.07 * s, 0.025 * s, 0.03 * s);
-          part(cap(0.055 * s, 0.17 * s), sd * 0.07 * s, 0.17 * s, 0);
-          part(ball(0.06 * s), sd * 0.07 * s, 0.3 * s, 0);
-          part(cap(0.07 * s, 0.16 * s), sd * 0.075 * s, 0.4 * s, 0);
-          part(ball(0.045 * s), sd * 0.15 * s, 0.78 * s, 0);
-          part(cap(0.038 * s, 0.14 * s), sd * 0.16 * s, 0.67 * s, 0, 0, sd * 0.08);
-          part(ball(0.034 * s), sd * 0.17 * s, 0.57 * s, 0);
-          part(cap(0.033 * s, 0.13 * s), sd * 0.175 * s, 0.47 * s, 0.01 * s, 0.08, 0);
+          dress(part(new THREE.BoxGeometry(0.09 * s, 0.05 * s, 0.17 * s), sd * 0.07 * s, 0.025 * s, 0.03 * s), 'shoe');
+          dress(part(cap(0.055 * s, 0.17 * s), sd * 0.07 * s, 0.17 * s, 0), 'cloth');
+          dress(part(ball(0.06 * s), sd * 0.07 * s, 0.3 * s, 0), 'cloth');
+          dress(part(cap(0.07 * s, 0.16 * s), sd * 0.075 * s, 0.4 * s, 0), 'cloth');
+          dress(part(ball(0.045 * s), sd * 0.15 * s, 0.78 * s, 0), 'cloth');
+          dress(part(cap(0.038 * s, 0.14 * s), sd * 0.16 * s, 0.67 * s, 0, 0, sd * 0.08), 'cloth');
+          dress(part(ball(0.034 * s), sd * 0.17 * s, 0.57 * s, 0), 'cloth');
+          dress(part(cap(0.033 * s, 0.13 * s), sd * 0.175 * s, 0.47 * s, 0.01 * s, 0.08, 0), 'cloth');
           part(ball(0.036 * s), sd * 0.175 * s, 0.37 * s, 0.02 * s);
         });
-        part(cap(0.1 * s, 0.1 * s), 0, 0.51 * s, 0, 0, Math.PI / 2);
-        part(ball(0.065 * s), 0, 0.59 * s, 0);
-        part(cap(0.11 * s, 0.08 * s), 0, 0.71 * s, 0);
+        dress(part(cap(0.1 * s, 0.1 * s), 0, 0.51 * s, 0, 0, Math.PI / 2), 'cloth');
+        dress(part(ball(0.065 * s), 0, 0.59 * s, 0), 'cloth');
+        dress(part(cap(0.11 * s, 0.08 * s), 0, 0.71 * s, 0), 'cloth');
         part(cap(0.035 * s, 0.04 * s), 0, 0.85 * s, 0);
         const hd = part(ball(0.08 * s), 0, 0.95 * s, 0.01 * s); hd.scale.set(0.85, 1.15, 0.95);
+        if (suit) {
+          const collar = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.1 * s, 0.05 * s, 0.02 * s), new THREE.MeshStandardMaterial({ color: 0xf4f2ec, roughness: 0.6 }))); collar.position.set(0, 0.8 * s, 0.085 * s); collar.rotation.x = -0.3; body.add(collar);
+          const tie = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.035 * s, 0.17 * s, 0.012 * s), new THREE.MeshStandardMaterial({ color: 0xa3161c, roughness: 0.4 }))); tie.position.set(0, 0.7 * s, 0.11 * s); tie.rotation.x = -0.12; body.add(tie);
+        }
         body.rotation.y = a.turn || 0;
         const group = new THREE.Group(); group.add(body);
         return {
@@ -1181,6 +1188,106 @@ export const PROPS = {
       const toe = shadowed(new THREE.Mesh(new THREE.SphereGeometry(1, 32, 12, 0, Math.PI * 2, 0, Math.PI / 2), rubber)); toe.scale.set(0.1 * L, 0.05 * L, wid(0.95) * 0.46); toe.position.set(0.4 * L, 0.06 * L, 0); shoe.add(toe);
       const group = new THREE.Group(); group.add(shoe);
       return { group, top: 0.4 * L, anchor: () => new THREE.Vector3(-0.3 * L, 0.04 * L, 0.18 * L).applyAxisAngle(new THREE.Vector3(0, 1, 0), -0.35), update() {} };
+    },
+  },
+  // An elevator in a lobby wall: brushed steel doors that slide shut ("shut": 0 open to 1 closed), a lit cab behind
+  // them, and a lamp over the door that shows where it is going ("dir": "up" or "down"). Anchors: 'left' and 'right'
+  // (the middle of each door, so a tag can be tied to it) and 'tie'.
+  elevator: {
+    build(a, ctx) {
+      const s = (a.w || 300) * ctx.S, W = 0.34 * s, H = 0.42 * s, WW = 0.62 * s, WH = H + 0.2 * s, D = 0.06 * s, CD = 0.42 * s;
+      const stone = new THREE.MeshStandardMaterial({ color: 0xb8ad9b, roughness: 0.55, envMap: ctx.env, envMapIntensity: 0.25 });
+      const brass = new THREE.MeshStandardMaterial({ color: 0xc8a45a, metalness: 1, roughness: 0.3, envMap: ctx.env, envMapIntensity: 1.2 });
+      const steel = new THREE.MeshStandardMaterial({ color: 0xbfc3c7, metalness: 0.95, roughness: 0.32, envMap: ctx.env, envMapIntensity: 1.1 });
+      const group = new THREE.Group();
+      const wall = new THREE.Shape(); wall.moveTo(-WW / 2, 0); wall.lineTo(WW / 2, 0); wall.lineTo(WW / 2, WH); wall.lineTo(-WW / 2, WH); wall.closePath();
+      const hole = new THREE.Path(); hole.moveTo(-W / 2, 0.001); hole.lineTo(-W / 2, H); hole.lineTo(W / 2, H); hole.lineTo(W / 2, 0.001); hole.closePath(); wall.holes.push(hole);
+      const wg = new THREE.ExtrudeGeometry(wall, { depth: D, bevelEnabled: false }); wg.translate(0, 0, -D / 2);
+      group.add(shadowed(new THREE.Mesh(wg, stone)));
+      [[-W / 2 - 0.012 * s, H / 2, 0.024 * s, H], [W / 2 + 0.012 * s, H / 2, 0.024 * s, H], [0, H + 0.012 * s, W + 0.048 * s, 0.024 * s]].forEach(([x, y, w, h]) => { const f = shadowed(new THREE.Mesh(new THREE.BoxGeometry(w, h, D * 1.4), brass)); f.position.set(x, y, 0); group.add(f); });
+      // the cab: warm wood panels seen from inside, a lit ceiling, and its own light
+      const cab = new THREE.Mesh(new THREE.BoxGeometry(W * 1.15, H * 1.02, CD), new THREE.MeshStandardMaterial({ color: 0x8a6440, roughness: 0.6, side: THREE.BackSide }));
+      cab.position.set(0, H * 0.51, -D / 2 - CD / 2); cab.receiveShadow = true; group.add(cab);
+      const ceil = new THREE.Mesh(new THREE.PlaneGeometry(W, CD * 0.8), new THREE.MeshBasicMaterial({ color: 0xfff2d6 })); ceil.rotation.x = Math.PI / 2; ceil.position.set(0, H * 1.01, -D / 2 - CD / 2); group.add(ceil);
+      const lamp = new THREE.PointLight(0xffe2b0, 0, 1.6 * s, 2); lamp.position.set(0, H * 0.85, -D / 2 - CD / 2); group.add(lamp);
+      // the doors run in a slot just behind the wall; open, they hide behind it
+      const leaf = (sd) => { const m = shadowed(new THREE.Mesh(new THREE.BoxGeometry(W / 2, H, 0.012 * s), steel)); m.position.set(sd * W * 0.75, H / 2, -D / 2 - 0.01 * s); group.add(m); return m; };
+      const L = leaf(-1), R = leaf(1);
+      // over the door: a dark lamp with an up and a down arrow
+      const c = document.createElement('canvas'); c.width = 256; c.height = 96; const g = c.getContext('2d');
+      const tx = new THREE.CanvasTexture(c); tx.colorSpace = THREE.SRGBColorSpace;
+      const arrows = (dir) => {
+        g.fillStyle = '#16120e'; g.fillRect(0, 0, 256, 96);
+        [['up', 78, -1], ['down', 178, 1]].forEach(([d, x, k]) => { g.fillStyle = dir === d ? '#ffb43a' : '#3a2f22'; g.beginPath(); g.moveTo(x - 30, 48 - k * 22); g.lineTo(x + 30, 48 - k * 22); g.lineTo(x, 48 + k * 24); g.closePath(); g.fill(); });
+        tx.needsUpdate = true;
+      };
+      let shown = a.dir || ''; arrows(shown);
+      const ind = new THREE.Mesh(new THREE.PlaneGeometry(0.2 * s, 0.075 * s), new THREE.MeshStandardMaterial({ map: tx, emissive: 0xffffff, emissiveMap: tx, emissiveIntensity: 1, roughness: 0.3 })); ind.position.set(0, H + 0.1 * s, D / 2 + 0.006 * s); group.add(ind);
+      const rim = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.22 * s, 0.095 * s, 0.01 * s), brass)); rim.position.set(0, H + 0.1 * s, D / 2 - 0.002); group.add(rim);
+      const plate = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.05 * s, 0.12 * s, 0.01 * s), brass)); plate.position.set(W / 2 + 0.07 * s, H * 0.5, D / 2 + 0.005); group.add(plate);
+      [0.025, -0.025].forEach((y) => { const b = new THREE.Mesh(new THREE.CylinderGeometry(0.012 * s, 0.012 * s, 0.01 * s, 16), new THREE.MeshStandardMaterial({ color: 0xfff1d0, emissive: 0xffd27a, emissiveIntensity: 0.4 })); b.rotation.x = Math.PI / 2; b.position.set(W / 2 + 0.07 * s, H * 0.5 + y * s, D / 2 + 0.012 * s); group.add(b); });
+      const seen = (v) => (v && v.o != null ? v.o : 1);
+      let k = num(a, 'shut');
+      return {
+        group, top: WH,
+        anchor(name) {
+          if (name === 'left') return new THREE.Vector3(L.position.x, H * 0.3, -D / 2);
+          if (name === 'right') return new THREE.Vector3(R.position.x, H * 0.3, -D / 2);
+          return new THREE.Vector3(WW * 0.4, 0.04 * s, D / 2);
+        },
+        update(A, B, e) {
+          k = lerp(A && A.shut != null ? A.shut : num(a, 'shut'), B && B.shut != null ? B.shut : (A && A.shut != null ? A.shut : num(a, 'shut')), e);
+          L.position.x = -W * 0.75 + k * W / 2; R.position.x = W * 0.75 - k * W / 2;
+          const d = (e < 0.5 ? A && A.dir : B && B.dir) || ''; if (d !== shown) { shown = d; arrows(d); }
+          lamp.intensity = 2.2 * lerp(seen(A), seen(B), e);
+        },
+      };
+    },
+  },
+  // An old television in a wooden cabinet on short legs, its screen lit with "screen" (two lines, split by "|"),
+  // rabbit-ear aerials on top.
+  tv: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 150, a.h || 150) * ctx.S, W = 0.85 * s, H = 0.62 * s, D = 0.5 * s, lift = 0.1 * s;
+      const wood = new THREE.MeshStandardMaterial({ map: weathered('#7a4a26'), roughness: 0.45, envMap: ctx.env, envMapIntensity: 0.4 });
+      const group = new THREE.Group();
+      const box = new THREE.Shape(), r = 0.06 * s; box.moveTo(-W / 2 + r, 0); box.lineTo(W / 2 - r, 0); box.quadraticCurveTo(W / 2, 0, W / 2, r); box.lineTo(W / 2, H - r); box.quadraticCurveTo(W / 2, H, W / 2 - r, H); box.lineTo(-W / 2 + r, H); box.quadraticCurveTo(-W / 2, H, -W / 2, H - r); box.lineTo(-W / 2, r); box.quadraticCurveTo(-W / 2, 0, -W / 2 + r, 0);
+      const sw = W * 0.62, sh = H * 0.72, sx = -W * 0.12, sy = H * 0.5;
+      const win = new THREE.Path(); win.moveTo(sx - sw / 2, sy - sh / 2); win.lineTo(sx - sw / 2, sy + sh / 2); win.lineTo(sx + sw / 2, sy + sh / 2); win.lineTo(sx + sw / 2, sy - sh / 2); win.closePath(); box.holes.push(win);
+      const bg = new THREE.ExtrudeGeometry(box, { depth: D, bevelEnabled: true, bevelThickness: 0.015 * s, bevelSize: 0.015 * s, bevelSegments: 3 }); bg.translate(0, lift, -D / 2);
+      group.add(shadowed(new THREE.Mesh(bg, wood)));
+      const c = document.createElement('canvas'); c.width = 480; c.height = 360; const g = c.getContext('2d');
+      const gr = g.createRadialGradient(240, 180, 30, 240, 180, 300); gr.addColorStop(0, '#3b5f86'); gr.addColorStop(1, '#0d1724'); g.fillStyle = gr; g.fillRect(0, 0, 480, 360);
+      for (let y = 0; y < 360; y += 4) { g.fillStyle = 'rgba(0,0,0,0.18)'; g.fillRect(0, y, 480, 2); }
+      const [l1, l2] = String(a.screen || 'NOW SHOWING|TRAILER').split('|');
+      g.fillStyle = '#ffd36a'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.font = '700 38px "VU Print"'; g.fillText(l1 || '', 240, 130); g.fillStyle = '#fff'; g.font = '800 74px "VU Print"'; g.fillText(l2 || '', 240, 215);
+      const tx = new THREE.CanvasTexture(c); tx.colorSpace = THREE.SRGBColorSpace;
+      const scr = new THREE.Mesh(new THREE.PlaneGeometry(sw, sh, 8, 8), new THREE.MeshStandardMaterial({ map: tx, emissive: 0xffffff, emissiveMap: tx, emissiveIntensity: 0.8, roughness: 0.08, envMap: ctx.env, envMapIntensity: 0.5 }));
+      { const p = scr.geometry.attributes.position; for (let i = 0; i < p.count; i++) { const x = p.getX(i) / sw * 2, y = p.getY(i) / sh * 2; p.setZ(i, 0.03 * s * (1 - 0.5 * (x * x + y * y))); } scr.geometry.computeVertexNormals(); }
+      scr.position.set(sx, lift + sy, D / 2 - 0.05 * s); group.add(scr);
+      const back = new THREE.Mesh(new THREE.PlaneGeometry(sw, sh), new THREE.MeshStandardMaterial({ color: 0x0b0b0c })); back.position.set(sx, lift + sy, D / 2 - 0.08 * s); group.add(back);
+      const brass = new THREE.MeshStandardMaterial({ color: 0xc9a75c, metalness: 1, roughness: 0.3, envMap: ctx.env });
+      [0.62, 0.38].forEach((u) => { const kb = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(0.04 * s, 0.04 * s, 0.03 * s, 20), brass)); kb.rotation.x = Math.PI / 2; kb.position.set(W * 0.36, lift + H * u, D / 2 + 0.03 * s); group.add(kb); });
+      const grille = new THREE.Mesh(new THREE.PlaneGeometry(W * 0.14, H * 0.18), new THREE.MeshStandardMaterial({ color: 0x2a1c12, roughness: 0.9 })); grille.position.set(W * 0.36, lift + H * 0.16, D / 2 + 0.016 * s); group.add(grille);
+      [-1, 1].forEach((sd) => [-1, 1].forEach((fb) => { const l = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(0.015 * s, 0.01 * s, lift + 0.02 * s, 10), wood)); l.position.set(sd * W * 0.4, lift / 2, fb * D * 0.38); l.rotation.z = sd * 0.15; group.add(l); }));
+      const ears = new THREE.Group(); ears.position.set(0, lift + H, 0); group.add(ears);
+      ears.add(shadowed(new THREE.Mesh(new THREE.SphereGeometry(0.05 * s, 16, 10, 0, Math.PI * 2, 0, Math.PI / 2), new THREE.MeshStandardMaterial({ color: 0x222224, roughness: 0.4 }))));
+      [-1, 1].forEach((sd) => { const rod = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(0.005 * s, 0.005 * s, 0.4 * s, 6), brass)); rod.position.set(sd * 0.1 * s, 0.17 * s, -0.04 * s); rod.rotation.z = -sd * 0.55; group.add(rod); ears.add(rod); });
+      const glow = new THREE.PointLight(0x8fb4ff, 0, 2 * s, 2); glow.position.set(sx, lift + sy, D / 2 + 0.35 * s); group.add(glow);
+      const seen = (v) => (v && v.o != null ? v.o : 1);
+      return { group, top: lift + H + 0.3 * s, anchor: () => new THREE.Vector3(W * 0.35, lift * 0.5, D / 2), update(A, B, e) { glow.intensity = 1.2 * lerp(seen(A), seen(B), e); } };
+    },
+  },
+  // A halo: a ring of warm gold light that floats just above whatever it rests "on", and lights it from above.
+  halo: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 60, a.h || 60) * ctx.S, R = 0.16 * s * 1.6;
+      const gold = new THREE.MeshStandardMaterial({ color: 0xffd36a, emissive: 0xffc04a, emissiveIntensity: 1.6, roughness: 0.3 });
+      const ring = new THREE.Mesh(new THREE.TorusGeometry(R, 0.12 * R, 16, 64), gold); ring.rotation.x = Math.PI / 2 - 0.25; ring.position.y = 0.08 * s;
+      const light = new THREE.PointLight(0xffc870, 0, 3 * s, 2); light.position.y = 0.1 * s;
+      const group = new THREE.Group(); group.add(ring, light);
+      const seen = (v) => (v && v.o != null ? v.o : 1);
+      return { group, top: 0.1 * s, anchor: () => new THREE.Vector3(R, 0.08 * s, 0), update(A, B, e) { light.intensity = 2.5 * lerp(seen(A), seen(B), e); ring.rotation.z = e * 0.3; } };
     },
   },
 };
