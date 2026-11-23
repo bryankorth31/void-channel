@@ -168,66 +168,80 @@
         {
           "id": "s0",
           "type": "card",
-          "x": 30,
-          "y": 90,
-          "w": 220,
-          "h": 100,
+          "o": 0,
+          "prop": "stacks",
+          "stacks": 5,
+          "n": 10,
           "label": "Equal pockets",
           "color": "blue",
-          "o": 0,
-          "size": 20
+          "size": 20,
+          "x": 80,
+          "y": 65,
+          "w": 180,
+          "h": 180,
+          "tagW": 180,
+          "tag": [
+            0,
+            115
+          ]
         },
         {
           "id": "s1",
           "type": "card",
-          "x": 290,
-          "y": 90,
-          "w": 220,
-          "h": 100,
+          "o": 0,
+          "prop": "hat",
+          "upturned": true,
+          "coins": 0,
           "label": "Coins by choice",
           "color": "blue",
-          "o": 0,
-          "size": 17
-        },
-        {
-          "id": "a1",
-          "type": "arrow",
-          "x": 256,
-          "y": 140,
-          "x2": 284,
-          "y2": 140,
-          "color": "dim",
-          "o": 0,
-          "draw": 0
+          "size": 18,
+          "x": 350,
+          "y": 130,
+          "w": 140,
+          "h": 140,
+          "tagW": 180,
+          "tag": [
+            0,
+            100
+          ]
         },
         {
           "id": "s2",
           "type": "card",
-          "x": 550,
-          "y": 90,
-          "w": 220,
-          "h": 100,
-          "label": "Unequal hats",
-          "color": "blue",
           "o": 0,
-          "size": 20
+          "prop": "figure",
+          "pose": "stand",
+          "label": "Unequal hats",
+          "x": 560.75,
+          "y": 85,
+          "w": 58.5,
+          "h": 130,
+          "look": "dark",
+          "turn": -0.4,
+          "color": "blue",
+          "size": 20,
+          "tagW": 170,
+          "tag": [
+            110,
+            105
+          ]
         },
         {
-          "id": "a2",
-          "type": "arrow",
-          "x": 516,
-          "y": 140,
-          "x2": 544,
-          "y2": 140,
-          "color": "dim",
+          "id": "gtr",
+          "type": "card",
           "o": 0,
-          "draw": 0
+          "prop": "guitar",
+          "label": "",
+          "x": 617.5,
+          "y": 65,
+          "w": 85,
+          "h": 170
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 270,
+          "y": 345,
           "label": "No one was forced. Is it unfair?",
           "color": "pink",
           "size": 22,
@@ -251,11 +265,17 @@
           "set": {
             "s1": {
               "o": 1,
+              "coins": 6,
               "sub": "each gives one freely"
             },
-            "a1": {
-              "o": 1,
-              "draw": 1
+            "s0": {
+              "n": 9
+            },
+            "s2": {
+              "o": 1
+            },
+            "gtr": {
+              "o": 1
             }
           }
         },
@@ -267,9 +287,11 @@
               "o": 1,
               "sub": "the player has hundreds"
             },
-            "a2": {
-              "o": 1,
-              "draw": 1
+            "gtr": {
+              "o": 1
+            },
+            "s1": {
+              "coins": 60
             },
             "line": {
               "o": 1

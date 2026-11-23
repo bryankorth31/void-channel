@@ -187,61 +187,125 @@
       ],
       "actors": [
         {
+          "id": "thing",
+          "type": "card",
+          "o": 0,
+          "prop": "crossing",
+          "label": "Crossing",
+          "color": "gold",
+          "size": 18,
+          "x": 250,
+          "y": 25,
+          "w": 300,
+          "h": 300,
+          "tagW": 150,
+          "tag": [
+            235,
+            95
+          ]
+        },
+        {
           "id": "left",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "tie": "thing.corner",
+          "x": 125,
+          "y": 265,
           "label": "No signals",
           "color": "blue",
+          "size": 22,
+          "tagW": 170
+        },
+        {
+          "id": "cE",
+          "type": "card",
           "o": 0,
-          "size": 22
+          "prop": "car",
+          "heading": 3.141592653589793,
+          "paint": 2842536,
+          "label": "",
+          "x": 565,
+          "y": 142.5,
+          "w": 70,
+          "h": 35
+        },
+        {
+          "id": "cW",
+          "type": "card",
+          "o": 0,
+          "prop": "car",
+          "heading": 0,
+          "paint": 3107642,
+          "label": "",
+          "x": 165,
+          "y": 174.5,
+          "w": 70,
+          "h": 35
+        },
+        {
+          "id": "cN",
+          "type": "card",
+          "o": 0,
+          "prop": "car",
+          "heading": -1.5707963267948966,
+          "paint": 13083194,
+          "label": "",
+          "x": 383,
+          "y": 12.5,
+          "w": 70,
+          "h": 35
+        },
+        {
+          "id": "cS",
+          "type": "card",
+          "o": 0,
+          "prop": "car",
+          "heading": 1.5707963267948966,
+          "label": "",
+          "x": 347,
+          "y": 312.5,
+          "w": 70,
+          "h": 35
         },
         {
           "id": "right",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "signal",
+          "light": "green",
           "label": "Traffic lights",
           "color": "blue",
-          "o": 0,
-          "size": 22
-        },
-        {
-          "id": "thing",
-          "type": "stamp",
-          "x": 340,
+          "size": 20,
+          "x": 495,
           "y": 20,
-          "w": 120,
-          "label": "CROSSING",
-          "color": "gold",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
+          "w": 50,
+          "h": 100,
+          "tagW": 180,
+          "tag": [
+            150,
+            0
+          ]
         },
         {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "ARRIVE",
-          "color": "fg",
+          "id": "sig2",
+          "type": "card",
           "o": 0,
-          "s": 0.4,
-          "size": 18
+          "prop": "signal",
+          "light": "red",
+          "label": "",
+          "x": 255,
+          "y": 220,
+          "w": 50,
+          "h": 100
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
+          "y": 350,
           "label": "You give up going first. You get home.",
           "color": "pink",
-          "size": 22,
+          "size": 18,
           "o": 0
         }
       ],
@@ -250,15 +314,23 @@
           "say": "Four roads meet. No lights, no signs.",
           "dur": 2.4,
           "set": {
+            "thing": {
+              "o": 1
+            },
             "left": {
               "o": 1
             },
-            "right": {
+            "cE": {
               "o": 1
             },
-            "thing": {
-              "o": 1,
-              "s": 1
+            "cW": {
+              "o": 1
+            },
+            "cN": {
+              "o": 1
+            },
+            "cS": {
+              "o": 1
             }
           }
         },
@@ -266,9 +338,32 @@
           "say": "Every driver arrives at once.",
           "dur": 2.4,
           "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
+            "cE": {
+              "x": 470,
+              "y": 142.5,
+              "w": 70,
+              "h": 35,
+              "shake": true
+            },
+            "cW": {
+              "x": 260,
+              "y": 174.5,
+              "w": 70,
+              "h": 35,
+              "shake": true
+            },
+            "cN": {
+              "x": 383,
+              "y": 67.5,
+              "w": 70,
+              "h": 35,
+              "shake": true
+            },
+            "cS": {
+              "x": 347,
+              "y": 247.5,
+              "w": 70,
+              "h": 35,
               "shake": true
             }
           }
@@ -277,11 +372,32 @@
           "say": "Each fears the others, so nobody is safe.",
           "dur": 2.6,
           "set": {
+            "cE": {
+              "x": 455,
+              "y": 142.5,
+              "w": 70,
+              "h": 35
+            },
+            "cW": {
+              "x": 275,
+              "y": 174.5,
+              "w": 70,
+              "h": 35
+            },
+            "cN": {
+              "x": 383,
+              "y": 80.5,
+              "w": 70,
+              "h": 35
+            },
+            "cS": {
+              "x": 347,
+              "y": 234.5,
+              "w": 70,
+              "h": 35
+            },
             "left": {
               "sub": "everyone edges and fears"
-            },
-            "right": {
-              "sub": "everyone waits, and goes"
             }
           }
         },
@@ -289,6 +405,37 @@
           "say": "Lights make everyone wait, and everyone gets through.",
           "dur": 2.6,
           "set": {
+            "right": {
+              "o": 1,
+              "sub": "everyone waits, and goes"
+            },
+            "sig2": {
+              "o": 1
+            },
+            "cE": {
+              "x": 180,
+              "y": 142.5,
+              "w": 70,
+              "h": 35
+            },
+            "cW": {
+              "x": 550,
+              "y": 174.5,
+              "w": 70,
+              "h": 35
+            },
+            "cN": {
+              "x": 383,
+              "y": 57.5,
+              "w": 70,
+              "h": 35
+            },
+            "cS": {
+              "x": 347,
+              "y": 257.5,
+              "w": 70,
+              "h": 35
+            },
             "line": {
               "o": 1
             }
@@ -309,13 +456,8 @@
               "color": "green"
             },
             "thing": {
-              "label": "SAFETY",
+              "label": "Safety",
               "size": 18
-            },
-            "act": {
-              "label": "TRADE FOR",
-              "size": 14,
-              "color": "pink"
             },
             "line": {
               "label": "Hobbes: without a common power, life is war.",
