@@ -31,9 +31,12 @@ const valueOf = (x) => (x && typeof x === 'object' ? x.v : x);
 // A move the hints allow, picked by chance: the cards to play (and the extra choice when one is asked for), or a button.
 function pickMove(h, rand) {
   const pick = (list) => list[Math.floor(rand() * list.length)];
-  const options = (h.buttons || []).map((b) => ({ type: b.type }));
-  const p = h.play;
-  if (p && p.cards.length >= p.min) {
+  const options = [];
+  // A button may ask one more thing (a bid): the answer is picked by chance too.
+  for (const b of h.buttons || []) { const m = { type: b.type }; if (b.choose) m[b.choose.field] = valueOf(pick(b.choose.from)); options.push(m); }
+  // The move made with cards, and any more the turn offers (plays).
+  for (const p of [h.play].concat(h.plays || [])) {
+    if (!p || p.cards.length < p.min) continue;
     const cards = C.shuffle(p.cards, rand).slice(0, p.min), m = { type: p.type, cards };
     if (p.choose && (!p.choose.cards || p.choose.cards.includes(cards[0]))) m[p.choose.field] = valueOf(pick(p.choose.from));
     options.push(m, m);   // playing is twice as likely as a button, so a game does not only draw

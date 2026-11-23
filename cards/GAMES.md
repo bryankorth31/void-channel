@@ -14,6 +14,15 @@ that says what may happen. A card was only the first kind of private thing.
 | Crazy Eights | 2 to 7 | Yes, a whole game |
 | Go Fish | 2 to 6 | Yes, the first asks |
 | Hearts | 3 to 5 | No. Its rules are tested; its table drawing is unseen |
+| Spades | 4, partners | No. The pages cannot yet show a bid button that asks a question |
+| Rummy | 2 to 6 | No. The pages cannot yet show several card moves in a turn, or sets and runs in groups |
+| Conquian | 2 | No. Same as Rummy |
+
+Spades as built: bid your books, nil is 100 either way, ten bags cost 100, first side to 500, and a side that sinks
+to 200 below nothing loses. No jokers. Rummy as built: sets and runs, lay off on anyone's, the card taken from the
+pile cannot go straight back, first out wins the deal. Conquian as built: forty cards, the 7 sits next to the jack, a
+card is never taken into the hand; not yet in it: making the other player take a card that fits their sets, and
+moving cards between your own sets.
 
 ## Bryan's own games, next
 
@@ -21,10 +30,10 @@ His words: "spadfes", "concion", "359", "rummy", "etc".
 
 | Game | Players | What is open |
 |---|---|---|
-| Spades | 4, partners | Whether his table plays jokers and deuces high. Needs partners in the engine |
-| Rummy | 2 to 6 | Nothing. Needs sets and runs laid on the table |
-| Conquian | 2 | Nothing. A 40-card pack. Named Conquian on VoidTV, never by its old English spelling |
-| 3-5-9 | 3 | "3 books 5 books etc. its a jail game". Open: how trump is chosen, the deal, what a miss costs |
+| Spades | 4, partners | Rules built (see above). Open: whether his table plays jokers and deuces high |
+| Rummy | 2 to 6 | Rules built |
+| Conquian | 2 | Rules built. Named Conquian on VoidTV, never by its old English spelling |
+| 3-5-9 | 3 | Not built. "3 books 5 books etc. its a jail game". Open: how trump is chosen, the deal, what a miss costs |
 
 ## More card games, after those
 

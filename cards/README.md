@@ -82,7 +82,11 @@ A game is one object. The engine does the rest.
   move. `from`: the answers, each a plain value or `{ v, label }`. `kind`: `'suit'`, `'player'`, `'rank'` or
   `'option'`, so the phone can draw it well. `title`: the question. For `'player'`, `v` is the player's place and the
   phone shows that player's own name (a rule file never knows names).
-- `buttons` are moves with no cards (Draw a card, Pass, Knock).
+- `buttons` are moves with no cards (Draw a card, Pass, Knock). A button may carry a `choose` of its own, of the same
+  shape without `cards`, when its move needs an answer (a bid: `{ type: 'bid', label: 'Bid', choose: { field: 'n',
+  from: [...], kind: 'option', title: 'How many books?' } }`).
+- `plays` is a list of more moves made with cards, each of the same shape as `play` and each with a button of its own,
+  for a turn that offers several (Rummy: Lay down, Lay off, Discard). Leave it out when the turn offers one.
 - Where a pick must also fit a pattern (a run in Rummy), list every card that could be part of one; `can` has the last
   word and says why not.
 
@@ -93,7 +97,14 @@ The table page and the hand page draw any game that keeps to these names:
 - Zones: `draw` (the pack, face down), `discard` (the pile, its top card showing), `hand` (each player's private
   hand), `trick` (cards played to a trick, in the order played from `s.pub.led`), `won` (each player's taken cards,
   face down), `laid` (each player's cards laid face up: books, sets, runs).
-- `s.pub.scores`: one number for each player, when the game keeps score.
+- `s.pub.scores`: one number for each player, when the game keeps score (partners each show their side's score).
+- `s.pub.teams`: each player's side, as a number, when the game has partners (`[0, 1, 0, 1]`: partners sit across).
+- `s.pub.notes`: one short line for each player's seat ("Bid 3, took 2"), when the game has something to say there.
+- `s.pub.cuts`: for a zone that holds several groups (sets and runs laid on the table), the size of each group in
+  order, by zone id: `{ melds: [3, 4, 3] }` means the zone's first 3 cards are one group, the next 4 another. The
+  cards themselves stay in the zone, so the public table stays small.
+- A card's id may be in `s.pub` only while that card lies face up on the table. What one player alone must remember
+  (the card they took and may not throw straight back) goes in `s.own[p]`, even if everyone saw it happen.
 - `game.labels`: words for a zone a phone should name, such as `{ pass: 'Your pass' }`.
 - `t.end({ winners: [players], note })`: `winners` always; `note` is one optional line for the screen
   ("Sam is the Old Maid").

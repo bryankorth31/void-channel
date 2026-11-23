@@ -100,5 +100,5 @@ test('the donation words appear once, in screen.js, and the link goes where the 
 });
 
 test('no dash characters in the page files', () => {
-  for (const f of [['cards', 'index.html'], ['cards', 'src', 'screen.js'], ['cards', 'table.css']]) assert.ok(!/[–—]/.test(read(...f)), f.join('/'));
+  for (const f of [['cards', 'index.html'], ['cards', 'src', 'screen.js'], ['cards', 'table.css']]) assert.ok(!new RegExp('[' + String.fromCharCode(8211, 8212) + ']').test(read(...f)), f.join('/'));
 });
