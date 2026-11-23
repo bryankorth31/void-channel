@@ -22,6 +22,7 @@
 (function (root) {
   'use strict';
   const C = root.VoidCards || require('../src/cards.js');
+  const rules = () => root.VoidRules || require('../src/rules.js');   // the rules card's word helpers, read when a tip is made
   const hand = (s, p) => s.zones['hand:' + p];
   const ORDER = 'A234567JQK';                      // the order of ranks in a run
   const at = (c) => ORDER.indexOf(C.rankOf(c));
@@ -141,6 +142,39 @@
       return 'Use the ' + C.name(s.zones.offer[0]) + ', or pass.';
     },
     labels: { laid: 'Sets and runs' },
+    // The rules card (cards/src/rules.js; Bryan picked "Rules B" from pictures, 23 Nov 2026): four pictures, each with a line.
+    howto: [
+      { show: ['back', '>', '5C'], say: 'Turn a card. Use it at once, or pass.' },
+      { show: ['5C', '5H', '5S'], say: 'Use it in a set: three or four of a kind.' },
+      { show: ['6D', '7D', 'JD'], say: 'Or in a run of one suit: the 7 and the jack are neighbours.' },
+      { show: ['QS', '>', '=0 left'], say: 'After using a card, discard one. Lay all your cards to win.' },
+    ],
+    // The practice hand's tips ("practice C"): table() for the big screen, from the public table and the events everyone
+    // saw; phone() for one phone, from that player's own cards and what they may do. Neither ever sees the game's state.
+    teach: {
+      table(v, events, who) {
+        if (!v || v.over || !v.turn.length) return '';
+        const ev = (events || []).filter(Boolean), p = v.turn[0], offer = v.zones.offer && v.zones.offer.cards && v.zones.offer.cards[0];
+        const passed = ev.find((e) => e.ev === 'pass'), first = passed ? who(passed.by) + ' passed. ' : '';
+        if (v.pub.step === 'turn') return first + who(p) + ' turns the top card of the pack.';
+        if (v.pub.step === 'discard') return who(p) + ' used the card. Now ' + who(p) + ' discards one, and ' + who((p + 1) % v.n) + ' may use it.';
+        if (offer) return first + who(p) + ' may use the ' + C.name(offer) + ' in a set or run at once, or pass it.';
+        return '';
+      },
+      phone(mine, v, me) {
+        const h = mine && mine.hints;
+        if (!h || !v) return '';
+        const R = rules(), held = ((mine.zones['hand:' + me] || {}).cards) || [], offer = v.zones.offer && v.zones.offer.cards && v.zones.offer.cards[0];
+        if (v.pub.step === 'turn') return 'Tap Turn a card to show the top card of the pack.';
+        if (v.pub.step === 'discard') return 'Discard one card. Keep the ones close to a set or run.';
+        if (!offer) return '';
+        for (let i = 0; i < held.length; i++) for (let j = i + 1; j < held.length; j++) {
+          if (kindOf([offer, held[i], held[j]])) return 'The ' + C.name(offer) + ' makes a set or run with your ' + R.list([held[i], held[j]].map(C.name)) + '. Pick them, tap Use the card.';
+        }
+        const laid = v.zones['laid:' + me] && v.zones['laid:' + me].cards && v.zones['laid:' + me].cards.length;
+        return 'The ' + C.name(offer) + ' fits nothing in your hand. ' + (laid ? 'If it fits a set or run of yours on the table, use it there. If not, tap Pass.' : 'Tap Pass.');
+      },
+    },
   };
 
   if (typeof module === 'object' && module.exports) module.exports = game;

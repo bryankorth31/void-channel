@@ -25,6 +25,25 @@ trick that was taken goes to its taker after its moment on the table. The phone'
 drop in, a card that leaves lifts away, a gold light on the bar for your turn). Both are CSS only, nothing flashes, and
 nothing moves on a device that asks for reduced motion (decision B9).
 
+## The rules card and the practice hand
+
+Bryan, 23 Nov 2026: "all games in cards but others aswell need atleast a basic rtules and how to play. maybe even a
+walkkthrough hand if tyhey choose". From pictures he picked "Rules B, practice C".
+
+- The rules card (`src/rules.js`) shows four pictures of a game's rules, each with a line under it: on the big screen
+  under the game being picked, and on every phone behind a Rules button (in the lobby too). A game gives it as
+  `howto: [{ show, say }, ...]`. `show` holds cards (`'4H'`), `'back'`, `'>'` (an arrow), `'suit:H'` or `'=a few words'`;
+  every card must be in the game's own pack. `test/rules.test.js` checks every rule file.
+- The practice hand: a Practice hand button beside Deal. Whoever has joined plays with tips, and the table plays the
+  empty seats (`src/practice.js`): each joins the dealer as a phone would, is told only what a phone in its place is
+  told, and tries the moves its hints offer until the rules take one. The dealer is not changed for it.
+- A game's tips are `teach: { table(view, events, who), phone(mine, view, me) }`. `table` is made on the big screen from
+  the public view and the events everyone saw; `phone` on that player's own phone, from their own hand and what they
+  may do. The phone page loads the rule files for this. `test/rules.test.js` plays practice hands of every game and
+  holds every tip against what its screen may show.
+- `practice: { opts }` sets the game's own settings for a practice hand (Hearts and Spades end after one deal), and
+  `bot: { bid(hand) }` is how the table bids for a seat it plays.
+
 ## The privacy rule
 
 A hand must stay private. So no screen is ever drawn from the game's state. Each is drawn from a view:

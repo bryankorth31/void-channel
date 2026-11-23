@@ -3,7 +3,8 @@
 // Two parts. The pure part (seatSpots, turnLine, winnerLine, trickSeat, joinHost) is tested in Node. The page part runs
 // only where there is a document: it opens a room on the phone relay, makes the dealer, and draws from the dealer's
 // snapshot and nothing else. The page never reads a game's state, so a hand cannot show here (see cards/README.md).
-// Of the dealer it uses five things only: relay, pick, start, stop and snapshot.
+// Of the dealer it uses five things only: relay, pick, start, stop and snapshot. A practice hand (src/practice.js) plays the
+// empty seats through relay too, as phones would.
 (function (root) {
   'use strict';
 
@@ -159,13 +160,21 @@
   const room = { code: null, join: null };
   let socket = null, problem = '', note = '';
 
-  const send = (to, msg) => { if (socket && socket.readyState === 1) socket.send(JSON.stringify({ to, msg })); };
-  const dealer = root.VoidDealer.create({
-    games: root.VoidGames, send,
+  const toPhones = (to, msg) => { if (socket && socket.readyState === 1) socket.send(JSON.stringify({ to, msg })); };
+  // What the dealer says goes to the phones, except what it says to a seat the table plays in a practice hand, which stays
+  // on this page (src/practice.js).
+  const send = (to, msg) => { if (practice && practice.deliver(to, msg)) return; toPhones(to, msg); };
+  // The dealer's settings: opts is a game's own practice settings while a practice hand is dealt (Hearts and Spades end after
+  // one deal), and nothing otherwise.
+  const dealing = {
+    games: root.VoidGames, send, opts: {},
     cleanName: (raw) => root.TriviaWords.cleanName(raw, 'family'),
     onChange: (events) => changed(events),
     warn: (w) => console.warn(w),
-  });
+  };
+  let practice = null, tip = '';
+  const dealer = root.VoidDealer.create(dealing);
+  practice = root.VoidPractice.create({ dealer, games: root.VoidGames, stuck: (seat) => console.warn('The table could not move for ' + seat) });
 
   const app = document.getElementById('app');
   // Everything typed by a phone goes in with textContent. Only the QR's own SVG goes in as markup.
@@ -189,8 +198,31 @@
   }
 
   function deal() {
+    if (practice.on) { practiceDeal(); return; }
     note = dealer.start() || '';
     if (note) render();
+  }
+  // The phones are told whether a practice hand is on, so each can show its own player's tips.
+  const tellPractice = () => toPhones('all', { type: 'c-practice', on: practice.on });
+  // A practice hand (Bryan, 23 Nov 2026, "practice C"): whoever has joined plays with tips, the table plays the empty seats.
+  function practiceDeal() {
+    if (practice.on) practice.end();
+    if (dealer.snapshot().phase !== 'lobby') dealer.stop();
+    const s = dealer.snapshot(), game = root.VoidGames[s.game.id];
+    if (!s.players.length) { note = 'Join with a phone first, then press Practice hand.'; render(); return; }
+    tip = '';
+    practice.begin(game, s.players.length);
+    dealing.opts = (game.practice && game.practice.opts) || {};
+    note = dealer.start() || '';
+    dealing.opts = {};
+    if (note) { practice.end(); tip = ''; }
+    tellPractice();
+    render();
+  }
+  // Back to the lobby to pick a game; a practice hand ends with it.
+  function stopGame() {
+    if (practice.on) { practice.end(); tip = ''; tellPractice(); }
+    dealer.stop();
   }
   function pickBy(step) {
     const s = dealer.snapshot();
@@ -213,7 +245,13 @@
     const g = s.game, range = g.min === g.max ? g.min + ' players' : g.min + ' to ' + g.max + ' players';
     const pick = el('div', 'lobby-pick');
     pick.append(button('‹', () => pickBy(-1), 'arrow'), el('div', 'lobby-game', g.name), button('›', () => pickBy(1), 'arrow'));
-    right.append(names, pick, el('div', 'lobby-range', range), button('Deal', deal, 'big-button'), el('div', 'lobby-note', note));
+    right.append(names, pick, el('div', 'lobby-range', range));
+    // The rules card for the game being picked (Bryan, 23 Nov 2026, "Rules B"): four pictures, each with a line.
+    const card = root.VoidRules.draw(root.VoidGames[g.id]);
+    if (card) { const box = el('div', 'lobby-rules'); box.append(el('div', 'lobby-rules-h', 'How to play'), card); right.append(box); }
+    const go = el('div', 'lobby-buttons');
+    go.append(button('Deal', deal, 'big-button'), button('Practice hand', practiceDeal, 'big-button quiet'));
+    right.append(go, el('div', 'lobby-hint', 'A practice hand has tips. The table plays the empty seats.'), el('div', 'lobby-note', note));
     stage.append(left, right);
   }
 
@@ -303,6 +341,11 @@
       }
     });
 
+    // In a practice hand a tip for the room takes the status line's place, and the table says it is practice.
+    if (practice.on) {
+      stage.append(el('div', 'practice-tag', 'Practice hand'));
+      if (tip && s.phase === 'play') { const t = el('div', 'tip'); t.append(el('b', '', 'Tip'), el('span', '', tip)); stage.append(t); return; }
+    }
     stage.append(el('div', 'status', s.status || ''));
   }
 
@@ -325,7 +368,7 @@
       rows.append(row);
     }
     const buttons = el('div', 'over-buttons');
-    buttons.append(button('Deal again', deal, 'big-button'), button('Change game', () => dealer.stop(), 'big-button quiet'));
+    buttons.append(button(practice.on ? 'Practice again' : 'Deal again', deal, 'big-button'), button('Change game', stopGame, 'big-button quiet'));
     const donate = el('div', 'donate', DONATE_LINE + ' ');
     const link = el('a', '', 'Donate');
     link.href = DONATE_URL; link.target = '_blank'; link.rel = 'noopener';
@@ -372,6 +415,12 @@
   // Every change of the game: the page is drawn again, then whatever the change's events moved flies from where it was.
   function changed(events) {
     note = '';
+    if (practice && practice.on) {
+      // The tip for the room is made from what the big screen may draw (the public view) and what everyone saw happen.
+      const s = dealer.snapshot(), g = root.VoidGames[s.game.id];
+      try { const t = s.view && g && g.teach ? g.teach.table(s.view, events || [], (i) => nameAt(s.players, i)) : ''; if (t) tip = t; } catch (e) { console.warn(e); }
+      if (!(events || []).length) tellPractice();   // someone joined or came back: tell their phone too
+    }
     const before = M.snap(app), h = heldTrick(events);
     if (h) { held = h; clearTimeout(heldTimer); heldTimer = setTimeout(() => { letGo(); render(); }, HOLD_MS); }
     else if (held && (events || []).some((e) => e && (e.ev === 'deal' || (e.ev === 'move' && (e.to === 'trick' || e.to === 'draw'))))) letGo();
@@ -386,7 +435,7 @@
     if (e.key === 'ArrowLeft' && phase === 'lobby') { e.preventDefault(); pickBy(-1); }
     else if (e.key === 'ArrowRight' && phase === 'lobby') { e.preventDefault(); pickBy(1); }
     else if (e.key === 'Enter' && !onButton && phase !== 'play') { e.preventDefault(); deal(); }
-    else if (e.key === 'Escape' && phase === 'over') { e.preventDefault(); dealer.stop(); }
+    else if (e.key === 'Escape' && phase === 'over') { e.preventDefault(); stopGame(); }
   });
 
   function openRoom() {

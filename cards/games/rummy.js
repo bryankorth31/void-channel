@@ -17,6 +17,7 @@
 (function (root) {
   'use strict';
   const C = root.VoidCards || require('../src/cards.js');
+  const rules = () => root.VoidRules || require('../src/rules.js');   // the rules card's word helpers, read when a tip is made
   const hand = (s, p) => s.zones['hand:' + p];
   const ORDER = C.ACE_LOW;
   const lowAt = (c) => ORDER.indexOf(C.rankOf(c));
@@ -31,6 +32,16 @@
     const sorted = cards.slice().sort((a, b) => lowAt(a) - lowAt(b));
     for (let i = 1; i < sorted.length; i++) if (lowAt(sorted[i]) !== lowAt(sorted[i - 1]) + 1) return null;
     return { kind: 'run', cards: sorted };
+  }
+  // A set or run of three that could be laid from these cards (holding the card must, when given), or null. For a practice
+  // hand's tips.
+  function meldIn(cards, must) {
+    const list = cards || [];
+    for (let i = 0; i < list.length; i++) for (let j = i + 1; j < list.length; j++) for (let k = j + 1; k < list.length; k++) {
+      const g = shape([list[i], list[j], list[k]]);
+      if (g && (!must || g.cards.includes(must))) return g.cards;
+    }
+    return null;
   }
   // The groups lying on the table, each a list of cards, cut from the one zone by s.pub.cuts.melds.
   function groups(s) {
@@ -173,6 +184,37 @@
     status: (s) => (s.over ? 'Game over.' : s.pub.drew ? 'Lay down sets and runs, then discard.' : 'Draw a card, or take the top of the pile.'),
     labels: { melds: 'Sets and runs' },
     points,
+    // The rules card (cards/src/rules.js; Bryan picked "Rules B" from pictures, 23 Nov 2026): four pictures, each with a line.
+    howto: [
+      { show: ['back', '=or', '6D'], say: 'Draw from the pack, or take the top of the pile.' },
+      { show: ['9H', '9S', '9C'], say: 'A set: three or four of a kind.' },
+      { show: ['4D', '5D', '6D'], say: 'A run: three or more in a row, one suit.' },
+      { show: ['KC', '>', '=0 left'], say: 'Lay down, then discard one. Empty your hand to win.' },
+    ],
+    // The practice hand's tips ("practice C"): table() for the big screen, from the public table and the events everyone
+    // saw; phone() for one phone, from that player's own cards and what they may do. Neither ever sees the game's state.
+    teach: {
+      table(v, events, who) {
+        if (!v || v.over || !v.turn.length) return '';
+        const ev = (events || []).filter(Boolean), p = v.turn[0], top = v.zones.discard && v.zones.discard.top;
+        const laid = ev.find((e) => e.ev === 'move' && e.to === 'melds' && e.by !== undefined);
+        const first = laid ? who(laid.by) + ' put ' + laid.n + (laid.n === 1 ? ' card' : ' cards') + ' down on the table. ' : '';
+        if (!v.pub.drew) return first + who(p) + ' starts by drawing from the pack' + (top ? ', or taking the ' + C.name(top) + ' if it fits a set or run.' : '.');
+        return first + who(p) + ' lays down any sets and runs, then discards one card.';
+      },
+      phone(mine, v, me) {
+        const h = mine && mine.hints;
+        if (!h || !v) return '';
+        const R = rules(), held = ((mine.zones['hand:' + me] || {}).cards) || [], top = v.zones.discard && v.zones.discard.top;
+        if (!v.pub.drew) {
+          if (top && meldIn(held.concat(top), top)) return 'The ' + C.name(top) + ' fits your cards: tap Take the top card.';
+          return (top ? 'The ' + C.name(top) + ' does not help you yet. ' : '') + 'Tap Draw from the pack.';
+        }
+        const m = meldIn(held);
+        if (m) return 'Lay down your ' + R.list(m.map(C.name)) + ': pick them, tap Lay down. Then discard one card.';
+        return 'No set or run to lay down yet. Discard a card you do not need: a high one costs the most points.';
+      },
+    },
   };
 
   if (typeof module === 'object' && module.exports) module.exports = game;

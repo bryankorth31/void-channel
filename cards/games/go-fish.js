@@ -17,6 +17,7 @@
 (function (root) {
   'use strict';
   const C = root.VoidCards || require('../src/cards.js');
+  const rules = () => root.VoidRules || require('../src/rules.js');   // the rules card's word helpers, read when a tip is made
   const hand = (s, p) => s.zones['hand:' + p];
   // How many cards make a set: 4 (a book) in Go Fish, 2 (a pair) in Go Fish (pairs), the family way (Bryan, 23 Nov 2026:
   // "pairs as its own game"). The game ends when every card of the pack is laid in sets.
@@ -138,10 +139,42 @@
       return 'Asked for ' + C.RANK_NAMES[l.rank] + 's: ' + (l.got ? 'got ' + l.got + '.' : 'go fish.');
     },
     labels: { laid: 'Books' },
+    // The rules card (cards/src/rules.js; Bryan picked "Rules B" from pictures, 23 Nov 2026): four pictures, each with a line.
+    howto: [
+      { show: ['7H', '>', '=Any 7s?'], say: 'Ask a player for a rank you hold.' },
+      { show: ['7S', '7D', '>', '=yours'], say: 'They hand you every one they have. Ask again.' },
+      { show: ['back', '=Go fish'], say: 'None? Go fish: draw a card.' },
+      { show: ['7H', '7S', '7D', '7C', '=book'], say: 'Four of a kind is a book. Most books wins.' },
+    ],
+    // The practice hand's tips ("practice C"): table() for the big screen, from the public table and the events everyone
+    // saw; phone() for one phone, from that player's own cards and what they may do. Neither ever sees the game's state.
+    teach: {
+      table(v, events, who) {
+        if (!v || v.over || !v.turn.length) return '';
+        const R = rules(), ev = (events || []).filter(Boolean), p = v.turn[0], set = v.opts && v.opts.size === 2 ? 'pair' : 'book';
+        const a = ev.find((e) => e.ev === 'asked'), f = ev.find((e) => e.ev === 'fished');
+        const laid = ev.filter((e) => e.ev === 'move' && /^laid:/.test(String(e.to))).length;
+        let say = '';
+        if (a) say = who(a.by) + ' asked ' + who(a.of) + ' for ' + R.ranks(a.rank) + '. ' + (a.got ? who(a.of) + ' handed over ' + a.got + ', so ' + who(a.by) + ' asks again.' : 'None, so ' + who(a.by) + (f && f.lucky ? ' fished, drew one and asks again.' : ' went fishing.'));
+        if (laid) say += (say ? ' ' : '') + (laid > 1 ? laid + ' ' + set + 's went' : 'A ' + set + ' went') + ' down.';
+        const next = who(p) + ' asks someone for a rank they hold. ' + (set === 'book' ? 'Four of a kind make a book.' : 'Two of a kind make a pair.');
+        return a ? say : (say ? say + ' ' : '') + next;
+      },
+      phone(mine) {
+        const h = mine && mine.hints;
+        if (!h) return '';
+        if (!h.play) return 'Nobody else holds cards. Tap Go fish to draw one.';
+        const R = rules(), count = {};
+        for (const c of h.play.cards) count[C.rankOf(c)] = (count[C.rankOf(c)] || 0) + 1;
+        const best = Object.keys(count).sort((x, y) => count[y] - count[x])[0];
+        return 'Ask for ' + R.ranks(best) + ': you hold ' + count[best] + ' already. Tap one, tap Ask, then pick a player.';
+      },
+    },
   };
   // Go Fish (pairs): the same game, a set is any two of a kind (Bryan, 23 Nov 2026: "pairs as its own game"). It sits
   // beside Go Fish in the table's list of games.
-  const pairs = Object.assign({}, game, { id: 'go-fish-pairs', name: 'Go Fish (pairs)', options: { first: 0, size: 2 }, labels: { laid: 'Pairs' } });
+  const pairs = Object.assign({}, game, { id: 'go-fish-pairs', name: 'Go Fish (pairs)', options: { first: 0, size: 2 }, labels: { laid: 'Pairs' },
+    howto: game.howto.slice(0, 3).concat([{ show: ['7H', '7S', '=pair'], say: 'Two of a kind is a pair. Most pairs wins.' }]) });
 
   if (typeof module === 'object' && module.exports) { module.exports = game; game.pairs = pairs; }
   else { root.VoidGames = root.VoidGames || {}; root.VoidGames[game.id] = game; root.VoidGames[pairs.id] = pairs; }

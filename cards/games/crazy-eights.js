@@ -11,6 +11,7 @@
 (function (root) {
   'use strict';
   const C = root.VoidCards || require('../src/cards.js');
+  const rules = () => root.VoidRules || require('../src/rules.js');   // the rules card's word helpers, read when a tip is made
   const hand = (s, p) => s.zones['hand:' + p];
   const topOf = (s) => s.zones.discard[s.zones.discard.length - 1];
   const fits = (s, c) => C.rankOf(c) === '8' || C.suitOf(c) === s.pub.suit || C.rankOf(c) === C.rankOf(topOf(s));
@@ -108,6 +109,38 @@
     // One line for the big screen.
     status: (s) => (s.over ? 'Game over.' : need(s)),
     points,
+    // The rules card (cards/src/rules.js; Bryan picked "Rules B" from pictures, 23 Nov 2026): four pictures, each with a line.
+    howto: [
+      { show: ['4H', '>', '9H', '4C'], say: 'Same suit or same number' },
+      { show: ['8S', '>', 'suit:H'], say: 'An 8 goes on anything. You pick the suit.' },
+      { show: ['back'], say: 'No match? Draw a card.' },
+      { show: ['5C', '>', '=0 left'], say: 'First to play every card wins.' },
+    ],
+    // The practice hand's tips ("practice C"): table() for the big screen, from the public table and the events everyone
+    // saw; phone() for one phone, from that player's own cards and what they may do. Neither ever sees the game's state.
+    teach: {
+      table(v, events, who) {
+        const top = v && v.zones.discard && v.zones.discard.top;
+        if (!top || v.over || !v.turn.length) return '';
+        const R = rules(), ev = (events || []).filter(Boolean), p = v.turn[0], suit = R.suit(v.pub.suit);
+        const called = ev.find((e) => e.ev === 'called');
+        if (called) return who(called.by) + ' played an 8 and picked ' + suit + '. ' + who(p) + ' plays ' + suit + ' or any 8.';
+        if (!ev.some((e) => e.ev === 'deal') && ev.some((e) => e.ev === 'move' && e.from === 'draw' && e.by === p)) return 'Nothing matched, so ' + who(p) + ' drew a card. ' + who(p) + ' may keep drawing until one fits.';
+        const passed = ev.find((e) => e.ev === 'pass'), first = passed ? who(passed.by) + ' could not play or draw, so passed. ' : '';
+        if (C.rankOf(top) === '8') return first + 'An 8 is on top and the suit is ' + suit + '. ' + who(p) + ' plays ' + suit + ' or any 8.';
+        return first + 'The top card is the ' + C.name(top) + '. ' + who(p) + ' plays ' + suit + ', ' + R.an(C.RANK_NAMES[C.rankOf(top)]) + ' or any 8.';
+      },
+      phone(mine, v) {
+        const h = mine && mine.hints, top = v && v.zones.discard && v.zones.discard.top;
+        if (!h || !top) return '';
+        const R = rules(), lit = h.play ? h.play.cards : [], suit = R.suit(v.pub.suit), eight = C.rankOf(top) === '8';
+        const need = eight ? 'The suit is ' + suit + ': play ' + suit + ' or any 8. ' : 'Match the ' + C.name(top) + ': ' + suit + ', ' + R.an(C.RANK_NAMES[C.rankOf(top)]) + ' or any 8. ';
+        if (lit.length > 3) return need + 'Your lit cards can go. Tap one, then Play.';
+        if (lit.length) return need + 'Your ' + R.list(lit.map(C.name)) + (lit.length === 1 ? ' lights' : ' light') + ' up. Tap one, then Play.' + (lit.some((c) => C.rankOf(c) === '8') ? ' After an 8, you pick the suit.' : '');
+        if ((h.buttons || []).some((b) => b.type === 'draw')) return 'Nothing matches the ' + C.name(top) + '. Tap Draw a card until one fits.';
+        return 'Nothing fits and the pack is empty. Tap Pass.';
+      },
+    },
   };
 
   if (typeof module === 'object' && module.exports) module.exports = game;

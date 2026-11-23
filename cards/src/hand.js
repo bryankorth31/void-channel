@@ -170,6 +170,7 @@
   let blocker = null;             // { h, p, link }: a note that replaces the page (an error, or a wait)
   let you = null, roster = null, table = null, mine = null;   // what the table last told this phone
   let askName = false, askedName = false, myName = '';
+  let practice = false;           // a practice hand is on: this phone shows its own player's tips (Bryan, 23 Nov 2026, "practice C")
   let rec = null;                 // { room, key, order }
   let order = [];                 // the hand in the player's own order
   let selected = [], fresh = new Set(), lay = null, drag = null, choosing = false;
@@ -255,6 +256,7 @@
     if (m.type === 'c-roster') { roster = m; render(); return; }
     if (m.type === 'c-table') { table = m; render(); return; }
     if (m.type === 'c-hand') { takeHand(m.m); render(); return; }
+    if (m.type === 'c-practice') { practice = !!m.on; render(); return; }
     if (m.type === 'c-no') { toast(String(m.error || 'That move was not allowed.')); }
   }
 
@@ -334,7 +336,7 @@
     lay = layout(order.length, Math.max(1, r.width - 2 * PAD), Math.max(1, r.height - 2 * PAD), GAP);
     lay.left += PAD; lay.top += PAD;
   }
-  function placeOne(id, i, ok) {
+  function placeOne(id, i, ok, lit) {
     const el = els.get(id), p = slot(lay, i);
     const up = selected.includes(id) ? -lay.cardH * 0.14 : 0;
     el.style.fontSize = (lay.cardW / 5) + 'px';
@@ -342,11 +344,14 @@
     el.classList.toggle('sel', selected.includes(id));
     el.classList.toggle('fresh', fresh.has(id));
     el.classList.toggle('dim', !!(ok && !ok.includes(id)));
+    el.classList.toggle('lit', !!(lit && lit.includes(id)));
   }
   function placeAll(except) {
     if (!lay) return;
     const ok = myTurn() ? pickable(hints()) : null;   // a card no move of this turn lists is dimmed
-    order.forEach((id, i) => { if (id !== except && els.has(id)) placeOne(id, i, ok); });
+    // In a practice hand the cards that can go now are lit as well, when some of the hand cannot.
+    const lit = practice && ok && ok.length < order.length ? ok : null;
+    order.forEach((id, i) => { if (id !== except && els.has(id)) placeOne(id, i, ok, lit); });
   }
   function drawHand() {
     const added = syncCards();
@@ -390,6 +395,7 @@
   function drawTop() {
     const v = table && table.v, me = meSeat();
     $('room').textContent = 'room ' + code;
+    $('practice').hidden = !practice;
     const turn = $('turn');
     turn.textContent = turnLine(v, roster, me);
     turn.classList.toggle('mine', !!(v && me !== null && v.turn.includes(me)));
@@ -414,6 +420,30 @@
     // This player's own line from the game ("Bid 3, took 1"), after the others.
     const own = notes && me !== null && v.pub.notes[me];
     if (own) { const s = document.createElement('span'); s.textContent = 'You · ' + own; others.appendChild(s); }
+  }
+  // The rule file for the game on now, which this page loads for its rules card and tips, or null.
+  const gameNow = () => (roster && root.VoidGames && Object.prototype.hasOwnProperty.call(root.VoidGames, roster.game) ? root.VoidGames[roster.game] : null);
+  // A practice hand's tip for this player, on their turn: made by the game's rule file from this phone's own cards and
+  // what it may do, and the public table. Nothing else is on this phone to make it from.
+  function drawTip() {
+    let words = '';
+    if (practice && myTurn()) {
+      const g = gameNow();
+      try { words = g && g.teach ? String(g.teach.phone(mine, table.v, meSeat()) || '') : ''; } catch (e) { words = ''; }
+    }
+    $('tip-t').textContent = words;
+    $('tip').hidden = !words;
+  }
+  // The rules card (Bryan, 23 Nov 2026, "Rules B"), open at any time: from the lobby or over the hand.
+  function openRules() {
+    const g = gameNow(), card = g && root.VoidRules ? root.VoidRules.draw(g) : null;
+    if (!card) { toast('This game has no rules card yet.'); return; }
+    $('rules-h').textContent = g.name;
+    const body = $('rules-body');
+    body.textContent = '';
+    body.append(card);
+    $('rules-back').textContent = $('game').hidden ? 'Back' : 'Back to my hand';
+    $('rules').hidden = false;
   }
   function drawPrivs() {
     const box = $('privs'), me = meSeat();
@@ -522,12 +552,14 @@
       const list = $('lobby-list');
       list.textContent = '';
       for (const pl of roster.players || []) { const li = document.createElement('li'); li.textContent = pl.name; list.appendChild(li); }
+      $('lobby-rules').textContent = 'How to play ' + (roster.title || 'the game');
+      $('lobby-rules').hidden = !(gameNow() && gameNow().howto);
       only('lobby'); return;
     }
     if (me === null) { only('watch'); return; }
     if (!mine || !table) { note('Dealing', 'Getting your cards.', false); return; }
     only('game');
-    drawTop(); drawHand(); drawPrivs(); drawBar(); overPanel();
+    drawTop(); drawTip(); drawHand(); drawPrivs(); drawBar(); overPanel();
     measure(); placeAll(drag && drag.moving ? drag.id : null);   // the strips can change height: measure again
   }
 
@@ -545,6 +577,9 @@
   $('b-suit').addEventListener('click', () => reorder(C.bySuit));
   $('b-rank').addEventListener('click', () => reorder(C.byRank));
   $('choose-back').addEventListener('click', () => { $('choose').hidden = true; choosing = false; });
+  $('b-rules').addEventListener('click', openRules);
+  $('lobby-rules').addEventListener('click', openRules);
+  $('rules-back').addEventListener('click', () => { $('rules').hidden = true; });
   const box = $('handbox');
   box.addEventListener('pointerdown', onDown);
   box.addEventListener('pointermove', onMove);

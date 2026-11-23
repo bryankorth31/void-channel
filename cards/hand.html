@@ -32,6 +32,7 @@
   <h1 id="lobby-h">You are in.</h1>
   <p id="lobby-p"></p>
   <ul id="lobby-list"></ul>
+  <button class="btn" id="lobby-rules" type="button">How to play</button>
 </section>
 
 <section id="watch" class="centre" hidden>
@@ -42,12 +43,13 @@
 <main id="game" hidden>
   <header id="top">
     <div class="topl">
-      <div class="mark"><span class="v">voidtv</span><span class="n">.net</span> <span class="room" id="room"></span></div>
+      <div class="mark"><span class="v">voidtv</span><span class="n">.net</span> <span class="room" id="room"></span><span class="practice" id="practice" hidden>practice hand</span><button class="btn rules-btn" id="b-rules" type="button">Rules</button></div>
       <div class="turn" id="turn" role="status"></div>
       <div class="status" id="status"></div>
     </div>
     <div class="pile" id="pile"></div>
   </header>
+  <div id="tip" role="status" hidden><b>Tip</b><span id="tip-t"></span></div>
   <div id="others"></div>
   <div id="handbox" aria-label="Your hand">
     <div id="nohand" hidden>No cards in your hand.</div>
@@ -73,8 +75,21 @@
     <p>Wait for the next deal.</p>
   </div>
 </main>
+<section id="rules" hidden>
+  <div class="rules-k">How to play</div>
+  <h2 id="rules-h"></h2>
+  <div id="rules-body"></div>
+  <button class="btn solid" id="rules-back" type="button">Back</button>
+</section>
 <script src="/cards/src/cards.js"></script>
 <script src="/cards/src/face.js"></script>
+<script src="/cards/src/rules.js"></script>
+<script src="/cards/games/crazy-eights.js"></script>
+<script src="/cards/games/hearts.js"></script>
+<script src="/cards/games/go-fish.js"></script>
+<script src="/cards/games/spades.js"></script>
+<script src="/cards/games/rummy.js"></script>
+<script src="/cards/games/conquian.js"></script>
 <script src="/cards/src/hand.js"></script>
 </body>
 </html>

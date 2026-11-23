@@ -13,6 +13,7 @@
 (function (root) {
   'use strict';
   const C = root.VoidCards || require('../src/cards.js');
+  const rules = () => root.VoidRules || require('../src/rules.js');   // the rules card's word helpers, read when a tip is made
   const hand = (s, p) => s.zones['hand:' + p];
   const high = (c) => C.ACE_HIGH.indexOf(C.rankOf(c));
   const pointsOf = (c) => (C.suitOf(c) === 'H' ? 1 : c === 'QS' ? 13 : 0);
@@ -129,6 +130,50 @@
       return C.SUIT_NAMES[C.suitOf(s.zones.trick[0])].replace(/^./, (x) => x.toUpperCase()) + ' led.';
     },
     pointsOf, passTo, opener,
+    // The rules card (cards/src/rules.js; Bryan picked "Rules B" from pictures, 23 Nov 2026): four pictures, each with a line.
+    howto: [
+      { show: ['QS', 'AH', 'KH', '=pass 3'], say: 'Before play, pass 3 cards to another player.' },
+      { show: ['9C', '>', '4C', 'KC'], say: 'Follow the suit led if you can.' },
+      { show: ['4C', '9C', 'KC', '=takes it'], say: 'The highest card of the suit led takes the trick.' },
+      { show: ['5H', '=1', 'QS', '=13'], say: 'Each heart is 1 point, the queen of spades 13. Fewest wins.' },
+    ],
+    // The practice hand's tips ("practice C"): table() for the big screen, from the public table and the events everyone
+    // saw; phone() for one phone, from that player's own cards and what they may do. Neither ever sees the game's state.
+    teach: {
+      table(v, events, who) {
+        if (!v || v.over || !v.turn.length) return '';
+        const R = rules(), ev = (events || []).filter(Boolean), p = v.turn[0];
+        if (v.phase === 'pass') return 'Everyone picks 3 cards to pass. High hearts and the queen of spades are good ones to give away.';
+        const tr = ev.find((e) => e.ev === 'trick'), took = ev.find((e) => e.ev === 'move' && e.from === 'trick' && Array.isArray(e.cards));
+        if (tr && took) {
+          const pts = took.cards.reduce((a, c) => a + (C.suitOf(c) === 'H' ? 1 : c === 'QS' ? 13 : 0), 0);
+          return who(tr.won) + ' played the highest ' + R.suit(C.suitOf(took.cards[0])).replace(/s$/, '') + ' and takes the trick, ' + (pts ? 'with ' + pts + (pts === 1 ? ' point' : ' points') : 'with no points') + '. ' + who(tr.won) + ' leads next.';
+        }
+        const trick = (v.zones.trick && v.zones.trick.cards) || [];
+        if (!trick.length) {
+          if (v.pub.tricks === 0) return who(p) + ' holds the lowest club and leads it. Everyone follows clubs if they can.';
+          return who(p) + ' leads. ' + (v.pub.broken ? 'Any card may lead now.' : 'A heart cannot lead until a heart has been played.');
+        }
+        const led = R.suit(C.suitOf(trick[0]));
+        return who(p) + ' follows ' + led + ' if they can. With no ' + led + ', any card goes, and points can be given away.';
+      },
+      phone(mine, v, me) {
+        const h = mine && mine.hints;
+        if (!h || !h.play || !v) return '';
+        const R = rules(), lit = h.play.cards, held = ((mine.zones['hand:' + me] || {}).cards) || [], trick = (v.zones.trick && v.zones.trick.cards) || [];
+        if (h.play.type === 'pass') return 'Pick 3 cards to give away, then tap ' + h.play.label + '. High hearts and the queen of spades are good to pass.';
+        if (!trick.length) {
+          if (v.pub.tricks === 0) return 'You hold the lowest club, so you lead it. Tap it, then Play.';
+          return 'You lead. ' + (lit.length < held.length ? 'Only your lit cards may lead. ' : '') + 'A low card is less likely to take points.';
+        }
+        const led = C.suitOf(trick[0]);
+        if (lit.every((c) => C.suitOf(c) === led)) return 'Follow ' + R.suit(led) + ': your lit cards can go. A low one lets someone else take the trick.';
+        if (lit.some((c) => C.suitOf(c) === 'H' || c === 'QS')) return 'No ' + R.suit(led) + ' in your hand, so any card can go. A good time to give away a heart or the queen of spades.';
+        return 'No ' + R.suit(led) + ' in your hand, so any of your lit cards can go.';
+      },
+    },
+    // A practice hand is one deal: the first score ends it.
+    practice: { opts: { target: 1 } },
   };
 
   if (typeof module === 'object' && module.exports) module.exports = game;

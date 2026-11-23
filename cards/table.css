@@ -81,15 +81,16 @@ button{font:inherit;color:inherit;cursor:pointer}
 .join-say{margin-top:calc(var(--u)*1.2);font-size:calc(var(--u)*2.4);font-weight:700}
 .join-host{font-size:calc(var(--u)*1.8);color:var(--dim)}
 .join-code{font-size:calc(var(--u)*5);font-weight:700;letter-spacing:.12em;color:var(--gold);line-height:1.2}
-.lobby-info{position:absolute;left:46%;right:6%;top:18%;display:flex;flex-direction:column;align-items:center;gap:calc(var(--u)*1.6)}
-.lobby-players{display:flex;flex-wrap:wrap;justify-content:center;gap:calc(var(--u)*.8);min-height:calc(var(--u)*8);align-content:flex-start}
+.lobby-info{position:absolute;left:46%;right:6%;top:15%;display:flex;flex-direction:column;align-items:center;gap:calc(var(--u)*1)}
+.lobby-players{display:flex;flex-wrap:wrap;justify-content:center;gap:calc(var(--u)*.8);min-height:calc(var(--u)*3.4);align-content:flex-start}
 .lobby-name{font-size:calc(var(--u)*1.8);padding:calc(var(--u)*.4) calc(var(--u)*1.2);background:var(--panel);border:calc(var(--u)*.2) solid var(--line);border-radius:calc(var(--u)*1)}
 .lobby-name.away{opacity:.55}
 .lobby-empty{font-size:calc(var(--u)*1.8);color:var(--dim)}
 .lobby-pick{display:flex;align-items:center;justify-content:center;gap:calc(var(--u)*1.5);width:100%}
 .lobby-game{font-size:calc(var(--u)*3.2);font-weight:700;color:var(--gold);min-width:calc(var(--u)*22);text-align:center}
-.lobby-range{font-size:calc(var(--u)*1.8);color:var(--dim)}
-.lobby-note{min-height:calc(var(--u)*1.8);font-size:calc(var(--u)*1.6);color:var(--pink);text-align:center}
+.lobby-range{font-size:calc(var(--u)*1.6);color:var(--dim)}
+.lobby-note{font-size:calc(var(--u)*1.6);color:var(--pink);text-align:center}
+.lobby-note:empty{display:none}
 .arrow{width:calc(var(--u)*4.5);height:calc(var(--u)*4.5);font-size:calc(var(--u)*3);line-height:1;background:var(--panel);border:calc(var(--u)*.2) solid var(--line);border-radius:50%}
 .big-button{font-size:calc(var(--u)*2.2);font-weight:700;padding:calc(var(--u)*.9) calc(var(--u)*4);background:var(--pink);color:var(--ink);border:0;border-radius:calc(var(--u)*1)}
 .big-button.quiet{background:var(--panel);color:var(--fg);border:calc(var(--u)*.2) solid var(--line)}
@@ -121,3 +122,21 @@ button{font:inherit;color:inherit;cursor:pointer}
 
 /* Words that say something is wrong with the phone room. */
 .problem{position:absolute;left:0;right:0;top:0;padding:calc(var(--u)*.8) calc(var(--u)*2);text-align:center;font-size:calc(var(--u)*1.8);background:var(--pink);color:var(--ink);font-weight:700}
+
+/* The rules card under the game being picked (src/rules.js) and the practice hand (Bryan, 23 Nov 2026: "Rules B, practice C"). */
+.lobby-rules{width:100%;box-sizing:border-box;background:var(--panel);border:calc(var(--u)*.2) solid var(--line);border-radius:calc(var(--u)*1);padding:calc(var(--u)*.8) calc(var(--u)*1.4)}
+.lobby-rules-h{font-size:calc(var(--u)*1.2);color:var(--gold);font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:calc(var(--u)*.5)}
+.howto{display:grid;grid-template-columns:1fr 1fr;gap:calc(var(--u)*.9) calc(var(--u)*1.8)}
+.howto-line{display:flex;flex-direction:column;gap:calc(var(--u)*.35)}
+.howto-show{display:flex;align-items:center;gap:calc(var(--u)*.4);min-height:calc(var(--u)*3.9)}
+.howto-card{display:inline-block;font-size:calc(var(--u)*.55)}
+.howto-arrow{color:var(--dim);font-size:calc(var(--u)*1.9);margin:0 calc(var(--u)*.3)}
+.howto-suit{display:inline-flex;align-items:center;justify-content:center;width:1.5em;height:1.5em;border-radius:.3em;background:var(--card);color:var(--ink);font-size:calc(var(--u)*1.9)}
+.howto-suit.red{color:var(--red)}
+.howto-words{color:var(--gold);font-weight:700;font-size:calc(var(--u)*1.7);white-space:nowrap}
+.howto-say{font-size:calc(var(--u)*1.25);line-height:1.22}
+.lobby-buttons{display:flex;gap:calc(var(--u)*1.6);align-items:center;justify-content:center}
+.lobby-hint{font-size:calc(var(--u)*1.4);color:var(--dim);text-align:center}
+.practice-tag{position:absolute;left:2.5%;top:3%;font-size:calc(var(--u)*1.5);font-weight:700;color:var(--gold);border:calc(var(--u)*.2) solid var(--gold);border-radius:calc(var(--u)*2);padding:calc(var(--u)*.35) calc(var(--u)*1.2)}
+.tip{position:absolute;left:50%;bottom:1.2%;transform:translateX(-50%);width:58%;box-sizing:border-box;background:var(--panel);border:calc(var(--u)*.2) solid var(--gold);border-radius:calc(var(--u)*1.2);padding:calc(var(--u)*.6) calc(var(--u)*1.5);font-size:calc(var(--u)*1.55);line-height:1.3;display:flex;gap:calc(var(--u)*1.2);align-items:baseline}
+.tip b{color:var(--gold);flex:none}

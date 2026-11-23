@@ -20,6 +20,14 @@
 (function (root) {
   'use strict';
   const C = root.VoidCards || require('../src/cards.js');
+  const rules = () => root.VoidRules || require('../src/rules.js');   // the rules card's word helpers, read when a tip is made
+  // About how many books a hand will take, for a practice hand's tip and the table's own bid: each ace and king, the queen
+  // and jack of spades, and every spade past the fourth. At least 1.
+  function bidGuess(held) {
+    const h = held || [], sp = h.filter((c) => C.suitOf(c) === 'S').length;
+    const n = h.filter((c) => C.rankOf(c) === 'A' || C.rankOf(c) === 'K').length + h.filter((c) => c === 'QS' || c === 'JS').length + Math.max(0, sp - 4);
+    return Math.max(1, Math.min(13, n));
+  }
   const hand = (s, p) => s.zones['hand:' + p];
   const high = (c) => C.ACE_HIGH.indexOf(C.rankOf(c));
   const isSpade = (c) => C.suitOf(c) === 'S';
@@ -167,6 +175,50 @@
       return C.SUIT_NAMES[C.suitOf(s.zones.trick[0])].replace(/^./, (x) => x.toUpperCase()) + ' led.';
     },
     sideOf, sideResult,
+    // The rules card (cards/src/rules.js; Bryan picked "Rules B" from pictures, 23 Nov 2026): four pictures, each with a line.
+    howto: [
+      { show: ['AS', 'KH', 'QS', '=bid 3'], say: 'Bid how many books (tricks) you will take.' },
+      { show: ['9D', '>', '3D', 'KD'], say: 'Follow the suit led if you can.' },
+      { show: ['KD', '2S', '=spade wins'], say: 'Spades beat every other suit.' },
+      { show: ['=3', '=+', '=4', '>', '=7 books'], say: 'Partners sit across. Take your bids together to score.' },
+    ],
+    // The practice hand's tips ("practice C"): table() for the big screen, from the public table and the events everyone
+    // saw; phone() for one phone, from that player's own cards and what they may do. Neither ever sees the game's state.
+    teach: {
+      table(v, events, who) {
+        if (!v || v.over || !v.turn.length) return '';
+        const R = rules(), ev = (events || []).filter(Boolean), p = v.turn[0];
+        if (v.phase === 'bid') {
+          const b = ev.find((e) => e.ev === 'bid');
+          return (b ? who(b.by) + ' bid ' + (b.n === 0 ? 'nil, no books at all' : b.n) + '. ' : '') + who(p) + ' bids next: how many books (tricks) to take. Partners add their bids.';
+        }
+        const tr = ev.find((e) => e.ev === 'trick'), took = ev.find((e) => e.ev === 'move' && e.from === 'trick' && Array.isArray(e.cards));
+        if (tr && took) {
+          const trumped = C.suitOf(took.cards[0]) !== 'S' && took.cards.some((c) => C.suitOf(c) === 'S');
+          return who(tr.won) + ' takes the trick' + (trumped ? ' with a spade: spades beat every other suit.' : ' with the highest ' + R.suit(C.suitOf(took.cards[0])).replace(/s$/, '') + '.') + ' ' + who(tr.won) + ' leads next.';
+        }
+        const trick = (v.zones.trick && v.zones.trick.cards) || [];
+        if (!trick.length) return who(p) + ' leads. ' + (v.pub.broken ? 'Any card may lead now.' : 'A spade cannot lead until a spade has been played.');
+        const led = R.suit(C.suitOf(trick[0]));
+        return who(p) + ' follows ' + led + ' if they can.' + (C.suitOf(trick[0]) === 'S' ? '' : ' With no ' + led + ', a spade takes the trick.');
+      },
+      phone(mine, v, me) {
+        const h = mine && mine.hints;
+        if (!h || !v) return '';
+        const R = rules(), held = ((mine.zones['hand:' + me] || {}).cards) || [];
+        if (v.phase === 'bid') return 'Count the books you can win: aces, kings and high spades. That is about ' + bidGuess(held) + ' for you. Tap Bid. Your partner sits across.';
+        if (!h.play) return '';
+        const lit = h.play.cards, trick = (v.zones.trick && v.zones.trick.cards) || [];
+        if (!trick.length) return 'You lead. ' + (v.pub.broken ? 'Any card can go.' : 'Spades cannot lead yet.') + ' An ace is a safe book.';
+        const led = C.suitOf(trick[0]);
+        if (lit.every((c) => C.suitOf(c) === led)) return 'Follow ' + R.suit(led) + ': your lit cards can go.';
+        return 'No ' + R.suit(led) + ' in your hand: a spade takes the trick, or a low card lets it go.';
+      },
+    },
+    // A practice hand is one deal, more if the first leaves the sides level: the first score ends it.
+    practice: { opts: { target: 1 } },
+    // How the table bids for a seat it plays in a practice hand.
+    bot: { bid: (held) => bidGuess(held) },
   };
 
   if (typeof module === 'object' && module.exports) module.exports = game;

@@ -171,12 +171,12 @@ test('laidAnchor: groups start at the plate\'s inner edge, never under the plate
 test('index.html loads the scripts in the order the page needs', () => {
   const html = read('cards', 'index.html');
   const src = [...html.matchAll(/<script[^>]*\ssrc="([^"]+)"/g)].map((m) => m[1]);
-  // The engine first, then every game there is a rule file for (a new game is one more line), then the motion and the
-  // page's own script.
+  // The engine first, then every game there is a rule file for (a new game is one more line), then the rules card, the
+  // practice hand, the motion and the page's own script.
   const games = require('fs').readdirSync(require('path').join(__dirname, '..', 'games')).filter((f) => f.endsWith('.js')).map((f) => '/cards/games/' + f);
   assert.deepEqual(src.slice(0, 6), ['/play/src/qr.js', '/trivia/src/words.js', '/cards/src/cards.js', '/cards/src/table.js', '/cards/src/dealer.js', '/cards/src/face.js']);
-  assert.deepEqual(src.slice(6, -2).slice().sort(), games.slice().sort(), 'every game in cards/games is loaded by the table page, and nothing else');
-  assert.deepEqual(src.slice(-2), ['/cards/src/motion.js', '/cards/src/screen.js']);
+  assert.deepEqual(src.slice(6, -4).slice().sort(), games.slice().sort(), 'every game in cards/games is loaded by the table page, and nothing else');
+  assert.deepEqual(src.slice(-4), ['/cards/src/rules.js', '/cards/src/practice.js', '/cards/src/motion.js', '/cards/src/screen.js']);
   const css = [...html.matchAll(/<link[^>]*\shref="([^"]+)"/g)].map((m) => m[1]);
   assert.deepEqual(css, ['/cards/cards.css', '/cards/table.css']);
   assert.ok(!/\son[a-z]+\s*=/i.test(html), 'no inline event handlers');
@@ -203,7 +203,7 @@ test('the donation words appear once, in screen.js, and the link goes where the 
 });
 
 test('no dash characters in the page files', () => {
-  for (const f of [['cards', 'index.html'], ['cards', 'src', 'screen.js'], ['cards', 'src', 'motion.js'], ['cards', 'table.css']]) assert.ok(!new RegExp('[' + String.fromCharCode(8211, 8212) + ']').test(read(...f)), f.join('/'));
+  for (const f of [['cards', 'index.html'], ['cards', 'src', 'screen.js'], ['cards', 'src', 'motion.js'], ['cards', 'src', 'rules.js'], ['cards', 'src', 'practice.js'], ['cards', 'table.css'], ['cards', 'hand.html'], ['cards', 'hand.css']]) assert.ok(!new RegExp('[' + String.fromCharCode(8211, 8212) + ']').test(read(...f)), f.join('/'));
 });
 
 test('laidScale: a few groups keep the usual size; a table full of pairs or books gets smaller cards, never taller than 14 units', () => {
@@ -218,4 +218,14 @@ test('laidScale: a few groups keep the usual size; a table full of pairs or book
   }
   assert.ok(S.laidScale(g(2, 13), 31) < 0.7, 'thirteen pairs come down a size');
   assert.ok(S.laidScale(g(4, 13), 31) <= S.laidScale(g(2, 13), 31), 'books of four need at least as much room as pairs');
+});
+
+test('hand.html loads the card blocks, the rules card and every game before the phone page script', () => {
+  const html = read('cards', 'hand.html');
+  const src = [...html.matchAll(/<script[^>]*\ssrc="([^"]+)"/g)].map((m) => m[1]);
+  const games = require('fs').readdirSync(require('path').join(__dirname, '..', 'games')).filter((f) => f.endsWith('.js')).map((f) => '/cards/games/' + f);
+  assert.deepEqual(src.slice(0, 3), ['/cards/src/cards.js', '/cards/src/face.js', '/cards/src/rules.js']);
+  assert.deepEqual(src.slice(3, -1).slice().sort(), games.slice().sort(), 'every game in cards/games is loaded by the phone page too, for its rules card and tips');
+  assert.equal(src[src.length - 1], '/cards/src/hand.js');
+  assert.ok(!/\son[a-z]+\s*=/i.test(html), 'no inline event handlers');
 });
