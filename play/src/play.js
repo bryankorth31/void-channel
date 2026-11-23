@@ -227,6 +227,7 @@
     else { paused = false; runner.resume(); runner.wakeSound(); stayAwake(true); }
     if (p) drawCps();
     $('menu').hidden = !p; $('b-pause').textContent = p ? 'Resume' : 'Pause';
+    try { if (navigator.mediaSession && navigator.mediaSession.metadata) navigator.mediaSession.playbackState = p ? 'paused' : 'playing'; } catch (e) { /* no media session */ }
     document.body.classList.toggle('paused', p);
     // The engine credits and source offer move from the start screen into the pause menu once a game is on.
     if (p && $('credits').parentElement !== $('menu')) $('menu').appendChild($('credits'));
@@ -600,7 +601,7 @@
     phoneScreen();
     $('b-play').hidden = true; $('b-continue').hidden = true; status('Starting');
     arriving = true; armDeadline();
-    runner = (isArcade() ? PlayArcade : isFlash() ? PlayFlash : PlayRunner).createRunner({ canvas: $('canvas'), mute: q.get('mute') === '1', volume: gainOf(vol), on: {
+    runner = (isArcade() ? PlayArcade : isFlash() ? PlayFlash : PlayRunner).createRunner({ canvas: $('canvas'), mute: q.get('mute') === '1', volume: gainOf(vol), mediaOut: canPop() && popWay() === 'video', on: {
       note: (t) => toast(t),
       // Progress words belong to the start screen, until the first picture (the auditor: "Reading the disc: N MB so far"
       // stayed for the whole game); a message that matters later comes as a toast or an error.
@@ -921,7 +922,12 @@
   addEventListener('keyup', (e) => keyEvent(e, false));
   addEventListener('pointerdown', () => runner && runner.wakeSound(), { passive: true });
   addEventListener('blur', () => hub && hub.releaseAll());
-  document.addEventListener('visibilitychange', () => { if (document.hidden && started && !pip) { if (!paused) setPaused(true); else autosave(); } });
+  // Leaving the page pauses the game (and saves), unless it has popped out: Chrome's automatic pop-out comes at that
+  // moment too, so the pause waits a moment for it (Bryan's recording, 22 Nov 2026: the pause came first).
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden || !started || pip) return;
+    setTimeout(() => { if (document.hidden && started && !pip) { if (!paused) setPaused(true); else autosave(); } }, 800);
+  });
   addEventListener('resize', place);
 
   // ---- Pop out (Bryan, 22 Nov 2026: "Go"; Document Picture-in-Picture, Chrome and Edge on a computer): the running
@@ -980,6 +986,10 @@
       const go = on && canPop() && popWay() === 'video';
       navigator.mediaSession.setActionHandler('enterpictureinpicture', go ? () => { if (started && !paused && !pip) popOut(); } : null);
       if (go && window.MediaMetadata) navigator.mediaSession.metadata = new MediaMetadata({ title: (card && card.title) || 'PLAY', artist: 'PLAY on voidtv.net' });
+      // Chrome's media controls and a keyboard's media keys pause and resume the game itself (not only its sound); in
+      // the pop-out they do nothing, as the menu is on the page.
+      navigator.mediaSession.setActionHandler('pause', go ? () => { if (!pip) setPaused(true); } : null);
+      navigator.mediaSession.setActionHandler('play', go ? () => { if (!pip) setPaused(false); } : null);
       navigator.mediaSession.playbackState = go ? 'playing' : 'none';
     } catch (e) { /* this browser has no automatic picture-in-picture */ }
   }
