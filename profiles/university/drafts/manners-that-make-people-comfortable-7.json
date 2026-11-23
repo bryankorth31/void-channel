@@ -135,56 +135,79 @@
         {
           "id": "left",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "cement",
           "label": "Wet cement",
           "color": "blue",
-          "o": 0,
-          "size": 22
+          "size": 22,
+          "x": 95,
+          "y": 60,
+          "w": 210,
+          "h": 210,
+          "tagW": 160,
+          "tag": [
+            0,
+            115
+          ]
         },
         {
           "id": "right",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "cement",
+          "set": true,
           "label": "Set cement",
           "color": "blue",
-          "o": 0,
-          "size": 22
+          "size": 22,
+          "x": 485,
+          "y": 60,
+          "w": 210,
+          "h": 210,
+          "tagW": 160,
+          "tag": [
+            0,
+            115
+          ]
         },
         {
           "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "A FOOTPRINT",
-          "color": "gold",
+          "type": "card",
           "o": 0,
-          "s": 0.4,
-          "size": 14
+          "tie": "right.print",
+          "x": 400,
+          "y": 60,
+          "label": "A footprint",
+          "color": "gold",
+          "size": 18,
+          "tagW": 160
         },
         {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "PRESS",
-          "color": "fg",
+          "id": "trowel",
+          "type": "card",
           "o": 0,
-          "s": 0.4,
-          "size": 18
+          "prop": "trowel",
+          "label": "",
+          "x": 245,
+          "y": 190,
+          "w": 110,
+          "h": 110
+        },
+        {
+          "id": "hammer",
+          "type": "card",
+          "o": 0,
+          "prop": "hammer",
+          "label": "",
+          "x": 635,
+          "y": 190,
+          "w": 130,
+          "h": 130
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
+          "y": 350,
           "label": "Shape it while it is soft.",
           "color": "pink",
           "size": 22,
@@ -203,8 +226,7 @@
               "o": 1
             },
             "thing": {
-              "o": 1,
-              "s": 1
+              "o": 1
             }
           }
         },
@@ -212,9 +234,10 @@
           "say": "When can you fix it?",
           "dur": 2.4,
           "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
+            "left": {
+              "shake": true
+            },
+            "right": {
               "shake": true
             }
           }
@@ -223,7 +246,11 @@
           "say": "Wet, it smooths out with a hand.",
           "dur": 2.6,
           "set": {
+            "trowel": {
+              "o": 1
+            },
             "left": {
+              "smooth": true,
               "sub": "smooths out in a second"
             },
             "right": {
@@ -235,6 +262,9 @@
           "say": "Set, it takes a hammer.",
           "dur": 2.6,
           "set": {
+            "hammer": {
+              "o": 1
+            },
             "line": {
               "o": 1
             }
@@ -255,13 +285,8 @@
               "color": "green"
             },
             "thing": {
-              "label": "TABLE WAYS",
-              "size": 14
-            },
-            "act": {
-              "label": "TEACH",
-              "size": 18,
-              "color": "pink"
+              "label": "Table ways",
+              "size": 18
             },
             "line": {
               "label": "A habit taught early is easy to keep.",

@@ -155,58 +155,91 @@
       ],
       "actors": [
         {
+          "id": "thing",
+          "type": "card",
+          "o": 0,
+          "prop": "goal",
+          "label": "The game",
+          "color": "gold",
+          "size": 18,
+          "x": 285,
+          "y": -15,
+          "w": 230,
+          "h": 230,
+          "tagW": 140,
+          "tag": [
+            190,
+            20
+          ]
+        },
+        {
           "id": "left",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "book",
           "label": "Rule book",
           "color": "blue",
+          "size": 22,
+          "x": 80,
+          "y": 185,
+          "w": 120,
+          "h": 120,
+          "tagW": 150,
+          "tag": [
+            0,
+            90
+          ]
+        },
+        {
+          "id": "p2",
+          "type": "card",
           "o": 0,
-          "size": 22
+          "prop": "figure",
+          "pose": "stand",
+          "label": "",
+          "x": 264.125,
+          "y": 137.5,
+          "w": 51.75,
+          "h": 115,
+          "look": "dark",
+          "turn": 0.8
         },
         {
           "id": "right",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "figure",
+          "pose": "stand",
           "label": "Fair player",
+          "x": 539.125,
+          "y": 147.5,
+          "w": 51.75,
+          "h": 115,
+          "turn": -0.8,
           "color": "blue",
-          "o": 0,
-          "size": 22
+          "size": 22,
+          "tagW": 150,
+          "tag": [
+            50,
+            105
+          ]
         },
         {
-          "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "THE GAME",
-          "color": "gold",
+          "id": "ball",
+          "type": "card",
           "o": 0,
-          "s": 0.4,
-          "size": 18
-        },
-        {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "PLAY",
-          "color": "fg",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
+          "prop": "football",
+          "label": "",
+          "x": 680,
+          "y": 250,
+          "w": 40,
+          "h": 40
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
+          "y": 350,
           "label": "Honor is what you do unseen.",
           "color": "pink",
           "size": 22,
@@ -218,15 +251,20 @@
           "say": "A game with no referee.",
           "dur": 2.4,
           "set": {
+            "thing": {
+              "o": 1
+            },
             "left": {
+              "o": 1
+            },
+            "p2": {
               "o": 1
             },
             "right": {
               "o": 1
             },
-            "thing": {
-              "o": 1,
-              "s": 1
+            "ball": {
+              "o": 1
             }
           }
         },
@@ -234,9 +272,10 @@
           "say": "Each player decides how to play.",
           "dur": 2.4,
           "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
+            "p2": {
+              "shake": true
+            },
+            "right": {
               "shake": true
             }
           }
@@ -249,7 +288,12 @@
               "sub": "only works when watched"
             },
             "right": {
-              "sub": "plays fair unwatched"
+              "sub": "plays fair unwatched",
+              "x": 614,
+              "y": 187.5,
+              "w": 52,
+              "h": 115,
+              "turn": 0.6
             }
           }
         },
@@ -257,6 +301,15 @@
           "say": "A fair player needs no one watching.",
           "dur": 2.6,
           "set": {
+            "ball": {
+              "x": 450,
+              "y": 195,
+              "w": 40,
+              "h": 40
+            },
+            "right": {
+              "turn": -1.4
+            },
             "line": {
               "o": 1
             }
@@ -277,13 +330,8 @@
               "color": "green"
             },
             "thing": {
-              "label": "MANNERS",
+              "label": "Manners",
               "size": 18
-            },
-            "act": {
-              "label": "LIVE",
-              "size": 18,
-              "color": "pink"
             },
             "line": {
               "label": "Honor comes before the rules.",

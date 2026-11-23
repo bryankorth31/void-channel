@@ -130,56 +130,65 @@
         {
           "id": "left",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "roadsign",
+          "lines": "EXIT 12|MAPLE AVE NORTH|NEXT 3 EXITS|NO TRUCKS OVER 5T|SERVICES 2 MI|TOLL AHEAD",
           "label": "Cluttered sign",
           "color": "blue",
-          "o": 0,
-          "size": 22
+          "size": 20,
+          "x": 120,
+          "y": 30,
+          "w": 180,
+          "h": 180,
+          "tagW": 170,
+          "tag": [
+            -60,
+            105
+          ]
         },
         {
           "id": "right",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "roadsign",
+          "lines": "EXIT|MAPLE AVE",
           "label": "Three clear words",
           "color": "blue",
-          "o": 0,
-          "size": 18
+          "size": 18,
+          "x": 490,
+          "y": 30,
+          "w": 180,
+          "h": 180,
+          "tagW": 190,
+          "tag": [
+            70,
+            105
+          ]
         },
         {
           "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "DRIVER",
+          "type": "card",
+          "o": 0,
+          "prop": "car",
+          "heading": 0,
+          "label": "Driver",
           "color": "gold",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
-        },
-        {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "READ",
-          "color": "fg",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
+          "size": 18,
+          "x": 25,
+          "y": 232.5,
+          "w": 150,
+          "h": 75,
+          "tagW": 120,
+          "tag": [
+            0,
+            70
+          ]
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
+          "y": 350,
           "label": "Simple is hardest, and best.",
           "color": "pink",
           "size": 22,
@@ -198,8 +207,7 @@
               "o": 1
             },
             "thing": {
-              "o": 1,
-              "s": 1
+              "o": 1
             }
           }
         },
@@ -207,9 +215,10 @@
           "say": "One sign is crowded. One is plain.",
           "dur": 2.4,
           "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
+            "left": {
+              "shake": true
+            },
+            "right": {
               "shake": true
             }
           }
@@ -218,6 +227,12 @@
           "say": "The crowded one is missed.",
           "dur": 2.6,
           "set": {
+            "thing": {
+              "x": 255,
+              "y": 232.5,
+              "w": 150,
+              "h": 75
+            },
             "left": {
               "sub": "missed the turn"
             },
@@ -230,6 +245,16 @@
           "say": "The plain one is understood.",
           "dur": 2.6,
           "set": {
+            "thing": {
+              "x": 565,
+              "y": 232.5,
+              "w": 150,
+              "h": 75,
+              "tag": [
+                -170,
+                30
+              ]
+            },
             "line": {
               "o": 1
             }
@@ -250,13 +275,8 @@
               "color": "green"
             },
             "thing": {
-              "label": "READER",
+              "label": "Reader",
               "size": 18
-            },
-            "act": {
-              "label": "OPEN",
-              "size": 18,
-              "color": "pink"
             },
             "line": {
               "label": "A note shows your character.",

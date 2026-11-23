@@ -156,58 +156,135 @@
       ],
       "actors": [
         {
+          "id": "clock",
+          "type": "card",
+          "o": 0,
+          "prop": "alarm",
+          "time": 7,
+          "label": "",
+          "x": 50,
+          "y": 35,
+          "w": 90,
+          "h": 100
+        },
+        {
           "id": "left",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
-          "h": 100,
-          "label": "Company manners",
-          "color": "blue",
           "o": 0,
-          "size": 18
+          "prop": "figure",
+          "pose": "stand",
+          "label": "Company manners",
+          "x": 138,
+          "y": 130,
+          "w": 54,
+          "h": 120,
+          "look": "suit",
+          "turn": 0.9,
+          "color": "blue",
+          "size": 20,
+          "tagW": 190,
+          "tag": [
+            0,
+            110
+          ]
+        },
+        {
+          "id": "g1",
+          "type": "card",
+          "o": 0,
+          "prop": "figure",
+          "pose": "stand",
+          "label": "",
+          "x": 250.25,
+          "y": 120,
+          "w": 49.5,
+          "h": 110,
+          "turn": -1
+        },
+        {
+          "id": "g2",
+          "type": "card",
+          "o": 0,
+          "prop": "figure",
+          "pose": "stand",
+          "label": "",
+          "x": 295.25,
+          "y": 145,
+          "w": 49.5,
+          "h": 110,
+          "turn": -1.2
+        },
+        {
+          "id": "home",
+          "type": "card",
+          "o": 0,
+          "prop": "house",
+          "label": "",
+          "x": 585,
+          "y": 20,
+          "w": 130,
+          "h": 130
         },
         {
           "id": "right",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
-          "h": 100,
-          "label": "Home manners",
-          "color": "blue",
           "o": 0,
-          "size": 22
+          "prop": "figure",
+          "pose": "stand",
+          "label": "Home manners",
+          "x": 518,
+          "y": 140,
+          "w": 54,
+          "h": 120,
+          "look": "dark",
+          "turn": 0.7,
+          "color": "blue",
+          "size": 20,
+          "tagW": 180,
+          "tag": [
+            -30,
+            105
+          ]
         },
         {
           "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "THE FAMILY",
-          "color": "gold",
+          "type": "card",
           "o": 0,
-          "s": 0.4,
-          "size": 14
+          "prop": "figure",
+          "pose": "stand",
+          "label": "The family",
+          "x": 615.25,
+          "y": 150,
+          "w": 49.5,
+          "h": 110,
+          "turn": -0.6,
+          "color": "gold",
+          "size": 18,
+          "tagW": 150,
+          "tag": [
+            90,
+            100
+          ]
         },
         {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "SEE",
-          "color": "fg",
+          "id": "kid",
+          "type": "card",
           "o": 0,
-          "s": 0.4,
-          "size": 18
+          "prop": "figure",
+          "pose": "stand",
+          "label": "",
+          "x": 684.25,
+          "y": 190,
+          "w": 31.5,
+          "h": 70,
+          "look": "dark",
+          "turn": -0.9
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
+          "y": 350,
           "label": "Home is where manners are tested.",
           "color": "pink",
           "size": 22,
@@ -219,15 +296,17 @@
           "say": "Guests see you for an hour.",
           "dur": 2.4,
           "set": {
+            "clock": {
+              "o": 1
+            },
             "left": {
               "o": 1
             },
-            "right": {
+            "g1": {
               "o": 1
             },
-            "thing": {
-              "o": 1,
-              "s": 1
+            "g2": {
+              "o": 1
             }
           }
         },
@@ -235,10 +314,20 @@
           "say": "Your family sees you all day.",
           "dur": 2.4,
           "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
-              "shake": true
+            "home": {
+              "o": 1
+            },
+            "right": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1
+            },
+            "kid": {
+              "o": 1
+            },
+            "clock": {
+              "time": 8
             }
           }
         },
@@ -246,7 +335,14 @@
           "say": "Company manners switch on and off.",
           "dur": 2.6,
           "set": {
+            "g1": {
+              "o": 0
+            },
+            "g2": {
+              "o": 0
+            },
             "left": {
+              "slump": true,
               "sub": "on for an hour"
             },
             "right": {
@@ -278,13 +374,8 @@
               "color": "green"
             },
             "thing": {
-              "label": "CHARACTER",
-              "size": 14
-            },
-            "act": {
-              "label": "SHOWS",
-              "size": 18,
-              "color": "pink"
+              "label": "Character",
+              "size": 18
             },
             "line": {
               "label": "Children copy what parents do.",

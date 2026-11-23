@@ -136,58 +136,136 @@
       ],
       "actors": [
         {
+          "id": "thing",
+          "type": "card",
+          "o": 0,
+          "prop": "firebell",
+          "ringing": false,
+          "label": "The alarm",
+          "color": "gold",
+          "size": 18,
+          "x": 320,
+          "y": 30,
+          "w": 100,
+          "h": 120,
+          "tagW": 140,
+          "tag": [
+            -150,
+            20
+          ]
+        },
+        {
+          "id": "exit",
+          "type": "card",
+          "o": 0,
+          "prop": "door",
+          "open": false,
+          "label": "",
+          "x": 585,
+          "y": 25,
+          "w": 170,
+          "h": 170
+        },
+        {
           "id": "left",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
-          "h": 100,
-          "label": "No plan",
-          "color": "blue",
           "o": 0,
-          "size": 22
+          "prop": "figure",
+          "pose": "stand",
+          "label": "No plan",
+          "x": 83.625,
+          "y": 187.5,
+          "w": 42.75,
+          "h": 95,
+          "turn": 0.6,
+          "color": "blue",
+          "size": 22,
+          "tagW": 130,
+          "tag": [
+            0,
+            95
+          ]
+        },
+        {
+          "id": "m1",
+          "type": "card",
+          "o": 0,
+          "prop": "figure",
+          "pose": "stand",
+          "label": "",
+          "x": 153.625,
+          "y": 152.5,
+          "w": 42.75,
+          "h": 95,
+          "turn": -2.2
+        },
+        {
+          "id": "m2",
+          "type": "card",
+          "o": 0,
+          "prop": "figure",
+          "pose": "stand",
+          "label": "",
+          "x": 203.625,
+          "y": 212.5,
+          "w": 42.75,
+          "h": 95,
+          "turn": 2.6
         },
         {
           "id": "right",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "figure",
+          "pose": "stand",
           "label": "Known steps",
+          "x": 418.625,
+          "y": 197.5,
+          "w": 42.75,
+          "h": 95,
+          "look": "dark",
+          "turn": 1.45,
           "color": "blue",
-          "o": 0,
-          "size": 22
+          "size": 20,
+          "tagW": 160,
+          "tag": [
+            20,
+            95
+          ]
         },
         {
-          "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "THE ALARM",
-          "color": "gold",
+          "id": "f1",
+          "type": "card",
           "o": 0,
-          "s": 0.4,
-          "size": 14
+          "prop": "figure",
+          "pose": "stand",
+          "label": "",
+          "x": 478.625,
+          "y": 197.5,
+          "w": 42.75,
+          "h": 95,
+          "look": "dark",
+          "turn": 1.45
         },
         {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "RING",
-          "color": "fg",
+          "id": "f2",
+          "type": "card",
           "o": 0,
-          "s": 0.4,
-          "size": 18
+          "prop": "figure",
+          "pose": "stand",
+          "label": "",
+          "x": 538.625,
+          "y": 197.5,
+          "w": 42.75,
+          "h": 95,
+          "look": "dark",
+          "turn": 1.45
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
+          "y": 350,
           "label": "Known steps carry people through.",
           "color": "pink",
           "size": 22,
@@ -199,15 +277,29 @@
           "say": "The alarm rings.",
           "dur": 2.4,
           "set": {
+            "thing": {
+              "o": 1
+            },
+            "exit": {
+              "o": 1
+            },
             "left": {
+              "o": 1
+            },
+            "m1": {
+              "o": 1
+            },
+            "m2": {
               "o": 1
             },
             "right": {
               "o": 1
             },
-            "thing": {
-              "o": 1,
-              "s": 1
+            "f1": {
+              "o": 1
+            },
+            "f2": {
+              "o": 1
             }
           }
         },
@@ -215,9 +307,8 @@
           "say": "Everyone must act at once.",
           "dur": 2.4,
           "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
+            "thing": {
+              "ringing": true,
               "shake": true
             }
           }
@@ -227,7 +318,17 @@
           "dur": 2.6,
           "set": {
             "left": {
+              "tremble": true,
+              "turn": 2.2,
               "sub": "panic and noise"
+            },
+            "m1": {
+              "tremble": true,
+              "turn": -0.4
+            },
+            "m2": {
+              "tremble": true,
+              "turn": 1.2
             },
             "right": {
               "sub": "calm, each does a part"
@@ -238,6 +339,27 @@
           "say": "With known steps, people stay calm.",
           "dur": 2.6,
           "set": {
+            "exit": {
+              "open": true
+            },
+            "right": {
+              "x": 488.5,
+              "y": 182.5,
+              "w": 43,
+              "h": 95
+            },
+            "f1": {
+              "x": 548.5,
+              "y": 182.5,
+              "w": 43,
+              "h": 95
+            },
+            "f2": {
+              "x": 608.5,
+              "y": 182.5,
+              "w": 43,
+              "h": 95
+            },
             "line": {
               "o": 1
             }
@@ -258,13 +380,9 @@
               "color": "green"
             },
             "thing": {
-              "label": "A DEATH",
-              "size": 18
-            },
-            "act": {
-              "label": "COMES",
+              "label": "A death",
               "size": 18,
-              "color": "pink"
+              "ringing": false
             },
             "line": {
               "label": "Custom shields the grieving family.",

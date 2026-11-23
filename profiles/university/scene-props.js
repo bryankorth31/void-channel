@@ -2694,4 +2694,113 @@ export const PROPS = {
       return { group, top: H, anchor: () => new THREE.Vector3(W * 0.45, H * 0.3, H * 0.3), update() {} };
     },
   },
+  // A red fire alarm bell on a wall plate lettered FIRE. "ringing": true shakes the gong and lights a lamp.
+  firebell: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 100, a.h || 100) * ctx.S, P = 0.75 * s;
+      const red = new THREE.MeshPhysicalMaterial({ color: 0xc81e16, roughness: 0.3, clearcoat: 1, envMap: ctx.env, envMapIntensity: 0.7 });
+      const group = new THREE.Group();
+      const post = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.06 * s, P, 0.06 * s), new THREE.MeshStandardMaterial({ color: 0x5a5e62, metalness: 0.6, roughness: 0.4 }))); post.position.y = P / 2; group.add(post);
+      const c = document.createElement('canvas'); c.width = 256; c.height = 128; const g = c.getContext('2d'); g.fillStyle = '#c81e16'; g.fillRect(0, 0, 256, 128); g.fillStyle = '#fff'; g.font = '800 70px "VU Print"'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText('FIRE', 128, 68);
+      const tx = new THREE.CanvasTexture(c); tx.colorSpace = THREE.SRGBColorSpace;
+      const plate = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.34 * s, 0.17 * s, 0.03 * s), [red, red, red, red, new THREE.MeshStandardMaterial({ map: tx, roughness: 0.4 }), red])); plate.position.set(0, P - 0.2 * s, 0.045 * s); group.add(plate);
+      const gong = shadowed(new THREE.Mesh(new THREE.SphereGeometry(0.2 * s, 32, 16, 0, Math.PI * 2, 0, Math.PI / 2), red)); gong.rotation.x = Math.PI / 2; gong.position.set(0, P + 0.08 * s, 0.05 * s); group.add(gong);
+      const lamp = new THREE.PointLight(0xff3020, 0, 1.5 * s, 2); lamp.position.set(0, P, 0.4 * s); group.add(lamp);
+      const ring = (v) => (v && v.ringing != null ? !!v.ringing : !!a.ringing);
+      return { group, top: P + 0.28 * s, anchor: () => new THREE.Vector3(0.17 * s, P - 0.25 * s, 0.06 * s), update(A, B, e) { const k = lerp(ring(A) ? 1 : 0, ring(B) ? 1 : 0, e); gong.rotation.z = Math.sin(e * 70) * 0.12 * k; lamp.intensity = 2 * k; } };
+    },
+  },
+  // A road sign on two posts. "lines": the words on it, split by "|"; many lines crowd it in small type, few stand
+  // large. Green with a white border, as on a highway.
+  roadsign: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 160, a.h || 160) * ctx.S, W = 0.8 * s, H = 0.5 * s, P = 0.45 * s;
+      const lines = String(a.lines || 'EXIT 12').split('|');
+      const c = document.createElement('canvas'); c.width = 640; c.height = 400; const g = c.getContext('2d');
+      g.fillStyle = '#1f6a3a'; g.fillRect(0, 0, 640, 400); g.strokeStyle = '#fff'; g.lineWidth = 10; g.strokeRect(14, 14, 612, 372);
+      const size = Math.min(110, Math.floor(320 / lines.length));
+      g.fillStyle = '#fff'; g.font = '700 ' + size + 'px "VU Print"'; g.textAlign = 'center'; g.textBaseline = 'middle';
+      lines.forEach((t, i) => g.fillText(t, 320, 200 + (i - (lines.length - 1) / 2) * size * 1.05, 590));
+      const tx = new THREE.CanvasTexture(c); tx.colorSpace = THREE.SRGBColorSpace; tx.anisotropy = 8;
+      const group = new THREE.Group();
+      const grey = new THREE.MeshStandardMaterial({ color: 0x8a8e92, metalness: 0.7, roughness: 0.4 });
+      [-1, 1].forEach((sd) => { const p = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(0.015 * s, 0.015 * s, P + H, 10), grey)); p.position.set(sd * W * 0.32, (P + H) / 2, -0.02 * s); group.add(p); });
+      const board = shadowed(new THREE.Mesh(new THREE.BoxGeometry(W, H, 0.02 * s), [grey, grey, grey, grey, new THREE.MeshStandardMaterial({ map: tx, roughness: 0.5 }), grey])); board.position.y = P + H / 2; group.add(board);
+      return { group, top: P + H, anchor: () => new THREE.Vector3(W * 0.32, P * 0.4, 0), update() {} };
+    },
+  },
+  // A football: white with black pentagons.
+  football: {
+    build(a, ctx) {
+      const R = Math.min(a.w || 40, a.h || 40) * ctx.S * 0.5;
+      const c = document.createElement('canvas'); c.width = 512; c.height = 256; const g = c.getContext('2d'); g.fillStyle = '#f4f2ec'; g.fillRect(0, 0, 512, 256);
+      g.fillStyle = '#1a1a1c'; for (let i = 0; i < 12; i++) { const x = (i % 6) * 86 + (i > 5 ? 43 : 0) + 20, y = i > 5 ? 180 : 76; g.beginPath(); for (let k = 0; k < 5; k++) { const an = k / 5 * Math.PI * 2 - Math.PI / 2; g.lineTo(x + Math.cos(an) * 26, y + Math.sin(an) * 26); } g.closePath(); g.fill(); }
+      const tx = new THREE.CanvasTexture(c); tx.colorSpace = THREE.SRGBColorSpace;
+      const ball = shadowed(new THREE.Mesh(new THREE.SphereGeometry(R, 32, 24), new THREE.MeshStandardMaterial({ map: tx, roughness: 0.45 }))); ball.position.y = R;
+      const group = new THREE.Group(); group.add(ball);
+      return { group, top: 2 * R, radius: R, spin: ball, anchor: () => new THREE.Vector3(R * 0.7, R, R * 0.7), update() {} };
+    },
+  },
+  // A small football goal: a white frame and a net.
+  goal: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 200, a.h || 200) * ctx.S, W = 0.9 * s, H = 0.38 * s, D = 0.3 * s;
+      const white = new THREE.MeshStandardMaterial({ color: 0xf4f2ec, roughness: 0.4 });
+      const group = new THREE.Group();
+      const bar = (x1, y1, z1, x2, y2, z2) => { const a1 = new THREE.Vector3(x1, y1, z1), b1 = new THREE.Vector3(x2, y2, z2); const m = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(0.012 * s, 0.012 * s, a1.distanceTo(b1), 10), white)); m.position.copy(a1).add(b1).multiplyScalar(0.5); m.lookAt(b1); m.rotateX(Math.PI / 2); group.add(m); };
+      bar(-W / 2, 0, D / 2, -W / 2, H, D / 2); bar(W / 2, 0, D / 2, W / 2, H, D / 2); bar(-W / 2, H, D / 2, W / 2, H, D / 2);
+      bar(-W / 2, 0, -D / 2, -W / 2, H * 0.6, -D / 2); bar(W / 2, 0, -D / 2, W / 2, H * 0.6, -D / 2); bar(-W / 2, H, D / 2, -W / 2, H * 0.6, -D / 2); bar(W / 2, H, D / 2, W / 2, H * 0.6, -D / 2);
+      const c = document.createElement('canvas'); c.width = c.height = 128; const g = c.getContext('2d'); g.clearRect(0, 0, 128, 128); g.strokeStyle = 'rgba(240,240,240,0.9)'; g.lineWidth = 2; for (let i = 0; i <= 128; i += 16) { g.beginPath(); g.moveTo(i, 0); g.lineTo(i, 128); g.moveTo(0, i); g.lineTo(128, i); g.stroke(); }
+      const net = new THREE.MeshStandardMaterial({ map: new THREE.CanvasTexture(c), transparent: true, side: THREE.DoubleSide, depthWrite: false }); net.map.wrapS = net.map.wrapT = THREE.RepeatWrapping; net.map.repeat.set(4, 2);
+      const back = new THREE.Mesh(new THREE.PlaneGeometry(W, Math.hypot(H * 0.4, D)), net); back.position.set(0, H * 0.8, 0); back.rotation.x = Math.atan2(D, H * 0.4) - Math.PI / 2 + Math.PI / 2; group.add(back);
+      const rear = new THREE.Mesh(new THREE.PlaneGeometry(W, H * 0.6), net); rear.position.set(0, H * 0.3, -D / 2); group.add(rear);
+      return { group, top: H, anchor: () => new THREE.Vector3(W * 0.45, 0.05 * s, D / 2), update() {} };
+    },
+  },
+  // A fresh slab of cement in a wooden form with a footprint pressed in it. "set": true turns it pale and hard;
+  // "smooth": true trowels the footprint away. Anchor 'print'.
+  cement: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 180, a.h || 180) * ctx.S, W = 0.8 * s, D = 0.55 * s;
+      const face = new THREE.MeshPhysicalMaterial({ color: 0x6a6660, roughness: 0.25, clearcoat: 0.6 });
+      const group = new THREE.Group();
+      const wood = new THREE.MeshStandardMaterial({ map: weathered('#9a7a52'), roughness: 0.8 });
+      [[W + 0.06 * s, 0.06 * s, 0.03 * s, 0, D / 2 + 0.015 * s], [W + 0.06 * s, 0.06 * s, 0.03 * s, 0, -D / 2 - 0.015 * s]].forEach(([w, h, d, x, z]) => { const m = board(w, h, d, wood); m.position.set(x, 0.03 * s, z); group.add(m); });
+      [-1, 1].forEach((sd) => { const m = board(0.03 * s, 0.06 * s, D, wood); m.position.set(sd * (W / 2 + 0.015 * s), 0.03 * s, 0); group.add(m); });
+      const slab = shadowed(new THREE.Mesh(new THREE.BoxGeometry(W, 0.05 * s, D), face)); slab.position.y = 0.025 * s; group.add(slab);
+      const print = new THREE.Group(); print.position.set(0.05 * s, 0.051 * s, 0); print.rotation.y = 0.3; group.add(print);
+      const dent = new THREE.MeshStandardMaterial({ color: 0x3a3834, roughness: 0.9 });
+      const sole = new THREE.Mesh(new THREE.CircleGeometry(0.07 * s, 24), dent); sole.scale.set(0.8, 1.7, 1); sole.rotation.x = -Math.PI / 2; sole.position.z = 0.03 * s; print.add(sole);
+      const heel = new THREE.Mesh(new THREE.CircleGeometry(0.05 * s, 20), dent); heel.rotation.x = -Math.PI / 2; heel.position.z = -0.12 * s; print.add(heel);
+      for (let k = 0; k < 5; k++) { const t = new THREE.Mesh(new THREE.CircleGeometry(0.016 * s, 12), dent); t.rotation.x = -Math.PI / 2; t.position.set(-0.04 * s + k * 0.02 * s, 0, 0.17 * s - Math.abs(k - 1) * 0.008 * s); print.add(t); }
+      const wet = new THREE.Color(0x6a6660), dry = new THREE.Color(0xb8b4ac);
+      const set = (v) => (v && v.set != null ? !!v.set : !!a.set), smoothed = (v) => (v && v.smooth != null ? !!v.smooth : !!a.smooth);
+      return { group, top: 0.06 * s, anchor: (n) => (n === 'print' ? print.position.clone() : new THREE.Vector3(W * 0.42, 0.04 * s, D / 2)), update(A, B, e) { const k = lerp(set(A) ? 1 : 0, set(B) ? 1 : 0, e); face.color.copy(wet).lerp(dry, k); face.roughness = 0.25 + 0.7 * k; face.clearcoat = 0.6 * (1 - k); dent.color.set(k > 0.5 ? 0x8a867e : 0x3a3834); print.visible = !smoothed(e < 0.5 ? A : B); } };
+    },
+  },
+  // A plasterer's trowel: a flat steel blade and a wooden handle.
+  trowel: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 100, a.h || 100) * ctx.S;
+      const group = new THREE.Group();
+      const blade = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.45 * s, 0.008 * s, 0.18 * s), new THREE.MeshStandardMaterial({ color: 0xc8ccd0, metalness: 1, roughness: 0.3, envMap: ctx.env }))); blade.position.y = 0.004 * s; group.add(blade);
+      const post = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(0.008 * s, 0.008 * s, 0.08 * s, 8), new THREE.MeshStandardMaterial({ color: 0x8a8e92, metalness: 0.8 }))); post.position.y = 0.045 * s; group.add(post);
+      const handle = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(0.025 * s, 0.025 * s, 0.22 * s, 12), new THREE.MeshStandardMaterial({ map: birch(), roughness: 0.6 }))); handle.rotation.z = Math.PI / 2; handle.position.y = 0.09 * s; group.add(handle);
+      group.rotation.y = 0.5;
+      return { group, top: 0.12 * s, anchor: () => new THREE.Vector3(0.2 * s, 0.01 * s, 0.08 * s), update() {} };
+    },
+  },
+  // A claw hammer with a steel head and a wooden handle.
+  hammer: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 120, a.h || 120) * ctx.S;
+      const steel = new THREE.MeshStandardMaterial({ color: 0x5a5e62, metalness: 0.9, roughness: 0.3, envMap: ctx.env });
+      const group = new THREE.Group();
+      const handle = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(0.025 * s, 0.03 * s, 0.55 * s, 12), new THREE.MeshStandardMaterial({ map: birch(), roughness: 0.6 }))); handle.rotation.z = Math.PI / 2; handle.position.y = 0.03 * s; group.add(handle);
+      const head = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.06 * s, 0.06 * s, 0.24 * s), steel)); head.position.set(0.29 * s, 0.04 * s, 0); group.add(head);
+      const face = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(0.035 * s, 0.035 * s, 0.05 * s, 16), steel)); face.rotation.x = Math.PI / 2; face.position.set(0.29 * s, 0.04 * s, 0.13 * s); group.add(face);
+      group.rotation.y = -0.4;
+      return { group, top: 0.08 * s, anchor: () => new THREE.Vector3(-0.2 * s, 0.03 * s, 0.03 * s), update() {} };
+    },
+  },
 };
