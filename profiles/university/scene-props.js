@@ -1879,4 +1879,117 @@ export const PROPS = {
       return { group, top: 1.1 * L, anchor: () => new THREE.Vector3(0.15 * L, 0.3 * L, 0.05 * L), update() {} };
     },
   },
+  // A small cloth flag on a pole with a ball finial, stirring a little. "flag": "uk" or "us".
+  flag: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 80, a.h || 140) * ctx.S, P = 1.2 * s, FW = 0.75 * s, FH = 0.45 * s;
+      const c = document.createElement('canvas'); c.width = 500; c.height = 300; const g = c.getContext('2d');
+      if (a.flag === 'us') {
+        for (let i = 0; i < 13; i++) { g.fillStyle = i % 2 ? '#f4f2ec' : '#b22234'; g.fillRect(0, i * 300 / 13, 500, 300 / 13 + 1); }
+        g.fillStyle = '#3c3b6e'; g.fillRect(0, 0, 200, 300 * 7 / 13); g.fillStyle = '#fff';
+        for (let r = 0; r < 9; r++) for (let k = 0; k < (r % 2 ? 5 : 6); k++) { g.beginPath(); g.arc(17 + k * 33 + (r % 2 ? 16 : 0), 12 + r * 17.5, 4, 0, 7); g.fill(); }
+      } else {
+        g.fillStyle = '#012169'; g.fillRect(0, 0, 500, 300);
+        const band = (w, col) => { g.strokeStyle = col; g.lineWidth = w; g.beginPath(); g.moveTo(0, 0); g.lineTo(500, 300); g.moveTo(500, 0); g.lineTo(0, 300); g.stroke(); };
+        band(60, '#fff'); band(20, '#c8102e');
+        g.fillStyle = '#fff'; g.fillRect(0, 110, 500, 80); g.fillRect(205, 0, 90, 300); g.fillStyle = '#c8102e'; g.fillRect(0, 125, 500, 50); g.fillRect(222, 0, 56, 300);
+      }
+      const tx = new THREE.CanvasTexture(c); tx.colorSpace = THREE.SRGBColorSpace; tx.anisotropy = 8;
+      const geo = new THREE.PlaneGeometry(FW, FH, 20, 6), p = geo.attributes.position;
+      for (let i = 0; i < p.count; i++) { const u = p.getX(i) / FW + 0.5; p.setZ(i, Math.sin(u * 7) * 0.035 * s * u); }
+      geo.computeVertexNormals(); geo.translate(FW / 2, 0, 0);
+      const cloth = shadowed(new THREE.Mesh(geo, new THREE.MeshStandardMaterial({ map: tx, roughness: 0.8, side: THREE.DoubleSide }))); cloth.position.y = P - FH / 2 - 0.02 * s;
+      const metal = new THREE.MeshStandardMaterial({ color: 0xc8ccd0, metalness: 0.9, roughness: 0.3, envMap: ctx.env });
+      const pole = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(0.012 * s, 0.014 * s, P, 12), metal)); pole.position.y = P / 2;
+      const ball = shadowed(new THREE.Mesh(new THREE.SphereGeometry(0.03 * s, 16, 12), new THREE.MeshStandardMaterial({ color: 0xd4a83a, metalness: 1, roughness: 0.25, envMap: ctx.env }))); ball.position.y = P + 0.02 * s;
+      const foot = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(0.1 * s, 0.12 * s, 0.03 * s, 24), new THREE.MeshStandardMaterial({ color: 0x2a2a2d, roughness: 0.5 }))); foot.position.y = 0.015 * s;
+      const group = new THREE.Group(); group.add(pole, ball, foot, cloth); group.rotation.y = -0.35;
+      return { group, top: P, anchor: () => new THREE.Vector3(0.02 * s, P * 0.3, 0.02 * s), update(A, B, e) { cloth.rotation.y = Math.sin(e * 3) * 0.06; } };
+    },
+  },
+  // Music notes in the air: black eighth notes and a pair of beamed ones turning slowly around a point. "n": how many
+  // show (0 to 7).
+  notes: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 120, a.h || 120) * ctx.S;
+      const ink = new THREE.MeshPhysicalMaterial({ color: 0x111114, roughness: 0.2, clearcoat: 1, envMap: ctx.env, envMapIntensity: 0.8 });
+      const one = () => {
+        const g = new THREE.Group();
+        const head = shadowed(new THREE.Mesh(new THREE.SphereGeometry(0.05 * s, 20, 12), ink)); head.scale.set(1.3, 0.85, 0.6); head.rotation.z = 0.4; g.add(head);
+        const stem = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.012 * s, 0.26 * s, 0.012 * s), ink)); stem.position.set(0.055 * s, 0.13 * s, 0); g.add(stem);
+        const fl = new THREE.Shape(); fl.moveTo(0, 0); fl.quadraticCurveTo(0.09 * s, -0.04 * s, 0.07 * s, -0.12 * s); fl.quadraticCurveTo(0.06 * s, -0.06 * s, 0, -0.04 * s); fl.closePath();
+        const flag = shadowed(new THREE.Mesh(new THREE.ExtrudeGeometry(fl, { depth: 0.01 * s, bevelEnabled: false }), ink)); flag.position.set(0.055 * s, 0.26 * s, -0.005 * s); g.add(flag);
+        return g;
+      };
+      const spin = new THREE.Group(), all = [];
+      for (let i = 0; i < 7; i++) { const n = one(); const an = i / 7 * Math.PI * 2; n.position.set(Math.cos(an) * 0.35 * s, 0.15 * s + (i % 3) * 0.12 * s, Math.sin(an) * 0.35 * s); n.rotation.y = -an; n.rotation.z = (rnd() - 0.5) * 0.4; spin.add(n); all.push(n); }
+      const group = new THREE.Group(); group.add(spin); group.position.y = 0;
+      return { group, top: 0.6 * s, anchor: () => new THREE.Vector3(0.3 * s, 0.2 * s, 0.3 * s), update(A, B, e) { const n = Math.round(lerp(num(A, 'n'), num(B, 'n'), e)); all.forEach((m, i) => { m.visible = i < n; }); spin.rotation.y = e * 1.2; } };
+    },
+  },
+  // A car seat in dark fabric: a cushion, a backrest and a headrest, and its seatbelt. "buckled": true draws the belt
+  // across from the shoulder to the buckle at the hip, where it clicks in.
+  seat: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 100, a.h || 120) * ctx.S, W = 0.5 * s;
+      const cloth = new THREE.MeshPhysicalMaterial({ color: 0x2a2c32, roughness: 0.85, sheen: 0.6, sheenColor: 0x5a5e68 });
+      const group = new THREE.Group();
+      const cushion = shadowed(new THREE.Mesh(new THREE.CapsuleGeometry(0.08 * s, W - 0.16 * s, 8, 16), cloth)); cushion.rotation.z = Math.PI / 2; cushion.scale.set(1, 1, 3.2); cushion.position.set(0, 0.22 * s, 0.05 * s); group.add(cushion);
+      const base = shadowed(new THREE.Mesh(new THREE.BoxGeometry(W * 0.9, 0.16 * s, 0.45 * s), new THREE.MeshStandardMaterial({ color: 0x18181a, roughness: 0.6 }))); base.position.set(0, 0.08 * s, 0.05 * s); group.add(base);
+      const back = shadowed(new THREE.Mesh(new THREE.CapsuleGeometry(0.08 * s, W - 0.16 * s, 8, 16), cloth)); back.rotation.z = Math.PI / 2; back.scale.set(1, 1, 1); back.position.set(0, 0.55 * s, -0.2 * s); back.scale.set(4.2, 1, 1); back.rotation.set(-0.2, 0, Math.PI / 2); group.add(back);
+      const head = shadowed(new THREE.Mesh(new THREE.CapsuleGeometry(0.06 * s, 0.14 * s, 8, 16), cloth)); head.rotation.z = Math.PI / 2; head.position.set(0, 0.98 * s, -0.28 * s); group.add(head);
+      [-1, 1].forEach((sd) => { const post = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(0.008 * s, 0.008 * s, 0.08 * s, 8), new THREE.MeshStandardMaterial({ color: 0xc8ccd0, metalness: 0.9, roughness: 0.3 }))); post.position.set(sd * 0.05 * s, 0.9 * s, -0.27 * s); group.add(post); });
+      const webbing = new THREE.MeshStandardMaterial({ color: 0x1a1a1c, roughness: 0.7 });
+      const strap = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.05 * s, 1, 0.008 * s), webbing)); group.add(strap);
+      const buckle = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.05 * s, 0.07 * s, 0.03 * s), new THREE.MeshStandardMaterial({ color: 0xb8bcc0, metalness: 0.9, roughness: 0.25, envMap: ctx.env }))); buckle.position.set(-W * 0.42, 0.33 * s, 0.05 * s); group.add(buckle);
+      const latch = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.06 * s, 0.05 * s, 0.015 * s), new THREE.MeshStandardMaterial({ color: 0xd0d4d8, metalness: 1, roughness: 0.2, envMap: ctx.env }))); group.add(latch);
+      const top = new THREE.Vector3(W * 0.5, 0.85 * s, -0.18 * s), hang = new THREE.Vector3(W * 0.55, 0.3 * s, -0.12 * s), hip = new THREE.Vector3(-W * 0.4, 0.38 * s, 0.12 * s);
+      const place = (k) => {
+        const end = hang.clone().lerp(hip, k); end.z += Math.sin(Math.PI * k) * 0.25 * s;
+        const mid = top.clone().add(end).multiplyScalar(0.5), len = top.distanceTo(end);
+        strap.position.copy(mid); strap.scale.y = len; strap.lookAt(end); strap.rotateX(Math.PI / 2);
+        latch.position.copy(end);
+      };
+      const on = (v) => (v && v.buckled != null ? !!v.buckled : !!a.buckled);
+      place(on(a) ? 1 : 0);
+      return { group, top: 0.27 * s, anchor: (n) => (n === 'buckle' ? buckle.position.clone() : new THREE.Vector3(W * 0.5, 0.15 * s, 0.25 * s)), update(A, B, e) { place(lerp(on(A) ? 1 : 0, on(B) ? 1 : 0, smooth(e))); } };
+    },
+  },
+  // A bell tent on a patch of grass: a canvas cone hung from one pole and held up by three guy ropes to pegs, front,
+  // back left and back right. "tilt": how far the pole leans toward the front rope (radians); "snapped": true breaks
+  // the front rope, its two ends lying slack. Anchors: 'pole' (the pole), 'ground' (the grass), 'tie' (the front rope).
+  tent: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 260, a.h || 260) * ctx.S, P = 0.7 * s, R = 0.32 * s, G = 0.5 * s;
+      const group = new THREE.Group();
+      const grass = turf(0.95 * s, 0.85 * s); group.add(grass);
+      const lean = new THREE.Group(); lean.position.y = 0.03; group.add(lean);
+      const pole = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(0.012 * s, 0.014 * s, P, 12), new THREE.MeshStandardMaterial({ color: 0x9aa0a6, metalness: 0.85, roughness: 0.3, envMap: ctx.env }))); pole.position.y = P / 2; lean.add(pole);
+      const canvasMat = new THREE.MeshStandardMaterial({ color: 0xd9ccb0, roughness: 0.9, side: THREE.DoubleSide });
+      const cone = shadowed(new THREE.Mesh(new THREE.ConeGeometry(R, P * 0.82, 40, 1, true), canvasMat)); cone.position.y = P * 0.41; lean.add(cone);
+      const door = new THREE.Mesh(new THREE.PlaneGeometry(0.1 * s, 0.22 * s), new THREE.MeshStandardMaterial({ color: 0x2a2218, roughness: 0.9 })); door.position.set(0, 0.11 * s, R * 0.82); door.rotation.x = -0.4; lean.add(door);
+      const pennant = new THREE.Mesh(new THREE.ConeGeometry(0.03 * s, 0.12 * s, 3), new THREE.MeshStandardMaterial({ color: 0xc8281e, roughness: 0.6 })); pennant.rotation.z = -Math.PI / 2; pennant.position.set(0.06 * s, P + 0.02 * s, 0); lean.add(pennant);
+      const ropeMat = new THREE.MeshStandardMaterial({ color: 0xe0d4b0, roughness: 0.9 }), pegMat = new THREE.MeshStandardMaterial({ color: 0x8a8e92, metalness: 0.7, roughness: 0.4 });
+      // the front rope runs to the right, so a gust from the right tips the pole away from it, across your view
+      const pegs = [[G * 0.85, 0.05 * s], [-G * 0.45, G * 0.6], [-G * 0.45, -G * 0.6]].map(([x, z]) => { const pg = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(0.008 * s, 0.003 * s, 0.06 * s, 8), pegMat)); pg.position.set(x, 0.05, z); pg.rotation.z = x > 0 ? 0.4 : -0.3; group.add(pg); return new THREE.Vector3(x, 0.06, z); });
+      const ropes = [0, 1, 2].map(() => { const m = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(0.004 * s, 0.004 * s, 1, 6), ropeMat)); group.add(m); return m; });
+      const ends = [0, 1].map(() => { const m = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(0.004 * s, 0.004 * s, 1, 6), ropeMat)); group.add(m); return m; });
+      const span = (m, from, to) => { m.position.copy(from).add(to).multiplyScalar(0.5); m.scale.y = from.distanceTo(to); m.lookAt(to); m.rotateX(Math.PI / 2); };
+      const apex = new THREE.Vector3();
+      const setTo = (t, snapped) => {
+        lean.rotation.z = t; lean.updateMatrixWorld();
+        apex.set(0, P * 0.95, 0).applyAxisAngle(new THREE.Vector3(0, 0, 1), t).add(new THREE.Vector3(0, 0.03, 0));
+        ropes.forEach((m, i) => { m.visible = !(i === 0 && snapped); if (m.visible) span(m, apex, pegs[i]); });
+        ends.forEach((m) => { m.visible = snapped; });
+        if (snapped) { span(ends[0], apex, apex.clone().add(new THREE.Vector3(0.12 * s, -P * 0.45, 0.06 * s))); span(ends[1], pegs[0], pegs[0].clone().add(new THREE.Vector3(-0.2 * s, 0.01, 0.08 * s))); }
+      };
+      const tilt = (v) => (v && v.tilt != null ? v.tilt : a.tilt || 0), snap = (v) => (v && v.snapped != null ? !!v.snapped : !!a.snapped);
+      setTo(tilt(a), snap(a));
+      return {
+        group, top: P,
+        anchor: (n) => (n === 'pole' ? apex.clone().multiplyScalar(0.6) : n === 'ground' ? new THREE.Vector3(-0.38 * s, 0.04, 0.34 * s) : apex.clone().lerp(pegs[0], 0.6)),
+        update(A, B, e) { setTo(lerp(tilt(A), tilt(B), smooth(e)), e < 0.5 ? snap(A) : snap(B)); },
+      };
+    },
+  },
 };

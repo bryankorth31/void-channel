@@ -1263,61 +1263,57 @@
         ],
         "actors": [
           {
+            "id": "thing",
+            "type": "card",
+            "o": 0,
+            "prop": "tent",
+            "tilt": 0,
+            "snapped": false,
+            "label": "Guy rope",
+            "color": "gold",
+            "size": 18,
+            "x": 250,
+            "y": 15,
+            "w": 300,
+            "h": 300,
+            "tagW": 150,
+            "tag": [
+              230,
+              70
+            ]
+          },
+          {
             "id": "left",
             "type": "card",
-            "x": 40,
-            "y": 40,
-            "w": 250,
-            "h": 100,
+            "o": 0,
+            "tie": "thing.pole",
+            "x": 130,
+            "y": 95,
             "label": "The tent pole",
             "color": "blue",
-            "o": 0,
-            "size": 22
+            "size": 22,
+            "tagW": 190
           },
           {
             "id": "right",
             "type": "card",
-            "x": 510,
-            "y": 40,
-            "w": 250,
-            "h": 100,
+            "o": 0,
+            "tie": "thing.ground",
+            "x": 140,
+            "y": 285,
             "label": "The ground",
             "color": "blue",
-            "o": 0,
-            "size": 22
-          },
-          {
-            "id": "thing",
-            "type": "stamp",
-            "x": 340,
-            "y": 20,
-            "w": 120,
-            "label": "GUY ROPE",
-            "color": "gold",
-            "o": 0,
-            "s": 0.4,
-            "size": 18
-          },
-          {
-            "id": "act",
-            "type": "stamp",
-            "x": 340,
-            "y": 160,
-            "w": 120,
-            "label": "SNAPS",
-            "color": "fg",
-            "o": 0,
-            "s": 0.4,
-            "size": 18
+            "size": 22,
+            "tagW": 170
           },
           {
             "id": "line",
             "type": "text",
             "x": 400,
-            "y": 325,
+            "y": 350,
             "label": "It stood back up. It leans in the next gust.",
             "color": "pink",
-            "size": 22,
+            "size": 18,
             "o": 0
           }
         ],
@@ -1326,15 +1322,14 @@
             "say": "A tent pole is held upright by three guy ropes.",
             "dur": 2.4,
             "set": {
+              "thing": {
+                "o": 1
+              },
               "left": {
                 "o": 1
               },
               "right": {
                 "o": 1
-              },
-              "thing": {
-                "o": 1,
-                "s": 1
               }
             }
           },
@@ -1342,9 +1337,8 @@
             "say": "A gust tips it and the front rope takes it first.",
             "dur": 2.4,
             "set": {
-              "act": {
-                "o": 1,
-                "s": 1,
+              "thing": {
+                "tilt": 0.3,
                 "shake": true
               }
             }
@@ -1353,6 +1347,10 @@
             "say": "That rope snaps and the pole swings back up.",
             "dur": 2.6,
             "set": {
+              "thing": {
+                "tilt": 0.03,
+                "snapped": true
+              },
               "left": {
                 "sub": "stands back up, looser"
               },
@@ -1365,6 +1363,9 @@
             "say": "It stands, but the next gust tips it more easily.",
             "dur": 2.6,
             "set": {
+              "thing": {
+                "tilt": 0.16
+              },
               "line": {
                 "o": 1
               }
@@ -1385,13 +1386,8 @@
                 "color": "green"
               },
               "thing": {
-                "label": "THE ATFL",
+                "label": "The ATFL",
                 "size": 18
-              },
-              "act": {
-                "label": "TEARS",
-                "size": 18,
-                "color": "pink"
               },
               "line": {
                 "label": "Back in place, with the ligament still torn.",

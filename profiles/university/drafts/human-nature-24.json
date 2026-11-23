@@ -198,58 +198,70 @@
       ],
       "actors": [
         {
-          "id": "left",
-          "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
-          "h": 100,
-          "label": "You, deciding",
-          "color": "blue",
-          "o": 0,
-          "size": 22
-        },
-        {
           "id": "right",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "radio",
+          "playing": true,
+          "song": "CATCHY TUNE",
           "label": "The catchy song",
           "color": "blue",
+          "size": 20,
+          "x": 135,
+          "y": 170,
+          "w": 150,
+          "h": 150,
+          "tagW": 190,
+          "tag": [
+            0,
+            85
+          ]
+        },
+        {
+          "id": "left",
+          "type": "card",
           "o": 0,
-          "size": 18
+          "prop": "figure",
+          "pose": "stand",
+          "label": "You, deciding",
+          "x": 530.75,
+          "y": 110,
+          "w": 58.5,
+          "h": 130,
+          "look": "dark",
+          "turn": -0.6,
+          "color": "blue",
+          "size": 20,
+          "tagW": 180,
+          "tag": [
+            130,
+            95
+          ]
         },
         {
           "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "YOUR HEAD",
+          "type": "card",
+          "o": 0,
+          "prop": "notes",
+          "n": 4,
+          "label": "",
           "color": "gold",
-          "o": 0,
-          "s": 0.4,
-          "size": 14
-        },
-        {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "HEAR ONCE",
-          "color": "fg",
-          "o": 0,
-          "s": 0.4,
-          "size": 14
+          "size": 18,
+          "x": 165,
+          "y": 95,
+          "w": 130,
+          "h": 130,
+          "tagW": 150,
+          "tag": [
+            -150,
+            10
+          ]
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
+          "y": 350,
           "label": "It got in without asking.",
           "color": "pink",
           "size": 22,
@@ -261,15 +273,14 @@
           "say": "You hear a catchy song once.",
           "dur": 2.4,
           "set": {
-            "left": {
-              "o": 1
-            },
             "right": {
               "o": 1
             },
+            "left": {
+              "o": 1
+            },
             "thing": {
-              "o": 1,
-              "s": 1
+              "o": 1
             }
           }
         },
@@ -277,10 +288,20 @@
           "say": "You did not decide to remember it.",
           "dur": 2.4,
           "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
-              "shake": true
+            "thing": {
+              "on": "left",
+              "x": 495,
+              "y": 110,
+              "w": 130,
+              "h": 130,
+              "label": "Your head",
+              "tag": [
+                -200,
+                20
+              ]
+            },
+            "right": {
+              "playing": false
             }
           }
         },
@@ -288,6 +309,9 @@
           "say": "All day it plays in your head.",
           "dur": 2.6,
           "set": {
+            "thing": {
+              "n": 7
+            },
             "left": {
               "sub": "did not choose it"
             },
@@ -320,13 +344,8 @@
               "color": "green"
             },
             "thing": {
-              "label": "THE SOUL",
+              "label": "The soul",
               "size": 18
-            },
-            "act": {
-              "label": "SHAPE",
-              "size": 18,
-              "color": "pink"
             },
             "line": {
               "label": "Plato: fiction trains the part that does not reason.",

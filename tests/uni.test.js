@@ -806,7 +806,7 @@ test('the crystal is a bottle of supercooled water on the lit table, shipped wit
 test('draft lessons get real objects too: every object a draft scene names is in the library', () => {
   // Bryan, 23 Nov 2026: "Yes, drafts next". The drafts given objects so far; each names only objects the library has.
   const lib = fs.readFileSync(path.join(uni.UNI, 'scene-props.js'), 'utf8'), dir = path.join(uni.UNI, 'drafts');
-  const done = ['human-nature-1', 'human-nature-3', 'human-nature-4', 'human-nature-5', 'human-nature-6', 'human-nature-7', 'human-nature-8', 'human-nature-9', 'human-nature-10', 'human-nature-12', 'human-nature-13', 'human-nature-14', 'human-nature-15', 'human-nature-16', 'human-nature-17', 'human-nature-18', 'human-nature-19', 'human-nature-20', 'human-nature-21', 'human-nature-22'];
+  const done = ['human-nature-1', 'human-nature-3', 'human-nature-4', 'human-nature-5', 'human-nature-6', 'human-nature-7', 'human-nature-8', 'human-nature-9', 'human-nature-10', 'human-nature-12', 'human-nature-13', 'human-nature-14', 'human-nature-15', 'human-nature-16', 'human-nature-17', 'human-nature-18', 'human-nature-19', 'human-nature-20', 'human-nature-21', 'human-nature-22', 'human-nature-23', 'human-nature-24', 'human-nature-25', 'human-nature-26'];
   for (const f of fs.readdirSync(dir).filter((x) => x.endsWith('.json'))) {
     const sc = (JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')).unit || {}).scene; if (!sc) continue;
     const props = sc.actors.filter((a) => a.prop);
@@ -916,5 +916,5 @@ test('real objects on the lit table: every object a scene names is in the librar
   // objects are the hang tags themselves
   const paper = allScenes().filter(({ sc }) => !sc.actors.some((a) => a.prop && a.prop !== 'tag')).map(({ sc }) => sc.analogy).sort();
   // the tent (The body, a lesson that reached master after the lit table was built) waits for its objects
-  assert.deepStrictEqual(paper, ['A gym with a cheap first two months', 'A sale price after the price went up', 'A tent in the wind when the first guy rope snaps', 'One student, or a whole school'], 'lessons still on paper: ' + paper.join('; '));
+  assert.deepStrictEqual(paper, ['A gym with a cheap first two months', 'A sale price after the price went up', 'One student, or a whole school'], 'lessons still on paper: ' + paper.join('; '));
 });
