@@ -38,6 +38,11 @@
     { id: 'trivia', name: 'Trivia Night', line: 'Play along on the big screen', site: 'main', path: '/trivia/', live: true,
       kicker: 'Trivia', head: 'Trivia night at home.', text: 'Questions on the TV, answers on your phones. Play with the whole room.',
       go: 'Start trivia', pic: '/assets/brand/bg/trivianight-m.webp' },
+    // Card games (Bryan, 23 Nov 2026: "Yes, add it"): the table on the TV, each hand on its own phone. Its picture is the real
+    // table on voidtv.net, a Spades trick with four players round it.
+    { id: 'cards', name: 'Card games', line: 'The table on the TV, your hand on your phone', site: 'main', path: '/cards/', live: true,
+      kicker: 'Card games', head: 'Card night at home.', text: 'The table on the TV, each hand on its own phone. Spades, Hearts, Rummy and more, free, no account.',
+      go: 'Deal a game', pic: '/assets/brand/bg/cardtable-m.webp' },
     { id: 'university', name: 'Void University', line: 'Big ideas, shown with everyday things', site: 'university', url: 'https://university.voidtv.net/', live: true,
       kicker: 'Learning', head: 'Big ideas, shown with everyday things.', text: 'Free courses built from real lectures, with things to try. No account.',
       go: 'Start learning', pic: 'https://university.voidtv.net/img/c-critical-thinking.jpg' },
@@ -75,6 +80,7 @@
     var p = location.pathname;
     if (/^\/play(\/|$)/.test(p)) return 'play';
     if (/^\/trivia(\/|$)/.test(p)) return 'trivia';
+    if (/^\/cards(\/|$)/.test(p)) return 'cards';
     if (/^\/tv(\/|$)/.test(p)) return 'live';
     return 'ondemand';
   };
