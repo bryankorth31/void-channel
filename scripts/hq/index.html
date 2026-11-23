@@ -13,6 +13,15 @@ nav{display:flex;gap:4px;margin-left:12px;flex-wrap:wrap}a,a:visited{color:var(-
 header .right{margin-left:auto;color:var(--dim);font-size:12px;display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px 10px;align-items:center;min-width:0;max-width:100%}header .right button,header .right .btn{white-space:nowrap}
 #gitline{max-width:340px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}#gitline.wait{color:var(--rev)}#gitline.bad{color:var(--red)} /* the last commit's subject can be a whole paragraph: one line here, all of it on hover */
 main{padding:16px 18px 60px;max-width:1500px}
+/* One header row and a side list (Bryan, 23 Nov 2026: "B, side list"). His window is wide and short (1278x513) and the header took 141 of its 513 px in three rows:
+   the area's tabs are now a list down the left, the two seldom-used publish buttons sit under More, and the last-commit line gives way before anything wraps.
+   --hh is the header's real height, kept by the page (hdrSize), so the list and the frames start right under it at any width. */
+header{padding:6px 18px}header .right{flex:1 1 320px;flex-wrap:nowrap}
+.shell{display:flex;align-items:flex-start}.shell main{flex:1 1 auto;min-width:0}
+#nav{position:sticky;top:var(--hh,51px);flex:none;box-sizing:border-box;width:148px;height:calc(100vh - var(--hh,51px));overflow-y:auto;flex-direction:column;flex-wrap:nowrap;gap:1px;margin:0;padding:8px;background:#0a0b10;border-right:1px solid var(--line)}#nav a{padding:6px 10px}
+details.more{position:relative}details.more>summary{list-style:none;white-space:nowrap}details.more>summary::-webkit-details-marker{display:none}details.more>summary::after{content:' \25BE'}details.more>summary:hover,details.more[open]>summary{border-color:var(--acc)}
+.morebox{position:absolute;right:0;top:calc(100% + 6px);z-index:6;display:flex;flex-direction:column;align-items:stretch;gap:6px;padding:8px;background:var(--panel2);border:1px solid var(--line);border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.5)}
+@media(max-width:900px){.shell{display:block}#nav{position:static;width:auto;height:auto;flex-direction:row;flex-wrap:wrap;border-right:0;border-bottom:1px solid var(--line)}header .right{flex-wrap:wrap}}
 h2{font-family:Unbounded;font-weight:500;font-size:16px;margin:18px 0 10px}h2 small{font-family:system-ui;color:var(--dim);font-weight:400;font-size:12px;margin-left:8px}
 h3{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin:14px 0 6px}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}.card b{display:block;font-family:Unbounded;font-weight:500;font-size:22px}.card small{color:var(--dim)}
@@ -35,9 +44,9 @@ video{width:100%;max-width:720px;background:#000;border-radius:8px}
 .help p{max-width:820px}
 </style></head><body>
 <header><img src="/brand/icon-192.png" alt=""><span class="wm">VOID<span>tv</span></span><span class="hq">HQ</span>
-<nav id="areas" class="areas"></nav><nav id="nav"></nav>
-<div class="right"><span id="gitline"></span><span id="tvbtns" style="display:contents"><a class="btn" href="http://127.0.0.1:8792/lab/" target="_blank" rel="noopener" style="text-decoration:none" title="The player lab: test playback, sync and stalls on this PC. In the HQ app it opens in its own window.">Player lab</a><button class="gold" onclick="publish()">Publish now</button><button onclick="pushLive()" title="Code commits waiting for GitHub (a push to master is the deploy), their tests on a clean copy, and one button to send them live.">Push live</button><button class="sm" onclick="publish('--allow-shrink')" title="Use after publish.log says refused: the catalog is more than 10% smaller than the last published one">Publish anyway (shrink)</button><button class="sm" onclick="publish('--allow-other-commits')" title="Use after publish.log says held: commits from other chats are waiting on this PC">Push with other commits</button></span></div></header>
-<main id="main"></main><script src="/hq/hindi.js"></script><script src="/hq/moments.js"></script>
+<nav id="areas" class="areas"></nav>
+<div class="right"><span id="gitline"></span><span id="tvbtns" style="display:contents"><a class="btn" href="http://127.0.0.1:8792/lab/" target="_blank" rel="noopener" style="text-decoration:none" title="The player lab: test playback, sync and stalls on this PC. In the HQ app it opens in its own window.">Player lab</a><button class="gold" onclick="publish()">Publish now</button><button onclick="pushLive()" title="Code commits waiting for GitHub (a push to master is the deploy), their tests on a clean copy, and one button to send them live.">Push live</button><details class="more"><summary class="btn" title="Two more publish buttons, for when Publish says refused or held: Publish anyway (shrink), Push with other commits">More</summary><div class="morebox"><button class="sm" onclick="publish('--allow-shrink')" title="Use after publish.log says refused: the catalog is more than 10% smaller than the last published one">Publish anyway (shrink)</button><button class="sm" onclick="publish('--allow-other-commits')" title="Use after publish.log says held: commits from other chats are waiting on this PC">Push with other commits</button></div></details></span></div></header>
+<div class="shell"><nav id="nav" aria-label="Tabs of this area"></nav><main id="main"></main></div><script src="/hq/hindi.js"></script><script src="/hq/moments.js"></script>
 <script>
 const $=(s,r)=>(r||document).querySelector(s);const jq=(v)=>esc(JSON.stringify(String(v==null?'':v)));const esc=(s)=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const HQ_TOKEN=(document.querySelector('meta[name=hq-token]')||{}).content||''; // HQ writes a fresh secret into this page each time it starts; every POST sends it back
@@ -53,6 +62,12 @@ let tab=location.hash.slice(1).split('/')[0]||'overview';let showSlug=location.h
 // A plain note goes away after 4 seconds. A note with a level ('ok', 'wait' or 'bad') is an answer he needs to read: it stays until
 // he presses Dismiss, and a newer answer with the same key takes its place. Notes stack in one corner and never cover each other.
 function toast(m,level,key){let box=$('#toasts');if(!box){box=document.createElement('div');box.id='toasts';box.className='toasts';document.body.appendChild(box)}const t=document.createElement('div');t.className='toast'+(level?' stay '+level:'');t.textContent=m;if(level){t.setAttribute('role','status');if(key){box.querySelectorAll('.toast.stay').forEach(x=>{if(x.dataset.key===key)x.remove()});t.dataset.key=key}const b=document.createElement('button');b.className='sm';b.textContent='Dismiss';b.onclick=()=>t.remove();t.appendChild(b)}else setTimeout(()=>t.remove(),4000);box.appendChild(t);return t}
+// --hh: how tall the header really is, so the side list and the frames start right under it (it can wrap on a narrow window).
+function hdrSize(){document.documentElement.style.setProperty('--hh',$('header').offsetHeight+'px')}
+hdrSize();if(window.ResizeObserver)new ResizeObserver(hdrSize).observe($('header'));
+// More (the two override publish buttons) closes after a press on one of them, a click anywhere else, or Escape.
+document.addEventListener('click',(ev)=>{const d=$('details.more');if(d&&d.open&&(!d.contains(ev.target)||ev.target.closest('.morebox button')))d.open=false});
+document.addEventListener('keydown',(ev)=>{const d=$('details.more');if(ev.key==='Escape'&&d&&d.open){d.open=false;$('summary',d).focus()}});
 function nav(){const ar=areaOf(tab);const on=(tab==='university'&&showSlug)?'uni-areas':tab;$('#areas').innerHTML=AREAS.map(a=>'<a class="'+(a.k===ar?'on':'')+'" href="#'+a.tabs[0][0]+'">'+a.n+'</a>').join('');$('#nav').innerHTML=AREAS.find(a=>a.k===ar).tabs.map(([k,n])=>'<a class="'+(k===on?'on':'')+'" href="#'+k+'">'+n+'</a>').join('');$('#tvbtns').style.display=ar==='tv'?'contents':'none';document.title=(ar==='tv'?'voidtv.net':AREAS.find(a=>a.k===ar).n)+' HQ'}
 window.addEventListener('hashchange',()=>{tab=location.hash.slice(1).split('/')[0]||'overview';showSlug=location.hash.split('/')[1]||null;render()});
 // No failure is silent (audit 19 Nov 2026, H2): whatever a button's work throws, and whichever button it is, ends in a red message
@@ -83,12 +98,12 @@ async function publish(flag){flag=flag||'';if(!(flag in PUBLISH_ASK)||!confirm(P
 const CAST='http://127.0.0.1:8801/?embed=1#/';
 async function castFrame(m,route){let up=true;try{await fetch('http://127.0.0.1:8801/api/ping',{mode:'no-cors',cache:'no-store'})}catch(e){up=false}
 if(!up){m.innerHTML='<div class="panel"><h2 style="margin:0 0 6px">Void Cast is not running</h2><p>Double-click <b>Void Cast</b> on the desktop once: it starts in the background and stays on until the PC restarts. Then come back here.</p><div class="row"><button onclick="render()">Try again</button></div></div>';return}
-m.innerHTML='<iframe title="Void Cast" src="'+CAST+route+'" style="display:block;width:100%;height:calc(100vh - 110px);border:0;border-radius:10px;background:#07080c"></iframe>'}
+m.innerHTML='<iframe title="Void Cast" src="'+CAST+route+'" style="display:block;width:100%;height:calc(100vh - var(--hh,51px) - 34px);border:0;border-radius:10px;background:#07080c"></iframe>'}
 function castOverview(m){return castFrame(m,'control')}function castCheck(m){return castFrame(m,'check')}function castFamily(m){return castFrame(m,'control/family')}
 // ---- PLAY (Bryan, 20 Nov 2026: "give me a page of large chunks to keep or not keep in hq") ----
 // The next games for PLAY, in chunks by machine and popularity, each with Keep or Skip. The page is made by the PLAY
 // assistant (audit/play-mode/weed/more-chunks.html) and served by HQ at /play/more-chunks; this area only shows it.
-function playMore(m){m.innerHTML='<iframe title="PLAY: games to add" src="/play/more-chunks" style="display:block;width:100%;height:calc(100vh - 110px);border:0;border-radius:10px;background:#07080c"></iframe>'}
+function playMore(m){m.innerHTML='<iframe title="PLAY: games to add" src="/play/more-chunks" style="display:block;width:100%;height:calc(100vh - var(--hh,51px) - 34px);border:0;border-radius:10px;background:#07080c"></iframe>'}
 // The 18+ door (Bryan, 20 Nov 2026: "put that gate in the headquarters for me to see"): Void Cast's Adult shelf, which
 // asks at the door first when it is shut, and has Close the door on it when open. Void Cast DECISIONS C15.
 function castDoor(m){return castFrame(m,'shelf/adult')}

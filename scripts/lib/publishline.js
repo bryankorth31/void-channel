@@ -47,7 +47,7 @@ function line(facts) {
     parts.push(n(own + others, 'commit') + ' waiting, Publish is holding');
     tips.push(n(others, 'commit') + ' from other work ' + (others === 1 ? 'waits' : 'wait') + ' on this PC'
       + (own ? ', with ' + n(own, 'catalog commit') : '') + '. Publish commits the catalog and holds the push until they have gone. '
-      + 'Push live tests them and sends them. Push with other commits sends them together with the catalog.');
+      + 'Push live tests them and sends them. Push with other commits (under More) sends them together with the catalog.');
   } else if (own) {
     if (level === 'ok') level = 'wait';
     parts.push(n(own, 'catalog commit') + ' waiting to go out');
@@ -100,7 +100,7 @@ function outcome(log, code) {
     return {
       kind, level: 'wait', detail: message,
       text: 'Held. The catalog is committed on this PC and was not pushed, because ' + n(+hit[1], 'other commit') + ' ' + (+hit[1] === 1 ? 'waits' : 'wait')
-        + ' here. Press Push live to test and send them, or Push with other commits to send them together with the catalog.',
+        + ' here. Press Push live to test and send them, or Push with other commits (under More) to send them together with the catalog.',
     };
   }
   if (kind === 'refused') {
@@ -108,7 +108,7 @@ function outcome(log, code) {
     return {
       kind, level: 'bad', detail: message,
       text: 'Refused. Nothing was pushed: ' + hit[1].replace(/\s*\(run with --allow-shrink[^)]*\)/, '').slice(0, 300) + '.'
-        + (shrink ? ' Find out what emptied the catalog first. Only when the drop is meant, press Publish anyway (shrink).' : ' Fix what the line names, then press Publish now again.'),
+        + (shrink ? ' Find out what emptied the catalog first. Only when the drop is meant, press Publish anyway (shrink), under More.' : ' Fix what the line names, then press Publish now again.'),
     };
   }
   return { kind: 'failed', level: 'bad', detail: message, text: 'Failed: ' + hit[1].slice(0, 300) + '. The whole line is in Jobs, publish.log.' };
