@@ -467,6 +467,24 @@ html{-webkit-tap-highlight-color:transparent}
 a.ontile{text-decoration:none}
 .ontile img,.ontile .p{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:var(--panel2)}.ontile b{display:block;padding:7px 10px 0;font-size:14px}.ontile small{display:block;padding:2px 10px 10px;color:var(--dim);font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 @media(max-width:700px){.home-tv .tv{padding:0 10px 4px}.home-tv .snd{left:50%;top:78%;transform:translate(-50%,-50%);font-size:18px;padding:14px 24px}.onnow{padding:4px 12px 12px}.ontile{flex-basis:170px}}
+/* The first screen on a wide, short window (Bryan, 23 Nov 2026, picked from three pictures: "B, TV beside what's on"; decision H10).
+   The TV was sized by the window's width alone, so at his 1278x513 it stood 688 px tall in a 513 px window: the channel buttons were 289 px below the fold and the first
+   row 860 px below it. Where the window is at least 1000 px wide and 8:5 or wider, the TV is now sized by the window's HEIGHT (--w is its width; 148 px = the header, the
+   channel bar and the gaps), On now is a list on its right (never under 380 px wide), and the channel bar runs under both. .home-top wraps the TV, On now and any moment;
+   the TV's own boxes step aside (display:contents) so the picture, the bar and the guide line are placed on .home-top's grid. Anything else in it (a moment's card and row)
+   keeps the full width below. Narrower or taller windows, phones among them, are not touched: there .home-top is a plain block. */
+@media(min-width:1000px) and (min-aspect-ratio:8/5){
+.home-top{--w:min(calc((100vh - 148px) * 16 / 9),calc(100vw - 456px));display:grid;grid-template-columns:var(--w) minmax(0,1fr);grid-template-rows:auto auto auto;grid-template-areas:"tv on" "tv hl" "bar bar";column-gap:16px;padding:10px 20px 0}
+.home-top>*{grid-column:1 / -1}.home-top>#htv{grid-area:tv;margin:0}.home-top>#htv.htv-on,.home-top .htv-on .tv,.home-top .htv-on .screen{display:contents}
+.home-top .hv,.home-top .screen>.swirl{grid-area:tv;border-radius:10px;overflow:hidden;background:#000}.home-top .screen>.swirl{max-height:none}.home-top .swirl .wm{font-size:calc(var(--w) * .075)}
+.home-top .osd{grid-area:bar;margin-top:8px;border-radius:10px;flex-wrap:nowrap}.home-top .osd>b,.home-top .osd .acts{flex:none;white-space:nowrap}.home-top .osd>span:not(.acts){flex:0 1 auto;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.home-top .osd>span.g{flex-shrink:3}
+.home-top .hl{grid-area:hl;height:18px;line-height:18px;margin:8px 0 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.home-top>#onnow{grid-area:on;display:flex;flex-direction:column;min-width:0;height:calc(var(--w) * 9 / 16 - 26px)}.home-top>#onnow h2{margin:0 0 8px}
+.home-top .onnow{flex:1 1 auto;min-height:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));grid-auto-rows:min-content;gap:8px;overflow-x:hidden;overflow-y:auto;padding:0 6px 0 0;scrollbar-width:thin}
+.home-top .onnow .ontile{display:grid;grid-template-columns:104px minmax(0,1fr);grid-template-rows:1fr 1fr;column-gap:10px;min-width:0}
+.home-top .onnow .ontile img,.home-top .onnow .ontile .p{grid-row:1 / 3;width:104px;height:58px;aspect-ratio:auto}
+.home-top .onnow .ontile b{align-self:end;padding:0 8px 0 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.home-top .onnow .ontile small{align-self:start;padding:0 8px 0 0}
+}
 @media (prefers-reduced-motion:reduce){.tv .swirl img,.tv .swirl .wm{animation:none}.tv .swirl .wm{transform:translate(-50%,-50%) scale(1.12);opacity:1}}
 .hist .row{display:flex;gap:10px;align-items:center;padding:7px 0;border-bottom:1px solid var(--line);font-size:14px}.hist .row span{flex:1;cursor:pointer}.hist small{color:var(--dim)}.hist .x{background:none;border:0;color:var(--dim);cursor:pointer;font-size:14px}
 .bar{display:flex;flex-wrap:wrap;gap:8px;padding:12px 20px;align-items:center;position:relative;z-index:6}
@@ -725,7 +743,10 @@ function browse(){let list=filtered();if(!state.q)list=list.filter(s=>!hidden(s)
   h+=!list.length?noMatch():'<div class="grid">'+list.slice(0,N).map(s=>card(s,'grid')).join('')+'</div>'+(list.length>N?'<p class="moreline"><button class="btn" onclick="state.gridN='+(N+60)+';render()">Show '+Math.min(60,list.length-N)+' more of '+list.length+'</button></p>':'');
  } else {
   // 1. Live TV first (B, 25 Oct 2026: the home page opens on a channel already playing, nothing in the way; the wall of 158 featured shows is gone)
+  // .home-top holds them so a wide, short window can put On now beside the TV (decision H10); it is a plain block everywhere else
+  h+='<div class="home-top">';
   h+='<section class="home-tv" id="htv"></section><div id="onnow">'+onNowHtml()+'</div>'+momentHome();
+  h+='</div>';
   // Play together (decision H9) right after, so a moment that is on keeps its place under Live TV (B, 22 Nov 2026, layout B)
   h+=togetherHome();
   // 2. yours

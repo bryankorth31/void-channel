@@ -103,3 +103,58 @@ test('V8: the two arrows on every home row have a hover tip and a name', () => {
   assert.ok(right.includes('title="Scroll right"') && right.includes('aria-label="Scroll right"'), right);
   assert.ok(left.includes(',-1)') && right.includes(',1)'), 'each still slides its own way');
 });
+
+// H10 (voidverse audit A1 and MAIN-04; Bryan, 23 Nov 2026, picked from three pictures: "B, TV beside what's on").
+// The home TV was sized by the window's width alone: at his 1278x513 window it stood 688 px tall, the channel buttons
+// were 289 px below the fold and the first row 860 px below it (L13 says the buttons are always reachable without
+// scrolling, H2 that rows sit right under the TV). On a wide, short window the TV is now sized by the window's height,
+// with On now as a list beside it and the channel bar under both.
+test('H10: one box holds Live TV, On now and any moment, and closes before Play together', () => {
+  const open = APP.indexOf("\n  h+='<div class=\"home-top\">';\n"), tv = APP.indexOf("<div id=\"onnow\">'+onNowHtml()+'</div>'+momentHome();\n  h+='</div>';\n"), row = APP.indexOf('\n  h+=togetherHome();\n');
+  assert.ok(open > 0 && tv > open && row > tv, 'opened before Live TV, closed right after the moment, Play together after it');
+  assert.equal(APP.slice(open, tv).split('\n').length, 3, 'nothing else between the opening and the Live TV line');
+  assert.equal(APP.split('class=\\"home-top\\"').length + APP.split('class="home-top"').length - 2, 1, 'one such box');
+});
+
+test('H10: the side-by-side rules apply only on a wide, short window, and place the picture, the bar, On now and the guide line', () => {
+  const at = APP.indexOf('@media(min-width:1000px) and (min-aspect-ratio:8/5){\n.home-top{'), end = APP.indexOf('\n}\n', at);
+  assert.ok(at > 0 && end > at, 'the rules sit in one block for windows at least 1000 px wide and 8:5 or wider');
+  const css = APP.slice(at, end);
+  assert.ok(!/\.home-top[ >.{]/.test(APP.slice(0, at).split('\n').filter((l) => !l.startsWith('/*') && !l.startsWith('   ')).join('\n')), 'no .home-top rule outside that block: everywhere else it is a plain block');
+  assert.match(css, /\.home-top\{--w:min\(calc\(\(100vh - 148px\) \* 16 \/ 9\),calc\(100vw - 456px\)\);display:grid;grid-template-columns:var\(--w\) minmax\(0,1fr\);/, 'the TV is sized by the window height, and leaves the list at least 380 px');
+  assert.match(css, /grid-template-areas:"tv on" "tv hl" "bar bar"/, 'the TV, On now beside it, the guide line under On now, the channel bar under both');
+  assert.ok(css.includes('.home-top>#htv.htv-on,.home-top .htv-on .tv,.home-top .htv-on .screen{display:contents}'), 'the TV section steps aside so its parts sit on the grid; no markup of the player changes');
+  assert.ok(css.includes('.home-top .hv,.home-top .screen>.swirl{grid-area:tv;'), 'the playing picture and the still swirl both take the TV place');
+  assert.ok(css.includes('.home-top .osd{grid-area:bar;') && css.includes('.home-top .hl{grid-area:hl;') && css.includes('.home-top>#onnow{grid-area:on;'));
+  assert.ok(css.includes('.home-top>*{grid-column:1 / -1}'), 'anything else in the box (a moment\'s card and row) keeps the full width below');
+  assert.match(css, /\.home-top>#onnow\{[^}]*height:calc\(var\(--w\) \* 9 \/ 16 - 26px\)\}/, 'the list is as tall as the picture, less the guide line');
+  assert.match(css, /\.home-top \.onnow\{[^}]*overflow-x:hidden;overflow-y:auto;/, 'and scrolls inside itself, so the page never grows sideways');
+});
+
+test('H10: the channel bar stays on one line there; long names shorten with dots and the buttons never wrap away', () => {
+  const css = lineAt('.home-top .osd{grid-area:bar;');
+  assert.ok(css.includes('flex-wrap:nowrap}'));
+  assert.ok(css.includes('.home-top .osd>b,.home-top .osd .acts{flex:none;white-space:nowrap}'), 'the channel name and the buttons keep their size');
+  assert.ok(css.includes('.home-top .osd>span:not(.acts){flex:0 1 auto;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}'), 'the show and the "next" text give way');
+  assert.ok(APP.includes('.osd{display:flex;flex-wrap:wrap;'), 'on a phone the bar still wraps, as before');
+});
+
+test('H10: by the numbers, the channel buttons are inside the window wherever the rules apply, and plain windows are left alone', () => {
+  const HEADER = 60, BAR = 64;                                   // measured on the page: the pinned header and the channel bar
+  const applies = (w, h) => w >= 1000 && w / h >= 8 / 5;
+  const tvWidth = (w, h) => Math.min((h - 148) * 16 / 9, w - 456);
+  for (const [w, h] of [[1278, 513], [1920, 1080], [1316, 821], [1366, 768], [1280, 800], [1440, 900], [2560, 1440], [1000, 600]]) {
+    assert.ok(applies(w, h), w + 'x' + h + ' is wide and short');
+    const tw = tvWidth(w, h), buttonsEnd = HEADER + 10 + tw * 9 / 16 + 8 + BAR;
+    assert.ok(tw >= 300, w + 'x' + h + ': the picture is ' + Math.round(tw) + ' px wide');
+    assert.ok(buttonsEnd <= h, w + 'x' + h + ': the channel bar ends at ' + Math.round(buttonsEnd) + ' of ' + h);
+    assert.ok(w - 40 - 16 - 16 - tw >= 380, w + 'x' + h + ': On now keeps 380 px beside it, a scroll bar allowed for');
+  }
+  // before the fix, the same sums at his window: the full-width picture alone was taller than the window
+  assert.ok(HEADER + (1278 - 15 - 40) * 9 / 16 > 513);
+  for (const [w, h] of [[390, 844], [821, 1316], [844, 390], [1024, 768], [1200, 800], [1080, 1920]]) {
+    assert.ok(!applies(w, h), w + 'x' + h + ' keeps the TV full width with On now under it');
+  }
+  // the two desktop windows it leaves alone already hold the full-width TV and its bar
+  for (const [w, h] of [[1024, 768], [1200, 800]]) assert.ok(HEADER + (w - 40) * 9 / 16 + BAR <= h, w + 'x' + h + ' fits as it is');
+});
