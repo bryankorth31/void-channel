@@ -81,7 +81,8 @@ test('the Browse back buttons still call go(\'\'): coming back from a show keeps
 
 // H9 (23 Nov 2026, "C, Play together row"): the rooms where the TV is the table and the phones are in your hands.
 test('H9: a "Play together" row under On now, with Card games, Trivia Night and Games, on voidtv.net itself only', () => {
-  assert.match(lineAt("h+='<section class=\"home-tv\""), /<div id="onnow">'\+onNowHtml\(\)\+'<\/div>'\+togetherHome\(\)\+momentHome\(\);/, 'right under On now');
+  const onnow = APP.indexOf("<div id=\"onnow\">'+onNowHtml()+'</div>'+momentHome();"), row = APP.indexOf('\n  h+=togetherHome();\n'), yours = APP.indexOf('// 2. yours');
+  assert.ok(onnow > 0 && row > onnow && row < yours, 'right after On now and any moment that is on (the moment keeps its place under Live TV), before your own rows');
   const fn = lineAt('function togetherHome(){');
   const run = (remoteOn) => vm.runInNewContext(fn + '\ntogetherHome();', { REMOTE_ON: remoteOn, BASE: '/' });
   assert.equal(run(false), '', 'nothing where the phone remote is off: another site, Kids, an embed');

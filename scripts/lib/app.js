@@ -718,7 +718,9 @@ function browse(){let list=filtered();if(!state.q)list=list.filter(s=>!hidden(s)
   h+=!list.length?noMatch():'<div class="grid">'+list.slice(0,N).map(s=>card(s,'grid')).join('')+'</div>'+(list.length>N?'<p class="moreline"><button class="btn" onclick="state.gridN='+(N+60)+';render()">Show '+Math.min(60,list.length-N)+' more of '+list.length+'</button></p>':'');
  } else {
   // 1. Live TV first (B, 25 Oct 2026: the home page opens on a channel already playing, nothing in the way; the wall of 158 featured shows is gone)
-  h+='<section class="home-tv" id="htv"></section><div id="onnow">'+onNowHtml()+'</div>'+togetherHome()+momentHome();
+  h+='<section class="home-tv" id="htv"></section><div id="onnow">'+onNowHtml()+'</div>'+momentHome();
+  // Play together (decision H9) right after, so a moment that is on keeps its place under Live TV (B, 22 Nov 2026, layout B)
+  h+=togetherHome();
   // 2. yours
   const cont=histShows().slice(0,30);if(cont.length)h+=shelf('Continue watching',cont,'continue');
   const mine=listShows();if(mine.length)h+=shelf('My List',mine,'list');
