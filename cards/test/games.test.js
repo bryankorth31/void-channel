@@ -104,7 +104,7 @@ test('Crazy Eights, house rule "draw one": after one draw you play or pass, and 
 test('Crazy Eights tells a phone what it may do: the cards that fit, the suit choice for an eight, and Draw', () => {
   const s = rig(CE, 2, { 'hand:0': ['7H', '9C', '8S', 'KD'], 'hand:1': ['2C'], discard: ['7D'] }, { pub: { suit: 'D' }, turn: 0 });
   const h = T.hints(CE, s, 0);
-  assert.deepEqual(h.play, { type: 'play', label: 'Play', cards: ['7H', '8S', 'KD'], min: 1, max: 1, choose: { cards: ['8S'], field: 'suit', from: ['S', 'H', 'D', 'C'], title: 'Name a suit' } });
+  assert.deepEqual(h.play, { type: 'play', label: 'Play', cards: ['7H', '8S', 'KD'], min: 1, max: 1, choose: { cards: ['8S'], field: 'suit', from: ['S', 'H', 'D', 'C'], kind: 'suit', title: 'Name a suit' } });
   assert.deepEqual(h.buttons, [{ type: 'draw', label: 'Draw a card' }]);
   assert.equal(T.hints(CE, s, 1), null);
 });

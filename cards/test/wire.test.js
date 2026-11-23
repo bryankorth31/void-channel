@@ -17,7 +17,7 @@ const best = (h) => { const p = h.play; if (p && p.cards.length) { const m = { t
 test('the card server gives out the pages\' files and nothing else', async () => {
   const port = await freePort(), servers = S.start([port], '127.0.0.1'), origin = 'http://127.0.0.1:' + port;
   try {
-    for (const [url, status] of [['/join', 200], ['/play/src/qr.js', 200], ['/trivia/src/words.js', 200], ['/cards/src/dealer.js', 200], ['/cards/games/crazy-eights.js', 200],
+    for (const [url, status] of [['/cards/', 200], ['/cards/hand', 200], ['/cards/cards.css', 200], ['/cards/table.css', 200], ['/cards/hand.css', 200], ['/cards/README.md', 404], ['/join', 200], ['/play/src/qr.js', 200], ['/trivia/src/words.js', 200], ['/cards/src/dealer.js', 200], ['/cards/games/crazy-eights.js', 200],
       ['/cards/src/..%2Fserve.js', 404], ['/cards/src/..%2F..%2Fplay%2Fserve.js', 404], ['/cards/serve.js', 404], ['/cards/test/helper.js', 404], ['/play/serve.js', 404], ['/cards/src/%E0%A4%A', 404], ['/api/room/KX7P', 404]]) {
       assert.equal((await fetch(origin + url, { redirect: 'manual' })).status, status, url);
     }

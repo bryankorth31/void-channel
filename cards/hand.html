@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#07080c">
+<title>Your hand | voidtv.net</title>
+<!-- VoidTV cards: the phone's hand. A phone comes here from the QR code on the big screen (through /join). It shows this
+     player's own cards, in rows, in the order the player chooses. Licence: GPL-2.0-or-later (play/LICENSE). -->
+<link rel="stylesheet" href="/cards/cards.css">
+<link rel="stylesheet" href="/cards/hand.css">
+</head>
+<body>
+<section id="note" class="centre">
+  <h1 id="note-h">Joining</h1>
+  <p id="note-p">Finding the big screen.</p>
+  <a class="btn solid" id="note-a" href="/join" hidden>Type a code</a>
+</section>
+
+<section id="name" class="centre" hidden>
+  <h1>You are in</h1>
+  <p>Pick a name for the big screen, or just play.</p>
+  <form id="name-f">
+    <input id="name-i" maxlength="16" autocomplete="off" autocapitalize="words" spellcheck="false" placeholder="Name" aria-label="Name">
+    <button class="btn solid" id="name-go" type="submit">Join</button>
+  </form>
+  <button class="btn" id="skip" type="button">Just play</button>
+  <p class="err" id="name-err"></p>
+</section>
+
+<section id="lobby" class="centre" hidden>
+  <h1 id="lobby-h">You are in.</h1>
+  <p id="lobby-p"></p>
+  <ul id="lobby-list"></ul>
+</section>
+
+<section id="watch" class="centre" hidden>
+  <h1>A game is on</h1>
+  <p>A game is on. You are in the next one.</p>
+</section>
+
+<main id="game" hidden>
+  <header id="top">
+    <div class="topl">
+      <div class="mark"><span class="v">voidtv</span><span class="n">.net</span> <span class="room" id="room"></span></div>
+      <div class="turn" id="turn" role="status"></div>
+      <div class="status" id="status"></div>
+    </div>
+    <div class="pile" id="pile"></div>
+  </header>
+  <div id="others"></div>
+  <div id="handbox" aria-label="Your hand">
+    <div id="nohand" hidden>No cards in your hand.</div>
+  </div>
+  <div id="privs"></div>
+  <div id="bar">
+    <div class="barl">
+      <button class="btn" id="b-suit" type="button">Group suits</button>
+      <button class="btn" id="b-rank" type="button">By number</button>
+      <span id="hint-btns"></span>
+    </div>
+    <button class="btn solid" id="b-main" type="button" hidden>Play</button>
+  </div>
+  <div id="toast" role="alert" hidden></div>
+  <div id="choose" class="panel" hidden>
+    <h2 id="choose-h"></h2>
+    <div id="choose-list"></div>
+    <button class="btn" id="choose-back" type="button">Back</button>
+  </div>
+  <div id="over" class="panel" hidden>
+    <h2 id="over-h"></h2>
+    <p id="over-note"></p>
+    <p>Wait for the next deal.</p>
+  </div>
+</main>
+<script src="/cards/src/cards.js"></script>
+<script src="/cards/src/face.js"></script>
+<script src="/cards/src/hand.js"></script>
+</body>
+</html>

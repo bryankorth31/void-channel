@@ -103,7 +103,7 @@
       if (canDraw(s)) buttons.push({ type: 'draw', label: 'Draw a card' });
       else if (!cards.length) buttons.push({ type: 'pass', label: 'Pass' });
       return { play: { type: 'play', label: 'Play', cards, min: 1, max: 1,
-        choose: eights.length ? { cards: eights, field: 'suit', from: C.SUITS.slice(), title: 'Name a suit' } : null }, buttons };
+        choose: eights.length ? { cards: eights, field: 'suit', from: C.SUITS.slice(), kind: 'suit', title: 'Name a suit' } : null }, buttons };
     },
     // One line for the big screen.
     status: (s) => (s.over ? 'Game over.' : need(s)),

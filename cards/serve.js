@@ -26,7 +26,7 @@ function start(ports, host) {
     const room = /^\/api\/room\/([^/]+)$/.exec(p);
     if (room && room[1] !== 'open') return rooms.lookup(req, res, room[1]);
     if (p === '/') { res.writeHead(302, { location: '/cards/' }); return res.end(); }
-    const rel = PAGES[p] || (p === '/cards/cards.css' || OPEN.some((d) => p.startsWith(d)) ? p.slice(1) : null);
+    const rel = PAGES[p] || (/^\/cards\/[a-z-]+\.css$/.test(p) || OPEN.some((d) => p.startsWith(d)) ? p.slice(1) : null);
     const f = rel ? path.join(ROOT, path.normalize(rel)) : null;
     if (!f || !f.startsWith(ROOT + path.sep)) { res.writeHead(404, { 'cache-control': 'no-store' }); return res.end('not found'); }
     fs.readFile(f, (e, b) => {
