@@ -335,10 +335,35 @@ export const PROPS = {
   // from whatever presses on its left.
   figure: {
     build(a, ctx) {
-      const s = (a.h || 100) * ctx.S, wood = new THREE.MeshStandardMaterial({ map: birch(), roughness: 0.55, envMap: ctx.env, envMapIntensity: 0.3 });
+      const s = (a.h || 100) * ctx.S, wood = new THREE.MeshStandardMaterial({ map: birch(), color: a.look === 'dark' ? 0x8a5a36 : 0xffffff, roughness: 0.55, envMap: ctx.env, envMapIntensity: 0.3 });
       const part = (geo, x, y, z, rx = 0, rz = 0, parent) => { const m = shadowed(new THREE.Mesh(geo, wood)); m.position.set(x, y, z); m.rotation.set(rx, 0, rz); (parent || body).add(m); return m; };
       const cap = (r, l) => new THREE.CapsuleGeometry(r, l, 8, 16), ball = (r) => new THREE.SphereGeometry(r, 16, 12);
       const body = new THREE.Group();
+      // "pose": "stand": the figure stands on its own feet, arms down, turned "turn" radians (0 faces you)
+      if (a.pose === 'stand') {
+        [-1, 1].forEach((sd) => {
+          part(new THREE.BoxGeometry(0.09 * s, 0.05 * s, 0.17 * s), sd * 0.07 * s, 0.025 * s, 0.03 * s);
+          part(cap(0.055 * s, 0.17 * s), sd * 0.07 * s, 0.17 * s, 0);
+          part(ball(0.06 * s), sd * 0.07 * s, 0.3 * s, 0);
+          part(cap(0.07 * s, 0.16 * s), sd * 0.075 * s, 0.4 * s, 0);
+          part(ball(0.045 * s), sd * 0.15 * s, 0.78 * s, 0);
+          part(cap(0.038 * s, 0.14 * s), sd * 0.16 * s, 0.67 * s, 0, 0, sd * 0.08);
+          part(ball(0.034 * s), sd * 0.17 * s, 0.57 * s, 0);
+          part(cap(0.033 * s, 0.13 * s), sd * 0.175 * s, 0.47 * s, 0.01 * s, 0.08, 0);
+          part(ball(0.036 * s), sd * 0.175 * s, 0.37 * s, 0.02 * s);
+        });
+        part(cap(0.1 * s, 0.1 * s), 0, 0.51 * s, 0, 0, Math.PI / 2);
+        part(ball(0.065 * s), 0, 0.59 * s, 0);
+        part(cap(0.11 * s, 0.08 * s), 0, 0.71 * s, 0);
+        part(cap(0.035 * s, 0.04 * s), 0, 0.85 * s, 0);
+        const hd = part(ball(0.08 * s), 0, 0.95 * s, 0.01 * s); hd.scale.set(0.85, 1.15, 0.95);
+        body.rotation.y = a.turn || 0;
+        const group = new THREE.Group(); group.add(body);
+        return {
+          group, top: 1.05 * s, anchor: () => new THREE.Vector3(0.1 * s, 0.5 * s, 0.08 * s).applyAxisAngle(new THREE.Vector3(0, 1, 0), a.turn || 0),
+          update(A, B, e) { const ta = (A && A.turn != null ? A.turn : a.turn) || 0, tb = (B && B.turn != null ? B.turn : ta); body.rotation.y = lerp(ta, tb, e); },
+        };
+      }
       // pelvis on the seat, thighs forward, shins down to the floor in front of the seat
       part(cap(0.12 * s, 0.14 * s), 0, 0.1 * s, 0, 0, Math.PI / 2);
       [-1, 1].forEach((sd) => {
@@ -369,7 +394,8 @@ export const PROPS = {
   // roof; "rebuilt": true stands it again in fresh pale wood.
   house: {
     build(a, ctx) {
-      const s = (a.w || 100) * ctx.S, W = 0.72 * s, H = 0.5 * s, D = 0.55 * s;
+      const shop = a.look === 'shop';
+      const s = (a.w || 100) * ctx.S, W = 0.72 * s, H = (shop ? 0.56 : 0.5) * s, D = 0.55 * s;
       const tint = [0xc9b48f, 0xa8c0c8, 0xd2b0a2, 0xb9c6a0, 0xd8cfb8][(a.id || 'a').charCodeAt((a.id || 'a').length - 1) % 5];
       const paint = new THREE.MeshStandardMaterial({ color: tint, roughness: 0.75 });
       const roofMat = new THREE.MeshStandardMaterial({ color: 0x7a3b2e, roughness: 0.7 });
@@ -379,8 +405,18 @@ export const PROPS = {
       const tri = new THREE.Shape(); tri.moveTo(-W / 2 - 0.05 * s, 0); tri.lineTo(W / 2 + 0.05 * s, 0); tri.lineTo(0, 0.36 * s); tri.closePath();
       const roofGeo = new THREE.ExtrudeGeometry(tri, { depth: D + 0.08 * s, bevelEnabled: false }); roofGeo.translate(0, 0, -(D + 0.08 * s) / 2);
       const roof = shadowed(new THREE.Mesh(roofGeo, roofMat)); roof.position.y = H; group.add(roof);
-      const door = new THREE.Mesh(new THREE.BoxGeometry(0.13 * s, 0.26 * s, 0.01), dark); door.position.set(0, 0.13 * s, D / 2 + 0.005); group.add(door);
-      [-1, 1].forEach((sd) => { const w = new THREE.Mesh(new THREE.BoxGeometry(0.12 * s, 0.11 * s, 0.01), dark); w.position.set(sd * 0.22 * s, 0.3 * s, D / 2 + 0.005); group.add(w); });
+      const dh = shop ? 0.36 : 0.26, lit = new THREE.MeshStandardMaterial({ color: 0x3a2a18, emissive: 0xffb866, emissiveIntensity: 0.55, roughness: 0.3 });
+      const door = new THREE.Mesh(new THREE.BoxGeometry(0.13 * s, dh * s, 0.01), dark); door.position.set(0, (dh / 2) * s, D / 2 + 0.005); group.add(door);
+      [-1, 1].forEach((sd) => { const w = new THREE.Mesh(new THREE.BoxGeometry(shop ? 0.16 * s : 0.12 * s, shop ? 0.17 * s : 0.11 * s, 0.01), shop ? lit : dark); w.position.set(sd * 0.22 * s, (shop ? 0.24 : 0.3) * s, D / 2 + 0.005); group.add(w); });
+      // a shop: lit windows and a striped awning over the door ("awning": a colour)
+      if (shop) {
+        const c = document.createElement('canvas'); c.width = 256; c.height = 64; const g = c.getContext('2d');
+        for (let i = 0; i < 8; i++) { g.fillStyle = i % 2 ? '#f3ede0' : (a.awning || '#a3281c'); g.fillRect(i * 32, 0, 32, 64); }
+        const tx = new THREE.CanvasTexture(c); tx.colorSpace = THREE.SRGBColorSpace;
+        const cloth = new THREE.MeshStandardMaterial({ map: tx, roughness: 0.8, side: THREE.DoubleSide });
+        const aw = shadowed(new THREE.Mesh(new THREE.PlaneGeometry(W * 0.92, 0.2 * s), cloth)); aw.rotation.x = -0.55; aw.position.set(0, (dh + 0.1) * s, D / 2 + 0.085 * s); group.add(aw);
+        const val = shadowed(new THREE.Mesh(new THREE.PlaneGeometry(W * 0.92, 0.045 * s), cloth)); val.position.set(0, (dh + 0.1) * s - 0.1 * s * Math.cos(0.55) - 0.02 * s, D / 2 + 0.085 * s + 0.1 * s * Math.sin(0.55)); group.add(val);
+      }
       const base = new THREE.Color(tint), char = new THREE.Color(0x1b1816), fresh = new THREE.Color(0xe6d3ad), roofBase = new THREE.Color(0x7a3b2e);
       return {
         group, top: H + 0.36 * s, anchor: () => new THREE.Vector3(W * 0.3, 0.12 * s, D / 2),
@@ -653,6 +689,189 @@ export const PROPS = {
       const ferrule = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.1 * s, 0.06 * s, 0.12 * s), tin)); ferrule.position.x = 0.22 * s; brush.add(ferrule);
       const bristles = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.12 * s, 0.05 * s, 0.12 * s), paintMat)); bristles.position.x = 0.33 * s; brush.add(bristles);
       return { group, top: H + 0.08 * s, anchor: () => new THREE.Vector3(R * 0.6, H * 0.3, R * 0.85), update() {} };
+    },
+  },
+  // A cinema ticket on card stock with a perforated stub. "torn": true tears the stub off, and it slides away.
+  ticket: {
+    build(a, ctx) {
+      const s = (a.w || 200) * ctx.S, W = 0.92 * s, D = 0.44 * s, T = 0.006, cut = 0.72;
+      const c = document.createElement('canvas'); c.width = 1024; c.height = 490; const g = c.getContext('2d');
+      noise(g, 1024, 490, '#efd8a6', 14);
+      g.strokeStyle = '#a3281c'; g.lineWidth = 8; g.strokeRect(22, 22, 980, 446); g.lineWidth = 2; g.strokeRect(36, 36, 952, 418);
+      g.fillStyle = '#a3281c'; g.textAlign = 'center'; g.textBaseline = 'middle';
+      g.font = '800 104px "VU Print"'; g.fillText('ADMIT ONE', 372, 170);
+      g.fillStyle = '#2c2420'; g.font = '500 34px "VU Print"'; g.fillText('CINEMA 4   ROW F   SEAT 12', 372, 272);
+      g.font = '800 70px "VU Print"'; g.fillText('$15.00', 372, 368);
+      g.fillStyle = 'rgba(60,40,30,0.75)'; for (let y = 30; y < 470; y += 16) { g.beginPath(); g.arc(737, y, 3.2, 0, 7); g.fill(); }
+      g.save(); g.translate(880, 245); g.rotate(-Math.PI / 2); g.fillStyle = '#a3281c'; g.font = '800 54px "VU Print"'; g.fillText('ADMIT ONE', 0, -28); g.fillStyle = '#2c2420'; g.font = '500 28px "VU Print"'; g.fillText('No 004817', 0, 34); g.restore();
+      const part = (u0, u1) => {
+        const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; t.repeat.set(u1 - u0, 1); t.offset.set(u0, 0);
+        const edge = new THREE.MeshStandardMaterial({ color: 0xe6cf9c, roughness: 0.9 });
+        const m = shadowed(new THREE.Mesh(new THREE.BoxGeometry(W * (u1 - u0), T, D), [edge, edge, new THREE.MeshStandardMaterial({ map: t, roughness: 0.85 }), edge, edge, edge]));
+        m.position.set(-W / 2 + W * (u0 + u1) / 2, T / 2 + 0.002, 0); return m;
+      };
+      const group = new THREE.Group(), main = part(0, cut), stub = part(cut, 1), home = stub.position.clone();
+      group.add(main, stub); group.rotation.y = 0.06;
+      return {
+        group, top: T, anchor: () => new THREE.Vector3(-W * 0.36, T, D * 0.38),
+        update(A, B, e) {
+          const k = lerp(flag(A, 'torn'), flag(B, 'torn'), e), moving = flag(A, 'torn') !== flag(B, 'torn');
+          stub.position.set(home.x + k * 0.16 * s, home.y + (moving ? Math.sin(Math.PI * e) * 0.08 * s : 0), home.z + k * 0.06 * s);
+          stub.rotation.set(0, -0.3 * k, moving ? Math.sin(Math.PI * e) * 0.15 : 0);
+        },
+      };
+    },
+  },
+  // A doorway in a short piece of wall with a lit EXIT sign over it. "open": true swings the door toward you and the
+  // light from outside spills onto the table.
+  door: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 150, a.h || 150) * ctx.S, W = 0.46 * s, H = 0.82 * s, WW = W + 0.5 * s, WH = H + 0.3 * s, D = 0.1 * s;
+      const plaster = new THREE.MeshStandardMaterial({ color: 0x8c857b, roughness: 0.95 });
+      const steel = new THREE.MeshStandardMaterial({ color: 0x55636c, metalness: 0.5, roughness: 0.45, envMap: ctx.env, envMapIntensity: 0.6 });
+      const chrome = new THREE.MeshStandardMaterial({ color: 0xd0d3d6, metalness: 1, roughness: 0.25, envMap: ctx.env, envMapIntensity: 1.2 });
+      const group = new THREE.Group();
+      const wall = new THREE.Shape(); wall.moveTo(-WW / 2, 0); wall.lineTo(WW / 2, 0); wall.lineTo(WW / 2, WH); wall.lineTo(-WW / 2, WH); wall.closePath();
+      const hole = new THREE.Path(); hole.moveTo(-W / 2, 0.001); hole.lineTo(-W / 2, H); hole.lineTo(W / 2, H); hole.lineTo(W / 2, 0.001); hole.closePath(); wall.holes.push(hole);
+      const wg = new THREE.ExtrudeGeometry(wall, { depth: D, bevelEnabled: false }); wg.translate(0, 0, -D / 2);
+      group.add(shadowed(new THREE.Mesh(wg, plaster)));
+      const foot = board(WW, 0.05 * s, 0.4 * s, new THREE.MeshStandardMaterial({ color: 0x5b5048, roughness: 0.8 })); foot.position.set(0, 0.025 * s, -0.15 * s); group.add(foot);
+      // the frame round the opening
+      [[-W / 2 - 0.02 * s, H / 2, 0.04 * s, H], [W / 2 + 0.02 * s, H / 2, 0.04 * s, H], [0, H + 0.02 * s, W + 0.08 * s, 0.04 * s]].forEach(([x, y, w, h]) => { const f = shadowed(new THREE.Mesh(new THREE.BoxGeometry(w, h, D * 1.3), steel)); f.position.set(x, y, 0); group.add(f); });
+      // daylight beyond, seen only through the doorway
+      const out = new THREE.Mesh(new THREE.PlaneGeometry(W, H), new THREE.MeshBasicMaterial({ color: 0xfff0d2 })); out.position.set(0, H / 2, -D / 2 - 0.004); group.add(out);
+      const hinge = new THREE.Group(); hinge.position.set(-W / 2, 0, D / 2 - 0.02 * s); group.add(hinge);
+      const leaf = shadowed(new THREE.Mesh(new THREE.BoxGeometry(W - 0.01 * s, H - 0.01 * s, 0.035 * s), steel)); leaf.position.set(W / 2, H / 2, 0); hinge.add(leaf);
+      const bar = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(0.014 * s, 0.014 * s, W * 0.75, 12), chrome)); bar.rotation.z = Math.PI / 2; bar.position.set(W / 2, H * 0.46, 0.035 * s); hinge.add(bar);
+      [0.15, 0.85].forEach((u) => { const b = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.025 * s, 0.04 * s, 0.035 * s), chrome)); b.position.set(W * u, H * 0.46, 0.02 * s); hinge.add(b); });
+      // the sign: a green panel with white letters, lit from inside
+      const c = document.createElement('canvas'); c.width = 512; c.height = 160; const g = c.getContext('2d');
+      g.fillStyle = '#0b7a3b'; g.fillRect(0, 0, 512, 160); g.fillStyle = '#f4fff6'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.font = '800 104px "VU Print"'; g.fillText('EXIT', 220, 86);
+      g.beginPath(); g.moveTo(380, 60); g.lineTo(430, 60); g.lineTo(430, 38); g.lineTo(478, 80); g.lineTo(430, 122); g.lineTo(430, 100); g.lineTo(380, 100); g.closePath(); g.fill();
+      const tx = new THREE.CanvasTexture(c); tx.colorSpace = THREE.SRGBColorSpace;
+      const case_ = new THREE.MeshStandardMaterial({ color: 0xe8e8e4, roughness: 0.5 });
+      const sign = shadowed(new THREE.Mesh(new THREE.BoxGeometry(W * 0.95, W * 0.3, 0.07 * s), [case_, case_, case_, case_, new THREE.MeshStandardMaterial({ map: tx, emissive: 0xffffff, emissiveMap: tx, emissiveIntensity: 1.1, roughness: 0.4 }), case_]));
+      sign.position.set(0, H + 0.04 * s + W * 0.17, D / 2 + 0.035 * s); group.add(sign);
+      const glow = new THREE.PointLight(0x46ff8c, 0, 2.2 * s, 2); glow.position.set(0, sign.position.y, D / 2 + 0.3 * s); group.add(glow);
+      const spill = new THREE.PointLight(0xffd9a0, 0, 4 * s, 2); spill.position.set(0, H * 0.45, D / 2 + 0.35 * s); group.add(spill);
+      const seen = (v) => (v && v.o != null ? v.o : 1);
+      return {
+        group, top: WH, anchor: () => new THREE.Vector3(WW * 0.38, 0.05 * s, D / 2),
+        update(A, B, e) {
+          const k = lerp(flag(A, 'open'), flag(B, 'open'), e), v = lerp(seen(A), seen(B), e);
+          hinge.rotation.y = -1.15 * k; glow.intensity = 1.2 * v; spill.intensity = 5 * k * v;
+        },
+      };
+    },
+  },
+  // A bunch of keys on a split ring: a brass house key, a steel key and a leather fob, lying on the table.
+  keys: {
+    build(a, ctx) {
+      const s = Math.min(a.w || 100, a.h || 100) * ctx.S * 1.8, rr = 0.12 * s;
+      const brass = new THREE.MeshStandardMaterial({ color: 0xc9a24c, metalness: 1, roughness: 0.3, envMap: ctx.env, envMapIntensity: 1.3 });
+      const steel = new THREE.MeshStandardMaterial({ color: 0xc3c7cb, metalness: 1, roughness: 0.28, envMap: ctx.env, envMapIntensity: 1.3 });
+      const leather = new THREE.MeshStandardMaterial({ color: 0x5a3220, roughness: 0.7 });
+      const group = new THREE.Group(), lay = new THREE.Group(); lay.rotation.y = -0.5; group.add(lay);
+      const ring = shadowed(new THREE.Mesh(new THREE.TorusGeometry(rr, 0.012 * s, 10, 48), steel)); ring.rotation.x = Math.PI / 2; ring.position.y = 0.014 * s; lay.add(ring);
+      // a key in outline: a round bow with a hole for the ring, a blade with cut teeth along one edge
+      const key = (L, mat, ang, lift) => {
+        const rb = 0.085 * s, hw = 0.032 * s, a0 = Math.asin(hw / rb), sh = new THREE.Shape();
+        sh.moveTo(rb * Math.cos(a0), hw); sh.lineTo(L - 0.05 * s, hw); sh.lineTo(L, 0); sh.lineTo(L - 0.02 * s, -hw);
+        const teeth = [0.02, 0.045, 0.015, 0.04, 0.025, 0.035];
+        teeth.forEach((d, i) => { const x = L - 0.06 * s - i * (L - rb - 0.08 * s) / teeth.length; sh.lineTo(x, -hw - d * s); sh.lineTo(x - 0.03 * s, -hw); });
+        sh.lineTo(rb * Math.cos(a0), -hw); sh.absarc(0, 0, rb, -a0, a0, true);
+        const h = new THREE.Path(); h.absarc(-0.035 * s, 0, 0.026 * s, 0, Math.PI * 2, true); sh.holes.push(h);
+        const geo = new THREE.ExtrudeGeometry(sh, { depth: 0.014 * s, bevelEnabled: true, bevelThickness: 0.003 * s, bevelSize: 0.003 * s, bevelSegments: 2, curveSegments: 24 });
+        geo.rotateX(-Math.PI / 2);
+        const m = shadowed(new THREE.Mesh(geo, mat)), k = new THREE.Group(); k.add(m);
+        m.position.set(0.035 * s, 0, 0); // the hole sits on the ring
+        k.position.set(Math.cos(ang) * rr, lift, -Math.sin(ang) * rr); k.rotation.y = ang; k.rotation.z = 0.04;
+        lay.add(k);
+      };
+      key(0.6 * s, brass, -0.25, 0.004 * s); key(0.52 * s, steel, 0.55, 0.02 * s);
+      const fob = new THREE.Shape(); fob.moveTo(0, -0.05 * s); fob.lineTo(0.22 * s, -0.06 * s); fob.absarc(0.22 * s, 0, 0.06 * s, -Math.PI / 2, Math.PI / 2, false); fob.lineTo(0, 0.05 * s); fob.closePath();
+      const fh = new THREE.Path(); fh.absarc(0.025 * s, 0, 0.018 * s, 0, Math.PI * 2, true); fob.holes.push(fh);
+      const fg = new THREE.ExtrudeGeometry(fob, { depth: 0.022 * s, bevelEnabled: true, bevelThickness: 0.005 * s, bevelSize: 0.005 * s, bevelSegments: 3 }); fg.rotateX(-Math.PI / 2);
+      const fm = shadowed(new THREE.Mesh(fg, leather)); fm.position.set(Math.cos(2.6) * rr, 0.004 * s, -Math.sin(2.6) * rr); fm.rotation.y = 2.6 + 0.2; lay.add(fm);
+      return { group, top: 0.05 * s, anchor: () => new THREE.Vector3(0, 0.02 * s, rr).applyAxisAngle(new THREE.Vector3(0, 1, 0), -0.5), update() {} };
+    },
+  },
+  // A die-cast toy car in glossy red: a body cut from its side view, glass all round, chrome bumpers, four wheels.
+  // Its window carries the price sticker: the tag's string ties to the side glass.
+  car: {
+    build(a, ctx) {
+      const L = (a.w || 220) * ctx.S * 0.85, Wd = 0.42 * L, rw = 0.085 * L, xw = 0.3 * L, ar = 0.105 * L, by = 0.06 * L;
+      const paint = new THREE.MeshPhysicalMaterial({ color: 0x9c1a1a, metalness: 0.55, roughness: 0.32, clearcoat: 1, clearcoatRoughness: 0.08, envMap: ctx.env, envMapIntensity: 1.3 });
+      const glass = new THREE.MeshPhysicalMaterial({ color: 0x18222b, metalness: 0.3, roughness: 0.05, envMap: ctx.env, envMapIntensity: 1.6 });
+      const chrome = new THREE.MeshStandardMaterial({ color: 0xd8dbde, metalness: 1, roughness: 0.18, envMap: ctx.env, envMapIntensity: 1.4 });
+      const rubber = new THREE.MeshStandardMaterial({ color: 0x18181a, roughness: 0.85 });
+      const sh = new THREE.Shape(), a0 = Math.asin((rw - by) / ar);
+      sh.moveTo(-0.5 * L, by + 0.02 * L); sh.lineTo(-0.5 * L, 0.26 * L); sh.quadraticCurveTo(-0.5 * L, 0.3 * L, -0.44 * L, 0.3 * L);
+      sh.lineTo(0.2 * L, 0.3 * L); sh.lineTo(0.46 * L, 0.27 * L); sh.quadraticCurveTo(0.5 * L, 0.265 * L, 0.5 * L, 0.21 * L); sh.lineTo(0.5 * L, by + 0.02 * L); sh.quadraticCurveTo(0.5 * L, by, 0.47 * L, by);
+      sh.lineTo(xw + ar * Math.cos(a0), by); sh.absarc(xw, rw, ar, -a0, Math.PI + a0, false);
+      sh.lineTo(-xw + ar * Math.cos(a0), by); sh.absarc(-xw, rw, ar, -a0, Math.PI + a0, false);
+      sh.lineTo(-0.47 * L, by); sh.quadraticCurveTo(-0.5 * L, by, -0.5 * L, by + 0.02 * L);
+      const bevel = 0.025 * L, bg = new THREE.ExtrudeGeometry(sh, { depth: Wd - 2 * bevel, bevelEnabled: true, bevelThickness: bevel, bevelSize: 0.015 * L, bevelSegments: 5, curveSegments: 32 });
+      bg.translate(0, 0, -(Wd - 2 * bevel) / 2);
+      const car = new THREE.Group(); car.rotation.y = -0.42;
+      car.add(shadowed(new THREE.Mesh(bg, paint)));
+      // the cabin in paint, narrowing toward the roof; glass set into its sides, front and back
+      const gh = new THREE.Shape(); gh.moveTo(-0.31 * L, 0.29 * L); gh.lineTo(-0.17 * L, 0.43 * L); gh.lineTo(0.05 * L, 0.43 * L); gh.lineTo(0.21 * L, 0.29 * L); gh.closePath();
+      const gt = 0.02 * L, gd = Wd * 0.8, gg = new THREE.ExtrudeGeometry(gh, { depth: gd, bevelEnabled: true, bevelThickness: gt, bevelSize: 0.012 * L, bevelSegments: 4 }); gg.translate(0, 0, -gd / 2);
+      const narrow = (y) => 1 - 0.12 * Math.min(1, Math.max(0, (y - 0.3 * L) / (0.14 * L)));
+      { const p = gg.attributes.position; for (let i = 0; i < p.count; i++) p.setZ(i, p.getZ(i) * narrow(p.getY(i))); gg.computeVertexNormals(); }
+      const cab = new THREE.Group(); car.add(cab);
+      cab.add(shadowed(new THREE.Mesh(gg, paint)));
+      const roof = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.25 * L, 0.018 * L, (gd + 2 * gt) * 0.9), paint)); roof.position.set(-0.06 * L, 0.438 * L, 0); cab.add(roof);
+      const glassD = new THREE.MeshPhysicalMaterial({ color: 0x141c24, metalness: 0.3, roughness: 0.04, envMap: ctx.env, envMapIntensity: 1.8, side: THREE.DoubleSide });
+      const zAt = (y) => (gd / 2 + gt) * narrow(y), ym = 0.3625 * L, tilt = Math.atan((zAt(0.3 * L) - zAt(0.44 * L)) / (0.14 * L));
+      const pane = (pts) => { const p = new THREE.Shape(); pts.forEach(([x, y], k) => (k ? p.lineTo(x * L, y * L - ym) : p.moveTo(x * L, y * L - ym))); p.closePath(); return new THREE.ShapeGeometry(p); };
+      [[[-0.035, 0.31], [-0.035, 0.415], [0.04, 0.415], [0.175, 0.31]], [[-0.065, 0.31], [-0.065, 0.415], [-0.16, 0.415], [-0.265, 0.31]]].forEach((pts) => {
+        [-1, 1].forEach((sd) => { const m = new THREE.Mesh(pane(pts), glassD); m.position.set(0, ym, sd * (zAt(ym) + 0.003)); m.rotation.x = -sd * tilt; cab.add(m); });
+      });
+      // windscreen and rear window, each lying on its sloped face
+      [[[0.05, 0.43], [0.21, 0.29], 1], [[-0.17, 0.43], [-0.31, 0.29], -1]].forEach(([t, b, sd]) => {
+        const dx = (b[0] - t[0]) * L, dy = (b[1] - t[1]) * L, len = Math.hypot(dx, dy), n = new THREE.Vector3(-dy * sd, dx * sd, 0).normalize();
+        if (n.y < 0) n.negate();
+        const m = new THREE.Mesh(new THREE.PlaneGeometry(zAt(0.36 * L) * 1.7, len * 0.8), glassD);
+        m.position.set((t[0] + b[0]) / 2 * L, (t[1] + b[1]) / 2 * L, 0).addScaledVector(n, gt + 0.004); m.lookAt(m.position.clone().add(n)); cab.add(m);
+      });
+      [0.52, -0.52].forEach((x) => { const b = shadowed(new THREE.Mesh(new THREE.BoxGeometry(0.03 * L, 0.05 * L, Wd * 0.96), chrome)); b.position.set(x * L, 0.11 * L, 0); car.add(b); });
+      [-1, 1].forEach((sd) => {
+        const hl = new THREE.Mesh(new THREE.SphereGeometry(0.03 * L, 16, 10), new THREE.MeshStandardMaterial({ color: 0xfff6e0, emissive: 0xfff1d0, emissiveIntensity: 0.6, roughness: 0.1 })); hl.scale.set(0.5, 1, 1); hl.position.set(0.5 * L, 0.21 * L, sd * Wd * 0.33); car.add(hl);
+        const tl = new THREE.Mesh(new THREE.BoxGeometry(0.012 * L, 0.04 * L, 0.08 * L), new THREE.MeshStandardMaterial({ color: 0xa01010, emissive: 0x600000, roughness: 0.2 })); tl.position.set(-0.505 * L, 0.24 * L, sd * Wd * 0.34); car.add(tl);
+      });
+      [[xw, 1], [xw, -1], [-xw, 1], [-xw, -1]].forEach(([x, sd]) => {
+        const w = new THREE.Group(); w.position.set(x, rw, sd * (Wd / 2 - 0.035 * L)); car.add(w);
+        const t = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(rw, rw, 0.07 * L, 32), rubber)); t.rotation.x = Math.PI / 2; w.add(t);
+        const hub = shadowed(new THREE.Mesh(new THREE.CylinderGeometry(rw * 0.55, rw * 0.55, 0.075 * L, 24), chrome)); hub.rotation.x = Math.PI / 2; w.add(hub);
+      });
+      const group = new THREE.Group(); group.add(car);
+      return { group, top: 0.45 * L, anchor: () => new THREE.Vector3(-0.15 * L, 0.34 * L, (Wd * 0.4 + 0.02 * L) * 0.97).applyAxisAngle(new THREE.Vector3(0, 1, 0), -0.42), update() {} };
+    },
+  },
+  // A twenty: a paper note printed in green with fine wavy lines, bowed a little as paper lies.
+  bill: {
+    build(a, ctx) {
+      const s = (a.w || 200) * ctx.S, W = 0.9 * s, D = 0.42 * s;
+      const c = document.createElement('canvas'); c.width = 1024; c.height = 478; const g = c.getContext('2d');
+      noise(g, 1024, 478, '#dfe6d2', 12);
+      g.strokeStyle = 'rgba(40,95,65,0.22)'; g.lineWidth = 1.2;
+      for (let k = 0; k < 26; k++) { g.beginPath(); for (let x = 0; x <= 1024; x += 8) { const y = 40 + k * 15.5 + Math.sin(x / 38 + k * 0.7) * 7; x ? g.lineTo(x, y) : g.moveTo(x, y); } g.stroke(); }
+      g.strokeStyle = '#2f5d45'; g.lineWidth = 10; g.strokeRect(18, 18, 988, 442); g.lineWidth = 3; g.strokeRect(36, 36, 952, 406);
+      g.fillStyle = '#e3e9d8'; g.beginPath(); g.ellipse(512, 239, 130, 160, 0, 0, 7); g.fill(); g.strokeStyle = '#2f5d45'; g.lineWidth = 4; g.stroke();
+      g.fillStyle = '#2f5d45'; g.textAlign = 'center'; g.textBaseline = 'middle';
+      g.font = '800 170px "VU Print"'; g.fillText('20', 512, 245);
+      g.font = '800 92px "VU Print"'; g.fillText('20', 120, 104); g.fillText('20', 904, 378);
+      g.font = '800 56px "VU Print"'; g.fillText('TWENTY', 800, 110); g.fillText('TWENTY', 224, 380);
+      const tx = new THREE.CanvasTexture(c); tx.colorSpace = THREE.SRGBColorSpace; tx.anisotropy = 8;
+      const geo = new THREE.PlaneGeometry(W, D, 32, 6), p = geo.attributes.position;
+      for (let i = 0; i < p.count; i++) { const u = p.getX(i) / W + 0.5, v = p.getY(i) / D + 0.5; p.setZ(i, 0.012 * s * Math.sin(Math.PI * u) + 0.006 * s * v * v); }
+      geo.computeVertexNormals(); geo.rotateX(-Math.PI / 2);
+      const m = shadowed(new THREE.Mesh(geo, new THREE.MeshStandardMaterial({ map: tx, roughness: 0.85, side: THREE.DoubleSide })));
+      m.position.y = 0.003; m.rotation.y = (a.id || 'a').charCodeAt(0) % 2 ? 0.08 : -0.1;
+      const group = new THREE.Group(); group.add(m);
+      return { group, top: 0.05 * s, anchor: () => new THREE.Vector3(-W * 0.38, 0.01 * s, D * 0.36), update() {} };
     },
   },
 };

@@ -631,4 +631,20 @@ test('real objects on the lit table: every object a scene names is in the librar
   assert.deepStrictEqual(money(/5:30 alarm/).states.map((s) => s.to.clock.time), [23, 5.5, 5.67, 5.67, 5.5]);
   assert.deepStrictEqual(['A', 'B'].map((id) => money(/fat free/).kind[id]), ['prop', 'prop']);
   assert.ok(money(/free sample/).states[1].to.smp.eaten && money(/free sample/).kind.big === 'prop' && money(/Painting the room/).kind.plan === 'prop');
+  // Mind lessons, batch 2 (Bryan, 23 Nov 2026: "Yes, next batch")
+  const movie = money(/bad movie/);
+  assert.deepStrictEqual(movie.states.map((s) => [!!s.to.tk.torn, !!s.to.exit.open]), [[false, false], [false, false], [false, false], [true, false], [true, false], [true, true], [true, true], [true, true]]);
+  assert.deepStrictEqual(kinds(movie, ['tk', 'exit']), ['prop', 'prop']);
+  const keys = money(/your keys/);
+  assert.ok(keys.kind.keys === 'prop' && keys.states[2].to.keys.o === 0 && keys.states[3].to.keys.o === 1);
+  const car = money(/sticker on a car/);
+  assert.deepStrictEqual(kinds(car, ['stk', 'deal', 'worth']), ['prop', 'tag', 'tag']);
+  assert.deepStrictEqual(kinds(money(/Finding \$20/), ['find', 'lose', 'lb']), ['prop', 'prop', 'bar']);
+  const line = money(/restaurant with the line/), sc = allScenes().find((x) => /restaurant with the line/.test(x.sc.analogy)).sc;
+  assert.deepStrictEqual(kinds(line, ['A', 'B', 'p0', 'p1', 'p2', 'p3', 'you']), Array(7).fill('prop'));
+  assert.ok(['p0', 'p1', 'p2', 'p3', 'you'].every((id) => sc.actors.find((a) => a.id === id).pose === 'stand'), 'the people in the line stand');
+  // the four who queue stand in a line at A's door, and you end up beside B
+  const ends = ['p0', 'p1', 'p2', 'p3'].map((id) => line.states[2].to[id]);
+  assert.ok(ends.every((v, i) => v.o === 1 && (i === 0 || v.x < ends[i - 1].x)), 'the line runs out from A');
+  assert.ok(line.states[3].to.you.x < ends[3].x && line.states[6].to.you.x > 400, 'you join the end of the line, then go to B');
 });
