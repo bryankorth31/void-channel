@@ -1,12 +1,16 @@
 <!doctype html>
-<!-- VoidTV cards: the big-screen table. Licence: GPL-2.0-or-later (play/LICENSE). The code is in src/screen.js. -->
+<!-- VoidTV cards: the big-screen table. Licence: GPL-2.0-or-later (play/LICENSE). The code is in src/screen.js.
+     On a phone the table is not drawn small: src/phone.js shows the games first instead (Bryan, 24 Nov 2026: "B games first"). -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#07080c">
 <title>Card games on voidtv.net</title>
+<meta name="description" content="Card games for the whole room: the TV is the table, each phone holds one hand. Free, no account.">
 <link rel="stylesheet" href="/cards/cards.css">
 <link rel="stylesheet" href="/cards/table.css">
+<link rel="stylesheet" href="/cards/phone.css">
 </head>
 <body tabindex="-1">
 <div id="app"></div>
@@ -26,6 +30,10 @@
 <script src="/cards/src/rules.js"></script>
 <script src="/cards/src/practice.js"></script>
 <script src="/cards/src/motion.js"></script>
+<script src="/cards/src/phone.js"></script>
 <script src="/cards/src/screen.js"></script>
+<!-- Every voidtv.net area (Bryan, 20 Nov 2026, M1 + A1; 24 Nov 2026: "The menus aren't just the same across the verse"): the
+     hamburger drawer, from one list in /assets/brand/areas/areas.js. Its button sits in the phone page's header. -->
+<script src="/assets/brand/areas/areas.js" defer data-here="cards"></script>
 </body>
 </html>

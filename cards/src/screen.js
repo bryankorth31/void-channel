@@ -154,8 +154,10 @@
   // ---------- the page part ----------
 
   if (typeof document === 'undefined') return;
+  // On a phone this page shows the games first instead, and opens no room (src/phone.js; Bryan, 24 Nov 2026: "B games first").
+  if (root.VoidCardsPhone && root.VoidCardsPhone.take && root.VoidCardsPhone.take()) return;
 
-  const CLOSED = 'The phone room is closed. Reload this page to open a new one.';
+  const CLOSED ='The phone room is closed. Reload this page to open a new one.';
   const NOT_SET_UP = 'Phone rooms are not set up on this site yet.';
   const room = { code: null, join: null };
   let socket = null, problem = '', note = '';

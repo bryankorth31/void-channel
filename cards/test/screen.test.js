@@ -170,15 +170,19 @@ test('laidAnchor: groups start at the plate\'s inner edge, never under the plate
 
 test('index.html loads the scripts in the order the page needs', () => {
   const html = read('cards', 'index.html');
-  const src = [...html.matchAll(/<script[^>]*\ssrc="([^"]+)"/g)].map((m) => m[1]);
+  const all = [...html.matchAll(/<script[^>]*\ssrc="([^"]+)"/g)].map((m) => m[1]);
+  // The site's areas menu loads last, deferred (src/phone.js puts its button in the phone page's header).
+  assert.equal(all[all.length - 1], '/assets/brand/areas/areas.js');
+  assert.match(html, /<script src="\/assets\/brand\/areas\/areas\.js" defer data-here="cards"><\/script>/);
+  const src = all.slice(0, -1);
   // The engine first, then every game there is a rule file for (a new game is one more line), then the rules card, the
-  // practice hand, the motion and the page's own script.
+  // practice hand, the motion, the phone page and the page's own script.
   const games = require('fs').readdirSync(require('path').join(__dirname, '..', 'games')).filter((f) => f.endsWith('.js')).map((f) => '/cards/games/' + f);
   assert.deepEqual(src.slice(0, 6), ['/play/src/qr.js', '/trivia/src/words.js', '/cards/src/cards.js', '/cards/src/table.js', '/cards/src/dealer.js', '/cards/src/face.js']);
-  assert.deepEqual(src.slice(6, -4).slice().sort(), games.slice().sort(), 'every game in cards/games is loaded by the table page, and nothing else');
-  assert.deepEqual(src.slice(-4), ['/cards/src/rules.js', '/cards/src/practice.js', '/cards/src/motion.js', '/cards/src/screen.js']);
+  assert.deepEqual(src.slice(6, -5).slice().sort(), games.slice().sort(), 'every game in cards/games is loaded by the table page, and nothing else');
+  assert.deepEqual(src.slice(-5), ['/cards/src/rules.js', '/cards/src/practice.js', '/cards/src/motion.js', '/cards/src/phone.js', '/cards/src/screen.js']);
   const css = [...html.matchAll(/<link[^>]*\shref="([^"]+)"/g)].map((m) => m[1]);
-  assert.deepEqual(css, ['/cards/cards.css', '/cards/table.css']);
+  assert.deepEqual(css, ['/cards/cards.css', '/cards/table.css', '/cards/phone.css']);
   assert.ok(!/\son[a-z]+\s*=/i.test(html), 'no inline event handlers');
 });
 

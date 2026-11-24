@@ -1,0 +1,79 @@
+/* VoidTV cards: voidtv.net/cards on a phone, look B "games first" (Bryan, 24 Nov 2026). Licence: GPL-2.0-or-later (play/LICENSE).
+   Only used when src/phone.js marks the page html.phone-page; the table page (table.css) is untouched otherwise.
+   Colours from cards/cards.css and voidtv.net's header: pink #ff4fc8, blue #5fe3ff, gold var(--gold). */
+@font-face{font-family:'Unbounded';font-style:normal;font-weight:200 900;font-display:swap;src:url(/assets/brand/fonts/unbounded-latin.woff2) format('woff2')}
+html.phone-page,html.phone-page body{height:auto;min-height:100%;overflow:auto;overflow-x:hidden}
+html.phone-page body{-webkit-text-size-adjust:100%}
+html.phone-page #app{position:static}
+.ph-top{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:12px;height:56px;padding:0 14px;padding-top:env(safe-area-inset-top);background:rgba(7,8,12,.92);border-bottom:1px solid #1c2030;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.ph-mark{font-family:Unbounded,system-ui,sans-serif;font-weight:800;font-size:19px;letter-spacing:-.01em;text-decoration:none}
+.ph-mark .v{color:#ff4fc8}.ph-mark .n{color:#5fe3ff}
+.ph-here{margin-left:auto;color:var(--dim);font-size:13px}
+.ph-main{padding:0 0 calc(170px + env(safe-area-inset-bottom))}
+.ph-intro{padding:18px 16px 4px}
+.ph-intro h1{margin:0;font-family:Unbounded,system-ui,sans-serif;font-weight:800;font-size:30px;line-height:1.08;letter-spacing:-.01em}
+.ph-intro p{margin:8px 0 0;color:#a9acbd;font-size:14.5px;line-height:1.4}
+
+/* the games, two by two */
+.ph-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:14px 12px 0}
+.ph-tile{position:relative;display:flex;flex-direction:column;align-items:flex-start;padding:12px;border-radius:16px;min-height:150px;text-align:left;color:var(--fg);font:inherit;cursor:pointer;
+  background:radial-gradient(ellipse at 50% 30%,#1d6b50 0,#123c2e 62%,#0b241c 100%);border:1px solid #1d6b50;overflow:hidden;-webkit-tap-highlight-color:transparent}
+.ph-tile:active{transform:scale(.98)}
+.ph-tile:focus-visible{outline:2px solid #5fe3ff;outline-offset:2px}
+.ph-tile b{font-family:Unbounded,system-ui,sans-serif;font-weight:800;font-size:14px;line-height:1.15}
+.ph-tile small{color:#cfe9dd;font-size:11.5px;margin-top:3px;opacity:.85}
+.ph-rose{background:radial-gradient(ellipse at 50% 30%,#4a1838 0,#2a0f22 70%);border-color:#6a2550}
+.ph-navy{background:radial-gradient(ellipse at 50% 30%,#1b2a55 0,#101833 70%);border-color:#2a3e78}
+.ph-amber{background:radial-gradient(ellipse at 50% 30%,#4a3510 0,#2a1d08 70%);border-color:#6a4d18}
+.ph-teal{background:radial-gradient(ellipse at 50% 30%,#123d4a 0,#0b2530 70%);border-color:#1d5c6b}
+.ph-plum{background:radial-gradient(ellipse at 50% 30%,#3d2050 0,#22112e 70%);border-color:#5a2f78}
+.ph-more{background:#0e1018;border:1px dashed var(--line);justify-content:flex-end;cursor:default}
+.ph-more b{color:var(--dim)}.ph-more small{color:var(--dim)}
+
+/* a small fan of real cards on each tile */
+.ph-fan{position:relative;display:block;align-self:center;width:90px;height:76px;margin:2px 0 10px;font-size:9px}
+.ph-fan .vc{position:absolute;bottom:0;left:50%;transform-origin:50% 120%;box-shadow:0 2px 6px rgba(0,0,0,.45)}
+.ph-fan .vc:nth-child(1){transform:translateX(-88%) rotate(-14deg)}
+.ph-fan .vc:nth-child(2){transform:translateX(-50%)}
+.ph-fan .vc:nth-child(3){transform:translateX(-12%) rotate(14deg)}
+.ph-fan .vc:nth-child(1):nth-last-child(2){transform:translateX(-75%) rotate(-9deg)}
+.ph-fan .vc:nth-child(2):last-child{transform:translateX(-25%) rotate(9deg)}
+
+.ph-host{margin:16px 16px 0;color:var(--dim);font-size:13.5px;line-height:1.45}
+.ph-host b{color:var(--fg)}
+.ph-host a{color:#5fe3ff}
+
+/* the join box, kept at the bottom */
+.ph-join{position:fixed;left:0;right:0;bottom:0;z-index:6;margin:0;padding:14px 14px calc(14px + env(safe-area-inset-bottom)) 16px;border-radius:18px 18px 0 0;
+  background:linear-gradient(135deg,#1a1230,#121a2c);border-top:1px solid #3a2f5a;box-shadow:0 -10px 30px rgba(0,0,0,.6);
+  display:grid;grid-template-columns:1fr auto;gap:10px 12px;align-items:center}
+.ph-join-label{grid-column:1/-1;font-weight:800;font-size:16px}
+.ph-join-label small{display:block;font-weight:500;font-size:12.5px;color:var(--dim);margin-top:2px}
+.ph-code{position:relative;display:flex;gap:7px}
+.ph-box{width:44px;height:52px;border-radius:10px;background:#07080c;border:1.5px solid var(--line);display:grid;place-content:center;font-family:Unbounded,system-ui,sans-serif;font-weight:800;font-size:22px;color:var(--gold)}
+.ph-box:not(:empty){border-color:#5fe3ff}
+.ph-box.on{border-color:#ff4fc8;box-shadow:0 0 0 2px rgba(255,79,200,.25)}
+.ph-code input{position:absolute;inset:0;width:100%;height:100%;opacity:0;font-size:16px;border:0;padding:0;margin:0;background:transparent;color:transparent;caret-color:transparent}
+.ph-go{height:52px;padding:0 22px;border:0;border-radius:12px;background:#ff4fc8;color:#14000e;font-weight:800;font-size:17px;font-family:Unbounded,system-ui,sans-serif;cursor:pointer}
+.ph-go:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.ph-why{grid-column:1/-1;margin:0;color:var(--gold);font-size:13px;min-height:0}
+.ph-why:empty{display:none}
+
+/* a game's rules card in a sheet */
+.ph-shade{position:fixed;inset:0;z-index:20;background:rgba(0,0,0,.6);display:flex;align-items:flex-end}
+.ph-sheet{width:100%;max-height:85vh;overflow:auto;background:var(--panel);border-radius:18px 18px 0 0;border-top:1px solid var(--line);padding:16px 16px calc(20px + env(safe-area-inset-bottom));box-sizing:border-box}
+.ph-sheet-head{display:flex;align-items:center;gap:12px}
+.ph-sheet-head h2{margin:0;flex:1;font-family:Unbounded,system-ui,sans-serif;font-weight:800;font-size:18px;line-height:1.2}
+.ph-close{border:1px solid var(--line);background:#07080c;color:var(--fg);border-radius:10px;padding:9px 14px;font:inherit;font-weight:700;cursor:pointer}
+.ph-sheet-players{margin:4px 0 14px;color:#5fe3ff;font-size:13px}
+.ph-sheet-note{margin:14px 0 0;color:var(--dim);font-size:13px}
+.ph-sheet .howto{display:flex;flex-direction:column;gap:14px}
+.ph-sheet .howto-line{display:flex;flex-direction:column;gap:6px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.ph-sheet .howto-show{display:flex;align-items:center;gap:4px;flex-wrap:wrap;min-height:0}
+.ph-sheet .howto-card{display:inline-block;font-size:8px}
+.ph-sheet .howto-arrow{color:var(--dim);font-size:20px;margin:0 6px}
+.ph-sheet .howto-suit{display:inline-flex;align-items:center;justify-content:center;width:1.5em;height:1.5em;border-radius:.3em;background:var(--card);color:var(--ink);font-size:20px}
+.ph-sheet .howto-suit.red{color:var(--red)}
+.ph-sheet .howto-words{color:var(--gold);font-weight:700;font-size:20px;white-space:nowrap}
+.ph-sheet .howto-say{font-size:16px;line-height:1.35}
+@media (prefers-reduced-motion:reduce){.ph-tile:active{transform:none}}
