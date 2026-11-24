@@ -23,10 +23,6 @@ try { RADIO = require('./radio'); } catch (e) { if (e.code !== 'MODULE_NOT_FOUND
 // The file's exact seconds, for the Live TV schedule only (scripts/lib/tvgrid.js lays each airing out at its real length).
 // Not enumerable, so it never reaches the show files the browser loads.
 const withSec = (ep, sec) => Object.defineProperty(ep, 'sec', { value: sec || 0 });
-// The other rooms' names, from the one list of rooms (assets/brand/areas/areas.js, read by scripts/lib/areas-v.js): voidverse join J3,
-// one name per room (Bryan, 24 Nov 2026: "B, PLAY"). The header button and the Play together tiles use these, never a word of their own.
-const ROOM_NAMES = require('./areas-v').names();
-const roomHtml = (id) => String(ROOM_NAMES[id] || '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 // Builds what the browser gets per episode: the best copy (url/item/p/f/m) plus same-episode backups (alt),
 // ranked by player/tools/rank-sources.js (lighter clean copies first; wrong-episode "alternates" dropped).
 function epOut(e) {
@@ -1340,6 +1336,11 @@ fromAddress();
 
 function page({ data, mode = 'embed', routes = 'hash', base = '/', meta = {} }) {
   const { shows, people, links, types, bios = {}, tv = { channels: [], rt: [], lib: [] }, homeOrder = [], colors = [], spots = null, trivia = null } = data;
+  // The other rooms' names, from the one list of rooms (assets/brand/areas/areas.js, read by scripts/lib/areas-v.js): voidverse join J3,
+  // one name per room (Bryan, 24 Nov 2026: "B, PLAY"). The header button and the Play together tiles use these, never a word of their own.
+  // Read here, where the page is drawn, and not when this file loads: the catalog publish loads this file from a copy without areas-v.js.
+  const ROOM_NAMES = require('./areas-v').names();
+  const roomHtml = (id) => String(ROOM_NAMES[id] || '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   // Split mode keeps the browse index in one shared, cacheable file (data/index.js) so the hundreds
   // of per-show share pages stay tiny; embed mode inlines everything for the single-file preview.
   const inline = mode === 'embed'

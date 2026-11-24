@@ -14,7 +14,8 @@ const read = (f) => fs.readFileSync(path.join(REPO, f), 'utf8').replace(/\r\n/g,
 test('the site header has a link to /play/ that carries the room\'s own name, PLAY', () => {
   const APP = read('scripts/lib/app.js');
   assert.match(APP, /<a class="mine-link" href="\$\{base\}play\/" title="Old games from the Internet Archive, free to play"><i class="ico play"><\/i> \$\{roomHtml\('play'\)\}<\/a>/);
-  assert.match(APP, /\nconst ROOM_NAMES = require\('\.\/areas-v'\)\.names\(\);\n/, 'read from the list at build time');
+  assert.match(APP, /\n  const ROOM_NAMES = require\('\.\/areas-v'\)\.names\(\);\n/, 'read from the list when the page is drawn');
+  assert.doesNotMatch(APP, /\nconst [A-Z_]+ = require\('\.\/areas-v'\)/, 'never when the file loads: the catalog publish loads app.js from a copy that has no areas-v.js (tests/publish.test.js)');
   assert.equal(require('../scripts/lib/areas-v').names().play, 'PLAY');
   assert.doesNotMatch(APP, /<\/i> Games<\/a>/);
 });
