@@ -67,3 +67,13 @@ test('the version is a hash of the list, so a changed list is never held in a ca
   assert.equal(v, require('crypto').createHash('sha1').update(SRC).digest('hex').slice(0, 10));
 });
 
+
+// Bryan, 23 Nov 2026: "Hindi void should not be in the list higher then any other void verse page aside from west side or spanish".
+test('the language sites come last: only West Side and Spanish stand below Hindi', () => {
+  const A = load('voidtv.net', '/').areas;
+  const ids = Array.from(A, (a) => a.id), at = ids.indexOf('hindi'); // Array.from: the list comes out of a vm, and its own arrays are another realm's
+  assert.ok(at > 0, 'Hindi is listed');
+  assert.deepEqual(ids.slice(at + 1).sort(), ['espanol', 'westside'], 'nothing else is below Hindi');
+  for (const id of ids.slice(0, at)) assert.ok(!['westside', 'espanol'].includes(id), id + ' is above Hindi and is not a language site');
+  assert.ok(ids.indexOf('read') < at && ids.indexOf('kids') < at && ids.indexOf('university') < at, 'lexROM, Kids and University are above it');
+});

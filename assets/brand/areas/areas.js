@@ -49,6 +49,13 @@
     { id: 'kids', name: 'voidtv.net kids', line: 'Shows and games for children', site: 'kids', url: 'https://kids.voidtv.net/', live: true,
       kicker: 'For children', head: 'Cartoons you grew up with. Shows that teach.', text: 'Picked by people, with computer games too. Nothing to sign up for.',
       go: 'Open kids', pic: 'https://kids.voidtv.net/assets/kids/mark.svg', picFit: 'contain' },
+    // Outside voidtv.net (Bryan, 21 Nov 2026, "yes" to the whole-house plan's question 5: Read joins the house as one line,
+    // linking lexROM where it is). Its card does not say "Also on voidtv.net" (also).
+    { id: 'read', name: 'lexROM', line: 'Books read one word at a time', site: 'lexrom', url: 'https://lexrom.bspokevisuals.com/', live: true,
+      also: 'Also free', kicker: 'Reading', head: 'Read a book one word at a time.', text: 'Free classics, your own books and the news, on the breath. No account.',
+      go: 'Open lexROM', pic: 'https://lexrom.bspokevisuals.com/icon-512.png', picFit: 'contain' },
+    // The language sites come last (Bryan, 23 Nov 2026: "Hindi void should not be in the list higher then any other void verse page aside from
+    // west side or spanish"): every other room, lexROM among them, stands above Hindi; only West Side and Spanish stand below it.
     { id: 'hindi', name: 'voidtv.net hindi', line: 'हिंदी में फ़िल्में और शो', site: 'hindi', url: 'https://hindi.voidtv.net/', live: true,
       kicker: 'हिंदी', head: 'हिंदी में फ़िल्में और शो', text: 'Hindi films and shows, Hindi dubs and Live TV. Free, with an English switch.',
       go: 'Open hindi', pic: '/assets/brand/bg/sign-orange-m.jpg' },
@@ -59,12 +66,7 @@
       go: 'Open west side', pic: '/assets/brand/bg/sign-pink-m.jpg' },
     { id: 'espanol', name: 'voidtv.net español', line: 'Películas y series en español', site: 'espanol', url: 'https://espanol.voidtv.net/', live: true,
       kicker: 'Español', head: 'Películas y series en español.', text: 'Spanish films and shows, and dubs, Latin American first. Free, no account.',
-      go: 'Abrir español', pic: '/assets/brand/bg/watcher-purple-m.jpg' },
-    // Outside voidtv.net (Bryan, 21 Nov 2026, "yes" to the whole-house plan's question 5: Read joins the house as one line,
-    // linking lexROM where it is). Its card does not say "Also on voidtv.net" (also).
-    { id: 'read', name: 'lexROM', line: 'Books read one word at a time', site: 'lexrom', url: 'https://lexrom.bspokevisuals.com/', live: true,
-      also: 'Also free', kicker: 'Reading', head: 'Read a book one word at a time.', text: 'Free classics, your own books and the news, on the breath. No account.',
-      go: 'Open lexROM', pic: 'https://lexrom.bspokevisuals.com/icon-512.png', picFit: 'contain' }
+      go: 'Abrir español', pic: '/assets/brand/bg/watcher-purple-m.jpg' }
     // An area not open yet goes here with live: false; it joins the menu and the cards the day live turns true.
   ];
 
