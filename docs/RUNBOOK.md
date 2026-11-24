@@ -73,6 +73,16 @@ Double-click `PLAY-LAYOUT.cmd` in the repo folder (or run `node play/serve.js` a
 5. **Fits these phones** says how the layout sits on each size of phone: "fits", a percentage (a squarer phone draws everything that much smaller), or what is wrong, in words. Parts that touch or leave the screen turn red.
 6. **Save** writes `play/layouts.json`. The pads read that file, so players get your layout after the next push; until then only this PC has it. With nothing saved for a pad, it keeps its built-in layout.
 
+## Where the controller's parts sit, set on the phone itself (the layout mover)
+
+On the phone open `voidtv.net/play/pad?move=1`. It is the real pad with a dashed box on each part; no game is joined.
+
+1. Drag a part to move it. Drag its round dot to resize it. Hold the phone the other way to set that way: sideways and upright each keep their own layout.
+2. The small bar: **Undo** takes back a change. **Match** gives the chosen part the size and gaps of its opposite number (d-pad and buttons, L and R, Select and Start). **Reset** goes back to the layout every player has. Drag the bar by its top strip to get it out of the way; **Fold** shrinks it to one row and **Open** brings back the arrows (one step each), **Smaller** and **Bigger**, and the list of machines whose buttons the pad shows. The line under them gives the chosen part's gaps and size.
+3. **Save** keeps the layout on that phone: its pad uses it at once, in every game. It also shows a text that starts `VOIDTV PAD LAYOUT`. **Copy** it (or **Share** it) and send it to this PC.
+4. On this PC, put the text into the file every player gets: `node play/tools/layout-take.js "VOIDTV PAD LAYOUT {...}"` (or paste a whole message into it on standard input). Add `--look` first to see what would change without writing. Players get it after the next push.
+5. Nothing is lost by closing the page: every change is kept as a draft on the phone and comes back, still unsaved, when the page is opened again. A phone in private browsing keeps nothing; the mover says so, and the text can still be copied.
+
 ## The phone as a game pad, on a real phone
 
 The doctor's **phones** light checks the relay. Only a real phone shows the rest; it takes two minutes.

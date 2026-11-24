@@ -14,47 +14,14 @@
   const PHONES = [['iPhone 14 and 15', 844, 390], ['iPhone Pro Max', 932, 430], ['iPhone SE and 8', 667, 375], ['Small phone', 568, 320], ['Android, tall', 915, 412], ['Tablet', 1024, 768]];
   const WIDEST = 2.4;
 
-  // Pure (tested): the entry that puts a part where its partner is, on the other side: same size, same gaps.
-  const mirror = (p) => ({ ax: p.ax === 'l' ? 'r' : p.ax === 'r' ? 'l' : 'c', ay: p.ay, x: p.ax === 'c' ? -p.x : p.x, y: p.y, w: p.w, h: p.h });
-  // Pure (tested): a box being dragged, pulled onto the nearest line of the other parts and of the screen (edges and
-  // middles) when it is within near pixels of one. Answers the box and the lines it caught, to draw them.
-  function snap(box, others, W, H, near) {
-    const out = { x: box.x, y: box.y, w: box.w, h: box.h }, lines = [];
-    const xs = [0, W / 2, W], ys = [0, H / 2, H];
-    for (const o of others) { xs.push(o.x, o.x + o.w / 2, o.x + o.w); ys.push(o.y, o.y + o.h / 2, o.y + o.h); }
-    const pull = (pos, size, marks) => {
-      let best = null;
-      for (const m of marks) for (const [off, at] of [[0, pos], [size / 2, pos + size / 2], [size, pos + size]]) {
-        const d = m - at;
-        if (Math.abs(d) <= near && (!best || Math.abs(d) < Math.abs(best.d))) best = { d, m, off };
-      }
-      return best;
-    };
-    const bx = pull(box.x, box.w, xs), by = pull(box.y, box.h, ys);
-    if (bx) { out.x = bx.m - bx.off; lines.push({ v: bx.m }); }
-    if (by) { out.y = by.m - by.off; lines.push({ h: by.m }); }
-    return { box: out, lines };
-  }
-  // Pure (tested): a box kept on the screen and no smaller than a thumb can find.
-  function hold(box, W, H, square) {
-    let w = Math.max(24, Math.min(box.w, W)), h = Math.max(24, Math.min(box.h, H));
-    if (square) w = h = Math.min(w, h, W, H);
-    // A round part's drawing sits inside its box, so its box may pass an edge by a little.
-    const over = square ? w * L.OVER : 0, lo = over ? -over : 0;
-    return { x: Math.max(lo, Math.min(box.x, W - w + over)), y: Math.max(lo, Math.min(box.y, H - h + over)), w, h };
-  }
+  // The rules of moving a part (mirror, snap, hold, rebase) are shared with the mover on a phone itself: src/padmove.js.
+  const M = root.PlayPadMove || (typeof module === 'object' && module.exports ? require('../src/padmove.js') : null);
+  const { mirror, snap, hold, rebase } = M;
   // Pure (tested): how much smaller the phone is drawn so that the whole of it, with its 10 px rim, fits the room the
   // stage has (the Void polish lead, 22 Nov 2026: upright ran off the bottom of a 513 px tall window). Never bigger than life.
   const scaleFor = (roomW, roomH, W, H) => Math.max(0.1, Math.min(1, (roomW - 28) / (W + 20), (roomH - 28) / (H + 20)));
   // Pure (tested): what is wrong, in words.
   const words = (p) => (p.kind === 'off' ? (NAMES[p.a] || p.a) + ' is off the screen' : (NAMES[p.a] || p.a) + ' and ' + (NAMES[p.b] || p.b) + ' touch');
-  // Pure (tested): a layout drawn smaller on this screen (it is squarer than the layout fits at full size), made into
-  // one that is full size here: every gap and size by that much. Editing starts from what is seen.
-  function rebase(set, k) {
-    const parts = {};
-    for (const [id, e] of Object.entries(set.parts)) parts[id] = { ax: e.ax, ay: e.ay, x: e.x * k, y: e.y * k, w: e.w * k, h: e.h * k };
-    return { parts, fit: set.fit };
-  }
   // Pure (tested): how a layout sits on each phone: as set, a little smaller, or with something wrong.
   function fits(set, tall, only) {
     return PHONES.map(([name, long, short]) => {

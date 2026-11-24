@@ -125,7 +125,10 @@
   const now = () => performance.now();
   const code = (new URLSearchParams(location.search).get('r') || '').toUpperCase();
   // Drawn inside the layout editor (play/tools/layout.html): the real pad, with no room to join and nothing asked of the browser.
-  const EDIT = /[?&]edit=1\b/.test(location.search);
+  // move=1: the same, opened on a phone itself, with the mover laid over it (src/padmove.js; Bryan, 24 Nov 2026: "recreate
+  // the layout mover I can operate on this iPhone so I can choose the correct spacing").
+  const MOVE = /[?&]move=1\b/.test(location.search);
+  const EDIT = MOVE || /[?&]edit=1\b/.test(location.search);
   // A random seat token for this tab only (sent only to its room, gone when the tab closes): a phone that drops and
   // comes back within a minute keeps its seat.
   let seatToken = null;
@@ -422,6 +425,17 @@
     if (EDIT) return;
     try { const el = document.documentElement; if (document.fullscreenEnabled && !document.fullscreenElement && matchMedia('(pointer: coarse)').matches) el.requestFullscreen({ navigationUI: 'hide' }).catch(() => {}); } catch (e) { /* not on this phone */ }
   }, { once: true });
+  // The mover on the phone itself: its scripts are fetched only when it is asked for, one after the other (the keys,
+  // the cards' rules, how a card becomes a pad, then the mover), and it is handed this page's door.
+  function mover() {
+    const v = BUILD ? '?v=' + BUILD : '', say = (h, p) => { $('note-h').textContent = h; $('note-p').textContent = p; };
+    say('Opening the layout mover', 'One moment.');
+    const get = (src) => new Promise((ok, no) => { const s = document.createElement('script'); s.src = src + v; s.onload = ok; s.onerror = no; document.body.appendChild(s); });
+    get('src/keys.js').then(() => get('src/cards.js')).then(() => get('src/phones.js')).then(() => get('src/padmove.js')).then(() => {
+      root.PlayPadMove.start({ door: api.editor, url: 'layouts.json' + v, cards: 'cards/',
+        card: (c) => root.PlayPhones.cardFor(c, root.PlayCards.gamepadMap(c), (code) => root.PlayCards.actionFor(c, code) || '') });
+    }).catch(() => say('The layout mover did not load', 'Check the connection and open this page again.'));
+  }
   // The layout editor's own door to this page: draw a game's buttons, read where each part is, try a layout.
   if (EDIT) {
     api.editor = {
@@ -439,6 +453,7 @@
       // set: a layout to try (null: the built-in one; undefined: what the file says).
       show(set) { draft = set; lay(); measure(); },
     };
+    if (MOVE) mover();
     return;
   }
   connect();

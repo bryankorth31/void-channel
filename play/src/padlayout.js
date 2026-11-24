@@ -136,14 +136,34 @@
     el.classList.remove('placed');
     for (const p of ['left', 'top', 'width', 'height', '--pw', '--ph']) el.style.removeProperty(p);
   }
-  // The file itself, read once (v: the build, so a push reaches a phone at once and not after its cache).
+  // A layout kept on this phone alone, set in the pad's own mover (pad.html?move=1; Bryan, 24 Nov 2026: "recreate the
+  // layout mover I can operate on this iPhone so I can choose the correct spacing"). A phone cannot write the site's
+  // file, so what he sets there is kept in that phone's browser and laid over the file, pad by pad and way by way: it
+  // is under his thumbs at once. Every other phone keeps the file's layout until his is put in the file and pushed.
+  const OWN = 'voidtv-pad-layout';
+  // Pure (tested): the file with a phone's own layouts laid over it. Both go through clean().
+  function merge(file, own) {
+    const out = clean(file), mine = clean(own);
+    for (const pad of PADS) for (const way of WAYS) if (mine[pad] && mine[pad][way]) { out[pad] = out[pad] || {}; out[pad][way] = mine[pad][way]; }
+    return out;
+  }
+  // What this phone keeps (nothing: { v: 1 }). A browser that refuses storage keeps nothing.
+  function mine() { try { return clean(JSON.parse(localStorage.getItem(OWN) || 'null')); } catch (e) { return clean(null); } }
+  // Keep this as the phone's own (with no pad in it: forget it). Answers whether the phone took it.
+  function keep(own) {
+    const c = clean(own);
+    try { if (PADS.some((p) => c[p])) localStorage.setItem(OWN, JSON.stringify(c)); else localStorage.removeItem(OWN); return true; } catch (e) { return false; }
+  }
+  // The file itself, read once (v: the build, so a push reaches a phone at once and not after its cache). site: the
+  // file alone, as every player has it. load: what this phone's pads place themselves from.
   let got = null;
-  function load(url) {
+  function site(url) {
     if (!got) got = fetch(url, { cache: 'no-cache' }).then((r) => (r.ok ? r.json() : {})).then(clean).catch(() => clean(null));
     return got;
   }
+  const load = (url) => site(url).then((f) => merge(f, mine()));
 
-  const api = { PADS, WAYS, THUMB, OVER, toEntry, toBox, shrink, boxes, touch, problems, fitOf, clean, apply, put, clear, load };
+  const api = { PADS, WAYS, THUMB, OVER, OWN, toEntry, toBox, shrink, boxes, touch, problems, fitOf, clean, merge, mine, keep, apply, put, clear, site, load };
   if (typeof module === 'object' && module.exports) module.exports = api;
   else root.PlayPadLayout = api;
 })(typeof self !== 'undefined' ? self : this);
