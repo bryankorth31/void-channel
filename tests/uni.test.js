@@ -208,6 +208,22 @@ test('live: one line puts a course on or off the public copy', () => {
   assert.ok(fs.readFileSync(real).equals(was), 'the test changed the real list.json');
 });
 
+test('every public page has the way home: the voidtv.net wordmark, a link, between the menu and the crest (Bryan, 24 Nov 2026: "A, left by the menu")', () => {
+  build('--site');
+  assert.ok(fs.existsSync(path.join(SITE, 'fonts', 'unbounded-latin.woff2')), 'the wordmark typeface ships with the site');
+  for (const p of fs.readdirSync(SITE).filter((f) => f.endsWith('.html') && f !== 'join.html')) {
+    const h = fs.readFileSync(path.join(SITE, p), 'utf8');
+    const top = (h.match(/<header class="top">[\s\S]*?<\/header>/) || [''])[0];
+    if (!top) continue;
+    assert.match(top, /^<header class="top"><span data-void-areas-menu><\/span><a class="voidmark" href="https:\/\/voidtv\.net\/"[^>]*>voidtv<i>\.net<\/i><\/a><a class="crest"/, p + ': the voidtv.net link sits right after the menu, before the crest');
+    assert.match(h, /@media \(max-width:640px\)\{header\.top\{[^}]*\}\.voidmark\{[^}]*\}\.crest span\{display:none\}/, p + ': on a phone the crest words step aside so Home and Courses fit');
+    // A page no wider than a phone (24 Nov 2026): the closed Courses list takes no room, and a course page's column may
+    // shrink below its widest line, so nothing pushes the page past the screen's right edge.
+    assert.match(h, /\.navall:not\(\[open\]\) \.navlist\{display:none\}/, p + ': the closed Courses list still takes room past the edge');
+    assert.doesNotMatch(h, /\.wrap\{grid-template-columns:1fr\}/, p + ': a one-column page must use minmax(0,1fr) so it can shrink to a phone');
+  }
+});
+
 test('the public pages carry no machine-made tells: no middle-dot strings, no capitals labels, and less motion when asked', () => {
   build('--site');
   for (const p of fs.readdirSync(SITE).filter((f) => f.endsWith('.html') && f !== 'join.html')) {
@@ -433,8 +449,8 @@ test('public pages name no workers.dev address and ask Google for nothing: Mind 
   const files = [...new Set([...css.matchAll(/url\(([^)]+)\)/g)].map((m) => m[1]))];
   assert.ok(files.length >= 2 && files.every((x) => /^[a-z0-9-]+\.woff2$/.test(x) && fs.existsSync(path.join(SITE, 'fonts', x))), 'a font file the sheet names is not on the site');
   // ...and, beside scenes, the two faces printed on the things on the lit table (scene.js), also from the site itself
-  // (and the hand on the crystal's slips, crystal-bottle.js)
-  const table = (fs.existsSync(path.join(SITE, 'scene.js')) ? ['bricolage-grotesque-latin.woff2', 'fraunces-latin.woff2'] : []).concat(fs.existsSync(path.join(SITE, 'crystal-bottle.js')) ? ['fraunces-latin.woff2'] : []);
+  // (and the hand on the crystal's slips, crystal-bottle.js), and the voidtv.net wordmark in every header
+  const table = ['unbounded-latin.woff2'].concat(fs.existsSync(path.join(SITE, 'scene.js')) ? ['bricolage-grotesque-latin.woff2', 'fraunces-latin.woff2'] : []).concat(fs.existsSync(path.join(SITE, 'crystal-bottle.js')) ? ['fraunces-latin.woff2'] : []);
   assert.deepEqual(fs.readdirSync(path.join(SITE, 'fonts')).filter((x) => x.endsWith('.woff2')).sort(), [...new Set(files.concat(table))].sort(), 'the public copy carries only the chosen typeface');
 });
 

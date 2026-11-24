@@ -639,7 +639,7 @@ footer{max-width:1500px;margin:0 auto;padding:10px 32px 40px;color:var(--dim);fo
 details.more{margin-top:6px;border-top:1px solid var(--line);padding-top:10px}
 details.more summary{cursor:pointer;color:var(--dim);font-size:15px;padding:6px 0}
 details.more summary:hover{color:var(--fg)}
-@media (max-width:1000px){.wrap{grid-template-columns:1fr}nav{position:static;max-height:none}nav{display:flex;flex-wrap:wrap;gap:4px}nav h4{width:100%}.row2{grid-template-columns:1fr}.hero ol{columns:1}}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr)}nav{position:static;max-height:none}nav{display:flex;flex-wrap:wrap;gap:4px}nav h4{width:100%}.row2{grid-template-columns:1fr}.hero ol{columns:1}}
 ${LOOKCSS}${TYPECSS}</style></head><body>
 ${top(c.slug, all)}
 <div class="wrap"><nav><h4>Units</h4>${toc}<p class="donecount"></p></nav><main>
@@ -820,6 +820,11 @@ header.top{display:flex;flex-wrap:nowrap;align-items:center;gap:10px 18px;paddin
 .navall{position:relative}.navall summary{cursor:pointer;list-style:none;font-size:14px;padding:6px 12px;border-radius:6px;color:var(--fg);border:1px solid var(--line)}.navall summary::-webkit-details-marker{display:none}.navall summary:hover{border-color:var(--gold)}
 .navlist{position:absolute;right:0;top:calc(100% + 8px);z-index:30;width:min(640px,calc(100vw - 40px));max-height:70vh;overflow:auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px 18px;padding:16px;background:var(--panel);border:1px solid var(--line);border-radius:10px;box-shadow:0 18px 40px rgba(0,0,0,.5)}
 @media (max-width:1000px){header.top{padding:8px 20px;gap:6px 14px}.navall{position:static}.navlist{left:20px;right:20px;width:auto}}
+.navall:not([open]) .navlist{display:none}
+@font-face{font-family:"Unbounded";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/unbounded-latin.woff2) format("woff2")}
+.voidmark{flex:none;font-family:"Unbounded",system-ui,sans-serif;font-weight:700;font-size:15px;letter-spacing:0;color:#ff4fc8;text-decoration:none;white-space:nowrap;padding-right:14px;border-right:1px solid rgba(255,255,255,.18)}.voidmark i{font-style:normal;color:#5fe3ff}.voidmark:hover{filter:brightness(1.15)}
+html[data-look="daylight"] .voidmark{color:#c2255c;border-right-color:var(--line)}html[data-look="daylight"] .voidmark i{color:#0b7fa3}
+@media (max-width:640px){header.top{padding:8px 12px;gap:8px}.voidmark{font-size:13px;padding-right:8px}.crest span{display:none}.nav{gap:2px}.nav a.here{display:none}.navall summary{padding:6px 10px}main table{display:block;max-width:100%;overflow-x:auto}}
 .navlist h5{margin:0 0 4px;font-size:14px;color:var(--acc)}.navlist a,.navlist b{display:block;padding:4px 0;font-size:14px}
 .nav a,.nav b{font-size:14px;padding:6px 12px;border-radius:6px;text-decoration:none;color:var(--dim)}
 .nav a:hover{color:var(--fg);background:var(--panel2)}.nav b{color:var(--gold);font-weight:600}
@@ -921,7 +926,10 @@ function top(current, all) {
   // Every voidtv.net area (Bryan, 20 Nov 2026, M1): the hamburger drawer from voidtv.net's one list. The menu only, no
   // card: Open Yale's terms (oyc.yale.edu/terms) say no ads on the University while it uses Yale material.
   const AREAS = '<script src="https://voidtv.net/assets/brand/areas/areas.js?v=' + require('../../scripts/lib/areas-v')() + '" defer data-site="university" data-here="university" data-ads="off"></script>';
-  return atmos + AREAS + '<header class="top"><span data-void-areas-menu></span><a class="crest" href="index.html">' + CREST + '<span><b>Void University</b><small>Learn from people who did it</small></span></a><nav class="nav">' + links + '</nav></header>'
+  // The way home (Bryan, 24 Nov 2026: "A, left by the menu", the Voidverse audit's join J4): voidtv.net's wordmark, a
+  // real link, between the menu and the crest, so a visitor who arrives cold can see this is a room of voidtv.net.
+  const VOIDMARK = '<a class="voidmark" href="https://voidtv.net/" title="voidtv.net, free shows and movies">voidtv<i>.net</i></a>';
+  return atmos + AREAS + '<header class="top"><span data-void-areas-menu></span>' + VOIDMARK + '<a class="crest" href="index.html">' + CREST + '<span><b>Void University</b><small>Learn from people who did it</small></span></a><nav class="nav">' + links + '</nav></header>'
     + '<script>(function(){var h=document.querySelector("header.top"),s=function(){document.documentElement.style.setProperty("--hh",h.offsetHeight+"px")};s();addEventListener("load",s);if(window.ResizeObserver)new ResizeObserver(s).observe(h);else addEventListener("resize",s)})()</script>';
 }
 const IMG = (() => { try { return JSON.parse(fs.readFileSync(path.join(DIR, 'img', 'images.json'), 'utf8')); } catch (e) { return {}; } })();
@@ -1273,6 +1281,7 @@ for (const k of (LIVE ? [TYPES[TYPE] ? TYPE : 'inter'] : Object.keys(TYPES))) {
   fs.writeFileSync(path.join(OUT, 'fonts', k + '.css'), sheet);
   for (const m of sheet.matchAll(/url\(([a-z0-9-]+\.woff2)\)/g)) fs.copyFileSync(path.join(DIR, 'fonts', m[1]), path.join(OUT, 'fonts', m[1]));
 }
+fs.copyFileSync(path.join(DIR, 'fonts', 'unbounded-latin.woff2'), path.join(OUT, 'fonts', 'unbounded-latin.woff2')); // the voidtv.net wordmark in every header
 fs.mkdirSync(path.join(OUT, 'img', 'bg'), { recursive: true });
 for (const f of fs.readdirSync(path.join(DIR, 'img', 'bg')).filter((x) => /\.(jpg|png)$/.test(x))) fs.copyFileSync(path.join(DIR, 'img', 'bg', f), path.join(OUT, 'img', 'bg', f)); // the moving backgrounds
 for (const f of APPICONS) fs.copyFileSync(path.join(DIR, 'img', f), path.join(OUT, 'img', f)); // home-screen icons (make-icons.js)
