@@ -353,6 +353,9 @@ function decideGrid(entry, cand, tv, ctx) {
   const ov = ctx.ov || {};
   const tags = ctx.tags || new Map();
   if (ov.excludeItems) cand.items = cand.items.filter((it) => !ov.excludeItems.includes(it.id));
+  // One upload is one file: the Archive's own copy of a file ("<name>.ia.mp4") that the hunt stored beside its original is taken out here,
+  // before anything is matched, so the two copies cannot become two episodes (voidverse function test F11; Bryan, 24 Nov 2026).
+  cand = { ...cand, items: cand.items.map((it) => { const files = sound.mergeTwins(it.files || []); return files === it.files ? it : { ...it, files }; }) };
   // A copy that would play with no sound (Dolby, DTS) plays the Archive's own .ia.mp4 copy instead: same episode, same name (B, 16 Nov 2026: Dragon Tales).
   const SOUND = (ctx.readSound || (() => ({})))();
   if (Object.keys(SOUND).length) cand = { ...cand, items: cand.items.map((it) => ({ ...it, files: it.files.map((f) => sound.playable(it.id, f, SOUND)) })) };

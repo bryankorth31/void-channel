@@ -21,6 +21,7 @@ const { execFileSync } = require('child_process');
 
 const ROOT = path.join(__dirname, '..');
 const PROFILE = require('./lib/profile');
+const { stemOf } = require('./lib/sound');
 const { nearNameGuard, rejectLine, saveRejected } = require('./lib/tvmazeguard');
 const { cachedPath, readGood, saveAnswer, entries } = require('./lib/cachefile');
 // Archive uploaders are usually e-mail addresses: third-party personal data that must not be committed. The hunters keep
@@ -233,7 +234,7 @@ async function openItem(id, show, tv) {
   // Group originals with their IA derivatives (same stem) so each episode counts once.
   const byStem = new Map();
   for (const f of files) {
-    const stem = f.name.replace(/\.ia\.mp4$/i, '').replace(/\.[^.]+$/, '');
+    const stem = stemOf(f.name); // the ending comes off once (scripts/lib/sound.js): a twin named "10-8 - 1.01.ia.mp4" must not be cut to "10-8 - 1"
     const g = byStem.get(stem) || { stem, files: [] };
     g.files.push(f); byStem.set(stem, g);
   }

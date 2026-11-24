@@ -143,7 +143,7 @@ function runPass(label, mod, shipped, { keepOverlay = false } = {}) {
         { const nt = AFTER.norm(e.file.itemTitle || ''); for (const w of WATCH) if (nt.includes(w)) watch.set(w, watch.get(w) + 1); }
         types.set(t, rec);
         if (r.selfListed) continue;
-        eps.set(slug + '|' + se.season + 'x' + e.number, { conf: e.file.conf, name: e.file.name, state: e.state });
+        eps.set(slug + '|' + se.season + 'x' + e.number, { conf: e.file.conf, name: e.file.name, state: e.state, file: e.file.item + '/' + e.file.file });
         picks.push({ slug, show: entry.name, name: e.file.name, conf: e.file.conf, state: e.state, why: e.file.why });
         if (e.state === 'REVIEW' && SE_TITLE.test(e.file.why || '')) { s.seA++; if (e.file.playable && !e.file.langRisk && e.file.conf < 0.85) s.seB++; }
       }
@@ -215,11 +215,15 @@ if (BEFORE) {
 
 // ---------------------------------------------------------------- per-episode movement in strict grids
 let gained = 0, lostEps = 0, confUp = 0, confDown = 0, fileChanged = 0, liveUp = 0, liveDown = 0;
+// The name can change while the very same file plays (a twin that takes its original's name), so the file itself is counted too.
+let playsOther = 0, toTwin = 0, toOriginal = 0;
+const isTwinFile = (x) => /.ia.mp4$/i.test(String(x || ''));
 for (const [k, b] of B.eps) {
   const a = A.eps.get(k);
   if (!a) { lostEps++; continue; }
   if (a.conf > b.conf) confUp++; else if (a.conf < b.conf) confDown++;
   if (a.name !== b.name) fileChanged++;
+  if (a.file !== b.file) { playsOther++; if (isTwinFile(a.file) && !isTwinFile(b.file)) toTwin++; else if (!isTwinFile(a.file) && isTwinFile(b.file)) toOriginal++; }
   if (a.state === 'LIVE' && b.state !== 'LIVE') liveUp++; else if (a.state !== 'LIVE' && b.state === 'LIVE') liveDown++;
 }
 if (BEFORE) for (const k of A.eps.keys()) if (!B.eps.has(k)) gained++;
@@ -284,7 +288,8 @@ say();
 }
 if (BEFORE) {
   say('STRICT-GRID MOVEMENT (episodes keyed by show, season, number)');
-  say('  placed after but not before: ' + fmt(gained) + '   placed before but not after: ' + fmt(lostEps) + '   confidence up: ' + fmt(confUp) + '   down: ' + fmt(confDown) + '   different file picked: ' + fmt(fileChanged));
+  say('  placed after but not before: ' + fmt(gained) + '   placed before but not after: ' + fmt(lostEps) + '   confidence up: ' + fmt(confUp) + '   down: ' + fmt(confDown) + '   different file picked (by name): ' + fmt(fileChanged));
+  say('  a different file plays: ' + fmt(playsOther) + '   of those, the original gives way to the Archive copy (.ia.mp4): ' + fmt(toTwin) + '   the Archive copy gives way to the original: ' + fmt(toOriginal));
   say('  reached LIVE: ' + fmt(liveUp) + '   dropped out of LIVE: ' + fmt(liveDown));
   say();
   say('WHAT BECAME OF EACH KIND OF GRID (shows; placed episodes before -> after)');

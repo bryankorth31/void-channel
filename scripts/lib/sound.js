@@ -16,6 +16,30 @@ const silentIn = (audio) => !!audio && audio !== 'none' && !PLAYS.has(audio);
 
 // The Archive's own copy of a file: "<stem>.ia.mp4" next to "<stem>.<ext>".
 const isTwin = (name) => /\.ia\.mp4$/i.test(String(name || ''));
+// The name the two copies share: "<stem>.<ext>" and "<stem>.ia.mp4" both give "<stem>". The ending is taken off ONCE. Until 24 Nov 2026
+// hunt.js took ".ia.mp4" off and then one more ending, so a twin whose name holds a dot ("10-8 - 1.01.ia.mp4") was cut to "10-8 - 1",
+// no longer paired with its original ("10-8 - 1.01") and was kept as a second file of its own (voidverse function test F11).
+const stemOf = (name) => (isTwin(name) ? String(name).replace(/\.ia\.mp4$/i, '') : String(name || '').replace(/\.[^.]+$/, ''));
+// match.js: one upload is one file. The stored hunt results still hold such twins as files of their own, so the matcher gave the
+// original one episode and its twin another, often the next one (116 shows, 309 episodes on 24 Nov 2026; Bryan: "Yes, dry run first").
+// A twin whose original is in the same item is joined to it: one entry, with the original's name, numbers and length (the twin's
+// own name was the cut one) and the TWIN's file to play. The twin's file, not the original's, because the Archive only makes a twin
+// when the original is not plain H.264 with AAC sound, and because that is what played before: on 24 Nov 2026 the twin was the
+// pick in 1,132 placed episodes of such pairs (549 LIVE), none of whose originals has been through sound-check.js. Playing the
+// originals instead would have risked silent episodes; this way only the double goes.
+function mergeTwins(files) {
+  const originals = new Map();
+  for (const f of files) if (f && f.file && !isTwin(f.file) && !originals.has(stemOf(f.file))) originals.set(stemOf(f.file), f);
+  const drop = new Set(), swap = new Map();
+  for (const t of files) {
+    if (!t || !isTwin(t.file)) continue;
+    const o = originals.get(stemOf(t.file));
+    if (!o) continue;
+    drop.add(t);
+    if (t.playable && !swap.has(o)) swap.set(o, { ...o, file: t.file, url: t.url, format: t.format, playable: true, sizeMB: t.sizeMB || o.sizeMB, seconds: o.seconds || t.seconds });
+  }
+  return drop.size ? files.filter((f) => !drop.has(f)).map((f) => swap.get(f) || f) : files;
+}
 function twinOf(meta, file) {
   if (isTwin(file)) return null;
   const want = String(file).replace(/\.[^.]+$/, '') + '.ia.mp4';
@@ -59,4 +83,4 @@ function probe(url, bin, timeoutMs = 90000) {
   });
 }
 
-module.exports = { PLAYS, silentIn, isTwin, twinOf, keyOf, urlOf, playable, ffprobePath, probe };
+module.exports = { PLAYS, silentIn, isTwin, stemOf, mergeTwins, twinOf, keyOf, urlOf, playable, ffprobePath, probe };
