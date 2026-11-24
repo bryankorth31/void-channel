@@ -140,3 +140,9 @@ button{font:inherit;color:inherit;cursor:pointer}
 .practice-tag{position:absolute;left:2.5%;top:3%;font-size:calc(var(--u)*1.5);font-weight:700;color:var(--gold);border:calc(var(--u)*.2) solid var(--gold);border-radius:calc(var(--u)*2);padding:calc(var(--u)*.35) calc(var(--u)*1.2)}
 .tip{position:absolute;left:50%;bottom:1.2%;transform:translateX(-50%);width:58%;box-sizing:border-box;background:var(--panel);border:calc(var(--u)*.2) solid var(--gold);border-radius:calc(var(--u)*1.2);padding:calc(var(--u)*.6) calc(var(--u)*1.5);font-size:calc(var(--u)*1.55);line-height:1.3;display:flex;gap:calc(var(--u)*1.2);align-items:baseline}
 .tip b{color:var(--gold);flex:none}
+/* The way back on a TV, laptop or tablet: the areas menu and the voidtv.net wordmark, top left, over the lobby only (voidverse audit, 24 Nov 2026) */
+.tv-top{position:fixed;z-index:20;top:max(12px,calc(var(--u)*1.2));left:max(12px,calc(var(--u)*1.4));display:flex;align-items:center;gap:max(10px,calc(var(--u)*.9))}
+.tv-top[hidden]{display:none}
+.tv-mark{font-weight:800;font-size:max(17px,calc(var(--u)*1.7));text-decoration:none;letter-spacing:-.01em}
+.tv-mark .v{color:var(--pink)}.tv-mark .n{color:#5fe3ff}
+.tv-mark:focus-visible{outline:3px solid #5fe3ff;outline-offset:4px;border-radius:6px}

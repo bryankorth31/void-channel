@@ -484,10 +484,30 @@
     app.append(page);
   }
 
+  // The way back on a TV, laptop or tablet (Bryan's rule: a visible way back on every page; the voidverse audit, 24 Nov 2026: the
+  // lobby was a dead end on every screen but a phone, though every room's menu lists Card games): the voidtv.net areas menu and the
+  // wordmark at the top left, over the lobby only (a game in play keeps the whole screen). Drawn once, outside #app, so the menu
+  // survives every redraw. Leaving with phones at the table asks first, since the table closes for them.
+  let tvTop = null;
+  function drawTvTop(show) {
+    if (!tvTop) {
+      tvTop = el('header', 'tv-top');
+      const menu = el('span'), mark = el('a', 'tv-mark');
+      menu.setAttribute('data-void-areas-menu', '');
+      mark.href = '/'; mark.setAttribute('aria-label', 'voidtv.net home');
+      mark.append(el('span', 'v', 'voidtv'), el('span', 'n', '.net'));
+      mark.addEventListener('click', (e) => { if (dealer.snapshot().players.length && !confirm('Leave and go to voidtv.net? The table closes for everyone.')) e.preventDefault(); });
+      tvTop.append(menu, mark);
+      document.body.insertBefore(tvTop, app);
+    }
+    tvTop.hidden = !show;
+  }
+
   let lastPhase = '';
   function render() {
     if (PHONES) { drawPhones(dealer.snapshot()); return; }
     const s = dealer.snapshot(), stage = el('div', 'stage');
+    drawTvTop(s.phase === 'lobby' || !s.view);
     if (s.phase === 'lobby' || !s.view) drawLobby(stage, s);
     else {
       drawTable(stage, s);
@@ -531,7 +551,7 @@
 
   document.addEventListener('keydown', (e) => {
     if (e.ctrlKey || e.metaKey || e.altKey) return;
-    const phase = dealer.snapshot().phase, onButton = !!(e.target && e.target.closest && e.target.closest('button'));
+    const phase = dealer.snapshot().phase, onButton = !!(e.target && e.target.closest && e.target.closest('button, a'));   // a focused link or button does its own thing
     if (e.key === 'ArrowLeft' && phase === 'lobby') { e.preventDefault(); pickBy(-1); }
     else if (e.key === 'ArrowRight' && phase === 'lobby') { e.preventDefault(); pickBy(1); }
     else if (e.key === 'Enter' && !onButton && phase !== 'play') { e.preventDefault(); deal(); }

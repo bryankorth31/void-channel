@@ -136,3 +136,17 @@ test('the way back: the host\'s phones-only table has the games page header, wit
   assert.ok(/confirm\('Leave and go to voidtv\.net\? The table closes for everyone\.'\)/.test(top));
   assert.ok(js.slice(js.indexOf('function drawPhones('), js.indexOf('function drawPhones(') + 200).includes('drawHostTop();'));
 });
+
+// The way back on a TV, laptop or tablet (the voidverse audit, 24 Nov 2026: the lobby was a dead end on every screen but a phone).
+test('the way back on a TV: the lobby carries the areas menu and the voidtv.net link, drawn once outside the redraws, hidden in play', () => {
+  const js = read('src', 'screen.js');
+  const top = js.slice(js.indexOf('function drawTvTop('), js.indexOf("let lastPhase = '';"));
+  assert.ok(top.includes("menu.setAttribute('data-void-areas-menu', '')") && top.includes("mark.href = '/'"));
+  assert.ok(top.includes('document.body.insertBefore(tvTop, app)') && /if \(!tvTop\)/.test(top), 'drawn once, outside #app');
+  assert.ok(top.includes('tvTop.hidden = !show;'));
+  assert.match(js, /drawTvTop\(s\.phase === 'lobby' \|\| !s\.view\);/, 'shown in the lobby only');
+  assert.match(top, /confirm\('Leave and go to voidtv\.net\? The table closes for everyone\.'\)/, 'with phones at the table it asks first');
+  assert.match(js, /e\.target\.closest\('button, a'\)/, 'Enter on the focused link follows it instead of dealing');
+  const site = fs.readFileSync(path.join(__dirname, '..', '..', 'scripts', 'site.js'), 'utf8');
+  assert.ok(site.includes(`.replace('src="/assets/brand/areas/areas.js"', 'src="/assets/brand/areas/areas.js?v=' + require('./lib/areas-v')() + '"')`), 'the card pages carry the area list\'s version, as PLAY and Trivia do');
+});

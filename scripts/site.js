@@ -214,7 +214,9 @@ const brandSrc = path.join(ROOT, 'assets', 'brand');
     const v = /^[0-9a-f]{40}$/.test(sha) ? sha.slice(0, 12) : '';
     for (const f of ['index.html', 'hand.html']) {
       const h = fs.readFileSync(path.join(K, f), 'utf8');
-      fs.writeFileSync(path.join(dst, f), v ? h.replace(/((?:src|href)="\/cards\/[a-z0-9/-]+\.(?:js|css))"/g, '$1?v=' + v + '"') : h);
+      // and the area list's own version (scripts/lib/areas-v.js), as PLAY and Trivia carry it, so the menu is never a day old.
+      fs.writeFileSync(path.join(dst, f), (v ? h.replace(/((?:src|href)="\/cards\/[a-z0-9/-]+\.(?:js|css))"/g, '$1?v=' + v + '"') : h)
+        .replace('src="/assets/brand/areas/areas.js"', 'src="/assets/brand/areas/areas.js?v=' + require('./lib/areas-v')() + '"'));
     }
   } }
 if (fs.existsSync(brandSrc)) fs.cpSync(brandSrc, path.join(OUT, 'assets', 'brand'), { recursive: true, filter: (p) => { const parts = path.relative(brandSrc, p).split(path.sep); return !parts.includes('src') && !parts.includes('sheets'); } }); // the 2K originals and design sheets stay out of the site
