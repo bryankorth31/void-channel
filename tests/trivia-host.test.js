@@ -383,3 +383,14 @@ test('the host and the phone both show the why line', () => {
   assert.match(read('trivia/index.html'), /id="why"/);
   assert.match(read('trivia/phone.html'), /id="res-why"/);
 });
+
+// The big screen on a phone (Voidverse sweep; Bryan, 24 Nov 2026: "Yes, phone overflow"): at 390 wide the one-line top bar ran
+// about 500 wide and a picture question's answers ran off the edge. Under 560 wide the top bar wraps and a media question stacks.
+test('on a phone the top bar wraps and a picture or sound question stacks, so nothing runs sideways', () => {
+  const css = read('trivia/trivia.css');
+  const m = css.match(/@media \(max-width:560px\)\{([\s\S]*?)\n\}/);
+  assert.ok(m, 'a phone rule');
+  assert.match(m[1], /\.bar\{flex-wrap:wrap;height:auto;min-height:52px/);
+  assert.match(m[1], /\.where:empty\{display:none\}/);
+  assert.match(m[1], /\.stage\.with-media \.body\{grid-template-columns:minmax\(0,1fr\)\}/);
+});
