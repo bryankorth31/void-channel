@@ -1,0 +1,52 @@
+{
+  "id": "contra-nes",
+  "title": "Contra",
+  "year": 1988,
+  "publisher": "Konami",
+  "system": "nes",
+  "core": "fceumm",
+  "players": 2,
+  "archive": {
+    "item": "contranes",
+    "file": "Contra (U) [!].nes",
+    "size": 131088
+  },
+  "controls": {
+    "kind": "pad",
+    "dpad": true,
+    "keys": [
+      "P1:B",
+      "P1:A",
+      "P1:Select",
+      "P1:Start"
+    ]
+  },
+  "help": "A and B are the game's two buttons; Start begins and pauses. This copy is a personal upload on the Internet Archive and may not stay there.",
+  "actions": [
+    {
+      "do": "Move",
+      "press": [
+        "P1:Up",
+        "P1:Down",
+        "P1:Left",
+        "P1:Right"
+      ]
+    },
+    {
+      "do": "A button",
+      "press": "P1:A"
+    },
+    {
+      "do": "B button",
+      "press": "P1:B"
+    },
+    {
+      "do": "Start and pause",
+      "press": "P1:Start"
+    }
+  ],
+  "added": "The game as released in the US, in place of the Polish fan translation taken off the same day (Bryan, 23 Nov 2026: \"Yes, look\", \"Yes, add it\"); found in the Internet Archive and started muted in PLAY's own player",
+  "genre": [
+    "shoot 'em up"
+  ]
+}
