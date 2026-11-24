@@ -157,56 +157,74 @@
         {
           "id": "left",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "shoe",
           "label": "Guessed size",
           "color": "blue",
+          "size": 22,
+          "x": 100,
+          "y": 130,
+          "w": 140,
+          "h": 140,
+          "tagW": 160,
+          "tag": [
+            0,
+            100
+          ]
+        },
+        {
+          "id": "thing",
+          "type": "card",
           "o": 0,
-          "size": 22
+          "prop": "shoebox",
+          "label": "New shoes",
+          "color": "gold",
+          "size": 18,
+          "x": 315,
+          "y": 70,
+          "w": 160,
+          "h": 160,
+          "tagW": 150,
+          "tag": [
+            0,
+            110
+          ]
         },
         {
           "id": "right",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "gauge",
           "label": "Measured foot",
           "color": "blue",
-          "o": 0,
-          "size": 22
+          "size": 20,
+          "x": 540,
+          "y": 120,
+          "w": 160,
+          "h": 160,
+          "tagW": 170,
+          "tag": [
+            0,
+            105
+          ]
         },
         {
-          "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "NEW SHOES",
-          "color": "gold",
+          "id": "fit",
+          "type": "card",
           "o": 0,
-          "s": 0.4,
-          "size": 14
-        },
-        {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
+          "prop": "shoe",
+          "on": "right",
+          "label": "",
+          "x": 560,
+          "y": 140,
           "w": 120,
-          "label": "MEASURE",
-          "color": "fg",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
+          "h": 120
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
+          "y": 350,
           "label": "Measure first, buy once.",
           "color": "pink",
           "size": 22,
@@ -225,8 +243,7 @@
               "o": 1
             },
             "thing": {
-              "o": 1,
-              "s": 1
+              "o": 1
             }
           }
         },
@@ -234,9 +251,7 @@
           "say": "One person guesses. One measures.",
           "dur": 2.4,
           "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
+            "thing": {
               "shake": true
             }
           }
@@ -246,6 +261,7 @@
           "dur": 2.6,
           "set": {
             "left": {
+              "shake": true,
               "sub": "pinch all day"
             },
             "right": {
@@ -257,6 +273,9 @@
           "say": "The measured pair fits.",
           "dur": 2.6,
           "set": {
+            "fit": {
+              "o": 1
+            },
             "line": {
               "o": 1
             }
@@ -277,13 +296,8 @@
               "color": "green"
             },
             "thing": {
-              "label": "GARMENT",
+              "label": "Garment",
               "size": 18
-            },
-            "act": {
-              "label": "APPLY",
-              "size": 18,
-              "color": "pink"
             },
             "line": {
               "label": "Take measures, then alter the pattern.",

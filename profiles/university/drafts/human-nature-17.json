@@ -192,58 +192,105 @@
       ],
       "actors": [
         {
+          "id": "thing",
+          "type": "card",
+          "o": 0,
+          "prop": "window",
+          "broken": true,
+          "label": "The window",
+          "color": "gold",
+          "size": 18,
+          "x": 290,
+          "y": -10,
+          "w": 220,
+          "h": 220,
+          "tagW": 160,
+          "tag": [
+            175,
+            30
+          ]
+        },
+        {
+          "id": "ball",
+          "type": "card",
+          "o": 0,
+          "prop": "baseball",
+          "label": "",
+          "x": 417.5,
+          "y": 232.5,
+          "w": 45,
+          "h": 45
+        },
+        {
           "id": "left",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
-          "h": 100,
-          "label": "Pay for it",
-          "color": "blue",
           "o": 0,
-          "size": 22
+          "prop": "figure",
+          "pose": "stand",
+          "label": "Pay for it",
+          "x": 147.5,
+          "y": 150,
+          "w": 45,
+          "h": 100,
+          "turn": 0.8,
+          "color": "blue",
+          "size": 22,
+          "tagW": 160,
+          "tag": [
+            0,
+            110
+          ]
+        },
+        {
+          "id": "jar",
+          "type": "card",
+          "o": 0,
+          "prop": "jar",
+          "coins": 24,
+          "label": "",
+          "x": 215,
+          "y": 215,
+          "w": 80,
+          "h": 80
         },
         {
           "id": "right",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "figure",
+          "pose": "stand",
           "label": "Stop it next time",
+          "x": 617.5,
+          "y": 150,
+          "w": 45,
+          "h": 100,
+          "look": "dark",
+          "turn": -0.8,
           "color": "blue",
-          "o": 0,
-          "size": 18
+          "size": 20,
+          "tagW": 190,
+          "tag": [
+            0,
+            110
+          ]
         },
         {
-          "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "THE WINDOW",
-          "color": "gold",
+          "id": "sign",
+          "type": "card",
           "o": 0,
-          "s": 0.4,
-          "size": 14
-        },
-        {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "BREAK",
-          "color": "fg",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
+          "prop": "signpost",
+          "text": "PARK",
+          "label": "",
+          "x": 460,
+          "y": 150,
+          "w": 170,
+          "h": 170
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
+          "y": 350,
           "label": "Looking back, or looking ahead?",
           "color": "pink",
           "size": 22,
@@ -255,15 +302,20 @@
           "say": "A ball goes through a window.",
           "dur": 2.4,
           "set": {
+            "thing": {
+              "o": 1
+            },
+            "ball": {
+              "o": 1
+            },
             "left": {
               "o": 1
             },
             "right": {
               "o": 1
             },
-            "thing": {
-              "o": 1,
-              "s": 1
+            "jar": {
+              "o": 1
             }
           }
         },
@@ -271,9 +323,7 @@
           "say": "Something has to be done.",
           "dur": 2.4,
           "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
+            "thing": {
               "shake": true
             }
           }
@@ -282,6 +332,9 @@
           "say": "One parent says: you broke it, you pay.",
           "dur": 2.6,
           "set": {
+            "jar": {
+              "coins": 5
+            },
             "left": {
               "sub": "because they did it"
             },
@@ -294,6 +347,9 @@
           "say": "Another says: what will stop this next time?",
           "dur": 2.6,
           "set": {
+            "sign": {
+              "o": 1
+            },
             "line": {
               "o": 1
             }
@@ -314,13 +370,8 @@
               "color": "green"
             },
             "thing": {
-              "label": "THE OFFENSE",
-              "size": 14
-            },
-            "act": {
-              "label": "ANSWER",
-              "size": 18,
-              "color": "pink"
+              "label": "The offense",
+              "size": 18
             },
             "line": {
               "label": "Desert looks back. Safety looks forward.",

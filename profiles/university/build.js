@@ -67,7 +67,7 @@ function crystal(c, u) {
   const chip = (t) => '<div class="cx-chip">' + esc(t) + '</div>';
   const cfg = { id: c.slug + '-' + u.n, speed: x.speed, aha: x.aha };
   return '<div class="cx" data-cfg="' + esc(JSON.stringify(cfg)) + '">'
-    + '<h3>Make it set</h3><p class="cx-lead">Five partials from this unit are floating in a supercooled liquid. Everything is here, and nothing has set. One more piece is the nucleation point. Pick it and watch what happens. There is no score.</p>'
+    + '<h3>Make it set</h3><p class="cx-lead">Five partials from this unit lie on slips beside a bottle of supercooled water. Everything is here, and nothing has set. One more piece is the nucleation point. Pick it and watch what happens. There is no score.</p>'
     + '<div class="cx-stage"><canvas></canvas>'
     + '<div class="cx-col l">' + [0, 2, 4].map((i) => chip(x.partials[i])).join('') + '</div>'
     + '<div class="cx-col r">' + [1, 3].map((i) => chip(x.partials[i])).join('') + '</div></div>'
@@ -97,12 +97,12 @@ function scene(u) {
 
 // The lab: something to put your hands on (lab.js; Bryan, 15 Nov 2026: "interactive teaching, analogous teaching,
 // If This Then That labs"). Knobs are the IF, the bench answers, and each rule's THEN shows only once you made it happen.
-function lab(u) {
+function lab(u, c) {
   if (!shipsLab(u)) return ''; // the public copy carries a lab only once it is marked live
   const l = u.lab;
   const map = (l.map || []).map(([a, z]) => '<span><i>' + esc(a) + '</i> = <b>' + esc(z) + '</b></span>').join('');
   const cfg = { bench: l.bench, go: l.go, knobs: l.knobs, rules: l.rules, meet: l.meet, triesNote: l.triesNote, guess: l.guess };
-  return '<div class="lab" data-lab="' + esc(JSON.stringify(cfg)) + '">'
+  return '<div class="lab" data-key="' + esc(ruleKey(c, u, 'lab')) + '" data-lab="' + esc(JSON.stringify(cfg)) + '">'
     + '<div class="lab-top"><span class="lab-kick">Lab: if this, then that</span><b>' + esc(l.title) + '</b><p>' + esc(l.ask) + '</p></div>'
     + '<div class="lab-body"><div class="lab-stage"><canvas></canvas></div><div class="lab-side"></div></div>'
     + '<div class="lab-tries"></div><div class="lab-rules"></div>'
@@ -155,10 +155,198 @@ function scaleOne(sc) {
     + '</div>';
 }
 
+// The explainer: a real system built in 3D from its data file (explain.js, explain-model.js; Bryan, 22 Nov 2026: "i want
+// less "thing" and more issues or delemas ... issues ppl cant seem to grasp"). Stores fill and drain from flows; the
+// learner drags the choices people argue about, plays the years ahead or replays the measured ones, guesses first and
+// finds the rules. The parts, their words, the faders and the sources are plain HTML here, so all of it reads with no 3D.
+const shipsExplain = (u) => !!(u.explainer && (!LIVE || u.explainer.live));
+function explainBlock(u, c) {
+  if (!shipsExplain(u)) return '';
+  const ex = u.explainer;
+  const srcs = Object.values(ex.sources).map((x) => '<a href="' + esc(x.url) + '" target="_blank" rel="noopener">' + esc(x.by) + ', ' + esc(String(x.year)) + ', ' + esc(x.title) + (x.where ? ', ' + esc(x.where) : '') + '</a>').join('; ');
+  const partRow = (p, isStore) => '<li><button type="button" data-part="' + esc(p.id) + '" title="What is ' + esc(p.name.toLowerCase()) + '? Press to see it on the world"><i class="t-' + esc(isStore && !p.color ? 'store' : p.color) + '"></i><b>' + esc(p.name) + '</b><span class="v"></span></button><p>' + esc(p.words) + '</p></li>';
+  const faders = ex.choices.map((c) => '<label class="ex-fader" title="' + esc(c.tip) + '"><span>' + esc(c.name) + ' <output data-choice="' + esc(c.id) + '">' + esc(String(c.start)) + '</output></span><input type="range" data-choice="' + esc(c.id) + '" min="' + c.min + '" max="' + c.max + '" step="' + c.step + '" value="' + c.start + '" aria-label="' + esc(c.name) + '" title="' + esc(c.tip) + '"></label>').join('');
+  const g = ex.guess ? '<div class="ex-guess"><b>Guess first</b><p>' + esc(ex.guess.q) + '</p><div class="opts">' + ex.guess.options.map((o, i) => '<button type="button" data-i="' + i + '" title="Choose this answer, then watch it play out">' + esc(o) + '</button>').join('') + '</div></div>' : '';
+  const speeds = [[1, 'Slow', 'One year a second'], [3, 'Steady', 'Three years a second'], [10, 'Fast', 'Ten years a second']].map(([v, t, tip]) => '<button type="button" data-speed="' + v + '" title="' + tip + '">' + t + '</button>').join('');
+  return '<div class="ex" data-key="' + esc(ruleKey(c, u, 'ex')) + '" data-ex="' + esc(JSON.stringify(ex)) + '">'
+    + '<div class="ex-top"><span class="ex-kick">See how it works</span><b>' + esc(ex.title) + '</b><p>' + esc(ex.ask) + '</p></div>'
+    + '<div class="ex-body"><div class="ex-main">'
+    + '<div class="ex-stage" tabindex="0" aria-label="3D world: ' + esc(ex.title) + '. Drag to turn it, arrow keys also turn it, plus and minus zoom. Press a place to learn what it is."><canvas></canvas><div class="ex-labels"></div><div class="ex-hud" aria-hidden="true"></div><div class="ex-card" hidden></div>' + g + '<p class="ex-hint">Drag to turn the world. Press the stage, then scroll or pinch to zoom. Press the land, the sea or the air to learn what it does.</p></div>'
+    + '<p class="ex-gap" hidden aria-live="polite"></p><p class="ex-say" aria-live="polite"></p></div>'
+    + '<div class="ex-side"><div class="ex-col"><div class="ex-faders">' + faders + '</div>'
+    + '<div class="ex-play"><button type="button" data-do="play" class="ex-go" title="Run the world forward a year at a time with your settings">Play the years ahead</button><button type="button" data-do="replay" title="Replay the measured years from ' + ex.clock.from + ' to ' + ex.clock.now + '">Replay ' + ex.clock.from + ' to ' + ex.clock.now + '</button><button type="button" data-do="today" title="Go back to ' + ex.clock.now + ' with today\'s settings">Back to today</button><span class="ex-speed">' + speeds + '</span></div></div><div class="ex-col">'
+    + '<canvas class="ex-trace" aria-label="The ' + esc(ex.stores[0].name.toLowerCase()) + ' over the years: measured in white, your run in pink"></canvas><div class="ex-balance"></div></div><div class="ex-col">'
+    + '<ol class="ex-parts">' + ex.stores.map((p) => partRow(p, true)).join('') + ex.flows.map((p) => partRow(p, false)).join('') + '</ol></div></div></div>'
+    + '<div class="ex-rules"></div>'
+    + (ex.note ? '<p class="ex-note">' + esc(ex.note) + '</p>' : '')
+    + '<p class="ex-src">Where the numbers come from: ' + srcs + '. Each speck is ' + esc(ex.eachWords) + '.' + (ex.world === 'globe' ? ' The Earth picture is NASA Earth Observatory\'s Blue Marble (Reto Stockli); land and sea from Natural Earth.' : ex.world === 'basin' ? ' The ground is NOAA\'s ETOPO1 heights with NASA Earth Observatory\'s Blue Marble (Reto Stockli) laid over it; the rivers are traced downhill over those heights by us.' : '') + '</p>'
+    + '</div>';
+}
+
+// If this, then that, across the whole University (Bryan, 22 Nov 2026: "id like to bu8ild a ifttt page of many topics to
+// show and be useful on and for many many topics"; his Mind Atlas: "a dominoes or ifttt of the worlds levers"). Every
+// rule from every lab and explainer that ships, by area, course and unit. A rule's "then" shows once the reader has
+// made it happen in its own lab or explainer (remembered in their browser as vu:found, under the rule's key).
+const ruleKey = (c, u, kind) => c.slug + '/' + u.n + '/' + kind;
+function rulesOf(all) {
+  const out = [];
+  for (const c of all) for (const u of c.units) {
+    const blocks = [];
+    if (u.lab && shipsLab(u)) blocks.push(['lab', u.lab, 'lab']);
+    if (u.explainer && shipsExplain(u)) blocks.push(['ex', u.explainer, 'explainer']);
+    for (const [kind, b, word] of blocks) (b.rules || []).forEach((r, i) => out.push({ area: c.domain, course: c.name, slug: c.slug, n: u.n, unit: u.title.replace(/^Draft, not kept yet: /, ''), title: b.title, word, key: ruleKey(c, u, kind) + '/' + i, if: String(r.if).replace(/[,\s]+$/, ''), then: r.then }));
+  }
+  return out;
+}
+function iftttPage(all, list) {
+  const rules = rulesOf(all);
+  const areas = list.types.filter((t) => rules.some((r) => r.area === t));
+  const groups = areas.map((t) => {
+    const mine = rules.filter((r) => r.area === t), places = [...new Set(mine.map((r) => r.slug + '#u' + r.n))];
+    return '<section class="ra" data-area="' + esc(t) + '" style="--area:' + hue(t) + '"><h2>' + esc(t) + '</h2>' + places.map((p) => {
+      const rs = mine.filter((r) => r.slug + '#u' + r.n === p), r0 = rs[0];
+      return '<div class="rp"><a class="go" href="' + esc(r0.slug) + '.html#u' + r0.n + '" title="Open the ' + esc(r0.word) + ' and make these happen yourself"><small>' + esc(r0.course) + ', unit ' + r0.n + '</small><b>' + esc(r0.title || r0.unit) + '</b><span>Go and do it</span></a><ul>'
+        + rs.map((r) => '<li data-key="' + esc(r.key) + '"><b>If</b> ' + esc(r.if) + ', <b>then</b> <span class="th" hidden>' + esc(r.then) + '</span><i class="tbd">make it happen and see.</i></li>').join('') + '</ul></div>';
+    }).join('') + '</section>';
+  }).join('');
+  const chips = '<button type="button" class="on" data-area="" title="Show the rules from every area">Every area</button>' + areas.map((t) => '<button type="button" data-area="' + esc(t) + '" style="--area:' + hue(t) + '" title="Show only the rules from ' + esc(t) + '">' + esc(t) + '</button>').join('');
+  return `<!doctype html><html lang="en" data-look="${LOOK}" data-type="${TYPE}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${APPHEAD}<title>If this, then that | Void University</title>${FONTS}<style>${BASE}
+main{max-width:1100px;margin:0 auto;padding:30px 24px 60px}
+.lead h1{font-family:var(--head);font-size:40px;line-height:1.1;margin:0 0 10px}.lead p{margin:0 0 6px;color:var(--soft);font-size:18px;max-width:760px}
+.tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:18px 0 6px}.tools button{font:inherit;font-size:14px;background:var(--panel);color:var(--fg);border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer}.tools button.on{border-color:var(--area,var(--gold));color:var(--area,var(--gold))}
+#rfind{font:inherit;font-size:15px;margin-left:auto;min-width:240px;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--panel);color:var(--fg)}#rfind:focus{outline:none;border-color:var(--gold)}
+.count{margin:10px 0 0;color:var(--dim);font-size:15px}.count b{color:#5fe39a}
+.ra{margin:26px 0 0}.ra h2{font-family:var(--head);font-size:24px;margin:0 0 10px;padding-bottom:6px;border-bottom:2px solid var(--area)}
+.rp{display:grid;grid-template-columns:260px minmax(0,1fr);gap:14px;margin:0 0 14px;padding:14px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+.rp .go{display:flex;flex-direction:column;gap:3px;text-decoration:none;color:var(--fg);padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--deep);align-self:start}.rp .go:hover{border-color:var(--area)}.rp .go small{color:var(--dim);font-size:13px}.rp .go b{font-family:var(--head);font-size:17px}.rp .go span{color:var(--area);font-size:14px;font-weight:600}
+.rp ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}.rp li{padding:8px 12px;border:1px solid var(--line);border-radius:8px;font-size:16px;background:var(--deep)}.rp li b{color:var(--gold)}.rp li .tbd{color:var(--dim)}.rp li.found{border-color:rgba(95,227,154,.5)}.rp li[hidden],.ra[hidden],.rp[hidden]{display:none}
+@media (max-width:820px){.rp{grid-template-columns:1fr}#rfind{margin-left:0;flex-basis:100%}.lead h1{font-size:32px}}
+${LOOKCSS}${TYPECSS}</style></head><body>
+${top('ifttt', all)}<main><div class="lead"><h1>If this, then that</h1><p>Every rule you can find in the University, by area. Each "then" stays hidden until you make it happen yourself in its lesson. Press a lesson to go and do it.</p></div>
+<div class="tools">${chips}<input type="search" id="rfind" placeholder="Find a rule" aria-label="Find a rule" title="Type a word to show only the rules that use it"></div>
+<div class="tools" role="group" aria-label="Which rules"><button type="button" class="on" data-show="all" title="Show every rule">All rules</button><button type="button" data-show="found" title="Show only the rules you have found">Found</button><button type="button" data-show="open" title="Show only the rules you have not found yet">Still to find</button></div>
+<p class="count" aria-live="polite"></p>${groups}</main>${FOOT()}
+<script>
+(function () {
+  var had = []; try { had = JSON.parse(localStorage.getItem('vu:found') || '[]'); } catch (e) { had = []; }
+  var lis = [].slice.call(document.querySelectorAll('.rp li')), area = '', show = 'all', q = '';
+  lis.forEach(function (li) { if (had.indexOf(li.dataset.key) >= 0) { li.classList.add('found'); li.querySelector('.th').hidden = false; li.querySelector('.tbd').hidden = true; } });
+  function paint() {
+    var n = 0, f = 0;
+    lis.forEach(function (li) {
+      var a = li.closest('.ra').dataset.area, isF = li.classList.contains('found');
+      var on = (!area || a === area) && (show === 'all' || (show === 'found') === isF) && (!q || li.textContent.toLowerCase().indexOf(q) >= 0);
+      li.hidden = !on; if (on) { n++; if (isF) f++; }
+    });
+    document.querySelectorAll('.rp').forEach(function (p) { p.hidden = !p.querySelector('li:not([hidden])'); });
+    document.querySelectorAll('.ra').forEach(function (s) { s.hidden = !s.querySelector('.rp:not([hidden])'); });
+    var all = lis.filter(function (li) { return li.classList.contains('found'); }).length;
+    document.querySelector('.count').innerHTML = '<b>' + all + ' of ' + lis.length + '</b> rules found so far.' + (n !== lis.length ? ' Showing ' + n + '.' : '') + (n === 0 ? ' Nothing matches.' : '');
+  }
+  document.querySelectorAll('[data-area]').forEach(function (b) { if (b.tagName !== 'BUTTON') return; b.onclick = function () { area = b.dataset.area; document.querySelectorAll('button[data-area]').forEach(function (x) { x.classList.toggle('on', x === b); }); paint(); }; });
+  document.querySelectorAll('[data-show]').forEach(function (b) { b.onclick = function () { show = b.dataset.show; document.querySelectorAll('[data-show]').forEach(function (x) { x.classList.toggle('on', x === b); }); paint(); }; });
+  document.getElementById('rfind').oninput = function (e) { q = e.target.value.trim().toLowerCase(); paint(); };
+  paint();
+})();
+</script></body></html>`;
+}
+
+// The front page's door (Bryan, 22 Nov 2026: "Option A"; docs/LANDING-REVIEW.md). Questions people can guess at, from
+// blocks that already ask for a guess: the explainers (their gap worked out here with the same model the page runs)
+// and the scale stages. Hooks: a unit may carry "hook", the question that brings someone to it, for the row of things
+// people get wrong.
+const EXM = require('./explain-model.js');
+function doorQuestions(all) {
+  const out = [];
+  for (const c of all) for (const u of c.units) {
+    if (u.explainer && shipsExplain(u) && u.explainer.guess) {
+      const ex = u.explainer, g = ex.guess, m = EXM.make(ex);
+      const run = m.run(Object.assign({}, ...ex.choices.map((ch) => ({ [ch.id]: ch.start })), g.set), g.years, ex.stores[0].id);
+      out.push({ q: g.door || g.q, options: g.options, answer: g.answer, after: EXM.say(g.after, { from: run[0].value, to: run[run.length - 1].value }), href: c.slug + '.html#u' + u.n, go: 'See it happen: ' + ex.title });
+    }
+    for (const sc of scalesOf(u)) if ((!LIVE || sc.live) && sc.guess) out.push({ q: sc.guess.door || sc.guess.q, options: sc.guess.options, answer: sc.guess.answer, after: sc.guess.after, href: c.slug + '.html#u' + u.n, go: 'See it to scale: ' + sc.title });
+  }
+  return out;
+}
+// The Tools row (Bryan, 22 Nov 2026: "i want it to be a place of tools"): what you do, not only watch. Each tool
+// links to where it lives; the practice sites (Mind Gym, Body Atlas) open in a new tab.
+function toolsRow(all) {
+  const ex = []; for (const c of all) for (const u of c.units) if (u.explainer && shipsExplain(u)) ex.push({ c, u });
+  const nq = Object.values(recallBank(all)).filter((b) => b.q.length >= 2 || b.crystal).length;
+  const tool = (href, mark, name, line, more, ext) => '<a class="tool" href="' + esc(href) + '"' + (ext ? ' target="_blank" rel="noopener"' : '') + ' title="' + esc(name + ': ' + line) + '"><span class="mark ' + mark + '"></span><b>' + esc(name) + '</b><span>' + esc(line) + '</span><i>' + esc(more) + '</i></a>';
+  const cards = [];
+  if (nq) cards.push(tool('study.html', 'm-study', 'Study together', 'One shared screen, everyone\'s phones. Guess first, see how the room split, let the source settle it.', 'Open a room, ' + nq + ' lessons to study'));
+  if (ex.length) cards.push(tool(ex[0].c.slug + '.html#u' + ex[0].u.n, 'm-earth', 'See how it works', 'Real systems in 3D: ' + ex.map((x) => x.u.explainer.title.replace(/^The /, 'the ')).join(', ') + '. Drag the choices, play the years.', ex.length + (ex.length === 1 ? ' explainer' : ' explainers')));
+  if (RULES) cards.push(tool('ifttt.html', 'm-rules', 'If this, then that', 'Every rule you can make happen yourself, across every topic. Find them, then see them all.', RULES + ' rules'));
+  for (const g of PRACTICE.filter((x) => x.live)) cards.push(tool(g.url, 'm-practice', g.name, g.what || '', g.rooms.length + ' ' + (g.word || 'room') + (g.rooms.length === 1 ? '' : 's'), true));
+  return cards.length ? '<section class="tools" id="tools"><h2><span>Tools</span><small>things to do, not only watch</small></h2><div class="toolrow">' + cards.join('') + '</div></section>' : '';
+}
+function hooksOf(all) {
+  const out = [];
+  for (const c of all) for (const u of c.units) if (u.hook) {
+    const where = u.explainer && shipsExplain(u) ? u.explainer.title : u.lab && shipsLab(u) ? u.lab.title : u.title;
+    out.push({ area: c.domain, hook: u.hook, href: c.slug + '.html#u' + u.n, where });
+  }
+  return out;
+}
+// Where a quiz answer's quote comes from, said plainly for the study room's screen.
+function quoteFrom(c, u, q) {
+  if (q.src && u.explainer && u.explainer.sources[q.src]) { const x = u.explainer.sources[q.src]; return x.by + ', ' + x.year; }
+  if (q.lesson) return 'the lesson in Body Atlas';
+  if (q.ref) return 'the book';
+  if (typeof q.t === 'number') return (u.main && u.main.title ? u.main.title : 'the lecture') + ', at ' + clock(q.t);
+  return c.name;
+}
+// What Remember it asks: every quiz question of the lessons that ship, by course and unit (recall.json, fetched by the
+// front page only once the reader has marked a lesson done).
+function recallBank(all) {
+  const out = {};
+  for (const c of all) for (const u of c.units) {
+    const cr = u.crystal && (u.crystal.partials || []).length >= 3 && u.crystal.key ? { partials: u.crystal.partials, key: u.crystal.key, decoys: (u.crystal.decoys || []).map((d) => ({ text: d.text, why: d.why || '' })), aha: u.crystal.aha || '' } : null;
+    if (!(u.quiz || []).length && !cr) continue;
+    out[c.slug + '/' + u.n] = { course: c.name, title: u.title.replace(/^Draft, not kept yet: /, ''), q: (u.quiz || []).map((q) => ({ q: q.q, choices: q.choices, a: q.a, why: q.why, quote: q.quote || '', from: quoteFrom(c, u, q) })), ...(cr ? { crystal: cr } : {}) };
+  }
+  return out;
+}
+
+// Study together: a room for one shared screen and everyone's phones (Bryan, 22 Nov 2026: "i want this to be a side
+// room ppl can use on void u. i want v u to be more hemn a place to mfind lectures. i want it to be a place of tools").
+// study.js runs it; the phones run the phone page in its study mode; the sets are the lessons' own questions.
+function studyPage(all) {
+  return `<!doctype html><html lang="en" data-look="${LOOK}" data-type="${TYPE}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${APPHEAD}<title>Study together | Void University</title>${FONTS}<style>${BASE}
+main{max-width:1200px;margin:0 auto;padding:26px 24px 60px}
+.lead h1{font-family:var(--head);font-size:38px;line-height:1.1;margin:0 0 8px}.lead p{margin:0 0 16px;color:var(--soft);font-size:18px;max-width:780px}
+.room{display:grid;grid-template-columns:260px minmax(0,1fr);gap:20px;align-items:start}
+.door2,.panel{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px}
+.door2 .qrbox{background:#fff;border-radius:10px;padding:8px;line-height:0;min-height:20px}.door2 .qrbox:empty{display:none}.door2 .qrbox svg{width:100%;height:auto;display:block}
+.door2 .code{font-family:var(--head);font-size:30px;letter-spacing:.06em;color:var(--acc);margin:10px 0 2px}.door2 p{margin:6px 0;font-size:14px;color:var(--soft);overflow-wrap:anywhere}
+.btn2{font:inherit;font-size:16px;padding:11px 18px;border-radius:12px;border:1px solid var(--line);background:var(--panel2);color:var(--fg);cursor:pointer}.btn2:hover{border-color:var(--acc)}.btn2.go{background:#ff4f8b;border-color:#ff4f8b;color:#fff;font-weight:700}
+#state{font-weight:600;color:var(--fg)}#count{color:var(--gold);font-weight:600}
+#find2{font:inherit;font-size:15px;width:100%;padding:9px 14px;border-radius:999px;border:1px solid var(--line);background:var(--panel2);color:var(--fg);margin:0 0 12px}
+.setgroup h3{font-family:var(--head);font-size:17px;margin:14px 0 6px}.setgroup{display:flex;flex-direction:column;gap:6px}
+.setbtn{display:flex;justify-content:space-between;gap:12px;text-align:left;font:inherit;font-size:15px;padding:9px 12px;border-radius:10px;border:1px solid var(--line);background:var(--panel2);color:var(--fg);cursor:pointer}.setbtn:hover{border-color:var(--acc)}.setbtn small{color:var(--dim);white-space:nowrap}.setbtn[hidden]{display:none}
+#setname{color:var(--dim);font-size:14px;margin:0 0 4px}#qn{color:var(--acc);font-size:14px;font-weight:600;margin:0}#qtext{font-family:var(--head);font-size:28px;line-height:1.2;margin:6px 0 14px}
+.bar{display:grid;grid-template-columns:minmax(0,260px) 1fr 34px;gap:12px;align-items:center;margin:8px 0;font-size:16px}.bar .track{height:26px;border-radius:8px;background:var(--panel2);overflow:hidden}.bar .track i{display:block;height:100%;background:#5fd4ff;transition:width .6s}.bar.real .bt{color:#5fe39a;font-weight:700}.bar.real .track i{background:#5fe39a}
+#source{margin:14px 0 0;padding:12px 14px;border-left:3px solid var(--gold);background:rgba(0,0,0,.25);border-radius:0 10px 10px 0}#srcline{margin:0 0 6px;font-size:17px}#srcquote{margin:0;color:var(--soft);font-size:15px;font-style:italic}
+.acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.eatgrid{display:grid;grid-template-columns:1fr 230px 1fr;gap:16px;align-items:center;margin:14px 0}.eatcol{display:flex;flex-direction:column;gap:8px}.chip.in{padding:9px 11px;border-radius:10px;border:1px solid #5fd4ff;color:#cfeeff;background:rgba(95,212,255,.08);font-size:14px;animation:drop .5s ease}
+.gem{width:210px;height:210px;margin:0 auto;clip-path:polygon(25% 5%,75% 5%,100% 50%,75% 95%,25% 95%,0 50%);background:linear-gradient(135deg,rgba(159,230,255,.25),rgba(47,140,255,.18));display:grid;place-items:center;text-align:center;padding:26px;font-family:var(--head);font-size:15px;color:var(--dim);transition:background .6s,transform .4s}.gem.set{background:linear-gradient(135deg,#9fe6ff,#2f8cff 60%,#ff4f8b);color:#041018;transform:scale(1.06)}.gem.cracked{background:repeating-linear-gradient(120deg,rgba(255,143,150,.35) 0 6px,rgba(20,10,14,.9) 6px 14px);color:#ffb3b8;animation:shake .4s}
+#eatline{font-size:17px;margin:6px 0 0}.cards2{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}.card2{padding:12px 14px;border-radius:12px;background:var(--panel2);border:1px solid var(--line);font-size:16px}.card2 small{display:block;margin-top:6px;color:var(--dim);font-size:13px}.card2.pick{border-color:#5fe39a}@keyframes drop{from{opacity:0;transform:translateY(-8px)}to{opacity:1}}@keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}@media (prefers-reduced-motion:reduce){.chip.in,.gem.cracked{animation:none}}@media (max-width:900px){.eatgrid{grid-template-columns:1fr}.gem{width:170px;height:170px}}
+[hidden]{display:none!important}
+@media (max-width:900px){.room{grid-template-columns:1fr}.lead h1{font-size:30px}#qtext{font-size:23px}.bar{grid-template-columns:minmax(0,1fr) 90px 28px}}
+${LOOKCSS}${TYPECSS}</style></head><body>
+${top('study', all)}<main id="study"><div class="lead"><h1>Study together</h1><p>One shared screen and everyone's phones. Pick a lesson; each question goes to every phone; everyone guesses privately; then the room sees how it split and the source settles it. No names, no scores, and nothing is kept.</p></div>
+<div class="room"><div class="door2"><button type="button" class="btn2 go" id="open" title="Open a room the phones can join">Open a room</button><div class="qrbox" id="qr" aria-hidden="true"></div><div class="code" id="code"></div><p id="addr"></p><p id="count">0 phones in the room</p><p id="state" role="status">Open a room, then scan its code with your phones.</p><button type="button" class="btn2" id="other" hidden title="If a phone cannot open the page, this computer may have another address on your network">Phone cannot open it? Try another address</button><button type="button" class="btn2" id="end" title="End the session: the phones are told, and nothing is kept">End the session</button></div>
+<div class="panel"><div id="pick"><h2 style="margin:0 0 10px">Pick a lesson to study</h2><input type="search" id="find" placeholder="Find a lesson" aria-label="Find a lesson" title="Type a word to find a lesson"><div id="sets"></div></div>
+<div id="how" hidden><p id="howname" style="color:var(--dim);margin:0 0 6px"></p><h2 style="margin:0 0 12px">How do you want to study it?</h2><div class="acts"><button type="button" class="btn2 go" id="howguess" title="Each question goes to every phone; everyone guesses privately; then the room sees how it split">Guess first</button><button type="button" class="btn2 go" id="howsay" title="Everyone writes the idea in their own words; the room sees them without names and picks the clearest">Say it another way</button><button type="button" class="btn2 go" id="howeat" title="The pieces go to the phones; the room builds the idea together; a wrong piece cracks it">Pattern Eater</button><button type="button" class="btn2" id="howback" title="Choose another lesson">Pick another lesson</button></div></div><div id="eatbox" hidden><p id="eatname" style="color:var(--dim);margin:0 0 4px"></p><p style="color:var(--acc);font-weight:600;margin:0">Pattern Eater: send the pieces that belong. A wrong one cracks it; the next right one rebuilds it.</p><div class="eatgrid"><div class="eatcol" id="eatleft"></div><div class="gem" id="gem">Not set yet</div><div class="eatcol" id="eatright"></div></div><p id="eatline"></p><div class="acts"><button type="button" class="btn2 go" id="showidea" hidden title="Show the idea that just set, after the room has said it out loud">Show the idea</button><button type="button" class="btn2 go" id="eatsay" title="Now everyone says the idea in their own words">Say it another way</button><button type="button" class="btn2" id="redeal" title="Deal the pieces still out again, to the phones in the room now">Deal again</button><button type="button" class="btn2" id="eatback" title="Choose another lesson">Pick another lesson</button></div></div><div id="saybox" hidden><p id="sayname" style="color:var(--dim);margin:0 0 4px"></p><p style="color:var(--acc);font-weight:600;margin:0">Say it another way: everyone writes this idea in their own words. Nothing shows until all are in.</p><p id="sayidea" style="font-family:var(--head);font-size:24px;margin:8px 0 12px"></p><div class="cards2" id="cards"></div><p id="saypick" style="color:var(--soft)"></p><div class="acts"><button type="button" class="btn2" id="showcards" hidden title="Stop waiting and show what has been written">Show what is written</button><button type="button" class="btn2" id="sayback" title="Choose another lesson">Pick another lesson</button></div></div><div id="run" hidden><p id="setname"></p><p id="qn"></p><p id="qtext"></p><div id="bars"></div><div id="source" hidden><p id="srcline"></p><p id="srcquote"></p></div>
+<div class="acts"><button type="button" class="btn2" id="reveal" title="Stop waiting and show how the room split">Show how the room split</button><button type="button" class="btn2 go" id="next" hidden title="Send the next question to the phones">Next question</button><button type="button" class="btn2" id="again" hidden title="Choose another lesson to study">Pick another lesson</button></div></div></div></div>
+</main>${FOOT()}<script src="${LIVE ? 'qr.js' : 'make/qr.js'}"></script><script src="study.js"></script></body></html>`;
+}
+
 // Bryan, 15 Nov 2026: "less words". A unit shows its picture, its main piece and its crystal; the rest is one tap away.
 // The mind's mechanisms are a supplement shelf (Bryan, 15 Nov 2026: "the smaller ones like the FOMO ... are
 // supplemental that go for anything"). Any unit lists the mechanisms it leans on; the mechanism shows where it is used.
-let MECH = null; const USED = {};
+let MECH = null; const USED = {}; let RULES = 0;
 function links(u, c) {
   if (c.shelf === 'supplement') {
     const used = USED[u.n] || [];
@@ -194,10 +382,10 @@ const shipsAnswer = (u) => !!(u.main && u.main.item && (u.quiz || []).some((q) =
 // Our own quiz, written from the lecture; every answer quotes the line it comes from (checked word for word).
 function quiz(u) {
   if (!(u.quiz || []).length) return '';
-  return '<details class="quiz"><summary><h3>Check yourself</h3><span>' + u.quiz.length + ' questions, each answer quotes the ' + (u.reading ? 'book' : u.main && u.main.role === 'train' ? 'lesson' : 'lecture') + '</span></summary>' + u.quiz.map((q, i) => '<div class="qq" data-a="' + q.a + '"><p><b>' + (i + 1) + '.</b> ' + esc(q.q) + '</p><div class="qc">'
+  return '<details class="quiz"><summary><h3>Check yourself</h3><span>' + u.quiz.length + ' questions, each answer quotes the ' + (u.explainer ? 'sources' : u.reading ? 'book' : u.main && u.main.role === 'train' ? 'lesson' : 'lecture') + '</span></summary>' + u.quiz.map((q, i) => '<div class="qq" data-a="' + q.a + '"><p><b>' + (i + 1) + '.</b> ' + esc(q.q) + '</p><div class="qc">'
     + q.choices.map((ch, j) => '<button data-j="' + j + '">' + esc(ch) + '</button>').join('') + '</div>'
     + '<p class="qh" role="status" hidden>Not quite. You have one more try.</p>'
-    + '<div class="qa" hidden><p class="qr"></p><p>' + esc(q.why) + '</p><blockquote>"' + esc(q.quote) + '"' + (q.lesson ? '<a class="qt" href="' + esc(q.ref) + '" target="_blank" rel="noopener">From the lesson: open it</a>' : q.ref ? '<a class="qt" href="' + esc(q.ref) + '">From the book: open the chapter</a>' : '<button class="qt" data-t="' + q.t + '"' + (q.e ? ' data-e="' + q.e + '"' : '') + '>From the lecture, at ' + clock(q.t) + '</button>') + '</blockquote></div></div>').join('')
+    + '<div class="qa" hidden><p class="qr"></p><p>' + esc(q.why) + '</p><blockquote>"' + esc(q.quote) + '"' + (q.src && u.explainer && u.explainer.sources[q.src] ? '<a class="qt" href="' + esc(u.explainer.sources[q.src].url) + '" target="_blank" rel="noopener">From ' + esc(u.explainer.sources[q.src].by) + ', ' + esc(String(u.explainer.sources[q.src].year)) + ': open it</a>' : q.lesson ? '<a class="qt" href="' + esc(q.ref) + '" target="_blank" rel="noopener">From the lesson: open it</a>' : q.ref ? '<a class="qt" href="' + esc(q.ref) + '">From the book: open the chapter</a>' : '<button class="qt" data-t="' + q.t + '"' + (q.e ? ' data-e="' + q.e + '"' : '') + '>From the lecture, at ' + clock(q.t) + '</button>') + '</blockquote></div></div>').join('')
     + '<div class="qs" hidden></div></details>';
 }
 
@@ -222,8 +410,9 @@ function unit(u, voices, c) {
     + '<p class="need"><b>Why you need this:</b> ' + esc(needIt(u)) + '</p>'
     + scene(u)
     + links(u, c)
-    + lab(u)
+    + lab(u, c)
     + scaleBlock(u)
+    + explainBlock(u, c)
     + (u.main ? '<div class="pieces">' + piece(u.main.role === 'train' ? { ...u.main, unit: u.n } : u.main, true) + '</div>' : '')
     // Preview only: make questions with a phone while the lecture plays (make/screen.js shows the button once the
     // preview server says this lecture has been heard). The public copy never carries it.
@@ -317,6 +506,10 @@ footer{max-width:1500px;margin:0 auto;padding:10px 32px 40px;color:var(--dim);fo
 .cx-lead{margin:2px 0 12px;color:var(--soft);font-size:15px;max-width:900px}
 .cx-stage{position:relative;height:360px;border-radius:10px;overflow:hidden;background:radial-gradient(ellipse at center,#0e1a24 0%,#07090f 70%)}
 .cx-stage canvas{position:absolute;inset:0;width:100%;height:100%}
+.cx.d3 .cx-stage{background:#070605}
+.cx.d3 .cx-col{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%)}
+/* on a phone the slips on the table are too small to read, so the same pieces are laid out under the bottle as paper slips */
+@media (max-width:600px){.cx.d3 .cx-stage{height:auto;padding-top:300px}.cx.d3 .cx-stage canvas{height:300px;bottom:auto}.cx.d3 .cx-col{position:static;width:auto;height:auto;clip-path:none;overflow:visible;padding:0 10px 10px;gap:8px;justify-content:flex-start}.cx.d3 .cx-col.l{padding-top:10px}.cx.d3 .cx-chip{background:#efe6cf;color:#2a2a2a;font:italic 600 16px "VU Hand",Georgia,serif;border:0;border-radius:3px;box-shadow:0 2px 6px rgba(0,0,0,.5);animation:none}.cx.d3 .cx-chip.set{color:#123a5c}.cx.d3 .cx-chip.bad{color:#8a4f0e}}
 .cx-col{position:absolute;top:0;bottom:0;width:min(240px,26%);display:flex;flex-direction:column;justify-content:space-around;padding:10px;pointer-events:none}
 .cx-col.l{left:0}.cx-col.r{right:0}
 .cx-chip{background:rgba(22,25,38,.85);border:1px dashed var(--line2);border-radius:10px;padding:8px 10px;font-size:13px;line-height:1.35;color:var(--dim2);transition:all .6s ease;animation:drift 6s ease-in-out infinite alternate}
@@ -340,8 +533,11 @@ footer{max-width:1500px;margin:0 auto;padding:10px 32px 40px;color:var(--dim);fo
 .cx-after small{color:var(--dim)}
 .sc{background:var(--deep);border:1px solid var(--line);border-radius:12px;padding:14px 18px 16px;margin:0 0 18px}
 .sc-like{font-size:14px;color:var(--pink);font-weight:700}
-.sc-stage{margin-top:8px;border-radius:10px;background:radial-gradient(ellipse at center,#0e1a24 0%,#07090f 75%);aspect-ratio:800/360;overflow:hidden}
-.sc-stage svg{display:block;width:100%;height:100%;font-family:system-ui,Segoe UI,Roboto,sans-serif}
+/* the stage is always the full width of its box: a short window lowers it (max-height below) and the camera widens its view, instead of the stage shrinking to one side */
+.sc-stage{position:relative;width:100%;margin-top:8px;border-radius:10px;background:radial-gradient(ellipse at 50% 55%,#24160c 0%,#070605 72%);aspect-ratio:800/360;overflow:hidden}
+.sc-stage canvas{position:absolute;inset:0;display:block;width:100%;height:100%}
+.sc-stage::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 45%,transparent 55%,rgba(0,0,0,.5) 100%)}
+.sc.no3d .sc-stage{display:none}
 .sc-say{min-height:40px;margin:12px 2px 6px;font-family:var(--head);font-size:22px;font-weight:500;text-align:center}
 .sc-ctrl{display:flex;align-items:center;justify-content:center;gap:10px}
 .sc-ctrl button{font:inherit;font-size:15px;background:var(--panel2);color:var(--fg);border:1px solid var(--line2);border-radius:10px;padding:8px 16px;cursor:pointer;min-width:44px;min-height:40px}
@@ -373,6 +569,32 @@ footer{max-width:1500px;margin:0 auto;padding:10px 32px 40px;color:var(--dim);fo
 .scale-list button:hover,.scale-list button.on{border-color:var(--gold)}.scale-list i{width:14px;height:14px;border-radius:3px;grid-row:1 / span 2}.scale-list b{font-size:15px;font-weight:600}.scale-list .v{grid-column:2;font-size:13px;color:var(--dim)}.scale-list button.ghost i{opacity:.35}
 .scale-note,.scale-src{margin:12px 0 0;font-size:14px;color:var(--dim)}.scale-src a{color:var(--acc)}
 @media (max-width:1000px){.scale-body{grid-template-columns:1fr}.scale-list{max-height:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}}
+.ex{background:var(--deep);border:1px solid var(--line);border-radius:12px;padding:16px 18px 18px;margin:0 0 18px}
+.ex-kick{display:block;font-size:14px;color:var(--acc);font-weight:700}.ex-top b{display:block;font-family:var(--head);font-size:24px;margin:2px 0 4px}.ex-top p{margin:0 0 12px;color:var(--soft);max-width:860px}
+.ex-body{display:flex;flex-direction:column;gap:14px}
+.ex-stage{position:relative;border-radius:10px;background:#020308;aspect-ratio:16/9;max-height:74vh;margin:0 auto;width:100%;overflow:hidden;border:1px solid #1b2030;outline:none}.ex-stage:focus-visible,.ex-stage.live{border-color:#5fd4ff}
+.ex-stage canvas{display:block;width:100%;height:100%;touch-action:none;cursor:grab}.ex-stage canvas:active{cursor:grabbing}.ex-stage.flat canvas{display:none}.ex-stage.flat{aspect-ratio:auto;padding:18px}
+.ex-labels{position:absolute;inset:0;pointer-events:none;overflow:hidden}.ex-labels button{position:absolute;left:0;top:0;pointer-events:auto;font:inherit;font-size:13px;font-weight:600;color:#f6f7fb;background:rgba(5,6,12,.7);border:1px solid #2b3045;border-radius:999px;padding:3px 10px;cursor:pointer;white-space:nowrap;backdrop-filter:blur(4px)}.ex-labels button:hover,.ex-labels button.on{border-color:#ffc44d;color:#ffc44d}
+.ex-hud{position:absolute;left:10px;top:10px;z-index:2;pointer-events:none;display:flex;flex-direction:column;gap:0;color:#f6f7fb;text-shadow:0 2px 12px #000;background:rgba(4,6,12,.62);border-radius:10px;padding:8px 12px;backdrop-filter:blur(4px)}.ex-hud:empty{display:none}.ex-hud .st{font-size:18px}.ex-hud .st small{font-size:12px}.ex-hud b{font-family:var(--head);font-size:30px;line-height:1}.ex-hud span{font-size:22px;font-weight:700}.ex-hud small{font-size:13px;color:#c8cde0}.ex-hud em{font-style:normal;font-size:13px;color:#ff8fb8}.ex-hud i{font-style:normal;font-size:12px;color:#a9c4ff}
+.ex-card{position:absolute;right:12px;top:12px;width:min(320px,calc(100% - 24px));max-height:calc(100% - 24px);overflow:auto;background:rgba(8,10,18,.9);border:1px solid #2b3045;border-radius:10px;padding:12px 14px;color:#e8eaf4;backdrop-filter:blur(6px)}.ex-card b{display:block;font-size:17px;margin:0 0 4px;color:#fff}.ex-card p{margin:0 0 6px;font-size:14px}.ex-card small{display:block;font-size:12px;color:#a6abc0;margin-bottom:6px}
+.ex-card .ex-x,.ex-guess button,.ex-play button{font:inherit;font-size:14px;padding:7px 12px;border-radius:8px;border:1px solid var(--line);background:var(--panel);color:var(--fg);cursor:pointer}.ex-card .ex-x{padding:3px 10px;font-size:13px}
+.ex-guess{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:10px;padding:22px 26px;background:radial-gradient(ellipse at 30% 50%,rgba(2,3,8,.55),rgba(2,3,8,.92));color:#f6f7fb;overflow:auto}.ex-guess[hidden]{display:none}.ex-guess>b{font-size:14px;color:#ffc44d}.ex-guess p{margin:0;font-size:19px;max-width:640px}.ex-guess .opts{display:flex;flex-wrap:wrap;gap:8px}.ex-guess button{background:#14161f;color:#f6f7fb;border-color:#2b2f41;font-size:15px;padding:9px 15px}.ex-guess button:hover{border-color:#5fd4ff}
+.ex-hint{position:absolute;left:10px;right:10px;bottom:8px;margin:0;font-size:13px;color:#a6abc0;pointer-events:none;text-align:center}.ex-stage.live .ex-hint{display:none}.ex-stage.flat .ex-hint{position:static;font-size:15px;color:#dcdfec;text-align:left}
+.ex:not(.opened) .ex-labels,.ex:not(.opened) .ex-hud,.ex:not(.opened) .ex-hint{visibility:hidden}
+.ex-say{margin:10px 0 0;min-height:3.2em;color:var(--soft);font-size:16px}.ex-gap{margin:10px 0 0;padding:10px 14px;border-left:3px solid #ffc44d;background:var(--panel);border-radius:0 8px 8px 0;font-size:16px}
+.ex-side{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;align-items:start}.ex-col{display:flex;flex-direction:column;gap:12px;min-width:0}.ex-faders{display:flex;flex-direction:column;gap:10px}
+.ex-fader{display:flex;flex-direction:column;gap:4px;font-size:14px;color:var(--soft)}.ex-fader span{display:flex;justify-content:space-between}.ex-fader output{font-weight:700;color:var(--fg)}
+.ex-fader input{width:100%;accent-color:#ff4f8b;height:26px;cursor:pointer}.ex-fader input:disabled{cursor:default;opacity:.7}
+.ex-play{display:flex;flex-wrap:wrap;gap:6px}.ex-play button:hover{border-color:#5fd4ff}.ex-play .ex-go{background:#ff4f8b;border-color:#ff4f8b;color:#fff;font-weight:700}.ex-play button.on{border-color:#ffc44d;color:#ffc44d}
+.ex-speed{display:flex;gap:4px;margin-left:auto}.ex-speed button{padding:5px 9px;font-size:13px}.ex-speed button.on{border-color:#5fd4ff;color:#5fd4ff}
+.ex-trace{width:100%;height:150px;display:block;background:#05070d;border:1px solid var(--line);border-radius:8px}
+.ex-balance{display:flex;flex-direction:column;gap:6px}.ex-bal span{display:flex;justify-content:space-between;font-size:13px;color:var(--soft)}.ex-bal b{color:var(--fg)}.ex-bar{display:flex;height:10px;border-radius:5px;overflow:hidden;background:#0b0e18}.ex-bar i{display:block;height:100%}.ex-balance p{margin:0;font-size:12px;color:var(--dim)}
+.ex-parts{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:3px}.ex-parts button{width:100%;display:grid;grid-template-columns:12px minmax(0,1fr) auto;gap:9px;align-items:center;text-align:left;font:inherit;font-size:14px;background:var(--panel);color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:6px 10px;cursor:pointer}.ex-parts button:hover,.ex-parts button.on{border-color:#ffc44d}.ex-parts .v{font-size:13px;color:var(--dim)}
+.ex-parts i{width:12px;height:12px;border-radius:50%}.ex-parts p{margin:4px 2px 8px;font-size:14px;color:var(--soft)}.ex.js .ex-parts p{display:none}
+.t-store{background:linear-gradient(90deg,#a9c4ff 50%,#ff4f8b 50%)}.t-hot{background:#ff4f8b}.t-amber{background:#ffb347}.t-cold{background:#5fd4ff}.t-green{background:#6fe39a}.t-gold{background:#ffc44d}.t-violet{background:#9b8cf0}.t-mist{background:#dfe8ff}.t-deep{background:#2f8cff}
+.ex-rules{margin:14px 0 0}.ex-h{display:block;font-size:14px;font-weight:700;color:var(--gold);margin:0 0 6px}.ex-rules ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px}.ex-rules li{padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:var(--panel);font-size:15px}.ex-rules li.found{border-color:rgba(95,227,154,.5)}.ex-rules li.fresh{box-shadow:0 0 0 2px rgba(95,227,154,.5)}.ex-rules li b{color:var(--gold)}.ex-rules li i{color:var(--dim)}.ex-meet{margin:10px 0 0;font-weight:600;color:#5fe39a}
+.ex-note,.ex-src{margin:12px 0 0;font-size:14px;color:var(--dim)}.ex-src a{color:var(--acc)}
+@media (max-width:1000px){.ex-body{grid-template-columns:1fr}.ex-speed{margin-left:0}}
 .lab{background:var(--deep);border:1px solid rgba(212,176,106,.45);border-radius:12px;padding:16px 18px 18px;margin:0 0 18px}
 .lab-kick{display:block;font-size:14px;color:var(--gold);font-weight:700}
 .lab-top b{display:block;font-family:var(--head);font-size:24px;font-weight:600;margin:2px 0}
@@ -427,7 +649,7 @@ ${(c.channels || []).length ? '<h3 style="margin:0 0 12px">Channels for this cou
 ${c.units.map((u) => unit(u, c.voices, c)).join('\n')}
 </main></div>
 ${FOOT()}
-<script src="crystal.js"></script><script src="scene.js"></script>${c.units.some((u) => shipsFlip(c, u)) ? '<script src="flip.js"></script>' : ''}${c.units.some(shipsLab) ? '<script src="planck.min.js"></script><script src="lab.js"></script>' + [...new Set(c.units.filter(shipsLab).map((u) => u.lab.bench))].map((n) => '<script src="lab-' + esc(n) + '.js"></script>').join('') : ''}${c.units.some(shipsScale) ? '<script type="module" src="scale.js"></script>' : ''}
+<script src="crystal.js"></script>${c.units.some((u) => u.scene) ? '<script src="scene-plan.js"></script><script type="module" src="scene.js"></script>' : ''}${c.units.some((u) => shipsFlip(c, u)) ? '<script src="flip.js"></script>' : ''}${c.units.some(shipsLab) ? '<script src="planck.min.js"></script><script src="lab.js"></script>' + [...new Set(c.units.filter(shipsLab).map((u) => u.lab.bench))].map((n) => '<script src="lab-' + esc(n) + '.js"></script>').join('') : ''}${c.units.some(shipsScale) ? '<script type="module" src="scale.js"></script>' : ''}${c.units.some(shipsExplain) ? '<script src="explain-model.js"></script><script type="module" src="explain.js"></script>' : ''}
 <script>
 function seek(el, t) {
   var v = el.closest('.unit').querySelector('video, audio'); if (!v) return;
@@ -464,7 +686,9 @@ document.addEventListener('click', function (e) {
   var b = e.target.closest('.donebtn'); if (!b) return;
   var all = VU.get('vu:done', {}), d = all[SLUG] || [], n = +b.closest('.unit').id.slice(1), i = d.indexOf(n);
   if (i >= 0) d.splice(i, 1); else d.push(n);
-  all[SLUG] = d; VU.set('vu:done', all); paintDone();
+  all[SLUG] = d; VU.set('vu:done', all);
+  var at = VU.get('vu:doneAt', {}); if (i < 0) at[SLUG + '/' + n] = Date.now(); else delete at[SLUG + '/' + n]; VU.set('vu:doneAt', at);
+  paintDone();
 });
 paintDone();
 if ('IntersectionObserver' in window) {
@@ -592,7 +816,7 @@ header.top{display:flex;flex-wrap:nowrap;align-items:center;gap:10px 18px;paddin
 .crest svg{width:34px;height:34px;flex:none}
 .crest span{white-space:nowrap}.crest b{font-family:var(--head);font-weight:700;font-size:19px;letter-spacing:.14em;text-transform:uppercase}
 .crest small{display:block;font-size:12px;color:var(--gold);margin-top:1px}
-.nav{display:flex;gap:4px;flex-wrap:nowrap;margin-left:auto;position:static;align-items:center;min-width:0}.nav>a{white-space:nowrap}.nav a.here{overflow:hidden;text-overflow:ellipsis;min-width:0;max-width:34vw}.navtools{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding-top:12px;border-top:1px solid var(--line)}.navtools:empty{display:none}.navtools .instnote{position:static;width:auto}@media (max-width:900px){.crest small{display:none}}
+.nav{display:flex;gap:4px;flex-wrap:nowrap;margin-left:auto;position:static;align-items:center;min-width:0}.nav>a{white-space:nowrap}.nav a.here{overflow:hidden;text-overflow:ellipsis;min-width:0;max-width:34vw}.navtools{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding-top:12px;border-top:1px solid var(--line)}.navtools:empty{display:none}.navtools .navrules{color:var(--gold);text-decoration:none;font-weight:600;padding:6px 0}.navtools .navrules:hover{text-decoration:underline}.navtools .instnote{position:static;width:auto}@media (max-width:900px){.crest small{display:none}}
 .navall{position:relative}.navall summary{cursor:pointer;list-style:none;font-size:14px;padding:6px 12px;border-radius:6px;color:var(--fg);border:1px solid var(--line)}.navall summary::-webkit-details-marker{display:none}.navall summary:hover{border-color:var(--gold)}
 .navlist{position:absolute;right:0;top:calc(100% + 8px);z-index:30;width:min(640px,calc(100vw - 40px));max-height:70vh;overflow:auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px 18px;padding:16px;background:var(--panel);border:1px solid var(--line);border-radius:10px;box-shadow:0 18px 40px rgba(0,0,0,.5)}
 @media (max-width:1000px){header.top{padding:8px 20px;gap:6px 14px}.navall{position:static}.navlist{left:20px;right:20px;width:auto}}
@@ -686,7 +910,7 @@ function top(current, all) {
     const areas = [...new Set(all.map((o) => o.domain))];
     const groups = areas.map((a) => '<div><h5>' + esc(a) + '</h5>' + all.filter((o) => o.domain === a).map(link).join('') + '</div>').join('')
       + (SHELFBOOKS.length ? '<div><h5>Old books in plain English</h5>' + SHELFBOOKS.map(link).join('') + '</div>' : '');
-    links = home + (here ? hereLink(here) : '') + '<details class="navall"><summary title="Every course, by area">Courses</summary><div class="navlist">' + groups + '<div class="navtools">' + INSTALL + DRAFT + '</div></div></details>';
+    links = home + (here ? hereLink(here) : '') + '<details class="navall"><summary title="Every course, by area">Courses</summary><div class="navlist">' + groups + '<div class="navtools"><a class="navrules" href="index.html#tools" title="Tools to learn by doing: study together, the explainers, If this, then that">Tools</a><a class="navrules" href="study.html" title="One shared screen and everyone\'s phones">Study together</a>' + (RULES ? '<a class="navrules" href="ifttt.html" title="Every If this, then that rule in the University, by area">If this, then that: every rule</a>' : '') + INSTALL + DRAFT + '</div></div></details>';
   }
   // The background (B, 19 Nov 2026: "i want these used in the same ways as as vtv. the way the bg moves", "make the background drift on
   // my tablet too"; 22 Nov 2026: "i want the bg sittuation to be fixed on all pages") is the one every Void area shares,
@@ -707,7 +931,7 @@ const IMG = (() => { try { return JSON.parse(fs.readFileSync(path.join(DIR, 'img
 const img = (name) => (IMG[name] && /^our own/i.test(IMG[name].license || '') ? IMG[name].file : '');
 // One hue for each area, so Money, Body, Mind and the rest differ at a glance: the unit's top edge and number, the row's
 // mark, the glow on a card with no picture yet.
-const AREAHUE = { Money: '#f2a93b', Food: '#ff8a3d', Home: '#ffd166', Body: '#ff6b8b', Mind: '#5fd4ff', Words: '#7ee0c3', 'Law and rights': '#8fa8ff', 'Work and trades': '#f59e6c', Machines: '#9ad1ff', Making: '#c4f06a', Land: '#5fe39a', 'Civics and history': '#e6c067', 'Faith and philosophy': '#a78bfa', Family: '#ff8fd0', Emergencies: '#ff5c5c' };
+const AREAHUE = { Money: '#f2a93b', Food: '#ff8a3d', Home: '#ffd166', Body: '#ff6b8b', Mind: '#5fd4ff', Words: '#7ee0c3', 'Law and rights': '#8fa8ff', 'Work and trades': '#f59e6c', Machines: '#9ad1ff', Making: '#c4f06a', Land: '#5fe39a', 'Civics and history': '#e6c067', 'Faith and philosophy': '#a78bfa', Family: '#ff8fd0', Emergencies: '#ff5c5c', 'Earth and climate': '#19c6b0' };
 const hue = (area) => AREAHUE[area] || '#5fd4ff';
 // The top of a card: its own picture, or its own words on the area's colour.
 const ph = (pic, words, lazy) => (pic ? '<div class="ph"><img' + (lazy ? ' loading="lazy"' : '') + ' src="' + pic + '" alt=""></div>' : '<div class="ph face"><span>' + esc(words || '') + '</span></div>');
@@ -781,6 +1005,22 @@ ${CARDCSS}
 .card .prog{font-style:normal;font-size:12px;color:#8fd6aa}
 @media (max-width:1000px){#find{margin-left:0;flex-basis:100%}}
 .course.off{display:none}
+.door{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px;max-width:1400px;margin:0 auto;padding:22px 32px 6px}
+.door .kick{font-size:14px;font-weight:700;color:var(--acc)}
+.ask{background:linear-gradient(135deg,rgba(255,79,139,.13),rgba(95,212,255,.07)),var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px 28px;box-shadow:0 14px 40px rgba(0,0,0,.35)}
+.ask h1{font-family:var(--head);font-size:34px;line-height:1.14;margin:8px 0 16px;max-width:none}
+.ask .opts{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 12px}.ask .opts button,.mem .mc button,.mem .nextq{font:inherit;font-size:16px;padding:10px 16px;border-radius:10px;border:1px solid var(--line);background:var(--panel2);color:var(--fg);cursor:pointer}
+.ask .opts button:hover:not(:disabled),.mem .mc button:hover:not(:disabled){border-color:var(--acc)}.ask .opts button.real,.mem .mc button.real{border-color:#5fe39a;color:#5fe39a}.ask .opts button.mine:not(.real),.mem .mc button.mine{border-color:#ff8f96;color:#ff8f96}
+.ask .said{margin:0 0 12px;font-size:17px;padding:10px 14px;border-left:3px solid var(--gold);background:rgba(0,0,0,.25);border-radius:0 8px 8px 0}.ask .go{display:inline-block;margin:0 0 10px;padding:10px 18px;border-radius:10px;background:#ff4f8b;color:#fff;font-weight:700;text-decoration:none}.ask .how{margin:0;color:var(--soft);font-size:15px}.ask .go:not([hidden])~.how{display:none}.ask .go[hidden]{display:none}
+.doorside{display:flex;flex-direction:column;gap:14px}.doorside>div{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px 18px}.doorside.known .welcome{display:none}.welcome b{font-family:var(--head);font-size:21px}.welcome p{margin:8px 0 0;color:var(--soft);font-size:15px}
+.mem b{display:block;font-family:var(--head);font-size:19px;margin:2px 0 6px}.mem .kick{color:var(--gold)}.mem small{display:block;color:var(--dim);font-size:13px}.mem .mq{margin:4px 0 8px;font-size:16px}.mem .mc{display:flex;flex-direction:column;gap:6px}.mem .mc button{text-align:left;font-size:15px;padding:8px 12px}.mem .ok{color:#5fe39a}.mem .no{color:#ffb3b8}.mem p{font-size:15px}.mem .nextq{margin-top:4px;font-size:14px;padding:7px 14px}
+.you .line{margin:0 0 6px;font-size:16px}.you #resume{margin:0;padding:0;border:0;background:none}
+.tools{max-width:1400px;margin:0 auto}.tools h2{margin-top:22px}.toolrow{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;padding:0 20px}\n.tool{display:grid;grid-template-columns:52px 1fr;gap:3px 14px;align-items:start;padding:16px 18px;border-radius:14px;background:var(--panel);border:1px solid var(--line);color:var(--fg);text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.3)}.tool:hover{border-color:var(--acc)}.tool .mark{grid-row:1 / span 3;width:52px;height:52px;border-radius:14px;border:1px solid var(--line)}.tool b{font-family:var(--head);font-size:19px}.tool span:not(.mark){color:var(--soft);font-size:14px}.tool i{font-style:normal;color:var(--acc);font-size:13px;font-weight:600}\n.m-study{background:repeating-linear-gradient(90deg,#fff 0 6px,#0b0d14 6px 9px),repeating-linear-gradient(0deg,#fff 0 6px,#0b0d14 6px 9px);background-blend-mode:multiply}.m-earth{background:url(img/explain/earth.jpg) 30% 40%/240% auto;border-radius:50%!important}.m-rules{background:linear-gradient(135deg,#ff4f8b 0 48%,transparent 48% 52%,#5fd4ff 52%)}.m-practice{background:radial-gradient(circle at 50% 40%,#ffc44d,#ff4f8b 60%,#6a2c8a)}\n.wrong{max-width:1400px;margin:0 auto}.wrong h2{margin-top:22px}.qrow{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;padding:0 20px}
+.qcard{display:flex;flex-direction:column;gap:8px;min-height:140px;padding:16px 18px;border-radius:14px;background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--area);color:var(--fg);text-decoration:none}.qcard:hover{border-color:var(--area)}.qcard small{color:var(--dim);font-size:13px}.qcard b{font-family:var(--head);font-size:19px;line-height:1.22;flex:1}.qcard i{font-style:normal;color:var(--area);font-size:14px;font-weight:600}
+.together{display:flex;flex-wrap:wrap;gap:4px 16px;align-items:baseline;max-width:1360px;margin:16px auto 0;padding:14px 18px;border:1px solid var(--line);border-radius:12px;background:var(--panel);color:var(--fg);text-decoration:none}.together b{font-family:var(--head);font-size:19px}.together span{color:var(--soft);font-size:15px;flex:1 1 420px}.together em{font-style:normal;color:var(--acc);font-weight:600}.together:hover{border-color:var(--acc)}
+@media (max-height:600px) and (min-width:901px){.ask{padding:18px 24px}.ask h1{font-size:26px;margin:6px 0 12px}.ask .opts button{padding:8px 14px;font-size:15px}}
+@media (max-width:900px){.door{grid-template-columns:1fr;padding:16px 16px 4px}.ask h1{font-size:27px}.together{margin:16px 16px 0}}
+.ruleslink{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:baseline;margin:18px 20px 0;padding:14px 18px;border:1px solid var(--gold);border-radius:12px;background:var(--panel);color:var(--fg);text-decoration:none}.ruleslink b{font-family:var(--head);font-size:22px;color:var(--gold)}.ruleslink span{color:var(--soft);font-size:15px}.ruleslink:hover{background:var(--panel2)}
 .areas{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px;padding:0 20px}
 .area{display:block;color:var(--fg);text-decoration:none;position:relative;border-radius:8px;overflow:hidden;aspect-ratio:16/10;border:1px solid var(--line)}
 .area img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) brightness(.45)}
@@ -790,9 +1030,10 @@ ${CARDCSS}
 @media(max-width:900px){.hero h1{font-size:36px}.course{width:290px}}
 ${LOOKCSS}${TYPECSS}</style></head><body>
 ${top('home', all)}
-<div id="colhost"><div class="hero">${img('a-mind') ? '<img src="' + img('a-mind') + '" alt="">' : ''}<div><h1>Big ideas, shown with everyday things.</h1><p>Each lesson starts from something you already know, then shows you the bigger idea working the same way. Every course is free, and there is no account to make.</p></div></div>
+<div id="colhost"><div class="door"><div class="ask" id="door"><h1>Big ideas, shown with everyday things.</h1><div class="opts"></div><p class="said" hidden aria-live="polite"></p><a class="go" hidden></a><p class="how">Today's question. Guess first, then see it happen, with the measured numbers.</p></div><div class="doorside" id="doorside"><div class="welcome"><b>Big ideas, shown with everyday things.</b><p>Each lesson starts from something you already know, then shows you the bigger idea working the same way. Every course is free, and there is no account to make.</p></div><div class="mem" id="mem" hidden><b></b><div class="body"></div></div><div class="you" id="you" hidden><div id="resume" hidden></div></div></div></div>${toolsRow(all)}${(() => { const h = hooksOf(all); return h.length ? '<section class="wrong"><h2><span>Things people get wrong</span><small>start from the question</small></h2><div class="qrow">' + h.map((x) => '<a class="qcard" style="--area:' + hue(x.area) + '" href="' + esc(x.href) + '" title="Open: ' + esc(x.where) + '"><small>' + esc(x.area) + '</small><b>' + esc(x.hook) + '</b><i>' + esc(x.where) + '</i></a>').join('') + '</div></section>' : ''; })()}${(() => { const c = all.find((o) => o.units.some(shipsAnswer)); const u = c && c.units.find(shipsAnswer); return u ? '<a class="together" href="' + esc(c.slug) + '.html#u' + u.n + '" title="Open a lecture you can take together"><b>Learn together</b><span>Play a lecture on a big screen; everyone answers on their own phone, with no account. For a class, a family or a community night. Open a lecture and press Answer on your phones.</span><em>Start with ' + esc(c.name) + '</em></a>' : ''; })()}
 <main><div class="who"><span>Who is it for?</span><button class="on" data-lv="">Everyone</button><button data-lv="high school">High school</button><button data-lv="young adults">Young adults</button><button data-lv="everyday">Everyday life</button><input type="search" id="find" placeholder="Find a course or a lesson" aria-label="Find a course or a lesson"><small>Everyday life: not for a job in the field, just useful for living, deciding and understanding people.</small></div>
-<div id="found" hidden></div><div id="resume" hidden></div>
+<div id="found" hidden></div>
+${RULES ? '<a class="ruleslink" href="ifttt.html" title="Every If this, then that rule in the University, by area"><b>If this, then that</b><span>' + RULES + ' rules across ' + new Set(rulesOf(all).map((r) => r.area)).size + ' areas. Make each one happen yourself, then see them all in one place.</span></a>' : ''}
 ${rows}
 ${shelfRow}
 <h2><span>Jump to an area</span></h2><div class="areas">${tiles}</div></main></div>
@@ -814,6 +1055,7 @@ document.querySelectorAll('.rowwrap').forEach(function (w) {
   l.onclick = function () { t.scrollLeft -= t.clientWidth * 0.8; }; r.onclick = function () { t.scrollLeft += t.clientWidth * 0.8; };
   t.addEventListener('scroll', upd); window.addEventListener('resize', upd); upd();
 });
+var DOORQ = ${JSON.stringify(doorQuestions(all)).replace(/</g, '\\u003c')}, RULESN = ${RULES};
 // Find a course or a lesson: every word typed must be in the course name, the lesson title or its "why you need this".
 var IDX = ${JSON.stringify(all.flatMap((c) => c.units.map((u) => [c.slug + '.html#u' + u.n, c.name, u.title, (u.needIt || '').toLowerCase()])).concat(SHELFBOOKS.flatMap((b) => b.chapters.map((x) => [b.slug + '.html#c' + x.n, b.title, x.title, (x.why || '').toLowerCase()])))).replace(/</g, '\\u003c')};
 var find = document.getElementById('find'), found = document.getElementById('found');
@@ -842,6 +1084,80 @@ find.addEventListener('input', function () {
     var i = document.createElement('i'); i.className = 'prog'; i.textContent = d + ' of ' + c.dataset.units + ' done'; c.querySelector('.t').appendChild(i);
   });
 })();
+(function () {
+  var Q = DOORQ, box = document.getElementById('door'); if (!box || !Q.length) return;
+  var day = Math.floor(Date.now() / 864e5), q = Q[day % Q.length];
+  var t = function (tag, cls, s) { var e = document.createElement(tag); if (cls) e.className = cls; if (s != null) e.textContent = s; return e; };
+  box.querySelector('h1').textContent = q.q;
+  var opts = box.querySelector('.opts'), said = box.querySelector('.said'), go = box.querySelector('.go');
+  q.options.forEach(function (o, i) {
+    var b = t('button', null, o); b.type = 'button'; b.title = 'Choose this answer';
+    b.onclick = function () {
+      opts.querySelectorAll('button').forEach(function (x, j) { x.disabled = true; x.classList.toggle('mine', j === i); x.classList.toggle('real', j === q.answer); });
+      said.textContent = 'You said: ' + o.toLowerCase() + '. ' + q.after; said.hidden = false; go.hidden = false;
+    };
+    opts.appendChild(b);
+  });
+  go.href = q.href; go.textContent = q.go; go.title = 'Open the lesson where you can see this happen';
+})();
+(function () {
+  var get = function (k, d) { try { return JSON.parse(localStorage.getItem(k)) || d; } catch (e) { return d; } };
+  var put = function (k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} };
+  var done = get('vu:done', {}), at = get('vu:doneAt', {}), plan = get('vu:recall', {}), found = get('vu:found', []);
+  var units = []; Object.keys(done).forEach(function (s) { (done[s] || []).forEach(function (n) { units.push(s + '/' + n); }); });
+  var side = document.getElementById('doorside'), you = document.getElementById('you'), mem = document.getElementById('mem');
+  var t = function (tag, cls, s) { var e = document.createElement(tag); if (cls) e.className = cls; if (s != null) e.textContent = s; return e; };
+  // one plain line of what you know
+  var bits = [];
+  if (units.length) bits.push('You have finished ' + units.length + (units.length === 1 ? ' lesson' : ' lessons'));
+  if (found.length) bits.push((bits.length ? 'found ' : 'You have found ') + found.length + ' of ' + RULESN + ' rules');
+  if (bits.length) { you.insertBefore(t('p', 'line', bits.join(' and ') + '.'), you.firstChild); you.hidden = false; side.classList.add('known'); }
+  if (!document.getElementById('resume').hidden) { you.hidden = false; side.classList.add('known'); }
+  if (!units.length) return;
+  var DAY = 864e5, STEPS = [1, 3, 7, 21], now = Date.now();
+  fetch('recall.json').then(function (r) { return r.json(); }).then(function (bank) {
+    var due = [], next = Infinity;
+    units.forEach(function (u) {
+      var b = bank[u]; if (!b) return;
+      b.q.forEach(function (q, i) {
+        var k = u + '/' + i, p = plan[k];
+        if (!p) { p = plan[k] = { step: 0, due: (at[u] || now) + DAY }; }
+        if (p.due <= now) due.push({ k: k, u: u, i: i, q: q, b: b }); else next = Math.min(next, p.due);
+      });
+    });
+    put('vu:recall', plan);
+    // mixed: take one from each lesson in turn
+    var by = {}; due.forEach(function (d) { (by[d.u] = by[d.u] || []).push(d); });
+    var mix = [], keys = Object.keys(by), r = 0;
+    while (mix.length < 3 && keys.some(function (k) { return by[k].length; })) { var k = keys[r++ % keys.length]; if (by[k].length) mix.push(by[k].shift()); }
+    mem.hidden = false; side.classList.add('known');
+    var head = mem.querySelector('b'), body = mem.querySelector('.body');
+    if (!mix.length) { head.textContent = 'Remember it: your questions come back ' + new Date(next).toLocaleDateString(undefined, { weekday: 'long' }); body.appendChild(t('p', null, 'Each one returns a day, three days, a week and three weeks after you finish a lesson. Pulling it back out is what makes it stay.')); return; }
+    head.textContent = 'Remember it: ' + mix.length + (mix.length === 1 ? ' question is' : ' questions are') + ' ready';
+    var i = 0;
+    function show() {
+      body.textContent = '';
+      if (i >= mix.length) { body.appendChild(t('p', null, 'That is all for today. They come back again, further apart each time you get one.')); return; }
+      var d = mix[i], q = d.q;
+      body.appendChild(t('small', null, d.b.course + ': ' + d.b.title));
+      body.appendChild(t('p', 'mq', q.q));
+      var c = t('div', 'mc'); body.appendChild(c);
+      q.choices.forEach(function (ch, j) {
+        var b = t('button', null, ch); b.type = 'button'; b.title = 'Choose this answer';
+        b.onclick = function () {
+          c.querySelectorAll('button').forEach(function (x, m) { x.disabled = true; x.classList.toggle('real', m === q.a); x.classList.toggle('mine', m === j && j !== q.a); });
+          var p = plan[d.k], right = j === q.a;
+          p.step = right ? Math.min(p.step + 1, STEPS.length - 1) : 0; p.due = Date.now() + STEPS[p.step] * DAY; put('vu:recall', plan);
+          body.appendChild(t('p', right ? 'ok' : 'no', (right ? 'Right. It comes back in ' : 'Not this time. It comes back tomorrow, and ') + (right ? STEPS[p.step] + ' days.' : 'again after that.') + ' ' + q.why));
+          var more = t('button', 'nextq', i + 1 < mix.length ? 'Next question' : 'Done'); more.type = 'button'; more.title = 'Go on'; more.onclick = function () { i++; show(); }; body.appendChild(more);
+        };
+        c.appendChild(b);
+      });
+    }
+    show();
+  }).catch(function () {});
+})();
+
 </script>
 </body></html>`;
 }
@@ -849,7 +1165,7 @@ function credits(all) {
   const rows = Object.keys(IMG).filter((k) => img(k)).map((k) => { const x = IMG[k]; return '<tr><td><img src="' + esc(x.file) + '" alt=""></td><td>' + esc(x.title || 'Untitled') + '</td><td>' + esc(x.creator || 'unknown') + '</td><td>' + esc(x.license) + '</td><td><a href="' + esc(x.page) + '" target="_blank" rel="noopener">' + esc(x.source) + '</a></td></tr>'; }).join('');
   return `<!doctype html><html lang="en" data-look="${LOOK}" data-type="${TYPE}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${APPHEAD}<title>Photo credits | Void University</title>${FONTS}<style>${BASE}
 main{max-width:1100px;margin:0 auto;padding:30px 32px}h1{font-family:var(--head)}table{width:100%;border-collapse:collapse;font-size:14px}td{border-bottom:1px solid var(--line);padding:8px;vertical-align:middle}td img{width:96px;height:60px;object-fit:cover;border-radius:4px;display:block}${LOOKCSS}${TYPECSS}</style></head><body>
-${top('credits', all)}<main><h1>Picture credits</h1><p>The pictures on this site are our own. The Body picture is the whole body standing in Body Atlas, and its body parts are BodyParts3D (CC BY 4.0).</p><table>${rows}</table><h1>Backgrounds</h1><p>The pictures of the classroom and the archive room behind the pages are our own, made for Void University. The lightning, the static and the film grain over them are Void TV's own.</p><h1>Phones</h1><p>The QR code maker and the relay that passes questions between a screen and its phones are Void TV PLAY's own.</p><h1>Typefaces</h1><p>Atkinson Hyperlegible Next (Braille Institute), Bricolage Grotesque, Inter, Fraunces, Literata and Schibsted Grotesk are used under the SIL Open Font License and are served from this site.</p>${all.some((c) => c.units.some(shipsLab)) ? '<h1>Lab physics</h1><p>Things in the labs fall, roll and bounce using Planck.js by Erin Catto and Ali Shakiba, free to use under the <a href="planck-LICENSE.txt">MIT licence</a>. The labs themselves are our own work.</p>' : ''}${all.some((c) => c.units.some(shipsScale)) ? '<h1>3D stages</h1><p>The 3D scale stages are drawn with three.js by the three.js authors, free to use under the <a href="three-LICENSE.txt">MIT licence</a>. The stages and what they show are our own work; each one names the papers its numbers come from.</p>' : ''}</main>${FOOT()}</body></html>`;
+${top('credits', all)}<main><h1>Picture credits</h1><p>The pictures on this site are our own. The Body picture is the whole body standing in Body Atlas, and its body parts are BodyParts3D (CC BY 4.0).</p><table>${rows}</table><h1>Backgrounds</h1><p>The pictures of the classroom and the archive room behind the pages are our own, made for Void University. The lightning, the static and the film grain over them are Void TV's own.</p><h1>Phones</h1><p>The QR code maker and the relay that passes questions between a screen and its phones are Void TV PLAY's own.</p><h1>Typefaces</h1><p>Atkinson Hyperlegible Next (Braille Institute), Bricolage Grotesque, Inter, Fraunces, Literata and Schibsted Grotesk are used under the SIL Open Font License and are served from this site.</p>${all.some((c) => c.units.some(shipsLab)) ? '<h1>Lab physics</h1><p>Things in the labs fall, roll and bounce using Planck.js by Erin Catto and Ali Shakiba, free to use under the <a href="planck-LICENSE.txt">MIT licence</a>. The labs themselves are our own work.</p>' : ''}${all.some((c) => c.units.some(shipsExplain)) ? '<h1>The Earth</h1><p>The Earth in the explainers is NASA Earth Observatory\'s Blue Marble Next Generation with topography and bathymetry, by Reto Stockli; NASA imagery is free to use with credit. Land and sea are told apart with Natural Earth\'s map data, which is in the public domain. The explainers are drawn with three.js (<a href="three-LICENSE.txt">MIT licence</a>) and are our own work; each names the papers and agencies its numbers come from.</p>' : ''}${all.some((c) => c.units.some((u) => u.scene || u.crystal)) ? '<h1>The lit table</h1><p>The lesson scenes and the bottle in Make it set are drawn with three.js by the three.js authors, free to use under the <a href="three-LICENSE.txt">MIT licence</a>. Every object on the table is modelled in our own code.</p>' : ''}${all.some((c) => c.units.some(shipsScale)) ? '<h1>3D stages</h1><p>The 3D scale stages are drawn with three.js by the three.js authors, free to use under the <a href="three-LICENSE.txt">MIT licence</a>. The stages and what they show are our own work; each one names the papers its numbers come from.</p>' : ''}</main>${FOOT()}</body></html>`;
 }
 
 // A wrong address: wrangler.jsonc serves 404.html for it. Links start from the site root, since the wrong address can be
@@ -871,7 +1187,6 @@ const shipJs = (from, to) => fs.writeFileSync(to, fs.readFileSync(from, 'utf8').
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT, { recursive: true });
 shipJs(path.join(DIR, 'crystal.js'), path.join(OUT, 'crystal.js'));
-shipJs(path.join(DIR, 'scene.js'), path.join(OUT, 'scene.js'));
 // A lab is on a page when the unit has one; the public copy carries only labs marked live.
 const shipsLab = (u) => !!(u.lab && (!LIVE || u.lab.live));
 const shipsScale = (u) => scalesOf(u).some((sc) => !LIVE || sc.live);
@@ -902,16 +1217,39 @@ if (loaded.some((c) => c.units.some(shipsLab))) {
   for (const f of fs.readdirSync(DIR).filter((f) => used.has(f))) shipJs(path.join(DIR, f), path.join(OUT, f));
   for (const f of ['planck.min.js', 'planck-LICENSE.txt']) fs.copyFileSync(path.join(DIR, 'vendor', f), path.join(OUT, f));
 }
-// The scale stage and its drawing library go along only when a page shows a scale.
-if (loaded.some((c) => c.units.some(shipsScale))) {
-  shipJs(path.join(DIR, 'scale.js'), path.join(OUT, 'scale.js'));
+// The crystal's bottle (Bryan, 23 Nov 2026: "A, the bottle") and the hand its slips are written in go with every
+// page that has a crystal; the drawing library goes below.
+if (loaded.some((c) => c.units.some((u) => u.crystal))) {
+  shipJs(path.join(DIR, 'crystal-bottle.js'), path.join(OUT, 'crystal-bottle.js'));
+  fs.mkdirSync(path.join(OUT, 'fonts'), { recursive: true });
+  fs.copyFileSync(path.join(DIR, 'fonts', 'fraunces-latin.woff2'), path.join(OUT, 'fonts', 'fraunces-latin.woff2'));
+}
+// The drawing library goes along when a page shows a scale, a scene or a crystal.
+const shipsThree = (c) => c.units.some((u) => shipsScale(u) || u.scene || u.crystal);
+if (loaded.some(shipsThree)) {
   fs.copyFileSync(path.join(DIR, 'vendor', 'three.module.min.js'), path.join(OUT, 'three.module.min.js'));
   fs.copyFileSync(path.join(DIR, 'vendor', 'three-LICENSE.txt'), path.join(OUT, 'three-LICENSE.txt'));
+}
+// The explainer, its model, the drawing library and the Earth pictures go along only when a page shows one.
+if (loaded.some((c) => c.units.some(shipsExplain))) {
+  shipJs(path.join(DIR, 'explain.js'), path.join(OUT, 'explain.js'));
+  shipJs(path.join(DIR, 'explain-model.js'), path.join(OUT, 'explain-model.js'));
+  fs.copyFileSync(path.join(DIR, 'vendor', 'three.module.min.js'), path.join(OUT, 'three.module.min.js'));
+  fs.copyFileSync(path.join(DIR, 'vendor', 'three-LICENSE.txt'), path.join(OUT, 'three-LICENSE.txt'));
+  fs.cpSync(path.join(DIR, 'img', 'explain'), path.join(OUT, 'img', 'explain'), { recursive: true });
+}
+if (loaded.some((c) => c.units.some(shipsScale))) shipJs(path.join(DIR, 'scale.js'), path.join(OUT, 'scale.js'));
+// The lit table (Bryan, 22 Nov 2026: "A, lit table"): the scene engine, its rules, and the two typefaces printed on the
+// things on the table, which ship whatever type the page itself is set in.
+if (loaded.some((c) => c.units.some((u) => u.scene))) {
+  for (const f of ['scene.js', 'scene-plan.js', 'scene-props.js']) shipJs(path.join(DIR, f), path.join(OUT, f));
+  fs.mkdirSync(path.join(OUT, 'fonts'), { recursive: true });
+  for (const f of ['bricolage-grotesque-latin.woff2', 'fraunces-latin.woff2']) fs.copyFileSync(path.join(DIR, 'fonts', f), path.join(OUT, 'fonts', f));
 }
 // Answer on your phones, in the public copy (Bryan, 21 Nov 2026: "Yes, build it"): the screen's script, PLAY's own QR
 // maker, and the phone page at /join, which is where the relay on voidtv.net sends a phone that scans the code.
 // Making questions stays in the preview on Bryan's PC: it writes course files, and the live site has nowhere to write.
-if (LIVE && loaded.some((c) => c.units.some(shipsAnswer))) {
+if (LIVE) { // the study room needs the phone page and the QR maker in every public copy
   shipJs(path.join(DIR, 'make', 'answer-screen.js'), path.join(OUT, 'answer.js'));
   shipJs(path.join(DIR, '..', '..', 'play', 'src', 'qr.js'), path.join(OUT, 'qr.js'));
   const give = 'If you found this service helpful, please think of donating to keep it running and to make more services like this possible. Every donation goes to CASH (cashvalues.org) and feeds its mission in the real world. <a href="' + DONATE + '" target="_blank" rel="noopener">Donate to CASH</a>';
@@ -924,6 +1262,7 @@ if (loaded.some((c) => c.units.some((u) => shipsFlip(c, u)))) {
   for (const c of loaded) for (const u of c.units) if (shipsFlip(c, u)) fs.writeFileSync(path.join(OUT, 'flip-' + c.slug + '-' + u.n + '.json'), JSON.stringify(flipData(c, u)));
 }
 MECH = loaded.find((c) => c.shelf === 'supplement') || null;
+RULES = rulesOf(loaded).length;
 for (const c of loaded) if (c.shelf !== 'supplement') for (const u of c.units) for (const n of u.mechanisms || []) (USED[n] = USED[n] || []).push({ slug: c.slug, course: c.name, n: u.n, title: u.title });
 fs.mkdirSync(path.join(OUT, 'img'), { recursive: true });
 for (const k of Object.keys(IMG)) if (img(k)) fs.copyFileSync(path.join(DIR, IMG[k].file), path.join(OUT, IMG[k].file)); // our own pictures only
@@ -940,6 +1279,10 @@ for (const f of APPICONS) fs.copyFileSync(path.join(DIR, 'img', f), path.join(OU
 fs.writeFileSync(path.join(OUT, 'manifest.webmanifest'), JSON.stringify(MANIFEST));
 fs.writeFileSync(path.join(OUT, 'sw.js'), SW);
 fs.writeFileSync(path.join(OUT, 'credits.html'), credits(loaded));
+fs.writeFileSync(path.join(OUT, 'recall.json'), JSON.stringify(recallBank(loaded)));
+fs.writeFileSync(path.join(OUT, 'study.html'), studyPage(loaded));
+shipJs(path.join(DIR, 'study.js'), path.join(OUT, 'study.js'));
+if (RULES) fs.writeFileSync(path.join(OUT, 'ifttt.html'), iftttPage(loaded, JSON.parse(fs.readFileSync(path.join(DIR, 'list.json'), 'utf8'))));
 fs.writeFileSync(path.join(OUT, '404.html'), notFound(loaded));
 fs.writeFileSync(path.join(OUT, 'index.html'), home(loaded, JSON.parse(fs.readFileSync(path.join(DIR, 'list.json'), 'utf8'))));
 for (const b of SHELFBOOKS) {

@@ -138,66 +138,71 @@
         {
           "id": "s0",
           "type": "card",
-          "x": 30,
-          "y": 90,
-          "w": 220,
-          "h": 100,
+          "o": 0,
+          "prop": "seat",
+          "recline": 0.55,
           "label": "Sit down",
           "color": "blue",
+          "size": 22,
+          "x": 105,
+          "y": 90,
+          "w": 130,
+          "h": 160,
+          "tagW": 150,
+          "tag": [
+            0,
+            115
+          ]
+        },
+        {
+          "id": "you",
+          "type": "card",
           "o": 0,
-          "size": 20
+          "prop": "figure",
+          "look": "dark",
+          "on": "s0",
+          "label": "",
+          "x": 150,
+          "y": 135,
+          "w": 40,
+          "h": 80
         },
         {
           "id": "s1",
           "type": "card",
-          "x": 290,
-          "y": 90,
-          "w": 220,
-          "h": 100,
+          "o": 0,
+          "tie": "s0.lever",
+          "x": 420,
+          "y": 80,
           "label": "Slide and tilt",
           "color": "blue",
-          "o": 0,
-          "size": 17
-        },
-        {
-          "id": "a1",
-          "type": "arrow",
-          "x": 256,
-          "y": 140,
-          "x2": 284,
-          "y2": 140,
-          "color": "dim",
-          "o": 0,
-          "draw": 0
+          "size": 20,
+          "tagW": 170
         },
         {
           "id": "s2",
           "type": "card",
-          "x": 550,
-          "y": 90,
-          "w": 220,
-          "h": 100,
+          "o": 0,
+          "prop": "wheel",
+          "turn": 0,
           "label": "Then drive",
           "color": "blue",
-          "o": 0,
-          "size": 20
-        },
-        {
-          "id": "a2",
-          "type": "arrow",
-          "x": 516,
-          "y": 140,
-          "x2": 544,
-          "y2": 140,
-          "color": "dim",
-          "o": 0,
-          "draw": 0
+          "size": 22,
+          "x": 475,
+          "y": 60,
+          "w": 210,
+          "h": 210,
+          "tagW": 150,
+          "tag": [
+            0,
+            125
+          ]
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 270,
+          "y": 350,
           "label": "Adjust before you start, not after.",
           "color": "pink",
           "size": 22,
@@ -212,6 +217,9 @@
             "s0": {
               "o": 1,
               "sub": "it was set for someone"
+            },
+            "you": {
+              "o": 1
             }
           }
         },
@@ -223,9 +231,18 @@
               "o": 1,
               "sub": "until it fits you"
             },
-            "a1": {
-              "o": 1,
-              "draw": 1
+            "s0": {
+              "recline": 0.05,
+              "x": 235,
+              "y": 90,
+              "w": 130,
+              "h": 160
+            },
+            "you": {
+              "x": 280,
+              "y": 135,
+              "w": 40,
+              "h": 80
             }
           }
         },
@@ -236,10 +253,6 @@
             "s2": {
               "o": 1,
               "sub": "comfortable all trip"
-            },
-            "a2": {
-              "o": 1,
-              "draw": 1
             },
             "line": {
               "o": 1

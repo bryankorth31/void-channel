@@ -170,56 +170,132 @@
         {
           "id": "left",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
-          "h": 100,
-          "label": "Where few buckle",
-          "color": "blue",
           "o": 0,
-          "size": 18
+          "prop": "seat",
+          "buckled": false,
+          "label": "Where few buckle",
+          "x": 110,
+          "y": 90,
+          "w": 120,
+          "h": 150,
+          "color": "blue",
+          "size": 20,
+          "tagW": 190,
+          "tag": [
+            40,
+            115
+          ]
+        },
+        {
+          "id": "dL",
+          "type": "card",
+          "o": 0,
+          "prop": "seat",
+          "buckled": false,
+          "label": "",
+          "x": 230,
+          "y": 90,
+          "w": 120,
+          "h": 150
+        },
+        {
+          "id": "youL",
+          "type": "card",
+          "o": 0,
+          "prop": "figure",
+          "on": "left",
+          "label": "",
+          "x": 150,
+          "y": 130,
+          "w": 40,
+          "h": 80
+        },
+        {
+          "id": "drL",
+          "type": "card",
+          "o": 0,
+          "prop": "figure",
+          "on": "dL",
+          "label": "",
+          "look": "dark",
+          "x": 270,
+          "y": 130,
+          "w": 40,
+          "h": 80
         },
         {
           "id": "right",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
-          "h": 100,
-          "label": "Where all buckle",
-          "color": "blue",
           "o": 0,
-          "size": 18
+          "prop": "seat",
+          "buckled": false,
+          "label": "Where all buckle",
+          "x": 460,
+          "y": 90,
+          "w": 120,
+          "h": 150,
+          "color": "blue",
+          "size": 20,
+          "tagW": 190,
+          "tag": [
+            40,
+            115
+          ]
+        },
+        {
+          "id": "dR",
+          "type": "card",
+          "o": 0,
+          "prop": "seat",
+          "buckled": false,
+          "label": "",
+          "x": 580,
+          "y": 90,
+          "w": 120,
+          "h": 150
+        },
+        {
+          "id": "youR",
+          "type": "card",
+          "o": 0,
+          "prop": "figure",
+          "on": "right",
+          "label": "",
+          "x": 500,
+          "y": 130,
+          "w": 40,
+          "h": 80
+        },
+        {
+          "id": "drR",
+          "type": "card",
+          "o": 0,
+          "prop": "figure",
+          "on": "dR",
+          "label": "",
+          "look": "dark",
+          "x": 620,
+          "y": 130,
+          "w": 40,
+          "h": 80
         },
         {
           "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "SEATBELT",
+          "type": "card",
+          "o": 0,
+          "tie": "left.buckle",
+          "x": 70,
+          "y": 270,
+          "label": "Seatbelt",
           "color": "gold",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
-        },
-        {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "BUCKLE",
-          "color": "fg",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
+          "size": 18,
+          "tagW": 140
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
+          "y": 350,
           "label": "Same click. Different message.",
           "color": "pink",
           "size": 22,
@@ -234,12 +310,29 @@
             "left": {
               "o": 1
             },
+            "dL": {
+              "o": 1
+            },
+            "youL": {
+              "o": 1
+            },
+            "drL": {
+              "o": 1
+            },
             "right": {
               "o": 1
             },
+            "dR": {
+              "o": 1
+            },
+            "youR": {
+              "o": 1
+            },
+            "drR": {
+              "o": 1
+            },
             "thing": {
-              "o": 1,
-              "s": 1
+              "o": 1
             }
           }
         },
@@ -247,10 +340,11 @@
           "say": "You buckle your seatbelt.",
           "dur": 2.4,
           "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
-              "shake": true
+            "left": {
+              "buckled": true
+            },
+            "right": {
+              "buckled": true
             }
           }
         },
@@ -258,6 +352,10 @@
           "say": "Where few do, it can insult the driver.",
           "dur": 2.6,
           "set": {
+            "drL": {
+              "shake": true,
+              "squeezed": true
+            },
             "left": {
               "sub": "says: I do not trust you"
             },
@@ -290,13 +388,8 @@
               "color": "green"
             },
             "thing": {
-              "label": "THE ACT",
+              "label": "The act",
               "size": 18
-            },
-            "act": {
-              "label": "MEANS",
-              "size": 18,
-              "color": "pink"
             },
             "line": {
               "label": "Norms set what an act says about you.",

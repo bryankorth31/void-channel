@@ -206,58 +206,104 @@
       ],
       "actors": [
         {
+          "id": "thing",
+          "type": "card",
+          "o": 0,
+          "prop": "playground",
+          "label": "Playground",
+          "color": "gold",
+          "size": 18,
+          "x": 250,
+          "y": 45,
+          "w": 300,
+          "h": 150,
+          "tagW": 160,
+          "tag": [
+            210,
+            -60
+          ]
+        },
+        {
+          "id": "benchL",
+          "type": "card",
+          "o": 0,
+          "prop": "bench",
+          "label": "",
+          "x": 45,
+          "y": 200,
+          "w": 170,
+          "h": 70
+        },
+        {
           "id": "left",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "figure",
+          "on": "benchL",
           "label": "Parent on bench",
           "color": "blue",
-          "o": 0,
-          "size": 18
+          "size": 20,
+          "x": 110,
+          "y": 195,
+          "w": 40,
+          "h": 80,
+          "tagW": 190,
+          "tag": [
+            0,
+            100
+          ]
         },
         {
           "id": "right",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "bench",
           "label": "No one there",
           "color": "blue",
-          "o": 0,
-          "size": 22
+          "size": 22,
+          "x": 595,
+          "y": 200,
+          "w": 170,
+          "h": 70,
+          "tagW": 170,
+          "tag": [
+            0,
+            95
+          ]
         },
         {
-          "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "PLAYGROUND",
-          "color": "gold",
+          "id": "kidA",
+          "type": "card",
           "o": 0,
-          "s": 0.4,
-          "size": 14
+          "prop": "figure",
+          "pose": "stand",
+          "label": "",
+          "x": 238.75,
+          "y": 240,
+          "w": 22.5,
+          "h": 50,
+          "look": "dark",
+          "turn": 0.4
         },
         {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "EXPLORE",
-          "color": "fg",
+          "id": "kidB",
+          "type": "card",
           "o": 0,
-          "s": 0.4,
-          "size": 18
+          "prop": "figure",
+          "pose": "stand",
+          "label": "",
+          "x": 548.75,
+          "y": 240,
+          "w": 22.5,
+          "h": 50,
+          "look": "dark",
+          "turn": -0.4
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
+          "y": 348,
           "label": "A safe base makes you brave.",
           "color": "pink",
           "size": 22,
@@ -269,15 +315,23 @@
           "say": "A child at a new playground.",
           "dur": 2.4,
           "set": {
+            "thing": {
+              "o": 1
+            },
+            "benchL": {
+              "o": 1
+            },
             "left": {
               "o": 1
             },
             "right": {
               "o": 1
             },
-            "thing": {
-              "o": 1,
-              "s": 1
+            "kidA": {
+              "o": 1
+            },
+            "kidB": {
+              "o": 1
             }
           }
         },
@@ -285,9 +339,10 @@
           "say": "Will they go and explore?",
           "dur": 2.4,
           "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
+            "kidA": {
+              "shake": true
+            },
+            "kidB": {
               "shake": true
             }
           }
@@ -296,6 +351,13 @@
           "say": "With a parent on the bench, they roam.",
           "dur": 2.6,
           "set": {
+            "kidA": {
+              "x": 459,
+              "y": 135,
+              "w": 22,
+              "h": 50,
+              "turn": -1.35
+            },
             "left": {
               "sub": "roams far, checks back"
             },
@@ -308,6 +370,13 @@
           "say": "Alone, they hang back.",
           "dur": 2.6,
           "set": {
+            "kidB": {
+              "x": 614,
+              "y": 250,
+              "w": 22,
+              "h": 50,
+              "turn": 2.2
+            },
             "line": {
               "o": 1
             }
@@ -328,13 +397,8 @@
               "color": "green"
             },
             "thing": {
-              "label": "THE WORLD",
-              "size": 14
-            },
-            "act": {
-              "label": "FACE",
-              "size": 18,
-              "color": "pink"
+              "label": "The world",
+              "size": 18
             },
             "line": {
               "label": "Trust comes first, courage after.",

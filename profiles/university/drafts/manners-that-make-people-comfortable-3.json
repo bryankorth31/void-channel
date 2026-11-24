@@ -141,56 +141,67 @@
         {
           "id": "left",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
-          "h": 100,
-          "label": "Throws it back",
-          "color": "blue",
           "o": 0,
-          "size": 22
+          "prop": "figure",
+          "pose": "stand",
+          "label": "Throws it back",
+          "x": 161.875,
+          "y": 107.5,
+          "w": 56.25,
+          "h": 125,
+          "look": "dark",
+          "turn": 1.3,
+          "color": "blue",
+          "size": 20,
+          "tagW": 180,
+          "tag": [
+            0,
+            115
+          ]
         },
         {
           "id": "right",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
-          "h": 100,
-          "label": "Keeps the ball",
-          "color": "blue",
           "o": 0,
-          "size": 22
+          "prop": "figure",
+          "pose": "stand",
+          "label": "Keeps the ball",
+          "x": 581.875,
+          "y": 107.5,
+          "w": 56.25,
+          "h": 125,
+          "turn": -1.3,
+          "color": "blue",
+          "size": 20,
+          "tagW": 180,
+          "tag": [
+            0,
+            115
+          ]
         },
         {
           "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "BALL",
+          "type": "card",
+          "o": 0,
+          "prop": "baseball",
+          "label": "Ball",
           "color": "gold",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
-        },
-        {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "THROW",
-          "color": "fg",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
+          "size": 18,
+          "x": 237.5,
+          "y": 192.5,
+          "w": 45,
+          "h": 45,
+          "tagW": 110,
+          "tag": [
+            0,
+            -70
+          ]
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
+          "y": 350,
           "label": "No return, no game.",
           "color": "pink",
           "size": 22,
@@ -209,8 +220,7 @@
               "o": 1
             },
             "thing": {
-              "o": 1,
-              "s": 1
+              "o": 1
             }
           }
         },
@@ -218,10 +228,11 @@
           "say": "You throw. They catch.",
           "dur": 2.4,
           "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
-              "shake": true
+            "thing": {
+              "x": 517.5,
+              "y": 192.5,
+              "w": 45,
+              "h": 45
             }
           }
         },
@@ -229,6 +240,12 @@
           "say": "Throw it back, and the game goes on.",
           "dur": 2.6,
           "set": {
+            "thing": {
+              "x": 237.5,
+              "y": 192.5,
+              "w": 45,
+              "h": 45
+            },
             "left": {
               "sub": "the game goes on"
             },
@@ -241,6 +258,15 @@
           "say": "Keep it, and there is no game.",
           "dur": 2.6,
           "set": {
+            "thing": {
+              "x": 537.5,
+              "y": 177.5,
+              "w": 45,
+              "h": 45
+            },
+            "right": {
+              "turn": 2.6
+            },
             "line": {
               "o": 1
             }
@@ -261,13 +287,8 @@
               "color": "green"
             },
             "thing": {
-              "label": "THE TALK",
+              "label": "The talk",
               "size": 18
-            },
-            "act": {
-              "label": "TAKE TURNS",
-              "size": 14,
-              "color": "pink"
             },
             "line": {
               "label": "Conversation is equal give and take.",

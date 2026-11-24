@@ -630,6 +630,13 @@ learned "when they can say it another way".
   cooling traps impurities; a wrong core grows two misaligned grains that crack where they meet; annealing lets the
   bigger grain absorb the smaller and pushes impurities out; a wrong core cannot be annealed, it melts back.
 - After it sets: "Now say it another way", a box that stays on the device and is never graded.
+- 23 Nov 2026, Bryan: "still simple", then "A, the bottle". The crystal is drawn on the lit table as a glass bottle of
+  supercooled water (profiles/university/crystal-bottle.js, three.js), the five partials handwritten on paper slips
+  around it. The right piece lies before the bottle and white ice runs down through the water; once set, strings tie
+  every slip to it. A wrong piece grows a clear grain and a cloudy one with a glowing crack between them. Fast cooling
+  leaves dark flaws in the ice; heat glows warm under the bottle and anneals them out, or melts a wrong core back to
+  water. crystal.js keeps every growth rule and only hands the bottle what they say; the flat drawing stays for a
+  screen that cannot draw in 3D. On a phone the slips are also laid out readable under the bottle.
 - Checked 15 Nov by stepping frames: right piece sets in about 60 frames (one second); wrong piece cracks (70 cells
   on the break) and heat melts it back with the choices open again; unit 4's fast cooling traps 75 flaws and heat
   anneals them out. Fits 1920 wide and the Tab S8 both ways with no sideways scroll.

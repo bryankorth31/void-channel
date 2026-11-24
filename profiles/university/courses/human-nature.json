@@ -205,44 +205,64 @@
           },
           {
             "id": "slice",
-            "type": "stamp",
-            "x": 345,
-            "y": 22,
-            "w": 110,
-            "label": "LAST SLICE",
+            "type": "card",
+            "x": 330,
+            "y": 0,
+            "w": 140,
+            "label": "Last slice",
             "color": "gold",
             "o": 0,
-            "s": 0.4,
-            "size": 15
+            "size": 20,
+            "prop": "pizza",
+            "h": 140,
+            "slices": 8,
+            "left": 1,
+            "tagW": 170,
+            "tag": [
+              0,
+              95
+            ]
           },
           {
             "id": "coin",
-            "type": "stamp",
-            "x": 340,
-            "y": 150,
-            "w": 120,
-            "label": "FLIP",
+            "type": "card",
+            "x": 355,
+            "y": 205,
+            "w": 90,
+            "label": "Flip",
             "color": "fg",
             "o": 0,
-            "s": 0.4,
-            "size": 20
+            "size": 20,
+            "prop": "coin",
+            "h": 90,
+            "tagW": 160,
+            "tag": [
+              -165,
+              20
+            ]
           },
           {
             "id": "mirror",
             "type": "card",
-            "x": 590,
-            "y": 190,
-            "w": 170,
-            "h": 90,
+            "x": 600,
+            "y": 180,
+            "w": 120,
+            "h": 100,
             "label": "A mirror",
             "color": "green",
             "o": 0,
-            "size": 18
+            "size": 18,
+            "prop": "mirror",
+            "tagW": 170,
+            "tag": [
+              0,
+              95
+            ]
           },
           {
             "id": "feel",
             "type": "text",
-            "x": 400,
+            "x": 370,
             "y": 330,
             "label": "\"I was totally fair.\"",
             "color": "pink",
@@ -262,8 +282,7 @@
                 "o": 1
               },
               "slice": {
-                "o": 1,
-                "s": 1
+                "o": 1
               }
             }
           },
@@ -273,7 +292,7 @@
             "set": {
               "coin": {
                 "o": 1,
-                "s": 1
+                "up": true
               }
             }
           },
@@ -282,7 +301,9 @@
             "dur": 2,
             "set": {
               "coin": {
-                "label": "TAILS"
+                "label": "Tails",
+                "up": false,
+                "face": "tails"
               },
               "mate": {
                 "sub": "wins the slice",
@@ -295,9 +316,10 @@
             "dur": 2.2,
             "set": {
               "coin": {
-                "label": "HEADS!",
+                "label": "Heads!",
                 "color": "pink",
-                "shake": true
+                "shake": true,
+                "face": "heads"
               },
               "mate": {
                 "sub": "loses it",
@@ -331,10 +353,10 @@
                 "sub": "living with the flip"
               },
               "slice": {
-                "label": "THE PRIZE"
+                "label": "The prize"
               },
               "coin": {
-                "label": "9 IN 10",
+                "label": "9 in 10",
                 "size": 18
               },
               "feel": {
@@ -350,7 +372,7 @@
                 "o": 1
               },
               "coin": {
-                "label": "FAIR",
+                "label": "Fair",
                 "color": "green"
               },
               "mate": {
@@ -567,15 +589,22 @@
           },
           {
             "id": "clock",
-            "type": "stamp",
-            "x": 560,
-            "y": 45,
-            "w": 150,
+            "type": "card",
+            "x": 600,
+            "y": 0,
+            "w": 180,
             "label": "11 PM",
             "color": "fg",
             "o": 0,
-            "s": 0.4,
-            "size": 22
+            "size": 22,
+            "prop": "alarm",
+            "h": 140,
+            "time": 23,
+            "tagW": 160,
+            "tag": [
+              -175,
+              10
+            ]
           },
           {
             "id": "lb",
@@ -631,8 +660,7 @@
                 "o": 1
               },
               "clock": {
-                "o": 1,
-                "s": 1
+                "o": 1
               },
               "lb": {
                 "o": 1
@@ -655,7 +683,8 @@
               "clock": {
                 "label": "5:30 AM",
                 "color": "pink",
-                "shake": true
+                "shake": true,
+                "time": 5.5
               },
               "sm": {
                 "w": 540,
@@ -674,8 +703,9 @@
                 "color": "dim"
               },
               "clock": {
-                "label": "SNOOZE",
-                "size": 20
+                "label": "Snooze",
+                "size": 20,
+                "time": 5.67
               }
             }
           },
@@ -694,7 +724,7 @@
                 "label": "Now"
               },
               "clock": {
-                "label": "UP CLOSE",
+                "label": "Up close",
                 "size": 18,
                 "color": "gold"
               }
@@ -719,9 +749,11 @@
                 "color": "green"
               },
               "clock": {
-                "label": "MAST",
+                "label": "Mast",
                 "color": "green",
-                "size": 22
+                "size": 22,
+                "x": 680,
+                "time": 5.5
               }
             }
           }

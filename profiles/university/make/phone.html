@@ -31,7 +31,7 @@ input:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:1px}
 .lines li i{font-style:normal;color:var(--gold);font-size:13px;margin-right:8px}
 #note{font-weight:600;min-height:1.4em}
 #note.ok{color:var(--ok)}#note.no{color:var(--no)}
-.picks{display:grid;gap:10px;margin:0 0 14px}.picks button{text-align:left;font-size:18px;padding:16px}.picks button:disabled{opacity:.6}.picks button.right{opacity:1;border-color:var(--ok);color:var(--ok)}.picks button.wrong{opacity:1;border-color:var(--no);color:var(--no)}
+.picks{display:grid;gap:10px;margin:0 0 14px}.picks button{text-align:left;font-size:18px;padding:16px}.picks button:disabled{opacity:.6}.picks button.right{opacity:1;border-color:var(--ok);color:var(--ok)}.picks button.wrong{opacity:1;border-color:var(--no);color:var(--no)}.picks button.mine{opacity:1;border-color:#5fd4ff;color:#5fd4ff}
 #aq{font-size:21px;font-weight:600;line-height:1.3;margin:0 0 14px}blockquote{margin:8px 0 14px;padding:8px 12px;border-left:3px solid var(--line);color:var(--dim)}
 a{color:var(--gold)}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
@@ -66,6 +66,20 @@ a{color:var(--gold)}
   <p class="dim" id="ascore"></p>
   <p class="dim" id="give" hidden><!--give--></p>
   <p class="dim" id="await">Watch the lecture on the big screen. Each question comes here when the lecture reaches it.</p>
+</section>
+
+<section id="eat" hidden>
+  <p class="dim" id="ehead">Your pieces. Send the ones you think belong to the idea on the shared screen.</p>
+  <div class="picks" id="pieces"></div>
+  <div id="eidea" hidden><p class="dim">The idea that set:</p><p id="eideatext"></p><p class="dim" id="eaha"></p></div>
+</section>
+
+<section id="say" hidden>
+  <p class="dim">Say this in your own words:</p>
+  <p id="sidea"></p>
+  <textarea id="stext" rows="4" maxlength="300" aria-label="The idea in your own words" title="Write the idea in your own words"></textarea>
+  <div class="row"><button type="button" id="ssend" title="Send it to the shared screen, without your name">Send, without my name</button></div>
+  <div class="picks" id="scards"></div>
 </section>
 
 <section id="write" hidden>
@@ -104,7 +118,7 @@ a{color:var(--gold)}
     try { sessionStorage.setItem('vu-make-token', token); } catch (e) {}
   }
   function norm(s) { var c = String(s || '').trim().toUpperCase(); return c.length === 4 && c.split('').every(function (x) { return ALPHA.indexOf(x) >= 0; }) ? c : ''; }
-  function show(id) { ['enter', 'ready', 'write', 'answer'].forEach(function (k) { $(k).hidden = k !== id; }); window.scrollTo(0, 0); }
+  function show(id) { ['enter', 'ready', 'write', 'answer', 'eat', 'say'].forEach(function (k) { $(k).hidden = k !== id; }); window.scrollTo(0, 0); }
   function note(text, kind) { $('note').textContent = text || ''; $('note').className = kind || ''; }
   function send(obj) { if (ws && ws.readyState === 1) { ws.send(JSON.stringify(obj)); return true; } note('Not connected to the computer. Wait a moment, or scan the code again.', 'no'); return false; }
 
@@ -123,9 +137,9 @@ a{color:var(--gold)}
       setTimeout(connect, 1500);
     };
   }
-  function askCode(text) { $('title').textContent = 'Join a lecture'; note(text, text ? 'no' : ''); show('enter'); }
+  function askCode(text) { $('title').textContent = 'Join a room'; note(text, text ? 'no' : ''); show('enter'); }
 
-  var mode = 'make', asking = null, tally = { right: 0, second: 0, seen: 0 }, total = 0, over = false;
+  var study = false, mode = 'make', asking = null, tally = { right: 0, second: 0, seen: 0 }, total = 0, over = false;
   function score() { $('ascore').textContent = tally.seen ? 'You have ' + tally.right + ' of ' + tally.seen + ' right' + (tally.second ? ', ' + tally.second + ' on the second try' : '') + '.' : ''; }
   function answer(m) {
     if (m.type === 'ask') { asking = { i: m.i, choices: [], open: false }; $('awhich').textContent = 'Question ' + (m.i + 1) + ' of ' + m.of; $('aq').textContent = m.q; $('picks').textContent = ''; $('after').hidden = true; $('await').hidden = true; note(''); show('answer'); return true; }
@@ -135,7 +149,7 @@ a{color:var(--gold)}
       asking.open = true;
       asking.choices.forEach(function (text, j) {
         var b = document.createElement('button'); b.type = 'button'; b.textContent = text; b.title = 'Choose this answer';
-        b.onclick = function () { if (!asking.open || b.disabled) return; if (send({ type: 'pick', i: asking.i, j: j })) { asking.open = false; note('Checking.'); } };
+        b.onclick = function () { if (!asking.open || b.disabled) return; if (send({ type: 'pick', i: asking.i, j: j })) { asking.open = false; if (study) b.className = 'mine'; note(study ? 'Locked in. Nobody sees it but you. The room sees how it split when everyone is in.' : 'Checking.'); } };
         $('picks').appendChild(b);
       });
       return true;
@@ -143,6 +157,7 @@ a{color:var(--gold)}
     if (m.type === 'result') {
       var bs = $('picks').querySelectorAll('button');
       if (m.more) { if (bs[m.j]) { bs[m.j].className = 'wrong'; bs[m.j].disabled = true; } asking.open = true; note('Not quite. You have one more try.', 'no'); return true; }
+      if (study) { [].forEach.call(bs, function (b, j) { b.disabled = true; if (j === m.a) b.className = 'right'; }); note(m.j === m.a ? 'You picked what the source says.' : (m.j >= 0 ? 'The source says something else: ' : 'The source says: ') + (m.j === m.a ? '' : (asking.choices[m.a] || '')), ''); $('await').hidden = false; $('await').textContent = 'Talk it over. The next question comes from the shared screen.'; return true; }
       [].forEach.call(bs, function (b, j) { b.disabled = true; if (j === m.a) b.className = 'right'; else if (j === m.j) b.className = 'wrong'; });
       tally.seen++; if (m.ok) { tally.right++; if (m.second) tally.second++; }
       note(m.ok ? (m.second ? 'Right, on your second try.' : 'Right.') : (m.late ? 'The lecture moved on. The answer is marked.' : 'Not quite.'), m.ok ? 'ok' : 'no');
@@ -150,12 +165,13 @@ a{color:var(--gold)}
       return true;
     }
     if (m.type === 'why') { $('awhy').textContent = m.text; $('after').hidden = false; return true; }
-    if (m.type === 'quote') { $('aquote').textContent = '"' + m.text + '" (the lecture, at ' + m.clock + ')'; return true; }
+    if (m.type === 'quote') { $('aquote').textContent = '"' + m.text + '" (' + (study ? m.clock : 'the lecture, at ' + m.clock) + ')'; return true; }
     return false;
   }
   function finish() {
     over = true; asking = null;
-    $('title').textContent = 'The lesson is over';
+    $('title').textContent = study ? 'The session is over' : 'The lesson is over';
+    if (study) { $('awhich').textContent = ''; $('aq').textContent = ''; $('picks').textContent = ''; $('after').hidden = true; $('await').hidden = true; $('ascore').textContent = 'Nothing from this room was kept. Mark the lesson done on Void University and its questions come back to you a day, three days and a week later.'; if ($('give').textContent.trim()) $('give').hidden = false; note(''); show('answer'); return; }
     $('awhich').textContent = ''; $('aq').textContent = ''; $('picks').textContent = ''; $('after').hidden = true; $('await').hidden = true;
     $('ascore').textContent = tally.seen ? 'You got ' + tally.right + ' of ' + tally.seen + (tally.second ? ', ' + tally.second + ' on the second try' : '') + '.' + (total > tally.seen ? ' ' + (total - tally.seen) + ' of the ' + total + ' questions were not reached.' : '') : 'No question was reached this time.';
     if ($('give').textContent.trim()) $('give').hidden = false;
@@ -163,6 +179,15 @@ a{color:var(--gold)}
   }
   function hear(m) {
     if (m.type === 'hello') { note(''); return; }
+    if (m.type === 'say') { mode = 'say'; study = true; $('kind').textContent = 'Void University: study together'; $('title').textContent = m.title || 'Say it another way'; $('sidea').textContent = m.idea; $('stext').value = ''; $('stext').disabled = false; $('ssend').hidden = false; $('scards').textContent = ''; $('ssend').onclick = function () { var v = $('stext').value.trim(); if (v) send({ type: 'said', text: v.slice(0, 300) }); else note('Write it first, in your own words.', 'no'); }; note(''); show('say'); return; }
+    if (m.type === 'heard' && mode === 'say') { $('stext').disabled = true; $('ssend').hidden = true; note('Sent. The cards show when everyone has written.', 'ok'); return; }
+    if (m.type === 'vote' && mode === 'say') { $('scards').textContent = ''; note('Pick the one that says it most clearly. Yours is marked and cannot be picked.'); return; }
+    if (m.type === 'card' && mode === 'say') { var cb = document.createElement('button'); cb.type = 'button'; cb.textContent = m.text; cb.title = m.mine ? 'This is yours' : 'Pick this one as the clearest'; if (m.mine) { cb.disabled = true; cb.className = 'mine'; } cb.onclick = function () { if (send({ type: 'vote', i: m.i })) { [].forEach.call($('scards').querySelectorAll('button'), function (x) { if (!x.classList.contains('mine')) x.className = ''; }); cb.className = 'right'; note('Picked. You can change it while others choose.', 'ok'); } }; $('scards').appendChild(cb); return; }
+    if (m.type === 'eat') { mode = 'eat'; study = true; $('kind').textContent = 'Void University: study together'; $('title').textContent = m.title || 'Pattern Eater'; $('pieces').textContent = ''; $('eidea').hidden = true; $('ehead').textContent = m.n ? 'Your pieces. Send the ones you think belong to the idea on the shared screen. Keep the ones you think do not.' : 'No pieces for you this round. Help the room decide out loud.'; note(''); show('eat'); return; }
+    if (m.type === 'piece' && mode === 'eat') { var pb = document.createElement('button'); pb.type = 'button'; pb.textContent = m.text; pb.dataset.id = m.id; pb.title = 'Send this piece to the shared screen'; pb.onclick = function () { if (pb.disabled) return; if (send({ type: 'give', id: m.id })) { pb.disabled = true; note('Sent.'); } }; $('pieces').appendChild(pb); return; }
+    if (m.type === 'took' && mode === 'eat') { var tb = $('pieces').querySelector('[data-id="' + m.id + '"]'); if (tb) { tb.className = m.ok ? 'mine' : 'wrong'; tb.disabled = true; } note(m.ok ? 'It fit. It is on the shared screen.' : 'That one cracked the crystal: it is not part of this idea. ' + (m.why || ''), m.ok ? 'ok' : 'no'); return; }
+    if (m.type === 'set' && mode === 'eat') { $('eideatext').textContent = m.idea; $('eaha').textContent = m.aha || ''; $('eidea').hidden = false; note(''); return; }
+    if (m.type === 'unit' && m.mode === 'study') { mode = 'answer'; study = true; $('kind').textContent = 'Void University: study together'; $('title').textContent = m.title || 'Study together'; if (!asking) { $('await').hidden = false; $('await').textContent = 'Waiting for the shared screen to ask the first question.'; show('answer'); } return; }
     if (m.type === 'unit' && m.mode === 'answer') { mode = 'answer'; $('kind').textContent = 'Void University: answer on your phone'; total = +m.of || 0; $('title').textContent = m.title || 'The lecture'; if (!asking) { $('await').hidden = false; score(); show('answer'); } return; }
     if (m.type === 'over') { finish(); return; }
     if (mode === 'answer' && answer(m)) return;

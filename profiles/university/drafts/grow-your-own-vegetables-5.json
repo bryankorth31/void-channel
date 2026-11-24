@@ -141,56 +141,87 @@
         {
           "id": "left",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "flour",
           "label": "Fresh flour",
           "color": "blue",
+          "size": 22,
+          "x": 70,
+          "y": 80,
+          "w": 100,
+          "h": 140,
+          "tagW": 160,
+          "tag": [
+            0,
+            105
+          ]
+        },
+        {
+          "id": "loafL",
+          "type": "card",
           "o": 0,
-          "size": 22
+          "prop": "loaf",
+          "good": true,
+          "label": "",
+          "x": 190,
+          "y": 180,
+          "w": 130,
+          "h": 130
+        },
+        {
+          "id": "thing",
+          "type": "card",
+          "o": 0,
+          "prop": "stove",
+          "label": "Same oven",
+          "color": "gold",
+          "size": 18,
+          "x": 315,
+          "y": 35,
+          "w": 170,
+          "h": 170,
+          "tagW": 150,
+          "tag": [
+            0,
+            125
+          ]
+        },
+        {
+          "id": "loafR",
+          "type": "card",
+          "o": 0,
+          "prop": "loaf",
+          "good": false,
+          "label": "",
+          "x": 480,
+          "y": 180,
+          "w": 130,
+          "h": 130
         },
         {
           "id": "right",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "flour",
+          "stale": true,
           "label": "Stale flour",
           "color": "blue",
-          "o": 0,
-          "size": 22
-        },
-        {
-          "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "SAME OVEN",
-          "color": "gold",
-          "o": 0,
-          "s": 0.4,
-          "size": 14
-        },
-        {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "BAKE",
-          "color": "fg",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
+          "size": 22,
+          "x": 630,
+          "y": 80,
+          "w": 100,
+          "h": 140,
+          "tagW": 160,
+          "tag": [
+            0,
+            105
+          ]
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
+          "y": 350,
           "label": "No care fixes a bad start.",
           "color": "pink",
           "size": 22,
@@ -209,8 +240,7 @@
               "o": 1
             },
             "thing": {
-              "o": 1,
-              "s": 1
+              "o": 1
             }
           }
         },
@@ -218,9 +248,8 @@
           "say": "Both bake with the same care.",
           "dur": 2.4,
           "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
+            "thing": {
+              "lit": true,
               "shake": true
             }
           }
@@ -229,6 +258,12 @@
           "say": "Fresh flour makes good bread. Stale flour does not.",
           "dur": 2.6,
           "set": {
+            "loafL": {
+              "o": 1
+            },
+            "loafR": {
+              "o": 1
+            },
             "left": {
               "sub": "good bread"
             },
@@ -261,13 +296,8 @@
               "color": "green"
             },
             "thing": {
-              "label": "SAME GARDEN",
-              "size": 14
-            },
-            "act": {
-              "label": "TEND",
-              "size": 18,
-              "color": "pink"
+              "label": "Same garden",
+              "size": 18
             },
             "line": {
               "label": "No amount of care fixes poor seed.",

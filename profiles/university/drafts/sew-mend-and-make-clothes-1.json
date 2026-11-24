@@ -157,68 +157,76 @@
       ],
       "actors": [
         {
+          "id": "wall",
+          "type": "card",
+          "o": 0,
+          "prop": "wallshelf",
+          "stage": "taped",
+          "label": "",
+          "x": 495,
+          "y": 0,
+          "w": 250,
+          "h": 250
+        },
+        {
           "id": "s0",
           "type": "card",
-          "x": 30,
-          "y": 90,
-          "w": 220,
-          "h": 100,
+          "o": 0,
+          "prop": "tape",
           "label": "Tape it up",
           "color": "blue",
-          "o": 0,
-          "size": 20
+          "size": 20,
+          "x": 55,
+          "y": 180,
+          "w": 120,
+          "h": 120,
+          "tagW": 160,
+          "tag": [
+            0,
+            -100
+          ]
         },
         {
           "id": "s1",
           "type": "card",
-          "x": 290,
-          "y": 90,
-          "w": 220,
-          "h": 100,
+          "o": 0,
+          "prop": "pencil",
           "label": "Mark the spot",
           "color": "blue",
-          "o": 0,
-          "size": 20
-        },
-        {
-          "id": "a1",
-          "type": "arrow",
-          "x": 256,
-          "y": 140,
-          "x2": 284,
-          "y2": 140,
-          "color": "dim",
-          "o": 0,
-          "draw": 0
+          "size": 20,
+          "x": 200,
+          "y": 170,
+          "w": 170,
+          "h": 170,
+          "tagW": 170,
+          "tag": [
+            0,
+            -110
+          ]
         },
         {
           "id": "s2",
           "type": "card",
-          "x": 550,
-          "y": 90,
-          "w": 220,
-          "h": 100,
+          "o": 0,
+          "prop": "screwdriver",
           "label": "Screw it in",
           "color": "blue",
-          "o": 0,
-          "size": 20
-        },
-        {
-          "id": "a2",
-          "type": "arrow",
-          "x": 516,
-          "y": 140,
-          "x2": 544,
-          "y2": 140,
-          "color": "dim",
-          "o": 0,
-          "draw": 0
+          "size": 20,
+          "x": 360,
+          "y": 175,
+          "w": 170,
+          "h": 170,
+          "tagW": 170,
+          "tag": [
+            0,
+            -115
+          ]
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 270,
+          "y": 345,
           "label": "Each tool has one job.",
           "color": "pink",
           "size": 22,
@@ -230,6 +238,9 @@
           "say": "Tape holds the shelf while you look.",
           "dur": 2.6,
           "set": {
+            "wall": {
+              "o": 1
+            },
             "s0": {
               "o": 1,
               "sub": "holds for now"
@@ -244,9 +255,8 @@
               "o": 1,
               "sub": "shows where"
             },
-            "a1": {
-              "o": 1,
-              "draw": 1
+            "wall": {
+              "stage": "marked"
             }
           }
         },
@@ -258,9 +268,8 @@
               "o": 1,
               "sub": "holds for good"
             },
-            "a2": {
-              "o": 1,
-              "draw": 1
+            "wall": {
+              "stage": "screwed"
             },
             "line": {
               "o": 1

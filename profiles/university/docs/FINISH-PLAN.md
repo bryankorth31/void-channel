@@ -336,3 +336,87 @@ the HQ areas chat. Steps 7 to 10 start after the 22 Nov reset.
   no sideways scroll, no broken picture, no console errors. Not done yet: the picture engine and the pictures
   themselves (38 live units), the labelled boxes in the scenes (UNI-02), the VOID ACADEMY sign, channel cards. Not
   pushed, not deployed.
+- 22 Nov 2026, explainers (Bryan: "i want thatr machine etc explainer to be incluiseded and usd in university now",
+  then "global warming, el nino, water issues ie colorado river. i want less "thing" and more issues or delemas ...
+  issues ppl cant seem to grasp", then "Yes, carbon bathtub"). Plan: chief-of-staff\plans\PLAN-university-explainers.md.
+  Built: one explainer engine for issues that are a store filling and draining (explain-model.js, the same code the
+  tests run; explain.js, the 3D stage on three.js; build.js explainBlock; uni.js explainerProblems). A unit's
+  `explainer` block names stores, flows, the learner's choices (faders), the measured years and the sources; a rate
+  is worked out from the measured years in the file, never typed in. First file: a new area, Earth and climate, and
+  a new course, Our climate, plainly, unit 1 "Steady emissions still fill the air": the Earth from space (NASA Blue
+  Marble, reused from Living World), the carbon in the air as specks (pale before coal and oil, pink added, each a
+  quarter of a billion tonnes), fuel and forest clearing rising from the land, the ocean and land taking back.
+  Numbers: Global Carbon Budget 2025 (Table 7) and NOAA Mauna Loa 1959 to 2025. Guess first (held at today's rate for
+  50 years: 427 to 507 ppm), four rules to find, replay of the measured years, the line under the stage, a trace and
+  a balance of in and out, a quiz quoting the sources, a crystal. The stage runs to 2075 only and its card says the
+  real sinks are weakening (Raupach 2014), so the real rise is likely faster. tests/uni.test.js 33 of 33, selftest 4
+  of 4. Checked in the preview at 1278x513, 1920x1080, 1316x821 and 821x1316: no sideways scroll, every control has a
+  hover tip, no errors from the explainer. The course and block are `live: false`. Not pushed, not deployed.
+- 22 Nov 2026, the If this, then that page (Bryan: "id like to bu8ild a ifttt page of many topics to show and be
+  useful on and for many many topics"; then "If this, then that page"). ifttt.html: every rule from every lab and
+  explainer that ships, by area, course and unit, 19 in the preview (16 from the live labs in the public copy). Each
+  "then" stays hidden until the reader makes it happen in its own lab or explainer; a rule found anywhere is
+  remembered in the reader's browser only (vu:found), so the page and a return visit show it found. Filters by area,
+  found and still to find, and a search. Linked from the Courses menu and the front page. Each block carries its key
+  (course/unit/lab or ex). Chains (a then that is the next rule's if) wait for a second climate unit whose rules
+  really follow from the first; none were invented. tests 34 of 34. Checked at 1278x513, 1316x821, 821x1316: no
+  sideways scroll. Not pushed, not deployed; at the next deploy the live site gains the page with the live labs' rules.
+- 22 Nov 2026, explainer 2, the Colorado River (Bryan: "Colorado River"; "Yes, download both"; at the meter line,
+  "Carry on"). Our climate, plainly, unit 2 "The Colorado River: more promised than it carries". A new world kind,
+  "basin": the real ground of the Colorado basin from NOAA ETOPO1 with NASA's July Blue Marble laid over it (both
+  downloaded on Bryan's yes, recorded in living-world/DOWNLOADS.md section E; cut by make/cut-basin.py into
+  img/explain/colorado), the basin's own catchment traced downhill and the rest dimmed, rivers traced (ours), Lake
+  Powell and Lake Mead as water at the level their storage gives, each lake grown on the heights to the area
+  Reclamation measured when full and its bed shaped to the measured area at each level (ours, said on the card), the
+  dry bed showing pale. Water moves along the rivers into Powell, down the Grand Canyon to Mead and on to Mexico, and
+  rises off Powell as evaporation. Numbers: Reclamation's daily records for sites 919 and 921, water years 2000 to
+  2026 (river, releases, evaporation, storage, levels; the books close for Powell to within 3,000 acre-feet a year),
+  and the Law of the River page for the 1922, 1928 and 1944 promises. Engine: a flow may run from one store into
+  another, an empty store lets out only what comes in, the hold line can name the store and choice, lakes have
+  levels read off the measured curve. Guess: the deals' 9 against the recent river empties Lake Mead in about 9 years.
+  tests 35 of 35, selftest 4 of 4, links answer. Checked at 1278x513, 1920x1080, 1316x821, 821x1316: no sideways
+  scroll, every control tipped. Not checked: the motion and the water up close at full speed (the hidden preview
+  pane runs a few frames a second). Not pushed, not deployed; the block and course are live: false.
+- 22 Nov 2026, the front page as the landing pad (Bryan: "Option A" of docs/LANDING-REVIEW.md). The old headline band
+  is now the door: one real question from a lesson, chosen by the day (the explainers' guesses, with their gap worked
+  out at build time by the same model the page runs, and the scale stages' guesses), each with a short door wording
+  where the lesson's is long; guess, the gap is stated as a plain fact, then "See it happen" opens the lesson. Beside
+  it, Remember it: the quiz questions of lessons the reader marked done come back a day, three days, a week and three
+  weeks later, mixed across lessons, answered in place (recall.json, fetched only once a lesson is done; kept in the
+  browser as vu:recall; marking done now records when, vu:doneAt); one plain line of what you know ("You have
+  finished 3 lessons and found 1 of 23 rules") with Pick up where you left off; a welcome card for a first visit.
+  Under it, Things people get wrong (units carry a "hook" question: six so far) and Learn together (opens a lecture
+  that has Answer on your phones). The public copy carries only live pieces: at the door the two scale-stage guesses,
+  in Remember it only live courses. tests 36 of 36, selftest 4 of 4. Checked at 1278x513, 1316x821, 821x1316 and
+  1920x1080: no sideways scroll. Not pushed, not deployed.
+- 22 Nov 2026, Study together and the Tools row (Bryan: "i want this to be a side room ppl can use on void u. i want
+  v u to be more hemn a place to mfind lectures. i want it to be a place of tools"; "Yes, build both"). study.html
+  and study.js: a room for one shared screen and everyone's phones, on the lesson rooms the University already
+  opens on voidtv.net's relay (no change to PLAY). Pick any lesson with questions (71 in the preview, live lessons
+  only in the public copy); each question goes to every phone; each phone locks in a guess privately; when all are in
+  (or Show how the room split) the screen shows the split and the source settles it with its quote; each phone is
+  told plainly, no score; End the session tells the phones and keeps nothing. The phone page gained a study mode.
+  recall.json now carries each question's quote and where it is from. The front page has a Tools row (Study
+  together, See how it works, If this, then that, Mind Gym, Body Atlas), and the Courses menu links to Tools and the
+  room (the header bar stays Home and the page's name, as the remodel set). Tested with two browser tabs as phones on
+  the preview server: join, private picks, the split, the source on screen and phone, end. tests 37 of 37, selftest
+  4 of 4; no sideways scroll at 821x1316, 1278x513, 1920x1080. Not tried with real phones. Not pushed, not deployed.
+- 22 Nov 2026, Pattern Eater together in the study room (Bryan: "Pattern Eater together"; his design from Dec 2025,
+  plans/research-aha-nucleation-pattern-eater.md). A lesson with a crystal can be studied as Pattern Eater: its true
+  pieces and its wrong whole answers are dealt out to the phones; people send the ones they think belong; a wrong one
+  cracks the crystal on the shared screen and dissolves, and the phone is told why; the next right piece rebuilds
+  it; when every true piece is in, the screen asks the room to say out loud what idea just set, then Show the idea
+  sets it on the screen and on every phone with the lesson's aha line. Deal again re-deals to whoever is in the room.
+  recall.json carries each lesson's crystal. Tested with two tabs as phones: a wrong piece cracked it, five right
+  pieces from two phones set it. tests 38 of 38, selftest 4 of 4. Not tried with real phones; not pushed or deployed.
+- 22 Nov 2026, Say it another way in the study room (Bryan: "Say it another way"). From a lesson (or right after a
+  Pattern Eater round sets) every phone writes the idea in its own words, up to 300 letters; nothing shows on the
+  shared screen until all have written (or Show what is written); then the cards show without names in a shuffled
+  order, each phone gets them all with its own marked and not pickable, and each picks the clearest; the room's pick
+  lights up. Nothing graded, nothing kept. Tested with two tabs as phones. tests 39 of 39, selftest 4 of 4.
+- 23 Nov 2026, The body, unit 5: the rolled ankle. Bryan typed here on 20 Nov "also want more lessons"; on 23 Nov
+  he told the Body Atlas chat "tell the university chat to add the ankle lesson" (relayed), after Body Atlas put its
+  fifth lesson live. Unit 5 opens ?lesson=ankle with the way back (unit=5), has its everyday scene (a tent when the
+  first guy rope snaps), a crystal and five questions; each quote was checked word for word against the live
+  lesson file. The Body Atlas entry in list.json has the ankle as its fifth room. The course is live, so the unit
+  reaches the site at the next University deploy. Not pushed, not deployed.

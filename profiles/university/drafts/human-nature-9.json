@@ -161,66 +161,65 @@
         {
           "id": "s0",
           "type": "card",
-          "x": 30,
-          "y": 90,
-          "w": 220,
-          "h": 100,
+          "o": 0,
+          "prop": "car",
+          "learner": true,
           "label": "Think each move",
           "color": "blue",
-          "o": 0,
-          "size": 17
+          "size": 20,
+          "x": 65,
+          "y": 117.5,
+          "w": 170,
+          "h": 85,
+          "tagW": 190,
+          "tag": [
+            0,
+            100
+          ]
         },
         {
           "id": "s1",
           "type": "card",
-          "x": 290,
-          "y": 90,
-          "w": 220,
-          "h": 100,
+          "o": 0,
+          "prop": "calendar",
+          "days": 0,
+          "month": "MARCH",
           "label": "Practice daily",
           "color": "blue",
-          "o": 0,
-          "size": 17
-        },
-        {
-          "id": "a1",
-          "type": "arrow",
-          "x": 256,
-          "y": 140,
-          "x2": 284,
-          "y2": 140,
-          "color": "dim",
-          "o": 0,
-          "draw": 0
+          "size": 20,
+          "x": 295,
+          "y": 20,
+          "w": 150,
+          "h": 150,
+          "tagW": 180,
+          "tag": [
+            0,
+            112
+          ]
         },
         {
           "id": "s2",
           "type": "card",
-          "x": 550,
-          "y": 90,
-          "w": 220,
-          "h": 100,
+          "o": 0,
+          "prop": "house",
           "label": "No thought now",
           "color": "blue",
-          "o": 0,
-          "size": 17
-        },
-        {
-          "id": "a2",
-          "type": "arrow",
-          "x": 516,
-          "y": 140,
-          "x2": 544,
-          "y2": 140,
-          "color": "dim",
-          "o": 0,
-          "draw": 0
+          "size": 17,
+          "x": 575,
+          "y": 25,
+          "w": 140,
+          "h": 140,
+          "tagW": 180,
+          "tag": [
+            0,
+            110
+          ]
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 270,
+          "y": 345,
           "label": "Repeat it until it runs itself.",
           "color": "pink",
           "size": 22,
@@ -244,11 +243,18 @@
           "set": {
             "s1": {
               "o": 1,
-              "sub": "same route, again"
+              "sub": "same route, again",
+              "days": 26
             },
-            "a1": {
-              "o": 1,
-              "draw": 1
+            "s0": {
+              "x": 115,
+              "y": 212.5,
+              "w": 170,
+              "h": 85,
+              "tag": [
+                190,
+                40
+              ]
             }
           }
         },
@@ -260,9 +266,16 @@
               "o": 1,
               "sub": "it just happens"
             },
-            "a2": {
-              "o": 1,
-              "draw": 1
+            "s0": {
+              "x": 415,
+              "y": 245.5,
+              "w": 170,
+              "h": 85,
+              "learner": false,
+              "tag": [
+                -215,
+                10
+              ]
             },
             "line": {
               "o": 1

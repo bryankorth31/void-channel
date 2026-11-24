@@ -11,6 +11,7 @@
     "Machines",
     "Making",
     "Land",
+    "Earth and climate",
     "Civics and history",
     "Faith and philosophy",
     "Family",
@@ -105,6 +106,14 @@
       "kind": "authored",
       "status": "draft",
       "live": true
+    },
+    {
+      "slug": "our-climate-plainly",
+      "name": "Our climate, plainly",
+      "type": "Earth and climate",
+      "kind": "authored",
+      "status": "draft",
+      "live": false
     }
   ],
   "_types": "The 15 areas are the front page rows (Bryan, 15 Nov 2026: \"I like those rows\"). A row shows each whole course as one card. A course with \"shelf\": \"supplement\" (the mind's mechanisms) shows its units as small cards instead, and any unit anywhere can point to them with \"mechanisms\": [unit numbers].",
@@ -192,6 +201,11 @@
           "id": "spleen",
           "name": "A spleen that swells",
           "trains": "Watch a spleen swell, and see what it reaches and presses on."
+        },
+        {
+          "id": "ankle",
+          "name": "An ankle that rolls inward and tears a ligament",
+          "trains": "Watch an ankle roll inward and tear a ligament, see what else is strained, and how the two are tested."
         }
       ]
     }

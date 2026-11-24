@@ -175,56 +175,143 @@
         {
           "id": "left",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "pizza",
+          "look": "anchovy",
+          "slices": 8,
           "label": "Your favorite",
           "color": "blue",
-          "o": 0,
-          "size": 22
+          "size": 22,
+          "x": 105,
+          "y": 120,
+          "w": 170,
+          "h": 170,
+          "tagW": 170,
+          "tag": [
+            0,
+            115
+          ]
         },
         {
           "id": "right",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "pizza",
+          "slices": 8,
           "label": "What most enjoy",
           "color": "blue",
-          "o": 0,
-          "size": 18
+          "size": 18,
+          "x": 525,
+          "y": 120,
+          "w": 170,
+          "h": 170,
+          "tagW": 180,
+          "tag": [
+            0,
+            115
+          ]
         },
         {
           "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "ONE PIZZA",
-          "color": "gold",
+          "type": "card",
           "o": 0,
-          "s": 0.4,
-          "size": 14
+          "prop": "phone",
+          "screen": "note",
+          "noteHead": "Order",
+          "note": "1 large",
+          "noteSub": "pizza",
+          "noteFoot": "for the table",
+          "label": "One pizza",
+          "color": "gold",
+          "size": 18,
+          "x": 340,
+          "y": 155,
+          "w": 120,
+          "h": 120,
+          "tagW": 150,
+          "tag": [
+            0,
+            110
+          ]
         },
         {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "ORDER",
-          "color": "fg",
+          "id": "p0",
+          "type": "card",
           "o": 0,
-          "s": 0.4,
-          "size": 18
+          "prop": "figure",
+          "pose": "stand",
+          "label": "",
+          "x": 159.25,
+          "y": 20,
+          "w": 31.5,
+          "h": 70,
+          "look": "dark"
+        },
+        {
+          "id": "p1",
+          "type": "card",
+          "o": 0,
+          "prop": "figure",
+          "pose": "stand",
+          "label": "",
+          "x": 249.25,
+          "y": 20,
+          "w": 31.5,
+          "h": 70
+        },
+        {
+          "id": "p2",
+          "type": "card",
+          "o": 0,
+          "prop": "figure",
+          "pose": "stand",
+          "label": "",
+          "x": 339.25,
+          "y": 20,
+          "w": 31.5,
+          "h": 70
+        },
+        {
+          "id": "p3",
+          "type": "card",
+          "o": 0,
+          "prop": "figure",
+          "pose": "stand",
+          "label": "",
+          "x": 429.25,
+          "y": 20,
+          "w": 31.5,
+          "h": 70
+        },
+        {
+          "id": "p4",
+          "type": "card",
+          "o": 0,
+          "prop": "figure",
+          "pose": "stand",
+          "label": "",
+          "x": 519.25,
+          "y": 20,
+          "w": 31.5,
+          "h": 70
+        },
+        {
+          "id": "p5",
+          "type": "card",
+          "o": 0,
+          "prop": "figure",
+          "pose": "stand",
+          "label": "",
+          "x": 609.25,
+          "y": 20,
+          "w": 31.5,
+          "h": 70
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
+          "y": 348,
           "label": "Count everyone, yourself only once.",
           "color": "pink",
           "size": 22,
@@ -243,8 +330,25 @@
               "o": 1
             },
             "thing": {
-              "o": 1,
-              "s": 1
+              "o": 1
+            },
+            "p0": {
+              "o": 1
+            },
+            "p1": {
+              "o": 1
+            },
+            "p2": {
+              "o": 1
+            },
+            "p3": {
+              "o": 1
+            },
+            "p4": {
+              "o": 1
+            },
+            "p5": {
+              "o": 1
             }
           }
         },
@@ -252,9 +356,7 @@
           "say": "You are ordering.",
           "dur": 2.4,
           "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
+            "thing": {
               "shake": true
             }
           }
@@ -268,6 +370,24 @@
             },
             "right": {
               "sub": "the table is happy"
+            },
+            "p0": {
+              "turn": 0.1
+            },
+            "p1": {
+              "turn": 2.9
+            },
+            "p2": {
+              "turn": 2.9
+            },
+            "p3": {
+              "turn": 2.9
+            },
+            "p4": {
+              "turn": 2.9
+            },
+            "p5": {
+              "turn": 2.9
             }
           }
         },
@@ -277,6 +397,24 @@
           "set": {
             "line": {
               "o": 1
+            },
+            "p0": {
+              "turn": 1.24
+            },
+            "p1": {
+              "turn": 1.16
+            },
+            "p2": {
+              "turn": 1.04
+            },
+            "p3": {
+              "turn": 0.83
+            },
+            "p4": {
+              "turn": 0.46
+            },
+            "p5": {
+              "turn": -0.1
             }
           }
         },
@@ -295,13 +433,8 @@
               "color": "green"
             },
             "thing": {
-              "label": "AN ACT",
+              "label": "An act",
               "size": 18
-            },
-            "act": {
-              "label": "JUDGE",
-              "size": 18,
-              "color": "pink"
             },
             "line": {
               "label": "Mill: right acts promote happiness for all.",

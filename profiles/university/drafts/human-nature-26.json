@@ -192,89 +192,110 @@
         {
           "id": "s0",
           "type": "card",
-          "x": 22.5,
-          "y": 90,
-          "w": 170,
-          "h": 100,
+          "o": 0,
+          "prop": "mirror",
           "label": "Know yourself",
           "color": "blue",
-          "o": 0,
-          "size": 17
+          "size": 20,
+          "x": 55,
+          "y": 65,
+          "w": 120,
+          "h": 150,
+          "tagW": 170,
+          "tag": [
+            0,
+            110
+          ]
         },
         {
           "id": "s1",
           "type": "card",
-          "x": 217.5,
-          "y": 90,
-          "w": 170,
-          "h": 100,
+          "o": 0,
+          "prop": "bag",
           "label": "Set it up",
           "color": "blue",
-          "o": 0,
-          "size": 20
-        },
-        {
-          "id": "a1",
-          "type": "arrow",
-          "x": 198.5,
-          "y": 140,
-          "x2": 211.5,
-          "y2": 140,
-          "color": "dim",
-          "o": 0,
-          "draw": 0
+          "size": 20,
+          "x": 220,
+          "y": 155,
+          "w": 150,
+          "h": 80,
+          "tagW": 150,
+          "tag": [
+            0,
+            85
+          ]
         },
         {
           "id": "s2",
           "type": "card",
-          "x": 412.5,
-          "y": 90,
-          "w": 170,
-          "h": 100,
+          "o": 0,
+          "prop": "calendar",
+          "days": 0,
+          "month": "APRIL",
           "label": "Practice",
           "color": "blue",
-          "o": 0,
-          "size": 20
-        },
-        {
-          "id": "a2",
-          "type": "arrow",
-          "x": 393.5,
-          "y": 140,
-          "x2": 406.5,
-          "y2": 140,
-          "color": "dim",
-          "o": 0,
-          "draw": 0
+          "size": 20,
+          "x": 415,
+          "y": 65,
+          "w": 130,
+          "h": 130,
+          "tagW": 150,
+          "tag": [
+            0,
+            110
+          ]
         },
         {
           "id": "s3",
           "type": "card",
-          "x": 607.5,
-          "y": 90,
-          "w": 170,
-          "h": 100,
-          "label": "Good company",
-          "color": "blue",
           "o": 0,
-          "size": 17
+          "prop": "figure",
+          "pose": "stand",
+          "label": "Good company",
+          "x": 639.125,
+          "y": 102.5,
+          "w": 51.75,
+          "h": 115,
+          "color": "blue",
+          "size": 20,
+          "tagW": 180,
+          "tag": [
+            0,
+            105
+          ]
         },
         {
-          "id": "a3",
-          "type": "arrow",
-          "x": 588.5,
-          "y": 140,
-          "x2": 601.5,
-          "y2": 140,
-          "color": "dim",
+          "id": "g1",
+          "type": "card",
           "o": 0,
-          "draw": 0
+          "prop": "figure",
+          "pose": "stand",
+          "label": "",
+          "x": 591.375,
+          "y": 92.5,
+          "w": 47.25,
+          "h": 105,
+          "look": "dark",
+          "turn": 0.6
+        },
+        {
+          "id": "g2",
+          "type": "card",
+          "o": 0,
+          "prop": "figure",
+          "pose": "stand",
+          "label": "",
+          "x": 691.375,
+          "y": 92.5,
+          "w": 47.25,
+          "h": 105,
+          "turn": -0.6
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 270,
+          "y": 348,
           "label": "Arrange your life for the person you want to be.",
           "color": "pink",
           "size": 18,
@@ -299,10 +320,6 @@
             "s1": {
               "o": 1,
               "sub": "before the moment"
-            },
-            "a1": {
-              "o": 1,
-              "draw": 1
             }
           }
         },
@@ -312,11 +329,8 @@
           "set": {
             "s2": {
               "o": 1,
-              "sub": "until it is habit"
-            },
-            "a2": {
-              "o": 1,
-              "draw": 1
+              "sub": "until it is habit",
+              "days": 21
             }
           }
         },
@@ -328,9 +342,11 @@
               "o": 1,
               "sub": "people shape you"
             },
-            "a3": {
-              "o": 1,
-              "draw": 1
+            "g1": {
+              "o": 1
+            },
+            "g2": {
+              "o": 1
             },
             "line": {
               "o": 1

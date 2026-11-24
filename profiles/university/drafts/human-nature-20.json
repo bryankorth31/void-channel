@@ -162,61 +162,120 @@
       ],
       "actors": [
         {
+          "id": "thing",
+          "type": "card",
+          "o": 0,
+          "prop": "sink",
+          "dishes": 1,
+          "label": "The sink",
+          "color": "gold",
+          "size": 18,
+          "x": 290,
+          "y": 75,
+          "w": 220,
+          "h": 220,
+          "tagW": 150,
+          "tag": [
+            175,
+            75
+          ]
+        },
+        {
+          "id": "m0",
+          "type": "card",
+          "o": 0,
+          "prop": "figure",
+          "pose": "stand",
+          "label": "",
+          "x": 204.25,
+          "y": 10,
+          "w": 31.5,
+          "h": 70
+        },
+        {
+          "id": "m1",
+          "type": "card",
+          "o": 0,
+          "prop": "figure",
+          "pose": "stand",
+          "label": "",
+          "x": 314.25,
+          "y": 10,
+          "w": 31.5,
+          "h": 70,
+          "look": "dark"
+        },
+        {
+          "id": "m2",
+          "type": "card",
+          "o": 0,
+          "prop": "figure",
+          "pose": "stand",
+          "label": "",
+          "x": 454.25,
+          "y": 10,
+          "w": 31.5,
+          "h": 70
+        },
+        {
+          "id": "m3",
+          "type": "card",
+          "o": 0,
+          "prop": "figure",
+          "pose": "stand",
+          "label": "",
+          "x": 564.25,
+          "y": 10,
+          "w": 31.5,
+          "h": 70,
+          "look": "dark"
+        },
+        {
           "id": "left",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "plate",
+          "dirty": false,
           "label": "Wash yours",
           "color": "blue",
-          "o": 0,
-          "size": 22
+          "size": 22,
+          "x": 117.5,
+          "y": 207.5,
+          "w": 95,
+          "h": 95,
+          "tagW": 160,
+          "tag": [
+            0,
+            85
+          ]
         },
         {
           "id": "right",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "plate",
+          "dirty": true,
           "label": "Leave them",
           "color": "blue",
-          "o": 0,
-          "size": 22
-        },
-        {
-          "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "THE SINK",
-          "color": "gold",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
-        },
-        {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "DECIDE",
-          "color": "fg",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
+          "size": 22,
+          "x": 592.5,
+          "y": 222.5,
+          "w": 95,
+          "h": 95,
+          "tagW": 160,
+          "tag": [
+            0,
+            75
+          ]
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
+          "y": 350,
           "label": "Each choice is sensible. The sink is full.",
           "color": "pink",
-          "size": 22,
+          "size": 18,
           "o": 0
         }
       ],
@@ -225,15 +284,26 @@
           "say": "Four housemates share one sink.",
           "dur": 2.4,
           "set": {
+            "thing": {
+              "o": 1
+            },
             "left": {
               "o": 1
             },
             "right": {
               "o": 1
             },
-            "thing": {
-              "o": 1,
-              "s": 1
+            "m0": {
+              "o": 1
+            },
+            "m1": {
+              "o": 1
+            },
+            "m2": {
+              "o": 1
+            },
+            "m3": {
+              "o": 1
             }
           }
         },
@@ -241,9 +311,16 @@
           "say": "Each decides alone.",
           "dur": 2.4,
           "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
+            "m0": {
+              "shake": true
+            },
+            "m1": {
+              "shake": true
+            },
+            "m2": {
+              "shake": true
+            },
+            "m3": {
               "shake": true
             }
           }
@@ -264,6 +341,12 @@
           "say": "When all think so, nobody has a clean plate.",
           "dur": 2.6,
           "set": {
+            "thing": {
+              "dishes": 9
+            },
+            "left": {
+              "dirty": true
+            },
             "line": {
               "o": 1
             }
@@ -284,13 +367,8 @@
               "color": "green"
             },
             "thing": {
-              "label": "PAYOFF",
+              "label": "Payoff",
               "size": 18
-            },
-            "act": {
-              "label": "CHOOSE",
-              "size": 18,
-              "color": "pink"
             },
             "line": {
               "label": "Sensible for one, bad for all.",

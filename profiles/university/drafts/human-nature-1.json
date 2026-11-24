@@ -188,56 +188,63 @@
         {
           "id": "left",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "list",
+          "items": "Milk|Eggs|Bread|Apples|Rice|Spinach",
           "label": "The list",
           "color": "blue",
+          "size": 22,
+          "x": 55,
+          "y": 30,
+          "w": 210,
+          "h": 240,
+          "tagW": 170,
+          "tag": [
+            0,
+            135
+          ]
+        },
+        {
+          "id": "thing",
+          "type": "card",
           "o": 0,
-          "size": 22
+          "prop": "basket",
+          "label": "Your cart",
+          "color": "gold",
+          "size": 20,
+          "x": 325,
+          "y": 105,
+          "w": 150,
+          "h": 150,
+          "tagW": 160,
+          "tag": [
+            0,
+            120
+          ]
         },
         {
           "id": "right",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "chips",
           "label": "The snack aisle",
           "color": "blue",
-          "o": 0,
-          "size": 18
-        },
-        {
-          "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "YOUR CART",
-          "color": "gold",
-          "o": 0,
-          "s": 0.4,
-          "size": 14
-        },
-        {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "WALK PAST",
-          "color": "fg",
-          "o": 0,
-          "s": 0.4,
-          "size": 14
+          "size": 18,
+          "x": 565,
+          "y": 65,
+          "w": 150,
+          "h": 190,
+          "tagW": 180,
+          "tag": [
+            0,
+            125
+          ]
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
+          "y": 345,
           "label": "You wrote the list. You also filled the cart.",
           "color": "pink",
           "size": 18,
@@ -252,12 +259,8 @@
             "left": {
               "o": 1
             },
-            "right": {
-              "o": 1
-            },
             "thing": {
-              "o": 1,
-              "s": 1
+              "o": 1
             }
           }
         },
@@ -265,9 +268,8 @@
           "say": "Then you pass the snack aisle.",
           "dur": 2.4,
           "set": {
-            "act": {
+            "right": {
               "o": 1,
-              "s": 1,
               "shake": true
             }
           }
@@ -288,6 +290,17 @@
           "say": "The cart shows what you did.",
           "dur": 2.6,
           "set": {
+            "right": {
+              "on": "thing",
+              "x": 340,
+              "y": 80,
+              "w": 150,
+              "h": 190,
+              "tag": [
+                200,
+                0
+              ]
+            },
             "line": {
               "o": 1
             }
@@ -308,13 +321,8 @@
               "color": "green"
             },
             "thing": {
-              "label": "A CHOICE",
+              "label": "A choice",
               "size": 18
-            },
-            "act": {
-              "label": "TEMPTS",
-              "size": 18,
-              "color": "pink"
             },
             "line": {
               "label": "We are planners and animals at once.",

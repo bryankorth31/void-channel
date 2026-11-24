@@ -155,68 +155,78 @@
       ],
       "actors": [
         {
+          "id": "crib",
+          "type": "card",
+          "o": 0,
+          "prop": "bed",
+          "blankets": 1,
+          "label": "",
+          "x": 300,
+          "y": 150,
+          "w": 200,
+          "h": 200
+        },
+        {
           "id": "s0",
           "type": "card",
-          "x": 30,
-          "y": 90,
-          "w": 220,
-          "h": 100,
+          "o": 0,
+          "prop": "thermometer",
+          "temp": 32,
           "label": "Not too warm",
           "color": "blue",
-          "o": 0,
-          "size": 20
+          "size": 20,
+          "x": 107.5,
+          "y": 35,
+          "w": 85,
+          "h": 210,
+          "tagW": 170,
+          "tag": [
+            0,
+            135
+          ]
         },
         {
           "id": "s1",
           "type": "card",
-          "x": 290,
-          "y": 90,
-          "w": 220,
-          "h": 100,
+          "o": 0,
+          "prop": "window",
+          "open": false,
           "label": "Fresh air",
           "color": "blue",
-          "o": 0,
-          "size": 20
-        },
-        {
-          "id": "a1",
-          "type": "arrow",
-          "x": 256,
-          "y": 140,
-          "x2": 284,
-          "y2": 140,
-          "color": "dim",
-          "o": 0,
-          "draw": 0
+          "size": 22,
+          "x": 290,
+          "y": -25,
+          "w": 220,
+          "h": 220,
+          "tagW": 150,
+          "tag": [
+            200,
+            40
+          ]
         },
         {
           "id": "s2",
           "type": "card",
-          "x": 550,
-          "y": 90,
-          "w": 220,
-          "h": 100,
+          "o": 0,
+          "prop": "bottle",
           "label": "Enough to drink",
           "color": "blue",
-          "o": 0,
-          "size": 17
-        },
-        {
-          "id": "a2",
-          "type": "arrow",
-          "x": 516,
-          "y": 140,
-          "x2": 544,
-          "y2": 140,
-          "color": "dim",
-          "o": 0,
-          "draw": 0
+          "size": 20,
+          "x": 612.5,
+          "y": 95,
+          "w": 95,
+          "h": 190,
+          "tagW": 180,
+          "tag": [
+            0,
+            120
+          ]
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 270,
+          "y": 350,
           "label": "Comfort, not coddling.",
           "color": "pink",
           "size": 22,
@@ -228,6 +238,9 @@
           "say": "A baby in a hot room gets weak and fussy.",
           "dur": 2.6,
           "set": {
+            "crib": {
+              "o": 1
+            },
             "s0": {
               "o": 1,
               "sub": "a hot room makes it limp"
@@ -240,11 +253,11 @@
           "set": {
             "s1": {
               "o": 1,
+              "open": true,
               "sub": "open the window a little"
             },
-            "a1": {
-              "o": 1,
-              "draw": 1
+            "s0": {
+              "temp": 20
             }
           }
         },
@@ -255,10 +268,6 @@
             "s2": {
               "o": 1,
               "sub": "little and often"
-            },
-            "a2": {
-              "o": 1,
-              "draw": 1
             },
             "line": {
               "o": 1

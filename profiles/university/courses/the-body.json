@@ -15,7 +15,8 @@
     "Name what holds a shoulder, a hip and a knee together.",
     "Say what tears when each one gives, and why it gives more easily afterward.",
     "Say why a hip is put back within hours.",
-    "Say why a swollen spleen is felt in the stomach."
+    "Say why a swollen spleen is felt in the stomach.",
+    "Say which ankle ligament tears first, and what cut repeat sprains."
   ],
   "units": [
     {
@@ -70,47 +71,59 @@
         ],
         "actors": [
           {
-            "id": "left",
-            "type": "card",
-            "x": 40,
-            "y": 40,
-            "w": 250,
-            "h": 100,
-            "label": "The golf ball",
-            "color": "blue",
-            "o": 0,
-            "size": 22
-          },
-          {
             "id": "right",
             "type": "card",
-            "x": 510,
-            "y": 40,
-            "w": 250,
-            "h": 100,
+            "prop": "tee",
+            "x": 300,
+            "y": 110,
+            "w": 240,
+            "h": 170,
             "label": "The tee",
             "color": "blue",
             "o": 0,
-            "size": 22
+            "size": 22,
+            "tagW": 190,
+            "tag": [
+              -230,
+              -30
+            ]
+          },
+          {
+            "id": "left",
+            "type": "card",
+            "prop": "golf-ball",
+            "x": 370,
+            "y": 145,
+            "w": 100,
+            "h": 100,
+            "on": "right",
+            "label": "The golf ball",
+            "color": "blue",
+            "o": 0,
+            "size": 22,
+            "tagW": 190,
+            "tag": [
+              230,
+              -50
+            ]
           },
           {
             "id": "thing",
-            "type": "stamp",
-            "x": 340,
-            "y": 20,
-            "w": 120,
-            "label": "THE RIM",
+            "type": "card",
+            "tie": "right.chip",
+            "x": 180,
+            "y": 265,
+            "label": "The rim",
             "color": "gold",
             "o": 0,
-            "s": 0.4,
-            "size": 18
+            "size": 20
           },
           {
             "id": "act",
             "type": "stamp",
-            "x": 340,
-            "y": 160,
-            "w": 120,
+            "x": 30,
+            "y": 15,
+            "w": 100,
             "label": "CHIPS",
             "color": "fg",
             "o": 0,
@@ -120,8 +133,8 @@
           {
             "id": "line",
             "type": "text",
-            "x": 400,
-            "y": 325,
+            "x": 300,
+            "y": 340,
             "label": "It sat fine until the edge chipped.",
             "color": "pink",
             "size": 22,
@@ -140,8 +153,7 @@
                 "o": 1
               },
               "thing": {
-                "o": 1,
-                "s": 1
+                "o": 1
               }
             }
           },
@@ -153,6 +165,9 @@
                 "o": 1,
                 "s": 1,
                 "shake": true
+              },
+              "right": {
+                "chipped": true
               }
             }
           },
@@ -174,6 +189,15 @@
             "set": {
               "line": {
                 "o": 1
+              },
+              "left": {
+                "on": null,
+                "x": 600,
+                "y": 150,
+                "tag": [
+                  0,
+                  95
+                ]
               }
             }
           },
@@ -192,8 +216,10 @@
                 "color": "green"
               },
               "thing": {
-                "label": "LABRUM",
-                "size": 18
+                "label": "The labrum",
+                "sub": "torn off",
+                "size": 18,
+                "color": "pink"
               },
               "act": {
                 "label": "TEARS OFF",
@@ -285,7 +311,8 @@
           "step": "a5",
           "ref": "https://body.bspokevisuals.com/?lesson=shoulder"
         }
-      ]
+      ],
+      "hook": "Why does a shoulder that comes out once come out again?"
     },
     {
       "n": 2,
@@ -341,45 +368,79 @@
           {
             "id": "left",
             "type": "card",
-            "x": 40,
-            "y": 40,
-            "w": 250,
-            "h": 100,
+            "prop": "tap",
+            "x": 60,
+            "y": 90,
+            "w": 110,
+            "h": 110,
             "label": "The tap",
             "color": "blue",
             "o": 0,
-            "size": 22
+            "size": 22,
+            "tagW": 190,
+            "tag": [
+              0,
+              115
+            ]
           },
           {
             "id": "right",
             "type": "card",
-            "x": 510,
-            "y": 40,
-            "w": 250,
-            "h": 100,
+            "prop": "plant",
+            "x": 620,
+            "y": 80,
+            "w": 130,
+            "h": 130,
             "label": "The plant",
             "color": "blue",
             "o": 0,
-            "size": 22
+            "size": 22,
+            "tagW": 190,
+            "tag": [
+              0,
+              120
+            ]
           },
           {
             "id": "thing",
-            "type": "stamp",
-            "x": 340,
-            "y": 20,
-            "w": 120,
-            "label": "THE HOSE",
+            "type": "card",
+            "prop": "hose",
+            "x": 150,
+            "y": 115,
+            "w": 480,
+            "h": 60,
+            "ends": [
+              87,
+              80
+            ],
+            "label": "The hose",
             "color": "gold",
             "o": 0,
-            "s": 0.4,
-            "size": 18
+            "size": 20,
+            "tagW": 190,
+            "tag": [
+              0,
+              120
+            ]
+          },
+          {
+            "id": "tyre",
+            "type": "card",
+            "prop": "tyre",
+            "x": 330,
+            "y": 100,
+            "w": 130,
+            "h": 90,
+            "label": "",
+            "color": "fg",
+            "o": 0
           },
           {
             "id": "act",
             "type": "stamp",
-            "x": 340,
-            "y": 160,
-            "w": 120,
+            "x": 470,
+            "y": 0,
+            "w": 100,
             "label": "PINCHED",
             "color": "fg",
             "o": 0,
@@ -390,7 +451,7 @@
             "id": "line",
             "type": "text",
             "x": 400,
-            "y": 325,
+            "y": 335,
             "label": "Move the tyre now, not tonight.",
             "color": "pink",
             "size": 22,
@@ -409,8 +470,7 @@
                 "o": 1
               },
               "thing": {
-                "o": 1,
-                "s": 1
+                "o": 1
               }
             }
           },
@@ -422,6 +482,12 @@
                 "o": 1,
                 "s": 1,
                 "shake": true
+              },
+              "tyre": {
+                "o": 1
+              },
+              "thing": {
+                "pinched": true
               }
             }
           },
@@ -443,6 +509,9 @@
             "set": {
               "line": {
                 "o": 1
+              },
+              "right": {
+                "wilted": true
               }
             }
           },
@@ -461,8 +530,8 @@
                 "color": "green"
               },
               "thing": {
-                "label": "THE HIP",
-                "size": 18
+                "label": "The hip",
+                "size": 20
               },
               "act": {
                 "label": "OUT",
@@ -610,45 +679,56 @@
           {
             "id": "left",
             "type": "card",
-            "x": 40,
-            "y": 40,
-            "w": 250,
-            "h": 100,
+            "prop": "gate",
+            "x": 230,
+            "y": 130,
+            "w": 260,
+            "h": 40,
             "label": "The gate",
             "color": "blue",
             "o": 0,
-            "size": 22
+            "size": 22,
+            "tagW": 190,
+            "tag": [
+              -20,
+              120
+            ]
           },
           {
             "id": "right",
             "type": "card",
-            "x": 510,
-            "y": 40,
-            "w": 250,
-            "h": 100,
+            "prop": "gatepost",
+            "x": 490,
+            "y": 130,
+            "w": 20,
+            "h": 40,
             "label": "The gatepost",
             "color": "blue",
             "o": 0,
-            "size": 22
+            "size": 22,
+            "tagW": 190,
+            "tag": [
+              60,
+              120
+            ]
           },
           {
             "id": "thing",
-            "type": "stamp",
-            "x": 340,
-            "y": 20,
-            "w": 120,
-            "label": "THE LATCH",
+            "type": "card",
+            "tie": "left.latch",
+            "x": 700,
+            "y": 190,
+            "label": "The latch",
             "color": "gold",
             "o": 0,
-            "s": 0.4,
-            "size": 14
+            "size": 20
           },
           {
             "id": "act",
             "type": "stamp",
-            "x": 340,
-            "y": 160,
-            "w": 120,
+            "x": 60,
+            "y": 20,
+            "w": 100,
             "label": "SNAPS",
             "color": "fg",
             "o": 0,
@@ -659,7 +739,7 @@
             "id": "line",
             "type": "text",
             "x": 400,
-            "y": 325,
+            "y": 335,
             "label": "It closed again. It just will not stay.",
             "color": "pink",
             "size": 22,
@@ -678,8 +758,7 @@
                 "o": 1
               },
               "thing": {
-                "o": 1,
-                "s": 1
+                "o": 1
               }
             }
           },
@@ -691,6 +770,10 @@
                 "o": 1,
                 "s": 1,
                 "shake": true
+              },
+              "left": {
+                "open": -0.55,
+                "snapped": true
               }
             }
           },
@@ -699,7 +782,8 @@
             "dur": 2.6,
             "set": {
               "left": {
-                "sub": "swings shut, looks fine"
+                "sub": "swings shut, looks fine",
+                "open": 0
               },
               "right": {
                 "sub": "nothing holds it now"
@@ -712,6 +796,9 @@
             "set": {
               "line": {
                 "o": 1
+              },
+              "left": {
+                "open": 1
               }
             }
           },
@@ -722,7 +809,8 @@
               "left": {
                 "label": "The shin bone",
                 "size": 22,
-                "color": "gold"
+                "color": "gold",
+                "open": 0
               },
               "right": {
                 "label": "The thigh bone",
@@ -730,8 +818,10 @@
                 "color": "green"
               },
               "thing": {
-                "label": "THE ACL",
-                "size": 18
+                "label": "The ACL",
+                "sub": "torn",
+                "size": 20,
+                "color": "pink"
               },
               "act": {
                 "label": "TEARS",
@@ -877,47 +967,67 @@
         ],
         "actors": [
           {
+            "id": "thing",
+            "type": "card",
+            "prop": "bench",
+            "x": 240,
+            "y": 60,
+            "w": 320,
+            "h": 75,
+            "label": "The bench",
+            "color": "gold",
+            "o": 0,
+            "size": 20,
+            "tagW": 170,
+            "tag": [
+              -250,
+              40
+            ]
+          },
+          {
             "id": "left",
             "type": "card",
-            "x": 40,
-            "y": 40,
-            "w": 250,
-            "h": 100,
+            "prop": "bag",
+            "x": 270,
+            "y": 77,
+            "w": 110,
+            "h": 40,
+            "on": "thing",
             "label": "The big bag",
             "color": "blue",
             "o": 0,
-            "size": 22
+            "size": 22,
+            "tagW": 190,
+            "tag": [
+              -20,
+              130
+            ]
           },
           {
             "id": "right",
             "type": "card",
-            "x": 510,
-            "y": 40,
-            "w": 250,
-            "h": 100,
+            "prop": "figure",
+            "x": 440,
+            "y": 27,
+            "w": 80,
+            "h": 140,
+            "on": "thing",
             "label": "The person beside it",
             "color": "blue",
             "o": 0,
-            "size": 18
-          },
-          {
-            "id": "thing",
-            "type": "stamp",
-            "x": 340,
-            "y": 20,
-            "w": 120,
-            "label": "THE BENCH",
-            "color": "gold",
-            "o": 0,
-            "s": 0.4,
-            "size": 14
+            "size": 18,
+            "tagW": 200,
+            "tag": [
+              60,
+              135
+            ]
           },
           {
             "id": "act",
             "type": "stamp",
-            "x": 340,
-            "y": 160,
-            "w": 120,
+            "x": 650,
+            "y": 40,
+            "w": 100,
             "label": "SPREADS",
             "color": "fg",
             "o": 0,
@@ -928,7 +1038,7 @@
             "id": "line",
             "type": "text",
             "x": 400,
-            "y": 325,
+            "y": 335,
             "label": "I did not move. I just have less room.",
             "color": "pink",
             "size": 22,
@@ -947,8 +1057,7 @@
                 "o": 1
               },
               "thing": {
-                "o": 1,
-                "s": 1
+                "o": 1
               }
             }
           },
@@ -960,6 +1069,10 @@
                 "o": 1,
                 "s": 1,
                 "shake": true
+              },
+              "left": {
+                "swell": true,
+                "x": 300
               }
             }
           },
@@ -981,6 +1094,10 @@
             "set": {
               "line": {
                 "o": 1
+              },
+              "right": {
+                "squeezed": true,
+                "x": 470
               }
             }
           },
@@ -999,8 +1116,8 @@
                 "color": "green"
               },
               "thing": {
-                "label": "THE BELLY",
-                "size": 14
+                "label": "The belly",
+                "size": 20
               },
               "act": {
                 "label": "SWELLS",
@@ -1091,6 +1208,271 @@
           "lesson": "spleen",
           "step": "s5",
           "ref": "https://body.bspokevisuals.com/?lesson=spleen"
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "title": "An ankle that rolls inward, and what keeps it from rolling again",
+      "needIt": "A rolled ankle is the commonest sprain. The foot is back in place in a moment, the ligament stays torn, and balance training is what cuts the risk of the next one.",
+      "why": "Three ligaments on the outer side of the ankle stop the foot turning inward. The front one, the ATFL, takes the turn first, so it is the one that tears. The roll takes about a tenth of a second, and the foot springs back by itself.",
+      "outcome": "Name the ligament a rolled ankle tears first, and say what cut repeat sprains in the trials.",
+      "reachesYou": "You step off a curb or land on the edge of your foot, and it folds under you. It is back in place before you know it. This lesson is that tenth of a second, and what is different inside afterward.",
+      "main": {
+        "role": "train",
+        "room": "ankle"
+      },
+      "do": "Stand on one foot for thirty seconds, then the other, near something to hold. Notice which ankle works harder to keep you up.",
+      "crystal": {
+        "speed": 0.3,
+        "partials": [
+          "Three ligaments on the outer side stop the foot turning inward.",
+          "The ATFL takes the turn first.",
+          "A rolled ankle is the commonest sprain.",
+          "The foot springs back by itself, and the ligament stays torn.",
+          "Balance training for 6 weeks or more cut repeat sprains."
+        ],
+        "key": "A rolled ankle tears the ligament that takes the turn first, and balance training is what cuts the risk of it happening again.",
+        "decoys": [
+          {
+            "text": "If the foot went back into place, nothing is torn.",
+            "why": "The foot springs back by itself while the ATFL stays torn."
+          },
+          {
+            "text": "All three outer ligaments tear together.",
+            "why": "The ATFL takes the turn first, which is why it is the one most often sprained."
+          }
+        ],
+        "aha": "The ankle looks right a moment later because the foot returns by itself. What changed is inside."
+      },
+      "scene": {
+        "analogy": "A tent in the wind when the first guy rope snaps",
+        "map": [
+          [
+            "The tent pole",
+            "The foot"
+          ],
+          [
+            "The ground",
+            "The fibula"
+          ],
+          [
+            "guy rope",
+            "the ATFL"
+          ]
+        ],
+        "actors": [
+          {
+            "id": "thing",
+            "type": "card",
+            "o": 0,
+            "prop": "tent",
+            "tilt": 0,
+            "snapped": false,
+            "label": "Guy rope",
+            "color": "gold",
+            "size": 18,
+            "x": 250,
+            "y": 15,
+            "w": 300,
+            "h": 300,
+            "tagW": 150,
+            "tag": [
+              230,
+              70
+            ]
+          },
+          {
+            "id": "left",
+            "type": "card",
+            "o": 0,
+            "tie": "thing.pole",
+            "x": 130,
+            "y": 95,
+            "label": "The tent pole",
+            "color": "blue",
+            "size": 22,
+            "tagW": 190
+          },
+          {
+            "id": "right",
+            "type": "card",
+            "o": 0,
+            "tie": "thing.ground",
+            "x": 140,
+            "y": 285,
+            "label": "The ground",
+            "color": "blue",
+            "size": 22,
+            "tagW": 170
+          },
+          {
+            "id": "line",
+            "type": "text",
+            "x": 400,
+            "y": 350,
+            "label": "It stood back up. It leans in the next gust.",
+            "color": "pink",
+            "size": 18,
+            "o": 0
+          }
+        ],
+        "beats": [
+          {
+            "say": "A tent pole is held upright by three guy ropes.",
+            "dur": 2.4,
+            "set": {
+              "thing": {
+                "o": 1
+              },
+              "left": {
+                "o": 1
+              },
+              "right": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "A gust tips it and the front rope takes it first.",
+            "dur": 2.4,
+            "set": {
+              "thing": {
+                "tilt": 0.3,
+                "shake": true
+              }
+            }
+          },
+          {
+            "say": "That rope snaps and the pole swings back up.",
+            "dur": 2.6,
+            "set": {
+              "thing": {
+                "tilt": 0.03,
+                "snapped": true
+              },
+              "left": {
+                "sub": "stands back up, looser"
+              },
+              "right": {
+                "sub": "two ropes left to hold it"
+              }
+            }
+          },
+          {
+            "say": "It stands, but the next gust tips it more easily.",
+            "dur": 2.6,
+            "set": {
+              "thing": {
+                "tilt": 0.16
+              },
+              "line": {
+                "o": 1
+              }
+            }
+          },
+          {
+            "say": "The first ligament to take the roll is the one that tears.",
+            "dur": 3.4,
+            "set": {
+              "left": {
+                "label": "The foot",
+                "size": 22,
+                "color": "gold"
+              },
+              "right": {
+                "label": "The fibula",
+                "size": 22,
+                "color": "green"
+              },
+              "thing": {
+                "label": "The ATFL",
+                "size": 18
+              },
+              "line": {
+                "label": "Back in place, with the ligament still torn.",
+                "size": 22,
+                "color": "green"
+              }
+            }
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Which of the three outer ligaments takes the inward turn first?",
+          "choices": [
+            "The calcaneofibular ligament",
+            "The ATFL",
+            "The posterior talofibular ligament",
+            "All three at the same moment"
+          ],
+          "a": 1,
+          "why": "It is the first to take the turn, so it is the one most often sprained.",
+          "quote": "The ATFL takes it first, which is why it is the ligament most often sprained.",
+          "lesson": "ankle",
+          "step": "p10",
+          "ref": "https://body.bspokevisuals.com/?lesson=ankle"
+        },
+        {
+          "q": "What is the ankle mortise?",
+          "choices": [
+            "The pulley on top of the talus",
+            "The heel bone under the talus",
+            "The socket the tibia and fibula make to grip the talus",
+            "The inner ankle bone"
+          ],
+          "a": 2,
+          "why": "Ligaments tie the two shin bones together, and the socket they make holds the talus.",
+          "quote": "With a ligament across the back, the two bones make a socket, the ankle mortise, that grips the talus.",
+          "lesson": "ankle",
+          "step": "p4",
+          "ref": "https://body.bspokevisuals.com/?lesson=ankle"
+        },
+        {
+          "q": "About how long does the roll take, even at the slowest speed filmed?",
+          "choices": [
+            "About two seconds",
+            "About half a minute",
+            "About a full second",
+            "About a tenth of a second"
+          ],
+          "a": 3,
+          "why": "In the filmed sprains the foot rolled in at 509 to 1488 degrees a second.",
+          "quote": "Even at the slowest, 48 degrees takes about a tenth of a second.",
+          "lesson": "ankle",
+          "step": "r6",
+          "ref": "https://body.bspokevisuals.com/?lesson=ankle"
+        },
+        {
+          "q": "What did balance training for six weeks or more do after a sprain?",
+          "choices": [
+            "It cut repeat sprains",
+            "It made the torn ligament whole again",
+            "It made no difference",
+            "It raised the risk of a sprain"
+          ],
+          "a": 0,
+          "why": "Across 7 trials the risk of a sprain fell to about two thirds.",
+          "quote": "Balance training for 6 weeks or more after a sprain cut repeat sprains.",
+          "lesson": "ankle",
+          "step": "a3",
+          "ref": "https://body.bspokevisuals.com/?lesson=ankle"
+        },
+        {
+          "q": "What does the anterior drawer test do?",
+          "choices": [
+            "It tilts the heel inward",
+            "It pushes the foot forward on the shin from the heel",
+            "It turns the foot outward",
+            "It presses on the inner ankle bone"
+          ],
+          "a": 1,
+          "why": "It tests the ATFL, and the other ankle is tested for comparison.",
+          "quote": "the anterior drawer test pushes the foot forward on the shin from the heel, the ankle a little pointed, and compares it with the other side.",
+          "lesson": "ankle",
+          "step": "h4",
+          "ref": "https://body.bspokevisuals.com/?lesson=ankle"
         }
       ]
     }

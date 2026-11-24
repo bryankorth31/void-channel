@@ -184,58 +184,70 @@
       ],
       "actors": [
         {
+          "id": "thing",
+          "type": "card",
+          "o": 0,
+          "prop": "cake",
+          "split": 0,
+          "label": "The cake",
+          "color": "gold",
+          "size": 18,
+          "x": 310,
+          "y": 70,
+          "w": 180,
+          "h": 180,
+          "tagW": 150,
+          "tag": [
+            0,
+            120
+          ]
+        },
+        {
           "id": "left",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
-          "h": 100,
-          "label": "The cutter",
-          "color": "blue",
           "o": 0,
-          "size": 22
+          "prop": "figure",
+          "pose": "stand",
+          "label": "The cutter",
+          "x": 193.625,
+          "y": 127.5,
+          "w": 42.75,
+          "h": 95,
+          "turn": 0.8,
+          "color": "blue",
+          "size": 22,
+          "tagW": 160,
+          "tag": [
+            0,
+            105
+          ]
         },
         {
           "id": "right",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "figure",
+          "pose": "stand",
           "label": "The chooser",
+          "x": 563.625,
+          "y": 127.5,
+          "w": 42.75,
+          "h": 95,
+          "look": "dark",
+          "turn": -0.8,
           "color": "blue",
-          "o": 0,
-          "size": 22
-        },
-        {
-          "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "THE CAKE",
-          "color": "gold",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
-        },
-        {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "CUT",
-          "color": "fg",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
+          "size": 22,
+          "tagW": 170,
+          "tag": [
+            0,
+            105
+          ]
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
+          "y": 350,
           "label": "So the cutter cuts fair.",
           "color": "pink",
           "size": 22,
@@ -247,15 +259,14 @@
           "say": "Two kids, one cake.",
           "dur": 2.4,
           "set": {
+            "thing": {
+              "o": 1
+            },
             "left": {
               "o": 1
             },
             "right": {
               "o": 1
-            },
-            "thing": {
-              "o": 1,
-              "s": 1
             }
           }
         },
@@ -263,9 +274,8 @@
           "say": "One cuts. The other picks first.",
           "dur": 2.4,
           "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
+            "thing": {
+              "split": 0.64,
               "shake": true
             }
           }
@@ -278,7 +288,8 @@
               "sub": "does not know their slice"
             },
             "right": {
-              "sub": "picks first"
+              "sub": "picks first",
+              "turn": -1.2
             }
           }
         },
@@ -286,6 +297,9 @@
           "say": "So the cutter makes them even.",
           "dur": 2.6,
           "set": {
+            "thing": {
+              "split": 0.5
+            },
             "line": {
               "o": 1
             }
@@ -306,13 +320,8 @@
               "color": "green"
             },
             "thing": {
-              "label": "SOCIETY",
+              "label": "Society",
               "size": 18
-            },
-            "act": {
-              "label": "DESIGN",
-              "size": 18,
-              "color": "pink"
             },
             "line": {
               "label": "Rawls: choose rules behind a veil of ignorance.",

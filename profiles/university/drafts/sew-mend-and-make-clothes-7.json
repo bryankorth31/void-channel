@@ -141,59 +141,62 @@
         {
           "id": "left",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "drawer",
+          "cheap": true,
+          "open": false,
           "label": "Cheap drawer",
           "color": "blue",
-          "o": 0,
-          "size": 22
+          "size": 22,
+          "x": 110,
+          "y": 75,
+          "w": 180,
+          "h": 180,
+          "tagW": 170,
+          "tag": [
+            0,
+            110
+          ]
         },
         {
           "id": "right",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "drawer",
+          "open": false,
           "label": "Well made drawer",
           "color": "blue",
-          "o": 0,
-          "size": 18
+          "size": 20,
+          "x": 500,
+          "y": 75,
+          "w": 180,
+          "h": 180,
+          "tagW": 200,
+          "tag": [
+            0,
+            110
+          ]
         },
         {
           "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "INSIDE",
+          "type": "card",
+          "o": 0,
+          "tie": "right.inside",
+          "x": 400,
+          "y": 70,
+          "label": "Inside",
           "color": "gold",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
-        },
-        {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "OPEN",
-          "color": "fg",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
+          "size": 18,
+          "tagW": 130
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
+          "y": 350,
           "label": "Quality is how the hidden part is done.",
           "color": "pink",
-          "size": 22,
+          "size": 20,
           "o": 0
         }
       ],
@@ -209,8 +212,7 @@
               "o": 1
             },
             "thing": {
-              "o": 1,
-              "s": 1
+              "o": 1
             }
           }
         },
@@ -218,9 +220,12 @@
           "say": "Open them.",
           "dur": 2.4,
           "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
+            "left": {
+              "open": true,
+              "shake": true
+            },
+            "right": {
+              "open": true,
               "shake": true
             }
           }
@@ -261,13 +266,8 @@
               "color": "green"
             },
             "thing": {
-              "label": "BLOUSE",
+              "label": "Blouse",
               "size": 18
-            },
-            "act": {
-              "label": "TURN OVER",
-              "size": 14,
-              "color": "pink"
             },
             "line": {
               "label": "Sheer cloth shows every seam.",

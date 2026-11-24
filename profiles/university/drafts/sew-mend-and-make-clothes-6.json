@@ -130,56 +130,64 @@
         {
           "id": "left",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "towel",
           "label": "Cotton towel",
           "color": "blue",
+          "size": 22,
+          "x": 95,
+          "y": 120,
+          "w": 160,
+          "h": 160,
+          "tagW": 170,
+          "tag": [
+            0,
+            100
+          ]
+        },
+        {
+          "id": "thing",
+          "type": "card",
           "o": 0,
-          "size": 22
+          "prop": "iron",
+          "hot": false,
+          "label": "Hot iron",
+          "color": "gold",
+          "size": 18,
+          "x": 330,
+          "y": 60,
+          "w": 130,
+          "h": 130,
+          "tagW": 140,
+          "tag": [
+            0,
+            95
+          ]
         },
         {
           "id": "right",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "shirt",
+          "scorched": false,
           "label": "Silk shirt",
           "color": "blue",
-          "o": 0,
-          "size": 22
-        },
-        {
-          "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "HOT IRON",
-          "color": "gold",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
-        },
-        {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "PRESS",
-          "color": "fg",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
+          "size": 22,
+          "x": 520,
+          "y": 110,
+          "w": 180,
+          "h": 180,
+          "tagW": 160,
+          "tag": [
+            0,
+            105
+          ]
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
+          "y": 350,
           "label": "Know the cloth before the iron.",
           "color": "pink",
           "size": 22,
@@ -194,12 +202,11 @@
             "left": {
               "o": 1
             },
-            "right": {
+            "thing": {
               "o": 1
             },
-            "thing": {
-              "o": 1,
-              "s": 1
+            "right": {
+              "o": 1
             }
           }
         },
@@ -207,9 +214,8 @@
           "say": "Same hot iron on both.",
           "dur": 2.4,
           "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
+            "thing": {
+              "hot": true,
               "shake": true
             }
           }
@@ -218,11 +224,19 @@
           "say": "The towel is fine.",
           "dur": 2.6,
           "set": {
+            "thing": {
+              "on": "left",
+              "x": 110,
+              "y": 135,
+              "w": 130,
+              "h": 130,
+              "tag": [
+                0,
+                -100
+              ]
+            },
             "left": {
               "sub": "fine with high heat"
-            },
-            "right": {
-              "sub": "scorched"
             }
           }
         },
@@ -230,6 +244,21 @@
           "say": "The silk is ruined.",
           "dur": 2.6,
           "set": {
+            "thing": {
+              "on": "right",
+              "x": 625,
+              "y": 85,
+              "w": 130,
+              "h": 130,
+              "tag": [
+                0,
+                -100
+              ]
+            },
+            "right": {
+              "scorched": true,
+              "sub": "scorched"
+            },
             "line": {
               "o": 1
             }
@@ -250,13 +279,8 @@
               "color": "green"
             },
             "thing": {
-              "label": "PRESSING",
+              "label": "Pressing",
               "size": 18
-            },
-            "act": {
-              "label": "HANDLE",
-              "size": 18,
-              "color": "pink"
             },
             "line": {
               "label": "Wet cloth for wool. No hot iron on silk.",

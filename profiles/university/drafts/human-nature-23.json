@@ -156,58 +156,104 @@
       ],
       "actors": [
         {
+          "id": "thing",
+          "type": "card",
+          "o": 0,
+          "prop": "jam",
+          "cars": 0,
+          "label": "The road",
+          "color": "gold",
+          "size": 18,
+          "x": 25,
+          "y": 90,
+          "w": 360,
+          "h": 90,
+          "tagW": 150,
+          "tag": [
+            -150,
+            85
+          ]
+        },
+        {
+          "id": "roadR",
+          "type": "card",
+          "o": 0,
+          "prop": "jam",
+          "cars": 0,
+          "label": "",
+          "x": 415,
+          "y": 90,
+          "w": 360,
+          "h": 90
+        },
+        {
+          "id": "flagL",
+          "type": "card",
+          "o": 0,
+          "prop": "flag",
+          "flag": "uk",
+          "label": "",
+          "x": 40,
+          "y": -25,
+          "w": 80,
+          "h": 130
+        },
+        {
+          "id": "flagR",
+          "type": "card",
+          "o": 0,
+          "prop": "flag",
+          "flag": "us",
+          "label": "",
+          "x": 430,
+          "y": -25,
+          "w": 80,
+          "h": 130
+        },
+        {
           "id": "left",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "car",
+          "heading": 0,
+          "paint": 2842536,
           "label": "Raised in Britain",
           "color": "blue",
-          "o": 0,
-          "size": 18
+          "size": 18,
+          "x": 55,
+          "y": 85.5,
+          "w": 110,
+          "h": 55,
+          "tagW": 190,
+          "tag": [
+            150,
+            110
+          ]
         },
         {
           "id": "right",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "car",
+          "heading": 0,
           "label": "Raised in America",
           "color": "blue",
-          "o": 0,
-          "size": 18
-        },
-        {
-          "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "THE ROAD",
-          "color": "gold",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
-        },
-        {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "DRIVE",
-          "color": "fg",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
+          "size": 18,
+          "x": 445,
+          "y": 129.5,
+          "w": 110,
+          "h": 55,
+          "tagW": 190,
+          "tag": [
+            110,
+            100
+          ]
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
+          "y": 350,
           "label": "Neither chose. Both feel sure.",
           "color": "pink",
           "size": 22,
@@ -219,15 +265,23 @@
           "say": "Two drivers, two countries.",
           "dur": 2.4,
           "set": {
+            "thing": {
+              "o": 1
+            },
+            "roadR": {
+              "o": 1
+            },
+            "flagL": {
+              "o": 1
+            },
+            "flagR": {
+              "o": 1
+            },
             "left": {
               "o": 1
             },
             "right": {
               "o": 1
-            },
-            "thing": {
-              "o": 1,
-              "s": 1
             }
           }
         },
@@ -235,9 +289,10 @@
           "say": "Each gets in a car.",
           "dur": 2.4,
           "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
+            "left": {
+              "shake": true
+            },
+            "right": {
               "shake": true
             }
           }
@@ -247,6 +302,14 @@
           "dur": 2.6,
           "set": {
             "left": {
+              "x": 245,
+              "y": 85.5,
+              "w": 110,
+              "h": 55,
+              "tag": [
+                -40,
+                110
+              ],
               "sub": "left feels natural"
             },
             "right": {
@@ -258,6 +321,16 @@
           "say": "One keeps right without thinking.",
           "dur": 2.6,
           "set": {
+            "right": {
+              "x": 635,
+              "y": 129.5,
+              "w": 110,
+              "h": 55,
+              "tag": [
+                -60,
+                100
+              ]
+            },
             "line": {
               "o": 1
             }
@@ -278,13 +351,8 @@
               "color": "green"
             },
             "thing": {
-              "label": "HABIT",
+              "label": "Habit",
               "size": 18
-            },
-            "act": {
-              "label": "TRAINS",
-              "size": 18,
-              "color": "pink"
             },
             "line": {
               "label": "Surroundings train what feels obvious.",

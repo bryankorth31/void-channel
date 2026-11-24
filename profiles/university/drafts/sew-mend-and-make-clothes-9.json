@@ -144,91 +144,96 @@
       ],
       "actors": [
         {
+          "id": "wall",
+          "type": "card",
+          "o": 0,
+          "prop": "wall",
+          "state": "wet",
+          "label": "",
+          "x": 300,
+          "y": 10,
+          "w": 200,
+          "h": 200
+        },
+        {
           "id": "s0",
           "type": "card",
-          "x": 22.5,
-          "y": 90,
-          "w": 170,
-          "h": 100,
+          "o": 0,
+          "prop": "bucket",
           "label": "Wash walls",
           "color": "blue",
-          "o": 0,
-          "size": 20
+          "size": 20,
+          "x": 47.5,
+          "y": 192.5,
+          "w": 115,
+          "h": 115,
+          "tagW": 150,
+          "tag": [
+            0,
+            -100
+          ]
         },
         {
           "id": "s1",
           "type": "card",
-          "x": 217.5,
-          "y": 90,
-          "w": 170,
-          "h": 100,
+          "o": 0,
+          "prop": "tape",
           "label": "Tape edges",
           "color": "blue",
-          "o": 0,
-          "size": 20
-        },
-        {
-          "id": "a1",
-          "type": "arrow",
-          "x": 198.5,
-          "y": 140,
-          "x2": 211.5,
-          "y2": 140,
-          "color": "dim",
-          "o": 0,
-          "draw": 0
+          "size": 20,
+          "x": 207.5,
+          "y": 212.5,
+          "w": 95,
+          "h": 95,
+          "tagW": 150,
+          "tag": [
+            -20,
+            -100
+          ]
         },
         {
           "id": "s2",
           "type": "card",
-          "x": 412.5,
-          "y": 90,
-          "w": 170,
-          "h": 100,
+          "o": 0,
+          "prop": "paint",
+          "tint": 15921386,
           "label": "Prime",
           "color": "blue",
-          "o": 0,
-          "size": 20
-        },
-        {
-          "id": "a2",
-          "type": "arrow",
-          "x": 393.5,
-          "y": 140,
-          "x2": 406.5,
-          "y2": 140,
-          "color": "dim",
-          "o": 0,
-          "draw": 0
+          "size": 22,
+          "x": 487.5,
+          "y": 197.5,
+          "w": 115,
+          "h": 115,
+          "tagW": 130,
+          "tag": [
+            20,
+            -100
+          ]
         },
         {
           "id": "s3",
           "type": "card",
-          "x": 607.5,
-          "y": 90,
-          "w": 170,
-          "h": 100,
+          "o": 0,
+          "prop": "roller",
+          "tint": 4161461,
           "label": "Paint",
           "color": "blue",
-          "o": 0,
-          "size": 20
-        },
-        {
-          "id": "a3",
-          "type": "arrow",
-          "x": 588.5,
-          "y": 140,
-          "x2": 601.5,
-          "y2": 140,
-          "color": "dim",
-          "o": 0,
-          "draw": 0
+          "size": 22,
+          "x": 637.5,
+          "y": 197.5,
+          "w": 125,
+          "h": 125,
+          "tagW": 130,
+          "tag": [
+            0,
+            -100
+          ]
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 270,
+          "y": 352,
           "label": "Most of the job is before the job.",
           "color": "pink",
           "size": 22,
@@ -240,6 +245,9 @@
           "say": "First you wash the walls.",
           "dur": 2.6,
           "set": {
+            "wall": {
+              "o": 1
+            },
             "s0": {
               "o": 1,
               "sub": "so paint sticks"
@@ -254,9 +262,8 @@
               "o": 1,
               "sub": "so lines are clean"
             },
-            "a1": {
-              "o": 1,
-              "draw": 1
+            "wall": {
+              "state": "dry"
             }
           }
         },
@@ -268,9 +275,8 @@
               "o": 1,
               "sub": "so color is even"
             },
-            "a2": {
-              "o": 1,
-              "draw": 1
+            "wall": {
+              "state": "primed"
             }
           }
         },
@@ -282,9 +288,8 @@
               "o": 1,
               "sub": "the easy part"
             },
-            "a3": {
-              "o": 1,
-              "draw": 1
+            "wall": {
+              "state": "painted"
             },
             "line": {
               "o": 1

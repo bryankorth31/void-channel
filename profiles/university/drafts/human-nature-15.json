@@ -190,58 +190,146 @@
       ],
       "actors": [
         {
+          "id": "thing",
+          "type": "card",
+          "o": 0,
+          "prop": "trolley",
+          "x0": 0,
+          "label": "Same result",
+          "color": "gold",
+          "size": 18,
+          "x": 100,
+          "y": 45,
+          "w": 520,
+          "h": 80,
+          "tagW": 160,
+          "tag": [
+            -270,
+            -15
+          ]
+        },
+        {
+          "id": "f0",
+          "type": "card",
+          "o": 0,
+          "prop": "figure",
+          "pose": "stand",
+          "label": "",
+          "x": 639.875,
+          "y": 32.5,
+          "w": 20.25,
+          "h": 45,
+          "turn": -0.3
+        },
+        {
+          "id": "f1",
+          "type": "card",
+          "o": 0,
+          "prop": "figure",
+          "pose": "stand",
+          "label": "",
+          "x": 674.875,
+          "y": 32.5,
+          "w": 20.25,
+          "h": 45,
+          "turn": -0.3
+        },
+        {
+          "id": "f2",
+          "type": "card",
+          "o": 0,
+          "prop": "figure",
+          "pose": "stand",
+          "label": "",
+          "x": 709.875,
+          "y": 32.5,
+          "w": 20.25,
+          "h": 45,
+          "turn": -0.3
+        },
+        {
+          "id": "f3",
+          "type": "card",
+          "o": 0,
+          "prop": "figure",
+          "pose": "stand",
+          "label": "",
+          "x": 639.875,
+          "y": 72.5,
+          "w": 20.25,
+          "h": 45,
+          "turn": -0.3
+        },
+        {
+          "id": "f4",
+          "type": "card",
+          "o": 0,
+          "prop": "figure",
+          "pose": "stand",
+          "label": "",
+          "x": 674.875,
+          "y": 72.5,
+          "w": 20.25,
+          "h": 45,
+          "turn": -0.3
+        },
+        {
           "id": "left",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "button",
           "label": "Press a button",
           "color": "blue",
-          "o": 0,
-          "size": 22
+          "size": 20,
+          "x": 105,
+          "y": 180,
+          "w": 110,
+          "h": 110,
+          "tagW": 180,
+          "tag": [
+            0,
+            95
+          ]
         },
         {
           "id": "right",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "figure",
+          "pose": "stand",
           "label": "Do it by hand",
+          "x": 497.5,
+          "y": 190,
+          "w": 45,
+          "h": 100,
+          "look": "dark",
+          "turn": 1.2,
           "color": "blue",
-          "o": 0,
-          "size": 22
+          "size": 20,
+          "tagW": 180,
+          "tag": [
+            120,
+            90
+          ]
         },
         {
-          "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "SAME RESULT",
-          "color": "gold",
+          "id": "big",
+          "type": "card",
           "o": 0,
-          "s": 0.4,
-          "size": 14
-        },
-        {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "CHOOSE",
-          "color": "fg",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
+          "prop": "figure",
+          "pose": "stand",
+          "label": "",
+          "x": 573,
+          "y": 175,
+          "w": 54,
+          "h": 120,
+          "turn": -0.2
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
+          "y": 350,
           "label": "Same outcome. Different gut.",
           "color": "pink",
           "size": 22,
@@ -253,15 +341,32 @@
           "say": "Two ways to cause the same result.",
           "dur": 2.4,
           "set": {
+            "thing": {
+              "o": 1
+            },
             "left": {
               "o": 1
             },
             "right": {
               "o": 1
             },
-            "thing": {
-              "o": 1,
-              "s": 1
+            "big": {
+              "o": 1
+            },
+            "f0": {
+              "o": 1
+            },
+            "f1": {
+              "o": 1
+            },
+            "f2": {
+              "o": 1
+            },
+            "f3": {
+              "o": 1
+            },
+            "f4": {
+              "o": 1
             }
           }
         },
@@ -269,9 +374,10 @@
           "say": "You must choose one.",
           "dur": 2.4,
           "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
+            "left": {
+              "shake": true
+            },
+            "right": {
               "shake": true
             }
           }
@@ -281,7 +387,11 @@
           "dur": 2.6,
           "set": {
             "left": {
+              "pressed": true,
               "sub": "feels like a decision"
+            },
+            "thing": {
+              "x0": 0.5
             },
             "right": {
               "sub": "feels like a crime"
@@ -292,6 +402,13 @@
           "say": "Your own hands feel like guilt.",
           "dur": 2.6,
           "set": {
+            "right": {
+              "turn": 1.57,
+              "slump": true
+            },
+            "big": {
+              "tremble": true
+            },
             "line": {
               "o": 1
             }
@@ -312,13 +429,8 @@
               "color": "green"
             },
             "thing": {
-              "label": "FIVE SAVED",
-              "size": 14
-            },
-            "act": {
-              "label": "WEIGH",
-              "size": 18,
-              "color": "pink"
+              "label": "Five saved",
+              "size": 18
             },
             "line": {
               "label": "Emotion answers first. Reasons come after.",

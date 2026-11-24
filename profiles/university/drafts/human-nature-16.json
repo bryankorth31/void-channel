@@ -180,58 +180,106 @@
       ],
       "actors": [
         {
+          "id": "roadL",
+          "type": "card",
+          "o": 0,
+          "prop": "jam",
+          "cars": 0,
+          "label": "",
+          "x": 25,
+          "y": 75,
+          "w": 360,
+          "h": 90
+        },
+        {
+          "id": "roadR",
+          "type": "card",
+          "o": 0,
+          "prop": "jam",
+          "cars": 0,
+          "label": "",
+          "x": 415,
+          "y": 75,
+          "w": 360,
+          "h": 90
+        },
+        {
           "id": "left",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "car",
+          "paint": 2842536,
+          "heading": 0,
           "label": "Road was empty",
           "color": "blue",
-          "o": 0,
-          "size": 22
+          "size": 20,
+          "x": 30,
+          "y": 90,
+          "w": 120,
+          "h": 60,
+          "tagW": 180,
+          "tag": [
+            10,
+            100
+          ]
         },
         {
           "id": "right",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "car",
+          "heading": 0,
           "label": "A child ran out",
           "color": "blue",
+          "size": 20,
+          "x": 420,
+          "y": 90,
+          "w": 120,
+          "h": 60,
+          "tagW": 180,
+          "tag": [
+            10,
+            100
+          ]
+        },
+        {
+          "id": "kid",
+          "type": "card",
           "o": 0,
-          "size": 18
+          "prop": "figure",
+          "pose": "stand",
+          "label": "",
+          "x": 669.875,
+          "y": 89.5,
+          "w": 20.25,
+          "h": 45,
+          "look": "dark",
+          "turn": -1.3
         },
         {
           "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "ONE GLANCE",
+          "type": "card",
+          "o": 0,
+          "prop": "phone",
+          "screen": "likes",
+          "label": "One glance",
           "color": "gold",
-          "o": 0,
-          "s": 0.4,
-          "size": 14
-        },
-        {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "LOOK AWAY",
-          "color": "fg",
-          "o": 0,
-          "s": 0.4,
-          "size": 14
+          "size": 18,
+          "x": 345,
+          "y": 195,
+          "w": 110,
+          "h": 110,
+          "tagW": 150,
+          "tag": [
+            130,
+            40
+          ]
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
+          "y": 350,
           "label": "Same choice. Different luck.",
           "color": "pink",
           "size": 22,
@@ -243,6 +291,12 @@
           "say": "Two drivers glance at their phones.",
           "dur": 2.4,
           "set": {
+            "roadL": {
+              "o": 1
+            },
+            "roadR": {
+              "o": 1
+            },
             "left": {
               "o": 1
             },
@@ -250,8 +304,7 @@
               "o": 1
             },
             "thing": {
-              "o": 1,
-              "s": 1
+              "o": 1
             }
           }
         },
@@ -259,10 +312,20 @@
           "say": "Each looks away for one second.",
           "dur": 2.4,
           "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
+            "thing": {
               "shake": true
+            },
+            "left": {
+              "x": 90,
+              "y": 90,
+              "w": 120,
+              "h": 60
+            },
+            "right": {
+              "x": 480,
+              "y": 90,
+              "w": 120,
+              "h": 60
             }
           }
         },
@@ -271,6 +334,10 @@
           "dur": 2.6,
           "set": {
             "left": {
+              "x": 240,
+              "y": 90,
+              "w": 120,
+              "h": 60,
               "sub": "home safe, forgotten"
             },
             "right": {
@@ -282,6 +349,16 @@
           "say": "On the other, a child runs out.",
           "dur": 2.6,
           "set": {
+            "kid": {
+              "o": 1
+            },
+            "right": {
+              "x": 540,
+              "y": 90,
+              "w": 120,
+              "h": 60,
+              "shake": true
+            },
             "line": {
               "o": 1
             }
@@ -302,13 +379,8 @@
               "color": "green"
             },
             "thing": {
-              "label": "SAME ACT",
+              "label": "Same act",
               "size": 18
-            },
-            "act": {
-              "label": "JUDGED",
-              "size": 18,
-              "color": "pink"
             },
             "line": {
               "label": "We blame outcomes people did not control.",

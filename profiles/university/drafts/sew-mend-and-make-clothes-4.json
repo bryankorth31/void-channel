@@ -154,58 +154,59 @@
       ],
       "actors": [
         {
+          "id": "thing",
+          "type": "card",
+          "o": 0,
+          "prop": "rack",
+          "label": "Frames",
+          "color": "gold",
+          "size": 18,
+          "x": 130,
+          "y": 70,
+          "w": 160,
+          "h": 160,
+          "tagW": 130,
+          "tag": [
+            0,
+            115
+          ]
+        },
+        {
           "id": "left",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "tie": "thing.tie",
+          "x": 75,
+          "y": 70,
           "label": "Looks good on rack",
           "color": "blue",
-          "o": 0,
-          "size": 18
+          "size": 18,
+          "tagW": 190
         },
         {
           "id": "right",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "head",
+          "wear": "",
           "label": "Tried on your face",
           "color": "blue",
-          "o": 0,
-          "size": 18
-        },
-        {
-          "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "FRAMES",
-          "color": "gold",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
-        },
-        {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "TRY ON",
-          "color": "fg",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
+          "size": 20,
+          "x": 480,
+          "y": 25,
+          "w": 180,
+          "h": 230,
+          "tagW": 190,
+          "tag": [
+            0,
+            145
+          ]
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
+          "y": 350,
           "label": "Choose for you, not for the shelf.",
           "color": "pink",
           "size": 22,
@@ -217,15 +218,14 @@
           "say": "A wall of glasses frames.",
           "dur": 2.4,
           "set": {
+            "thing": {
+              "o": 1
+            },
             "left": {
               "o": 1
             },
             "right": {
               "o": 1
-            },
-            "thing": {
-              "o": 1,
-              "s": 1
             }
           }
         },
@@ -233,9 +233,8 @@
           "say": "You try them on your own face.",
           "dur": 2.4,
           "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
+            "right": {
+              "wear": "square",
               "shake": true
             }
           }
@@ -244,11 +243,12 @@
           "say": "The pretty pair on the rack looks wrong on you.",
           "dur": 2.6,
           "set": {
+            "right": {
+              "wear": "cat",
+              "sub": "suits you"
+            },
             "left": {
               "sub": "wrong for your face"
-            },
-            "right": {
-              "sub": "suits you"
             }
           }
         },
@@ -256,6 +256,10 @@
           "say": "Another pair suits your face.",
           "dur": 2.6,
           "set": {
+            "right": {
+              "wear": "round",
+              "shake": true
+            },
             "line": {
               "o": 1
             }
@@ -276,13 +280,8 @@
               "color": "green"
             },
             "thing": {
-              "label": "BODICE",
+              "label": "Bodice",
               "size": 18
-            },
-            "act": {
-              "label": "STUDY",
-              "size": 18,
-              "color": "pink"
             },
             "line": {
               "label": "Study your own lines, then choose.",

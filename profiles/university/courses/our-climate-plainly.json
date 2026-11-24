@@ -1,0 +1,1461 @@
+{
+  "slug": "our-climate-plainly",
+  "name": "Our climate, plainly",
+  "domain": "Earth and climate",
+  "kind": "authored",
+  "status": "draft",
+  "levels": [
+    "high school",
+    "young adults",
+    "everyday"
+  ],
+  "draftedBy": "Claude, 22 Nov 2026, from Bryan's ask for explainers of the issues people cannot seem to grasp (\"global warming, el nino, water issues\"). Every line here waits for Bryan to keep, change or strike.",
+  "why": "Climate is argued about every day, at dinner, at the ballot box and in the price of insurance. Most of the arguing skips how the system actually works. This course gives you the working parts, with the measured numbers, so you can follow any claim back to what is really happening.",
+  "outcomes": [
+    "Explain why the CO2 in the air keeps rising while emissions stay steady.",
+    "Explain why Lakes Mead and Powell keep falling, and what it would take to stop them."
+  ],
+  "units": [
+    {
+      "n": 1,
+      "title": "Steady emissions still fill the air",
+      "outcome": "Explain why the CO2 in the air keeps rising while emissions stay steady, and how far emissions must fall just to hold it.",
+      "needIt": "Most people, MIT graduate students included, think holding emissions steady holds the CO2 in the air steady. It does not, and every climate argument you hear turns on that one fact.",
+      "why": "The air holds carbon the way a tub holds water. What goes in each year is what we burn and clear; what comes out is what the ocean and land plants take back. The ocean and land take back only about half, so the air keeps filling even if what we put in stops growing. Waiting until harm shows, then holding emissions steady, would not stop the rise.",
+      "reachesYou": "Every promise to \"hold emissions steady\", \"cap\" them or reach a target by some year is a promise about the tap, not the tub. Knowing the difference lets you tell a plan that stops the rise from one that only slows it.",
+      "do": "Find one climate pledge in the news this week, from a country, a company or a city. Ask one question of it: does it cut what goes in below what the ocean and land take back, or does it only slow the growth?",
+      "explainer": {
+        "live": false,
+        "title": "The carbon in the air",
+        "ask": "Every speck around the Earth is a quarter of a billion tonnes of carbon in the air. The pale ones were there before people burned coal and oil; the pink ones are what we added. Guess first, then drag what the world burns and clears, play the years, and watch what the air does.",
+        "world": "globe",
+        "each": 0.25,
+        "eachWords": "a quarter of a billion tonnes of carbon",
+        "clock": {
+          "from": 1959,
+          "now": 2025,
+          "to": 2075
+        },
+        "stores": [
+          {
+            "id": "air",
+            "name": "The air",
+            "start": 427.35,
+            "base": 278,
+            "unit": {
+              "name": "ppm",
+              "per": 2.124,
+              "words": "parts per million"
+            },
+            "pick": "air",
+            "words": "Carbon dioxide in the air, measured since 1958 on Mauna Loa in Hawaii. One part per million of it is 2.124 billion tonnes of carbon. Before coal and oil it was about 278 parts per million.",
+            "src": [
+              "noaa",
+              "gcb"
+            ],
+            "baseWords": "before coal and oil"
+          }
+        ],
+        "flows": [
+          {
+            "id": "fossil",
+            "name": "Burning fuel",
+            "to": "air",
+            "rule": {
+              "kind": "choice",
+              "choice": "fossil"
+            },
+            "color": "hot",
+            "site": {
+              "on": "land",
+              "lat": [
+                -40,
+                60
+              ]
+            },
+            "at": [
+              35,
+              100
+            ],
+            "words": "Coal, oil and gas burned, and cement made, every year, in billions of tonnes of carbon. 10.3 in 2024, still rising about one percent a year.",
+            "src": [
+              "gcb"
+            ]
+          },
+          {
+            "id": "landuse",
+            "name": "Clearing forests",
+            "to": "air",
+            "rule": {
+              "kind": "choice",
+              "choice": "landuse"
+            },
+            "color": "amber",
+            "site": {
+              "on": "land",
+              "lat": [
+                -20,
+                12
+              ]
+            },
+            "at": [
+              -5,
+              -60
+            ],
+            "words": "Forests cut and burned to farm and build, less the regrowth, in billions of tonnes of carbon a year. 1.3 in 2024; the paper calls this estimate persistently uncertain.",
+            "src": [
+              "gcb"
+            ]
+          },
+          {
+            "id": "ocean",
+            "name": "The ocean takes back",
+            "from": "air",
+            "rule": {
+              "kind": "rate",
+              "store": "air",
+              "above": 278,
+              "fit": {
+                "period": [
+                  2015,
+                  2024
+                ],
+                "value": 3.2
+              }
+            },
+            "color": "cold",
+            "site": {
+              "on": "sea",
+              "lat": [
+                -60,
+                65
+              ]
+            },
+            "at": [
+              -30,
+              -150
+            ],
+            "pick": "sea",
+            "words": "Sea water takes carbon dioxide out of the air, more the more there is above the old level. 3.2 billion tonnes of carbon a year on average from 2015 to 2024. On this stage it keeps taking back at that measured rate.",
+            "src": [
+              "gcb",
+              "raupach"
+            ]
+          },
+          {
+            "id": "land",
+            "name": "Plants and soils take back",
+            "from": "air",
+            "rule": {
+              "kind": "rate",
+              "store": "air",
+              "above": 278,
+              "fit": {
+                "period": [
+                  2015,
+                  2024
+                ],
+                "value": 2.4
+              }
+            },
+            "color": "green",
+            "site": {
+              "on": "land",
+              "lat": [
+                -45,
+                62
+              ]
+            },
+            "at": [
+              55,
+              40
+            ],
+            "pick": "land",
+            "words": "Forests, grass and soils grow on the extra carbon dioxide and hold some of it. 2.4 billion tonnes of carbon a year on average from 2015 to 2024, swinging a lot from year to year with droughts and fires.",
+            "src": [
+              "gcb",
+              "raupach"
+            ]
+          }
+        ],
+        "choices": [
+          {
+            "id": "fossil",
+            "name": "Fuel burned",
+            "start": 10.4,
+            "min": 0,
+            "max": 20,
+            "step": 0.1,
+            "tip": "Drag to set how much coal, oil and gas the world burns each year, in billions of tonnes of carbon. Today: 10.4."
+          },
+          {
+            "id": "landuse",
+            "name": "Forest cleared",
+            "start": 1.1,
+            "min": 0,
+            "max": 4,
+            "step": 0.1,
+            "tip": "Drag to set how much forest is cleared each year, in billions of tonnes of carbon. Today: 1.1."
+          }
+        ],
+        "say": {
+          "run": "{year}. Burning fuel puts in {fossil} and clearing forest {landuse} billion tonnes of carbon a year. The ocean takes back {ocean} and plants and soils {land}. The air keeps the rest, so its CO2 {airway} {airchange} ppm a year. Now {air} ppm.",
+          "replay": "{year}, as measured. The world burned {fossil} and cleared {landuse} billion tonnes of carbon a year; the ocean took back {ocean} and land {land}. CO2 on Mauna Loa: {air} ppm.",
+          "hold": "To hold the air where it is today, what goes in would have to fall to what comes out: about {total} billion tonnes a year, roughly half of today's {now}."
+        },
+        "guess": {
+          "q": "Say the world kept burning fuel and clearing forest at exactly today's rate, no more and no less, for the next 50 years. What happens to the CO2 in the air?",
+          "options": [
+            "It falls back",
+            "It stays about where it is",
+            "It keeps climbing"
+          ],
+          "answer": 2,
+          "set": {
+            "fossil": 10.4,
+            "landuse": 1.1
+          },
+          "years": 50,
+          "after": "Held at today's rate, the CO2 climbs from {from} to {to} ppm in 50 years, and is still climbing at the end. In the MIT study most people expected it to hold.",
+          "door": "If the world kept burning fuel at exactly today's rate for 50 years, what would the CO2 in the air do?"
+        },
+        "rules": [
+          {
+            "if": "the world holds its emissions where they are today",
+            "then": "the CO2 in the air keeps climbing, year after year, because more goes in than the ocean and land take back.",
+            "when": {
+              "choices": {
+                "fossil": [
+                  10,
+                  10.8
+                ],
+                "landuse": [
+                  0.9,
+                  1.3
+                ]
+              },
+              "years": 20
+            }
+          },
+          {
+            "if": "emissions fall to about half of today's",
+            "then": "the air roughly holds. Half is about what the ocean and land take back now, so only there does the air stop filling.",
+            "when": {
+              "total": [
+                5.4,
+                7
+              ],
+              "years": 20
+            }
+          },
+          {
+            "if": "emissions stop altogether",
+            "then": "the CO2 falls, but slowly: it takes decades, because the ocean and land take back only a little of the extra each year.",
+            "when": {
+              "total": [
+                0,
+                0.5
+              ],
+              "years": 30
+            }
+          },
+          {
+            "if": "you replay the measured years since 1959",
+            "then": "you see the ocean and land take back more every decade, and emissions grow faster still, so the air never stops filling.",
+            "when": {
+              "replay": true
+            }
+          }
+        ],
+        "meet": "The air is a store. It rises whenever more goes in than comes out, however steady the inflow. Holding emissions steady is not holding the climate steady.",
+        "note": "On this stage the ocean and land keep taking back carbon at the rate measured from 2015 to 2024, and the stage runs 50 years ahead. Measurements show that rate has been falling for decades (Raupach and others, 2014), so the real rise would likely be faster than shown here. Run from 1959 on the measured emissions, the same rate ends 2025 about 16 ppm too high, which is that falling rate showing. Over longer times the ocean fills and takes back less, which is why the stage stops at 2075.",
+        "history": {
+          "stores": {
+            "air": {
+              "1959": 315.98,
+              "1960": 316.91,
+              "1961": 317.64,
+              "1962": 318.45,
+              "1963": 318.99,
+              "1964": 319.62,
+              "1965": 320.04,
+              "1966": 321.37,
+              "1967": 322.18,
+              "1968": 323.05,
+              "1969": 324.62,
+              "1970": 325.68,
+              "1971": 326.32,
+              "1972": 327.46,
+              "1973": 329.68,
+              "1974": 330.19,
+              "1975": 331.13,
+              "1976": 332.03,
+              "1977": 333.84,
+              "1978": 335.41,
+              "1979": 336.84,
+              "1980": 338.76,
+              "1981": 340.12,
+              "1982": 341.48,
+              "1983": 343.15,
+              "1984": 344.87,
+              "1985": 346.35,
+              "1986": 347.61,
+              "1987": 349.31,
+              "1988": 351.69,
+              "1989": 353.2,
+              "1990": 354.45,
+              "1991": 355.7,
+              "1992": 356.54,
+              "1993": 357.21,
+              "1994": 358.96,
+              "1995": 360.97,
+              "1996": 362.74,
+              "1997": 363.88,
+              "1998": 366.84,
+              "1999": 368.54,
+              "2000": 369.71,
+              "2001": 371.32,
+              "2002": 373.45,
+              "2003": 375.98,
+              "2004": 377.7,
+              "2005": 379.98,
+              "2006": 382.09,
+              "2007": 384.02,
+              "2008": 385.83,
+              "2009": 387.64,
+              "2010": 390.1,
+              "2011": 391.85,
+              "2012": 394.06,
+              "2013": 396.74,
+              "2014": 398.81,
+              "2015": 401.01,
+              "2016": 404.41,
+              "2017": 406.76,
+              "2018": 408.72,
+              "2019": 411.65,
+              "2020": 414.21,
+              "2021": 416.41,
+              "2022": 418.53,
+              "2023": 421.08,
+              "2024": 424.61,
+              "2025": 427.35
+            }
+          },
+          "storesSrc": "noaa",
+          "periods": [
+            {
+              "from": 1959,
+              "to": 1969,
+              "name": "the 1960s mean",
+              "flows": {
+                "fossil": 3,
+                "landuse": 1.9,
+                "ocean": 1.3,
+                "land": 0.9
+              }
+            },
+            {
+              "from": 1970,
+              "to": 1979,
+              "name": "the 1970s mean",
+              "flows": {
+                "fossil": 4.7,
+                "landuse": 1.7,
+                "ocean": 1.6,
+                "land": 1.6
+              }
+            },
+            {
+              "from": 1980,
+              "to": 1989,
+              "name": "the 1980s mean",
+              "flows": {
+                "fossil": 5.4,
+                "landuse": 1.7,
+                "ocean": 2.1,
+                "land": 1.4
+              }
+            },
+            {
+              "from": 1990,
+              "to": 1999,
+              "name": "the 1990s mean",
+              "flows": {
+                "fossil": 6.4,
+                "landuse": 1.7,
+                "ocean": 2.3,
+                "land": 2
+              }
+            },
+            {
+              "from": 2000,
+              "to": 2009,
+              "name": "the 2000s mean",
+              "flows": {
+                "fossil": 7.8,
+                "landuse": 1.7,
+                "ocean": 2.6,
+                "land": 2.2
+              }
+            },
+            {
+              "from": 2010,
+              "to": 2014,
+              "name": "the 2010s mean",
+              "flows": {
+                "fossil": 9.5,
+                "landuse": 1.6,
+                "ocean": 3.1,
+                "land": 2.5
+              }
+            },
+            {
+              "from": 2015,
+              "to": 2023,
+              "name": "the 2015 to 2024 mean",
+              "flows": {
+                "fossil": 9.8,
+                "landuse": 1.4,
+                "ocean": 3.2,
+                "land": 2.4
+              }
+            },
+            {
+              "from": 2024,
+              "to": 2024,
+              "name": "2024",
+              "flows": {
+                "fossil": 10.3,
+                "landuse": 1.3,
+                "ocean": 3.4,
+                "land": 1.9
+              }
+            },
+            {
+              "from": 2025,
+              "to": 2025,
+              "name": "the 2025 projection",
+              "flows": {
+                "fossil": 10.4,
+                "landuse": 1.1,
+                "ocean": 3.2,
+                "land": 3.4
+              }
+            }
+          ],
+          "periodsSrc": "gcb"
+        },
+        "sources": {
+          "gcb": {
+            "by": "Friedlingstein and others",
+            "year": 2026,
+            "title": "Global Carbon Budget 2025",
+            "where": "Earth System Science Data 18, Table 7, CC BY 4.0",
+            "url": "https://essd.copernicus.org/articles/18/3211/2026/"
+          },
+          "noaa": {
+            "by": "NOAA Global Monitoring Laboratory and Scripps Institution of Oceanography",
+            "year": 2026,
+            "title": "Mauna Loa CO2 annual mean data",
+            "where": "US government data, free to the public",
+            "url": "https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_annmean_mlo.txt"
+          },
+          "raupach": {
+            "by": "Raupach and others",
+            "year": 2014,
+            "title": "The declining uptake rate of atmospheric CO2 by land and ocean sinks",
+            "where": "Biogeosciences 11, CC BY 3.0",
+            "url": "https://bg.copernicus.org/articles/11/3453/2014/"
+          },
+          "sterman": {
+            "by": "Sterman and Booth Sweeney",
+            "year": 2007,
+            "title": "Understanding public complacency about climate change",
+            "where": "Climatic Change 80",
+            "url": "https://www.mit.edu/~jsterman/Understanding_public.html"
+          }
+        }
+      },
+      "quiz": [
+        {
+          "q": "In the MIT study, what did most of the highly educated adults believe?",
+          "choices": [
+            "That emissions have already started to fall",
+            "That the CO2 in the air can hold steady while more goes in than comes out",
+            "That the ocean takes back all of our emissions",
+            "That CO2 leaves the air within a few years"
+          ],
+          "a": 1,
+          "why": "They expected a steady inflow to give a steady level. A store only holds steady when what goes in equals what comes out.",
+          "quote": "most subjects believe atmospheric GHG concentrations can be stabilized while emissions into the atmosphere continuously exceed the removal of GHGs from it",
+          "src": "sterman"
+        },
+        {
+          "q": "When does the CO2 in the air stop rising?",
+          "choices": [
+            "When emissions stop growing",
+            "When emissions equal what is removed",
+            "When emissions fall a little",
+            "When a target year arrives"
+          ],
+          "a": 1,
+          "why": "Only then does the inflow match the outflow. Today what goes in is about twice what comes out.",
+          "quote": "GHG concentrations will therefore continue to rise even if emissions fall, stabilizing only when emissions equal removal",
+          "src": "sterman"
+        },
+        {
+          "q": "By the 2025 estimate, how far is the CO2 in the air above where it was in 1750?",
+          "choices": [
+            "About 5 percent",
+            "About 20 percent",
+            "About 53 percent",
+            "About three times"
+          ],
+          "a": 2,
+          "why": "From about 278 parts per million to about 425.6.",
+          "quote": "atmospheric CO2 concentration increasing by 2.1 ppm reaching 425.6 ppm, 53 % above the pre-industrial level",
+          "src": "gcb"
+        },
+        {
+          "q": "Have the ocean and land kept pace with the extra CO2 in the air?",
+          "choices": [
+            "Yes, they take back a growing share",
+            "No, they grew more slowly than the extra CO2",
+            "They have stopped taking any back",
+            "They now give CO2 back"
+          ],
+          "a": 1,
+          "why": "They take back more in tonnes each decade, but less for each tonne of extra CO2 in the air.",
+          "quote": "implying that CO2 sinks increased more slowly than excess CO2",
+          "src": "raupach"
+        },
+        {
+          "q": "Were fossil emissions still growing in 2024?",
+          "choices": [
+            "No, they fell by a tenth",
+            "No, they held exactly level",
+            "Yes, by about 1 percent",
+            "Yes, by about 10 percent"
+          ],
+          "a": 2,
+          "why": "Up 1.1 percent on 2023, to 10.3 billion tonnes of carbon.",
+          "quote": "For the year 2024, EFOS increased by 1.1 % relative to 2023",
+          "src": "gcb"
+        }
+      ],
+      "crystal": {
+        "speed": 0.3,
+        "partials": [
+          "The ocean and land take back about half of what we put in each year.",
+          "In 2024 fossil emissions still grew, by about one percent.",
+          "Holding emissions at today's rate, the CO2 climbs for decades.",
+          "At about half of today's emissions, the air stops filling.",
+          "With no emissions at all, the CO2 comes down over decades, not years."
+        ],
+        "key": "The CO2 in the air is a store: it rises whenever more goes in than comes out, however steady the inflow.",
+        "decoys": [
+          {
+            "text": "If emissions stop growing, the CO2 stops growing.",
+            "why": "The inflow would still be about twice the outflow, so the air would keep filling."
+          },
+          {
+            "text": "The ocean and land will soak up whatever we add.",
+            "why": "They take back about half, and less for each extra tonne as the decades pass."
+          }
+        ],
+        "aha": "Every partial is the same tub: what goes in, against what comes out."
+      },
+      "hook": "Why does the CO2 keep rising when emissions stop growing?"
+    },
+    {
+      "n": 2,
+      "title": "The Colorado River: more promised than it carries",
+      "outcome": "Explain why Lakes Mead and Powell keep falling, and what it would take to stop them.",
+      "needIt": "Forty million people and a great deal of the country's winter food depend on the Colorado River, and the deals that share it out promise more water than it has carried since 2000. Who takes the cut is the fight; knowing how the lakes fill and drain lets you follow it.",
+      "why": "Lake Powell and Lake Mead are stores, like a tub. The river fills Powell; Glen Canyon Dam lets water down through the Grand Canyon into Mead; Hoover Dam lets it go to Arizona, California, Nevada and Mexico. The 1922 compact and the 1944 treaty promise 16.5 million acre-feet a year in all, but from 2000 to 2026 the river brought Lake Powell about 8.2 a year. When more is let out than comes in, the lakes fall, year after year, until the shares are cut.",
+      "reachesYou": "Water bills in Phoenix, Las Vegas and Los Angeles, winter vegetables from the Imperial and Yuma valleys, power from Hoover and Glen Canyon dams, and the news every summer about \"record lows\" all come from this one balance of what comes in against what goes out.",
+      "do": "Look up where your own tap water comes from (your water utility's yearly report says). Then find one news story about Colorado River cuts and ask: whose share is being cut, and does the cut bring what goes out down to what the river brings in?",
+      "explainer": {
+        "live": false,
+        "title": "Lake Powell and Lake Mead",
+        "ask": "This is the real ground of the Colorado River basin, the part that drains to the river lit and the rest dimmed. Lake Powell sits high in the canyons, Lake Mead below the Grand Canyon. Guess first, then drag what the river brings, what Glen Canyon Dam lets through and what Hoover Dam lets go, and play the years.",
+        "world": "basin",
+        "map": {
+          "dir": "img/explain/colorado",
+          "lift": 18
+        },
+        "each": 0.04,
+        "eachWords": "40,000 acre-feet of water",
+        "clock": {
+          "from": 2000,
+          "now": 2026,
+          "to": 2056
+        },
+        "stores": [
+          {
+            "id": "mead",
+            "name": "Lake Mead",
+            "start": 6.83,
+            "color": "deep",
+            "lake": "mead",
+            "at": [
+              36.15,
+              -114.4
+            ],
+            "unit": {
+              "name": "million acre-feet",
+              "per": 1
+            },
+            "level": {
+              "curve": [
+                [
+                  6.83,
+                  1037.8
+                ],
+                [
+                  6.99,
+                  1040
+                ],
+                [
+                  8.43,
+                  1060
+                ],
+                [
+                  10,
+                  1080
+                ],
+                [
+                  11.49,
+                  1100
+                ],
+                [
+                  13.54,
+                  1120
+                ],
+                [
+                  15.37,
+                  1140
+                ],
+                [
+                  17.61,
+                  1160
+                ],
+                [
+                  20.1,
+                  1180
+                ],
+                [
+                  22.92,
+                  1200
+                ]
+              ],
+              "bottom": 828,
+              "src": "mead"
+            },
+            "pick": "mead",
+            "words": "The biggest reservoir in the country, behind Hoover Dam. On 30 September 2026 it held 6.83 million acre-feet, at 1,037.8 feet; in 2000 it held 22.44. Below 1,037 feet it is lower than any level measured.",
+            "src": [
+              "mead"
+            ]
+          },
+          {
+            "id": "powell",
+            "name": "Lake Powell",
+            "start": 5.16,
+            "color": "cold",
+            "lake": "powell",
+            "at": [
+              37.35,
+              -110.9
+            ],
+            "unit": {
+              "name": "million acre-feet",
+              "per": 1
+            },
+            "level": {
+              "curve": [
+                [
+                  0.72,
+                  3400
+                ],
+                [
+                  1.25,
+                  3420
+                ],
+                [
+                  1.93,
+                  3440
+                ],
+                [
+                  2.66,
+                  3460
+                ],
+                [
+                  3.55,
+                  3480
+                ],
+                [
+                  4.52,
+                  3500
+                ],
+                [
+                  5.155,
+                  3518.08
+                ],
+                [
+                  6.47,
+                  3540
+                ],
+                [
+                  7.85,
+                  3560
+                ],
+                [
+                  9.88,
+                  3580
+                ],
+                [
+                  11.75,
+                  3600
+                ],
+                [
+                  13.76,
+                  3620
+                ],
+                [
+                  16,
+                  3640
+                ],
+                [
+                  18.51,
+                  3660
+                ],
+                [
+                  21.27,
+                  3680
+                ]
+              ],
+              "bottom": 3373,
+              "src": "powell"
+            },
+            "words": "The reservoir behind Glen Canyon Dam, in the canyons of Utah and Arizona. On 30 September 2026 it held 5.16 million acre-feet, at 3,518 feet; in 2000 it held 20.94. Reclamation warned in 2026 it could fall below 3,490 feet, the lowest level at which the dam can make power.",
+            "src": [
+              "powell",
+              "drought"
+            ]
+          }
+        ],
+        "flows": [
+          {
+            "id": "river",
+            "name": "The river",
+            "to": "powell",
+            "rule": {
+              "kind": "choice",
+              "choice": "river"
+            },
+            "color": "cold",
+            "site": {
+              "on": "into",
+              "to": [
+                36.94,
+                -111.48
+              ]
+            },
+            "at": [
+              39.6,
+              -108.3
+            ],
+            "words": "Rain and snowmelt from the Rockies, gathered by the Green, the Colorado and the San Juan, as it would reach Lake Powell with no dams upstream holding any back (Reclamation's \"unregulated inflow\"). From 2000 to 2026 it averaged 8.2 million acre-feet a year: 15.97 in 2011, 2.64 in 2002, 3.72 in 2026.",
+            "src": [
+              "powell"
+            ]
+          },
+          {
+            "id": "evap",
+            "name": "Evaporation off Lake Powell",
+            "from": "powell",
+            "rule": {
+              "kind": "rate",
+              "store": "powell",
+              "above": 0,
+              "fit": {
+                "period": [
+                  2000,
+                  2026
+                ],
+                "value": 0.371
+              }
+            },
+            "color": "mist",
+            "site": {
+              "on": "lake",
+              "lake": "powell"
+            },
+            "at": [
+              37.1,
+              -111.1
+            ],
+            "words": "Water the desert sun takes off the lake, more when the lake is bigger. Measured at 0.18 to 0.62 million acre-feet a year from 2000 to 2026; on this stage it follows the lake's size at the average measured rate.",
+            "src": [
+              "powell"
+            ]
+          },
+          {
+            "id": "release",
+            "name": "Glen Canyon Dam lets through",
+            "from": "powell",
+            "to": "mead",
+            "rule": {
+              "kind": "choice",
+              "choice": "release"
+            },
+            "color": "cold",
+            "site": {
+              "on": "river",
+              "from": [
+                36.94,
+                -111.48
+              ],
+              "to": [
+                36.1,
+                -114.5
+              ]
+            },
+            "at": [
+              36.3,
+              -112.5
+            ],
+            "words": "What Glen Canyon Dam lets down through the Grand Canyon into Lake Mead. 8.23 million acre-feet in most years from 2000 to 2013; 7.48 in 2024 and 2025; 6.0 in 2026.",
+            "src": [
+              "powell"
+            ]
+          },
+          {
+            "id": "deliver",
+            "name": "Hoover Dam lets go",
+            "from": "mead",
+            "rule": {
+              "kind": "choice",
+              "choice": "deliver"
+            },
+            "color": "hot",
+            "site": {
+              "on": "river",
+              "from": [
+                36.02,
+                -114.74
+              ],
+              "to": [
+                31,
+                -114.67
+              ]
+            },
+            "at": [
+              33.6,
+              -114.5
+            ],
+            "words": "What Hoover Dam lets go down the river to Arizona, California, Nevada and Mexico: 10.98 million acre-feet in 2000, 7.37 in 2026. The 1922 compact gives the Lower Basin 7.5 a year (California 4.4, Arizona 2.8, Nevada 0.3) and the 1944 treaty gives Mexico 1.5.",
+            "src": [
+              "mead",
+              "law"
+            ]
+          }
+        ],
+        "choices": [
+          {
+            "id": "river",
+            "name": "The river brings",
+            "start": 8.2,
+            "min": 2,
+            "max": 17,
+            "step": 0.1,
+            "tip": "Drag to set how much the river brings Lake Powell each year, in million acre-feet. The 2000 to 2026 average was 8.2; 2011 brought 16, 2002 brought 2.6."
+          },
+          {
+            "id": "release",
+            "name": "Glen Canyon lets through",
+            "start": 7.48,
+            "min": 0,
+            "max": 12,
+            "step": 0.01,
+            "tip": "Drag to set how much Glen Canyon Dam lets through to Lake Mead each year, in million acre-feet. 8.23 in most years before 2014; 7.48 in 2024 and 2025."
+          },
+          {
+            "id": "deliver",
+            "name": "Hoover lets go",
+            "start": 7.37,
+            "min": 0,
+            "max": 12,
+            "step": 0.01,
+            "tip": "Drag to set how much Hoover Dam lets go to Arizona, California, Nevada and Mexico each year, in million acre-feet. 7.37 in 2026; the deals promise 9."
+          }
+        ],
+        "hold": {
+          "store": "mead",
+          "choices": [
+            "deliver"
+          ]
+        },
+        "say": {
+          "run": "{year}. The river brings {river} million acre-feet into Lake Powell, {evap} evaporates, and Glen Canyon lets {release} through to Lake Mead. Hoover lets {deliver} go downstream. Lake Mead {meadway} {meadchange} a year, now {mead}; Lake Powell {powellway} {powellchange}, now {powell}.",
+          "replay": "Water year {year}, as measured. The river brought {river} million acre-feet into Lake Powell, {evap} evaporated, Glen Canyon let through {release} and Hoover let go {deliver}. Lake Mead ended the year at {mead}, Lake Powell at {powell}.",
+          "hold": "To hold Lake Mead where it is with these settings, what Hoover lets go would have to come down to about {deliver} million acre-feet a year. The deals promise the Lower Basin states and Mexico 9."
+        },
+        "guess": {
+          "q": "Say the river brings Lake Powell its 2000 to 2026 average every year, Glen Canyon lets through 8.23 as it did in most of those years, and Hoover lets go the 9 million acre-feet a year the 1922 compact and the 1944 treaty promise the Lower Basin and Mexico. What happens to Lake Mead over the next 20 years?",
+          "options": [
+            "It fills back up",
+            "It holds about where it is",
+            "It falls, then levels off",
+            "It falls until there is nothing left to let go"
+          ],
+          "answer": 3,
+          "set": {
+            "river": 8.2,
+            "release": 8.23,
+            "deliver": 9
+          },
+          "years": 20,
+          "after": "At those numbers Lake Mead goes from {from} to {to} million acre-feet in 20 years: more goes out than comes in, every year, so it never levels off.",
+          "door": "If the Colorado keeps bringing its recent average, and Arizona, California, Nevada and Mexico keep taking what the deals promise, what happens to Lake Mead?"
+        },
+        "rules": [
+          {
+            "if": "the river brings its recent average and Hoover lets go what the deals promise",
+            "then": "Lake Mead falls every year until there is nothing left in it to let go. The promises add up to more than the river has carried since 2000.",
+            "when": {
+              "choices": {
+                "river": [
+                  7.7,
+                  8.7
+                ],
+                "deliver": [
+                  8.8,
+                  9.2
+                ]
+              },
+              "years": 5
+            }
+          },
+          {
+            "if": "a flood year like 2011 comes once",
+            "then": "Lake Powell rises, but one wet year puts back only part of what the dry years took. In 2011 the river brought 16 million acre-feet, and Lake Powell still ended the year 3.35 lower than in 2000. Lake Mead rises only if Glen Canyon lets more of it through.",
+            "when": {
+              "choices": {
+                "river": [
+                  14,
+                  17
+                ]
+              },
+              "years": 1
+            }
+          },
+          {
+            "if": "Hoover lets go only about what Glen Canyon lets through",
+            "then": "Lake Mead about holds. With today's release that is about 7.5 a year, 1.5 million acre-feet less than the deals promise: somebody's share is cut.",
+            "when": {
+              "choices": {
+                "release": [
+                  7.2,
+                  7.8
+                ],
+                "deliver": [
+                  7.2,
+                  7.8
+                ]
+              },
+              "years": 5
+            }
+          },
+          {
+            "if": "you replay the measured years since 2000",
+            "then": "you see both lakes fall from nearly full to near their lowest; the wet years 2011 and 2023 only paused the fall.",
+            "when": {
+              "replay": true
+            }
+          }
+        ],
+        "meet": "A lake is a store. It holds only when what goes out equals what comes in. The deals promise more than the river has carried since 2000, so somebody's share has to be cut; the only question is whose.",
+        "note": "The lakes' storage, levels, releases, evaporation and the river's inflow are Reclamation's daily records, added up by water year (October to September). From 2000 to 2026 the river, the releases and the evaporation account for Lake Powell's measured change to within 3,000 acre-feet a year; for Lake Mead the side streams and its own evaporation about cancel out, so the stage leaves both out. The lake shapes are ours: grown on NOAA's heights from each dam until they cover the area Reclamation measured when full, with each bed shaped to Reclamation's measured area at each level. Below the lowest level ever measured (Lake Mead 1,037 feet, Lake Powell 3,394 feet in 1964) the stage draws the level straight down, and says so. When a store on this stage reaches zero, no more is let out of it.",
+        "history": {
+          "stores": {
+            "mead": {
+              "2000": 22.44,
+              "2001": 19.87,
+              "2002": 17.09,
+              "2003": 15.62,
+              "2004": 13.94,
+              "2005": 15.22,
+              "2006": 13.89,
+              "2007": 12.5,
+              "2008": 12.01,
+              "2009": 10.93,
+              "2010": 10.09,
+              "2011": 12.98,
+              "2012": 13.13,
+              "2013": 12.36,
+              "2014": 10.12,
+              "2015": 9.85,
+              "2016": 9.62,
+              "2017": 10.18,
+              "2018": 9.87,
+              "2019": 10.26,
+              "2020": 10.28,
+              "2021": 9.02,
+              "2022": 7.33,
+              "2023": 8.87,
+              "2024": 8.71,
+              "2025": 8.22,
+              "2026": 6.83
+            },
+            "powell": {
+              "2000": 20.94,
+              "2001": 19.13,
+              "2002": 14.47,
+              "2003": 12.11,
+              "2004": 9.17,
+              "2005": 11.94,
+              "2006": 11.92,
+              "2007": 11.93,
+              "2008": 14.51,
+              "2009": 15.46,
+              "2010": 15.27,
+              "2011": 17.59,
+              "2012": 13.93,
+              "2013": 10.93,
+              "2014": 12.29,
+              "2015": 12.33,
+              "2016": 12.82,
+              "2017": 14.66,
+              "2018": 11.03,
+              "2019": 13.28,
+              "2020": 11.37,
+              "2021": 7.26,
+              "2022": 5.8,
+              "2023": 8.79,
+              "2024": 9.14,
+              "2025": 6.75,
+              "2026": 5.16
+            }
+          },
+          "storesSrc": "mead",
+          "periods": [
+            {
+              "from": 2000,
+              "to": 2000,
+              "name": "water year 2000",
+              "flows": {
+                "river": 6.94,
+                "evap": 0.62,
+                "release": 9.38,
+                "deliver": 10.98
+              }
+            },
+            {
+              "from": 2001,
+              "to": 2001,
+              "name": "water year 2001",
+              "flows": {
+                "river": 6.99,
+                "evap": 0.57,
+                "release": 8.24,
+                "deliver": 10.49
+              }
+            },
+            {
+              "from": 2002,
+              "to": 2002,
+              "name": "water year 2002",
+              "flows": {
+                "river": 2.64,
+                "evap": 0.48,
+                "release": 8.23,
+                "deliver": 10.5
+              }
+            },
+            {
+              "from": 2003,
+              "to": 2003,
+              "name": "water year 2003",
+              "flows": {
+                "river": 6.16,
+                "evap": 0.39,
+                "release": 8.23,
+                "deliver": 9.45
+              }
+            },
+            {
+              "from": 2004,
+              "to": 2004,
+              "name": "water year 2004",
+              "flows": {
+                "river": 5.91,
+                "evap": 0.32,
+                "release": 8.23,
+                "deliver": 9.63
+              }
+            },
+            {
+              "from": 2005,
+              "to": 2005,
+              "name": "water year 2005",
+              "flows": {
+                "river": 12.79,
+                "evap": 0.32,
+                "release": 8.23,
+                "deliver": 7.94
+              }
+            },
+            {
+              "from": 2006,
+              "to": 2006,
+              "name": "water year 2006",
+              "flows": {
+                "river": 8.63,
+                "evap": 0.36,
+                "release": 8.23,
+                "deliver": 9.4
+              }
+            },
+            {
+              "from": 2007,
+              "to": 2007,
+              "name": "water year 2007",
+              "flows": {
+                "river": 8.75,
+                "evap": 0.37,
+                "release": 8.23,
+                "deliver": 9.45
+              }
+            },
+            {
+              "from": 2008,
+              "to": 2008,
+              "name": "water year 2008",
+              "flows": {
+                "river": 12.09,
+                "evap": 0.4,
+                "release": 8.98,
+                "deliver": 9.53
+              }
+            },
+            {
+              "from": 2009,
+              "to": 2009,
+              "name": "water year 2009",
+              "flows": {
+                "river": 10.22,
+                "evap": 0.44,
+                "release": 8.24,
+                "deliver": 9.21
+              }
+            },
+            {
+              "from": 2010,
+              "to": 2010,
+              "name": "water year 2010",
+              "flows": {
+                "river": 8.43,
+                "evap": 0.44,
+                "release": 8.23,
+                "deliver": 9.26
+              }
+            },
+            {
+              "from": 2011,
+              "to": 2011,
+              "name": "water year 2011",
+              "flows": {
+                "river": 15.97,
+                "evap": 0.47,
+                "release": 12.52,
+                "deliver": 9.8
+              }
+            },
+            {
+              "from": 2012,
+              "to": 2012,
+              "name": "water year 2012",
+              "flows": {
+                "river": 4.91,
+                "evap": 0.45,
+                "release": 9.47,
+                "deliver": 9.42
+              }
+            },
+            {
+              "from": 2013,
+              "to": 2013,
+              "name": "water year 2013",
+              "flows": {
+                "river": 5.12,
+                "evap": 0.36,
+                "release": 8.23,
+                "deliver": 9.04
+              }
+            },
+            {
+              "from": 2014,
+              "to": 2014,
+              "name": "water year 2014",
+              "flows": {
+                "river": 10.38,
+                "evap": 0.35,
+                "release": 7.48,
+                "deliver": 9.76
+              }
+            },
+            {
+              "from": 2015,
+              "to": 2015,
+              "name": "water year 2015",
+              "flows": {
+                "river": 10.17,
+                "evap": 0.37,
+                "release": 9,
+                "deliver": 9.25
+              }
+            },
+            {
+              "from": 2016,
+              "to": 2016,
+              "name": "water year 2016",
+              "flows": {
+                "river": 9.62,
+                "evap": 0.38,
+                "release": 9,
+                "deliver": 9.29
+              }
+            },
+            {
+              "from": 2017,
+              "to": 2017,
+              "name": "water year 2017",
+              "flows": {
+                "river": 11.9,
+                "evap": 0.41,
+                "release": 9,
+                "deliver": 8.62
+              }
+            },
+            {
+              "from": 2018,
+              "to": 2018,
+              "name": "water year 2018",
+              "flows": {
+                "river": 4.61,
+                "evap": 0.39,
+                "release": 9,
+                "deliver": 9.24
+              }
+            },
+            {
+              "from": 2019,
+              "to": 2019,
+              "name": "water year 2019",
+              "flows": {
+                "river": 12.95,
+                "evap": 0.36,
+                "release": 9,
+                "deliver": 8.89
+              }
+            },
+            {
+              "from": 2020,
+              "to": 2020,
+              "name": "water year 2020",
+              "flows": {
+                "river": 5.85,
+                "evap": 0.37,
+                "release": 8.23,
+                "deliver": 8.26
+              }
+            },
+            {
+              "from": 2021,
+              "to": 2021,
+              "name": "water year 2021",
+              "flows": {
+                "river": 3.5,
+                "evap": 0.28,
+                "release": 8.23,
+                "deliver": 9.36
+              }
+            },
+            {
+              "from": 2022,
+              "to": 2022,
+              "name": "water year 2022",
+              "flows": {
+                "river": 6.08,
+                "evap": 0.2,
+                "release": 7,
+                "deliver": 8.9
+              }
+            },
+            {
+              "from": 2023,
+              "to": 2023,
+              "name": "water year 2023",
+              "flows": {
+                "river": 13.42,
+                "evap": 0.23,
+                "release": 8.58,
+                "deliver": 7.63
+              }
+            },
+            {
+              "from": 2024,
+              "to": 2024,
+              "name": "water year 2024",
+              "flows": {
+                "river": 7.98,
+                "evap": 0.27,
+                "release": 7.48,
+                "deliver": 7.63
+              }
+            },
+            {
+              "from": 2025,
+              "to": 2025,
+              "name": "water year 2025",
+              "flows": {
+                "river": 4.69,
+                "evap": 0.24,
+                "release": 7.48,
+                "deliver": 7.87
+              }
+            },
+            {
+              "from": 2026,
+              "to": 2026,
+              "name": "water year 2026",
+              "flows": {
+                "river": 3.72,
+                "evap": 0.18,
+                "release": 6,
+                "deliver": 7.37
+              }
+            }
+          ],
+          "periodsSrc": "powell"
+        },
+        "sources": {
+          "mead": {
+            "by": "US Bureau of Reclamation",
+            "year": 2026,
+            "title": "Lake Mead daily storage, elevation and releases",
+            "where": "Upper Colorado hydrologic data, site 921, US government data",
+            "url": "https://www.usbr.gov/uc/water/hydrodata/reservoir_data/921/dashboard.html"
+          },
+          "powell": {
+            "by": "US Bureau of Reclamation",
+            "year": 2026,
+            "title": "Lake Powell daily storage, elevation, area, unregulated inflow, releases and evaporation",
+            "where": "Upper Colorado hydrologic data, site 919, US government data",
+            "url": "https://www.usbr.gov/uc/water/hydrodata/reservoir_data/919/dashboard.html"
+          },
+          "law": {
+            "by": "US Bureau of Reclamation",
+            "year": 2026,
+            "title": "Law of the River",
+            "where": "Lower Colorado Region",
+            "url": "https://www.usbr.gov/lc/region/pao/lawofrvr.html"
+          },
+          "drought": {
+            "by": "US Bureau of Reclamation",
+            "year": 2026,
+            "title": "Colorado River System During Historic Drought",
+            "where": "news release",
+            "url": "https://www.usbr.gov/newsroom/news-release/5326"
+          },
+          "etopo": {
+            "by": "Amante and Eakins, NOAA",
+            "year": 2009,
+            "title": "ETOPO1 1 arc-minute global relief model",
+            "where": "public domain, through NOAA ERDDAP",
+            "url": "https://coastwatch.pfeg.noaa.gov/erddap/griddap/etopo180.html"
+          }
+        }
+      },
+      "quiz": [
+        {
+          "q": "What did the 1922 compact give each half of the Colorado River basin?",
+          "choices": [
+            "Half of whatever the river carries each year",
+            "The right to use 7.5 million acre-feet a year each",
+            "All the water that falls inside its own states",
+            "Whatever is left after Mexico is served"
+          ],
+          "a": 1,
+          "why": "Each basin got a fixed amount, 7.5 million acre-feet a year, not a share of what the river actually carries.",
+          "quote": "each basin having the right to develop and use 7.5 million acre-feet (maf) of river water annually",
+          "src": "law"
+        },
+        {
+          "q": "How is the Lower Basin's 7.5 million acre-feet split?",
+          "choices": [
+            "California 4.4, Arizona 2.8, Nevada 0.3",
+            "An equal third to each state",
+            "Arizona 4.4, California 2.8, Nevada 0.3",
+            "By how many people live in each state"
+          ],
+          "a": 0,
+          "why": "The 1928 act set California's share largest and Nevada's smallest.",
+          "quote": "apportioned the lower basin's 7.5 maf among the states of Arizona (2.8 maf), California (4.4 maf) and Nevada (0.3 maf)",
+          "src": "law"
+        },
+        {
+          "q": "How much did the 1944 treaty promise Mexico each year?",
+          "choices": [
+            "Nothing; it set only how the border runs",
+            "0.5 million acre-feet",
+            "1.5 million acre-feet",
+            "A tenth of whatever reaches the border"
+          ],
+          "a": 2,
+          "why": "With the compact's 15, that brings the promises to 16.5 million acre-feet a year.",
+          "quote": "Committed 1.5 maf of the river's annual flow to Mexico.",
+          "src": "law"
+        },
+        {
+          "q": "What did Reclamation warn in 2026 about Lake Powell?",
+          "choices": [
+            "That it would spill over the dam",
+            "That it may fall below 3,490 feet, the minimum power pool",
+            "That it would refill within two years",
+            "That it was full of sediment"
+          ],
+          "a": 1,
+          "why": "Below 3,490 feet Glen Canyon Dam can no longer make power.",
+          "quote": "projects Lake Powell may decline to below 3,490 feet",
+          "src": "drought"
+        }
+      ],
+      "crystal": {
+        "speed": 0.3,
+        "partials": [
+          "The deals promise 16.5 million acre-feet a year in all.",
+          "From 2000 to 2026 the river brought Lake Powell about 8.2 a year.",
+          "Lake Mead held 22.44 in 2000 and 6.83 in 2026.",
+          "The flood year 2011 brought 16, and Lake Mead still ended lower than in 2000.",
+          "Lake Mead about holds only when Hoover lets go what Glen Canyon lets through."
+        ],
+        "key": "A reservoir holds only when what goes out equals what comes in; the Colorado has been promised more than it carries, so the lakes fall until the shares are cut.",
+        "decoys": [
+          {
+            "text": "A few wet years will fix it.",
+            "why": "The wettest year since 2000 refilled only a part; the promises still exceed the average every year after."
+          },
+          {
+            "text": "The lakes fall because of evaporation.",
+            "why": "Evaporation off Lake Powell was under half a million acre-feet a year; the gap between promises and the river is several million."
+          }
+        ],
+        "aha": "Every partial is the same tub: what the river brings, against what the deals let out."
+      },
+      "hook": "Why do Lake Mead and Lake Powell keep falling?"
+    }
+  ]
+}

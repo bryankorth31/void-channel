@@ -140,68 +140,75 @@
       ],
       "actors": [
         {
+          "id": "sun",
+          "type": "card",
+          "o": 0,
+          "prop": "sun",
+          "label": "",
+          "x": 120,
+          "y": 110,
+          "w": 60,
+          "h": 60
+        },
+        {
           "id": "s0",
           "type": "card",
-          "x": 30,
-          "y": 90,
-          "w": 220,
-          "h": 100,
+          "o": 0,
+          "prop": "plant",
           "label": "Pick a spot",
           "color": "blue",
-          "o": 0,
-          "size": 20
+          "size": 20,
+          "x": 80,
+          "y": 75,
+          "w": 140,
+          "h": 140,
+          "tagW": 160,
+          "tag": [
+            0,
+            115
+          ]
         },
         {
           "id": "s1",
           "type": "card",
-          "x": 290,
-          "y": 90,
-          "w": 220,
-          "h": 100,
+          "o": 0,
+          "prop": "can",
           "label": "Weekly care",
           "color": "blue",
-          "o": 0,
-          "size": 20
-        },
-        {
-          "id": "a1",
-          "type": "arrow",
-          "x": 256,
-          "y": 140,
-          "x2": 284,
-          "y2": 140,
-          "color": "dim",
-          "o": 0,
-          "draw": 0
+          "size": 20,
+          "x": 335,
+          "y": 120,
+          "w": 130,
+          "h": 130,
+          "tagW": 160,
+          "tag": [
+            0,
+            100
+          ]
         },
         {
           "id": "s2",
           "type": "card",
-          "x": 550,
-          "y": 90,
-          "w": 220,
-          "h": 100,
+          "o": 0,
+          "prop": "punnet",
           "label": "Fruit each year",
           "color": "blue",
-          "o": 0,
-          "size": 17
-        },
-        {
-          "id": "a2",
-          "type": "arrow",
-          "x": 516,
-          "y": 140,
-          "x2": 544,
-          "y2": 140,
-          "color": "dim",
-          "o": 0,
-          "draw": 0
+          "size": 20,
+          "x": 595,
+          "y": 145,
+          "w": 110,
+          "h": 110,
+          "tagW": 180,
+          "tag": [
+            0,
+            90
+          ]
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 270,
+          "y": 345,
           "label": "Simple care, kept up.",
           "color": "pink",
           "size": 22,
@@ -213,6 +220,9 @@
           "say": "You set the plant where it gets sun.",
           "dur": 2.6,
           "set": {
+            "sun": {
+              "o": 1
+            },
             "s0": {
               "o": 1,
               "sub": "sun and good soil"
@@ -226,10 +236,6 @@
             "s1": {
               "o": 1,
               "sub": "weed, trim, feed"
-            },
-            "a1": {
-              "o": 1,
-              "draw": 1
             }
           }
         },
@@ -241,9 +247,8 @@
               "o": 1,
               "sub": "for years to come"
             },
-            "a2": {
-              "o": 1,
-              "draw": 1
+            "s0": {
+              "berries": true
             },
             "line": {
               "o": 1

@@ -154,58 +154,79 @@
       ],
       "actors": [
         {
+          "id": "thing",
+          "type": "card",
+          "o": 0,
+          "prop": "plate",
+          "dirty": true,
+          "label": "One dish",
+          "color": "gold",
+          "size": 18,
+          "x": 142.5,
+          "y": 107.5,
+          "w": 115,
+          "h": 115,
+          "tagW": 140,
+          "tag": [
+            -110,
+            90
+          ]
+        },
+        {
           "id": "left",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "sponge",
           "label": "Washed tonight",
           "color": "blue",
+          "size": 20,
+          "x": 282.5,
+          "y": 172.5,
+          "w": 85,
+          "h": 85,
+          "tagW": 180,
+          "tag": [
+            0,
+            85
+          ]
+        },
+        {
+          "id": "plateR",
+          "type": "card",
           "o": 0,
-          "size": 22
+          "prop": "plate",
+          "dirty": true,
+          "label": "",
+          "x": 462.5,
+          "y": 107.5,
+          "w": 115,
+          "h": 115
         },
         {
           "id": "right",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "calendar",
+          "days": 0,
+          "month": "MAY",
           "label": "Left a week",
           "color": "blue",
-          "o": 0,
-          "size": 22
-        },
-        {
-          "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
+          "size": 20,
+          "x": 610,
+          "y": 85,
           "w": 120,
-          "label": "ONE DISH",
-          "color": "gold",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
-        },
-        {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "WAIT",
-          "color": "fg",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
+          "h": 120,
+          "tagW": 160,
+          "tag": [
+            0,
+            110
+          ]
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
+          "y": 350,
           "label": "Small jobs grow when you leave them.",
           "color": "pink",
           "size": 22,
@@ -217,15 +238,17 @@
           "say": "One dirty dish.",
           "dur": 2.4,
           "set": {
+            "thing": {
+              "o": 1
+            },
+            "plateR": {
+              "o": 1
+            },
             "left": {
               "o": 1
             },
             "right": {
               "o": 1
-            },
-            "thing": {
-              "o": 1,
-              "s": 1
             }
           }
         },
@@ -233,9 +256,10 @@
           "say": "You can wash it now, or leave it.",
           "dur": 2.4,
           "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
+            "thing": {
+              "shake": true
+            },
+            "plateR": {
               "shake": true
             }
           }
@@ -244,6 +268,9 @@
           "say": "Tonight it wipes clean in seconds.",
           "dur": 2.6,
           "set": {
+            "thing": {
+              "dirty": false
+            },
             "left": {
               "sub": "ten seconds"
             },
@@ -256,6 +283,13 @@
           "say": "In a week it is stuck fast.",
           "dur": 2.6,
           "set": {
+            "right": {
+              "days": 7
+            },
+            "plateR": {
+              "dirty": false,
+              "crust": true
+            },
             "line": {
               "o": 1
             }
@@ -276,13 +310,8 @@
               "color": "green"
             },
             "thing": {
-              "label": "WEEDS",
+              "label": "Weeds",
               "size": 18
-            },
-            "act": {
-              "label": "GROW",
-              "size": 18,
-              "color": "pink"
             },
             "line": {
               "label": "Early weeding is easy weeding.",

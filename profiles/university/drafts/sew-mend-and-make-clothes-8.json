@@ -130,56 +130,62 @@
         {
           "id": "left",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "dome",
+          "up": 0,
           "label": "Tent cloth",
           "color": "blue",
+          "size": 22,
+          "x": 125,
+          "y": 50,
+          "w": 230,
+          "h": 230,
+          "tagW": 160,
+          "tag": [
+            -40,
+            130
+          ]
+        },
+        {
+          "id": "bundle",
+          "type": "card",
           "o": 0,
-          "size": 22
+          "prop": "poles",
+          "label": "",
+          "x": 490,
+          "y": 160,
+          "w": 140,
+          "h": 140
         },
         {
           "id": "right",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "tie": "left.pole",
+          "x": 610,
+          "y": 110,
           "label": "Poles",
           "color": "blue",
-          "o": 0,
-          "size": 22
+          "size": 22,
+          "tagW": 130
         },
         {
           "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "SHAPE",
+          "type": "card",
+          "o": 0,
+          "tie": "left.top",
+          "x": 420,
+          "y": 45,
+          "label": "Shape",
           "color": "gold",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
-        },
-        {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "HOLD UP",
-          "color": "fg",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
+          "size": 18,
+          "tagW": 120
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
+          "y": 350,
           "label": "What you do not see holds it up.",
           "color": "pink",
           "size": 22,
@@ -194,12 +200,14 @@
             "left": {
               "o": 1
             },
+            "bundle": {
+              "o": 1
+            },
             "right": {
               "o": 1
             },
             "thing": {
-              "o": 1,
-              "s": 1
+              "o": 1
             }
           }
         },
@@ -207,9 +215,7 @@
           "say": "The poles go inside.",
           "dur": 2.4,
           "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
+            "bundle": {
               "shake": true
             }
           }
@@ -230,6 +236,16 @@
           "say": "The poles give it shape.",
           "dur": 2.6,
           "set": {
+            "left": {
+              "up": 1
+            },
+            "bundle": {
+              "o": 0,
+              "x": 230,
+              "y": 120,
+              "w": 140,
+              "h": 140
+            },
             "line": {
               "o": 1
             }
@@ -250,13 +266,8 @@
               "color": "green"
             },
             "thing": {
-              "label": "FIT",
+              "label": "Fit",
               "size": 18
-            },
-            "act": {
-              "label": "SUPPORT",
-              "size": 18,
-              "color": "pink"
             },
             "line": {
               "label": "The lining keeps the garment in position.",

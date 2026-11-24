@@ -157,56 +157,106 @@
         {
           "id": "left",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "stove",
           "label": "Big kitchen",
           "color": "blue",
-          "o": 0,
-          "size": 22
+          "size": 22,
+          "x": 60,
+          "y": 45,
+          "w": 180,
+          "h": 180,
+          "tagW": 170,
+          "tag": [
+            0,
+            120
+          ]
         },
         {
           "id": "right",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "pan",
+          "food": "",
           "label": "One small pan",
           "color": "blue",
-          "o": 0,
-          "size": 22
+          "size": 20,
+          "x": 325,
+          "y": 140,
+          "w": 150,
+          "h": 150,
+          "tagW": 180,
+          "tag": [
+            0,
+            95
+          ]
         },
         {
           "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "DINNER",
-          "color": "gold",
+          "type": "card",
           "o": 0,
-          "s": 0.4,
-          "size": 18
+          "prop": "plate",
+          "dirty": false,
+          "label": "Dinner",
+          "color": "gold",
+          "size": 18,
+          "x": 542.5,
+          "y": 72.5,
+          "w": 85,
+          "h": 85,
+          "tagW": 140,
+          "tag": [
+            -30,
+            -80
+          ]
         },
         {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "PLAN",
-          "color": "fg",
+          "id": "p1",
+          "type": "card",
           "o": 0,
-          "s": 0.4,
-          "size": 18
+          "prop": "plate",
+          "dirty": false,
+          "label": "",
+          "color": "gold",
+          "size": 18,
+          "x": 642.5,
+          "y": 72.5,
+          "w": 85,
+          "h": 85
+        },
+        {
+          "id": "p2",
+          "type": "card",
+          "o": 0,
+          "prop": "plate",
+          "dirty": false,
+          "label": "",
+          "color": "gold",
+          "size": 18,
+          "x": 542.5,
+          "y": 172.5,
+          "w": 85,
+          "h": 85
+        },
+        {
+          "id": "p3",
+          "type": "card",
+          "o": 0,
+          "prop": "plate",
+          "dirty": false,
+          "label": "",
+          "color": "gold",
+          "size": 18,
+          "x": 642.5,
+          "y": 172.5,
+          "w": 85,
+          "h": 85
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
+          "y": 350,
           "label": "It was never about the size.",
           "color": "pink",
           "size": 22,
@@ -225,8 +275,16 @@
               "o": 1
             },
             "thing": {
-              "o": 1,
-              "s": 1
+              "o": 1
+            },
+            "p1": {
+              "o": 1
+            },
+            "p2": {
+              "o": 1
+            },
+            "p3": {
+              "o": 1
             }
           }
         },
@@ -234,9 +292,8 @@
           "say": "With one pan, you plan what cooks when.",
           "dur": 2.4,
           "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
+            "right": {
+              "food": "eggs",
               "shake": true
             }
           }
@@ -245,11 +302,18 @@
           "say": "One dish after another, the pan feeds everyone.",
           "dur": 2.6,
           "set": {
+            "right": {
+              "food": "veg",
+              "sub": "feeds four, in turns"
+            },
+            "thing": {
+              "dirty": true
+            },
+            "p1": {
+              "dirty": true
+            },
             "left": {
               "sub": "not needed"
-            },
-            "right": {
-              "sub": "feeds four, in turns"
             }
           }
         },
@@ -257,6 +321,15 @@
           "say": "Small, but never empty.",
           "dur": 2.6,
           "set": {
+            "right": {
+              "food": "steak"
+            },
+            "p2": {
+              "dirty": true
+            },
+            "p3": {
+              "dirty": true
+            },
             "line": {
               "o": 1
             }
@@ -277,13 +350,8 @@
               "color": "green"
             },
             "thing": {
-              "label": "FOOD",
+              "label": "Food",
               "size": 18
-            },
-            "act": {
-              "label": "SUCCESSION",
-              "size": 14,
-              "color": "pink"
             },
             "line": {
               "label": "A small plot, replanted, feeds a family.",

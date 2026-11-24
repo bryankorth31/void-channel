@@ -182,58 +182,72 @@
       ],
       "actors": [
         {
+          "id": "wreck",
+          "type": "card",
+          "o": 0,
+          "prop": "car",
+          "look": "wreck",
+          "label": "By the road",
+          "color": "fg",
+          "size": 18,
+          "x": 35,
+          "y": 55,
+          "w": 200,
+          "h": 100,
+          "tagW": 150,
+          "tag": [
+            0,
+            95
+          ]
+        },
+        {
+          "id": "thing",
+          "type": "card",
+          "o": 0,
+          "prop": "wheel",
+          "label": "The wheel",
+          "color": "gold",
+          "size": 20,
+          "turn": 0,
+          "x": 320,
+          "y": 45,
+          "w": 240,
+          "h": 240,
+          "tagW": 150,
+          "tag": [
+            210,
+            110
+          ]
+        },
+        {
           "id": "left",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "tie": "thing.left",
+          "x": 165,
+          "y": 280,
           "label": "One wants to look",
           "color": "blue",
-          "o": 0,
-          "size": 18
+          "size": 18,
+          "tagW": 190
         },
         {
           "id": "right",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "tie": "thing.right",
+          "x": 680,
+          "y": 175,
           "label": "One turns away",
           "color": "blue",
-          "o": 0,
-          "size": 22
-        },
-        {
-          "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "THE WHEEL",
-          "color": "gold",
-          "o": 0,
-          "s": 0.4,
-          "size": 14
-        },
-        {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "GRAB",
-          "color": "fg",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
+          "size": 20,
+          "tagW": 180
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
+          "y": 345,
           "label": "One car, two hands on the wheel.",
           "color": "pink",
           "size": 22,
@@ -245,15 +259,17 @@
           "say": "Something awful by the road.",
           "dur": 2.4,
           "set": {
+            "wreck": {
+              "o": 1
+            },
+            "thing": {
+              "o": 1
+            },
             "left": {
               "o": 1
             },
             "right": {
               "o": 1
-            },
-            "thing": {
-              "o": 1,
-              "s": 1
             }
           }
         },
@@ -261,9 +277,8 @@
           "say": "Part of you wants to stare.",
           "dur": 2.4,
           "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
+            "thing": {
+              "turn": -0.65,
               "shake": true
             }
           }
@@ -272,6 +287,9 @@
           "say": "Part of you is disgusted and turns away.",
           "dur": 2.6,
           "set": {
+            "thing": {
+              "turn": 0.4
+            },
             "left": {
               "sub": "pulls toward it"
             },
@@ -284,6 +302,9 @@
           "say": "Both are you.",
           "dur": 2.6,
           "set": {
+            "thing": {
+              "turn": -0.12
+            },
             "line": {
               "o": 1
             }
@@ -304,13 +325,8 @@
               "color": "green"
             },
             "thing": {
-              "label": "THE SELF",
+              "label": "The self",
               "size": 18
-            },
-            "act": {
-              "label": "CONFLICT",
-              "size": 18,
-              "color": "pink"
             },
             "line": {
               "label": "Plato: the soul has parts that can clash.",

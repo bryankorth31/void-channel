@@ -162,68 +162,78 @@
       ],
       "actors": [
         {
-          "id": "s0",
+          "id": "ph",
           "type": "card",
-          "x": 30,
-          "y": 90,
-          "w": 220,
-          "h": 100,
+          "o": 0,
+          "prop": "phone",
+          "screen": "likes",
           "label": "Phone buzzes",
           "color": "blue",
-          "o": 0,
-          "size": 20
+          "size": 20,
+          "x": 60,
+          "y": 75,
+          "w": 150,
+          "h": 150,
+          "tagW": 190,
+          "tag": [
+            0,
+            115
+          ]
         },
         {
           "id": "s1",
           "type": "card",
-          "x": 290,
-          "y": 90,
-          "w": 220,
-          "h": 100,
+          "o": 0,
+          "prop": "pouch",
+          "shut": false,
           "label": "Bag it first",
           "color": "blue",
-          "o": 0,
-          "size": 20
+          "size": 20,
+          "x": 325,
+          "y": 85,
+          "w": 130,
+          "h": 150,
+          "tagW": 170,
+          "tag": [
+            0,
+            115
+          ]
         },
         {
-          "id": "a1",
-          "type": "arrow",
-          "x": 256,
-          "y": 140,
-          "x2": 284,
-          "y2": 140,
-          "color": "dim",
+          "id": "s0",
+          "type": "card",
           "o": 0,
-          "draw": 0
+          "tie": "s1.tie",
+          "x": 250,
+          "y": 300,
+          "label": "",
+          "color": "gold",
+          "size": 20,
+          "tagW": 150
         },
         {
           "id": "s2",
           "type": "card",
-          "x": 550,
-          "y": 90,
-          "w": 220,
-          "h": 100,
+          "o": 0,
+          "prop": "car",
           "label": "Drive in peace",
           "color": "blue",
-          "o": 0,
-          "size": 17
-        },
-        {
-          "id": "a2",
-          "type": "arrow",
-          "x": 516,
-          "y": 140,
-          "x2": 544,
-          "y2": 140,
-          "color": "dim",
-          "o": 0,
-          "draw": 0
+          "size": 17,
+          "x": 520,
+          "y": 97.5,
+          "w": 210,
+          "h": 105,
+          "tagW": 180,
+          "tag": [
+            0,
+            110
+          ]
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 270,
+          "y": 345,
           "label": "Decide once, before the moment.",
           "color": "pink",
           "size": 22,
@@ -235,9 +245,10 @@
           "say": "While you drive, the phone will buzz.",
           "dur": 2.6,
           "set": {
-            "s0": {
+            "ph": {
               "o": 1,
-              "sub": "you will want to look"
+              "sub": "you will want to look",
+              "shake": true
             }
           }
         },
@@ -247,11 +258,15 @@
           "set": {
             "s1": {
               "o": 1,
-              "sub": "sealed, out of reach"
+              "sub": "sealed, out of reach",
+              "shut": true
             },
-            "a1": {
-              "o": 1,
-              "draw": 1
+            "ph": {
+              "x": 315,
+              "y": 85,
+              "w": 150,
+              "h": 150,
+              "o": 0
             }
           }
         },
@@ -261,11 +276,11 @@
           "set": {
             "s2": {
               "o": 1,
-              "sub": "nothing to resist"
-            },
-            "a2": {
-              "o": 1,
-              "draw": 1
+              "sub": "nothing to resist",
+              "x": 565,
+              "y": 97.5,
+              "w": 210,
+              "h": 105
             },
             "line": {
               "o": 1
@@ -282,6 +297,7 @@
               "color": "green"
             },
             "s0": {
+              "o": 1,
               "label": "Desire",
               "size": 20,
               "color": "gold"

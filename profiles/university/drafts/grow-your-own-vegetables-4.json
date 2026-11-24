@@ -157,56 +157,58 @@
         {
           "id": "left",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "bed",
+          "blankets": 0,
           "label": "Light blanket",
           "color": "blue",
-          "o": 0,
-          "size": 22
+          "size": 22,
+          "x": 105,
+          "y": 70,
+          "w": 210,
+          "h": 210,
+          "tagW": 170,
+          "tag": [
+            0,
+            110
+          ]
         },
         {
           "id": "right",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "bed",
+          "blankets": 0,
           "label": "Ten blankets",
           "color": "blue",
-          "o": 0,
-          "size": 22
+          "size": 22,
+          "x": 485,
+          "y": 70,
+          "w": 210,
+          "h": 210,
+          "tagW": 170,
+          "tag": [
+            0,
+            110
+          ]
         },
         {
           "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "SLEEPER",
-          "color": "gold",
+          "type": "card",
           "o": 0,
-          "s": 0.4,
-          "size": 18
-        },
-        {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
+          "tie": "left.head",
+          "x": 65,
           "y": 160,
-          "w": 120,
-          "label": "TUCK IN",
-          "color": "fg",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
+          "label": "Sleeper",
+          "color": "gold",
+          "size": 18,
+          "tagW": 140
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
+          "y": 350,
           "label": "Cover it just enough.",
           "color": "pink",
           "size": 22,
@@ -225,8 +227,7 @@
               "o": 1
             },
             "thing": {
-              "o": 1,
-              "s": 1
+              "o": 1
             }
           }
         },
@@ -234,9 +235,12 @@
           "say": "You tuck the blanket in snug.",
           "dur": 2.4,
           "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
+            "left": {
+              "blankets": 1,
+              "shake": true
+            },
+            "right": {
+              "blankets": 1,
               "shake": true
             }
           }
@@ -257,6 +261,9 @@
           "say": "Ten blankets would trap them.",
           "dur": 2.6,
           "set": {
+            "right": {
+              "blankets": 10
+            },
             "line": {
               "o": 1
             }
@@ -277,13 +284,8 @@
               "color": "green"
             },
             "thing": {
-              "label": "SMALL SEED",
-              "size": 14
-            },
-            "act": {
-              "label": "PRESS SOIL",
-              "size": 14,
-              "color": "pink"
+              "label": "Small seed",
+              "size": 18
             },
             "line": {
               "label": "Small seeds need hardly any covering.",

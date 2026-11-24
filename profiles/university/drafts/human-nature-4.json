@@ -185,58 +185,62 @@
       ],
       "actors": [
         {
-          "id": "left",
+          "id": "thing",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
-          "h": 100,
-          "label": "What you know",
-          "color": "blue",
           "o": 0,
-          "size": 22
+          "prop": "skywalk",
+          "label": "Glass floor",
+          "color": "gold",
+          "size": 20,
+          "x": 210,
+          "y": 100,
+          "w": 340,
+          "h": 120,
+          "tagW": 150,
+          "tag": [
+            -240,
+            -45
+          ]
         },
         {
           "id": "right",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "figure",
+          "pose": "stand",
+          "look": "dark",
+          "turn": -0.5,
+          "on": "thing",
           "label": "What your legs do",
           "color": "blue",
-          "o": 0,
-          "size": 18
+          "size": 18,
+          "x": 420,
+          "y": 115,
+          "w": 50,
+          "h": 90,
+          "tagW": 190,
+          "tag": [
+            190,
+            150
+          ]
         },
         {
-          "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "GLASS FLOOR",
-          "color": "gold",
+          "id": "left",
+          "type": "card",
           "o": 0,
-          "s": 0.4,
-          "size": 14
-        },
-        {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "STEP OUT",
-          "color": "fg",
-          "o": 0,
-          "s": 0.4,
-          "size": 18
+          "tie": "thing.glass",
+          "x": 160,
+          "y": 285,
+          "label": "What you know",
+          "color": "blue",
+          "size": 22,
+          "tagW": 180
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
+          "y": 345,
           "label": "Knowing is not the same as feeling.",
           "color": "pink",
           "size": 22,
@@ -248,15 +252,14 @@
           "say": "A glass floor over a long drop.",
           "dur": 2.4,
           "set": {
-            "left": {
+            "thing": {
               "o": 1
             },
             "right": {
               "o": 1
             },
-            "thing": {
-              "o": 1,
-              "s": 1
+            "left": {
+              "o": 1
             }
           }
         },
@@ -264,10 +267,16 @@
           "say": "You step out onto it.",
           "dur": 2.4,
           "set": {
-            "act": {
-              "o": 1,
-              "s": 1,
-              "shake": true
+            "right": {
+              "x": 305,
+              "y": 115,
+              "w": 50,
+              "h": 90,
+              "turn": -0.2,
+              "tag": [
+                305,
+                150
+              ]
             }
           }
         },
@@ -279,7 +288,8 @@
               "sub": "it is perfectly safe"
             },
             "right": {
-              "sub": "knees shake anyway"
+              "sub": "knees shake anyway",
+              "tremble": true
             }
           }
         },
@@ -289,6 +299,9 @@
           "set": {
             "line": {
               "o": 1
+            },
+            "right": {
+              "tremble": true
             }
           }
         },
@@ -304,16 +317,12 @@
             "right": {
               "label": "Alief",
               "size": 22,
-              "color": "green"
+              "color": "green",
+              "tremble": true
             },
             "thing": {
-              "label": "ONE MOMENT",
-              "size": 14
-            },
-            "act": {
-              "label": "REACT",
-              "size": 18,
-              "color": "pink"
+              "label": "One moment",
+              "size": 18
             },
             "line": {
               "label": "Fast habit can overrule slow reason.",

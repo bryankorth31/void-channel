@@ -157,58 +157,83 @@
       ],
       "actors": [
         {
+          "id": "spill",
+          "type": "card",
+          "o": 0,
+          "prop": "spill",
+          "label": "",
+          "x": 300,
+          "y": 115,
+          "w": 200,
+          "h": 160
+        },
+        {
+          "id": "thing",
+          "type": "card",
+          "o": 0,
+          "prop": "figure",
+          "pose": "stand",
+          "label": "A stranger",
+          "x": 457.5,
+          "y": 85,
+          "w": 45,
+          "h": 100,
+          "turn": -0.5,
+          "color": "gold",
+          "size": 18,
+          "tagW": 160,
+          "tag": [
+            150,
+            -40
+          ]
+        },
+        {
           "id": "left",
           "type": "card",
-          "x": 40,
-          "y": 40,
-          "w": 250,
-          "h": 100,
-          "label": "Plenty of time",
-          "color": "blue",
           "o": 0,
-          "size": 22
+          "prop": "figure",
+          "pose": "stand",
+          "label": "Plenty of time",
+          "x": 107.5,
+          "y": 155,
+          "w": 45,
+          "h": 100,
+          "look": "dark",
+          "turn": 1.2,
+          "color": "blue",
+          "size": 22,
+          "tagW": 180,
+          "tag": [
+            0,
+            110
+          ]
         },
         {
           "id": "right",
           "type": "card",
-          "x": 510,
-          "y": 40,
-          "w": 250,
-          "h": 100,
+          "o": 0,
+          "prop": "figure",
+          "pose": "stand",
           "label": "Running late",
+          "x": 637.5,
+          "y": 185,
+          "w": 45,
+          "h": 100,
+          "look": "suit",
+          "turn": -1.3,
           "color": "blue",
-          "o": 0,
-          "size": 22
-        },
-        {
-          "id": "thing",
-          "type": "stamp",
-          "x": 340,
-          "y": 20,
-          "w": 120,
-          "label": "A STRANGER",
-          "color": "gold",
-          "o": 0,
-          "s": 0.4,
-          "size": 14
-        },
-        {
-          "id": "act",
-          "type": "stamp",
-          "x": 340,
-          "y": 160,
-          "w": 120,
-          "label": "NEEDS HELP",
-          "color": "fg",
-          "o": 0,
-          "s": 0.4,
-          "size": 14
+          "size": 22,
+          "tagW": 170,
+          "tag": [
+            0,
+            100
+          ]
         },
         {
           "id": "line",
           "type": "text",
           "x": 400,
-          "y": 325,
+          "y": 348,
           "label": "Same person. Different hurry.",
           "color": "pink",
           "size": 22,
@@ -220,15 +245,11 @@
           "say": "Someone drops their groceries.",
           "dur": 2.4,
           "set": {
-            "left": {
-              "o": 1
-            },
-            "right": {
+            "spill": {
               "o": 1
             },
             "thing": {
-              "o": 1,
-              "s": 1
+              "o": 1
             }
           }
         },
@@ -236,10 +257,19 @@
           "say": "Two people walk by.",
           "dur": 2.4,
           "set": {
-            "act": {
+            "left": {
               "o": 1,
-              "s": 1,
-              "shake": true
+              "x": 167.5,
+              "y": 155,
+              "w": 45,
+              "h": 100
+            },
+            "right": {
+              "o": 1,
+              "x": 577.5,
+              "y": 190,
+              "w": 45,
+              "h": 100
             }
           }
         },
@@ -248,6 +278,11 @@
           "dur": 2.6,
           "set": {
             "left": {
+              "x": 277.5,
+              "y": 135,
+              "w": 45,
+              "h": 100,
+              "turn": 1.47,
               "sub": "stops and helps"
             },
             "right": {
@@ -259,6 +294,17 @@
           "say": "The one running late does not.",
           "dur": 2.6,
           "set": {
+            "right": {
+              "x": 97.5,
+              "y": 100,
+              "w": 45,
+              "h": 100,
+              "turn": -2.2,
+              "tag": [
+                0,
+                100
+              ]
+            },
             "line": {
               "o": 1
             }
@@ -279,13 +325,8 @@
               "color": "green"
             },
             "thing": {
-              "label": "THE ACT",
+              "label": "The act",
               "size": 18
-            },
-            "act": {
-              "label": "DECIDES",
-              "size": 18,
-              "color": "pink"
             },
             "line": {
               "label": "Hurry beat character in the study.",

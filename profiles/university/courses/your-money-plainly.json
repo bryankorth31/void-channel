@@ -65,70 +65,81 @@
         "actors": [
           {
             "id": "h1",
-            "type": "stamp",
-            "x": 40,
+            "type": "card",
+            "x": 230,
             "y": 20,
-            "w": 100,
-            "label": "Home",
+            "w": 90,
+            "label": "",
             "color": "blue",
             "o": 0,
-            "size": 16
+            "prop": "house",
+            "h": 90
           },
           {
             "id": "h2",
-            "type": "stamp",
-            "x": 190,
+            "type": "card",
+            "x": 350,
             "y": 20,
-            "w": 100,
-            "label": "Home",
+            "w": 90,
+            "label": "",
             "color": "blue",
             "o": 0,
-            "size": 16
+            "prop": "house",
+            "h": 90
           },
           {
             "id": "h3",
-            "type": "stamp",
-            "x": 340,
+            "type": "card",
+            "x": 470,
             "y": 20,
-            "w": 100,
-            "label": "Home",
+            "w": 90,
+            "label": "",
             "color": "blue",
             "o": 0,
-            "size": 16
+            "prop": "house",
+            "h": 90
           },
           {
             "id": "h4",
-            "type": "stamp",
-            "x": 490,
+            "type": "card",
+            "x": 590,
             "y": 20,
-            "w": 100,
-            "label": "Home",
+            "w": 90,
+            "label": "",
             "color": "blue",
             "o": 0,
-            "size": 16
+            "prop": "house",
+            "h": 90
           },
           {
             "id": "h5",
-            "type": "stamp",
-            "x": 640,
+            "type": "card",
+            "x": 710,
             "y": 20,
-            "w": 100,
-            "label": "Home",
+            "w": 90,
+            "label": "",
             "color": "blue",
             "o": 0,
-            "size": 16
+            "prop": "house",
+            "h": 90
           },
           {
             "id": "jar",
             "type": "card",
-            "x": 280,
-            "y": 160,
-            "w": 240,
-            "h": 84,
+            "x": 40,
+            "y": 20,
+            "w": 140,
+            "h": 100,
             "label": "The jar",
             "sub": "empty",
             "color": "gold",
-            "o": 0
+            "o": 0,
+            "prop": "jar",
+            "tagW": 190,
+            "tag": [
+              0,
+              125
+            ]
           },
           {
             "id": "res",
@@ -171,7 +182,8 @@
             "set": {
               "jar": {
                 "o": 1,
-                "sub": "$100"
+                "sub": "$100",
+                "coins": 20
               }
             }
           },
@@ -180,8 +192,7 @@
             "dur": 2.2,
             "set": {
               "h3": {
-                "label": "FIRE",
-                "color": "pink",
+                "burnt": true,
                 "shake": true
               }
             }
@@ -193,11 +204,11 @@
               "jar": {
                 "label": "Pays out",
                 "sub": "$100 to rebuild",
-                "color": "green"
+                "color": "green",
+                "coins": 0
               },
               "h3": {
-                "label": "Rebuilt",
-                "color": "green"
+                "rebuilt": true
               }
             }
           },
@@ -395,14 +406,20 @@
           {
             "id": "jar",
             "type": "card",
-            "x": 40,
+            "x": 60,
             "y": 40,
-            "w": 300,
-            "h": 92,
+            "w": 140,
+            "h": 110,
             "label": "Your savings",
             "sub": "$100",
             "color": "blue",
-            "o": 0
+            "o": 0,
+            "prop": "jar",
+            "tagW": 200,
+            "tag": [
+              0,
+              120
+            ]
           },
           {
             "id": "yr",
@@ -419,20 +436,26 @@
           {
             "id": "bas",
             "type": "card",
-            "x": 460,
+            "x": 520,
             "y": 40,
-            "w": 300,
-            "h": 92,
+            "w": 160,
+            "h": 110,
             "label": "A week of groceries",
             "sub": "$100",
             "color": "gold",
-            "o": 0
+            "o": 0,
+            "prop": "basket",
+            "tagW": 210,
+            "tag": [
+              0,
+              120
+            ]
           },
           {
             "id": "res",
             "type": "card",
             "x": 40,
-            "y": 240,
+            "y": 270,
             "w": 720,
             "h": 84,
             "label": "Real gain = interest minus inflation",
@@ -447,7 +470,8 @@
             "dur": 2.6,
             "set": {
               "jar": {
-                "o": 1
+                "o": 1,
+                "coins": 15
               },
               "bas": {
                 "o": 1
@@ -473,7 +497,8 @@
               },
               "jar": {
                 "sub": "$103",
-                "color": "green"
+                "color": "green",
+                "coins": 18
               }
             }
           },
@@ -1278,13 +1303,27 @@
           {
             "id": "pz",
             "type": "stamp",
-            "x": 60,
-            "y": 40,
-            "w": 190,
+            "x": 300,
+            "y": 175,
+            "w": 100,
             "label": "8 slices",
             "color": "gold",
             "o": 0,
             "size": 20
+          },
+          {
+            "id": "pizza",
+            "type": "card",
+            "prop": "pizza",
+            "x": 40,
+            "y": 20,
+            "w": 250,
+            "h": 250,
+            "label": "",
+            "color": "fg",
+            "o": 0,
+            "slices": 8,
+            "mine": 2
           },
           {
             "id": "you",
@@ -1302,9 +1341,9 @@
             "id": "res",
             "type": "card",
             "x": 40,
-            "y": 262,
+            "y": 282,
             "w": 720,
-            "h": 76,
+            "h": 70,
             "label": "What you own = your slices divided by all slices",
             "sub": "not the number of slices you hold",
             "color": "green",
@@ -1321,6 +1360,9 @@
               },
               "you": {
                 "o": 1
+              },
+              "pizza": {
+                "o": 1
               }
             }
           },
@@ -1334,6 +1376,10 @@
               },
               "you": {
                 "sub": "4 of 16: still one quarter"
+              },
+              "pizza": {
+                "slices": 16,
+                "mine": 4
               }
             }
           },
@@ -1358,6 +1404,10 @@
               "you": {
                 "sub": "4 of 20: less than a quarter",
                 "color": "pink"
+              },
+              "pizza": {
+                "slices": 20,
+                "mine": 4
               }
             }
           },
@@ -1569,9 +1619,9 @@
             "id": "win",
             "type": "card",
             "x": 40,
-            "y": 30,
-            "w": 260,
-            "h": 92,
+            "y": 20,
+            "w": 240,
+            "h": 90,
             "label": "Heads",
             "sub": "you win $200",
             "color": "green",
@@ -1579,23 +1629,28 @@
           },
           {
             "id": "coin",
-            "type": "stamp",
+            "type": "card",
             "x": 350,
             "y": 30,
             "w": 100,
-            "label": "FLIP?",
+            "label": "Flip?",
             "color": "gold",
             "o": 0,
-            "s": 0.4,
-            "size": 16
+            "prop": "coin",
+            "h": 100,
+            "tagW": 150,
+            "tag": [
+              0,
+              105
+            ]
           },
           {
             "id": "lose",
             "type": "card",
-            "x": 500,
-            "y": 30,
-            "w": 260,
-            "h": 92,
+            "x": 520,
+            "y": 20,
+            "w": 240,
+            "h": 90,
             "label": "Tails",
             "sub": "you pay $100",
             "color": "pink",
@@ -1605,7 +1660,7 @@
             "id": "avg",
             "type": "text",
             "x": 400,
-            "y": 175,
+            "y": 255,
             "label": "",
             "color": "fg",
             "size": 18,
@@ -1615,9 +1670,9 @@
             "id": "res",
             "type": "card",
             "x": 40,
-            "y": 250,
+            "y": 285,
             "w": 720,
-            "h": 84,
+            "h": 70,
             "label": "Losses loom larger",
             "sub": "so we pass up good chances, and hold on to bad ones",
             "color": "blue",
@@ -1633,8 +1688,7 @@
                 "o": 1
               },
               "coin": {
-                "o": 1,
-                "s": 1
+                "o": 1
               },
               "lose": {
                 "o": 1
@@ -1648,6 +1702,9 @@
               "avg": {
                 "o": 1,
                 "label": "average: +$50 a flip"
+              },
+              "coin": {
+                "up": true
               }
             }
           },
@@ -1656,9 +1713,10 @@
             "dur": 2.4,
             "set": {
               "coin": {
-                "label": "NO",
+                "label": "No",
                 "color": "pink",
-                "shake": true
+                "shake": true,
+                "up": false
               }
             }
           },
@@ -1888,14 +1946,20 @@
           {
             "id": "tch",
             "type": "card",
-            "x": 290,
-            "y": 30,
-            "w": 220,
-            "h": 92,
+            "x": 330,
+            "y": 20,
+            "w": 140,
+            "h": 110,
             "label": "The teacher",
             "sub": "holds $100",
             "color": "gold",
-            "o": 0
+            "o": 0,
+            "prop": "jar",
+            "tagW": 190,
+            "tag": [
+              0,
+              120
+            ]
           },
           {
             "id": "sto",
@@ -1913,7 +1977,7 @@
             "id": "rum",
             "type": "text",
             "x": 400,
-            "y": 175,
+            "y": 252,
             "label": "\"The store is broke! Give it back, now!\"",
             "color": "pink",
             "size": 18,
@@ -1923,9 +1987,9 @@
             "id": "res",
             "type": "card",
             "x": 40,
-            "y": 250,
+            "y": 280,
             "w": 720,
-            "h": 84,
+            "h": 70,
             "label": "Banks lend long and borrow short",
             "sub": "safe on normal days; one panic can break them; deposit insurance stops the panic",
             "color": "blue",
@@ -1941,7 +2005,8 @@
                 "o": 1
               },
               "tch": {
-                "o": 1
+                "o": 1,
+                "coins": 10
               }
             }
           },
@@ -1962,7 +2027,8 @@
                 "o": 1
               },
               "tch": {
-                "sub": "$10 left on hand"
+                "sub": "$10 left on hand",
+                "coins": 1
               }
             }
           },
@@ -2202,32 +2268,50 @@
           {
             "id": "a",
             "type": "card",
-            "x": 40,
-            "y": 30,
-            "w": 330,
-            "h": 100,
+            "x": 120,
+            "y": 40,
+            "w": 120,
+            "h": 40,
             "label": "\"Doubles every ten years!\"",
             "sub": "shiny box",
             "color": "gold",
-            "o": 0
+            "o": 0,
+            "prop": "box",
+            "look": "shiny",
+            "front": "Doubles every ten years!",
+            "back": "",
+            "tagW": 200,
+            "tag": [
+              0,
+              130
+            ]
           },
           {
             "id": "b",
             "type": "card",
-            "x": 430,
-            "y": 30,
-            "w": 330,
-            "h": 100,
+            "x": 520,
+            "y": 40,
+            "w": 120,
+            "h": 40,
             "label": "Plain box",
             "sub": "full label on the back",
             "color": "blue",
-            "o": 0
+            "o": 0,
+            "prop": "box",
+            "look": "plain",
+            "front": "What is inside. The risks. The fees. Who gets paid.",
+            "back": "What is inside. The risks. The fees. Who gets paid.",
+            "tagW": 200,
+            "tag": [
+              0,
+              130
+            ]
           },
           {
             "id": "law",
             "type": "text",
             "x": 400,
-            "y": 180,
+            "y": 245,
             "label": "Since 1934: public investments must show their label",
             "color": "fg",
             "size": 17,
@@ -2237,9 +2321,9 @@
             "id": "res",
             "type": "card",
             "x": 40,
-            "y": 250,
+            "y": 280,
             "w": 720,
-            "h": 84,
+            "h": 70,
             "label": "\"Sunshine is the best disinfectant\"",
             "sub": "a seller who will not show the label is the warning",
             "color": "green",
@@ -2272,7 +2356,8 @@
             "set": {
               "a": {
                 "sub": "no ingredients, no risks",
-                "color": "pink"
+                "color": "pink",
+                "turned": true
               }
             }
           },
