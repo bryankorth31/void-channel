@@ -38,6 +38,7 @@ const CSS = `
 // ---- Node only: the catalog -------------------------------------------------------------------------------------------------
 const readJson = (p, fallback) => { try { return JSON.parse(fs.readFileSync(p, 'utf8')); } catch (e) { return fallback; } };
 const encPath = (f) => String(f).split('/').map(encodeURIComponent).join('/');
+const HALF_HOUR = 1800; // seconds: the longest radio episode Void Radio plays
 
 // The radio channels that are on, with their shows assembled. dir: catalog/radio. Returns { channels: [{ id, name, shows: [slug] }],
 // shows: [show] } with each show shaped like assemble()'s (seasons of episodes with url, item, p, f, min and the seconds), plus
@@ -52,7 +53,9 @@ function readRadio(dir) {
     for (const slug of c.shows || []) {
       const r = readJson(path.join(dir, slug + '.json'), null);
       if (!r || r.slug !== slug || !r.item || !Array.isArray(r.episodes)) continue;
-      const eps = r.episodes.filter((e) => e && e.file && e.sec > 0).map((e) => {
+      // A radio show fills one half hour. A file even a little over 30:00 takes a whole hour on the grid, and a radio break takes no
+      // filler, so the cards would hold for half an hour after it (the Void TV owner chat measured 26 such hours a week, 24 Nov 2026).
+      const eps = r.episodes.filter((e) => e && e.file && e.sec > 0 && e.sec <= HALF_HOUR).map((e) => {
         const ep = { n: e.n, name: e.name, state: 'LIVE', url: 'https://archive.org/download/' + r.item + '/' + encPath(e.file), min: Math.round(e.sec / 60), item: r.item, p: e.file, f: 'MP3' };
         if (e.aired) ep.ad = e.aired;
         return Object.defineProperty(ep, 'sec', { value: e.sec });

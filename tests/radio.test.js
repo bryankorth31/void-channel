@@ -49,6 +49,7 @@ function tmpCatalog() {
     { n: 1, name: 'One', aired: '1952-04-26', file: 'Have Gun—Will Travel 1958-11-23 (001) Strange Vendetta.mp3', sec: 1772 },
     { n: 2, name: 'Two', aired: '', file: 'b.mp3', sec: 1500 },
     { n: 3, name: 'No length', aired: '', file: 'c.mp3', sec: 0 },
+    { n: 4, name: 'Over the half hour', aired: '', file: 'd.mp3', sec: 1801 },
   ]);
   show('radio-b', 'radio-off', [{ n: 1, name: 'One', aired: '', file: 'a.mp3', sec: 1800 }]);
   fs.writeFileSync(path.join(dir, 'channels.json'), JSON.stringify({ channels: [
@@ -68,7 +69,7 @@ test('readRadio: only channels that are on, shows shaped like the catalog, files
     assert.equal(s.type, 'Radio'); assert.equal(s.network, 'Radio On'); assert.equal(s.year, '1952');
     assert.deepEqual(s.radio, { channel: 'radio-on', credit: 'Old Time Radio Researchers', licence: 'http://creativecommons.org/licenses/by-nc-sa/3.0/us/', years: '1952-1961' });
     const eps = s.seasons[0].episodes;
-    assert.equal(eps.length, 2, 'an episode with no length is left out');
+    assert.equal(eps.length, 2, 'an episode with no length, or one a second over 30:00, is left out');
     assert.equal(eps[0].url, 'https://archive.org/download/OTRR_Test_Singles/Have%20Gun%E2%80%94Will%20Travel%201958-11-23%20(001)%20Strange%20Vendetta.mp3');
     assert.equal(eps[0].p, 'Have Gun—Will Travel 1958-11-23 (001) Strange Vendetta.mp3', 'the file name exactly as the Archive has it');
     assert.equal(eps[0].ad, '1952-04-26'); assert.equal(eps[1].ad, undefined);
@@ -81,7 +82,7 @@ test('readRadio: only channels that are on, shows shaped like the catalog, files
 
 const REAL = R.readRadio(DIR);
 
-test('the radio catalog: kids radio stays off; every episode runs 20 to 31.5 minutes; the OTRR shows carry their credit', () => {
+test('the radio catalog: kids radio stays off; every episode on the channel runs 20 to 30 minutes; the OTRR shows carry their credit', () => {
   const CH = JSON.parse(fs.readFileSync(path.join(DIR, 'channels.json'), 'utf8'));
   const kids = CH.channels.find((c) => c.id === 'radio-kids');
   assert.ok(kids, 'the kids channel is in the file, ready for Bryan to switch on');
@@ -90,7 +91,7 @@ test('the radio catalog: kids radio stays off; every episode runs 20 to 31.5 min
   assert.deepEqual(REAL.channels.map((c) => [c.id, c.name]), [['radio', 'Void Radio']], 'one radio channel (Bryan, 24 Nov 2026: "One channel")');
   assert.equal(REAL.channels[0].shows.length, 30, 'every series of every kind but kids');
   for (const s of REAL.shows) {
-    for (const e of s.seasons[0].episodes) assert.ok(e.sec >= 1200 && e.sec <= 1890, s.slug + ' ' + e.n + ': ' + e.sec + ' s');
+    for (const e of s.seasons[0].episodes) assert.ok(e.sec >= 1200 && e.sec <= 1800, s.slug + ' ' + e.n + ': ' + e.sec + ' s, a radio show fills one half hour');
     assert.equal(typeof s.radio.credit, 'string', s.slug);
   }
   for (const slug of ['radio-dragnet', 'radio-gunsmoke', 'radio-suspense']) {
@@ -154,6 +155,7 @@ test('schedule: a week on every radio channel sits on the 30-minute grid, never 
       const a = air[u];
       assert.equal(new Date(a.g0).getUTCMinutes() % 30, 0, ch.id + ': every block starts on the hour or the half hour');
       assert.ok(a.st + a.du * 60000 <= a.en, ch.id + ': no episode runs past its airing');
+      assert.ok(a.en - a.st <= 30 * 60000, ch.id + ': every radio show sits in one half hour, so the cards never hold for half an hour after one');
       if (u + 1 < air.length) assert.equal(a.en, air[u + 1].st, ch.id + ': airings run back to back');
       const key = a.s + ':' + a.se + 'x' + a.n;
       assert.ok(!seen.has(key), ch.id + ': episode ' + key + ' plays twice in a week');
