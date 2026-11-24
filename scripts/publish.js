@@ -20,11 +20,15 @@
 //     real shrink through.
 //   * The commit takes the files as they are at commit time, so the commit itself is checked again (every .json in
 //     it parses, nothing added carries an address or token). On a hit the commit is undone and nothing is pushed.
+//   * The trivia bank and timed questions (trivia/bank, trivia/timed) join its own paths only on a run whose trivia gate is
+//     open (scripts/trivia/gate.js; Bryan, 24 Nov 2026: "By itself each morning"): the morning run checked them today and every
+//     file still hashes to what it checked. Otherwise they are left alone and one line says why. A bank that fell more than 10%
+//     in questions against the committed one is left alone with a FAILED line; --allow-bank-shrink lets a real shrink through.
 //   * An option it does not know (--dry-run, --root=DIR) is refused with exit 2, never ignored.
 //   * catalog/cache/publish.log is cut back to its last 1 MB whenever it grows past that.
 // Every run ends with one dated line the doctor reads: "nothing new", "pushed <hash>: <message>",
 // "refused: <reason>", "FAILED: <one line>" or "held: <n> other commits waiting: <subjects>".
-// Usage: node scripts/publish.js [--allow-shrink] [--allow-other-commits] [--dry] [--root <folder>]
+// Usage: node scripts/publish.js [--allow-shrink] [--allow-bank-shrink] [--allow-other-commits] [--dry] [--root <folder>]
 //   --dry         do everything except git commit and git push, and say what would happen
 //   --root <dir>  work on that repository instead of this one (the tests use it); the catalog, docs and
 //                 list paths move there with it
@@ -45,8 +49,8 @@ const DOC_REPORTS = ['CANDIDATES.md', 'COVERAGE.md', 'HUNT.md', 'MOVIES.md', 'NE
 const argv = process.argv.slice(2);
 // Only these exact options are accepted. Anything else (a typo such as --dry-run, or --root=DIR) is refused, never ignored:
 // an ignored option would turn a hoped-for dry run into a real publish.
-const FLAGS = ['--allow-shrink', '--allow-other-commits', '--dry'];
-const KNOWN = '--allow-shrink, --allow-other-commits, --dry, --root <folder>';
+const FLAGS = ['--allow-shrink', '--allow-bank-shrink', '--allow-other-commits', '--dry'];
+const KNOWN = '--allow-shrink, --allow-bank-shrink, --allow-other-commits, --dry, --root <folder>';
 const unknown = [];
 let rootArg = null;
 for (let i = 0; i < argv.length; i++) {
@@ -56,7 +60,7 @@ for (let i = 0; i < argv.length; i++) {
 }
 if (rootArg !== null && !fs.existsSync(path.resolve(rootArg))) { unknown.push(`--root ${rootArg} (no such folder)`); rootArg = null; }
 const has = (f) => argv.includes(f);
-const ALLOW_SHRINK = has('--allow-shrink'), ALLOW_OTHER = has('--allow-other-commits'), DRY = has('--dry');
+const ALLOW_SHRINK = has('--allow-shrink'), ALLOW_BANK_SHRINK = has('--allow-bank-shrink'), ALLOW_OTHER = has('--allow-other-commits'), DRY = has('--dry');
 const ROOT = rootArg !== null ? path.resolve(rootArg) : path.join(__dirname, '..');
 // The profile module works out its paths from the script's own tree. With --root they are moved to the other tree
 // before anything (assemble() included) reads them. Without --root nothing here changes.
@@ -69,6 +73,7 @@ const CATALOG = rel(PROFILE.catalogDir);
 const DOCS = rel(PROFILE.docsDir);
 const OWN_PATHS = [CATALOG, rel(PROFILE.listFile), ...DOC_REPORTS.map((n) => DOCS + '/' + n)];
 const inOwnPaths = (f) => OWN_PATHS.some((p) => f === p || f.startsWith(p + '/'));
+const TG = require('./trivia/gate');
 let PATHS = [], SPEC = []; // the own paths that exist (or are tracked), worked out when a run starts
 const LOG = path.join(PROFILE.catalogDir, 'cache', 'publish.log');
 const STATE = path.join(PROFILE.catalogDir, 'cache', 'publish-state.json');
@@ -258,11 +263,30 @@ function handWrittenDocs() {
   return out.split('\0').filter((e) => e.length > 3).map((e) => e.slice(3)).filter((f) => !DOC_REPORTS.some((n) => f === DOCS + '/' + n)).length;
 }
 
+// The trivia gate (scripts/trivia/gate.js). Open: the trivia folders join OWN_PATHS for this run only, so the own-commit rule, the
+// scan, the staging and the commit cover them through the one list. Shut, or a bank more than 10% smaller than the committed one:
+// they stay out of every step, and when they hold changes one line says why. Returns the gate when open, else null.
+function triviaGate() {
+  let dirty = false;
+  try { dirty = git(['status', '--porcelain', '-uall', '--', ...TG.FOLDERS]).trim() !== ''; } catch (_) {}
+  const g = TG.check(ROOT, Date.now());
+  if (!g.open) { if (dirty) log('trivia bank left alone: ' + g.why); return null; }
+  let before = null;
+  try { before = JSON.parse(git(['show', 'HEAD:trivia/bank/index.json'])).total; } catch (_) {}
+  if (dirty && before > 0 && !ALLOW_BANK_SHRINK && !(g.questions >= before * 0.9)) {
+    log(`FAILED: trivia bank shrink: ${before} -> ${g.questions} questions, more than 10% down; the bank was left alone and the catalog goes on without it (run with --allow-bank-shrink if this is meant)`);
+    return null;
+  }
+  OWN_PATHS.push(...TG.FOLDERS);
+  return g;
+}
+
 function main() {
   trimLog();
   let branch;
   try { branch = git(['branch', '--show-current']).trim(); } catch (e) { log('FAILED: ' + why(e)); return 1; }
   if (branch !== 'master') { log(`FAILED: the checked-out branch is ${branch || 'no branch (detached HEAD)'}, publish only runs on master; nothing was staged or pushed`); return 1; }
+  const bank = triviaGate();
   PATHS = SPEC = ownPathsNow();
   if (!PATHS.length) { log('nothing new'); return 0; }
   let ahead;
@@ -314,7 +338,8 @@ function main() {
   const leak = leaks(changed);
   if (leak) return refuse(`${leak.file} would add ${leak.what}; take it out before this is published`);
 
-  const msg = `Catalog: ${shows} shows, ${eps} episodes (${changed.length} files)`;
+  const withBank = bank && changed.some((f) => TG.FOLDERS.some((d) => f.startsWith(d + '/')));
+  const msg = `Catalog: ${shows} shows, ${eps} episodes (${changed.length} files)` + (withBank ? `, trivia bank ${bank.questions} questions` : '');
   if (DRY) { log(`would commit ${changed.length} files: ${msg}`); unstage(); return pushStep(null, 1) === 'failed' ? 1 : 0; }
   try { git(['commit', '-q', '-m', msg, '--', ...SPEC]); } catch (e) { unstage(); log('FAILED: ' + why(e)); return 1; }
   // The commit took the files as they are now, not as they were scanned. Check the commit itself before anything leaves this PC.

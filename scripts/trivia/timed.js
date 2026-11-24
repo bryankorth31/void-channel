@@ -192,35 +192,44 @@ function build() {
   return { byShow, skipped };
 }
 
+// When the questions are the same as the files already there, nothing is written (the build time alone is not a change), so a
+// night with nothing new leaves no changed file for the hourly publish (Bryan, 24 Nov 2026: "By itself each morning").
 function write(byShow) {
   fs.mkdirSync(OUT, { recursive: true });
-  for (const f of fs.readdirSync(OUT)) if (f.endsWith('.json')) fs.rmSync(path.join(OUT, f));
-  const shows = {};
+  const files = {}, shows = {};
   for (const [slug, qs] of Object.entries(byShow)) {
     qs.sort((a, b) => a.season - b.season || a.number - b.number || a.at - b.at);
-    fs.writeFileSync(path.join(OUT, slug + '.json'), JSON.stringify({ questions: qs }) + '\n');
+    files[slug + '.json'] = JSON.stringify({ questions: qs }) + '\n';
     shows[slug] = qs.length;
   }
+  const old = fs.readdirSync(OUT).filter((f) => f.endsWith('.json') && f !== 'index.json');
+  const oldIndex = readJson(path.join(OUT, 'index.json'), null);
+  const same = oldIndex && JSON.stringify(oldIndex.shows) === JSON.stringify(shows) && old.length === Object.keys(files).length &&
+    old.every((f) => files[f] !== undefined && fs.readFileSync(path.join(OUT, f), 'utf8') === files[f]);
+  if (same) return shows;
+  for (const f of old) fs.rmSync(path.join(OUT, f));
+  for (const [f, text] of Object.entries(files)) fs.writeFileSync(path.join(OUT, f), text);
   fs.writeFileSync(path.join(OUT, 'index.json'), JSON.stringify({ builtAt: new Date().toISOString(), shows }) + '\n');
   return shows;
 }
 
 function main() {
   const { byShow, skipped } = build();
-  const shows = write(byShow);
-  // Read every written question back against its moment.
+  // Every question is checked against its moment before anything is written: when one fails, nothing is written and the timed
+  // files there stay as they were (24 Nov 2026: a failed check must not leave changed files behind for the publish).
   let n = 0, bad = 0;
-  for (const slug of Object.keys(shows)) {
+  for (const [slug, qs] of Object.entries(byShow)) {
     const moments = new Map(M.load(slug).map((m) => [m.id, m]));
-    for (const q of readJson(path.join(OUT, slug + '.json'), { questions: [] }).questions) {
+    for (const q of qs) {
       n++;
       const p = problems(q, moments.get(q.about.moment));
       if (p.length) { bad++; console.log(`FAIL ${q.id}: ${p.join('; ')}`); }
     }
   }
   for (const s of skipped) console.log('skipped ' + s);
-  console.log(`${n} timed questions for ${Object.keys(shows).length} shows, ${bad} failed, ${skipped.length} moments skipped`);
-  if (bad) process.exitCode = 1;
+  console.log(`${n} timed questions for ${Object.keys(byShow).length} shows, ${bad} failed, ${skipped.length} moments skipped` + (bad ? '; nothing was written' : ''));
+  if (bad) { process.exitCode = 1; return; }
+  write(byShow);
 }
 
 if (require.main === module) main();

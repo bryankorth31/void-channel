@@ -20,8 +20,15 @@
 //   8. bank         node scripts/trivia/bank.js        rebuild the questions; its checker must pass every one
 //   then a morning line: catalog/cache/trivia/night.json and a line in catalog/cache/trivia/night.log
 //
+// Two parts (Bryan, 24 Nov 2026: "Night job order", "By itself each morning"). The night part (steps 1 to 4) runs at 11:30 PM:
+// the long work, Whisper on the card while he sleeps. The morning part (steps 5 to 8) runs at 4:30 AM from
+// scripts/trivia/morning.js, after VoidTV Nightly (3:30 AM) has rebuilt the catalog, so the bank is made from and checked
+// against the catalog the site uses that day; it waits while the catalog night or a trivia night is still running. The bank
+// only changes when every question passes and something is new, and the hourly publish (scripts/publish.js) takes it live.
+//
 // The fame list, transcripts, Whisper and moments tools are the clip chat's; this file only runs them, as they are.
-// Usage: node scripts/trivia/night.js                 the whole night
+// Usage: node scripts/trivia/night.js                 the night part (11:30 PM)
+//        node scripts/trivia/night.js --morning       the morning part (4:30 AM; scripts/trivia/morning.js runs this)
 //        node scripts/trivia/night.js --dry           say what tonight would run, run nothing
 //        node scripts/trivia/night.js --only bank,moments    just those jobs
 //        options: --shows 10  --eps 3  --whisper-minutes 180  --force (weekly jobs run tonight anyway)
@@ -43,6 +50,10 @@ const TAG = 'trivia-night';
 const WEEK = 7 * 864e5;
 
 const JOBS = ['fame', 'pool', 'queue', 'whisper', 'transcripts', 'moments', 'timed', 'bank'];
+const NIGHT = ['fame', 'pool', 'queue', 'whisper'];
+const MORNING = ['transcripts', 'moments', 'timed', 'bank'];
+const CATALOG_LOG = path.join(ROOT, 'catalog', 'cache', 'nightly.log');
+const WAIT_MINUTES = 90;
 
 // ---------- pure parts (tested in tests/trivia-night.test.js) ----------
 
@@ -50,7 +61,7 @@ function options(argv) {
   const get = (k, d) => { const i = argv.indexOf(k); return i >= 0 && argv[i + 1] ? argv[i + 1] : d; };
   const only = get('--only', null);
   return {
-    dry: argv.includes('--dry'), force: argv.includes('--force'),
+    dry: argv.includes('--dry'), force: argv.includes('--force'), morning: argv.includes('--morning'),
     only: only ? only.split(',').map((s) => s.trim()).filter((s) => JOBS.includes(s)) : null,
     shows: Math.max(1, Number(get('--shows', 10)) || 10), eps: Math.max(1, Number(get('--eps', 3)) || 3),
     whisperMinutes: Math.max(10, Number(get('--whisper-minutes', 180)) || 180),
@@ -68,6 +79,29 @@ function cardFree(mode, now) {
   if (!mode || mode.mode !== 'studio') return true;
   if (mode.by === TAG) return true;
   return !(mode.until && mode.until * 1000 > now);
+}
+
+// Which jobs a run does: the ones --only names, else the morning part or the night part.
+function jobsFor(o) { return o.only || (o.morning ? MORNING : NIGHT); }
+
+// Is the catalog night still running? Its log says "==== nightly start" and, when it ends, "==== nightly done". A start with no
+// end after it, less than six hours old, means it is running (an older one died without its last line).
+function catalogBusy(logText, now) {
+  const lines = String(logText || '').trim().split('\n');
+  for (let i = lines.length - 1; i >= 0; i--) {
+    if (lines[i].includes('==== nightly done')) return false;
+    if (lines[i].includes('==== nightly start')) { const t = Date.parse(lines[i].slice(0, 24)); return !!t && now - t < 6 * 3600e3; }
+  }
+  return false;
+}
+
+// Why the publish gate stays shut after a run, or '' when it may open: the bank must have run and passed, and the timed
+// questions (which ride the same gate, so the site never gets a bank its timed files do not fit) must not have failed.
+function gateWhy(results) {
+  const b = results.bank;
+  if (!b || b.status !== 'ok') return 'the bank ' + (b ? (b.status === 'skipped' ? 'was skipped (' + b.why + ')' : 'did not pass') : 'did not run');
+  if (results.timed && results.timed.status !== 'ok' && results.timed.status !== 'skipped') return 'the timed questions did not pass';
+  return '';
 }
 
 // The bank is rebuilt only when the checks it stands on passed (or did not run tonight).
@@ -124,7 +158,7 @@ function counts() {
 function main() {
   const o = options(process.argv.slice(2));
   const now = Date.now();
-  const want = (k) => !o.only || o.only.includes(k);
+  const want = (k) => jobsFor(o).includes(k);
   const plan = [];
   if (want('fame')) plan.push(['fame', due(path.join(ROOT, 'catalog', 'trivia-fame.json'), now, o.force || !!o.only) ? 'run' : 'skip: the fame list is under a week old']);
   if (want('pool')) plan.push(['pool', due(path.join(ROOT, 'catalog', 'trivia-pool.json'), now, o.force || !!o.only) ? 'run' : 'skip: the pool is under a week old']);
@@ -137,12 +171,22 @@ function main() {
   if (o.dry) { for (const [k, v] of plan) console.log(k.padEnd(12) + v); return; }
 
   fs.mkdirSync(OUT, { recursive: true });
+  // The morning part waits for the catalog night and for a trivia night still running, at most WAIT_MINUTES, then goes on.
+  if (o.morning) {
+    const busy = () => { const h = readJson(LOCK, null); if (h && h.pid && pidAlive(h.pid)) return 'a trivia night (pid ' + h.pid + ')';
+      let t = ''; try { t = fs.readFileSync(CATALOG_LOG, 'utf8').slice(-20000); } catch (e) { /* no catalog log */ } return catalogBusy(t, Date.now()) ? 'the catalog night' : ''; };
+    const until = Date.now() + WAIT_MINUTES * 60000;
+    let what = busy();
+    if (what) log('trivia morning waits: ' + what + ' is still running');
+    while (what && Date.now() < until) { Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 60000); what = busy(); }
+    if (what) { log('trivia morning stops: ' + what + ' still running after ' + WAIT_MINUTES + ' minutes; yesterday\'s questions stay'); return; }
+  }
   const held = readJson(LOCK, null);
   if (held && held.pid && pidAlive(held.pid)) { log('another trivia night is running (pid ' + held.pid + '); this one stops'); return; }
   fs.writeFileSync(LOCK, JSON.stringify({ pid: process.pid, at: new Date().toISOString() }));
   const results = {};
   try {
-    log('==== trivia night start');
+    log('==== trivia ' + (o.morning ? 'morning' : 'night') + ' start');
     for (const [k, v] of plan) {
       if (v.startsWith('skip')) { results[k] = { status: 'skipped', why: v.slice(6) }; log('-- ' + k + ': ' + v); continue; }
       if (k === 'fame') results.fame = run('fame', process.execPath, [path.join(ROOT, 'scripts/trivia/fame.js')], 120, [0, 3]);
@@ -169,14 +213,20 @@ function main() {
         results.bank = run('bank', process.execPath, [path.join(ROOT, 'scripts/trivia/bank.js')], 30);
       }
     }
+    // The gate for the hourly publish (scripts/trivia/gate.js): open only when the bank passed and the timed questions did not fail.
+    if (want('bank')) {
+      const why = gateWhy(results);
+      const g = require('./gate').write(ROOT, Date.now(), !why, why);
+      log('-- gate: ' + (g.passed ? 'open for ' + g.day + ', ' + g.questions + ' questions, ' + Object.keys(g.files).length + ' files' : 'shut for ' + g.day + ': ' + g.why));
+    }
   } finally {
-    const report = { at: new Date().toISOString(), results, counts: counts() };
+    const report = { at: new Date().toISOString(), part: o.only ? 'only' : o.morning ? 'morning' : 'night', results, counts: counts() };
     fs.writeFileSync(REPORT, JSON.stringify(report, null, 1));
     const c = report.counts;
-    log('==== trivia night done: ' + Object.entries(results).map(([k, r]) => k + ' ' + r.status).join(', ') + '; ' + c.transcripts + ' transcripts, ' + c.moments + ' moments, ' + c.questions + ' questions, ' + c.whisperQueue + ' episodes still queued for Whisper');
+    log('==== trivia ' + (o.morning ? 'morning' : 'night') + ' done: ' + Object.entries(results).map(([k, r]) => k + ' ' + r.status).join(', ') + '; ' + c.transcripts + ' transcripts, ' + c.moments + ' moments, ' + c.questions + ' questions, ' + c.whisperQueue + ' episodes still queued for Whisper');
     try { fs.unlinkSync(LOCK); } catch (e) { /* gone */ }
   }
 }
 
 if (require.main === module) main();
-module.exports = { options, due, cardFree, bankAllowed, JOBS, TAG };
+module.exports = { options, due, cardFree, bankAllowed, gateWhy, jobsFor, catalogBusy, main, JOBS, NIGHT, MORNING, TAG };

@@ -314,7 +314,7 @@ test('works the way this PC is set up: core.autocrlf=true and CRLF files in the 
 test('no flags: the scheduled run, started from inside its own tree, finds the same paths without --root', () => {
   const c = fresh();
   const root = path.join(__dirname, '..');
-  for (const f of ['scripts/publish.js', 'scripts/lib/profile.js', 'scripts/lib/app.js', 'scripts/lib/areas-v.js', 'scripts/lib/app-fetch.js', 'scripts/lib/app-me.js', 'scripts/lib/app-near.js', 'scripts/lib/app-list.js', 'scripts/lib/tvgrid.js', 'scripts/lib/tvweek.js', 'scripts/lib/siteguards.js', 'player/tools/rank-sources.js']) write(c.work, f, fs.readFileSync(path.join(root, f), 'utf8'));
+  for (const f of ['scripts/publish.js', 'scripts/lib/profile.js', 'scripts/lib/app.js', 'scripts/lib/areas-v.js', 'scripts/lib/app-fetch.js', 'scripts/lib/app-me.js', 'scripts/lib/app-near.js', 'scripts/lib/app-list.js', 'scripts/lib/tvgrid.js', 'scripts/lib/tvweek.js', 'scripts/lib/siteguards.js', 'scripts/trivia/gate.js', 'player/tools/rank-sources.js']) write(c.work, f, fs.readFileSync(path.join(root, f), 'utf8'));
   git(c.work, 'add', 'scripts', 'player');
   git(c.work, 'commit', '-q', '-m', 'Catalog: 10 shows, 50 episodes (the tooling for this test)'); // a Catalog commit so nothing is "other"
   git(c.work, 'push', '-q', 'origin', 'master');
@@ -332,7 +332,7 @@ test('no flags: the scheduled run, started from inside its own tree, finds the s
 const STUB_APP = "const fs = require('fs');\nconst real = require('./app-real');\nmodule.exports = { assemble() { const d = real.assemble(); if (process.env.TEST_DRIFT_FILE) fs.writeFileSync(process.env.TEST_DRIFT_FILE, process.env.TEST_DRIFT_TEXT); return d; } };\n";
 function copyTools(work, stub) {
   const root = path.join(__dirname, '..');
-  for (const f of ['scripts/publish.js', 'scripts/lib/profile.js', 'scripts/lib/app-fetch.js', 'scripts/lib/app-me.js', 'scripts/lib/app-near.js', 'scripts/lib/app-list.js', 'scripts/lib/tvgrid.js', 'scripts/lib/tvweek.js', 'scripts/lib/siteguards.js', 'player/tools/rank-sources.js']) write(work, f, fs.readFileSync(path.join(root, f), 'utf8'));
+  for (const f of ['scripts/publish.js', 'scripts/lib/profile.js', 'scripts/lib/app-fetch.js', 'scripts/lib/app-me.js', 'scripts/lib/app-near.js', 'scripts/lib/app-list.js', 'scripts/lib/tvgrid.js', 'scripts/lib/tvweek.js', 'scripts/lib/siteguards.js', 'scripts/trivia/gate.js', 'player/tools/rank-sources.js']) write(work, f, fs.readFileSync(path.join(root, f), 'utf8'));
   const app = fs.readFileSync(path.join(root, 'scripts/lib/app.js'), 'utf8');
   if (stub) { write(work, 'scripts/lib/app-real.js', app); write(work, 'scripts/lib/app.js', STUB_APP); } else write(work, 'scripts/lib/app.js', app);
 }
@@ -367,7 +367,7 @@ test('an option it does not know is refused with exit 2 and nothing is done', ()
   for (const bad of [['--dry-run'], ['--dryrun'], ['--allow-shrink=1'], ['stray'], ['--allow-other']]) {
     const r = publish(c.work, bad);
     assert.strictEqual(r.status, 2, bad.join(' ') + ': ' + r.out);
-    assert.match(outcome(c.work), /refused: unknown option .* \(known: --allow-shrink, --allow-other-commits, --dry, --root <folder>\)/);
+    assert.match(outcome(c.work), /refused: unknown option .* \(known: --allow-shrink, --allow-bank-shrink, --allow-other-commits, --dry, --root <folder>\)/);
     assert.match(r.out, /Known options: /);
     assert.strictEqual(head(c.work), before);
     assert.strictEqual(staged(c.work), '');
@@ -593,4 +593,110 @@ test('shrink: a gate pushed as code (the live site already serves fewer shows, b
   } finally { older.stop(); }
   const r = publish(c.work);                             // no live site to ask: the record decides, as before
   assert.strictEqual(r.status, 1, r.out);
+});
+
+// The trivia gate (scripts/trivia/gate.js; Bryan, 24 Nov 2026: "By itself each morning"; the conditions are the Void TV owner
+// chat's). The morning run writes catalog/cache/trivia/gate.json with a hash of every bank file it checked; publish takes trivia/bank
+// and trivia/timed only on a run where that gate is today's, passed, and every file still hashes to it.
+const TG = require('../scripts/trivia/gate');
+function withBank(c, total) {                       // a small bank, committed and pushed the way the site holds it
+  write(c.work, 'trivia/bank/index.json', JSON.stringify({ total }) + '\n');
+  write(c.work, 'trivia/bank/tv-1.json', JSON.stringify([{ id: 'q0' }]) + '\n');
+  git(c.work, 'add', 'trivia');
+  git(c.work, 'commit', '-q', '-m', 'Catalog: 10 shows, 50 episodes (a trivia bank)');
+  git(c.work, 'push', '-q', 'origin', 'master');
+}
+function newBank(c, total, note) {                  // what a morning build writes over it
+  write(c.work, 'trivia/bank/index.json', JSON.stringify({ total }) + '\n');
+  write(c.work, 'trivia/bank/tv-1.json', JSON.stringify([{ id: 'q0' }, { id: 'q1', note: note || 'new' }]) + '\n');
+}
+const originFiles = (c) => git(c.origin, 'show', '--name-only', '--format=', 'master').split('\n').sort();
+const changedHere = (c) => git(c.work, 'status', '--porcelain', '--', 'trivia');
+const originLast = (c) => git(c.origin, 'log', '-1', '--format=%s', 'master');
+
+test('trivia gate shut (no gate): the bank is left alone with one line saying why, and the catalog still publishes', () => {
+  const c = fresh();
+  withBank(c, 100);
+  newBank(c, 101);
+  putShow(c.work, 10);
+  const r = publish(c.work);
+  assert.strictEqual(r.status, 0, r.out);
+  assert.match(outcome(c.work), /pushed [0-9a-f]+: Catalog: 11 shows, 55 episodes \(1 files\)$/);
+  assert.deepStrictEqual(originFiles(c), ['catalog/shows/test-show-10.json']);
+  assert.ok(logLines(c.work).some((l) => /trivia bank left alone: no trivia gate/.test(l)));
+  assert.match(changedHere(c), /trivia\/bank\/index\.json/, 'the bank change stays in the working tree, not staged, not committed');
+  assert.strictEqual(staged(c.work), '');
+});
+
+test('trivia gate open and every file hashes the same: the bank is committed and pushed, named after the catalog counts', () => {
+  const c = fresh();
+  withBank(c, 100);
+  newBank(c, 101);
+  TG.write(c.work, Date.now(), true);
+  const r = publish(c.work);
+  assert.strictEqual(r.status, 0, r.out);
+  assert.match(outcome(c.work), /pushed [0-9a-f]+: Catalog: 10 shows, 50 episodes \(2 files\), trivia bank 101 questions$/);
+  assert.deepStrictEqual(originFiles(c), ['trivia/bank/index.json', 'trivia/bank/tv-1.json']);
+  assert.strictEqual(changedHere(c), '');
+  assert.strictEqual(publish(c.work).status, 0);
+  assert.match(outcome(c.work), /nothing new$/, 'the next run finds nothing new');
+});
+
+test('trivia gate: a bank file changed after the check, a gate from another day, or a failed morning leaves the bank alone', () => {
+  const c = fresh();
+  withBank(c, 100);
+  newBank(c, 101);
+  TG.write(c.work, Date.now(), true);
+  newBank(c, 101, 'edited by hand after the check');
+  let r = publish(c.work);
+  assert.strictEqual(r.status, 0, r.out);
+  assert.match(outcome(c.work), /nothing new$/);
+  assert.ok(logLines(c.work).some((l) => /trivia bank left alone: trivia\/bank\/tv-1\.json changed after this morning's check/.test(l)));
+  TG.write(c.work, Date.now() - 2 * 864e5, true);
+  r = publish(c.work);
+  assert.ok(logLines(c.work).some((l) => /trivia bank left alone: the trivia gate is from \S+, not today/.test(l)));
+  TG.write(c.work, Date.now(), false, 'the bank did not pass');
+  r = publish(c.work);
+  assert.ok(logLines(c.work).some((l) => /trivia bank left alone: this morning's trivia run did not pass \(the bank did not pass\)/.test(l)));
+  assert.strictEqual(originLast(c), 'Catalog: 10 shows, 50 episodes (a trivia bank)');
+});
+
+test('trivia gate: a commit touching trivia/bank made by someone else still holds the push, even with the gate open', () => {
+  const c = fresh();
+  withBank(c, 100);
+  newBank(c, 101);
+  git(c.work, 'add', 'trivia');
+  git(c.work, 'commit', '-q', '-m', 'Trivia: a hand edit');
+  TG.write(c.work, Date.now(), true);
+  putShow(c.work, 10);
+  publish(c.work);
+  assert.match(outcome(c.work), /held: 1 other commit waiting: Trivia: a hand edit/);
+  assert.strictEqual(originLast(c), 'Catalog: 10 shows, 50 episodes (a trivia bank)');
+});
+
+test('trivia gate: the token scan reads the bank files it is about to commit', () => {
+  const c = fresh();
+  withBank(c, 100);
+  newBank(c, 101, 'TOKEN = abcdefgh12345678');
+  TG.write(c.work, Date.now(), true);
+  const r = publish(c.work);
+  assert.strictEqual(r.status, 1, r.out);
+  assert.match(outcome(c.work), /refused: trivia\/bank\/tv-1\.json would add /);
+  assert.strictEqual(originLast(c), 'Catalog: 10 shows, 50 episodes (a trivia bank)');
+  assert.strictEqual(staged(c.work), '');
+});
+
+test('trivia gate: a bank more than 10% smaller is left alone with a FAILED line, the catalog goes on; --allow-bank-shrink lets it through', () => {
+  const c = fresh();
+  withBank(c, 100);
+  newBank(c, 50);
+  TG.write(c.work, Date.now(), true);
+  putShow(c.work, 10);
+  let r = publish(c.work);
+  assert.strictEqual(r.status, 0, r.out);
+  assert.ok(logLines(c.work).some((l) => /FAILED: trivia bank shrink: 100 -> 50 questions, more than 10% down/.test(l)));
+  assert.deepStrictEqual(originFiles(c), ['catalog/shows/test-show-10.json']);
+  r = publish(c.work, ['--allow-bank-shrink']);
+  assert.strictEqual(r.status, 0, r.out);
+  assert.match(outcome(c.work), /pushed [0-9a-f]+: Catalog: 11 shows, 55 episodes \(2 files\), trivia bank 50 questions$/);
 });

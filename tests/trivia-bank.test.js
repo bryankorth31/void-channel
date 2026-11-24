@@ -210,3 +210,26 @@ test('pool: TMDB and TVmaze must name the same show', () => {
   assert.equal(sameShow('Sanford and Son', '1972-01-14', 'Sanford and Son', '1972-01-14'), true);
   assert.equal(sameShow('The Cosby Show', '1984-09-20', 'Cosby Show', '1984-09-20'), true);
 });
+
+// The bank only changes when it passes and differs (Bryan, 24 Nov 2026: "By itself each morning"): a failing build writes nothing,
+// and a build with the same questions leaves the folder as it is, so the hourly publish only ever takes a checked, changed bank.
+test('the bank is checked before anything is written, and swapped in only when it differs', () => {
+  const fs = require('fs'), os = require('os'), path = require('path');
+  const src = fs.readFileSync(path.join(__dirname, '..', 'scripts', 'trivia', 'bank.js'), 'utf8');
+  const main = src.slice(src.indexOf('function main()'));
+  assert.ok(main.indexOf('checkAll(') < main.indexOf('write('), 'the checker runs before the write');
+  assert.match(main, /process\.exit\(1\); \}\s+console\.log\('Checker: every question passes\.'\);\s+const files = write\(/);
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'trivia-swap-'));
+  const out = path.join(tmp, 'bank'), next = path.join(tmp, 'next');
+  const qs = [{ id: 'q1', category: 'tv', round: 'network', band: 'family', q: 'Which network?', choices: ['A', 'B', 'C', 'D'], answer: 0, source: {} }];
+  B.write(qs, { builtAt: '2026-11-24T00:00:00.000Z' }, out);
+  B.write(qs, { builtAt: '2026-11-25T00:00:00.000Z' }, next);
+  assert.equal(B.swapIn(next, out), false, 'only the build time differs: left as it is');
+  assert.equal(fs.existsSync(next), false, 'the side folder is gone either way');
+  assert.match(fs.readFileSync(path.join(out, 'index.json'), 'utf8'), /2026-11-24T00/, 'the old build time stays');
+  B.write(qs.concat([{ ...qs[0], id: 'q2' }]), { builtAt: '2026-11-25T00:00:00.000Z' }, next);
+  assert.equal(B.swapIn(next, out), true, 'a new question: the new bank takes its place');
+  assert.match(fs.readFileSync(path.join(out, 'index.json'), 'utf8'), /"total": 2/);
+  assert.equal(fs.existsSync(next), false);
+  fs.rmSync(tmp, { recursive: true, force: true });
+});

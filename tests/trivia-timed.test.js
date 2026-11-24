@@ -96,6 +96,16 @@ test('the build: approved lines only, in the pool only, each checked against its
   assert.deepEqual(TQ.problems(clue, M.load('breaking-bad').find((y) => y.id === clue.about.moment)), []);
   assert.deepEqual(shows, { 'breaking-bad': 6 });
   assert.ok(fs.existsSync(path.join(process.env.TRIVIA_TIMED_DIR, 'index.json')));
+  // The same questions again write nothing: the build time stays, so a night with nothing new leaves no changed file (24 Nov 2026).
+  const idx = path.join(process.env.TRIVIA_TIMED_DIR, 'index.json');
+  const before = fs.readFileSync(idx, 'utf8');
+  const stamped = JSON.parse(before); stamped.builtAt = '2026-01-01T00:00:00.000Z'; fs.writeFileSync(idx, JSON.stringify(stamped) + '\n');
+  assert.deepEqual(TQ.write(byShow), shows);
+  assert.equal(JSON.parse(fs.readFileSync(idx, 'utf8')).builtAt, '2026-01-01T00:00:00.000Z');
+  const fewer = { 'breaking-bad': byShow['breaking-bad'].slice(1) };
+  TQ.write(fewer);
+  assert.notEqual(JSON.parse(fs.readFileSync(idx, 'utf8')).builtAt, '2026-01-01T00:00:00.000Z', 'a change writes, with a new build time');
+  TQ.write(byShow);
 });
 
 test('the strip takes the line just said, once', () => {

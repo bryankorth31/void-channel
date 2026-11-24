@@ -6,7 +6,10 @@
 //        catalog/voidtv.db (TVmaze premiere dates, networks and episode names; TMDB cast credits and film years),
 //        play/cards/*.json (PLAY's games).
 // Writes: trivia/bank/<category>-<n>.json (500 questions a file at most) and trivia/bank/index.json.
-// Then runs the checker (scripts/trivia/check.js) over everything it wrote and fails if any question fails.
+// The checker (scripts/trivia/check.js) runs first, over every question made: when any fails, nothing is written and
+// yesterday's bank stays. A passing bank is written beside it (catalog/cache/trivia/bank-next, gitignored) and takes its place only when it differs
+// from what is there (the build time alone is not a difference), so a night with nothing new leaves no changed file behind
+// (Bryan, 24 Nov 2026: "By itself each morning"; the hourly publish takes a changed bank to voidtv.net).
 // Usage: node scripts/trivia/bank.js
 'use strict';
 const fs = require('fs');
@@ -14,6 +17,8 @@ const path = require('path');
 
 const ROOT = path.join(__dirname, '..', '..');
 const OUT = path.join(ROOT, 'trivia', 'bank');
+// The side folder a new bank is written into before it takes the old one's place (gitignored, like the rest of catalog/cache).
+const NEXT = path.join(ROOT, 'catalog', 'cache', 'trivia', 'bank-next');
 const PER_FILE = 500;
 const THIS_YEAR = new Date().getFullYear();
 
@@ -418,7 +423,9 @@ function showFiles(qs) {
   return out;
 }
 
-function write(qs, meta) {
+// Writes the bank into the folder named (the side folder catalog/cache/trivia/bank-next when run; main swaps it in after).
+function write(qs, meta, dir) {
+  const OUT = dir;
   fs.rmSync(OUT, { recursive: true, force: true });
   fs.mkdirSync(OUT, { recursive: true });
   const files = [];
@@ -456,16 +463,42 @@ function main() {
   const foreign = new Set((list.shows || list).filter((s) => s.language && s.language !== 'en').map((s) => s.name));
   const data = gather(db, pool, foreign);
   const qs = makeQuestions(data);
-  const files = write(qs, { builtAt: new Date().toISOString(), fameLine: pool.fameLine });
-  console.log('Questions: ' + qs.length + ' in ' + files.length + ' files (' + data.shows.length + ' shows, ' + data.films.length + ' films, ' + data.cards.length + ' games)');
   const { checkAll } = require('./check');
   const bad = checkAll(qs, db, pool, data.cards, data.metaOf);
   db.close();
-  if (bad.length) { console.error(bad.length + ' questions fail the checker:'); for (const b of bad.slice(0, 30)) console.error('  ' + b.id + ': ' + b.why); process.exit(1); }
+  if (bad.length) { console.error(bad.length + ' questions fail the checker, so nothing was written and yesterday\'s bank stays:'); for (const b of bad.slice(0, 30)) console.error('  ' + b.id + ': ' + b.why); process.exit(1); }
   console.log('Checker: every question passes.');
+  const files = write(qs, { builtAt: new Date().toISOString(), fameLine: pool.fameLine }, NEXT);
+  const changed = swapIn(NEXT, OUT);
+  console.log('Questions: ' + qs.length + ' in ' + files.length + ' files (' + data.shows.length + ' shows, ' + data.films.length + ' films, ' + data.cards.length + ' games)' +
+    (changed ? '; the bank changed and replaces the old one' : '; the same questions as the bank already there, so it was left as it is'));
+}
+
+// Every file under a folder, by its path inside it, with index.json's build time left out (it changes on every build).
+function contents(dir) {
+  const out = new Map();
+  const walk = (d) => { let list = []; try { list = fs.readdirSync(d, { withFileTypes: true }); } catch (e) { return; }
+    for (const e of list) { const p = path.join(d, e.name); if (e.isDirectory()) walk(p); else out.set(path.relative(dir, p).replace(/\\/g, '/'), fs.readFileSync(p, 'utf8')); } };
+  walk(dir);
+  const idx = out.get('index.json');
+  if (idx) { try { const j = JSON.parse(idx); delete j.builtAt; out.set('index.json', JSON.stringify(j)); } catch (e) { /* kept as text */ } }
+  return out;
+}
+function sameFolder(a, b) {
+  const A = contents(a), B = contents(b);
+  if (A.size !== B.size) return false;
+  for (const [k, v] of A) if (B.get(k) !== v) return false;
+  return true;
+}
+// The new bank takes the old one's place only when it differs; either way the side folder is gone after. True when it changed.
+function swapIn(next, out) {
+  if (sameFolder(next, out)) { fs.rmSync(next, { recursive: true, force: true }); return false; }
+  fs.rmSync(out, { recursive: true, force: true });
+  fs.renameSync(next, out);
+  return true;
 }
 
 module.exports = { showFiles, DEEP_RANK, datesOf, clipQs, filmClip, archiveMeta, PD_MARK, CLIP_SECS, mmss, screenOk, looksLikeGuests, guestShow, hash, rng, shuffle, norm, sameish, clean, nearYears, usablePart, usableEpisodeName, choicesOf, agreedNetwork, makerName,
-  firstAired, premieredOn, whoPlayed, whichShow, filmYear, gameQs, makeQuestions, gather };
+  firstAired, premieredOn, whoPlayed, whichShow, filmYear, gameQs, makeQuestions, gather, write, sameFolder, swapIn };
 // Exported before main runs, so the checker (which needs these helpers) can load while main is running.
 if (require.main === module) main();
