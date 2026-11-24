@@ -348,3 +348,38 @@ test('between questions (Bryan, 22 Nov 2026: "the lag or wait time between quest
   assert.match(s, /if \(after && \(phase === 'reveal' \|\| phase === 'board'\)\) \{/, 'P or Pause holds the countdown');
   assert.match(read('trivia/index.html'), /value="0"> No clock<\/label>/, 'No clock is still there for a host who wants to pace it');
 });
+
+// The "why" line under an answer (Bryan, 24 Nov 2026): one sentence from the question and its recorded fact, never guessed.
+test('whyLine says why the answer is right, from the recorded fact only', () => {
+  const mk = (round, q, ans, fact, about) => ({ round, q, choices: ['x', ans], answer: 1, about: about || {}, source: { fact } });
+  assert.equal(G.whyLine(mk('cast', 'Who voiced The Doctor on Superjail!?', 'Christopher McCulloch', 'Christopher McCulloch as The Doctor (voice), 36 episodes')),
+    'Christopher McCulloch voiced The Doctor in 36 episodes of Superjail!');
+  assert.equal(G.whyLine(mk('cast', 'Who played Al Bundy on Married... with Children?', 'Ed O\'Neill', 'Ed O\'Neill as Al Bundy, 258 episodes')),
+    'Ed O\'Neill played Al Bundy in 258 episodes of Married... with Children.');
+  assert.equal(G.whyLine(mk('first-aired', 'What year did The A-Team first air?', '1983', 'premiered 1983-01-23', { title: 'The A-Team' })), 'The A-Team first aired on 23 January 1983.');
+  assert.equal(G.whyLine(mk('network', 'On which network did 8 Simple Rules first air?', 'ABC', 'first aired on ABC, 2002-09-17')), '8 Simple Rules first aired on ABC, on 17 September 2002.');
+  assert.equal(G.whyLine(mk('game-maker', 'Who made Great Guns?', 'Stern Electronics', 'publisher Stern Electronics on VoidTV PLAY\'s card for this item')), 'Great Guns was made by Stern Electronics.');
+  assert.equal(G.whyLine(mk('game-maker', 'Who made Dora?', 'Nick Jr.', 'publisher Nick Jr.')), 'Dora was made by Nick Jr.', 'no doubled full stop');
+  assert.equal(G.whyLine(mk('clip', 'Which show is this clip from?', 'Futurama', 'Futurama, season 3, episode 4 "Parasites Lost", at 14:29; the item is marked public domain on the Archive')),
+    'This clip is from Futurama, season 3, episode 4 "Parasites Lost", 14:29 in.');
+  assert.equal(G.whyLine(mk('cast', 'Who played X on Y?', 'Z', 'something else entirely')), null, 'a fact in a shape the round does not record gets no guessed line');
+  assert.equal(G.whyLine(mk('year-guess', 'q', '1', 'f')), null);
+});
+
+test('every question in the bank gets a why line with no dashes, no PLAY card wording and no double stops', () => {
+  const qs = [];
+  const walk = (d) => { for (const f of fs.readdirSync(d, { withFileTypes: true })) { const p = path.join(d, f.name); if (f.isDirectory()) walk(p); else if (f.name.endsWith('.json') && f.name !== 'index.json') { const j = JSON.parse(fs.readFileSync(p, 'utf8')); for (const q of Array.isArray(j) ? j : (j.questions || [])) if (q.round && q.choices) qs.push(q); } } };
+  walk(path.join(ROOT, 'trivia', 'bank'));
+  assert.ok(qs.length > 1000);
+  const none = qs.filter((q) => q.round !== 'year-guess' && q.round !== 'higher-lower' && !G.whyLine(q));
+  assert.equal(none.length, 0, 'no question is left without a line: ' + none.slice(0, 2).map((q) => q.q));
+  for (const q of qs) { const w = G.whyLine(q); if (!w) continue; assert.doesNotMatch(w, /[–—]|PLAY's card|\.\.$|[!?]\.$/, w); }
+});
+
+test('the host and the phone both show the why line', () => {
+  assert.match(read('trivia/src/host.js'), /G\.whyLine\(q\)/);
+  assert.match(read('trivia/src/host.js'), /why: why \? why\.slice\(0, 240\)/, 'phones get it in t-res, kept well under the 1 KB limit');
+  assert.match(read('trivia/src/phone.js'), /res-why/);
+  assert.match(read('trivia/index.html'), /id="why"/);
+  assert.match(read('trivia/phone.html'), /id="res-why"/);
+});

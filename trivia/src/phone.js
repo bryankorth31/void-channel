@@ -160,6 +160,7 @@
       h.className = 'result ' + (m.right ? 'right' : 'wrong');
       h.textContent = m.points === 1000 ? 'Spot on!' : m.right ? 'Closest!' : m.guess == null ? 'No guess' : 'Not this time';
       $('res-p').textContent = 'It was ' + m.year + '.' + (m.guess != null ? ' You said ' + m.guess + '.' : '') + (m.points ? ' +' + m.points.toLocaleString() + ' points' : '');
+      $('res-why').hidden = true;
       $('res-total').textContent = m.score.toLocaleString() + ' points, ' + G.ordinal(m.place) + ' of ' + m.of;
       only('res');
       return;
@@ -170,6 +171,7 @@
       h.className = 'result ' + (m.right ? 'right' : 'wrong');
       h.textContent = m.right ? 'Right!' : m.pick === null ? 'No answer' : 'Not this time';
       $('res-p').textContent = m.right ? '+' + m.points.toLocaleString() + ' points' : 'It was ' + answerText(m) + '.' + (m.points < 0 ? ' You lose ' + (-m.points).toLocaleString() + ' points.' : '');
+      $('res-why').textContent = m.why || ''; $('res-why').hidden = !m.why; // why it is the answer, from the host
       $('res-total').textContent = m.score.toLocaleString() + ' points, ' + G.ordinal(m.place) + ' of ' + m.of;
       only('res');
       return;

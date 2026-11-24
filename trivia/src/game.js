@@ -231,7 +231,55 @@
   // "1st", "2nd", "3rd", "11th", "22nd".
   function ordinal(n) { const t = n % 100, o = n % 10; return n + (t >= 11 && t <= 13 ? 'th' : o === 1 ? 'st' : o === 2 ? 'nd' : o === 3 ? 'rd' : 'th'); }
 
-  const api = { ROUND_NAMES, CATEGORY_NAMES, seeded, shuffle, subject, allowed, pickGame, keyAction, points, standings, answerOf, ordinal,
+  // The short "why" under an answer (Bryan, 24 Nov 2026: "a brief little and this is why it's right"): one plain sentence made from the
+  // question and its recorded source fact, never from anywhere else. Null when the fact is not in the shape this round records, so a
+  // question is never given a guessed explanation (the source line still shows).
+  const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  function longDate(iso) {
+    const m = /^(\d{4})-(\d\d)-(\d\d)$/.exec(iso || '');
+    return m && +m[2] >= 1 && +m[2] <= 12 ? (+m[3]) + ' ' + MONTHS[+m[2] - 1] + ' ' + m[1] : null;
+  }
+  const stop = (t) => (/[.!?]$/.test(t) ? t : t + '.');
+  function whyRaw(q) {
+    if (!q || !q.round || !Array.isArray(q.choices) || q.choices[q.answer] == null) return null;
+    const ans = String(q.choices[q.answer]), fact = (q.source && q.source.fact) || '', about = q.about || {}, text = q.q || '';
+    let m;
+    switch (q.round) {
+      case 'first-aired': {
+        const d = (m = /^premiered (\d{4}-\d\d-\d\d)$/.exec(fact)) && longDate(m[1]);
+        return d && about.title ? about.title + ' first aired on ' + d + '.' : null;
+      }
+      case 'network': {
+        const t = (m = /^What .*?on which network did (.+) first air\?$/i.exec(text) || /^On which network did (.+) first air\?$/.exec(text)) && m[1];
+        const d = (m = /^first aired on (.+), (\d{4}-\d\d-\d\d)$/.exec(fact)) && longDate(m[2]);
+        return t && d && m[1] === ans ? t + ' first aired on ' + ans + ', on ' + d + '.' : null;
+      }
+      case 'cast': {
+        if (!(m = /^(.+?) as (.+?)(\s+\(voice\))?, (\d+) episodes?$/i.exec(fact)) || m[1] !== ans) return null;
+        const part = m[2], voice = !!m[3], n = +m[4], at = text.lastIndexOf(part + ' on ');
+        const show = at >= 0 ? text.slice(at + part.length + 4).replace(/\?$/, '') : '';
+        return show ? stop(ans + (voice ? ' voiced ' : ' played ') + part + ' in ' + n + (n === 1 ? ' episode' : ' episodes') + ' of ' + show) : null;
+      }
+      case 'episode': {
+        const title = (m = /called "(.+)"\?$/.exec(text)) && m[1].replace(/^"|"$/g, '');
+        const f = /^season (\d+), episode (\d+)(?:, aired (\d{4}-\d\d-\d\d))?$/.exec(fact), d = f && f[3] && longDate(f[3]);
+        return title && f ? '"' + title + '" is season ' + f[1] + ', episode ' + f[2] + ' of ' + ans + (d ? ', aired ' + d : '') + '.' : null;
+      }
+      case 'film-year': return about.title && /^released \d{4}$/.test(fact) ? about.title + ' came out in ' + ans + '.' : null;
+      case 'game-year': return about.title && /^year \d{4} on /.test(fact) ? about.title + ' came out in ' + ans + '.' : null;
+      case 'game-maker': return (m = /^Who made (.+)\?$/.exec(text)) ? m[1] + ' was made by ' + ans + '.' : null;
+      case 'clip': case 'still': case 'listen': case 'film-clip': {
+        if (!(m = /^(.+), at (\d+:\d\d(?::\d\d)?)(?:;.*)?$/.exec(fact))) return null;
+        const what = q.round === 'still' ? 'This picture' : q.round === 'listen' ? 'This sound' : 'This clip';
+        return what + ' is from ' + m[1] + ', ' + m[2] + ' in.';
+      }
+      default: return null;
+    }
+  }
+
+  function whyLine(q) { const w = whyRaw(q); return w ? (/[!?]$/.test(w) ? w : w.replace(/\.+$/, '') + '.') : null; }
+
+  const api = { ROUND_NAMES, CATEGORY_NAMES, whyLine, seeded, shuffle, subject, allowed, pickGame, keyAction, points, standings, answerOf, ordinal,
     order, datesFor, hlRun, yearQs, guessOf, yearPoints, compose, SHELF_VALUES, buildShelf, wagerOf, settleWager };
   if (typeof module !== 'undefined' && module.exports) module.exports = api; else root.TriviaGame = api;
 })(this);

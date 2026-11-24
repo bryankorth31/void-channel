@@ -46,6 +46,7 @@ input{width:100%;font:600 22px/1 system-ui,sans-serif;background:var(--panel);co
 .answers.locked .a:not(.picked){opacity:.3}
 .result{font-family:'Unbounded',sans-serif;font-size:34px;margin:18px 0 6px}
 .result.right{color:var(--green)} .result.wrong{color:var(--pink)}
+.why{margin:6px 0 10px;font-size:17px;line-height:1.35;color:var(--fg)}
 .give{margin-top:auto;padding-top:20px;font-size:14px;color:var(--dim)}
 .give a{color:var(--gold);font-weight:700}
 .donate-cross{width:28px;height:auto;vertical-align:middle;margin-right:6px}
@@ -94,6 +95,7 @@ body>header,body>main{position:relative;z-index:1}
     <p class="num" id="res-num"></p>
     <div class="result" id="res-h"></div>
     <p class="big" id="res-p"></p>
+    <p class="why" id="res-why" hidden></p>
     <p id="res-total"></p>
   </section>
 

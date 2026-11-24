@@ -488,7 +488,7 @@
       li.append(shape, letter, text, tally);
       ol.appendChild(li);
     });
-    $('source').hidden = true;
+    $('source').hidden = true; $('why').hidden = true;
     $('hint').classList.remove('warn'); $('board-hint').classList.remove('warn');
     stopMedia();
     const secs = game.opts.secs;
@@ -600,6 +600,8 @@
     if (clip) { $('media').classList.remove('listen'); $('ear').hidden = true; if (clip.kind !== 'still') { try { vid.pause(); } catch (e) { /* fine */ } } }
     $('fill').style.width = '0%';
     const s = q.source || {};
+    const why = G.whyLine(q);
+    $('why').textContent = why || ''; $('why').hidden = !why; // "and this is why it's right" (Bryan, 24 Nov 2026)
     const src = $('source');
     src.textContent = '';
     const b = document.createElement('b'); b.textContent = 'Source: ' + s.site;
@@ -617,7 +619,7 @@
       const ranks = G.standings([...room.players.values()]);
       for (const r of ranks) {
         const p = room.players.get(r.seat);
-        send(r.seat, { type: 't-res', n: game.at, pick: p.pick, answer: q.answer, right: p.pick === q.answer, points: gained.get(r.seat), score: p.score, place: r.place, of: ranks.length });
+        send(r.seat, { type: 't-res', n: game.at, pick: p.pick, answer: q.answer, why: why ? why.slice(0, 240) : undefined, right: p.pick === q.answer, points: gained.get(r.seat), score: p.score, place: r.place, of: ranks.length });
       }
       $('where').textContent = '';
     }
