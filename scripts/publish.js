@@ -74,6 +74,8 @@ const DOCS = rel(PROFILE.docsDir);
 const OWN_PATHS = [CATALOG, rel(PROFILE.listFile), ...DOC_REPORTS.map((n) => DOCS + '/' + n)];
 const inOwnPaths = (f) => OWN_PATHS.some((p) => f === p || f.startsWith(p + '/'));
 const TG = require('./trivia/gate');
+const inTrivia = (f) => TG.FOLDERS.some((d) => f === d || f.startsWith(d + '/'));
+const BANK_SUBJECT = /, trivia bank \d+ questions$/;
 let PATHS = [], SPEC = []; // the own paths that exist (or are tracked), worked out when a run starts
 const LOG = path.join(PROFILE.catalogDir, 'cache', 'publish.log');
 const STATE = path.join(PROFILE.catalogDir, 'cache', 'publish-state.json');
@@ -138,8 +140,13 @@ function trimLog() {
 function getAhead() {
   const out = git(['log', '--format=%h%x09%s', 'origin/master..HEAD']).trim();
   const rows = out ? out.split('\n').map((l) => { const i = l.indexOf('\t'); return { hash: l.slice(0, i), subject: l.slice(i + 1).trim() }; }) : [];
+  // A trivia bank file counts only in a commit whose subject says it carries the bank (", trivia bank N questions"), which only
+  // publish writes; whether a commit already made is publish's own does not depend on today's trivia gate (Void TV owner chat,
+  // 24 Nov 2026: a bank commit whose push failed must not hold every later catalog publish once the day turns).
   for (const r of rows) {
-    r.own = OWN.test(r.subject) && git(['diff-tree', '--no-commit-id', '--name-only', '-r', '-z', r.hash]).split('\0').filter(Boolean).every(inOwnPaths);
+    const carriesBank = BANK_SUBJECT.test(r.subject);
+    r.own = OWN.test(r.subject) && git(['diff-tree', '--no-commit-id', '--name-only', '-r', '-z', r.hash]).split('\0').filter(Boolean)
+      .every((f) => (inTrivia(f) ? carriesBank : inOwnPaths(f)));
   }
   return rows;
 }
@@ -286,7 +293,7 @@ function main() {
   let branch;
   try { branch = git(['branch', '--show-current']).trim(); } catch (e) { log('FAILED: ' + why(e)); return 1; }
   if (branch !== 'master') { log(`FAILED: the checked-out branch is ${branch || 'no branch (detached HEAD)'}, publish only runs on master; nothing was staged or pushed`); return 1; }
-  const bank = triviaGate();
+  let bank = triviaGate();
   PATHS = SPEC = ownPathsNow();
   if (!PATHS.length) { log('nothing new'); return 0; }
   let ahead;
@@ -335,10 +342,21 @@ function main() {
     const fell = (a, b) => a > 0 && (a - b) / a > 0.1;
     if (fell(before.shows, shows) || fell(before.episodes, eps)) return refuse(`shrink: shows ${before.shows} -> ${shows}, episodes ${before.episodes} -> ${eps}, more than 10% down (run with --allow-shrink if this is meant)`);
   }
-  const leak = leaks(changed);
+  let leak = leaks(changed);
+  // A bank file that trips the scan drops the bank from this run only, as the floor does: one FAILED line, the catalog goes on.
+  if (leak && bank && inTrivia(leak.file)) {
+    log(`FAILED: ${leak.file} would add ${leak.what}; the trivia bank was left out of this run and the catalog goes on without it`);
+    try { git(['reset', '-q', '--', ...TG.FOLDERS]); } catch (_) {}
+    for (const d of TG.FOLDERS) OWN_PATHS.splice(OWN_PATHS.indexOf(d), 1);
+    PATHS = SPEC = SPEC.filter((p) => !TG.FOLDERS.includes(p));
+    for (let i = changed.length - 1; i >= 0; i--) if (inTrivia(changed[i])) changed.splice(i, 1);
+    bank = null;
+    if (!changed.length) { if (!waiting) { log('nothing new'); return 0; } return pushStep() === 'failed' ? 1 : 0; }
+    leak = leaks(changed);
+  }
   if (leak) return refuse(`${leak.file} would add ${leak.what}; take it out before this is published`);
 
-  const withBank = bank && changed.some((f) => TG.FOLDERS.some((d) => f.startsWith(d + '/')));
+  const withBank = bank && changed.some(inTrivia);
   const msg = `Catalog: ${shows} shows, ${eps} episodes (${changed.length} files)` + (withBank ? `, trivia bank ${bank.questions} questions` : '');
   if (DRY) { log(`would commit ${changed.length} files: ${msg}`); unstage(); return pushStep(null, 1) === 'failed' ? 1 : 0; }
   try { git(['commit', '-q', '-m', msg, '--', ...SPEC]); } catch (e) { unstage(); log('FAILED: ' + why(e)); return 1; }

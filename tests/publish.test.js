@@ -674,16 +674,46 @@ test('trivia gate: a commit touching trivia/bank made by someone else still hold
   assert.strictEqual(originLast(c), 'Catalog: 10 shows, 50 episodes (a trivia bank)');
 });
 
-test('trivia gate: the token scan reads the bank files it is about to commit', () => {
+test('trivia gate: the token scan reads the bank files; a hit drops the bank from that run with a FAILED line and the catalog goes on', () => {
   const c = fresh();
   withBank(c, 100);
   newBank(c, 101, 'TOKEN = abcdefgh12345678');
   TG.write(c.work, Date.now(), true);
+  putShow(c.work, 10);
   const r = publish(c.work);
-  assert.strictEqual(r.status, 1, r.out);
-  assert.match(outcome(c.work), /refused: trivia\/bank\/tv-1\.json would add /);
-  assert.strictEqual(originLast(c), 'Catalog: 10 shows, 50 episodes (a trivia bank)');
+  assert.strictEqual(r.status, 0, r.out);
+  assert.ok(logLines(c.work).some((l) => /FAILED: trivia\/bank\/tv-1\.json would add .*; the trivia bank was left out of this run/.test(l)));
+  assert.match(outcome(c.work), /pushed [0-9a-f]+: Catalog: 11 shows, 55 episodes \(1 files\)$/);
+  assert.deepStrictEqual(originFiles(c), ['catalog/shows/test-show-10.json']);
   assert.strictEqual(staged(c.work), '');
+  assert.match(changedHere(c), /trivia\/bank\/tv-1\.json/, 'the bank stays in the working tree, not committed');
+});
+
+test('trivia gate: a bank commit publish made whose push did not go through is still its own once the gate is shut, and goes out', () => {
+  const c = fresh();
+  withBank(c, 100);
+  newBank(c, 101);
+  git(c.work, 'add', 'trivia');
+  git(c.work, 'commit', '-q', '-m', 'Catalog: 10 shows, 50 episodes (2 files), trivia bank 101 questions'); // made by an earlier run, not pushed
+  TG.write(c.work, Date.now() - 2 * 864e5, true);                                                            // the day has turned: gate shut
+  const r = publish(c.work);
+  assert.strictEqual(r.status, 0, r.out);
+  assert.ok(!logLines(c.work).some((l) => /held:/.test(l)), 'a waiting bank commit of publish\'s own must not hold the push');
+  assert.strictEqual(originLast(c), 'Catalog: 10 shows, 50 episodes (2 files), trivia bank 101 questions');
+  assert.strictEqual(ahead(c.work), '0');
+});
+
+test('trivia gate: a hand-made "Catalog:" commit that slips bank files in, without the bank in its subject, still holds the push', () => {
+  const c = fresh();
+  withBank(c, 100);
+  newBank(c, 101);
+  git(c.work, 'add', 'trivia');
+  git(c.work, 'commit', '-q', '-m', 'Catalog: 10 shows, 50 episodes (by hand)');
+  TG.write(c.work, Date.now(), true);                                                                        // even with the gate open
+  putShow(c.work, 10);
+  publish(c.work);
+  assert.match(outcome(c.work), /held: 1 other commit waiting: Catalog: 10 shows, 50 episodes \(by hand\)/);
+  assert.strictEqual(originLast(c), 'Catalog: 10 shows, 50 episodes (a trivia bank)');
 });
 
 test('trivia gate: a bank more than 10% smaller is left alone with a FAILED line, the catalog goes on; --allow-bank-shrink lets it through', () => {
