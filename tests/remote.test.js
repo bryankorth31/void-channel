@@ -372,3 +372,16 @@ test('Trivia: the phone presses only the host\'s own Start, Start the game, Play
   A.act({ a: 'hand' }, 3);
   assert.deepEqual(handed, [[3, 'EJJN', 'Trivia Night']]);
 });
+
+test('the phone remote page says voidtv.net in its own two colours, as the site header does (DECISIONS B2; voidverse join J5, Bryan 24 Nov 2026: "Yes, those four")', () => {
+  const page = fs.readFileSync(path.join(ROOT, 'remote', 'index.html'), 'utf8');
+  const mark = page.match(/<a class="mark" id="mark" href="\/">[\s\S]*?<\/a>/)[0];
+  assert.match(mark, /<span class="v">voidtv<\/span><span class="n">\.net<\/span>/);
+  assert.equal(mark.replace(/<[^>]+>/g, ''), 'voidtv.net');
+  const css = page.match(/<style>([\s\S]*?)<\/style>/)[1];
+  assert.match(css, /--brand-pink:#ff4fc8/, 'the wordmark pink');
+  assert.match(css, /--brand-blue:#5fe3ff/, 'the wordmark blue (not the page blue #5fd4ff)');
+  assert.match(css, /\.mark \.v\{color:var\(--brand-pink\)\}/);
+  assert.match(css, /\.mark \.n\{color:var\(--brand-blue\)\}/);
+  assert.doesNotMatch(css, /\.mark span\{/, 'no rule colours both halves alike');
+});

@@ -9,14 +9,15 @@
      show"). A phone comes here from the code on the big screen (/join). It draws what the screen sends; shows saved here stay
      on this phone only. Nothing is asked for. Licence: GPL-2.0-or-later. remote/README.md has the whole of it. -->
 <style>
-:root{--bg:#07080c;--card:#10131c;--fg:#e8e8ee;--dim:#8a8fa3;--line:#1d2130;--pink:#ff4fc8;--blue:#5fd4ff;--gold:#f3c969}
+:root{--bg:#07080c;--card:#10131c;--fg:#e8e8ee;--dim:#8a8fa3;--line:#1d2130;--pink:#ff4fc8;--blue:#5fd4ff;--gold:#f3c969;--brand-pink:#ff4fc8;--brand-blue:#5fe3ff}
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--bg);color:var(--fg);font:16px system-ui,Segoe UI,Roboto,sans-serif;-webkit-text-size-adjust:100%}
 body{padding:12px 16px calc(20px + env(safe-area-inset-bottom));max-width:520px;margin:0 auto;touch-action:manipulation}
 button,a.btn{font:inherit;color:var(--fg);background:#161a25;border:1px solid #2a2f40;border-radius:12px;padding:10px 14px;min-height:44px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:6px}
 button:active{transform:scale(.98)}
 header{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:10px}
-.mark{font-weight:800;font-size:20px;color:var(--fg);text-decoration:none}.mark span{color:var(--pink)}
+/* The wordmark in its own two colours, as in the site's header (DECISIONS B2): "voidtv" pink, ".net" blue. */
+.mark{font-weight:800;font-size:20px;text-decoration:none;white-space:nowrap}.mark .v{color:var(--brand-pink)}.mark .n{color:var(--brand-blue)}
 #status{color:var(--dim);font-size:13px;text-align:right}
 .tabs{display:flex;gap:8px;margin-bottom:12px}.tabs button{flex:1}.tabs button[aria-selected="true"]{border-color:var(--blue);color:var(--blue)}
 .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;margin-bottom:12px}
@@ -45,7 +46,7 @@ ul{list-style:none;margin:0;padding:0}
 </style>
 </head>
 <body>
-<header><a class="mark" id="mark" href="/">voidtv<span>.net</span></a><div id="status" role="status">Connecting</div></header>
+<header><a class="mark" id="mark" href="/"><span class="v">voidtv</span><span class="n">.net</span></a><div id="status" role="status">Connecting</div></header>
 <div id="note"><h1 id="note-h"></h1><p class="note" id="note-p"></p><p><a class="btn" href="/join">Type a code</a></p></div>
 <main id="app" hidden>
   <div class="tabs" role="tablist"><button type="button" role="tab" id="tab-r" aria-selected="true">Remote</button><button type="button" role="tab" id="tab-f" aria-selected="false" hidden>Find</button><button type="button" role="tab" id="tab-a" aria-selected="false" hidden>Areas</button><button type="button" role="tab" id="tab-s" aria-selected="false">Saved</button></div>
