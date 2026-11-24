@@ -11,7 +11,9 @@
 :root{--bg:#07080c;--fg:#e8e8ee;--dim:#8a8fa3;--acc:#5fd4ff;--line:#1d2130}
 html,body{margin:0;background:var(--bg);color:var(--fg);font:17px system-ui,Segoe UI,Roboto,sans-serif}
 main{max-width:420px;margin:0 auto;padding:48px 16px;text-align:center}
-.mark{font-weight:800;font-size:22px;letter-spacing:.02em;color:var(--fg);text-decoration:none}.mark span{color:#ff4fc8}
+/* The wordmark in its own colours and lettering (rule B2: "voidtv" neon pink, ".net" neon blue, Unbounded), as on the shelf. */
+@font-face{font-family:'Unbounded';font-style:normal;font-weight:200 900;font-display:swap;src:url(/assets/brand/fonts/unbounded-latin.woff2) format('woff2')}
+.mark{font-family:'Unbounded',sans-serif;font-weight:700;font-size:22px;letter-spacing:-.02em;color:#ff4fc8;text-decoration:none}.mark span{color:#5fe3ff}
 h1{font-size:24px;margin:28px 0 8px}p{color:var(--dim);margin:0 0 22px}
 input{width:8ch;font:700 34px/1 ui-monospace,Consolas,monospace;letter-spacing:.2em;text-transform:uppercase;text-align:center;background:#0f1118;color:var(--fg);border:1px solid var(--line);border-radius:12px;padding:14px 10px}
 button{display:block;margin:18px auto 0;font:inherit;font-weight:700;background:var(--acc);color:#07080c;border:0;border-radius:12px;padding:14px 30px;cursor:pointer}

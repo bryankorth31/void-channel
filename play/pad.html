@@ -25,7 +25,9 @@ body{background:radial-gradient(ellipse at 22% 6%,rgba(205,215,245,.16) 0%,trans
   padding:max(8px,env(safe-area-inset-top)) max(14px,env(safe-area-inset-right)) max(10px,env(safe-area-inset-bottom)) max(14px,env(safe-area-inset-left))}
 #pad[hidden],#note[hidden]{display:none}
 #top{grid-area:top;text-align:center;min-width:0;font-size:13px;line-height:1.35;color:var(--dim);text-shadow:0 1px 2px rgba(0,0,0,.6)}
-#top b{display:block;color:var(--fg);font-size:14px;letter-spacing:.02em}#top b span{color:var(--pink)}
+/* The wordmark in its own colours and lettering (rule B2: "voidtv" neon pink, ".net" neon blue, Unbounded), as on the shelf. */
+@font-face{font-family:'Unbounded';font-style:normal;font-weight:200 900;font-display:swap;src:url(/assets/brand/fonts/unbounded-latin.woff2) format('woff2')}
+#top b{display:block;font-family:'Unbounded',sans-serif;font-weight:700;color:var(--pink);font-size:14px;letter-spacing:-.02em}#top b span{color:var(--acc)}
 #game{display:block;color:var(--fg);font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 #who{color:var(--acc);font-weight:700;margin-right:8px}#who:empty{margin:0}#delay[data-path=direct]{color:var(--acc)}#delay.slow{color:var(--gold)}
 #left{grid-area:left;display:flex;justify-content:flex-start;align-items:flex-start;min-height:50px}

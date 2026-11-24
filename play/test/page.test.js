@@ -221,3 +221,29 @@ test('fullscreen during play (Bryan, 20 Nov 2026: "a simple fullscreen to the ga
   assert.ok(js.includes("if (e.clientY < 48) { document.body.classList.add('showbar');"), 'the mouse at the top brings the bar');
   assert.ok(css.includes('body.full:not(.paused):not(.showbar) .bar{transform:translateY(-100%)}') && css.includes('body.full.idle:not(.paused) .stage,body.full.idle:not(.paused) .stage *{cursor:none}'));
 });
+
+test('rule B2, the wordmark in its own colours on every PLAY page: "voidtv" neon pink, ".net" neon blue, in Unbounded (Voidverse join J5; Bryan, 24 Nov 2026: "Yes, those four")', () => {
+  const PINK = '#ff4fc8', BLUE = '#5fe3ff', FACE = "@font-face{font-family:'Unbounded';font-style:normal;font-weight:200 900;font-display:swap;src:url(/assets/brand/fonts/unbounded-latin.woff2) format('woff2')}";
+  assert.ok(fs.existsSync(path.join(ROOT, '..', 'assets', 'brand', 'fonts', 'unbounded-latin.woff2')), 'the lettering is in the repo');
+  // The shelf and the game page: the bar's mark, coloured by the shelf's own two names.
+  const css = read(ROOT, 'shelf.css');
+  assert.ok(css.includes(FACE) && css.includes('--pink:' + PINK) && css.includes('--blue:' + BLUE));
+  assert.ok(css.includes(".mark{font-family:'Unbounded',sans-serif;font-weight:700;") && css.includes('.mark .v{color:var(--pink)} .mark .n{color:var(--blue)}'));
+  for (const f of ['index.html', 'game.html']) assert.ok(read(ROOT, f).includes('<span class="v">voidtv</span><span class="n">.net</span>'), f);
+  // The join page: it was "voidtv" white and ".net" pink in the system's lettering (the Voidverse ledger's PLAY-17).
+  const join = read(ROOT, 'join.html');
+  assert.ok(join.includes(FACE), 'join.html loads the lettering');
+  assert.ok(join.includes(".mark{font-family:'Unbounded',sans-serif;font-weight:700;font-size:22px;letter-spacing:-.02em;color:" + PINK + ";text-decoration:none}.mark span{color:" + BLUE + '}'));
+  assert.ok(join.includes('<a class="mark" href="/">voidtv<span>.net</span></a>'));
+  // The pad's top line: the same fault, the same mark. Its --acc is the brand blue.
+  const pad = read(ROOT, 'pad.html');
+  assert.ok(pad.includes(FACE), 'pad.html loads the lettering');
+  assert.ok(pad.includes('--acc:' + BLUE) && pad.includes('--pink:' + PINK));
+  assert.ok(pad.includes("#top b{display:block;font-family:'Unbounded',sans-serif;font-weight:700;color:var(--pink);font-size:14px;letter-spacing:-.02em}#top b span{color:var(--acc)}"));
+  assert.ok(pad.includes('<b>voidtv<span>.net</span></b>'));
+  // Nowhere on a PLAY page is the name drawn the old way: white with a pink ".net".
+  for (const f of ['index.html', 'game.html', 'join.html', 'pad.html']) {
+    const html = read(ROOT, f);
+    assert.ok(!html.includes('.mark span{color:' + PINK + '}') && !html.includes('#top b span{color:var(--pink)}'), f);
+  }
+});
