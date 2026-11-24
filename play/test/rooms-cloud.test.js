@@ -134,6 +134,8 @@ test("a phone link with a code the codes never use is told there is no such room
   assert.ok(read('play', 'src', 'phonepad.js').includes("if (e.code === 4404) { note('No room with that code',"));
   assert.ok(read('trivia', 'src', 'phone.js').includes("if (e.code === 4404) { note('No game with that code',"), 'the Trivia phone');
   assert.ok(read('cards', 'src', 'hand.js').includes("if (e.code === 4404) return stop('No game with that code',"), 'the Cards hand');
-  // Each page lets any four letters and digits through to the door (Z among them), so the door must answer well.
-  for (const page of [['trivia', 'src', 'phone.js'], ['cards', 'src', 'hand.js']]) assert.ok(read(...page).includes('if (!/^[2-9A-Z]{4}$/.test(code))'), page.join('/'));
+  // The Trivia phone lets any four letters and digits through to the door (Z among them), and the pad sends whatever
+  // its link holds, so the door must answer well. The Cards hand has since learned to refuse such a code itself, before
+  // it connects (the Card games chat, 901053ddc, the same day); that guard and this door do not get in each other's way.
+  assert.ok(read('trivia', 'src', 'phone.js').includes('if (!/^[2-9A-Z]{4}$/.test(code))'), 'the Trivia phone');
 });
