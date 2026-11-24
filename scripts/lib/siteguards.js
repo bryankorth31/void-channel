@@ -98,10 +98,20 @@ const PLAY_HEADERS = PLAY_ISOLATED.map((p) => p + '\n' + ISOLATE + (PLAY_CACHE[p
 // just the same across the verse"). With five minutes, any copy of the address, however old its stamp, follows the list. The rule stands AFTER /assets/*
 // and detaches the header first; without the "!" line Pages joins both values and caches keep the first.
 const AREAS_CACHE = '/assets/brand/areas/areas.js\n  ! Cache-Control\n  Cache-Control: public, max-age=300\n';
+// Card games with phones only (Bryan, 24 Nov 2026: "Card games needs pure phone mode"): the host's phone is the table, and the host
+// plays from the card hand page shown in a frame inside it. So that one page, and only it, may be framed, and only by voidtv.net's own
+// pages (SAMEORIGIN, frame-ancestors 'self'): every other site still may not frame it, and every other page keeps DENY (Bryan,
+// 24 Nov 2026: "Allow it, one page"). The rule stands after /* and detaches the site-wide values first; without the "!" lines Pages
+// joins both values ("DENY, SAMEORIGIN"), which a browser reads as no frame at all. Keep in step with CARDS_HAND in
+// functions/_middleware.js (tests/site-middleware.test.js).
+const CARDS_HAND = ['/cards/hand', '/cards/hand.html'];
+const CARDS_HAND_CSP = CSP.replace("frame-ancestors 'none'", "frame-ancestors 'self'");
+const CARDS_HAND_HEADERS = CARDS_HAND.map((p) => p + '\n  ! X-Frame-Options\n  X-Frame-Options: SAMEORIGIN\n'
+  + '  ! Content-Security-Policy-Report-Only\n  Content-Security-Policy-Report-Only: ' + CARDS_HAND_CSP + '\n').join('');
 function headersFile() {
   return '/*\n' + SECURITY_HEADERS.map(([k, v]) => `  ${k}: ${v}\n`).join('')
     + '/data/*\n  Cache-Control: public, max-age=300\n/show/*\n  Cache-Control: public, max-age=300\n/assets/*\n  Cache-Control: public, max-age=86400\n'
-    + AREAS_CACHE + PLAY_HEADERS;
+    + AREAS_CACHE + CARDS_HAND_HEADERS + PLAY_HEADERS;
 }
 // Names of the three headers the doctor insists on that a response lacks. get(name) returns the value or null.
 function missingSecurityHeaders(get) {
@@ -325,7 +335,7 @@ async function liveLights({ base, versionTextBody, doFetch, remote, nowMs }) {
 }
 
 module.exports = {
-  LIMITS, SECURITY_HEADERS, CSP,
+  LIMITS, SECURITY_HEADERS, CSP, CARDS_HAND, CARDS_HAND_CSP,
   PLAY_ISOLATED, PLAY_STRICT, PLAY_CSP, isPlayIsolated, gateMode, gateDecision, isGated, routesFor, headersFile, missingSecurityHeaders, versionText, parseVersion,
   checkOutput, shrinkVerdict, shrinkBaseline, readLastCounts, countsFromVersion, liveCountsSync, unreadableGrids,
   filesLight, gateLight, wwwLight, headersLight, liveVersionLight, shrinkLight, backupLight, branchBackupLight, BRANCH_GRACE_HOURS, liveLights,

@@ -32,12 +32,23 @@ function playHeaders(out, path) {
   out.headers.set('Cross-Origin-Embedder-Policy', 'require-corp');
   out.headers.set('Content-Security-Policy-Report-Only', PLAY_CSP);
 }
+// Card games with phones only (Bryan, 24 Nov 2026: "Allow it, one page"): the card hand page alone may be framed, and only by
+// voidtv.net's own pages, because the host plays from it in a frame on the table page. Every other page keeps DENY. Keep in step
+// with CARDS_HAND and CARDS_HAND_CSP in scripts/lib/siteguards.js; tests/site-middleware.test.js fails when the two differ.
+const CARDS_HAND = ['/cards/hand', '/cards/hand.html'];
+const CARDS_HAND_CSP = SECURITY.find(([k]) => k === 'Content-Security-Policy-Report-Only')[1].replace("frame-ancestors 'none'", "frame-ancestors 'self'");
+function cardsHandHeaders(out, path) {
+  if (!CARDS_HAND.includes(path)) return;
+  out.headers.set('X-Frame-Options', 'SAMEORIGIN');
+  out.headers.set('Content-Security-Policy-Report-Only', CARDS_HAND_CSP);
+}
 // A response from next() is normally mutable; one that is not (a redirect or a cached asset) is copied first.
 function withSecurity(res, path) {
   if (res.status === 101) return res;   // a WebSocket handover (phone rooms): its headers are not ours to change, and a copy would lose the socket
   let out = res;
   try { for (const [k, v] of SECURITY) out.headers.set(k, v); } catch (e) { out = new Response(res.body, res); for (const [k, v] of SECURITY) out.headers.set(k, v); }
   playHeaders(out, path);
+  cardsHandHeaders(out, path);
   if (out.status === 401) out.headers.set('Cache-Control', 'no-store'); // the password page is never cached
   return out;
 }

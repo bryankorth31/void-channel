@@ -396,3 +396,14 @@ test('branch backup light: green when every local-only branch is in the newest c
   assert.match(same.msg, /same drive/);
   assert.notEqual(G.branchBackupLight(stamp, [b('hindi', 'zzz', 9999)], REPO, now).level, 'red', 'never red: git still has them here');
 });
+
+test('security headers: only the card hand page may be framed, by voidtv.net only, and its rule detaches the site-wide values first', () => {
+  const file = G.headersFile();
+  for (const p of G.CARDS_HAND) {
+    const own = p + '\n  ! X-Frame-Options\n  X-Frame-Options: SAMEORIGIN\n  ! Content-Security-Policy-Report-Only\n  Content-Security-Policy-Report-Only: ' + G.CARDS_HAND_CSP + '\n';
+    assert.ok(file.includes(own), p + ' has its own rule (Bryan, 24 Nov 2026: "Allow it, one page")');
+    assert.ok(file.indexOf(own) > file.indexOf('/*\n'), 'and it stands after the rule for every page');
+  }
+  assert.equal((file.match(/SAMEORIGIN/g) || []).length, G.CARDS_HAND.length, 'no other page may be framed');
+  assert.ok(file.startsWith('/*\n') && file.slice(0, file.indexOf('\n/', 3)).includes('X-Frame-Options: DENY'), 'every other page keeps DENY');
+});

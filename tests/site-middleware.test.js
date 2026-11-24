@@ -231,3 +231,21 @@ test('PLAY engines and cards: a missing one answers 404 and is never cached; rea
   const gated = await ask('/play/engine/mame/williams.js', nextOk(), { SITE_PASSWORD: 'secret' });
   assert.equal(gated.status, 401, 'the password page is not turned into a 404');
 });
+
+// Card games with phones only (Bryan, 24 Nov 2026: "Allow it, one page"): the host plays from the card hand page in a frame on the
+// table page, so that page alone may be framed, by voidtv.net only. With the password gate on, pages come through the Function, so it
+// must say what _headers says.
+test('the card hand page alone may be framed, and only by voidtv.net: the Function and _headers agree', async () => {
+  const { onRequest } = await load('functions/_middleware.js');
+  const env = { SITE_PASSWORD: 'secret' };
+  const ask = (u) => onRequest({ request: new Request('https://voidtv.net' + u, { headers: { cookie: 'voidtv_gate=x' } }), env, next: nextOk() });
+  for (const u of ['/cards/hand', '/cards/hand.html']) {
+    const r = await ask(u);
+    assert.equal(r.headers.get('X-Frame-Options'), 'SAMEORIGIN', u);
+    assert.equal(r.headers.get('Content-Security-Policy-Report-Only'), G.CARDS_HAND_CSP, u + ': the same policy as _headers, with frame-ancestors self');
+  }
+  for (const u of ['/', '/cards/', '/cards/hand/x', '/join']) assert.equal((await ask(u)).headers.get('X-Frame-Options'), 'DENY', u + ' keeps DENY');
+  assert.deepEqual(G.CARDS_HAND, ['/cards/hand', '/cards/hand.html']);
+  assert.ok(G.CARDS_HAND_CSP.includes("frame-ancestors 'self'") && !G.CARDS_HAND_CSP.includes("frame-ancestors 'none'"));
+  assert.equal(G.CARDS_HAND_CSP, G.CSP.replace("frame-ancestors 'none'", "frame-ancestors 'self'"), 'built from the site policy, so the two never drift');
+});

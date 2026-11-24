@@ -94,3 +94,20 @@ test('phones only: the hand page shows the Table button only on a phones-only ta
   assert.ok(!/\bmine\b|takeHand|c-hand/.test(draw), 'the whole table is drawn from the public table (table.v), never from a hand');
   assert.ok(/table && table\.v/.test(draw) && /S\.centreItems\(v\)/.test(draw) && /S\.laidGroups\(v, i\)/.test(draw));
 });
+
+test('phones only: the card hand page alone may be framed, by voidtv.net only (Bryan, 24 Nov 2026: "Allow it, one page")', () => {
+  const G = require('../../scripts/lib/siteguards.js');
+  const h = G.headersFile();
+  const rules = h.split(/\n(?=\/)/);
+  const all = rules.find((r) => r.startsWith('/*\n'));
+  assert.match(all, /X-Frame-Options: DENY/, 'every page keeps DENY');
+  for (const p of ['/cards/hand', '/cards/hand.html']) {
+    const r = rules.find((x) => x.startsWith(p + '\n'));
+    assert.ok(r, p + ' has its own rule');
+    assert.match(r, /! X-Frame-Options\n  X-Frame-Options: SAMEORIGIN/, p + ': the site-wide value is detached first, then same origin only');
+    assert.match(r, /frame-ancestors 'self'/);
+  }
+  assert.equal((h.match(/SAMEORIGIN/g) || []).length, 2, 'no other path is opened');
+  const mw = fs.readFileSync(path.join(__dirname, '..', '..', 'functions', '_middleware.js'), 'utf8');
+  assert.ok(mw.includes("const CARDS_HAND = ['/cards/hand', '/cards/hand.html'];"), 'the Function does the same when the password gate is on');
+});
