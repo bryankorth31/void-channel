@@ -605,7 +605,18 @@
   function closeTable() { tableOpen = false; $('tablesheet').hidden = true; }
 
   // ----- Which page is showing -----
-  function only(id) { for (const s of ['note', 'name', 'lobby', 'watch', 'game']) $(s).hidden = s !== id; }
+  function only(id) { for (const s of ['note', 'name', 'lobby', 'watch', 'game']) $(s).hidden = s !== id; $('home-out').hidden = id === 'game'; }
+  // A way back to voidtv.net from every screen (Bryan's rule: a visible way back on every page; 24 Nov 2026: "on mobile umm Caitlin
+  // was unable to back out of the card game and go back to void TV"). The game screen's wordmark is the link; the other screens get a
+  // small one at the top. While a game is on it asks first, and the host of a phones-only table (this page in the table's frame) is
+  // told the table closes for everyone.
+  const inFrame = (() => { try { return window.top !== window.self; } catch (e) { return true; } })();
+  function goHome(e) {
+    const playing = !!(roster && roster.phase === 'play' && meSeat() !== null);
+    if (!playing && !inFrame) return;
+    const words = inFrame ? 'Leave and go to voidtv.net? You are the host, so the table closes for everyone.' : 'Leave the game and go to voidtv.net?';
+    if (!confirm(words)) e.preventDefault();
+  }
   function note(h, p, link) { $('note-h').textContent = h; $('note-p').textContent = p; $('note-a').hidden = !link; only('note'); }
   function render() {
     if (blocker) { note(blocker.h, blocker.p, blocker.link); return; }
@@ -647,6 +658,8 @@
   $('b-rules').addEventListener('click', openRules);
   $('lobby-rules').addEventListener('click', openRules);
   $('rules-back').addEventListener('click', () => { $('rules').hidden = true; });
+  $('home').addEventListener('click', goHome);
+  $('home-out').addEventListener('click', goHome);
   $('b-table').addEventListener('click', openTable);
   $('table-back').addEventListener('click', closeTable);
   const box = $('handbox');

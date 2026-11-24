@@ -414,8 +414,24 @@
     try { if (navigator.wakeLock && !awake) { awake = await navigator.wakeLock.request('screen'); awake.addEventListener('release', () => { awake = null; }); } } catch (e) { /* not allowed here */ }
   }
   document.addEventListener('visibilitychange', () => { if (PHONES && !document.hidden && dealer.snapshot().phase !== 'lobby') stayAwake(); });
+  // The way back (Bryan's rule: a visible way back on every page; 24 Nov 2026, a player could not get out on a phone): the same header
+  // as the games page, with the voidtv.net areas menu. Drawn once, outside #app, so the menu survives every redraw. Leaving with
+  // players at the table asks first, since the table closes for everyone.
+  let hostTop = null;
+  function drawHostTop() {
+    if (hostTop) return;
+    hostTop = el('header', 'ph-top');
+    const menu = el('span'), mark = el('a', 'ph-mark');
+    menu.setAttribute('data-void-areas-menu', '');
+    mark.href = '/'; mark.setAttribute('aria-label', 'voidtv.net home');
+    mark.append(el('span', 'v', 'voidtv'), el('span', 'n', '.net'));
+    mark.addEventListener('click', (e) => { if (dealer.snapshot().players.length && !confirm('Leave and go to voidtv.net? The table closes for everyone.')) e.preventDefault(); });
+    hostTop.append(menu, mark, el('span', 'ph-here', 'Card games'));
+    document.body.insertBefore(hostTop, app);
+  }
   function drawPhones(s) {
     document.documentElement.classList.add('phones-host');
+    drawHostTop();
     ensureFrame();
     const inGame = !(s.phase === 'lobby' || !s.view);
     if (hostFrame) hostFrame.classList.toggle('on', inGame);

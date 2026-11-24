@@ -136,3 +136,8 @@ li{margin:4px 0}
 .ts-laid{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;font-size:7px}
 .ts-laid .ts-cards{font-size:7px}
 #table-back{width:100%;min-height:50px;font-size:18px;margin-top:14px}
+/* The way back to voidtv.net (Bryan's rule: a visible way back on every page; 24 Nov 2026, a player could not get out on a phone) */
+.mark .home{text-decoration:none;padding:6px 4px 6px 0;margin:-6px 0;display:inline-block}
+.home-out{position:fixed;z-index:60;top:max(12px,env(safe-area-inset-top));left:max(14px,env(safe-area-inset-left));font-weight:800;font-size:17px;text-decoration:none;padding:8px 10px;margin:-8px -10px}
+.home-out .v{color:var(--pink)}.home-out .n{color:#5fe3ff}
+.home-out[hidden]{display:none}

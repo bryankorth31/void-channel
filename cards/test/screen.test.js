@@ -262,7 +262,8 @@ test('the table opens its room at once and asks whether rooms are set up only wh
 
 test('the phone\'s wordmark: "voidtv" pink and ".net" blue, the site header\'s colours (decision B2)', () => {
   const css = read('cards', 'hand.css'), base = read('cards', 'cards.css'), html = read('cards', 'hand.html');
-  assert.match(html, /<div class="mark"><span class="v">voidtv<\/span><span class="n">\.net<\/span>/);
+  // The wordmark is also the way back to voidtv.net (24 Nov 2026), so its two spans sit inside the link.
+  assert.match(html, /<div class="mark"><a class="home"[^>]*><span class="v">voidtv<\/span><span class="n">\.net<\/span><\/a>/);
   assert.match(css, /\.mark \.v\{color:var\(--pink\)\}/);
   assert.match(base, /--pink:#ff4fc8/, 'the site\'s brand pink');
   assert.match(css, /\.mark \.n\{color:#5fe3ff\}/, 'the site\'s brand blue');

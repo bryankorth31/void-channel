@@ -11,6 +11,9 @@
 <link rel="stylesheet" href="/cards/hand.css">
 </head>
 <body>
+<!-- A way back to voidtv.net from every screen (Bryan's rule: a visible way back on every page; 24 Nov 2026, a player could not
+     get out of a card game on a phone). target="_top": the host of a phones-only table plays from this page in a frame. -->
+<a class="home-out" id="home-out" href="/" target="_top" aria-label="Go to voidtv.net"><span class="v">voidtv</span><span class="n">.net</span></a>
 <section id="note" class="centre">
   <h1 id="note-h">Joining</h1>
   <p id="note-p">Finding the big screen.</p>
@@ -43,7 +46,7 @@
 <main id="game" hidden>
   <header id="top">
     <div class="topl">
-      <div class="mark"><span class="v">voidtv</span><span class="n">.net</span> <span class="room" id="room"></span><span class="practice" id="practice" hidden>practice hand</span><button class="btn rules-btn" id="b-rules" type="button">Rules</button><button class="btn rules-btn table-btn" id="b-table" type="button" hidden>Table</button></div>
+      <div class="mark"><a class="home" id="home" href="/" target="_top" aria-label="Leave the game and go to voidtv.net"><span class="v">voidtv</span><span class="n">.net</span></a> <span class="room" id="room"></span><span class="practice" id="practice" hidden>practice hand</span><button class="btn rules-btn" id="b-rules" type="button">Rules</button><button class="btn rules-btn table-btn" id="b-table" type="button" hidden>Table</button></div>
       <div class="turn" id="turn" role="status"></div>
       <div class="status" id="status"></div>
     </div>

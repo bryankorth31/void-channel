@@ -111,3 +111,28 @@ test('phones only: the card hand page alone may be framed, by voidtv.net only (B
   const mw = fs.readFileSync(path.join(__dirname, '..', '..', 'functions', '_middleware.js'), 'utf8');
   assert.ok(mw.includes("const CARDS_HAND = ['/cards/hand', '/cards/hand.html'];"), 'the Function does the same when the password gate is on');
 });
+
+// A way back to voidtv.net from every card screen on a phone (Bryan's rule: a visible way back on every page; 24 Nov 2026: "on mobile
+// umm Caitlin was unable to back out of the card game and go back to void TV").
+test('the way back: every screen of the hand page links to voidtv.net at the top page, and a game on asks first', () => {
+  const html = read('hand.html'), h = read('src', 'hand.js');
+  assert.match(html, /<a class="home" id="home" href="\/" target="_top"[^>]*><span class="v">voidtv<\/span><span class="n">\.net<\/span><\/a>/, 'the game screen\'s wordmark is the link');
+  assert.match(html, /<a class="home-out" id="home-out" href="\/" target="_top"/, 'the other screens get one at the top');
+  assert.ok(html.indexOf('id="home-out"') < html.indexOf('<section id="note"'), 'before every screen, so none is without it');
+  assert.ok(h.includes("$('home-out').hidden = id === 'game';"), 'shown on every screen but the game, which has its own');
+  assert.ok(h.includes("$('home').addEventListener('click', goHome)") && h.includes("$('home-out').addEventListener('click', goHome)"));
+  const go = h.slice(h.indexOf('function goHome('), h.indexOf('function goHome(') + 500);
+  assert.match(go, /roster\.phase === 'play'/, 'it asks only while a game is on (or for the host)');
+  assert.match(go, /confirm\(/);
+  assert.match(go, /the table closes for everyone/);
+});
+
+test('the way back: the host\'s phones-only table has the games page header, with the areas menu, drawn once outside the redraws', () => {
+  const js = read('src', 'screen.js');
+  const top = js.slice(js.indexOf('function drawHostTop()'), js.indexOf('function drawPhones('));
+  assert.ok(top.includes("menu.setAttribute('data-void-areas-menu', '')") && top.includes("mark.href = '/'"));
+  assert.ok(top.includes('document.body.insertBefore(hostTop, app)'), 'outside #app, so the menu survives every redraw');
+  assert.ok(/if \(hostTop\) return;/.test(top), 'drawn once');
+  assert.ok(/confirm\('Leave and go to voidtv\.net\? The table closes for everyone\.'\)/.test(top));
+  assert.ok(js.slice(js.indexOf('function drawPhones('), js.indexOf('function drawPhones(') + 200).includes('drawHostTop();'));
+});
