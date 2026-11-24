@@ -18,7 +18,12 @@
   for (const e of document.querySelectorAll('.donate-cross')) e.src = CROSS;
 
   const code = (new URLSearchParams(location.search).get('r') || '').toUpperCase();
-  let ws = null, ended = false, tries = 0, current = null, asked = false;
+  let ws = null, ended = false, tries = 0, current = null, asked = false, shown = null;
+  // The right answer as "C: Friday" when this phone has that question's choices (a phone that rejoined mid-reveal may not), else "C".
+  function answerText(m) {
+    const word = shown && shown.n === m.n && shown.choices ? shown.choices[m.answer] : null;
+    return LETTERS[m.answer] + (word ? ': ' + word : '');
+  }
 
   function only(id) { for (const s of ['note', 'name', 'wait', 'ask', 'res', 'end']) $(s).hidden = s !== id; }
   function note(h, p, link) { $('note-h').textContent = h; $('note-p').textContent = p; $('note-a').hidden = !link; only('note'); }
@@ -38,6 +43,7 @@
 
   function drawQuestion(m) {
     current = m.n;
+    shown = { n: m.n, choices: m.choices || null }; // kept so the result can say the answer in words
     $('num').textContent = 'Question ' + (m.n + 1) + ' of ' + m.of;
     $('q').textContent = m.q || 'Look at the big screen.';
     const box = $('answers');
@@ -163,7 +169,7 @@
       const h = $('res-h');
       h.className = 'result ' + (m.right ? 'right' : 'wrong');
       h.textContent = m.right ? 'Right!' : m.pick === null ? 'No answer' : 'Not this time';
-      $('res-p').textContent = m.right ? '+' + m.points.toLocaleString() + ' points' : 'It was ' + LETTERS[m.answer] + '.' + (m.points < 0 ? ' You lose ' + (-m.points).toLocaleString() + ' points.' : '');
+      $('res-p').textContent = m.right ? '+' + m.points.toLocaleString() + ' points' : 'It was ' + answerText(m) + '.' + (m.points < 0 ? ' You lose ' + (-m.points).toLocaleString() + ' points.' : '');
       $('res-total').textContent = m.score.toLocaleString() + ' points, ' + G.ordinal(m.place) + ' of ' + m.of;
       only('res');
       return;
