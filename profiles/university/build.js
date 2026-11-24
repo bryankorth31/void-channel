@@ -533,7 +533,8 @@ footer{max-width:1500px;margin:0 auto;padding:10px 32px 40px;color:var(--dim);fo
 .cx-after small{color:var(--dim)}
 .sc{background:var(--deep);border:1px solid var(--line);border-radius:12px;padding:14px 18px 16px;margin:0 0 18px}
 .sc-like{font-size:14px;color:var(--pink);font-weight:700}
-.sc-stage{position:relative;margin-top:8px;border-radius:10px;background:radial-gradient(ellipse at 50% 55%,#24160c 0%,#070605 72%);aspect-ratio:800/360;overflow:hidden}
+/* the stage is always the full width of its box: a short window lowers it (max-height below) and the camera widens its view, instead of the stage shrinking to one side */
+.sc-stage{position:relative;width:100%;margin-top:8px;border-radius:10px;background:radial-gradient(ellipse at 50% 55%,#24160c 0%,#070605 72%);aspect-ratio:800/360;overflow:hidden}
 .sc-stage canvas{position:absolute;inset:0;display:block;width:100%;height:100%}
 .sc-stage::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 45%,transparent 55%,rgba(0,0,0,.5) 100%)}
 .sc.no3d .sc-stage{display:none}
