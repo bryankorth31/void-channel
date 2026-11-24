@@ -3,7 +3,7 @@
   "slug": "the-driver",
   "type": "British and Beyond",
   "network": "BBC One",
-  "matchedAt": "2026-10-24T08:01:17.051Z",
+  "matchedAt": "2026-11-24T01:55:27.226Z",
   "addedAt": "2026-10-24T08:01:17.051Z",
   "tvmaze": {
     "id": 262,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 3,
-    "live": 1,
+    "live": 0,
     "review": 0,
-    "missing": 2,
-    "pct": 33
+    "missing": 3,
+    "pct": 0
   },
   "seasons": [
     {
@@ -27,20 +27,8 @@
           "number": 1,
           "name": "Episode 1",
           "airdate": "2014-09-23",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "taxi.-driver.-s-01-e-01.720p.-web-dl.-h-264.-aac-legendado.",
-            "itemTitle": "Taxi Driver 2021 - S01.E01 [720p] - Legendado.",
-            "file": "Taxi.Driver.S01E01.720p.WEB-DL.H264.AAC-Legendado..m4v",
-            "name": "Taxi.Driver.S01E01.720p.WEB-DL.H264.AAC-Legendado.",
-            "url": "https://archive.org/download/taxi.-driver.-s-01-e-01.720p.-web-dl.-h-264.-aac-legendado./Taxi.Driver.S01E01.720p.WEB-DL.H264.AAC-Legendado..m4v",
-            "seconds": 3984,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 717
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

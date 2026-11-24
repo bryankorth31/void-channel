@@ -3,7 +3,7 @@
   "slug": "mythic-warriors",
   "type": "Animated",
   "network": "CBS",
-  "matchedAt": "2026-10-22T09:40:29.081Z",
+  "matchedAt": "2026-11-24T01:53:35.297Z",
   "addedAt": "2026-10-22T09:40:29.081Z",
   "tvmaze": {
     "id": 18463,
@@ -43,8 +43,8 @@
           },
           "alternates": [
             {
-              "conf": 0.9,
-              "why": "S/E in filename",
+              "conf": 1,
+              "why": "S/E in filename + title match",
               "item": "mythic-warriors-guardians-of-the-legend-s-01-e-01-andromeda-the-warrior-princess",
               "itemTitle": "Mythic Warriors Guardians Of The Legend (1998-2000)",
               "file": "Mythic Warriors Guardians of the Legend S01E01 Andromeda the Warrior Princess.mp4",
@@ -89,8 +89,8 @@
           "airdate": "1998-11-14",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "mythic-warriors-guardians-of-the-legend-s-01-e-01-andromeda-the-warrior-princess",
             "itemTitle": "Mythic Warriors Guardians Of The Legend (1998-2000)",
             "file": "Mythic Warriors Guardians of the Legend S01E02 Hercules and Iolas.mp4",
@@ -149,8 +149,8 @@
           "airdate": "1998-11-21",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "mythic-warriors-guardians-of-the-legend-s-01-e-01-andromeda-the-warrior-princess",
             "itemTitle": "Mythic Warriors Guardians Of The Legend (1998-2000)",
             "file": "Mythic Warriors Guardians of the Legend S01E03 Ulysses and the Journey Home.mp4",
@@ -209,8 +209,8 @@
           "airdate": "1998-11-28",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "mythic-warriors-guardians-of-the-legend-s-01-e-01-andromeda-the-warrior-princess",
             "itemTitle": "Mythic Warriors Guardians Of The Legend (1998-2000)",
             "file": "Mythic Warriors Guardians of the Legend S01E04 Perseus the Search for Medusa.mp4",
@@ -269,19 +269,32 @@
           "airdate": "1998-12-05",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "mythic-warriors-guardians-of-the-legend",
-            "itemTitle": "Mythic Warriors Guardians Of The Legend (1998) Complete Series",
-            "file": "Mythic Warriors Guardians of the Legend S1 E05 - Jason and the.mp4",
-            "name": "Mythic Warriors Guardians of the Legend S1 E05 - Jason and the",
-            "url": "https://archive.org/download/mythic-warriors-guardians-of-the-legend/Mythic%20Warriors%20Guardians%20of%20the%20Legend%20S1%20E05%20-%20Jason%20and%20the.mp4",
-            "seconds": 1352,
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "mythic-warriors-guardians-of-the-legend-s-01-e-01-andromeda-the-warrior-princess",
+            "itemTitle": "Mythic Warriors Guardians Of The Legend (1998-2000)",
+            "file": "Mythic Warriors Guardians of the Legend S01E05 Jason and the Argonauts.mp4",
+            "name": "Mythic Warriors Guardians of the Legend S01E05 Jason and the Argonauts",
+            "url": "https://archive.org/download/mythic-warriors-guardians-of-the-legend-s-01-e-01-andromeda-the-warrior-princess/Mythic%20Warriors%20Guardians%20of%20the%20Legend%20S01E05%20Jason%20and%20the%20Argonauts.mp4",
+            "seconds": 1357,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 87
+            "sizeMB": 54
           },
           "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "mythic-warriors-guardians-of-the-legend",
+              "itemTitle": "Mythic Warriors Guardians Of The Legend (1998) Complete Series",
+              "file": "Mythic Warriors Guardians of the Legend S1 E05 - Jason and the.mp4",
+              "name": "Mythic Warriors Guardians of the Legend S1 E05 - Jason and the",
+              "url": "https://archive.org/download/mythic-warriors-guardians-of-the-legend/Mythic%20Warriors%20Guardians%20of%20the%20Legend%20S1%20E05%20-%20Jason%20and%20the.mp4",
+              "seconds": 1352,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 87
+            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -294,19 +307,6 @@
               "format": "h.264 IA",
               "playable": true,
               "sizeMB": 87
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "mythic-warriors-guardians-of-the-legend-s-01-e-01-andromeda-the-warrior-princess",
-              "itemTitle": "Mythic Warriors Guardians Of The Legend (1998-2000)",
-              "file": "Mythic Warriors Guardians of the Legend S01E05 Jason and the Argonauts.mp4",
-              "name": "Mythic Warriors Guardians of the Legend S01E05 Jason and the Argonauts",
-              "url": "https://archive.org/download/mythic-warriors-guardians-of-the-legend-s-01-e-01-andromeda-the-warrior-princess/Mythic%20Warriors%20Guardians%20of%20the%20Legend%20S01E05%20Jason%20and%20the%20Argonauts.mp4",
-              "seconds": 1357,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 54
             },
             {
               "conf": 0.85,
@@ -329,8 +329,8 @@
           "airdate": "1998-12-12",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "mythic-warriors-guardians-of-the-legend-s-01-e-01-andromeda-the-warrior-princess",
             "itemTitle": "Mythic Warriors Guardians Of The Legend (1998-2000)",
             "file": "Mythic Warriors Guardians of the Legend S01E06 Persephone and the Winter Seeds.mp4",
@@ -389,8 +389,8 @@
           "airdate": "1999-12-19",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "mythic-warriors-guardians-of-the-legend-s-01-e-01-andromeda-the-warrior-princess",
             "itemTitle": "Mythic Warriors Guardians Of The Legend (1998-2000)",
             "file": "Mythic Warriors Guardians of the Legend S01E07 Icarus and Daedalus.mp4",
@@ -449,8 +449,8 @@
           "airdate": "1999-12-26",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "mythic-warriors-guardians-of-the-legend-s-01-e-01-andromeda-the-warrior-princess",
             "itemTitle": "Mythic Warriors Guardians Of The Legend (1998-2000)",
             "file": "Mythic Warriors Guardians of the Legend S01E08 Ulysses and Circe.mp4",
@@ -509,8 +509,8 @@
           "airdate": "1999-01-02",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "mythic-warriors-guardians-of-the-legend-s-01-e-01-andromeda-the-warrior-princess",
             "itemTitle": "Mythic Warriors Guardians Of The Legend (1998-2000)",
             "file": "Mythic Warriors Guardians of the Legend S01E09 Atalanta the Wild Girl.mp4",
@@ -569,8 +569,8 @@
           "airdate": "1999-01-09",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "mythic-warriors-guardians-of-the-legend-s-01-e-01-andromeda-the-warrior-princess",
             "itemTitle": "Mythic Warriors Guardians Of The Legend (1998-2000)",
             "file": "Mythic Warriors Guardians of the Legend S01E10 Prometheus and Pandora's Box.mp4",
@@ -629,8 +629,8 @@
           "airdate": "1999-01-16",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "mythic-warriors-guardians-of-the-legend-s-01-e-01-andromeda-the-warrior-princess",
             "itemTitle": "Mythic Warriors Guardians Of The Legend (1998-2000)",
             "file": "Mythic Warriors Guardians of the Legend S01E11 Bellerophon and Pegasus.mp4",
@@ -689,8 +689,8 @@
           "airdate": "1999-01-23",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "mythic-warriors-guardians-of-the-legend-s-01-e-01-andromeda-the-warrior-princess",
             "itemTitle": "Mythic Warriors Guardians Of The Legend (1998-2000)",
             "file": "Mythic Warriors Guardians of the Legend S01E12 Theseus and the Minotaur.mp4",
@@ -749,8 +749,8 @@
           "airdate": "1999-01-30",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "mythic-warriors-guardians-of-the-legend-s-01-e-01-andromeda-the-warrior-princess",
             "itemTitle": "Mythic Warriors Guardians Of The Legend (1998-2000)",
             "file": "Mythic Warriors Guardians of the Legend S01E13 The Labours of Hercules.mp4",
@@ -828,8 +828,8 @@
           },
           "alternates": [
             {
-              "conf": 0.9,
-              "why": "S/E in filename",
+              "conf": 1,
+              "why": "S/E in filename + title match",
               "item": "mythic-warriors-guardians-of-the-legend-s-01-e-01-andromeda-the-warrior-princess",
               "itemTitle": "Mythic Warriors Guardians Of The Legend (1998-2000)",
               "file": "Mythic Warriors Guardians of the Legend S02E01 Psyche and Eros.mp4",
@@ -874,8 +874,8 @@
           "airdate": "1999-10-02",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "mythic-warriors-guardians-of-the-legend-s-01-e-01-andromeda-the-warrior-princess",
             "itemTitle": "Mythic Warriors Guardians Of The Legend (1998-2000)",
             "file": "Mythic Warriors Guardians of the Legend S02E02 Ulysses and the Trojan Horse.mp4",
@@ -934,8 +934,8 @@
           "airdate": "1999-10-09",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "mythic-warriors-guardians-of-the-legend-s-01-e-01-andromeda-the-warrior-princess",
             "itemTitle": "Mythic Warriors Guardians Of The Legend (1998-2000)",
             "file": "Mythic Warriors Guardians of the Legend S02E03 Ulysses and Penelope.mp4",
@@ -1008,8 +1008,8 @@
           },
           "alternates": [
             {
-              "conf": 0.9,
-              "why": "S/E in filename",
+              "conf": 1,
+              "why": "S/E in filename + title match",
               "item": "mythic-warriors-guardians-of-the-legend-s-01-e-01-andromeda-the-warrior-princess",
               "itemTitle": "Mythic Warriors Guardians Of The Legend (1998-2000)",
               "file": "Mythic Warriors Guardians of the Legend S02E04 Hercules and the Golden Apples.mp4",
@@ -1068,8 +1068,8 @@
           },
           "alternates": [
             {
-              "conf": 0.9,
-              "why": "S/E in filename",
+              "conf": 1,
+              "why": "S/E in filename + title match",
               "item": "mythic-warriors-guardians-of-the-legend-s-01-e-01-andromeda-the-warrior-princess",
               "itemTitle": "Mythic Warriors Guardians Of The Legend (1998-2000)",
               "file": "Mythic Warriors Guardians of the Legend S02E05 Cadmus and Europa.mp4",
@@ -1114,8 +1114,8 @@
           "airdate": "1999-10-30",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "mythic-warriors-guardians-of-the-legend-s-01-e-01-andromeda-the-warrior-princess",
             "itemTitle": "Mythic Warriors Guardians Of The Legend (1998-2000)",
             "file": "Mythic Warriors Guardians of the Legend S02E06 Jason and Medea.mp4",
@@ -1174,8 +1174,8 @@
           "airdate": "1999-11-06",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "mythic-warriors-guardians-of-the-legend-s-01-e-01-andromeda-the-warrior-princess",
             "itemTitle": "Mythic Warriors Guardians Of The Legend (1998-2000)",
             "file": "Mythic Warriors Guardians of the Legend S02E07 Damon and Pythias.mp4",
@@ -1234,8 +1234,8 @@
           "airdate": "1999-11-13",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "mythic-warriors-guardians-of-the-legend-s-01-e-01-andromeda-the-warrior-princess",
             "itemTitle": "Mythic Warriors Guardians Of The Legend (1998-2000)",
             "file": "Mythic Warriors Guardians of the Legend S02E08 Castor and Pollux.mp4",
@@ -1294,8 +1294,8 @@
           "airdate": "1999-11-20",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "mythic-warriors-guardians-of-the-legend-s-01-e-01-andromeda-the-warrior-princess",
             "itemTitle": "Mythic Warriors Guardians Of The Legend (1998-2000)",
             "file": "Mythic Warriors Guardians of the Legend S02E09 The Hounds of Actaeon.mp4",
@@ -1354,8 +1354,8 @@
           "airdate": "1999-11-27",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
+            "conf": 1,
+            "why": "S/E in filename + title match",
             "item": "mythic-warriors-guardians-of-the-legend-s-01-e-01-andromeda-the-warrior-princess",
             "itemTitle": "Mythic Warriors Guardians Of The Legend (1998-2000)",
             "file": "Mythic Warriors Guardians of the Legend S02E10 Phaeton The Chariot of Fire.mp4",
@@ -1428,8 +1428,8 @@
           },
           "alternates": [
             {
-              "conf": 0.9,
-              "why": "S/E in filename",
+              "conf": 1,
+              "why": "S/E in filename + title match",
               "item": "mythic-warriors-guardians-of-the-legend-s-01-e-01-andromeda-the-warrior-princess",
               "itemTitle": "Mythic Warriors Guardians Of The Legend (1998-2000)",
               "file": "Mythic Warriors Guardians of the Legend S02E11 Androcles and the Lion.mp4",
@@ -1488,8 +1488,8 @@
           },
           "alternates": [
             {
-              "conf": 0.9,
-              "why": "S/E in filename",
+              "conf": 1,
+              "why": "S/E in filename + title match",
               "item": "mythic-warriors-guardians-of-the-legend-s-01-e-01-andromeda-the-warrior-princess",
               "itemTitle": "Mythic Warriors Guardians Of The Legend (1998-2000)",
               "file": "Mythic Warriors Guardians of the Legend S02E12 King Midas The Golden Touch.mp4",
@@ -1548,8 +1548,8 @@
           },
           "alternates": [
             {
-              "conf": 0.9,
-              "why": "S/E in filename",
+              "conf": 1,
+              "why": "S/E in filename + title match",
               "item": "mythic-warriors-guardians-of-the-legend-s-01-e-01-andromeda-the-warrior-princess",
               "itemTitle": "Mythic Warriors Guardians Of The Legend (1998-2000)",
               "file": "Mythic Warriors Guardians of the Legend S02E13 Hercules and the Titans The Last Battle.mp4",

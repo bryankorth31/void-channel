@@ -3,21 +3,21 @@
   "slug": "blackadder",
   "type": "Classic TV",
   "network": "BBC One",
-  "matchedAt": "2026-10-19T04:12:28.248Z",
-  "addedAt": "2026-10-15T12:09:00.975Z",
+  "matchedAt": "2026-11-24T01:52:34.842Z",
+  "selfListed": true,
   "tvmaze": {
-    "id": 1072,
+    "id": null,
     "name": "Blackadder",
-    "runtime": 30,
-    "premiered": "1983-06-15",
+    "runtime": null,
+    "premiered": null,
     "network": "BBC One"
   },
   "coverage": {
-    "total": 24,
+    "total": 63,
     "live": 12,
-    "review": 6,
-    "missing": 6,
-    "pct": 75
+    "review": 51,
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -25,12 +25,9 @@
       "episodes": [
         {
           "number": 1,
-          "name": "The Foretelling",
-          "airdate": "1983-06-15",
+          "name": "ep01 captain cook",
           "state": "REVIEW",
           "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
             "item": "blackadder-iv-goes-forth",
             "itemTitle": "Blackadder Goes Forth (Complete Fourth Series)",
             "file": "Ep01 - Captain Cook.mp4",
@@ -39,32 +36,21 @@
             "seconds": 1753,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 176
+            "sizeMB": 176,
+            "ep": {
+              "season": null,
+              "episode": 1
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 1 of 45 in \"Blackadder Remastered: The Ultimate Coll\"",
-              "item": "blackadder-remastered",
-              "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
-              "file": "1 The Black Adder (Series 1)3.mp4",
-              "name": "1 The Black Adder (Series 1)3",
-              "url": "https://archive.org/download/blackadder-remastered/1%20The%20Black%20Adder%20(Series%201)3.mp4",
-              "seconds": 2012,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 196
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 2,
-          "name": "Born to Be King",
-          "airdate": "1983-06-22",
+          "name": "ep02 corporal punishment",
           "state": "REVIEW",
           "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
             "item": "blackadder-iv-goes-forth",
             "itemTitle": "Blackadder Goes Forth (Complete Fourth Series)",
             "file": "Ep02 - Corporal Punishment.mp4",
@@ -73,32 +59,21 @@
             "seconds": 1758,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 177
+            "sizeMB": 177,
+            "ep": {
+              "season": null,
+              "episode": 2
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 2 of 45 in \"Blackadder Remastered: The Ultimate Coll\"",
-              "item": "blackadder-remastered",
-              "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
-              "file": "1 The Black Adder (Series 1)4.mp4",
-              "name": "1 The Black Adder (Series 1)4",
-              "url": "https://archive.org/download/blackadder-remastered/1%20The%20Black%20Adder%20(Series%201)4.mp4",
-              "seconds": 2029,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 197
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 3,
-          "name": "The Archbishop",
-          "airdate": "1983-06-29",
+          "name": "ep03 major star",
           "state": "REVIEW",
           "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
             "item": "blackadder-iv-goes-forth",
             "itemTitle": "Blackadder Goes Forth (Complete Fourth Series)",
             "file": "Ep03 - Major Star.mp4",
@@ -107,32 +82,21 @@
             "seconds": 1746,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 175
+            "sizeMB": 175,
+            "ep": {
+              "season": null,
+              "episode": 3
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 3 of 45 in \"Blackadder Remastered: The Ultimate Coll\"",
-              "item": "blackadder-remastered",
-              "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
-              "file": "1 The Black Adder (Series 1)5.mp4",
-              "name": "1 The Black Adder (Series 1)5",
-              "url": "https://archive.org/download/blackadder-remastered/1%20The%20Black%20Adder%20(Series%201)5.mp4",
-              "seconds": 1957,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 191
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 4,
-          "name": "The Queen of Spain's Beard",
-          "airdate": "1983-07-06",
+          "name": "ep04 private plane",
           "state": "REVIEW",
           "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
             "item": "blackadder-iv-goes-forth",
             "itemTitle": "Blackadder Goes Forth (Complete Fourth Series)",
             "file": "Ep04 - Private Plane.mp4",
@@ -141,32 +105,21 @@
             "seconds": 1740,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 181
+            "sizeMB": 181,
+            "ep": {
+              "season": null,
+              "episode": 4
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 4 of 45 in \"Blackadder Remastered: The Ultimate Coll\"",
-              "item": "blackadder-remastered",
-              "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
-              "file": "1 The Black Adder (Series 1)6.mp4",
-              "name": "1 The Black Adder (Series 1)6",
-              "url": "https://archive.org/download/blackadder-remastered/1%20The%20Black%20Adder%20(Series%201)6.mp4",
-              "seconds": 2014,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 196
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 5,
-          "name": "Witchsmeller Pursuivant",
-          "airdate": "1983-07-13",
+          "name": "ep05 general hospital",
           "state": "REVIEW",
           "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
             "item": "blackadder-iv-goes-forth",
             "itemTitle": "Blackadder Goes Forth (Complete Fourth Series)",
             "file": "Ep05 - General Hospital.mp4",
@@ -175,32 +128,21 @@
             "seconds": 1684,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 171
+            "sizeMB": 171,
+            "ep": {
+              "season": null,
+              "episode": 5
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 5 of 45 in \"Blackadder Remastered: The Ultimate Coll\"",
-              "item": "blackadder-remastered",
-              "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
-              "file": "1 The Black Adder (Series 1)7.mp4",
-              "name": "1 The Black Adder (Series 1)7",
-              "url": "https://archive.org/download/blackadder-remastered/1%20The%20Black%20Adder%20(Series%201)7.mp4",
-              "seconds": 1808,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 175
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 6,
-          "name": "The Black Seal",
-          "airdate": "1983-07-20",
+          "name": "ep06 goodbyeee",
           "state": "REVIEW",
           "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
             "item": "blackadder-iv-goes-forth",
             "itemTitle": "Blackadder Goes Forth (Complete Fourth Series)",
             "file": "Ep06 - Goodbyeee.mp4",
@@ -209,75 +151,914 @@
             "seconds": 1766,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 179
+            "sizeMB": 179,
+            "ep": {
+              "season": null,
+              "episode": 6
+            },
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 6 of 45 in \"Blackadder Remastered: The Ultimate Coll\"",
-              "item": "blackadder-remastered",
-              "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
-              "file": "1 The Black Adder (Series 1)8.mp4",
-              "name": "1 The Black Adder (Series 1)8",
-              "url": "https://archive.org/download/blackadder-remastered/1%20The%20Black%20Adder%20(Series%201)8.mp4",
-              "seconds": 1866,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 181
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "season": 2,
-      "episodes": [
-        {
-          "number": 1,
-          "name": "Bells",
-          "airdate": "1986-01-09",
-          "state": "MISSING",
-          "file": null,
           "alternates": []
         },
         {
-          "number": 2,
-          "name": "Head",
-          "airdate": "1986-01-16",
-          "state": "MISSING",
-          "file": null,
+          "number": 7,
+          "name": "1 the black adder series 1 3",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "1 The Black Adder (Series 1)3.mp4",
+            "name": "1 The Black Adder (Series 1)3",
+            "url": "https://archive.org/download/blackadder-remastered/1%20The%20Black%20Adder%20(Series%201)3.mp4",
+            "seconds": 2012,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 196,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 3,
-          "name": "Potato",
-          "airdate": "1986-01-23",
-          "state": "MISSING",
-          "file": null,
+          "number": 8,
+          "name": "1 the black adder series 1 4",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "1 The Black Adder (Series 1)4.mp4",
+            "name": "1 The Black Adder (Series 1)4",
+            "url": "https://archive.org/download/blackadder-remastered/1%20The%20Black%20Adder%20(Series%201)4.mp4",
+            "seconds": 2029,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 197,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 4,
-          "name": "Money",
-          "airdate": "1986-02-05",
-          "state": "MISSING",
-          "file": null,
+          "number": 9,
+          "name": "1 the black adder series 1 5",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "1 The Black Adder (Series 1)5.mp4",
+            "name": "1 The Black Adder (Series 1)5",
+            "url": "https://archive.org/download/blackadder-remastered/1%20The%20Black%20Adder%20(Series%201)5.mp4",
+            "seconds": 1957,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 191,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 5,
-          "name": "Beer",
-          "airdate": "1986-02-13",
-          "state": "MISSING",
-          "file": null,
+          "number": 10,
+          "name": "1 the black adder series 1 6",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "1 The Black Adder (Series 1)6.mp4",
+            "name": "1 The Black Adder (Series 1)6",
+            "url": "https://archive.org/download/blackadder-remastered/1%20The%20Black%20Adder%20(Series%201)6.mp4",
+            "seconds": 2014,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 196,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         },
         {
-          "number": 6,
-          "name": "Chains",
-          "airdate": "1986-02-20",
-          "state": "MISSING",
-          "file": null,
+          "number": 11,
+          "name": "1 the black adder series 1 7",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "1 The Black Adder (Series 1)7.mp4",
+            "name": "1 The Black Adder (Series 1)7",
+            "url": "https://archive.org/download/blackadder-remastered/1%20The%20Black%20Adder%20(Series%201)7.mp4",
+            "seconds": 1808,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 175,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 12,
+          "name": "1 the black adder series 1 8",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "1 The Black Adder (Series 1)8.mp4",
+            "name": "1 The Black Adder (Series 1)8",
+            "url": "https://archive.org/download/blackadder-remastered/1%20The%20Black%20Adder%20(Series%201)8.mp4",
+            "seconds": 1866,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 181,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 13,
+          "name": "2 ii series 2",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "2 Blackadder II (Series 2).mp4",
+            "name": "2 Blackadder II (Series 2)",
+            "url": "https://archive.org/download/blackadder-remastered/2%20Blackadder%20II%20(Series%202).mp4",
+            "seconds": 1813,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 177,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 14,
+          "name": "2 ii series 2 4",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "2 Blackadder II (Series 2)4.mp4",
+            "name": "2 Blackadder II (Series 2)4",
+            "url": "https://archive.org/download/blackadder-remastered/2%20Blackadder%20II%20(Series%202)4.mp4",
+            "seconds": 1813,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 177,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 15,
+          "name": "2 ii series 2 5",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "2 Blackadder II (Series 2)5.mp4",
+            "name": "2 Blackadder II (Series 2)5",
+            "url": "https://archive.org/download/blackadder-remastered/2%20Blackadder%20II%20(Series%202)5.mp4",
+            "seconds": 1607,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 156,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 16,
+          "name": "2 ii series 2 6",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "2 Blackadder II (Series 2)6.mp4",
+            "name": "2 Blackadder II (Series 2)6",
+            "url": "https://archive.org/download/blackadder-remastered/2%20Blackadder%20II%20(Series%202)6.mp4",
+            "seconds": 1607,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 156,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 17,
+          "name": "2 ii series 2 7",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "2 Blackadder II (Series 2)7.mp4",
+            "name": "2 Blackadder II (Series 2)7",
+            "url": "https://archive.org/download/blackadder-remastered/2%20Blackadder%20II%20(Series%202)7.mp4",
+            "seconds": 1805,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 176,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 18,
+          "name": "2 ii series 2 8",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "2 Blackadder II (Series 2)8.mp4",
+            "name": "2 Blackadder II (Series 2)8",
+            "url": "https://archive.org/download/blackadder-remastered/2%20Blackadder%20II%20(Series%202)8.mp4",
+            "seconds": 1805,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 176,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 19,
+          "name": "2 ii series 2 9",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "2 Blackadder II (Series 2)9.mp4",
+            "name": "2 Blackadder II (Series 2)9",
+            "url": "https://archive.org/download/blackadder-remastered/2%20Blackadder%20II%20(Series%202)9.mp4",
+            "seconds": 1797,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 175,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 20,
+          "name": "2 ii series 2 10",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "2 Blackadder II (Series 2)10.mp4",
+            "name": "2 Blackadder II (Series 2)10",
+            "url": "https://archive.org/download/blackadder-remastered/2%20Blackadder%20II%20(Series%202)10.mp4",
+            "seconds": 1797,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 175,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 21,
+          "name": "2 ii series 2 11",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "2 Blackadder II (Series 2)11.mp4",
+            "name": "2 Blackadder II (Series 2)11",
+            "url": "https://archive.org/download/blackadder-remastered/2%20Blackadder%20II%20(Series%202)11.mp4",
+            "seconds": 1756,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 171,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 22,
+          "name": "2 ii series 2 12",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "2 Blackadder II (Series 2)12.mp4",
+            "name": "2 Blackadder II (Series 2)12",
+            "url": "https://archive.org/download/blackadder-remastered/2%20Blackadder%20II%20(Series%202)12.mp4",
+            "seconds": 1756,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 171,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 23,
+          "name": "2 ii series 2 13",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "2 Blackadder II (Series 2)13.mp4",
+            "name": "2 Blackadder II (Series 2)13",
+            "url": "https://archive.org/download/blackadder-remastered/2%20Blackadder%20II%20(Series%202)13.mp4",
+            "seconds": 1759,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 171,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 24,
+          "name": "2 ii series 2 14",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "2 Blackadder II (Series 2)14.mp4",
+            "name": "2 Blackadder II (Series 2)14",
+            "url": "https://archive.org/download/blackadder-remastered/2%20Blackadder%20II%20(Series%202)14.mp4",
+            "seconds": 1759,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 171,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 25,
+          "name": "3 iii series 3",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "3 Blackadder III (Series 3).mp4",
+            "name": "3 Blackadder III (Series 3)",
+            "url": "https://archive.org/download/blackadder-remastered/3%20Blackadder%20III%20(Series%203).mp4",
+            "seconds": 1794,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 175,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 26,
+          "name": "3 iii series 3 3",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "3 Blackadder III (Series 3)3.mp4",
+            "name": "3 Blackadder III (Series 3)3",
+            "url": "https://archive.org/download/blackadder-remastered/3%20Blackadder%20III%20(Series%203)3.mp4",
+            "seconds": 1764,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 172,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 27,
+          "name": "3 iii series 3 4",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "3 Blackadder III (Series 3)4.mp4",
+            "name": "3 Blackadder III (Series 3)4",
+            "url": "https://archive.org/download/blackadder-remastered/3%20Blackadder%20III%20(Series%203)4.mp4",
+            "seconds": 1764,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 172,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 28,
+          "name": "3 iii series 3 5",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "3 Blackadder III (Series 3)5.mp4",
+            "name": "3 Blackadder III (Series 3)5",
+            "url": "https://archive.org/download/blackadder-remastered/3%20Blackadder%20III%20(Series%203)5.mp4",
+            "seconds": 1758,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 172,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 29,
+          "name": "3 iii series 3 6",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "3 Blackadder III (Series 3)6.mp4",
+            "name": "3 Blackadder III (Series 3)6",
+            "url": "https://archive.org/download/blackadder-remastered/3%20Blackadder%20III%20(Series%203)6.mp4",
+            "seconds": 1758,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 172,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 30,
+          "name": "3 iii series 3 8",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "3 Blackadder III (Series 3)8.mp4",
+            "name": "3 Blackadder III (Series 3)8",
+            "url": "https://archive.org/download/blackadder-remastered/3%20Blackadder%20III%20(Series%203)8.mp4",
+            "seconds": 1794,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 175,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 31,
+          "name": "3 iii series 3 9",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "3 Blackadder III (Series 3)9.mp4",
+            "name": "3 Blackadder III (Series 3)9",
+            "url": "https://archive.org/download/blackadder-remastered/3%20Blackadder%20III%20(Series%203)9.mp4",
+            "seconds": 1598,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 156,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 32,
+          "name": "3 iii series 3 10",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "3 Blackadder III (Series 3)10.mp4",
+            "name": "3 Blackadder III (Series 3)10",
+            "url": "https://archive.org/download/blackadder-remastered/3%20Blackadder%20III%20(Series%203)10.mp4",
+            "seconds": 1598,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 156,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 33,
+          "name": "3 iii series 3 11",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "3 Blackadder III (Series 3)11.mp4",
+            "name": "3 Blackadder III (Series 3)11",
+            "url": "https://archive.org/download/blackadder-remastered/3%20Blackadder%20III%20(Series%203)11.mp4",
+            "seconds": 1772,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 173,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 34,
+          "name": "3 iii series 3 12",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "3 Blackadder III (Series 3)12.mp4",
+            "name": "3 Blackadder III (Series 3)12",
+            "url": "https://archive.org/download/blackadder-remastered/3%20Blackadder%20III%20(Series%203)12.mp4",
+            "seconds": 1772,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 173,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 35,
+          "name": "3 iii series 3 13",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "3 Blackadder III (Series 3)13.mp4",
+            "name": "3 Blackadder III (Series 3)13",
+            "url": "https://archive.org/download/blackadder-remastered/3%20Blackadder%20III%20(Series%203)13.mp4",
+            "seconds": 1792,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 175,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 36,
+          "name": "3 iii series 3 14",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "3 Blackadder III (Series 3)14.mp4",
+            "name": "3 Blackadder III (Series 3)14",
+            "url": "https://archive.org/download/blackadder-remastered/3%20Blackadder%20III%20(Series%203)14.mp4",
+            "seconds": 1792,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 175,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 37,
+          "name": "4 goes forth series 4",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "4 Blackadder Goes Forth (Series 4).mp4",
+            "name": "4 Blackadder Goes Forth (Series 4)",
+            "url": "https://archive.org/download/blackadder-remastered/4%20Blackadder%20Goes%20Forth%20(Series%204).mp4",
+            "seconds": 1766,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 179,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 38,
+          "name": "4 goes forth series 4 3",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "4 Blackadder Goes Forth (Series 4)3.mp4",
+            "name": "4 Blackadder Goes Forth (Series 4)3",
+            "url": "https://archive.org/download/blackadder-remastered/4%20Blackadder%20Goes%20Forth%20(Series%204)3.mp4",
+            "seconds": 1753,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 176,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 39,
+          "name": "4 goes forth series 4 4",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "4 Blackadder Goes Forth (Series 4)4.mp4",
+            "name": "4 Blackadder Goes Forth (Series 4)4",
+            "url": "https://archive.org/download/blackadder-remastered/4%20Blackadder%20Goes%20Forth%20(Series%204)4.mp4",
+            "seconds": 1753,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 176,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 40,
+          "name": "4 goes forth series 4 5",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "4 Blackadder Goes Forth (Series 4)5.mp4",
+            "name": "4 Blackadder Goes Forth (Series 4)5",
+            "url": "https://archive.org/download/blackadder-remastered/4%20Blackadder%20Goes%20Forth%20(Series%204)5.mp4",
+            "seconds": 1758,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 177,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 41,
+          "name": "4 goes forth series 4 6",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "4 Blackadder Goes Forth (Series 4)6.mp4",
+            "name": "4 Blackadder Goes Forth (Series 4)6",
+            "url": "https://archive.org/download/blackadder-remastered/4%20Blackadder%20Goes%20Forth%20(Series%204)6.mp4",
+            "seconds": 1758,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 177,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 42,
+          "name": "4 goes forth series 4 7",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "4 Blackadder Goes Forth (Series 4)7.mp4",
+            "name": "4 Blackadder Goes Forth (Series 4)7",
+            "url": "https://archive.org/download/blackadder-remastered/4%20Blackadder%20Goes%20Forth%20(Series%204)7.mp4",
+            "seconds": 1746,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 175,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 43,
+          "name": "4 goes forth series 4 8",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "4 Blackadder Goes Forth (Series 4)8.mp4",
+            "name": "4 Blackadder Goes Forth (Series 4)8",
+            "url": "https://archive.org/download/blackadder-remastered/4%20Blackadder%20Goes%20Forth%20(Series%204)8.mp4",
+            "seconds": 1746,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 175,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 44,
+          "name": "4 goes forth series 4 9",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "4 Blackadder Goes Forth (Series 4)9.mp4",
+            "name": "4 Blackadder Goes Forth (Series 4)9",
+            "url": "https://archive.org/download/blackadder-remastered/4%20Blackadder%20Goes%20Forth%20(Series%204)9.mp4",
+            "seconds": 1736,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 175,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 45,
+          "name": "4 goes forth series 4 10",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "4 Blackadder Goes Forth (Series 4)10.mp4",
+            "name": "4 Blackadder Goes Forth (Series 4)10",
+            "url": "https://archive.org/download/blackadder-remastered/4%20Blackadder%20Goes%20Forth%20(Series%204)10.mp4",
+            "seconds": 1736,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 175,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 46,
+          "name": "4 goes forth series 4 11",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "4 Blackadder Goes Forth (Series 4)11.mp4",
+            "name": "4 Blackadder Goes Forth (Series 4)11",
+            "url": "https://archive.org/download/blackadder-remastered/4%20Blackadder%20Goes%20Forth%20(Series%204)11.mp4",
+            "seconds": 1684,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 171,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 47,
+          "name": "4 goes forth series 4 12",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "4 Blackadder Goes Forth (Series 4)12.mp4",
+            "name": "4 Blackadder Goes Forth (Series 4)12",
+            "url": "https://archive.org/download/blackadder-remastered/4%20Blackadder%20Goes%20Forth%20(Series%204)12.mp4",
+            "seconds": 1684,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 171,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 48,
+          "name": "4 goes forth series 4 14",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "4 Blackadder Goes Forth (Series 4)14.mp4",
+            "name": "4 Blackadder Goes Forth (Series 4)14",
+            "url": "https://archive.org/download/blackadder-remastered/4%20Blackadder%20Goes%20Forth%20(Series%204)14.mp4",
+            "seconds": 1766,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 179,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 49,
+          "name": "5 blackadders christmas carol back and forth the cavalier years baldricks diary3",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "5 Blackadder's Christmas Carol, Back and Forth, The Cavalier Years, Baldrick's Diary3.mp4",
+            "name": "5 Blackadder's Christmas Carol, Back and Forth, The Cavalier Years, Baldrick's Diary3",
+            "url": "https://archive.org/download/blackadder-remastered/5%20Blackadder's%20Christmas%20Carol%2C%20Back%20and%20Forth%2C%20The%20Cavalier%20Years%2C%20Baldrick's%20Diary3.mp4",
+            "seconds": 2018,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 205,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 50,
+          "name": "5 blackadders christmas carol back and forth the cavalier years baldricks diary4",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "5 Blackadder's Christmas Carol, Back and Forth, The Cavalier Years, Baldrick's Diary4.mp4",
+            "name": "5 Blackadder's Christmas Carol, Back and Forth, The Cavalier Years, Baldrick's Diary4",
+            "url": "https://archive.org/download/blackadder-remastered/5%20Blackadder's%20Christmas%20Carol%2C%20Back%20and%20Forth%2C%20The%20Cavalier%20Years%2C%20Baldrick's%20Diary4.mp4",
+            "seconds": 904,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 91,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
+          "alternates": []
+        },
+        {
+          "number": 51,
+          "name": "5 blackadders christmas carol back and forth the cavalier years baldricks diary5",
+          "state": "REVIEW",
+          "file": {
+            "item": "blackadder-remastered",
+            "itemTitle": "Blackadder Remastered: The Ultimate Collection [PAL DVD ISO]",
+            "file": "5 Blackadder's Christmas Carol, Back and Forth, The Cavalier Years, Baldrick's Diary5.mp4",
+            "name": "5 Blackadder's Christmas Carol, Back and Forth, The Cavalier Years, Baldrick's Diary5",
+            "url": "https://archive.org/download/blackadder-remastered/5%20Blackadder's%20Christmas%20Carol%2C%20Back%20and%20Forth%2C%20The%20Cavalier%20Years%2C%20Baldrick's%20Diary5.mp4",
+            "seconds": 1784,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 176,
+            "ep": null,
+            "conf": 0.6,
+            "why": "self-listed: no TVmaze entry; order from the files"
+          },
           "alternates": []
         }
       ]
@@ -287,12 +1068,9 @@
       "episodes": [
         {
           "number": 1,
-          "name": "Dish and Dishonesty",
-          "airdate": "1987-09-17",
+          "name": "dish and dishonesty eac3 2 0 ivy",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
             "item": "blackadder-s03",
             "itemTitle": "Blackadder - Season 3 (1987)",
             "file": "Blackadder.S03E01.Dish.and.Dishonesty.1080p.BluRay.EAC3.2.0.1080p.x265-iVy.mp4",
@@ -302,18 +1080,21 @@
             "format": "h.264",
             "playable": true,
             "codecRisk": "audio (EAC3)",
-            "sizeMB": 170
+            "sizeMB": 170,
+            "ep": {
+              "season": 3,
+              "episode": 1
+            },
+            "conf": 1,
+            "why": "S/E in filename + title match | kept LIVE inside the self-list"
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "Ink and Incapability",
-          "airdate": "1987-09-24",
+          "name": "ink and incapability eac3 2 0 ivy",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
             "item": "blackadder-s03",
             "itemTitle": "Blackadder - Season 3 (1987)",
             "file": "Blackadder.S03E02.Ink.and.Incapability.1080p.BluRay.EAC3.2.0.1080p.x265-iVy.mp4",
@@ -323,18 +1104,21 @@
             "format": "h.264",
             "playable": true,
             "codecRisk": "audio (EAC3)",
-            "sizeMB": 169
+            "sizeMB": 169,
+            "ep": {
+              "season": 3,
+              "episode": 2
+            },
+            "conf": 1,
+            "why": "S/E in filename + title match | kept LIVE inside the self-list"
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "Nob and Nobility",
-          "airdate": "1987-10-01",
+          "name": "nob and nobility eac3 2 0 ivy",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
             "item": "blackadder-s03",
             "itemTitle": "Blackadder - Season 3 (1987)",
             "file": "Blackadder.S03E03.Nob.and.Nobility.1080p.BluRay.EAC3.2.0.1080p.x265-iVy.mp4",
@@ -344,18 +1128,21 @@
             "format": "h.264",
             "playable": true,
             "codecRisk": "audio (EAC3)",
-            "sizeMB": 173
+            "sizeMB": 173,
+            "ep": {
+              "season": 3,
+              "episode": 3
+            },
+            "conf": 1,
+            "why": "S/E in filename + title match | kept LIVE inside the self-list"
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "Sense and Senility",
-          "airdate": "1987-10-08",
+          "name": "sense and senility eac3 2 0 ivy",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
             "item": "blackadder-s03",
             "itemTitle": "Blackadder - Season 3 (1987)",
             "file": "Blackadder.S03E04.Sense.and.Senility.1080p.BluRay.EAC3.2.0.1080p.x265-iVy.mp4",
@@ -365,18 +1152,21 @@
             "format": "h.264",
             "playable": true,
             "codecRisk": "audio (EAC3)",
-            "sizeMB": 154
+            "sizeMB": 154,
+            "ep": {
+              "season": 3,
+              "episode": 4
+            },
+            "conf": 1,
+            "why": "S/E in filename + title match | kept LIVE inside the self-list"
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "Amy and Amiability",
-          "airdate": "1987-10-15",
+          "name": "amy and amiability eac3 2 0 ivy",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
             "item": "blackadder-s03",
             "itemTitle": "Blackadder - Season 3 (1987)",
             "file": "Blackadder.S03E05.Amy.and.Amiability.1080p.BluRay.EAC3.2.0.1080p.x265-iVy.mp4",
@@ -386,18 +1176,21 @@
             "format": "h.264",
             "playable": true,
             "codecRisk": "audio (EAC3)",
-            "sizeMB": 170
+            "sizeMB": 170,
+            "ep": {
+              "season": 3,
+              "episode": 5
+            },
+            "conf": 1,
+            "why": "S/E in filename + title match | kept LIVE inside the self-list"
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "Duel and Duality",
-          "airdate": "1987-10-22",
+          "name": "duel and duality eac3 2 0 ivy",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
             "item": "blackadder-s03",
             "itemTitle": "Blackadder - Season 3 (1987)",
             "file": "Blackadder.S03E06.Duel.and.Duality.1080p.BluRay.EAC3.2.0.1080p.x265-iVy.mp4",
@@ -407,7 +1200,13 @@
             "format": "h.264",
             "playable": true,
             "codecRisk": "audio (EAC3)",
-            "sizeMB": 173
+            "sizeMB": 173,
+            "ep": {
+              "season": 3,
+              "episode": 6
+            },
+            "conf": 1,
+            "why": "S/E in filename + title match | kept LIVE inside the self-list"
           },
           "alternates": []
         }
@@ -418,12 +1217,9 @@
       "episodes": [
         {
           "number": 1,
-          "name": "Captain Cook",
-          "airdate": "1989-09-28",
+          "name": "captain cook eac3 2 0 ivy",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
             "item": "blackadder-s04",
             "itemTitle": "Blackadder - Season 4 (1989)",
             "file": "Blackadder.S04E01.Captain.Cook.1080p.BluRay.EAC3.2.0.1080p.x265-iVy.mp4",
@@ -433,18 +1229,21 @@
             "format": "h.264",
             "playable": true,
             "codecRisk": "audio (EAC3)",
-            "sizeMB": 173
+            "sizeMB": 173,
+            "ep": {
+              "season": 4,
+              "episode": 1
+            },
+            "conf": 1,
+            "why": "S/E in filename + title match | kept LIVE inside the self-list"
           },
           "alternates": []
         },
         {
           "number": 2,
-          "name": "Corporal Punishment",
-          "airdate": "1989-10-05",
+          "name": "corporal punishment eac3 2 0 ivy",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
             "item": "blackadder-s04",
             "itemTitle": "Blackadder - Season 4 (1989)",
             "file": "Blackadder.S04E02.Corporal.Punishment.1080p.BluRay.EAC3.2.0.1080p.x265-iVy.mp4",
@@ -454,18 +1253,21 @@
             "format": "h.264",
             "playable": true,
             "codecRisk": "audio (EAC3)",
-            "sizeMB": 175
+            "sizeMB": 175,
+            "ep": {
+              "season": 4,
+              "episode": 2
+            },
+            "conf": 1,
+            "why": "S/E in filename + title match | kept LIVE inside the self-list"
           },
           "alternates": []
         },
         {
           "number": 3,
-          "name": "Major Star",
-          "airdate": "1989-10-12",
+          "name": "major star eac3 2 0 ivy",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
             "item": "blackadder-s04",
             "itemTitle": "Blackadder - Season 4 (1989)",
             "file": "Blackadder.S04E03.Major.Star.1080p.BluRay.EAC3.2.0.1080p.x265-iVy.mp4",
@@ -475,18 +1277,21 @@
             "format": "h.264",
             "playable": true,
             "codecRisk": "audio (EAC3)",
-            "sizeMB": 172
+            "sizeMB": 172,
+            "ep": {
+              "season": 4,
+              "episode": 3
+            },
+            "conf": 1,
+            "why": "S/E in filename + title match | kept LIVE inside the self-list"
           },
           "alternates": []
         },
         {
           "number": 4,
-          "name": "Private Plane",
-          "airdate": "1989-10-19",
+          "name": "private plane eac3 2 0 ivy",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
             "item": "blackadder-s04",
             "itemTitle": "Blackadder - Season 4 (1989)",
             "file": "Blackadder.S04E04.Private.Plane.1080p.BluRay.EAC3.2.0.1080p.x265-iVy.mp4",
@@ -496,18 +1301,21 @@
             "format": "h.264",
             "playable": true,
             "codecRisk": "audio (EAC3)",
-            "sizeMB": 173
+            "sizeMB": 173,
+            "ep": {
+              "season": 4,
+              "episode": 4
+            },
+            "conf": 1,
+            "why": "S/E in filename + title match | kept LIVE inside the self-list"
           },
           "alternates": []
         },
         {
           "number": 5,
-          "name": "General Hospital",
-          "airdate": "1989-10-26",
+          "name": "general hospital eac3 2 0 ivy",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
             "item": "blackadder-s04",
             "itemTitle": "Blackadder - Season 4 (1989)",
             "file": "Blackadder.S04E05.General.Hospital.1080p.BluRay.EAC3.2.0.1080p.x265-iVy.mp4",
@@ -517,18 +1325,21 @@
             "format": "h.264",
             "playable": true,
             "codecRisk": "audio (EAC3)",
-            "sizeMB": 169
+            "sizeMB": 169,
+            "ep": {
+              "season": 4,
+              "episode": 5
+            },
+            "conf": 1,
+            "why": "S/E in filename + title match | kept LIVE inside the self-list"
           },
           "alternates": []
         },
         {
           "number": 6,
-          "name": "Goodbyeee",
-          "airdate": "1989-11-02",
+          "name": "goodbyeee eac3 2 0 ivy",
           "state": "LIVE",
           "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
             "item": "blackadder-s04",
             "itemTitle": "Blackadder - Season 4 (1989)",
             "file": "Blackadder.S04E06.Goodbyeee.1080p.BluRay.EAC3.2.0.1080p.x265-iVy.mp4",
@@ -538,11 +1349,22 @@
             "format": "h.264",
             "playable": true,
             "codecRisk": "audio (EAC3)",
-            "sizeMB": 175
+            "sizeMB": 175,
+            "ep": {
+              "season": 4,
+              "episode": 6
+            },
+            "conf": 1,
+            "why": "S/E in filename + title match | kept LIVE inside the self-list"
           },
           "alternates": []
         }
       ]
     }
-  ]
+  ],
+  "tvmazeWeak": {
+    "id": 1072,
+    "name": "Blackadder",
+    "placed": 18
+  }
 }

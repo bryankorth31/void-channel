@@ -3,7 +3,7 @@
   "slug": "the-inbetweeners",
   "type": "British and Beyond",
   "network": "E4",
-  "matchedAt": "2026-10-19T04:11:10.504Z",
+  "matchedAt": "2026-11-24T01:50:29.770Z",
   "addedAt": "2026-10-16T07:57:03.392Z",
   "tvmaze": {
     "id": 953,
@@ -57,30 +57,17 @@
               "sizeMB": 124
             },
             {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-inbetweeners-us-incomplete",
-              "itemTitle": "The Inbetweeners US (Incomplete)",
-              "file": "The.Inbetweeners.US.S01E01.HDTV.x264-COMPULSiON.ia.mp4",
-              "name": "The.Inbetweeners.US.S01E01.HDTV",
-              "url": "https://archive.org/download/the-inbetweeners-us-incomplete/The.Inbetweeners.US.S01E01.HDTV.x264-COMPULSiON.ia.mp4",
-              "seconds": 1341,
-              "format": "h.264 IA",
+              "conf": 0.75,
+              "why": "title ~ \"First Day\" (0.95)",
+              "item": "episode-two-bunk-off",
+              "itemTitle": "The Inbetweeners - Season 1",
+              "file": "Episode One - First Day.mp4",
+              "name": "Episode One - First Day",
+              "url": "https://archive.org/download/episode-two-bunk-off/Episode%20One%20-%20First%20Day.mp4",
+              "seconds": 1307,
+              "format": "h.264",
               "playable": true,
-              "sizeMB": 194
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-inbetweeners-us-incomplete",
-              "itemTitle": "The Inbetweeners US (Incomplete)",
-              "file": "The.Inbetweeners.US.S01E01.HDTV.x264-COMPULSiON.mp4",
-              "name": "The.Inbetweeners.US.S01E01.HDTV.x264-COMPULSiON",
-              "url": "https://archive.org/download/the-inbetweeners-us-incomplete/The.Inbetweeners.US.S01E01.HDTV.x264-COMPULSiON.mp4",
-              "seconds": 1341,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 194
+              "sizeMB": 132
             }
           ]
         },

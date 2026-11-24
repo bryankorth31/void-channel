@@ -3,7 +3,7 @@
   "slug": "the-link",
   "type": "Documentary & Geographic",
   "network": "National Geographic",
-  "matchedAt": "2026-10-19T10:24:10.073Z",
+  "matchedAt": "2026-11-24T01:55:15.378Z",
   "addedAt": "2026-10-19T10:24:10.074Z",
   "tvmaze": {
     "id": 14890,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 60,
-    "live": 1,
+    "live": 0,
     "review": 0,
-    "missing": 59,
-    "pct": 2
+    "missing": 60,
+    "pct": 0
   },
   "seasons": [
     {
@@ -35,35 +35,9 @@
           "number": 2,
           "name": "Episode 2",
           "airdate": "2014-05-06",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "the-weakest-link-2021-12-23",
-            "itemTitle": "The Weakest Link - 23 December 2021",
-            "file": "The Weakest Link   S01E02, 23.12.2021 – Christmas Special.ia.mp4",
-            "name": "The Weakest Link   S01E02, 23.12",
-            "url": "https://archive.org/download/the-weakest-link-2021-12-23/The%20Weakest%20Link%20%20%20S01E02%2C%2023.12.2021%20%E2%80%93%20Christmas%20Special.ia.mp4",
-            "seconds": 2738,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 798
-          },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "the-weakest-link-2021-12-23",
-              "itemTitle": "The Weakest Link - 23 December 2021",
-              "file": "The Weakest Link   S01E02, 23.12.2021 – Christmas Special.mp4",
-              "name": "The Weakest Link   S01E02, 23.12.2021 – Christmas Special",
-              "url": "https://archive.org/download/the-weakest-link-2021-12-23/The%20Weakest%20Link%20%20%20S01E02%2C%2023.12.2021%20%E2%80%93%20Christmas%20Special.mp4",
-              "seconds": 2738,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 798
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 3,

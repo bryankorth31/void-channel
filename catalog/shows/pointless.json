@@ -3,7 +3,7 @@
   "slug": "pointless",
   "type": "Reality & Talk",
   "network": "BBC One",
-  "matchedAt": "2026-10-23T10:08:52.682Z",
+  "matchedAt": "2026-11-24T01:54:43.109Z",
   "addedAt": "2026-10-23T08:28:01.628Z",
   "tvmaze": {
     "id": 3422,
@@ -14,9 +14,9 @@
   },
   "coverage": {
     "total": 1863,
-    "live": 7,
-    "review": 2,
-    "missing": 1854,
+    "live": 0,
+    "review": 0,
+    "missing": 1863,
     "pct": 0
   },
   "seasons": [
@@ -67,20 +67,8 @@
           "number": 6,
           "name": "Episode 6",
           "airdate": "2009-09-01",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.7,
-            "why": "absolute episode number",
-            "item": "pointless-celebrities-s-4-ep-6-james-and-oliver-phelps",
-            "itemTitle": "Pointless Celebrities S4 Ep 6 James And Oliver Phelps",
-            "file": "Pointless Celebrities S4 - Ep6 James and Oliver Phelps.mp4",
-            "name": "Pointless Celebrities S4 - Ep6 James and Oliver Phelps",
-            "url": "https://archive.org/download/pointless-celebrities-s-4-ep-6-james-and-oliver-phelps/Pointless%20Celebrities%20S4%20-%20Ep6%20James%20and%20Oliver%20Phelps.mp4",
-            "seconds": 2957,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 290
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -95,20 +83,8 @@
           "number": 8,
           "name": "Episode 8",
           "airdate": "2009-09-03",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.7,
-            "why": "absolute episode number",
-            "item": "bbc-one-pointless-celebrities-series-8-episode-8-halloween-with-jedward",
-            "itemTitle": "BBC One Pointless Celebrities Series 8 Episode 8 Halloween (with Jedward)",
-            "file": "BBC One - Pointless Celebrities   Series 8 - Episode 8 Halloween (with Jedward).mp4",
-            "name": "BBC One - Pointless Celebrities   Series 8 - Episode 8 Halloween (with Jedward)",
-            "url": "https://archive.org/download/bbc-one-pointless-celebrities-series-8-episode-8-halloween-with-jedward/BBC%20One%20-%20Pointless%20Celebrities%20%20%20Series%208%20-%20Episode%208%20Halloween%20(with%20Jedward).mp4",
-            "seconds": 2910,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 285
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -605,80 +581,32 @@
           "number": 9,
           "name": "Episode 9",
           "airdate": "2010-09-09",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "pointless-celebrities-s3-e9",
-            "itemTitle": "Pointless Celebrities (11 December 2012 | S3 E9)",
-            "file": "Pointless Celebrities S3 E9.mp4",
-            "name": "Pointless Celebrities S3 E9",
-            "url": "https://archive.org/download/pointless-celebrities-s3-e9/Pointless%20Celebrities%20S3%20E9.mp4",
-            "seconds": 3604,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 174
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 10,
           "name": "Episode 10",
           "airdate": "2010-09-10",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "pointless-celebrities-s3-e10",
-            "itemTitle": "Pointless Celebrities (12 December 2012 | S3 E10)",
-            "file": "Pointless Celebrities S3 E10.mp4",
-            "name": "Pointless Celebrities S3 E10",
-            "url": "https://archive.org/download/pointless-celebrities-s3-e10/Pointless%20Celebrities%20S3%20E10.mp4",
-            "seconds": 3602,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 420
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 11,
           "name": "Episode 11",
           "airdate": "2010-09-13",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "pointless-celebrities-s3-e11",
-            "itemTitle": "Pointless Celebrities (13 December 2012 | S3 E11)",
-            "file": "Pointless Celebrities S3 E11.mp4",
-            "name": "Pointless Celebrities S3 E11",
-            "url": "https://archive.org/download/pointless-celebrities-s3-e11/Pointless%20Celebrities%20S3%20E11.mp4",
-            "seconds": 3598,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 421
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 12,
           "name": "Episode 12",
           "airdate": "2010-09-14",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "pointless-celebrities-s3-e12",
-            "itemTitle": "Pointless Celebrities (14 December 2012 | S3 E12)",
-            "file": "Pointless Celebrities S3 E12.mp4",
-            "name": "Pointless Celebrities S3 E12",
-            "url": "https://archive.org/download/pointless-celebrities-s3-e12/Pointless%20Celebrities%20S3%20E12.mp4",
-            "seconds": 3608,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 419
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -3150,20 +3078,8 @@
           "number": 8,
           "name": "Episode 8",
           "airdate": "2013-01-11",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "pointless-celebrities-series-8-episode-8-s-8-e-8-video-dailymotion",
-            "itemTitle": "Pointless Celebrities Series 8 Episode 8",
-            "file": "Pointless Celebrities Series 8 Episode 8 (S8E8) - Video Dailymotion.mp4",
-            "name": "Pointless Celebrities Series 8 Episode 8 (S8E8) - Video Dailymotion",
-            "url": "https://archive.org/download/pointless-celebrities-series-8-episode-8-s-8-e-8-video-dailymotion/Pointless%20Celebrities%20Series%208%20Episode%208%20(S8E8)%20-%20Video%20Dailymotion.mp4",
-            "seconds": 2924,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 286
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -3210,20 +3126,8 @@
           "number": 14,
           "name": "Episode 14",
           "airdate": "2013-01-21",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "pointless-celebrities-series-4-episode-14-full-episode-s-08-e-14-dailymotion-video",
-            "itemTitle": "Pointless Celebrities Series 4 Episode 14 Full Episode S 08 E 14 Dailymotion Video",
-            "file": "Pointless Celebrities Series 4 Episode 14 Full Episode   S08E14 - Dailymotion Video.mp4",
-            "name": "Pointless Celebrities Series 4 Episode 14 Full Episode   S08E14 - Dailymotion Video",
-            "url": "https://archive.org/download/pointless-celebrities-series-4-episode-14-full-episode-s-08-e-14-dailymotion-video/Pointless%20Celebrities%20Series%204%20Episode%2014%20Full%20Episode%20%20%20S08E14%20-%20Dailymotion%20Video.mp4",
-            "seconds": 2934,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 286
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -4360,20 +4264,8 @@
           "number": 34,
           "name": "Episode 34",
           "airdate": "2014-01-07",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "pointless-celebrities-s-10-e-34-kids-tv",
-            "itemTitle": "Pointless Celebrities S10 E34 Kids' TV",
-            "file": "Pointless Celebrities S10E34 Kids' TV.mp4",
-            "name": "Pointless Celebrities S10E34 Kids' TV",
-            "url": "https://archive.org/download/pointless-celebrities-s-10-e-34-kids-tv/Pointless%20Celebrities%20S10E34%20Kids'%20TV.mp4",
-            "seconds": 2941,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 289
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

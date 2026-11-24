@@ -3,7 +3,7 @@
   "slug": "mammals",
   "type": "Streaming Era",
   "network": "Prime Video",
-  "matchedAt": "2026-10-25T03:41:52.617Z",
+  "matchedAt": "2026-11-24T01:57:05.734Z",
   "addedAt": "2026-10-25T03:41:52.617Z",
   "tvmaze": {
     "id": 74976,
@@ -14,8 +14,8 @@
   },
   "coverage": {
     "total": 6,
-    "live": 6,
-    "review": 0,
+    "live": 0,
+    "review": 6,
     "missing": 0,
     "pct": 100
   },
@@ -27,218 +27,121 @@
           "number": 1,
           "name": "Dark",
           "airdate": "2024-03-31",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "the-life-of-mammals-2002-s-01e-10-food-for-thought",
-            "itemTitle": "The Life Of Mammals",
-            "file": "The Life Of Mammals (2002) - S01e01 - A Winning Design.m4v",
-            "name": "The Life Of Mammals (2002) - S01e01 - A Winning Design",
-            "url": "https://archive.org/download/the-life-of-mammals-2002-s-01e-10-food-for-thought/The%20Life%20Of%20Mammals%20(2002)%20-%20S01e01%20-%20A%20Winning%20Design.m4v",
-            "seconds": 2951,
+            "conf": 0.75,
+            "why": "title ~ \"Dark\" (0.95)",
+            "item": "bbc-mammals",
+            "itemTitle": "Mammals ★ BBC Earth Documentary with MKV",
+            "file": "01 Dark.mp4",
+            "name": "01 Dark",
+            "url": "https://archive.org/download/bbc-mammals/01%20Dark.mp4",
+            "seconds": 3671,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1014
+            "sizeMB": 388
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Dark\" (0.95)",
-              "item": "bbc-mammals",
-              "itemTitle": "Mammals ★ BBC Earth Documentary with MKV",
-              "file": "01 Dark.mp4",
-              "name": "01 Dark",
-              "url": "https://archive.org/download/bbc-mammals/01%20Dark.mp4",
-              "seconds": 3671,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 388
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 2,
           "name": "The New Wild",
           "airdate": "2024-04-07",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "the-life-of-mammals-2002-s-01e-10-food-for-thought",
-            "itemTitle": "The Life Of Mammals",
-            "file": "The Life Of Mammals (2002) - S01e02 - Insect Hunters.m4v",
-            "name": "The Life Of Mammals (2002) - S01e02 - Insect Hunters",
-            "url": "https://archive.org/download/the-life-of-mammals-2002-s-01e-10-food-for-thought/The%20Life%20Of%20Mammals%20(2002)%20-%20S01e02%20-%20Insect%20Hunters.m4v",
-            "seconds": 2951,
+            "conf": 0.75,
+            "why": "title ~ \"The New Wild\" (0.95)",
+            "item": "bbc-mammals",
+            "itemTitle": "Mammals ★ BBC Earth Documentary with MKV",
+            "file": "02 The New Wild.mp4",
+            "name": "02 The New Wild",
+            "url": "https://archive.org/download/bbc-mammals/02%20The%20New%20Wild.mp4",
+            "seconds": 3634,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 901
+            "sizeMB": 476
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"The New Wild\" (0.95)",
-              "item": "bbc-mammals",
-              "itemTitle": "Mammals ★ BBC Earth Documentary with MKV",
-              "file": "02 The New Wild.mp4",
-              "name": "02 The New Wild",
-              "url": "https://archive.org/download/bbc-mammals/02%20The%20New%20Wild.mp4",
-              "seconds": 3634,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 476
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 3,
           "name": "Water",
           "airdate": "2024-04-14",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "the-life-of-mammals-2002-s-01e-10-food-for-thought",
-            "itemTitle": "The Life Of Mammals",
-            "file": "The Life Of Mammals (2002) - S01e03 - Plant Predators.m4v",
-            "name": "The Life Of Mammals (2002) - S01e03 - Plant Predators",
-            "url": "https://archive.org/download/the-life-of-mammals-2002-s-01e-10-food-for-thought/The%20Life%20Of%20Mammals%20(2002)%20-%20S01e03%20-%20Plant%20Predators.m4v",
-            "seconds": 2940,
+            "conf": 0.75,
+            "why": "title ~ \"Water\" (0.95)",
+            "item": "bbc-mammals",
+            "itemTitle": "Mammals ★ BBC Earth Documentary with MKV",
+            "file": "03 Water.mp4",
+            "name": "03 Water",
+            "url": "https://archive.org/download/bbc-mammals/03%20Water.mp4",
+            "seconds": 3577,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1173
+            "sizeMB": 533
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Water\" (0.95)",
-              "item": "the-life-of-mammals-2002-s-01e-10-food-for-thought",
-              "itemTitle": "The Life Of Mammals",
-              "file": "The Life Of Mammals (2002) - S01e07 - Return To The Water.m4v",
-              "name": "The Life Of Mammals (2002) - S01e07 - Return To The Water",
-              "url": "https://archive.org/download/the-life-of-mammals-2002-s-01e-10-food-for-thought/The%20Life%20Of%20Mammals%20(2002)%20-%20S01e07%20-%20Return%20To%20The%20Water.m4v",
-              "seconds": 2941,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 986
-            },
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Water\" (0.95)",
-              "item": "bbc-mammals",
-              "itemTitle": "Mammals ★ BBC Earth Documentary with MKV",
-              "file": "03 Water.mp4",
-              "name": "03 Water",
-              "url": "https://archive.org/download/bbc-mammals/03%20Water.mp4",
-              "seconds": 3577,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 533
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 4,
           "name": "Cold",
           "airdate": "2024-04-21",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "the-life-of-mammals-2002-s-01e-10-food-for-thought",
-            "itemTitle": "The Life Of Mammals",
-            "file": "The Life Of Mammals (2002) - S01e04 - Chisellers.m4v",
-            "name": "The Life Of Mammals (2002) - S01e04 - Chisellers",
-            "url": "https://archive.org/download/the-life-of-mammals-2002-s-01e-10-food-for-thought/The%20Life%20Of%20Mammals%20(2002)%20-%20S01e04%20-%20Chisellers.m4v",
-            "seconds": 2951,
+            "conf": 0.75,
+            "why": "title ~ \"Cold\" (0.95)",
+            "item": "bbc-mammals",
+            "itemTitle": "Mammals ★ BBC Earth Documentary with MKV",
+            "file": "04 Cold.mp4",
+            "name": "04 Cold",
+            "url": "https://archive.org/download/bbc-mammals/04%20Cold.mp4",
+            "seconds": 3635,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1020
+            "sizeMB": 359
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Cold\" (0.95)",
-              "item": "bbc-mammals",
-              "itemTitle": "Mammals ★ BBC Earth Documentary with MKV",
-              "file": "04 Cold.mp4",
-              "name": "04 Cold",
-              "url": "https://archive.org/download/bbc-mammals/04%20Cold.mp4",
-              "seconds": 3635,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 359
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 5,
           "name": "Heat",
           "airdate": "2024-04-28",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "the-life-of-mammals-2002-s-01e-10-food-for-thought",
-            "itemTitle": "The Life Of Mammals",
-            "file": "The Life Of Mammals (2002) - S01e05 - Meat Eaters.m4v",
-            "name": "The Life Of Mammals (2002) - S01e05 - Meat Eaters",
-            "url": "https://archive.org/download/the-life-of-mammals-2002-s-01e-10-food-for-thought/The%20Life%20Of%20Mammals%20(2002)%20-%20S01e05%20-%20Meat%20Eaters.m4v",
-            "seconds": 2949,
+            "conf": 0.75,
+            "why": "title ~ \"Heat\" (0.95)",
+            "item": "bbc-mammals",
+            "itemTitle": "Mammals ★ BBC Earth Documentary with MKV",
+            "file": "05 Heat.mp4",
+            "name": "05 Heat",
+            "url": "https://archive.org/download/bbc-mammals/05%20Heat.mp4",
+            "seconds": 3635,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1084
+            "sizeMB": 484
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Heat\" (0.95)",
-              "item": "bbc-mammals",
-              "itemTitle": "Mammals ★ BBC Earth Documentary with MKV",
-              "file": "05 Heat.mp4",
-              "name": "05 Heat",
-              "url": "https://archive.org/download/bbc-mammals/05%20Heat.mp4",
-              "seconds": 3635,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 484
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 6,
           "name": "Forest",
           "airdate": "2024-05-05",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "the-life-of-mammals-2002-s-01e-10-food-for-thought",
-            "itemTitle": "The Life Of Mammals",
-            "file": "The Life Of Mammals (2002) - S01e06 - Opportunists.m4v",
-            "name": "The Life Of Mammals (2002) - S01e06 - Opportunists",
-            "url": "https://archive.org/download/the-life-of-mammals-2002-s-01e-10-food-for-thought/The%20Life%20Of%20Mammals%20(2002)%20-%20S01e06%20-%20Opportunists.m4v",
-            "seconds": 2950,
+            "conf": 0.75,
+            "why": "title ~ \"Forest\" (0.95)",
+            "item": "bbc-mammals",
+            "itemTitle": "Mammals ★ BBC Earth Documentary with MKV",
+            "file": "06 Forest.mp4",
+            "name": "06 Forest",
+            "url": "https://archive.org/download/bbc-mammals/06%20Forest.mp4",
+            "seconds": 3649,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1026
+            "sizeMB": 535
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Forest\" (0.95)",
-              "item": "bbc-mammals",
-              "itemTitle": "Mammals ★ BBC Earth Documentary with MKV",
-              "file": "06 Forest.mp4",
-              "name": "06 Forest",
-              "url": "https://archive.org/download/bbc-mammals/06%20Forest.mp4",
-              "seconds": 3649,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 535
-            }
-          ]
+          "alternates": []
         }
       ]
     }

@@ -3,7 +3,7 @@
   "slug": "the-crocodile-hunter",
   "type": "Documentary & Geographic",
   "network": "Animal Planet",
-  "matchedAt": "2026-10-19T04:12:07.033Z",
+  "matchedAt": "2026-11-24T01:52:07.816Z",
   "addedAt": "2026-10-15T12:08:34.113Z",
   "tvmaze": {
     "id": 9832,
@@ -14,8 +14,8 @@
   },
   "coverage": {
     "total": 64,
-    "live": 62,
-    "review": 1,
+    "live": 60,
+    "review": 3,
     "missing": 1,
     "pct": 98
   },
@@ -42,19 +42,6 @@
             "sizeMB": 327
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "crocodile-hunter-diaries",
-              "itemTitle": "Crocodile Hunter Diaries",
-              "file": "Crocodile Hunter Diaries S01E01 Wild About Harry.mp4",
-              "name": "Crocodile Hunter Diaries S01E01 Wild About Harry",
-              "url": "https://archive.org/download/crocodile-hunter-diaries/Crocodile%20Hunter%20Diaries%20S01E01%20Wild%20About%20Harry.mp4",
-              "seconds": 2669,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1722
-            },
             {
               "conf": 0.55,
               "why": "sequence guess: file 1 of 18 in \"Crocodile Hunter\"",
@@ -90,19 +77,6 @@
           },
           "alternates": [
             {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "crocodile-hunter-diaries",
-              "itemTitle": "Crocodile Hunter Diaries",
-              "file": "Crocodile Hunter Diaries S01E02 What's The Buzz.mp4",
-              "name": "Crocodile Hunter Diaries S01E02 What's The Buzz",
-              "url": "https://archive.org/download/crocodile-hunter-diaries/Crocodile%20Hunter%20Diaries%20S01E02%20What's%20The%20Buzz.mp4",
-              "seconds": 2668,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1723
-            },
-            {
               "conf": 0.6,
               "why": "title ~ \"Dinosaurs Down Under\" (0.63)",
               "item": "crocodile-hunter",
@@ -127,6 +101,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 564
+            },
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Dinosaurs Down Under\" (0.63)",
+              "item": "crocodile-hunter",
+              "itemTitle": "Crocodile Hunter",
+              "file": "Crocodile Hunter Up Over Down Under.mp4",
+              "name": "Crocodile Hunter Up Over Down Under",
+              "url": "https://archive.org/download/crocodile-hunter/Crocodile%20Hunter%20Up%20Over%20Down%20Under.mp4",
+              "seconds": 3007,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 465
             }
           ]
         },
@@ -149,19 +136,6 @@
             "sizeMB": 427
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "crocodile-hunter-diaries",
-              "itemTitle": "Crocodile Hunter Diaries",
-              "file": "Crocodile Hunter Diaries S01E03 Steve's Birthday.mp4",
-              "name": "Crocodile Hunter Diaries S01E03 Steve's Birthday",
-              "url": "https://archive.org/download/crocodile-hunter-diaries/Crocodile%20Hunter%20Diaries%20S01E03%20Steve's%20Birthday.mp4",
-              "seconds": 2668,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1722
-            },
             {
               "conf": 0.55,
               "why": "sequence guess: file 3 of 18 in \"Crocodile Hunter\"",
@@ -196,19 +170,6 @@
             "sizeMB": 387
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "crocodile-hunter-diaries",
-              "itemTitle": "Crocodile Hunter Diaries",
-              "file": "Crocodile Hunter Diaries S01E04 Operation Sui.mp4",
-              "name": "Crocodile Hunter Diaries S01E04 Operation Sui",
-              "url": "https://archive.org/download/crocodile-hunter-diaries/Crocodile%20Hunter%20Diaries%20S01E04%20Operation%20Sui.mp4",
-              "seconds": 2668,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1721
-            },
             {
               "conf": 0.55,
               "why": "sequence guess: file 4 of 18 in \"Crocodile Hunter\"",
@@ -248,35 +209,21 @@
           "number": 6,
           "name": "Travelling the Dingo Fence",
           "airdate": "1997-05-10",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "crocodile-hunter-diaries",
-            "itemTitle": "Crocodile Hunter Diaries",
-            "file": "Crocodile Hunter Diaries S01E06 It's A Girl.mp4",
-            "name": "Crocodile Hunter Diaries S01E06 It's A Girl",
-            "url": "https://archive.org/download/crocodile-hunter-diaries/Crocodile%20Hunter%20Diaries%20S01E06%20It's%20A%20Girl.mp4",
-            "seconds": 2668,
+            "conf": 0.55,
+            "why": "sequence guess: file 6 of 18 in \"Crocodile Hunter\"",
+            "item": "crocodile-hunter",
+            "itemTitle": "Crocodile Hunter",
+            "file": "Crocodile Hunter CNN Interview With Steve On Larry King Live 2004.mp4",
+            "name": "Crocodile Hunter CNN Interview With Steve On Larry King Live 2004",
+            "url": "https://archive.org/download/crocodile-hunter/Crocodile%20Hunter%20CNN%20Interview%20With%20Steve%20On%20Larry%20King%20Live%202004.mp4",
+            "seconds": 2638,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1721
+            "sizeMB": 253
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 6 of 18 in \"Crocodile Hunter\"",
-              "item": "crocodile-hunter",
-              "itemTitle": "Crocodile Hunter",
-              "file": "Crocodile Hunter CNN Interview With Steve On Larry King Live 2004.mp4",
-              "name": "Crocodile Hunter CNN Interview With Steve On Larry King Live 2004",
-              "url": "https://archive.org/download/crocodile-hunter/Crocodile%20Hunter%20CNN%20Interview%20With%20Steve%20On%20Larry%20King%20Live%202004.mp4",
-              "seconds": 2638,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 253
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 7,
@@ -298,19 +245,6 @@
           },
           "alternates": [
             {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "crocodile-hunter-diaries",
-              "itemTitle": "Crocodile Hunter Diaries",
-              "file": "Crocodile Hunter Diaries S01E07 Zoo Mates.mp4",
-              "name": "Crocodile Hunter Diaries S01E07 Zoo Mates",
-              "url": "https://archive.org/download/crocodile-hunter-diaries/Crocodile%20Hunter%20Diaries%20S01E07%20Zoo%20Mates.mp4",
-              "seconds": 2668,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1720
-            },
-            {
               "conf": 0.55,
               "why": "sequence guess: file 7 of 18 in \"Crocodile Hunter\"",
               "item": "crocodile-hunter",
@@ -329,35 +263,21 @@
           "number": 8,
           "name": "Elephants and Orange People",
           "airdate": "1997-05-24",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "crocodile-hunter-diaries",
-            "itemTitle": "Crocodile Hunter Diaries",
-            "file": "Crocodile Hunter Diaries S01E08 A Jellybean For Jodie.mp4",
-            "name": "Crocodile Hunter Diaries S01E08 A Jellybean For Jodie",
-            "url": "https://archive.org/download/crocodile-hunter-diaries/Crocodile%20Hunter%20Diaries%20S01E08%20A%20Jellybean%20For%20Jodie.mp4",
-            "seconds": 2668,
+            "conf": 0.55,
+            "why": "sequence guess: file 8 of 18 in \"Crocodile Hunter\"",
+            "item": "crocodile-hunter",
+            "itemTitle": "Crocodile Hunter",
+            "file": "Crocodile Hunter Croc Live!.mp4",
+            "name": "Crocodile Hunter Croc Live!",
+            "url": "https://archive.org/download/crocodile-hunter/Crocodile%20Hunter%20Croc%20Live!.mp4",
+            "seconds": 2941,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1722
+            "sizeMB": 860
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 8 of 18 in \"Crocodile Hunter\"",
-              "item": "crocodile-hunter",
-              "itemTitle": "Crocodile Hunter",
-              "file": "Crocodile Hunter Croc Live!.mp4",
-              "name": "Crocodile Hunter Croc Live!",
-              "url": "https://archive.org/download/crocodile-hunter/Crocodile%20Hunter%20Croc%20Live!.mp4",
-              "seconds": 2941,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 860
-            }
-          ]
+          "alternates": []
         }
       ]
     },
@@ -382,21 +302,7 @@
             "playable": true,
             "sizeMB": 483
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "crocodile-hunter-diaries",
-              "itemTitle": "Crocodile Hunter Diaries",
-              "file": "Crocodile Hunter Diaries S02E01 Pressure Point.mp4",
-              "name": "Crocodile Hunter Diaries S02E01 Pressure Point",
-              "url": "https://archive.org/download/crocodile-hunter-diaries/Crocodile%20Hunter%20Diaries%20S02E01%20Pressure%20Point.mp4",
-              "seconds": 2690,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1037
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 2,
@@ -416,21 +322,7 @@
             "playable": true,
             "sizeMB": 375
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "crocodile-hunter-diaries",
-              "itemTitle": "Crocodile Hunter Diaries",
-              "file": "Crocodile Hunter Diaries S02E02 Teamwork.mp4",
-              "name": "Crocodile Hunter Diaries S02E02 Teamwork",
-              "url": "https://archive.org/download/crocodile-hunter-diaries/Crocodile%20Hunter%20Diaries%20S02E02%20Teamwork.mp4",
-              "seconds": 2687,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1007
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 3,
@@ -450,21 +342,7 @@
             "playable": true,
             "sizeMB": 1267
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "crocodile-hunter-diaries",
-              "itemTitle": "Crocodile Hunter Diaries",
-              "file": "Crocodile Hunter Diaries S02E03 Battle Of The Pythons.mp4",
-              "name": "Crocodile Hunter Diaries S02E03 Battle Of The Pythons",
-              "url": "https://archive.org/download/crocodile-hunter-diaries/Crocodile%20Hunter%20Diaries%20S02E03%20Battle%20Of%20The%20Pythons.mp4",
-              "seconds": 2689,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 888
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 4,
@@ -474,30 +352,17 @@
           "file": {
             "conf": 0.9,
             "why": "S/E in filename",
-            "item": "crocodile-hunter-diaries",
-            "itemTitle": "Crocodile Hunter Diaries",
-            "file": "Crocodile Hunter Diaries S02E04 To The Rescue.mp4",
-            "name": "Crocodile Hunter Diaries S02E04 To The Rescue",
-            "url": "https://archive.org/download/crocodile-hunter-diaries/Crocodile%20Hunter%20Diaries%20S02E04%20To%20The%20Rescue.mp4",
-            "seconds": 2719,
+            "item": "crocodile-hunter",
+            "itemTitle": "Crocodile Hunter",
+            "file": "Crocodile Hunter S02E04 Wildest Home Videos.mp4",
+            "name": "Crocodile Hunter S02E04 Wildest Home Videos",
+            "url": "https://archive.org/download/crocodile-hunter/Crocodile%20Hunter%20S02E04%20Wildest%20Home%20Videos.mp4",
+            "seconds": 2596,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 1041
+            "sizeMB": 709
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "crocodile-hunter",
-              "itemTitle": "Crocodile Hunter",
-              "file": "Crocodile Hunter S02E04 Wildest Home Videos.mp4",
-              "name": "Crocodile Hunter S02E04 Wildest Home Videos",
-              "url": "https://archive.org/download/crocodile-hunter/Crocodile%20Hunter%20S02E04%20Wildest%20Home%20Videos.mp4",
-              "seconds": 2596,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 709
-            },
             {
               "conf": 0.8,
               "why": "title ~ \"Island of Time\" (1.00)",
@@ -532,19 +397,6 @@
             "sizeMB": 309
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "crocodile-hunter-diaries",
-              "itemTitle": "Crocodile Hunter Diaries",
-              "file": "Crocodile Hunter Diaries S02E05 Dancing With Devils.mp4",
-              "name": "Crocodile Hunter Diaries S02E05 Dancing With Devils",
-              "url": "https://archive.org/download/crocodile-hunter-diaries/Crocodile%20Hunter%20Diaries%20S02E05%20Dancing%20With%20Devils.mp4",
-              "seconds": 2688,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 889
-            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -595,19 +447,6 @@
             {
               "conf": 0.9,
               "why": "S/E in filename",
-              "item": "crocodile-hunter-diaries",
-              "itemTitle": "Crocodile Hunter Diaries",
-              "file": "Crocodile Hunter Diaries S02E06 Surgical Marvels.mp4",
-              "name": "Crocodile Hunter Diaries S02E06 Surgical Marvels",
-              "url": "https://archive.org/download/crocodile-hunter-diaries/Crocodile%20Hunter%20Diaries%20S02E06%20Surgical%20Marvels.mp4",
-              "seconds": 2689,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 941
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
               "item": "crocodile-hunter",
               "itemTitle": "Crocodile Hunter",
               "file": "Crocodile Hunter S02E06 Reptiles Of The Deep Turtles.mp4",
@@ -655,19 +494,6 @@
             {
               "conf": 0.9,
               "why": "S/E in filename",
-              "item": "crocodile-hunter-diaries",
-              "itemTitle": "Crocodile Hunter Diaries",
-              "file": "Crocodile Hunter Diaries S02E07 Something's Burning.mp4",
-              "name": "Crocodile Hunter Diaries S02E07 Something's Burning",
-              "url": "https://archive.org/download/crocodile-hunter-diaries/Crocodile%20Hunter%20Diaries%20S02E07%20Something's%20Burning.mp4",
-              "seconds": 2686,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 815
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
               "item": "crocodile-hunter",
               "itemTitle": "Crocodile Hunter",
               "file": "Crocodile Hunter S02E07 Where Devils Run Wild.mp4",
@@ -701,31 +527,17 @@
           "file": {
             "conf": 0.9,
             "why": "S/E in filename",
-            "item": "crocodile-hunter-diaries",
-            "itemTitle": "Crocodile Hunter Diaries",
-            "file": "Crocodile Hunter Diaries S02E08 Mateship.mp4",
-            "name": "Crocodile Hunter Diaries S02E08 Mateship",
-            "url": "https://archive.org/download/crocodile-hunter-diaries/Crocodile%20Hunter%20Diaries%20S02E08%20Mateship.mp4",
-            "seconds": 2701,
+            "item": "crocodile-hunter",
+            "itemTitle": "Crocodile Hunter",
+            "file": "Crocodile Hunter S02E08 Last Waterholes Of The Outback.mp4",
+            "name": "Crocodile Hunter S02E08 Last Waterholes Of The Outback",
+            "url": "https://archive.org/download/crocodile-hunter/Crocodile%20Hunter%20S02E08%20Last%20Waterholes%20Of%20The%20Outback.mp4",
+            "seconds": 2980,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 672
+            "sizeMB": 500
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "crocodile-hunter",
-              "itemTitle": "Crocodile Hunter",
-              "file": "Crocodile Hunter S02E08 Last Waterholes Of The Outback.mp4",
-              "name": "Crocodile Hunter S02E08 Last Waterholes Of The Outback",
-              "url": "https://archive.org/download/crocodile-hunter/Crocodile%20Hunter%20S02E08%20Last%20Waterholes%20Of%20The%20Outback.mp4",
-              "seconds": 2980,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 500
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 9,
@@ -735,30 +547,17 @@
           "file": {
             "conf": 0.9,
             "why": "S/E in filename",
-            "item": "crocodile-hunter-diaries",
-            "itemTitle": "Crocodile Hunter Diaries",
-            "file": "Crocodile Hunter Diaries S02E09 Wombats, Kangaroos, Koalas.mp4",
-            "name": "Crocodile Hunter Diaries S02E09 Wombats, Kangaroos, Koalas",
-            "url": "https://archive.org/download/crocodile-hunter-diaries/Crocodile%20Hunter%20Diaries%20S02E09%20Wombats%2C%20Kangaroos%2C%20Koalas.mp4",
-            "seconds": 2689,
+            "item": "crocodile-hunter",
+            "itemTitle": "Crocodile Hunter",
+            "file": "Crocodile Hunter S02E09 Sharks Outside The Cage.mp4",
+            "name": "Crocodile Hunter S02E09 Sharks Outside The Cage",
+            "url": "https://archive.org/download/crocodile-hunter/Crocodile%20Hunter%20S02E09%20Sharks%20Outside%20The%20Cage.mp4",
+            "seconds": 2812,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 872
+            "sizeMB": 577
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "crocodile-hunter",
-              "itemTitle": "Crocodile Hunter",
-              "file": "Crocodile Hunter S02E09 Sharks Outside The Cage.mp4",
-              "name": "Crocodile Hunter S02E09 Sharks Outside The Cage",
-              "url": "https://archive.org/download/crocodile-hunter/Crocodile%20Hunter%20S02E09%20Sharks%20Outside%20The%20Cage.mp4",
-              "seconds": 2812,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 577
-            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -793,19 +592,6 @@
             "sizeMB": 280
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "crocodile-hunter-diaries",
-              "itemTitle": "Crocodile Hunter Diaries",
-              "file": "Crocodile Hunter Diaries S02E10 Grumpy Gators.mp4",
-              "name": "Crocodile Hunter Diaries S02E10 Grumpy Gators",
-              "url": "https://archive.org/download/crocodile-hunter-diaries/Crocodile%20Hunter%20Diaries%20S02E10%20Grumpy%20Gators.mp4",
-              "seconds": 2700,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 956
-            },
             {
               "conf": 0.8,
               "why": "title ~ \"Sharks Outside the Cage\" (1.00)",
@@ -883,19 +669,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 250
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "crocodile-hunter-diaries",
-              "itemTitle": "Crocodile Hunter Diaries",
-              "file": "Crocodile Hunter Diaries S03E01 A New Zoo.mp4",
-              "name": "Crocodile Hunter Diaries S03E01 A New Zoo",
-              "url": "https://archive.org/download/crocodile-hunter-diaries/Crocodile%20Hunter%20Diaries%20S03E01%20A%20New%20Zoo.mp4",
-              "seconds": 2690,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1736
             }
           ]
         },
@@ -945,17 +718,17 @@
               "sizeMB": 250
             },
             {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "crocodile-hunter-diaries",
-              "itemTitle": "Crocodile Hunter Diaries",
-              "file": "Crocodile Hunter Diaries S03E02 British Gorillas.mp4",
-              "name": "Crocodile Hunter Diaries S03E02 British Gorillas",
-              "url": "https://archive.org/download/crocodile-hunter-diaries/Crocodile%20Hunter%20Diaries%20S03E02%20British%20Gorillas.mp4",
-              "seconds": 2688,
+              "conf": 0.6,
+              "why": "title ~ \"America's Deadliest Snakes\" (0.63)",
+              "item": "crocodile-hunter",
+              "itemTitle": "Crocodile Hunter",
+              "file": "Crocodile Hunter The Ten Deadliest Snakes In The World.mp4",
+              "name": "Crocodile Hunter The Ten Deadliest Snakes In The World",
+              "url": "https://archive.org/download/crocodile-hunter/Crocodile%20Hunter%20The%20Ten%20Deadliest%20Snakes%20In%20The%20World.mp4",
+              "seconds": 2956,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 846
+              "sizeMB": 1560
             }
           ]
         },
@@ -1003,19 +776,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 256
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "crocodile-hunter-diaries",
-              "itemTitle": "Crocodile Hunter Diaries",
-              "file": "Crocodile Hunter Diaries S03E03 Backstage Bedlam.mp4",
-              "name": "Crocodile Hunter Diaries S03E03 Backstage Bedlam",
-              "url": "https://archive.org/download/crocodile-hunter-diaries/Crocodile%20Hunter%20Diaries%20S03E03%20Backstage%20Bedlam.mp4",
-              "seconds": 3001,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1072
             }
           ]
         },
@@ -1110,19 +870,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 251
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "crocodile-hunter-diaries",
-              "itemTitle": "Crocodile Hunter Diaries",
-              "file": "Crocodile Hunter Diaries S03E05 Celebrities and Practical Jokes Part 1.mp4",
-              "name": "Crocodile Hunter Diaries S03E05 Celebrities and Practical Jokes Part 1",
-              "url": "https://archive.org/download/crocodile-hunter-diaries/Crocodile%20Hunter%20Diaries%20S03E05%20Celebrities%20and%20Practical%20Jokes%20Part%201.mp4",
-              "seconds": 2689,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 787
             }
           ]
         },
@@ -1170,19 +917,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 250
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "crocodile-hunter-diaries",
-              "itemTitle": "Crocodile Hunter Diaries",
-              "file": "Crocodile Hunter Diaries S03E06 Future Footprints.mp4",
-              "name": "Crocodile Hunter Diaries S03E06 Future Footprints",
-              "url": "https://archive.org/download/crocodile-hunter-diaries/Crocodile%20Hunter%20Diaries%20S03E06%20Future%20Footprints.mp4",
-              "seconds": 2688,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 863
             }
           ]
         },
@@ -1230,19 +964,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 249
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "crocodile-hunter-diaries",
-              "itemTitle": "Crocodile Hunter Diaries",
-              "file": "Crocodile Hunter Diaries S03E07 Wild Boys Wild Crocs.mp4",
-              "name": "Crocodile Hunter Diaries S03E07 Wild Boys Wild Crocs",
-              "url": "https://archive.org/download/crocodile-hunter-diaries/Crocodile%20Hunter%20Diaries%20S03E07%20Wild%20Boys%20Wild%20Crocs.mp4",
-              "seconds": 2686,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 909
             }
           ]
         },
@@ -1268,19 +989,6 @@
             {
               "conf": 0.9,
               "why": "S/E in filename",
-              "item": "crocodile-hunter-diaries",
-              "itemTitle": "Crocodile Hunter Diaries",
-              "file": "Crocodile Hunter Diaries S03E08 Girls Catch Crocs Too.mp4",
-              "name": "Crocodile Hunter Diaries S03E08 Girls Catch Crocs Too",
-              "url": "https://archive.org/download/crocodile-hunter-diaries/Crocodile%20Hunter%20Diaries%20S03E08%20Girls%20Catch%20Crocs%20Too.mp4",
-              "seconds": 2688,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 934
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
               "item": "crocodile-hunter",
               "itemTitle": "Crocodile Hunter",
               "file": "Crocodile Hunter S03E08 Wild River Of Africa.mp4",
@@ -1303,6 +1011,19 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 253
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Steve's Story\" (0.95)",
+              "item": "crocodile-hunter",
+              "itemTitle": "Crocodile Hunter",
+              "file": "Crocodile Hunter Steve's Story Special Edition.mp4",
+              "name": "Crocodile Hunter Steve's Story Special Edition",
+              "url": "https://archive.org/download/crocodile-hunter/Crocodile%20Hunter%20Steve's%20Story%20Special%20Edition.mp4",
+              "seconds": 3988,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 911
             }
           ]
         },
@@ -1328,19 +1049,6 @@
             {
               "conf": 0.9,
               "why": "S/E in filename",
-              "item": "crocodile-hunter-diaries",
-              "itemTitle": "Crocodile Hunter Diaries",
-              "file": "Crocodile Hunter Diaries S03E09 Croc School For Bindi.mp4",
-              "name": "Crocodile Hunter Diaries S03E09 Croc School For Bindi",
-              "url": "https://archive.org/download/crocodile-hunter-diaries/Crocodile%20Hunter%20Diaries%20S03E09%20Croc%20School%20For%20Bindi.mp4",
-              "seconds": 2685,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 784
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
               "item": "crocodile-hunter",
               "itemTitle": "Crocodile Hunter",
               "file": "Crocodile Hunter S03E09 A Handful Of Elephants.mp4",
@@ -1363,6 +1071,19 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 250
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Steve's Most Dangerous Adventures\" (0.95)",
+              "item": "crocodile-hunter",
+              "itemTitle": "Crocodile Hunter",
+              "file": "Crocodile Hunter Steve's Most Dangerous Adventures Extended.mp4",
+              "name": "Crocodile Hunter Steve's Most Dangerous Adventures Extended",
+              "url": "https://archive.org/download/crocodile-hunter/Crocodile%20Hunter%20Steve's%20Most%20Dangerous%20Adventures%20Extended.mp4",
+              "seconds": 3455,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 769
             }
           ]
         },
@@ -1388,19 +1109,6 @@
             {
               "conf": 0.9,
               "why": "S/E in filename",
-              "item": "crocodile-hunter-diaries",
-              "itemTitle": "Crocodile Hunter Diaries",
-              "file": "Crocodile Hunter Diaries S03E10 Matters Of Life and Death.mp4",
-              "name": "Crocodile Hunter Diaries S03E10 Matters Of Life and Death",
-              "url": "https://archive.org/download/crocodile-hunter-diaries/Crocodile%20Hunter%20Diaries%20S03E10%20Matters%20Of%20Life%20and%20Death.mp4",
-              "seconds": 2629,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 887
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
               "item": "crocodile-hunter",
               "itemTitle": "Crocodile Hunter",
               "file": "Crocodile Hunter S03E10 Jungle In The Clouds.mp4",
@@ -1423,6 +1131,19 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 249
+            },
+            {
+              "conf": 0.6,
+              "why": "title ~ \"Steve's Greatest Crocodile Captures\" (0.71)",
+              "item": "crocodile-hunter",
+              "itemTitle": "Crocodile Hunter",
+              "file": "Crocodile Hunter Steve's Greatest Crocodile Captures Extended.mp4",
+              "name": "Crocodile Hunter Steve's Greatest Crocodile Captures Extended",
+              "url": "https://archive.org/download/crocodile-hunter/Crocodile%20Hunter%20Steve's%20Greatest%20Crocodile%20Captures%20Extended.mp4",
+              "seconds": 3138,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 791
             }
           ]
         },
@@ -1448,19 +1169,6 @@
             {
               "conf": 0.9,
               "why": "S/E in filename",
-              "item": "crocodile-hunter-diaries",
-              "itemTitle": "Crocodile Hunter Diaries",
-              "file": "Crocodile Hunter Diaries S03E11 Steve's Singapore Safari.mp4",
-              "name": "Crocodile Hunter Diaries S03E11 Steve's Singapore Safari",
-              "url": "https://archive.org/download/crocodile-hunter-diaries/Crocodile%20Hunter%20Diaries%20S03E11%20Steve's%20Singapore%20Safari.mp4",
-              "seconds": 2690,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1665
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
               "item": "crocodile-hunter",
               "itemTitle": "Crocodile Hunter",
               "file": "Crocodile Hunter S03E11 Wildest Baby Animal Videos.mp4",
@@ -1483,6 +1191,19 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 256
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Wild River of Africa\" (1.00)",
+              "item": "crocodile-hunter",
+              "itemTitle": "Crocodile Hunter",
+              "file": "Crocodile Hunter S03E08 Wild River Of Africa.mp4",
+              "name": "Crocodile Hunter S03E08 Wild River Of Africa",
+              "url": "https://archive.org/download/crocodile-hunter/Crocodile%20Hunter%20S03E08%20Wild%20River%20Of%20Africa.mp4",
+              "seconds": 3005,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 690
             }
           ]
         },
@@ -1508,19 +1229,6 @@
             {
               "conf": 0.9,
               "why": "S/E in filename",
-              "item": "crocodile-hunter-diaries",
-              "itemTitle": "Crocodile Hunter Diaries",
-              "file": "Crocodile Hunter Diaries S03E12 Days Of Disaster.mp4",
-              "name": "Crocodile Hunter Diaries S03E12 Days Of Disaster",
-              "url": "https://archive.org/download/crocodile-hunter-diaries/Crocodile%20Hunter%20Diaries%20S03E12%20Days%20Of%20Disaster.mp4",
-              "seconds": 2691,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1658
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
               "item": "crocodile-hunter",
               "itemTitle": "Crocodile Hunter",
               "file": "Crocodile Hunter S03E12 Wildlife In Combat.mp4",
@@ -1543,6 +1251,19 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 250
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"A Handful of Elephants\" (1.00)",
+              "item": "crocodile-hunter",
+              "itemTitle": "Crocodile Hunter",
+              "file": "Crocodile Hunter S03E09 A Handful Of Elephants.mp4",
+              "name": "Crocodile Hunter S03E09 A Handful Of Elephants",
+              "url": "https://archive.org/download/crocodile-hunter/Crocodile%20Hunter%20S03E09%20A%20Handful%20Of%20Elephants.mp4",
+              "seconds": 3006,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 675
             }
           ]
         },
@@ -1581,19 +1302,6 @@
             {
               "conf": 0.9,
               "why": "S/E in filename",
-              "item": "crocodile-hunter-diaries",
-              "itemTitle": "Crocodile Hunter Diaries",
-              "file": "Crocodile Hunter Diaries S03E13 Crocoseum.mp4",
-              "name": "Crocodile Hunter Diaries S03E13 Crocoseum",
-              "url": "https://archive.org/download/crocodile-hunter-diaries/Crocodile%20Hunter%20Diaries%20S03E13%20Crocoseum.mp4",
-              "seconds": 2686,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 866
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
               "item": "the-crocodile-hunter-s-04-e-01-crocodiles-of-the-revolution",
               "itemTitle": "The Crocodile Hunter",
               "file": "The Crocodile Hunter - S03E13 - Forces of Nature [720p].mp4",
@@ -1603,6 +1311,19 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 254
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Jungle in the Clouds\" (1.00)",
+              "item": "crocodile-hunter",
+              "itemTitle": "Crocodile Hunter",
+              "file": "Crocodile Hunter S03E10 Jungle In The Clouds.mp4",
+              "name": "Crocodile Hunter S03E10 Jungle In The Clouds",
+              "url": "https://archive.org/download/crocodile-hunter/Crocodile%20Hunter%20S03E10%20Jungle%20In%20The%20Clouds.mp4",
+              "seconds": 3218,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 729
             }
           ]
         },
@@ -1625,19 +1346,6 @@
             "sizeMB": 297
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "crocodile-hunter-diaries",
-              "itemTitle": "Crocodile Hunter Diaries",
-              "file": "Crocodile Hunter Diaries S03E14 Celebrities and Practical Jokes Part 2.mp4",
-              "name": "Crocodile Hunter Diaries S03E14 Celebrities and Practical Jokes Part 2",
-              "url": "https://archive.org/download/crocodile-hunter-diaries/Crocodile%20Hunter%20Diaries%20S03E14%20Celebrities%20and%20Practical%20Jokes%20Part%202.mp4",
-              "seconds": 2630,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1660
-            },
             {
               "conf": 0.8,
               "why": "title ~ \"Wildest Baby Animal Videos\" (1.00)",
@@ -1686,19 +1394,6 @@
           },
           "alternates": [
             {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "crocodile-hunter-diaries",
-              "itemTitle": "Crocodile Hunter Diaries",
-              "file": "Crocodile Hunter Diaries S03E15 Action Stations.mp4",
-              "name": "Crocodile Hunter Diaries S03E15 Action Stations",
-              "url": "https://archive.org/download/crocodile-hunter-diaries/Crocodile%20Hunter%20Diaries%20S03E15%20Action%20Stations.mp4",
-              "seconds": 2630,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1639
-            },
-            {
               "conf": 0.8,
               "why": "title ~ \"Wildlife in Combat (1)\" (0.97)",
               "item": "crocodile-hunter",
@@ -1745,19 +1440,6 @@
             "sizeMB": 297
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "crocodile-hunter-diaries",
-              "itemTitle": "Crocodile Hunter Diaries",
-              "file": "Crocodile Hunter Diaries S03E16 Living Dangerously.mp4",
-              "name": "Crocodile Hunter Diaries S03E16 Living Dangerously",
-              "url": "https://archive.org/download/crocodile-hunter-diaries/Crocodile%20Hunter%20Diaries%20S03E16%20Living%20Dangerously.mp4",
-              "seconds": 2630,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1650
-            },
             {
               "conf": 0.8,
               "why": "title ~ \"Forces of Nature (2)\" (0.96)",

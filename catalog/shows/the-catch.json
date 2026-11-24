@@ -3,7 +3,7 @@
   "slug": "the-catch",
   "type": "Drama",
   "network": "ABC",
-  "matchedAt": "2026-10-24T21:49:56.946Z",
+  "matchedAt": "2026-11-24T01:55:44.898Z",
   "addedAt": "2026-10-24T21:49:56.946Z",
   "tvmaze": {
     "id": 3072,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 20,
-    "live": 1,
+    "live": 0,
     "review": 0,
-    "missing": 19,
-    "pct": 5
+    "missing": 20,
+    "pct": 0
   },
   "seasons": [
     {
@@ -27,20 +27,8 @@
           "number": 1,
           "name": "The Pilot",
           "airdate": "2016-03-24",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "halt-and-catch-fire-s01e01-vose-720p",
-            "itemTitle": "halt-and-catch-fire-s01e01-vose-720p",
-            "file": "halt-and-catch-fire-s01e01-vose-720p.mp4",
-            "name": "halt-and-catch-fire-s01e01-vose-720p",
-            "url": "https://archive.org/download/halt-and-catch-fire-s01e01-vose-720p/halt-and-catch-fire-s01e01-vose-720p.mp4",
-            "seconds": 2860,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 283
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

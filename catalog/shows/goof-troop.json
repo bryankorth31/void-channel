@@ -3,7 +3,7 @@
   "slug": "goof-troop",
   "type": "Animated",
   "network": "Cartoon",
-  "matchedAt": "2026-10-16T07:56:29.809Z",
+  "matchedAt": "2026-11-24T01:49:55.357Z",
   "addedAt": "2026-10-15T16:47:46.846Z",
   "tvmaze": {
     "id": 52748,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 13,
-    "live": 1,
+    "live": 0,
     "review": 1,
-    "missing": 11,
-    "pct": 15
+    "missing": 12,
+    "pct": 8
   },
   "seasons": [
     {
@@ -51,20 +51,8 @@
           "number": 4,
           "name": "Great Egg-Spectations",
           "airdate": "1992-10-03",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "dvd-transfer-230",
-            "itemTitle": "DVD Transfer 230 (Miscellaneous 1992 Christmas Specials and Goof Troop Premiere)",
-            "file": "Title 3 - Roundhouse (School Daze - S1E4).mp4",
-            "name": "Title 3 - Roundhouse (School Daze - S1E4)",
-            "url": "https://archive.org/download/dvd-transfer-230/Title%203%20-%20Roundhouse%20(School%20Daze%20-%20S1E4).mp4",
-            "seconds": 1583,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 331
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

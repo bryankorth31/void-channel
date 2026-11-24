@@ -3,7 +3,7 @@
   "slug": "rabbit-hole",
   "type": "Streaming Era",
   "network": "Paramount+",
-  "matchedAt": "2026-10-25T03:01:14.718Z",
+  "matchedAt": "2026-11-24T01:56:56.646Z",
   "addedAt": "2026-10-25T03:01:14.718Z",
   "tvmaze": {
     "id": 60285,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 8,
     "live": 0,
-    "review": 1,
-    "missing": 7,
-    "pct": 13
+    "review": 0,
+    "missing": 8,
+    "pct": 0
   },
   "seasons": [
     {
@@ -27,20 +27,8 @@
           "number": 1,
           "name": "Pilot",
           "airdate": "2023-03-26",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.7,
-            "why": "absolute episode number",
-            "item": "cs-episode-1-welcome-to-the-rabbit-hole",
-            "itemTitle": "Conspiracy Synergy Episode 1: Welcome To The Rabbit Hole",
-            "file": "CS Episode 1, Welcome to the Rabbit Hole.mp4",
-            "name": "CS Episode 1, Welcome to the Rabbit Hole",
-            "url": "https://archive.org/download/cs-episode-1-welcome-to-the-rabbit-hole/CS%20Episode%201%2C%20Welcome%20to%20the%20Rabbit%20Hole.mp4",
-            "seconds": 2468,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 2631
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

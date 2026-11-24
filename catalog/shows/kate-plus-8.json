@@ -3,7 +3,7 @@
   "slug": "kate-plus-8",
   "type": "Reality & Talk",
   "network": "TLC",
-  "matchedAt": "2026-10-23T09:07:15.535Z",
+  "matchedAt": "2026-11-24T01:55:01.080Z",
   "addedAt": "2026-10-23T09:07:15.535Z",
   "tvmaze": {
     "id": 1384,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 43,
-    "live": 1,
+    "live": 0,
     "review": 0,
-    "missing": 42,
-    "pct": 2
+    "missing": 43,
+    "pct": 0
   },
   "seasons": [
     {
@@ -351,20 +351,8 @@
           "number": 6,
           "name": "Sweet 16",
           "airdate": "2017-01-03",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "jon-kate-plus-8-tea-party-2009-09-28-0",
-            "itemTitle": "Jon & Kate Plus 8 - The Gosselin Family",
-            "file": "5x06 Houses & Big Changes.mp4",
-            "name": "5x06 Houses & Big Changes",
-            "url": "https://archive.org/download/jon-kate-plus-8-tea-party-2009-09-28-0/5x06%20Houses%20%26%20Big%20Changes.mp4",
-            "seconds": 3838,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 383
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

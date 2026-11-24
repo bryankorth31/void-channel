@@ -3,7 +3,7 @@
   "slug": "lost",
   "type": "Drama",
   "network": "ABC",
-  "matchedAt": "2026-10-19T04:10:49.139Z",
+  "matchedAt": "2026-11-24T01:50:06.902Z",
   "addedAt": "2026-10-15T12:07:46.266Z",
   "tvmaze": {
     "id": 123,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 121,
-    "live": 4,
+    "live": 1,
     "review": 0,
-    "missing": 117,
-    "pct": 3
+    "missing": 120,
+    "pct": 1
   },
   "seasons": [
     {
@@ -51,60 +51,24 @@
           "number": 4,
           "name": "Walkabout",
           "airdate": "2004-10-13",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "007-the-lost-history-of-flat-earth-season-1-episode-7.ia",
-            "itemTitle": "The Lost History Of Flat Earth Season 1",
-            "file": "004 The Lost History of Flat Earth - Season 1, Episode 4.ia.mp4",
-            "name": "004 The Lost History of Flat Earth - Season 1, Episode 4",
-            "url": "https://archive.org/download/007-the-lost-history-of-flat-earth-season-1-episode-7.ia/004%20The%20Lost%20History%20of%20Flat%20Earth%20-%20Season%201%2C%20Episode%204.ia.mp4",
-            "seconds": 3391,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 572
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 5,
           "name": "White Rabbit",
           "airdate": "2004-10-20",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "007-the-lost-history-of-flat-earth-season-1-episode-7.ia",
-            "itemTitle": "The Lost History Of Flat Earth Season 1",
-            "file": "005 The Lost History of Flat Earth - Season 1, Episode 5.ia.mp4",
-            "name": "005 The Lost History of Flat Earth - Season 1, Episode 5",
-            "url": "https://archive.org/download/007-the-lost-history-of-flat-earth-season-1-episode-7.ia/005%20The%20Lost%20History%20of%20Flat%20Earth%20-%20Season%201%2C%20Episode%205.ia.mp4",
-            "seconds": 4316,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 672
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 6,
           "name": "House of the Rising Sun",
           "airdate": "2004-10-27",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "007-the-lost-history-of-flat-earth-season-1-episode-7.ia",
-            "itemTitle": "The Lost History Of Flat Earth Season 1",
-            "file": "006 The Lost History of Flat Earth - Season 1, Episode 6.ia.mp4",
-            "name": "006 The Lost History of Flat Earth - Season 1, Episode 6",
-            "url": "https://archive.org/download/007-the-lost-history-of-flat-earth-season-1-episode-7.ia/006%20The%20Lost%20History%20of%20Flat%20Earth%20-%20Season%201%2C%20Episode%206.ia.mp4",
-            "seconds": 3874,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 582
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

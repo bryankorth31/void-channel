@@ -3,7 +3,7 @@
   "slug": "young-sherlock",
   "type": "Streaming Era",
   "network": "Prime Video",
-  "matchedAt": "2026-10-25T04:33:16.601Z",
+  "matchedAt": "2026-11-24T01:57:23.262Z",
   "addedAt": "2026-10-25T04:33:16.601Z",
   "tvmaze": {
     "id": 77427,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 8,
-    "live": 1,
+    "live": 0,
     "review": 0,
-    "missing": 7,
-    "pct": 13
+    "missing": 8,
+    "pct": 0
   },
   "seasons": [
     {
@@ -27,20 +27,8 @@
           "number": 1,
           "name": "The Case of the Missing Scrolls",
           "airdate": "2026-03-04",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "premise-a-young-sherlock-holmes-stumbles-upon-a-conspiracy-to-assassinate-queen-",
-            "itemTitle": "Young Sherlock The Mystery Of The Manor House",
-            "file": "Young Sherlock The Mystery of the Manor House S01E01 The Young Master.mp4",
-            "name": "Young Sherlock The Mystery of the Manor House S01E01 The Young Master",
-            "url": "https://archive.org/download/premise-a-young-sherlock-holmes-stumbles-upon-a-conspiracy-to-assassinate-queen-/Young%20Sherlock%20The%20Mystery%20of%20the%20Manor%20House%20S01E01%20The%20Young%20Master.mp4",
-            "seconds": 3105,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 155
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

@@ -3,7 +3,7 @@
   "slug": "my-hero-academia",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-19T04:11:35.706Z",
+  "matchedAt": "2026-11-24T01:51:13.569Z",
   "addedAt": "2026-10-16T07:57:33.297Z",
   "tvmaze": {
     "id": 13615,
@@ -14,8 +14,8 @@
   },
   "coverage": {
     "total": 170,
-    "live": 1,
-    "review": 44,
+    "live": 0,
+    "review": 45,
     "missing": 125,
     "pct": 26
   },
@@ -374,35 +374,21 @@
           "number": 5,
           "name": "Cavalry Battle Finale",
           "airdate": "2017-04-29",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "my-hero-academia-vigilantes-season-2-episode-5-english-sub",
-            "itemTitle": "My Hero Academia Vigilantes Season 2 Episode 5 English Sub",
-            "file": "My Hero Academia Vigilantes Season 2 Episode 5 English Sub.mp4",
-            "name": "My Hero Academia Vigilantes Season 2 Episode 5 English Sub",
-            "url": "https://archive.org/download/my-hero-academia-vigilantes-season-2-episode-5-english-sub/My%20Hero%20Academia%20Vigilantes%20Season%202%20Episode%205%20English%20Sub.mp4",
-            "seconds": 1420,
-            "format": "MPEG4",
+            "conf": 0.75,
+            "why": "title ~ \"Cavalry Battle Finale\" (0.94)",
+            "item": "myheroacademiaseasontwo",
+            "itemTitle": "My Hero Academia Season Two",
+            "file": "5CavalryBattleFinale2.mp4",
+            "name": "5CavalryBattleFinale2",
+            "url": "https://archive.org/download/myheroacademiaseasontwo/5CavalryBattleFinale2.mp4",
+            "seconds": 1439,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 263
+            "sizeMB": 142
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "title ~ \"Cavalry Battle Finale\" (0.94)",
-              "item": "myheroacademiaseasontwo",
-              "itemTitle": "My Hero Academia Season Two",
-              "file": "5CavalryBattleFinale2.mp4",
-              "name": "5CavalryBattleFinale2",
-              "url": "https://archive.org/download/myheroacademiaseasontwo/5CavalryBattleFinale2.mp4",
-              "seconds": 1439,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 142
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 6,

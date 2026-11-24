@@ -3,7 +3,7 @@
   "slug": "the-troop",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "Nickelodeon",
-  "matchedAt": "2026-10-23T07:38:47.611Z",
+  "matchedAt": "2026-11-24T01:54:26.670Z",
   "addedAt": "2026-10-23T02:06:45.385Z",
   "tvmaze": {
     "id": 14285,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 40,
     "live": 6,
-    "review": 1,
-    "missing": 33,
-    "pct": 18
+    "review": 0,
+    "missing": 34,
+    "pct": 15
   },
   "seasons": [
     {
@@ -408,21 +408,8 @@
           "number": 6,
           "name": "Through the Looking Glass",
           "airdate": "2011-07-30",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "S/E in filename | not browser-playable: container (Windows Media)",
-            "item": "GoofTroopPistolgeistS2E6",
-            "itemTitle": "Goof Troop- Pistolgeist (S2E6)",
-            "file": "Goof Troop- Pistolgeist (S2E6).wmv",
-            "name": "Goof Troop- Pistolgeist (S2E6)",
-            "url": "https://archive.org/download/GoofTroopPistolgeistS2E6/Goof%20Troop-%20Pistolgeist%20(S2E6).wmv",
-            "seconds": 1391,
-            "format": "Windows Media",
-            "playable": false,
-            "codecRisk": "container (Windows Media)",
-            "sizeMB": 604
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

@@ -3,7 +3,7 @@
   "slug": "nova",
   "type": "Documentary & Geographic",
   "network": "PBS",
-  "matchedAt": "2026-10-19T04:12:05.545Z",
+  "matchedAt": "2026-11-24T01:52:05.711Z",
   "addedAt": "2026-10-15T12:08:32.879Z",
   "tvmaze": {
     "id": 3321,
@@ -15,8 +15,8 @@
   "coverage": {
     "total": 1014,
     "live": 3,
-    "review": 90,
-    "missing": 921,
+    "review": 86,
+    "missing": 925,
     "pct": 9
   },
   "seasons": [
@@ -43,32 +43,6 @@
           },
           "alternates": [
             {
-              "conf": 0.65,
-              "why": "absolute episode number",
-              "item": "pbsnovadocs",
-              "itemTitle": "PBS Nova Documentaries",
-              "file": "PBS Empires - Rome in the 1st Century - Episode 1 - Order from Chaos.mp4",
-              "name": "PBS Empires - Rome in the 1st Century - Episode 1 - Order from Chaos",
-              "url": "https://archive.org/download/pbsnovadocs/PBS%20Empires%20-%20Rome%20in%20the%201st%20Century%20-%20Episode%201%20-%20Order%20from%20Chaos.mp4",
-              "seconds": 3257,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 324
-            },
-            {
-              "conf": 0.65,
-              "why": "absolute episode number",
-              "item": "pbsnovadocs",
-              "itemTitle": "PBS Nova Documentaries",
-              "file": "Empires - Rome in the 1st Century - Episode 1 - Order from Chaos.mp4",
-              "name": "Empires - Rome in the 1st Century - Episode 1 - Order from Chaos",
-              "url": "https://archive.org/download/pbsnovadocs/Empires%20-%20Rome%20in%20the%201st%20Century%20-%20Episode%201%20-%20Order%20from%20Chaos.mp4",
-              "seconds": 3257,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 181
-            },
-            {
               "conf": 0.6,
               "why": "absolute episode number",
               "item": "nova-pbs-documentaries",
@@ -87,103 +61,25 @@
           "number": 2,
           "name": "Where Did the Colorado Go?",
           "airdate": "1974-03-10",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
-            "item": "pbsnovadocs",
-            "itemTitle": "PBS Nova Documentaries",
-            "file": "PBS Empires - Rome in the 1st Century - Episode 2 - Years of Trial.mp4",
-            "name": "PBS Empires - Rome in the 1st Century - Episode 2 - Years of Trial",
-            "url": "https://archive.org/download/pbsnovadocs/PBS%20Empires%20-%20Rome%20in%20the%201st%20Century%20-%20Episode%202%20-%20Years%20of%20Trial.mp4",
-            "seconds": 3306,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 327
-          },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "absolute episode number",
-              "item": "pbsnovadocs",
-              "itemTitle": "PBS Nova Documentaries",
-              "file": "Empires - Rome in the 1st Century - Episode 2 - Years of Trial.mp4",
-              "name": "Empires - Rome in the 1st Century - Episode 2 - Years of Trial",
-              "url": "https://archive.org/download/pbsnovadocs/Empires%20-%20Rome%20in%20the%201st%20Century%20-%20Episode%202%20-%20Years%20of%20Trial.mp4",
-              "seconds": 3306,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 182
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 3,
           "name": "Whales, Dolphins, and Men",
           "airdate": "1974-03-17",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
-            "item": "pbsnovadocs",
-            "itemTitle": "PBS Nova Documentaries",
-            "file": "PBS Empires - Rome in the 1st Century - Episode 3 - Winds of Change.mp4",
-            "name": "PBS Empires - Rome in the 1st Century - Episode 3 - Winds of Change",
-            "url": "https://archive.org/download/pbsnovadocs/PBS%20Empires%20-%20Rome%20in%20the%201st%20Century%20-%20Episode%203%20-%20Winds%20of%20Change.mp4",
-            "seconds": 3306,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 329
-          },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "absolute episode number",
-              "item": "pbsnovadocs",
-              "itemTitle": "PBS Nova Documentaries",
-              "file": "Empires - Rome in the 1st Century - Episode 3 - Winds of Change.mp4",
-              "name": "Empires - Rome in the 1st Century - Episode 3 - Winds of Change",
-              "url": "https://archive.org/download/pbsnovadocs/Empires%20-%20Rome%20in%20the%201st%20Century%20-%20Episode%203%20-%20Winds%20of%20Change.mp4",
-              "seconds": 3306,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 184
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 4,
           "name": "The Search for Life",
           "airdate": "1974-03-24",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
-            "item": "pbsnovadocs",
-            "itemTitle": "PBS Nova Documentaries",
-            "file": "PBS Empires - Rome in the 1st Century - Episode 4 - Years of Eruption.mp4",
-            "name": "PBS Empires - Rome in the 1st Century - Episode 4 - Years of Eruption",
-            "url": "https://archive.org/download/pbsnovadocs/PBS%20Empires%20-%20Rome%20in%20the%201st%20Century%20-%20Episode%204%20-%20Years%20of%20Eruption.mp4",
-            "seconds": 3307,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 329
-          },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "absolute episode number",
-              "item": "pbsnovadocs",
-              "itemTitle": "PBS Nova Documentaries",
-              "file": "Empires - Rome in the 1st Century - Episode 4 - Years of Eruption.mp4",
-              "name": "Empires - Rome in the 1st Century - Episode 4 - Years of Eruption",
-              "url": "https://archive.org/download/pbsnovadocs/Empires%20-%20Rome%20in%20the%201st%20Century%20-%20Episode%204%20-%20Years%20of%20Eruption.mp4",
-              "seconds": 3307,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 180
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 5,
@@ -8013,20 +7909,8 @@
           "number": 6,
           "name": "Treasures of the Earth: Metals",
           "airdate": "2016-11-09",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Treasures of the Earth: Metals\" (0.95)",
-            "item": "pbsnovadocs",
-            "itemTitle": "PBS Nova Documentaries",
-            "file": "PBS Nova - Treasures of the Earth - Metals.mp4",
-            "name": "PBS Nova - Treasures of the Earth - Metals",
-            "url": "https://archive.org/download/pbsnovadocs/PBS%20Nova%20-%20Treasures%20of%20the%20Earth%20-%20Metals.mp4",
-            "seconds": 3171,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 317
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

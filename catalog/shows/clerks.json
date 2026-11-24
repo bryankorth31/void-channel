@@ -3,7 +3,7 @@
   "slug": "clerks",
   "type": "Animated",
   "network": "ABC",
-  "matchedAt": "2026-10-22T09:03:31.034Z",
+  "matchedAt": "2026-11-24T01:52:55.772Z",
   "addedAt": "2026-10-22T09:03:31.034Z",
   "tvmaze": {
     "id": 3284,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 6,
-    "live": 6,
-    "review": 0,
-    "missing": 0,
-    "pct": 100
+    "live": 0,
+    "review": 5,
+    "missing": 1,
+    "pct": 83
   },
   "seasons": [
     {
@@ -27,9 +27,9 @@
           "number": 1,
           "name": "Leonardo Leonardo Returns and Dante Has an Important Decision to Make",
           "airdate": "",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "clerks-the-animated-series_202607",
             "itemTitle": "Clerks: The Animated Series",
@@ -41,55 +41,15 @@
             "playable": true,
             "sizeMB": 77
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "clerks-the-animated-series-1080p-ai-upscale",
-              "itemTitle": "Clerks: The Animated Series 1080p AI Upscale",
-              "file": "Clerks - The Animated Series/Clerks - S01e01 1.mp4",
-              "name": "Clerks - The Animated Series/Clerks - S01e01 1",
-              "url": "https://archive.org/download/clerks-the-animated-series-1080p-ai-upscale/Clerks%20-%20The%20Animated%20Series%2FClerks%20-%20S01e01%201.mp4",
-              "seconds": 1434,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 132
-            },
-            {
-              "conf": 0.7,
-              "why": "absolute episode number",
-              "item": "clerks-tas-abc-premiere",
-              "itemTitle": "Clerks TAS - ABC Premiere Airing (2000) + WIP Cut of Episode 2",
-              "file": "Clerks TAS - Episode 1 ABC 11 Airing (2000).mp4",
-              "name": "Clerks TAS - Episode 1 ABC 11 Airing (2000)",
-              "url": "https://archive.org/download/clerks-tas-abc-premiere/Clerks%20TAS%20-%20Episode%201%20ABC%2011%20Airing%20(2000).mp4",
-              "seconds": 1304,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 220
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 1 of 6 in \"Clerks: The Animated Series\"",
-              "item": "clerks-the-animated-series",
-              "itemTitle": "Clerks: The Animated Series",
-              "file": "CLERKS_TV1.mp4",
-              "name": "CLERKS_TV1",
-              "url": "https://archive.org/download/clerks-the-animated-series/CLERKS_TV1.mp4",
-              "seconds": 1419,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 142
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 2,
           "name": "The Clipshow Wherein Dante and Randal are Locked in the Freezer and Remember Some of the Great Moments in Their Lives",
           "airdate": "2000-06-07",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "clerks-the-animated-series_202607",
             "itemTitle": "Clerks: The Animated Series",
@@ -101,42 +61,15 @@
             "playable": true,
             "sizeMB": 78
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "clerks-the-animated-series-1080p-ai-upscale",
-              "itemTitle": "Clerks: The Animated Series 1080p AI Upscale",
-              "file": "Clerks - The Animated Series/Clerks - S01e02 2.mp4",
-              "name": "Clerks - The Animated Series/Clerks - S01e02 2",
-              "url": "https://archive.org/download/clerks-the-animated-series-1080p-ai-upscale/Clerks%20-%20The%20Animated%20Series%2FClerks%20-%20S01e02%202.mp4",
-              "seconds": 1378,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 127
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 2 of 6 in \"Clerks: The Animated Series\"",
-              "item": "clerks-the-animated-series",
-              "itemTitle": "Clerks: The Animated Series",
-              "file": "CLERKS_TV2.mp4",
-              "name": "CLERKS_TV2",
-              "url": "https://archive.org/download/clerks-the-animated-series/CLERKS_TV2.mp4",
-              "seconds": 1352,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 134
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 3,
           "name": "Leonardo is Caught in the Grip of an Outbreak of Randal's Imagination and Patrick Swayze Either Does or Doesn't Work in the New Pet Store",
           "airdate": "",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "clerks-the-animated-series_202607",
             "itemTitle": "Clerks: The Animated Series",
@@ -148,55 +81,15 @@
             "playable": true,
             "sizeMB": 77
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "clerks-the-animated-series-1080p-ai-upscale",
-              "itemTitle": "Clerks: The Animated Series 1080p AI Upscale",
-              "file": "Clerks - The Animated Series/Clerks - S01e03 3.mp4",
-              "name": "Clerks - The Animated Series/Clerks - S01e03 3",
-              "url": "https://archive.org/download/clerks-the-animated-series-1080p-ai-upscale/Clerks%20-%20The%20Animated%20Series%2FClerks%20-%20S01e03%203.mp4",
-              "seconds": 1416,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 131
-            },
-            {
-              "conf": 0.7,
-              "why": "absolute episode number",
-              "item": "clerks-tas-abc-premiere",
-              "itemTitle": "Clerks TAS - ABC Premiere Airing (2000) + WIP Cut of Episode 2",
-              "file": "Clerks TAS - Episode 2 (WIP Cut).mp4",
-              "name": "Clerks TAS - Episode 2 (WIP Cut)",
-              "url": "https://archive.org/download/clerks-tas-abc-premiere/Clerks%20TAS%20-%20Episode%202%20(WIP%20Cut).mp4",
-              "seconds": 1286,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 216
-            },
-            {
-              "conf": 0.7,
-              "why": "absolute episode number",
-              "item": "clerks-tas-abc-premiere",
-              "itemTitle": "Clerks TAS - ABC Premiere Airing (2000) + WIP Cut of Episode 2",
-              "file": "Clerks TAS - Episode 2 ABC 11 Airing (2000).mp4",
-              "name": "Clerks TAS - Episode 2 ABC 11 Airing (2000)",
-              "url": "https://archive.org/download/clerks-tas-abc-premiere/Clerks%20TAS%20-%20Episode%202%20ABC%2011%20Airing%20(2000).mp4",
-              "seconds": 1280,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 202
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 4,
           "name": "A Dissertation on the American Justice System by People Who Have Never Been Inside a Courtroom, Let Alone Know Anything About the Law, but Have Seen Way Too Many Legal Thrillers",
           "airdate": "2000-05-31",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "clerks-the-animated-series_202607",
             "itemTitle": "Clerks: The Animated Series",
@@ -208,42 +101,15 @@
             "playable": true,
             "sizeMB": 82
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "clerks-the-animated-series-1080p-ai-upscale",
-              "itemTitle": "Clerks: The Animated Series 1080p AI Upscale",
-              "file": "Clerks - The Animated Series/Clerks - S01e04 4.mp4",
-              "name": "Clerks - The Animated Series/Clerks - S01e04 4",
-              "url": "https://archive.org/download/clerks-the-animated-series-1080p-ai-upscale/Clerks%20-%20The%20Animated%20Series%2FClerks%20-%20S01e04%204.mp4",
-              "seconds": 1416,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 130
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 4 of 6 in \"Clerks: The Animated Series\"",
-              "item": "clerks-the-animated-series",
-              "itemTitle": "Clerks: The Animated Series",
-              "file": "CLERKS_TV13.mp4",
-              "name": "CLERKS_TV13",
-              "url": "https://archive.org/download/clerks-the-animated-series/CLERKS_TV13.mp4",
-              "seconds": 1343,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 134
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 5,
           "name": "Dante and Randal and Jay and Silent Bob and a Bunch",
           "airdate": "",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 1,
+            "conf": 0.6,
             "why": "S/E in filename + title match",
             "item": "clerks-the-animated-series_202607",
             "itemTitle": "Clerks: The Animated Series",
@@ -255,81 +121,15 @@
             "playable": true,
             "sizeMB": 91
           },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "clerks-the-animated-series-1080p-ai-upscale",
-              "itemTitle": "Clerks: The Animated Series 1080p AI Upscale",
-              "file": "Clerks - The Animated Series/Clerks - S01e05 5.mp4",
-              "name": "Clerks - The Animated Series/Clerks - S01e05 5",
-              "url": "https://archive.org/download/clerks-the-animated-series-1080p-ai-upscale/Clerks%20-%20The%20Animated%20Series%2FClerks%20-%20S01e05%205.mp4",
-              "seconds": 1426,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 131
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 5 of 6 in \"Clerks: The Animated Series\"",
-              "item": "clerks-the-animated-series",
-              "itemTitle": "Clerks: The Animated Series",
-              "file": "CLERKS_TV21.mp4",
-              "name": "CLERKS_TV21",
-              "url": "https://archive.org/download/clerks-the-animated-series/CLERKS_TV21.mp4",
-              "seconds": 1403,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 140
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 6,
           "name": "The Last Episode Ever",
           "airdate": "",
-          "state": "LIVE",
-          "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "clerks-the-animated-series_202607",
-            "itemTitle": "Clerks: The Animated Series",
-            "file": "Clerks The Animated Series - 1X06 - The Last Episode Ever.mp4",
-            "name": "Clerks The Animated Series - 1X06 - The Last Episode Ever",
-            "url": "https://archive.org/download/clerks-the-animated-series_202607/Clerks%20The%20Animated%20Series%20-%201X06%20-%20The%20Last%20Episode%20Ever.mp4",
-            "seconds": 1299,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 71
-          },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "clerks-the-animated-series-1080p-ai-upscale",
-              "itemTitle": "Clerks: The Animated Series 1080p AI Upscale",
-              "file": "Clerks - The Animated Series/Clerks - S01e06 6.mp4",
-              "name": "Clerks - The Animated Series/Clerks - S01e06 6",
-              "url": "https://archive.org/download/clerks-the-animated-series-1080p-ai-upscale/Clerks%20-%20The%20Animated%20Series%2FClerks%20-%20S01e06%206.mp4",
-              "seconds": 1413,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 130
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 6 of 6 in \"Clerks: The Animated Series\"",
-              "item": "clerks-the-animated-series",
-              "itemTitle": "Clerks: The Animated Series",
-              "file": "CLERKS_TV23.mp4",
-              "name": "CLERKS_TV23",
-              "url": "https://archive.org/download/clerks-the-animated-series/CLERKS_TV23.mp4",
-              "seconds": 1400,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 139
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         }
       ]
     }

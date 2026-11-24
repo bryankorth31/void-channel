@@ -3,7 +3,7 @@
   "slug": "gilligans-island",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-19T04:12:19.462Z",
+  "matchedAt": "2026-11-24T01:52:24.032Z",
   "addedAt": "2026-10-15T12:08:51.757Z",
   "tvmaze": {
     "id": 4041,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 98,
-    "live": 98,
+    "live": 96,
     "review": 0,
-    "missing": 0,
-    "pct": 100
+    "missing": 2,
+    "pct": 98
   },
   "seasons": [
     {
@@ -1306,20 +1306,8 @@
           "number": 28,
           "name": "Allergy Time",
           "airdate": "1966-03-31",
-          "state": "LIVE",
-          "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "gilligans-island-complete-tv-series",
-            "itemTitle": "Gilligan's Island Complete TV Series",
-            "file": "Season 02/Gilligans.Island.S02E28.Allergy.Time.mp4",
-            "name": "Season 02/Gilligans.Island.S02E28.Allergy.Time",
-            "url": "https://archive.org/download/gilligans-island-complete-tv-series/Season%2002%2FGilligans.Island.S02E28.Allergy.Time.mp4",
-            "seconds": 1523,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 844
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -1346,20 +1334,8 @@
           "number": 30,
           "name": "V for Vitamins",
           "airdate": "1966-04-14",
-          "state": "LIVE",
-          "file": {
-            "conf": 1,
-            "why": "S/E in filename + title match",
-            "item": "gilligans-island-complete-tv-series",
-            "itemTitle": "Gilligan's Island Complete TV Series",
-            "file": "Season 02/Gilligans.Island.S02E30.V.for.Vitamins.mp4",
-            "name": "Season 02/Gilligans.Island.S02E30.V.for.Vitamins",
-            "url": "https://archive.org/download/gilligans-island-complete-tv-series/Season%2002%2FGilligans.Island.S02E30.V.for.Vitamins.mp4",
-            "seconds": 1520,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 760
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

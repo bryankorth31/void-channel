@@ -3,7 +3,7 @@
   "slug": "magic-knight-rayearth",
   "type": "Anime",
   "network": "JP",
-  "matchedAt": "2026-10-19T04:11:43.091Z",
+  "matchedAt": "2026-11-24T01:51:32.666Z",
   "addedAt": "2026-10-15T12:08:19.950Z",
   "tvmaze": {
     "id": 26374,
@@ -29,33 +29,19 @@
           "airdate": "1994-10-17",
           "state": "REVIEW",
           "file": {
-            "conf": 0.7,
-            "why": "absolute episode number",
-            "item": "mock-abs-cbn-broadcast-of-magic-knight-rayearth-episode-1",
-            "itemTitle": "MOCK ABS CBN Broadcast Of Magic Knight Rayearth Episode 1",
-            "file": "MOCK ABS-CBN Broadcast of Magic Knight Rayearth Episode 1.mp4",
-            "name": "MOCK ABS-CBN Broadcast of Magic Knight Rayearth Episode 1",
-            "url": "https://archive.org/download/mock-abs-cbn-broadcast-of-magic-knight-rayearth-episode-1/MOCK%20ABS-CBN%20Broadcast%20of%20Magic%20Knight%20Rayearth%20Episode%201.mp4",
-            "seconds": 1469,
-            "format": "MPEG4",
+            "conf": 0.55,
+            "why": "sequence guess: file 1 of 20 in \"Magic Knight Rayearth - (Silverwynd VHS \"",
+            "item": "20251204_20251204_0111",
+            "itemTitle": "Magic Knight Rayearth - (Silverwynd VHS Fansub)",
+            "file": "Magic Knight Rayearth - 01 [SW][SFS].mp4",
+            "name": "Magic Knight Rayearth - 01 [SW][SFS]",
+            "url": "https://archive.org/download/20251204_20251204_0111/Magic%20Knight%20Rayearth%20-%2001%20%5BSW%5D%5BSFS%5D.mp4",
+            "seconds": 1465,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 2343
+            "sizeMB": 149
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 1 of 20 in \"Magic Knight Rayearth - (Silverwynd VHS \"",
-              "item": "20251204_20251204_0111",
-              "itemTitle": "Magic Knight Rayearth - (Silverwynd VHS Fansub)",
-              "file": "Magic Knight Rayearth - 01 [SW][SFS].mp4",
-              "name": "Magic Knight Rayearth - 01 [SW][SFS]",
-              "url": "https://archive.org/download/20251204_20251204_0111/Magic%20Knight%20Rayearth%20-%2001%20%5BSW%5D%5BSFS%5D.mp4",
-              "seconds": 1465,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 149
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 2,

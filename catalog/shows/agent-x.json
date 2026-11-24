@@ -3,7 +3,7 @@
   "slug": "agent-x",
   "type": "Drama",
   "network": "TNT",
-  "matchedAt": "2026-10-24T21:46:28.923Z",
+  "matchedAt": "2026-11-24T01:55:36.895Z",
   "addedAt": "2026-10-24T21:46:28.923Z",
   "tvmaze": {
     "id": 3030,
@@ -14,8 +14,8 @@
   },
   "coverage": {
     "total": 10,
-    "live": 1,
-    "review": 7,
+    "live": 0,
+    "review": 8,
     "missing": 2,
     "pct": 80
   },
@@ -27,35 +27,21 @@
           "number": 1,
           "name": "Pilot",
           "airdate": "2015-11-08",
-          "state": "LIVE",
+          "state": "REVIEW",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "agent.x.us.S01E01",
-            "itemTitle": "agent.x.us.S01E01",
-            "file": "agent.x.us.S01E01.mp4",
-            "name": "agent.x.us.S01E01",
-            "url": "https://archive.org/download/agent.x.us.S01E01/agent.x.us.S01E01.mp4",
-            "seconds": 2594,
-            "format": "MPEG4",
+            "conf": 0.8,
+            "why": "title ~ \"Pilot\" (0.95)",
+            "item": "agent-x_202608",
+            "itemTitle": "Agent X (2015)",
+            "file": "Agent X E01 - Pilot.mp4",
+            "name": "Agent X E01 - Pilot",
+            "url": "https://archive.org/download/agent-x_202608/Agent%20X%20E01%20-%20Pilot.mp4",
+            "seconds": 2590,
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 297
+            "sizeMB": 254
           },
-          "alternates": [
-            {
-              "conf": 0.8,
-              "why": "title ~ \"Pilot\" (0.95)",
-              "item": "agent-x_202608",
-              "itemTitle": "Agent X (2015)",
-              "file": "Agent X E01 - Pilot.mp4",
-              "name": "Agent X E01 - Pilot",
-              "url": "https://archive.org/download/agent-x_202608/Agent%20X%20E01%20-%20Pilot.mp4",
-              "seconds": 2590,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 254
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 2,

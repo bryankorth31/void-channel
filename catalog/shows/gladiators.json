@@ -3,7 +3,7 @@
   "slug": "gladiators",
   "type": "Documentary & Geographic",
   "network": "ITV",
-  "matchedAt": "2026-10-17T09:45:40.647Z",
+  "matchedAt": "2026-11-24T01:53:13.657Z",
   "addedAt": "2026-10-17T09:45:40.647Z",
   "tvmaze": {
     "id": 63727,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 33,
-    "live": 2,
+    "live": 0,
     "review": 0,
-    "missing": 31,
-    "pct": 6
+    "missing": 33,
+    "pct": 0
   },
   "seasons": [
     {
@@ -27,40 +27,16 @@
           "number": 1,
           "name": "Episode 1",
           "airdate": "2024-01-13",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "gladiatorsuks11e1",
-            "itemTitle": "Gladiators UK - Mùa 11 - Tập 1 (13.01.2024)",
-            "file": "Gladiator UK 2024 S01E01.mp4",
-            "name": "Gladiator UK 2024 S01E01",
-            "url": "https://archive.org/download/gladiatorsuks11e1/Gladiator%20UK%202024%20S01E01.mp4",
-            "seconds": 3774,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1013
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
           "name": "Episode 2",
           "airdate": "2024-01-20",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "gladiatorsuks11e2",
-            "itemTitle": "Gladiators UK - Mùa 11 - Tập 2 (20.01.2024)",
-            "file": "Gladiator UK 2024 S01E02.mp4",
-            "name": "Gladiator UK 2024 S01E02",
-            "url": "https://archive.org/download/gladiatorsuks11e2/Gladiator%20UK%202024%20S01E02.mp4",
-            "seconds": 4349,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1172
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

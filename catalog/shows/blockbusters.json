@@ -3,7 +3,7 @@
   "slug": "blockbusters",
   "type": "Classic TV",
   "network": "NBC",
-  "matchedAt": "2026-10-16T07:58:41.171Z",
+  "matchedAt": "2026-11-24T01:52:45.349Z",
   "addedAt": "2026-10-16T07:58:41.171Z",
   "tvmaze": {
     "id": 8490,
@@ -14,9 +14,9 @@
   },
   "coverage": {
     "total": 1513,
-    "live": 1,
+    "live": 0,
     "review": 0,
-    "missing": 1512,
+    "missing": 1513,
     "pct": 0
   },
   "seasons": [
@@ -283,20 +283,8 @@
           "number": 33,
           "name": "Episode 33",
           "airdate": "1983-10-12",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "blockbusters-uk-2012-s1-e33",
-            "itemTitle": "Blockbusters UK (27 June 2012 | S1 E33): Ryan @ Gold Run",
-            "file": "Blockbusters UK (27 June 2012 | S1 E33)_ Ryan @ Gold Run.mp4",
-            "name": "Blockbusters UK (27 June 2012 | S1 E33)_ Ryan @ Gold Run",
-            "url": "https://archive.org/download/blockbusters-uk-2012-s1-e33/Blockbusters%20UK%20(27%20June%202012%20%7C%20S1%20E33)_%20Ryan%20%40%20Gold%20Run.mp4",
-            "seconds": 1796,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 84
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

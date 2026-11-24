@@ -3,7 +3,7 @@
   "slug": "pluribus",
   "type": "Streaming Era",
   "network": "US",
-  "matchedAt": "2026-10-16T07:56:59.756Z",
+  "matchedAt": "2026-11-24T01:50:22.993Z",
   "addedAt": "2026-10-16T02:39:54.432Z",
   "tvmaze": {
     "id": 86175,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 9,
-    "live": 6,
+    "live": 5,
     "review": 0,
-    "missing": 3,
-    "pct": 67
+    "missing": 4,
+    "pct": 56
   },
   "seasons": [
     {
@@ -111,21 +111,8 @@
           "number": 5,
           "name": "Got Milk",
           "airdate": "2025-11-26",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.85,
-            "why": "S/E in filename",
-            "item": "httpsarchive.orgdetailspluribus05and06",
-            "itemTitle": "Pluribus capitulo 5 y 6",
-            "file": "PLUR1BUS 2025 S01E05 720p hevc x265 [WD-13].mp4",
-            "name": "PLUR1BUS 2025 S01E05 720p hevc x265 [WD-13]",
-            "url": "https://archive.org/download/httpsarchive.orgdetailspluribus05and06/PLUR1BUS%202025%20S01E05%20720p%20hevc%20x265%20%5BWD-13%5D.mp4",
-            "seconds": 2760,
-            "format": "h.264",
-            "playable": true,
-            "codecRisk": "video (hevc)",
-            "sizeMB": 268
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

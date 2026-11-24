@@ -3,7 +3,7 @@
   "slug": "pulling",
   "type": "British and Beyond",
   "network": "BBC Three",
-  "matchedAt": "2026-10-16T07:57:04.411Z",
+  "matchedAt": "2026-11-24T01:50:30.911Z",
   "addedAt": "2026-10-15T12:07:58.690Z",
   "tvmaze": {
     "id": 7042,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 12,
-    "live": 1,
+    "live": 0,
     "review": 0,
-    "missing": 11,
-    "pct": 8
+    "missing": 12,
+    "pct": 0
   },
   "seasons": [
     {
@@ -27,35 +27,9 @@
           "number": 1,
           "name": "Episode 1",
           "airdate": "2006-11-23",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "pulling.moves.1x01.claimitis_scale_2x_alq-122",
-            "itemTitle": "Pulling Moves S01E01 - Upscaled 480p -> 720p",
-            "file": "pulling.moves.1x01.claimitis_scale_2x_alq-12(2).ia.mp4",
-            "name": "pulling.moves.1x01",
-            "url": "https://archive.org/download/pulling.moves.1x01.claimitis_scale_2x_alq-122/pulling.moves.1x01.claimitis_scale_2x_alq-12(2).ia.mp4",
-            "seconds": 1672,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 930
-          },
-          "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "pulling.moves.1x01.claimitis_scale_2x_alq-122",
-              "itemTitle": "Pulling Moves S01E01 - Upscaled 480p -> 720p",
-              "file": "pulling.moves.1x01.claimitis_scale_2x_alq-12(2).mp4",
-              "name": "pulling.moves.1x01.claimitis_scale_2x_alq-12(2)",
-              "url": "https://archive.org/download/pulling.moves.1x01.claimitis_scale_2x_alq-122/pulling.moves.1x01.claimitis_scale_2x_alq-12(2).mp4",
-              "seconds": 1672,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 930
-            }
-          ]
+          "state": "MISSING",
+          "file": null,
+          "alternates": []
         },
         {
           "number": 2,

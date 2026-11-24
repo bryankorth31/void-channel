@@ -3,7 +3,7 @@
   "slug": "pen15",
   "type": "Streaming Era",
   "network": "US",
-  "matchedAt": "2026-10-16T07:57:01.071Z",
+  "matchedAt": "2026-11-24T01:50:25.229Z",
   "addedAt": "2026-10-15T12:07:57.396Z",
   "tvmaze": {
     "id": 38541,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 24,
-    "live": 1,
+    "live": 0,
     "review": 0,
-    "missing": 23,
-    "pct": 4
+    "missing": 24,
+    "pct": 0
   },
   "seasons": [
     {
@@ -75,20 +75,8 @@
           "number": 7,
           "name": "AIM",
           "airdate": "2019-02-08",
-          "state": "LIVE",
-          "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "pen-15.-s-01-e-07.720p.-hulu.-webrip.x-264-galaxy-tv",
-            "itemTitle": "PEN 15. S 01 E 07.720p. HULU. WEBRip.x 264 Galaxy TV",
-            "file": "PEN15.S01E07.720p.HULU.WEBRip.x264-GalaxyTV.mp4",
-            "name": "PEN15.S01E07.720p.HULU.WEBRip.x264-GalaxyTV",
-            "url": "https://archive.org/download/pen-15.-s-01-e-07.720p.-hulu.-webrip.x-264-galaxy-tv/PEN15.S01E07.720p.HULU.WEBRip.x264-GalaxyTV.mp4",
-            "seconds": 1714,
-            "format": "h.264",
-            "playable": true,
-            "sizeMB": 165
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

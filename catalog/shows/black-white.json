@@ -3,7 +3,8 @@
   "slug": "black-white",
   "type": "Drama",
   "network": "FX",
-  "matchedAt": "2026-10-24T18:05:44.308Z",
+  "matchedAt": "2026-11-24T01:53:58.808Z",
+  "addedAt": "2026-11-24T01:53:58.814Z",
   "tvmaze": {
     "id": 32994,
     "name": "Black. White.",
@@ -13,10 +14,10 @@
   },
   "coverage": {
     "total": 6,
-    "live": 0,
+    "live": 1,
     "review": 0,
-    "missing": 6,
-    "pct": 0
+    "missing": 5,
+    "pct": 17
   },
   "seasons": [
     {
@@ -26,8 +27,20 @@
           "number": 1,
           "name": "Episode 1",
           "airdate": "2006-03-08",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "black.-white.-s-01e-01",
+            "itemTitle": "Black. White. S01e01",
+            "file": "Black. White. s01e01.mp4",
+            "name": "Black. White. s01e01",
+            "url": "https://archive.org/download/black.-white.-s-01e-01/Black.%20White.%20s01e01.mp4",
+            "seconds": 2887,
+            "format": "h.264",
+            "playable": true,
+            "sizeMB": 286
+          },
           "alternates": []
         },
         {

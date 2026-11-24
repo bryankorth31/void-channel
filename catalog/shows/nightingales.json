@@ -3,7 +3,7 @@
   "slug": "nightingales",
   "type": "British and Beyond",
   "network": "Channel 4",
-  "matchedAt": "2026-10-26T16:01:02.202Z",
+  "matchedAt": "2026-11-24T01:53:35.435Z",
   "addedAt": "2026-10-26T16:01:02.202Z",
   "tvmaze": {
     "id": 36301,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 13,
     "live": 0,
-    "review": 3,
-    "missing": 10,
-    "pct": 23
+    "review": 0,
+    "missing": 13,
+    "pct": 0
   },
   "seasons": [
     {
@@ -27,60 +27,24 @@
           "number": 1,
           "name": "Moonlight Becomes You",
           "airdate": "1990-02-27",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.6,
-            "why": "absolute episode number",
-            "item": "death-and-nightingales",
-            "itemTitle": "Death And Nightingales",
-            "file": "Death and Nightingales Episode 1.mp4",
-            "name": "Death and Nightingales Episode 1",
-            "url": "https://archive.org/download/death-and-nightingales/Death%20and%20Nightingales%20Episode%201.mp4",
-            "seconds": 3512,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 345
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
           "name": "Takeaway",
           "airdate": "1990-03-06",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.6,
-            "why": "absolute episode number",
-            "item": "death-and-nightingales",
-            "itemTitle": "Death And Nightingales",
-            "file": "Death and Nightingales Episode 2.mp4",
-            "name": "Death and Nightingales Episode 2",
-            "url": "https://archive.org/download/death-and-nightingales/Death%20and%20Nightingales%20Episode%202.mp4",
-            "seconds": 3568,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 301
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 3,
           "name": "Kiss and Make Up",
           "airdate": "1990-03-13",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.6,
-            "why": "absolute episode number",
-            "item": "death-and-nightingales",
-            "itemTitle": "Death And Nightingales",
-            "file": "Death and Nightingales Episode 3.mp4",
-            "name": "Death and Nightingales Episode 3",
-            "url": "https://archive.org/download/death-and-nightingales/Death%20and%20Nightingales%20Episode%203.mp4",
-            "seconds": 3507,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 303
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

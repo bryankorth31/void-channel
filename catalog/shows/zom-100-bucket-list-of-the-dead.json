@@ -3,7 +3,7 @@
   "slug": "zom-100-bucket-list-of-the-dead",
   "type": "Animated",
   "network": "Hulu",
-  "matchedAt": "2026-10-26T16:02:15.429Z",
+  "matchedAt": "2026-11-24T01:57:07.587Z",
   "addedAt": "2026-10-26T16:02:15.429Z",
   "tvmaze": {
     "id": 69000,
@@ -14,8 +14,8 @@
   },
   "coverage": {
     "total": 12,
-    "live": 1,
-    "review": 11,
+    "live": 5,
+    "review": 7,
     "missing": 0,
     "pct": 100
   },
@@ -43,8 +43,8 @@
           },
           "alternates": [
             {
-              "conf": 0.65,
-              "why": "absolute episode number",
+              "conf": 0.8,
+              "why": "absolute episode number + title match",
               "item": "episode-7-truck-stop-of-the-dead",
               "itemTitle": "ZOM 100 Bucket List Of The Dead The Whole Toonami Broadcast",
               "file": "Episode 1 Akira Of The Dead.mp4",
@@ -97,10 +97,10 @@
           "number": 3,
           "name": "Best Friend of the Dead",
           "airdate": "2023-07-23",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
+            "conf": 0.95,
+            "why": "absolute episode number + title match",
             "item": "episode-7-truck-stop-of-the-dead",
             "itemTitle": "ZOM 100 Bucket List Of The Dead The Whole Toonami Broadcast",
             "file": "Episode 3 Best Friend of the Dead.mp4",
@@ -157,8 +157,8 @@
           "airdate": "2023-08-13",
           "state": "REVIEW",
           "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
+            "conf": 0.8,
+            "why": "absolute episode number + title match",
             "item": "episode-7-truck-stop-of-the-dead",
             "itemTitle": "ZOM 100 Bucket List Of The Dead The Whole Toonami Broadcast",
             "file": "Episode 5 Hero Of The Dead.mp4",
@@ -193,8 +193,8 @@
           "airdate": "2023-08-27",
           "state": "REVIEW",
           "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
+            "conf": 0.8,
+            "why": "absolute episode number + title match",
             "item": "episode-7-truck-stop-of-the-dead",
             "itemTitle": "ZOM 100 Bucket List Of The Dead The Whole Toonami Broadcast",
             "file": "Episode 6 RV Of The Dead.mp4",
@@ -227,10 +227,10 @@
           "number": 7,
           "name": "Truck Stop of the Dead",
           "airdate": "2023-09-03",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
+            "conf": 0.95,
+            "why": "absolute episode number + title match",
             "item": "episode-7-truck-stop-of-the-dead",
             "itemTitle": "ZOM 100 Bucket List Of The Dead The Whole Toonami Broadcast",
             "file": "Episode 7 Truck Stop of the Dead .mp4",
@@ -263,10 +263,10 @@
           "number": 8,
           "name": "Sushi & Hot Springs of the Dead",
           "airdate": "2023-09-17",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
+            "conf": 0.95,
+            "why": "absolute episode number + title match",
             "item": "episode-7-truck-stop-of-the-dead",
             "itemTitle": "ZOM 100 Bucket List Of The Dead The Whole Toonami Broadcast",
             "file": "Episode 8 Sushi & Hot Springs Of the Dead.mp4",
@@ -299,10 +299,10 @@
           "number": 9,
           "name": "Treehouse of the Dead",
           "airdate": "2023-09-24",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
+            "conf": 0.95,
+            "why": "absolute episode number + title match",
             "item": "episode-7-truck-stop-of-the-dead",
             "itemTitle": "ZOM 100 Bucket List Of The Dead The Whole Toonami Broadcast",
             "file": "Episode 9 Treehouse Of The Dead.mp4",
@@ -337,8 +337,8 @@
           "airdate": "2023-12-25",
           "state": "REVIEW",
           "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
+            "conf": 0.8,
+            "why": "absolute episode number + title match",
             "item": "episode-7-truck-stop-of-the-dead",
             "itemTitle": "ZOM 100 Bucket List Of The Dead The Whole Toonami Broadcast",
             "file": "Episode 10 Hometown Of The Dead.mp4",
@@ -373,8 +373,8 @@
           "airdate": "2023-12-25",
           "state": "REVIEW",
           "file": {
-            "conf": 0.65,
-            "why": "absolute episode number",
+            "conf": 0.8,
+            "why": "absolute episode number + title match",
             "item": "episode-7-truck-stop-of-the-dead",
             "itemTitle": "ZOM 100 Bucket List Of The Dead The Whole Toonami Broadcast",
             "file": "Episode 11 Hometown Of The Dead II.mp4",
@@ -386,6 +386,19 @@
             "sizeMB": 355
           },
           "alternates": [
+            {
+              "conf": 0.55,
+              "why": "title ~ \"Hometown of the Dead II\" (0.76)",
+              "item": "episode-7-truck-stop-of-the-dead",
+              "itemTitle": "ZOM 100 Bucket List Of The Dead The Whole Toonami Broadcast",
+              "file": "Episode 12 Hometown of The Dead III.mp4",
+              "name": "Episode 12 Hometown of The Dead III",
+              "url": "https://archive.org/download/episode-7-truck-stop-of-the-dead/Episode%2012%20Hometown%20of%20The%20Dead%20III.mp4",
+              "seconds": 1428,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 354
+            },
             {
               "conf": 0.55,
               "why": "S/E in filename",
