@@ -1,8 +1,9 @@
 // TRIVIA NIGHTS: the night jobs. This PC digests the Internet Archive into the trivia machine while Bryan sleeps, with no
 // Claude usage (Bryan, 20 Nov 2026: "create jobs for my local machine to do in pursuit of digesting the internet archive
 // and creating a trivia machine from it"). One job after another, each with a time limit, the way scripts/nightly.js runs
-// the catalog; a failing job is logged and the night goes on, but the question bank is only rebuilt when the checks before
-// it passed.
+// the catalog; a failing job is logged and the night goes on. The question bank stands on its own checker (scripts/trivia/
+// check.js, every question against the day's catalog): it reads no transcript and no moment, so their checks do not hold it
+// back (24 Nov 2026: five stale transcripts held the bank on Bryan's first morning; "Yes, fix it").
 //
 //   1. fame         node scripts/trivia/fame.js        the fame list: who people know best (Wikidata, Wikipedia views); weekly
 //   2. pool         node scripts/trivia/pool.js        TMDB ratings and votes for what plays (its own cache keeps a month); weekly
@@ -104,10 +105,6 @@ function gateWhy(results) {
   return '';
 }
 
-// The bank is rebuilt only when the checks it stands on passed (or did not run tonight).
-function bankAllowed(results) {
-  return !['transcripts', 'moments'].some((k) => results[k] && results[k].status === 'failed');
-}
 
 // ---------- running ----------
 
@@ -209,7 +206,6 @@ function main() {
       // The timed questions stand apart from the bank: a timed question that fails its check is logged, and the bank still rebuilds.
       else if (k === 'timed') results.timed = run('timed', process.execPath, [path.join(ROOT, 'scripts/trivia/timed.js')], 20);
       else if (k === 'bank') {
-        if (!bankAllowed(results)) { results.bank = { status: 'skipped', why: 'a check before it failed; yesterday\'s questions stay' }; log('-- bank: skipped, a check before it failed'); continue; }
         results.bank = run('bank', process.execPath, [path.join(ROOT, 'scripts/trivia/bank.js')], 30);
       }
     }
@@ -229,4 +225,4 @@ function main() {
 }
 
 if (require.main === module) main();
-module.exports = { options, due, cardFree, bankAllowed, gateWhy, jobsFor, catalogBusy, main, JOBS, NIGHT, MORNING, TAG };
+module.exports = { options, due, cardFree, gateWhy, jobsFor, catalogBusy, main, JOBS, NIGHT, MORNING, TAG };

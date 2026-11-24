@@ -1,7 +1,7 @@
 // Trivia Nights: the night jobs on this PC (scripts/trivia/night.js; Bryan, 20 Nov 2026: "create jobs for my local machine to do
 // in pursuit of digesting the internet archive and creating a trivia machine from it"). Run: node --test tests/trivia-night.test.js
-// The rules that keep a night safe: weekly jobs wait a week, the graphics card is only taken when free, the question bank is only
-// rebuilt when the checks before it passed. Nothing is run or fetched here.
+// The rules that keep a night safe: weekly jobs wait a week, the graphics card is only taken when free, the question bank stands
+// on its own checker. Nothing is run or fetched here.
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('fs');
@@ -38,13 +38,15 @@ test('the graphics card: free unless another job holds it in studio mode and its
   assert.equal(N.cardFree({ mode: 'studio', by: N.TAG, until: now / 1000 + 600 }, now), true, 'our own claim');
 });
 
-test('the bank is rebuilt only when the transcript and moment checks did not fail', () => {
-  assert.equal(N.bankAllowed({ timed: { status: 'failed' } }), true, 'the timed questions stand apart from the bank');
-  assert.equal(N.bankAllowed({}), true);
-  assert.equal(N.bankAllowed({ transcripts: { status: 'ok' }, moments: { status: 'ok' } }), true);
-  assert.equal(N.bankAllowed({ moments: { status: 'failed' } }), false);
-  assert.equal(N.bankAllowed({ transcripts: { status: 'failed' } }), false);
-  assert.equal(N.bankAllowed({ whisper: { status: 'failed' } }), true, 'a Whisper night that failed leaves the bank to rebuild from what checked out');
+// The bank stands on its own checker (24 Nov 2026, "Yes, fix it"): bank.js and check.js read no transcript and no moment, so a
+// failed transcript or moment check is logged and does not hold the bank back; the gate still needs the bank itself to pass.
+test('the bank is not held back by the transcript or moment checks, which it does not read', () => {
+  const dir = path.join(__dirname, '..', 'scripts', 'trivia');
+  for (const f of ['bank.js', 'check.js']) assert.ok(!/transcript|moment/i.test(fs.readFileSync(path.join(dir, f), 'utf8')), f + ' reads no transcript or moment');
+  const src = fs.readFileSync(path.join(dir, 'night.js'), 'utf8');
+  assert.ok(!/bankAllowed/.test(src));
+  assert.match(src, /else if \(k === 'bank'\) \{\s+results\.bank = run\('bank'/);
+  assert.equal(N.gateWhy({ transcripts: { status: 'failed' }, moments: { status: 'failed' }, bank: { status: 'ok' } }), '', 'the gate opens on the bank, not on them');
 });
 
 test('the night runs the tools it names, in order, and claims and releases the card around Whisper', () => {
