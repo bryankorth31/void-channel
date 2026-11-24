@@ -9,8 +9,14 @@ const guards = require('../scripts/lib/siteguards');
 const REPO = path.join(__dirname, '..');
 const read = (f) => fs.readFileSync(path.join(REPO, f), 'utf8').replace(/\r\n/g, '\n');
 
-test('the site header has a Games link to /play/', () => {
-  assert.match(read('scripts/lib/app.js'), /<a class="mine-link" href="\$\{base\}play\/" title="Old games from the Internet Archive, free to play"><i class="ico play"><\/i> Games<\/a>/);
+// The link's word is the room's own name from the one list of rooms (voidverse join J3; Bryan, 24 Nov 2026: "B, PLAY"). It said
+// "Games" until then, while the menu, the room and its title said "PLAY".
+test('the site header has a link to /play/ that carries the room\'s own name, PLAY', () => {
+  const APP = read('scripts/lib/app.js');
+  assert.match(APP, /<a class="mine-link" href="\$\{base\}play\/" title="Old games from the Internet Archive, free to play"><i class="ico play"><\/i> \$\{roomHtml\('play'\)\}<\/a>/);
+  assert.match(APP, /\nconst ROOM_NAMES = require\('\.\/areas-v'\)\.names\(\);\n/, 'read from the list at build time');
+  assert.equal(require('../scripts/lib/areas-v').names().play, 'PLAY');
+  assert.doesNotMatch(APP, /<\/i> Games<\/a>/);
 });
 
 test('the player and its files are isolated, the shelf is not', () => {

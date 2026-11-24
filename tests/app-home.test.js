@@ -80,16 +80,21 @@ test('the Browse back buttons still call go(\'\'): coming back from a show keeps
 });
 
 // H9 (23 Nov 2026, "C, Play together row"): the rooms where the TV is the table and the phones are in your hands.
-test('H9: a "Play together" row under On now, with Card games, Trivia Night and Games, on voidtv.net itself only', () => {
+test('H9: a "Play together" row under On now, with Card games, Trivia Night and PLAY, on voidtv.net itself only', () => {
   const onnow = APP.indexOf("<div id=\"onnow\">'+onNowHtml()+'</div>'+momentHome();"), row = APP.indexOf('\n  h+=togetherHome();\n'), yours = APP.indexOf('// 2. yours');
   assert.ok(onnow > 0 && row > onnow && row < yours, 'right after On now and any moment that is on (the moment keeps its place under Live TV), before your own rows');
   const fn = lineAt('function togetherHome(){');
-  const run = (remoteOn) => vm.runInNewContext(fn + '\ntogetherHome();', { REMOTE_ON: remoteOn, BASE: '/' });
+  // The tiles' names come from the one list of rooms (voidverse join J3; Bryan, 24 Nov 2026: "B, PLAY"), never a word of the row's own.
+  const NAMES = require('../scripts/lib/areas-v').names();
+  const escPage = (s) => String(s == null ? '' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const run = (remoteOn, rooms) => vm.runInNewContext(fn + '\ntogetherHome();', { REMOTE_ON: remoteOn, BASE: '/', ROOMS: rooms || NAMES, esc: escPage });
   assert.equal(run(false), '', 'nothing where the phone remote is off: another site, Kids, an embed');
   const html = run(true);
   assert.match(html, /<h2>Play together<small>/);
   const tiles = [...html.matchAll(/<a class="ontile" href="([^"]+)"[^>]*><img loading="lazy" src="([^"]+)" alt=""><b>([^<]+)<\/b><small>([^<]+)<\/small><\/a>/g)].map((m) => m.slice(1));
-  assert.deepEqual(tiles.map((t) => [t[0], t[2]]), [['/cards/', 'Card games'], ['/trivia/', 'Trivia Night'], ['/play/', 'Games']]);
+  assert.deepEqual(tiles.map((t) => [t[0], t[2]]), [['/cards/', 'Card games'], ['/trivia/', 'Trivia Night'], ['/play/', 'PLAY']]);
+  assert.doesNotMatch(fn, /'(Games|PLAY|Card games|Trivia Night)'/, 'no room name is written into the row itself');
+  assert.match(run(true, { cards: 'A & B', trivia: 'Quiz', play: 'Arcade' }), /<b>A &amp; B<\/b>.*<b>Quiz<\/b>.*<b>Arcade<\/b>/, 'a new name in the list is the name on the tile');
   for (const t of tiles) assert.ok(fs.existsSync(path.join(__dirname, '..', t[1])), t[1] + ' is in the repo');
   assert.doesNotMatch(html, /[–—]/, 'no em or en dashes');
   assert.match(APP, /\na\.ontile\{text-decoration:none\}\n/, 'a link tile looks like the On now tiles');

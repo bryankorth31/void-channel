@@ -67,13 +67,27 @@ test('the version is a hash of the list, so a changed list is never held in a ca
   assert.equal(v, require('crypto').createHash('sha1').update(SRC).digest('hex').slice(0, 10));
 });
 
+// Voidverse join J3, one name per room (Bryan, 24 Nov 2026: "Yes, those four", then "B, PLAY"). The main page takes the other rooms'
+// names from this list through areas-v.js names(); the header said "Games" where the list, the menu and the room said "PLAY".
+test('J3: the rooms\' names the main page uses are the list\'s own, and the names for a build without the list do not differ from it', () => {
+  const V = require('../scripts/lib/areas-v');
+  const A = load('voidtv.net', '/').areas;
+  const names = V.names();
+  for (const a of Array.from(A)) assert.equal(names[a.id], a.name, a.id + ' is named as the list names it');
+  assert.equal(names.play, 'PLAY');
+  for (const [id, name] of Object.entries(V.NAMES_WITHOUT_LIST)) assert.equal(name, Array.from(A).find((a) => a.id === id).name, id + ': the spare name equals the list');
+  assert.match(read('scripts/lib/app.js'), /const ROOMS=\$\{JSON\.stringify\(\{ play: ROOM_NAMES\.play, trivia: ROOM_NAMES\.trivia, cards: ROOM_NAMES\.cards \}\)/, 'the page gets them at build time');
+});
+
 
 // Bryan, 23 Nov 2026: "Hindi void should not be in the list higher then any other void verse page aside from west side or spanish".
-test('the language sites come last: only West Side and Spanish stand below Hindi', () => {
+// Then, 24 Nov 2026 (typed in the sister sites chat): "Hindi needs to be really relegated to the sidelines of things even underneath Spanish
+// it should go Spanish and then the West side and then Indy or Indian ... but Spanish first and below on the list these three things".
+test('the language sites come last, in his order: Spanish, then West Side, then Hindi at the very end', () => {
   const A = load('voidtv.net', '/').areas;
-  const ids = Array.from(A, (a) => a.id), at = ids.indexOf('hindi'); // Array.from: the list comes out of a vm, and its own arrays are another realm's
-  assert.ok(at > 0, 'Hindi is listed');
-  assert.deepEqual(ids.slice(at + 1).sort(), ['espanol', 'westside'], 'nothing else is below Hindi');
-  for (const id of ids.slice(0, at)) assert.ok(!['westside', 'espanol'].includes(id), id + ' is above Hindi and is not a language site');
-  assert.ok(ids.indexOf('read') < at && ids.indexOf('kids') < at && ids.indexOf('university') < at, 'lexROM, Kids and University are above it');
+  const ids = Array.from(A, (a) => a.id); // Array.from: the list comes out of a vm, and its own arrays are another realm's
+  assert.deepEqual(ids.slice(-3), ['espanol', 'westside', 'hindi'], 'the last three, in this order');
+  for (const id of ids.slice(0, -3)) assert.ok(!['espanol', 'westside', 'hindi'].includes(id), id + ' is above them and is not a language site');
+  const first = ids.indexOf('espanol');
+  assert.ok(ids.indexOf('read') < first && ids.indexOf('kids') < first && ids.indexOf('university') < first, 'lexROM, Kids and University are above all three');
 });

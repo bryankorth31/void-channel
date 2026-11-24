@@ -54,19 +54,21 @@
     { id: 'read', name: 'lexROM', line: 'Books read one word at a time', site: 'lexrom', url: 'https://lexrom.bspokevisuals.com/', live: true,
       also: 'Also free', kicker: 'Reading', head: 'Read a book one word at a time.', text: 'Free classics, your own books and the news, on the breath. No account.',
       go: 'Open lexROM', pic: 'https://lexrom.bspokevisuals.com/icon-512.png', picFit: 'contain' },
-    // The language sites come last (Bryan, 23 Nov 2026: "Hindi void should not be in the list higher then any other void verse page aside from
-    // west side or spanish"): every other room, lexROM among them, stands above Hindi; only West Side and Spanish stand below it.
-    { id: 'hindi', name: 'voidtv.net hindi', line: 'हिंदी में फ़िल्में और शो', site: 'hindi', url: 'https://hindi.voidtv.net/', live: true,
-      kicker: 'हिंदी', head: 'हिंदी में फ़िल्में और शो', text: 'Hindi films and shows, Hindi dubs and Live TV. Free, with an English switch.',
-      go: 'Open hindi', pic: '/assets/brand/bg/sign-orange-m.jpg' },
+    // The language sites come last, Spanish first, then West Side, then Hindi (Bryan, 23 Nov 2026: "Hindi void should not be in the list higher then
+    // any other void verse page aside from west side or spanish"; then 24 Nov 2026, in the sister sites chat: "Hindi needs to be really relegated to
+    // the sidelines of things even underneath Spanish it should go Spanish and then the West side and then Indy or Indian"). Every other room,
+    // lexROM among them, stands above all three.
     // West Side and Spanish have been online since 22 Nov 2026 (Bryan: "Yes, put them online") but were missing here, so no other
     // room led to them and they led to none (Bryan, 23 Nov 2026, "Yes, both", to the same menu as Hindi).
+    { id: 'espanol', name: 'voidtv.net español', line: 'Películas y series en español', site: 'espanol', url: 'https://espanol.voidtv.net/', live: true,
+      kicker: 'Español', head: 'Películas y series en español.', text: 'Spanish films and shows, and dubs, Latin American first. Free, no account.',
+      go: 'Abrir español', pic: '/assets/brand/bg/watcher-purple-m.jpg' },
     { id: 'westside', name: 'voidtv.net west side', line: 'Films and shows from West Africa', site: 'westside', url: 'https://westside.voidtv.net/', live: true,
       kicker: 'West Africa', head: 'Films and shows from Ghana and Nigeria.', text: 'Kumawood, Ghallywood and Nollywood, free, no account.',
       go: 'Open west side', pic: '/assets/brand/bg/sign-pink-m.jpg' },
-    { id: 'espanol', name: 'voidtv.net español', line: 'Películas y series en español', site: 'espanol', url: 'https://espanol.voidtv.net/', live: true,
-      kicker: 'Español', head: 'Películas y series en español.', text: 'Spanish films and shows, and dubs, Latin American first. Free, no account.',
-      go: 'Abrir español', pic: '/assets/brand/bg/watcher-purple-m.jpg' }
+    { id: 'hindi', name: 'voidtv.net hindi', line: 'हिंदी में फ़िल्में और शो', site: 'hindi', url: 'https://hindi.voidtv.net/', live: true,
+      kicker: 'हिंदी', head: 'हिंदी में फ़िल्में और शो', text: 'Hindi films and shows, Hindi dubs and Live TV. Free, with an English switch.',
+      go: 'Open hindi', pic: '/assets/brand/bg/sign-orange-m.jpg' }
     // An area not open yet goes here with live: false; it joins the menu and the cards the day live turns true.
   ];
 
