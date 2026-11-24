@@ -170,7 +170,11 @@
   let blocker = null;             // { h, p, link }: a note that replaces the page (an error, or a wait)
   let you = null, roster = null, table = null, mine = null;   // what the table last told this phone
   let askName = false, askedName = false, myName = '';
+  // The host's own hand on a phones-only table comes with the name the host typed on the start screen (src/screen.js).
+  { const given = (new URLSearchParams(location.search).get('name') || '').trim().slice(0, 16); if (given) myName = given; }
   let practice = false;           // a practice hand is on: this phone shows its own player's tips (Bryan, 23 Nov 2026, "practice C")
+  let phonesOnly = false;         // no TV: this phone shows the whole table behind its Table button (Bryan, 24 Nov 2026, "B, hand first")
+  let tableOpen = false;
   let rec = null;                 // { room, key, order }
   let order = [];                 // the hand in the player's own order
   let selected = [], fresh = new Set(), lay = null, drag = null, choosing = false;
@@ -257,6 +261,7 @@
     if (m.type === 'c-table') { table = m; render(); return; }
     if (m.type === 'c-hand') { takeHand(m.m); render(); return; }
     if (m.type === 'c-practice') { practice = !!m.on; render(); return; }
+    if (m.type === 'c-mode') { phonesOnly = !!m.phones; render(); return; }
     if (m.type === 'c-no') { toast(String(m.error || 'That move was not allowed.')); }
   }
 
@@ -396,6 +401,7 @@
     const v = table && table.v, me = meSeat();
     $('room').textContent = 'room ' + code;
     $('practice').hidden = !practice;
+    $('b-table').hidden = !phonesOnly;
     const turn = $('turn');
     turn.textContent = turnLine(v, roster, me);
     turn.classList.toggle('mine', !!(v && me !== null && v.turn.includes(me)));
@@ -538,6 +544,66 @@
     $('choose').hidden = false; choosing = true;
   }
 
+  // ----- The whole table, on a phones-only table (no TV shows it) -----
+  // Drawn from the public table alone (table.v, what the big screen would draw), with the table page's own helpers
+  // (src/screen.js, its pure part): the trick or the middle of the table, then every player with their cards in hand, their
+  // game line and what they have laid down. Nothing here comes from another phone's hand.
+  function cardRow(ids, cls) {
+    const row = document.createElement('div');
+    row.className = 'ts-cards' + (cls ? ' ' + cls : '');
+    for (const id of ids || []) row.appendChild(id ? F.card(id) : F.back());
+    return row;
+  }
+  function drawTable() {
+    const S = root.VoidScreen, v = table && table.v, body = $('table-body'), me = meSeat();
+    body.textContent = '';
+    $('table-turn').textContent = turnLine(v, roster, me);
+    if (!v || !S) return;
+    const mid = document.createElement('div');
+    mid.className = 'ts-mid';
+    const trick = v.zones && v.zones.trick && Array.isArray(v.zones.trick.cards) ? v.zones.trick.cards : [];
+    if (trick.length) {
+      const t = document.createElement('div');
+      t.className = 'ts-trick';
+      trick.forEach((c, i) => {
+        const cell = document.createElement('div'), who = S.trickSeat(v, i), name = document.createElement('small');
+        cell.className = 'ts-played';
+        cell.appendChild(F.card(c));
+        name.textContent = who === null ? '' : who === me ? 'You' : nameAt(roster, who);
+        cell.appendChild(name);
+        t.appendChild(cell);
+      });
+      mid.appendChild(t);
+    }
+    for (const it of S.centreItems(v)) {
+      const box = document.createElement('div'), say = document.createElement('small');
+      box.className = 'ts-item';
+      if (it.kind === 'pack') { box.appendChild(cardRow([null])); say.textContent = it.n + ' in the pack'; }
+      else if (it.kind === 'pile') { box.appendChild(cardRow([it.card])); say.textContent = 'Top of the pile'; }
+      else if (it.kind === 'offer') { if (it.card) box.appendChild(cardRow([it.card])); say.textContent = it.card ? 'On offer' : 'Nothing on offer'; }
+      else if (it.kind === 'waste') { box.appendChild(cardRow([it.top])); say.textContent = it.n + ' set aside'; }
+      else if (it.kind === 'groups') { for (const g of it.groups) box.appendChild(cardRow(g, 'ts-group')); say.textContent = 'On the table'; }
+      box.appendChild(say);
+      mid.appendChild(box);
+    }
+    body.appendChild(mid);
+    for (let i = 0; i < v.n; i++) {
+      const row = document.createElement('div'), head = document.createElement('div'), b = document.createElement('b'), info = document.createElement('span');
+      row.className = 'ts-seat' + (v.turn.includes(i) ? ' turn' : '') + (i === me ? ' me' : '');
+      b.textContent = i === me ? 'You' : nameAt(roster, i);
+      const z = v.zones && v.zones['hand:' + i], note = S.seatNote(v, i);
+      info.textContent = [z ? z.n + (z.n === 1 ? ' card' : ' cards') : '', note, v.turn.includes(i) ? 'to play' : ''].filter(Boolean).join(' · ');
+      head.className = 'ts-head';
+      head.append(b, info);
+      row.appendChild(head);
+      const laid = S.laidGroups(v, i);
+      if (laid.length) { const l = document.createElement('div'); l.className = 'ts-laid'; for (const g of laid) l.appendChild(cardRow(g, 'ts-group')); row.appendChild(l); }
+      body.appendChild(row);
+    }
+  }
+  function openTable() { tableOpen = true; $('tablesheet').hidden = false; drawTable(); }
+  function closeTable() { tableOpen = false; $('tablesheet').hidden = true; }
+
   // ----- Which page is showing -----
   function only(id) { for (const s of ['note', 'name', 'lobby', 'watch', 'game']) $(s).hidden = s !== id; }
   function note(h, p, link) { $('note-h').textContent = h; $('note-p').textContent = p; $('note-a').hidden = !link; only('note'); }
@@ -560,6 +626,7 @@
     if (!mine || !table) { note('Dealing', 'Getting your cards.', false); return; }
     only('game');
     drawTop(); drawTip(); drawHand(); drawPrivs(); drawBar(); overPanel();
+    if (tableOpen) drawTable();
     measure(); placeAll(drag && drag.moving ? drag.id : null);   // the strips can change height: measure again
   }
 
@@ -580,6 +647,8 @@
   $('b-rules').addEventListener('click', openRules);
   $('lobby-rules').addEventListener('click', openRules);
   $('rules-back').addEventListener('click', () => { $('rules').hidden = true; });
+  $('b-table').addEventListener('click', openTable);
+  $('table-back').addEventListener('click', closeTable);
   const box = $('handbox');
   box.addEventListener('pointerdown', onDown);
   box.addEventListener('pointermove', onMove);

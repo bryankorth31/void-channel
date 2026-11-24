@@ -112,3 +112,27 @@ li{margin:4px 0}
 #rules .howto-say{font-size:17px;line-height:1.3}
 #rules-back{width:100%;min-height:50px;font-size:18px;margin-top:14px}
 #lobby-rules{margin-top:18px}
+/* Phones only (no TV): the Table button and the whole table (Bryan, 24 Nov 2026: "pure phone mode", "B, hand first") */
+.table-btn{border-color:var(--gold);color:var(--gold)}
+#tablesheet{position:fixed;inset:0;z-index:70;background:var(--bg);display:flex;flex-direction:column;overflow-y:auto;
+  padding:max(18px,env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) max(16px,env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left))}
+#tablesheet h2{margin:2px 0 12px;font-size:22px}
+#table-body{flex:1;display:flex;flex-direction:column;gap:10px}
+.ts-mid{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;align-items:flex-end;padding:14px 10px;border-radius:18px;background:radial-gradient(ellipse at 50% 45%,#1d6b50 0,#123c2e 75%);border:2px solid var(--felt-line)}
+.ts-mid:empty{display:none}
+.ts-item,.ts-played{display:flex;flex-direction:column;align-items:center;gap:5px}
+.ts-item small,.ts-played small{color:#cfe9dd;font-size:12px}
+.ts-trick{display:flex;gap:8px;font-size:9px}
+.ts-cards{display:flex;gap:2px;font-size:8px}
+.ts-group{padding:2px;border-radius:6px;background:rgba(0,0,0,.18)}
+.ts-item .ts-group+.ts-group{margin-top:4px}
+.ts-seat{padding:10px 12px;border-radius:12px;background:var(--panel);border:1.5px solid var(--line)}
+.ts-seat.turn{border-color:var(--pink)}
+.ts-seat.me{border-style:dashed}
+.ts-head{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.ts-head b{font-size:16px}
+.ts-head span{color:var(--dim);font-size:13px}
+.ts-seat.turn .ts-head span{color:var(--pink)}
+.ts-laid{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;font-size:7px}
+.ts-laid .ts-cards{font-size:7px}
+#table-back{width:100%;min-height:50px;font-size:18px;margin-top:14px}

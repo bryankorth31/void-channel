@@ -43,7 +43,7 @@
 <main id="game" hidden>
   <header id="top">
     <div class="topl">
-      <div class="mark"><span class="v">voidtv</span><span class="n">.net</span> <span class="room" id="room"></span><span class="practice" id="practice" hidden>practice hand</span><button class="btn rules-btn" id="b-rules" type="button">Rules</button></div>
+      <div class="mark"><span class="v">voidtv</span><span class="n">.net</span> <span class="room" id="room"></span><span class="practice" id="practice" hidden>practice hand</span><button class="btn rules-btn" id="b-rules" type="button">Rules</button><button class="btn rules-btn table-btn" id="b-table" type="button" hidden>Table</button></div>
       <div class="turn" id="turn" role="status"></div>
       <div class="status" id="status"></div>
     </div>
@@ -75,6 +75,13 @@
     <p>Wait for the next deal.</p>
   </div>
 </main>
+<!-- Phones only (no TV): the whole table, from the public table alone (src/hand.js drawTable). -->
+<section id="tablesheet" hidden>
+  <div class="rules-k">The table</div>
+  <h2 id="table-turn"></h2>
+  <div id="table-body"></div>
+  <button class="btn solid" id="table-back" type="button">Back to your hand</button>
+</section>
 <section id="rules" hidden>
   <div class="rules-k">How to play</div>
   <h2 id="rules-h"></h2>
@@ -90,6 +97,7 @@
 <script src="/cards/games/spades.js"></script>
 <script src="/cards/games/rummy.js"></script>
 <script src="/cards/games/conquian.js"></script>
+<script src="/cards/src/screen.js"></script>
 <script src="/cards/src/hand.js"></script>
 </body>
 </html>

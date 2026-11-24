@@ -229,8 +229,9 @@ test('hand.html loads the card blocks, the rules card and every game before the 
   const src = [...html.matchAll(/<script[^>]*\ssrc="([^"]+)"/g)].map((m) => m[1]);
   const games = require('fs').readdirSync(require('path').join(__dirname, '..', 'games')).filter((f) => f.endsWith('.js')).map((f) => '/cards/games/' + f);
   assert.deepEqual(src.slice(0, 3), ['/cards/src/cards.js', '/cards/src/face.js', '/cards/src/rules.js']);
-  assert.deepEqual(src.slice(3, -1).slice().sort(), games.slice().sort(), 'every game in cards/games is loaded by the phone page too, for its rules card and tips');
-  assert.equal(src[src.length - 1], '/cards/src/hand.js');
+  assert.deepEqual(src.slice(3, -2).slice().sort(), games.slice().sort(), 'every game in cards/games is loaded by the phone page too, for its rules card and tips');
+  // The table page's script, for its pure part only (the Table button of a phones-only table draws with it), then the phone's own.
+  assert.deepEqual(src.slice(-2), ['/cards/src/screen.js', '/cards/src/hand.js']);
   assert.ok(!/\son[a-z]+\s*=/i.test(html), 'no inline event handlers');
 });
 

@@ -154,6 +154,8 @@
   // ---------- the page part ----------
 
   if (typeof document === 'undefined') return;
+  // The phone's hand page loads this file for the pure part only (its Table button draws the table from the same helpers).
+  if (!root.VoidDealer) return;
   // On a phone this page shows the games first instead, and opens no room (src/phone.js; Bryan, 24 Nov 2026: "B games first").
   if (root.VoidCardsPhone && root.VoidCardsPhone.take && root.VoidCardsPhone.take()) return;
 
@@ -390,8 +392,85 @@
     stage.append(corner);
   }
 
+  // ---------- phones only ----------
+  // Bryan, 24 Nov 2026: "Card games needs pure phone mode"; he picked "B, hand first". /cards/?phones opens the table on a phone,
+  // with no TV. This page then draws the start screen (the code, who is in, the game, Deal) in place of the table. The host
+  // plays from the same hand page every phone uses, laid over this one and joined to this room through the relay, and every
+  // phone is told it is phones only, so each shows the whole table behind its Table button (src/hand.js).
+  const PHONES = /[?&]phones(?:[=&]|$)/.test(location.search);
+  const HOST_NAME = 'voidtv-cards-host';
+  let hostName = '', hostFrame = null, awake = null;
+  try { hostName = localStorage.getItem(HOST_NAME) || ''; } catch (e) { /* asked again next time */ }
+  const tellMode = () => { if (PHONES) toPhones('all', { type: 'c-mode', phones: true }); };
+  function ensureFrame() {
+    if (hostFrame || !room.code || !hostName) return;
+    hostFrame = el('iframe', 'host-hand');
+    hostFrame.title = 'Your hand';
+    hostFrame.src = '/cards/hand?r=' + room.code + '&name=' + encodeURIComponent(hostName);
+    document.body.append(hostFrame);
+  }
+  // The host's phone is the table: its screen stays on while a game is dealt.
+  async function stayAwake() {
+    try { if (navigator.wakeLock && !awake) { awake = await navigator.wakeLock.request('screen'); awake.addEventListener('release', () => { awake = null; }); } } catch (e) { /* not allowed here */ }
+  }
+  document.addEventListener('visibilitychange', () => { if (PHONES && !document.hidden && dealer.snapshot().phase !== 'lobby') stayAwake(); });
+  function drawPhones(s) {
+    document.documentElement.classList.add('phones-host');
+    ensureFrame();
+    const inGame = !(s.phase === 'lobby' || !s.view);
+    if (hostFrame) hostFrame.classList.toggle('on', inGame);
+    const page = el('main', 'host' + (inGame ? ' playing' : ''));
+    if (!inGame) {
+      page.append(el('p', 'host-kick', 'Phones only'), el('h1', '', room.code ? 'Your table is open' : 'Opening your table'));
+      const code = el('div', 'host-code');
+      code.append(el('small', '', 'Everyone types this code at voidtv.net/cards'), el('b', '', room.code || '....'));
+      page.append(code);
+      if (!hostName) {
+        const f = el('form', 'host-name'), i = el('input');
+        i.maxLength = 16; i.placeholder = 'Your name'; i.autocomplete = 'off';
+        i.setAttribute('aria-label', 'Your name'); i.setAttribute('autocapitalize', 'words'); i.spellcheck = false;
+        const go = el('button', 'host-deal', 'Sit down'); go.type = 'submit';
+        f.append(el('label', '', 'You play too. Your name for the others:'), i, go);
+        f.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const v = i.value.trim().slice(0, 16);
+          if (!v) { i.focus(); return; }
+          hostName = v;
+          try { localStorage.setItem(HOST_NAME, v); } catch (x) { /* asked again next time */ }
+          render();
+        });
+        page.append(f);
+      }
+      const who = el('div', 'host-who'), ul = el('ul');
+      who.append(el('h2', '', 'At the table'));
+      for (const p of s.players) {
+        const me = !!hostName && p.name === hostName, li = el('li', (me ? 'me' : '') + (p.here ? '' : ' away'), p.name);
+        if (me) li.append(el('em', '', 'you, the host'));
+        ul.append(li);
+      }
+      ul.append(el('li', 'wait', s.players.length ? 'waiting for more...' : 'waiting for players...'));
+      who.append(ul);
+      const g = s.game, range = g.min === g.max ? g.min + ' players' : g.min + ' to ' + g.max + ' players';
+      const pick = el('div', 'host-pick'), name = el('div');
+      name.append(el('b', '', g.name), el('small', '', range));
+      pick.append(button('‹', () => pickBy(-1), 'arrow', 'Previous game'), name, button('›', () => pickBy(1), 'arrow', 'Next game'));
+      page.append(who, pick, button('Deal', () => { stayAwake(); deal(); }, 'host-deal', 'Deal this game to everyone at the table'),
+        el('p', 'host-note', note || 'Your phone is the table and your hand. Keep this page open while you play.'));
+    } else if (s.phase === 'over') {
+      const bar = el('div', 'host-bar'), btns = el('div', 'host-btns');
+      btns.append(button('Deal again', () => { stayAwake(); deal(); }, 'host-deal'), button('Change game', stopGame, 'host-quiet'));
+      bar.append(el('b', '', winnerLine(s.view, s.players) || 'Game over'), btns);
+      if (note) bar.append(el('p', 'host-note', note));
+      page.append(bar);
+    }
+    if (problem) page.append(el('div', 'problem', problem));
+    app.textContent = '';
+    app.append(page);
+  }
+
   let lastPhase = '';
   function render() {
+    if (PHONES) { drawPhones(dealer.snapshot()); return; }
     const s = dealer.snapshot(), stage = el('div', 'stage');
     if (s.phase === 'lobby' || !s.view) drawLobby(stage, s);
     else {
@@ -419,6 +498,7 @@
   // Every change of the game: the page is drawn again, then whatever the change's events moved flies from where it was.
   function changed(events) {
     note = '';
+    if (!(events || []).length) tellMode();   // someone joined or came back: on a phones-only table their phone is told so
     if (practice && practice.on) {
       // The tip for the room is made from what the big screen may draw (the public view) and what everyone saw happen.
       const s = dealer.snapshot(), g = root.VoidGames[s.game.id];

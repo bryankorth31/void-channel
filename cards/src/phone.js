@@ -16,7 +16,8 @@
   function isPhone(w) {
     if (!w) return false;
     const search = (w.location && w.location.search) || '';
-    if (/[?&]table(?:[=&]|$)/.test(search)) return false;
+    // ?table: the TV table on this screen; ?phones: the table for phones only (src/screen.js draws its start screen).
+    if (/[?&](?:table|phones)(?:[=&]|$)/.test(search)) return false;
     let coarse = false;
     try { coarse = !!(w.matchMedia && w.matchMedia('(pointer: coarse)').matches); } catch (e) { coarse = false; }
     return coarse && Math.min(w.innerWidth || 0, w.innerHeight || 0) > 0 && Math.min(w.innerWidth, w.innerHeight) < 600;
@@ -152,11 +153,15 @@
     const more = el('div', 'ph-tile ph-more');
     more.append(el('b', '', 'Board games'), el('small', '', 'coming later'));
     grid.append(more);
+    // No TV: one phone opens the table and plays too (Bryan, 24 Nov 2026: "Card games needs pure phone mode").
+    const phones = el('a', 'ph-phones');
+    phones.href = '/cards/?phones';
+    phones.append(el('b', '', 'No TV? Play with phones only'), el('small', '', 'Your phone opens the table. Everyone joins with its code.'));
     const host = el('p', 'ph-host');
-    host.append('To host, open ', el('b', '', 'voidtv.net/cards'), ' on a TV or a computer. ');
+    host.append('With a TV, open ', el('b', '', 'voidtv.net/cards'), ' on it or on a computer. ');
     const here = el('a', '', 'Show the table on this screen'); here.href = '/cards/?table';
     host.append(here, '.');
-    main.append(intro, grid, host);
+    main.append(intro, grid, phones, host);
     app.append(top, main, joinBox());
     return true;
   }

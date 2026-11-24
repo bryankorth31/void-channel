@@ -64,3 +64,33 @@ test('the table page hands over to the phone page before it makes a dealer or op
   const css = read('phone.css');
   assert.ok(/html\.phone-page/.test(css) && !/^body\{|^html,body\{/m.test(css), 'its styles apply only on a phone page');
 });
+
+// Phones only (Bryan, 24 Nov 2026: "Card games needs pure phone mode"; he picked "B, hand first").
+test('phones only: ?phones opens the table on a phone (not the games page), and the games page offers it', () => {
+  assert.equal(P.isPhone(win(390, 844, true, '?phones')), false, 'the host phone gets the table page in phones mode');
+  const ph = read('src', 'phone.js');
+  assert.ok(ph.includes("phones.href = '/cards/?phones'"), 'No TV? Play with phones only');
+});
+
+test('phones only: the host page draws the start screen, sits the host down through the same hand page every phone uses, and tells the phones', () => {
+  const js = read('src', 'screen.js');
+  assert.ok(js.indexOf('if (!root.VoidDealer) return;') > 0 && js.indexOf('if (!root.VoidDealer) return;') < js.indexOf('VoidCardsPhone.take()'), 'the hand page can load screen.js for its pure part only');
+  assert.match(js, /const PHONES = \/\[\?&\]phones\(\?:\[=&\]\|\$\)\/\.test\(location\.search\);/);
+  assert.match(js, /function render\(\) \{\n    if \(PHONES\) \{ drawPhones\(dealer\.snapshot\(\)\); return; \}/, 'a phones-only table never draws the TV table');
+  assert.ok(js.includes("hostFrame.src = '/cards/hand?r=' + room.code + '&name=' + encodeURIComponent(hostName);"), 'the host plays from the hand page, joined through the relay like any phone');
+  assert.ok(js.includes("toPhones('all', { type: 'c-mode', phones: true })"), 'every phone is told it is phones only');
+  assert.match(js, /if \(!\(events \|\| \[\]\)\.length\) tellMode\(\);/, 'told again whenever someone joins or comes back');
+  assert.ok(/navigator\.wakeLock/.test(js), 'the host phone keeps its screen on while a game is on');
+});
+
+test('phones only: the hand page shows the Table button only on a phones-only table, and draws it from the public table alone', () => {
+  const h = read('src', 'hand.js'), html = read('hand.html');
+  assert.ok(h.includes("if (m.type === 'c-mode') { phonesOnly = !!m.phones; render(); return; }"));
+  assert.ok(h.includes("$('b-table').hidden = !phonesOnly;"));
+  assert.match(html, /id="b-table" type="button" hidden>Table</);
+  assert.ok(h.includes("new URLSearchParams(location.search).get('name')"), 'the host comes with the name typed on the start screen');
+  const draw = h.slice(h.indexOf('function drawTable()'), h.indexOf('function openTable()'));
+  assert.ok(draw.length > 200);
+  assert.ok(!/\bmine\b|takeHand|c-hand/.test(draw), 'the whole table is drawn from the public table (table.v), never from a hand');
+  assert.ok(/table && table\.v/.test(draw) && /S\.centreItems\(v\)/.test(draw) && /S\.laidGroups\(v, i\)/.test(draw));
+});
