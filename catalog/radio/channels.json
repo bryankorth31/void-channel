@@ -1,0 +1,66 @@
+{
+ "about": "Old-time radio channels for Live TV (PLAN-ia-treatments T5). Made by scripts/radio-import.js from radio-series.json; name and on may be edited by hand and survive a rerun. on: false keeps a channel off Live TV.",
+ "made": "2026-11-23",
+ "channels": [
+  {
+   "id": "radio",
+   "name": "Void Radio",
+   "kinds": [
+    "mystery and detective",
+    "westerns",
+    "comedy",
+    "science fiction and suspense",
+    "drama and anthology"
+   ],
+   "on": true,
+   "shows": [
+    "radio-dragnet",
+    "radio-the-adventures-of-philip-marlowe",
+    "radio-richard-diamond-private-detective",
+    "radio-boston-blackie",
+    "radio-casey-crime-photographer",
+    "radio-yours-truly-johnny-dollar",
+    "radio-gunsmoke",
+    "radio-have-gun-will-travel",
+    "radio-the-six-shooter",
+    "radio-fort-laramie",
+    "radio-tales-of-the-texas-rangers",
+    "radio-frontier-town",
+    "radio-wild-bill-hickok",
+    "radio-the-jack-benny-program",
+    "radio-the-great-gildersleeve",
+    "radio-fibber-mcgee-and-molly",
+    "radio-our-miss-brooks",
+    "radio-the-burns-and-allen-show",
+    "radio-the-life-of-riley",
+    "radio-father-knows-best",
+    "radio-suspense",
+    "radio-x-minus-one",
+    "radio-dimension-x",
+    "radio-escape",
+    "radio-lights-out",
+    "radio-quiet-please",
+    "radio-inner-sanctum-mysteries",
+    "radio-2000-plus",
+    "radio-cavalcade-of-america",
+    "radio-hallmark-playhouse"
+   ]
+  },
+  {
+   "id": "radio-kids",
+   "name": "Void Radio Kids",
+   "kinds": [
+    "kids radio"
+   ],
+   "on": false,
+   "shows": [
+    "radio-challenge-of-the-yukon",
+    "radio-space-patrol",
+    "radio-the-roy-rogers-show",
+    "radio-hopalong-cassidy",
+    "radio-the-adventures-of-frank-merriwell",
+    "radio-archie-andrews"
+   ]
+  }
+ ]
+}

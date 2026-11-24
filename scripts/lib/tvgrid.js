@@ -96,7 +96,8 @@ function tvgridFactory() {
   // h t x v e a holiday, aired only in season. Order: B's originals, then the channel's own network's specials, then a
   // holiday special in season, then any special. Kids mornings and kids channels take kids items only, and kids items air
   // nowhere else; Late Night takes no
-  // specials (only originals listed for it); an item airs once a day per channel.
+  // specials (only originals listed for it), nor does a radio channel (ch.ns: no TV special breaks into old-time radio; PLAN-ia-treatments
+  // T5, 24 Nov 2026); an item airs once a day per channel.
   // mode 'insert': an item that fits inside the gap (room = the gap). mode 'swap': an item to take the place of the
   // daypart's last show, filling its slot plus the gap (room = both, minDu = the show's length). len(s): the minutes of
   // the item's next airing (its typical minutes when not given). gs: which of the four groups to look in, in order (all of
@@ -109,7 +110,7 @@ function tvgridFactory() {
     const ok = (e) => {
       const f = e[1] || '';
       if (cnt[e[0]]) return false;
-      if (e[2] === 0 ? mine.indexOf(e[0]) < 0 : ch.adult) return false;
+      if (e[2] === 0 ? mine.indexOf(e[0]) < 0 : ch.adult || ch.ns) return false;
       // Kids items only there, and only there (B, 20 Oct; audit P3A-01).
       if (kidsOnly !== (f.indexOf('k') >= 0)) return false;
       if (f.indexOf('r') >= 0 && k !== 'l' && k !== 'o') return false;

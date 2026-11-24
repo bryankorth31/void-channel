@@ -16,6 +16,10 @@ const { listSource: LIST_SRC } = require('./app-list');
 // Live TV schedule: the builder (Node) and the pure schedule logic the page inlines (see scripts/lib/tvgrid.js).
 const TVGRID = require('./tvgrid');
 const TVGRID_SRC = TVGRID.source;
+// Old-time radio channels on Live TV (PLAN-ia-treatments T5, scripts/lib/radio.js). Loaded when present, so the small copies of the build
+// the tests make need not carry radio.js (as with hardexclude.js below): without it a build has no radio and no radio screen.
+let RADIO = { readRadio: () => ({ channels: [], shows: [] }), pageSource: '', CSS: '' };
+try { RADIO = require('./radio'); } catch (e) { if (e.code !== 'MODULE_NOT_FOUND' || !/radio/.test(e.message)) throw e; }
 // The file's exact seconds, for the Live TV schedule only (scripts/lib/tvgrid.js lays each airing out at its real length).
 // Not enumerable, so it never reaches the show files the browser loads.
 const withSec = (ep, sec) => Object.defineProperty(ep, 'sec', { value: sec || 0 });
@@ -61,9 +65,12 @@ const slugify = (s) => String(s).toLowerCase().replace(/&/g, 'and').replace(/[^a
 // channel order, with the place of each show in the FULL list the page indexes.
 // Shelves that are their own channel for shows not in English (B, 25 Oct 2026, "own chan").
 const OWN_LANGUAGE_ROWS = new Set(['Anime', 'World TV']);
-function channelLists(shows, types, off, foreign, offAll) {
+function channelLists(shows, types, off, foreign, offAll, radio) {
   const isAdultShow = (s) => s.type === 'Late Night' || (s.tags || []).includes('Late Night') || !!s.adult;
   const idx = new Map(shows.map((s, i) => [s.slug, i])); // against the FULL list the page indexes; filtering first put every item after an adult show off by one
+  // Old-time radio shows (scripts/lib/radio.js) sit on their own radio channels only, never on a TV channel.
+  const radioBySlug = new Map(shows.filter((s) => s.radio).map((s) => [s.slug, s]));
+  shows = shows.filter((s) => !s.radio);
   // Shows B keeps off Live TV (catalog/live-tv-off.json) leave the mixed channels (The Void, rows, collections, movies,
   // Late Night) but stay on their own network's channel, so no network channel empties out (B, 20 Oct). They stay on demand.
   const kept = (s) => !(off && off.has(s.slug));
@@ -91,15 +98,18 @@ function channelLists(shows, types, off, foreign, offAll) {
   for (const [n, list] of Object.entries(nets).sort((a, b) => b[1].length - a[1].length)) if (list.length >= 2) make('net-' + slugify(n), n, 'network', list);
   if (movies.length) make('movies', 'TV Movies and Specials', 'row', movies);
   if (adultList.length) make('row-late-night', 'Late Night', 'row', adultList, true);
+  // The radio channels (PLAN-ia-treatments T5; Bryan, 24 Nov 2026: "Go"), from catalog/radio/channels.json: after every other
+  // channel, so no channel's id or place moves.
+  for (const c of radio || []) make(c.id, c.name, 'radio', (c.shows || []).map((sl) => radioBySlug.get(sl)).filter(Boolean));
   return { lists, idx };
 }
 // The schedule plan (scripts/lib/tvgrid.js): per channel the pools of shows for each daypart, plus one shared library of typical
 // minutes and episode runs. This is what data/tv.json carries.
-function buildTv(shows, types, foreign) {
+function buildTv(shows, types, foreign, radio) {
   const OFF = readJson(path.join(PROFILE.catalogDir, 'live-tv-off.json'), { shows: {} });
   const offSet = new Set(Object.keys(OFF.shows || {}));
   const offAll = new Set(Object.keys(OFF.shows || {}).filter((k) => OFF.shows[k] && OFF.shows[k].everywhere));
-  const { lists, idx } = channelLists(shows, types, offSet, foreign, offAll);
+  const { lists, idx } = channelLists(shows, types, offSet, foreign, offAll, radio);
   const lib = TVGRID.buildLib(shows);
   // The filler library for the gaps before each daypart (B, 20 Oct): B's originals (catalog/fillers.json, written by HQ) first,
   // then TV specials of 60 minutes or less. One list; a show that is both counts as an original.
@@ -113,7 +123,9 @@ function buildTv(shows, types, foreign) {
     const c = TVGRID.planChannel({ id: L.id, name: L.name, kind: L.kind }, recs, lib.rt);
     if (L.adult) c.adult = true;
     if (L.kind === 'network') { const spn = sp.filter((e) => e[2] !== 0 && shows[e[0]].network === L.name).map((e) => e[0]); if (spn.length) c.spn = spn; }
-    const fo = ORIG.scope(c);
+    // A radio channel's breaks take no TV specials and no video originals (ns, tvgrid.js pickFill): its own short shows, then the cards.
+    if (L.kind === 'radio') c.ns = 1;
+    const fo = L.kind === 'radio' ? [] : ORIG.scope(c);
     if (fo.length) c.fo = fo;
     return c;
   });
@@ -217,6 +229,11 @@ function assemble() {
     });
   }
 
+  // Old-time radio (PLAN-ia-treatments T5; Bryan, 24 Nov 2026: "Go"): the shows of the radio channels that are on, from
+  // catalog/radio (written by scripts/radio-import.js). voidtv.net only. They play on Live TV's radio channels and nowhere else.
+  const RAD = PROFILE.name === 'voidtv' ? RADIO.readRadio(path.join(PROFILE.catalogDir, 'radio')) : { channels: [], shows: [] };
+  for (const s of RAD.shows) shows.push(s);
+
   // Graph trimmed to the shows that play here.
   const onPage = new Set(shows.map((s) => s.slug));
   const people = {};
@@ -266,7 +283,7 @@ function assemble() {
   const TW = require('./tvweek');
   const lang = Object.fromEntries(LIST.shows.map((s) => [s.name, s.language]));
   const foreign = new Set(shows.filter((s) => lang[s.show] && lang[s.show] !== 'en').map((s) => s.slug));
-  const tvLineup = TW.lineup(buildTv(shows, types, foreign),TW.read(path.join(PROFILE.catalogDir, 'tv-lineup.json')), +process.env.VOID_TV_NOW || Date.now()); // VOID_TV_NOW: tests pin the clock
+  const tvLineup = TW.lineup(buildTv(shows, types, foreign, RAD.channels),TW.read(path.join(PROFILE.catalogDir, 'tv-lineup.json')), +process.env.VOID_TV_NOW || Date.now()); // VOID_TV_NOW: tests pin the clock
   const tv = tvLineup.tv;
   // Trivia Night (trivia/, plan PLAN-voidtv-trivia; B, 20 Nov 2026: "Yes, a Trivia row"): a home row when the question bank is
   // built, on voidtv.net only (never on the kids site). It carries only the question counts per topic, for the cards.
@@ -284,7 +301,7 @@ function triviaCounts() {
 }
 
 // The index entry: everything the browse page needs; seasons and cast load per show in split mode.
-const indexEntry = (s) => ({ show: s.show, slug: s.slug, type: s.type, people: (s.cast || []).slice(0, 8).map((c) => c.name).join(', ') || undefined, adult: (s.type === 'Late Night' || (s.tags || []).includes('Late Night') || s.adult) ? 1 : undefined, network: s.network, year: s.year, runtime: s.runtime, tags: s.tags, poster: s.poster, backdrop: s.backdrop, overview: s.overview && s.overview.length > 380 ? s.overview.slice(0, 380).replace(/\s+\S*$/, '') + '…' : s.overview, genres: s.genres, rating: s.rating, matchedAt: s.matchedAt && s.matchedAt.slice(0, 10), added: ((s.addedAt || s.matchedAt) || '').slice(0, 10) || undefined, eps: s.eps, seasonCount: s.seasons.length, cg: s.cg });
+const indexEntry = (s) => ({ show: s.show, slug: s.slug, type: s.type, radio: s.radio ? 1 : undefined, rc: (s.radio && s.radio.credit) || undefined, people: (s.cast || []).slice(0, 8).map((c) => c.name).join(', ') || undefined, adult: (s.type === 'Late Night' || (s.tags || []).includes('Late Night') || s.adult) ? 1 : undefined, network: s.network, year: s.year, runtime: s.runtime, tags: s.tags, poster: s.poster, backdrop: s.backdrop, overview: s.overview && s.overview.length > 380 ? s.overview.slice(0, 380).replace(/\s+\S*$/, '') + '…' : s.overview, genres: s.genres, rating: s.rating, matchedAt: s.matchedAt && s.matchedAt.slice(0, 10), added: ((s.addedAt || s.matchedAt) || '').slice(0, 10) || undefined, eps: s.eps, seasonCount: s.seasons.length, cg: s.cg });
 const showFile = (s, data) => {
   const links = (data && data.links && data.links[s.slug]) || {};
   const ids = new Set([...s.cast, ...s.crew].map((c) => c.id));
@@ -616,7 +633,7 @@ const gated=(s)=>isAdult(s)&&!ME.adult;
    (?moment=<id>). A moment's shows rule picks from the series and its movies rule from the films, never the 18+ shelf or a show the
    viewer turned down. Nothing shows until HQ switches a moment on and it is in its dates. */
 let MOMENTS=null;
-function momentParts(){const ok=SHOWS.filter(s=>!gated(s)&&!hidden(s)).map(s=>({id:s.slug,title:s.show,year:+s.year||null,genres:(s.genres||[]).concat(s.tags||[]),people:s.people?String(s.people).split(', '):[],system:s.type,s}));return [{area:'shows',items:ok.filter(x=>x.id.indexOf('movie-')!==0)},{area:'movies',items:ok.filter(x=>x.id.indexOf('movie-')===0)}]}
+function momentParts(){const ok=SHOWS.filter(s=>!gated(s)&&!hidden(s)).filter(s=>!s.radio).map(s=>({id:s.slug,title:s.show,year:+s.year||null,genres:(s.genres||[]).concat(s.tags||[]),people:s.people?String(s.people).split(', '):[],system:s.type,s}));return [{area:'shows',items:ok.filter(x=>x.id.indexOf('movie-')!==0)},{area:'movies',items:ok.filter(x=>x.id.indexOf('movie-')===0)}]}
 function momentRows(o){return MOMENTS&&window.VoidMoments&&VoidMoments.rowsMany?VoidMoments.rowsMany(MOMENTS,momentParts(),o):[]}
 function momentName(id){const m=(MOMENTS||[]).find(x=>x.id===id);if(!m)return '';const a=m.areas||{};return (a.shows&&a.shows.title)||(a.movies&&a.movies.title)||m.name||''}
 function momentKind(list){const n=list.length,f=list.filter(s=>s.slug.indexOf('movie-')===0).length;return f===n?(n===1?'film':'films'):f?'shows and films':(n===1?'show':'shows')}
@@ -632,7 +649,7 @@ if(window.VoidMoments&&VoidMoments.ready)VoidMoments.ready.then(ms=>{MOMENTS=ms;
 function adultGate(then){const then0=then;then=()=>{then0()};const old=$('gate');if(old)old.remove();const g=document.createElement('div');g.id='gate';g.innerHTML='<div class="gatebox"><img src="'+BASE+'assets/brand/ui/doors/latenight.png" alt=""><b>Late Night</b><p>The after-dark shelf: HBO and Showtime documentary series, Cinemax, the Playboy years. Adults only. By entering you confirm you are 18 or older.</p><div class="acts"><button class="btn gold" id="gate-yes">I am 18 or older, enter</button><button class="btn ghost" id="gate-no">Not now</button></div></div>';document.body.appendChild(g);
  $('gate-yes').onclick=()=>{ME.adult=Date.now();saveMe();g.remove();then&&then()};$('gate-no').onclick=()=>{if(!$('main').firstChild||(state.show&&gated(state.show))){state.show=null;go('',true)}g.remove();if(state.show&&gated(state.show))go('')};g.onclick=(e)=>{if(e.target===g)$('gate-no').click()}}
 function leaveAdult(){ME.adult=0;saveMe();state.type=state.type==='Late Night'?'':state.type;go('')}
-const VIS=()=>SHOWS.filter(s=>!hidden(s)&&!gated(s));
+const VIS=()=>SHOWS.filter(s=>!s.radio&&!hidden(s)&&!gated(s));
 const histShows=()=>Object.entries(ME.history).sort((a,b)=>(b[1].at||0)-(a[1].at||0)).map(([sl])=>BY_SLUG[sl]).filter(s=>s&&!gated(s));
 const listShows=()=>Object.entries(ME.list).sort((a,b)=>b[1]-a[1]).map(([sl])=>BY_SLUG[sl]).filter(s=>s&&!gated(s));
 const likedShows=()=>Object.keys(ME.likes).filter(k=>ME.likes[k]===1).map(k=>BY_SLUG[k]).filter(s=>s&&!gated(s));
@@ -690,7 +707,7 @@ function mePage(){const cont=histShows(),mine=listShows(),liked=likedShows(),hid
 function counts(key){const m={};for(const s of SHOWS){const v=(key==='genres'||key==='tags')?(s[key]||[]):[s[key]];for(const x of v)if(x)m[x]=(m[x]||0)+1}return Object.entries(m).sort((a,b)=>b[1]-a[1])}
 // The site's search: a show is found by its name, genre, network, tags or people (q in lower case). The phone remote's search asks the same (remote/src/voidtv.js).
 const qHit=(s,q)=>s.show.toLowerCase().includes(q)||s.genres.join(' ').toLowerCase().includes(q)||(s.network||'').toLowerCase().includes(q)||(s.tags||[]).join(' ').toLowerCase().includes(q)||(s.people||'').toLowerCase().includes(q);
-function filtered(){const q=state.q.trim().toLowerCase();let r=(state.moment?momentList():SHOWS).filter(s=>!gated(s)&&(!state.type||s.type===state.type)&&(!state.genre||s.genres.includes(state.genre))&&(!state.network||s.network===state.network)&&(!state.decade||decade(s.year)===state.decade)&&(!state.tag||(s.tags||[]).includes(state.tag))&&(!q||qHit(s,q)));
+function filtered(){const q=state.q.trim().toLowerCase();let r=(state.moment?momentList():SHOWS).filter(s=>!gated(s)&&!s.radio&&(!state.type||s.type===state.type)&&(!state.genre||s.genres.includes(state.genre))&&(!state.network||s.network===state.network)&&(!state.decade||decade(s.year)===state.decade)&&(!state.tag||(s.tags||[]).includes(state.tag))&&(!q||qHit(s,q)));
  if(state.moment&&state.sort==='eps')return r;const by={eps:(a,b)=>b.eps-a.eps,rating:(a,b)=>(b.rating||0)-(a.rating||0)||b.eps-a.eps,year:(a,b)=>(+b.year||0)-(+a.year||0),old:(a,b)=>(+a.year||9999)-(+b.year||9999),az:(a,b)=>a.show.localeCompare(b.show),added:(a,b)=>(b.added||'').localeCompare(a.added||'')};return r.sort(by[state.sort]||by.eps)}
 function sel(key,label,opts){return '<select onchange="state.'+key+'=this.value;render()"><option value="">'+label+'</option>'+opts.map(([v,n])=>'<option value="'+esc(v)+'"'+(state[key]===v?' selected':'')+'>'+esc(v)+(n?' ('+n+')':'')+'</option>').join('')+'</select>'}
 function meta(s){return [s.network,s.year,s.genres.join(' · '),s.rating?'★ '+s.rating:'',s.eps+' episode'+(s.eps===1?'':'s'),s.runtime?s.runtime+' min':''].filter(Boolean).join('  ·  ')}
@@ -734,7 +751,7 @@ function fromAddress(){const s=slugFromUrl();if(!s)listFromUrl();go(s,true)}
 function typed(){if(state.show||state.view){go('');return}listSync(/[?&]q=/.test(location.search));render()}
 /* A search or filter that finds nothing says so, and a search offers the titles one typing slip away (audit of 20 Nov 2026, A10). The 18+ shows stay out while the door is closed. */
 ${NEAR_SRC}
-function noMatch(){if(state.moment)return momentElse(state.moment);const q=state.q.trim(),filt=[state.type,state.tag,state.genre,state.network,state.decade].filter(Boolean);if(!q)return '<div class="nomatch"><p>No shows fit '+(filt.length>1?'these filters together':'this filter')+'. Press Clear to start over.</p></div>';const pool=SHOWS.filter(s=>!gated(s)),near=nearTitles(q,pool.map(s=>s.show),6).map(i=>pool[i]);return '<div class="nomatch"><p>Nothing matches <b>“'+esc(q)+'”</b>'+(filt.length?' in '+esc(filt.join(', ')):'')+'. '+(near.length?'Closest titles:':'Check the spelling, or press Clear and browse.')+'</p></div>'+(near.length?'<div class="grid">'+near.map(s=>card(s,'grid')).join('')+'</div>':'')}
+function noMatch(){if(state.moment)return momentElse(state.moment);const q=state.q.trim(),filt=[state.type,state.tag,state.genre,state.network,state.decade].filter(Boolean);if(!q)return '<div class="nomatch"><p>No shows fit '+(filt.length>1?'these filters together':'this filter')+'. Press Clear to start over.</p></div>';const pool=SHOWS.filter(s=>!gated(s)).filter(s=>!s.radio),near=nearTitles(q,pool.map(s=>s.show),6).map(i=>pool[i]);return '<div class="nomatch"><p>Nothing matches <b>“'+esc(q)+'”</b>'+(filt.length?' in '+esc(filt.join(', ')):'')+'. '+(near.length?'Closest titles:':'Check the spelling, or press Clear and browse.')+'</p></div>'+(near.length?'<div class="grid">'+near.map(s=>card(s,'grid')).join('')+'</div>':'')}
 function browse(){let list=filtered();if(!state.q)list=list.filter(s=>!hidden(s));const any=state.type||state.genre||state.network||state.decade||state.tag||state.q||state.moment;
  const bar=filterBar(list);
  let h='';
@@ -786,7 +803,7 @@ document.addEventListener('click',()=>{if(state.menu){state.menu=null;render()}}
 function dd(key,label,opts,current,isSort){const open=state.menu===key;const cur=opts.find(o=>o[0]===current);
  return '<div class="dd'+(open?' open':'')+(current&&!isSort?' set':'')+'"><button type="button" onclick="menuToggle(\\''+key+'\\',event)">'+(isSort?'<small>Sort</small> ':'')+esc(cur?(cur[2]||cur[0]):label)+'<i class="ico chevron-down sm"></i></button>'
  +(open?'<div class="panel" onclick="event.stopPropagation()">'+(!isSort?'<div class="opt'+(current?'':' on')+'" onclick="pick(\\''+key+'\\',\\'\\',event)">'+esc(label)+'</div>':'')+opts.map(([v,n,txt])=>'<div class="opt'+(current===v?' on':'')+'" onclick="pick(\\''+key+'\\',\\''+esc(v)+'\\',event)"><span>'+esc(txt||v)+'</span>'+(n!=null?'<small>'+n+'</small>':'')+'</div>').join('')+'</div>':'')+'</div>'}
-function filterBar(list){const series=SHOWS.filter(t=>!t.slug.startsWith('movie-')&&!hidden(t)&&!gated(t));const pop=VIS();const tally=(key,src)=>{const m={};for(const t of src){const v=key==='genres'||key==='tags'?(t[key]||[]):[t[key]];for(const x of v)if(x)m[x]=(m[x]||0)+1}return Object.entries(m).sort((a,b)=>b[1]-a[1])};
+function filterBar(list){const series=SHOWS.filter(t=>!t.radio&&!t.slug.startsWith('movie-')&&!hidden(t)&&!gated(t));const pop=VIS();const tally=(key,src)=>{const m={};for(const t of src){const v=key==='genres'||key==='tags'?(t[key]||[]):[t[key]];for(const x of v)if(x)m[x]=(m[x]||0)+1}return Object.entries(m).sort((a,b)=>b[1]-a[1])};
  const rows=TYPES.map(t=>[t,SHOWS.filter(s=>s.type===t&&!hidden(s)&&!gated(s)).length]).filter(x=>x[1]);
  const genres=tally('genres',pop).filter(([g])=>!SKIP_GENRES.has(g));
  const nets=tally('network',pop).filter(([,c])=>c>=2).slice(0,40);
@@ -845,7 +862,7 @@ function loadEp(p,s,se,ep,o){const epk=se.season+'x'+ep.n,v=p.v;
  delete v.dataset.tr;delete v.dataset.lt;
  v.addEventListener('loadeddata',()=>v.removeAttribute('poster'),{once:true});
  const n=p._loadN=(p._loadN||0)+1;p.play=function(){};
- const r=Promise.resolve(p.load({id:s.slug+'/'+epk,title:'S'+String(se.season).padStart(2,'0')+'E'+String(ep.n).padStart(2,'0')+' · '+ep.name,show:s.show,files:filesFor(ep),artwork:s.poster||''},{startAt:o.at||0,autoplay:true}));
+ const r=Promise.resolve(p.load({id:s.slug+'/'+epk,title:'S'+String(se.season).padStart(2,'0')+'E'+String(ep.n).padStart(2,'0')+' · '+ep.name,show:s.show,files:filesFor(ep),artwork:s.poster||''},{startAt:o.at||0,autoplay:true}));radioScreen(p,s,ep);
  const done=()=>{if(p._loadN===n&&Object.prototype.hasOwnProperty.call(p,'play'))delete p.play};r.then(done,(e)=>{done();throw e});
  if(o.feel&&typeof p._status==='function')p._status('Starting…',8000);
  return r}
@@ -908,11 +925,12 @@ function findPerson(s,id){const pool=[...(s.cast||[]),...(s.crew||[])];for(const
 function bioFor(id){if(BIO[id]!==undefined)return BIO[id];BIO[id]=null;fetch(BASE+'data/people/'+id+'.json').then(r=>r.ok?r.json():null).then(b=>{BIO[id]=b||false;const el=document.querySelector('.person');if(el&&state.show&&state.person===id)el.outerHTML=personPanel(id,findPerson(state.show,id));if(state.view==='person'&&state.personId===id)render()}).catch(()=>{BIO[id]=false;const el=document.querySelector('.person');if(el&&state.show&&state.person===id)el.outerHTML=personPanel(id,findPerson(state.show,id));if(state.view==='person'&&state.personId===id)render()});return null}
 function epXray(s,se,ep){const c=(s.credits||{})[se.season+'x'+ep.n];if(!c)return '';const chips=(arr)=>arr.map(p=>'<span onclick="person('+p.id+')">'+esc(p.name)+'</span>').join(', ');
  return '<div class="inep"><h3>IN THIS EPISODE</h3>'+((c.d.length||c.w.length)?'<div class="by">'+(c.d.length?'<div>Directed by '+chips(c.d)+'</div>':'')+(c.w.length?'<div>Written by '+chips(c.w)+'</div>':'')+'</div>':'')+(c.g.length?'<div class="faces">'+c.g.map(p=>face({id:p.id,name:p.name,photo:p.photo,as:p.as?'as '+p.as:'Guest'})).join('')+'</div>':'')+'</div>'}
-function degSuggest(q){const el=$('degs');if(!el)return;q=q.trim().toLowerCase();if(q.length<2){el.innerHTML='';return}const m=SHOWS.filter(t=>t.slug!==state.show.slug&&t.show.toLowerCase().includes(q)).slice(0,8);el.innerHTML=m.map(t=>'<span class="chip" onclick="degPath(\\''+t.slug+'\\')">'+esc(t.show)+'</span>').join('')||'<span class="g">No show by that name here.</span>'}
+function degSuggest(q){const el=$('degs');if(!el)return;q=q.trim().toLowerCase();if(q.length<2){el.innerHTML='';return}const m=SHOWS.filter(t=>!t.radio&&t.slug!==state.show.slug&&t.show.toLowerCase().includes(q)).slice(0,8);el.innerHTML=m.map(t=>'<span class="chip" onclick="degPath(\\''+t.slug+'\\')">'+esc(t.show)+'</span>').join('')||'<span class="g">No show by that name here.</span>'}
 async function degPath(target){let adj;if(!GRAPH_LOADED){const out=$('degp');if(out)out.innerHTML='<div class="path"><span class="signal" style="width:28px;height:28px"></span> Loading the connections…</div>';const d=await ensureDeg();if(!d){if(out)out.innerHTML='';return}adj=(sl)=>{const i=d.ix.get(sl);return i===undefined?[]:d.a[i].map((j)=>d.s[j])}}else adj=(sl)=>Object.keys(LINKS[sl]||{});const from=state.show.slug;const prev={};prev[from]=null;const q=[from];let found=from===target;while(q.length&&!found){const a=q.shift();for(const b of adj(a)){if(prev[b]!==undefined)continue;prev[b]=a;if(b===target){found=true;break}q.push(b)}}
  const out=$('degp');if($('degs'))$('degs').innerHTML='';if($('degq'))$('degq').value='';if(!found){out.innerHTML='<div class="path">No path to '+esc(BY_SLUG[target].show)+' through the people here (yet).</div>';return}
  const chain=[];for(let c=target;c;c=prev[c])chain.unshift(c);if(!GRAPH_LOADED)await Promise.all(chain.map((sl)=>BY_SLUG[sl]?ensure(BY_SLUG[sl]).catch(()=>null):null));const via={};chain.forEach((sl,i)=>{if(i){const a=chain[i-1];via[sl]=(((LINKS[a]||{})[sl])||((LINKS[sl]||{})[a])||[])[0]}});let h='<div class="path">';chain.forEach((sl,i)=>{if(i){const id=via[sl];const p=PEOPLE[id];h+='<span class="v" onclick="person('+id+')">→ '+esc(p?p.name:'?')+' →</span>'}h+='<span class="s" onclick="go(\\''+sl+'\\')">'+esc(BY_SLUG[sl].show)+'</span>'});h+='</div><div class="g" style="color:var(--dim);font-size:12px;margin-top:4px">'+(chain.length-1)+' hop'+(chain.length===2?'':'s')+' · every show on the path plays here</div>';out.innerHTML=h}
 // LIVE TV. What is on comes from the schedule in scripts/lib/tvgrid.js; the text below IS that file, so the page, the guide and the tests run the same code: dayparts, strips, airings with real start and end times on the viewer's own clock.
+${RADIO.pageSource}
 const TVG=${TVGRID_SRC};
 // Is the player on that part of the page? Popped out (player/src/popout.js) it still counts where its place is kept, so Live TV
 // goes on in the pop-out window from one programme to the next instead of building a new player on the page. A function
@@ -963,6 +981,10 @@ function tvAt(c,t){const n=chanNow(c,t);if(!n)return null;const a=n.a,end=a.st+a
  const br=TVG.breakOf(c,TVLIB,a);
  if(br)for(let u=0;u<br.fill.length;u++){const it=br.fill[u];if(t>=it.en||TV_DONE[tvDoneKey(c,a,u)])continue;if(t<it.st)return{k:'card',a,until:it.st};return{k:'item',a,it,u,off:(t-it.st)/1000}}
  return{k:'card',a,until:a.en}}
+// OLD-TIME RADIO (PLAN-ia-treatments T5; look B, Bryan 23 Nov 2026: "B, old radio"): while a radio show plays, the old radio over the
+// picture with the show, the episode, its air date, the channel and what is next (scripts/lib/radio.js); anything else takes it away.
+function radioScreen(p,s,ep,c,a){const R=typeof VoidRadio!=='undefined'?VoidRadio:null,root=p&&p.root;if(!R||!root)return;if(!s||!s.radio){R.off(root);return}let next='',at='';if(c&&a&&TVLIB){const nx=TVG.nextAiring(c,TVLIB,a),ns=nx&&SHOWS[nx.s];if(ns){next=ns.show;at=clock(nx.st)}}
+ R.screen(root,{show:s.show,ep:ep&&ep.name,aired:ep&&ep.ad,channel:c?c.name:'',next,at,credit:s.rc||''})}
 // Another episode of the same show for an airing whose own episode is dead or missing: one long enough to be playing at off and short
 // enough to end inside the airing, that has not failed in the last hour. Null when the show has none.
 function tvSwap(c,a,s,off){const lim=(a.en-a.st)/6e4;for(const se of s.seasons||[])for(const e of se.episodes)if(!(se.season===a.se&&e.n===a.n)&&e.min&&e.min*60>off+60&&e.min<=lim&&!tvDead(c,{s:a.s,se:se.season,n:e.n}))return{se:se.season,ep:e};return null}
@@ -991,7 +1013,7 @@ async function tvPlay(c,fromEnd,tries){const host=$('vph');if(!host)return;const
  if(!ep||(ep.min&&off>=ep.min*60-20))return skip();
  osd(c,a,SHOWS[a.s],x.k==='ep'?ep:null);track('tvplay',{slug:c.id,x:s.slug+' '+se.season+'x'+ep.n});TVCUR={c,a,x,cur:{s:piece.s,se:se.season,n:ep.n}};
  if(!VP||!vpIn(host))VP=tvMk(host);if(!VP)return;
- VP._ctx={slug:s.slug,ep:se.season+'x'+ep.n,item:ep.item||''};VP.load({id:c.id+'/'+s.slug+'/'+se.season+'x'+ep.n,title:s.show+' · '+ep.name,show:c.name,files:filesFor(ep),artwork:s.poster||''},{startAt:off>5?off:0,autoplay:!!state.tvOn})}
+ VP._ctx={slug:s.slug,ep:se.season+'x'+ep.n,item:ep.item||''};VP.load({id:c.id+'/'+s.slug+'/'+se.season+'x'+ep.n,title:s.show+' · '+ep.name,show:c.name,files:filesFor(ep),artwork:s.poster||''},{startAt:off>5?off:0,autoplay:!!state.tvOn});radioScreen(VP,s,ep,c,a)}
 // THE HOLDING CARDS (B, 21 Oct 2026: "short motion graphics that say things like go grab a snack, <show> will be on next, many more like
 // this so as not to be repetitive", chained and stretched to fit). Live HTML over the picture, never a video file. The card on screen is
 // a function of the clock, so everyone on a channel sees the same card at the same moment; each card holds TVC_MS, the next one never
@@ -1060,7 +1082,7 @@ function tvCard(c,a,until,t){const nx=TVG.nextAiring(c,TVLIB,a),ns=nx&&SHOWS[nx.
 let TVC_TIMER=0,TVC_NOW=null;
 function tvCardsOff(){if(TVC_TIMER){clearInterval(TVC_TIMER);TVC_TIMER=0}TVC_NOW=null;const el=(VP&&VP.root&&VP.root.querySelector&&VP.root.querySelector('.tvc'))||document.querySelector('.tvc');if(el&&el.remove)el.remove()}
 function tvCards(c,x,token){const host=$('vph');if(!host)return;tvCardsOff();TVCUR={c,a:x.a,x};
- if(!VP||!vpIn(host))VP=tvMk(host);if(!VP)return;if(VP.idle)VP.idle();osd(c,x.a,SHOWS[x.a.s],null);
+ if(!VP||!vpIn(host))VP=tvMk(host);if(!VP)return;if(VP.idle)VP.idle();radioScreen(VP,null);osd(c,x.a,SHOWS[x.a.s],null);
  let el=null,shown=-1;
  const tick=()=>{if(token!==TV_TOKEN||!tvLive()){if(token===TV_TOKEN)tvCardsOff();else clearInterval(iv);return}
   const t=Date.now();if(t>=x.until){tvCardsOff();tvPlay(c,true);return}
@@ -1182,7 +1204,7 @@ function tvSwirlFlash(){const root=VP&&VP.root;if(stillWanted()||!root||typeof r
  el.classList.remove('gone');swirlUntilReady(el,VP.v&&VP.v.currentSrc||'',15000)}
 // Play together (B, 23 Nov 2026, picked C from pictures: "C, Play together row"; decision H9): under On now, the rooms where the TV is the table and the phones are in your hands, in On now's own tiles. voidtv.net itself only (the phone remote's rule), never Kids or an embed.
 function togetherHome(){if(!REMOTE_ON)return '';const t=(href,img,name,line,c)=>'<a class="ontile" href="'+BASE+href+'" style="--c:'+c+'"><img loading="lazy" src="'+BASE+img+'" alt=""><b>'+name+'</b><small>'+line+'</small></a>';return '<div id="together"><h2>Play together<small>the TV is the table, the phones are in your hands</small></h2><div class="onnow">'+t('cards/','assets/brand/bg/cardtable-m.webp','Card games','Spades, Hearts, Rummy and more','#4ade80')+t('trivia/','assets/brand/bg/trivianight-m.webp','Trivia Night','Questions on the TV, answers on phones','#ffd23f')+t('play/','assets/brand/bg/voidarcade-wall-m.webp','Games','Old games, your phone is the controller','#ff4fc8')+'</div></div>'}
-function onNowHtml(){if(!TV)return '';const now=Date.now();const tiles=TV.filter(c=>!c.adult).slice(0,40).map(c=>{const n=chanNow(c,now),s=n&&SHOWS[n.a.s];if(!s)return '';const art=s.backdrop||s.poster;return '<button class="ontile" onclick="tune(\\''+c.id+'\\')" style="--c:'+(CGM[chanCg(c)]||CGM.other||{}).c+'">'+(art?'<img loading="lazy" src="'+esc(art)+'" alt="">':'<span class="p"></span>')+'<b>'+esc(c.name)+'</b><small>'+esc(s.show)+'</small></button>'}).join('');return tiles?'<h2>On now<small>tap a channel to watch it</small></h2><div class="onnow">'+tiles+'</div>':''}
+function onNowHtml(){if(!TV)return '';const now=Date.now();const tiles=TV.filter(c=>!c.adult).slice(0,40).map(c=>{const n=chanNow(c,now),s=n&&SHOWS[n.a.s];if(!s)return '';const art=s.backdrop||s.poster;return '<button class="ontile" onclick="tune(\\''+c.id+'\\')" style="--c:'+(CGM[chanCg(c)]||CGM.other||{}).c+'">'+(s.radio&&typeof VoidRadio!=='undefined'?VoidRadio.tile(s.show):art?'<img loading="lazy" src="'+esc(art)+'" alt="">':'<span class="p"></span>')+'<b>'+esc(c.name)+'</b><small>'+esc(s.show)+'</small></button>'}).join('');return tiles?'<h2>On now<small>tap a channel to watch it</small></h2><div class="onnow">'+tiles+'</div>':''}
 async function homeTvStart(){const el=$('htv');if(!el)return;
  if(!TV){el.innerHTML='<div class="loading"><span class="signal"></span><span>Searching the Void for a signal…</span></div>';try{await ensureTV()}catch(_){el.innerHTML='';return}}
  if(viewNow()!=='home'||$('htv')!==el)return;
@@ -1344,7 +1366,7 @@ function page({ data, mode = 'embed', routes = 'hash', base = '/', meta = {} }) 
 <link rel="icon" href="${base}assets/brand/favicon.png?v=2"><link rel="apple-touch-icon" href="${base}assets/brand/apple-touch-icon.png?v=2"><link rel="manifest" href="/manifest.webmanifest"><meta name="theme-color" content="#07080c">
 <meta name="description" content="${desc.replace(/"/g, '&quot;')}">
 ${og}
-<style>${CSS}</style></head><body>
+<style>${CSS}${RADIO.CSS}</style></head><body>
 <header>${PROFILE.name === 'kids' ? '' : '<span data-void-areas-menu></span>'}<a class="logo" href="${base}" aria-label="${BRAND} home" onclick="if(event.metaKey||event.ctrlKey||event.shiftKey||event.altKey||event.button)return true;goHome();return false"><img class="mark" src="${base}assets/brand/icon-192.png?v=2" alt="" onerror="this.remove()"><span class="name"><span class="v">voidtv</span><span class="n">.net</span></span></a><input id="q" placeholder="Search shows…" oninput="state.q=this.value;typed()"><a class="mine-link" onclick="go('tv')" title="Live channels, always on"><i class="ico tv"></i><span class="long"> TV</span></a><a class="mine-link" onclick="go('me')" title="My List, likes and watch history"><i class="ico bookmark"></i><span class="long"> Mine</span></a><a class="mine-link" href="${base}play/" title="Old games from the Internet Archive, free to play"><i class="ico play"></i> Games</a><a class="donate" href="${DONATE_URL}" target="_blank" rel="noopener" title="Donate to CASH (cashvalues.org)"><i class="ico heart sm"></i> Donate<span class="long"> to CASH</span></a><button class="inst" id="inst" hidden onclick="installApp()" title="Install voidtv.net as an app"><i class="ico arrow-down sm"></i><span class="long"> Install</span></button></header><div class="instbar" id="instbar" hidden><span><b>Get voidtv.net on your phone.</b> Free, no account.</span><button class="inst" onclick="installApp()"><i class="ico arrow-down sm"></i> Install</button><button class="instx" onclick="instClose()" aria-label="Close">×</button></div>
 <main id="main"></main>${atmosScript}
 <footer>${PROFILE.name === 'voidtv' ? '<a href="#" class="enjoy-link" onclick="enjoyCard(\'\',false);return false">Enjoying it? Tap here</a> · ' : ''}${CREDIT}</footer>
