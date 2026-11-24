@@ -89,3 +89,51 @@ test('the Worker runs the shared room core, keeps nothing in storage, and the mi
   const out = await mw.onRequest({ request: new Request('https://voidtv.net/api/room/open'), env: {}, next: async () => res });
   assert.equal(out, res);
 });
+
+test("a phone link with a code the codes never use is told there is no such room, the way a room that is not open tells it: the socket is taken and closed with 4404 (the Voidverse function test's F6, 24 Nov 2026; Bryan: \"Yes, fix it\")", async () => {
+  // Before: the door answered that join with a plain 404. A phone page reads that as a line that dropped, so the pad,
+  // the Trivia phone and the Cards hand said "Reconnecting" and tried again for good. They all show their own
+  // "no room" words on a 4404 close. Node has no WebSocketPair and its Response refuses 101, so both are stood in for.
+  const f = fakeRooms(), had = { pair: global.WebSocketPair, response: global.Response }, made = [];
+  const side = () => ({ accepted: false, closed: null, accept() { this.accepted = true; }, close(code, why) { this.closed = [code, why]; } });
+  global.WebSocketPair = function () { const p = [side(), side()]; made.push(p); return p; };
+  global.Response = class extends had.response { constructor(body, init) { if (init && init.status === 101) return { status: 101, webSocket: init.webSocket }; super(body, init); } };
+  try {
+    // A letter the codes never use (Z, B, S, O, I, L, 0, 1), too short, too long, or not letters at all.
+    for (const bad of ['ZZZZ', 'ABCD', 'kx7s', 'KX7', 'KX7PQ', 'KX-7']) {
+      const r = await call(ws('https://voidtv.net/api/room/' + bad + '/join'), { ROOMS: f.ROOMS }, [bad, 'join']);
+      const pair = made.at(-1);
+      assert.equal(r.status, 101, bad + ': the socket is taken, not refused');
+      assert.equal(r.webSocket, pair[0], bad + ': the phone gets its end of it');
+      assert.equal(pair[1].accepted, true, bad);
+      assert.deepEqual(pair[1].closed, [4404, 'No room by that code'], bad + ': closed as a room that is not open is');
+    }
+    assert.equal(made.length, 6);
+    assert.deepEqual(f.calls, [], 'no room is asked about a code that cannot be one');
+    // What was refused before is refused still, before any socket is taken.
+    assert.equal((await call(ws('https://voidtv.net/api/room/ZZZZ/join', 'https://evil.example'), { ROOMS: f.ROOMS }, ['ZZZZ', 'join'])).status, 403, 'another site');
+    assert.equal((await call(new Request('https://voidtv.net/api/room/ZZZZ/join'), { ROOMS: f.ROOMS }, ['ZZZZ', 'join'])).status, 426, 'a plain request where a socket is needed');
+    assert.equal((await call(ws('https://voidtv.net/api/room/ZZZZ/join'), {}, ['ZZZZ', 'join'])).status, 503, 'a site with no rooms bound');
+    assert.equal(made.length, 6, 'none of those took a socket');
+    // The join page's own question about such a code is a plain 404, as before: it is not a socket.
+    assert.equal((await call(new Request('https://voidtv.net/api/room/ZZZZ'), { ROOMS: f.ROOMS }, ['ZZZZ'])).status, 404);
+    // A code that can be one still goes to its room, which answers for itself.
+    assert.equal(await (await call(ws('https://voidtv.net/api/room/KX7P/join'), { ROOMS: f.ROOMS }, ['KX7P', 'join'])).text(), 'ws:/join');
+    assert.deepEqual(f.calls, ['KX7P /join?t=']);
+  } finally {
+    if (had.pair === undefined) delete global.WebSocketPair; else global.WebSocketPair = had.pair;
+    global.Response = had.response;
+  }
+  // The same answer everywhere a phone can join: the Worker's room, the local server, and now the site's door.
+  const read = (...p) => fs.readFileSync(path.join(ROOT, ...p), 'utf8');
+  assert.ok(read('functions', 'api', 'room', '[[path]].js').includes("pair[1].accept(); pair[1].close(R.CLOSE.noRoom, 'No room by that code');\n      return new Response(null, { status: 101, webSocket: pair[0] });"));
+  assert.ok(read('play', 'rooms', 'worker', 'worker.js').includes("close(server, R.CLOSE.noRoom, 'No room by that code'); return new Response(null, { status: 101, webSocket: client });"));
+  assert.ok(read('play', 'rooms', 'local.js').includes("if (!room || !room.open) { conn.close(R.CLOSE.noRoom, 'No room by that code'); return; }"));
+  assert.equal(require('../rooms/room.js').CLOSE.noRoom, 4404);
+  // And every phone page shows its own words for that close, where any other end is a line that dropped.
+  assert.ok(read('play', 'src', 'phonepad.js').includes("if (e.code === 4404) { note('No room with that code',"));
+  assert.ok(read('trivia', 'src', 'phone.js').includes("if (e.code === 4404) { note('No game with that code',"), 'the Trivia phone');
+  assert.ok(read('cards', 'src', 'hand.js').includes("if (e.code === 4404) return stop('No game with that code',"), 'the Cards hand');
+  // Each page lets any four letters and digits through to the door (Z among them), so the door must answer well.
+  for (const page of [['trivia', 'src', 'phone.js'], ['cards', 'src', 'hand.js']]) assert.ok(read(...page).includes('if (!/^[2-9A-Z]{4}$/.test(code))'), page.join('/'));
+});

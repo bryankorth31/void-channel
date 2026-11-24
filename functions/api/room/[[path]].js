@@ -63,7 +63,16 @@ export async function onRequest({ request, env, params }) {
   }
   if (parts.length === 2 && parts[1] === 'join') {
     const code = R.normCode(parts[0]);
-    if (!code) return json(404, { error: 'No room by that code' });
+    // A code with a letter the codes never use (a link like pad.html?r=ZZZZ) is no room at all. The phone is told so the
+    // way a room that is not open tells it (play/rooms/worker/worker.js): the socket is taken and closed with 4404, which
+    // every phone page already shows as "no room with that code". A plain 404 here reached the page as a line that
+    // dropped, so the pad, the Trivia phone and the Cards hand said "Reconnecting" and tried again for good (the
+    // Voidverse function test's F6, 24 Nov 2026; the local server, play/rooms/local.js, always answered this way).
+    if (!code) {
+      const pair = new WebSocketPair();
+      pair[1].accept(); pair[1].close(R.CLOSE.noRoom, 'No room by that code');
+      return new Response(null, { status: 101, webSocket: pair[0] });
+    }
     // A guest joins only a room of its own kinds: the room is looked up first.
     if (may !== R.KINDS) {
       const r = await stub(code).fetch('https://room/lookup');
