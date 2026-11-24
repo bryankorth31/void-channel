@@ -215,18 +215,21 @@
     toastTimer = setTimeout(() => { t.hidden = true; }, 4000);
   }
   function connect() {
-    if (!/^[2-9A-Z]{4}$/.test(code)) { blocker = { h: 'No room code', p: 'Scan the code on the big screen, or type it.', link: true }; render(); return; }
+    // A code the rooms could never make (the letters of play/join.html) is said at once: the room door answers it with a plain 404,
+    // which never reaches the 4404 below, so it sat on Reconnecting for good (voidverse function test F6, 24 Nov 2026).
+    if (!code) { blocker = { h: 'No room code', p: "Type the 4 letters from the host's phone or the TV, or scan its code.", link: true }; render(); return; }
+    if (!/^[2-9ACDEFGHJKMNPQRTUVWXY]{4}$/.test(code)) { blocker = { h: 'No game with that code', p: "Check the 4 letters on the host's phone or the TV.", link: true }; ended = true; render(); return; }
     ws = new WebSocket((location.protocol === 'https:' ? 'wss://' : 'ws://') + location.host + '/api/room/' + code + '/join?t=' + token());
     ws.onmessage = (e) => { let m; try { m = JSON.parse(e.data); } catch (x) { return; } onMessage(m); };
     ws.onclose = (e) => {
       ws = null;
       if (ended) return;
       const stop = (h, p, link, final) => { if (final) ended = true; blocker = { h, p, link }; render(); };
-      if (e.code === 4404) return stop('No game with that code', 'The code changes each game. Check the big screen.', true);
+      if (e.code === 4404) return stop('No game with that code', "The code changes each game. Check the host's phone or the TV.", true);
       if (e.code === 4409) return stop('This game is full', 'The table has no room for more phones.', false);
-      if (e.code === 4423) return stop('This game is locked', 'The big screen is not letting new phones in right now.', false);
-      if (e.code === 4403) return stop('The big screen removed this phone', 'Ask whoever runs the screen if that was a mistake.', false, true);
-      if (e.code === 4410 || e.code === 4408) return stop('The big screen closed', 'Scan the new code on the big screen to play again.', true);
+      if (e.code === 4423) return stop('This game is locked', 'The table is not letting new phones in right now.', false);
+      if (e.code === 4403) return stop('The table removed this phone', 'Ask whoever runs the table if that was a mistake.', false, true);
+      if (e.code === 4410 || e.code === 4408) return stop('The table closed', 'Join with the new code to play again.', true);
       // A dropped connection: try again, a little slower each time; the seat is kept for a minute.
       if (e.code === 4411) { /* the seat was taken over: nothing special, try again */ }
       blocker = { h: 'Reconnecting', p: 'The connection dropped. Trying again.', link: false }; render();
@@ -248,7 +251,7 @@
     }
     if (m.type === 'c-you') {
       you = m;
-      if (m.refused) { $('name-err').textContent = 'That name cannot go on the big screen. Try another, or just play.'; askName = true; }
+      if (m.refused) { $('name-err').textContent = 'That name cannot go on the table. Try another, or just play.'; askName = true; }
       // Asked once in a room, and only in the lobby: a phone coming back in the middle of a game goes straight to its
       // hand, and the question does not come up again between games (found in the browser, 22 Nov 2026).
       else if (!askedName && !wasAsked() && !m.named && m.phase === 'lobby') { askedName = true; askName = true; markAsked(); }
@@ -620,7 +623,7 @@
   function note(h, p, link) { $('note-h').textContent = h; $('note-p').textContent = p; $('note-a').hidden = !link; only('note'); }
   function render() {
     if (blocker) { note(blocker.h, blocker.p, blocker.link); return; }
-    if (!you || !roster) { note('Joining', 'Finding the big screen.', false); return; }
+    if (!you || !roster) { note('Joining', 'Finding the table.', false); return; }
     if (askName) { only('name'); return; }
     const me = meSeat();
     if (roster.phase === 'lobby') {

@@ -69,7 +69,23 @@ test('the table page hands over to the phone page before it makes a dealer or op
 test('phones only: ?phones opens the table on a phone (not the games page), and the games page offers it', () => {
   assert.equal(P.isPhone(win(390, 844, true, '?phones')), false, 'the host phone gets the table page in phones mode');
   const ph = read('src', 'phone.js');
-  assert.ok(ph.includes("phones.href = '/cards/?phones'"), 'No TV? Play with phones only');
+  // Phone to phone is the default (Bryan, 24 Nov 2026: "The same phone to phone uh dynamic needs to be the default in card games as
+  // well"): every game's sheet starts a phones-only table with that game picked; a TV is a line at the bottom.
+  assert.ok(ph.includes("const startUrl = (id) => '/cards/?phones&game=' + encodeURIComponent(id);") && ph.includes('start.href = startUrl(game.id);'));
+  assert.ok(!ph.includes('No TV? Play with phones only'), 'no separate box: starting on the phone is the default');
+  assert.ok(/Have a TV or a computer hooked to it\?/.test(ph) && ph.includes("here.href = '/cards/?table'"), 'the TV stays the other way');
+  const js = read('src', 'screen.js');
+  assert.match(js, /if \(PHONES\) \{ const want = new URLSearchParams\(location\.search\)\.get\('game'\); if \(want\) dealer\.pick\(want\); \}/, 'the table opens on the game the tile started');
+});
+
+test('the hand page: a code the rooms could never make says so at once, and no screen talks of a big screen', () => {
+  const h = read('src', 'hand.js'), html = read('hand.html');
+  assert.ok(h.includes('if (!/^[2-9ACDEFGHJKMNPQRTUVWXY]{4}$/.test(code))'), 'the code letters of play/join.html (voidverse function test F6)');
+  const join = fs.readFileSync(path.join(__dirname, '..', '..', 'play', 'join.html'), 'utf8');
+  assert.ok(join.includes("const ALPHABET = '23456789ACDEFGHJKMNPQRTUVWXY'"), 'the same letters');
+  const shown = (src) => [...src.matchAll(/'([^'\n]*)'|"([^"\n]*)"/g)].map((m) => m[1] || m[2] || '').filter((x) => / /.test(x)).join('\n');
+  assert.ok(!/big screen/i.test(shown(h)), 'no line the player reads names a big screen: there may be none');
+  assert.ok(!/big screen/i.test(html.replace(/<!--[\s\S]*?-->/g, '')), 'nor in the page');
 });
 
 test('phones only: the host page draws the start screen, sits the host down through the same hand page every phone uses, and tells the phones', () => {

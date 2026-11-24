@@ -582,6 +582,9 @@
     };
   }
 
+  // The game the phone's games page started (?game=hearts: a tile's Start a game; phone to phone is the default, 24 Nov 2026).
+  // The dealer takes only a game it has; anything else leaves the first game picked. Here, once everything a change draws with exists.
+  if (PHONES) { const want = new URLSearchParams(location.search).get('game'); if (want) dealer.pick(want); }
   render();
   document.body.focus();
   openRoom();

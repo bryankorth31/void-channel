@@ -78,10 +78,10 @@ html.phone-page #app{position:static}
 .ph-sheet .howto-say{font-size:16px;line-height:1.35}
 @media (prefers-reduced-motion:reduce){.ph-tile:active{transform:none}}
 
-/* "No TV? Play with phones only" on the games-first page */
-.ph-phones{display:block;margin:16px 12px 0;padding:14px 16px;border-radius:14px;background:linear-gradient(135deg,#2a0f22,#1a1230);border:1px solid #6a2550;color:var(--fg);text-decoration:none}
-.ph-phones b{display:block;font-family:Unbounded,system-ui,sans-serif;font-weight:800;font-size:16px}
-.ph-phones small{display:block;color:#d8c0cf;font-size:13px;margin-top:3px}
+/* A game's sheet: Start a game (phone to phone is the default, 24 Nov 2026), then how to play */
+.ph-start{display:flex;align-items:center;justify-content:center;height:56px;margin-top:6px;border-radius:12px;background:#ff4fc8;color:#14000e;text-decoration:none;font-family:Unbounded,system-ui,sans-serif;font-weight:800;font-size:19px}
+.ph-start:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.ph-sheet-how{margin:18px 0 10px;font-family:Unbounded,system-ui,sans-serif;font-size:15px;font-weight:800;color:var(--gold)}
 
 /* PHONES ONLY: the host's phone (/cards/?phones; Bryan, 24 Nov 2026, "pure phone mode", "B, hand first"). The start screen,
    then the host's own hand page laid over it while a game is on. */

@@ -3,7 +3,8 @@
 // than this empty looking introduction", and "The menus aren't just the same across the verse". He picked look B from three
 // pictures: "B games first". On a phone the table page (made for a TV) is not drawn small; this page is shown instead:
 // the voidtv.net areas menu, the games as big tiles (each opens its rules card), a line on how to host, and a join box that
-// stays at the bottom and hands the code to /join, which sends the phone to the right room. No room is opened here.
+// stays at the bottom and hands the code to /join, which sends the phone to the right room. No room is opened here. Since 24 Nov
+// 2026 phone to phone is the default: a game's tile starts a phones-only table with that game picked (src/screen.js, ?phones).
 // "Show the table on this screen" (?table) still opens the table on a phone, for a phone or tablet plugged into a TV.
 // Two parts, as in screen.js: the pure part (isPhone, normCode, playersLine, tiles) is tested in Node; the page part draws.
 (function (root) {
@@ -66,16 +67,21 @@
     return e;
   }
 
-  // The rules card of one game in a sheet over the page; Close, Escape or a tap outside takes it away.
+  // Phone to phone is the default (Bryan, 24 Nov 2026: "The same phone to phone uh dynamic needs to be the default in card games as
+  // well"): a game's sheet starts it on this phone, with that game picked (/cards/?phones&game=...), and shows how to play under it.
+  // Close, Escape or a tap outside takes it away.
+  const startUrl = (id) => '/cards/?phones&game=' + encodeURIComponent(id);
   function openRules(game, back) {
     const shade = el('div', 'ph-shade'), sheet = el('div', 'ph-sheet');
-    sheet.setAttribute('role', 'dialog'); sheet.setAttribute('aria-modal', 'true'); sheet.setAttribute('aria-label', 'How to play ' + game.name);
-    const head = el('div', 'ph-sheet-head'), h = el('h2', '', 'How to play ' + game.name), close = el('button', 'ph-close', 'Close');
+    sheet.setAttribute('role', 'dialog'); sheet.setAttribute('aria-modal', 'true'); sheet.setAttribute('aria-label', game.name);
+    const head = el('div', 'ph-sheet-head'), h = el('h2', '', game.name), close = el('button', 'ph-close', 'Close');
     close.type = 'button';
     head.append(h, close);
-    sheet.append(head, el('p', 'ph-sheet-players', playersLine(game)));
-    if (root.VoidRules && root.VoidRules.draw) sheet.append(root.VoidRules.draw(game));
-    sheet.append(el('p', 'ph-sheet-note', 'Deal it from the table on a TV or a computer: voidtv.net/cards'));
+    const start = el('a', 'ph-start', 'Start a game');
+    start.href = startUrl(game.id);
+    sheet.append(head, el('p', 'ph-sheet-players', playersLine(game)), start,
+      el('p', 'ph-sheet-note', 'Your phone opens the table and holds your hand too. Friends join with its code.'));
+    if (root.VoidRules && root.VoidRules.draw) { sheet.append(el('h3', 'ph-sheet-how', 'How to play')); sheet.append(root.VoidRules.draw(game)); }
     shade.append(sheet);
     const done = () => { shade.remove(); document.removeEventListener('keydown', key); if (back) back.focus(); };
     const key = (e) => { if (e.key === 'Escape') done(); };
@@ -90,9 +96,9 @@
   function joinBox() {
     const form = el('form', 'ph-join');
     form.setAttribute('novalidate', '');
-    const label = el('label', 'ph-join-label', 'Joining a table?');
+    const label = el('label', 'ph-join-label', "Joining a friend's game?");
     label.htmlFor = 'ph-code';
-    label.append(el('small', '', 'Type the 4 letters on the TV'));
+    label.append(el('small', '', 'Type the 4 letters on their phone or the TV'));
     const field = el('div', 'ph-code');
     const boxes = [0, 1, 2, 3].map(() => field.appendChild(el('span', 'ph-box')));
     const input = el('input');
@@ -108,13 +114,13 @@
       if (input.value !== v) input.value = v;
       boxes.forEach((b, i) => { b.textContent = v[i] || ''; b.classList.toggle('on', i === Math.min(v.length, 3) && document.activeElement === input); });
     };
-    // A new letter clears the last message; focus alone does not (the message asks to look at the TV and type again).
+    // A new letter clears the last message; focus alone does not (the message asks to look at the code and type again).
     input.addEventListener('input', () => { why.textContent = ''; show(); });
     input.addEventListener('focus', show); input.addEventListener('blur', show);
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       const code = normCode(input.value);
-      if (!code) { why.textContent = 'The code is four letters and numbers, like KX7P. It is on the TV.'; input.focus(); return; }
+      if (!code) { why.textContent = "The code is four letters and numbers, like KX7P. It is on the host's phone or the TV."; input.focus(); return; }
       location.href = '/join?r=' + code;
     });
     form.append(label, field, go, why);
@@ -137,12 +143,12 @@
     top.append(menu, mark, el('span', 'ph-here', 'Card games'));
     const main = el('main', 'ph-main');
     const intro = el('div', 'ph-intro');
-    intro.append(el('h1', '', 'Card games'), el('p', '', 'Play on the big screen together. Each phone holds one hand.'));
+    intro.append(el('h1', '', 'Card games'), el('p', '', 'Play with friends, phone to phone. No TV needed. Tap a game to start it.'));
     const grid = el('div', 'ph-grid');
     for (const t of tiles(games)) {
       const b = el('button', 'ph-tile ph-' + t.tint);
       b.type = 'button';
-      b.setAttribute('aria-label', t.name + ', ' + t.players + '. How to play');
+      b.setAttribute('aria-label', t.name + ', ' + t.players + '. Start a game or see how to play');
       const fan = el('span', 'ph-fan');
       fan.setAttribute('aria-hidden', 'true');
       if (F) for (const id of t.cards) fan.append(F.card(id));
@@ -153,15 +159,12 @@
     const more = el('div', 'ph-tile ph-more');
     more.append(el('b', '', 'Board games'), el('small', '', 'coming later'));
     grid.append(more);
-    // No TV: one phone opens the table and plays too (Bryan, 24 Nov 2026: "Card games needs pure phone mode").
-    const phones = el('a', 'ph-phones');
-    phones.href = '/cards/?phones';
-    phones.append(el('b', '', 'No TV? Play with phones only'), el('small', '', 'Your phone opens the table. Everyone joins with its code.'));
+    // A TV is the other way, now a line at the bottom (phone to phone is the default, 24 Nov 2026).
     const host = el('p', 'ph-host');
-    host.append('With a TV, open ', el('b', '', 'voidtv.net/cards'), ' on it or on a computer. ');
+    host.append('Have a TV or a computer hooked to it? Open ', el('b', '', 'voidtv.net/cards'), ' there and everyone plays from their phones. ');
     const here = el('a', '', 'Show the table on this screen'); here.href = '/cards/?table';
     host.append(here, '.');
-    main.append(intro, grid, phones, host);
+    main.append(intro, grid, host);
     app.append(top, main, joinBox());
     return true;
   }
