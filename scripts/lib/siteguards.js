@@ -92,10 +92,16 @@ const ISOLATE = '  Cross-Origin-Opener-Policy: same-origin\n  Cross-Origin-Embed
 const PLAY_CACHE = { '/play/engine/*': '  Cache-Control: public, max-age=86400\n', '/play/cards/*': '  Cache-Control: public, max-age=300\n' };
 const PLAY_HEADERS = PLAY_ISOLATED.map((p) => p + '\n' + ISOLATE + (PLAY_CACHE[p] || '')).join('')
   + '/play/shelf/*\n  Cache-Control: public, max-age=300\n';
+// The area list (the menu every room shows) is kept five minutes, not the day the rest of /assets/ is kept. The rooms on their own address (University,
+// Hindi, West Side, Spanish) load it from voidtv.net at an address stamped when THEY were last built, so with a day's cache a changed list reached them
+// late or only when they were built again: on 24 Nov 2026 the University's menu still lacked Card games, West Side and Spanish (Bryan: "The menus aren't
+// just the same across the verse"). With five minutes, any copy of the address, however old its stamp, follows the list. The rule stands AFTER /assets/*
+// and detaches the header first; without the "!" line Pages joins both values and caches keep the first.
+const AREAS_CACHE = '/assets/brand/areas/areas.js\n  ! Cache-Control\n  Cache-Control: public, max-age=300\n';
 function headersFile() {
   return '/*\n' + SECURITY_HEADERS.map(([k, v]) => `  ${k}: ${v}\n`).join('')
     + '/data/*\n  Cache-Control: public, max-age=300\n/show/*\n  Cache-Control: public, max-age=300\n/assets/*\n  Cache-Control: public, max-age=86400\n'
-    + PLAY_HEADERS;
+    + AREAS_CACHE + PLAY_HEADERS;
 }
 // Names of the three headers the doctor insists on that a response lacks. get(name) returns the value or null.
 function missingSecurityHeaders(get) {

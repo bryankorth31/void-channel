@@ -152,6 +152,11 @@ test('security headers: the file names every header, the policy is report-only a
   assert.ok(G.SECURITY_HEADERS.some(([k, v]) => k === 'Strict-Transport-Security' && v === 'max-age=31536000'));
   assert.ok(G.SECURITY_HEADERS.some(([k, v]) => k === 'X-Frame-Options' && v === 'DENY'));
   assert.ok(G.SECURITY_HEADERS.some(([k, v]) => k === 'Permissions-Policy' && v === 'camera=(), microphone=(), geolocation=()'));
+  // The area list is kept five minutes so every room's menu follows it (Bryan, 24 Nov 2026: "The menus aren't just the same across the verse").
+  // Its rule must stand after /assets/* and detach the day-long value first, or Pages joins the two and caches keep the first.
+  const own = '/assets/brand/areas/areas.js\n  ! Cache-Control\n  Cache-Control: public, max-age=300\n';
+  assert.ok(file.includes(own), 'the area list has its own short cache');
+  assert.ok(file.indexOf(own) > file.indexOf('/assets/*\n'), 'and its rule stands after the rule for all of /assets/');
   assert.ok(file.length < 2000 * 4, 'well inside the Pages _headers limits');
   for (const line of file.split('\n')) assert.ok(line.length <= 2000, 'Pages allows 2,000 characters a line');
 });
