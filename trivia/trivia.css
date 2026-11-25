@@ -199,3 +199,11 @@ body.finished .foot .give{display:none}
    how it scrolls"): his VOID TRIVIA NIGHT picture in the one background every Void area shares, /assets/brand/atmos/atmos.js,
    loaded at the foot of the page. The page itself sits over it. */
 body>header,body>main,body>footer{position:relative;z-index:1}
+/* Motion off, by the person's own device setting (Voidverse sweep, Trivia item 9; Bryan, 24 Nov 2026: "Yes, reduced motion"):
+   the Listen word stands still and the answer cards change colour without sliding or growing. The countdown bar still runs,
+   because it is the time left. The shared background and the areas menu keep their own reduced-motion rules. */
+@media (prefers-reduced-motion:reduce){
+  .ear span{animation:none;opacity:1}
+  .a{transition:none}
+  .a.right{transform:none}
+}

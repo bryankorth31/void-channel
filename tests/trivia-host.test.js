@@ -394,3 +394,17 @@ test('on a phone the top bar wraps and a picture or sound question stacks, so no
   assert.match(m[1], /\.where:empty\{display:none\}/);
   assert.match(m[1], /\.stage\.with-media \.body\{grid-template-columns:minmax\(0,1fr\)\}/);
 });
+
+// Motion off (Voidverse sweep, Trivia item 9; Bryan, 24 Nov 2026: "Yes, reduced motion"): every animation and transition in
+// trivia.css is stilled under prefers-reduced-motion, and the pages have no other moving part of their own.
+test('with motion turned off the Listen pulse stops and the answer cards do not move', () => {
+  const css = read('trivia/trivia.css');
+  const m = css.match(/@media \(prefers-reduced-motion:reduce\)\{([\s\S]*?)\n\}/);
+  assert.ok(m, 'a reduced-motion rule');
+  assert.match(m[1], /\.ear span\{animation:none/);
+  assert.match(m[1], /\.a\{transition:none\}/);
+  assert.match(m[1], /\.a\.right\{transform:none\}/);
+  const outside = css.replace(m[0], '');
+  assert.deepEqual((outside.match(/animation:[^;}]+/g) || []).map((s) => s.split(' ')[0]), ['animation:ear'], 'no other animation to still');
+  for (const f of ['trivia/index.html', 'trivia/phone.html']) assert.ok(!/animation:|@keyframes/.test(read(f)), f + ' has no animation of its own');
+});
