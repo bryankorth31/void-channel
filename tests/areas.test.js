@@ -80,6 +80,69 @@ test('J3: the rooms\' names the main page uses are the list\'s own, and the name
 });
 
 
+// The menu opens as "the voidverse" with the room you are in lit (Bryan, 25 Nov 2026, "Yes, your picks": N1, W2, B2; decision H12).
+// html(here) is what the opened menu holds, as text; spots(n, tall) is where each room sits, in hundredths of the box.
+test('H12: the menu opens as "the voidverse", voidtv.net stays the wordmark, and the room you are in is lit', () => {
+  const V = load('voidtv.net', '/play/');
+  assert.match(SRC, /<b class="va-ttl">the voidverse<\/b>/, 'the whole is named on top');
+  const h = V.html('play');
+  assert.match(h, /<span class="va-hub"><span class="va-wm">voidtv<i>\.net<\/i><\/span><\/span>/, 'voidtv.net is the wordmark, in the middle');
+  assert.equal((h.match(/aria-current="page"/g) || []).length, 1, 'one place is lit');
+  assert.match(h, /aria-current="page" data-va="play" title="[^"]*"><em class="va-here">You are here<\/em><i class="va-dot has"><svg class="va-mark"[^]*?<\/svg><\/i><b>PLAY<\/b>/);
+  assert.equal((h.match(/<line [^>]*class="on"/g) || []).length, 2, 'its line to the middle is lit, in the wide drawing and the tall one');
+  // every room that is not a site for a group of people sits round the middle, under its own name from the list
+  const A = Array.from(V.areas).filter((a) => a.live);
+  for (const a of A.filter((x) => !x.chip)) assert.ok(h.includes('data-va="' + a.id + '"') && h.includes('<b>' + a.name.replace(/&/g, '&#38;') + '</b>'), a.id + ' is on it by its list name');
+  // the sites for a group of people are the row under the rooms, in the list's own order (Spanish, West Side, Hindi last)
+  assert.deepEqual(A.filter((a) => a.chip).map((a) => a.id), ['kids', 'espanol', 'westside', 'hindi']);
+  assert.deepEqual(Array.from(h.matchAll(/<a class="va-chip" href="[^"]*"[^>]* data-va="([a-z]+)"/g), (m) => m[1]), ['kids', 'espanol', 'westside', 'hindi', 'join']);
+  assert.match(V.html('hindi'), /<a class="va-chip" href="https:\/\/hindi\.voidtv\.net\/" aria-current="page" data-va="hindi"[^>]*><svg class="va-mark"[^]*?<\/svg>hindi <em>you are here<\/em><\/a>/, 'on a language site its own button is lit');
+  assert.match(h, /Your phone joins any room:<\/span><a class="va-chip" href="\/join" data-va="join">Type a code<\/a>/, 'the phone has one door, the join page');
+  assert.match(load('university.voidtv.net', '/').html('university'), /href="https:\/\/voidtv\.net\/join"/, 'from another address the join page is voidtv.net\'s');
+  assert.match(h, /All free\. No account\. No ads sold\./);
+});
+
+// The room marks (Bryan, 25 Nov 2026: "S2 neon line"). The drawings live as files in assets/brand/marks/ and, the same lines, inside
+// the menu file, so the menu asks no site for a picture.
+test('H12: every room carries its mark from the neon line set, the same drawing as the file in the brand folder, in pink and blue only', () => {
+  const V = load('voidtv.net', '/');
+  const M = V.marks, h = V.html('ondemand');
+  const ids = Array.from(V.areas).filter((a) => a.live).map((a) => a.id);
+  for (const id of ids.concat('phone')) {
+    assert.ok(M[id], id + ' has a mark');
+    const file = read('assets/brand/marks/' + id + '.svg');
+    assert.ok(file.includes('filter="url(#n)">' + M[id] + '</g></svg>'), id + ': the menu draws what the file draws');
+    assert.deepEqual(Array.from(new Set(file.match(/#[0-9a-fA-F]{3,8}\b/g))).sort(), ['#5fe3ff', '#ff4fc8'], id + ': the brand\'s pink and blue, nothing else');
+    assert.doesNotMatch(file, /<script|<image|href=|<foreignObject|style=/i, id + ': a plain drawing');
+  }
+  assert.deepEqual(Object.keys(M).sort(), ids.concat('phone').sort(), 'no mark without a room');
+  assert.deepEqual(fs.readdirSync(path.join(REPO, 'assets/brand/marks')).sort(), ids.concat('phone').map((id) => id + '.svg').sort(), 'no file without a room');
+  assert.equal((h.match(/<svg class="va-mark"/g) || []).length, ids.length + 1, 'one mark for each room and each button, and one for the phone');
+  assert.doesNotMatch(h, /<img/, 'the opened menu loads no picture from any site');
+  assert.equal((h.match(/<filter id="va-glow"/g) || []).length, 1, 'one glow, shared');
+});
+
+test('H12: plain words only, and every room has a place of its own at both shapes', () => {
+  // B2: the words for the parts of the whole stay in the docs and HQ; a visitor reads rooms and "your phone".
+  assert.doesNotMatch(SRC, /\b(heart|nerves?|spine|limbs?|skin)\b|the body|as a body/i, 'no body words anywhere in the file a visitor\'s browser loads');
+  const V = load('voidtv.net', '/');
+  // Seven rooms fit round the middle on a phone. An eighth makes the names touch there: this fails then, so the phone drawing is looked at again.
+  assert.ok(Array.from(V.areas).filter((a) => a.live && !a.chip).length <= 7, 'at most seven rooms round the middle until the phone drawing is checked for more');
+  for (const n of [5, 6, 7]) for (const tall of [false, true]) {
+    const p = Array.from(V.spots(n, tall));
+    assert.equal(p.length, n);
+    for (const s of p) assert.ok(s.x >= 8 && s.x <= 92 && s.y >= 8 && s.y <= 92, 'inside the box: ' + JSON.stringify(s));
+    // no two rooms on top of each other: at a 1278 by 513 window the box is about 1230 by 360, on a phone about 358 by 520
+    const W = tall ? 358 : 1230, H = tall ? 520 : 360;
+    for (let i = 0; i < n; i++) for (let j = i + 1; j < n; j++) {
+      const dx = Math.abs(p[i].x - p[j].x) * W / 100, dy = Math.abs(p[i].y - p[j].y) * H / 100;
+      assert.ok(dx >= 100 || dy >= 62, n + ' rooms, ' + (tall ? 'tall' : 'wide') + ': rooms ' + i + ' and ' + j + ' do not overlap (' + Math.round(dx) + ', ' + Math.round(dy) + ')');
+    }
+  }
+  assert.equal(V.spots(7, false)[0].x, 10, 'wide: the first room is at the left');
+  assert.equal(V.spots(7, true)[0].y, 12, 'tall: the first room is at the top');
+});
+
 // Bryan, 23 Nov 2026: "Hindi void should not be in the list higher then any other void verse page aside from west side or spanish".
 // Then, 24 Nov 2026 (typed in the sister sites chat): "Hindi needs to be really relegated to the sidelines of things even underneath Spanish
 // it should go Spanish and then the West side and then Indy or Indian ... but Spanish first and below on the list these three things".
