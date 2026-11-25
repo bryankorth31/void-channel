@@ -21,6 +21,13 @@ function createRooms() {
     res.end(JSON.stringify(r && r.open ? { kind: r.kind } : { error: 'No room by that code' }));
   }
 
+  // GET /api/room -> { on: true }: are phone rooms on? Here they are whenever this server runs. The site's door says the
+  // same once its rooms Worker has answered (functions/api/room), so a big screen asks one plain question in both places.
+  function status(req, res) {
+    res.writeHead(200, { 'content-type': 'application/json', 'cache-control': 'no-store' });
+    res.end(JSON.stringify({ on: true }));
+  }
+
   function upgrade(req, socket) {
     const u = new URL(req.url, 'http://x');
     const m = /^\/api\/room\/(?:open|([^/]+)\/join)$/.exec(u.pathname);
@@ -54,7 +61,7 @@ function createRooms() {
     conn.onclose = () => room.drop(conn);
   }
 
-  return { lookup, upgrade, rooms };
+  return { lookup, status, upgrade, rooms };
 }
 
 module.exports = { createRooms };

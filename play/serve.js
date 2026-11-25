@@ -21,6 +21,7 @@ const ISOLATE = { 'cross-origin-opener-policy': 'same-origin', 'cross-origin-emb
 const rooms = require('./rooms/local.js').createRooms();
 http.createServer((req, res) => {
   let p = decodeURIComponent(req.url.split('?')[0]);
+  if (p === '/api/room' || p === '/api/room/') return rooms.status(req, res);   // are phone rooms on?
   const room = /^\/api\/room\/([^/]+)$/.exec(p);
   if (room && room[1] !== 'open') return rooms.lookup(req, res, room[1]);
   if (p === '/join') p = '/play/join.html';

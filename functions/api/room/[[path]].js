@@ -4,6 +4,7 @@
 //   WebSocket /api/room/open?kind=pad|trivia   a big screen opens a room with a fresh code
 //   WebSocket /api/room/CODE/join              a phone joins it
 //   GET       /api/room/CODE                   { kind } or 404, for the join page
+//   GET       /api/room                        { on: true } when phone rooms work (the Worker answered), 503 when not
 // Only a page from this same site may open or join, so no other web page can use the relay. Named guests (GUESTS, matched on
 // the exact origin, no wildcard) may use only the kinds listed for them: University's lesson rooms (Bryan, 21 Nov 2026: "we
 // need to corect the relay door to allow university"). kids.voidtv.net reaches the rooms by its own Worker's binding, not here.
@@ -23,6 +24,18 @@ export async function onRequest({ request, env, params }) {
   const stub = (code) => env.ROOMS.get(env.ROOMS.idFromName(code));
   const upgrade = request.headers.get('Upgrade') === 'websocket';
 
+  // GET /api/room: are phone rooms on? A plain yes, said only once the rooms Worker has itself answered a lookup, so it
+  // still proves the Worker is there. A big screen used to learn this by asking for a room that could not exist
+  // (/api/room/2222) and reading its 404 as "on", which put a red line in the browser's log on every open (the Trivia
+  // Night owner chat, 24 Nov 2026, after Bryan's "Fix the red line"; his word for this door: "Yes, add it"). Nothing is
+  // given away: it says only that rooms work. Not bound is the 503 above; a Worker that does not answer is a 503 too.
+  if ((!parts.length || (parts.length === 1 && parts[0] === '')) && request.method === 'GET' && !upgrade) {
+    try {
+      const r = await stub('2222').fetch('https://room/lookup');
+      if (r.status === 200 || r.status === 404) return json(200, { on: true });
+    } catch (e) { /* the Worker did not answer: said below */ }
+    return json(503, { error: 'Phone rooms are not answering right now' });
+  }
   if (parts.length === 1 && parts[0] !== 'open' && request.method === 'GET' && !upgrade) {
     const code = R.normCode(parts[0]);
     if (!code) return json(404, { error: 'No room by that code' });

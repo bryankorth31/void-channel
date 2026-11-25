@@ -139,3 +139,46 @@ test("a phone link with a code the codes never use is told there is no such room
   // it connects (the Card games chat, 901053ddc, the same day); that guard and this door do not get in each other's way.
   assert.ok(read('trivia', 'src', 'phone.js').includes('if (!/^[2-9A-Z]{4}$/.test(code))'), 'the Trivia phone');
 });
+
+test('are phone rooms on? One plain question with a plain yes, at the site and on this PC (the Trivia Night owner chat, 24 Nov 2026; Bryan: "Yes, add it")', async () => {
+  // A big screen used to ask for a room that could not exist and read its 404 as "on": a red line in the log on every open.
+  const f = fakeRooms();
+  const yes = await call(new Request('https://voidtv.net/api/room'), { ROOMS: f.ROOMS }, []);
+  assert.equal(yes.status, 200);
+  assert.deepEqual(await yes.json(), { on: true });
+  assert.equal(yes.headers.get('cache-control'), 'no-store', 'never a stale yes');
+  assert.deepEqual(f.calls, ['2222 /lookup'], 'said only after the rooms Worker has itself answered a lookup');
+  // The same with the path the browser may send for a trailing slash.
+  assert.equal((await call(new Request('https://voidtv.net/api/room/'), { ROOMS: f.ROOMS }, [''])).status, 200);
+  // Rooms in use answer a lookup with 200: still a yes.
+  f.open.add('2222');
+  assert.deepEqual(await (await call(new Request('https://voidtv.net/api/room'), { ROOMS: f.ROOMS }, [])).json(), { on: true });
+  // Not on: no rooms bound, a Worker that throws, a Worker that answers something else.
+  assert.equal((await call(new Request('https://voidtv.net/api/room'), {}, [])).status, 503, 'not set up');
+  const broken = { idFromName: (n) => n, get: () => ({ fetch: async () => { throw new Error('down'); } }) };
+  const down = await call(new Request('https://voidtv.net/api/room'), { ROOMS: broken }, []);
+  assert.equal(down.status, 503);
+  assert.ok(!(await down.json()).on, 'a Worker that does not answer is not a yes');
+  const odd = { idFromName: (n) => n, get: () => ({ fetch: async () => new Response('oops', { status: 500 }) }) };
+  assert.equal((await call(new Request('https://voidtv.net/api/room'), { ROOMS: odd }, [])).status, 503);
+  // Nothing else moved: a socket at that address still falls to the socket rules, and the old question still gets its 404.
+  assert.equal((await call(ws('https://voidtv.net/api/room'), { ROOMS: f.ROOMS }, [])).status, 404);
+  assert.equal((await call(new Request('https://voidtv.net/api/room', { method: 'POST' }), { ROOMS: f.ROOMS }, [])).status, 426);
+  assert.equal((await call(new Request('https://voidtv.net/api/room/3333'), { ROOMS: f.ROOMS }, ['3333'])).status, 404);
+  // This PC's local server says the same, so a page asks one question in both places.
+  const { spawn } = require('child_process');
+  const port = await new Promise((ok) => { const srv = require('net').createServer(); srv.listen(0, '127.0.0.1', () => { const n = srv.address().port; srv.close(() => ok(n)); }); });
+  const srv = spawn(process.execPath, [path.join(ROOT, 'play', 'serve.js'), String(port)], { stdio: ['ignore', 'pipe', 'pipe'] });
+  try {
+    await new Promise((ok, no) => { srv.stdout.once('data', ok); srv.once('error', no); setTimeout(() => no(new Error('the local server did not start')), 15000); });
+    for (const at of ['/api/room', '/api/room/']) {
+      const r = await fetch('http://127.0.0.1:' + port + at);
+      assert.equal(r.status, 200, at);
+      assert.deepEqual(await r.json(), { on: true }, at);
+    }
+    assert.equal((await fetch('http://127.0.0.1:' + port + '/api/room/2222')).status, 404, 'the old question is answered as before');
+  } finally { srv.kill(); }
+  const read = (...p) => fs.readFileSync(path.join(ROOT, ...p), 'utf8');
+  assert.ok(read('play', 'serve.js').includes("if (p === '/api/room' || p === '/api/room/') return rooms.status(req, res);"));
+  assert.ok(read('play', 'rooms', 'local.js').includes('return { lookup, status, upgrade, rooms };'));
+});
