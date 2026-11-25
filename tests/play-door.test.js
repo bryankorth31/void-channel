@@ -36,7 +36,7 @@ test('the player and its files are isolated, the shelf is not', () => {
 
 test('the site build copies the PLAY pages, scripts, cards, shelf list and engines, and no build tools, tests or sources', () => {
   const src = read('scripts/site.js');
-  assert.match(src, /for \(const f of \['index\.html', 'game\.html', 'play\.css', 'shelf\.css', 'pad\.html', 'join\.html'\]\)/);
+  assert.match(src, /for \(const f of \['index\.html', 'game\.html', 'play\.css', 'shelf\.css', 'pad\.html', 'join\.html', 'manifest\.webmanifest'\]\)/);
   assert.ok(src.includes("fs.copyFileSync(path.join(P, 'join.html'), path.join(OUT, 'join.html'));"), 'the join page answers at /join too');
   assert.match(src, /for \(const d of \['src', 'cards', 'engine', 'cheats', 'library', 'skin'\]/);
   // The shelf list and the nightly check's results (an old link to a game off the shelf reads them to say so).
@@ -86,4 +86,24 @@ test('with the password gate on, the middleware isolates the same PLAY paths wit
 test('_headers gives the PLAY paths their own report-only policy that allows WebAssembly and the worklet', () => {
   const h = guards.headersFile();
   assert.match(h, /\/play\/game\n[^/]*! Content-Security-Policy-Report-Only\n  Content-Security-Policy-Report-Only: [^\n]*'wasm-unsafe-eval' blob:[^\n]*worker-src 'self' blob:/);
+});
+
+// Voidverse join J12 (Bryan, 25 Nov 2026: "Yes, your picks"): each room installs under its own name. PLAY's two pages always
+// named an install file beside themselves, but the build never copied it, so the address answered with the home page and a
+// phone that added PLAY to its home screen got a plain shortcut or the main app. The name follows decision B1: voidtv.net.
+test('PLAY installs under its own name: the file its pages name is real, is copied, and opens PLAY', () => {
+  for (const page of ['play/index.html', 'play/game.html']) assert.ok(read(page).includes('<link rel="manifest" href="manifest.webmanifest">'), page + ' names the install file beside itself');
+  const m = JSON.parse(read('play/manifest.webmanifest'));
+  assert.equal(m.name, 'voidtv.net PLAY');
+  assert.equal(m.short_name, 'PLAY');
+  assert.equal(m.start_url, '/play/');
+  assert.equal(m.scope, '/play/', 'its own app, apart from the main one at /');
+  assert.ok(m.description && !new RegExp('[' + String.fromCharCode(8211, 8212) + ']').test(JSON.stringify(m)), 'no long dashes');
+  const sizes = m.icons.map((i) => i.sizes);
+  assert.ok(sizes.includes('192x192') && sizes.includes('512x512'), 'the two sizes a browser asks for before it offers Install');
+  assert.equal(m.icons.filter((i) => i.purpose === 'maskable').length, 1);
+  for (const i of m.icons) {
+    assert.match(i.src, /^\/assets\/brand\/[a-z0-9-]+\.png\?v=\d+$/, i.src);
+    assert.ok(fs.existsSync(path.join(REPO, i.src.replace(/\?.*$/, ''))), i.src + ' is a real picture in the repo');
+  }
 });

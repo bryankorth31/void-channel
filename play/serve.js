@@ -14,7 +14,7 @@ const PLAY = __dirname, ASSETS = path.join(__dirname, '..', 'assets'), TRIVIA = 
 // The phone remote's scripts (remote/README.md): PLAY's and Trivia's pages load /remote/src/follow.js.
 const REMOTE = path.join(__dirname, '..', 'remote');
 const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.json': 'application/json',
-  '.wasm': 'application/wasm', '.png': 'image/png', '.svg': 'image/svg+xml', '.woff2': 'font/woff2', '.ico': 'image/x-icon' };
+  '.wasm': 'application/wasm', '.webmanifest': 'application/manifest+json', '.png': 'image/png', '.svg': 'image/svg+xml', '.woff2': 'font/woff2', '.ico': 'image/x-icon' };
 const PLAIN = { 'cache-control': 'no-store' };
 const ISOLATE = { 'cross-origin-opener-policy': 'same-origin', 'cross-origin-embedder-policy': 'require-corp', 'cache-control': 'no-store' };
 // Rooms for phone controllers and Trivia Nights (play/rooms/), the same addresses as voidtv.net's.
