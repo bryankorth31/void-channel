@@ -16,8 +16,32 @@ test('the home page carries the Trivia row only when the build hands it question
   // Every card opens /trivia/ with a deck picked, and says what it is in a tip.
   const row = src.slice(src.indexOf('function triviaRow()'), src.indexOf('function triviaRow()') + 2000);
   for (const q of ['crowd=family', 'crowd=family&topics=tv', 'crowd=family&topics=games', 'crowd=after-dark', 'mode=loud']) assert.ok(row.includes("'" + q + "'"), q);
-  assert.match(row, /href="'\+BASE\+'trivia\/\?'\+q\+'" title="Start /);
+  assert.match(row, /href="'\+BASE\+'trivia\/\?'\+q\+'"'\+\(door\?' onclick="return triviaDoor\(this\)"':''\)\+' title="Start /);
   assert.ok(!/[\u2013\u2014]/.test(row));
+});
+
+// Voidverse function test F1 (Bryan, 24 Nov 2026: "Yes, add the door"): the After dark deck holds questions on every rated show, and
+// its card opened Trivia Night at once while the Late Night shelf sat behind the 18+ door. Now it is the same door.
+test('the After dark deck is behind the same 18+ door as the Late Night shelf; the other decks open at once', () => {
+  const vm = require('node:vm');
+  const src = read('scripts/lib/app.js');
+  const line = (start) => { const i = src.indexOf('\n' + start); assert.ok(i >= 0, start); return src.slice(i + 1, src.indexOf('\n', i + 1)).replace(/\\\\/g, '\\'); };
+  const rowAt = src.indexOf('\nfunction triviaRow(){');
+  const rowSrc = src.slice(rowAt + 1, src.indexOf('\nconst TRACKS=', rowAt)).replace(/\\\\/g, '\\');
+  const html = vm.runInNewContext(rowSrc + '\ntriviaRow();', { TRIVIA: { tv: { family: 10, all: 20 }, movies: { family: 5, all: 9 }, games: { family: 3, all: 3 } }, BASE: '/', esc: (s) => String(s), hue: () => 1 });
+  const cards = [...html.matchAll(/<a class="card" href="([^"]+)"( onclick="return triviaDoor\(this\)")? title=/g)].map((m) => [m[1], !!m[2]]);
+  assert.equal(cards.length, 5);
+  for (const [href, door] of cards) assert.equal(door, href === '/trivia/?crowd=after-dark', href + (door ? ' asks at the door' : ' opens at once'));
+  // The door itself: shut, the card does not follow its link and the door opens; "I am 18 or older" then goes on; open, it goes straight through.
+  const run = (adult) => {
+    const seen = { gate: 0, went: null };
+    const ctx = { ME: { adult }, location: { href: '' }, adultGate: (then) => { seen.gate++; seen.then = then; } };
+    const followed = vm.runInNewContext(line('function triviaDoor(a){') + '\ntriviaDoor({href:"/trivia/?crowd=after-dark"});', ctx);
+    if (seen.then) { seen.then(); seen.went = ctx.location.href; }
+    return { followed, gate: seen.gate, went: seen.went };
+  };
+  assert.deepEqual(run(0), { followed: false, gate: 1, went: '/trivia/?crowd=after-dark' });
+  assert.deepEqual(run(1795500000000), { followed: true, gate: 0, went: null });
 });
 
 test('the host page reads a deck from its address', () => {

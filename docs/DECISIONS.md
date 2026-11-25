@@ -118,6 +118,7 @@ reworded). The private sources (chat archive, audit ledgers) stay on B's PC; thi
 | A4 | Adult Swim stays outside the 18+ door. | "no, Adult Swim isn't 18 gated" (20 Oct) | plan: PLAN-tv-guide-finish | tests/decisions.test.js | HOLDS |  |
 | A5 | Racy shows outside the door are gated 18+: list A (14 titles, adult: true in catalog/overrides.json); list B (10 borderline) stays open; Jerry Springer stays in The Void's late night. | "should just be gated 18+" (21 Oct) | plan: PLAN-tv-guide-finish; commit 444c05a64 | tests/decisions.test.js | HOLDS |  |
 | A6 | The Late night colour appears in the legend only behind the 18+ door; the guide shows Late Night only when the door is open. | (25 Oct) | commit 20eff78cf; commit ef35771aa | player/test/tv-guide.test.js | HOLDS |  |
+| A7 | The After dark deck of Trivia Night (questions on every rated show) is behind the same 18+ door as the Late Night shelf: with the door shut, its card on the home page's Trivia row opens the door first and goes on to the deck only after "I am 18 or older"; with the door open it goes straight through. The other decks open at once. | "Yes, add the door" (24 Nov 2026), to the voidverse function test's finding F1 | chat "Void TV owner", 2026-11-24 | tests/trivia-door.test.js | HOLDS  The home card only. A direct address to the deck inside Trivia Night is the Trivia Night owner chat's half. |
 
 ## 6. Catalog and matching
 
