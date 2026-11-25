@@ -143,6 +143,30 @@ test('H12: plain words only, and every room has a place of its own at both shape
   assert.equal(V.spots(7, true)[0].y, 12, 'tall: the first room is at the top');
 });
 
+// The closing line every room carries (Bryan, 25 Nov 2026, "Yes, your picks": voidverse join J10; decision H13). One block, in the
+// menu file; a page gives it a place with <div data-void-closing></div> under its own footer.
+test('H13: the closing line names the room as one room of the voidverse, free, a project of CASH, and says "from the Internet Archive" only where that is true', () => {
+  const V = load('voidtv.net', '/');
+  const text = (id) => V.closing(id).replace(/<[^>]+>/g, '');
+  assert.equal(text('ondemand'), 'On Demand is one room of the voidverse: free, from the Internet Archive, a project of CASH (cashvalues.org).');
+  assert.equal(text('cards'), 'Card games is one room of the voidverse: free, a project of CASH (cashvalues.org).');
+  const A = Array.from(V.areas).filter((a) => a.live);
+  // what plays from the Archive, and what does not: questions, cards and lexROM's books are not from it
+  assert.deepEqual(A.filter((a) => a.ia).map((a) => a.id), ['ondemand', 'live', 'play', 'university', 'kids', 'espanol', 'westside', 'hindi']);
+  for (const a of A) {
+    const t = text(a.id);
+    assert.ok(t.startsWith(a.name + ' is one room of the voidverse: free, '), a.id + ': the room by its list name');
+    assert.equal(/from the Internet Archive/.test(t), !!a.ia, a.id + ': the Archive is named only where it is the source');
+    assert.ok(t.endsWith('a project of CASH (cashvalues.org).'), a.id + ': CASH by its short name, with cashvalues.org');
+    assert.doesNotMatch(t, /—|–|Church of American|donat|give|gift|tax|\$/i, a.id + ': no dashes, no full name, and it asks for nothing');
+  }
+  assert.match(V.closing('play'), /<a href="https:\/\/cashvalues\.org" target="_blank" rel="noopener">CASH<\/a>/);
+  assert.equal(V.closing('not-a-room'), '', 'an address that is no room gets no line');
+  assert.match(SRC, /function run\(\) \{ queued = false; menus\(\); ads\(\); closings\(\); \}/, 'it is written whenever the page changes, so it follows from On Demand to Live TV');
+  // the main site gives it a place under the footer's own words; Kids, which never loads this file, has none
+  assert.match(read('scripts/lib/app.js'), /\$\{CREDIT\}\$\{PROFILE\.name === 'kids' \? '' : '<div data-void-closing><\/div>'\}<\/footer>/);
+});
+
 // Bryan, 23 Nov 2026: "Hindi void should not be in the list higher then any other void verse page aside from west side or spanish".
 // Then, 24 Nov 2026 (typed in the sister sites chat): "Hindi needs to be really relegated to the sidelines of things even underneath Spanish
 // it should go Spanish and then the West side and then Indy or Indian ... but Spanish first and below on the list these three things".

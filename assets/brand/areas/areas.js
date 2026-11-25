@@ -10,6 +10,7 @@
    On a page:
      <span data-void-areas-menu></span>      the hamburger button goes here (in the header)
      <div data-void-areas-ad></div>          one small card for another area goes here
+     <div data-void-closing></div>           the closing line goes here, under the room's own footer
      <script src=".../areas.js" defer data-here="play" data-ad-into="#rows" data-ad-at="3"></script>
        data-here       which area this page is (else worked out from the address)
        data-site       "main" when the page is on voidtv.net itself (else worked out from the address)
@@ -22,6 +23,10 @@
    rooms, in the list's own order. Words a visitor sees are plain ones: rooms, your phone. Each room carries its mark from the
    set he picked the same day ("S2 neon line").
 
+   The closing line (Bryan, 25 Nov 2026, "Yes, your picks": join J10). Every room ends with the same short line, in the same
+   words: the room is one room of the voidverse, free, a project of CASH. "From the Internet Archive" is said only where it is
+   true (ia: true on the room's line; Trivia Night, Card games and lexROM are not from the Archive). It asks for nothing.
+
    Rules: Void Cast is never here (Bryan's private viewer). Kids (kids.voidtv.net) never loads this file: its links to the
    other areas sit behind the grown-up check (its profile's portals), and no card is ever shown to a child. Only live areas
    are listed: set live: true when an area opens. Copy says shows and movies, free, no account, no ads sold. */
@@ -32,13 +37,13 @@
   // id, menu name, one line for the menu, where it lives (main = voidtv.net), the card's words and picture.
   var MAIN = 'https://voidtv.net';
   var AREAS = [
-    { id: 'ondemand', name: 'On Demand', line: 'Shows and movies, free', site: 'main', path: '/', live: true,
+    { id: 'ondemand', ia: true, name: 'On Demand', line: 'Shows and movies, free', site: 'main', path: '/', live: true,
       kicker: 'Shows and movies', head: 'Shows and movies, free.', text: 'Pick a show, start an episode. Free, no account, no ads sold.',
       go: 'Browse shows', pic: '/assets/brand/bg/wall-m.jpg' },
-    { id: 'live', name: 'Live TV', line: 'Channels, always on', site: 'main', path: '/tv', live: true,
+    { id: 'live', ia: true, name: 'Live TV', line: 'Channels, always on', site: 'main', path: '/tv', live: true,
       kicker: 'Live TV', head: 'Turn it on. Something good is on.', text: 'Channels that play all day, with a guide like real TV. Free, no account.',
       go: 'Watch live', pic: '/assets/brand/bg/watcher-purple-m.jpg' },
-    { id: 'play', name: 'PLAY', line: 'Old games, free to play', site: 'main', path: '/play/', live: true,
+    { id: 'play', ia: true, name: 'PLAY', line: 'Old games, free to play', site: 'main', path: '/play/', live: true,
       kicker: 'Games', head: 'Old games, free to play.', text: 'Arcade and computer games from the Internet Archive, right in your browser. Your phone can be the controller.',
       go: 'Play now', pic: '/assets/brand/bg/voidarcade-wall-m.webp' },
     { id: 'trivia', name: 'Trivia Night', line: 'Play along on the big screen', site: 'main', path: '/trivia/', live: true,
@@ -49,10 +54,10 @@
     { id: 'cards', name: 'Card games', line: 'The table on the TV, your hand on your phone', site: 'main', path: '/cards/', live: true,
       kicker: 'Card games', head: 'Card night at home.', text: 'The table on the TV, each hand on its own phone. Spades, Hearts, Rummy and more, free, no account.',
       go: 'Deal a game', pic: '/assets/brand/bg/cardtable-m.webp' },
-    { id: 'university', name: 'Void University', line: 'Big ideas, shown with everyday things', site: 'university', url: 'https://university.voidtv.net/', live: true,
+    { id: 'university', ia: true, name: 'Void University', line: 'Big ideas, shown with everyday things', site: 'university', url: 'https://university.voidtv.net/', live: true,
       kicker: 'Learning', head: 'Big ideas, shown with everyday things.', text: 'Free courses built from real lectures, with things to try. No account.',
       go: 'Start learning', pic: 'https://university.voidtv.net/img/c-critical-thinking.jpg' },
-    { id: 'kids', chip: 'kids', name: 'voidtv.net kids', line: 'Shows and games for children', site: 'kids', url: 'https://kids.voidtv.net/', live: true,
+    { id: 'kids', ia: true, chip: 'kids', name: 'voidtv.net kids', line: 'Shows and games for children', site: 'kids', url: 'https://kids.voidtv.net/', live: true,
       kicker: 'For children', head: 'Cartoons you grew up with. Shows that teach.', text: 'Picked by people, with computer games too. Nothing to sign up for.',
       go: 'Open kids', pic: 'https://kids.voidtv.net/assets/kids/mark.svg', picFit: 'contain' },
     // Outside voidtv.net (Bryan, 21 Nov 2026, "yes" to the whole-house plan's question 5: Read joins the house as one line,
@@ -66,13 +71,13 @@
     // lexROM among them, stands above all three.
     // West Side and Spanish have been online since 22 Nov 2026 (Bryan: "Yes, put them online") but were missing here, so no other
     // room led to them and they led to none (Bryan, 23 Nov 2026, "Yes, both", to the same menu as Hindi).
-    { id: 'espanol', chip: 'español', name: 'voidtv.net español', line: 'Películas y series en español', site: 'espanol', url: 'https://espanol.voidtv.net/', live: true,
+    { id: 'espanol', ia: true, chip: 'español', name: 'voidtv.net español', line: 'Películas y series en español', site: 'espanol', url: 'https://espanol.voidtv.net/', live: true,
       kicker: 'Español', head: 'Películas y series en español.', text: 'Spanish films and shows, and dubs, Latin American first. Free, no account.',
       go: 'Abrir español', pic: '/assets/brand/bg/watcher-purple-m.jpg' },
-    { id: 'westside', chip: 'west side', name: 'voidtv.net west side', line: 'Films and shows from West Africa', site: 'westside', url: 'https://westside.voidtv.net/', live: true,
+    { id: 'westside', ia: true, chip: 'west side', name: 'voidtv.net west side', line: 'Films and shows from West Africa', site: 'westside', url: 'https://westside.voidtv.net/', live: true,
       kicker: 'West Africa', head: 'Films and shows from Ghana and Nigeria.', text: 'Kumawood, Ghallywood and Nollywood, free, no account.',
       go: 'Open west side', pic: '/assets/brand/bg/sign-pink-m.jpg' },
-    { id: 'hindi', chip: 'hindi', name: 'voidtv.net hindi', line: 'हिंदी में फ़िल्में और शो', site: 'hindi', url: 'https://hindi.voidtv.net/', live: true,
+    { id: 'hindi', ia: true, chip: 'hindi', name: 'voidtv.net hindi', line: 'हिंदी में फ़िल्में और शो', site: 'hindi', url: 'https://hindi.voidtv.net/', live: true,
       kicker: 'हिंदी', head: 'हिंदी में फ़िल्में और शो', text: 'Hindi films and shows, Hindi dubs and Live TV. Free, with an English switch.',
       go: 'Open hindi', pic: '/assets/brand/bg/sign-orange-m.jpg' }
     // An area not open yet goes here with live: false; it joins the menu and the cards the day live turns true.
@@ -144,6 +149,13 @@
     return '<svg class="va-lines ' + cls + '" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><ellipse cx="50" cy="50" rx="' + (tall ? 33 : 40) + '" ry="' + (tall ? 38 : 35) + '"/>'
       + rooms.map(function (a, i) { return '<line x1="50" y1="50" x2="' + p[i].x + '" y2="' + p[i].y + '"' + (a.id === here ? ' class="on"' : '') + '/>'; }).join('') + '</svg>';
   }
+  // The closing line for the room named in here, as text (the tests read it too). An address that is no room gets none.
+  function closingHtml(here) {
+    var a = live.filter(function (x) { return x.id === here; })[0];
+    if (!a) return '';
+    return '<p class="va-close">' + esc(a.name) + ' is one room of <b>the voidverse</b>: free, ' + (a.ia ? 'from the Internet Archive, ' : '')
+      + 'a project of <a href="https://cashvalues.org" target="_blank" rel="noopener">CASH</a> (cashvalues.org).</p>';
+  }
   // What the opened menu holds, as text, for the room named in here (the tests read it too).
   function mapHtml(here) {
     var w = spots(rooms.length, false), t = spots(rooms.length, true);
@@ -199,6 +211,7 @@
     + '.va-chip{display:inline-flex;align-items:center;gap:7px;padding:5px 15px 5px 11px;border:1px solid #3a3f58;border-radius:999px;background:#141522;color:#e8e6f0;font-size:14px;line-height:1.3;text-decoration:none;white-space:nowrap}'
     + '.va-chip .va-mark{width:22px;height:22px}.va-chip[data-va="join"]{padding-left:15px}.va-chip:hover,.va-chip:focus-visible{border-color:#5fe3ff;color:#fff}'
     + '.va-chip[aria-current]{border-color:#ff4fc8;color:#fff;box-shadow:0 0 16px rgba(255,79,200,.55)}.va-chip em{font-style:normal;font-size:12px;color:#5fe3ff}'
+    + '.va-close{margin:12px 0 0;padding:0;text-align:center;font:13px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;color:#a9a5bd}.va-close b{font-family:Unbounded,system-ui,sans-serif;font-weight:700;font-size:12px;color:#e8e6f0}.va-close a{color:inherit;text-decoration:underline}'
     + '.va-foot{flex:none;margin:8px 0 0;color:#8f8ba6;font-size:12.5px;text-align:center}'
     // A phone held upright: the rooms start at the top and go round, the buttons are easier to press.
     + '@media (max-aspect-ratio:1/1){.va-drawer{padding:14px 16px 14px}.va-stage{min-height:430px}.va-lw{display:none}.va-lt{display:block}.va-list li{left:calc(var(--tx)*1%);top:calc(var(--ty)*1%)}.va-hub{width:98px;height:98px;margin:-49px 0 0 -49px}.va-wm{font-size:13px}.va-list a{left:-62px;top:-22px;width:124px}.va-dot{width:44px;height:44px}.va-dot .va-mark{width:28px;height:28px}.va-list a b{font-size:14px}.va-rows{flex-direction:column;align-items:flex-start;gap:14px}.va-also{display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%;max-width:340px}.va-also .va-k{grid-column:1/-1}.va-chip{padding:7px 15px 7px 11px}.va-foot{margin-top:14px}}'
@@ -315,13 +328,21 @@
   }
 
   var queued = false;
-  function run() { queued = false; menus(); ads(); }
+  // The closing line, in every place a page gives it; written again when the page moves to another room without loading anew.
+  function closings() {
+    var here = hereId();
+    document.querySelectorAll('[data-void-closing]').forEach(function (slot) {
+      if (slot.getAttribute('data-va-for') === here) return;
+      slot.setAttribute('data-va-for', here); slot.innerHTML = closingHtml(here);
+    });
+  }
+  function run() { queued = false; menus(); ads(); closings(); }
   function later() { if (!queued) { queued = true; setTimeout(run, 60); } }
   function start() {
     style(); run();
     // Pages that draw themselves (voidtv.net's app, PLAY's rows) put new slots in later: fill them as they come.
     new MutationObserver(later).observe(document.body, { childList: true, subtree: true });
   }
-  window.VoidAreas = { areas: AREAS, open: open, close: close, refresh: run, spots: spots, html: mapHtml, marks: MARKS };
+  window.VoidAreas = { areas: AREAS, open: open, close: close, refresh: run, spots: spots, html: mapHtml, marks: MARKS, closing: closingHtml };
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
 })();
