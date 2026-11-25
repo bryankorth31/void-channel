@@ -209,8 +209,10 @@
   // ----- Talking to the table -----
   const send = (m) => { if (ws && ws.readyState === 1) ws.send(JSON.stringify(m)); };
   function toast(words) {
-    const t = $('toast');
+    const t = $('toast'), bar = $('bar');
     t.textContent = words; t.hidden = false;
+    // Just above the bar, however many rows it has (voidverse function test F32: a two-row bar was covered at a fixed 70px).
+    if (bar && bar.offsetHeight) t.style.bottom = (bar.offsetHeight + 10) + 'px';
     clearTimeout(toastTimer);
     toastTimer = setTimeout(() => { t.hidden = true; }, 4000);
   }

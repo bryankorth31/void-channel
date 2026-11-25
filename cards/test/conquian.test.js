@@ -294,7 +294,13 @@ test('Conquian: hints and status at each step', () => {
   assert.equal(h.play.type, 'use');
   assert.equal(h.play.label, 'Use the card');
   assert.deepEqual(h.play.cards, ['2D', '3C']);
-  assert.equal(h.play.min, 0);
+  // The fewest cards from the hand that could use the card on offer (voidverse function test F34, 24 Nov 2026): the king of hearts
+  // fits none of these sets or runs alone (the hearts run stops at the jack), nor with one card of 2D, 3C, so two (a new set or run).
+  assert.equal(h.play.min, 2);
+  const queen = tab({ 'hand:0': ['2D', '3C'], offer: ['QH'], 'laid:0': laid }, { cuts: { 'laid:0': [4, 3, 3, 3], 'laid:1': [] } });
+  assert.equal(T.hints(Q, queen, 0).play.min, 0, 'the queen of hearts goes on the hearts run by itself');
+  const king = tab({ 'hand:0': ['QH', '3C'], offer: ['KH'], 'laid:0': laid }, { cuts: { 'laid:0': [4, 3, 3, 3], 'laid:1': [] } });
+  assert.equal(T.hints(Q, king, 0).play.min, 1, 'the king fits the run with the queen from the hand');
   assert.equal(h.play.max, 10);
   assert.equal(h.play.choose.cards, null);
   assert.equal(h.play.choose.field, 'on');

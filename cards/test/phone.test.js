@@ -166,3 +166,10 @@ test('the way back on a TV: the lobby carries the areas menu and the voidtv.net 
   const site = fs.readFileSync(path.join(__dirname, '..', '..', 'scripts', 'site.js'), 'utf8');
   assert.ok(site.includes(`.replace('src="/assets/brand/areas/areas.js"', 'src="/assets/brand/areas/areas.js?v=' + require('./lib/areas-v')() + '"')`), 'the card pages carry the area list\'s version, as PLAY and Trivia do');
 });
+
+// The voidverse function test's slice 3 (24 Nov 2026), on Bryan's "Yes, fix them".
+test('the message after a refused move never covers or takes a press of the bar', () => {
+  const css = read('hand.css'), h = read('src', 'hand.js');
+  assert.match(css, /#toast\{[^}]*pointer-events:none/, 'every tap goes through it (F32)');
+  assert.ok(h.includes("if (bar && bar.offsetHeight) t.style.bottom = (bar.offsetHeight + 10) + 'px';"), 'and it sits above the bar, however many rows it has');
+});

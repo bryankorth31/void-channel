@@ -73,8 +73,10 @@ li{margin:4px 0}
 #moves{display:flex;gap:8px;margin-left:auto}
 #moves .btn{min-width:96px;padding:0 12px}
 
+/* The message after a refused move sits just above the bar, whatever the bar's height (hand.js sets bottom), and lets every tap
+   through: before, at a fixed 70px it covered a bar of two rows and took the press (voidverse function test F32, 24 Nov 2026). */
 #toast{position:absolute;left:12px;right:12px;bottom:calc(70px + env(safe-area-inset-bottom));z-index:40;background:var(--panel);color:var(--gold);
-  border:1px solid var(--gold);border-radius:12px;padding:10px 14px;text-align:center;font-weight:600}
+  border:1px solid var(--gold);border-radius:12px;padding:10px 14px;text-align:center;font-weight:600;pointer-events:none}
 
 .panel{position:absolute;inset:0;z-index:50;display:flex;flex-direction:column;align-items:stretch;justify-content:center;text-align:center;
   background:rgba(7,8,12,.94);padding:20px max(20px,env(safe-area-inset-right)) 20px max(20px,env(safe-area-inset-left))}

@@ -132,7 +132,13 @@
       if (step === 'discard') return { play: { type: 'discard', label: 'Discard', cards: mine, min: 1, max: 1, choose: null }, buttons: [] };
       const from = [{ v: 'new', label: 'A new set or run' }];
       groupsOf(s, p).forEach((g, i) => from.push({ v: i, label: words(g) }));
-      return { play: { type: 'use', label: 'Use the card', cards: mine, min: 0, max: 10,
+      // The fewest cards from the hand that could use the card on offer: none when it fits one of this player's own sets or runs
+      // by itself, one when it fits with one more card, else two (a new set or run). Before, it said none always, so Use the card
+      // lit with nothing picked and its first answer was a refusal (voidverse function test F34, 24 Nov 2026).
+      const offer = s.zones.offer[0], groups = groupsOf(s, p);
+      const alone = groups.some((g) => kindOf(g.concat([offer])));
+      const withOne = alone || groups.some((g) => mine.some((c) => kindOf(g.concat([offer, c]))));
+      return { play: { type: 'use', label: 'Use the card', cards: mine, min: alone ? 0 : withOne ? 1 : 2, max: 10,
         choose: { cards: null, field: 'on', from, kind: 'option', title: 'Use it where?' } }, buttons: [{ type: 'pass', label: 'Pass' }] };
     },
     status(s) {
