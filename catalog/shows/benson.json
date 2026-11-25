@@ -3,7 +3,7 @@
   "slug": "benson",
   "type": "Classic TV",
   "network": "ABC",
-  "matchedAt": "2026-10-19T04:12:22.444Z",
+  "matchedAt": "2026-11-24T22:45:13.911Z",
   "addedAt": "2026-10-15T12:08:54.786Z",
   "tvmaze": {
     "id": 7348,
@@ -2831,11 +2831,11 @@
               "why": "title ~ \"Pete the Hero\" (0.77)",
               "item": "benson-complete-series-1979-1986",
               "itemTitle": "Benson Complete Series (1979-1986)",
-              "file": "Season 7/Benson.S07E01.Benson the Hero.mp4",
+              "file": "Season 7/Benson.S07E01.Benson the Hero.ia.mp4",
               "name": "Season 7/Benson.S07E01.Benson the Hero",
-              "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E01.Benson%20the%20Hero.mp4",
+              "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E01.Benson%20the%20Hero.ia.mp4",
               "seconds": 1352,
-              "format": "MPEG4",
+              "format": "h.264 IA",
               "playable": true,
               "sizeMB": 131
             },
@@ -5577,28 +5577,15 @@
             "why": "S/E in filename + title match",
             "item": "benson-complete-series-1979-1986",
             "itemTitle": "Benson Complete Series (1979-1986)",
-            "file": "Season 6/Benson.S06E23.The Bookburner.mp4",
+            "file": "Season 6/Benson.S06E23.The Bookburner.ia.mp4",
             "name": "Season 6/Benson.S06E23.The Bookburner",
-            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%206%2FBenson.S06E23.The%20Bookburner.mp4",
+            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%206%2FBenson.S06E23.The%20Bookburner.ia.mp4",
             "seconds": 1350,
-            "format": "MPEG4",
+            "format": "h.264 IA",
             "playable": true,
             "sizeMB": 142
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "benson-complete-series-1979-1986",
-              "itemTitle": "Benson Complete Series (1979-1986)",
-              "file": "Season 6/Benson.S06E23.The Bookburner.ia.mp4",
-              "name": "Season 6/Benson.S06E23",
-              "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%206%2FBenson.S06E23.The%20Bookburner.ia.mp4",
-              "seconds": 1350,
-              "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 142
-            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -5624,6 +5611,19 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 132
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"The Bookburner\" (1.00)",
+              "item": "benson-s-06",
+              "itemTitle": "Benson - Season 6",
+              "file": "623_The_Bookburner.mp4",
+              "name": "623_The_Bookburner",
+              "url": "https://archive.org/download/benson-s-06/623_The_Bookburner.mp4",
+              "seconds": 1336,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 129
             }
           ]
         },
@@ -5637,28 +5637,15 @@
             "why": "S/E in filename + title match",
             "item": "benson-complete-series-1979-1986",
             "itemTitle": "Benson Complete Series (1979-1986)",
-            "file": "Season 6/Benson.S06E24.Jung at Heart.mp4",
+            "file": "Season 6/Benson.S06E24.Jung at Heart.ia.mp4",
             "name": "Season 6/Benson.S06E24.Jung at Heart",
-            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%206%2FBenson.S06E24.Jung%20at%20Heart.mp4",
+            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%206%2FBenson.S06E24.Jung%20at%20Heart.ia.mp4",
             "seconds": 1344,
-            "format": "MPEG4",
+            "format": "h.264 IA",
             "playable": true,
             "sizeMB": 142
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "benson-complete-series-1979-1986",
-              "itemTitle": "Benson Complete Series (1979-1986)",
-              "file": "Season 6/Benson.S06E24.Jung at Heart.ia.mp4",
-              "name": "Season 6/Benson.S06E24",
-              "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%206%2FBenson.S06E24.Jung%20at%20Heart.ia.mp4",
-              "seconds": 1344,
-              "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 142
-            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -5703,7 +5690,7 @@
             "item": "benson-complete-series-1979-1986",
             "itemTitle": "Benson Complete Series (1979-1986)",
             "file": "Season 7/Benson.S07E01.Benson the Hero.ia.mp4",
-            "name": "Season 7/Benson.S07E01",
+            "name": "Season 7/Benson.S07E01.Benson the Hero",
             "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E01.Benson%20the%20Hero.ia.mp4",
             "seconds": 1352,
             "format": "h.264 IA",
@@ -5711,19 +5698,6 @@
             "sizeMB": 131
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "benson-complete-series-1979-1986",
-              "itemTitle": "Benson Complete Series (1979-1986)",
-              "file": "Season 7/Benson.S07E01.Benson the Hero.mp4",
-              "name": "Season 7/Benson.S07E01.Benson the Hero",
-              "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E01.Benson%20the%20Hero.mp4",
-              "seconds": 1352,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 131
-            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -5749,28 +5723,15 @@
             "why": "S/E in filename + title match",
             "item": "benson-complete-series-1979-1986",
             "itemTitle": "Benson Complete Series (1979-1986)",
-            "file": "Season 7/Benson.S07E02.Love and Politics.mp4",
+            "file": "Season 7/Benson.S07E02.Love and Politics.ia.mp4",
             "name": "Season 7/Benson.S07E02.Love and Politics",
-            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E02.Love%20and%20Politics.mp4",
+            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E02.Love%20and%20Politics.ia.mp4",
             "seconds": 1349,
-            "format": "MPEG4",
+            "format": "h.264 IA",
             "playable": true,
             "sizeMB": 137
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "benson-complete-series-1979-1986",
-              "itemTitle": "Benson Complete Series (1979-1986)",
-              "file": "Season 7/Benson.S07E02.Love and Politics.ia.mp4",
-              "name": "Season 7/Benson.S07E02",
-              "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E02.Love%20and%20Politics.ia.mp4",
-              "seconds": 1349,
-              "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 137
-            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -5809,28 +5770,15 @@
             "why": "S/E in filename + title match",
             "item": "benson-complete-series-1979-1986",
             "itemTitle": "Benson Complete Series (1979-1986)",
-            "file": "Season 7/Benson.S07E03.Uncle Jack.mp4",
+            "file": "Season 7/Benson.S07E03.Uncle Jack.ia.mp4",
             "name": "Season 7/Benson.S07E03.Uncle Jack",
-            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E03.Uncle%20Jack.mp4",
+            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E03.Uncle%20Jack.ia.mp4",
             "seconds": 1351,
-            "format": "MPEG4",
+            "format": "h.264 IA",
             "playable": true,
             "sizeMB": 152
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "benson-complete-series-1979-1986",
-              "itemTitle": "Benson Complete Series (1979-1986)",
-              "file": "Season 7/Benson.S07E03.Uncle Jack.ia.mp4",
-              "name": "Season 7/Benson.S07E03",
-              "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E03.Uncle%20Jack.ia.mp4",
-              "seconds": 1351,
-              "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 152
-            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -5869,28 +5817,15 @@
             "why": "S/E in filename + title match",
             "item": "benson-complete-series-1979-1986",
             "itemTitle": "Benson Complete Series (1979-1986)",
-            "file": "Season 7/Benson.S07E04.The Stranger.mp4",
+            "file": "Season 7/Benson.S07E04.The Stranger.ia.mp4",
             "name": "Season 7/Benson.S07E04.The Stranger",
-            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E04.The%20Stranger.mp4",
+            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E04.The%20Stranger.ia.mp4",
             "seconds": 1349,
-            "format": "MPEG4",
+            "format": "h.264 IA",
             "playable": true,
             "sizeMB": 140
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "benson-complete-series-1979-1986",
-              "itemTitle": "Benson Complete Series (1979-1986)",
-              "file": "Season 7/Benson.S07E04.The Stranger.ia.mp4",
-              "name": "Season 7/Benson.S07E04",
-              "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E04.The%20Stranger.ia.mp4",
-              "seconds": 1349,
-              "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 140
-            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -5929,28 +5864,15 @@
             "why": "S/E in filename + title match",
             "item": "benson-complete-series-1979-1986",
             "itemTitle": "Benson Complete Series (1979-1986)",
-            "file": "Season 7/Benson.S07E05.We Spy.mp4",
+            "file": "Season 7/Benson.S07E05.We Spy.ia.mp4",
             "name": "Season 7/Benson.S07E05.We Spy",
-            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E05.We%20Spy.mp4",
+            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E05.We%20Spy.ia.mp4",
             "seconds": 1349,
-            "format": "MPEG4",
+            "format": "h.264 IA",
             "playable": true,
             "sizeMB": 143
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "benson-complete-series-1979-1986",
-              "itemTitle": "Benson Complete Series (1979-1986)",
-              "file": "Season 7/Benson.S07E05.We Spy.ia.mp4",
-              "name": "Season 7/Benson.S07E05",
-              "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E05.We%20Spy.ia.mp4",
-              "seconds": 1349,
-              "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 143
-            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -5989,28 +5911,15 @@
             "why": "S/E in filename + title match",
             "item": "benson-complete-series-1979-1986",
             "itemTitle": "Benson Complete Series (1979-1986)",
-            "file": "Season 7/Benson.S07E06.$1,000,000 an Hour.mp4",
+            "file": "Season 7/Benson.S07E06.$1,000,000 an Hour.ia.mp4",
             "name": "Season 7/Benson.S07E06.$1,000,000 an Hour",
-            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E06.%241%2C000%2C000%20an%20Hour.mp4",
+            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E06.%241%2C000%2C000%20an%20Hour.ia.mp4",
             "seconds": 1349,
-            "format": "MPEG4",
+            "format": "h.264 IA",
             "playable": true,
             "sizeMB": 148
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "benson-complete-series-1979-1986",
-              "itemTitle": "Benson Complete Series (1979-1986)",
-              "file": "Season 7/Benson.S07E06.$1,000,000 an Hour.ia.mp4",
-              "name": "Season 7/Benson.S07E06",
-              "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E06.%241%2C000%2C000%20an%20Hour.ia.mp4",
-              "seconds": 1349,
-              "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 148
-            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -6036,11 +5945,11 @@
             "why": "S/E in filename + title match",
             "item": "benson-complete-series-1979-1986",
             "itemTitle": "Benson Complete Series (1979-1986)",
-            "file": "Season 7/Benson.S07E07.Flight of the Dodo (1).mp4",
+            "file": "Season 7/Benson.S07E07.Flight of the Dodo (1).ia.mp4",
             "name": "Season 7/Benson.S07E07.Flight of the Dodo (1)",
-            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E07.Flight%20of%20the%20Dodo%20(1).mp4",
+            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E07.Flight%20of%20the%20Dodo%20(1).ia.mp4",
             "seconds": 1353,
-            "format": "MPEG4",
+            "format": "h.264 IA",
             "playable": true,
             "sizeMB": 128
           },
@@ -6057,19 +5966,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 131
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "benson-complete-series-1979-1986",
-              "itemTitle": "Benson Complete Series (1979-1986)",
-              "file": "Season 7/Benson.S07E07.Flight of the Dodo (1).ia.mp4",
-              "name": "Season 7/Benson.S07E07",
-              "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E07.Flight%20of%20the%20Dodo%20(1).ia.mp4",
-              "seconds": 1353,
-              "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 128
             }
           ]
         },
@@ -6083,28 +5979,15 @@
             "why": "S/E in filename + title match",
             "item": "benson-complete-series-1979-1986",
             "itemTitle": "Benson Complete Series (1979-1986)",
-            "file": "Season 7/Benson.S07E08.Flight of the Dodo (2).mp4",
+            "file": "Season 7/Benson.S07E08.Flight of the Dodo (2).ia.mp4",
             "name": "Season 7/Benson.S07E08.Flight of the Dodo (2)",
-            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E08.Flight%20of%20the%20Dodo%20(2).mp4",
+            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E08.Flight%20of%20the%20Dodo%20(2).ia.mp4",
             "seconds": 1334,
-            "format": "MPEG4",
+            "format": "h.264 IA",
             "playable": true,
             "sizeMB": 137
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "benson-complete-series-1979-1986",
-              "itemTitle": "Benson Complete Series (1979-1986)",
-              "file": "Season 7/Benson.S07E08.Flight of the Dodo (2).ia.mp4",
-              "name": "Season 7/Benson.S07E08",
-              "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E08.Flight%20of%20the%20Dodo%20(2).ia.mp4",
-              "seconds": 1334,
-              "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 137
-            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -6130,28 +6013,15 @@
             "why": "S/E in filename + title match",
             "item": "benson-complete-series-1979-1986",
             "itemTitle": "Benson Complete Series (1979-1986)",
-            "file": "Season 7/Benson.S07E09.Two Boys and Their Dog.mp4",
+            "file": "Season 7/Benson.S07E09.Two Boys and Their Dog.ia.mp4",
             "name": "Season 7/Benson.S07E09.Two Boys and Their Dog",
-            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E09.Two%20Boys%20and%20Their%20Dog.mp4",
+            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E09.Two%20Boys%20and%20Their%20Dog.ia.mp4",
             "seconds": 1335,
-            "format": "MPEG4",
+            "format": "h.264 IA",
             "playable": true,
             "sizeMB": 138
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "benson-complete-series-1979-1986",
-              "itemTitle": "Benson Complete Series (1979-1986)",
-              "file": "Season 7/Benson.S07E09.Two Boys and Their Dog.ia.mp4",
-              "name": "Season 7/Benson.S07E09",
-              "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E09.Two%20Boys%20and%20Their%20Dog.ia.mp4",
-              "seconds": 1335,
-              "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 138
-            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -6177,11 +6047,11 @@
             "why": "S/E in filename + title match",
             "item": "benson-complete-series-1979-1986",
             "itemTitle": "Benson Complete Series (1979-1986)",
-            "file": "Season 7/Benson.S07E10.Last Man on Earth.mp4",
+            "file": "Season 7/Benson.S07E10.Last Man on Earth.ia.mp4",
             "name": "Season 7/Benson.S07E10.Last Man on Earth",
-            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E10.Last%20Man%20on%20Earth.mp4",
+            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E10.Last%20Man%20on%20Earth.ia.mp4",
             "seconds": 1348,
-            "format": "MPEG4",
+            "format": "h.264 IA",
             "playable": true,
             "sizeMB": 124
           },
@@ -6198,19 +6068,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 131
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "benson-complete-series-1979-1986",
-              "itemTitle": "Benson Complete Series (1979-1986)",
-              "file": "Season 7/Benson.S07E10.Last Man on Earth.ia.mp4",
-              "name": "Season 7/Benson.S07E10",
-              "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E10.Last%20Man%20on%20Earth.ia.mp4",
-              "seconds": 1348,
-              "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 124
             }
           ]
         },
@@ -6224,11 +6081,11 @@
             "why": "S/E in filename + title match",
             "item": "benson-complete-series-1979-1986",
             "itemTitle": "Benson Complete Series (1979-1986)",
-            "file": "Season 7/Benson.S07E11.Secret Love.mp4",
+            "file": "Season 7/Benson.S07E11.Secret Love.ia.mp4",
             "name": "Season 7/Benson.S07E11.Secret Love",
-            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E11.Secret%20Love.mp4",
+            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E11.Secret%20Love.ia.mp4",
             "seconds": 1350,
-            "format": "MPEG4",
+            "format": "h.264 IA",
             "playable": true,
             "sizeMB": 123
           },
@@ -6245,19 +6102,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 131
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "benson-complete-series-1979-1986",
-              "itemTitle": "Benson Complete Series (1979-1986)",
-              "file": "Season 7/Benson.S07E11.Secret Love.ia.mp4",
-              "name": "Season 7/Benson.S07E11",
-              "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E11.Secret%20Love.ia.mp4",
-              "seconds": 1350,
-              "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 123
             }
           ]
         },
@@ -6271,28 +6115,15 @@
             "why": "S/E in filename + title match",
             "item": "benson-complete-series-1979-1986",
             "itemTitle": "Benson Complete Series (1979-1986)",
-            "file": "Season 7/Benson.S07E12.Summer of Discontent.mp4",
+            "file": "Season 7/Benson.S07E12.Summer of Discontent.ia.mp4",
             "name": "Season 7/Benson.S07E12.Summer of Discontent",
-            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E12.Summer%20of%20Discontent.mp4",
+            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E12.Summer%20of%20Discontent.ia.mp4",
             "seconds": 1354,
-            "format": "MPEG4",
+            "format": "h.264 IA",
             "playable": true,
             "sizeMB": 141
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "benson-complete-series-1979-1986",
-              "itemTitle": "Benson Complete Series (1979-1986)",
-              "file": "Season 7/Benson.S07E12.Summer of Discontent.ia.mp4",
-              "name": "Season 7/Benson.S07E12",
-              "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E12.Summer%20of%20Discontent.ia.mp4",
-              "seconds": 1354,
-              "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 141
-            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -6318,28 +6149,15 @@
             "why": "S/E in filename + title match",
             "item": "benson-complete-series-1979-1986",
             "itemTitle": "Benson Complete Series (1979-1986)",
-            "file": "Season 7/Benson.S07E13.Parade Rest.mp4",
+            "file": "Season 7/Benson.S07E13.Parade Rest.ia.mp4",
             "name": "Season 7/Benson.S07E13.Parade Rest",
-            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E13.Parade%20Rest.mp4",
+            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E13.Parade%20Rest.ia.mp4",
             "seconds": 1348,
-            "format": "MPEG4",
+            "format": "h.264 IA",
             "playable": true,
             "sizeMB": 131
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "benson-complete-series-1979-1986",
-              "itemTitle": "Benson Complete Series (1979-1986)",
-              "file": "Season 7/Benson.S07E13.Parade Rest.ia.mp4",
-              "name": "Season 7/Benson.S07E13",
-              "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E13.Parade%20Rest.ia.mp4",
-              "seconds": 1348,
-              "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 131
-            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -6365,11 +6183,11 @@
             "why": "S/E in filename + title match",
             "item": "benson-complete-series-1979-1986",
             "itemTitle": "Benson Complete Series (1979-1986)",
-            "file": "Season 7/Benson.S07E14.Reel Murder (1).mp4",
+            "file": "Season 7/Benson.S07E14.Reel Murder (1).ia.mp4",
             "name": "Season 7/Benson.S07E14.Reel Murder (1)",
-            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E14.Reel%20Murder%20(1).mp4",
+            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E14.Reel%20Murder%20(1).ia.mp4",
             "seconds": 1343,
-            "format": "MPEG4",
+            "format": "h.264 IA",
             "playable": true,
             "sizeMB": 125
           },
@@ -6386,19 +6204,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 131
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "benson-complete-series-1979-1986",
-              "itemTitle": "Benson Complete Series (1979-1986)",
-              "file": "Season 7/Benson.S07E14.Reel Murder (1).ia.mp4",
-              "name": "Season 7/Benson.S07E14",
-              "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E14.Reel%20Murder%20(1).ia.mp4",
-              "seconds": 1343,
-              "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 125
             }
           ]
         },
@@ -6412,28 +6217,15 @@
             "why": "S/E in filename + title match",
             "item": "benson-complete-series-1979-1986",
             "itemTitle": "Benson Complete Series (1979-1986)",
-            "file": "Season 7/Benson.S07E15.Reel Murder (2).mp4",
+            "file": "Season 7/Benson.S07E15.Reel Murder (2).ia.mp4",
             "name": "Season 7/Benson.S07E15.Reel Murder (2)",
-            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E15.Reel%20Murder%20(2).mp4",
+            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E15.Reel%20Murder%20(2).ia.mp4",
             "seconds": 1342,
-            "format": "MPEG4",
+            "format": "h.264 IA",
             "playable": true,
             "sizeMB": 135
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "benson-complete-series-1979-1986",
-              "itemTitle": "Benson Complete Series (1979-1986)",
-              "file": "Season 7/Benson.S07E15.Reel Murder (2).ia.mp4",
-              "name": "Season 7/Benson.S07E15",
-              "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E15.Reel%20Murder%20(2).ia.mp4",
-              "seconds": 1342,
-              "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 135
-            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -6459,28 +6251,15 @@
             "why": "S/E in filename + title match",
             "item": "benson-complete-series-1979-1986",
             "itemTitle": "Benson Complete Series (1979-1986)",
-            "file": "Season 7/Benson.S07E16.The Hat and the Ring.mp4",
+            "file": "Season 7/Benson.S07E16.The Hat and the Ring.ia.mp4",
             "name": "Season 7/Benson.S07E16.The Hat and the Ring",
-            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E16.The%20Hat%20and%20the%20Ring.mp4",
+            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E16.The%20Hat%20and%20the%20Ring.ia.mp4",
             "seconds": 1351,
-            "format": "MPEG4",
+            "format": "h.264 IA",
             "playable": true,
             "sizeMB": 131
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "benson-complete-series-1979-1986",
-              "itemTitle": "Benson Complete Series (1979-1986)",
-              "file": "Season 7/Benson.S07E16.The Hat and the Ring.ia.mp4",
-              "name": "Season 7/Benson.S07E16",
-              "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E16.The%20Hat%20and%20the%20Ring.ia.mp4",
-              "seconds": 1351,
-              "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 131
-            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -6506,28 +6285,15 @@
             "why": "S/E in filename + title match",
             "item": "benson-complete-series-1979-1986",
             "itemTitle": "Benson Complete Series (1979-1986)",
-            "file": "Season 7/Benson.S07E17.The Bucks Stop Here.mp4",
+            "file": "Season 7/Benson.S07E17.The Bucks Stop Here.ia.mp4",
             "name": "Season 7/Benson.S07E17.The Bucks Stop Here",
-            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E17.The%20Bucks%20Stop%20Here.mp4",
+            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E17.The%20Bucks%20Stop%20Here.ia.mp4",
             "seconds": 1348,
-            "format": "MPEG4",
+            "format": "h.264 IA",
             "playable": true,
             "sizeMB": 143
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "benson-complete-series-1979-1986",
-              "itemTitle": "Benson Complete Series (1979-1986)",
-              "file": "Season 7/Benson.S07E17.The Bucks Stop Here.ia.mp4",
-              "name": "Season 7/Benson.S07E17",
-              "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E17.The%20Bucks%20Stop%20Here.ia.mp4",
-              "seconds": 1348,
-              "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 143
-            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -6553,11 +6319,11 @@
             "why": "S/E in filename + title match",
             "item": "benson-complete-series-1979-1986",
             "itemTitle": "Benson Complete Series (1979-1986)",
-            "file": "Season 7/Benson.S07E18.Pardon Me.mp4",
+            "file": "Season 7/Benson.S07E18.Pardon Me.ia.mp4",
             "name": "Season 7/Benson.S07E18.Pardon Me",
-            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E18.Pardon%20Me.mp4",
+            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E18.Pardon%20Me.ia.mp4",
             "seconds": 1347,
-            "format": "MPEG4",
+            "format": "h.264 IA",
             "playable": true,
             "sizeMB": 129
           },
@@ -6574,19 +6340,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 131
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "benson-complete-series-1979-1986",
-              "itemTitle": "Benson Complete Series (1979-1986)",
-              "file": "Season 7/Benson.S07E18.Pardon Me.ia.mp4",
-              "name": "Season 7/Benson.S07E18",
-              "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E18.Pardon%20Me.ia.mp4",
-              "seconds": 1347,
-              "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 129
             }
           ]
         },
@@ -6600,28 +6353,15 @@
             "why": "S/E in filename + title match",
             "item": "benson-complete-series-1979-1986",
             "itemTitle": "Benson Complete Series (1979-1986)",
-            "file": "Season 7/Benson.S07E19.Hi, Society.mp4",
+            "file": "Season 7/Benson.S07E19.Hi, Society.ia.mp4",
             "name": "Season 7/Benson.S07E19.Hi, Society",
-            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E19.Hi%2C%20Society.mp4",
+            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E19.Hi%2C%20Society.ia.mp4",
             "seconds": 1346,
-            "format": "MPEG4",
+            "format": "h.264 IA",
             "playable": true,
             "sizeMB": 142
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "benson-complete-series-1979-1986",
-              "itemTitle": "Benson Complete Series (1979-1986)",
-              "file": "Season 7/Benson.S07E19.Hi, Society.ia.mp4",
-              "name": "Season 7/Benson.S07E19",
-              "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E19.Hi%2C%20Society.ia.mp4",
-              "seconds": 1346,
-              "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 142
-            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -6647,28 +6387,15 @@
             "why": "S/E in filename + title match",
             "item": "benson-complete-series-1979-1986",
             "itemTitle": "Benson Complete Series (1979-1986)",
-            "file": "Season 7/Benson.S07E20.Three on a Mismatch.mp4",
+            "file": "Season 7/Benson.S07E20.Three on a Mismatch.ia.mp4",
             "name": "Season 7/Benson.S07E20.Three on a Mismatch",
-            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E20.Three%20on%20a%20Mismatch.mp4",
+            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E20.Three%20on%20a%20Mismatch.ia.mp4",
             "seconds": 1347,
-            "format": "MPEG4",
+            "format": "h.264 IA",
             "playable": true,
             "sizeMB": 138
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "benson-complete-series-1979-1986",
-              "itemTitle": "Benson Complete Series (1979-1986)",
-              "file": "Season 7/Benson.S07E20.Three on a Mismatch.ia.mp4",
-              "name": "Season 7/Benson.S07E20",
-              "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E20.Three%20on%20a%20Mismatch.ia.mp4",
-              "seconds": 1347,
-              "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 138
-            },
             {
               "conf": 0.9,
               "why": "S/E in filename",
@@ -6694,11 +6421,11 @@
             "why": "S/E in filename + title match",
             "item": "benson-complete-series-1979-1986",
             "itemTitle": "Benson Complete Series (1979-1986)",
-            "file": "Season 7/Benson.S07E21.Friends and Enemies.mp4",
+            "file": "Season 7/Benson.S07E21.Friends and Enemies.ia.mp4",
             "name": "Season 7/Benson.S07E21.Friends and Enemies",
-            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E21.Friends%20and%20Enemies.mp4",
+            "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E21.Friends%20and%20Enemies.ia.mp4",
             "seconds": 1345,
-            "format": "MPEG4",
+            "format": "h.264 IA",
             "playable": true,
             "sizeMB": 130
           },
@@ -6715,19 +6442,6 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 131
-            },
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "benson-complete-series-1979-1986",
-              "itemTitle": "Benson Complete Series (1979-1986)",
-              "file": "Season 7/Benson.S07E21.Friends and Enemies.ia.mp4",
-              "name": "Season 7/Benson.S07E21",
-              "url": "https://archive.org/download/benson-complete-series-1979-1986/Season%207%2FBenson.S07E21.Friends%20and%20Enemies.ia.mp4",
-              "seconds": 1345,
-              "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 130
             }
           ]
         },

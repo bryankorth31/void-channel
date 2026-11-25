@@ -3,7 +3,7 @@
   "slug": "vr-5",
   "type": "Sci-Fi, Fantasy and Horror",
   "network": "FOX",
-  "matchedAt": "2026-10-23T07:11:15.293Z",
+  "matchedAt": "2026-11-24T22:45:54.225Z",
   "addedAt": "2026-10-23T00:51:19.119Z",
   "tvmaze": {
     "id": 18358,
@@ -91,30 +91,17 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "vr.5-upscaled",
-            "itemTitle": "VR.5 (AI Upscaled)",
-            "file": "1X02 Dr. Strangechild (From Russian TV).mp4",
-            "name": "1X02 Dr. Strangechild (From Russian TV)",
-            "url": "https://archive.org/download/vr.5-upscaled/1X02%20Dr.%20Strangechild%20(From%20Russian%20TV).mp4",
+            "item": "VR.5TVSeries",
+            "itemTitle": "VR.5 (TV Series)",
+            "file": "102 Dr. Strangechild.mp4",
+            "name": "102 Dr. Strangechild",
+            "url": "https://archive.org/download/VR.5TVSeries/102%20Dr.%20Strangechild.mp4",
             "seconds": 2584,
-            "format": "MPEG4",
+            "format": "h.264",
             "playable": true,
-            "sizeMB": 4326
+            "sizeMB": 268
           },
           "alternates": [
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "VR.5TVSeries",
-              "itemTitle": "VR.5 (TV Series)",
-              "file": "102 Dr. Strangechild.mp4",
-              "name": "102 Dr. Strangechild",
-              "url": "https://archive.org/download/VR.5TVSeries/102%20Dr.%20Strangechild.mp4",
-              "seconds": 2584,
-              "format": "h.264",
-              "playable": true,
-              "sizeMB": 268
-            },
             {
               "conf": 1,
               "why": "S/E in filename + title match",
@@ -127,6 +114,19 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 259
+            },
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "vr.5-upscaled",
+              "itemTitle": "VR.5 (AI Upscaled)",
+              "file": "1X02 Dr. Strangechild (From Russian TV).ia.mp4",
+              "name": "1X02 Dr. Strangechild (From Russian TV)",
+              "url": "https://archive.org/download/vr.5-upscaled/1X02%20Dr.%20Strangechild%20(From%20Russian%20TV).ia.mp4",
+              "seconds": 2584,
+              "format": "h.264 IA",
+              "playable": true,
+              "sizeMB": 252
             },
             {
               "conf": 1,

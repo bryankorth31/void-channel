@@ -3,7 +3,7 @@
   "slug": "maggie-winters",
   "type": "90s Sitcoms",
   "network": "CBS",
-  "matchedAt": "2026-10-23T09:05:41.704Z",
+  "matchedAt": "2026-11-24T22:47:15.161Z",
   "addedAt": "2026-10-23T05:44:32.558Z",
   "tvmaze": {
     "id": 79640,
@@ -94,7 +94,7 @@
             "item": "maggie-winters-1998-99-faith-ford-sitcom",
             "itemTitle": "Maggie Winters (1998–99) Faith Ford, sitcom",
             "file": "Maggie Winters ep 02 Maggie's Master Plan -Maggie Winters - 1.02.ia.mp4",
-            "name": "Maggie Winters ep 02 Maggie's Master Plan -Maggie Winters - 1",
+            "name": "Maggie Winters ep 02 Maggie's Master Plan -Maggie Winters - 1.02",
             "url": "https://archive.org/download/maggie-winters-1998-99-faith-ford-sitcom/Maggie%20Winters%20ep%2002%20Maggie's%20Master%20Plan%20-Maggie%20Winters%20-%201.02.ia.mp4",
             "seconds": 1289,
             "format": "h.264 IA",
@@ -102,19 +102,6 @@
             "sizeMB": 666
           },
           "alternates": [
-            {
-              "conf": 1,
-              "why": "absolute episode number + title match",
-              "item": "maggie-winters-1998-99-faith-ford-sitcom",
-              "itemTitle": "Maggie Winters (1998–99) Faith Ford, sitcom",
-              "file": "Maggie Winters ep 02 Maggie's Master Plan -Maggie Winters - 1.02.mp4",
-              "name": "Maggie Winters ep 02 Maggie's Master Plan -Maggie Winters - 1.02",
-              "url": "https://archive.org/download/maggie-winters-1998-99-faith-ford-sitcom/Maggie%20Winters%20ep%2002%20Maggie's%20Master%20Plan%20-Maggie%20Winters%20-%201.02.mp4",
-              "seconds": 1289,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 666
-            },
             {
               "conf": 1,
               "why": "absolute episode number + title match",
@@ -140,6 +127,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 264
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 2 of 11 in \"Maggie Winters - Faith Ford, Clea Lewis\"",
+              "item": "maggie-winters-1.01",
+              "itemTitle": "Maggie Winters - Faith Ford, Clea Lewis",
+              "file": "Maggie Winters - 1.02.mp4",
+              "name": "Maggie Winters - 1.02",
+              "url": "https://archive.org/download/maggie-winters-1.01/Maggie%20Winters%20-%201.02.mp4",
+              "seconds": 1289,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 666
             }
           ]
         },
@@ -177,16 +177,16 @@
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 3 of 12 in \"Maggie Winters - Faith Ford, Clea Lewis\"",
+              "why": "sequence guess: file 3 of 11 in \"Maggie Winters - Faith Ford, Clea Lewis\"",
               "item": "maggie-winters-1.01",
               "itemTitle": "Maggie Winters - Faith Ford, Clea Lewis",
-              "file": "Maggie Winters - 1.02.mp4",
-              "name": "Maggie Winters - 1.02",
-              "url": "https://archive.org/download/maggie-winters-1.01/Maggie%20Winters%20-%201.02.mp4",
-              "seconds": 1289,
+              "file": "Maggie Winters - 1.03.mp4",
+              "name": "Maggie Winters - 1.03",
+              "url": "https://archive.org/download/maggie-winters-1.01/Maggie%20Winters%20-%201.03.mp4",
+              "seconds": 1318,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 666
+              "sizeMB": 681
             }
           ]
         },
@@ -201,7 +201,7 @@
             "item": "maggie-winters-1998-99-faith-ford-sitcom",
             "itemTitle": "Maggie Winters (1998–99) Faith Ford, sitcom",
             "file": "Maggie Winters ep 04 Mama's Got a Brand New Bag - Maggie Winters - 1.04.ia.mp4",
-            "name": "Maggie Winters ep 04 Mama's Got a Brand New Bag - Maggie Winters - 1",
+            "name": "Maggie Winters ep 04 Mama's Got a Brand New Bag - Maggie Winters - 1.04",
             "url": "https://archive.org/download/maggie-winters-1998-99-faith-ford-sitcom/Maggie%20Winters%20ep%2004%20Mama's%20Got%20a%20Brand%20New%20Bag%20-%20Maggie%20Winters%20-%201.04.ia.mp4",
             "seconds": 1291,
             "format": "h.264 IA",
@@ -209,19 +209,6 @@
             "sizeMB": 667
           },
           "alternates": [
-            {
-              "conf": 1,
-              "why": "absolute episode number + title match",
-              "item": "maggie-winters-1998-99-faith-ford-sitcom",
-              "itemTitle": "Maggie Winters (1998–99) Faith Ford, sitcom",
-              "file": "Maggie Winters ep 04 Mama's Got a Brand New Bag - Maggie Winters - 1.04.mp4",
-              "name": "Maggie Winters ep 04 Mama's Got a Brand New Bag - Maggie Winters - 1.04",
-              "url": "https://archive.org/download/maggie-winters-1998-99-faith-ford-sitcom/Maggie%20Winters%20ep%2004%20Mama's%20Got%20a%20Brand%20New%20Bag%20-%20Maggie%20Winters%20-%201.04.mp4",
-              "seconds": 1291,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 667
-            },
             {
               "conf": 0.85,
               "why": "absolute episode number + title match",
@@ -247,6 +234,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 213
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 4 of 11 in \"Maggie Winters - Faith Ford, Clea Lewis\"",
+              "item": "maggie-winters-1.01",
+              "itemTitle": "Maggie Winters - Faith Ford, Clea Lewis",
+              "file": "Maggie Winters - 1.04.mp4",
+              "name": "Maggie Winters - 1.04",
+              "url": "https://archive.org/download/maggie-winters-1.01/Maggie%20Winters%20-%201.04.mp4",
+              "seconds": 1291,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 667
             }
           ]
         },
@@ -284,16 +284,16 @@
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 5 of 12 in \"Maggie Winters - Faith Ford, Clea Lewis\"",
+              "why": "sequence guess: file 5 of 11 in \"Maggie Winters - Faith Ford, Clea Lewis\"",
               "item": "maggie-winters-1.01",
               "itemTitle": "Maggie Winters - Faith Ford, Clea Lewis",
-              "file": "Maggie Winters - 1.04.mp4",
-              "name": "Maggie Winters - 1.04",
-              "url": "https://archive.org/download/maggie-winters-1.01/Maggie%20Winters%20-%201.04.mp4",
-              "seconds": 1291,
+              "file": "Maggie Winters - 1.06.mp4",
+              "name": "Maggie Winters - 1.06",
+              "url": "https://archive.org/download/maggie-winters-1.01/Maggie%20Winters%20-%201.06.mp4",
+              "seconds": 1307,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 667
+              "sizeMB": 675
             }
           ]
         },
@@ -331,16 +331,16 @@
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 6 of 12 in \"Maggie Winters - Faith Ford, Clea Lewis\"",
+              "why": "sequence guess: file 6 of 11 in \"Maggie Winters - Faith Ford, Clea Lewis\"",
               "item": "maggie-winters-1.01",
               "itemTitle": "Maggie Winters - Faith Ford, Clea Lewis",
-              "file": "Maggie Winters - 1.06.mp4",
-              "name": "Maggie Winters - 1.06",
-              "url": "https://archive.org/download/maggie-winters-1.01/Maggie%20Winters%20-%201.06.mp4",
-              "seconds": 1307,
+              "file": "Maggie Winters - 1.08.mp4",
+              "name": "Maggie Winters - 1.08",
+              "url": "https://archive.org/download/maggie-winters-1.01/Maggie%20Winters%20-%201.08.mp4",
+              "seconds": 1322,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 675
+              "sizeMB": 683
             }
           ]
         },
@@ -378,16 +378,16 @@
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 7 of 12 in \"Maggie Winters - Faith Ford, Clea Lewis\"",
+              "why": "sequence guess: file 7 of 11 in \"Maggie Winters - Faith Ford, Clea Lewis\"",
               "item": "maggie-winters-1.01",
               "itemTitle": "Maggie Winters - Faith Ford, Clea Lewis",
-              "file": "Maggie Winters - 1.08.mp4",
-              "name": "Maggie Winters - 1.08",
-              "url": "https://archive.org/download/maggie-winters-1.01/Maggie%20Winters%20-%201.08.mp4",
-              "seconds": 1322,
+              "file": "Maggie Winters - 1.09.mp4",
+              "name": "Maggie Winters - 1.09",
+              "url": "https://archive.org/download/maggie-winters-1.01/Maggie%20Winters%20-%201.09.mp4",
+              "seconds": 1345,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 683
+              "sizeMB": 695
             }
           ]
         },
@@ -438,16 +438,16 @@
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 8 of 12 in \"Maggie Winters - Faith Ford, Clea Lewis\"",
+              "why": "sequence guess: file 8 of 11 in \"Maggie Winters - Faith Ford, Clea Lewis\"",
               "item": "maggie-winters-1.01",
               "itemTitle": "Maggie Winters - Faith Ford, Clea Lewis",
-              "file": "Maggie Winters - 1.09.mp4",
-              "name": "Maggie Winters - 1.09",
-              "url": "https://archive.org/download/maggie-winters-1.01/Maggie%20Winters%20-%201.09.mp4",
-              "seconds": 1345,
+              "file": "Maggie Winters - 1.10.mp4",
+              "name": "Maggie Winters - 1.10",
+              "url": "https://archive.org/download/maggie-winters-1.01/Maggie%20Winters%20-%201.10.mp4",
+              "seconds": 1330,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 695
+              "sizeMB": 687
             }
           ]
         },
@@ -485,16 +485,16 @@
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 9 of 12 in \"Maggie Winters - Faith Ford, Clea Lewis\"",
+              "why": "sequence guess: file 9 of 11 in \"Maggie Winters - Faith Ford, Clea Lewis\"",
               "item": "maggie-winters-1.01",
               "itemTitle": "Maggie Winters - Faith Ford, Clea Lewis",
-              "file": "Maggie Winters - 1.10.mp4",
-              "name": "Maggie Winters - 1.10",
-              "url": "https://archive.org/download/maggie-winters-1.01/Maggie%20Winters%20-%201.10.mp4",
-              "seconds": 1330,
+              "file": "Maggie Winters - 1.11.mp4",
+              "name": "Maggie Winters - 1.11",
+              "url": "https://archive.org/download/maggie-winters-1.01/Maggie%20Winters%20-%201.11.mp4",
+              "seconds": 1338,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 687
+              "sizeMB": 691
             }
           ]
         },
@@ -532,16 +532,16 @@
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 10 of 12 in \"Maggie Winters - Faith Ford, Clea Lewis\"",
+              "why": "sequence guess: file 10 of 11 in \"Maggie Winters - Faith Ford, Clea Lewis\"",
               "item": "maggie-winters-1.01",
               "itemTitle": "Maggie Winters - Faith Ford, Clea Lewis",
-              "file": "Maggie Winters - 1.11.mp4",
-              "name": "Maggie Winters - 1.11",
-              "url": "https://archive.org/download/maggie-winters-1.01/Maggie%20Winters%20-%201.11.mp4",
-              "seconds": 1338,
+              "file": "Maggie Winters - 1.13.mp4",
+              "name": "Maggie Winters - 1.13",
+              "url": "https://archive.org/download/maggie-winters-1.01/Maggie%20Winters%20-%201.13.mp4",
+              "seconds": 1321,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 691
+              "sizeMB": 683
             }
           ]
         },
@@ -592,16 +592,16 @@
             },
             {
               "conf": 0.55,
-              "why": "sequence guess: file 11 of 12 in \"Maggie Winters - Faith Ford, Clea Lewis\"",
+              "why": "sequence guess: file 11 of 11 in \"Maggie Winters - Faith Ford, Clea Lewis\"",
               "item": "maggie-winters-1.01",
               "itemTitle": "Maggie Winters - Faith Ford, Clea Lewis",
-              "file": "Maggie Winters - 1.13.mp4",
-              "name": "Maggie Winters - 1.13",
-              "url": "https://archive.org/download/maggie-winters-1.01/Maggie%20Winters%20-%201.13.mp4",
-              "seconds": 1321,
+              "file": "Maggie Winters - 1.15.mp4",
+              "name": "Maggie Winters - 1.15",
+              "url": "https://archive.org/download/maggie-winters-1.01/Maggie%20Winters%20-%201.15.mp4",
+              "seconds": 1324,
               "format": "MPEG4",
               "playable": true,
-              "sizeMB": 683
+              "sizeMB": 684
             }
           ]
         },
@@ -636,19 +636,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 205
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 12 of 12 in \"Maggie Winters - Faith Ford, Clea Lewis\"",
-              "item": "maggie-winters-1.01",
-              "itemTitle": "Maggie Winters - Faith Ford, Clea Lewis",
-              "file": "Maggie Winters - 1.15.mp4",
-              "name": "Maggie Winters - 1.15",
-              "url": "https://archive.org/download/maggie-winters-1.01/Maggie%20Winters%20-%201.15.mp4",
-              "seconds": 1324,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 684
             }
           ]
         },
@@ -731,28 +718,14 @@
             "item": "maggie-winters-1998-99-faith-ford-sitcom",
             "itemTitle": "Maggie Winters (1998–99) Faith Ford, sitcom",
             "file": "Maggie Winters ep 15 - Suffering Estelle - Maggie Winters - 1.15.ia.mp4",
-            "name": "Maggie Winters ep 15 - Suffering Estelle - Maggie Winters - 1",
+            "name": "Maggie Winters ep 15 - Suffering Estelle - Maggie Winters - 1.15",
             "url": "https://archive.org/download/maggie-winters-1998-99-faith-ford-sitcom/Maggie%20Winters%20ep%2015%20-%20Suffering%20Estelle%20-%20Maggie%20Winters%20-%201.15.ia.mp4",
             "seconds": 1324,
             "format": "h.264 IA",
             "playable": true,
             "sizeMB": 684
           },
-          "alternates": [
-            {
-              "conf": 1,
-              "why": "absolute episode number + title match",
-              "item": "maggie-winters-1998-99-faith-ford-sitcom",
-              "itemTitle": "Maggie Winters (1998–99) Faith Ford, sitcom",
-              "file": "Maggie Winters ep 15 - Suffering Estelle - Maggie Winters - 1.15.mp4",
-              "name": "Maggie Winters ep 15 - Suffering Estelle - Maggie Winters - 1.15",
-              "url": "https://archive.org/download/maggie-winters-1998-99-faith-ford-sitcom/Maggie%20Winters%20ep%2015%20-%20Suffering%20Estelle%20-%20Maggie%20Winters%20-%201.15.mp4",
-              "seconds": 1324,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 684
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 16,

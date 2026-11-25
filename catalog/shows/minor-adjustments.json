@@ -3,7 +3,7 @@
   "slug": "minor-adjustments",
   "type": "90s Sitcoms",
   "network": "NBC",
-  "matchedAt": "2026-10-19T04:10:28.661Z",
+  "matchedAt": "2026-11-24T22:43:15.500Z",
   "addedAt": "2026-10-16T07:56:17.341Z",
   "tvmaze": {
     "id": 62372,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 20,
     "live": 2,
-    "review": 6,
-    "missing": 12,
-    "pct": 40
+    "review": 5,
+    "missing": 13,
+    "pct": 35
   },
   "seasons": [
     {
@@ -47,11 +47,11 @@
               "why": "title ~ \"Pilot\" (1.00)",
               "item": "minor-adjustments",
               "itemTitle": "Minor Adjustments (1994–95) sitcom -Raven's Dad + Sara Rue",
-              "file": "Minor Adjustments S1.E01-Pilot.mp4",
+              "file": "Minor Adjustments S1.E01-Pilot.ia.mp4",
               "name": "Minor Adjustments S1.E01-Pilot",
-              "url": "https://archive.org/download/minor-adjustments/Minor%20Adjustments%20S1.E01-Pilot.mp4",
+              "url": "https://archive.org/download/minor-adjustments/Minor%20Adjustments%20S1.E01-Pilot.ia.mp4",
               "seconds": 1338,
-              "format": "MPEG4",
+              "format": "h.264 IA",
               "playable": true,
               "sizeMB": 100
             }
@@ -161,11 +161,11 @@
             "why": "title ~ \"Ask Doctor Ron\" (0.67)",
             "item": "minor-adjustments",
             "itemTitle": "Minor Adjustments (1994–95) sitcom -Raven's Dad + Sara Rue",
-            "file": "Minor Adjustments S1.E09- Ask Dr. Ron.mp4",
+            "file": "Minor Adjustments S1.E09- Ask Dr. Ron.ia.mp4",
             "name": "Minor Adjustments S1.E09- Ask Dr. Ron",
-            "url": "https://archive.org/download/minor-adjustments/Minor%20Adjustments%20S1.E09-%20Ask%20Dr.%20Ron.mp4",
+            "url": "https://archive.org/download/minor-adjustments/Minor%20Adjustments%20S1.E09-%20Ask%20Dr.%20Ron.ia.mp4",
             "seconds": 1308,
-            "format": "MPEG4",
+            "format": "h.264 IA",
             "playable": true,
             "sizeMB": 87
           },
@@ -243,20 +243,8 @@
           "number": 17,
           "name": "Witness",
           "airdate": "1996-04-30",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Witness\" (1.00)",
-            "item": "minor-adjustments",
-            "itemTitle": "Minor Adjustments (1994–95) sitcom -Raven's Dad + Sara Rue",
-            "file": "Minor Adjustments S1.E17 - Witness. -wrong man accused after mugging.ia.mp4",
-            "name": "Minor Adjustments S1.E17 - Witness",
-            "url": "https://archive.org/download/minor-adjustments/Minor%20Adjustments%20S1.E17%20-%20Witness.%20-wrong%20man%20accused%20after%20mugging.ia.mp4",
-            "seconds": 1330,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 85
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

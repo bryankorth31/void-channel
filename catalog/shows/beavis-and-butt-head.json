@@ -3,7 +3,7 @@
   "slug": "beavis-and-butt-head",
   "type": "Animated",
   "network": "MTV",
-  "matchedAt": "2026-11-24T01:49:50.874Z",
+  "matchedAt": "2026-11-24T22:43:21.083Z",
   "addedAt": "2026-10-15T12:07:39.820Z",
   "tvmaze": {
     "id": 910,
@@ -404,11 +404,11 @@
             "why": "S/E in filename + title match",
             "item": "beavis-and-butt-head-project-buffcoat-s-02-e-02.2-good-credit-janes-addiction",
             "itemTitle": "Beavis And Butt Head ( Project Buffcoat) Season 2",
-            "file": "Beavis and Butt-Head (Project Buffcoat) S02E06.2 - At the Sideshow (Golden Earring Version).mp4",
+            "file": "Beavis and Butt-Head (Project Buffcoat) S02E06.2 - At the Sideshow (Golden Earring Version).ia.mp4",
             "name": "Beavis and Butt-Head (Project Buffcoat) S02E06.2 - At the Sideshow (Golden Earring Version)",
-            "url": "https://archive.org/download/beavis-and-butt-head-project-buffcoat-s-02-e-02.2-good-credit-janes-addiction/Beavis%20and%20Butt-Head%20(Project%20Buffcoat)%20S02E06.2%20-%20At%20the%20Sideshow%20(Golden%20Earring%20Version).mp4",
+            "url": "https://archive.org/download/beavis-and-butt-head-project-buffcoat-s-02-e-02.2-good-credit-janes-addiction/Beavis%20and%20Butt-Head%20(Project%20Buffcoat)%20S02E06.2%20-%20At%20the%20Sideshow%20(Golden%20Earring%20Version).ia.mp4",
             "seconds": 700,
-            "format": "MPEG4",
+            "format": "h.264 IA",
             "playable": true,
             "sizeMB": 375
           },
@@ -440,17 +440,17 @@
               "sizeMB": 69
             },
             {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "beavis-and-butt-head-project-buffcoat-s-02-e-02.2-good-credit-janes-addiction",
-              "itemTitle": "Beavis And Butt Head ( Project Buffcoat) Season 2",
-              "file": "Beavis and Butt-Head (Project Buffcoat) S02E06.2 - At the Sideshow (Golden Earring Version).ia.mp4",
-              "name": "Beavis and Butt-Head (Project Buffcoat) S02E06",
-              "url": "https://archive.org/download/beavis-and-butt-head-project-buffcoat-s-02-e-02.2-good-credit-janes-addiction/Beavis%20and%20Butt-Head%20(Project%20Buffcoat)%20S02E06.2%20-%20At%20the%20Sideshow%20(Golden%20Earring%20Version).ia.mp4",
-              "seconds": 700,
-              "format": "h.264 IA",
+              "conf": 0.75,
+              "why": "title ~ \"At the Sideshow\" (0.95)",
+              "item": "beavis-and-butthead-complete",
+              "itemTitle": "Beavis and Butt-Head Complete Series (1992 - Present) [Final]",
+              "file": "Season 2 (1993) - E06 - At the Sideshow.mp4",
+              "name": "Season 2 (1993) - E06 - At the Sideshow",
+              "url": "https://archive.org/download/beavis-and-butthead-complete/Season%202%20(1993)%20-%20E06%20-%20At%20the%20Sideshow.mp4",
+              "seconds": 802,
+              "format": "h.264",
               "playable": true,
-              "sizeMB": 375
+              "sizeMB": 78
             }
           ]
         },

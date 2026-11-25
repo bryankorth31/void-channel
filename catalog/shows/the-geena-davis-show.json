@@ -3,7 +3,7 @@
   "slug": "the-geena-davis-show",
   "type": "2000s and Later Sitcoms",
   "network": "ABC",
-  "matchedAt": "2026-10-22T23:28:05.073Z",
+  "matchedAt": "2026-11-24T22:45:42.437Z",
   "addedAt": "2026-10-22T23:28:05.073Z",
   "tvmaze": {
     "id": 39506,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 22,
     "live": 0,
-    "review": 10,
-    "missing": 12,
-    "pct": 45
+    "review": 9,
+    "missing": 13,
+    "pct": 41
   },
   "seasons": [
     {
@@ -30,11 +30,11 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 1 of 10 in \"The Geena Davis Show - Genna Davis\"",
+            "why": "sequence guess: file 1 of 9 in \"The Geena Davis Show - Genna Davis\"",
             "item": "the-geena-davis-show-1.01",
             "itemTitle": "The Geena Davis Show - Genna Davis",
             "file": "The Geena Davis Show - 1.01.ia.mp4",
-            "name": "The Geena Davis Show - 1",
+            "name": "The Geena Davis Show - 1.01",
             "url": "https://archive.org/download/the-geena-davis-show-1.01/The%20Geena%20Davis%20Show%20-%201.01.ia.mp4",
             "seconds": 1275,
             "format": "h.264 IA",
@@ -50,27 +50,7 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 2 of 10 in \"The Geena Davis Show - Genna Davis\"",
-            "item": "the-geena-davis-show-1.01",
-            "itemTitle": "The Geena Davis Show - Genna Davis",
-            "file": "The Geena Davis Show - 1.01.mp4",
-            "name": "The Geena Davis Show - 1.01",
-            "url": "https://archive.org/download/the-geena-davis-show-1.01/The%20Geena%20Davis%20Show%20-%201.01.mp4",
-            "seconds": 1275,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 659
-          },
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "Piece of Cake",
-          "airdate": "2000-10-24",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 3 of 10 in \"The Geena Davis Show - Genna Davis\"",
+            "why": "sequence guess: file 2 of 9 in \"The Geena Davis Show - Genna Davis\"",
             "item": "the-geena-davis-show-1.01",
             "itemTitle": "The Geena Davis Show - Genna Davis",
             "file": "The Geena Davis Show - 1.02.mp4",
@@ -84,13 +64,13 @@
           "alternates": []
         },
         {
-          "number": 4,
-          "name": "Jealousy",
-          "airdate": "2000-10-31",
+          "number": 3,
+          "name": "Piece of Cake",
+          "airdate": "2000-10-24",
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 4 of 10 in \"The Geena Davis Show - Genna Davis\"",
+            "why": "sequence guess: file 3 of 9 in \"The Geena Davis Show - Genna Davis\"",
             "item": "the-geena-davis-show-1.01",
             "itemTitle": "The Geena Davis Show - Genna Davis",
             "file": "The Geena Davis Show - 1.04.mp4",
@@ -104,13 +84,13 @@
           "alternates": []
         },
         {
-          "number": 5,
-          "name": "Motherly Advice",
-          "airdate": "2000-11-14",
+          "number": 4,
+          "name": "Jealousy",
+          "airdate": "2000-10-31",
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 5 of 10 in \"The Geena Davis Show - Genna Davis\"",
+            "why": "sequence guess: file 4 of 9 in \"The Geena Davis Show - Genna Davis\"",
             "item": "the-geena-davis-show-1.01",
             "itemTitle": "The Geena Davis Show - Genna Davis",
             "file": "The Geena Davis Show - 1.08.mp4",
@@ -124,13 +104,13 @@
           "alternates": []
         },
         {
-          "number": 6,
-          "name": "There's Something About Max",
-          "airdate": "2000-11-21",
+          "number": 5,
+          "name": "Motherly Advice",
+          "airdate": "2000-11-14",
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 6 of 10 in \"The Geena Davis Show - Genna Davis\"",
+            "why": "sequence guess: file 5 of 9 in \"The Geena Davis Show - Genna Davis\"",
             "item": "the-geena-davis-show-1.01",
             "itemTitle": "The Geena Davis Show - Genna Davis",
             "file": "The Geena Davis Show - 1.09.mp4",
@@ -144,18 +124,38 @@
           "alternates": []
         },
         {
+          "number": 6,
+          "name": "There's Something About Max",
+          "airdate": "2000-11-21",
+          "state": "REVIEW",
+          "file": {
+            "conf": 0.55,
+            "why": "sequence guess: file 6 of 9 in \"The Geena Davis Show - Genna Davis\"",
+            "item": "the-geena-davis-show-1.01",
+            "itemTitle": "The Geena Davis Show - Genna Davis",
+            "file": "The Geena Davis Show - 1.10.mp4",
+            "name": "The Geena Davis Show - 1.10",
+            "url": "https://archive.org/download/the-geena-davis-show-1.01/The%20Geena%20Davis%20Show%20-%201.10.mp4",
+            "seconds": 1280,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 662
+          },
+          "alternates": []
+        },
+        {
           "number": 7,
           "name": "Cooties",
           "airdate": "2000-11-28",
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 7 of 10 in \"The Geena Davis Show - Genna Davis\"",
+            "why": "sequence guess: file 7 of 9 in \"The Geena Davis Show - Genna Davis\"",
             "item": "the-geena-davis-show-1.01",
             "itemTitle": "The Geena Davis Show - Genna Davis",
-            "file": "The Geena Davis Show - 1.10.mp4",
-            "name": "The Geena Davis Show - 1.10",
-            "url": "https://archive.org/download/the-geena-davis-show-1.01/The%20Geena%20Davis%20Show%20-%201.10.mp4",
+            "file": "The Geena Davis Show - 1.11.mp4",
+            "name": "The Geena Davis Show - 1.11",
+            "url": "https://archive.org/download/the-geena-davis-show-1.01/The%20Geena%20Davis%20Show%20-%201.11.mp4",
             "seconds": 1280,
             "format": "MPEG4",
             "playable": true,
@@ -170,27 +170,7 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 8 of 10 in \"The Geena Davis Show - Genna Davis\"",
-            "item": "the-geena-davis-show-1.01",
-            "itemTitle": "The Geena Davis Show - Genna Davis",
-            "file": "The Geena Davis Show - 1.11.mp4",
-            "name": "The Geena Davis Show - 1.11",
-            "url": "https://archive.org/download/the-geena-davis-show-1.01/The%20Geena%20Davis%20Show%20-%201.11.mp4",
-            "seconds": 1280,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 662
-          },
-          "alternates": []
-        },
-        {
-          "number": 9,
-          "name": "By Teddie Cochrane",
-          "airdate": "2000-12-12",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 9 of 10 in \"The Geena Davis Show - Genna Davis\"",
+            "why": "sequence guess: file 8 of 9 in \"The Geena Davis Show - Genna Davis\"",
             "item": "the-geena-davis-show-1.01",
             "itemTitle": "The Geena Davis Show - Genna Davis",
             "file": "The Geena Davis Show - 1.12.mp4",
@@ -204,13 +184,13 @@
           "alternates": []
         },
         {
-          "number": 10,
-          "name": "The Mom That Stole Christmas",
-          "airdate": "2000-12-19",
+          "number": 9,
+          "name": "By Teddie Cochrane",
+          "airdate": "2000-12-12",
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 10 of 10 in \"The Geena Davis Show - Genna Davis\"",
+            "why": "sequence guess: file 9 of 9 in \"The Geena Davis Show - Genna Davis\"",
             "item": "the-geena-davis-show-1.01",
             "itemTitle": "The Geena Davis Show - Genna Davis",
             "file": "The Geena Davis Show - 1.16.mp4",
@@ -221,6 +201,14 @@
             "playable": true,
             "sizeMB": 669
           },
+          "alternates": []
+        },
+        {
+          "number": 10,
+          "name": "The Mom That Stole Christmas",
+          "airdate": "2000-12-19",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

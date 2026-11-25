@@ -3,7 +3,7 @@
   "slug": "second-noah",
   "type": "Drama",
   "network": "ABC",
-  "matchedAt": "2026-10-24T18:40:47.199Z",
+  "matchedAt": "2026-11-24T22:46:39.299Z",
   "addedAt": "2026-10-24T18:40:47.199Z",
   "tvmaze": {
     "id": 9160,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 21,
     "live": 9,
-    "review": 12,
-    "missing": 0,
-    "pct": 100
+    "review": 11,
+    "missing": 1,
+    "pct": 95
   },
   "seasons": [
     {
@@ -30,11 +30,11 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 1 of 7 in \"Second Noah - Daniel Hugh Kelly, Betsy B\"",
+            "why": "sequence guess: file 1 of 5 in \"Second Noah - Daniel Hugh Kelly, Betsy B\"",
             "item": "second-noah-1.04",
             "itemTitle": "Second Noah - Daniel Hugh Kelly, Betsy Brantley",
             "file": "Second Noah - 1.04.ia.mp4",
-            "name": "Second Noah - 1",
+            "name": "Second Noah - 1.04",
             "url": "https://archive.org/download/second-noah-1.04/Second%20Noah%20-%201.04.ia.mp4",
             "seconds": 2895,
             "format": "h.264 IA",
@@ -50,27 +50,7 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 2 of 7 in \"Second Noah - Daniel Hugh Kelly, Betsy B\"",
-            "item": "second-noah-1.04",
-            "itemTitle": "Second Noah - Daniel Hugh Kelly, Betsy Brantley",
-            "file": "Second Noah - 1.04.mp4",
-            "name": "Second Noah - 1.04",
-            "url": "https://archive.org/download/second-noah-1.04/Second%20Noah%20-%201.04.mp4",
-            "seconds": 2895,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1497
-          },
-          "alternates": []
-        },
-        {
-          "number": 3,
-          "name": "Close Encounters",
-          "airdate": "1996-02-19",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 3 of 7 in \"Second Noah - Daniel Hugh Kelly, Betsy B\"",
+            "why": "sequence guess: file 2 of 5 in \"Second Noah - Daniel Hugh Kelly, Betsy B\"",
             "item": "second-noah-1.04",
             "itemTitle": "Second Noah - Daniel Hugh Kelly, Betsy Brantley",
             "file": "Second Noah - 1.07.mp4",
@@ -84,13 +64,13 @@
           "alternates": []
         },
         {
-          "number": 4,
-          "name": "Stormy Weather",
-          "airdate": "1996-02-26",
+          "number": 3,
+          "name": "Close Encounters",
+          "airdate": "1996-02-19",
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 4 of 7 in \"Second Noah - Daniel Hugh Kelly, Betsy B\"",
+            "why": "sequence guess: file 3 of 5 in \"Second Noah - Daniel Hugh Kelly, Betsy B\"",
             "item": "second-noah-1.04",
             "itemTitle": "Second Noah - Daniel Hugh Kelly, Betsy Brantley",
             "file": "Second Noah - 1.10.mp4",
@@ -104,13 +84,13 @@
           "alternates": []
         },
         {
-          "number": 5,
-          "name": "The Good Samaritan",
-          "airdate": "1996-03-02",
+          "number": 4,
+          "name": "Stormy Weather",
+          "airdate": "1996-02-26",
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 5 of 7 in \"Second Noah - Daniel Hugh Kelly, Betsy B\"",
+            "why": "sequence guess: file 4 of 5 in \"Second Noah - Daniel Hugh Kelly, Betsy B\"",
             "item": "second-noah-1.04",
             "itemTitle": "Second Noah - Daniel Hugh Kelly, Betsy Brantley",
             "file": "Second Noah - 1.11.mp4",
@@ -124,23 +104,31 @@
           "alternates": []
         },
         {
-          "number": 6,
-          "name": "Julio is My Dad",
-          "airdate": "1996-03-04",
+          "number": 5,
+          "name": "The Good Samaritan",
+          "airdate": "1996-03-02",
           "state": "REVIEW",
           "file": {
             "conf": 0.55,
-            "why": "sequence guess: file 6 of 7 in \"Second Noah - Daniel Hugh Kelly, Betsy B\"",
+            "why": "sequence guess: file 5 of 5 in \"Second Noah - Daniel Hugh Kelly, Betsy B\"",
             "item": "second-noah-1.04",
             "itemTitle": "Second Noah - Daniel Hugh Kelly, Betsy Brantley",
             "file": "Second Noah - 2.04.ia.mp4",
-            "name": "Second Noah - 2",
+            "name": "Second Noah - 2.04",
             "url": "https://archive.org/download/second-noah-1.04/Second%20Noah%20-%202.04.ia.mp4",
             "seconds": 2842,
             "format": "h.264 IA",
             "playable": true,
             "sizeMB": 1469
           },
+          "alternates": []
+        },
+        {
+          "number": 6,
+          "name": "Julio is My Dad",
+          "airdate": "1996-03-04",
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -161,21 +149,7 @@
             "playable": true,
             "sizeMB": 476
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 7 of 7 in \"Second Noah - Daniel Hugh Kelly, Betsy B\"",
-              "item": "second-noah-1.04",
-              "itemTitle": "Second Noah - Daniel Hugh Kelly, Betsy Brantley",
-              "file": "Second Noah - 2.04.mp4",
-              "name": "Second Noah - 2.04",
-              "url": "https://archive.org/download/second-noah-1.04/Second%20Noah%20-%202.04.mp4",
-              "seconds": 2842,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1469
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 8,

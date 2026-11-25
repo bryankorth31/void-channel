@@ -3,7 +3,7 @@
   "slug": "maybe-this-time",
   "type": "90s Sitcoms",
   "network": "ABC",
-  "matchedAt": "2026-10-23T08:49:57.988Z",
+  "matchedAt": "2026-11-24T22:46:27.382Z",
   "addedAt": "2026-10-23T08:49:57.988Z",
   "tvmaze": {
     "id": 37095,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 18,
     "live": 0,
-    "review": 14,
-    "missing": 4,
-    "pct": 78
+    "review": 11,
+    "missing": 7,
+    "pct": 61
   },
   "seasons": [
     {
@@ -27,40 +27,16 @@
           "number": 1,
           "name": "Please Re-Lease Me",
           "airdate": "1995-09-15",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 1 of 5 in \"Maybe This Time - Marie Osmond, Betty Wh\"",
-            "item": "maybe-this-time-1.01",
-            "itemTitle": "Maybe This Time - Marie Osmond, Betty White",
-            "file": "Maybe This Time - 1.01.ia.mp4",
-            "name": "Maybe This Time - 1",
-            "url": "https://archive.org/download/maybe-this-time-1.01/Maybe%20This%20Time%20-%201.01.ia.mp4",
-            "seconds": 1320,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 682
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 2,
           "name": "Maybe This Time",
           "airdate": "1995-09-16",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 2 of 5 in \"Maybe This Time - Marie Osmond, Betty Wh\"",
-            "item": "maybe-this-time-1.01",
-            "itemTitle": "Maybe This Time - Marie Osmond, Betty White",
-            "file": "Maybe This Time - 1.01.mp4",
-            "name": "Maybe This Time - 1.01",
-            "url": "https://archive.org/download/maybe-this-time-1.01/Maybe%20This%20Time%20-%201.01.mp4",
-            "seconds": 1320,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 682
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -81,40 +57,14 @@
             "playable": true,
             "sizeMB": 137
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 3 of 5 in \"Maybe This Time - Marie Osmond, Betty Wh\"",
-              "item": "maybe-this-time-1.01",
-              "itemTitle": "Maybe This Time - Marie Osmond, Betty White",
-              "file": "Maybe This Time - 1.06.mp4",
-              "name": "Maybe This Time - 1.06",
-              "url": "https://archive.org/download/maybe-this-time-1.01/Maybe%20This%20Time%20-%201.06.mp4",
-              "seconds": 1344,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 694
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 4,
           "name": "Out, Out, Damn Radio Spot!",
           "airdate": "1995-09-30",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 4 of 5 in \"Maybe This Time - Marie Osmond, Betty Wh\"",
-            "item": "maybe-this-time-1.01",
-            "itemTitle": "Maybe This Time - Marie Osmond, Betty White",
-            "file": "Maybe This Time - 1.11.mp4",
-            "name": "Maybe This Time - 1.11",
-            "url": "https://archive.org/download/maybe-this-time-1.01/Maybe%20This%20Time%20-%201.11.mp4",
-            "seconds": 1382,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 714
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -135,21 +85,7 @@
             "playable": true,
             "sizeMB": 149
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 5 of 5 in \"Maybe This Time - Marie Osmond, Betty Wh\"",
-              "item": "maybe-this-time-1.01",
-              "itemTitle": "Maybe This Time - Marie Osmond, Betty White",
-              "file": "Maybe This Time - 1.17.mp4",
-              "name": "Maybe This Time - 1.17",
-              "url": "https://archive.org/download/maybe-this-time-1.01/Maybe%20This%20Time%20-%201.17.mp4",
-              "seconds": 1321,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 683
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 6,

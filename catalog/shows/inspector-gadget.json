@@ -3,7 +3,7 @@
   "slug": "inspector-gadget",
   "type": "Animated",
   "network": "Netflix",
-  "matchedAt": "2026-10-22T11:01:36.035Z",
+  "matchedAt": "2026-11-24T22:47:50.183Z",
   "addedAt": "2026-10-22T11:01:36.035Z",
   "tvmaze": {
     "id": 4579,
@@ -1089,23 +1089,10 @@
               "item": "inspector-gadget-1-1",
               "itemTitle": "Inspector Gadget Season 1 Part 1 (1080p Upscale)",
               "file": "S01e19 M.A.D. Trap.ia.mp4",
-              "name": "S01e19 M.A.D",
+              "name": "S01e19 M.A.D. Trap",
               "url": "https://archive.org/download/inspector-gadget-1-1/S01e19%20M.A.D.%20Trap.ia.mp4",
               "seconds": 1347,
               "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 400
-            },
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "inspector-gadget-1-1",
-              "itemTitle": "Inspector Gadget Season 1 Part 1 (1080p Upscale)",
-              "file": "S01e19 M.A.D. Trap.mp4",
-              "name": "S01e19 M.A.D. Trap",
-              "url": "https://archive.org/download/inspector-gadget-1-1/S01e19%20M.A.D.%20Trap.mp4",
-              "seconds": 1347,
-              "format": "MPEG4",
               "playable": true,
               "sizeMB": 400
             },
@@ -1121,6 +1108,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 440
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 19 of 59 in \"Inspector Gadget - 25th Anniversary Edit\"",
+              "item": "inspector-gadget-25th-anniversary",
+              "itemTitle": "Inspector Gadget - 25th Anniversary Edition",
+              "file": "Inspector Gadget The Original Series Boxset/Series 1/InspectorGadgetS01E15VolcanoIsland.mp4",
+              "name": "Inspector Gadget The Original Series Boxset/Series 1/InspectorGadgetS01E15VolcanoIsland",
+              "url": "https://archive.org/download/inspector-gadget-25th-anniversary/Inspector%20Gadget%20The%20Original%20Series%20Boxset%2FSeries%201%2FInspectorGadgetS01E15VolcanoIsland.mp4",
+              "seconds": 1349,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 130
             }
           ]
         },
@@ -1135,7 +1135,7 @@
             "item": "inspector-gadget-go-go-gadget-series",
             "itemTitle": "Inspector Gadget: The Complete Seasons 1 & 2 (1983-86)",
             "file": "Inspector Gadget S01E20 M.A.D. Trap.ia.mp4",
-            "name": "Inspector Gadget S01E20 M.A.D",
+            "name": "Inspector Gadget S01E20 M.A.D. Trap",
             "url": "https://archive.org/download/inspector-gadget-go-go-gadget-series/Inspector%20Gadget%20S01E20%20M.A.D.%20Trap.ia.mp4",
             "seconds": 1347,
             "format": "h.264 IA",
@@ -1143,19 +1143,6 @@
             "sizeMB": 448
           },
           "alternates": [
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "inspector-gadget-go-go-gadget-series",
-              "itemTitle": "Inspector Gadget: The Complete Seasons 1 & 2 (1983-86)",
-              "file": "Inspector Gadget S01E20 M.A.D. Trap.mp4",
-              "name": "Inspector Gadget S01E20 M.A.D. Trap",
-              "url": "https://archive.org/download/inspector-gadget-go-go-gadget-series/Inspector%20Gadget%20S01E20%20M.A.D.%20Trap.mp4",
-              "seconds": 1347,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 448
-            },
             {
               "conf": 0.85,
               "why": "S/E in filename",
@@ -1174,13 +1161,26 @@
               "why": "title ~ \"M.A.D. Trap\" (1.00)",
               "item": "inspector-gadget-1-1",
               "itemTitle": "Inspector Gadget Season 1 Part 1 (1080p Upscale)",
-              "file": "S01e19 M.A.D. Trap.mp4",
+              "file": "S01e19 M.A.D. Trap.ia.mp4",
               "name": "S01e19 M.A.D. Trap",
-              "url": "https://archive.org/download/inspector-gadget-1-1/S01e19%20M.A.D.%20Trap.mp4",
+              "url": "https://archive.org/download/inspector-gadget-1-1/S01e19%20M.A.D.%20Trap.ia.mp4",
               "seconds": 1347,
-              "format": "MPEG4",
+              "format": "h.264 IA",
               "playable": true,
               "sizeMB": 400
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 20 of 59 in \"Inspector Gadget - 25th Anniversary Edit\"",
+              "item": "inspector-gadget-25th-anniversary",
+              "itemTitle": "Inspector Gadget - 25th Anniversary Edition",
+              "file": "Inspector Gadget The Original Series Boxset/Series 1/InspectorGadgetS01E16TheInvasion.mp4",
+              "name": "Inspector Gadget The Original Series Boxset/Series 1/InspectorGadgetS01E16TheInvasion",
+              "url": "https://archive.org/download/inspector-gadget-25th-anniversary/Inspector%20Gadget%20The%20Original%20Series%20Boxset%2FSeries%201%2FInspectorGadgetS01E16TheInvasion.mp4",
+              "seconds": 1354,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 131
             }
           ]
         },
@@ -2383,23 +2383,10 @@
               "item": "inspector-gadget-1-2",
               "itemTitle": "Inspector Gadget Season 1 Part 2 (1080p Upscale)",
               "file": "S01e41 M.A.D. Academy.ia.mp4",
-              "name": "S01e41 M.A.D",
+              "name": "S01e41 M.A.D. Academy",
               "url": "https://archive.org/download/inspector-gadget-1-2/S01e41%20M.A.D.%20Academy.ia.mp4",
               "seconds": 1347,
               "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 412
-            },
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "inspector-gadget-1-2",
-              "itemTitle": "Inspector Gadget Season 1 Part 2 (1080p Upscale)",
-              "file": "S01e41 M.A.D. Academy.mp4",
-              "name": "S01e41 M.A.D. Academy",
-              "url": "https://archive.org/download/inspector-gadget-1-2/S01e41%20M.A.D.%20Academy.mp4",
-              "seconds": 1347,
-              "format": "MPEG4",
               "playable": true,
               "sizeMB": 412
             },
@@ -2415,6 +2402,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 493
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 41 of 59 in \"Inspector Gadget - 25th Anniversary Edit\"",
+              "item": "inspector-gadget-25th-anniversary",
+              "itemTitle": "Inspector Gadget - 25th Anniversary Edition",
+              "file": "Inspector Gadget The Original Series Boxset/Series 1/InspectorGadgetS01E42NoFilesOnUs.mp4",
+              "name": "Inspector Gadget The Original Series Boxset/Series 1/InspectorGadgetS01E42NoFilesOnUs",
+              "url": "https://archive.org/download/inspector-gadget-25th-anniversary/Inspector%20Gadget%20The%20Original%20Series%20Boxset%2FSeries%201%2FInspectorGadgetS01E42NoFilesOnUs.mp4",
+              "seconds": 1353,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 130
             }
           ]
         },
@@ -2428,28 +2428,15 @@
             "why": "S/E in filename + title match",
             "item": "inspector-gadget-go-go-gadget-series",
             "itemTitle": "Inspector Gadget: The Complete Seasons 1 & 2 (1983-86)",
-            "file": "Inspector Gadget S01E42 M.A.D. Acadamy.mp4",
+            "file": "Inspector Gadget S01E42 M.A.D. Acadamy.ia.mp4",
             "name": "Inspector Gadget S01E42 M.A.D. Acadamy",
-            "url": "https://archive.org/download/inspector-gadget-go-go-gadget-series/Inspector%20Gadget%20S01E42%20M.A.D.%20Acadamy.mp4",
+            "url": "https://archive.org/download/inspector-gadget-go-go-gadget-series/Inspector%20Gadget%20S01E42%20M.A.D.%20Acadamy.ia.mp4",
             "seconds": 1347,
-            "format": "MPEG4",
+            "format": "h.264 IA",
             "playable": true,
             "sizeMB": 447
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "inspector-gadget-go-go-gadget-series",
-              "itemTitle": "Inspector Gadget: The Complete Seasons 1 & 2 (1983-86)",
-              "file": "Inspector Gadget S01E42 M.A.D. Acadamy.ia.mp4",
-              "name": "Inspector Gadget S01E42 M.A.D",
-              "url": "https://archive.org/download/inspector-gadget-go-go-gadget-series/Inspector%20Gadget%20S01E42%20M.A.D.%20Acadamy.ia.mp4",
-              "seconds": 1347,
-              "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 447
-            },
             {
               "conf": 0.85,
               "why": "S/E in filename",
@@ -2468,13 +2455,26 @@
               "why": "title ~ \"M.A.D. Acadamy\" (0.80)",
               "item": "inspector-gadget-1-2",
               "itemTitle": "Inspector Gadget Season 1 Part 2 (1080p Upscale)",
-              "file": "S01e41 M.A.D. Academy.mp4",
+              "file": "S01e41 M.A.D. Academy.ia.mp4",
               "name": "S01e41 M.A.D. Academy",
-              "url": "https://archive.org/download/inspector-gadget-1-2/S01e41%20M.A.D.%20Academy.mp4",
+              "url": "https://archive.org/download/inspector-gadget-1-2/S01e41%20M.A.D.%20Academy.ia.mp4",
               "seconds": 1347,
-              "format": "MPEG4",
+              "format": "h.264 IA",
               "playable": true,
               "sizeMB": 412
+            },
+            {
+              "conf": 0.55,
+              "why": "sequence guess: file 42 of 59 in \"Inspector Gadget - 25th Anniversary Edit\"",
+              "item": "inspector-gadget-25th-anniversary",
+              "itemTitle": "Inspector Gadget - 25th Anniversary Edition",
+              "file": "Inspector Gadget The Original Series Boxset/Series 1/InspectorGadgetS01E43LuckoftheIrish.mp4",
+              "name": "Inspector Gadget The Original Series Boxset/Series 1/InspectorGadgetS01E43LuckoftheIrish",
+              "url": "https://archive.org/download/inspector-gadget-25th-anniversary/Inspector%20Gadget%20The%20Original%20Series%20Boxset%2FSeries%201%2FInspectorGadgetS01E43LuckoftheIrish.mp4",
+              "seconds": 1353,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 130
             }
           ]
         },
@@ -4209,28 +4209,15 @@
             "why": "S/E in filename + title match",
             "item": "inspector-gadget-go-go-gadget-series",
             "itemTitle": "Inspector Gadget: The Complete Seasons 1 & 2 (1983-86)",
-            "file": "Inspector Gadget S02E14 M.A.D. in the Moon.mp4",
+            "file": "Inspector Gadget S02E14 M.A.D. in the Moon.ia.mp4",
             "name": "Inspector Gadget S02E14 M.A.D. in the Moon",
-            "url": "https://archive.org/download/inspector-gadget-go-go-gadget-series/Inspector%20Gadget%20S02E14%20M.A.D.%20in%20the%20Moon.mp4",
+            "url": "https://archive.org/download/inspector-gadget-go-go-gadget-series/Inspector%20Gadget%20S02E14%20M.A.D.%20in%20the%20Moon.ia.mp4",
             "seconds": 1334,
-            "format": "MPEG4",
+            "format": "h.264 IA",
             "playable": true,
             "sizeMB": 441
           },
           "alternates": [
-            {
-              "conf": 0.9,
-              "why": "S/E in filename",
-              "item": "inspector-gadget-go-go-gadget-series",
-              "itemTitle": "Inspector Gadget: The Complete Seasons 1 & 2 (1983-86)",
-              "file": "Inspector Gadget S02E14 M.A.D. in the Moon.ia.mp4",
-              "name": "Inspector Gadget S02E14 M.A.D",
-              "url": "https://archive.org/download/inspector-gadget-go-go-gadget-series/Inspector%20Gadget%20S02E14%20M.A.D.%20in%20the%20Moon.ia.mp4",
-              "seconds": 1334,
-              "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 441
-            },
             {
               "conf": 0.75,
               "why": "title ~ \"M.A.D. in the Moon\" (1.00)",
@@ -4257,28 +4244,14 @@
             "item": "inspector-gadget-go-go-gadget-series",
             "itemTitle": "Inspector Gadget: The Complete Seasons 1 & 2 (1983-86)",
             "file": "Inspector Gadget S02E15 N.S.F. Gadget.ia.mp4",
-            "name": "Inspector Gadget S02E15 N.S.F",
+            "name": "Inspector Gadget S02E15 N.S.F. Gadget",
             "url": "https://archive.org/download/inspector-gadget-go-go-gadget-series/Inspector%20Gadget%20S02E15%20N.S.F.%20Gadget.ia.mp4",
             "seconds": 1335,
             "format": "h.264 IA",
             "playable": true,
             "sizeMB": 442
           },
-          "alternates": [
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "inspector-gadget-go-go-gadget-series",
-              "itemTitle": "Inspector Gadget: The Complete Seasons 1 & 2 (1983-86)",
-              "file": "Inspector Gadget S02E15 N.S.F. Gadget.mp4",
-              "name": "Inspector Gadget S02E15 N.S.F. Gadget",
-              "url": "https://archive.org/download/inspector-gadget-go-go-gadget-series/Inspector%20Gadget%20S02E15%20N.S.F.%20Gadget.mp4",
-              "seconds": 1335,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 442
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 16,

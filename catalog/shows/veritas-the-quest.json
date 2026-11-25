@@ -3,7 +3,7 @@
   "slug": "veritas-the-quest",
   "type": "Drama",
   "network": "ABC",
-  "matchedAt": "2026-10-24T17:11:28.494Z",
+  "matchedAt": "2026-11-24T22:46:10.787Z",
   "addedAt": "2026-10-24T17:11:28.494Z",
   "tvmaze": {
     "id": 4504,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 13,
     "live": 1,
-    "review": 4,
-    "missing": 8,
-    "pct": 38
+    "review": 1,
+    "missing": 11,
+    "pct": 15
   },
   "seasons": [
     {
@@ -87,20 +87,8 @@
           "number": 2,
           "name": "Antarctica",
           "airdate": "2003-02-03",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 2 of 5 in \"Veritas: The Quest - Cobie Smulders, Eri\"",
-            "item": "veritas-the-quest-1.1",
-            "itemTitle": "Veritas: The Quest - Cobie Smulders, Eric Balfour",
-            "file": "Veritas The Quest - 1.1.mp4",
-            "name": "Veritas The Quest - 1.1",
-            "url": "https://archive.org/download/veritas-the-quest-1.1/Veritas%20The%20Quest%20-%201.1.mp4",
-            "seconds": 3211,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1660
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -121,60 +109,22 @@
             "playable": true,
             "sizeMB": 274
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 3 of 5 in \"Veritas: The Quest - Cobie Smulders, Eri\"",
-              "item": "veritas-the-quest-1.1",
-              "itemTitle": "Veritas: The Quest - Cobie Smulders, Eric Balfour",
-              "file": "Veritas The Quest - 1.2.mp4",
-              "name": "Veritas The Quest - 1.2",
-              "url": "https://archive.org/download/veritas-the-quest-1.1/Veritas%20The%20Quest%20-%201.2.mp4",
-              "seconds": 2592,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 1340
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 4,
           "name": "Heist",
           "airdate": "2003-03-10",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 4 of 5 in \"Veritas: The Quest - Cobie Smulders, Eri\"",
-            "item": "veritas-the-quest-1.1",
-            "itemTitle": "Veritas: The Quest - Cobie Smulders, Eric Balfour",
-            "file": "Veritas The Quest - 1.3.mp4",
-            "name": "Veritas The Quest - 1.3",
-            "url": "https://archive.org/download/veritas-the-quest-1.1/Veritas%20The%20Quest%20-%201.3.mp4",
-            "seconds": 2590,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1339
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
           "number": 5,
           "name": "Wheel of Dharma",
           "airdate": "2004-02-23",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 5 of 5 in \"Veritas: The Quest - Cobie Smulders, Eri\"",
-            "item": "veritas-the-quest-1.1",
-            "itemTitle": "Veritas: The Quest - Cobie Smulders, Eric Balfour",
-            "file": "Veritas The Quest - 1.4.mp4",
-            "name": "Veritas The Quest - 1.4",
-            "url": "https://archive.org/download/veritas-the-quest-1.1/Veritas%20The%20Quest%20-%201.4.mp4",
-            "seconds": 2591,
-            "format": "MPEG4",
-            "playable": true,
-            "sizeMB": 1340
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {

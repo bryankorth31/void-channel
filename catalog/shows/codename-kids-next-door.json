@@ -3,7 +3,7 @@
   "slug": "codename-kids-next-door",
   "type": "Animated",
   "network": "Cartoon",
-  "matchedAt": "2026-10-19T04:10:40.910Z",
+  "matchedAt": "2026-11-24T22:43:27.483Z",
   "addedAt": "2026-10-15T18:18:11.483Z",
   "tvmaze": {
     "id": 7302,
@@ -966,32 +966,18 @@
           "state": "REVIEW",
           "file": {
             "conf": 0.65,
-            "why": "title ~ \"Operation: Z.O.O.\" (0.86)",
+            "why": "title ~ \"Operation: Z.O.O.\" (0.95)",
             "item": "s-5-e-14-operation-z.-e.-r.-o",
             "itemTitle": "Codename Kids Next Door The Complete Series including Operation Z.E.R.O.",
             "file": "S5E14 - Operation Z.E.R.O.ia.mp4",
-            "name": "S5E14 - Operation Z.E.R",
+            "name": "S5E14 - Operation Z.E.R.O",
             "url": "https://archive.org/download/s-5-e-14-operation-z.-e.-r.-o/S5E14%20-%20Operation%20Z.E.R.O.ia.mp4",
             "seconds": 4416,
             "format": "h.264 IA",
             "playable": true,
             "sizeMB": 578
           },
-          "alternates": [
-            {
-              "conf": 0.65,
-              "why": "title ~ \"Operation: Z.O.O.\" (0.95)",
-              "item": "s-5-e-14-operation-z.-e.-r.-o",
-              "itemTitle": "Codename Kids Next Door The Complete Series including Operation Z.E.R.O.",
-              "file": "S5E14 - Operation Z.E.R.O.mp4",
-              "name": "S5E14 - Operation Z.E.R.O",
-              "url": "https://archive.org/download/s-5-e-14-operation-z.-e.-r.-o/S5E14%20-%20Operation%20Z.E.R.O.mp4",
-              "seconds": 4416,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 578
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 24,
@@ -2847,7 +2833,7 @@
             "item": "s-5-e-14-operation-z.-e.-r.-o",
             "itemTitle": "Codename Kids Next Door The Complete Series including Operation Z.E.R.O.",
             "file": "S4E04 – Operation P.O.O.L.ia.mp4",
-            "name": "S4E04 – Operation P.O.O",
+            "name": "S4E04 – Operation P.O.O.L",
             "url": "https://archive.org/download/s-5-e-14-operation-z.-e.-r.-o/S4E04%20%E2%80%93%20Operation%20P.O.O.L.ia.mp4",
             "seconds": 1380,
             "format": "h.264 IA",
@@ -2855,19 +2841,6 @@
             "sizeMB": 187
           },
           "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "s-5-e-14-operation-z.-e.-r.-o",
-              "itemTitle": "Codename Kids Next Door The Complete Series including Operation Z.E.R.O.",
-              "file": "S4E04 – Operation P.O.O.L.mp4",
-              "name": "S4E04 – Operation P.O.O.L",
-              "url": "https://archive.org/download/s-5-e-14-operation-z.-e.-r.-o/S4E04%20%E2%80%93%20Operation%20P.O.O.L.mp4",
-              "seconds": 1380,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 187
-            },
             {
               "conf": 0.85,
               "why": "S/E in filename",
@@ -3003,11 +2976,11 @@
             },
             {
               "conf": 0.75,
-              "why": "title ~ \"Operation: P.O.O.L.\" (0.96)",
+              "why": "title ~ \"Operation: P.O.O.L.\" (1.00)",
               "item": "s-5-e-14-operation-z.-e.-r.-o",
               "itemTitle": "Codename Kids Next Door The Complete Series including Operation Z.E.R.O.",
               "file": "S4E04 – Operation P.O.O.L.ia.mp4",
-              "name": "S4E04 – Operation P.O.O",
+              "name": "S4E04 – Operation P.O.O.L",
               "url": "https://archive.org/download/s-5-e-14-operation-z.-e.-r.-o/S4E04%20%E2%80%93%20Operation%20P.O.O.L.ia.mp4",
               "seconds": 1380,
               "format": "h.264 IA",
@@ -3015,17 +2988,18 @@
               "sizeMB": 187
             },
             {
-              "conf": 0.75,
-              "why": "title ~ \"Operation: P.O.O.L.\" (1.00)",
-              "item": "s-5-e-14-operation-z.-e.-r.-o",
-              "itemTitle": "Codename Kids Next Door The Complete Series including Operation Z.E.R.O.",
-              "file": "S4E04 – Operation P.O.O.L.mp4",
-              "name": "S4E04 – Operation P.O.O.L",
-              "url": "https://archive.org/download/s-5-e-14-operation-z.-e.-r.-o/S4E04%20%E2%80%93%20Operation%20P.O.O.L.mp4",
-              "seconds": 1380,
-              "format": "MPEG4",
+              "conf": 0.55,
+              "why": "title ~ \"Operation: P.O.O.L.\" (0.76)",
+              "item": "codename-kids-next-door_202606",
+              "itemTitle": "Codename: Kids Next Door",
+              "file": "KND.S04E04.OP_P.O.O.L..XviD-dummy.mp4",
+              "name": "KND.S04E04.OP_P.O.O.L..XviD-dummy",
+              "url": "https://archive.org/download/codename-kids-next-door_202606/KND.S04E04.OP_P.O.O.L..XviD-dummy.mp4",
+              "seconds": 1385,
+              "format": "h.264",
               "playable": true,
-              "sizeMB": 187
+              "codecRisk": "video (XviD)",
+              "sizeMB": 138
             }
           ]
         },
@@ -3537,27 +3511,14 @@
             },
             {
               "conf": 0.75,
-              "why": "title ~ \"Operation: N.A.U.G.H.T.Y\" (0.97)",
-              "item": "s-5-e-14-operation-z.-e.-r.-o",
-              "itemTitle": "Codename Kids Next Door The Complete Series including Operation Z.E.R.O.",
-              "file": "S5E05 – Operation N.A.U.G.H.T.Y.ia.mp4",
-              "name": "S5E05 – Operation N.A.U.G.H.T",
-              "url": "https://archive.org/download/s-5-e-14-operation-z.-e.-r.-o/S5E05%20%E2%80%93%20Operation%20N.A.U.G.H.T.Y.ia.mp4",
-              "seconds": 1348,
-              "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 227
-            },
-            {
-              "conf": 0.75,
               "why": "title ~ \"Operation: N.A.U.G.H.T.Y\" (1.00)",
               "item": "s-5-e-14-operation-z.-e.-r.-o",
               "itemTitle": "Codename Kids Next Door The Complete Series including Operation Z.E.R.O.",
-              "file": "S5E05 – Operation N.A.U.G.H.T.Y.mp4",
+              "file": "S5E05 – Operation N.A.U.G.H.T.Y.ia.mp4",
               "name": "S5E05 – Operation N.A.U.G.H.T.Y",
-              "url": "https://archive.org/download/s-5-e-14-operation-z.-e.-r.-o/S5E05%20%E2%80%93%20Operation%20N.A.U.G.H.T.Y.mp4",
+              "url": "https://archive.org/download/s-5-e-14-operation-z.-e.-r.-o/S5E05%20%E2%80%93%20Operation%20N.A.U.G.H.T.Y.ia.mp4",
               "seconds": 1348,
-              "format": "MPEG4",
+              "format": "h.264 IA",
               "playable": true,
               "sizeMB": 227
             }
@@ -3706,7 +3667,7 @@
             "item": "s-5-e-14-operation-z.-e.-r.-o",
             "itemTitle": "Codename Kids Next Door The Complete Series including Operation Z.E.R.O.",
             "file": "S5E05 – Operation N.A.U.G.H.T.Y.ia.mp4",
-            "name": "S5E05 – Operation N.A.U.G.H.T",
+            "name": "S5E05 – Operation N.A.U.G.H.T.Y",
             "url": "https://archive.org/download/s-5-e-14-operation-z.-e.-r.-o/S5E05%20%E2%80%93%20Operation%20N.A.U.G.H.T.Y.ia.mp4",
             "seconds": 1348,
             "format": "h.264 IA",
@@ -3714,19 +3675,6 @@
             "sizeMB": 227
           },
           "alternates": [
-            {
-              "conf": 0.85,
-              "why": "S/E in filename",
-              "item": "s-5-e-14-operation-z.-e.-r.-o",
-              "itemTitle": "Codename Kids Next Door The Complete Series including Operation Z.E.R.O.",
-              "file": "S5E05 – Operation N.A.U.G.H.T.Y.mp4",
-              "name": "S5E05 – Operation N.A.U.G.H.T.Y",
-              "url": "https://archive.org/download/s-5-e-14-operation-z.-e.-r.-o/S5E05%20%E2%80%93%20Operation%20N.A.U.G.H.T.Y.mp4",
-              "seconds": 1348,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 227
-            },
             {
               "conf": 0.85,
               "why": "S/E in filename",
@@ -4103,28 +4051,14 @@
             "item": "s-5-e-14-operation-z.-e.-r.-o",
             "itemTitle": "Codename Kids Next Door The Complete Series including Operation Z.E.R.O.",
             "file": "S5E14 - Operation Z.E.R.O.ia.mp4",
-            "name": "S5E14 - Operation Z.E.R",
+            "name": "S5E14 - Operation Z.E.R.O",
             "url": "https://archive.org/download/s-5-e-14-operation-z.-e.-r.-o/S5E14%20-%20Operation%20Z.E.R.O.ia.mp4",
             "seconds": 4416,
             "format": "h.264 IA",
             "playable": true,
             "sizeMB": 578
           },
-          "alternates": [
-            {
-              "conf": 0.75,
-              "why": "S/E in filename",
-              "item": "s-5-e-14-operation-z.-e.-r.-o",
-              "itemTitle": "Codename Kids Next Door The Complete Series including Operation Z.E.R.O.",
-              "file": "S5E14 - Operation Z.E.R.O.mp4",
-              "name": "S5E14 - Operation Z.E.R.O",
-              "url": "https://archive.org/download/s-5-e-14-operation-z.-e.-r.-o/S5E14%20-%20Operation%20Z.E.R.O.mp4",
-              "seconds": 4416,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 578
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 15,

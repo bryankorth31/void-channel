@@ -3,7 +3,7 @@
   "slug": "the-net",
   "type": "Drama",
   "network": "USA Network",
-  "matchedAt": "2026-10-24T18:30:34.870Z",
+  "matchedAt": "2026-11-24T22:46:34.067Z",
   "addedAt": "2026-10-24T18:30:34.870Z",
   "tvmaze": {
     "id": 1152,
@@ -1281,7 +1281,7 @@
             "item": "e-n-s-0-e-1-d",
             "itemTitle": "The Net",
             "file": "The Net S01E22 Eye-see-you.com.ia.mp4",
-            "name": "The Net S01E22 Eye-see-you",
+            "name": "The Net S01E22 Eye-see-you.com",
             "url": "https://archive.org/download/e-n-s-0-e-1-d/The%20Net%20S01E22%20Eye-see-you.com.ia.mp4",
             "seconds": 2581,
             "format": "h.264 IA",
@@ -1289,19 +1289,6 @@
             "sizeMB": 515
           },
           "alternates": [
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "e-n-s-0-e-1-d",
-              "itemTitle": "The Net",
-              "file": "The Net S01E22 Eye-see-you.com.mp4",
-              "name": "The Net S01E22 Eye-see-you.com",
-              "url": "https://archive.org/download/e-n-s-0-e-1-d/The%20Net%20S01E22%20Eye-see-you.com.mp4",
-              "seconds": 2581,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 515
-            },
             {
               "conf": 1,
               "why": "S/E in filename + title match",
@@ -1327,6 +1314,19 @@
               "format": "h.264",
               "playable": true,
               "sizeMB": 256
+            },
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "the-net-tv-show",
+              "itemTitle": "The Net (1998, TV show)",
+              "file": "The.Net.-.S01E22.-.eye-see-you.com.mp4",
+              "name": "The.Net.-.S01E22.-.eye-see-you.com",
+              "url": "https://archive.org/download/the-net-tv-show/The.Net.-.S01E22.-.eye-see-you.com.mp4",
+              "seconds": 2580,
+              "format": "h.264",
+              "playable": true,
+              "sizeMB": 254
             }
           ]
         }

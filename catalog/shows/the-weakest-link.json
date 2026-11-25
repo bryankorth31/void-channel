@@ -3,7 +3,7 @@
   "slug": "the-weakest-link",
   "type": "Reality & Talk",
   "network": "BBC One",
-  "matchedAt": "2026-10-23T13:06:50.064Z",
+  "matchedAt": "2026-11-24T22:49:01.663Z",
   "selfListed": true,
   "tvmaze": {
     "id": null,
@@ -14,8 +14,8 @@
   },
   "coverage": {
     "total": 243,
-    "live": 0,
-    "review": 243,
+    "live": 1,
+    "review": 242,
     "missing": 0,
     "pct": 100
   },
@@ -48,13 +48,13 @@
         },
         {
           "number": 2,
-          "name": "the 23 12",
-          "state": "REVIEW",
+          "name": "the 23 12 christmas special",
+          "state": "LIVE",
           "file": {
             "item": "the-weakest-link-2021-12-23",
             "itemTitle": "The Weakest Link - 23 December 2021",
             "file": "The Weakest Link   S01E02, 23.12.2021 – Christmas Special.ia.mp4",
-            "name": "The Weakest Link   S01E02, 23.12",
+            "name": "The Weakest Link   S01E02, 23.12.2021 – Christmas Special",
             "url": "https://archive.org/download/the-weakest-link-2021-12-23/The%20Weakest%20Link%20%20%20S01E02%2C%2023.12.2021%20%E2%80%93%20Christmas%20Special.ia.mp4",
             "seconds": 2738,
             "format": "h.264 IA",
@@ -64,8 +64,8 @@
               "season": 1,
               "episode": 2
             },
-            "conf": 0.6,
-            "why": "self-listed: no TVmaze entry; order from the files"
+            "conf": 1,
+            "why": "S/E in filename + title match | kept LIVE inside the self-list"
           },
           "alternates": []
         },

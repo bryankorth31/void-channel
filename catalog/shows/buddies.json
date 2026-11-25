@@ -3,7 +3,7 @@
   "slug": "buddies",
   "type": "90s Sitcoms",
   "network": "ABC",
-  "matchedAt": "2026-10-23T04:57:12.616Z",
+  "matchedAt": "2026-11-24T22:46:22.285Z",
   "addedAt": "2026-10-23T04:57:12.616Z",
   "tvmaze": {
     "id": 58244,
@@ -209,11 +209,11 @@
               "why": "S/E in filename + title match",
               "item": "buddies-s-01",
               "itemTitle": "Buddies (1996) - 12 of 13 Episodes",
-              "file": "S01E05 Marry Me ... Sort Of.mp4",
+              "file": "S01E05 Marry Me ... Sort Of.ia.mp4",
               "name": "S01E05 Marry Me ... Sort Of",
-              "url": "https://archive.org/download/buddies-s-01/S01E05%20Marry%20Me%20...%20Sort%20Of.mp4",
+              "url": "https://archive.org/download/buddies-s-01/S01E05%20Marry%20Me%20...%20Sort%20Of.ia.mp4",
               "seconds": 1377,
-              "format": "MPEG4",
+              "format": "h.264 IA",
               "playable": true,
               "sizeMB": 98
             }
@@ -230,7 +230,7 @@
             "item": "buddies-s-01",
             "itemTitle": "Buddies (1996) - 12 of 13 Episodes",
             "file": "S01E06 Lights, Camera ... Yuck!.ia.mp4",
-            "name": "S01E06 Lights, Camera ..",
+            "name": "S01E06 Lights, Camera ... Yuck!",
             "url": "https://archive.org/download/buddies-s-01/S01E06%20Lights%2C%20Camera%20...%20Yuck!.ia.mp4",
             "seconds": 1349,
             "format": "h.264 IA",
@@ -238,19 +238,6 @@
             "sizeMB": 108
           },
           "alternates": [
-            {
-              "conf": 1,
-              "why": "S/E in filename + title match",
-              "item": "buddies-s-01",
-              "itemTitle": "Buddies (1996) - 12 of 13 Episodes",
-              "file": "S01E06 Lights, Camera ... Yuck!.mp4",
-              "name": "S01E06 Lights, Camera ... Yuck!",
-              "url": "https://archive.org/download/buddies-s-01/S01E06%20Lights%2C%20Camera%20...%20Yuck!.mp4",
-              "seconds": 1349,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 108
-            },
             {
               "conf": 0.8,
               "why": "title ~ \"Lights, Camera...Yuck!\" (0.95)",
@@ -276,6 +263,19 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 113
+            },
+            {
+              "conf": 0.75,
+              "why": "title ~ \"Lights, Camera...Yuck!\" (0.95)",
+              "item": "buddies-1996-sitcom",
+              "itemTitle": "Buddies (1996– ) sitcom ft Dave Chappelle",
+              "file": "6 \"Lights, Camera...Yuck!\" Paul Lazarus, Peter Tolan not - E03- someone's G-drive yay.mp4",
+              "name": "6 \"Lights, Camera...Yuck!\" Paul Lazarus, Peter Tolan not - E03- someone's G-drive yay",
+              "url": "https://archive.org/download/buddies-1996-sitcom/6%20%22Lights%2C%20Camera...Yuck!%22%20Paul%20Lazarus%2C%20Peter%20Tolan%20not%20-%20E03-%20someone's%20G-drive%20yay.mp4",
+              "seconds": 1359,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 484
             }
           ]
         },

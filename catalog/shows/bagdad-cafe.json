@@ -3,7 +3,7 @@
   "slug": "bagdad-cafe",
   "type": "90s Sitcoms",
   "network": "CBS",
-  "matchedAt": "2026-10-23T05:26:07.200Z",
+  "matchedAt": "2026-11-24T22:46:50.619Z",
   "addedAt": "2026-10-23T05:26:07.200Z",
   "tvmaze": {
     "id": 57564,
@@ -15,9 +15,9 @@
   "coverage": {
     "total": 15,
     "live": 9,
-    "review": 1,
-    "missing": 5,
-    "pct": 67
+    "review": 0,
+    "missing": 6,
+    "pct": 60
   },
   "seasons": [
     {
@@ -41,21 +41,7 @@
             "playable": true,
             "sizeMB": 124
           },
-          "alternates": [
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 1 of 5 in \"Bagdad Cafe (1990–91) sitcom, Whoopi Gol\"",
-              "item": "bagdad-cafe-1990",
-              "itemTitle": "Bagdad Cafe (1990–91) sitcom, Whoopi Goldberg - partial",
-              "file": "Bagdad Cafe -01  Pilot 1990  Jean Stapleton, Whoopi Goldberg.mp4",
-              "name": "Bagdad Cafe -01  Pilot 1990  Jean Stapleton, Whoopi Goldberg",
-              "url": "https://archive.org/download/bagdad-cafe-1990/Bagdad%20Cafe%20-01%20%20Pilot%201990%20%20Jean%20Stapleton%2C%20Whoopi%20Goldberg.mp4",
-              "seconds": 1426,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 54
-            }
-          ]
+          "alternates": []
         },
         {
           "number": 2,
@@ -101,19 +87,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 71
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 2 of 5 in \"Bagdad Cafe (1990–91) sitcom, Whoopi Gol\"",
-              "item": "bagdad-cafe-1990",
-              "itemTitle": "Bagdad Cafe (1990–91) sitcom, Whoopi Goldberg - partial",
-              "file": "Bagdad Cafe -01 Pilot.mp4",
-              "name": "Bagdad Cafe -01 Pilot",
-              "url": "https://archive.org/download/bagdad-cafe-1990/Bagdad%20Cafe%20-01%20Pilot.mp4",
-              "seconds": 1377,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 81
             }
           ]
         },
@@ -148,19 +121,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 70
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 3 of 5 in \"Bagdad Cafe (1990–91) sitcom, Whoopi Gol\"",
-              "item": "bagdad-cafe-1990",
-              "itemTitle": "Bagdad Cafe (1990–91) sitcom, Whoopi Goldberg - partial",
-              "file": "Bagdad Cafe -01 Pilot -Baghdad Cafe Whoppi Goldberg Part 1.mp4",
-              "name": "Bagdad Cafe -01 Pilot -Baghdad Cafe Whoppi Goldberg Part 1",
-              "url": "https://archive.org/download/bagdad-cafe-1990/Bagdad%20Cafe%20-01%20Pilot%20-Baghdad%20Cafe%20Whoppi%20Goldberg%20Part%201.mp4",
-              "seconds": 1426,
-              "format": "MPEG4",
-              "playable": true,
-              "sizeMB": 124
             }
           ]
         },
@@ -208,19 +168,6 @@
               "format": "MPEG4",
               "playable": true,
               "sizeMB": 67
-            },
-            {
-              "conf": 0.55,
-              "why": "sequence guess: file 4 of 5 in \"Bagdad Cafe (1990–91) sitcom, Whoopi Gol\"",
-              "item": "bagdad-cafe-1990",
-              "itemTitle": "Bagdad Cafe (1990–91) sitcom, Whoopi Goldberg - partial",
-              "file": "Bagdad Cafe s01.E05 Breakdown (1990) - not Episode 4 WG - yellow shirt - gs howard morton.ia.mp4",
-              "name": "Bagdad Cafe s01",
-              "url": "https://archive.org/download/bagdad-cafe-1990/Bagdad%20Cafe%20s01.E05%20Breakdown%20(1990)%20-%20not%20Episode%204%20WG%20-%20yellow%20shirt%20-%20gs%20howard%20morton.ia.mp4",
-              "seconds": 1414,
-              "format": "h.264 IA",
-              "playable": true,
-              "sizeMB": 91
             }
           ]
         },
@@ -228,20 +175,8 @@
           "number": 5,
           "name": "Breakdown",
           "airdate": "1990-05-04",
-          "state": "REVIEW",
-          "file": {
-            "conf": 0.55,
-            "why": "sequence guess: file 5 of 5 in \"Bagdad Cafe (1990–91) sitcom, Whoopi Gol\"",
-            "item": "bagdad-cafe-1990",
-            "itemTitle": "Bagdad Cafe (1990–91) sitcom, Whoopi Goldberg - partial",
-            "file": "Bagdad Cafe S2.E04 - Sixteen Candles.ia.mp4",
-            "name": "Bagdad Cafe S2",
-            "url": "https://archive.org/download/bagdad-cafe-1990/Bagdad%20Cafe%20S2.E04%20-%20Sixteen%20Candles.ia.mp4",
-            "seconds": 1336,
-            "format": "h.264 IA",
-            "playable": true,
-            "sizeMB": 120
-          },
+          "state": "MISSING",
+          "file": null,
           "alternates": []
         },
         {
@@ -305,11 +240,11 @@
               "why": "title ~ \"Sixteen Candles\" (1.00)",
               "item": "bagdad-cafe-1990",
               "itemTitle": "Bagdad Cafe (1990–91) sitcom, Whoopi Goldberg - partial",
-              "file": "Bagdad Cafe S2.E04 - Sixteen Candles.mp4",
+              "file": "Bagdad Cafe S2.E04 - Sixteen Candles.ia.mp4",
               "name": "Bagdad Cafe S2.E04 - Sixteen Candles",
-              "url": "https://archive.org/download/bagdad-cafe-1990/Bagdad%20Cafe%20S2.E04%20-%20Sixteen%20Candles.mp4",
+              "url": "https://archive.org/download/bagdad-cafe-1990/Bagdad%20Cafe%20S2.E04%20-%20Sixteen%20Candles.ia.mp4",
               "seconds": 1336,
-              "format": "MPEG4",
+              "format": "h.264 IA",
               "playable": true,
               "sizeMB": 120
             }
