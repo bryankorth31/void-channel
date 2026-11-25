@@ -473,11 +473,30 @@
     lock.textContent = phones && phones.locked ? 'Let new phones in' : 'Lock: no new phones';
     lock.setAttribute('aria-pressed', String(!!(phones && phones.locked)));
   }
+  // A phone that joins a game already running: the panel has done its work, so it steps aside by itself, as it does for
+  // Play (begin()). Before, it stayed over the game, and no button on the phone could close it: only Close or the Phones
+  // button on the big screen (the Voidverse function test's F36, 24 Nov 2026, high on a couch; Bryan: "Yes, fix it").
+  // It waits a moment first, so whoever joined sees their seat appear on the list; the Phones button brings the code
+  // back for the next phone. Before Play the panel stays, as before: more phones may be on their way.
+  const ASIDE_MS = 1500;
+  const seatsSeen = new Set();
+  let asideTimer = 0;
+  function phonesChange(list) {
+    phonesList(list);
+    const joined = list.some((p) => !seatsSeen.has(p.seat));
+    seatsSeen.clear(); for (const p of list) seatsSeen.add(p.seat);
+    if (!joined || !started || $('phones').hidden) return;
+    clearTimeout(asideTimer);
+    asideTimer = setTimeout(() => {
+      if (!started || $('phones').hidden) return;
+      showPhones(false); toast('Phone joined. Phone controller shows the code again');
+    }, ASIDE_MS);
+  }
   function showPhones(open) {
     if (KIDS) return;   // no phone controller on the kids page
     $('phones').hidden = !open; $('b-phones').setAttribute('aria-expanded', String(open));
     if (!open) return;
-    if (!phones) phones = PlayPhones.create({ card: phoneCard, change: phonesList });
+    if (!phones) phones = PlayPhones.create({ card: phoneCard, change: phonesChange });
     $('phones-code').textContent = '....'; $('phones-site').textContent = location.host + '/join';
     phones.open().then((room) => {
       $('phones-code').textContent = room.code;
@@ -494,7 +513,7 @@
   // A phone connected on the shelf, or in the game before, stays connected (Bryan, 20 Nov 2026: "connect the phone as the
   // controller prior to being in a game"): this page quietly takes back the room this tab holds, phones in their seats.
   if (!KIDS && PlayPhones.kept()) {
-    phones = PlayPhones.create({ card: phoneCard, change: phonesList });
+    phones = PlayPhones.create({ card: phoneCard, change: phonesChange });
     phones.open(true).then((r) => {
       if (!r) return;
       $('phones-code').textContent = r.code; $('phones-site').textContent = location.host + '/join';

@@ -261,3 +261,20 @@ test('pressing Touch says how to get the bar back when that press is what hid it
   // The same words as the line a found controller gets, so the two read as one voice.
   assert.ok(js.includes("toast('Controller found: the game fills the screen. Tap it for the bar');"));
 });
+
+test('the Phone controller panel steps aside when a phone joins a game already running (the Voidverse function test F36, 24 Nov 2026; Bryan: "Yes, fix it")', () => {
+  const js = read(ROOT, 'src', 'play.js');
+  // Both places that make the phones helper hand its list to the one function that watches for a new seat.
+  assert.equal(js.split('change: phonesChange });').length - 1, 2);
+  assert.ok(!js.includes('change: phonesList });'), 'no wiring is left that only redraws the list');
+  // It redraws the list first, so whoever joined sees their seat; a seat not seen before is a join.
+  assert.ok(js.includes('phonesList(list);') && js.includes('const joined = list.some((p) => !seatsSeen.has(p.seat));'));
+  // Only in a game that has started, and only if the panel is up: before Play it stays, more phones may be coming.
+  assert.ok(js.includes("if (!joined || !started || $('phones').hidden) return;"));
+  // After a moment, and only if it is still up then: closed by hand in between, nothing more happens.
+  assert.ok(js.includes('const ASIDE_MS = 1500;') && js.includes("if (!started || $('phones').hidden) return;"));
+  assert.ok(js.includes("showPhones(false); toast('Phone joined. Phone controller shows the code again');"));
+  // The same thing Play has always done, and the button that brings the code back.
+  assert.ok(js.includes("if (!$('phones').hidden) showPhones(false);   // the code steps aside for the game; the Phones button brings it back"));
+  assert.ok(js.includes("$('b-phones').onclick = () => showPhones($('phones').hidden);"));
+});
