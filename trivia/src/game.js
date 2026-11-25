@@ -283,7 +283,23 @@
   // (503 with an error, a plain page, no answer) means off, so the game starts on Out loud.
   function roomsOn(ok, j) { return !!(ok && j && j.on === true); }
 
-  const api = { ROUND_NAMES, CATEGORY_NAMES, whyLine, roomsOn, seeded, shuffle, subject, allowed, pickGame, keyAction, points, standings, answerOf, ordinal,
+  // The 18+ door (Bryan, 25 Nov 2026: "Yes, add the door"; decision A7): After dark sits behind the same door as the home
+  // page's Late Night shelf. The door is one field, adult, in the site's own blob (localStorage voidtv:me, scripts/lib/app.js):
+  // open when it holds a time. Opening it here writes only that field and keeps the rest of the blob as it is; a blob this
+  // page cannot read is left alone (null), so a list, likes or history are never lost to the door.
+  function adultOpen(raw) {
+    try { const m = JSON.parse(raw || 'null'); return !!(m && typeof m === 'object' && m.v === 1 && m.adult); } catch (e) { return false; }
+  }
+  function adultOpened(raw, now) {
+    if (raw == null || raw === '') return JSON.stringify({ v: 1, list: {}, likes: {}, history: {}, reports: {}, adult: now });
+    let m;
+    try { m = JSON.parse(raw); } catch (e) { return null; }
+    if (!m || typeof m !== 'object' || Array.isArray(m) || m.v !== 1) return null;
+    m.adult = now;
+    return JSON.stringify(m);
+  }
+
+  const api = { ROUND_NAMES, CATEGORY_NAMES, whyLine, roomsOn, adultOpen, adultOpened, seeded, shuffle, subject, allowed, pickGame, keyAction, points, standings, answerOf, ordinal,
     order, datesFor, hlRun, yearQs, guessOf, yearPoints, compose, SHELF_VALUES, buildShelf, wagerOf, settleWager };
   if (typeof module !== 'undefined' && module.exports) module.exports = api; else root.TriviaGame = api;
 })(this);

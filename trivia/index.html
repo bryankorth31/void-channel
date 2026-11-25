@@ -170,6 +170,20 @@
   </section>
 </main>
 
+<!-- The 18+ door (Bryan, 25 Nov 2026: "Yes, add the door"; decision A7): the home page's own Late Night door, shown when After
+     dark is picked while the door is shut on this browser. One door for the whole site (voidtv:me, field adult). -->
+<div id="gate" hidden role="dialog" aria-modal="true" aria-labelledby="gate-t">
+  <div class="gatebox">
+    <img src="/assets/brand/ui/doors/latenight.png" alt="">
+    <b id="gate-t">After dark</b>
+    <p>Questions on every rated show, for grown-up nights. Adults only. By entering you confirm you are 18 or older.</p>
+    <div class="acts">
+      <button class="btn gold" id="gate-yes" title="Open the 18+ door on this browser and keep After dark">I am 18 or older, enter</button>
+      <button class="btn ghost" id="gate-no" title="Keep the door shut and play Family">Not now</button>
+    </div>
+  </div>
+</div>
+
 <footer class="foot">
   <p class="give"><a class="donate-link cross-link" href="#" target="_blank" rel="noopener" title="Donate to CASH" aria-label="Donate to CASH"><img class="donate-cross" src="" alt="" width="28" height="27"></a> <span class="donate-line"></span> <a class="donate-link" href="#" target="_blank" rel="noopener" title="Donate to CASH">Donate</a></p>
   <p class="credit" id="credit">Facts from TVmaze, TMDB, Wikidata and the Internet Archive. This product uses the TMDB API but is not endorsed or certified by TMDB.</p>

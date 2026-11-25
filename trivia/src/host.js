@@ -51,6 +51,40 @@
     if (topics.length) for (const e of document.querySelectorAll('input[name="cat"]')) e.checked = topics.includes(e.value);
   })();
 
+  // The 18+ door (Bryan, 25 Nov 2026: "Yes, add the door"; decision A7, the voidtv function test's F1): After dark sits behind
+  // the home page's own Late Night door. Picking it (or a link that starts on it) with the door shut on this browser shows the
+  // door; "I am 18 or older, enter" opens it for the whole site (voidtv:me, field adult) and keeps After dark; "Not now",
+  // a click outside the box or a back key keeps it shut and picks Family again. With the door open nothing is asked.
+  const ME_KEY = 'voidtv:me';
+  let doorHere = false;      // opened on this page (also when the browser will not store it)
+  const isAfterDark = () => { const e = document.querySelector('input[name="band"]:checked'); return !!e && e.value === 'after-dark'; };
+  function doorOpen() {
+    if (doorHere) return true;
+    try { return G.adultOpen(localStorage.getItem(ME_KEY)); } catch (e) { return false; }
+  }
+  function askDoor() {
+    if (doorOpen()) return true;
+    $('gate').hidden = false;
+    $('gate-yes').focus();
+    return false;
+  }
+  function shutDoor(enter) {
+    $('gate').hidden = true;
+    if (enter) {
+      doorHere = true;
+      try { const out = G.adultOpened(localStorage.getItem(ME_KEY), Date.now()); if (out) localStorage.setItem(ME_KEY, out); } catch (e) { /* private window: open for this page only */ }
+    } else {
+      document.querySelector('input[name="band"][value="family"]').checked = true;
+      showAvailable();
+    }
+    $('start').focus();
+  }
+  $('gate-yes').addEventListener('click', () => shutDoor(true));
+  $('gate-no').addEventListener('click', () => shutDoor(false));
+  $('gate').addEventListener('click', (e) => { if (e.target === $('gate')) shutDoor(false); });
+  document.querySelector('input[name="band"][value="after-dark"]').addEventListener('change', (e) => { if (e.target.checked) askDoor(); });
+  if (isAfterDark()) askDoor();
+
   let index = null;          // trivia/bank/index.json
   const loaded = new Map();  // file name -> questions
   let game = null;           // { qs, at, opts, startedAt }
@@ -267,6 +301,7 @@
   // ---------- the game ----------
 
   async function start() {
+    if (isAfterDark() && !askDoor()) return;   // no After dark game while the 18+ door is shut
     const o = opts();
     $('start').disabled = true;
     $('avail').textContent = 'Getting the questions ready';
@@ -757,6 +792,15 @@
 
   // Keys: the same few on a keyboard, a presentation clicker and a TV remote.
   document.addEventListener('keydown', (e) => {
+    // While the 18+ door shows, its two buttons take the keys: Tab or a remote's arrows move between them, Enter (or a
+    // remote's OK) presses the one in focus, the gold one when the browser left its focus elsewhere at load, and a back key
+    // means Not now.
+    if (!$('gate').hidden) {
+      if (G.keyAction(e) === 'back') { e.preventDefault(); shutDoor(false); }
+      else if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); shutDoor(document.activeElement !== $('gate-no')); }
+      else if (/^(Tab|ArrowLeft|ArrowRight|ArrowUp|ArrowDown)$/.test(e.key)) { e.preventDefault(); (document.activeElement === $('gate-yes') ? $('gate-no') : $('gate-yes')).focus(); }
+      return;
+    }
     if (e.target && /^(INPUT|SELECT|TEXTAREA)$/.test(e.target.tagName) && e.key !== 'Enter') return;
     if (e.key === 'f' || e.key === 'F') { full(); return; }
     if ((e.key === 'r' || e.key === 'R') && clip && phase === 'ask') { playClip(); return; }
@@ -792,6 +836,6 @@
   for (const i of document.querySelectorAll('.setup input')) i.addEventListener('change', showAvailable);
   addEventListener('pagehide', closeRoom);
 
-  fetch('bank/index.json').then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); }).then((j) => { index = j; showAvailable(); $('start').focus(); })
+  fetch('bank/index.json').then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); }).then((j) => { index = j; showAvailable(); if ($('gate').hidden) $('start').focus(); })
     .catch(() => { $('avail').textContent = 'The questions did not load. Check the connection and reload the page.'; });
 })();

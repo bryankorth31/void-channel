@@ -433,3 +433,45 @@ test('with motion turned off the Listen pulse stops and the answer cards do not 
   assert.deepEqual((outside.match(/animation:[^;}]+/g) || []).map((s) => s.split(' ')[0]), ['animation:ear'], 'no other animation to still');
   for (const f of ['trivia/index.html', 'trivia/phone.html']) assert.ok(!/animation:|@keyframes/.test(read(f)), f + ' has no animation of its own');
 });
+
+// The 18+ door (Bryan, 25 Nov 2026: "Yes, add the door"; decision A7): After dark sits behind the home page's own door.
+test('18+ door: open only when the site blob holds a time in adult; Close the door (0) shuts it', () => {
+  assert.equal(G.adultOpen(null), false);
+  assert.equal(G.adultOpen(JSON.stringify({ v: 1, list: {}, adult: 1764000000000 })), true);
+  assert.equal(G.adultOpen(JSON.stringify({ v: 1, list: {}, adult: 0 })), false, 'the home page closes it with 0');
+  assert.equal(G.adultOpen('not json'), false);
+  assert.equal(G.adultOpen(JSON.stringify({ adult: 5 })), false, 'not the site blob');
+});
+
+test('18+ door: opening it writes only adult and keeps the list, likes and history; the home page reads it the same way', () => {
+  const ME = require('../scripts/lib/app-me');
+  const before = { v: 1, list: { 'the-x-files': 1 }, likes: { cheers: 1 }, history: { cheers: { se: 0, e: 3, at: 5, pos: 60 } }, reports: {}, extra: 'kept' };
+  const out = JSON.parse(G.adultOpened(JSON.stringify(before), 1764000000000));
+  assert.deepEqual(out, Object.assign({}, before, { adult: 1764000000000 }));
+  const home = ME.meClean(out);
+  assert.equal(home.adult, 1764000000000, 'the home page keeps the field');
+  assert.deepEqual(home.list, before.list);
+  const fresh = ME.meClean(JSON.parse(G.adultOpened(null, 7)));
+  assert.equal(fresh.adult, 7, 'no blob yet: a fresh one the home page accepts');
+  assert.equal(G.adultOpened('{broken', 7), null, 'a blob this page cannot read is left alone');
+  assert.equal(G.adultOpened(JSON.stringify({ v: 2, list: {} }), 7), null, 'another blob version is left alone');
+});
+
+test('18+ door: the page carries the home page\'s own door and asks it before an After dark game', () => {
+  const html = read('trivia/index.html'), host = read('trivia/src/host.js'), css = read('trivia/trivia.css'), app = read('scripts/lib/app.js');
+  assert.match(html, /<div id="gate" hidden role="dialog" aria-modal="true"/);
+  assert.match(html, /src="\/assets\/brand\/ui\/doors\/latenight\.png"/);
+  assert.match(html, /By entering you confirm you are 18 or older\./);
+  assert.match(html, /id="gate-yes"[^>]*>I am 18 or older, enter</);
+  assert.match(html, /id="gate-no"[^>]*>Not now</);
+  assert.ok(app.includes('assets/brand/ui/doors/latenight.png') && app.includes('I am 18 or older, enter'), 'the same picture and button as the home door');
+  const look = (s) => (s.match(/#gate\{[^}]*\}/) || [''])[0];
+  assert.equal(look(css), look(app), 'the same backdrop as the home door');
+  assert.match(host, /ME_KEY = 'voidtv:me'/);
+  assert.match(host, /value="after-dark"\]'\)\.addEventListener\('change', \(e\) => \{ if \(e\.target\.checked\) askDoor\(\); \}\)/, 'picking After dark asks');
+  assert.match(host, /if \(isAfterDark\(\)\) askDoor\(\);/, 'a link that starts on After dark asks');
+  assert.match(host, /async function start\(\) \{\n    if \(isAfterDark\(\) && !askDoor\(\)\) return;/, 'no After dark game while the door is shut');
+  assert.match(host, /value="family"\]'\)\.checked = true;/, 'Not now picks Family again');
+  assert.match(host, /if \(\$\('gate'\)\.hidden\) \$\('start'\)\.focus\(\);/, 'the bank loading late does not pull the focus off the door');
+  assert.match(host, /e\.key === 'Enter' \|\| e\.key === ' '\) \{ e\.preventDefault\(\); shutDoor\(document\.activeElement !== \$\('gate-no'\)\);/, 'Enter or OK presses the door button in focus');
+});
