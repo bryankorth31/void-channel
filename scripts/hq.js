@@ -39,6 +39,8 @@ const uni = require('./lib/uni'); // the University tab: Void University's sourc
 const promos = require('./lib/promos'); // the Motion and Promos tabs: motion editor, site placements, share copies
 const momentshq = require('./lib/momentshq'); // the Moments tab: what is in the news, and the rows and ad line each area shows (catalog/moments.json)
 promos.init({ nodeBin, cache: CACHE });
+const casthq = require('./lib/casthq'); // the Void Cast area: HQ starts Void Cast's own server when it is not running (Bryan, 24 Nov 2026)
+casthq.init({ nodeBin, cache: CACHE });
 const FILES = {
   list: PROFILE.listFile,
   overrides: path.join(PROFILE.catalogDir, 'overrides.json'),
@@ -502,6 +504,8 @@ const server = http.createServer(async (req, res) => {
     if (p === '/api/uni/rewrite') return send(res, 200, { text: uni.rewriteBrief(url.searchParams.get('area') || '', url.searchParams.get('id') || '') });
     if (p === '/api/uni/scaffold' && req.method === 'POST') { const b = await body(req); return send(res, 200, uni.scaffold(String(b.area || ''), String(b.name || ''))); }
     if (p === '/api/uni/live' && req.method === 'POST') { const b = await body(req); return send(res, 200, uni.setLive(String(b.slug || ''), !!b.live)); }
+    if (p === '/api/cast') return send(res, 200, await casthq.status());
+    if (p === '/api/cast/start' && req.method === 'POST') { await body(req); return send(res, 200, await casthq.start()); }
     if (p === '/api/motion') return send(res, 200, await promos.motionStatus());
     if (p === '/api/motion/start' && req.method === 'POST') { const b = await body(req); return send(res, 200, await promos.motionStart({ restart: !!b.restart })); }
     if (p === '/api/promos') return send(res, 200, { ...promos.overview(), motion: await promos.motionStatus() });

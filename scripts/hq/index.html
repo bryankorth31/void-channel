@@ -94,10 +94,12 @@ async function publish(flag){flag=flag||'';if(!(flag in PUBLISH_ASK)||!confirm(P
 // ---- Void Cast (Bryan, 19 Nov 2026: "A Void Cast area in HQ"; "the pulls and hunts can be easier in one area") ----
 // Void Cast is Bryan's private film viewer, in its own folder (void-cast) with its own server on this PC (127.0.0.1:8801).
 // It serves its own control page (hunts, posters, the Check page, the nightly, the family site); this area only shows
-// it. Void Cast allows HQ and Studio Tools, and no other page, to show it. When it is not running the area says how.
+// it. Void Cast allows HQ and Studio Tools, and no other page, to show it. When it is not running, HQ starts it (scripts/lib/casthq.js;
+// Bryan, 24 Nov 2026: "so i donyt have to hunt fpor the app on my desktop"): it starts in the background, as its desktop icon starts it,
+// and stays on until the PC restarts. Only when it will not start does the area say so, with the reason and a button to try again.
 const CAST='http://127.0.0.1:8801/?embed=1#/';
 async function castFrame(m,route){let up=true;try{await fetch('http://127.0.0.1:8801/api/ping',{mode:'no-cors',cache:'no-store'})}catch(e){up=false}
-if(!up){m.innerHTML='<div class="panel"><h2 style="margin:0 0 6px">Void Cast is not running</h2><p>Double-click <b>Void Cast</b> on the desktop once: it starts in the background and stays on until the PC restarts. Then come back here.</p><div class="row"><button onclick="render()">Try again</button></div></div>';return}
+if(!up){m.innerHTML='<p class="dim">Starting Void Cast…</p>';try{await api('/api/cast/start',{})}catch(e){m.innerHTML='<div class="panel"><h2 style="margin:0 0 6px">Void Cast would not start</h2><p>'+esc(e.message)+'</p><p class="dim">HQ starts Void Cast by itself when you open this area. Its desktop icon starts the same thing.</p><div class="row"><button onclick="render()">Try again</button></div></div>';return}}
 m.innerHTML='<iframe title="Void Cast" src="'+CAST+route+'" style="display:block;width:100%;height:calc(100vh - var(--hh,51px) - 34px);border:0;border-radius:10px;background:#07080c"></iframe>'}
 function castOverview(m){return castFrame(m,'control')}function castCheck(m){return castFrame(m,'check')}function castFamily(m){return castFrame(m,'control/family')}
 // ---- PLAY (Bryan, 20 Nov 2026: "give me a page of large chunks to keep or not keep in hq") ----
