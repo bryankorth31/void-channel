@@ -107,3 +107,25 @@ test('PLAY installs under its own name: the file its pages name is real, is copi
     assert.ok(fs.existsSync(path.join(REPO, i.src.replace(/\?.*$/, ''))), i.src + ' is a real picture in the repo');
   }
 });
+
+// Bryan, 25 Nov 2026: "S2 neon line" (the room marks, picked in the voidverse plan chat), then "Yes, draw it" and "Yes, build
+// it" for PLAY's icon. PLAY's mark is a joystick in the wordmark's pink and blue on the main icon's dark ground. The drawings
+// are play/tools/icon/*.svg; the pictures in assets/brand are those drawings at 512, 192 and 180 (iPhone) pixels.
+test('PLAY installs under its own mark: its own icon in the install file and on an iPhone home screen', () => {
+  const m = JSON.parse(read('play/manifest.webmanifest'));
+  assert.deepEqual(m.icons.map((i) => i.src.replace(/\?.*$/, '')), ['/assets/brand/play-icon-192.png', '/assets/brand/play-icon-512.png', '/assets/brand/play-icon-512-maskable.png']);
+  for (const page of ['play/index.html', 'play/game.html']) assert.ok(read(page).includes('<link rel="apple-touch-icon" href="/assets/brand/play-apple-touch-icon.png?v=1">'), page);
+  // A PNG says its own size in bytes 16 to 23.
+  const size = (f) => { const b = fs.readFileSync(path.join(REPO, 'assets', 'brand', f)); return b.readUInt32BE(16) + 'x' + b.readUInt32BE(20); };
+  assert.equal(size('play-icon-192.png'), '192x192');
+  assert.equal(size('play-icon-512.png'), '512x512');
+  assert.equal(size('play-icon-512-maskable.png'), '512x512');
+  assert.equal(size('play-apple-touch-icon.png'), '180x180');
+  for (const f of ['play-icon-512.svg', 'play-icon-512-maskable.svg']) {
+    const svg = read('play/tools/icon/' + f);
+    const colours = [...new Set(svg.match(/#[0-9a-f]{6}/g))].sort();
+    assert.deepEqual(colours, ['#161921', '#5fe3ff', '#ff4fc8'], f + ': the ground, and the wordmark\'s blue and pink, nothing else');
+  }
+  // The main app keeps its own icon: this is PLAY's alone.
+  assert.ok(!read('scripts/lib/app.js').includes('play-icon'));
+});
