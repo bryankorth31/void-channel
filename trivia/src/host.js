@@ -21,12 +21,13 @@
   const CROSS = '/assets/brand/cash-cross.png';
   for (const e of document.querySelectorAll('.donate-cross')) e.src = CROSS;
 
-  // Is voidtv.net's room service on? Phones need it (the rooms Worker is Bryan's one-time Cloudflare step). Asking for a room
-  // that is not there gets the service's own answer, {"error":"No room by that code"} (or {kind} if the code is in use); anything
-  // else (503 "not set up", a plain page, no answer) means it is off. When it is off the game starts on "Out loud" and the phones
-  // choice says so, instead of failing at Start (audit A20).
-  fetch('/api/room/2222', { cache: 'no-store' })
-    .then((r) => r.json().then((j) => (r.status === 200 && !!j.kind) || (r.status === 404 && /no room/i.test(j.error || ''))))
+  // Is voidtv.net's room service on? Phones need it (the rooms Worker is Bryan's one-time Cloudflare step). The room door
+  // answers the plain question GET /api/room with 200 {"on":true} when its rooms answer; anything else (503 "not set up",
+  // a plain page, no answer) means it is off (G.roomsOn). Asking the plain question leaves no red 404 in the console
+  // (Bryan, 24 Nov 2026: "Fix the red line"). When it is off the game starts on "Out loud" and the phones choice says so,
+  // instead of failing at Start (audit A20).
+  fetch('/api/room', { cache: 'no-store' })
+    .then((r) => r.json().then((j) => G.roomsOn(r.ok, j)))
     .catch(() => false).then((on) => {
     const phonesIn = document.querySelector('input[name="mode"][value="phones"]');
     $('phones-off').hidden = on;

@@ -178,10 +178,35 @@ test('the host plays clips from archive.org itself, waits for them before the cl
 // ---- Audit round (20 Nov 2026): A20, A21 and the cross mark ----
 test('A20: the host asks whether the room service is on and starts on Out loud when it is not', () => {
   const host = read('trivia/src/host.js');
-  assert.match(host, /fetch\('\/api\/room\/2222'/);
-  assert.match(host, /\/no room\/i\.test\(j\.error/, 'only the service\'s own answer counts as on, not any 404');
+  assert.match(host, /fetch\('\/api\/room', \{ cache: 'no-store' \}\)/, 'the plain question, no made-up room code');
+  assert.doesNotMatch(host, /\/api\/room\/2222/, 'no lookup of a room that is not there (it leaves a red 404 in the console)');
+  assert.match(host, /G\.roomsOn\(r\.ok, j\)/);
   assert.match(host, /if \(phonesIn\.checked\) loud\.checked = true;/);
   assert.match(read('trivia/index.html'), /id="phones-off" hidden> \(not switched on yet\)/);
+});
+
+test('red line: only 200 {on: true} counts as phone rooms on; every other answer is off', () => {
+  assert.equal(G.roomsOn(true, { on: true }), true);
+  assert.equal(G.roomsOn(false, { error: 'Phone rooms are not set up on this site yet' }), false, '503 not bound');
+  assert.equal(G.roomsOn(false, { error: 'Phone rooms are not answering right now' }), false, '503 not answering');
+  assert.equal(G.roomsOn(true, { error: 'No room by that code' }), false, 'a lookup answer is not an on');
+  assert.equal(G.roomsOn(true, { on: 'yes' }), false);
+  assert.equal(G.roomsOn(true, null), false, 'a plain page');
+});
+
+test('red line: the local room door answers the plain question with on, so the big screen offers phones here too', async () => {
+  const http = require('http');
+  const rooms = require('../play/rooms/local.js').createRooms();
+  const server = http.createServer((req, res) => {
+    const p = new URL(req.url, 'http://x').pathname;
+    if (p === '/api/room' || p === '/api/room/') return rooms.status(req, res);
+    res.writeHead(404); res.end();
+  });
+  await new Promise((ok) => server.listen(0, '127.0.0.1', ok));
+  try {
+    const r = await fetch('http://127.0.0.1:' + server.address().port + '/api/room', { cache: 'no-store' });
+    assert.equal(G.roomsOn(r.ok, await r.json()), true);
+  } finally { server.close(); }
 });
 
 test('A21: the opening words follow the mode', () => {

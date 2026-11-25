@@ -279,7 +279,11 @@
 
   function whyLine(q) { const w = whyRaw(q); return w ? (/[!?]$/.test(w) ? w : w.replace(/\.+$/, '') + '.') : null; }
 
-  const api = { ROUND_NAMES, CATEGORY_NAMES, whyLine, seeded, shuffle, subject, allowed, pickGame, keyAction, points, standings, answerOf, ordinal,
+  // Are phone rooms on? The room door answers GET /api/room with 200 {on: true} only when its rooms answer; anything else
+  // (503 with an error, a plain page, no answer) means off, so the game starts on Out loud.
+  function roomsOn(ok, j) { return !!(ok && j && j.on === true); }
+
+  const api = { ROUND_NAMES, CATEGORY_NAMES, whyLine, roomsOn, seeded, shuffle, subject, allowed, pickGame, keyAction, points, standings, answerOf, ordinal,
     order, datesFor, hlRun, yearQs, guessOf, yearPoints, compose, SHELF_VALUES, buildShelf, wagerOf, settleWager };
   if (typeof module !== 'undefined' && module.exports) module.exports = api; else root.TriviaGame = api;
 })(this);
