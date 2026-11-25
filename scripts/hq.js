@@ -420,7 +420,14 @@ const server = http.createServer(async (req, res) => {
   const p = url.pathname;
   const SLUG_OK = /^[a-z0-9][a-z0-9-]*$/;
   try {
-    if (p === '/' || p === '/index.html') return send(res, 200, fs.readFileSync(path.join(__dirname, 'hq', 'index.html'), 'utf8').replace('__HQ_TOKEN__', TOKEN), MIME['.html']);
+    // HQ loads its new code by itself (scripts/lib/hqreload.js; Bryan, 24 Nov 2026: "Yes, build it"): when the page is opened and the
+    // code on disk is no longer the code this process loaded, HQ hands over to a fresh copy of itself before it draws the page.
+    if (p === '/' || p === '/index.html') {
+      if (RELOAD.check().stale && RELOAD.canReload().ok) { res.on('finish', () => RELOAD.reload(server)); return send(res, 200, WAIT_PAGE, MIME['.html']); }
+      return send(res, 200, fs.readFileSync(path.join(__dirname, 'hq', 'index.html'), 'utf8').replace('__HQ_TOKEN__', TOKEN), MIME['.html']);
+    }
+    if (p === '/api/reload' && req.method === 'GET') return send(res, 200, RELOAD.state());
+    if (p === '/api/reload' && req.method === 'POST') { await body(req); const st = RELOAD.state(); if (st.stale && st.canReload) res.on('finish', () => RELOAD.reload(server)); return send(res, 200, { ...st, reloading: !!(st.stale && st.canReload) }); }
     if (p === '/api/ping' && req.method === 'POST') return send(res, 200, { ok: true }); // does nothing; the doctor and the tests use it to see whether the guards above let a call through
     // PLAY's games-to-add page (the PLAY assistant's file), shown in the PLAY area's frame: HQ itself may frame it.
     if (p === '/play/more-chunks') { const f = path.join(__dirname, '..', 'audit', 'play-mode', 'weed', 'more-chunks.html'); if (!fs.existsSync(f)) return send(res, 404, { error: 'The PLAY games-to-add page is not made yet.' }); res.writeHead(200, { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store', 'x-frame-options': 'SAMEORIGIN' }); return res.end(fs.readFileSync(f)); }
@@ -534,15 +541,28 @@ const server = http.createServer(async (req, res) => {
 
 function start(opts = {}) {
   const port = opts.port || PORT;
+  // A copy started by a hand-over (HQ_RELOADED, scripts/lib/hqreload.js) may find the old HQ still letting go of the port: it waits
+  // for it, up to five seconds. Any other start fails at once when the port is taken, as before.
+  let waits = process.env.HQ_RELOADED ? 20 : 0;
   return new Promise((ok, no) => {
-    server.once('error', no);
-    server.listen(port, '127.0.0.1', () => {
-      console.log(`VOIDtv HQ at http://localhost:${port}  (Ctrl+C to stop)`);
-      if (opts.open || process.argv.includes('--open')) { try { execSync(`start http://localhost:${port}`, { windowsHide: true, stdio: 'ignore', shell: true }); } catch (e) { /* fine */ } }
-      ok({ port, server });
-    });
+    const listen = () => {
+      const onError = (e) => { if (e && e.code === 'EADDRINUSE' && waits-- > 0) return setTimeout(listen, 250); no(e); };
+      server.once('error', onError);
+      server.listen(port, '127.0.0.1', () => {
+        server.removeListener('error', onError);
+        console.log(`VOIDtv HQ at http://localhost:${port}  (Ctrl+C to stop)`);
+        if (opts.open || process.argv.includes('--open')) { try { execSync(`start http://localhost:${port}`, { windowsHide: true, stdio: 'ignore', shell: true }); } catch (e) { /* fine */ } }
+        ok({ port, server });
+      });
+    };
+    listen();
   });
 }
+// The self-reload watches the files this process has loaded, so it is set up last, when they are all loaded. Only an HQ started as
+// its own program ("node scripts/hq.js": HQ.cmd, Studio Tools) hands over; inside the desktop app, or loaded by a test, it only reports.
+const { create: makeReload, WAIT_PAGE } = require('./lib/hqreload');
+const RELOAD = makeReload({ root: ROOT, entry: __filename, args: process.argv.slice(2).filter((a) => a !== '--open'), nodeBin, log: path.join(CACHE, 'hq-reload.log'),
+  busy: () => LISTENING.size > 0, inApp: require.main !== module || !!process.versions.electron });
 module.exports = { start, PORT, ROOT, guards: { hostAllowed, originAllowed, mediaType }, stop: { stopHqJob, stopListedProcess, sameProcess, processInfo, scriptRe, builderScript },
   jobs: { startJob, jobList, jobOver } };
 if (require.main === module) start().catch((e) => { console.error(e.message); process.exit(1); });

@@ -53,6 +53,13 @@ const HQ_TOKEN=(document.querySelector('meta[name=hq-token]')||{}).content||''; 
 // Every question and every save goes through api(). A failure is thrown in words he can read; a save of a show's decisions or of the
 // show list drops the kept Shows list, so that list is never an old one (audit 19 Nov 2026, H2 and H4).
 const api=async(p,o)=>{let r,j;try{r=await fetch(p,o?{method:'POST',headers:{'content-type':'application/json','x-hq-token':HQ_TOKEN},body:JSON.stringify(o)}:undefined)}catch(e){throw new Error('HQ did not answer. Is HQ still open?')}try{j=await r.json()}catch(e){throw new Error('HQ gave an answer this page cannot read (status '+r.status+')')}if(j.error)throw new Error(j.error);if(o&&(p.startsWith('/api/override/')||p==='/api/list'))SHOWS=null;return j};
+// HQ loads its new code by itself when it is opened (scripts/lib/hqreload.js; Bryan, 24 Nov 2026: "Yes, build it"). A page that was
+// already open when the code changed asks when it comes back into view, and every five minutes: if HQ has new code and can hand
+// over, the page reloads (never while something is being typed); if it cannot, one line says why.
+let NEWCODE_SAID='';async function newCodeCheck(){let s;try{s=await api('/api/reload')}catch(e){return}if(!s||!s.stale)return;
+ if(s.canReload){const a=document.activeElement;if(a&&/^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName))return;location.reload();return}
+ if(s.why&&s.why!==NEWCODE_SAID){NEWCODE_SAID=s.why;toast('HQ has new code but is still running the old: '+s.why,'wait','newcode')}}
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)newCodeCheck()});setInterval(newCodeCheck,300000);
 const fmt=(n)=>n==null?'':Number(n).toLocaleString();const pct=(a,b)=>b?Math.round(a/b*100):0;
 // HQ has three areas (B, 15 Nov 2026, docs/PLAN-hq-areas.md): Void TV, Kids, University. Each area has its own tabs; the
 // switcher in the header picks the area. Old links (#shows, #university/<area>) still open where they did.
