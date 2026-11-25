@@ -1169,7 +1169,14 @@
   $('b-file-save').onclick = saveFile;
   $('b-file-load').onclick = () => { $('file-in').value = ''; $('file-in').click(); };
   $('file-in').onchange = () => loadFile($('file-in').files[0]);
-  $('b-touch').onclick = () => { if (padMode) { padMode = false; touch = true; } else touch = !touch; place.sig = ''; place(); };
+  // In a short window the buttons bring the handheld look, and in that look the bar slides away. Pressing Touch said
+  // nothing about that, so the bar was simply gone (the Voidverse function test's F17, 24 Nov 2026, at 1278 by 513;
+  // Bryan: "Yes, add it"). The line is said only when this press is what hid the bar.
+  $('b-touch').onclick = () => {
+    if (padMode) { padMode = false; touch = true; } else touch = !touch;
+    place.sig = ''; place();
+    if (touch && !paused && document.body.classList.contains('shell')) toast('Buttons on. Tap the picture for the bar');
+  };
   // iPhone has no fullscreen for a web page: the button shows only where the browser can do it.
   if (!document.fullscreenEnabled) $('b-full').hidden = true;
   $('b-pop').onclick = popOut;   // shown once the game draws (firstFrame): before Play there is nothing to pop out

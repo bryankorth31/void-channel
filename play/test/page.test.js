@@ -247,3 +247,17 @@ test('rule B2, the wordmark in its own colours on every PLAY page: "voidtv" neon
     assert.ok(!html.includes('.mark span{color:' + PINK + '}') && !html.includes('#top b span{color:var(--pink)}'), f);
   }
 });
+
+test('pressing Touch says how to get the bar back when that press is what hid it (the Voidverse function test F17, 24 Nov 2026; Bryan: "Yes, add it")', () => {
+  const js = read(ROOT, 'src', 'play.js'), css = read(ROOT, 'play.css');
+  // In a short window the buttons bring the handheld look, and in that look the bar slides away.
+  assert.ok(js.includes('const shell = touch && !padMode && (started || FRAME) && Math.min(innerWidth, innerHeight) <= 540;'));
+  assert.ok(css.includes('body.shell:not(.paused):not(.showbar) .bar{transform:translateY(-100%);transition:transform .2s}'));
+  // The line is said after the page has taken its new look, and only when the buttons are on, the game is not paused
+  // (a paused game shows the bar) and the look is the handheld one: a tall window keeps its bar and is told nothing.
+  assert.ok(js.includes("place.sig = ''; place();\n    if (touch && !paused && document.body.classList.contains('shell')) toast('Buttons on. Tap the picture for the bar');"));
+  // What the line promises is true: a tap on the picture shows the bar for three seconds.
+  assert.ok(js.includes("document.body.classList.add('showbar'); clearTimeout(barTimer); barTimer = setTimeout(() => document.body.classList.remove('showbar'), 3000);"));
+  // The same words as the line a found controller gets, so the two read as one voice.
+  assert.ok(js.includes("toast('Controller found: the game fills the screen. Tap it for the bar');"));
+});
