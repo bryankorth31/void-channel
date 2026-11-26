@@ -140,6 +140,11 @@ const brandSrc = path.join(ROOT, 'assets', 'brand');
     // manifest.webmanifest is PLAY's own install file: the shelf and the game page both name it, and without it the address
     // answered with the home page, so PLAY could not install under its own name (voidverse join J12, 25 Nov 2026).
     for (const f of ['index.html', 'game.html', 'play.css', 'shelf.css', 'pad.html', 'join.html', 'manifest.webmanifest']) fs.copyFileSync(path.join(P, f), path.join(dst, f));
+    // A shared game link shows PLAY's own share card (voidverse join J6; Bryan, 25 Nov 2026: "A, neon sign"). The tags live in
+    // play/index.html and reach the game page here, never in play/game.html itself: the Kids build makes its game page from
+    // that file, and Kids takes no share card. og:url stays off the game page, so a shared game link keeps its own address.
+    { const tags = (fs.readFileSync(path.join(P, 'index.html'), 'utf8').match(/<meta (?:property="og:|name="twitter:)[^>]*>/g) || []).filter((t) => !t.includes('og:url'));
+      const g = path.join(dst, 'game.html'); fs.writeFileSync(g, fs.readFileSync(g, 'utf8').replace('<link rel="icon" href="/favicon.ico">', tags.join('') + '\n<link rel="icon" href="/favicon.ico">')); }
     // Where each controller's parts sit (play/layouts.json, set by Bryan in play/tools/layout.html; the pads read it).
     if (fs.existsSync(path.join(P, 'layouts.json'))) fs.copyFileSync(path.join(P, 'layouts.json'), path.join(dst, 'layouts.json'));
     // The join page also answers at /join, the short address people type from the big screen (phone controllers, Trivia Nights).

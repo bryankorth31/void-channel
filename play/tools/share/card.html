@@ -1,0 +1,21 @@
+<!doctype html>
+<!-- PLAY's share card (voidverse join J6; Bryan, 25 Nov 2026: "A, neon sign"): the main neon sign with PLAY's mark, name and
+     line beside it, the same layout as the sister sites' cards. Open this page at 1200 by 630 and save the picture as
+     assets/brand/play-og.jpg; when the picture changes, raise ?v= on the og:image line in play/index.html. -->
+<meta charset="utf-8">
+<title>PLAY share card</title>
+<style>
+@font-face{font-family:'Unbounded';font-weight:200 900;src:url(../../../assets/brand/fonts/unbounded-latin.woff2) format('woff2')}
+html,body{margin:0;background:#07080c}
+.card{position:relative;width:1200px;height:630px;overflow:hidden;background:#07080c;color:#fff;font-family:'Segoe UI',Arial,sans-serif}
+.bg{position:absolute;inset:0;background:url(../../../assets/brand/og.jpg) -245px 0/1200px 630px no-repeat}
+.fade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,8,12,0) 46%,rgba(7,8,12,.86) 60%,#07080c 70%)}
+.side{position:absolute;left:700px;width:470px;top:0;height:630px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.side svg{width:190px;height:190px}
+.name{font-family:'Unbounded',sans-serif;font-weight:800;font-size:76px;margin-top:10px;color:#ff4fc8;letter-spacing:.02em;text-shadow:0 0 18px rgba(255,79,200,.75),0 0 44px rgba(255,79,200,.45)}
+.line{font-size:27px;line-height:1.35;margin-top:14px;color:#f3f4f8;text-shadow:0 0 10px rgba(0,0,0,.9)}
+</style>
+<div class="card"><div class="bg"></div><div class="fade"></div><div class="side">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><filter id="n" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="1.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><g stroke-linecap="round" stroke-linejoin="round" filter="url(#n)" stroke-width="3.4"><path d="M31 42 L26 23" fill="none" stroke="#ff4fc8"/><circle cx="25" cy="17" r="7" fill="#5fe3ff" stroke="#5fe3ff"/><rect x="10" y="42" width="44" height="13" rx="5" fill="none" stroke="#ff4fc8"/><path d="M16 48.5 H24" fill="none" stroke="#ff4fc8"/><circle cx="44" cy="37.5" r="3.5" fill="#5fe3ff" stroke="#5fe3ff"/></g></svg>
+<div class="name">PLAY</div><div class="line">Old games from the Internet Archive.<br>Free, no account.</div>
+</div></div>

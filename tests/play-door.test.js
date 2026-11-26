@@ -129,3 +129,33 @@ test('PLAY installs under its own mark: its own icon in the install file and on 
   // The main app keeps its own icon: this is PLAY's alone.
   assert.ok(!read('scripts/lib/app.js').includes('play-icon'));
 });
+
+// Voidverse join J6 (Bryan, 25 Nov 2026: "Yes, your picks" in the voidverse plan chat; "Yes, draw it" and "A, neon sign" in the
+// PLAY lead chat): a pasted link to PLAY shows PLAY's own title, line and picture, not nothing. The picture is the main neon
+// sign with PLAY's mark, name and line beside it, as on the sister sites' cards; its drawing is play/tools/share/card.html.
+test('PLAY has its own share card, a shared game link shows it, and the Kids game page gets none', () => {
+  const page = read('play/index.html');
+  const tag = (k) => (page.match(new RegExp('<meta (?:property|name)="' + k + '" content="([^"]*)">')) || [])[1];
+  assert.equal(tag('og:title'), 'PLAY | voidtv.net');
+  assert.equal(tag('og:site_name'), 'voidtv.net');
+  assert.equal(tag('og:description'), JSON.parse(read('play/manifest.webmanifest')).description);
+  assert.equal(tag('og:image'), 'https://voidtv.net/assets/brand/play-og.jpg?v=1');
+  assert.equal(tag('og:url'), 'https://voidtv.net/play/');
+  assert.equal(tag('twitter:card'), 'summary_large_image');
+  // A JPEG says its size in its first frame header (marker C0 or C2): height, then width.
+  const b = fs.readFileSync(path.join(REPO, 'assets', 'brand', 'play-og.jpg'));
+  let i = 2, size = '';
+  while (i < b.length && !size) { const m = b[i + 1], len = b.readUInt16BE(i + 2); if (m === 0xC0 || m === 0xC2) size = b.readUInt16BE(i + 7) + 'x' + b.readUInt16BE(i + 5); i += 2 + len; }
+  assert.equal(size, '1200x630');
+  assert.ok(b.length < 300 * 1024, 'small enough for a link preview');
+  assert.ok(fs.existsSync(path.join(REPO, 'play', 'tools', 'share', 'card.html')), 'the drawing the picture is made from');
+  // The game page: the build copies the shelf's tags onto it, all but og:url, so a shared game link keeps its own address.
+  const game = read('play/game.html');
+  assert.doesNotMatch(game, /og:|twitter:/, 'never in the file itself: the Kids build makes its game page from it, and Kids takes no share card');
+  const src = read('scripts/site.js');
+  assert.ok(src.includes("(fs.readFileSync(path.join(P, 'index.html'), 'utf8').match(/<meta (?:property=\"og:|name=\"twitter:)[^>]*>/g) || []).filter((t) => !t.includes('og:url'));"));
+  assert.ok(src.includes("replace('<link rel=\"icon\" href=\"/favicon.ico\">', tags.join('') + '\\n<link rel=\"icon\" href=\"/favicon.ico\">')"));
+  const tags = (page.match(/<meta (?:property="og:|name="twitter:)[^>]*>/g) || []).filter((t) => !t.includes('og:url'));
+  assert.equal(tags.length, 8);
+  assert.ok(game.includes('<link rel="icon" href="/favicon.ico">'), 'the spot the build puts them at');
+});
