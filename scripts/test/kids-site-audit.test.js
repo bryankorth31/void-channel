@@ -73,6 +73,26 @@ function archiveOk(rel, text, url, at) {
   if (rel.endsWith('.html')) { const fn = text.lastIndexOf('function filesFor(', at); return url === 'https://archive.org/download/' && fn >= 0 && !text.slice(fn, at).includes('\nfunction '); }
   return false;
 }
+// Kids Computer games (/games/, built by scripts/lib/games/build.js) ship PLAY's own player files as they are, so their
+// code holds addresses that voidtv.net's PLAY uses. Each one passes only for what it is on Kids, and only while play.js
+// keeps the kids guard that makes it so; if PLAY drops a guard, the address fails here (Bryan, 26 Nov 2026: "Teach the
+// Kids site check the games folder").
+const KIDS_GUARDS = [
+  "const KIDS = document.documentElement.hasAttribute('data-kids');",            // play.js knows a kids page
+  "for (const e of document.querySelectorAll('.donate, #give, #give-card')) e.remove();", // no donation in front of a child
+  "if (KIDS) $('from').textContent = 'The game plays straight from the Internet Archive.';", // the Archive in words, no link
+];
+function gamesOk(dir, rel, url) {
+  if (rel === 'games/LICENSE.txt') return true; // the licence's own text: names, never a link on the page
+  if (!/^games\/src\/[a-z0-9-]+\.js$/.test(rel)) return false;
+  if (/^https:\/\/archive\.org\/(?:cors|services\/img)\//.test(url)) return true; // the game's own files and pictures, fetched from the Archive as the video player does
+  const play = fs.existsSync(path.join(dir, 'games', 'src', 'play.js')) ? fs.readFileSync(path.join(dir, 'games', 'src', 'play.js'), 'utf8') : '';
+  if (!KIDS_GUARDS.every((g) => play.includes(g))) return false;
+  if (rel === 'games/src/cards.js' && url === 'https://archive.org/details/') return true; // the game's Archive page: on Kids said in words, never linked
+  if (rel === 'games/src/cards.js' && /^https:\/\/github\.com\/[A-Za-z0-9-]+\/[A-Za-z0-9._-]+\/tree\/[0-9a-f]{40}$/.test(url)) return true; // each engine's source offer: on Kids it fills a hidden span, the offer is on For grown-ups
+  if (rel === 'games/src/play.js' && /^https:\/\/square\.link\//.test(url)) return true; // the CASH donation: play.js removes it on a kids page
+  return false;
+}
 function audit(dir) {
   const problems = [];
   for (const [rel, text] of shipped(dir)) {
@@ -84,6 +104,7 @@ function audit(dir) {
       if (url === 'http://www.w3.org/1999/xhtml' && rel === 'assets/kids/three/three.min.js') continue; // the XHTML namespace inside three.js (Void Village): a name, not a request
       if (url === 'http://www.sitemaps.org/schemas/sitemap/0.9' && rel === 'sitemap.xml') continue; // the sitemap namespace (B, 17 Nov 2026: "Add a sitemap"): a name, not a request
       if (archiveOk(rel, text, url, m.index)) continue;
+      if (rel.startsWith('games/') && gamesOk(dir, rel, url)) continue;
       if (url === PORTAL && rel.endsWith('.html') && text.slice(Math.max(0, m.index - 200), m.index).includes('const PORTALS=')) continue; // behind the grown-up check
       if (/^https:\/\/square\.link\//.test(url) && rel.endsWith('.html') && text.slice(Math.max(0, m.index - 40), m.index).includes('const KDONATE=')) continue; // the CASH donation, also only behind the grown-up check (B, 17 Nov 2026: grown-ups only, replacing C9)
       problems.push(rel + ': ' + url);
