@@ -210,7 +210,7 @@ test('the Christmas moment is saved switched off, waiting for Bryan, and picks C
 test('the voidtv.net home page: the engine loads on voidtv.net only, the card and row sit right under Live TV, Clear leaves a moment list', () => {
   const APP = fs.readFileSync(path.join(REPO, 'scripts', 'lib', 'app.js'), 'utf8');
   assert.ok(APP.includes("const momentsScript = PROFILE.name === 'voidtv' && mode !== 'embed' && data.momentsV ?"), 'never on Kids or the one-file preview');
-  assert.ok(APP.includes('const indexScript = momentsScript + areasScript'), 'before the page script that reads it');
+  assert.ok(APP.includes('const indexScript = memoryScript + momentsScript + areasScript'), 'before the page script that reads it');
   assert.ok(APP.includes("<div id=\"onnow\">'+onNowHtml()+'</div>'+momentHome();"), 'right under Live TV and On now (Live TV stays first)');
   assert.ok(APP.includes("goHome(){for(const k of ['moment',"), 'the logo and Clear leave a moment list');
   assert.ok(APP.includes('let r=(state.moment?momentList():SHOWS).filter(s=>!gated(s)'), 'a moment list keeps the 18+ door and narrows by the other filters');

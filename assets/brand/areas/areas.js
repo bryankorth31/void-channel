@@ -310,7 +310,13 @@
   // ---- the small card: one other area, the next one on each visit (an even turn through them, not a random pick)
   var turn = (function () {
     var n = 0;
-    try { n = (parseInt(localStorage.getItem('va-turn'), 10) || 0) + 1; localStorage.setItem('va-turn', String(n)); }
+    // Kept as voidtv:menu-turn (the one prefix, voidverse plan M1); the count under its old name, va-turn, is carried over. On
+    // voidtv.net this goes through the memory block (assets/brand/memory/memory.js); a site that does not load it does the same here.
+    try {
+      var M = window.VoidMemory, was = M ? M.get('voidtv:menu-turn') : (localStorage.getItem('voidtv:menu-turn') || localStorage.getItem('va-turn'));
+      n = (parseInt(was, 10) || 0) + 1;
+      if (M) M.set('voidtv:menu-turn', String(n)); else localStorage.setItem('voidtv:menu-turn', String(n));
+    }
     catch (e) { n = Math.floor(Math.random() * 1000); }
     return n;
   })();
