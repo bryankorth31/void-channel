@@ -225,18 +225,25 @@ function assemble({ preview = false } = {}) {
     .sort((a, b) => b.eps - a.eps);
 
   // TV movies and specials: one-episode shows in their own rows; Hallmark and faith studios tag themselves.
-  for (const f of (fs.existsSync(MOV_DIR) && !PROFILE.approvedOnly ? fs.readdirSync(MOV_DIR) : [])) { // TV movies are not on an approved list
+  // An approved-only site (kids) takes a film only when a person approved it by name in list.json "films" (Bryan, 26 Nov 2026:
+  // 13 Christmas specials for Kids, "yes, add those"); a film's season ("christmas") makes it a seasonal row, shown only in season.
+  const FILMS = PROFILE.approvedOnly ? new Map((LIST.films || []).filter((x) => x && x.approved === true && x.tmdb).map((x) => [String(x.tmdb), x])) : null;
+  for (const f of (fs.existsSync(MOV_DIR) && (!PROFILE.approvedOnly || FILMS.size) ? fs.readdirSync(MOV_DIR) : [])) {
     if (!f.endsWith('.json')) continue;
     const m = readJson(path.join(MOV_DIR, f), null);
+    const film = FILMS && m ? FILMS.get(String(m.tmdbId)) : null;
+    if (FILMS && !film) continue;
     if (!movieShips(m, OV)) continue;
     const ref = TVM_BY_ID[m.tmdbId] || {};
     const companies = (ref.companies || []).join(' ');
     const tags = [];
     if (/hallmark/i.test(companies)) tags.push('Family & Hallmark');
     if (/pure ?flix|affirm|kingdom story|crossflix|trinity broadcasting|tbn/i.test(companies)) tags.push('Christian');
+    const season = film && film.season === 'christmas' ? 'christmas' : undefined;
+    if (season) tags.push('Christmas');
     shows.push({
-      show: m.title, slug: 'movie-' + m.tmdbId, type: m.kind === 'special' ? 'Specials' : 'TV Movies', network: (ref.companies || [])[0] || (m.kind === 'special' ? 'Special' : 'TV Movie'), tags,
-      year: m.year, runtime: m.runtime, poster: m.poster, backdrop: m.backdrop, overview: m.overview, genres: [], rating: m.rating, country: null, matchedAt: m.huntedAt,
+      show: m.title, slug: 'movie-' + m.tmdbId, type: m.kind === 'special' ? 'Specials' : 'TV Movies', network: (ref.companies || [])[0] || (m.kind === 'special' ? 'Special' : 'TV Movie'), tags, season, ...(film ? { approved: true } : {}),
+      year: m.year, runtime: m.runtime, poster: PROFILE.features.tmdbImages ? m.poster : selfPoster('movie-' + m.tmdbId), backdrop: PROFILE.features.tmdbImages ? m.backdrop : null, overview: m.overview, genres: [], rating: m.rating, country: null, matchedAt: m.huntedAt,
       seasons: [{ season: 1, episodes: [withSec({ n: 1, name: m.title + (m.year ? ' (' + m.year + ')' : ''), state: m.state, url: m.file.url, min: Math.round(m.file.seconds / 60), item: m.file.item }, m.file.seconds)] }],
       eps: 1, cast: [], crew: [], credits: {}, adult: !!ref.adult,
     });
@@ -297,7 +304,7 @@ function assemble({ preview = false } = {}) {
 }
 
 // The index entry: everything the browse page needs; seasons and cast load per show in split mode.
-const indexEntry = (s) => ({ show: s.show, slug: s.slug, type: s.type, people: (s.cast || []).slice(0, 8).map((c) => c.name).join(', ') || undefined, adult: (s.type === 'Late Night' || (s.tags || []).includes('Late Night') || s.adult) ? 1 : undefined, network: s.network, year: s.year, runtime: s.runtime, tags: s.tags, poster: s.poster, backdrop: s.backdrop, overview: s.overview && s.overview.length > 380 ? s.overview.slice(0, 380).replace(/\s+\S*$/, '') + '…' : s.overview, genres: s.genres, rating: s.rating, matchedAt: s.matchedAt && s.matchedAt.slice(0, 10), added: ((s.addedAt || s.matchedAt) || '').slice(0, 10) || undefined, eps: s.eps, seasonCount: s.seasons.length, cg: s.cg, na: PROFILE.approvedOnly && !s.approved ? 1 : undefined });
+const indexEntry = (s) => ({ show: s.show, slug: s.slug, type: s.type, people: (s.cast || []).slice(0, 8).map((c) => c.name).join(', ') || undefined, adult: (s.type === 'Late Night' || (s.tags || []).includes('Late Night') || s.adult) ? 1 : undefined, network: s.network, year: s.year, runtime: s.runtime, tags: s.tags, poster: s.poster, backdrop: s.backdrop, overview: s.overview && s.overview.length > 380 ? s.overview.slice(0, 380).replace(/\s+\S*$/, '') + '…' : s.overview, genres: s.genres, rating: s.rating, matchedAt: s.matchedAt && s.matchedAt.slice(0, 10), added: ((s.addedAt || s.matchedAt) || '').slice(0, 10) || undefined, eps: s.eps, seasonCount: s.seasons.length, cg: s.cg, na: PROFILE.approvedOnly && !s.approved ? 1 : undefined, season: s.season || undefined });
 const showFile = (s, data) => {
   const links = (data && data.links && data.links[s.slug]) || {};
   const ids = new Set([...s.cast, ...s.crew].map((c) => c.id));
@@ -698,16 +705,18 @@ function report(){const s=state.show;if(!s||!s.seasons||!s.seasons[state.se])ret
 function playAll(){const s=state.show;if(!s||!s.seasons)return;const r=resume(s);play(r.se,r.e)}
 function kidsHero(s){const r=ME.history[s.slug];const at=r&&s.seasons[r.se]&&s.seasons[r.se].episodes[r.e];const ov=s.overview||'';
  return '<div class="khero">'+(s.poster?'<div class="p"><img src="'+s.poster+'" alt=""></div>':genPoster(s))+'<div class="kinfo"><h1>'+esc(s.show)+'</h1>'+(s.na?'<span class="na">not approved</span>':'')+(ov?'<p>'+esc(ov.length>300?ov.slice(0,300).replace(/\\s+\\S*$/,'')+'…':ov)+'</p>':'')+'<div class="g">'+esc([s.network,s.year,s.eps+' episode'+(s.eps===1?'':'s')].filter(Boolean).join(' · '))+'</div><div class="acts"><button class="btn kplay" onclick="playAll()"><i class="ico play lg"></i>Play all</button>'+(at?'<span class="g">from ${PROFILE.theme === 'kids' ? "'+kSE(s.seasons[r.se].season,at.n)+'" : "S'+String(s.seasons[r.se].season).padStart(2,'0')+'E'+String(at.n).padStart(2,'0')+'"}, where you left off</span>':'')+'</div></div></div>'}
-function browse(){const q=state.q.trim().toLowerCase();const vis=SHOWS.filter(s=>!hidden(s));let h='';
+function kidsInSeason(s){if(!s.season)return true;const d=new Date(),m=d.getMonth()+1,day=d.getDate();return s.season==='christmas'&&((m===11&&day>=25)||m===12)}
+function browse(){const q=state.q.trim().toLowerCase();const vis=SHOWS.filter(s=>!hidden(s)&&kidsInSeason(s));let h='';
  if(q||state.type||state.tag){const list=vis.filter(s=>(!state.type||s.type===state.type)&&(!state.tag||(s.tags||[]).includes(state.tag))&&(!q||s.show.toLowerCase().includes(q))).sort((a,b)=>a.show.localeCompare(b.show));
   if(q.length>=3&&q!==state.lastQ){clearTimeout(state.qT);state.qT=setTimeout(()=>{state.lastQ=q;track('search',{})},1200)}
   h='<div class="khead"><button class="btn" onclick="state.type=\\'\\';state.q=\\'\\';if($(\\'q\\'))$(\\'q\\').value=\\'\\';state.tag=null;render();window.scrollTo(0,0)"><i class="ico back"></i>All shows</button><h2>'+esc(state.type||state.tag||('“'+state.q.trim()+'”'))+'<small>'+list.length+' show'+(list.length===1?'':'s')+'</small></h2></div>'+(list.length?'<div class="grid">'+list.map(s=>card(s,'grid')).join('')+'</div>':'<div class="kempty"><p>No show by that name here.</p></div>');
  } else {
   h+='<section class="khello"><img src="'+BASE+'assets/kids/mark.svg" alt=""><div><h1>Pick a show!</h1><p>'+esc(${JSON.stringify(PROFILE.tagline || '')})+'</p></div><div class="kdoors"><a class="kplay" href="'+BASE+'play/"><svg viewBox="0 0 100 100" aria-hidden="true"><rect x="10" y="22" width="36" height="52" rx="8" fill="#4cc9f0" stroke="#1b1f3b" stroke-width="6" transform="rotate(-8 28 48)"/><rect x="54" y="22" width="36" height="52" rx="8" fill="#ffd23f" stroke="#1b1f3b" stroke-width="6" transform="rotate(8 72 48)"/><circle cx="28" cy="48" r="8" fill="#ff5fa2"/><circle cx="72" cy="48" r="8" fill="#ff5fa2"/></svg><b>Play and Learn</b></a><a class="kplay kgames" href="'+BASE+'games/"><svg viewBox="0 0 100 100" aria-hidden="true"><rect x="10" y="16" width="80" height="54" rx="8" fill="#2ec4b6" stroke="#1b1f3b" stroke-width="6"/><rect x="20" y="26" width="60" height="34" rx="3" fill="#fff8e7" stroke="#1b1f3b" stroke-width="4"/><path d="M38 70L34 86H66L62 70" fill="#ffd23f" stroke="#1b1f3b" stroke-width="6" stroke-linejoin="round"/><circle cx="50" cy="43" r="7" fill="#ff5fa2"/></svg><b>Computer games</b></a><a class="kplay kvill" href="'+BASE+'village/"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M14 52L50 18L86 52" fill="#ff5fa2" stroke="#1b1f3b" stroke-width="6" stroke-linejoin="round"/><rect x="24" y="50" width="52" height="38" rx="4" fill="#fff8e7" stroke="#1b1f3b" stroke-width="6"/><rect x="42" y="62" width="16" height="26" fill="#2ec4b6" stroke="#1b1f3b" stroke-width="5"/></svg><b>Void Village</b></a><a class="kplay kbrave" href="'+BASE+'brave/"><svg viewBox="0 0 100 100" aria-hidden="true"><rect x="22" y="6" width="10" height="88" rx="4" fill="#ffd23f" stroke="#1b1f3b" stroke-width="5"/><rect x="68" y="6" width="10" height="88" rx="4" fill="#ffd23f" stroke="#1b1f3b" stroke-width="5"/><rect x="28" y="22" width="44" height="9" rx="3" fill="#fff" stroke="#1b1f3b" stroke-width="5"/><rect x="28" y="46" width="44" height="9" rx="3" fill="#fff" stroke="#1b1f3b" stroke-width="5"/><rect x="28" y="70" width="44" height="9" rx="3" fill="#fff" stroke="#1b1f3b" stroke-width="5"/></svg><b>Brave steps</b></a></div></section>';
   if(!SHOWS.length)h+='<div class="kempty"><b>No shows here yet.</b><p>A person picks every show on '+esc(SITE)+' before it appears, and none has been approved yet. Check back soon.</p></div>';
+  const xmas=vis.filter(s=>s.season==='christmas');if(xmas.length)h+=shelf('Christmas',xmas,'tag:Christmas');
   const cont=histShows().slice(0,30);if(cont.length)h+=shelf('Keep watching',cont,'continue');
   const fav=listShows();if(fav.length)h+=shelf('Favourites',fav,'list');
-  const done=new Set();for(const [kind,name] of HOME_ORDER.concat(TYPES.map(t=>['type',t]))){const key=kind+':'+name;if((kind!=='type'&&kind!=='tag')||done.has(key))continue;done.add(key);const row=vis.filter(s=>kind==='tag'?(s.tags||[]).includes(name):s.type===name);if(row.length)h+=shelf(name,row,key)}
+  const done=new Set();for(const [kind,name] of HOME_ORDER.concat(TYPES.map(t=>['type',t]))){const key=kind+':'+name;if((kind!=='type'&&kind!=='tag')||done.has(key))continue;done.add(key);const row=vis.filter(s=>!s.season&&(kind==='tag'?(s.tags||[]).includes(name):s.type===name));if(row.length)h+=shelf(name,row,key)}
  }
  killPlayer();$('main').innerHTML=h}
 ${PROFILE.portals.length ? GATE_JS : ''}`;
