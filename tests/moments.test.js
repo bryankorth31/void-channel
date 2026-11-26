@@ -12,6 +12,9 @@ const M = require('../assets/brand/moments/moments.js');
 
 const REPO = path.join(__dirname, '..');
 const DATA = JSON.parse(fs.readFileSync(path.join(REPO, 'catalog', 'moments.json'), 'utf8'));
+// The GTA rule switched on, whatever HQ says today: Bryan switches moments on and off in HQ (GTA off, 26 Nov 2026), and these
+// tests hold the rule, not the switch. A switched-off moment showing nothing is held on its own below.
+const GTA_ON = { ...DATA.moments.find((m) => m.id === 'gta'), on: true };
 const at = (d) => new Date(d + 'T12:00:00');
 const base = (o) => ({ id: 'x', name: 'X', on: true, approved: '2026-11-01', start: '2026-11-01', end: '2026-11-30', areas: { play: { title: 'X row', match: { titles: ['x'] } } }, ...o });
 
@@ -99,7 +102,7 @@ test('catalog/moments.json: every moment passes, keeps the house rules', () => {
 });
 
 test('the GTA moment picks the four first Grand Theft Autos on PLAY, in order, and not later ones', () => {
-  const gta = DATA.moments.find((m) => m.id === 'gta');
+  const gta = GTA_ON;
   assert.equal(gta.kids, false, 'never on Kids');
   assert.equal(gta.ad.line, 'Before the world only played 1 game...', "Bryan's own line");
   // PLAY's shelf rows as the PLAY assistant carded them (audit/play-mode/consoles/gta-rows.json): shelf ids differ from items.
@@ -110,12 +113,13 @@ test('the GTA moment picks the four first Grand Theft Autos on PLAY, in order, a
     { id: 'gta-gbc', item: 'grand-theft-auto-game-boy-gbc-enhanced', title: 'Grand Theft Auto', year: 1999, system: 'gbcolor' },
     { id: 'super-mario-world', title: 'Super Mario World', year: 1990, system: 'snes', plays: 900000 },
   ];
-  const r = M.rows(DATA.moments, 'play', shelf, { now: at('2026-11-23') });
+  const r = M.rows([GTA_ON], 'play', shelf, { now: at('2026-11-23') });
   assert.equal(r.length, 1);
   assert.equal(r[0].title, 'The first Grand Theft Autos');
   assert.deepEqual(r[0].items.map((g) => g.item), gta.areas.play.order);
-  assert.equal(M.rows(DATA.moments, 'play', shelf, { now: at('2026-11-23'), kids: true }).length, 0);
-  assert.equal(M.rows(DATA.moments, 'play', [...shelf, { id: 'gta5', title: 'Grand Theft Auto V', year: 2013 }], { now: at('2026-11-23') })[0].items.length, 4);
+  assert.equal(M.rows([GTA_ON], 'play', shelf, { now: at('2026-11-23'), kids: true }).length, 0);
+  assert.equal(M.rows([GTA_ON], 'play', [...shelf, { id: 'gta5', title: 'Grand Theft Auto V', year: 2013 }], { now: at('2026-11-23') })[0].items.length, 4);
+  assert.equal(M.rows([{ ...GTA_ON, on: false }], 'play', shelf, { now: at('2026-11-23') }).length, 0, 'switched off in HQ: no row');
 });
 
 // 4. HQ > Moments (scripts/lib/momentshq.js) on a copy: save, refuse in words, switch, remove; and what the build publishes.
@@ -231,7 +235,7 @@ test('a moment page with nothing here says where the moment lives, never "it may
     vm.runInContext(src, ctx);
     return (id) => { ctx.state.moment = id; return vm.runInContext('noMatch()', ctx); };
   };
-  const gta = DATA.moments.find((m) => m.id === 'gta');
+  const gta = GTA_ON;
   const on = page([gta], '2026-12-01')('gta');
   assert.match(on, /This one is on <b>PLAY<\/b>\./);
   assert.match(on, /<a class="btn gold" href="\/play\/">Play the first ones<\/a>/, 'the button is the moment\'s own ad words and goes to PLAY');

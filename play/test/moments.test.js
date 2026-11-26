@@ -13,7 +13,9 @@ const PM = require('../src/moments-shelf.js');
 
 const REPO = path.join(__dirname, '..', '..');
 const shelf = JSON.parse(fs.readFileSync(path.join(REPO, 'play', 'shelf', 'index.json'), 'utf8')).games;
-const moments = JSON.parse(fs.readFileSync(path.join(REPO, 'catalog', 'moments.json'), 'utf8')).moments;
+// The GTA rule switched on, whatever HQ says today (Bryan switched GTA off in HQ, 26 Nov 2026): these tests hold the rule and the
+// layout, not the switch; tests/moments.test.js holds that a switched-off moment shows nothing.
+const moments = JSON.parse(fs.readFileSync(path.join(REPO, 'catalog', 'moments.json'), 'utf8')).moments.map((m) => (m.id === 'gta' ? { ...m, on: true } : m));
 const now = new Date('2026-11-23T12:00:00');
 
 test('the GTA moment picks every first Grand Theft Auto on the shelf, in its order, and shows only with two', () => {
