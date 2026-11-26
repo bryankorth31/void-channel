@@ -190,14 +190,14 @@ test('rowsMany: one row from the shows rule and the movies rule, one copy each, 
   assert.equal(M.rowsMany([m, base({ id: 'other', start: '2026-12-01', end: '2026-12-31', areas: { shows: rule } })], parts, { now, only: 'other' })[0].id, 'other');
 });
 
-test('the Christmas moment is saved switched off, waiting for Bryan, and picks Christmas titles once he switches it on', () => {
+test('the Christmas moment shows only when Bryan has switched it on (he did in HQ, 26 Nov 2026), and picks Christmas titles', () => {
   const x = DATA.moments.find((m) => m.id === 'christmas');
   assert.ok(x, 'saved');
-  assert.equal(x.on, false, 'Bryan: engine only, no moment switched on');
-  assert.equal(x.approved, '', 'not approved yet: HQ shows "waiting for your yes"');
+  if (x.on) assert.ok(x.approved, 'switched on means his yes is recorded');
   assert.equal(x.ad.line, 'Before streaming, there was Christmas TV.');
   assert.equal(x.kids, false);
-  assert.equal(M.rowsMany(DATA.moments, [{ area: 'movies', items: [] }], { now: at('2026-12-10') }).filter((r) => r.id === 'christmas').length, 0, 'off: nothing shows');
+  const off = { ...x, on: false };
+  assert.equal(M.rowsMany([off], [{ area: 'movies', items: [] }], { now: at('2026-12-10') }).length, 0, 'off: nothing shows');
   const on = { ...x, on: true, approved: '2026-11-22' };
   const films = ['A Christmas Carol', 'The Year Without a Santa Claus', 'Christmas in Connecticut', 'A Nutcracker Christmas', 'Heat'].map((t, i) => ({ id: 'movie-' + i, title: t, year: 1990 + i }));
   const shows = [{ id: 'noels-house-party', title: "Noel's House Party", year: 1991 }, { id: 'christmas-in-rockefeller-center', title: 'Christmas In Rockefeller Center', year: 1997 }];
@@ -243,6 +243,30 @@ test('a moment page with nothing here says where the moment lives, never "it may
   assert.match(page([noAd], '2026-12-01')('gta'), />Go to PLAY<\/a>/, 'with no ad words the button says where it goes');
   const nowhere = { ...gta, areas: { live: { title: 'x', match: { titles: ['x'] } } } };
   assert.match(page([nowhere], '2026-12-01')('gta'), /Nothing to show for this one here yet\./, 'a room with no page of its own yet is not linked');
+});
+
+test('a moment with a live rule gets its own Live TV channel, last, clean, with its dates (Bryan, 26 Nov 2026: "C, both")', () => {
+  const { channelLists } = require('../scripts/lib/app');
+  const sh = (slug, show, o) => ({ slug, show, type: 'Sitcoms', year: '1990', eps: 10, ...o });
+  const SHOWS = [sh('friends', 'Friends', { eps: 200 }), sh('christmas-in-rockefeller-center', 'Christmas In Rockefeller Center', { type: 'Specials', eps: 12 }),
+    sh('movie-1', 'A Christmas Carol', { type: 'TV Movies', eps: 1 }), sh('movie-2', 'Christmas After Dark', { type: 'TV Movies', eps: 1, adult: 1 }),
+    sh('movie-3', 'Santa, Jr.', { type: 'TV Movies', eps: 1 }), sh('movie-4', 'Heat', { type: 'TV Movies', eps: 1 }), sh('movie-5', 'Christmas Kept Off', { type: 'TV Movies', eps: 3 })];
+  const rule = { title: 'Christmas', match: { titles: ['christmas', 'santa'] } };
+  const moment = { id: 'christmas', name: 'Christmas', rule, start: '2026-11-25', end: '2026-12-31', pick: M.pick };
+  const { lists } = channelLists(SHOWS, ['Sitcoms'], new Set(['movie-5']), null, null, [], [moment]);
+  const last = lists[lists.length - 1];
+  assert.equal(last.id, 'moment-christmas', 'after every other channel, so no channel moves');
+  assert.equal(last.name, 'Christmas');
+  assert.deepEqual(last.when, ['2026-11-25', '2026-12-31']);
+  assert.deepEqual(last.list.map((s) => s.slug).sort(), ['christmas-in-rockefeller-center', 'movie-1', 'movie-3'], 'no 18+ film, none kept off Live TV, nothing off the rule');
+  const without = channelLists(SHOWS, ['Sitcoms'], new Set(['movie-5']), null, null, []).lists;
+  assert.deepEqual(lists.slice(0, -1).map((l) => l.id), without.map((l) => l.id), 'every other channel is as it was');
+  const thin = channelLists(SHOWS, ['Sitcoms'], new Set(), null, null, [], [{ ...moment, rule: { match: { titles: ['heat'] } } }]).lists;
+  assert.ok(!thin.some((l) => l.id === 'moment-christmas'), 'too little to fill a channel makes none');
+  const APP = fs.readFileSync(path.join(REPO, 'scripts', 'lib', 'app.js'), 'utf8');
+  assert.ok(APP.includes('TV=A.channels.filter(c=>!c.when||(c.when[0]<=day&&day<=c.when[1]))'), 'the page leaves the channel out before its start and after its end, by the viewer\'s own date');
+  assert.ok(APP.includes('<span class="mch" data-m="\'+esc(r.id)+\'">\'+momentChan(r.id)+\'</span>'),'the gold card offers the channel only when it is in the plan');
+  assert.ok(APP.includes("onNowHtml();momentChans();"), 'and once Live TV has loaded');
 });
 
 test('HQ reads On Demand from the list visitors get, handed in here', async () => {

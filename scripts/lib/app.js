@@ -68,7 +68,7 @@ const slugify = (s) => String(s).toLowerCase().replace(/&/g, 'and').replace(/[^a
 // channel order, with the place of each show in the FULL list the page indexes.
 // Shelves that are their own channel for shows not in English (B, 25 Oct 2026, "own chan").
 const OWN_LANGUAGE_ROWS = new Set(['Anime', 'World TV']);
-function channelLists(shows, types, off, foreign, offAll, radio) {
+function channelLists(shows, types, off, foreign, offAll, radio, moments) {
   const isAdultShow = (s) => s.type === 'Late Night' || (s.tags || []).includes('Late Night') || !!s.adult;
   const idx = new Map(shows.map((s, i) => [s.slug, i])); // against the FULL list the page indexes; filtering first put every item after an adult show off by one
   // Old-time radio shows (scripts/lib/radio.js) sit on their own radio channels only, never on a TV channel.
@@ -104,15 +104,25 @@ function channelLists(shows, types, off, foreign, offAll, radio) {
   // The radio channels (PLAN-ia-treatments T5; Bryan, 24 Nov 2026: "Go"), from catalog/radio/channels.json: after every other
   // channel, so no channel's id or place moves.
   for (const c of radio || []) make(c.id, c.name, 'radio', (c.shows || []).map((sl) => radioBySlug.get(sl)).filter(Boolean));
+  // A moment's own channel (Bryan, 26 Nov 2026, Christmas: "C, both"): a published moment with a live rule gets channel
+  // moment-<id>, last of all so no channel's id or place moves. It picks from the same series and films the mixed channels
+  // use (no 18+, none kept off Live TV, none not in English), by the moment's rule (assets/brand/moments/moments.js), and
+  // carries its dates (when), so the page leaves it out before its start and after its end.
+  for (const m of moments || []) {
+    const items = series.concat(movies).map((s) => ({ id: s.slug, title: s.show, year: +s.year || null, genres: (s.genres || []).concat(s.tags || []), people: s.people ? String(s.people).split(', ') : [], s }));
+    const n = lists.length;
+    make('moment-' + m.id, m.name, 'row', m.pick(m.rule, items).map((x) => x.s));
+    if (lists.length > n) lists[n].when = [m.start, m.end];
+  }
   return { lists, idx };
 }
 // The schedule plan (scripts/lib/tvgrid.js): per channel the pools of shows for each daypart, plus one shared library of typical
 // minutes and episode runs. This is what data/tv.json carries.
-function buildTv(shows, types, foreign, radio) {
+function buildTv(shows, types, foreign, radio, moments) {
   const OFF = readJson(path.join(PROFILE.catalogDir, 'live-tv-off.json'), { shows: {} });
   const offSet = new Set(Object.keys(OFF.shows || {}));
   const offAll = new Set(Object.keys(OFF.shows || {}).filter((k) => OFF.shows[k] && OFF.shows[k].everywhere));
-  const { lists, idx } = channelLists(shows, types, offSet, foreign, offAll, radio);
+  const { lists, idx } = channelLists(shows, types, offSet, foreign, offAll, radio, moments);
   const lib = TVGRID.buildLib(shows);
   // The filler library for the gaps before each daypart (B, 20 Oct): B's originals (catalog/fillers.json, written by HQ) first,
   // then TV specials of 60 minutes or less. One list; a show that is both counts as an original.
@@ -125,6 +135,7 @@ function buildTv(shows, types, foreign, radio) {
     const recs = L.list.map((s) => { const i = idx.get(s.slug); used.add(i); return Object.assign({ i, sl: s.slug }, lib.infos[i]); });
     const c = TVGRID.planChannel({ id: L.id, name: L.name, kind: L.kind }, recs, lib.rt);
     if (L.adult) c.adult = true;
+    if (L.when) c.when = L.when;
     if (L.kind === 'network') { const spn = sp.filter((e) => e[2] !== 0 && shows[e[0]].network === L.name).map((e) => e[0]); if (spn.length) c.spn = spn; }
     // A radio channel's breaks take no TV specials and no video originals (ns, tvgrid.js pickFill): its own short shows, then the cards.
     if (L.kind === 'radio') c.ns = 1;
@@ -286,7 +297,15 @@ function assemble() {
   const TW = require('./tvweek');
   const lang = Object.fromEntries(LIST.shows.map((s) => [s.name, s.language]));
   const foreign = new Set(shows.filter((s) => lang[s.show] && lang[s.show] !== 'en').map((s) => s.slug));
-  const tvLineup = TW.lineup(buildTv(shows, types, foreign, RAD.channels),TW.read(path.join(PROFILE.catalogDir, 'tv-lineup.json')), +process.env.VOID_TV_NOW || Date.now()); // VOID_TV_NOW: tests pin the clock
+  // Moments with a live rule get their own channel (only on voidtv.net; read lazily so a copy of scripts/ without assets/ still loads).
+  let momentChans = [];
+  if (PROFILE.name === 'voidtv') {
+    const MP = require('./moments-pub');
+    const ME_ = require(MP.ENGINE);
+    momentChans = MP.publicMoments(path.join(PROFILE.catalogDir, 'moments.json'), +process.env.VOID_TV_NOW || Date.now()).moments
+      .filter((m) => m.areas && m.areas.live).map((m) => ({ id: m.id, name: m.areas.live.title || m.name, rule: m.areas.live, start: m.start, end: m.end, pick: ME_.pick }));
+  }
+  const tvLineup = TW.lineup(buildTv(shows, types, foreign, RAD.channels, momentChans),TW.read(path.join(PROFILE.catalogDir, 'tv-lineup.json')), +process.env.VOID_TV_NOW || Date.now()); // VOID_TV_NOW: tests pin the clock
   const tv = tvLineup.tv;
   // Trivia Night (trivia/, plan PLAN-voidtv-trivia; B, 20 Nov 2026: "Yes, a Trivia row"): a home row when the question bank is
   // built, on voidtv.net only (never on the kids site). It carries only the question counts per topic, for the cards.
@@ -589,8 +608,8 @@ video{width:100%;max-height:70vh;background:#000;border-radius:8px;outline:none}
 footer{position:relative;z-index:1;color:var(--fg);font-size:13px;padding:20px;border-top:1px solid var(--line);margin-top:20px}
 .enjoy{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:60;width:min(360px,calc(100vw - 32px));background:var(--panel,#11131a);border:1px solid var(--line);border-radius:14px;padding:14px 40px 14px 16px;box-shadow:0 10px 40px rgba(0,0,0,.5);display:flex;flex-wrap:wrap;gap:10px;align-items:center;transition:opacity .5s}.enjoy.out{opacity:0}.enjoy b{flex:1 1 auto}.enjoy p{margin:0;font-size:13px;line-height:1.45;color:var(--dim,#aab)}.enjoy-x{position:absolute;top:6px;right:8px;background:none;border:0;color:var(--dim,#aab);font-size:20px;cursor:pointer;padding:2px 6px}
 @media(max-width:860px){.player{grid-template-columns:1fr;grid-template-rows:none}.player>.vcol,.player>.eps,.player>.inep{grid-column:auto;grid-row:auto}.player>.inep{order:3;margin-top:4px}.eps{max-height:48vh}.hero .t b{font-size:19px}}
-.mcard{display:flex;align-items:center;gap:18px;margin:16px 20px 4px;padding:16px 20px;border:1px solid var(--gold);border-radius:14px;background:radial-gradient(120% 140% at 90% 0%,rgba(220,32,169,.2),transparent 60%),radial-gradient(90% 120% at 0% 100%,rgba(242,169,59,.14),transparent 60%),rgba(11,12,18,.86)}.mcard .mk{display:block;color:var(--gold);font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}.mcard b{display:block;font-family:Unbounded,system-ui,sans-serif;font-weight:700;font-size:clamp(18px,2.4vw,26px);line-height:1.15;margin:4px 0 6px}.mcard small{color:var(--dim);font-size:13px}.mcard .btn{margin-left:auto;white-space:nowrap}.mabout{margin:-4px 20px 8px;color:var(--dim);font-size:13px;max-width:760px}
-@media(max-width:600px){.mcard{flex-direction:column;align-items:flex-start;margin:12px 10px 4px;padding:14px 16px}.mcard .btn{margin-left:0}.mabout{margin:-4px 12px 8px}}
+.mcard{display:flex;align-items:center;gap:18px;margin:16px 20px 4px;padding:16px 20px;border:1px solid var(--gold);border-radius:14px;background:radial-gradient(120% 140% at 90% 0%,rgba(220,32,169,.2),transparent 60%),radial-gradient(90% 120% at 0% 100%,rgba(242,169,59,.14),transparent 60%),rgba(11,12,18,.86)}.mcard .mk{display:block;color:var(--gold);font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}.mcard b{display:block;font-family:Unbounded,system-ui,sans-serif;font-weight:700;font-size:clamp(18px,2.4vw,26px);line-height:1.15;margin:4px 0 6px}.mcard small{color:var(--dim);font-size:13px}.mcard .btn{margin-left:auto;white-space:nowrap}.mcard .mch:empty{display:none}.mcard .mch:not(:empty){margin-left:auto}.mcard .mch .btn,.mcard .mch:not(:empty)+.btn{margin-left:0}.mabout{margin:-4px 20px 8px;color:var(--dim);font-size:13px;max-width:760px}
+@media(max-width:600px){.mcard{flex-direction:column;align-items:flex-start;margin:12px 10px 4px;padding:14px 16px}.mcard .btn,.mcard .mch:not(:empty){margin-left:0}.mabout{margin:-4px 12px 8px}}
 `;
 
 // Browser code. MODE 'embed': all data inline. MODE 'split': index inline, shows + graph fetched from BASE.
@@ -640,8 +659,10 @@ function momentParts(){const ok=SHOWS.filter(s=>!gated(s)&&!hidden(s)).filter(s=
 function momentRows(o){return MOMENTS&&window.VoidMoments&&VoidMoments.rowsMany?VoidMoments.rowsMany(MOMENTS,momentParts(),o):[]}
 function momentName(id){const m=(MOMENTS||[]).find(x=>x.id===id);if(!m)return '';const a=m.areas||{};return (a.shows&&a.shows.title)||(a.movies&&a.movies.title)||m.name||''}
 function momentKind(list){const n=list.length,f=list.filter(s=>s.slug.indexOf('movie-')===0).length;return f===n?(n===1?'film':'films'):f?'shows and films':(n===1?'show':'shows')}
+function momentChan(id){const c=TV&&TV.find(x=>x.id==='moment-'+id);return c?'<button type="button" class="btn gold" data-c="'+esc(c.id)+'" onclick="tune(this.dataset.c)">Watch the '+esc(c.name)+' channel</button>':''}
+function momentChans(){document.querySelectorAll('.mch').forEach(e=>{if(!e.innerHTML)e.innerHTML=momentChan(e.dataset.m)})}
 function momentHome(){let h='';for(const r of momentRows()){const list=r.items.map(x=>x.s),n=list.length;
- if(r.ad)h+='<section class="mcard"><div class="mtxt"><span class="mk">In the news</span><b>'+esc(r.ad.line)+'</b><small>'+n+' '+momentKind(list)+', free, no account</small></div><button type="button" class="btn gold" data-m="'+esc(r.id)+'" onclick="momentOpen(this.dataset.m)">'+esc(r.ad.go||'See them all')+'</button></section>';
+ if(r.ad)h+='<section class="mcard"><div class="mtxt"><span class="mk">In the news</span><b>'+esc(r.ad.line)+'</b><small>'+n+' '+momentKind(list)+', free, no account</small></div><span class="mch" data-m="'+esc(r.id)+'">'+momentChan(r.id)+'</span><button type="button" class="btn gold" data-m="'+esc(r.id)+'" onclick="momentOpen(this.dataset.m)">'+esc(r.ad.go||'See them all')+'</button></section>';
  h+=shelf(r.title,list,'moment-'+r.id,n).replace('</h2>','<button type="button" class="all" data-m="'+esc(r.id)+'" onclick="momentOpen(this.dataset.m)">See all ›</button></h2>'+(r.about?'<p class="mabout">'+esc(r.about)+'</p>':''))}
  return h}
 function momentOpen(id){Object.assign(state,{type:'',tag:'',genre:'',network:'',decade:'',q:'',moment:id,menu:null});const q=$('q');if(q)q.value='';listSync();render();window.scrollTo(0,0)}
@@ -960,7 +981,7 @@ let TV_TOKEN=0;
 // episodes that failed in the last hour, per channel: the airing gives its place to another episode of the same show, and a dead episode cannot loop (Bryan, 20 Oct 2026)
 const TV_DEAD={};const tvKey=(c,a)=>c.id+':'+a.s+':'+a.se+'x'+a.n;const tvDead=(c,a)=>TV_DEAD[tvKey(c,a)]>Date.now()-36e5;
 // The plan is laid onto this page's own show list by name (TVG.adopt), so a show removed since either file was built drops out instead of breaking the TV (B, 21 Oct 2026).
-async function ensureTV(){if(TV&&TVLIB)return TV;const j=typeof TVJ!=='undefined'?TVJ:await (await fetch(BASE+'data/tv.json')).json();const A=TVG.adopt(j,SHOWS.map(s=>s.slug));TVLIB=A;TV=A.channels;return TV}
+async function ensureTV(){if(TV&&TVLIB)return TV;const j=typeof TVJ!=='undefined'?TVJ:await (await fetch(BASE+'data/tv.json')).json();const A=TVG.adopt(j,SHOWS.map(s=>s.slug));TVLIB=A;const d=new Date(),day=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');TV=A.channels.filter(c=>!c.when||(c.when[0]<=day&&day<=c.when[1]));return TV}
 const chanNow=(c,at)=>TVG.chanNow(c,TVLIB,at);
 const mmss=(sec)=>{sec=Math.max(0,Math.round(sec));const h=Math.floor(sec/3600),m=Math.floor(sec%3600/60);return h?h+'h '+String(m).padStart(2,'0')+'m':m+' min'};
 const kindName={all:'every show',row:'row',collection:'collection',network:'network'};
@@ -1229,7 +1250,7 @@ async function homeTvStart(){const el=$('htv');if(!el)return;
  if(!TV){el.innerHTML='<div class="loading"><span class="signal"></span><span>Searching the Void for a signal…</span></div>';try{await ensureTV()}catch(_){el.innerHTML='';return}}
  if(viewNow()!=='home'||$('htv')!==el)return;
  const chans=TV.filter(c=>!c.adult);const cur=chans.find(c=>c.id===lastChan())||chans.find(c=>c.id==='void')||chans[0];if(!cur){el.innerHTML='';return}
- state.chan=cur.id;const on=$('onnow');if(on&&!on.innerHTML)on.innerHTML=onNowHtml();
+ state.chan=cur.id;const on=$('onnow');if(on&&!on.innerHTML)on.innerHTML=onNowHtml();momentChans();
  const still=!HTV.forced&&((navigator.connection&&navigator.connection.saveData)||matchMedia('(prefers-reduced-motion: reduce)').matches);
  killPlayer();el.className='home-tv htv-on';
  el.innerHTML='<div class="tv"><div class="screen">'+(still?swirlHtml('HTV.forced=true;homeTvStart()'):'<div class="hv"><div class="vpx-host" id="vph"></div>'+(HTV.introDone||stillWanted()?'':introHtml())+(HTV.forced?'':'<button class="snd" onclick="homeSound()">Tap for sound</button>')+'</div>')+'<div class="osd"></div></div><p class="hl">Live TV, the same for everyone, always on. <a onclick="go(\\'tv\\')">Full guide</a></p></div>';
