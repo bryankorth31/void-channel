@@ -131,6 +131,9 @@ function kidsGamePage(html, version) {
     [/<p id="credits" class="credits">[\s\S]*?<\/p>/, '<p id="credits" class="credits"><span id="from">The game plays straight from the Internet Archive.</span>'
       + '<span hidden><span id="core-name"></span><span id="core-licence"></span><span id="src-core"></span><span id="core-terms"><span id="core-terms-link"></span></span></span></p>'],
     [/<p class="cheat-src">[\s\S]*?<\/p>/, '<p class="cheat-src"><span id="cheat-src"></span></p>'],
+    // The phone remote's script: Kids serves no /remote/, so the address answered the Kids page and the browser refused it
+    // on every game page (the PLAY auditor, 26 Nov 2026; Bryan: "Yes, drop it", no phone remote on Kids games).
+    [/\s*<script src="\/remote\/src\/follow\.js"[^>]*><\/script>/, ''],
     // Scripts carry this build, so a new build reaches a browser at once (as voidtv.net's site build does).
     [/(src="src\/[a-z0-9-]+\.js)"/g, '$1?v=' + version + '"'],
   ];

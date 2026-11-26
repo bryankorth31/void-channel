@@ -20,6 +20,7 @@ test('the kids copy of the game page keeps nothing that leaves the site, and no 
   assert.doesNotMatch(h, /target="_blank"/);
   assert.doesNotMatch(h, /id="give"|give-card|class="donate"|Donate/i, 'no donation in front of a child');
   assert.doesNotMatch(h, /href="\/takedown"/);
+  assert.doesNotMatch(h, /\/remote\//, 'no phone remote script: Kids serves no /remote/ (Bryan, 26 Nov 2026: "Yes, drop it")');
   for (const id of ['from', 'core-name', 'core-licence', 'src-core', 'core-terms', 'core-terms-link', 'cheat-src', 'b-games', 'b-phones', 'cover-phone', 'm-phones']) assert.match(h, new RegExp('id="' + id + '"'), id + ' is still there for PLAY\'s script');
   assert.match(h, /<script src="src\/play\.js\?v=abcdef012345">/, 'PLAY\'s own script, with this build');
   assert.match(fs.readFileSync(path.join(PLAY, 'src', 'play.js'), 'utf8'), /const KIDS = document\.documentElement\.hasAttribute\('data-kids'\);/, 'PLAY knows a kids page');
@@ -29,7 +30,7 @@ test('a change to play/game.html that the kids copy cannot place stops the build
   assert.throws(() => G.kidsGamePage('<html lang="en"><head></head><body></body></html>', 'abcdef012345'), /play\/game\.html changed/);
   const sneaky = '<html lang="en"><head><meta name="theme-color" content="#07080c"><meta content="PLAY"><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png"><title>PLAY | voidtv.net</title><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="play.css"></head><body>'
     + '<a class="mark" href="/">x</a><span class="tag">PLAY</span><button type="button" id="give"></button><div id="give-card"></div><p class="donate"></p><p id="credits" class="credits"></p><p class="cheat-src"></p>'
-    + '<a href="https://example.com/">out</a><script src="src/play.js"></script></body></html>';
+    + '<a href="https://example.com/">out</a><script src="src/play.js"></script><script src="/remote/src/follow.js" defer data-area="play"></script></body></html>';
   assert.throws(() => G.kidsGamePage(sneaky, 'abcdef012345'), /a link out is left/);
 });
 
