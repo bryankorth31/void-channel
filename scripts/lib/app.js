@@ -758,6 +758,16 @@ function typed(){if(state.show||state.view){go('');return}listSync(/[?&]q=/.test
 /* A search or filter that finds nothing says so, and a search offers the titles one typing slip away (audit of 20 Nov 2026, A10). The 18+ shows stay out while the door is closed. */
 ${NEAR_SRC}
 function noMatch(){if(state.moment)return momentElse(state.moment);const q=state.q.trim(),filt=[state.type,state.tag,state.genre,state.network,state.decade].filter(Boolean);if(!q)return '<div class="nomatch"><p>No shows fit '+(filt.length>1?'these filters together':'this filter')+'. Press Clear to start over.</p></div>';const pool=SHOWS.filter(s=>!gated(s)).filter(s=>!s.radio),near=nearTitles(q,pool.map(s=>s.show),6).map(i=>pool[i]);return '<div class="nomatch"><p>Nothing matches <b>“'+esc(q)+'”</b>'+(filt.length?' in '+esc(filt.join(', ')):'')+'. '+(near.length?'Closest titles:':'Check the spelling, or press Clear and browse.')+'</p></div>'+(near.length?'<div class="grid">'+near.map(s=>card(s,'grid')).join('')+'</div>':'')}
+// The ripple (Bryan, 26 Nov 2026: "i dont want the static stalesness ... a ripple that acts upon things to gently change whats seen",
+// "go pls" for daily and gentle). The kind rows on the home page (sitcoms, animation, the tags) are no longer in the very same order
+// every day. The first three cards of a row stay: the best known lead, always. Each card after them drifts up to five places
+// forward or back, and one show from deep in the row (past the twelfth card) gets the fifth place as the day's guest, so a show
+// that was out of sight gets a turn. It moves by the day, not by the reload: the same day draws the same wall, so a show seen at
+// noon is where it was in the evening. Which shows are in a row, and the order of the rows, are untouched (H4). Continue watching,
+// My List, Recently added and Top rated are not rippled: their order is their meaning.
+function ripHash(s){let h=2166136261;for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)}return h>>>0}
+function rippleDay(){const d=new Date();return d.getFullYear()*372+d.getMonth()*31+d.getDate()}
+function ripple(list,key,day){const KEEP=3,DRIFT=5,DEEP=12;if(list.length<=KEEP+DRIFT)return list;if(day==null)day=rippleDay();const rest=list.slice(KEEP).map((s,i)=>({s,i,v:i+ripHash(day+'|'+key+'|'+s.slug)%(2*DRIFT+1)-DRIFT}));rest.sort((a,b)=>a.v-b.v||a.i-b.i);const out=list.slice(0,KEEP).concat(rest.map(x=>x.s));if(list.length>DEEP+1){const guest=list[DEEP+ripHash(day+'|guest|'+key)%(list.length-DEEP)];out.splice(out.indexOf(guest),1);out.splice(KEEP+1,0,guest)}return out}
 function browse(){let list=filtered();if(!state.q)list=list.filter(s=>!hidden(s));const any=state.type||state.genre||state.network||state.decade||state.tag||state.q||state.moment;
  const bar=filterBar(list);
  let h='';
@@ -778,7 +788,7 @@ function browse(){let list=filtered();if(!state.q)list=list.filter(s=>!hidden(s)
   const cont=histShows().slice(0,30);if(cont.length)h+=shelf('Continue watching',cont,'continue');
   const mine=listShows();if(mine.length)h+=shelf('My List',mine,'list');
   // 3. the first rows: well-known kinds, right under the TV; the rest of the rows follow further down
-  const done=new Set();const put=(kind,name)=>{const key=kind+':'+name;if(done.has(key))return;done.add(key);const rows=list.filter(s=>kind==='tag'?(s.tags||[]).includes(name):s.type===name);const art=rows.filter(s=>s.poster);if(art.length)h+=shelf(name,art,key,rows.length)};
+  const done=new Set();const put=(kind,name)=>{const key=kind+':'+name;if(done.has(key))return;done.add(key);const rows=list.filter(s=>kind==='tag'?(s.tags||[]).includes(name):s.type===name);const art=rows.filter(s=>s.poster);if(art.length)h+=shelf(name,ripple(art,key),key,rows.length)};
   for(const t of ['90s Sitcoms','Animated','Adult Swim','Documentary & Geographic'])put('type',t);
   // 4. the donation box, below the first rows
   h+='<div class="support'+(state.supportOpen?' open':'')+'"><img class="cross" src="'+BASE+'assets/brand/cash-cross.png" alt=""><div class="sp"><b>${BRAND} is free and stays free.</b> <span class="l2">Donations fund the real-world work of CASH.</span><div class="more">The shows belong to the Internet Archive; what we add is a better way to find and watch them. That is CASH\\'s work: finding ways for people to have good things that fit a busy life and a budget stretched to the max. No set amount, never required. If that is work worth supporting, give back and be part of it. <a onclick="go(\\'cash\\')">Our work in the community →</a> · <a href="https://cashvalues.org" target="_blank" rel="noopener">cashvalues.org ↗</a></div></div><span class="acts"><a class="btn donate" data-void-donate href="'+DONATE+'" target="_blank" rel="noopener">♥ Donate to CASH</a><a class="btn" data-void-donate="monthly" href="'+DONATE_MONTHLY+'" target="_blank" rel="noopener">↻ Give monthly</a><button class="btn ghost sm" onclick="state.supportOpen=!state.supportOpen;render()">'+(state.supportOpen?'Less':'More')+'</button></span></div>';
