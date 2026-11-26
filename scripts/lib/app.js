@@ -299,7 +299,7 @@ function assemble() {
   const foreign = new Set(shows.filter((s) => lang[s.show] && lang[s.show] !== 'en').map((s) => s.slug));
   // Moments with a live rule get their own channel (only on voidtv.net; read lazily so a copy of scripts/ without assets/ still loads).
   let momentChans = [];
-  if (PROFILE.name === 'voidtv') {
+  if (PROFILE.name === 'voidtv' && fs.existsSync(path.join(__dirname, '..', '..', 'assets', 'brand', 'moments', 'moments.js'))) {
     const MP = require('./moments-pub');
     const ME_ = require(MP.ENGINE);
     momentChans = MP.publicMoments(path.join(PROFILE.catalogDir, 'moments.json'), +process.env.VOID_TV_NOW || Date.now()).moments
