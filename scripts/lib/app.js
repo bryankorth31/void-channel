@@ -225,7 +225,7 @@ function assemble({ preview = false } = {}) {
     .sort((a, b) => b.eps - a.eps);
 
   // TV movies and specials: one-episode shows in their own rows; Hallmark and faith studios tag themselves.
-  // An approved-only site (kids) takes a film only when a person approved it by name in list.json "films" (Bryan, 26 Nov 2026:
+  // An approved-only site (kids) takes a film only when a person approved it by name in list.json "films" (the owner, 26 Nov 2026:
   // 13 Christmas specials for Kids, "yes, add those"); a film's season ("christmas") makes it a seasonal row, shown only in season.
   const FILMS = PROFILE.approvedOnly ? new Map((LIST.films || []).filter((x) => x && x.approved === true && x.tmdb).map((x) => [String(x.tmdb), x])) : null;
   for (const f of (fs.existsSync(MOV_DIR) && (!PROFILE.approvedOnly || FILMS.size) ? fs.readdirSync(MOV_DIR) : [])) {
