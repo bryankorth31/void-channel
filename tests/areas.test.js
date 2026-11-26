@@ -162,7 +162,7 @@ test('H13: the closing line names the room as one room of the voidverse, free, a
   }
   assert.match(V.closing('play'), /<a href="https:\/\/cashvalues\.org" target="_blank" rel="noopener">CASH<\/a>/);
   assert.equal(V.closing('not-a-room'), '', 'an address that is no room gets no line');
-  assert.match(SRC, /function run\(\) \{ queued = false; menus\(\); ads\(\); closings\(\); \}/, 'it is written whenever the page changes, so it follows from On Demand to Live TV');
+  assert.match(SRC, /function run\(\) \{ queued = false; menus\(\); ads\(\); closings\(\);/, 'it is written whenever the page changes, so it follows from On Demand to Live TV');
   // the main site gives it a place under the footer's own words; Kids, which never loads this file, has none
   assert.match(read('scripts/lib/app.js'), /\$\{CREDIT\}\$\{PROFILE\.name === 'kids' \? '' : '<div data-void-closing><\/div>'\}<\/footer>/);
 });
@@ -177,4 +177,31 @@ test('the language sites come last, in his order: Spanish, then West Side, then 
   for (const id of ids.slice(0, -3)) assert.ok(!['espanol', 'westside', 'hindi'].includes(id), id + ' is above them and is not a language site');
   const first = ids.indexOf('espanol');
   assert.ok(ids.indexOf('read') < first && ids.indexOf('kids') < first && ids.indexOf('university') < first, 'lexROM, Kids and University are above all three');
+});
+
+// Bryan, 25 Nov 2026: "Yes, your picks" (join J11, a real "not found" page that says so and offers the rooms), then "Yes, start it".
+test('H14: an address that is not there says so and offers every room, from one block in the menu file; no room is lit and it asks for nothing', () => {
+  const V = load('voidtv.net', '/this-page-is-not-here');
+  const html = V.notFound();
+  const text = html.replace(/<svg[\s\S]*?<\/svg>/g, '').replace(/<[^>]+>/g, '');
+  assert.ok(text.startsWith('That page is not here.The address may be old or mistyped. Every room of the voidverse is still open:'), text.slice(0, 120));
+  const A = Array.from(V.areas).filter((a) => a.live);
+  const links = html.match(/<a class="va-chip"[^>]*>/g) || [];
+  assert.equal(links.length, A.length, 'one button for every room that is open');
+  for (const a of A) {
+    assert.ok(html.includes('data-va="' + a.id + '"'), a.id + ' is offered');
+    assert.ok(text.includes(a.chip || a.name), a.id + ': by the name the menu uses');
+  }
+  assert.equal((html.match(/class="va-mark"/g) || []).length, A.length, 'every room with its mark');
+  assert.doesNotMatch(html, /aria-current|you are here/i, 'no room is lit: the visitor is in none of them');
+  assert.doesNotMatch(text, /—|–|404|error|oops|sorry|donat|give|gift|\$/i, 'plain words, no dashes, and it asks for nothing');
+  assert.doesNotMatch(html, /cast\.voidtv|fbdmlab|onemechanism/i);
+  assert.match(SRC, /function run\(\) \{ queued = false; menus\(\); ads\(\); closings\(\); notFounds\(\); \}/, 'a place a page adds later is filled too');
+  // the main site: an address it does not know shows the block, never the home page; the known pages are untouched; Kids is left out
+  const app = read('scripts/lib/app.js');
+  assert.match(app, /\$\{PROFILE\.name === 'kids' \? '' : "if\(location\.pathname!==BASE&&location\.pathname!==BASE\+'index\.html'\)return '\/notfound';"\}\}return location\.hash/);
+  assert.match(app, /if\(slug==='\/notfound'\)\{state\.show=null;state\.view='notfound';document\.title='Not found · '\+SITE;render\(\)/, 'the address stays as typed: no history change');
+  assert.match(app, /else if\(state\.view==='notfound'\)keepTracks\(notFoundPage\)/);
+  assert.match(app, /function notFoundPage\(\)\{killPlayer\(\);\$\('main'\)\.innerHTML='<div data-void-notfound>/);
+  assert.match(app, /noIndex\(slug==='\/notfound'\)/, 'search engines are asked not to list a wrong address, and only that');
 });

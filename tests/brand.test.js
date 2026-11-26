@@ -206,7 +206,7 @@ test('the privacy page tells only what the code does: cookie life, stored fields
 
 test('routes: /privacy and /takedown work as direct visits, with or without a trailing slash, and as #hash links', () => {
   const run = (pathname, hash, routes) => {
-    const ctx = { location: { pathname, hash, search: '' }, ROUTES: routes };
+    const ctx = { location: { pathname, hash, search: '' }, ROUTES: routes, BASE: '/' };
     vm.createContext(ctx);
     vm.runInContext(fn('safeDecode') + '\n' + fn('slugFromUrl') + '\n' + fn('urlFor') + '\nthis.slug = slugFromUrl(); this.p = urlFor("privacy"); this.t = urlFor("takedown");', ctx);
     return { slug: ctx.slug, p: ctx.p, t: ctx.t };
@@ -215,6 +215,10 @@ test('routes: /privacy and /takedown work as direct visits, with or without a tr
   assert.deepEqual([run('/', '', 'path').p, run('/', '', 'path').t], ['/privacy', '/takedown']);
   assert.equal(run('/', '#privacy', 'hash').slug, 'privacy');
   assert.deepEqual([run('/', '', 'hash').p, run('/', '', 'hash').t], ['#privacy', '#takedown']);
+  // H14: an address the site does not know is "not found", never the home page; the home page itself and # links are untouched
+  for (const p of ['/this-page-is-not-here', '/an/old/link.html', '/tv/a/b', '/me/x', '/abou']) assert.equal(run(p, '', 'path').slug, '/notfound', p);
+  for (const p of ['/', '/index.html']) assert.equal(run(p, '', 'path').slug, '', p);
+  assert.equal(run('/anything', '', 'hash').slug, '', 'a site that routes by # has no wrong page addresses');
   // go() and render() know both views, the same way they know about and cash
   assert.match(SCRIPT, /if\(slug==='privacy'\)\{state\.show=null;state\.view='privacy';history\[replace\?'replaceState':'pushState'\]\(null,'',urlFor\('privacy'\)\);document\.title='Privacy · '\+SITE;render\(\);/);
   assert.match(SCRIPT, /if\(slug==='takedown'\)\{state\.show=null;state\.view='takedown';history\[replace\?'replaceState':'pushState'\]\(null,'',urlFor\('takedown'\)\);document\.title='Takedown and corrections · '\+SITE;render\(\);/);

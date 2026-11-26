@@ -11,6 +11,7 @@
      <span data-void-areas-menu></span>      the hamburger button goes here (in the header)
      <div data-void-areas-ad></div>          one small card for another area goes here
      <div data-void-closing></div>           the closing line goes here, under the room's own footer
+     <div data-void-notfound></div>          the "not found" words and every room go here, on a page for an address that is not there
      <script src=".../areas.js" defer data-here="play" data-ad-into="#rows" data-ad-at="3"></script>
        data-here       which area this page is (else worked out from the address)
        data-site       "main" when the page is on voidtv.net itself (else worked out from the address)
@@ -26,6 +27,10 @@
    The closing line (Bryan, 25 Nov 2026, "Yes, your picks": join J10). Every room ends with the same short line, in the same
    words: the room is one room of the voidverse, free, a project of CASH. "From the Internet Archive" is said only where it is
    true (ia: true on the room's line; Trivia Night, Card games and lexROM are not from the Archive). It asks for nothing.
+
+   The "not found" block (Bryan, 25 Nov 2026, "Yes, your picks": join J11). A page for an address that is not there says so in
+   one line and offers every room, each with its mark. No room is lit there: the visitor is in none of them. A site gives the
+   block a place on its own "not found" page and may put its own plain words inside the place; they show if this file fails to load.
 
    Rules: Void Cast is never here (Bryan's private viewer). Kids (kids.voidtv.net) never loads this file: its links to the
    other areas sit behind the grown-up check (its profile's portals), and no card is ever shown to a child. Only live areas
@@ -156,6 +161,14 @@
     return '<p class="va-close">' + esc(a.name) + ' is one room of <b>the voidverse</b>: free, ' + (a.ia ? 'from the Internet Archive, ' : '')
       + 'a project of <a href="https://cashvalues.org" target="_blank" rel="noopener">CASH</a> (cashvalues.org).</p>';
   }
+  // The "not found" block, as text (the tests read it too): the words, then every room as a button with its mark.
+  function notFoundHtml() {
+    return '<div class="va-nf">' + GLOW + '<h1 class="va-nf-h">That page is not here.</h1>'
+      + '<p class="va-nf-p">The address may be old or mistyped. Every room of <b>the voidverse</b> is still open:</p>'
+      + '<div class="va-nf-rooms">' + live.map(function (a) {
+        return '<a class="va-chip" href="' + esc(href(a)) + '" data-va="' + a.id + '" title="' + esc(a.line) + '">' + mark(a.id) + esc(a.chip || a.name) + '</a>';
+      }).join('') + '</div></div>';
+  }
   // What the opened menu holds, as text, for the room named in here (the tests read it too).
   function mapHtml(here) {
     var w = spots(rooms.length, false), t = spots(rooms.length, true);
@@ -211,6 +224,7 @@
     + '.va-chip{display:inline-flex;align-items:center;gap:7px;padding:5px 15px 5px 11px;border:1px solid #3a3f58;border-radius:999px;background:#141522;color:#e8e6f0;font-size:14px;line-height:1.3;text-decoration:none;white-space:nowrap}'
     + '.va-chip .va-mark{width:22px;height:22px}.va-chip[data-va="join"]{padding-left:15px}.va-chip:hover,.va-chip:focus-visible{border-color:#5fe3ff;color:#fff}'
     + '.va-chip[aria-current]{border-color:#ff4fc8;color:#fff;box-shadow:0 0 16px rgba(255,79,200,.55)}.va-chip em{font-style:normal;font-size:12px;color:#5fe3ff}'
+    + '.va-nf{max-width:760px;margin:0 auto;padding:56px 20px 44px;text-align:center;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#e8e6f0}.va-nf-h{margin:0 0 12px;font:700 clamp(23px,5vw,36px)/1.2 Unbounded,system-ui,sans-serif;color:#fff}.va-nf-p{margin:0 0 24px;font-size:16px;line-height:1.5;color:#a9a5bd}.va-nf-p b{font-family:Unbounded,system-ui,sans-serif;font-weight:700;font-size:14px;color:#e8e6f0}.va-nf-rooms{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}.va-nf .va-chip{padding:8px 16px 8px 12px;font-size:15px}'
     + '.va-close{margin:12px 0 0;padding:0;text-align:center;font:13px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;color:#a9a5bd}.va-close b{font-family:Unbounded,system-ui,sans-serif;font-weight:700;font-size:12px;color:#e8e6f0}.va-close a{color:inherit;text-decoration:underline}'
     + '.va-foot{flex:none;margin:8px 0 0;color:#8f8ba6;font-size:12.5px;text-align:center}'
     // A phone held upright: the rooms start at the top and go round, the buttons are easier to press.
@@ -336,13 +350,20 @@
       slot.setAttribute('data-va-for', here); slot.innerHTML = closingHtml(here);
     });
   }
-  function run() { queued = false; menus(); ads(); closings(); }
+  // The "not found" block, in every place a page gives it (once: it does not change with the room).
+  function notFounds() {
+    document.querySelectorAll('[data-void-notfound]').forEach(function (slot) {
+      if (slot.getAttribute('data-va-done')) return;
+      slot.setAttribute('data-va-done', '1'); slot.innerHTML = notFoundHtml();
+    });
+  }
+  function run() { queued = false; menus(); ads(); closings(); notFounds(); }
   function later() { if (!queued) { queued = true; setTimeout(run, 60); } }
   function start() {
     style(); run();
     // Pages that draw themselves (voidtv.net's app, PLAY's rows) put new slots in later: fill them as they come.
     new MutationObserver(later).observe(document.body, { childList: true, subtree: true });
   }
-  window.VoidAreas = { areas: AREAS, open: open, close: close, refresh: run, spots: spots, html: mapHtml, marks: MARKS, closing: closingHtml };
+  window.VoidAreas = { areas: AREAS, open: open, close: close, refresh: run, spots: spots, html: mapHtml, marks: MARKS, closing: closingHtml, notFound: notFoundHtml };
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
 })();
