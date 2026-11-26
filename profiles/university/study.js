@@ -32,11 +32,11 @@
 
   // ---- the room
   $('open').onclick = function () {
-    this.hidden = true;
+    this.hidden = true; $('end').hidden = false; // End the session only once there is a room to end (the function test's F35)
     if (!LIVE_SITE) fetch('/api/make/info').then(function (r) { return r.ok ? r.json() : null; }).then(function (j) { S.info = j; paintQR(); }).catch(function () {});
     var ws = S.ws = new WebSocket(ROOMS + '/api/room/open?kind=lesson');
     ws.onmessage = function (ev) { var m; try { m = JSON.parse(ev.data); } catch (e) { return; } hear(m); };
-    ws.onclose = function () { say('The room closed. Open a new one to go on.'); $('open').hidden = false; $('qr').textContent = ''; };
+    ws.onclose = function () { if (S.ws !== ws) return; say('The room closed. Open a new one to go on.'); $('open').hidden = false; $('end').hidden = true; $('qr').textContent = ''; };
     say('Opening a room for the phones.');
   };
   function paintQR() {
@@ -223,7 +223,7 @@
   $('again').onclick = function () { $('run').hidden = true; $('pick').hidden = false; S.set = null; S.i = -1; };
   $('end').onclick = function () {
     try { if (S.ws && S.ws.readyState === 1) { S.ws.send(JSON.stringify({ to: 'all', msg: { type: 'over' } })); S.ws.send(JSON.stringify({ relay: 'end' })); } if (S.ws) S.ws.close(); } catch (e) {}
-    S.ws = null; S.seats = {}; S.code = ''; S.eat = null; S.say = null; people(); $('how').hidden = true; $('eatbox').hidden = true; $('saybox').hidden = true; $('code').textContent = ''; $('qr').textContent = ''; $('addr').textContent = ''; $('open').hidden = false; $('run').hidden = true; $('pick').hidden = false;
+    S.ws = null; S.seats = {}; S.code = ''; S.eat = null; S.say = null; people(); $('how').hidden = true; $('eatbox').hidden = true; $('saybox').hidden = true; $('code').textContent = ''; $('qr').textContent = ''; $('addr').textContent = ''; $('open').hidden = false; $('end').hidden = true; $('run').hidden = true; $('pick').hidden = false;
     say('The session is over. Nothing from it was kept.');
   };
   root._study = { state: function () { return { code: S.code, phones: here().length, i: S.i, shown: S.shown, picks: Object.assign({}, S.picks) }; } };

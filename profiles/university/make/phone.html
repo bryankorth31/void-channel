@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <title>Void University on your phone</title>
+<link rel="icon" type="image/png" sizes="192x192" href="/img/icon-192.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 <style>
 :root{color-scheme:dark;--bg:#07080c;--panel:#111827;--line:#2b3550;--fg:#eef1f8;--dim:#a5aec4;--gold:#f0c869;--ok:#5fe39a;--no:#e08a8f}
 *{box-sizing:border-box}
@@ -130,7 +132,7 @@ a{color:var(--gold)}
     ws.onclose = function (ev) {
       if (ev.code === 4404) { askCode('No lecture is open with that code. Look at the code on the computer and type it here.'); return; }
       if (mode === 'answer' && (over || ev.code === 4410 || gone)) { if (!over) finish(); return; }
-      if (ev.code === 4410 || gone) { askCode('The computer closed the lecture. Your saved questions are kept. To make more, press Make questions on the computer and scan again.'); return; }
+      if (ev.code === 4410 || gone) { askCode(study ? 'The computer ended the study session. Nothing from it was kept. To join another, scan the new code on the computer.' : 'The computer closed the lecture. Your saved questions are kept. To make more, press Make questions on the computer and scan again.'); return; }
       if (ev.code === 4409) { askCode('That room is full.'); return; }
       if (ev.code === 4411) { note('This phone joined again in another tab. Use that tab.', 'no'); return; }
       note('The connection dropped. Joining again.', 'no');

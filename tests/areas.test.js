@@ -230,8 +230,13 @@ test('H15: one donation setting in the menu file; marked links follow it, the ma
   assert.equal((app.match(/data-void-donate="monthly" href="/g) || []).length, 2, 'and the two monthly ones');
   assert.doesNotMatch(app, /<a (?![^>]*data-void-donate)[^>]*href="(?:\$\{DONATE(?:_MONTHLY)?_URL\}|'\+DONATE(?:_MONTHLY)?\+')"/, 'no donation link is left unmarked');
 });
-// Known drift until the University chat changes its build file (Bryan, 25 Nov 2026: "Same link"): it still types the other address.
-test.todo('H15: University asks through the same donation link as every other room (drift: profiles/university/build.js types its own)', () => {
+// Bryan, 25 Nov 2026: "Same link": University's spare is the setting's address, and both of its donation links are marked.
+test('H15: University asks through the same donation link as every other room', () => {
   const D = load('voidtv.net', '/').donate;
-  for (const u of donateLinks('profiles/university/build.js')) assert.equal(u, D.url);
+  const uni = read('profiles/university/build.js');
+  const found = donateLinks('profiles/university/build.js');
+  assert.ok(found.length > 0, 'University keeps a spare');
+  for (const u of found) assert.equal(u, D.url);
+  assert.equal((uni.match(/<a data-void-donate href="(?:\$\{DONATE\}|' \+ DONATE \+ ')"/g) || []).length, 2, 'the footer link and the join page link are marked');
+  assert.doesNotMatch(uni, /<a (?![^>]*data-void-donate)[^>]*href="(?:\$\{DONATE\}|' \+ DONATE \+ ')"/, 'no donation link is left unmarked');
 });

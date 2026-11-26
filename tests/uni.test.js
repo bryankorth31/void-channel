@@ -711,6 +711,22 @@ test('Pattern Eater together: every lesson crystal is a set the room can build, 
   assert.match(phone, /m\.type === 'eat'/); assert.match(phone, /type: 'give'/); assert.match(phone, /id="eat"/);
 });
 
+// The Voidverse function test, 24 Nov 2026 (Bryan, 26 Nov 2026: "yes" to fixing F21, F33, F35 and UNI-21).
+test('small finds of the function test: End the session only with a room, a study goodbye on the phones, a lesson scene\'s ends say so, the join page names its icon', () => {
+  build();
+  const page = fs.readFileSync(path.join(uni.UNI, 'site-preview', 'study.html'), 'utf8');
+  assert.match(page, /<button type="button" class="btn2" id="end" hidden title=/, 'F35: End the session shows before any room is open');
+  const study = fs.readFileSync(path.join(uni.UNI, 'study.js'), 'utf8');
+  assert.match(study, /this\.hidden = true; \$\('end'\)\.hidden = false;/, 'F35: opening a room brings End the session');
+  assert.match(study, /ws\.onclose = function \(\) \{ if \(S\.ws !== ws\) return;/, 'a room ended on purpose does not say it closed by itself');
+  assert.equal((study.match(/\$\('end'\)\.hidden = true;/g) || []).length, 2, 'F35: ending or losing the room puts End the session away');
+  const phone = fs.readFileSync(path.join(uni.UNI, 'make', 'phone.html'), 'utf8');
+  assert.match(phone, /askCode\(study \? 'The computer ended the study session\. Nothing from it was kept\./, 'F33: a study phone gets the Make questions goodbye');
+  assert.match(phone, /<link rel="icon" type="image\/png" sizes="192x192" href="\/img\/icon-192\.png">/, 'UNI-21: the join page names no icon, so the browser asks for favicon.ico');
+  const scene = fs.readFileSync(path.join(uni.UNI, 'scene.js'), 'utf8');
+  assert.match(scene, /nextBtn\.disabled = beat === st\.length - 1 && prog >= 1; backBtn\.disabled = beat === 0 && prog <= 0;/, 'F21: Step forward on the last step is not shown as disabled');
+});
+
 test('Say it another way in the study room: write privately, cards show only when all are in, no names, your own cannot be picked', () => {
   build();
   const prev = path.join(uni.UNI, 'site-preview');

@@ -566,12 +566,15 @@ function mount(root) {
     view.getContext('2d').drawImage(GL.canvas, 0, 0, pw, ph);
   }
 
+  const backBtn = root.querySelector('.sc-back'), nextBtn = root.querySelector('.sc-next');
   let beat = 0, prog = 0, playing = false, last = 0, raf = 0, hold = 0;
   function go(i, p) {
     beat = Math.max(0, Math.min(st.length - 1, i)); prog = Math.max(0, Math.min(1, p));
     say.textContent = sc.beats[beat].say || '';
     [...dots.children].forEach((d, k) => d.classList.toggle('on', k <= beat));
     root.classList.toggle('done', beat === st.length - 1 && prog >= 1);
+    // nowhere further to step: the button says so (the Voidverse function test's F21)
+    nextBtn.disabled = beat === st.length - 1 && prog >= 1; backBtn.disabled = beat === 0 && prog <= 0;
     paint();
   }
   function tick(t) {
@@ -592,8 +595,8 @@ function mount(root) {
   }
   function stop() { playing = false; cancelAnimationFrame(raf); playBtn.textContent = beat === st.length - 1 && prog >= 1 ? 'Watch again' : 'Play'; }
   playBtn.onclick = () => (playing ? stop() : play());
-  root.querySelector('.sc-back').onclick = () => { stop(); if (beat > 0) go(beat - 1, 1); else go(0, 0); };
-  root.querySelector('.sc-next').onclick = () => { stop(); if (prog < 1) go(beat, 1); else go(beat + 1, 1); };
+  backBtn.onclick = () => { stop(); if (beat > 0) go(beat - 1, 1); else go(0, 0); };
+  nextBtn.onclick = () => { stop(); if (prog < 1) go(beat, 1); else go(beat + 1, 1); };
   go(0, 0);
   root._sc = { go, beats: st.length, plan, state: () => ({ beat, prog, built: !!W }), ready: () => { near = true; return W ? Promise.resolve() : build(); } };
 
