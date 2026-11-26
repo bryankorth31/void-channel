@@ -103,7 +103,7 @@ test('assemble(): guesses are off the show pages and the vault, a real alternate
 // Each mistake is made in a copy of app.js. The fixture must then come out different; if one of these passed, the test above would not notice the bug.
 const APP = fs.readFileSync(path.join(REPO, 'scripts/lib/app.js'), 'utf8');
 const BUGS = [
-  ['the show pages skip the gate', 'episodes: se.episodes.map(epNoGuess).filter((e) => e && ', 'episodes: se.episodes.filter((e) => e && '],
+  ['the show pages skip the gate', 'episodes: joinStories(se.episodes.map(epNoGuess).filter((e) => e && ', 'episodes: joinStories(se.episodes.filter((e) => e && '],
   ['the vault skips the gate', 'se.episodes.map(epNoGuess).filter((e) => e && e.file && !e.file.playable', 'se.episodes.filter((e) => e && e.file && !e.file.playable'],
   ['the gate lets everything through', 'if (!e || !isGuess(e.file)) return e;', 'return e;'],
   ['the real alternate is ignored', "return alt ? { ...e, state: 'REVIEW', file: alt, alternates: alts.filter((a) => a !== alt) } : null;", 'return null;'],

@@ -233,6 +233,8 @@ function buildGames(out, root, opts = {}) {
   const hash = crypto.createHash('sha1');
   const srcFiles = fs.readdirSync(path.join(play, 'src')).filter((f) => f.endsWith('.js')).sort();
   for (const f of ['game.html', 'play.css'].concat(srcFiles.map((f) => 'src/' + f))) hash.update(fs.readFileSync(path.join(play, f)));
+  // Bryan's pad layout (play/layouts.json): play.js asks for it with this stamp, so a new layout gets a new stamp.
+  if (fs.existsSync(path.join(play, 'layouts.json'))) hash.update(fs.readFileSync(path.join(play, 'layouts.json')));
   hash.update(KIDS_CSS);
   const version = hash.digest('hex').slice(0, 12);
   fs.cpSync(path.join(play, 'src'), path.join(dst, 'src'), { recursive: true, filter: (p) => fs.statSync(p).isDirectory() || p.endsWith('.js') });
@@ -251,6 +253,9 @@ function buildGames(out, root, opts = {}) {
   }
   if (fs.existsSync(path.join(play, 'skin'))) fs.cpSync(path.join(play, 'skin'), path.join(dst, 'skin'), { recursive: true });
   fs.copyFileSync(path.join(play, 'play.css'), path.join(dst, 'play.css'));
+  // Where the on-screen pad's parts and the picture sit, as Bryan set them in PLAY's layout editor; play.js asks for
+  // layouts.json beside game.html (the audit's F18: Kids answered 404, so Kids games lost his layout).
+  if (fs.existsSync(path.join(play, 'layouts.json'))) fs.copyFileSync(path.join(play, 'layouts.json'), path.join(dst, 'layouts.json'));
   fs.copyFileSync(path.join(play, 'LICENSE'), path.join(dst, 'LICENSE.txt'));
   fs.writeFileSync(path.join(dst, 'kids.css'), KIDS_CSS);
   fs.writeFileSync(path.join(dst, 'game.html'), kidsGamePage(fs.readFileSync(path.join(play, 'game.html'), 'utf8'), version));

@@ -51,6 +51,7 @@ test('the build carries only kids cards, their engines and our own pictures', { 
     for (const d of ['drafts', 'library', 'cheats', 'tools', 'rooms']) assert.equal(fs.existsSync(path.join(out, 'games', d)), false, d + ' is not copied');
     assert.equal(fs.existsSync(path.join(out, 'games', 'shelf', 'index.json')), false, 'no PLAY shelf list, so no other game can be found');
     assert.equal(fs.readdirSync(path.join(out, 'games', 'art')).length, kids.length - 1, 'our own pictures, where PLAY\'s kids page looks (art/<id>.jpg)');
+    if (fs.existsSync(path.join(PLAY, 'layouts.json'))) assert.equal(fs.readFileSync(path.join(out, 'games', 'layouts.json'), 'utf8'), fs.readFileSync(path.join(PLAY, 'layouts.json'), 'utf8'), "Bryan's pad layout sits beside game.html, where play.js asks for it (F18)");
     const shelf = fs.readFileSync(path.join(out, 'games', 'index.html'), 'utf8');
     assert.doesNotMatch(shelf, /https?:\/\/(?!www\.w3\.org)/, 'the shelf loads and links nothing outside');
     for (const f of cards) assert.match(shelf, new RegExp('game\\.html\\?game=' + f.replace('.json', '') + '"'));

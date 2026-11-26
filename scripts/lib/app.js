@@ -145,6 +145,19 @@ function movieShips(m, OV) {
   return m.state === 'LIVE' || movieApproved(m, OV);
 }
 
+// Kids strict: one half hour holding two stories is one episode (the voidverse function test's F16, 25 Nov 2026). Strict
+// matching places such a file on both stories (scripts/match.js 1c), but nothing knows where the second story starts, so its
+// entry played the first story and Next on the first replayed the same file. Here the second story's entry joins the one
+// before it when both play the same file: one episode named after both stories ("Flies a Kite + From Scratch"), for the
+// show page and the Live TV grid alike. voidtv.net never makes these pairs, so it is untouched.
+const SECOND_STORY = /^two stories by title \(the second\)/;
+const joinStories = (eps) => !PROFILE.strict ? eps : eps.reduce((out, e) => {
+  const p = out[out.length - 1];
+  if (p && SECOND_STORY.test(e.file.why || '') && p.file.url === e.file.url) out[out.length - 1] = { ...p, name: p.name + ' + ' + e.name };
+  else out.push(e);
+  return out;
+}, []);
+
 // THE COLOR CODE (B, 25 Oct 2026: shows, channels and guide blocks color coded, easy to understand). catalog/colors.json names the
 // groups and their colors. A show takes its shelf's group; a show on a mixed shelf (British and Beyond, World TV and the like) takes
 // the first group in genreOrder whose genres it has; a TV movie or special is movies; anything behind the 18+ door is late; else other.
@@ -199,7 +212,7 @@ function assemble({ preview = false } = {}) {
       return {
         show: s.show, slug: s.slug, type: entry.age || s.type, network: s.network, year: (s.tvmaze.premiered || a.year || '').slice(0, 4), runtime: s.tvmaze.runtime, tags: entry.tags || [],
         poster: PROFILE.features.tmdbImages ? a.poster || null : selfPoster(s.slug), backdrop: PROFILE.features.tmdbImages ? a.backdrop || null : null, overview: a.overview || '', genres: a.genres || [], rating: a.rating || null, country: a.country || null, matchedAt: s.matchedAt, addedAt: s.addedAt,
-        seasons: s.seasons.map((se) => ({ season: se.season, episodes: se.episodes.map(epNoGuess).filter((e) => e && e.file && e.file.playable && !e.file.langRisk && (!PROFILE.strict || e.state === 'LIVE')).map((e) => epOut(e)) })).filter((se) => se.episodes.length),
+        seasons: s.seasons.map((se) => ({ season: se.season, episodes: joinStories(se.episodes.map(epNoGuess).filter((e) => e && e.file && e.file.playable && !e.file.langRisk && (!PROFILE.strict || e.state === 'LIVE'))).map((e) => epOut(e)) })).filter((se) => se.episodes.length),
         vault: !PROFILE.features.downloads ? [] : s.seasons.flatMap((se) => se.episodes.map(epNoGuess).filter((e) => e && e.file && !e.file.playable && !e.file.langRisk).map((e) => ({ season: se.season, n: e.number, name: e.name, url: e.file.url, min: Math.round(e.file.seconds / 60), risk: (e.file.codecRisk || 'format').replace(/^(video|audio|container) /, '').replace(/[()]/g, '') }))),
         cast: p ? p.cast.slice(0, 14).map((c) => ({ id: c.id, name: c.name, photo: c.photo, as: c.character, eps: c.episodes })) : [],
         crew: p ? p.crew.slice(0, 6).map((c) => ({ id: c.id, name: c.name, photo: c.photo, as: c.jobs.join(', ') })) : [],
