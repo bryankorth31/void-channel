@@ -202,7 +202,7 @@ function assemble() {
       const p = readJson(path.join(PEOPLE_DIR, s.slug + '.json'), null);
       return {
         show: s.show, slug: s.slug, type: s.type, network: s.network, year: (s.tvmaze.premiered || a.year || '').slice(0, 4), runtime: s.tvmaze.runtime, tags: entry.tags || [],
-        poster: a.poster || null, backdrop: a.backdrop || null, overview: a.overview || '', genres: a.genres || [], rating: a.rating || null, country: a.country || null, matchedAt: s.matchedAt, addedAt: s.addedAt,
+        poster: a.poster || null, backdrop: a.backdrop || null, overview: a.overview || '', genres: a.genres || [], rating: a.rating || null, votes: a.votes || 0, country: a.country || null, matchedAt: s.matchedAt, addedAt: s.addedAt,
         seasons: s.seasons.map((se) => ({ season: se.season, episodes: se.episodes.map(epNoGuess).filter((e) => e && e.file && e.file.playable && !e.file.langRisk).map((e) => epOut(e)) })).filter((se) => se.episodes.length),
         vault: s.seasons.flatMap((se) => se.episodes.map(epNoGuess).filter((e) => e && e.file && !e.file.playable && !e.file.langRisk).map((e) => ({ season: se.season, n: e.number, name: e.name, url: e.file.url, min: Math.round(e.file.seconds / 60), risk: (e.file.codecRisk || 'format').replace(/^(video|audio|container) /, '').replace(/[()]/g, '') }))),
         cast: p ? p.cast.slice(0, 14).map((c) => ({ id: c.id, name: c.name, photo: c.photo, as: c.character, eps: c.episodes })) : [],
@@ -226,7 +226,7 @@ function assemble() {
     if (/pure ?flix|affirm|kingdom story|crossflix|trinity broadcasting|tbn/i.test(companies)) tags.push('Christian');
     shows.push({
       show: m.title, slug: 'movie-' + m.tmdbId, type: m.kind === 'special' ? 'Specials' : 'TV Movies', network: (ref.companies || [])[0] || (m.kind === 'special' ? 'Special' : 'TV Movie'), tags,
-      year: m.year, runtime: m.runtime, poster: m.poster, backdrop: m.backdrop, overview: m.overview, genres: [], rating: m.rating, country: null, matchedAt: m.huntedAt,
+      year: m.year, runtime: m.runtime, poster: m.poster, backdrop: m.backdrop, overview: m.overview, genres: [], rating: m.rating, votes: m.votes || 0, country: null, matchedAt: m.huntedAt,
       seasons: [{ season: 1, episodes: [withSec({ n: 1, name: m.title + (m.year ? ' (' + m.year + ')' : ''), state: m.state, url: m.file.url, min: Math.round(m.file.seconds / 60), item: m.file.item }, m.file.seconds)] }],
       eps: 1, cast: [], crew: [], credits: {}, adult: !!ref.adult,
     });
@@ -304,7 +304,7 @@ function triviaCounts() {
 }
 
 // The index entry: everything the browse page needs; seasons and cast load per show in split mode.
-const indexEntry = (s) => ({ show: s.show, slug: s.slug, type: s.type, radio: s.radio ? 1 : undefined, rc: (s.radio && s.radio.credit) || undefined, people: (s.cast || []).slice(0, 8).map((c) => c.name).join(', ') || undefined, adult: (s.type === 'Late Night' || (s.tags || []).includes('Late Night') || s.adult) ? 1 : undefined, network: s.network, year: s.year, runtime: s.runtime, tags: s.tags, poster: s.poster, backdrop: s.backdrop, overview: s.overview && s.overview.length > 380 ? s.overview.slice(0, 380).replace(/\s+\S*$/, '') + '…' : s.overview, genres: s.genres, rating: s.rating, matchedAt: s.matchedAt && s.matchedAt.slice(0, 10), added: ((s.addedAt || s.matchedAt) || '').slice(0, 10) || undefined, eps: s.eps, seasonCount: s.seasons.length, cg: s.cg });
+const indexEntry = (s) => ({ show: s.show, slug: s.slug, type: s.type, radio: s.radio ? 1 : undefined, rc: (s.radio && s.radio.credit) || undefined, people: (s.cast || []).slice(0, 8).map((c) => c.name).join(', ') || undefined, adult: (s.type === 'Late Night' || (s.tags || []).includes('Late Night') || s.adult) ? 1 : undefined, network: s.network, year: s.year, runtime: s.runtime, tags: s.tags, poster: s.poster, backdrop: s.backdrop, overview: s.overview && s.overview.length > 380 ? s.overview.slice(0, 380).replace(/\s+\S*$/, '') + '…' : s.overview, genres: s.genres, rating: s.rating, votes: s.votes || undefined, matchedAt: s.matchedAt && s.matchedAt.slice(0, 10), added: ((s.addedAt || s.matchedAt) || '').slice(0, 10) || undefined, eps: s.eps, seasonCount: s.seasons.length, cg: s.cg });
 const showFile = (s, data) => {
   const links = (data && data.links && data.links[s.slug]) || {};
   const ids = new Set([...s.cast, ...s.crew].map((c) => c.id));
@@ -765,6 +765,10 @@ function noMatch(){if(state.moment)return momentElse(state.moment);const q=state
 // that was out of sight gets a turn. It moves by the day, not by the reload: the same day draws the same wall, so a show seen at
 // noon is where it was in the evening. Which shows are in a row, and the order of the rows, are untouched (H4). Continue watching,
 // My List, Recently added and Top rated are not rippled: their order is their meaning.
+// Who leads a home row (Bryan, 26 Nov 2026: "Yes, build it"): the shows most people have rated (TMDB's vote count, kept in the
+// catalog as votes), the nearest thing we have to "best known", then the ones with the most episodes. Before, a row was led by
+// episode count alone, so Horrid Henry (250 episodes) stood ahead of The Simpsons. A show with no count sorts as it did.
+function byKnown(a,b){return (b.votes||0)-(a.votes||0)||b.eps-a.eps}
 function ripHash(s){let h=2166136261;for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)}return h>>>0}
 function rippleDay(){const d=new Date();return d.getFullYear()*372+d.getMonth()*31+d.getDate()}
 function ripple(list,key,day){const KEEP=3,DRIFT=5,DEEP=12;if(list.length<=KEEP+DRIFT)return list;if(day==null)day=rippleDay();const rest=list.slice(KEEP).map((s,i)=>({s,i,v:i+ripHash(day+'|'+key+'|'+s.slug)%(2*DRIFT+1)-DRIFT}));rest.sort((a,b)=>a.v-b.v||a.i-b.i);const out=list.slice(0,KEEP).concat(rest.map(x=>x.s));if(list.length>DEEP+1){const guest=list[DEEP+ripHash(day+'|guest|'+key)%(list.length-DEEP)];out.splice(out.indexOf(guest),1);out.splice(KEEP+1,0,guest)}return out}
@@ -788,7 +792,7 @@ function browse(){let list=filtered();if(!state.q)list=list.filter(s=>!hidden(s)
   const cont=histShows().slice(0,30);if(cont.length)h+=shelf('Continue watching',cont,'continue');
   const mine=listShows();if(mine.length)h+=shelf('My List',mine,'list');
   // 3. the first rows: well-known kinds, right under the TV; the rest of the rows follow further down
-  const done=new Set();const put=(kind,name)=>{const key=kind+':'+name;if(done.has(key))return;done.add(key);const rows=list.filter(s=>kind==='tag'?(s.tags||[]).includes(name):s.type===name);const art=rows.filter(s=>s.poster);if(art.length)h+=shelf(name,ripple(art,key),key,rows.length)};
+  const done=new Set();const put=(kind,name)=>{const key=kind+':'+name;if(done.has(key))return;done.add(key);const rows=list.filter(s=>kind==='tag'?(s.tags||[]).includes(name):s.type===name);const art=rows.filter(s=>s.poster).sort(byKnown);if(art.length)h+=shelf(name,ripple(art,key),key,rows.length)};
   for(const t of ['90s Sitcoms','Animated','Adult Swim','Documentary & Geographic'])put('type',t);
   // 4. the donation box, below the first rows
   h+='<div class="support'+(state.supportOpen?' open':'')+'"><img class="cross" src="'+BASE+'assets/brand/cash-cross.png" alt=""><div class="sp"><b>${BRAND} is free and stays free.</b> <span class="l2">Donations fund the real-world work of CASH.</span><div class="more">The shows belong to the Internet Archive; what we add is a better way to find and watch them. That is CASH\\'s work: finding ways for people to have good things that fit a busy life and a budget stretched to the max. No set amount, never required. If that is work worth supporting, give back and be part of it. <a onclick="go(\\'cash\\')">Our work in the community →</a> · <a href="https://cashvalues.org" target="_blank" rel="noopener">cashvalues.org ↗</a></div></div><span class="acts"><a class="btn donate" data-void-donate href="'+DONATE+'" target="_blank" rel="noopener">♥ Donate to CASH</a><a class="btn" data-void-donate="monthly" href="'+DONATE_MONTHLY+'" target="_blank" rel="noopener">↻ Give monthly</a><button class="btn ghost sm" onclick="state.supportOpen=!state.supportOpen;render()">'+(state.supportOpen?'Less':'More')+'</button></span></div>';

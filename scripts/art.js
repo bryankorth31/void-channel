@@ -5,6 +5,7 @@
 // Usage: node scripts/art.js            (shows without art yet)
 //        node scripts/art.js --fresh    (re-fetch everything)
 //        node scripts/art.js Seinfeld   (one show, re-fetched)
+//        node scripts/art.js --votes    (no network: every show's vote count, from the TMDB answer already saved in the cache)
 //        node scripts/art.js --recheck [--hold file.json]   (every show whose art is another show's, matched again;
 //                                        the slugs in the hold file, a JSON list, are left as they are)
 // A TMDB record is taken only when it is this show (scripts/lib/sameshow.js): the same name as VoidTV's (or the cached
@@ -91,6 +92,7 @@ async function lookup(entry) {
     overview: detail.overview || '',
     genres: (detail.genres || []).map((g) => g.name),
     rating: detail.vote_average ? Math.round(detail.vote_average * 10) / 10 : null,
+    votes: detail.vote_count || 0, // how many people rated it: the nearest thing to "how well known" (the home rows lead by it, decision H18)
     networks: (detail.networks || []).map((n) => n.name),
     country: (detail.origin_country || [])[0] || null,
     seasons: detail.number_of_seasons || null,
@@ -105,6 +107,23 @@ async function main() {
   const SLUG_ONLY = (() => { const i = process.argv.indexOf('--slug'); return i >= 0 ? process.argv[i + 1] : null; })();
   const recheck = args.includes('--recheck');
   const hold = (() => { const i = args.indexOf('--hold'); try { return new Set(i >= 0 ? JSON.parse(fs.readFileSync(args[i + 1], 'utf8')) : []); } catch (e) { console.error('--hold: ' + e.message); process.exit(1); } })();
+  // --votes: the vote count for art fetched before 26 Nov 2026, which kept the rating but not how many people gave it. It is read
+  // from the saved TMDB answer (catalog/cache/tmdb-<slug>.json) and only when that answer is the record the art came from (same
+  // id), so a show never gets another show's count. Nothing is fetched and nothing else in the art changes.
+  if (args.includes('--votes')) {
+    let set = 0, same = 0, none = 0, other = 0;
+    for (const s of Object.keys(art)) {
+      let d = null;
+      try { d = JSON.parse(fs.readFileSync(path.join(CACHE_DIR, 'tmdb-' + s + '.json'), 'utf8')); } catch (e) { none++; continue; }
+      if (!d || d.id !== art[s].tmdbId) { other++; continue; }
+      const v = d.vote_count || 0;
+      if (art[s].votes === v) { same++; continue; }
+      art[s].votes = v; set++;
+    }
+    fs.writeFileSync(OUT, JSON.stringify(art, null, 1));
+    console.log(set + ' vote counts set, ' + same + ' already right, ' + none + ' with no saved answer, ' + other + ' whose saved answer is another record (left alone); ' + Object.keys(art).length + ' shows in catalog/art.json');
+    return;
+  }
   let done = 0, miss = 0;
   for (const entry of LIST.shows) {
     const s = slug(entry.name);
