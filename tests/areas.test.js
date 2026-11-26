@@ -240,3 +240,22 @@ test('H15: University asks through the same donation link as every other room', 
   assert.equal((uni.match(/<a data-void-donate href="(?:\$\{DONATE\}|' \+ DONATE \+ ')"/g) || []).length, 2, 'the footer link and the join page link are marked');
   assert.doesNotMatch(uni, /<a (?![^>]*data-void-donate)[^>]*href="(?:\$\{DONATE\}|' \+ DONATE \+ ')"/, 'no donation link is left unmarked');
 });
+
+// Bryan, 26 Nov 2026: "S1 and L" (a Share button in the top bar, and a link for every ad), from audit/voidverse/owner-shots/share/SHEET-share.png.
+test('H19: Share says the room by its name and line, asks for nothing, and every link for an ad opens a room and is counted by name only', () => {
+  const V = load('voidtv.net', '/play/');
+  assert.equal(V.shareText('play'), 'PLAY on voidtv.net: Old games, free to play. No account, no ads sold.');
+  assert.equal(V.shareText('not-a-room'), 'voidtv.net: shows, movies and games, free. No account, no ads sold.');
+  for (const a of Array.from(V.areas).filter((x) => x.live)) assert.doesNotMatch(V.shareText(a.id), /\u2014|\u2013|donat|\$/i, a.id);
+  assert.match(SRC, /if \(navigator\.share\) return navigator\.share\(data\)/, 'the phone\'s own share sheet first');
+  assert.match(SRC, /navigator\.clipboard\.writeText\(url\)/, 'else the link is copied');
+  const app = read('scripts/lib/app.js');
+  assert.match(app, /\$\{PROFILE\.name === 'kids' \? '' : '<button type="button" class="sharebtn" id="sharebtn" onclick="shareRoom\(\)"/, 'the button sits in the top bar, never on Kids');
+  const ctx = {}; vm.runInNewContext(app.match(/^const GO=\{.*\};$/m)[0] + ' this.GO = GO;', ctx); const go = Object.fromEntries(Object.entries(ctx.GO).map(([k, v]) => [k, typeof v === 'function' ? '/tv' : v]));
+  assert.deepEqual(Object.keys(go), ['christmas', 'christmas-tv', 'play', 'trivia', 'cards', 'tv', 'shows', 'learn']);
+  const rooms = new Set(Array.from(V.areas).filter((x) => x.live).map((a) => (a.site === 'main' ? a.path : a.url)));
+  for (const [k, to] of Object.entries(go)) assert.ok(rooms.has(to) || to === '/tv', k + ' opens a room: ' + to);
+  assert.match(app, /new Date\(2026,10,30,6\)\.getTime\(\)\?'\/tv':'\/tv\/moment-christmas'/, 'the Christmas channel link opens Live TV until the channel joins');
+  assert.match(app, /track\('act',\{x:'go:'\+m\[1\]\}\)/, 'an arrival is counted under the link\'s name and nothing else');
+  assert.match(app, /if\(location\.pathname\.startsWith\('\/go\/'\)\)\{const g=goLink\(\);if\(g!==null\)return g\}/, 'read before the "not found" check, so a known link is never "not found"');
+});

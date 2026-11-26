@@ -362,6 +362,19 @@
       slot.setAttribute('data-va-for', here); slot.innerHTML = closingHtml(here);
     });
   }
+  // Share (Bryan, 26 Nov 2026: "S1 and L"): the page you are on, with its room's name and line. On a phone the phone's own share
+  // sheet opens (Facebook, WhatsApp, Messages...); elsewhere the link is copied. It answers what happened: shared, closed, copied.
+  function shareText(here) {
+    var a = live.filter(function (x) { return x.id === here; })[0];
+    return a ? a.name + ' on voidtv.net: ' + a.line + '. No account, no ads sold.' : 'voidtv.net: shows, movies and games, free. No account, no ads sold.';
+  }
+  function share() {
+    var url = location.origin + location.pathname, data = { title: document.title, text: shareText(hereId()), url: url };
+    if (navigator.share) return navigator.share(data).then(function () { return 'shared'; }, function () { return 'closed'; });
+    if (navigator.clipboard) return navigator.clipboard.writeText(url).then(function () { return 'copied'; }, function () { window.prompt('Copy this link', url); return 'copied'; });
+    window.prompt('Copy this link', url);
+    return Promise.resolve('copied');
+  }
   // The "not found" block, in every place a page gives it (once: it does not change with the room).
   function notFounds() {
     document.querySelectorAll('[data-void-notfound]').forEach(function (slot) {
@@ -383,6 +396,6 @@
     // Pages that draw themselves (voidtv.net's app, PLAY's rows) put new slots in later: fill them as they come.
     new MutationObserver(later).observe(document.body, { childList: true, subtree: true });
   }
-  window.VoidAreas = { areas: AREAS, open: open, close: close, refresh: run, spots: spots, html: mapHtml, marks: MARKS, closing: closingHtml, notFound: notFoundHtml, donate: DONATE };
+  window.VoidAreas = { areas: AREAS, open: open, close: close, refresh: run, spots: spots, html: mapHtml, marks: MARKS, closing: closingHtml, notFound: notFoundHtml, donate: DONATE, share: share, shareText: shareText };
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
 })();
