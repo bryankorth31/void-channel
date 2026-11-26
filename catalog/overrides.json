@@ -1,5 +1,5 @@
 {
-  "_readme": "B's edits layer, read by match.js and never written by the builder. Per show slug: excludeItems (Archive identifiers that are the wrong show), aliases (other names an upload may use: abbreviations, short titles), later tvmazeId (name collisions), adult (true puts the show behind the 18+ door with the Late Night shows: gated On Demand, off every open Live TV channel; B, 21 Oct 2026). guideOnly (keep the TVmaze grid, never self-list) and noGuess (no sequence guesses from unnamed disc files), B 25 Oct.",
+  "_readme": "B's edits layer, read by match.js and never written by the builder. Per show slug: excludeItems (Archive identifiers that are the wrong show), aliases (other names an upload may use: abbreviations, short titles), later tvmazeId (name collisions), adult (true puts the show behind the 18+ door with the Late Night shows: gated On Demand, off every open Live TV channel; B, 21 Oct 2026). guideOnly (keep the TVmaze grid, never self-list) and noGuess (no sequence guesses from unnamed disc files), B 25 Oct. tmdbId pins the TMDB record a show's art comes from, and noArt (true) keeps a show without TMDB art, the site drawing its own poster, where no record is this show; both read by art.js (B, 26 Nov 2026: \"Yes, fix them\", for row leads wearing another show's record).",
   "look-around-you": {
     "excludeItems": [
       "razzledazzle-molly-in-the-trolley-15th-may-2009"
@@ -717,5 +717,23 @@
     "aliases": [
       "Hell's Paradise Jigokuraku"
     ]
+  },
+  "gravity": {
+    "tmdbId": 31393
+  },
+  "impossible": {
+    "tmdbId": 69641
+  },
+  "shootout": {
+    "tmdbId": 3083
+  },
+  "evolution": {
+    "tmdbId": 14930
+  },
+  "gospel": {
+    "tmdbId": 27336
+  },
+  "the-big-bang": {
+    "noArt": true
   }
 }

@@ -129,6 +129,9 @@ async function main() {
     const s = slug(entry.name);
     if (SLUG_ONLY ? s !== SLUG_ONLY : (filter && !entry.name.toLowerCase().includes(filter))) continue;
     const ovId = (OVERRIDES[s] || {}).tmdbId;
+    // noArt in overrides.json: no TMDB record is this show (The Big Bang, ITV 2007, kept wearing The Big Bang Theory), so it has
+    // none and the site draws its own poster. A person set it; the builder only follows it, and never looks the show up again.
+    if ((OVERRIDES[s] || {}).noArt) { if (art[s]) { delete art[s]; done++; console.log(entry.name + '  ->  art taken off (noArt in overrides.json)'); } continue; }
     const wrong = recheck && art[s] && !ovId && !hold.has(s) && !isThisShow(entry.name, art[s].title, art[s].year);
     if (recheck && !wrong) continue;
     if (!filter && !SLUG_ONLY && !fresh && !wrong && art[s] && !(ovId && art[s].tmdbId !== ovId)) continue;

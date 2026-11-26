@@ -60,3 +60,11 @@ test('H18: the art script keeps the vote count, and --votes fills it from the sa
     assert.match(r.stdout, /1 vote counts set, 0 already right, 1 with no saved answer, 1 whose saved answer is another record/);
   } finally { fs.rmSync(tmp, { recursive: true, force: true }); }
 });
+
+// Bryan, 26 Nov 2026: "Yes, fix them" (row leads that wore another show's record; audit/voidverse/owner-shots/row-leads/MISMATCHED-LEADS.md).
+test('H18: the five shows that wore another show\'s record are pinned to their own, and The Big Bang keeps no TMDB art', () => {
+  const o = JSON.parse(fs.readFileSync(path.join(ROOT, 'catalog', 'overrides.json'), 'utf8'));
+  assert.deepEqual(['gravity', 'impossible', 'shootout', 'evolution', 'gospel'].map((s) => o[s] && o[s].tmdbId), [31393, 69641, 3083, 14930, 27336]);
+  assert.equal(o['the-big-bang'].noArt, true);
+  assert.match(ART, /if \(\(OVERRIDES\[s\] \|\| \{\}\)\.noArt\) \{ if \(art\[s\]\) \{ delete art\[s\];/);
+});
