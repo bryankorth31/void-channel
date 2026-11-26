@@ -52,7 +52,13 @@ async function get(url, headers) {
   const LIST = readJson(PROFILE.listFile, { shows: [] });
   const ART = { ...readJson(path.join(ROOT, 'catalog', 'art.json'), {}), ...readJson(path.join(PROFILE.catalogDir, 'art.json'), {}) };
   const grids = new Set((fs.existsSync(path.join(PROFILE.catalogDir, 'shows')) ? fs.readdirSync(path.join(PROFILE.catalogDir, 'shows')) : []).map((f) => f.replace(/\.json$/, '')));
-  const todo = LIST.shows.map((e) => ({ e, slug: slug(e.name) }))
+  // Approved films (list.json "films", 26 Nov 2026): the poster their own catalog file names (catalog/movies/*.json), as movie-<tmdb>.
+  const MOV = path.join(PROFILE.catalogDir, 'movies');
+  const filmPoster = {};
+  for (const f of (fs.existsSync(MOV) ? fs.readdirSync(MOV) : []).filter((x) => x.endsWith('.json'))) { const m = readJson(path.join(MOV, f), null); if (m && m.tmdbId && m.poster) filmPoster['movie-' + m.tmdbId] = m.poster; }
+  for (const f of (LIST.films || []).filter((x) => x && x.approved === true && x.tmdb)) if (filmPoster['movie-' + f.tmdb]) ART['movie-' + f.tmdb] = { poster: filmPoster['movie-' + f.tmdb] };
+  const films = (LIST.films || []).filter((x) => x && x.approved === true && x.tmdb).map((x) => ({ e: { name: x.title || 'movie ' + x.tmdb }, slug: 'movie-' + x.tmdb }));
+  const todo = LIST.shows.map((e) => ({ e, slug: slug(e.name) })).concat(films)
     .filter((x) => !FILTER || x.e.name.toLowerCase().includes(FILTER))
     .filter((x) => FORCE || !fs.existsSync(path.join(OUT, x.slug + '.jpg')))
     .sort((a, b) => grids.has(b.slug) - grids.has(a.slug))
