@@ -196,7 +196,7 @@ test('H14: an address that is not there says so and offers every room, from one 
   assert.doesNotMatch(html, /aria-current|you are here/i, 'no room is lit: the visitor is in none of them');
   assert.doesNotMatch(text, /—|–|404|error|oops|sorry|donat|give|gift|\$/i, 'plain words, no dashes, and it asks for nothing');
   assert.doesNotMatch(html, /cast\.voidtv|fbdmlab|onemechanism/i);
-  assert.match(SRC, /function run\(\) \{ queued = false; menus\(\); ads\(\); closings\(\); notFounds\(\); \}/, 'a place a page adds later is filled too');
+  assert.match(SRC, /function run\(\) \{ queued = false; menus\(\); ads\(\); closings\(\); notFounds\(\);/, 'a place a page adds later is filled too');
   // the main site: an address it does not know shows the block, never the home page; the known pages are untouched; Kids is left out
   const app = read('scripts/lib/app.js');
   assert.match(app, /\$\{PROFILE\.name === 'kids' \? '' : "if\(location\.pathname!==BASE&&location\.pathname!==BASE\+'index\.html'\)return '\/notfound';"\}\}return location\.hash/);
@@ -204,4 +204,34 @@ test('H14: an address that is not there says so and offers every room, from one 
   assert.match(app, /else if\(state\.view==='notfound'\)keepTracks\(notFoundPage\)/);
   assert.match(app, /function notFoundPage\(\)\{killPlayer\(\);\$\('main'\)\.innerHTML='<div data-void-notfound>/);
   assert.match(app, /noIndex\(slug==='\/notfound'\)/, 'search engines are asked not to list a wrong address, and only that');
+});
+
+// Bryan, 25 Nov 2026: "Yes, your picks" (join J7, one donation setting every room reads), "Same link" (University uses the link
+// every other room uses), then "Yes, build it" for the setting in this file with each room's typed address kept as a spare.
+const DONATE_SPARES = ['scripts/lib/app.js', 'cards/src/screen.js', 'play/index.html', 'play/src/play.js', 'remote/src/phone.js', 'trivia/src/host.js', 'trivia/src/phone.js'];
+const donateLinks = (f) => read(f).match(/https:\/\/square\.link\/u\/\w+/g) || [];
+test('H15: one donation setting in the menu file; marked links follow it, the main site marks every one of its links, and every spare a room keeps is the same address', () => {
+  const D = load('voidtv.net', '/').donate;
+  assert.match(D.url, /^https:\/\/square\.link\/u\/\w+$/);
+  assert.match(D.monthly, /^https:\/\/square\.link\/u\/\w+$/);
+  assert.notEqual(D.url, D.monthly);
+  assert.equal((SRC.match(/square\.link\/u\//g) || []).length, 2, 'the setting is written once in the menu file');
+  assert.match(SRC, /querySelectorAll\('a\[data-void-donate\]'\)/);
+  assert.match(SRC, /a\.getAttribute\('data-void-donate'\) === 'monthly' \? DONATE\.monthly : DONATE\.url/);
+  assert.match(SRC, /notFounds\(\); donates\(\); \}/, 'links a page draws later follow it too');
+  for (const f of DONATE_SPARES) {
+    const found = donateLinks(f);
+    assert.ok(found.length > 0, f + ' keeps a spare');
+    for (const u of found) assert.ok(u === D.url || u === D.monthly, f + ': ' + u + ' is not the setting');
+  }
+  const app = read('scripts/lib/app.js');
+  assert.match(app, /const DONATE_URL = 'https:\/\/square\.link\/u\/\w+';\r?\nconst DONATE_MONTHLY_URL = 'https:\/\/square\.link\/u\/\w+';/);
+  assert.equal((app.match(/data-void-donate href="/g) || []).length, 6, 'the six links to the donation page are marked');
+  assert.equal((app.match(/data-void-donate="monthly" href="/g) || []).length, 2, 'and the two monthly ones');
+  assert.doesNotMatch(app, /<a (?![^>]*data-void-donate)[^>]*href="(?:\$\{DONATE(?:_MONTHLY)?_URL\}|'\+DONATE(?:_MONTHLY)?\+')"/, 'no donation link is left unmarked');
+});
+// Known drift until the University chat changes its build file (Bryan, 25 Nov 2026: "Same link"): it still types the other address.
+test.todo('H15: University asks through the same donation link as every other room (drift: profiles/university/build.js types its own)', () => {
+  const D = load('voidtv.net', '/').donate;
+  for (const u of donateLinks('profiles/university/build.js')) assert.equal(u, D.url);
 });

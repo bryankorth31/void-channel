@@ -41,6 +41,12 @@
 
   // id, menu name, one line for the menu, where it lives (main = voidtv.net), the card's words and picture.
   var MAIN = 'https://voidtv.net';
+  // The one donation setting (voidverse join J7; Bryan, 25 Nov 2026: "Yes, your picks", then "Same link" for University and "Yes, build it").
+  // Every room asks for a donation to CASH through these two addresses and no other; monthly is voidtv.net's monthly donation. Change
+  // them here. A link a page marks with data-void-donate (or data-void-donate="monthly") gets its address from here each time the page
+  // is drawn. A room keeps the same address typed in its own file as a spare, for the moment this file has not loaded;
+  // tests/areas.test.js fails while any spare differs, so the spares are changed in the same commit.
+  var DONATE = { url: 'https://square.link/u/bJl9PGAC', monthly: 'https://square.link/u/H1GYlvzp' };
   var AREAS = [
     { id: 'ondemand', ia: true, name: 'On Demand', line: 'Shows and movies, free', site: 'main', path: '/', live: true,
       kicker: 'Shows and movies', head: 'Shows and movies, free.', text: 'Pick a show, start an episode. Free, no account, no ads sold.',
@@ -357,13 +363,20 @@
       slot.setAttribute('data-va-done', '1'); slot.innerHTML = notFoundHtml();
     });
   }
-  function run() { queued = false; menus(); ads(); closings(); notFounds(); }
+  // Donation links follow the one setting: every link a page has marked gets the address from DONATE.
+  function donates() {
+    document.querySelectorAll('a[data-void-donate]').forEach(function (a) {
+      var u = a.getAttribute('data-void-donate') === 'monthly' ? DONATE.monthly : DONATE.url;
+      if (a.getAttribute('href') !== u) a.setAttribute('href', u);
+    });
+  }
+  function run() { queued = false; menus(); ads(); closings(); notFounds(); donates(); }
   function later() { if (!queued) { queued = true; setTimeout(run, 60); } }
   function start() {
     style(); run();
     // Pages that draw themselves (voidtv.net's app, PLAY's rows) put new slots in later: fill them as they come.
     new MutationObserver(later).observe(document.body, { childList: true, subtree: true });
   }
-  window.VoidAreas = { areas: AREAS, open: open, close: close, refresh: run, spots: spots, html: mapHtml, marks: MARKS, closing: closingHtml, notFound: notFoundHtml };
+  window.VoidAreas = { areas: AREAS, open: open, close: close, refresh: run, spots: spots, html: mapHtml, marks: MARKS, closing: closingHtml, notFound: notFoundHtml, donate: DONATE };
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
 })();
