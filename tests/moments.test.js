@@ -263,7 +263,18 @@ test('a moment with a live rule gets its own Live TV channel, last, clean, with 
   assert.deepEqual(lists.slice(0, -1).map((l) => l.id), without.map((l) => l.id), 'every other channel is as it was');
   const thin = channelLists(SHOWS, ['Sitcoms'], new Set(), null, null, [], [{ ...moment, rule: { match: { titles: ['heat'] } } }]).lists;
   assert.ok(!thin.some((l) => l.id === 'moment-christmas'), 'too little to fill a channel makes none');
+  // Off, not yet begun or over: the build gets no moment channel, and the lists are exactly today's (the owner chat's condition, 26 Nov).
+  const os = require('os');
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'moments-off-'));
+  const f = path.join(tmp, 'moments.json');
+  const mk = (o) => ({ ...base({ id: 'christmas', start: '2026-11-25', end: '2026-12-31', areas: { live: rule } }), ...o });
+  fs.writeFileSync(f, JSON.stringify({ moments: [mk({ on: false }), mk({ id: 'past', start: '2025-12-01', end: '2025-12-31' }), mk({ id: 'unsure', approved: '' })] }));
+  const MP = require('../scripts/lib/moments-pub');
+  assert.deepEqual(MP.publicMoments(f, at('2026-11-26')).moments.map((m) => m.id), [], 'none of them reaches the build');
+  fs.rmSync(tmp, { recursive: true, force: true });
+  assert.deepEqual(channelLists(SHOWS, ['Sitcoms'], new Set(['movie-5']), null, null, [], []).lists, without, 'with no moment channel the lists are the same as today');
   const APP = fs.readFileSync(path.join(REPO, 'scripts', 'lib', 'app.js'), 'utf8');
+  assert.ok(APP.includes("function momentChan(id){const c=TV&&TV.find(x=>x.id==='moment-'+id);return c?"), 'no channel in the plan, no button');
   assert.ok(APP.includes('TV=A.channels.filter(c=>!c.when||(c.when[0]<=day&&day<=c.when[1]))'), 'the page leaves the channel out before its start and after its end, by the viewer\'s own date');
   assert.ok(APP.includes('<span class="mch" data-m="\'+esc(r.id)+\'">\'+momentChan(r.id)+\'</span>'),'the gold card offers the channel only when it is in the plan');
   assert.ok(APP.includes("onNowHtml();momentChans();"), 'and once Live TV has loaded');
