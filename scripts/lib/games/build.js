@@ -116,7 +116,9 @@ function kidsGamePage(html, version) {
     ['<head>', '<head>\n<meta name="play-build" content="' + version + '">'],
     ['<meta name="theme-color" content="#07080c">', '<meta name="theme-color" content="#fff8e7">'],
     ['content="PLAY">', 'content="Kids games">'],
-    ['<link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">', '<link rel="manifest" href="/manifest.webmanifest"><link rel="apple-touch-icon" href="/assets/kids/apple-touch-icon.png">'],
+    // PLAY's own home-screen icon changes now and then (25 Nov 2026: its joystick mark, play-apple-touch-icon.png?v=1);
+    // Kids always shows its own, whichever PLAY's is.
+    [/<link rel="manifest" href="manifest\.webmanifest"><link rel="apple-touch-icon" href="[^"]*">/, '<link rel="manifest" href="/manifest.webmanifest"><link rel="apple-touch-icon" href="/assets/kids/apple-touch-icon.png">'],
     ['<title>PLAY | voidtv.net</title>', '<title>Games | voidtv.net kids</title>'],
     ['<link rel="icon" href="/favicon.ico">', '<link rel="icon" href="/assets/kids/mark.svg" type="image/svg+xml">'],
     ['<link rel="stylesheet" href="play.css">', '<link rel="stylesheet" href="play.css?v=' + version + '"><link rel="stylesheet" href="kids.css?v=' + version + '">'],

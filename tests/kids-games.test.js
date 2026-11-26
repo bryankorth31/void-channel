@@ -20,6 +20,7 @@ test('the kids copy of the game page keeps nothing that leaves the site, and no 
   assert.doesNotMatch(h, /target="_blank"/);
   assert.doesNotMatch(h, /id="give"|give-card|class="donate"|Donate/i, 'no donation in front of a child');
   assert.doesNotMatch(h, /href="\/takedown"/);
+  assert.match(h, /<link rel="apple-touch-icon" href="\/assets\/kids\/apple-touch-icon\.png">/, 'the Kids home-screen icon, whichever icon PLAY uses');
   assert.doesNotMatch(h, /\/remote\//, 'no phone remote script: Kids serves no /remote/ (Bryan, 26 Nov 2026: "Yes, drop it")');
   for (const id of ['from', 'core-name', 'core-licence', 'src-core', 'core-terms', 'core-terms-link', 'cheat-src', 'b-games', 'b-phones', 'cover-phone', 'm-phones']) assert.match(h, new RegExp('id="' + id + '"'), id + ' is still there for PLAY\'s script');
   assert.match(h, /<script src="src\/play\.js\?v=abcdef012345">/, 'PLAY\'s own script, with this build');
