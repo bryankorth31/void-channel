@@ -4,7 +4,7 @@
     {
       "id": "gta",
       "name": "A new Grand Theft Auto",
-      "on": true,
+      "on": false,
       "approved": "2026-11-22",
       "start": "2026-11-22",
       "peak": "2026-11-22",
@@ -56,9 +56,9 @@
     {
       "id": "christmas",
       "name": "Christmas",
-      "on": false,
-      "approved": "",
-      "start": "2026-12-01",
+      "on": true,
+      "approved": "2026-11-26",
+      "start": "2026-11-25",
       "peak": "2026-12-25",
       "end": "2026-12-31",
       "why": "Christmas is the most watched holiday on TV; voidtv.net carries over 100 Christmas films and specials.",
@@ -107,6 +107,27 @@
           },
           "sort": "year",
           "min": 4
+        },
+        "live": {
+          "title": "Christmas",
+          "about": "Christmas films and specials around the clock, 25 November to 31 December.",
+          "match": {
+            "titles": [
+              "christmas",
+              "santa",
+              "rudolph",
+              "frosty",
+              "grinch",
+              "scrooge",
+              "nutcracker",
+              "mistletoe",
+              "yuletide"
+            ],
+            "not": [
+              "noels-house-party"
+            ]
+          },
+          "min": 12
         }
       },
       "ad": {
