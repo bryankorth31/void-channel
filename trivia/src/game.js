@@ -19,6 +19,8 @@
   function subject(q) { const a = q.about || {}; return a.show ? 'show:' + a.show : a.film ? 'film:' + a.film : a.card ? 'card:' + a.card : 'q:' + q.id; }
 
   // A theme deck (Black TV first; Bryan, 26 Nov 2026: "A, Theme row") takes only what is about a show on that theme's list.
+  // How long a clip or sound plays (its own start and end, else the bank's 10 seconds).
+  function clipSeconds(m) { const s = m && Number(m.end) - Number(m.start); return s > 0 && s < 120 ? s : 10; }
   function inTheme(q, opts) { return !opts.theme || (Array.isArray(q.groups) && q.groups.includes(opts.theme)); }
   // Does the bank's index hold any question for this theme? (bank.js writes each file's theme counts as groups.)
   function themeInIndex(index, theme) { return !!(index && (index.files || []).some((f) => f.groups && f.groups[theme] && f.groups[theme].count > 0)); }
@@ -304,7 +306,7 @@
     return JSON.stringify(m);
   }
 
-  const api = { ROUND_NAMES, CATEGORY_NAMES, whyLine, inTheme, themeInIndex, roomsOn, adultOpen, adultOpened, seeded, shuffle, subject, allowed, pickGame, keyAction, points, standings, answerOf, ordinal,
+  const api = { ROUND_NAMES, CATEGORY_NAMES, whyLine, clipSeconds, inTheme, themeInIndex, roomsOn, adultOpen, adultOpened, seeded, shuffle, subject, allowed, pickGame, keyAction, points, standings, answerOf, ordinal,
     order, datesFor, hlRun, yearQs, guessOf, yearPoints, compose, SHELF_VALUES, buildShelf, wagerOf, settleWager };
   if (typeof module !== 'undefined' && module.exports) module.exports = api; else root.TriviaGame = api;
 })(this);

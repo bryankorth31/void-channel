@@ -25,7 +25,47 @@
     return LETTERS[m.answer] + (word ? ': ' + word : '');
   }
 
-  function only(id) { for (const s of ['note', 'name', 'wait', 'ask', 'res', 'end']) $(s).hidden = s !== id; }
+  function only(id) { if (id !== 'ask') dropMedia(); for (const s of ['note', 'name', 'wait', 'ask', 'res', 'end']) $(s).hidden = s !== id; }
+
+  // The question's clip, picture or sound, played on this phone (Bryan, 26 Nov 2026: playing from another room). A picture
+  // shows by itself; a clip or a sound waits for a tap, since a phone plays sound only after one, and in the same room as the
+  // screen nobody needs to tap.
+  const pv = $('pv');
+  let media = null;
+  function dropMedia() {
+    media = null;
+    pv.onloadeddata = pv.onplaying = pv.ontimeupdate = pv.onerror = null;
+    try { pv.pause(); } catch (e) { /* fine */ }
+    pv.removeAttribute('src'); try { pv.load(); } catch (e) { /* fine */ }
+    $('pm').hidden = true; $('ask').classList.remove('with-media');
+  }
+  function showMedia(n, m) {
+    if (media && media.n === n) return; // the same question again (a reconnect): leave what is playing
+    dropMedia();
+    if (!m || !/^https:\/\/archive\.org\//.test(m.url || '')) return;
+    media = { n, ...m };
+    const still = m.kind === 'still', sound = m.kind === 'audio';
+    $('pm').hidden = false; $('ask').classList.add('with-media');
+    $('pm').classList.toggle('listen', sound);
+    $('pear').hidden = !sound;
+    $('pplay').hidden = still;
+    $('pplay').textContent = sound ? '\u25B6 Listen here' : '\u25B6 Play here';
+    $('pnote').textContent = still ? 'Loading the picture' : (sound ? '10 seconds of sound.' : '10 seconds from the Internet Archive.') + ' Same room as the screen? Leave it.';
+    pv.muted = still;
+    pv.onloadeddata = () => { if (media && media.n === n && still) { $('pnote').textContent = ''; pv.pause(); } };
+    pv.onplaying = () => { if (media && media.n === n && still) { pv.pause(); $('pnote').textContent = ''; } };
+    pv.ontimeupdate = () => { if (media && media.n === n && !still && pv.currentTime >= m.end) { pv.pause(); $('pplay').hidden = false; $('pplay').textContent = '\u21BB Again'; } };
+    pv.onerror = () => { if (media && media.n === n) { $('pnote').textContent = 'This one did not load here. Look at the big screen.'; $('pplay').hidden = true; } };
+    pv.src = m.url + '#t=' + m.start + ',' + m.end;
+    if (still) pv.play().catch(() => { /* the first frame still shows once loaded */ });
+    else { try { pv.load(); } catch (e) { /* fine */ } }
+  }
+  $('pplay').addEventListener('click', () => {
+    if (!media) return;
+    $('pplay').hidden = true;
+    try { pv.currentTime = media.start; } catch (e) { /* fine */ }
+    pv.play().catch(() => { $('pplay').hidden = false; $('pnote').textContent = 'Tap again to play it.'; });
+  });
   function note(h, p, link) { $('note-h').textContent = h; $('note-p').textContent = p; $('note-a').hidden = !link; only('note'); }
   const send = (m) => { if (ws && ws.readyState === 1) ws.send(JSON.stringify(m)); };
   const buzz = () => { try { if (navigator.vibrate) navigator.vibrate(12); } catch (e) { /* not on this phone */ } };
@@ -46,6 +86,7 @@
     shown = { n: m.n, choices: m.choices || null }; // kept so the result can say the answer in words
     $('num').textContent = 'Question ' + (m.n + 1) + ' of ' + m.of;
     $('q').textContent = m.q || 'Look at the big screen.';
+    showMedia(m.n, m.media);
     const box = $('answers');
     box.textContent = '';
     if (m.kind === 'year') { drawYear(box, m); only('ask'); return; }

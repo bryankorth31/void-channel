@@ -468,7 +468,10 @@
   // ---------- clips, pictures and sound: played straight from archive.org ----------
   const vid = $('vid');
   let clip = null;          // the media of the question on screen
-  let clockWaiting = false; // the clock starts when the clip is ready (or after 8 seconds, whatever happens)
+  // The clock waits for the media: a picture's clock starts once it shows; a clip's or a sound's once its seconds have played,
+  // so the answering time is all after it (Bryan, 26 Nov 2026: "the timer needs to be longer before the answer is shown").
+  // A file that never starts gives the clock after 15 seconds; one that stalls, after its length and 3 more.
+  let clockWaiting = false;
   function stopMedia() {
     clip = null; clockWaiting = false;
     vid.onloadeddata = vid.onplaying = vid.onerror = vid.ontimeupdate = null;
@@ -491,11 +494,22 @@
     $('stage').classList.add('with-media');
     $('mnote').textContent = 'Loading from the Internet Archive';
     clockWaiting = true;
-    const ready = () => { $('mnote').textContent = ''; if (clockWaiting) { clockWaiting = false; startClock(); } };
-    setTimeout(() => { if (clip === m && clockWaiting) { clockWaiting = false; startClock(); } }, 8000);
+    let started = false;
+    const clockNow = () => { if (clip === m && clockWaiting) { clockWaiting = false; startClock(); } };
+    const ready = () => {
+      $('mnote').textContent = '';
+      if (m.kind === 'still') return clockNow();
+      if (started) return;
+      started = true;
+      // A slow file can start after the wait below gave up and started the clock: the clock then starts again, full, once
+      // the clip has played, so the answering time is still all after it.
+      if (!clockWaiting && clip === m && phase === 'ask') { stopClock(); clockWaiting = true; }
+      setTimeout(clockNow, (G.clipSeconds(m) + 3) * 1000);
+    };
+    setTimeout(() => { if (!started) clockNow(); }, 15000);
     vid.onloadeddata = () => { if (clip !== m) return; if (m.kind === 'still') { vid.pause(); ready(); } else playClip(); };
     vid.onplaying = () => { if (clip === m) ready(); };
-    vid.ontimeupdate = () => { if (clip === m && m.kind !== 'still' && vid.currentTime >= m.end) vid.pause(); };
+    vid.ontimeupdate = () => { if (clip === m && m.kind !== 'still' && vid.currentTime >= m.end) { vid.pause(); clockNow(); } };
     vid.onerror = () => { if (clip !== m) return; $('mnote').textContent = 'This clip did not load from the Internet Archive. Enter shows the answer.'; if (clockWaiting) { clockWaiting = false; startClock(); } };
     vid.muted = m.kind === 'still';
     vid.src = m.url + '#t=' + m.start + ',' + m.end;
@@ -511,6 +525,9 @@
     const q = game.qs[game.at];
     if (q.round === 'year-guess') return { type: 't-q', n: game.at, of: game.total || game.qs.length, q: q.q, kind: 'year', min: q.min, max: q.max, secs: game.opts.secs, guess: pick == null ? null : pick };
     const m = { type: 't-q', n: game.at, of: game.total || game.qs.length, q: q.q, choices: q.choices, secs: game.opts.secs, pick: pick == null ? null : pick };
+    // The clip, picture or sound goes to the phone too, so a phone in another room can play it itself (Bryan, 26 Nov 2026,
+    // playing from another room: "Yes"). Only an archive.org address is passed on.
+    if (q.media && /^https:\/\/archive\.org\//.test(q.media.url)) m.media = { kind: q.media.kind, url: q.media.url, start: q.media.start, end: q.media.end };
     if (JSON.stringify(m).length > 900) delete m.q;
     if (JSON.stringify(m).length > 900) m.choices = q.choices.map((c) => c.slice(0, 80));
     return m;

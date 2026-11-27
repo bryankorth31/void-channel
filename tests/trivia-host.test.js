@@ -509,3 +509,33 @@ test('theme: a theme is offered only when the bank holds questions for it', () =
   const host = require('fs').readFileSync(require('path').join(__dirname, '..', 'trivia', 'src', 'host.js'), 'utf8');
   assert.match(host, /index = j; themesInBank\(\); showAvailable\(\);/, 'checked as soon as the index loads, before the count');
 });
+
+// Phones apart (Bryan, 26 Nov 2026: "Yes" to phones that play the question and a clock that starts after the clip).
+test('phones apart: a phone is sent the question\'s archive.org clip, picture or sound, and nothing else as media', () => {
+  const fs = require('fs'), path = require('path');
+  const host = fs.readFileSync(path.join(__dirname, '..', 'trivia', 'src', 'host.js'), 'utf8');
+  const qm = host.slice(host.indexOf('function questionMsg('), host.indexOf('function ask('));
+  assert.ok(qm.includes('archive\\.org\\/\/.test(q.media.url)) m.media = { kind: q.media.kind, url: q.media.url, start: q.media.start, end: q.media.end };'), 'archive.org media only, four fields');
+  assert.ok(qm.indexOf('m.media =') < qm.indexOf('delete m.q'), 'the media goes in before the size trim, which drops the question text first');
+  const phone = fs.readFileSync(path.join(__dirname, '..', 'trivia', 'src', 'phone.js'), 'utf8');
+  assert.match(phone, /showMedia\(m\.n, m\.media\);/);
+  assert.ok(phone.includes("archive\\.org\\/\/.test(m.url || '')) return;"), 'the phone plays archive.org only');
+  assert.match(phone, /function only\(id\) \{ if \(id !== 'ask'\) dropMedia\(\);/, 'leaving the question stops it');
+  assert.match(phone, /if \(media && media\.n === n\) return;/, 'a reconnect does not restart it');
+  const html = fs.readFileSync(path.join(__dirname, '..', 'trivia', 'phone.html'), 'utf8');
+  assert.match(html, /<video id="pv" playsinline preload="metadata"><\/video>/, 'plays inside the page on an iPhone');
+  assert.match(html, /<button type="button" class="pplay" id="pplay" title="[^"]+">&#9654; Play here<\/button>/);
+});
+
+test('phones apart: a clip\'s or a sound\'s clock starts when it has played; a picture\'s when it shows', () => {
+  assert.equal(G.clipSeconds({ start: 300, end: 310 }), 10);
+  assert.equal(G.clipSeconds({ start: 5, end: 5 }), 10, 'a broken length falls back to the bank\'s 10');
+  assert.equal(G.clipSeconds(null), 10);
+  const host = require('fs').readFileSync(require('path').join(__dirname, '..', 'trivia', 'src', 'host.js'), 'utf8');
+  const sm = host.slice(host.indexOf('function showMedia('), host.indexOf('function startClock('));
+  assert.match(sm, /if \(m\.kind === 'still'\) return clockNow\(\);/);
+  assert.match(sm, /setTimeout\(clockNow, \(G\.clipSeconds\(m\) \+ 3\) \* 1000\)/, 'a stalled clip still gets its clock');
+  assert.match(sm, /vid\.currentTime >= m\.end\) \{ vid\.pause\(\); clockNow\(\); \}/, 'the clock starts as the clip ends');
+  assert.ok(sm.includes('setTimeout(() => { if (!started) clockNow(); }, 15000)'), 'a file that never starts');
+  assert.ok(sm.includes("if (!clockWaiting && clip === m && phase === 'ask') { stopClock(); clockWaiting = true; }"), 'a late start gives the full clock after it');
+});

@@ -31,6 +31,13 @@ input{width:100%;font:600 22px/1 system-ui,sans-serif;background:var(--panel);co
 .q{font-size:16px;color:var(--dim);margin:0 0 10px}
 .num{color:var(--gold);font-weight:600;font-size:15px;margin:0 0 6px}
 .answers{flex:1;display:grid;grid-template-rows:repeat(4,1fr);gap:10px;min-height:340px}
+.pm{position:relative;margin:0 0 10px;border-radius:14px;overflow:hidden;background:#000;aspect-ratio:16/9;border:2px solid rgba(255,255,255,.14);flex:none}
+.pm video{width:100%;height:100%;object-fit:contain;display:block}
+.pm.listen video{opacity:0}
+.pear{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:54px;color:var(--blue)}
+.pplay{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:#ff2e88;color:#fff;border:0;border-radius:999px;font:800 19px system-ui,sans-serif;padding:14px 22px;box-shadow:0 4px 18px rgba(0,0,0,.5);cursor:pointer}
+.pnote{position:absolute;left:0;right:0;bottom:0;margin:0;padding:6px 10px;font-size:12px;color:#ddd;background:rgba(0,0,0,.55)}
+#ask.with-media .answers{min-height:250px}
 .yearpick{display:flex;flex-direction:column;align-items:stretch;gap:14px}
 .yearbig{font-family:'Unbounded',sans-serif;font-size:64px;text-align:center;color:var(--gold);line-height:1}
 .yearpick input[type=range]{width:100%;height:44px;accent-color:var(--gold)}
@@ -88,6 +95,12 @@ body>header,body>main{position:relative;z-index:1}
   <section id="ask" hidden>
     <p class="num" id="num"></p>
     <p class="q" id="q"></p>
+    <div class="pm" id="pm" hidden>
+      <video id="pv" playsinline preload="metadata"></video>
+      <span class="pear" id="pear" aria-hidden="true">&#9835;</span>
+      <button type="button" class="pplay" id="pplay" title="Play it on this phone">&#9654; Play here</button>
+      <p class="pnote" id="pnote"></p>
+    </div>
     <div class="answers" id="answers"></div>
   </section>
 
