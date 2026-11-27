@@ -242,8 +242,8 @@ test('theme list: a listed show under the vote line gets questions, each tagged 
   const qs = B.makeQuestions(data);
   const alpha = qs.filter((q) => q.about && q.about.show === 'alpha');
   assert.ok(alpha.length > 0, 'the listed show is asked about though it is under the line');
-  for (const q of alpha) assert.deepEqual(q.groups, ['black-tv']);
-  assert.ok(qs.filter((q) => q.about && q.about.show && q.about.show !== 'alpha').every((q) => !q.groups), 'unlisted shows carry no tag');
+  for (const q of alpha) assert.equal(q.groups[0], 'black-tv', 'the list tag first');
+  assert.ok(qs.filter((q) => q.about && q.about.show && q.about.show !== 'alpha').every((q) => !(q.groups || []).includes('black-tv')), 'unlisted shows carry no list tag');
   assert.deepEqual(checkAll(qs, db, pool, cards, metaOf), []);
   for (const s of pool.shows) if (s.slug === 'alpha') delete s.lists;
   const off = B.makeQuestions(B.gather(db, pool, new Set(), {}, metaOf));
@@ -287,4 +287,24 @@ test('theme: a listed show\'s wrong answers come from its own list when the list
   assert.equal(B.showFoils(thin[0], thin, 3, B.rng('x')).length, 4, 'too few on the list: every show, as before');
   const plain = B.showFoils(shows[4], shows, 3, B.rng('y')).map((x) => x.slug);
   assert.ok(plain.some((x) => ['a', 'b', 'c', 'd'].includes(x)) && plain.some((x) => ['f', 'g'].includes(x)), 'an unlisted show draws from every show');
+});
+
+test('generations: a show or TV movie is tagged by the year it first aired, in every generation whose years hold it', () => {
+  assert.deepEqual(B.generationsOf(1955), [], 'before every span: no generation');
+  assert.deepEqual(B.generationsOf(1983), ['boomer']);
+  assert.deepEqual(B.generationsOf(1995), ['boomer', 'millennial'], 'the spans overlap');
+  assert.deepEqual(B.generationsOf(2001), ['millennial']);
+  assert.deepEqual(B.generationsOf(2005), ['millennial', 'genz'], 'the spans overlap');
+  assert.deepEqual(B.generationsOf(2024), ['genz']);
+  assert.deepEqual(B.generationsOf(null), []);
+  const { db, pool } = fixture();
+  db.prepare("update shows set premiered = '1978-09-01' where slug = 'charlie'").run();
+  for (const s of pool.shows) if (s.slug === 'alpha') s.lists = ['black-tv'];
+  const data = B.gather(db, pool, new Set(), {}, metaOf);
+  data.cards = cards;
+  const qs = B.makeQuestions(data);
+  const charlie = qs.filter((q) => q.about && q.about.show === 'charlie');
+  assert.ok(charlie.length && charlie.every((q) => q.groups && q.groups.includes('boomer')));
+  assert.ok(qs.filter((q) => q.about && q.about.show === 'alpha').every((q) => q.groups[0] === 'black-tv'), 'list first, then generations');
+  assert.deepEqual(checkAll(qs, db, pool, cards, metaOf), []);
 });

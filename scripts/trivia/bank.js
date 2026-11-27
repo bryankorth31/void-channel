@@ -394,16 +394,25 @@ function makeQuestions(data) {
   const fameOfShow = new Map(data.shows.map((s) => [s.slug, s.votes || 0]));
   const fameOfFilm = new Map(data.films.map((f) => [String(f.tmdbId), f.votes || 0]));
   const listsOfShow = new Map(data.shows.filter((s) => s.lists).map((s) => [s.slug, s.lists]));
+  const yearOfShow = new Map(data.shows.map((s) => [s.slug, yearOf(s.premiered)]));
+  const yearOfFilm = new Map(data.films.map((f) => [String(f.tmdbId), +f.year || null]));
   for (const q of qs) {
     const a = q.about || {};
     const fame = a.show ? fameOfShow.get(a.show) : a.film ? fameOfFilm.get(String(a.film)) : null;
     if (fame) q.fame = fame;
-    // The theme lists a question's show is on (black-tv first), so a deck can be made of one theme.
-    const lists = a.show && listsOfShow.get(a.show);
-    if (lists) q.groups = lists;
+    // The theme lists a question's show is on (black-tv first), then the generations whose growing-up years its first year
+    // falls in, so a deck can be made of one theme.
+    const groups = [...((a.show && listsOfShow.get(a.show)) || []), ...generationsOf(a.show ? yearOfShow.get(a.show) : a.film ? yearOfFilm.get(String(a.film)) : null)];
+    if (groups.length) q.groups = groups;
   }
   return qs.filter((q) => screenOk(q.band, [q.q, ...q.choices]));
 }
+
+// The generations, by the years each grew up watching TV (Bryan, 26 Nov 2026: "Boomer. Gen Z millennials the culture",
+// "This make sense"; Boomers "77 and on" to "2000", the years they were in their 20s and 30s). A show or TV movie belongs to
+// every generation whose span holds the year it first aired, so the spans overlap.
+const GENERATIONS = [['boomer', 1977, 2000], ['millennial', 1987, 2009], ['genz', 2003, 9999]];
+function generationsOf(year) { return year ? GENERATIONS.filter(([, a, b]) => year >= a && year <= b).map(([id]) => id) : []; }
 
 // ---------- writing ----------
 
@@ -522,7 +531,7 @@ function swapIn(next, out) {
   return true;
 }
 
-module.exports = { showFoils, showFiles, DEEP_RANK, datesOf, clipQs, filmClip, archiveMeta, PD_MARK, CLIP_SECS, mmss, screenOk, looksLikeGuests, guestShow, hash, rng, shuffle, norm, sameish, clean, nearYears, usablePart, usableEpisodeName, choicesOf, agreedNetwork, makerName,
+module.exports = { GENERATIONS, generationsOf, showFoils, showFiles, DEEP_RANK, datesOf, clipQs, filmClip, archiveMeta, PD_MARK, CLIP_SECS, mmss, screenOk, looksLikeGuests, guestShow, hash, rng, shuffle, norm, sameish, clean, nearYears, usablePart, usableEpisodeName, choicesOf, agreedNetwork, makerName,
   firstAired, premieredOn, whoPlayed, whichShow, filmYear, gameQs, makeQuestions, gather, write, sameFolder, swapIn };
 // Exported before main runs, so the checker (which needs these helpers) can load while main is running.
 if (require.main === module) main();

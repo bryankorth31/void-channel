@@ -494,7 +494,7 @@ test('theme: the page has the Theme row, Every show first and checked, and the c
   const fs = require('fs'), path = require('path');
   const html = fs.readFileSync(path.join(__dirname, '..', 'trivia', 'index.html'), 'utf8');
   const row = html.slice(html.indexOf('<span class="label">Theme</span>'), html.indexOf('<span class="label">Topics</span>'));
-  assert.match(row, /name="theme" value="all" checked> Every show[\s\S]*name="theme" value="black-tv"> Black TV/);
+  assert.match(row, /value="all" checked> Every show[\s\S]*value="boomer"> Boomers[\s\S]*value="millennial"> Millennials[\s\S]*value="genz"> Gen Z[\s\S]*value="black-tv"> The Culture/);
   assert.ok(html.indexOf('name="band" value="after-dark"') < html.indexOf('name="theme"'), 'it sits under Crowd');
   const host = fs.readFileSync(path.join(__dirname, '..', 'trivia', 'src', 'host.js'), 'utf8');
   assert.match(host, /theme: val\('theme'\) && val\('theme'\) !== 'all' \? val\('theme'\) : null/);
