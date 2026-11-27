@@ -274,3 +274,17 @@ test('theme: the bank applies the theme lists to the pool on every build, before
   assert.ok(main.indexOf('onLists(') < main.indexOf('gather(') && main.indexOf('onLists(') < main.indexOf('checkAll('), 'lists before the questions and the checker');
   assert.doesNotMatch(pool, /readLists/, 'the weekly pool file holds no lists, so none goes stale');
 });
+
+test('theme: a listed show\'s wrong answers come from its own list when the list holds enough, else from every show', () => {
+  const mk = (slug, band, lists) => ({ slug, name: slug.toUpperCase() + ' Show', band, premiered: '1990-01-01', ...(lists ? { lists } : {}) });
+  const shows = [mk('a', 'family', ['black-tv']), mk('b', 'family', ['black-tv']), mk('c', 'family', ['black-tv']), mk('d', 'family', ['black-tv']),
+    mk('e', 'family'), mk('f', 'family'), mk('g', 'family'), mk('h', 'after-dark', ['black-tv'])];
+  for (let i = 0; i < 20; i++) {
+    const foils = B.showFoils(shows[0], shows, 3, B.rng('t' + i)).slice(0, 3).map((x) => x.slug);
+    assert.deepEqual([...foils].sort(), ['b', 'c', 'd'], 'family list shows only; the after dark one stays out of a family question');
+  }
+  const thin = [mk('a', 'family', ['black-tv']), mk('b', 'family', ['black-tv']), mk('e', 'family'), mk('f', 'family'), mk('g', 'family')];
+  assert.equal(B.showFoils(thin[0], thin, 3, B.rng('x')).length, 4, 'too few on the list: every show, as before');
+  const plain = B.showFoils(shows[4], shows, 3, B.rng('y')).map((x) => x.slug);
+  assert.ok(plain.some((x) => ['a', 'b', 'c', 'd'].includes(x)) && plain.some((x) => ['f', 'g'].includes(x)), 'an unlisted show draws from every show');
+});

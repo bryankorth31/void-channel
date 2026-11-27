@@ -177,7 +177,10 @@ function yearOf(d) { const y = parseInt(String(d || '').slice(0, 4), 10); return
 // Who may stand beside a show as a wrong answer: a different show of a band this question allows, nearest in years.
 function showFoils(s, shows, n, rand) {
   const y = yearOf(s.premiered) || 2000;
-  const ok = shows.filter((o) => o.slug !== s.slug && (s.band === 'after-dark' || o.band === 'family') && !sameish(o.name, s.name));
+  let ok = shows.filter((o) => o.slug !== s.slug && (s.band === 'after-dark' || o.band === 'family') && !sameish(o.name, s.name));
+  // A show on a theme list takes its wrong answers from the same list when the list holds enough, so the right one does not
+  // stand out among unlike shows (Bryan, 26 Nov 2026: "Fix the wrong answers too").
+  if (s.lists && s.lists.length) { const same = ok.filter((o) => o.lists && o.lists.some((l) => s.lists.includes(l))); if (same.length >= n) ok = same; }
   const near = ok.filter((o) => Math.abs((yearOf(o.premiered) || 0) - y) <= 10);
   return shuffle(near.length >= n * 4 ? near : ok, rand);
 }
@@ -519,7 +522,7 @@ function swapIn(next, out) {
   return true;
 }
 
-module.exports = { showFiles, DEEP_RANK, datesOf, clipQs, filmClip, archiveMeta, PD_MARK, CLIP_SECS, mmss, screenOk, looksLikeGuests, guestShow, hash, rng, shuffle, norm, sameish, clean, nearYears, usablePart, usableEpisodeName, choicesOf, agreedNetwork, makerName,
+module.exports = { showFoils, showFiles, DEEP_RANK, datesOf, clipQs, filmClip, archiveMeta, PD_MARK, CLIP_SECS, mmss, screenOk, looksLikeGuests, guestShow, hash, rng, shuffle, norm, sameish, clean, nearYears, usablePart, usableEpisodeName, choicesOf, agreedNetwork, makerName,
   firstAired, premieredOn, whoPlayed, whichShow, filmYear, gameQs, makeQuestions, gather, write, sameFolder, swapIn };
 // Exported before main runs, so the checker (which needs these helpers) can load while main is running.
 if (require.main === module) main();
