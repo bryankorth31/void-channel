@@ -276,6 +276,13 @@ async function huntShow(entry) {
   console.log(`   Archive mentions: ${items.length}${narrow ? ' (narrow net)' : ''}; worth opening: ${scored.length}; opening up to ${MAX_ITEMS_TO_OPEN}`);
   const opened = prior ? prior.items.map((o) => ({ ...o })) : [];
   const already = new Set(opened.map((o) => o.id));
+  // includeItems (overrides.json): uploads a person found for this show that the search does not bring up (Girlfriends' 341-file
+  // upload, 27 Nov 2026). They are opened first and judged like any other item; the matcher still decides what each file is.
+  for (const id of (OVERRIDES[slug(show)] || {}).includeItems || []) {
+    if (already.has(id)) continue;
+    try { const o = await openItem(id, show, tv); o.searchScore = 1; o.named = true; opened.push(o); already.add(id); console.log(`   + ${id} (named in overrides.json): ${o.episodeShaped} episode-shaped of ${o.totalVideo} video`); }
+    catch (e) { console.log(`   ${id} (named in overrides.json) did not open: ${e.message}`); }
+  }
   for (const it of scored.filter((it) => !already.has(it.identifier)).slice(0, MAX_ITEMS_TO_OPEN)) {
     try {
       const o = await openItem(it.identifier, show, tv);

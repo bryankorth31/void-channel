@@ -271,6 +271,21 @@ const isExtras = (text, cores) => EXTRAS.test(stripShow(text, cores));
 // Inside the TVmaze runtime band. TVmaze's runtime is the broadcast slot, not the content: a 60-minute show is 40 to 45 minutes once the ads are
 // stripped, and short web series are listed rounded up to whole minutes (Jake and Amir: 4 listed, 2.4 real). So a file passes from half the runtime to
 // one and a quarter of it: short is normal, long is a compilation. (The strict pass keeps its own, narrower bands: 0.7 to 1.35 for one episode, 1.7 to 2.5 for two.)
+// The number a file gives its episode. As the hunt read it (f.ep: S01E02, 1x02, "Episode 7"), with two more ways uploads write it
+// (Bryan, 27 Nov 2026: "Teach the matches please", after Living Single placed 18 of its 91-file upload):
+//  * "Ep 501" or "Episode 312": season and episode in one number. Read so only when the plain count cannot be this show's (beyond its
+//    run) and the split is an episode TVmaze lists, so a long show's "Episode 120" still means the 120th.
+//  * "Living Single #01 pilot": a number after # is the episode's place in the run, when the hunt read no number at all.
+function readNumber(f, byKey, runLength) {
+  const ep = f.ep;
+  if (ep && ep.season == null && ep.episode >= 100 && ep.episode > runLength) {
+    const se = Math.floor(ep.episode / 100), e = ep.episode % 100;
+    if (e >= 1 && byKey.has(se + 'x' + e)) return { season: se, episode: e, why: 'season and episode in one number' };
+  }
+  if (ep) return ep;
+  const h = /#\s?(\d{1,3})(?!\d)/.exec(f.name || '');
+  return h && +h[1] >= 1 ? { season: null, episode: +h[1], why: 'numbered upload (#)' } : null;
+}
 function inRuntimeBand(seconds, runtimeMin) {
   if (!(seconds > 0) || !(runtimeMin > 0)) return false;
   const m = seconds / 60;
@@ -428,10 +443,11 @@ function decideGrid(entry, cand, tv, ctx) {
       if (fd && byDate.has(fd)) { candidates.push({ ep: byDate.get(fd), base: 0.75, why: 'airdate in filename', dated: true }); dateHit = true; }
       else if (fd && firstYear && +fd.slice(0, 4) < firstYear) { dateRejected++; tags.set(f, 'before-premiere'); continue; }
       // 1. S/E in the filename
-      if (f.ep && f.ep.season != null && byKey.has(`${f.ep.season}x${f.ep.episode}`)) {
-        candidates.push({ ep: byKey.get(`${f.ep.season}x${f.ep.episode}`), base: 0.6, why: 'S/E in filename' });
-      } else if (f.ep && f.ep.season == null && f.ep.episode >= 1 && f.ep.episode <= ordered.length) {
-        candidates.push({ ep: ordered[f.ep.episode - 1], base: 0.4, why: 'absolute episode number' });
+      const fe = readNumber(f, byKey, ordered.length);
+      if (fe && fe.season != null && byKey.has(`${fe.season}x${fe.episode}`)) {
+        candidates.push({ ep: byKey.get(`${fe.season}x${fe.episode}`), base: 0.6, why: fe.why || 'S/E in filename' });
+      } else if (fe && fe.season == null && fe.episode >= 1 && fe.episode <= ordered.length) {
+        candidates.push({ ep: ordered[fe.episode - 1], base: 0.4, why: fe.why || 'absolute episode number' });
       }
       // 2. Title similarity (best episode by name)
       let best = null, bestSim = 0;
