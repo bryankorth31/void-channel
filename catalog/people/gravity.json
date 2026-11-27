@@ -1,1815 +1,596 @@
 {
  "show": "Gravity",
  "slug": "gravity",
- "tmdbId": 40075,
+ "tmdbId": 31393,
  "cast": [
   {
-   "id": 50095,
-   "name": "Jason Ritter",
-   "photo": "https://image.tmdb.org/t/p/w185/9i4YvUpSlQDzH0U8y5FWXQkaAGf.jpg",
-   "character": "Dipper Pines (voice)",
-   "episodes": 40
+   "id": 78080,
+   "name": "Krysten Ritter",
+   "photo": "https://image.tmdb.org/t/p/w185/sOlFqP13d3GFp7ccCHgcfTgWIWu.jpg",
+   "character": "Lily Champagne",
+   "episodes": 10
   },
   {
-   "id": 109869,
-   "name": "Kristen Schaal",
-   "photo": "https://image.tmdb.org/t/p/w185/s3LSHVTx8gxHP2twYsXEGa8JbLl.jpg",
-   "character": "Mabel Pines (voice)",
-   "episodes": 40
+   "id": 38583,
+   "name": "Ivan Sergei",
+   "photo": "https://image.tmdb.org/t/p/w185/2UML9oX6NfJqYDALnT6U32kMOnF.jpg",
+   "character": "Robert Collingsworth",
+   "episodes": 10
   },
   {
-   "id": 1254995,
-   "name": "Alex Hirsch",
-   "photo": "https://image.tmdb.org/t/p/w185/pGoKJKbqI3AwcmQkmEKG9jBXdcw.jpg",
-   "character": "Grunkle Stan / Soos Ramirez / Bill Cipher / Old Man McGucket (voice)",
-   "episodes": 40
+   "id": 68185,
+   "name": "Eric Schaeffer",
+   "photo": "https://image.tmdb.org/t/p/w185/rXuDlJrIaU7Sc01nCAe5faHfKGM.jpg",
+   "character": "Christian Miller",
+   "episodes": 10
   },
   {
-   "id": 1817,
-   "name": "Linda Cardellini",
-   "photo": "https://image.tmdb.org/t/p/w185/bcycvynDprC1rrhBNrnBjn5uOUd.jpg",
-   "character": "Wendy Corduroy (voice)",
-   "episodes": 40
+   "id": 10182,
+   "name": "Ving Rhames",
+   "photo": "https://image.tmdb.org/t/p/w185/tOVDvu1EQP78AwaUw6uh1wN818E.jpg",
+   "character": "Dogg McFee",
+   "episodes": 10
   },
   {
-   "id": 590012,
-   "name": "Matt Chapman",
+   "id": 110015,
+   "name": "Rachel Hunter",
+   "photo": "https://image.tmdb.org/t/p/w185/8HAfc1D1zx9hWBaK4cwj38MZkWv.jpg",
+   "character": "Shawna Rollins",
+   "episodes": 10
+  },
+  {
+   "id": 159319,
+   "name": "Robyn Cohen",
+   "photo": "https://image.tmdb.org/t/p/w185/1PU2R8aCNcLUDmJoNIVTfpogB8e.jpg",
+   "character": "Carla",
+   "episodes": 10
+  },
+  {
+   "id": 104482,
+   "name": "James Martinez",
+   "photo": "https://image.tmdb.org/t/p/w185/xWGHtcBUmNO9MBqoDHPtetQZ3k7.jpg",
+   "character": "Jorge Sanchez",
+   "episodes": 10
+  },
+  {
+   "id": 234136,
+   "name": "Seth Numrich",
+   "photo": "https://image.tmdb.org/t/p/w185/7G9knd2kMDe02GK8nebZPJSC2xj.jpg",
+   "character": "Adam Rosenblum",
+   "episodes": 10
+  },
+  {
+   "id": 27176,
+   "name": "Karl Geary",
+   "photo": "https://image.tmdb.org/t/p/w185/ex3VfDXZPirfULVqzyTKVcKHFt2.jpg",
+   "character": "Diego",
+   "episodes": 7
+  },
+  {
+   "id": 41232,
+   "name": "Jessica Walter",
+   "photo": "https://image.tmdb.org/t/p/w185/dR7b2FmJGgjfSpwfz3AZzm6X13O.jpg",
+   "character": "Henrietta",
+   "episodes": 5
+  },
+  {
+   "id": 1211,
+   "name": "Larry Miller",
+   "photo": "https://image.tmdb.org/t/p/w185/ajnXlXG20LJwAwxne8G94ucVj0v.jpg",
+   "character": "Dr. Tepperman",
+   "episodes": 4
+  },
+  {
+   "id": 11512,
+   "name": "John Heard",
+   "photo": "https://image.tmdb.org/t/p/w185/zjhcxrCFK4q0C1gtVmeN8FeqCw0.jpg",
+   "character": "B.C.",
+   "episodes": 3
+  },
+  {
+   "id": 19978,
+   "name": "Jason Kravits",
+   "photo": "https://image.tmdb.org/t/p/w185/kTaZGtOP3SR6kosdRLyeQayfjcF.jpg",
+   "character": "Credit Card Asshole (voice) / Credit Card Asshole",
+   "episodes": 3
+  },
+  {
+   "id": 59845,
+   "name": "Marcella Lowery",
+   "photo": "https://image.tmdb.org/t/p/w185/9GuDeNZZHYx7dULykxM31j2fqix.jpg",
+   "character": "Selma Jones",
+   "episodes": 2
+  },
+  {
+   "id": 55496,
+   "name": "Robert LuPone",
+   "photo": "https://image.tmdb.org/t/p/w185/8lL8tea78b5ACsSbr2ebBK7olMD.jpg",
+   "character": "Jim Rosenblum",
+   "episodes": 2
+  },
+  {
+   "id": 26715,
+   "name": "Robert Klein",
+   "photo": "https://image.tmdb.org/t/p/w185/eZNiVyIMZSuyDmjIf7UaccpCJph.jpg",
+   "character": "Father Anthony",
+   "episodes": 2
+  },
+  {
+   "id": 94008,
+   "name": "Allyce Beasley",
+   "photo": "https://image.tmdb.org/t/p/w185/qVZvGwAyxlDpUDjlbKpxjyW1hQx.jpg",
+   "character": "Dr. Karen Robinson / Dr. Robinson",
+   "episodes": 2
+  },
+  {
+   "id": 1236282,
+   "name": "Ching Valdes-Aran",
+   "photo": "https://image.tmdb.org/t/p/w185/q8HTfORLPF9lHvkipfm3E4x1bcB.jpg",
+   "character": "Rhonda",
+   "episodes": 2
+  },
+  {
+   "id": 84899,
+   "name": "Melissa Bacelar",
    "photo": null,
-   "character": "Marius von Fundshauser (voice) / French Lilliputtian (voice) / Hand Witch / Hiker / Cyclops (voice)",
-   "episodes": 21
+   "character": "Megan",
+   "episodes": 1
   },
   {
-   "id": 1224999,
-   "name": "Gregg Turkington",
-   "photo": "https://image.tmdb.org/t/p/w185/rlusjIKkiM5lWUUNWZBbHMSBEjH.jpg",
-   "character": "Toby Determined (voice) / Young Toby Determined (voice)",
-   "episodes": 16
+   "id": 32394,
+   "name": "Anne Meara",
+   "photo": "https://image.tmdb.org/t/p/w185/zQVdY5AdOlGuq2AtwOMjOD3AmfH.jpg",
+   "character": "Mrs. Talbot",
+   "episodes": 1
   },
   {
-   "id": 24362,
-   "name": "Kevin Michael Richardson",
-   "photo": "https://image.tmdb.org/t/p/w185/xXt9Nh7RAT5bOen66TaXreNYmCl.jpg",
-   "character": "Sheriff Blubs (voice) / Sheriff Blubs / Ghost-Eyes (voice) / Sheriff Blubs / Additional Voices (voice)",
-   "episodes": 15
+   "id": 212403,
+   "name": "Brian Berrebbi",
+   "photo": "https://image.tmdb.org/t/p/w185/oZakuoRkgD5sleAedQ1ZtL6tKGk.jpg",
+   "character": "Paparazzi 3",
+   "episodes": 1
   },
   {
-   "id": 1367713,
-   "name": "Carl Faruolo",
-   "photo": null,
-   "character": "Grenda (voice) / Bully (voice) / Grenda (voice)",
-   "episodes": 14
+   "id": 59691,
+   "name": "Richard Bekins",
+   "photo": "https://image.tmdb.org/t/p/w185/1Pgbx17u57jQe9tuWpfVUP620vc.jpg",
+   "character": "",
+   "episodes": 1
   },
   {
-   "id": 38334,
-   "name": "Jennifer Coolidge",
-   "photo": "https://image.tmdb.org/t/p/w185/hcpbV0dY4ZJxmZi1WcAWe8euqV2.jpg",
-   "character": "Lazy Susan / Additional Voices (voice) / Lazy Susan (voice)",
-   "episodes": 14
+   "id": 164323,
+   "name": "Robert Turano",
+   "photo": "https://image.tmdb.org/t/p/w185/pNkYFTtkwMi8KmlTuy1MrmYTnRi.jpg",
+   "character": "Desk Sargent",
+   "episodes": 1
   },
   {
-   "id": 1245731,
-   "name": "Niki Yang",
-   "photo": "https://image.tmdb.org/t/p/w185/t0MYbwrpGZLwp66L2rSG5uhlaJ6.jpg",
-   "character": "Candy Chiu (voice) / Additional Voices (voice) / Candy Chiu (voice)",
-   "episodes": 14
-  },
-  {
-   "id": 62831,
-   "name": "Will Forte",
-   "photo": "https://image.tmdb.org/t/p/w185/4VEzbkL3HwHTUZAPA5PyypFG2U.jpg",
-   "character": "Tyler Cutebiker (voice)",
-   "episodes": 13
-  },
-  {
-   "id": 51990,
-   "name": "T.J. Miller",
-   "photo": "https://image.tmdb.org/t/p/w185/rRrVvBxOkyYM5XdLXimShHR1Itn.jpg",
-   "character": "Robbie Valentino / Additional Voices (voice) / Robbie Valentino (voice)",
-   "episodes": 13
-  },
-  {
-   "id": 15761,
-   "name": "Grey DeLisle",
-   "photo": "https://image.tmdb.org/t/p/w185/vrUHaXe1pG56yZkgH7Hs3LGRLTT.jpg",
-   "character": "Carla McCorkle / Additional Voices (voice) / Rosanna (voice) / Hank's son (voice) / Mrs. Gleeful  (voice)",
-   "episodes": 11
-  },
-  {
-   "id": 23680,
-   "name": "Dee Bradley Baker",
-   "photo": "https://image.tmdb.org/t/p/w185/9oFnToDZWp0I484s7Ua1EzNQQ2m.jpg",
-   "character": "Sprott (voice) / Waddles / Loinclothiclese (voice) / Waddles (voice) / Pterodactyl (voice)",
-   "episodes": 10
-  },
-  {
-   "id": 31531,
-   "name": "John DiMaggio",
-   "photo": "https://image.tmdb.org/t/p/w185/qcbQe71nSlULDsP1OxTqltEKFbl.jpg",
-   "character": "Harry Claymore (voice) / Vegas Rapper (voice) / Manly Dan (voice)",
-   "episodes": 10
-  },
-  {
-   "id": 1647289,
-   "name": "Mike Rianda",
-   "photo": "https://image.tmdb.org/t/p/w185/1MEH4XJ7fSkwA5oCEyx3CckbIva.jpg",
-   "character": "Lee / Thompson / Additional Voices (voice) / Additional Voices (voice) / Mr. Poolcheck / Additional Voices ( voice)",
-   "episodes": 10
-  },
-  {
-   "id": 1245730,
-   "name": "Thurop Van Orman",
-   "photo": "https://image.tmdb.org/t/p/w185/kKiWFAtDPInyBltWzdCKsDkmZsZ.jpg",
-   "character": "Gideon Gleeful (voice)",
-   "episodes": 9
-  },
-  {
-   "id": 143346,
-   "name": "Keith Ferguson",
-   "photo": "https://image.tmdb.org/t/p/w185/8EvTlmOhP34EZFEGsznqjbr4o4q.jpg",
-   "character": "Deputy Durland (voice) / Teen (voice) / Deputy Durland (voice) / Testosteraur (voice) /  Glurk (voice)",
-   "episodes": 9
-  },
-  {
-   "id": 18999,
-   "name": "J.K. Simmons",
-   "photo": "https://image.tmdb.org/t/p/w185/ScmKoJ9eiSUOthAt1PDNLi8Fkw.jpg",
-   "character": "Stanford Pines (voice)",
-   "episodes": 8
-  },
-  {
-   "id": 1245733,
-   "name": "Justin Roiland",
-   "photo": "https://image.tmdb.org/t/p/w185/wYApP38aXe6ZcEtlBAfNRxJTQQi.jpg",
-   "character": "Additional Voices (voice) / Blendin Blandin (voice) / Bobby Renzobbi (voice)",
-   "episodes": 7
-  },
-  {
-   "id": 94820,
-   "name": "Jessica DiCicco",
-   "photo": "https://image.tmdb.org/t/p/w185/1Cp0PFtup0mlsecGyfImzd4LDiL.jpg",
-   "character": "Tambry / Additional Voices (voice) / Tambry (voice) / Mean Girl (voice) / Tambry (voice)",
-   "episodes": 7
-  },
-  {
-   "id": 17401,
-   "name": "Stephen Root",
-   "photo": "https://image.tmdb.org/t/p/w185/2Zwi6AydqQQ9InVdhjYcfJXNzkp.jpg",
-   "character": "Bud Gleeful (voice) / Bud Gleeful / Additional Voices (voice)",
-   "episodes": 7
-  },
-  {
-   "id": 1296988,
-   "name": "Jackie Buscarino",
-   "photo": "https://image.tmdb.org/t/p/w185/nnJNAN8N7fhPs3ruhiiTNKQBBGU.jpg",
-   "character": "Trixandra (voice) / Pacifica Northwest (voice) / Pacifica Northwest (voice) / Additional Voices (voice)",
-   "episodes": 6
-  },
-  {
-   "id": 60279,
-   "name": "Fred Tatasciore",
-   "photo": "https://image.tmdb.org/t/p/w185/8YCIAGSWcxeTmPfOWMtVjLSwGOH.jpg",
-   "character": "The Gremloblin (voice) / Hank (voice) / Ogre (voice) / Additional Voices (voice)",
-   "episodes": 6
+   "id": 116881,
+   "name": "Deborah Twiss",
+   "photo": "https://image.tmdb.org/t/p/w185/gg4xoBRej4WcgN5bm4UUPy5g01c.jpg",
+   "character": "Dr. Joyce Allen",
+   "episodes": 1
   }
  ],
  "crew": [
   {
-   "id": 1254995,
-   "name": "Alex Hirsch",
-   "photo": "https://image.tmdb.org/t/p/w185/pGoKJKbqI3AwcmQkmEKG9jBXdcw.jpg",
+   "id": 68185,
+   "name": "Eric Schaeffer",
+   "photo": "https://image.tmdb.org/t/p/w185/rXuDlJrIaU7Sc01nCAe5faHfKGM.jpg",
    "jobs": [
     "Creator",
-    "Executive Producer",
-    "Writer"
-   ],
-   "episodes": 39
-  },
-  {
-   "id": 1543201,
-   "name": "Brad Breeck",
-   "photo": "https://image.tmdb.org/t/p/w185/lYEWRfPr2tpE7GQKZjpFzowGJE0.jpg",
-   "jobs": [
-    "Original Music Composer"
-   ],
-   "episodes": 40
-  },
-  {
-   "id": 1447382,
-   "name": "Joe Pitt",
-   "photo": null,
-   "jobs": [
-    "Director"
-   ],
-   "episodes": 12
-  },
-  {
-   "id": 1656571,
-   "name": "John Aoshima",
-   "photo": "https://image.tmdb.org/t/p/w185/hf3M06Zoe6cyidzUNvFxJOqcg0k.jpg",
-   "jobs": [
-    "Director"
-   ],
-   "episodes": 11
-  },
-  {
-   "id": 590012,
-   "name": "Matt Chapman",
-   "photo": null,
-   "jobs": [
+    "Director",
     "Writer"
    ],
    "episodes": 10
   },
   {
-   "id": 217181,
-   "name": "Aaron Springer",
-   "photo": null,
-   "jobs": [
-    "Director"
-   ],
-   "episodes": 8
-  },
-  {
-   "id": 1656572,
-   "name": "Matt Braly",
-   "photo": "https://image.tmdb.org/t/p/w185/mXY5zPVc97CHmwGvIvYoWkUQTQ0.jpg",
-   "jobs": [
-    "Director"
-   ],
-   "episodes": 8
-  },
-  {
-   "id": 1578590,
-   "name": "Jeff Rowe",
-   "photo": "https://image.tmdb.org/t/p/w185/xaKqMC3uEE8d06x9zpX9fVvaiqA.jpg",
-   "jobs": [
-    "Writer"
-   ],
-   "episodes": 8
-  },
-  {
-   "id": 584803,
-   "name": "Tim McKeon",
+   "id": 1223847,
+   "name": "Jill Franklyn",
    "photo": null,
    "jobs": [
     "Writer"
    ],
-   "episodes": 8
-  },
-  {
-   "id": 1216642,
-   "name": "Josh Weinstein",
-   "photo": null,
-   "jobs": [
-    "Writer"
-   ],
-   "episodes": 7
-  },
-  {
-   "id": 1647289,
-   "name": "Mike Rianda",
-   "photo": "https://image.tmdb.org/t/p/w185/1MEH4XJ7fSkwA5oCEyx3CckbIva.jpg",
-   "jobs": [
-    "Writer"
-   ],
-   "episodes": 6
-  },
-  {
-   "id": 1656577,
-   "name": "Zach Paez",
-   "photo": null,
-   "jobs": [
-    "Writer"
-   ],
-   "episodes": 6
-  },
-  {
-   "id": 1923844,
-   "name": "Sunil Hall",
-   "photo": null,
-   "jobs": [
-    "Director"
-   ],
-   "episodes": 5
-  },
-  {
-   "id": 1219054,
-   "name": "Stephen Sandoval",
-   "photo": null,
-   "jobs": [
-    "Director"
-   ],
-   "episodes": 4
-  },
-  {
-   "id": 1578591,
-   "name": "Mark Rizzo",
-   "photo": null,
-   "jobs": [
-    "Writer"
-   ],
-   "episodes": 4
-  },
-  {
-   "id": 1251100,
-   "name": "Shion Takeuchi",
-   "photo": "https://image.tmdb.org/t/p/w185/4l87QnF5Fdm7iUk3CJHt5aKBljw.jpg",
-   "jobs": [
-    "Writer"
-   ],
-   "episodes": 3
+   "episodes": 1
   }
  ],
- "fetchedAt": "2026-10-15T08:06:44.289Z",
+ "fetchedAt": "2026-11-27T08:45:49.712Z",
  "episodes": {
   "1x1": {
    "d": [
     {
-     "id": 1656571,
-     "name": "John Aoshima",
-     "photo": "https://image.tmdb.org/t/p/w185/hf3M06Zoe6cyidzUNvFxJOqcg0k.jpg"
+     "id": 68185,
+     "name": "Eric Schaeffer",
+     "photo": "https://image.tmdb.org/t/p/w185/rXuDlJrIaU7Sc01nCAe5faHfKGM.jpg"
     }
    ],
-   "w": [
-    {
-     "id": 1254995,
-     "name": "Alex Hirsch",
-     "photo": "https://image.tmdb.org/t/p/w185/pGoKJKbqI3AwcmQkmEKG9jBXdcw.jpg"
-    }
-   ],
+   "w": [],
    "g": [
     {
-     "id": 60279,
-     "name": "Fred Tatasciore",
-     "photo": "https://image.tmdb.org/t/p/w185/8YCIAGSWcxeTmPfOWMtVjLSwGOH.jpg",
-     "as": "Hank (voice)"
+     "id": 27176,
+     "name": "Karl Geary",
+     "photo": "https://image.tmdb.org/t/p/w185/ex3VfDXZPirfULVqzyTKVcKHFt2.jpg",
+     "as": "Diego"
     },
     {
-     "id": 1656574,
-     "name": "Kimberly Mooney",
+     "id": 41232,
+     "name": "Jessica Walter",
+     "photo": "https://image.tmdb.org/t/p/w185/dR7b2FmJGgjfSpwfz3AZzm6X13O.jpg",
+     "as": "Henrietta"
+    },
+    {
+     "id": 26715,
+     "name": "Robert Klein",
+     "photo": "https://image.tmdb.org/t/p/w185/eZNiVyIMZSuyDmjIf7UaccpCJph.jpg",
+     "as": "Father Anthony"
+    },
+    {
+     "id": 60021,
+     "name": "Christopher Evan Welch",
+     "photo": "https://image.tmdb.org/t/p/w185/midyg7Ni0QCHGgqaHyld7tpAzND.jpg",
+     "as": "Brad"
+    },
+    {
+     "id": 999822,
+     "name": "Tyler Maynard",
      "photo": null,
-     "as": "Hank's wife (voice)"
-    },
-    {
-     "id": 143346,
-     "name": "Keith Ferguson",
-     "photo": "https://image.tmdb.org/t/p/w185/8EvTlmOhP34EZFEGsznqjbr4o4q.jpg",
-     "as": "Teen (voice)"
+     "as": "Gay Man 2"
     }
    ]
   },
   "1x2": {
    "d": [
     {
-     "id": 1656571,
-     "name": "John Aoshima",
-     "photo": "https://image.tmdb.org/t/p/w185/hf3M06Zoe6cyidzUNvFxJOqcg0k.jpg"
+     "id": 68185,
+     "name": "Eric Schaeffer",
+     "photo": "https://image.tmdb.org/t/p/w185/rXuDlJrIaU7Sc01nCAe5faHfKGM.jpg"
     }
    ],
-   "w": [
-    {
-     "id": 1254995,
-     "name": "Alex Hirsch",
-     "photo": "https://image.tmdb.org/t/p/w185/pGoKJKbqI3AwcmQkmEKG9jBXdcw.jpg"
-    },
-    {
-     "id": 1647289,
-     "name": "Mike Rianda",
-     "photo": "https://image.tmdb.org/t/p/w185/1MEH4XJ7fSkwA5oCEyx3CckbIva.jpg"
-    }
-   ],
+   "w": [],
    "g": [
     {
-     "id": 38334,
-     "name": "Jennifer Coolidge",
-     "photo": "https://image.tmdb.org/t/p/w185/hcpbV0dY4ZJxmZi1WcAWe8euqV2.jpg",
-     "as": "Lazy Susan (voice)"
+     "id": 59845,
+     "name": "Marcella Lowery",
+     "photo": "https://image.tmdb.org/t/p/w185/9GuDeNZZHYx7dULykxM31j2fqix.jpg",
+     "as": "Selma Jones"
     },
     {
-     "id": 31531,
-     "name": "John DiMaggio",
-     "photo": "https://image.tmdb.org/t/p/w185/qcbQe71nSlULDsP1OxTqltEKFbl.jpg",
-     "as": "Manly Dan (voice)"
+     "id": 27176,
+     "name": "Karl Geary",
+     "photo": "https://image.tmdb.org/t/p/w185/ex3VfDXZPirfULVqzyTKVcKHFt2.jpg",
+     "as": "Diego"
     },
     {
-     "id": 62831,
-     "name": "Will Forte",
-     "photo": "https://image.tmdb.org/t/p/w185/4VEzbkL3HwHTUZAPA5PyypFG2U.jpg",
-     "as": "Tyler Cutebiker (voice)"
+     "id": 11512,
+     "name": "John Heard",
+     "photo": "https://image.tmdb.org/t/p/w185/zjhcxrCFK4q0C1gtVmeN8FeqCw0.jpg",
+     "as": "B.C."
     },
     {
-     "id": 1224999,
-     "name": "Gregg Turkington",
-     "photo": "https://image.tmdb.org/t/p/w185/rlusjIKkiM5lWUUNWZBbHMSBEjH.jpg",
-     "as": "Toby Determined (voice)"
+     "id": 19978,
+     "name": "Jason Kravits",
+     "photo": "https://image.tmdb.org/t/p/w185/kTaZGtOP3SR6kosdRLyeQayfjcF.jpg",
+     "as": "Credit Card Asshole (voice) / Credit Card Asshole"
     },
     {
-     "id": 76621,
-     "name": "Will Friedle",
-     "photo": "https://image.tmdb.org/t/p/w185/Ao3fp9f4loVQ1Vvk6ph8HU5p0Lu.jpg",
-     "as": "Reginald (voice)"
+     "id": 212403,
+     "name": "Brian Berrebbi",
+     "photo": "https://image.tmdb.org/t/p/w185/oZakuoRkgD5sleAedQ1ZtL6tKGk.jpg",
+     "as": "Paparazzi 3"
     },
     {
-     "id": 15761,
-     "name": "Grey DeLisle",
-     "photo": "https://image.tmdb.org/t/p/w185/vrUHaXe1pG56yZkgH7Hs3LGRLTT.jpg",
-     "as": "Rosanna (voice) / Hank's son (voice)"
+     "id": 94008,
+     "name": "Allyce Beasley",
+     "photo": "https://image.tmdb.org/t/p/w185/qVZvGwAyxlDpUDjlbKpxjyW1hQx.jpg",
+     "as": "Dr. Karen Robinson / Dr. Robinson"
     },
     {
-     "id": 51382,
-     "name": "Chris Parnell",
-     "photo": "https://image.tmdb.org/t/p/w185/9Ga03Y9TVIqTZJ4I9rfL740ibgJ.jpg",
-     "as": "Host (voice)"
+     "id": 1218156,
+     "name": "John Douglas Thompson",
+     "photo": "https://image.tmdb.org/t/p/w185/ieN9RkPSnsdaXWjarOhXkl4Jofm.jpg",
+     "as": "Mack"
     },
     {
-     "id": 1245733,
-     "name": "Justin Roiland",
-     "photo": "https://image.tmdb.org/t/p/w185/wYApP38aXe6ZcEtlBAfNRxJTQQi.jpg",
-     "as": "Additional Voices (voice)"
+     "id": 54242,
+     "name": "Jim Burke",
+     "photo": "https://image.tmdb.org/t/p/w185/z1u9hHQxdJXrYsXSRzqiw6Pmf9K.jpg",
+     "as": "Other Yoga Guy"
     },
     {
-     "id": 52117,
-     "name": "Horatio Sanz",
-     "photo": "https://image.tmdb.org/t/p/w185/ckz64bpwFOhF1tMu1klDk5AT9Ck.jpg",
-     "as": "Worker (voice)"
-    },
-    {
-     "id": 12080,
-     "name": "Conrad Vernon",
-     "photo": "https://image.tmdb.org/t/p/w185/2fhutx4eTBE6UR3eIRfYozKsUjk.jpg",
-     "as": "Tate McGucket (voice)"
+     "id": 1236282,
+     "name": "Ching Valdes-Aran",
+     "photo": "https://image.tmdb.org/t/p/w185/q8HTfORLPF9lHvkipfm3E4x1bcB.jpg",
+     "as": "Rhonda"
     }
    ]
   },
   "1x3": {
    "d": [
     {
-     "id": 1656571,
-     "name": "John Aoshima",
-     "photo": "https://image.tmdb.org/t/p/w185/hf3M06Zoe6cyidzUNvFxJOqcg0k.jpg"
+     "id": 68185,
+     "name": "Eric Schaeffer",
+     "photo": "https://image.tmdb.org/t/p/w185/rXuDlJrIaU7Sc01nCAe5faHfKGM.jpg"
     }
    ],
-   "w": [
-    {
-     "id": 146665,
-     "name": "Aury Wallington",
-     "photo": null
-    },
-    {
-     "id": 1254995,
-     "name": "Alex Hirsch",
-     "photo": "https://image.tmdb.org/t/p/w185/pGoKJKbqI3AwcmQkmEKG9jBXdcw.jpg"
-    }
-   ],
+   "w": [],
    "g": [
     {
-     "id": 24362,
-     "name": "Kevin Michael Richardson",
-     "photo": "https://image.tmdb.org/t/p/w185/xXt9Nh7RAT5bOen66TaXreNYmCl.jpg",
-     "as": "Sheriff Blubs (voice) / Tats (voice)"
+     "id": 27176,
+     "name": "Karl Geary",
+     "photo": "https://image.tmdb.org/t/p/w185/ex3VfDXZPirfULVqzyTKVcKHFt2.jpg",
+     "as": "Diego"
     },
     {
-     "id": 116315,
-     "name": "Kari Wahlgren",
-     "photo": "https://image.tmdb.org/t/p/w185/kc0BOnSdzCfq8w9qoNVEm5K12x1.jpg",
-     "as": "Shandra Jimenez (voice)"
+     "id": 41232,
+     "name": "Jessica Walter",
+     "photo": "https://image.tmdb.org/t/p/w185/dR7b2FmJGgjfSpwfz3AZzm6X13O.jpg",
+     "as": "Henrietta"
     },
     {
-     "id": 31531,
-     "name": "John DiMaggio",
-     "photo": "https://image.tmdb.org/t/p/w185/qcbQe71nSlULDsP1OxTqltEKFbl.jpg",
-     "as": "Manly Dan (voice)"
+     "id": 19978,
+     "name": "Jason Kravits",
+     "photo": "https://image.tmdb.org/t/p/w185/kTaZGtOP3SR6kosdRLyeQayfjcF.jpg",
+     "as": "Credit Card Asshole (voice) / Credit Card Asshole"
     },
     {
-     "id": 143346,
-     "name": "Keith Ferguson",
-     "photo": "https://image.tmdb.org/t/p/w185/8EvTlmOhP34EZFEGsznqjbr4o4q.jpg",
-     "as": "Deputy Durland (voice)"
+     "id": 116881,
+     "name": "Deborah Twiss",
+     "photo": "https://image.tmdb.org/t/p/w185/gg4xoBRej4WcgN5bm4UUPy5g01c.jpg",
+     "as": "Dr. Joyce Allen"
     },
     {
-     "id": 62831,
-     "name": "Will Forte",
-     "photo": "https://image.tmdb.org/t/p/w185/4VEzbkL3HwHTUZAPA5PyypFG2U.jpg",
-     "as": "Tyler Cutebiker (voice)"
-    },
-    {
-     "id": 1224999,
-     "name": "Gregg Turkington",
-     "photo": "https://image.tmdb.org/t/p/w185/rlusjIKkiM5lWUUNWZBbHMSBEjH.jpg",
-     "as": "Toby Determined (voice)"
-    },
-    {
-     "id": 44127,
-     "name": "Larry King",
-     "photo": "https://image.tmdb.org/t/p/w185/afNrrwBSbeFLrh0dVHvlMRRyont.jpg",
-     "as": "Wax Larry King (voice)"
-    },
-    {
-     "id": 84292,
-     "name": "John Oliver",
-     "photo": "https://image.tmdb.org/t/p/w185/wI7LRInWUT3RgCByYx69wRMqgsy.jpg",
-     "as": "Wax Sherlock Holmes (voice)"
-    },
-    {
-     "id": 35549,
-     "name": "Coolio",
-     "photo": "https://image.tmdb.org/t/p/w185/2RXxdCB68Haao2O9Fq8NCRpFkFm.jpg",
-     "as": "Wax Coolio (voice)"
-    },
-    {
-     "id": 4031,
-     "name": "Greg Ellis",
-     "photo": "https://image.tmdb.org/t/p/w185/qks30OeY78q0j8w4s10mXtg5vpd.jpg",
-     "as": "Wax William Shakespeare (voice)"
+     "id": 1236282,
+     "name": "Ching Valdes-Aran",
+     "photo": "https://image.tmdb.org/t/p/w185/q8HTfORLPF9lHvkipfm3E4x1bcB.jpg",
+     "as": "Rhonda"
     }
    ]
   },
   "1x4": {
    "d": [
     {
-     "id": 1656571,
-     "name": "John Aoshima",
-     "photo": "https://image.tmdb.org/t/p/w185/hf3M06Zoe6cyidzUNvFxJOqcg0k.jpg"
+     "id": 68185,
+     "name": "Eric Schaeffer",
+     "photo": "https://image.tmdb.org/t/p/w185/rXuDlJrIaU7Sc01nCAe5faHfKGM.jpg"
     }
    ],
-   "w": [
-    {
-     "id": 1254995,
-     "name": "Alex Hirsch",
-     "photo": "https://image.tmdb.org/t/p/w185/pGoKJKbqI3AwcmQkmEKG9jBXdcw.jpg"
-    },
-    {
-     "id": 1656577,
-     "name": "Zach Paez",
-     "photo": null
-    }
-   ],
+   "w": [],
    "g": [
     {
-     "id": 62831,
-     "name": "Will Forte",
-     "photo": "https://image.tmdb.org/t/p/w185/4VEzbkL3HwHTUZAPA5PyypFG2U.jpg",
-     "as": "Tyler Cutebiker (voice)"
+     "id": 27176,
+     "name": "Karl Geary",
+     "photo": "https://image.tmdb.org/t/p/w185/ex3VfDXZPirfULVqzyTKVcKHFt2.jpg",
+     "as": "Diego"
     },
     {
-     "id": 1224999,
-     "name": "Gregg Turkington",
-     "photo": "https://image.tmdb.org/t/p/w185/rlusjIKkiM5lWUUNWZBbHMSBEjH.jpg",
-     "as": "Toby Determined (voice)"
+     "id": 41232,
+     "name": "Jessica Walter",
+     "photo": "https://image.tmdb.org/t/p/w185/dR7b2FmJGgjfSpwfz3AZzm6X13O.jpg",
+     "as": "Henrietta"
     },
     {
-     "id": 1245730,
-     "name": "Thurop Van Orman",
-     "photo": "https://image.tmdb.org/t/p/w185/kKiWFAtDPInyBltWzdCKsDkmZsZ.jpg",
-     "as": "Gideon Gleeful (voice)"
+     "id": 19978,
+     "name": "Jason Kravits",
+     "photo": "https://image.tmdb.org/t/p/w185/kTaZGtOP3SR6kosdRLyeQayfjcF.jpg",
+     "as": "Credit Card Asshole (voice) / Credit Card Asshole"
     },
     {
-     "id": 89599,
-     "name": "Eric Bauza",
-     "photo": "https://image.tmdb.org/t/p/w185/afOlsVPQxbtkom604MeCemjlwEV.jpg",
-     "as": "Additional Voices (voice)"
+     "id": 32394,
+     "name": "Anne Meara",
+     "photo": "https://image.tmdb.org/t/p/w185/zQVdY5AdOlGuq2AtwOMjOD3AmfH.jpg",
+     "as": "Mrs. Talbot"
     },
     {
-     "id": 15761,
-     "name": "Grey DeLisle",
-     "photo": "https://image.tmdb.org/t/p/w185/vrUHaXe1pG56yZkgH7Hs3LGRLTT.jpg",
-     "as": "Additional Voices (voice)"
+     "id": 55496,
+     "name": "Robert LuPone",
+     "photo": "https://image.tmdb.org/t/p/w185/8lL8tea78b5ACsSbr2ebBK7olMD.jpg",
+     "as": "Jim Rosenblum"
     },
     {
-     "id": 24362,
-     "name": "Kevin Michael Richardson",
-     "photo": "https://image.tmdb.org/t/p/w185/xXt9Nh7RAT5bOen66TaXreNYmCl.jpg",
-     "as": "Sheriff Blubs (voice)"
-    },
-    {
-     "id": 17401,
-     "name": "Stephen Root",
-     "photo": "https://image.tmdb.org/t/p/w185/2Zwi6AydqQQ9InVdhjYcfJXNzkp.jpg",
-     "as": "Bud Gleeful / Additional Voices (voice)"
-    },
-    {
-     "id": 60741,
-     "name": "April Winchell",
-     "photo": "https://image.tmdb.org/t/p/w185/twx3xkmvRAuHHJp3xUd1sbxTZRS.jpg",
-     "as": "Old Lady / Additional Voices (voice)"
+     "id": 97268,
+     "name": "Karl Bury",
+     "photo": "https://image.tmdb.org/t/p/w185/aMqxYtlCNKLik0ImzYGftj80kcf.jpg",
+     "as": "Dr. Doh"
     }
    ]
   },
   "1x5": {
    "d": [
     {
-     "id": 217181,
-     "name": "Aaron Springer",
-     "photo": null
-    },
-    {
-     "id": 1447382,
-     "name": "Joe Pitt",
-     "photo": null
+     "id": 68185,
+     "name": "Eric Schaeffer",
+     "photo": "https://image.tmdb.org/t/p/w185/rXuDlJrIaU7Sc01nCAe5faHfKGM.jpg"
     }
    ],
-   "w": [
-    {
-     "id": 1254995,
-     "name": "Alex Hirsch",
-     "photo": "https://image.tmdb.org/t/p/w185/pGoKJKbqI3AwcmQkmEKG9jBXdcw.jpg"
-    },
-    {
-     "id": 1647289,
-     "name": "Mike Rianda",
-     "photo": "https://image.tmdb.org/t/p/w185/1MEH4XJ7fSkwA5oCEyx3CckbIva.jpg"
-    }
-   ],
+   "w": [],
    "g": [
     {
-     "id": 38570,
-     "name": "Ken Jenkins",
-     "photo": "https://image.tmdb.org/t/p/w185/basRrWk50y03ydjm0DW8A6AxH1o.jpg",
-     "as": "Pa (voice)"
+     "id": 59845,
+     "name": "Marcella Lowery",
+     "photo": "https://image.tmdb.org/t/p/w185/9GuDeNZZHYx7dULykxM31j2fqix.jpg",
+     "as": "Selma Jones"
     },
     {
-     "id": 24362,
-     "name": "Kevin Michael Richardson",
-     "photo": "https://image.tmdb.org/t/p/w185/xXt9Nh7RAT5bOen66TaXreNYmCl.jpg",
-     "as": "Possessed Mabel (voice)"
+     "id": 59691,
+     "name": "Richard Bekins",
+     "photo": "https://image.tmdb.org/t/p/w185/1Pgbx17u57jQe9tuWpfVUP620vc.jpg",
+     "as": ""
     },
     {
-     "id": 19507,
-     "name": "Mikey Kelley",
-     "photo": "https://image.tmdb.org/t/p/w185/pXxi5KjwpYacmaKAXYfTiOkAlTF.jpg",
-     "as": "Announcer (voice)"
+     "id": 55496,
+     "name": "Robert LuPone",
+     "photo": "https://image.tmdb.org/t/p/w185/8lL8tea78b5ACsSbr2ebBK7olMD.jpg",
+     "as": "Jim Rosenblum"
     },
     {
-     "id": 1647289,
-     "name": "Mike Rianda",
-     "photo": "https://image.tmdb.org/t/p/w185/1MEH4XJ7fSkwA5oCEyx3CckbIva.jpg",
-     "as": "Lee / Thompson (voice)"
-    },
-    {
-     "id": 94820,
-     "name": "Jessica DiCicco",
-     "photo": "https://image.tmdb.org/t/p/w185/1Cp0PFtup0mlsecGyfImzd4LDiL.jpg",
-     "as": "Tambry / Additional Voices (voice)"
-    },
-    {
-     "id": 51990,
-     "name": "T.J. Miller",
-     "photo": "https://image.tmdb.org/t/p/w185/rRrVvBxOkyYM5XdLXimShHR1Itn.jpg",
-     "as": "Robbie Valentino / Additional Voices (voice)"
-    },
-    {
-     "id": 113916,
-     "name": "Scott Menville",
-     "photo": "https://image.tmdb.org/t/p/w185/iLoApH8LbyJSKFmdgWxNR314GGa.jpg",
-     "as": "Nate / Flavor Pup #2 (voice)"
-    },
-    {
-     "id": 60741,
-     "name": "April Winchell",
-     "photo": "https://image.tmdb.org/t/p/w185/twx3xkmvRAuHHJp3xUd1sbxTZRS.jpg",
-     "as": "Ma / Duchess (voice)"
+     "id": 26715,
+     "name": "Robert Klein",
+     "photo": "https://image.tmdb.org/t/p/w185/eZNiVyIMZSuyDmjIf7UaccpCJph.jpg",
+     "as": "Father Anthony"
     }
    ]
   },
   "1x6": {
    "d": [
     {
-     "id": 217181,
-     "name": "Aaron Springer",
-     "photo": null
-    },
-    {
-     "id": 1447382,
-     "name": "Joe Pitt",
-     "photo": null
+     "id": 68185,
+     "name": "Eric Schaeffer",
+     "photo": "https://image.tmdb.org/t/p/w185/rXuDlJrIaU7Sc01nCAe5faHfKGM.jpg"
     }
    ],
-   "w": [
-    {
-     "id": 1254995,
-     "name": "Alex Hirsch",
-     "photo": "https://image.tmdb.org/t/p/w185/pGoKJKbqI3AwcmQkmEKG9jBXdcw.jpg"
-    },
-    {
-     "id": 584803,
-     "name": "Tim McKeon",
-     "photo": null
-    }
-   ],
+   "w": [],
    "g": [
     {
-     "id": 38334,
-     "name": "Jennifer Coolidge",
-     "photo": "https://image.tmdb.org/t/p/w185/hcpbV0dY4ZJxmZi1WcAWe8euqV2.jpg",
-     "as": "Lazy Susan (voice)"
+     "id": 27176,
+     "name": "Karl Geary",
+     "photo": "https://image.tmdb.org/t/p/w185/ex3VfDXZPirfULVqzyTKVcKHFt2.jpg",
+     "as": "Diego"
     },
     {
-     "id": 62831,
-     "name": "Will Forte",
-     "photo": "https://image.tmdb.org/t/p/w185/4VEzbkL3HwHTUZAPA5PyypFG2U.jpg",
-     "as": "Tyler Cutebiker (voice)"
+     "id": 1211,
+     "name": "Larry Miller",
+     "photo": "https://image.tmdb.org/t/p/w185/ajnXlXG20LJwAwxne8G94ucVj0v.jpg",
+     "as": "Dr. Tepperman"
     },
     {
-     "id": 24362,
-     "name": "Kevin Michael Richardson",
-     "photo": "https://image.tmdb.org/t/p/w185/xXt9Nh7RAT5bOen66TaXreNYmCl.jpg",
-     "as": "Sheriff Blubs (voice) / Leaderaur (voice) / Chutzpar (voice)"
+     "id": 187721,
+     "name": "Chris Meyer",
+     "photo": "https://image.tmdb.org/t/p/w185/uiVPQ3f3a4XhQp4H194dyoczGo2.jpg",
+     "as": "Tony"
     },
     {
-     "id": 60279,
-     "name": "Fred Tatasciore",
-     "photo": "https://image.tmdb.org/t/p/w185/8YCIAGSWcxeTmPfOWMtVjLSwGOH.jpg",
-     "as": "Pituitaur (voice) / Additional Voices (voice)"
-    },
-    {
-     "id": 143346,
-     "name": "Keith Ferguson",
-     "photo": "https://image.tmdb.org/t/p/w185/8EvTlmOhP34EZFEGsznqjbr4o4q.jpg",
-     "as": "Deputy Durland (voice) / Testosteraur (voice) /  Glurk (voice)"
-    },
-    {
-     "id": 15761,
-     "name": "Grey DeLisle",
-     "photo": "https://image.tmdb.org/t/p/w185/vrUHaXe1pG56yZkgH7Hs3LGRLTT.jpg",
-     "as": "Shopkeeper (voice) / Scout Lady (voice)"
-    },
-    {
-     "id": 107407,
-     "name": "Andrew Pifko",
-     "photo": "https://image.tmdb.org/t/p/w185/wns5dQLREcvy29j6F7IZdOCIiK3.jpg",
-     "as": "Additional Voices (voice)"
-    },
-    {
-     "id": 588231,
-     "name": "Chris Wylde",
-     "photo": "https://image.tmdb.org/t/p/w185/eS2Gv7lBrwNYeifgV23Jwm5HSZL.jpg",
-     "as": "Additional Voices (voice)"
-    },
-    {
-     "id": 31531,
-     "name": "John DiMaggio",
-     "photo": "https://image.tmdb.org/t/p/w185/qcbQe71nSlULDsP1OxTqltEKFbl.jpg",
-     "as": "Manly Dan (voice) / Additional Voices (voice)"
-    },
-    {
-     "id": 658,
-     "name": "Alfred Molina",
-     "photo": "https://image.tmdb.org/t/p/w185/nJo91Czesn6z0d0pkfbDoVZY3sg.jpg",
-     "as": "Multi-Bear (voice)"
+     "id": 94008,
+     "name": "Allyce Beasley",
+     "photo": "https://image.tmdb.org/t/p/w185/qVZvGwAyxlDpUDjlbKpxjyW1hQx.jpg",
+     "as": "Dr. Karen Robinson / Dr. Robinson"
     }
    ]
   },
   "1x7": {
    "d": [
     {
-     "id": 217181,
-     "name": "Aaron Springer",
-     "photo": null
-    },
-    {
-     "id": 1447382,
-     "name": "Joe Pitt",
-     "photo": null
+     "id": 68185,
+     "name": "Eric Schaeffer",
+     "photo": "https://image.tmdb.org/t/p/w185/rXuDlJrIaU7Sc01nCAe5faHfKGM.jpg"
     }
    ],
-   "w": [
-    {
-     "id": 1254995,
-     "name": "Alex Hirsch",
-     "photo": "https://image.tmdb.org/t/p/w185/pGoKJKbqI3AwcmQkmEKG9jBXdcw.jpg"
-    },
-    {
-     "id": 584803,
-     "name": "Tim McKeon",
-     "photo": null
-    },
-    {
-     "id": 1647289,
-     "name": "Mike Rianda",
-     "photo": "https://image.tmdb.org/t/p/w185/1MEH4XJ7fSkwA5oCEyx3CckbIva.jpg"
-    }
-   ],
+   "w": [],
    "g": [
     {
-     "id": 1296988,
-     "name": "Jackie Buscarino",
-     "photo": "https://image.tmdb.org/t/p/w185/nnJNAN8N7fhPs3ruhiiTNKQBBGU.jpg",
-     "as": "Pacifica Northwest (voice)"
-    },
-    {
-     "id": 1367713,
-     "name": "Carl Faruolo",
-     "photo": null,
-     "as": "Grenda (voice)"
-    },
-    {
-     "id": 15762,
-     "name": "Tara Strong",
-     "photo": "https://image.tmdb.org/t/p/w185/Cm3X7CCSuYbjW1ZKJ8vxCj4SI7.jpg",
-     "as": "Additional Voices (voice)"
-    },
-    {
-     "id": 113916,
-     "name": "Scott Menville",
-     "photo": "https://image.tmdb.org/t/p/w185/iLoApH8LbyJSKFmdgWxNR314GGa.jpg",
-     "as": "Nate (voice)"
-    },
-    {
-     "id": 1245731,
-     "name": "Niki Yang",
-     "photo": "https://image.tmdb.org/t/p/w185/t0MYbwrpGZLwp66L2rSG5uhlaJ6.jpg",
-     "as": "Candy Chiu (voice)"
-    },
-    {
-     "id": 1647289,
-     "name": "Mike Rianda",
-     "photo": "https://image.tmdb.org/t/p/w185/1MEH4XJ7fSkwA5oCEyx3CckbIva.jpg",
-     "as": "Lee (voice)"
-    },
-    {
-     "id": 51990,
-     "name": "T.J. Miller",
-     "photo": "https://image.tmdb.org/t/p/w185/rRrVvBxOkyYM5XdLXimShHR1Itn.jpg",
-     "as": "Robbie Valentino (voice)"
+     "id": 1211,
+     "name": "Larry Miller",
+     "photo": "https://image.tmdb.org/t/p/w185/ajnXlXG20LJwAwxne8G94ucVj0v.jpg",
+     "as": "Dr. Tepperman"
     }
    ]
   },
   "1x8": {
    "d": [
     {
-     "id": 217181,
-     "name": "Aaron Springer",
-     "photo": null
+     "id": 68185,
+     "name": "Eric Schaeffer",
+     "photo": "https://image.tmdb.org/t/p/w185/rXuDlJrIaU7Sc01nCAe5faHfKGM.jpg"
     }
    ],
    "w": [
     {
-     "id": 127383,
-     "name": "David Slack",
-     "photo": "https://image.tmdb.org/t/p/w185/lFxuKUPYGwLlEPzE74QgHfxizjx.jpg"
-    },
-    {
-     "id": 1254995,
-     "name": "Alex Hirsch",
-     "photo": "https://image.tmdb.org/t/p/w185/pGoKJKbqI3AwcmQkmEKG9jBXdcw.jpg"
-    },
-    {
-     "id": 584803,
-     "name": "Tim McKeon",
+     "id": 1223847,
+     "name": "Jill Franklyn",
      "photo": null
+    },
+    {
+     "id": 68185,
+     "name": "Eric Schaeffer",
+     "photo": "https://image.tmdb.org/t/p/w185/rXuDlJrIaU7Sc01nCAe5faHfKGM.jpg"
     }
    ],
    "g": [
     {
-     "id": 1296988,
-     "name": "Jackie Buscarino",
-     "photo": "https://image.tmdb.org/t/p/w185/nnJNAN8N7fhPs3ruhiiTNKQBBGU.jpg",
-     "as": "Pacifica Northwest (voice)"
+     "id": 27176,
+     "name": "Karl Geary",
+     "photo": "https://image.tmdb.org/t/p/w185/ex3VfDXZPirfULVqzyTKVcKHFt2.jpg",
+     "as": "Diego"
     },
     {
-     "id": 1224999,
-     "name": "Gregg Turkington",
-     "photo": "https://image.tmdb.org/t/p/w185/rlusjIKkiM5lWUUNWZBbHMSBEjH.jpg",
-     "as": "Toby Determined (voice)"
+     "id": 11512,
+     "name": "John Heard",
+     "photo": "https://image.tmdb.org/t/p/w185/zjhcxrCFK4q0C1gtVmeN8FeqCw0.jpg",
+     "as": "B.C."
     },
     {
-     "id": 1245730,
-     "name": "Thurop Van Orman",
-     "photo": "https://image.tmdb.org/t/p/w185/kKiWFAtDPInyBltWzdCKsDkmZsZ.jpg",
-     "as": "Gideon Gleeful (voice)"
-    },
-    {
-     "id": 51382,
-     "name": "Chris Parnell",
-     "photo": "https://image.tmdb.org/t/p/w185/9Ga03Y9TVIqTZJ4I9rfL740ibgJ.jpg",
-     "as": "Additional Voices (voice)"
-    },
-    {
-     "id": 15762,
-     "name": "Tara Strong",
-     "photo": "https://image.tmdb.org/t/p/w185/Cm3X7CCSuYbjW1ZKJ8vxCj4SI7.jpg",
-     "as": "Sue / Additional Voices (voice)"
-    },
-    {
-     "id": 143346,
-     "name": "Keith Ferguson",
-     "photo": "https://image.tmdb.org/t/p/w185/8EvTlmOhP34EZFEGsznqjbr4o4q.jpg",
-     "as": "Deputy Durland / Additional Voices (voice)"
-    },
-    {
-     "id": 24362,
-     "name": "Kevin Michael Richardson",
-     "photo": "https://image.tmdb.org/t/p/w185/xXt9Nh7RAT5bOen66TaXreNYmCl.jpg",
-     "as": "Sheriff Blubs / Additional Voices (voice)"
-    },
-    {
-     "id": 116315,
-     "name": "Kari Wahlgren",
-     "photo": "https://image.tmdb.org/t/p/w185/kc0BOnSdzCfq8w9qoNVEm5K12x1.jpg",
-     "as": "Priscilla Northwest / Additional Voices (voice)"
+     "id": 41232,
+     "name": "Jessica Walter",
+     "photo": "https://image.tmdb.org/t/p/w185/dR7b2FmJGgjfSpwfz3AZzm6X13O.jpg",
+     "as": "Henrietta"
     }
    ]
   },
   "1x9": {
    "d": [
     {
-     "id": 217181,
-     "name": "Aaron Springer",
-     "photo": null
-    },
-    {
-     "id": 1447382,
-     "name": "Joe Pitt",
-     "photo": null
+     "id": 68185,
+     "name": "Eric Schaeffer",
+     "photo": "https://image.tmdb.org/t/p/w185/rXuDlJrIaU7Sc01nCAe5faHfKGM.jpg"
     }
    ],
-   "w": [
-    {
-     "id": 146665,
-     "name": "Aury Wallington",
-     "photo": null
-    },
-    {
-     "id": 1254995,
-     "name": "Alex Hirsch",
-     "photo": "https://image.tmdb.org/t/p/w185/pGoKJKbqI3AwcmQkmEKG9jBXdcw.jpg"
-    }
-   ],
+   "w": [],
    "g": [
     {
-     "id": 1296988,
-     "name": "Jackie Buscarino",
-     "photo": "https://image.tmdb.org/t/p/w185/nnJNAN8N7fhPs3ruhiiTNKQBBGU.jpg",
-     "as": "Pacifica Northwest (voice)"
+     "id": 84899,
+     "name": "Melissa Bacelar",
+     "photo": null,
+     "as": "Megan"
     },
     {
-     "id": 5727,
-     "name": "Diedrich Bader",
-     "photo": "https://image.tmdb.org/t/p/w185/z7CctykPTuXDfAs7pkAA7vW4b3T.jpg",
-     "as": "Dundgren (voice)"
+     "id": 1211,
+     "name": "Larry Miller",
+     "photo": "https://image.tmdb.org/t/p/w185/ajnXlXG20LJwAwxne8G94ucVj0v.jpg",
+     "as": "Dr. Tepperman"
     },
     {
-     "id": 15762,
-     "name": "Tara Strong",
-     "photo": "https://image.tmdb.org/t/p/w185/Cm3X7CCSuYbjW1ZKJ8vxCj4SI7.jpg",
-     "as": "Additional Voices (voice)"
-    },
-    {
-     "id": 15761,
-     "name": "Grey DeLisle",
-     "photo": "https://image.tmdb.org/t/p/w185/vrUHaXe1pG56yZkgH7Hs3LGRLTT.jpg",
-     "as": "Additional Voices (voice)"
-    },
-    {
-     "id": 1245733,
-     "name": "Justin Roiland",
-     "photo": "https://image.tmdb.org/t/p/w185/wYApP38aXe6ZcEtlBAfNRxJTQQi.jpg",
-     "as": "Blendin Blandin (voice)"
-    },
-    {
-     "id": 51990,
-     "name": "T.J. Miller",
-     "photo": "https://image.tmdb.org/t/p/w185/rRrVvBxOkyYM5XdLXimShHR1Itn.jpg",
-     "as": "Robbie Valentino / Additional Voices (voice)"
-    },
-    {
-     "id": 571300,
-     "name": "Dave Wittenberg",
-     "photo": "https://image.tmdb.org/t/p/w185/jqKxWh9Kyd0WmKiLRrtThDZHSYZ.jpg",
-     "as": "Lolph / Time Baby (voice)"
+     "id": 164323,
+     "name": "Robert Turano",
+     "photo": "https://image.tmdb.org/t/p/w185/pNkYFTtkwMi8KmlTuy1MrmYTnRi.jpg",
+     "as": "Desk Sargent"
     }
    ]
   },
   "1x10": {
    "d": [
     {
-     "id": 1656571,
-     "name": "John Aoshima",
-     "photo": "https://image.tmdb.org/t/p/w185/hf3M06Zoe6cyidzUNvFxJOqcg0k.jpg"
+     "id": 68185,
+     "name": "Eric Schaeffer",
+     "photo": "https://image.tmdb.org/t/p/w185/rXuDlJrIaU7Sc01nCAe5faHfKGM.jpg"
     }
    ],
-   "w": [
-    {
-     "id": 1254995,
-     "name": "Alex Hirsch",
-     "photo": "https://image.tmdb.org/t/p/w185/pGoKJKbqI3AwcmQkmEKG9jBXdcw.jpg"
-    },
-    {
-     "id": 1656577,
-     "name": "Zach Paez",
-     "photo": null
-    }
-   ],
+   "w": [],
    "g": [
     {
-     "id": 23680,
-     "name": "Dee Bradley Baker",
-     "photo": "https://image.tmdb.org/t/p/w185/9oFnToDZWp0I484s7Ua1EzNQQ2m.jpg",
-     "as": "Waddles (voice) / Additional Voices (voice)"
+     "id": 27176,
+     "name": "Karl Geary",
+     "photo": "https://image.tmdb.org/t/p/w185/ex3VfDXZPirfULVqzyTKVcKHFt2.jpg",
+     "as": "Diego"
     },
     {
-     "id": 54427,
-     "name": "Kimberly Brooks",
-     "photo": "https://image.tmdb.org/t/p/w185/iPlCk1VQ8fnAtsMow6HlCZoQc0w.jpg",
-     "as": "Sassica (voice)"
+     "id": 11512,
+     "name": "John Heard",
+     "photo": "https://image.tmdb.org/t/p/w185/zjhcxrCFK4q0C1gtVmeN8FeqCw0.jpg",
+     "as": "B.C."
     },
     {
-     "id": 590012,
-     "name": "Matt Chapman",
-     "photo": null,
-     "as": "Video Game Announcer (voice)"
+     "id": 41232,
+     "name": "Jessica Walter",
+     "photo": "https://image.tmdb.org/t/p/w185/dR7b2FmJGgjfSpwfz3AZzm6X13O.jpg",
+     "as": "Henrietta"
     },
     {
-     "id": 31531,
-     "name": "John DiMaggio",
-     "photo": "https://image.tmdb.org/t/p/w185/qcbQe71nSlULDsP1OxTqltEKFbl.jpg",
-     "as": "Dad on Pier (voice)"
-    },
-    {
-     "id": 57675,
-     "name": "Daryl Sabara",
-     "photo": "https://image.tmdb.org/t/p/w185/eZfWmQqNgmuveRWSYuvnQyLXM0d.jpg",
-     "as": "Son on Pier (voice)"
-    },
-    {
-     "id": 4753,
-     "name": "Brian Bloom",
-     "photo": "https://image.tmdb.org/t/p/w185/9mZKhI3aVbzZ5Xq43n7fGzWAqi0.jpg",
-     "as": "Rumble McSkirmish (voice)"
-    },
-    {
-     "id": 51990,
-     "name": "T.J. Miller",
-     "photo": "https://image.tmdb.org/t/p/w185/rRrVvBxOkyYM5XdLXimShHR1Itn.jpg",
-     "as": "Robbie Valentino (voice)"
-    }
-   ]
-  },
-  "1x11": {
-   "d": [
-    {
-     "id": 217181,
-     "name": "Aaron Springer",
-     "photo": null
-    },
-    {
-     "id": 1447382,
-     "name": "Joe Pitt",
-     "photo": null
-    }
-   ],
-   "w": [
-    {
-     "id": 1254995,
-     "name": "Alex Hirsch",
-     "photo": "https://image.tmdb.org/t/p/w185/pGoKJKbqI3AwcmQkmEKG9jBXdcw.jpg"
-    },
-    {
-     "id": 584803,
-     "name": "Tim McKeon",
-     "photo": null
-    },
-    {
-     "id": 1656577,
-     "name": "Zach Paez",
-     "photo": null
-    }
-   ],
-   "g": [
-    {
-     "id": 38334,
-     "name": "Jennifer Coolidge",
-     "photo": "https://image.tmdb.org/t/p/w185/hcpbV0dY4ZJxmZi1WcAWe8euqV2.jpg",
-     "as": "Lazy Susan (voice)"
-    },
-    {
-     "id": 1245730,
-     "name": "Thurop Van Orman",
-     "photo": "https://image.tmdb.org/t/p/w185/kKiWFAtDPInyBltWzdCKsDkmZsZ.jpg",
-     "as": "Gideon Gleeful (voice)"
-    },
-    {
-     "id": 15761,
-     "name": "Grey DeLisle",
-     "photo": "https://image.tmdb.org/t/p/w185/vrUHaXe1pG56yZkgH7Hs3LGRLTT.jpg",
-     "as": "Mrs. Gleeful  (voice)"
-    },
-    {
-     "id": 35219,
-     "name": "Corey Burton",
-     "photo": "https://image.tmdb.org/t/p/w185/wcpFwdL7m01cZoBJiUSMQVakK2G.jpg",
-     "as": "The Lawyer (voice)"
-    },
-    {
-     "id": 17401,
-     "name": "Stephen Root",
-     "photo": "https://image.tmdb.org/t/p/w185/2Zwi6AydqQQ9InVdhjYcfJXNzkp.jpg",
-     "as": "Bud Gleeful (voice)"
-    }
-   ]
-  },
-  "1x12": {
-   "d": [
-    {
-     "id": 1656571,
-     "name": "John Aoshima",
-     "photo": "https://image.tmdb.org/t/p/w185/hf3M06Zoe6cyidzUNvFxJOqcg0k.jpg"
-    }
-   ],
-   "w": [
-    {
-     "id": 1254995,
-     "name": "Alex Hirsch",
-     "photo": "https://image.tmdb.org/t/p/w185/pGoKJKbqI3AwcmQkmEKG9jBXdcw.jpg"
-    },
-    {
-     "id": 1647289,
-     "name": "Mike Rianda",
-     "photo": "https://image.tmdb.org/t/p/w185/1MEH4XJ7fSkwA5oCEyx3CckbIva.jpg"
-    },
-    {
-     "id": 1656577,
-     "name": "Zach Paez",
-     "photo": null
-    }
-   ],
-   "g": [
-    {
-     "id": 1367713,
-     "name": "Carl Faruolo",
-     "photo": null,
-     "as": "Grenda (voice)"
-    },
-    {
-     "id": 38334,
-     "name": "Jennifer Coolidge",
-     "photo": "https://image.tmdb.org/t/p/w185/hcpbV0dY4ZJxmZi1WcAWe8euqV2.jpg",
-     "as": "Lazy Susan (voice)"
-    },
-    {
-     "id": 31531,
-     "name": "John DiMaggio",
-     "photo": "https://image.tmdb.org/t/p/w185/qcbQe71nSlULDsP1OxTqltEKFbl.jpg",
-     "as": "Manly Dan (voice)"
-    },
-    {
-     "id": 143346,
-     "name": "Keith Ferguson",
-     "photo": "https://image.tmdb.org/t/p/w185/8EvTlmOhP34EZFEGsznqjbr4o4q.jpg",
-     "as": "Deputy Durland (voice)"
-    },
-    {
-     "id": 1224999,
-     "name": "Gregg Turkington",
-     "photo": "https://image.tmdb.org/t/p/w185/rlusjIKkiM5lWUUNWZBbHMSBEjH.jpg",
-     "as": "Toby Determined (voice)"
-    },
-    {
-     "id": 23680,
-     "name": "Dee Bradley Baker",
-     "photo": "https://image.tmdb.org/t/p/w185/9oFnToDZWp0I484s7Ua1EzNQQ2m.jpg",
-     "as": "Waddles (voice)"
-    },
-    {
-     "id": 34982,
-     "name": "Jeff Bennett",
-     "photo": "https://image.tmdb.org/t/p/w185/6Fq3Q1e0Oz0j2J2fnFSl7fKCHd9.jpg",
-     "as": "Summerween Trickster (voice)"
-    },
-    {
-     "id": 212184,
-     "name": "Joshua Rush",
-     "photo": "https://image.tmdb.org/t/p/w185/8vp0f4FuGK2bUsBNeolJJgEksxJ.jpg",
-     "as": "Soldier Kid (voice)"
-    },
-    {
-     "id": 15761,
-     "name": "Grey DeLisle",
-     "photo": "https://image.tmdb.org/t/p/w185/vrUHaXe1pG56yZkgH7Hs3LGRLTT.jpg",
-     "as": "Gorney (voice) / Store Employee (voice)"
-    },
-    {
-     "id": 992381,
-     "name": "Blake Bertrand",
-     "photo": "https://image.tmdb.org/t/p/w185/tg2Vg5Uce1k3cfXY2chX9vmyeYd.jpg",
-     "as": "Mummy Kid (voice)"
-    }
-   ]
-  },
-  "1x13": {
-   "d": [
-    {
-     "id": 1656571,
-     "name": "John Aoshima",
-     "photo": "https://image.tmdb.org/t/p/w185/hf3M06Zoe6cyidzUNvFxJOqcg0k.jpg"
-    }
-   ],
-   "w": [
-    {
-     "id": 1254995,
-     "name": "Alex Hirsch",
-     "photo": "https://image.tmdb.org/t/p/w185/pGoKJKbqI3AwcmQkmEKG9jBXdcw.jpg"
-    },
-    {
-     "id": 584803,
-     "name": "Tim McKeon",
-     "photo": null
-    },
-    {
-     "id": 3005156,
-     "name": "Tommy Reahard",
-     "photo": null
-    }
-   ],
-   "g": [
-    {
-     "id": 23680,
-     "name": "Dee Bradley Baker",
-     "photo": "https://image.tmdb.org/t/p/w185/9oFnToDZWp0I484s7Ua1EzNQQ2m.jpg",
-     "as": "Waddles (voice)"
-    },
-    {
-     "id": 24362,
-     "name": "Kevin Michael Richardson",
-     "photo": "https://image.tmdb.org/t/p/w185/xXt9Nh7RAT5bOen66TaXreNYmCl.jpg",
-     "as": "Rich (voice)"
-    },
-    {
-     "id": 110885,
-     "name": "Jennifer Cody",
-     "photo": "https://image.tmdb.org/t/p/w185/nQ4t2XhwToiMN8RAPvgrA4QnSbK.jpg",
-     "as": "Additional Voices (voice)"
-    },
-    {
-     "id": 60279,
-     "name": "Fred Tatasciore",
-     "photo": "https://image.tmdb.org/t/p/w185/8YCIAGSWcxeTmPfOWMtVjLSwGOH.jpg",
-     "as": "The Gremloblin (voice)"
-    },
-    {
-     "id": 113916,
-     "name": "Scott Menville",
-     "photo": "https://image.tmdb.org/t/p/w185/iLoApH8LbyJSKFmdgWxNR314GGa.jpg",
-     "as": "Nate (voice)"
-    },
-    {
-     "id": 116315,
-     "name": "Kari Wahlgren",
-     "photo": "https://image.tmdb.org/t/p/w185/kc0BOnSdzCfq8w9qoNVEm5K12x1.jpg",
-     "as": "Additional Voices (voice)"
-    },
-    {
-     "id": 94820,
-     "name": "Jessica DiCicco",
-     "photo": "https://image.tmdb.org/t/p/w185/1Cp0PFtup0mlsecGyfImzd4LDiL.jpg",
-     "as": "Tambry / Additional Voices (voice)"
-    },
-    {
-     "id": 1647289,
-     "name": "Mike Rianda",
-     "photo": "https://image.tmdb.org/t/p/w185/1MEH4XJ7fSkwA5oCEyx3CckbIva.jpg",
-     "as": "Lee / Thompson / Additional Voices (voice)"
-    }
-   ]
-  },
-  "1x14": {
-   "d": [
-    {
-     "id": 217181,
-     "name": "Aaron Springer",
-     "photo": null
-    },
-    {
-     "id": 1447382,
-     "name": "Joe Pitt",
-     "photo": null
-    }
-   ],
-   "w": [
-    {
-     "id": 1254995,
-     "name": "Alex Hirsch",
-     "photo": "https://image.tmdb.org/t/p/w185/pGoKJKbqI3AwcmQkmEKG9jBXdcw.jpg"
-    },
-    {
-     "id": 1647289,
-     "name": "Mike Rianda",
-     "photo": "https://image.tmdb.org/t/p/w185/1MEH4XJ7fSkwA5oCEyx3CckbIva.jpg"
-    }
-   ],
-   "g": [
-    {
-     "id": 24362,
-     "name": "Kevin Michael Richardson",
-     "photo": "https://image.tmdb.org/t/p/w185/xXt9Nh7RAT5bOen66TaXreNYmCl.jpg",
-     "as": "Sheriff Blubs (voice) / Tats (voice)"
-    },
-    {
-     "id": 23680,
-     "name": "Dee Bradley Baker",
-     "photo": "https://image.tmdb.org/t/p/w185/9oFnToDZWp0I484s7Ua1EzNQQ2m.jpg",
-     "as": "Waddles (voice)"
-    },
-    {
-     "id": 1647311,
-     "name": "A. Smith Harrison",
-     "photo": "https://image.tmdb.org/t/p/w185/z6DJ4TfWQBvLUfUz1Z5oIHrBP8N.jpg",
-     "as": "Deep Voice Dipper (voice)"
-    },
-    {
-     "id": 15761,
-     "name": "Grey DeLisle",
-     "photo": "https://image.tmdb.org/t/p/w185/vrUHaXe1pG56yZkgH7Hs3LGRLTT.jpg",
-     "as": "Female Voice Stan (voice)"
-    },
-    {
-     "id": 143346,
-     "name": "Keith Ferguson",
-     "photo": "https://image.tmdb.org/t/p/w185/8EvTlmOhP34EZFEGsznqjbr4o4q.jpg",
-     "as": "Deputy Durland / Additional Voices (voice)"
-    },
-    {
-     "id": 31531,
-     "name": "John DiMaggio",
-     "photo": "https://image.tmdb.org/t/p/w185/qcbQe71nSlULDsP1OxTqltEKFbl.jpg",
-     "as": "Manly Dan / Pinball Cowboy Skeleton (voice)"
-    }
-   ]
-  },
-  "1x15": {
-   "d": [
-    {
-     "id": 217181,
-     "name": "Aaron Springer",
-     "photo": null
-    },
-    {
-     "id": 1447382,
-     "name": "Joe Pitt",
-     "photo": null
-    }
-   ],
-   "w": [
-    {
-     "id": 1254995,
-     "name": "Alex Hirsch",
-     "photo": "https://image.tmdb.org/t/p/w185/pGoKJKbqI3AwcmQkmEKG9jBXdcw.jpg"
-    },
-    {
-     "id": 3005157,
-     "name": "Nancy Cohen",
-     "photo": null
-    }
-   ],
-   "g": [
-    {
-     "id": 62831,
-     "name": "Will Forte",
-     "photo": "https://image.tmdb.org/t/p/w185/4VEzbkL3HwHTUZAPA5PyypFG2U.jpg",
-     "as": "Tyler Cutebiker (voice)"
-    },
-    {
-     "id": 1224999,
-     "name": "Gregg Turkington",
-     "photo": "https://image.tmdb.org/t/p/w185/rlusjIKkiM5lWUUNWZBbHMSBEjH.jpg",
-     "as": "Toby Determined (voice)"
-    },
-    {
-     "id": 1245730,
-     "name": "Thurop Van Orman",
-     "photo": "https://image.tmdb.org/t/p/w185/kKiWFAtDPInyBltWzdCKsDkmZsZ.jpg",
-     "as": "Gideon Gleeful (voice)"
-    },
-    {
-     "id": 23680,
-     "name": "Dee Bradley Baker",
-     "photo": "https://image.tmdb.org/t/p/w185/9oFnToDZWp0I484s7Ua1EzNQQ2m.jpg",
-     "as": "Waddles (voice)"
-    },
-    {
-     "id": 143346,
-     "name": "Keith Ferguson",
-     "photo": "https://image.tmdb.org/t/p/w185/8EvTlmOhP34EZFEGsznqjbr4o4q.jpg",
-     "as": "Deputy Durland / Additional Voices (voice)"
-    },
-    {
-     "id": 24362,
-     "name": "Kevin Michael Richardson",
-     "photo": "https://image.tmdb.org/t/p/w185/xXt9Nh7RAT5bOen66TaXreNYmCl.jpg",
-     "as": "Sheriff Blubs / Additional Voices (voice)"
-    },
-    {
-     "id": 590012,
-     "name": "Matt Chapman",
-     "photo": null,
-     "as": "Mermando / Additional Voices (voice)"
-    },
-    {
-     "id": 1647289,
-     "name": "Mike Rianda",
-     "photo": "https://image.tmdb.org/t/p/w185/1MEH4XJ7fSkwA5oCEyx3CckbIva.jpg",
-     "as": "Mr. Poolcheck / Additional Voices ( voice)"
-    }
-   ]
-  },
-  "1x16": {
-   "d": [
-    {
-     "id": 1447382,
-     "name": "Joe Pitt",
-     "photo": null
-    }
-   ],
-   "w": [
-    {
-     "id": 1254995,
-     "name": "Alex Hirsch",
-     "photo": "https://image.tmdb.org/t/p/w185/pGoKJKbqI3AwcmQkmEKG9jBXdcw.jpg"
-    },
-    {
-     "id": 584803,
-     "name": "Tim McKeon",
-     "photo": null
-    },
-    {
-     "id": 1656577,
-     "name": "Zach Paez",
-     "photo": null
-    }
-   ],
-   "g": [
-    {
-     "id": 1367713,
-     "name": "Carl Faruolo",
-     "photo": null,
-     "as": "Grenda (voice)"
-    },
-    {
-     "id": 143346,
-     "name": "Keith Ferguson",
-     "photo": "https://image.tmdb.org/t/p/w185/8EvTlmOhP34EZFEGsznqjbr4o4q.jpg",
-     "as": "Deputy Durland (voice)"
-    },
-    {
-     "id": 23680,
-     "name": "Dee Bradley Baker",
-     "photo": "https://image.tmdb.org/t/p/w185/9oFnToDZWp0I484s7Ua1EzNQQ2m.jpg",
-     "as": "Waddles (voice)"
-    },
-    {
-     "id": 15761,
-     "name": "Grey DeLisle",
-     "photo": "https://image.tmdb.org/t/p/w185/vrUHaXe1pG56yZkgH7Hs3LGRLTT.jpg",
-     "as": "Lost Woman (voice)"
-    },
-    {
-     "id": 1647289,
-     "name": "Mike Rianda",
-     "photo": "https://image.tmdb.org/t/p/w185/1MEH4XJ7fSkwA5oCEyx3CckbIva.jpg",
-     "as": "Additional Voices (voice)"
-    },
-    {
-     "id": 35219,
-     "name": "Corey Burton",
-     "photo": "https://image.tmdb.org/t/p/w185/wcpFwdL7m01cZoBJiUSMQVakK2G.jpg",
-     "as": "Additional Voices (voice)"
-    },
-    {
-     "id": 24362,
-     "name": "Kevin Michael Richardson",
-     "photo": "https://image.tmdb.org/t/p/w185/xXt9Nh7RAT5bOen66TaXreNYmCl.jpg",
-     "as": "Sheriff Blubs (voice)"
-    },
-    {
-     "id": 1245731,
-     "name": "Niki Yang",
-     "photo": "https://image.tmdb.org/t/p/w185/t0MYbwrpGZLwp66L2rSG5uhlaJ6.jpg",
-     "as": "Candy Chiu (voice)"
-    }
-   ]
-  },
-  "1x17": {
-   "d": [
-    {
-     "id": 1656571,
-     "name": "John Aoshima",
-     "photo": "https://image.tmdb.org/t/p/w185/hf3M06Zoe6cyidzUNvFxJOqcg0k.jpg"
-    }
-   ],
-   "w": [
-    {
-     "id": 1254995,
-     "name": "Alex Hirsch",
-     "photo": "https://image.tmdb.org/t/p/w185/pGoKJKbqI3AwcmQkmEKG9jBXdcw.jpg"
-    },
-    {
-     "id": 590012,
-     "name": "Matt Chapman",
-     "photo": null
-    }
-   ],
-   "g": [
-    {
-     "id": 1367713,
-     "name": "Carl Faruolo",
-     "photo": null,
-     "as": "Grenda (voice)"
-    },
-    {
-     "id": 62831,
-     "name": "Will Forte",
-     "photo": "https://image.tmdb.org/t/p/w185/4VEzbkL3HwHTUZAPA5PyypFG2U.jpg",
-     "as": "Tyler Cutebiker (voice)"
-    },
-    {
-     "id": 77073,
-     "name": "Lance Bass",
-     "photo": "https://image.tmdb.org/t/p/w185/sxwb6xvaZu1MRztxLc2oiITVgJj.jpg",
-     "as": "Sev'ral Timez member (voice)"
-    },
-    {
-     "id": 590012,
-     "name": "Matt Chapman",
-     "photo": null,
-     "as": "Sev'ral Timez member (voice)"
-    },
-    {
-     "id": 143346,
-     "name": "Keith Ferguson",
-     "photo": "https://image.tmdb.org/t/p/w185/8EvTlmOhP34EZFEGsznqjbr4o4q.jpg",
-     "as": "Additional Voices (voice)"
-    },
-    {
-     "id": 236327,
-     "name": "Ken Hudson Campbell",
-     "photo": "https://image.tmdb.org/t/p/w185/5KmuInp11wKczUQMHlNP26STfzT.jpg",
-     "as": "Ergman Bratzman (voice)"
-    },
-    {
-     "id": 1656574,
-     "name": "Kimberly Mooney",
-     "photo": null,
-     "as": "Additional Voices (voice)"
-    },
-    {
-     "id": 116315,
-     "name": "Kari Wahlgren",
-     "photo": "https://image.tmdb.org/t/p/w185/kc0BOnSdzCfq8w9qoNVEm5K12x1.jpg",
-     "as": "Shandra Jimenez / Additional Voices (voice)"
-    },
-    {
-     "id": 3068344,
-     "name": "Ariel Hirsch",
-     "photo": null,
-     "as": "Additional Voices (voice)"
-    },
-    {
-     "id": 2334208,
-     "name": "Zaden Lipman",
-     "photo": null,
-     "as": "Hilkop Hyges (voice)"
-    }
-   ]
-  },
-  "1x18": {
-   "d": [
-    {
-     "id": 1656571,
-     "name": "John Aoshima",
-     "photo": "https://image.tmdb.org/t/p/w185/hf3M06Zoe6cyidzUNvFxJOqcg0k.jpg"
-    }
-   ],
-   "w": [
-    {
-     "id": 1254995,
-     "name": "Alex Hirsch",
-     "photo": "https://image.tmdb.org/t/p/w185/pGoKJKbqI3AwcmQkmEKG9jBXdcw.jpg"
-    },
-    {
-     "id": 584803,
-     "name": "Tim McKeon",
-     "photo": null
-    }
-   ],
-   "g": [
-    {
-     "id": 143346,
-     "name": "Keith Ferguson",
-     "photo": "https://image.tmdb.org/t/p/w185/8EvTlmOhP34EZFEGsznqjbr4o4q.jpg",
-     "as": "Deputy Durland / Additional Voices (voice)"
-    },
-    {
-     "id": 23680,
-     "name": "Dee Bradley Baker",
-     "photo": "https://image.tmdb.org/t/p/w185/9oFnToDZWp0I484s7Ua1EzNQQ2m.jpg",
-     "as": "Waddles (voice) / Pterodactyl (voice)"
-    },
-    {
-     "id": 35219,
-     "name": "Corey Burton",
-     "photo": "https://image.tmdb.org/t/p/w185/wcpFwdL7m01cZoBJiUSMQVakK2G.jpg",
-     "as": "Additional Voices (voice)"
-    },
-    {
-     "id": 1245733,
-     "name": "Justin Roiland",
-     "photo": "https://image.tmdb.org/t/p/w185/wYApP38aXe6ZcEtlBAfNRxJTQQi.jpg",
-     "as": "Bobby Renzobbi (voice) / Additional Voices (voice)"
-    },
-    {
-     "id": 15761,
-     "name": "Grey DeLisle",
-     "photo": "https://image.tmdb.org/t/p/w185/vrUHaXe1pG56yZkgH7Hs3LGRLTT.jpg",
-     "as": "Additional Voices (voice)"
-    },
-    {
-     "id": 24362,
-     "name": "Kevin Michael Richardson",
-     "photo": "https://image.tmdb.org/t/p/w185/xXt9Nh7RAT5bOen66TaXreNYmCl.jpg",
-     "as": "Sheriff Blubs (voice)"
-    }
-   ]
-  },
-  "1x19": {
-   "d": [
-    {
-     "id": 1447382,
-     "name": "Joe Pitt",
-     "photo": null
-    },
-    {
-     "id": 1656571,
-     "name": "John Aoshima",
-     "photo": "https://image.tmdb.org/t/p/w185/hf3M06Zoe6cyidzUNvFxJOqcg0k.jpg"
-    }
-   ],
-   "w": [
-    {
-     "id": 1254995,
-     "name": "Alex Hirsch",
-     "photo": "https://image.tmdb.org/t/p/w185/pGoKJKbqI3AwcmQkmEKG9jBXdcw.jpg"
-    },
-    {
-     "id": 584803,
-     "name": "Tim McKeon",
-     "photo": null
-    },
-    {
-     "id": 590012,
-     "name": "Matt Chapman",
-     "photo": null
-    }
-   ],
-   "g": [
-    {
-     "id": 60227,
-     "name": "Greg Cipes",
-     "photo": "https://image.tmdb.org/t/p/w185/x6kE9Ox4sR3HnrF6qtnjGNgujzV.jpg",
-     "as": "Craz (voice)"
-    },
-    {
-     "id": 1251981,
-     "name": "John Roberts",
-     "photo": "https://image.tmdb.org/t/p/w185/s2cF0TVUTPWUaGKfM2ADZQdkypc.jpg",
-     "as": "Xyler (voice)"
-    },
-    {
-     "id": 38334,
-     "name": "Jennifer Coolidge",
-     "photo": "https://image.tmdb.org/t/p/w185/hcpbV0dY4ZJxmZi1WcAWe8euqV2.jpg",
-     "as": "Lazy Susan (voice)"
-    },
-    {
-     "id": 1245730,
-     "name": "Thurop Van Orman",
-     "photo": "https://image.tmdb.org/t/p/w185/kKiWFAtDPInyBltWzdCKsDkmZsZ.jpg",
-     "as": "Gideon Gleeful (voice)"
-    },
-    {
-     "id": 6574,
-     "name": "Clancy Brown",
-     "photo": "https://image.tmdb.org/t/p/w185/1JeBRNG7VS7r64V9lOvej9bZXW5.jpg",
-     "as": "British Dog Man (voice)"
-    },
-    {
-     "id": 1164238,
-     "name": "Stuart Allan",
-     "photo": "https://image.tmdb.org/t/p/w185/xCAGTIcgC7J6YCl2bviIADY8blp.jpg",
-     "as": "Young Stan (voice)"
-    },
-    {
-     "id": 24362,
-     "name": "Kevin Michael Richardson",
-     "photo": "https://image.tmdb.org/t/p/w185/xXt9Nh7RAT5bOen66TaXreNYmCl.jpg",
-     "as": "Additional Voices (voice)"
-    },
-    {
-     "id": 17401,
-     "name": "Stephen Root",
-     "photo": "https://image.tmdb.org/t/p/w185/2Zwi6AydqQQ9InVdhjYcfJXNzkp.jpg",
-     "as": "Bud Gleeful / Additional Voices (voice)"
-    },
-    {
-     "id": 15761,
-     "name": "Grey DeLisle",
-     "photo": "https://image.tmdb.org/t/p/w185/vrUHaXe1pG56yZkgH7Hs3LGRLTT.jpg",
-     "as": "Carla McCorkle / Additional Voices (voice)"
-    }
-   ]
-  },
-  "1x20": {
-   "d": [
-    {
-     "id": 1447382,
-     "name": "Joe Pitt",
-     "photo": null
-    },
-    {
-     "id": 1656571,
-     "name": "John Aoshima",
-     "photo": "https://image.tmdb.org/t/p/w185/hf3M06Zoe6cyidzUNvFxJOqcg0k.jpg"
-    }
-   ],
-   "w": [
-    {
-     "id": 1254995,
-     "name": "Alex Hirsch",
-     "photo": "https://image.tmdb.org/t/p/w185/pGoKJKbqI3AwcmQkmEKG9jBXdcw.jpg"
-    },
-    {
-     "id": 1647289,
-     "name": "Mike Rianda",
-     "photo": "https://image.tmdb.org/t/p/w185/1MEH4XJ7fSkwA5oCEyx3CckbIva.jpg"
-    },
-    {
-     "id": 590012,
-     "name": "Matt Chapman",
-     "photo": null
-    }
-   ],
-   "g": [
-    {
-     "id": 116315,
-     "name": "Kari Wahlgren",
-     "photo": "https://image.tmdb.org/t/p/w185/kc0BOnSdzCfq8w9qoNVEm5K12x1.jpg",
-     "as": "Shandra Jimenez (voice)"
-    },
-    {
-     "id": 38334,
-     "name": "Jennifer Coolidge",
-     "photo": "https://image.tmdb.org/t/p/w185/hcpbV0dY4ZJxmZi1WcAWe8euqV2.jpg",
-     "as": "Lazy Susan (voice)"
-    },
-    {
-     "id": 31531,
-     "name": "John DiMaggio",
-     "photo": "https://image.tmdb.org/t/p/w185/qcbQe71nSlULDsP1OxTqltEKFbl.jpg",
-     "as": "Manly Dan (voice)"
-    },
-    {
-     "id": 143346,
-     "name": "Keith Ferguson",
-     "photo": "https://image.tmdb.org/t/p/w185/8EvTlmOhP34EZFEGsznqjbr4o4q.jpg",
-     "as": "Deputy Durland (voice)"
-    },
-    {
-     "id": 62831,
-     "name": "Will Forte",
-     "photo": "https://image.tmdb.org/t/p/w185/4VEzbkL3HwHTUZAPA5PyypFG2U.jpg",
-     "as": "Tyler Cutebiker (voice)"
-    },
-    {
-     "id": 1224999,
-     "name": "Gregg Turkington",
-     "photo": "https://image.tmdb.org/t/p/w185/rlusjIKkiM5lWUUNWZBbHMSBEjH.jpg",
-     "as": "Toby Determined (voice)"
-    },
-    {
-     "id": 1245730,
-     "name": "Thurop Van Orman",
-     "photo": "https://image.tmdb.org/t/p/w185/kKiWFAtDPInyBltWzdCKsDkmZsZ.jpg",
-     "as": "Gideon Gleeful (voice)"
-    },
-    {
-     "id": 23680,
-     "name": "Dee Bradley Baker",
-     "photo": "https://image.tmdb.org/t/p/w185/9oFnToDZWp0I484s7Ua1EzNQQ2m.jpg",
-     "as": "Waddles (voice)"
-    },
-    {
-     "id": 24362,
-     "name": "Kevin Michael Richardson",
-     "photo": "https://image.tmdb.org/t/p/w185/xXt9Nh7RAT5bOen66TaXreNYmCl.jpg",
-     "as": "Sheriff Blubs / Additional Voices (voice)"
-    },
-    {
-     "id": 1245733,
-     "name": "Justin Roiland",
-     "photo": "https://image.tmdb.org/t/p/w185/wYApP38aXe6ZcEtlBAfNRxJTQQi.jpg",
-     "as": "Bobby Renzobbi (voice)"
+     "id": 1211,
+     "name": "Larry Miller",
+     "photo": "https://image.tmdb.org/t/p/w185/ajnXlXG20LJwAwxne8G94ucVj0v.jpg",
+     "as": "Dr. Tepperman"
     }
    ]
   }
  },
- "episodesAt": "2026-10-25T07:35:45.988Z"
+ "episodesAt": "2026-11-27T08:45:50.338Z"
 }
