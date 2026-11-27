@@ -96,6 +96,22 @@ piece, and he has not asked for one.
 | Dots and boxes | 2 to 4 | Draw a line, close a box, go again |
 | Snakes and Ladders, Ludo | 2 to 4 | Dice; a board on the table, drawn by us (moved here from "Not cards") |
 
+## Barbershop games
+
+Bryan, 26 Nov 2026, in the ads chat: "ohhh what about barber shop games... drops mic... eachy person getting cut has
+a hand.. people waiting can have a seperate difffernt thing". Then, in this chat: "Yes" to putting it on this list.
+Not built.
+
+One shop TV, two games at once:
+- The chairs: each person getting a cut holds a hand on their phone, and the table is on the TV. A cut takes 20 to 40
+  minutes, about one hand of Spades. When someone leaves the chair, their seat passes to whoever is next up.
+- The waiting bench: something separate and different on the same screen (a trivia round, a quick party game), so
+  the people waiting play without breaking up the card table.
+
+What works today: the table on the shop TV and a hand on every phone, so a shop can already deal in the waiting bench.
+What would be new: two games on one screen, a seat that passes to the next customer, and a shop mode that runs all day.
+Two games on one screen is a new look, so pictures first.
+
 ## What stays the same
 
 - The phone relay, the dealer and the privacy rule do not change for any of these.
