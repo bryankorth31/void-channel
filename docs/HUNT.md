@@ -98,7 +98,7 @@ Mentions = Archive items naming the show in any field. Episode-shaped = video fi
 | FOUND | Gary Unmarried | 2000s and Later Sitcoms | 13 | 7 | 63 | 0 | ajs-broadcast-stash (63) |
 | FOUND | George Lopez | 2000s and Later Sitcoms | 2000 | 72 | 99 | 22 | greetingsfromtucson (22) |
 | FOUND | Getting Personal | 2000s and Later Sitcoms | 2000 | 8 | 34 | 34 | getting-personal-1998-full-sitcom (24) |
-| FOUND | Girlfriends | 2000s and Later Sitcoms | 325 | 39 | 34 | 34 | WSBK_20010911_013000_Girlfriends (1) |
+| FOUND | Girlfriends | 2000s and Later Sitcoms | 318 | 42 | 94 | 94 | girlfriends_202406 (60) |
 | FOUND | Good Grief | 2000s and Later Sitcoms | 461 | 8 | 11 | 11 | goodgrief_202411 (8) |
 | FOUND | Grand | 2000s and Later Sitcoms | 2388 | 8 | 45 | 44 | grand-1990 (27) |
 | FOUND | Great News | 2000s and Later Sitcoms | 2000 | 8 | 76 | 1 | 07-dialing-for-dollars-007-season-1 (26) |
