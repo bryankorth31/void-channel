@@ -68,3 +68,19 @@ test('H18: the five shows that wore another show\'s record are pinned to their o
   assert.equal(o['the-big-bang'].noArt, true);
   assert.match(ART, /if \(\(OVERRIDES\[s\] \|\| \{\}\)\.noArt\) \{ if \(art\[s\]\) \{ delete art\[s\];/);
 });
+
+// Bryan, 26 Nov 2026: "dont want shows with 1 ep in the first rows".
+test('H18: a show with only a few episodes never leads a row of fuller shows, and the day\'s guest is a fuller show too', () => {
+  const src = APP.match(/^function byKnown\(.*$/m)[0] + '\n' + APP.match(/^function ripHash\(.*$/m)[0] + '\n' + APP.match(/^function ripple\(.*$/m)[0];
+  const ctx = {}; vm.createContext(ctx); vm.runInContext(src + '\nthis.byKnown = byKnown; this.ripple = ripple;', ctx);
+  const row = [{ show: 'One-off hit', eps: 1, votes: 90000 }, { show: 'Big', eps: 100, votes: 500 }, { show: 'Five', eps: 5, votes: 8000 }, { show: 'Full', eps: 40, votes: 900 }];
+  assert.deepEqual([...row].sort(ctx.byKnown).map((s) => s.show), ['Full', 'Big', 'One-off hit', 'Five']);
+  const films = [{ show: 'A', eps: 1, votes: 5 }, { show: 'B', eps: 1, votes: 50 }];
+  assert.deepEqual([...films].sort(ctx.byKnown).map((s) => s.show), ['B', 'A'], 'a row of single films sorts among its own');
+  const mixed = Array.from({ length: 40 }, (_, i) => ({ slug: 's' + i, eps: i < 20 ? 50 : 1, votes: 1000 - i }));
+  for (let day = 750000; day < 750060; day++) {
+    const o = Array.from(ctx.ripple(mixed, 'k', day));
+    assert.ok(o[4].eps >= 6, 'the guest is a fuller show');
+    assert.ok(o.slice(0, 8).every((s) => s.eps >= 6), 'no one-episode show in the first eight');
+  }
+});

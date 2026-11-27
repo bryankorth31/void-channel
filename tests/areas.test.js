@@ -252,7 +252,7 @@ test('H19: Share says the room by its name and line, asks for nothing, and every
   const app = read('scripts/lib/app.js');
   assert.match(app, /\$\{PROFILE\.name === 'kids' \? '' : '<button type="button" class="sharebtn" id="sharebtn" onclick="shareRoom\(\)"/, 'the button sits in the top bar, never on Kids');
   const ctx = {}; vm.runInNewContext(app.match(/^const GO=\{.*\};$/m)[0] + ' this.GO = GO;', ctx); const go = Object.fromEntries(Object.entries(ctx.GO).map(([k, v]) => [k, typeof v === 'function' ? '/tv' : v]));
-  assert.deepEqual(Object.keys(go), ['christmas', 'christmas-tv', 'play', 'trivia', 'cards', 'tv', 'shows', 'learn']);
+  for (const k of ['christmas', 'christmas-tv', 'play', 'trivia', 'cards', 'tv', 'shows', 'learn', 'xmas-voidtv', 'opt-retro', 'opt-free', 'xmas-channel', 'opt-world', 'xmas-play', 'opt-retro-play', 'xmas-trivia', 'xmas-cards', 'opt-hand', 'opt-world-cards']) assert.ok(go[k], 'a link for ' + k);
   const rooms = new Set(Array.from(V.areas).filter((x) => x.live).map((a) => (a.site === 'main' ? a.path : a.url)));
   for (const [k, to] of Object.entries(go)) assert.ok(rooms.has(to) || to === '/tv', k + ' opens a room: ' + to);
   assert.match(app, /new Date\(2026,10,30,6\)\.getTime\(\)\?'\/tv':'\/tv\/moment-christmas'/, 'the Christmas channel link opens Live TV until the channel joins');
