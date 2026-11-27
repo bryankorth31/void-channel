@@ -500,3 +500,12 @@ test('theme: the page has the Theme row, Every show first and checked, and the c
   assert.match(host, /theme: val\('theme'\) && val\('theme'\) !== 'all' \? val\('theme'\) : null/);
   assert.match(host, /o\.theme \? \(f\.groups && f\.groups\[o\.theme\]\) \|\| null : f/);
 });
+
+test('theme: a theme is offered only when the bank holds questions for it', () => {
+  assert.equal(G.themeInIndex({ files: [{ count: 9 }] }, 'black-tv'), false, 'a bank built before the list: hidden');
+  assert.equal(G.themeInIndex({ files: [{ count: 9, groups: { 'black-tv': { count: 0 } } }] }, 'black-tv'), false);
+  assert.equal(G.themeInIndex({ files: [{ count: 9 }, { count: 9, groups: { 'black-tv': { count: 4 } } }] }, 'black-tv'), true);
+  assert.equal(G.themeInIndex(null, 'black-tv'), false);
+  const host = require('fs').readFileSync(require('path').join(__dirname, '..', 'trivia', 'src', 'host.js'), 'utf8');
+  assert.match(host, /index = j; themesInBank\(\); showAvailable\(\);/, 'checked as soon as the index loads, before the count');
+});

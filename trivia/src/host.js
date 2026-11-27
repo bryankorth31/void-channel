@@ -130,6 +130,17 @@
     return want.flatMap((f) => loaded.get(f.file));
   }
 
+  // A theme shows only when the bank has questions for it (the bank tags them on its next build after a list is added), so the
+  // page never offers a theme that starts nothing.
+  function themesInBank() {
+    for (const e of document.querySelectorAll('input[name="theme"]')) {
+      if (e.value === 'all') continue;
+      const has = G.themeInIndex(index, e.value);
+      e.closest('label').hidden = !has;
+      if (!has && e.checked) document.querySelector('input[name="theme"][value="all"]').checked = true;
+    }
+  }
+
   // How many questions the chosen crowd and topics allow, shown under the settings.
   function showAvailable() {
     if (!index) return;
@@ -839,6 +850,6 @@
   for (const i of document.querySelectorAll('.setup input')) i.addEventListener('change', showAvailable);
   addEventListener('pagehide', closeRoom);
 
-  fetch('bank/index.json').then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); }).then((j) => { index = j; showAvailable(); if ($('gate').hidden) $('start').focus(); })
+  fetch('bank/index.json').then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); }).then((j) => { index = j; themesInBank(); showAvailable(); if ($('gate').hidden) $('start').focus(); })
     .catch(() => { $('avail').textContent = 'The questions did not load. Check the connection and reload the page.'; });
 })();

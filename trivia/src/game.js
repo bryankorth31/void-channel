@@ -20,6 +20,8 @@
 
   // A theme deck (Black TV first; Bryan, 26 Nov 2026: "A, Theme row") takes only what is about a show on that theme's list.
   function inTheme(q, opts) { return !opts.theme || (Array.isArray(q.groups) && q.groups.includes(opts.theme)); }
+  // Does the bank's index hold any question for this theme? (bank.js writes each file's theme counts as groups.)
+  function themeInIndex(index, theme) { return !!(index && (index.files || []).some((f) => f.groups && f.groups[theme] && f.groups[theme].count > 0)); }
 
   // The questions a deck allows: family decks take family questions only; after dark takes every question.
   function allowed(questions, opts) {
@@ -302,7 +304,7 @@
     return JSON.stringify(m);
   }
 
-  const api = { ROUND_NAMES, CATEGORY_NAMES, whyLine, inTheme, roomsOn, adultOpen, adultOpened, seeded, shuffle, subject, allowed, pickGame, keyAction, points, standings, answerOf, ordinal,
+  const api = { ROUND_NAMES, CATEGORY_NAMES, whyLine, inTheme, themeInIndex, roomsOn, adultOpen, adultOpened, seeded, shuffle, subject, allowed, pickGame, keyAction, points, standings, answerOf, ordinal,
     order, datesFor, hlRun, yearQs, guessOf, yearPoints, compose, SHELF_VALUES, buildShelf, wagerOf, settleWager };
   if (typeof module !== 'undefined' && module.exports) module.exports = api; else root.TriviaGame = api;
 })(this);
