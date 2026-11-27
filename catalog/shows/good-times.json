@@ -3,7 +3,7 @@
   "slug": "good-times",
   "type": "Classic TV",
   "network": "CBS",
-  "matchedAt": "2026-10-16T07:58:19.916Z",
+  "matchedAt": "2026-11-27T03:11:12.062Z",
   "addedAt": "2026-10-15T12:08:53.845Z",
   "tvmaze": {
     "id": 1472,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 133,
-    "live": 3,
-    "review": 1,
-    "missing": 129,
-    "pct": 3
+    "live": 133,
+    "review": 0,
+    "missing": 0,
+    "pct": 100
   },
   "seasons": [
     {
@@ -29,19 +29,33 @@
           "airdate": "1974-02-08",
           "state": "LIVE",
           "file": {
-            "conf": 0.9,
-            "why": "S/E in filename",
-            "item": "GoodTimesS01E01GettingUpTheRent",
-            "itemTitle": "Good Times - S01E01 - Getting Up The Rent",
-            "file": "Good Times - S01E01 - Getting Up the Rent.mp4",
-            "name": "Good Times - S01E01 - Getting Up the Rent",
-            "url": "https://archive.org/download/GoodTimesS01E01GettingUpTheRent/Good%20Times%20-%20S01E01%20-%20Getting%20Up%20the%20Rent.mp4",
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S01E01 (Too Old Blues).mp4",
+            "name": "Good Times - S01E01 (Too Old Blues)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S01E01%20(Too%20Old%20Blues).mp4",
             "seconds": 1577,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 164
+            "sizeMB": 208
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.9,
+              "why": "S/E in filename",
+              "item": "GoodTimesS01E01GettingUpTheRent",
+              "itemTitle": "Good Times - S01E01 - Getting Up The Rent",
+              "file": "Good Times - S01E01 - Getting Up the Rent.mp4",
+              "name": "Good Times - S01E01 - Getting Up the Rent",
+              "url": "https://archive.org/download/GoodTimesS01E01GettingUpTheRent/Good%20Times%20-%20S01E01%20-%20Getting%20Up%20the%20Rent.mp4",
+              "seconds": 1577,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 164
+            }
+          ]
         },
         {
           "number": 2,
@@ -51,37 +65,65 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "GoodTimesS01E02BlackJesus",
-            "itemTitle": "Good Times - S01E02 - Black Jesus",
-            "file": "Good Times - S01E02 - Black Jesus.mp4",
-            "name": "Good Times - S01E02 - Black Jesus",
-            "url": "https://archive.org/download/GoodTimesS01E02BlackJesus/Good%20Times%20-%20S01E02%20-%20Black%20Jesus.mp4",
-            "seconds": 1575,
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S01E02 (Black Jesus).mp4",
+            "name": "Good Times - S01E02 (Black Jesus)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S01E02%20(Black%20Jesus).mp4",
+            "seconds": 1582,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 164
+            "sizeMB": 202
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "GoodTimesS01E02BlackJesus",
+              "itemTitle": "Good Times - S01E02 - Black Jesus",
+              "file": "Good Times - S01E02 - Black Jesus.mp4",
+              "name": "Good Times - S01E02 - Black Jesus",
+              "url": "https://archive.org/download/GoodTimesS01E02BlackJesus/Good%20Times%20-%20S01E02%20-%20Black%20Jesus.mp4",
+              "seconds": 1575,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 164
+            }
+          ]
         },
         {
           "number": 3,
           "name": "Getting Up the Rent",
           "airdate": "1974-02-22",
-          "state": "REVIEW",
+          "state": "LIVE",
           "file": {
-            "conf": 0.8,
-            "why": "title ~ \"Getting Up the Rent\" (1.00)",
-            "item": "GoodTimesS01E01GettingUpTheRent",
-            "itemTitle": "Good Times - S01E01 - Getting Up The Rent",
-            "file": "Good Times - S01E01 - Getting Up the Rent.mp4",
-            "name": "Good Times - S01E01 - Getting Up the Rent",
-            "url": "https://archive.org/download/GoodTimesS01E01GettingUpTheRent/Good%20Times%20-%20S01E01%20-%20Getting%20Up%20the%20Rent.mp4",
-            "seconds": 1577,
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S01E03 (Getting Up the Rent).mp4",
+            "name": "Good Times - S01E03 (Getting Up the Rent)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S01E03%20(Getting%20Up%20the%20Rent).mp4",
+            "seconds": 1582,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 164
+            "sizeMB": 223
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Getting Up the Rent\" (1.00)",
+              "item": "GoodTimesS01E01GettingUpTheRent",
+              "itemTitle": "Good Times - S01E01 - Getting Up The Rent",
+              "file": "Good Times - S01E01 - Getting Up the Rent.mp4",
+              "name": "Good Times - S01E01 - Getting Up the Rent",
+              "url": "https://archive.org/download/GoodTimesS01E01GettingUpTheRent/Good%20Times%20-%20S01E01%20-%20Getting%20Up%20the%20Rent.mp4",
+              "seconds": 1577,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 164
+            }
+          ]
         },
         {
           "number": 4,
@@ -91,88 +133,210 @@
           "file": {
             "conf": 1,
             "why": "S/E in filename + title match",
-            "item": "GoodTimesS01E04GodsBusinessIsGoodBusiness",
-            "itemTitle": "Good Times - God's Business Is Good Business",
-            "file": "Good Times S01E04 Gods Business Is Good Business.m4v",
-            "name": "Good Times S01E04 Gods Business Is Good Business",
-            "url": "https://archive.org/download/GoodTimesS01E04GodsBusinessIsGoodBusiness/Good%20Times%20S01E04%20Gods%20Business%20Is%20Good%20Business.m4v",
-            "seconds": 1575,
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S01E04 (God's Business is Good Business).mp4",
+            "name": "Good Times - S01E04 (God's Business is Good Business)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S01E04%20(God's%20Business%20is%20Good%20Business).mp4",
+            "seconds": 1583,
             "format": "MPEG4",
             "playable": true,
-            "sizeMB": 99
+            "sizeMB": 235
           },
-          "alternates": []
+          "alternates": [
+            {
+              "conf": 1,
+              "why": "S/E in filename + title match",
+              "item": "GoodTimesS01E04GodsBusinessIsGoodBusiness",
+              "itemTitle": "Good Times - God's Business Is Good Business",
+              "file": "Good Times S01E04 Gods Business Is Good Business.m4v",
+              "name": "Good Times S01E04 Gods Business Is Good Business",
+              "url": "https://archive.org/download/GoodTimesS01E04GodsBusinessIsGoodBusiness/Good%20Times%20S01E04%20Gods%20Business%20Is%20Good%20Business.m4v",
+              "seconds": 1575,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 99
+            }
+          ]
         },
         {
           "number": 5,
           "name": "Michael Gets Suspended",
           "airdate": "1974-03-08",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S01E05 (Michael Gets Suspended).mp4",
+            "name": "Good Times - S01E05 (Michael Gets Suspended)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S01E05%20(Michael%20Gets%20Suspended).mp4",
+            "seconds": 1564,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 216
+          },
           "alternates": []
         },
         {
           "number": 6,
           "name": "Sex and the Evans Family",
           "airdate": "1974-03-15",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S01E06 (Sex and the Evans Family).mp4",
+            "name": "Good Times - S01E06 (Sex and the Evans Family)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S01E06%20(Sex%20and%20the%20Evans%20Family).mp4",
+            "seconds": 1575,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 245
+          },
           "alternates": []
         },
         {
           "number": 7,
           "name": "Junior Gets a Patron",
           "airdate": "1974-03-22",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S01E07 (Junior Gets a Patron).mp4",
+            "name": "Good Times - S01E07 (Junior Gets a Patron)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S01E07%20(Junior%20Gets%20a%20Patron).mp4",
+            "seconds": 1584,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 198
+          },
           "alternates": []
         },
         {
           "number": 8,
           "name": "Junior the Senior",
           "airdate": "1974-03-29",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S01E08 (Junior the Senior).mp4",
+            "name": "Good Times - S01E08 (Junior the Senior)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S01E08%20(Junior%20the%20Senior).mp4",
+            "seconds": 1580,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 229
+          },
           "alternates": []
         },
         {
           "number": 9,
           "name": "The Visitor",
           "airdate": "1974-04-05",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S01E09 (The Visitor).mp4",
+            "name": "Good Times - S01E09 (The Visitor)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S01E09%20(The%20Visitor).mp4",
+            "seconds": 1569,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 222
+          },
           "alternates": []
         },
         {
           "number": 10,
           "name": "Springtime in the Ghetto",
           "airdate": "1974-04-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S01E10 (Springtime in the Ghetto).mp4",
+            "name": "Good Times - S01E10 (Springtime in the Ghetto)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S01E10%20(Springtime%20in%20the%20Ghetto).mp4",
+            "seconds": 1571,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 232
+          },
           "alternates": []
         },
         {
           "number": 11,
           "name": "The TV Commercial",
           "airdate": "1974-04-26",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S01E11 (The TV Commercial).mp4",
+            "name": "Good Times - S01E11 (The TV Commercial)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S01E11%20(The%20TV%20Commercial).mp4",
+            "seconds": 1581,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 220
+          },
           "alternates": []
         },
         {
           "number": 12,
           "name": "The Check Up",
           "airdate": "1974-05-03",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S01E12 (The Check-Up).mp4",
+            "name": "Good Times - S01E12 (The Check-Up)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S01E12%20(The%20Check-Up).mp4",
+            "seconds": 1566,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 245
+          },
           "alternates": []
         },
         {
           "number": 13,
           "name": "My Son, the Lover",
           "airdate": "1974-05-10",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S01E13 (My Son, the Lover).mp4",
+            "name": "Good Times - S01E13 (My Son, the Lover)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S01E13%20(My%20Son%2C%20the%20Lover).mp4",
+            "seconds": 1554,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 211
+          },
           "alternates": []
         }
       ]
@@ -184,192 +348,522 @@
           "number": 1,
           "name": "Florida Flips",
           "airdate": "1974-09-10",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S02E01 (Florida Flips).mp4",
+            "name": "Good Times - S02E01 (Florida Flips)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S02E01%20(Florida%20Flips).mp4",
+            "seconds": 1529,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 226
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "J.J. Becomes a Man (1)",
           "airdate": "1974-09-17",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S02E02 (J.J. Becomes a Man - pt1).mp4",
+            "name": "Good Times - S02E02 (J.J. Becomes a Man - pt1)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S02E02%20(J.J.%20Becomes%20a%20Man%20-%20pt1).mp4",
+            "seconds": 1528,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 233
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"J.J. Becomes a Man (1)\" (0.86)",
+              "item": "good-times-Lando18",
+              "itemTitle": "Good Times (complete TV series)",
+              "file": "Good Times - S02E03 (J.J. Becomes a Man - pt2).mp4",
+              "name": "Good Times - S02E03 (J.J. Becomes a Man - pt2)",
+              "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S02E03%20(J.J.%20Becomes%20a%20Man%20-%20pt2).mp4",
+              "seconds": 1505,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 198
+            }
+          ]
         },
         {
           "number": 3,
           "name": "J.J. Becomes a Man (2)",
           "airdate": "1974-09-24",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S02E03 (J.J. Becomes a Man - pt2).mp4",
+            "name": "Good Times - S02E03 (J.J. Becomes a Man - pt2)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S02E03%20(J.J.%20Becomes%20a%20Man%20-%20pt2).mp4",
+            "seconds": 1505,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 198
+          },
           "alternates": []
         },
         {
           "number": 4,
           "name": "Crosstown Buses Run All Day, Doodah, Doodah",
           "airdate": "1974-10-01",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S02E04 (Crosstown Buses Run All Day, Doodah, Doodah).mp4",
+            "name": "Good Times - S02E04 (Crosstown Buses Run All Day, Doodah, Doodah)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S02E04%20(Crosstown%20Buses%20Run%20All%20Day%2C%20Doodah%2C%20Doodah).mp4",
+            "seconds": 1532,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 220
+          },
           "alternates": []
         },
         {
           "number": 5,
           "name": "The Man I Most Admire",
           "airdate": "1974-10-08",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S02E05 (The Man I Most Admire).mp4",
+            "name": "Good Times - S02E05 (The Man I Most Admire)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S02E05%20(The%20Man%20I%20Most%20Admire).mp4",
+            "seconds": 1524,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 192
+          },
           "alternates": []
         },
         {
           "number": 6,
           "name": "Thelma's Young Man",
           "airdate": "1974-10-15",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S02E06 (Thelma's Young Man).mp4",
+            "name": "Good Times - S02E06 (Thelma's Young Man)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S02E06%20(Thelma's%20Young%20Man).mp4",
+            "seconds": 1526,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 195
+          },
           "alternates": []
         },
         {
           "number": 7,
           "name": "The I.Q. Test",
           "airdate": "1974-10-22",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S02E07 (The I.Q. Test).mp4",
+            "name": "Good Times - S02E07 (The I.Q. Test)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S02E07%20(The%20I.Q.%20Test).mp4",
+            "seconds": 1526,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 198
+          },
           "alternates": []
         },
         {
           "number": 8,
           "name": "The Encyclopedia Hustle",
           "airdate": "1974-10-29",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S02E08 (The Encyclopedia Hustle).mp4",
+            "name": "Good Times - S02E08 (The Encyclopedia Hustle)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S02E08%20(The%20Encyclopedia%20Hustle).mp4",
+            "seconds": 1529,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 192
+          },
           "alternates": []
         },
         {
           "number": 9,
           "name": "The Gang (1)",
           "airdate": "1974-11-12",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S02E09 (The Gang - pt1).mp4",
+            "name": "Good Times - S02E09 (The Gang - pt1)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S02E09%20(The%20Gang%20-%20pt1).mp4",
+            "seconds": 1525,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 219
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "title ~ \"The Gang (1)\" (0.75)",
+              "item": "good-times-Lando18",
+              "itemTitle": "Good Times (complete TV series)",
+              "file": "Good Times - S02E10 (The Gang - pt2).mp4",
+              "name": "Good Times - S02E10 (The Gang - pt2)",
+              "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S02E10%20(The%20Gang%20-%20pt2).mp4",
+              "seconds": 1528,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 197
+            }
+          ]
         },
         {
           "number": 10,
           "name": "The Gang (2)",
           "airdate": "1974-11-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S02E10 (The Gang - pt2).mp4",
+            "name": "Good Times - S02E10 (The Gang - pt2)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S02E10%20(The%20Gang%20-%20pt2).mp4",
+            "seconds": 1528,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 197
+          },
           "alternates": []
         },
         {
           "number": 11,
           "name": "Florida, the Matchmaker",
           "airdate": "1974-11-26",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S02E11 (The Matchmaker).mp4",
+            "name": "Good Times - S02E11 (The Matchmaker)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S02E11%20(The%20Matchmaker).mp4",
+            "seconds": 1525,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 241
+          },
           "alternates": []
         },
         {
           "number": 12,
           "name": "The Windfall",
           "airdate": "1974-12-03",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S02E12 (The Windfall).mp4",
+            "name": "Good Times - S02E12 (The Windfall)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S02E12%20(The%20Windfall).mp4",
+            "seconds": 1503,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 211
+          },
           "alternates": []
         },
         {
           "number": 13,
           "name": "Sometimes There's No Bottom in the Bottle",
           "airdate": "1974-12-10",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S02E13 (Sometimes There's No Bottom in the Bottle).mp4",
+            "name": "Good Times - S02E13 (Sometimes There's No Bottom in the Bottle)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S02E13%20(Sometimes%20There's%20No%20Bottom%20in%20the%20Bottle).mp4",
+            "seconds": 1531,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 238
+          },
           "alternates": []
         },
         {
           "number": 14,
           "name": "Florida's Big Gig",
           "airdate": "1974-12-31",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S02E14 (Florida's Big Gig).mp4",
+            "name": "Good Times - S02E14 (Florida's Big Gig)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S02E14%20(Florida's%20Big%20Gig).mp4",
+            "seconds": 1528,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 220
+          },
           "alternates": []
         },
         {
           "number": 15,
           "name": "Florida Goes to School",
           "airdate": "1975-01-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S02E15 (Florida Goes to School).mp4",
+            "name": "Good Times - S02E15 (Florida Goes to School)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S02E15%20(Florida%20Goes%20to%20School).mp4",
+            "seconds": 1516,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 227
+          },
           "alternates": []
         },
         {
           "number": 16,
           "name": "The Nude",
           "airdate": "1975-01-14",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S02E16 (The Nude).mp4",
+            "name": "Good Times - S02E16 (The Nude)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S02E16%20(The%20Nude).mp4",
+            "seconds": 1523,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 227
+          },
           "alternates": []
         },
         {
           "number": 17,
           "name": "The Family Business",
           "airdate": "1975-01-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S02E17 (The Family Business).mp4",
+            "name": "Good Times - S02E17 (The Family Business)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S02E17%20(The%20Family%20Business).mp4",
+            "seconds": 1523,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 229
+          },
           "alternates": []
         },
         {
           "number": 18,
           "name": "The Debutante Ball",
           "airdate": "1975-02-04",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S02E18 (The Debutante Ball).mp4",
+            "name": "Good Times - S02E18 (The Debutante Ball)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S02E18%20(The%20Debutante%20Ball).mp4",
+            "seconds": 1527,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 211
+          },
           "alternates": []
         },
         {
           "number": 19,
           "name": "The Dinner Party",
           "airdate": "1975-02-11",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S02E19 (The Dinner Party).mp4",
+            "name": "Good Times - S02E19 (The Dinner Party)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S02E19%20(The%20Dinner%20Party).mp4",
+            "seconds": 1527,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 246
+          },
           "alternates": []
         },
         {
           "number": 20,
           "name": "The Houseguest",
           "airdate": "1975-02-18",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S02E20 (The Houseguest).mp4",
+            "name": "Good Times - S02E20 (The Houseguest)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S02E20%20(The%20Houseguest).mp4",
+            "seconds": 1498,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 200
+          },
           "alternates": []
         },
         {
           "number": 21,
           "name": "My Girl Henrietta",
           "airdate": "1975-02-25",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S02E21 (My Girl Henrietta).mp4",
+            "name": "Good Times - S02E21 (My Girl Henrietta)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S02E21%20(My%20Girl%20Henrietta).mp4",
+            "seconds": 1499,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 193
+          },
           "alternates": []
         },
         {
           "number": 22,
           "name": "The Enlistment",
           "airdate": "1975-03-04",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S02E22 (The Enlistment).mp4",
+            "name": "Good Times - S02E22 (The Enlistment)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S02E22%20(The%20Enlistment).mp4",
+            "seconds": 1525,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 208
+          },
+          "alternates": [
+            {
+              "conf": 0.6,
+              "why": "absolute episode number",
+              "item": "sitcom-my-face-episode-38-good-times",
+              "itemTitle": "Episode 38. Good Times (1974-1979) - Sitcom My Face: A Situation Comedy Podcast",
+              "file": "Sitcom My Face - Episode 38 - Good Times.mp4",
+              "name": "Sitcom My Face - Episode 38 - Good Times",
+              "url": "https://archive.org/download/sitcom-my-face-episode-38-good-times/Sitcom%20My%20Face%20-%20Episode%2038%20-%20Good%20Times.mp4",
+              "seconds": 4047,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 1830
+            }
+          ]
         },
         {
           "number": 23,
           "name": "Thelma's Scholarship",
           "airdate": "1975-03-11",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S02E23 (Thelma's Scholarship).mp4",
+            "name": "Good Times - S02E23 (Thelma's Scholarship)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S02E23%20(Thelma's%20Scholarship).mp4",
+            "seconds": 1488,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 215
+          },
           "alternates": []
         },
         {
           "number": 24,
           "name": "The Lunch Money Ripoff",
           "airdate": "1975-03-18",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S02E24 (The Lunch Money Ripoff).mp4",
+            "name": "Good Times - S02E24 (The Lunch Money Ripoff)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S02E24%20(The%20Lunch%20Money%20Ripoff).mp4",
+            "seconds": 1529,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 222
+          },
           "alternates": []
         }
       ]
@@ -381,192 +875,494 @@
           "number": 1,
           "name": "A Real Cool Job",
           "airdate": "1975-09-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S03E01 (A Real Cool Job).mp4",
+            "name": "Good Times - S03E01 (A Real Cool Job)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S03E01%20(A%20Real%20Cool%20Job).mp4",
+            "seconds": 1523,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 257
+          },
           "alternates": []
         },
         {
           "number": 2,
           "name": "The Family Gun",
           "airdate": "1975-09-16",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S03E02 (The Family Gun).mp4",
+            "name": "Good Times - S03E02 (The Family Gun)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S03E02%20(The%20Family%20Gun).mp4",
+            "seconds": 1498,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 234
+          },
           "alternates": []
         },
         {
           "number": 3,
           "name": "Operation Florida",
           "airdate": "1975-09-23",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S03E03 (Operation Florida).mp4",
+            "name": "Good Times - S03E03 (Operation Florida)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S03E03%20(Operation%20Florida).mp4",
+            "seconds": 1526,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 227
+          },
           "alternates": []
         },
         {
           "number": 4,
           "name": "Love in the Ghetto",
           "airdate": "1975-09-30",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S03E04 (Love in the Ghetto).mp4",
+            "name": "Good Times - S03E04 (Love in the Ghetto)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S03E04%20(Love%20in%20the%20Ghetto).mp4",
+            "seconds": 1527,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 228
+          },
           "alternates": []
         },
         {
           "number": 5,
           "name": "Florida's Rich Cousin",
           "airdate": "1975-10-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S03E05 (Florida's Rich Cousin).mp4",
+            "name": "Good Times - S03E05 (Florida's Rich Cousin)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S03E05%20(Florida's%20Rich%20Cousin).mp4",
+            "seconds": 1520,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 248
+          },
           "alternates": []
         },
         {
           "number": 6,
           "name": "The Weekend",
           "airdate": "1975-10-14",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S03E06 (The Weekend).mp4",
+            "name": "Good Times - S03E06 (The Weekend)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S03E06%20(The%20Weekend).mp4",
+            "seconds": 1519,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 282
+          },
           "alternates": []
         },
         {
           "number": 7,
           "name": "The Baby",
           "airdate": "1975-10-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S03E07 (The Baby).mp4",
+            "name": "Good Times - S03E07 (The Baby)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S03E07%20(The%20Baby).mp4",
+            "seconds": 1519,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 231
+          },
           "alternates": []
         },
         {
           "number": 8,
           "name": "Michael's Big Fall",
           "airdate": "1975-10-28",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S03E08 (Michael's Big Fall).mp4",
+            "name": "Good Times - S03E08 (Michael's Big Fall)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S03E08%20(Michael's%20Big%20Fall).mp4",
+            "seconds": 1527,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 232
+          },
           "alternates": []
         },
         {
           "number": 9,
           "name": "The Politicians",
           "airdate": "1975-11-04",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S03E09 (The Politicians).mp4",
+            "name": "Good Times - S03E09 (The Politicians)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S03E09%20(The%20Politicians).mp4",
+            "seconds": 1522,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 243
+          },
           "alternates": []
         },
         {
           "number": 10,
           "name": "Willona's Dilemma",
           "airdate": "1975-11-11",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S03E10 (Willona's Dilemma).mp4",
+            "name": "Good Times - S03E10 (Willona's Dilemma)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S03E10%20(Willona's%20Dilemma).mp4",
+            "seconds": 1498,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 263
+          },
           "alternates": []
         },
         {
           "number": 11,
           "name": "Florida's Protest",
           "airdate": "1975-11-25",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S03E11 (Florida's Protest).mp4",
+            "name": "Good Times - S03E11 (Florida's Protest)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S03E11%20(Florida's%20Protest).mp4",
+            "seconds": 1512,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 264
+          },
           "alternates": []
         },
         {
           "number": 12,
           "name": "The Mural",
           "airdate": "1975-12-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S03E12 (The Mural).mp4",
+            "name": "Good Times - S03E12 (The Mural)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S03E12%20(The%20Mural).mp4",
+            "seconds": 1525,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 249
+          },
           "alternates": []
         },
         {
           "number": 13,
           "name": "A Loss of Confidence",
           "airdate": "1975-12-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S03E13 (A Loss of Confidence).mp4",
+            "name": "Good Times - S03E13 (A Loss of Confidence)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S03E13%20(A%20Loss%20of%20Confidence).mp4",
+            "seconds": 1498,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 258
+          },
           "alternates": []
         },
         {
           "number": 14,
           "name": "Cousin Cleatus",
           "airdate": "1975-12-16",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S03E14 (Cleatus).mp4",
+            "name": "Good Times - S03E14 (Cleatus)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S03E14%20(Cleatus).mp4",
+            "seconds": 1527,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 226
+          },
           "alternates": []
         },
         {
           "number": 15,
           "name": "The Family Tree",
           "airdate": "1975-12-23",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S03E15 (The Family Tree).mp4",
+            "name": "Good Times - S03E15 (The Family Tree)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S03E15%20(The%20Family%20Tree).mp4",
+            "seconds": 1523,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 252
+          },
           "alternates": []
         },
         {
           "number": 16,
           "name": "A Place to Die",
           "airdate": "1975-12-30",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S03E16 (A Place to Die).mp4",
+            "name": "Good Times - S03E16 (A Place to Die)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S03E16%20(A%20Place%20to%20Die).mp4",
+            "seconds": 1493,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 259
+          },
           "alternates": []
         },
         {
           "number": 17,
           "name": "J.J.'s Fiancee (1)",
           "airdate": "1976-01-06",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S03E17 (J.J.'s Fiancee - pt1).mp4",
+            "name": "Good Times - S03E17 (J.J.'s Fiancee - pt1)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S03E17%20(J.J.'s%20Fiancee%20-%20pt1).mp4",
+            "seconds": 1514,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 236
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"J.J.'s Fiancee (1)\" (0.82)",
+              "item": "good-times-Lando18",
+              "itemTitle": "Good Times (complete TV series)",
+              "file": "Good Times - S03E18 (J.J.'s Fiancee - pt2).mp4",
+              "name": "Good Times - S03E18 (J.J.'s Fiancee - pt2)",
+              "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S03E18%20(J.J.'s%20Fiancee%20-%20pt2).mp4",
+              "seconds": 1526,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 227
+            }
+          ]
         },
         {
           "number": 18,
           "name": "J.J.'s Fiancee (2)",
           "airdate": "1976-01-13",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S03E18 (J.J.'s Fiancee - pt2).mp4",
+            "name": "Good Times - S03E18 (J.J.'s Fiancee - pt2)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S03E18%20(J.J.'s%20Fiancee%20-%20pt2).mp4",
+            "seconds": 1526,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 227
+          },
           "alternates": []
         },
         {
           "number": 19,
           "name": "Sweet Daddy Williams",
           "airdate": "1976-01-20",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S03E19 (Sweet Daddy Williams).mp4",
+            "name": "Good Times - S03E19 (Sweet Daddy Williams)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S03E19%20(Sweet%20Daddy%20Williams).mp4",
+            "seconds": 1527,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 255
+          },
           "alternates": []
         },
         {
           "number": 20,
           "name": "The Investigation",
           "airdate": "1976-01-27",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S03E20 (The Investigation).mp4",
+            "name": "Good Times - S03E20 (The Investigation)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S03E20%20(The%20Investigation).mp4",
+            "seconds": 1528,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 227
+          },
           "alternates": []
         },
         {
           "number": 21,
           "name": "J.J. in Trouble",
           "airdate": "1976-02-03",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S03E21 (J.J. in Trouble).mp4",
+            "name": "Good Times - S03E21 (J.J. in Trouble)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S03E21%20(J.J.%20in%20Trouble).mp4",
+            "seconds": 1486,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 247
+          },
           "alternates": []
         },
         {
           "number": 22,
           "name": "Florida the Woman",
           "airdate": "1976-02-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S03E22 (Florida the Woman).mp4",
+            "name": "Good Times - S03E22 (Florida the Woman)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S03E22%20(Florida%20the%20Woman).mp4",
+            "seconds": 1528,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 253
+          },
           "alternates": []
         },
         {
           "number": 23,
           "name": "The Break Up",
           "airdate": "1976-02-24",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S03E23 (The Breakup).mp4",
+            "name": "Good Times - S03E23 (The Breakup)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S03E23%20(The%20Breakup).mp4",
+            "seconds": 1528,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 235
+          },
           "alternates": []
         },
         {
           "number": 24,
           "name": "The Rent Party",
           "airdate": "1976-03-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S03E24 (The Rent Party).mp4",
+            "name": "Good Times - S03E24 (The Rent Party)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S03E24%20(The%20Rent%20Party).mp4",
+            "seconds": 1496,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 297
+          },
           "alternates": []
         }
       ]
@@ -578,192 +1374,536 @@
           "number": 1,
           "name": "The Big Move (1)",
           "airdate": "1976-09-22",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S04E01 (The Big Move - pt1).mp4",
+            "name": "Good Times - S04E01 (The Big Move - pt1)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S04E01%20(The%20Big%20Move%20-%20pt1).mp4",
+            "seconds": 1498,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 241
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Big Move (1)\" (0.82)",
+              "item": "good-times-Lando18",
+              "itemTitle": "Good Times (complete TV series)",
+              "file": "Good Times - S04E02 (The Big Move - pt2).mp4",
+              "name": "Good Times - S04E02 (The Big Move - pt2)",
+              "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S04E02%20(The%20Big%20Move%20-%20pt2).mp4",
+              "seconds": 1474,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 221
+            }
+          ]
         },
         {
           "number": 2,
           "name": "The Big Move (2)",
           "airdate": "1976-09-29",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S04E02 (The Big Move - pt2).mp4",
+            "name": "Good Times - S04E02 (The Big Move - pt2)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S04E02%20(The%20Big%20Move%20-%20pt2).mp4",
+            "seconds": 1474,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 221
+          },
           "alternates": []
         },
         {
           "number": 3,
           "name": "J.J. and the Older Woman",
           "airdate": "1976-10-06",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S04E03 (J.J. and the Older Woman).mp4",
+            "name": "Good Times - S04E03 (J.J. and the Older Woman)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S04E03%20(J.J.%20and%20the%20Older%20Woman).mp4",
+            "seconds": 1487,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 255
+          },
           "alternates": []
         },
         {
           "number": 4,
           "name": "Michael, the Warlord",
           "airdate": "1976-10-13",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S04E04 (Michael the Warlord).mp4",
+            "name": "Good Times - S04E04 (Michael the Warlord)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S04E04%20(Michael%20the%20Warlord).mp4",
+            "seconds": 1502,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 267
+          },
           "alternates": []
         },
         {
           "number": 5,
           "name": "Michael's Great Romance",
           "airdate": "1976-10-20",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S04E05 (Michael's Great Romance).mp4",
+            "name": "Good Times - S04E05 (Michael's Great Romance)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S04E05%20(Michael's%20Great%20Romance).mp4",
+            "seconds": 1499,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 252
+          },
           "alternates": []
         },
         {
           "number": 6,
           "name": "Evans Versus Davis",
           "airdate": "1976-10-27",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S04E06 (Evans Versus Davis).mp4",
+            "name": "Good Times - S04E06 (Evans Versus Davis)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S04E06%20(Evans%20Versus%20Davis).mp4",
+            "seconds": 1499,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 230
+          },
           "alternates": []
         },
         {
           "number": 7,
           "name": "J.J.'s New Career (1)",
           "airdate": "1976-11-10",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S04E07 (J.J.'s New Career - pt1).mp4",
+            "name": "Good Times - S04E07 (J.J.'s New Career - pt1)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S04E07%20(J.J.'s%20New%20Career%20-%20pt1).mp4",
+            "seconds": 1499,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 219
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"J.J.'s New Career (1)\" (0.85)",
+              "item": "good-times-Lando18",
+              "itemTitle": "Good Times (complete TV series)",
+              "file": "Good Times - S04E08 (J.J.'s New Career - pt2).mp4",
+              "name": "Good Times - S04E08 (J.J.'s New Career - pt2)",
+              "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S04E08%20(J.J.'s%20New%20Career%20-%20pt2).mp4",
+              "seconds": 1445,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 208
+            }
+          ]
         },
         {
           "number": 8,
           "name": "J.J.'s New Career (2)",
           "airdate": "1976-11-17",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S04E08 (J.J.'s New Career - pt2).mp4",
+            "name": "Good Times - S04E08 (J.J.'s New Career - pt2)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S04E08%20(J.J.'s%20New%20Career%20-%20pt2).mp4",
+            "seconds": 1445,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 208
+          },
           "alternates": []
         },
         {
           "number": 9,
           "name": "Grandpa's Visit",
           "airdate": "1976-11-24",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S04E09 (Grandpa's Visit).mp4",
+            "name": "Good Times - S04E09 (Grandpa's Visit)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S04E09%20(Grandpa's%20Visit).mp4",
+            "seconds": 1500,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 266
+          },
           "alternates": []
         },
         {
           "number": 10,
           "name": "Rich is Better Than Poor...Maybe",
           "airdate": "1976-12-08",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S04E10 (Rich is Better than Poor... Maybe).mp4",
+            "name": "Good Times - S04E10 (Rich is Better than Poor... Maybe)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S04E10%20(Rich%20is%20Better%20than%20Poor...%20Maybe).mp4",
+            "seconds": 1500,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 210
+          },
           "alternates": []
         },
         {
           "number": 11,
           "name": "Florida's Night Out",
           "airdate": "1976-12-15",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S04E11 (Florida's Night Out).mp4",
+            "name": "Good Times - S04E11 (Florida's Night Out)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S04E11%20(Florida's%20Night%20Out).mp4",
+            "seconds": 1499,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 243
+          },
           "alternates": []
         },
         {
           "number": 12,
           "name": "The Judy Cohen Story",
           "airdate": "1976-12-22",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S04E12 (The Judy Cohen Story).mp4",
+            "name": "Good Times - S04E12 (The Judy Cohen Story)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S04E12%20(The%20Judy%20Cohen%20Story).mp4",
+            "seconds": 1499,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 260
+          },
           "alternates": []
         },
         {
           "number": 13,
           "name": "The Comedian and the Loan Sharks",
           "airdate": "1977-01-05",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S04E13 (The Comedian and the Loan Sharks).mp4",
+            "name": "Good Times - S04E13 (The Comedian and the Loan Sharks)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S04E13%20(The%20Comedian%20and%20the%20Loan%20Sharks).mp4",
+            "seconds": 1499,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 232
+          },
           "alternates": []
         },
         {
           "number": 14,
           "name": "The Hustle",
           "airdate": "1977-01-12",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S04E14 (The Hustle).mp4",
+            "name": "Good Times - S04E14 (The Hustle)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S04E14%20(The%20Hustle).mp4",
+            "seconds": 1541,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 264
+          },
           "alternates": []
         },
         {
           "number": 15,
           "name": "Thelma's African Romance (1)",
           "airdate": "1977-01-19",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S04E15 (Thelma's African Romance - pt1).mp4",
+            "name": "Good Times - S04E15 (Thelma's African Romance - pt1)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S04E15%20(Thelma's%20African%20Romance%20-%20pt1).mp4",
+            "seconds": 1541,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 285
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Thelma's African Romance (1)\" (0.90)",
+              "item": "good-times-Lando18",
+              "itemTitle": "Good Times (complete TV series)",
+              "file": "Good Times - S04E16 (Thelma's African Romance - pt2).mp4",
+              "name": "Good Times - S04E16 (Thelma's African Romance - pt2)",
+              "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S04E16%20(Thelma's%20African%20Romance%20-%20pt2).mp4",
+              "seconds": 1534,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 268
+            }
+          ]
         },
         {
           "number": 16,
           "name": "Thelma's African Romance (2)",
           "airdate": "1977-01-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S04E16 (Thelma's African Romance - pt2).mp4",
+            "name": "Good Times - S04E16 (Thelma's African Romance - pt2)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S04E16%20(Thelma's%20African%20Romance%20-%20pt2).mp4",
+            "seconds": 1534,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 268
+          },
           "alternates": []
         },
         {
           "number": 17,
           "name": "Willona's Surprise",
           "airdate": "1977-01-26",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S04E17 (Willona's Surprise).mp4",
+            "name": "Good Times - S04E17 (Willona's Surprise)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S04E17%20(Willona's%20Surprise).mp4",
+            "seconds": 1541,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 279
+          },
           "alternates": []
         },
         {
           "number": 18,
           "name": "A Friend in Need",
           "airdate": "1977-02-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S04E18 (A Friend in Need).mp4",
+            "name": "Good Times - S04E18 (A Friend in Need)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S04E18%20(A%20Friend%20in%20Need).mp4",
+            "seconds": 1541,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 318
+          },
           "alternates": []
         },
         {
           "number": 19,
           "name": "A Stormy Relationship",
           "airdate": "1977-02-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S04E19 (A Stormy Relationship).mp4",
+            "name": "Good Times - S04E19 (A Stormy Relationship)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S04E19%20(A%20Stormy%20Relationship).mp4",
+            "seconds": 1533,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 247
+          },
           "alternates": []
         },
         {
           "number": 20,
           "name": "Florida and Carl",
           "airdate": "1977-02-23",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S04E20 (Florida and Carl).mp4",
+            "name": "Good Times - S04E20 (Florida and Carl)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S04E20%20(Florida%20and%20Carl).mp4",
+            "seconds": 1541,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 255
+          },
           "alternates": []
         },
         {
           "number": 21,
           "name": "My Son, the Father",
           "airdate": "1977-03-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S04E21 (My Son, the Father).mp4",
+            "name": "Good Times - S04E21 (My Son, the Father)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S04E21%20(My%20Son%2C%20the%20Father).mp4",
+            "seconds": 1541,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 249
+          },
           "alternates": []
         },
         {
           "number": 22,
           "name": "J.J. in Business",
           "airdate": "1977-03-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S04E22 (J.J. in Business).mp4",
+            "name": "Good Times - S04E22 (J.J. in Business)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S04E22%20(J.J.%20in%20Business).mp4",
+            "seconds": 1540,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 242
+          },
           "alternates": []
         },
         {
           "number": 23,
           "name": "Love Has a Spot on His Lung (1)",
           "airdate": "1977-03-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S04E23 (Love Has a Spot on His Lung - pt1).mp4",
+            "name": "Good Times - S04E23 (Love Has a Spot on His Lung - pt1)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S04E23%20(Love%20Has%20a%20Spot%20on%20His%20Lung%20-%20pt1).mp4",
+            "seconds": 1535,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 236
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Love Has a Spot on His Lung (1)\" (0.90)",
+              "item": "good-times-Lando18",
+              "itemTitle": "Good Times (complete TV series)",
+              "file": "Good Times - S04E24 (Love Has a Spot on His Lung - pt2).mp4",
+              "name": "Good Times - S04E24 (Love Has a Spot on His Lung - pt2)",
+              "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S04E24%20(Love%20Has%20a%20Spot%20on%20His%20Lung%20-%20pt2).mp4",
+              "seconds": 1436,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 266
+            }
+          ]
         },
         {
           "number": 24,
           "name": "Love Has a Spot on His Lung (2)",
           "airdate": "1977-03-30",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S04E24 (Love Has a Spot on His Lung - pt2).mp4",
+            "name": "Good Times - S04E24 (Love Has a Spot on His Lung - pt2)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S04E24%20(Love%20Has%20a%20Spot%20on%20His%20Lung%20-%20pt2).mp4",
+            "seconds": 1436,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 266
+          },
           "alternates": []
         }
       ]
@@ -775,192 +1915,520 @@
           "number": 1,
           "name": "The Evans Get Involved (1)",
           "airdate": "1977-09-21",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S05E01 (The Evans Get Involved - pt1).mp4",
+            "name": "Good Times - S05E01 (The Evans Get Involved - pt1)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S05E01%20(The%20Evans%20Get%20Involved%20-%20pt1).mp4",
+            "seconds": 1523,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 238
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Evans Get Involved (1)\" (0.90)",
+              "item": "good-times-Lando18",
+              "itemTitle": "Good Times (complete TV series)",
+              "file": "Good Times - S05E04 (The Evans Get Involved - pt4).mp4",
+              "name": "Good Times - S05E04 (The Evans Get Involved - pt4)",
+              "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S05E04%20(The%20Evans%20Get%20Involved%20-%20pt4).mp4",
+              "seconds": 1447,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 244
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Evans Get Involved (1)\" (0.90)",
+              "item": "good-times-Lando18",
+              "itemTitle": "Good Times (complete TV series)",
+              "file": "Good Times - S05E02 (The Evans Get Involved - pt2).mp4",
+              "name": "Good Times - S05E02 (The Evans Get Involved - pt2)",
+              "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S05E02%20(The%20Evans%20Get%20Involved%20-%20pt2).mp4",
+              "seconds": 1430,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 236
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Evans Get Involved (1)\" (0.90)",
+              "item": "good-times-Lando18",
+              "itemTitle": "Good Times (complete TV series)",
+              "file": "Good Times - S05E03 (The Evans Get Involved - pt3).mp4",
+              "name": "Good Times - S05E03 (The Evans Get Involved - pt3)",
+              "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S05E03%20(The%20Evans%20Get%20Involved%20-%20pt3).mp4",
+              "seconds": 1430,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 236
+            }
+          ]
         },
         {
           "number": 2,
           "name": "The Evans Get Involved (2)",
           "airdate": "1977-09-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S05E02 (The Evans Get Involved - pt2).mp4",
+            "name": "Good Times - S05E02 (The Evans Get Involved - pt2)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S05E02%20(The%20Evans%20Get%20Involved%20-%20pt2).mp4",
+            "seconds": 1430,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 236
+          },
           "alternates": []
         },
         {
           "number": 3,
           "name": "The Evans Get Involved (3)",
           "airdate": "1977-09-28",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S05E03 (The Evans Get Involved - pt3).mp4",
+            "name": "Good Times - S05E03 (The Evans Get Involved - pt3)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S05E03%20(The%20Evans%20Get%20Involved%20-%20pt3).mp4",
+            "seconds": 1430,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 236
+          },
           "alternates": []
         },
         {
           "number": 4,
           "name": "The Evans Get Involved (4)",
           "airdate": "1977-10-05",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S05E04 (The Evans Get Involved - pt4).mp4",
+            "name": "Good Times - S05E04 (The Evans Get Involved - pt4)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S05E04%20(The%20Evans%20Get%20Involved%20-%20pt4).mp4",
+            "seconds": 1447,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 244
+          },
           "alternates": []
         },
         {
           "number": 5,
           "name": "Thelma Moves Out",
           "airdate": "1977-10-12",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S05E05 (Thelma Moves Out).mp4",
+            "name": "Good Times - S05E05 (Thelma Moves Out)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S05E05%20(Thelma%20Moves%20Out).mp4",
+            "seconds": 1542,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 269
+          },
           "alternates": []
         },
         {
           "number": 6,
           "name": "Willona, the Fuzz",
           "airdate": "1977-10-19",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S05E06 (Willona, the Fuzz).mp4",
+            "name": "Good Times - S05E06 (Willona, the Fuzz)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S05E06%20(Willona%2C%20the%20Fuzz).mp4",
+            "seconds": 1540,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 227
+          },
           "alternates": []
         },
         {
           "number": 7,
           "name": "Wheels",
           "airdate": "1977-11-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S05E07 (Wheels).mp4",
+            "name": "Good Times - S05E07 (Wheels)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S05E07%20(Wheels).mp4",
+            "seconds": 1540,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 265
+          },
           "alternates": []
         },
         {
           "number": 8,
           "name": "Breaker, Breaker",
           "airdate": "1977-11-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S05E08 (Breaker, Breaker).mp4",
+            "name": "Good Times - S05E08 (Breaker, Breaker)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S05E08%20(Breaker%2C%20Breaker).mp4",
+            "seconds": 1530,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 252
+          },
           "alternates": []
         },
         {
           "number": 9,
           "name": "Bye, Bye, Bookman",
           "airdate": "1977-11-16",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S05E09 (Bye, Bye, Bookman).mp4",
+            "name": "Good Times - S05E09 (Bye, Bye, Bookman)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S05E09%20(Bye%2C%20Bye%2C%20Bookman).mp4",
+            "seconds": 1542,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 246
+          },
           "alternates": []
         },
         {
           "number": 10,
           "name": "Thelma's Brief Encounter",
           "airdate": "1977-12-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S05E10 (Thelma's Brief Encounter).mp4",
+            "name": "Good Times - S05E10 (Thelma's Brief Encounter)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S05E10%20(Thelma's%20Brief%20Encounter).mp4",
+            "seconds": 1541,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 235
+          },
           "alternates": []
         },
         {
           "number": 11,
           "name": "Requiem for a Wino",
           "airdate": "1977-12-14",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S05E11 (Requiem for a Wino).mp4",
+            "name": "Good Times - S05E11 (Requiem for a Wino)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S05E11%20(Requiem%20for%20a%20Wino).mp4",
+            "seconds": 1540,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 267
+          },
           "alternates": []
         },
         {
           "number": 12,
           "name": "Penny's Christmas",
           "airdate": "1977-12-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S05E12 (Penny's Christmas).mp4",
+            "name": "Good Times - S05E12 (Penny's Christmas)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S05E12%20(Penny's%20Christmas).mp4",
+            "seconds": 1542,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 290
+          },
           "alternates": []
         },
         {
           "number": 13,
           "name": "No More Mr. Nice Guy",
           "airdate": "1978-01-04",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S05E13 (No More Mr. Nice Guy).mp4",
+            "name": "Good Times - S05E13 (No More Mr. Nice Guy)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S05E13%20(No%20More%20Mr.%20Nice%20Guy).mp4",
+            "seconds": 1541,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 242
+          },
           "alternates": []
         },
         {
           "number": 14,
           "name": "Willona's Mr. Right",
           "airdate": "1978-01-11",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S05E14 (Willona's Mr. Right).mp4",
+            "name": "Good Times - S05E14 (Willona's Mr. Right)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S05E14%20(Willona's%20Mr.%20Right).mp4",
+            "seconds": 1541,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 260
+          },
           "alternates": []
         },
         {
           "number": 15,
           "name": "J.J. and the Boss' Daughter",
           "airdate": "1978-01-18",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S05E15 (J.J. and the Boss's Daughter).mp4",
+            "name": "Good Times - S05E15 (J.J. and the Boss's Daughter)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S05E15%20(J.J.%20and%20the%20Boss's%20Daughter).mp4",
+            "seconds": 1543,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 237
+          },
           "alternates": []
         },
         {
           "number": 16,
           "name": "Where There's Smoke",
           "airdate": "1978-01-25",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S05E16 (Where There's Smoke).mp4",
+            "name": "Good Times - S05E16 (Where There's Smoke)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S05E16%20(Where%20There's%20Smoke).mp4",
+            "seconds": 1543,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 265
+          },
           "alternates": []
         },
         {
           "number": 17,
           "name": "I Had a Dream",
           "airdate": "1978-01-30",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S05E17 (I Had a Dream).mp4",
+            "name": "Good Times - S05E17 (I Had a Dream)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S05E17%20(I%20Had%20a%20Dream).mp4",
+            "seconds": 1537,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 245
+          },
           "alternates": []
         },
         {
           "number": 18,
           "name": "The Boarder",
           "airdate": "1978-02-06",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S05E18 (The Boarder).mp4",
+            "name": "Good Times - S05E18 (The Boarder)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S05E18%20(The%20Boarder).mp4",
+            "seconds": 1540,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 228
+          },
           "alternates": []
         },
         {
           "number": 19,
           "name": "J.J.'s Condition",
           "airdate": "1978-02-13",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S05E19 (J.J.'s Condition).mp4",
+            "name": "Good Times - S05E19 (J.J.'s Condition)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S05E19%20(J.J.'s%20Condition).mp4",
+            "seconds": 1527,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 266
+          },
           "alternates": []
         },
         {
           "number": 20,
           "name": "Willona, the Other Woman",
           "airdate": "1978-02-27",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S05E20 (Willona, the Other Woman).mp4",
+            "name": "Good Times - S05E20 (Willona, the Other Woman)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S05E20%20(Willona%2C%20the%20Other%20Woman).mp4",
+            "seconds": 1542,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 301
+          },
           "alternates": []
         },
         {
           "number": 21,
           "name": "Something Old, Something New",
           "airdate": "1978-03-13",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S05E21 (Something Old, Something New).mp4",
+            "name": "Good Times - S05E21 (Something Old, Something New)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S05E21%20(Something%20Old%2C%20Something%20New).mp4",
+            "seconds": 1525,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 296
+          },
           "alternates": []
         },
         {
           "number": 22,
           "name": "Willona's New Job",
           "airdate": "1978-03-20",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S05E22 (Willona's New Job).mp4",
+            "name": "Good Times - S05E22 (Willona's New Job)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S05E22%20(Willona's%20New%20Job).mp4",
+            "seconds": 1512,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 275
+          },
           "alternates": []
         },
         {
           "number": 23,
           "name": "Write On, Thelma",
           "airdate": "1978-03-27",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S05E23 (Write on, Thelma).mp4",
+            "name": "Good Times - S05E23 (Write on, Thelma)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S05E23%20(Write%20on%2C%20Thelma).mp4",
+            "seconds": 1510,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 276
+          },
           "alternates": []
         },
         {
           "number": 24,
           "name": "That's Entertainment, Evans Style",
           "airdate": "1978-04-03",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S05E24 (Entertainment, Evans Style).mp4",
+            "name": "Good Times - S05E24 (Entertainment, Evans Style)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S05E24%20(Entertainment%2C%20Evans%20Style).mp4",
+            "seconds": 1544,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 291
+          },
           "alternates": []
         }
       ]
@@ -972,193 +2440,619 @@
           "number": 1,
           "name": "Florida's Homecoming (1)",
           "airdate": "1978-09-16",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S06E01 (Florida's Homecoming - pt1).mp4",
+            "name": "Good Times - S06E01 (Florida's Homecoming - pt1)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S06E01%20(Florida's%20Homecoming%20-%20pt1).mp4",
+            "seconds": 1348,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 214
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Florida's Homecoming (1)\" (0.89)",
+              "item": "good-times-Lando18",
+              "itemTitle": "Good Times (complete TV series)",
+              "file": "Good Times - S06E04 (Florida's Homecoming - pt4).mp4",
+              "name": "Good Times - S06E04 (Florida's Homecoming - pt4)",
+              "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S06E04%20(Florida's%20Homecoming%20-%20pt4).mp4",
+              "seconds": 1471,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 259
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Florida's Homecoming (1)\" (0.89)",
+              "item": "good-times-Lando18",
+              "itemTitle": "Good Times (complete TV series)",
+              "file": "Good Times - S06E03 (Florida's Homecoming - pt3).mp4",
+              "name": "Good Times - S06E03 (Florida's Homecoming - pt3)",
+              "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S06E03%20(Florida's%20Homecoming%20-%20pt3).mp4",
+              "seconds": 1464,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 239
+            },
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Florida's Homecoming (1)\" (0.89)",
+              "item": "good-times-Lando18",
+              "itemTitle": "Good Times (complete TV series)",
+              "file": "Good Times - S06E02 (Florida's Homecoming - pt2).mp4",
+              "name": "Good Times - S06E02 (Florida's Homecoming - pt2)",
+              "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S06E02%20(Florida's%20Homecoming%20-%20pt2).mp4",
+              "seconds": 1345,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 210
+            }
+          ]
         },
         {
           "number": 2,
           "name": "Florida's Homecoming (2)",
           "airdate": "1978-09-16",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S06E02 (Florida's Homecoming - pt2).mp4",
+            "name": "Good Times - S06E02 (Florida's Homecoming - pt2)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S06E02%20(Florida's%20Homecoming%20-%20pt2).mp4",
+            "seconds": 1345,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 210
+          },
           "alternates": []
         },
         {
           "number": 3,
           "name": "Florida's Homecoming: The Wedding (3)",
           "airdate": "1978-09-23",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S06E03 (Florida's Homecoming - pt3).mp4",
+            "name": "Good Times - S06E03 (Florida's Homecoming - pt3)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S06E03%20(Florida's%20Homecoming%20-%20pt3).mp4",
+            "seconds": 1464,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 239
+          },
           "alternates": []
         },
         {
           "number": 4,
           "name": "Florida's Homecoming: United We Stand (4)",
           "airdate": "1978-09-30",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S06E04 (Florida's Homecoming - pt4).mp4",
+            "name": "Good Times - S06E04 (Florida's Homecoming - pt4)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S06E04%20(Florida's%20Homecoming%20-%20pt4).mp4",
+            "seconds": 1471,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 259
+          },
           "alternates": []
         },
         {
           "number": 5,
           "name": "Florida Gets a Job",
           "airdate": "1978-10-07",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S06E05 (Florida Gets a Job).mp4",
+            "name": "Good Times - S06E05 (Florida Gets a Job)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S06E05%20(Florida%20Gets%20a%20Job).mp4",
+            "seconds": 1470,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 264
+          },
           "alternates": []
         },
         {
           "number": 6,
           "name": "Stomach Mumps",
           "airdate": "1978-10-14",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S06E06 (Stomach Mumps).mp4",
+            "name": "Good Times - S06E06 (Stomach Mumps)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S06E06%20(Stomach%20Mumps).mp4",
+            "seconds": 1468,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 258
+          },
           "alternates": []
         },
         {
           "number": 7,
           "name": "J.J. the Teacher",
           "airdate": "1978-10-21",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S06E07 (J.J. the Teacher).mp4",
+            "name": "Good Times - S06E07 (J.J. the Teacher)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S06E07%20(J.J.%20the%20Teacher).mp4",
+            "seconds": 1467,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 238
+          },
           "alternates": []
         },
         {
           "number": 8,
           "name": "Michael's Decision",
           "airdate": "1978-11-08",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S06E08 (Michael's Decision).mp4",
+            "name": "Good Times - S06E08 (Michael's Decision)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S06E08%20(Michael's%20Decision).mp4",
+            "seconds": 1469,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 236
+          },
           "alternates": []
         },
         {
           "number": 9,
           "name": "J.J. and the Plumber's Helper",
           "airdate": "1978-12-02",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S06E09 (J.J. and the Plumber's Helper).mp4",
+            "name": "Good Times - S06E09 (J.J. and the Plumber's Helper)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S06E09%20(J.J.%20and%20the%20Plumber's%20Helper).mp4",
+            "seconds": 1459,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 228
+          },
           "alternates": []
         },
         {
           "number": 10,
           "name": "The Witness",
           "airdate": "1978-12-09",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S06E10 (The Witness).mp4",
+            "name": "Good Times - S06E10 (The Witness)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S06E10%20(The%20Witness).mp4",
+            "seconds": 1467,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 237
+          },
           "alternates": []
         },
         {
           "number": 11,
           "name": "The Snow Storm",
           "airdate": "1978-12-13",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S06E11 (The Snowstorm).mp4",
+            "name": "Good Times - S06E11 (The Snowstorm)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S06E11%20(The%20Snowstorm).mp4",
+            "seconds": 1475,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 257
+          },
           "alternates": []
         },
         {
           "number": 12,
           "name": "The Traveling Christmas",
           "airdate": "1978-12-20",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S06E12 (The Traveling Christmas).mp4",
+            "name": "Good Times - S06E12 (The Traveling Christmas)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S06E12%20(The%20Traveling%20Christmas).mp4",
+            "seconds": 1475,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 276
+          },
           "alternates": []
         },
         {
           "number": 13,
           "name": "House Hunting",
           "airdate": "1979-01-03",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S06E13 (House Hunting).mp4",
+            "name": "Good Times - S06E13 (House Hunting)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S06E13%20(House%20Hunting).mp4",
+            "seconds": 1469,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 231
+          },
           "alternates": []
         },
         {
           "number": 14,
           "name": "Florida's Favorite Passenger (1)",
           "airdate": "1979-05-23",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S06E14 (Florida's Favorite Passenger - pt1).mp4",
+            "name": "Good Times - S06E14 (Florida's Favorite Passenger - pt1)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S06E14%20(Florida's%20Favorite%20Passenger%20-%20pt1).mp4",
+            "seconds": 1474,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 222
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Florida's Favorite Passenger (1)\" (0.91)",
+              "item": "good-times-Lando18",
+              "itemTitle": "Good Times (complete TV series)",
+              "file": "Good Times - S06E15 (Florida's Favorite Passenger - pt2).mp4",
+              "name": "Good Times - S06E15 (Florida's Favorite Passenger - pt2)",
+              "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S06E15%20(Florida's%20Favorite%20Passenger%20-%20pt2).mp4",
+              "seconds": 1440,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 232
+            }
+          ]
         },
         {
           "number": 15,
           "name": "Florida's Favorite Passenger (2)",
           "airdate": "1979-05-30",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S06E15 (Florida's Favorite Passenger - pt2).mp4",
+            "name": "Good Times - S06E15 (Florida's Favorite Passenger - pt2)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S06E15%20(Florida's%20Favorite%20Passenger%20-%20pt2).mp4",
+            "seconds": 1440,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 232
+          },
           "alternates": []
         },
         {
           "number": 16,
           "name": "Blood Will Tell",
           "airdate": "1979-06-06",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S06E16 (Blood will Tell).mp4",
+            "name": "Good Times - S06E16 (Blood will Tell)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S06E16%20(Blood%20will%20Tell).mp4",
+            "seconds": 1474,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 272
+          },
           "alternates": []
         },
         {
           "number": 17,
           "name": "Where Have All the Doctors Gone?",
           "airdate": "1979-06-13",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S06E17 (Where Have All the Doctors Gone ).mp4",
+            "name": "Good Times - S06E17 (Where Have All the Doctors Gone )",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S06E17%20(Where%20Have%20All%20the%20Doctors%20Gone%20).mp4",
+            "seconds": 1473,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 217
+          },
           "alternates": []
         },
         {
           "number": 18,
           "name": "J.J. and T.C.",
           "airdate": "1979-06-20",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 1,
+            "why": "S/E in filename + title match",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S06E18 (J.J. and T.C).mp4",
+            "name": "Good Times - S06E18 (J.J. and T.C)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S06E18%20(J.J.%20and%20T.C).mp4",
+            "seconds": 1475,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 263
+          },
           "alternates": []
         },
         {
           "number": 19,
           "name": "The Physical",
           "airdate": "1979-07-11",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S06E19 (The Art Contest).mp4",
+            "name": "Good Times - S06E19 (The Art Contest)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S06E19%20(The%20Art%20Contest).mp4",
+            "seconds": 1473,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 241
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Physical\" (1.00)",
+              "item": "good-times-Lando18",
+              "itemTitle": "Good Times (complete TV series)",
+              "file": "Good Times - S06E20 (The Physical).mp4",
+              "name": "Good Times - S06E20 (The Physical)",
+              "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S06E20%20(The%20Physical).mp4",
+              "seconds": 1474,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 262
+            }
+          ]
         },
         {
           "number": 20,
           "name": "A Matter of Mothers",
           "airdate": "1979-07-18",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S06E20 (The Physical).mp4",
+            "name": "Good Times - S06E20 (The Physical)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S06E20%20(The%20Physical).mp4",
+            "seconds": 1474,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 262
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"A Matter of Mothers\" (1.00)",
+              "item": "good-times-Lando18",
+              "itemTitle": "Good Times (complete TV series)",
+              "file": "Good Times - S06E21 (A Matter of Mothers).mp4",
+              "name": "Good Times - S06E21 (A Matter of Mothers)",
+              "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S06E21%20(A%20Matter%20of%20Mothers).mp4",
+              "seconds": 1474,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 276
+            }
+          ]
         },
         {
           "number": 21,
           "name": "The Evans' Dilemma",
           "airdate": "",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S06E21 (A Matter of Mothers).mp4",
+            "name": "Good Times - S06E21 (A Matter of Mothers)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S06E21%20(A%20Matter%20of%20Mothers).mp4",
+            "seconds": 1474,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 276
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Evans' Dilemma\" (1.00)",
+              "item": "good-times-Lando18",
+              "itemTitle": "Good Times (complete TV series)",
+              "file": "Good Times - S06E23 (The Evans' Dilemma).mp4",
+              "name": "Good Times - S06E23 (The Evans' Dilemma)",
+              "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S06E23%20(The%20Evans'%20Dilemma).mp4",
+              "seconds": 1475,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 231
+            }
+          ]
         },
         {
           "number": 22,
           "name": "The Art Contest",
           "airdate": "",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S06E22 (The End of the Rainbow).mp4",
+            "name": "Good Times - S06E22 (The End of the Rainbow)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S06E22%20(The%20End%20of%20the%20Rainbow).mp4",
+            "seconds": 1474,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 276
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The Art Contest\" (1.00)",
+              "item": "good-times-Lando18",
+              "itemTitle": "Good Times (complete TV series)",
+              "file": "Good Times - S06E19 (The Art Contest).mp4",
+              "name": "Good Times - S06E19 (The Art Contest)",
+              "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S06E19%20(The%20Art%20Contest).mp4",
+              "seconds": 1473,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 241
+            }
+          ]
         },
         {
           "number": 23,
           "name": "Cousin Raymond",
           "airdate": "",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S06E23 (The Evans' Dilemma).mp4",
+            "name": "Good Times - S06E23 (The Evans' Dilemma)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S06E23%20(The%20Evans'%20Dilemma).mp4",
+            "seconds": 1475,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 231
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"Cousin Raymond\" (1.00)",
+              "item": "good-times-Lando18",
+              "itemTitle": "Good Times (complete TV series)",
+              "file": "Good Times - S06E24 (Cousin Raymond).mp4",
+              "name": "Good Times - S06E24 (Cousin Raymond)",
+              "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S06E24%20(Cousin%20Raymond).mp4",
+              "seconds": 1474,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 242
+            }
+          ]
         },
         {
           "number": 24,
           "name": "The End of the Rainbow",
           "airdate": "1979-08-01",
-          "state": "MISSING",
-          "file": null,
-          "alternates": []
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "good-times-Lando18",
+            "itemTitle": "Good Times (complete TV series)",
+            "file": "Good Times - S06E24 (Cousin Raymond).mp4",
+            "name": "Good Times - S06E24 (Cousin Raymond)",
+            "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S06E24%20(Cousin%20Raymond).mp4",
+            "seconds": 1474,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 242
+          },
+          "alternates": [
+            {
+              "conf": 0.8,
+              "why": "title ~ \"The End of the Rainbow\" (1.00)",
+              "item": "good-times-Lando18",
+              "itemTitle": "Good Times (complete TV series)",
+              "file": "Good Times - S06E22 (The End of the Rainbow).mp4",
+              "name": "Good Times - S06E22 (The End of the Rainbow)",
+              "url": "https://archive.org/download/good-times-Lando18/Good%20Times%20-%20S06E22%20(The%20End%20of%20the%20Rainbow).mp4",
+              "seconds": 1474,
+              "format": "MPEG4",
+              "playable": true,
+              "sizeMB": 276
+            }
+          ]
         }
       ]
     }

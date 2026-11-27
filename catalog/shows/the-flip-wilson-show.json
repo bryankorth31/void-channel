@@ -3,7 +3,7 @@
   "slug": "the-flip-wilson-show",
   "type": "Classic TV",
   "network": "NBC",
-  "matchedAt": "2026-10-16T07:58:44.099Z",
+  "matchedAt": "2026-11-27T03:11:14.099Z",
   "addedAt": "2026-10-15T12:09:11.092Z",
   "tvmaze": {
     "id": 23794,
@@ -14,10 +14,10 @@
   },
   "coverage": {
     "total": 43,
-    "live": 0,
+    "live": 1,
     "review": 2,
-    "missing": 41,
-    "pct": 5
+    "missing": 40,
+    "pct": 7
   },
   "seasons": [
     {
@@ -141,8 +141,20 @@
           "number": 12,
           "name": "Lena Horne, Tony Randall",
           "airdate": "1970-12-10",
-          "state": "MISSING",
-          "file": null,
+          "state": "LIVE",
+          "file": {
+            "conf": 0.9,
+            "why": "S/E in filename",
+            "item": "fl-te-fli-wn-sw-s-2-e-7",
+            "itemTitle": "Flip (1970) (TV SHOW CLIPS)",
+            "file": "Flip - The Flip Wilson Show S01E12 (Dec 10, 1970).mp4",
+            "name": "Flip - The Flip Wilson Show S01E12 (Dec 10, 1970)",
+            "url": "https://archive.org/download/fl-te-fli-wn-sw-s-2-e-7/Flip%20-%20The%20Flip%20Wilson%20Show%20S01E12%20(Dec%2010%2C%201970).mp4",
+            "seconds": 2650,
+            "format": "MPEG4",
+            "playable": true,
+            "sizeMB": 124
+          },
           "alternates": []
         },
         {

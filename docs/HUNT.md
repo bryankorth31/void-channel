@@ -1,6 +1,6 @@
 # The Hunt
 
-Wide-net results, 12746 shows: 3524 FOUND, 3794 TRACES, 5428 NOT FOUND.
+Wide-net results, 12746 shows: 3526 FOUND, 3792 TRACES, 5428 NOT FOUND.
 
 Mentions = Archive items naming the show in any field. Episode-shaped = video files whose runtime fits the show's TVmaze runtime. Named = those whose filename also carries the show name. FOUND = 8+ episode-shaped files.
 
@@ -387,6 +387,7 @@ Mentions = Archive items naming the show in any field. Episode-shaped = video fi
 | FOUND | Sherman Oaks | 90s Sitcoms | 103 | 16 | 42 | 2 | masters-of-horror-mick-garris-2005-2007 (25) |
 | FOUND | Sibs | 90s Sitcoms | 7 | 2 | 24 | 24 | sibs-1991 (24) |
 | FOUND | Sister, Sister | 90s Sitcoms | 2036 | 40 | 167 | 23 | zoe-duncan-jack-and-jane-complete-series (26) |
+| FOUND | Smart Guy | 90s Sitcoms | 879 | 48 | 103 | 58 | SmartGuySeason3Episode18Crushed (52) |
 | FOUND | Something So Right | 90s Sitcoms | 129 | 11 | 39 | 18 | something-so-right-1.04 (15) |
 | FOUND | Soul Man | 90s Sitcoms | 141 | 11 | 14 | 13 | soul-man-1997 (13) |
 | FOUND | Step by Step | 90s Sitcoms | 937 | 42 | 47 | 14 | teen-angel-1997-1998 (12) |
@@ -1423,6 +1424,7 @@ Mentions = Archive items naming the show in any field. Episode-shaped = video fi
 | FOUND | Fawlty Towers | Classic TV | 139 | 8 | 50 | 38 | fawlty-towers-hd-s-2.-e-2-the-psychiatrist (14) |
 | FOUND | Fraggle Rock | Classic TV | 330 | 8 | 13 | 9 | fraggle-rock-uk (8) |
 | FOUND | Gilligan's Island | Classic TV | 18 | 8 | 106 | 103 | gilligans-island-complete-tv-series (100) |
+| FOUND | Good Times | Classic TV | 605 | 48 | 155 | 141 | good-times-Lando18 (133) |
 | FOUND | Green Acres | Classic TV | 1820 | 8 | 175 | 170 | GreenAcresCompleteSeries (169) |
 | FOUND | Growing Pains | Classic TV | 790 | 8 | 175 | 164 | growing-pains-complete-series (164) |
 | FOUND | Happy Days | Classic TV | 2000 | 8 | 72 | 70 | happy-days-s-3-d-1 (24) |
@@ -1503,7 +1505,7 @@ Mentions = Archive items naming the show in any field. Episode-shaped = video fi
 | FOUND | The Dinah Shore Chevy Show | Classic TV | 40 | 8 | 8 | 5 | DinahShore4October1959 (1) |
 | FOUND | The Dukes of Hazzard | Classic TV | 256 | 8 | 49 | 49 | the-dukes-of-hazzard-s2 (30) |
 | FOUND | The Facts of Life | Classic TV | 2000 | 8 | 36 | 1 | 68_20251128 (33) |
-| FOUND | The Flip Wilson Show | Classic TV | 40 | 8 | 8 | 8 | dvd-6827-woody-allen-later-with-bob-costas-the-flip-wilson-show-1989-02-28 (4) |
+| FOUND | The Flip Wilson Show | Classic TV | 40 | 30 | 14 | 9 | dvd-6827-woody-allen-later-with-bob-costas-the-flip-wilson-show-1989-02-28 (4) |
 | FOUND | The Garry Moore Show | Classic TV | 44 | 8 | 31 | 1 | s-hd-s-01-e-01-c-1 (27) |
 | FOUND | The George Burns and Gracie Allen Show | Classic TV | 127 | 8 | 284 | 271 | georgeburnsandgracieallen_202307 (271) |
 | FOUND | The Golden Girls | Classic TV | 2000 | 8 | 25 | 0 | 01-buying-a-hotel (24) |
@@ -1511,7 +1513,7 @@ Mentions = Archive items naming the show in any field. Episode-shaped = video fi
 | FOUND | The Honeymooners | Classic TV | 124 | 8 | 44 | 44 | the-honeymooners-DVD (40) |
 | FOUND | The Jack Benny Program | Classic TV | 348 | 8 | 22 | 17 | JackBennyProgramTVSHOWJacksMaxwellIsStolen (9) |
 | FOUND | The Jackie Gleason Show | Classic TV | 166 | 8 | 325 | 24 | gleasonshow79 (83) |
-| FOUND | The Jeffersons | Classic TV | 205 | 8 | 45 | 13 | all-in-the-family-s4 (24) |
+| FOUND | The Jeffersons | Classic TV | 205 | 47 | 242 | 14 | familymatters_202507 (184) |
 | FOUND | The Jerry Springer Show | Classic TV | 260 | 8 | 37 | 37 | the-jerry-springer-show-various-episodes (33) |
 | FOUND | The Joker's Wild | Classic TV | 8 | 8 | 35 | 34 | jokers-wild-s-01-e-01 (34) |
 | FOUND | The Judy Garland Show | Classic TV | 88 | 8 | 34 | 27 | the-judy-garland-show-1963-Full (32) |
@@ -3311,7 +3313,7 @@ Mentions = Archive items naming the show in any field. Episode-shaped = video fi
 | FOUND | The Bible | Streaming Era | 3851 | 8 | 35 | 3 | 01-genesis_20240808 (16) |
 | FOUND | The Blacklist | Streaming Era | 303 | 22 | 22 | 19 | blacklist-s-2-e-1 (19) |
 | FOUND | The Calling | Streaming Era | 2032 | 8 | 35 | 0 | ted-tv-series-complete-series-2024-2026 (16) |
-| FOUND | The Chi | Streaming Era | 2104 | 8 | 26 | 2 | filmography-john-woo-asian (22) |
+| FOUND | The Chi | Streaming Era | 2104 | 48 | 55 | 26 | filmography-john-woo-asian (22) |
 | FOUND | The Dangerous Book for Boys | Streaming Era | 90 | 1 | 10 | 0 | happy-eternity-the-visual-album (10) |
 | FOUND | The Dark Crystal: Age of Resistance | Streaming Era | 43 | 8 | 10 | 0 | darkcyrjim (10) |
 | FOUND | The Day of the Jackal | Streaming Era | 62 | 8 | 257 | 44 | movies-zipped (170) |
@@ -3923,7 +3925,6 @@ Mentions = Archive items naming the show in any field. Episode-shaped = video fi
 | TRACES | On Our Own | 90s Sitcoms | 762 | 14 | 7 | 5 | on-our-own-1.5 (5) |
 | TRACES | Phenom | 90s Sitcoms | 49 | 11 | 7 | 7 | phenom-s-01e-08-nws-9-10-02-96 (6) |
 | TRACES | Roc | 90s Sitcoms | 395 | 8 | 2 | 1 | nos-news-2023-04-24 (1) |
-| TRACES | Smart Guy | 90s Sitcoms | 879 | 8 | 4 | 4 | smart-guy-season-1-202312 (2) |
 | TRACES | South Central | 90s Sitcoms | 2000 | 8 | 1 | 0 | 5689412HrsOfSebring (1) |
 | TRACES | Sparks | 90s Sitcoms | 1270 | 8 | 3 | 3 | mike_lu_og_206_for_the_love_of_mike_sparks_ant (1) |
 | TRACES | Tenacious D | 90s Sitcoms | 210 | 16 | 3 | 2 | tenacious-d-post-apocalypto (1) |
@@ -4750,7 +4751,6 @@ Mentions = Archive items naming the show in any field. Episode-shaped = video fi
 | TRACES | Fantasy Island | Classic TV | 699 | 8 | 2 | 2 | fantasy-island-s-4-e-9 (1) |
 | TRACES | Geraldo | Classic TV | 2452 | 8 | 5 | 5 | GeraldoOctober201992 (1) |
 | TRACES | Get Smart | Classic TV | 2000 | 8 | 7 | 7 | 1991-nick-at-nite-breaks-get-smart (1) |
-| TRACES | Good Times | Classic TV | 2000 | 8 | 3 | 3 | GoodTimesS01E01GettingUpTheRent (1) |
 | TRACES | Gunsmoke | Classic TV | 153 | 8 | 2 | 0 | red-skelton-the-lost-episodes-1990 (1) |
 | TRACES | Hallmark Hall of Fame | Classic TV | 108 | 8 | 1 | 0 | capture-a-5876 (1) |
 | TRACES | Hart to Hart | Classic TV | 2000 | 8 | 2 | 0 | KPIX_20101105_140000_The_Early_Show (1) |
