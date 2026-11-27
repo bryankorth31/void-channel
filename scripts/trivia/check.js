@@ -11,6 +11,7 @@
 const fs = require('fs');
 const path = require('path');
 const { norm, sameish, agreedNetwork, makerName, screenOk, archiveMeta, PD_MARK, CLIP_SECS } = require('./bank');
+const { showInDecks } = require('./pool');
 
 const ROOT = path.join(__dirname, '..', '..');
 
@@ -18,7 +19,7 @@ function checkAll(qs, db, pool, cards, metaOf) {
   const bad = [];
   const fail = (q, why) => bad.push({ id: q.id, why });
   const line = pool.fameLine;
-  const inPool = new Map(pool.shows.filter((s) => s.band !== 'out' && s.votes >= line).map((s) => [s.slug, s.band]));
+  const inPool = new Map(pool.shows.filter((s) => showInDecks(s, line)).map((s) => [s.slug, s.band]));
   const filmPool = new Map(pool.films.filter((f) => f.band !== 'out' && f.votes >= line).map((f) => [String(f.tmdbId), f.band]));
   const showRow = db.prepare('select slug, name, network, tvmaze_network as tvmazeNetwork, premiered from shows where slug = ?');
   const credits = db.prepare("select sp.person_id as id, p.name, sp.role from show_people sp join people p on p.tmdb_id = sp.person_id where sp.show_slug = ? and sp.kind = 'cast'");

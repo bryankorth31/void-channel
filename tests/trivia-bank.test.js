@@ -233,3 +233,44 @@ test('the bank is checked before anything is written, and swapped in only when i
   assert.equal(fs.existsSync(next), false);
   fs.rmSync(tmp, { recursive: true, force: true });
 });
+
+test('theme list: a listed show under the vote line gets questions, each tagged with the list, and the checker passes them', () => {
+  const { db, pool } = fixture();
+  for (const s of pool.shows) if (s.slug === 'alpha') { s.votes = 10; s.lists = ['black-tv']; }
+  const data = B.gather(db, pool, new Set(), {}, metaOf);
+  data.cards = cards;
+  const qs = B.makeQuestions(data);
+  const alpha = qs.filter((q) => q.about && q.about.show === 'alpha');
+  assert.ok(alpha.length > 0, 'the listed show is asked about though it is under the line');
+  for (const q of alpha) assert.deepEqual(q.groups, ['black-tv']);
+  assert.ok(qs.filter((q) => q.about && q.about.show && q.about.show !== 'alpha').every((q) => !q.groups), 'unlisted shows carry no tag');
+  assert.deepEqual(checkAll(qs, db, pool, cards, metaOf), []);
+  for (const s of pool.shows) if (s.slug === 'alpha') delete s.lists;
+  const off = B.makeQuestions(B.gather(db, pool, new Set(), {}, metaOf));
+  assert.ok(!off.some((q) => q.about && q.about.show === 'alpha'), 'off the list and under the line, it is out as before');
+});
+
+test('theme: the index counts each theme per file, and dates keep their theme', () => {
+  const fs = require('fs'), os = require('os'), path = require('path');
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'trivia-theme-'));
+  const src = { site: 'TMDB', url: 'https://www.themoviedb.org/tv/1' };
+  const qs = [
+    { id: 'tv-year-a', category: 'tv', round: 'first-aired', band: 'family', groups: ['black-tv'], q: 'When?', choices: ['1', '2', '3', '4'], answer: 0, source: src, about: { show: 'a', title: 'A', date: '1987-01-01' } },
+    { id: 'tv-cast-a', category: 'tv', round: 'cast', band: 'after-dark', groups: ['black-tv'], media: false, q: 'Who?', choices: ['1', '2', '3', '4'], answer: 0, source: src, about: { show: 'a' } },
+    { id: 'tv-cast-b', category: 'tv', round: 'cast', band: 'family', q: 'Who?', choices: ['1', '2', '3', '4'], answer: 0, source: src, about: { show: 'b' } },
+  ];
+  const files = B.write(qs, { builtAt: '2026-11-26T00:00:00.000Z' }, tmp);
+  assert.deepEqual(files[0].groups, { 'black-tv': { count: 2, family: 1, media: 0, mediaFamily: 0 } });
+  const dates = JSON.parse(fs.readFileSync(path.join(tmp, 'dates.json'), 'utf8'));
+  assert.deepEqual(dates.map((d) => d.groups), [['black-tv']]);
+  fs.rmSync(tmp, { recursive: true, force: true });
+});
+
+test('theme: the bank applies the theme lists to the pool on every build, before the checker reads it', () => {
+  const fs = require('fs'), path = require('path');
+  const main = fs.readFileSync(path.join(__dirname, '..', 'scripts', 'trivia', 'bank.js'), 'utf8').split('function main()')[1];
+  const pool = fs.readFileSync(path.join(__dirname, '..', 'scripts', 'trivia', 'pool.js'), 'utf8').split('async function main()')[1].split('if (require.main')[0];
+  assert.match(main, /pool\.shows = pool\.shows\.map\(\(s\) => onLists\(s, themes\)\)/);
+  assert.ok(main.indexOf('onLists(') < main.indexOf('gather(') && main.indexOf('onLists(') < main.indexOf('checkAll('), 'lists before the questions and the checker');
+  assert.doesNotMatch(pool, /readLists/, 'the weekly pool file holds no lists, so none goes stale');
+});

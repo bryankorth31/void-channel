@@ -475,3 +475,28 @@ test('18+ door: the page carries the home page\'s own door and asks it before an
   assert.match(host, /if \(\$\('gate'\)\.hidden\) \$\('start'\)\.focus\(\);/, 'the bank loading late does not pull the focus off the door');
   assert.match(host, /e\.key === 'Enter' \|\| e\.key === ' '\) \{ e\.preventDefault\(\); shutDoor\(document\.activeElement !== \$\('gate-no'\)\);/, 'Enter or OK presses the door button in focus');
 });
+
+// The Theme row (Bryan, 26 Nov 2026: "A, Theme row"): a theme deck takes only questions and dates about shows on its list.
+test('theme: Black TV takes only questions and dates tagged black-tv; Every show takes all', () => {
+  const qs = [
+    { id: 'a', category: 'tv', round: 'cast', band: 'family', groups: ['black-tv'] },
+    { id: 'b', category: 'tv', round: 'cast', band: 'family' },
+    { id: 'c', category: 'tv', round: 'cast', band: 'after-dark', groups: ['black-tv'] },
+  ];
+  const ids = (o) => G.allowed(qs, { categories: ['tv'], ...o }).map((q) => q.id);
+  assert.deepEqual(ids({ band: 'after-dark', theme: null }), ['a', 'b', 'c']);
+  assert.deepEqual(ids({ band: 'after-dark', theme: 'black-tv' }), ['a', 'c']);
+  assert.deepEqual(ids({ band: 'family', theme: 'black-tv' }), ['a'], 'the crowd still holds inside a theme');
+  assert.equal(G.inTheme({ groups: 'black-tv' }, { theme: 'black-tv' }), false, 'only a list of themes counts');
+});
+
+test('theme: the page has the Theme row, Every show first and checked, and the count reads the theme\'s own numbers', () => {
+  const fs = require('fs'), path = require('path');
+  const html = fs.readFileSync(path.join(__dirname, '..', 'trivia', 'index.html'), 'utf8');
+  const row = html.slice(html.indexOf('<span class="label">Theme</span>'), html.indexOf('<span class="label">Topics</span>'));
+  assert.match(row, /name="theme" value="all" checked> Every show[\s\S]*name="theme" value="black-tv"> Black TV/);
+  assert.ok(html.indexOf('name="band" value="after-dark"') < html.indexOf('name="theme"'), 'it sits under Crowd');
+  const host = fs.readFileSync(path.join(__dirname, '..', 'trivia', 'src', 'host.js'), 'utf8');
+  assert.match(host, /theme: val\('theme'\) && val\('theme'\) !== 'all' \? val\('theme'\) : null/);
+  assert.match(host, /o\.theme \? \(f\.groups && f\.groups\[o\.theme\]\) \|\| null : f/);
+});

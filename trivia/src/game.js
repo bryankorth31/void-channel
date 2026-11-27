@@ -18,13 +18,16 @@
   // What a question is about (a show, a film, a game), so one game never asks about the same thing twice.
   function subject(q) { const a = q.about || {}; return a.show ? 'show:' + a.show : a.film ? 'film:' + a.film : a.card ? 'card:' + a.card : 'q:' + q.id; }
 
+  // A theme deck (Black TV first; Bryan, 26 Nov 2026: "A, Theme row") takes only what is about a show on that theme's list.
+  function inTheme(q, opts) { return !opts.theme || (Array.isArray(q.groups) && q.groups.includes(opts.theme)); }
+
   // The questions a deck allows: family decks take family questions only; after dark takes every question.
   function allowed(questions, opts) {
     const cats = new Set(opts.categories || []);
     // Clips, pictures and sound only when asked for. On a public night only when the host switches them on as their own call
     // (Bryan, 20 Nov 2026: "i want it as a toggle to choose"): showing someone's show to a crowd is a public performance, and an
     // Archive item's "public domain" mark is only its uploader's word (many such marks sit on recent shows).
-    return questions.filter((q) => cats.has(q.category) && (opts.band === 'after-dark' || q.band === 'family')
+    return questions.filter((q) => cats.has(q.category) && (opts.band === 'after-dark' || q.band === 'family') && inTheme(q, opts)
       && (!q.media || (opts.clips !== false && (!opts.publicNight || opts.publicClips === true))));
   }
 
@@ -108,7 +111,7 @@
   const verb = (d) => (d.category === 'tv' ? 'first air' : 'come out');
   function datesFor(dates, opts) {
     const cats = new Set(opts.categories || []);
-    return (dates || []).filter((d) => cats.has(d.category) && (opts.band === 'after-dark' || d.band === 'family'));
+    return (dates || []).filter((d) => cats.has(d.category) && (opts.band === 'after-dark' || d.band === 'family') && inTheme(d, opts));
   }
 
   // Higher or Lower: a run of `len` steps. The screen shows the last title with its date; was the next one earlier or later?
@@ -299,7 +302,7 @@
     return JSON.stringify(m);
   }
 
-  const api = { ROUND_NAMES, CATEGORY_NAMES, whyLine, roomsOn, adultOpen, adultOpened, seeded, shuffle, subject, allowed, pickGame, keyAction, points, standings, answerOf, ordinal,
+  const api = { ROUND_NAMES, CATEGORY_NAMES, whyLine, inTheme, roomsOn, adultOpen, adultOpened, seeded, shuffle, subject, allowed, pickGame, keyAction, points, standings, answerOf, ordinal,
     order, datesFor, hlRun, yearQs, guessOf, yearPoints, compose, SHELF_VALUES, buildShelf, wagerOf, settleWager };
   if (typeof module !== 'undefined' && module.exports) module.exports = api; else root.TriviaGame = api;
 })(this);

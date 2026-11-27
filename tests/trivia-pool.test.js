@@ -40,3 +40,43 @@ test('Pool: unfetched, missing and adult titles are out; others carry votes, rat
   assert.deepEqual(p.films.map((x) => x.band), ['after-dark', 'out']);
   assert.match(p.films[1].why, /adult/);
 });
+
+// Theme lists (scripts/trivia/lists/; black-tv first, Bryan 26 Nov 2026: "All three", "Yes, go on").
+test('Theme list: a listed show skips the vote line, and its band fills only a missing US rating', () => {
+  const { showInDecks } = require('../scripts/trivia/pool');
+  const shows = [{ slug: 'a', name: 'A', tmdbId: 1, live: 3 }, { slug: 'b', name: 'B', tmdbId: 2, live: 1 }, { slug: 'c', name: 'C', tmdbId: 3, live: 1 }, { slug: 'd', name: 'D', tmdbId: 4, live: 1 }, { slug: 'e', name: 'E', tmdbId: 5, live: 1 }];
+  const tv = {
+    1: { name: 'A', first: '', votes: 20, us: 'TV-PG', source: 'https://www.themoviedb.org/tv/1' },   // listed, rated, few votes
+    2: { name: 'B', first: '', votes: 5, us: '', source: 'https://www.themoviedb.org/tv/2' },         // listed, no US rating
+    3: { name: 'Another Show', first: '', votes: 900, us: '', source: 'https://www.themoviedb.org/tv/3' }, // listed, wrong record
+    4: { name: 'D', first: '', votes: 20, us: 'TV-14', source: 'https://www.themoviedb.org/tv/4' },   // listed, the rating wins over the list
+    5: { name: 'E', first: '', votes: 20, us: 'TV-PG', source: 'https://www.themoviedb.org/tv/5' },   // not listed
+  };
+  const lists = [{ id: 'black-tv', shows: [{ slug: 'a' }, { slug: 'b', band: 'family' }, { slug: 'c', band: 'family' }, { slug: 'd', band: 'family' }] }];
+  const p = buildPool(shows, [], tv, {}, lists);
+  const by = Object.fromEntries(p.shows.map((x) => [x.slug, x]));
+  assert.deepEqual(by.a.lists, ['black-tv']);
+  assert.equal(by.a.band, 'family');
+  assert.equal(by.b.band, 'family', 'the list fills a missing US rating');
+  assert.match(by.b.why, /no official US rating.*family from the black-tv list/);
+  assert.equal(by.c.band, 'out', 'a wrong TMDB record stays out, list or not');
+  assert.equal(by.d.band, 'after-dark', 'an official rating wins over the list');
+  assert.equal(by.e.lists, undefined);
+  assert.deepEqual(p.shows.map((x) => showInDecks(x, 100)), [true, true, false, true, false], 'listed shows skip the vote line; others still need it');
+  assert.deepEqual(buildPool(shows, [], tv, {}).shows.map((x) => showInDecks(x, 100)), [false, false, false, false, false], 'with no lists nothing changes');
+});
+
+test('Theme list files: each names an id and shows once, with only family or after-dark as a band', () => {
+  const { readLists, LISTS } = require('../scripts/trivia/pool');
+  const lists = readLists(LISTS);
+  assert.ok(lists.some((l) => l.id === 'black-tv'), 'the black-tv list is there');
+  for (const l of lists) {
+    const slugs = l.shows.map((s) => s.slug);
+    assert.equal(new Set(slugs).size, slugs.length, l.id + ': no show twice');
+    for (const s of l.shows) {
+      assert.match(s.slug, /^[a-z0-9-]+$/, l.id + ': ' + s.slug);
+      if ('band' in s) assert.ok(s.band === 'family' || s.band === 'after-dark', l.id + ': ' + s.slug + ' band');
+    }
+    for (const s of l.leftOff || []) assert.ok(!slugs.includes(s.slug), l.id + ': ' + s.slug + ' was left off by Bryan, so it is not on the list');
+  }
+});

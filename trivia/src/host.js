@@ -101,6 +101,7 @@
     return {
       phones: val('mode') !== 'loud',
       band: val('band') || 'family',
+      theme: val('theme') && val('theme') !== 'all' ? val('theme') : null,
       categories: [...document.querySelectorAll('input[name="cat"]:checked')].map((e) => e.value),
       count: +val('count') || 20,
       secs: +(val('secs') || 0),
@@ -141,7 +142,9 @@
     const noMedia = !o.clips || (o.publicNight && !o.publicClips);
     // The public-night clips switch only means something on a public night.
     $('pubclips-l').hidden = !o.publicNight;
-    const n = files.reduce((s, f) => s + (o.band === 'family' ? f.family - (noMedia ? f.mediaFamily || 0 : 0) : f.count - (noMedia ? f.media || 0 : 0)), 0);
+    // With a theme, each file's own counts for that theme (the bank writes them as groups).
+    const n = files.map((f) => (o.theme ? (f.groups && f.groups[o.theme]) || null : f)).filter(Boolean)
+      .reduce((s, f) => s + (o.band === 'family' ? f.family - (noMedia ? f.mediaFamily || 0 : 0) : f.count - (noMedia ? f.media || 0 : 0)), 0);
     $('avail').textContent = o.categories.length ? n.toLocaleString() + ' questions to pick from' : 'Pick at least one topic';
     $('start').disabled = !o.categories.length || !n;
   }

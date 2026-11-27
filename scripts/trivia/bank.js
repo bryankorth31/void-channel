@@ -73,6 +73,7 @@ function usableEpisodeName(name, showName) {
 // Words no trivia screen shows: one list, in trivia/src/words.js, shared with the host screen and phone nicknames.
 // A question whose text or choices hold one is not made.
 const { screenOk } = require('../../trivia/src/words');
+const { showInDecks, onLists, readLists, LISTS } = require('./pool');
 
 // An episode name made only of people's names ("Dave Higgins, Doug Llewelyn"): a guest list, not a title anyone knows.
 function looksLikeGuests(name) { return /^[A-Z][\w.'-]+ [A-Z][\w.'-]+(\s*(,|&|and)\s*[A-Z][\w.'-]+ [A-Z][\w.'-]+)+$/.test(String(name).trim()); }
@@ -108,7 +109,7 @@ function gather(db, pool, foreign, overrides, metaOf, deadFiles) {
   for (const r of db.prepare('select slug, type, tags from shows').iterate()) {
     if (r.type === 'Late Night' || String(r.tags || '').split(',').map((t) => t.trim()).includes('Late Night') || (OV[r.slug] && OV[r.slug].adult)) lateNight.add(r.slug);
   }
-  const showBand = new Map(pool.shows.filter((s) => s.band !== 'out' && s.votes >= line && !away.has(s.name) && !lateNight.has(s.slug)).map((s) => [s.slug, s]));
+  const showBand = new Map(pool.shows.filter((s) => showInDecks(s, line) && !away.has(s.name) && !lateNight.has(s.slug)).map((s) => [s.slug, s]));
   const filmBand = new Map(pool.films.filter((f) => f.band !== 'out' && f.votes >= line && !(OV['movie-' + f.tmdbId] && OV['movie-' + f.tmdbId].adult)).map((f) => [String(f.tmdbId), f]));
   const shows = [];
   const getShow = db.prepare('select slug, name, network, tvmaze_network as tvmazeNetwork, tvmaze_id as tvmazeId, tmdb_id as tmdbId, premiered, genres, type, matched_at as matchedAt from shows where slug = ?');
@@ -127,6 +128,7 @@ function gather(db, pool, foreign, overrides, metaOf, deadFiles) {
     const s = getShow.get(slug);
     if (!s) continue;
     s.band = p.band; s.votes = p.votes; s.tmdbSource = p.source;
+    if (p.lists && p.lists.length) s.lists = p.lists;
     s.cast = getCast.all(slug);
     s.castRead = fileDay(path.join(ROOT, 'catalog', 'people', slug + '.json'));
     s.episodes = getEps.all(slug);
@@ -388,10 +390,14 @@ function makeQuestions(data) {
   // squares (plan G1).
   const fameOfShow = new Map(data.shows.map((s) => [s.slug, s.votes || 0]));
   const fameOfFilm = new Map(data.films.map((f) => [String(f.tmdbId), f.votes || 0]));
+  const listsOfShow = new Map(data.shows.filter((s) => s.lists).map((s) => [s.slug, s.lists]));
   for (const q of qs) {
     const a = q.about || {};
     const fame = a.show ? fameOfShow.get(a.show) : a.film ? fameOfFilm.get(String(a.film)) : null;
     if (fame) q.fame = fame;
+    // The theme lists a question's show is on (black-tv first), so a deck can be made of one theme.
+    const lists = a.show && listsOfShow.get(a.show);
+    if (lists) q.groups = lists;
   }
   return qs.filter((q) => screenOk(q.band, [q.q, ...q.choices]));
 }
@@ -403,7 +409,7 @@ function datesOf(qs) {
   const out = [];
   for (const q of qs) {
     if (!['first-aired', 'film-year', 'game-year'].includes(q.round) || !q.about || !q.about.date || !q.about.title) continue;
-    out.push({ id: q.id.replace(/^(tv-year|film-year|game-year)-/, 'd-'), title: q.about.title, date: q.about.date, category: q.category, band: q.band, source: q.source });
+    out.push({ id: q.id.replace(/^(tv-year|film-year|game-year)-/, 'd-'), title: q.about.title, date: q.about.date, category: q.category, band: q.band, source: q.source, ...(q.groups ? { groups: q.groups } : {}) });
   }
   return out;
 }
@@ -423,6 +429,18 @@ function showFiles(qs) {
   return out;
 }
 
+// The same counts for each theme list a file holds (black-tv first), so the page can say how many a theme deck has.
+function groupCounts(part) {
+  const ids = [...new Set(part.flatMap((q) => q.groups || []))].sort();
+  if (!ids.length) return {};
+  const groups = {};
+  for (const id of ids) {
+    const g = part.filter((q) => (q.groups || []).includes(id));
+    groups[id] = { count: g.length, family: g.filter((q) => q.band === 'family').length, media: g.filter((q) => q.media).length, mediaFamily: g.filter((q) => q.media && q.band === 'family').length };
+  }
+  return { groups };
+}
+
 // Writes the bank into the folder named (the side folder catalog/cache/trivia/bank-next when run; main swaps it in after).
 function write(qs, meta, dir) {
   const OUT = dir;
@@ -436,7 +454,7 @@ function write(qs, meta, dir) {
       const name = cat + '-' + (i / PER_FILE + 1) + '.json';
       fs.writeFileSync(path.join(OUT, name), JSON.stringify(part));
       files.push({ file: name, category: cat, count: part.length, family: part.filter((q) => q.band === 'family').length, kids: part.filter((q) => q.kids).length,
-        media: part.filter((q) => q.media).length, mediaFamily: part.filter((q) => q.media && q.band === 'family').length });
+        media: part.filter((q) => q.media).length, mediaFamily: part.filter((q) => q.media && q.band === 'family').length, ...groupCounts(part) });
     }
   }
   const rounds = {};
@@ -458,6 +476,9 @@ function write(qs, meta, dir) {
 function main() {
   const pool = readJson(path.join(ROOT, 'catalog', 'trivia-pool.json'), null);
   if (!pool) { console.error('No catalog/trivia-pool.json: run node scripts/trivia/pool.js first'); process.exit(1); }
+  // The theme lists, read fresh each build (pool.js onLists): who is on them, and the band a list gives a show with no US rating.
+  const themes = readLists(LISTS);
+  pool.shows = pool.shows.map((s) => onLists(s, themes));
   const db = openDb();
   const list = readJson(path.join(ROOT, 'scripts', 'show-list.json'), { shows: [] });
   const foreign = new Set((list.shows || list).filter((s) => s.language && s.language !== 'en').map((s) => s.name));

@@ -126,8 +126,32 @@ async function fetchAll(list, kind, cacheFile, tok, limit) {
 // Is TMDB's record the same show as TVmaze's? (scripts/lib/sameshow.js, shared with scripts/art.js since 21 Nov 2026.)
 const { sameShow } = require('../lib/sameshow');
 
+// The theme lists (scripts/trivia/lists/*.json; the first, black-tv, Bryan 26 Nov 2026: "All three", "Yes, go on"). A show on a
+// list carries the list's id in lists, skips the vote line, and where TMDB has no US rating the band the list gives fills it.
+// A wrong TMDB record or an adult mark keeps it out as before. The bank applies the lists to the pool each time it builds
+// (bank.js main), so a list change counts at the next bank build and the weekly pool file never holds a stale list.
+const LISTS = path.join(__dirname, 'lists');
+function readLists(dir) {
+  if (!fs.existsSync(dir)) return [];
+  return fs.readdirSync(dir).filter((f) => f.endsWith('.json')).sort().map((f) => readJson(path.join(dir, f), null)).filter((l) => l && l.id && Array.isArray(l.shows));
+}
+function onLists(row, lists) {
+  const ids = [];
+  let band = null;
+  for (const l of lists || []) {
+    const hit = l.shows.find((x) => x.slug === row.slug);
+    if (!hit) continue;
+    ids.push(l.id);
+    if (!band && (hit.band === 'family' || hit.band === 'after-dark')) band = { band: hit.band, list: l.id };
+  }
+  if (!ids.length) return row;
+  const out = { ...row, lists: ids };
+  if (out.band === 'out' && /^no official US rating/.test(out.why || '') && band) { out.band = band.band; out.why = out.why + '; ' + band.band + ' from the ' + band.list + ' list'; }
+  return out;
+}
+
 // The pool from the titles and the cache (pure; tested).
-function buildPool(shows, films, tvCache, filmCache) {
+function buildPool(shows, films, tvCache, filmCache, lists) {
   const one = (kind, t, c) => {
     const base = kind === 'tv' ? { slug: t.slug, name: t.name, tmdbId: t.tmdbId, premiered: t.premiered, playing: t.live } : { tmdbId: t.tmdbId, title: t.title, year: t.year, kind: t.kind };
     if (!c) return { ...base, band: 'out', why: 'not fetched from TMDB yet' };
@@ -138,7 +162,7 @@ function buildPool(shows, films, tvCache, filmCache) {
     return { ...base, votes: c.votes, us: c.us, source: c.source, band: b.band, why: b.why };
   };
   return {
-    shows: shows.map((t) => one('tv', t, tvCache[t.tmdbId])),
+    shows: shows.map((t) => onLists(one('tv', t, tvCache[t.tmdbId]), lists)),
     films: films.map((t) => one('film', t, filmCache[t.tmdbId])),
   };
 }
@@ -209,4 +233,7 @@ async function main() {
 }
 
 if (require.main === module) main().catch((e) => { console.error(e.message); process.exit(1); });
-module.exports = { band, usRating, buildPool, report, sameShow, FAME_LINE };
+// Who a deck may ask about, read the same way by the bank and its checker: a band, and the vote line or a theme list.
+function showInDecks(s, line) { return s.band !== 'out' && (s.votes >= line || !!(s.lists && s.lists.length)); }
+
+module.exports = { band, usRating, buildPool, report, sameShow, FAME_LINE, readLists, onLists, showInDecks, LISTS };
