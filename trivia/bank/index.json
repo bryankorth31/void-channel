@@ -1,15 +1,15 @@
 {
- "builtAt": "2026-11-26T09:30:16.531Z",
+ "builtAt": "2026-11-27T09:30:22.613Z",
  "fameLine": 100,
- "total": 6000,
+ "total": 6315,
  "rounds": {
-  "first-aired": 446,
-  "network": 255,
-  "cast": 1837,
-  "episode": 1461,
-  "clip": 418,
-  "still": 354,
-  "listen": 337,
+  "first-aired": 474,
+  "network": 279,
+  "cast": 1933,
+  "episode": 1543,
+  "clip": 450,
+  "still": 381,
+  "listen": 363,
   "film-year": 103,
   "film-clip": 102,
   "game-maker": 305,
@@ -41,111 +41,417 @@
    "family": 144,
    "kids": 0,
    "media": 102,
-   "mediaFamily": 72
+   "mediaFamily": 72,
+   "groups": {
+    "boomer": {
+     "count": 48,
+     "family": 29,
+     "media": 24,
+     "mediaFamily": 15
+    },
+    "genz": {
+     "count": 151,
+     "family": 111,
+     "media": 75,
+     "mediaFamily": 55
+    },
+    "millennial": {
+     "count": 106,
+     "family": 71,
+     "media": 53,
+     "mediaFamily": 36
+    }
+   }
   },
   {
    "file": "tv-1.json",
    "category": "tv",
    "count": 500,
-   "family": 191,
+   "family": 204,
    "kids": 0,
-   "media": 110,
-   "mediaFamily": 44
+   "media": 113,
+   "mediaFamily": 49,
+   "groups": {
+    "black-tv": {
+     "count": 38,
+     "family": 28,
+     "media": 13,
+     "mediaFamily": 8
+    },
+    "boomer": {
+     "count": 160,
+     "family": 98,
+     "media": 39,
+     "mediaFamily": 27
+    },
+    "genz": {
+     "count": 287,
+     "family": 73,
+     "media": 60,
+     "mediaFamily": 13
+    },
+    "millennial": {
+     "count": 228,
+     "family": 111,
+     "media": 56,
+     "mediaFamily": 30
+    }
+   }
   },
   {
    "file": "tv-2.json",
    "category": "tv",
    "count": 500,
-   "family": 192,
+   "family": 210,
    "kids": 0,
-   "media": 97,
-   "mediaFamily": 35
+   "media": 100,
+   "mediaFamily": 38,
+   "groups": {
+    "black-tv": {
+     "count": 55,
+     "family": 38,
+     "media": 14,
+     "mediaFamily": 9
+    },
+    "boomer": {
+     "count": 139,
+     "family": 89,
+     "media": 26,
+     "mediaFamily": 16
+    },
+    "genz": {
+     "count": 306,
+     "family": 82,
+     "media": 60,
+     "mediaFamily": 11
+    },
+    "millennial": {
+     "count": 208,
+     "family": 114,
+     "media": 34,
+     "mediaFamily": 17
+    }
+   }
   },
   {
    "file": "tv-3.json",
    "category": "tv",
    "count": 500,
-   "family": 232,
+   "family": 239,
    "kids": 0,
-   "media": 121,
-   "mediaFamily": 70
+   "media": 117,
+   "mediaFamily": 68,
+   "groups": {
+    "black-tv": {
+     "count": 47,
+     "family": 37,
+     "media": 12,
+     "mediaFamily": 9
+    },
+    "boomer": {
+     "count": 170,
+     "family": 123,
+     "media": 38,
+     "mediaFamily": 34
+    },
+    "genz": {
+     "count": 283,
+     "family": 80,
+     "media": 67,
+     "mediaFamily": 25
+    },
+    "millennial": {
+     "count": 229,
+     "family": 143,
+     "media": 50,
+     "mediaFamily": 39
+    }
+   }
   },
   {
    "file": "tv-4.json",
    "category": "tv",
    "count": 500,
-   "family": 193,
+   "family": 192,
    "kids": 0,
-   "media": 129,
-   "mediaFamily": 55
+   "media": 128,
+   "mediaFamily": 56,
+   "groups": {
+    "black-tv": {
+     "count": 33,
+     "family": 21,
+     "media": 8,
+     "mediaFamily": 4
+    },
+    "boomer": {
+     "count": 152,
+     "family": 92,
+     "media": 38,
+     "mediaFamily": 28
+    },
+    "genz": {
+     "count": 295,
+     "family": 62,
+     "media": 76,
+     "mediaFamily": 19
+    },
+    "millennial": {
+     "count": 209,
+     "family": 99,
+     "media": 50,
+     "mediaFamily": 31
+    }
+   }
   },
   {
    "file": "tv-5.json",
    "category": "tv",
    "count": 500,
-   "family": 208,
+   "family": 227,
    "kids": 0,
-   "media": 109,
-   "mediaFamily": 44
+   "media": 115,
+   "mediaFamily": 53,
+   "groups": {
+    "black-tv": {
+     "count": 29,
+     "family": 25,
+     "media": 8,
+     "mediaFamily": 7
+    },
+    "boomer": {
+     "count": 174,
+     "family": 120,
+     "media": 40,
+     "mediaFamily": 25
+    },
+    "genz": {
+     "count": 286,
+     "family": 74,
+     "media": 64,
+     "mediaFamily": 18
+    },
+    "millennial": {
+     "count": 227,
+     "family": 132,
+     "media": 50,
+     "mediaFamily": 26
+    }
+   }
   },
   {
    "file": "tv-6.json",
    "category": "tv",
    "count": 500,
-   "family": 221,
+   "family": 218,
    "kids": 0,
-   "media": 105,
-   "mediaFamily": 51
+   "media": 96,
+   "mediaFamily": 46,
+   "groups": {
+    "black-tv": {
+     "count": 38,
+     "family": 26,
+     "media": 7,
+     "mediaFamily": 7
+    },
+    "boomer": {
+     "count": 160,
+     "family": 100,
+     "media": 23,
+     "mediaFamily": 16
+    },
+    "genz": {
+     "count": 283,
+     "family": 75,
+     "media": 62,
+     "mediaFamily": 23
+    },
+    "millennial": {
+     "count": 226,
+     "family": 114,
+     "media": 39,
+     "mediaFamily": 24
+    }
+   }
   },
   {
    "file": "tv-7.json",
    "category": "tv",
    "count": 500,
-   "family": 196,
+   "family": 215,
    "kids": 0,
-   "media": 124,
-   "mediaFamily": 53
+   "media": 131,
+   "mediaFamily": 59,
+   "groups": {
+    "black-tv": {
+     "count": 42,
+     "family": 31,
+     "media": 12,
+     "mediaFamily": 10
+    },
+    "boomer": {
+     "count": 165,
+     "family": 105,
+     "media": 27,
+     "mediaFamily": 21
+    },
+    "genz": {
+     "count": 290,
+     "family": 77,
+     "media": 91,
+     "mediaFamily": 26
+    },
+    "millennial": {
+     "count": 223,
+     "family": 118,
+     "media": 46,
+     "mediaFamily": 24
+    }
+   }
   },
   {
    "file": "tv-8.json",
    "category": "tv",
    "count": 500,
-   "family": 195,
+   "family": 214,
    "kids": 0,
-   "media": 82,
-   "mediaFamily": 38
+   "media": 98,
+   "mediaFamily": 52,
+   "groups": {
+    "black-tv": {
+     "count": 44,
+     "family": 31,
+     "media": 14,
+     "mediaFamily": 10
+    },
+    "boomer": {
+     "count": 170,
+     "family": 103,
+     "media": 32,
+     "mediaFamily": 19
+    },
+    "genz": {
+     "count": 289,
+     "family": 85,
+     "media": 56,
+     "mediaFamily": 26
+    },
+    "millennial": {
+     "count": 213,
+     "family": 116,
+     "media": 48,
+     "mediaFamily": 29
+    }
+   }
   },
   {
    "file": "tv-9.json",
    "category": "tv",
    "count": 500,
-   "family": 224,
+   "family": 225,
    "kids": 0,
-   "media": 94,
-   "mediaFamily": 43
+   "media": 102,
+   "mediaFamily": 50,
+   "groups": {
+    "black-tv": {
+     "count": 23,
+     "family": 19,
+     "media": 4,
+     "mediaFamily": 3
+    },
+    "boomer": {
+     "count": 177,
+     "family": 116,
+     "media": 43,
+     "mediaFamily": 31
+    },
+    "genz": {
+     "count": 291,
+     "family": 84,
+     "media": 53,
+     "mediaFamily": 13
+    },
+    "millennial": {
+     "count": 209,
+     "family": 118,
+     "media": 45,
+     "mediaFamily": 32
+    }
+   }
   },
   {
    "file": "tv-10.json",
    "category": "tv",
    "count": 500,
-   "family": 201,
+   "family": 224,
    "kids": 0,
-   "media": 110,
-   "mediaFamily": 52
+   "media": 95,
+   "mediaFamily": 46,
+   "groups": {
+    "black-tv": {
+     "count": 32,
+     "family": 22,
+     "media": 8,
+     "mediaFamily": 4
+    },
+    "boomer": {
+     "count": 177,
+     "family": 118,
+     "media": 36,
+     "mediaFamily": 23
+    },
+    "genz": {
+     "count": 288,
+     "family": 80,
+     "media": 53,
+     "mediaFamily": 18
+    },
+    "millennial": {
+     "count": 228,
+     "family": 133,
+     "media": 41,
+     "mediaFamily": 26
+    }
+   }
   },
   {
    "file": "tv-11.json",
    "category": "tv",
-   "count": 108,
-   "family": 45,
+   "count": 423,
+   "family": 177,
    "kids": 0,
-   "media": 28,
-   "mediaFamily": 13
+   "media": 99,
+   "mediaFamily": 46,
+   "groups": {
+    "black-tv": {
+     "count": 37,
+     "family": 26,
+     "media": 11,
+     "mediaFamily": 6
+    },
+    "boomer": {
+     "count": 144,
+     "family": 95,
+     "media": 32,
+     "mediaFamily": 19
+    },
+    "genz": {
+     "count": 247,
+     "family": 63,
+     "media": 58,
+     "mediaFamily": 23
+    },
+    "millennial": {
+     "count": 185,
+     "family": 96,
+     "media": 45,
+     "mediaFamily": 24
+    }
+   }
   }
  ],
  "dates": {
   "file": "dates.json",
-  "count": 931
+  "count": 959
  },
  "credit": "Facts from TVmaze (CC BY-SA), TMDB, Wikidata (CC0) and the Internet Archive. This product uses the TMDB API but is not endorsed or certified by TMDB."
 }
