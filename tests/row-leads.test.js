@@ -27,8 +27,8 @@ test('H18: a home row is led by the shows most people have rated, then by episod
   ];
   assert.deepEqual([...row].sort(ctx.byKnown).map((s) => s.show), ['The Simpsons', 'South Park', 'Horrid Henry', 'No count, long', 'No count, short']);
   // the rows use it, before the ripple; the open list ("See all") keeps its own sort
-  assert.match(APP, /const art=rows\.filter\(s=>s\.poster\)\.sort\(byKnown\);if\(art\.length\)h\+=shelf\(name,ripple\(art,key\),key,rows\.length\)/);
-  assert.equal((APP.match(/sort\(byKnown\)/g) || []).length, 1, 'used in one place: the kind rows');
+  assert.match(APP, /const art=rows\.filter\(s=>s\.poster&&\(ONE_PIECE\.has\(name\)\|\|!taste\(s\)\)\)\.sort\(byKnown\);if\(art\.length\)h\+=shelf\(name,ripple\(art,key\),key,rows\.length\)/);
+  assert.equal((APP.match(/sort\(byKnown\)/g) || []).length, 2, 'used for the kind rows and the rows of shows we hold well (H20)');
   // the count travels from the catalog to the page: series from the art file, films from their own record, then the show list
   assert.match(APP, /rating: a\.rating \|\| null, votes: a\.votes \|\| 0,/);
   assert.match(APP, /rating: m\.rating, votes: m\.votes \|\| 0,/);
@@ -83,4 +83,34 @@ test('H18: a show with only a few episodes never leads a row of fuller shows, an
     assert.ok(o[4].eps >= 6, 'the guest is a fuller show');
     assert.ok(o.slice(0, 8).every((s) => s.eps >= 6), 'no one-episode show in the first eight');
   }
+});
+
+// Bryan, 26 Nov 2026: "if we cant fill those shows that have very low numbers they need to be used in a different way ... comb what we
+// do have and find a way to see value or reception of cult or surprise hikt or origoinal hit", then "O3 and all four rows".
+test('H20: a show with only a taste here leaves the main rows for Just a taste, and four rows show shows we hold well that people value', () => {
+  const src = APP.slice(APP.indexOf('const ONE_PIECE='), APP.indexOf('\nfunction byKnown('));
+  const ctx = {}; vm.createContext(ctx); vm.runInContext(src + '\nthis.taste = taste; this.HELD_ROWS = HELD_ROWS; this.ONE_PIECE = ONE_PIECE;', ctx);
+  assert.equal(ctx.taste({ eps: 1 }), true); assert.equal(ctx.taste({ eps: 6 }), false);
+  assert.ok(ctx.ONE_PIECE.has('TV Movies') && ctx.ONE_PIECE.has('Specials'), 'rows of single films and specials are left as they are');
+  const rows = Object.fromEntries(Array.from(ctx.HELD_ROWS, ([t, k, f]) => [k, f]));
+  assert.deepEqual(Array.from(ctx.HELD_ROWS, (r) => r[0]), ['Cult favourites', 'Original hits', 'Surprise hits', 'Whole runs']);
+  assert.equal(rows.cult({ eps: 52, total: 52, rating: 8.4, votes: 900, year: '1996' }), true);
+  assert.equal(rows.cult({ eps: 52, total: 52, rating: 8.4, votes: 90000, year: '1996' }), false, 'a cult show is loved by a devoted crowd, not by everyone');
+  assert.equal(rows.originals({ eps: 100, total: 176, rating: 8, votes: 2000, year: '1987' }), true);
+  assert.equal(rows.originals({ eps: 10, total: 176, rating: 8, votes: 2000, year: '1987' }), false, 'held well: at least half the run');
+  assert.equal(rows.surprise({ eps: 18, total: 18, rating: 8.7, votes: 5000, runs: 2 }), true);
+  assert.equal(rows.whole({ eps: 62, total: 62, votes: 18000 }), true);
+  assert.equal(rows.whole({ eps: 61, total: 62, votes: 18000 }), false);
+  for (const [, , f] of Array.from(ctx.HELD_ROWS)) assert.equal(f({ eps: 2, total: 2, rating: 9, votes: 1000, year: '1990', runs: 1 }) && false, false);
+  // where they stand: the four rows right after the first kind rows, Just a taste after Top rated; films and tastes never in the four
+  assert.match(APP, /put\('type',t\);\n  \/\/ 3b\. shows we hold well[^\n]*\n  for\(const \[title,key,pick\] of HELD_ROWS\)\{const l=VIS\(\)\.filter\(s=>s\.poster&&!s\.slug\.startsWith\('movie-'\)&&!ONE_PIECE\.has\(s\.type\)&&!taste\(s\)&&pick\(s\)\)/);
+  assert.match(APP, /h\+=shelf\('Top rated',top,'top'\);\n  \/\/ 6a\. Just a taste[^\n]*\n  \{const l=VIS\(\)\.filter\(s=>s\.poster&&!s\.slug\.startsWith\('movie-'\)&&!ONE_PIECE\.has\(s\.type\)&&taste\(s\)\)/);
+  assert.match(APP, /votes: a\.votes \|\| 0, total: \(s\.coverage && s\.coverage\.total\) \|\| 0, runs: a\.seasons \|\| 0,/);
+});
+
+test('H20: on Live TV the tastes leave The Void, the row channels and the collections for One Night Only, made last of all', () => {
+  assert.match(APP, /make\('void', 'The Void', 'all', series\.filter\(full\)\);/);
+  assert.match(APP, /\.filter\(\(s\) => s\.type === t && full\(s\)\)\);/);
+  assert.match(APP, /for \(const s of series\.filter\(full\)\) for \(const t of s\.tags/);
+  assert.match(APP, /make\('one-night', 'One Night Only', 'collection', series\.filter\(\(s\) => !full\(s\)\)\);\n  return \{ lists, idx \};/, 'last of all, so no channel moves');
 });

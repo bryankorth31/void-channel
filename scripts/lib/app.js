@@ -93,9 +93,12 @@ function channelLists(shows, types, off, foreign, offAll, radio, moments) {
     if (!list.length || eps < 12) return;
     lists.push({ id, name, kind, list, adult: adult || undefined });
   };
-  make('void', 'The Void', 'all', series);
-  for (const t of types) make('row-' + slugify(t), t, 'row', (OWN_LANGUAGE_ROWS.has(t) ? allSeries.filter(kept) : series).filter((s) => s.type === t));
-  const tags = {}; for (const s of series) for (const t of s.tags || []) (tags[t] = tags[t] || []).push(s);
+  // A series with fewer than 6 playable episodes (a taste, decision H20) leaves The Void, the row channels and the collections for
+  // its own channel, One Night Only, made last of all below; it stays on its network's channel, as a show kept off Live TV does.
+  const full = (s) => (s.eps || 0) >= 6;
+  make('void', 'The Void', 'all', series.filter(full));
+  for (const t of types) make('row-' + slugify(t), t, 'row', (OWN_LANGUAGE_ROWS.has(t) ? allSeries.filter(kept) : series).filter((s) => s.type === t && full(s)));
+  const tags = {}; for (const s of series.filter(full)) for (const t of s.tags || []) (tags[t] = tags[t] || []).push(s);
   for (const [t, list] of Object.entries(tags)) make('tag-' + slugify(t), t, 'collection', list);
   const nets = {}; for (const s of allSeries) if (s.network && onNet(s)) (nets[s.network] = nets[s.network] || []).push(s);
   for (const [n, list] of Object.entries(nets).sort((a, b) => b[1].length - a[1].length)) if (list.length >= 2) make('net-' + slugify(n), n, 'network', list);
@@ -114,6 +117,9 @@ function channelLists(shows, types, off, foreign, offAll, radio, moments) {
     make('moment-' + m.id, m.name, 'row', m.pick(m.rule, items).map((x) => x.s));
     if (lists.length > n) lists[n].when = [m.start, m.end];
   }
+  // One Night Only (Bryan, 26 Nov 2026: "O3 and all four rows"): the tastes, a different show every half hour. Last of all, so no
+  // channel's id or place moves; it joins the lineup with the next week's plan.
+  make('one-night', 'One Night Only', 'collection', series.filter((s) => !full(s)));
   return { lists, idx };
 }
 // The schedule plan (scripts/lib/tvgrid.js): per channel the pools of shows for each daypart, plus one shared library of typical
@@ -213,7 +219,7 @@ function assemble() {
       const p = readJson(path.join(PEOPLE_DIR, s.slug + '.json'), null);
       return {
         show: s.show, slug: s.slug, type: s.type, network: s.network, year: (s.tvmaze.premiered || a.year || '').slice(0, 4), runtime: s.tvmaze.runtime, tags: entry.tags || [],
-        poster: a.poster || null, backdrop: a.backdrop || null, overview: a.overview || '', genres: a.genres || [], rating: a.rating || null, votes: a.votes || 0, country: a.country || null, matchedAt: s.matchedAt, addedAt: s.addedAt,
+        poster: a.poster || null, backdrop: a.backdrop || null, overview: a.overview || '', genres: a.genres || [], rating: a.rating || null, votes: a.votes || 0, total: (s.coverage && s.coverage.total) || 0, runs: a.seasons || 0, country: a.country || null, matchedAt: s.matchedAt, addedAt: s.addedAt,
         seasons: s.seasons.map((se) => ({ season: se.season, episodes: se.episodes.map(epNoGuess).filter((e) => e && e.file && e.file.playable && !e.file.langRisk).map((e) => epOut(e)) })).filter((se) => se.episodes.length),
         vault: s.seasons.flatMap((se) => se.episodes.map(epNoGuess).filter((e) => e && e.file && !e.file.playable && !e.file.langRisk).map((e) => ({ season: se.season, n: e.number, name: e.name, url: e.file.url, min: Math.round(e.file.seconds / 60), risk: (e.file.codecRisk || 'format').replace(/^(video|audio|container) /, '').replace(/[()]/g, '') }))),
         cast: p ? p.cast.slice(0, 14).map((c) => ({ id: c.id, name: c.name, photo: c.photo, as: c.character, eps: c.episodes })) : [],
@@ -323,7 +329,7 @@ function triviaCounts() {
 }
 
 // The index entry: everything the browse page needs; seasons and cast load per show in split mode.
-const indexEntry = (s) => ({ show: s.show, slug: s.slug, type: s.type, radio: s.radio ? 1 : undefined, rc: (s.radio && s.radio.credit) || undefined, people: (s.cast || []).slice(0, 8).map((c) => c.name).join(', ') || undefined, adult: (s.type === 'Late Night' || (s.tags || []).includes('Late Night') || s.adult) ? 1 : undefined, network: s.network, year: s.year, runtime: s.runtime, tags: s.tags, poster: s.poster, backdrop: s.backdrop, overview: s.overview && s.overview.length > 380 ? s.overview.slice(0, 380).replace(/\s+\S*$/, '') + '…' : s.overview, genres: s.genres, rating: s.rating, votes: s.votes || undefined, matchedAt: s.matchedAt && s.matchedAt.slice(0, 10), added: ((s.addedAt || s.matchedAt) || '').slice(0, 10) || undefined, eps: s.eps, seasonCount: s.seasons.length, cg: s.cg });
+const indexEntry = (s) => ({ show: s.show, slug: s.slug, type: s.type, radio: s.radio ? 1 : undefined, rc: (s.radio && s.radio.credit) || undefined, people: (s.cast || []).slice(0, 8).map((c) => c.name).join(', ') || undefined, adult: (s.type === 'Late Night' || (s.tags || []).includes('Late Night') || s.adult) ? 1 : undefined, network: s.network, year: s.year, runtime: s.runtime, tags: s.tags, poster: s.poster, backdrop: s.backdrop, overview: s.overview && s.overview.length > 380 ? s.overview.slice(0, 380).replace(/\s+\S*$/, '') + '…' : s.overview, genres: s.genres, rating: s.rating, votes: s.votes || undefined, total: s.total || undefined, runs: s.runs || undefined, matchedAt: s.matchedAt && s.matchedAt.slice(0, 10), added: ((s.addedAt || s.matchedAt) || '').slice(0, 10) || undefined, eps: s.eps, seasonCount: s.seasons.length, cg: s.cg });
 const showFile = (s, data) => {
   const links = (data && data.links && data.links[s.slug]) || {};
   const ids = new Set([...s.cast, ...s.crew].map((c) => c.id));
@@ -792,6 +798,19 @@ function noMatch(){if(state.moment)return momentElse(state.moment);const q=state
 // episode count alone, so Horrid Henry (250 episodes) stood ahead of The Simpsons. A show with no count sorts as it did.
 // A show with only a few episodes (fewer than 6) never leads a row of fuller shows, however many people rated it (Bryan, 26 Nov
 // 2026: "dont want shows with 1 ep in the first rows"); a row of single films or specials sorts among its own.
+// A taste (Bryan, 26 Nov 2026: "if we cant fill those shows that have very low numbers they need to be used in a different way",
+// then "O3 and all four rows"): a series with fewer than 6 playable episodes. It leaves the main rows for its own row, Just a taste,
+// and the Live TV channel One Night Only; it still opens from search. Rows of single pieces (TV movies, specials) are left as they are.
+const ONE_PIECE=new Set(['TV Movies','Specials']);
+function taste(s){return (s.eps||0)<6}
+// Four rows of shows we hold well (6 or more episodes here and at least half the run), each a different way to say people value it;
+// the numbers were tried twice on the real catalog (audit/voidverse/owner-shots/row-leads/HITS-AND-ONE-OFFS.md).
+function heldWell(s){return s.eps>=6&&(!s.total||s.eps>=s.total/2)}
+const HELD_ROWS=[
+ ['Cult favourites','cult',(s)=>heldWell(s)&&s.eps>=10&&(s.rating||0)>=7.8&&(s.votes||0)>=200&&(s.votes||0)<=3000&&+s.year&&+s.year<=2012],
+ ['Original hits','originals',(s)=>heldWell(s)&&+s.year&&+s.year<2000&&(s.votes||0)>=100],
+ ['Surprise hits','surprise',(s)=>heldWell(s)&&s.runs&&s.runs<=2&&(s.rating||0)>=7.5&&(s.votes||0)>=300],
+ ['Whole runs','whole',(s)=>s.eps>=6&&s.total&&s.eps>=s.total&&(s.votes||0)>=30]];
 function byKnown(a,b){const FEW=6;return ((b.eps>=FEW)-(a.eps>=FEW))||(b.votes||0)-(a.votes||0)||b.eps-a.eps}
 function ripHash(s){let h=2166136261;for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)}return h>>>0}
 function rippleDay(){const d=new Date();return d.getFullYear()*372+d.getMonth()*31+d.getDate()}
@@ -816,8 +835,10 @@ function browse(){let list=filtered();if(!state.q)list=list.filter(s=>!hidden(s)
   const cont=histShows().slice(0,30);if(cont.length)h+=shelf('Continue watching',cont,'continue');
   const mine=listShows();if(mine.length)h+=shelf('My List',mine,'list');
   // 3. the first rows: well-known kinds, right under the TV; the rest of the rows follow further down
-  const done=new Set();const put=(kind,name)=>{const key=kind+':'+name;if(done.has(key))return;done.add(key);const rows=list.filter(s=>kind==='tag'?(s.tags||[]).includes(name):s.type===name);const art=rows.filter(s=>s.poster).sort(byKnown);if(art.length)h+=shelf(name,ripple(art,key),key,rows.length)};
+  const done=new Set();const put=(kind,name)=>{const key=kind+':'+name;if(done.has(key))return;done.add(key);const rows=list.filter(s=>kind==='tag'?(s.tags||[]).includes(name):s.type===name);const art=rows.filter(s=>s.poster&&(ONE_PIECE.has(name)||!taste(s))).sort(byKnown);if(art.length)h+=shelf(name,ripple(art,key),key,rows.length)};
   for(const t of ['90s Sitcoms','Animated','Adult Swim','Documentary & Geographic'])put('type',t);
+  // 3b. shows we hold well that people value, in place of the known names we only have a taste of (decision H20)
+  for(const [title,key,pick] of HELD_ROWS){const l=VIS().filter(s=>s.poster&&!s.slug.startsWith('movie-')&&!ONE_PIECE.has(s.type)&&!taste(s)&&pick(s));if(l.length>=6)h+=shelf(title,ripple(l.sort(byKnown).slice(0,40),key),key)}
   // 4. the donation box, below the first rows
   h+='<div class="support'+(state.supportOpen?' open':'')+'"><img class="cross" src="'+BASE+'assets/brand/cash-cross.png" alt=""><div class="sp"><b>${BRAND} is free and stays free.</b> <span class="l2">Donations fund the real-world work of CASH.</span><div class="more">The shows belong to the Internet Archive; what we add is a better way to find and watch them. That is CASH\\'s work: finding ways for people to have good things that fit a busy life and a budget stretched to the max. No set amount, never required. If that is work worth supporting, give back and be part of it. <a onclick="go(\\'cash\\')">Our work in the community →</a> · <a href="https://cashvalues.org" target="_blank" rel="noopener">cashvalues.org ↗</a></div></div><span class="acts"><a class="btn donate" data-void-donate href="'+DONATE+'" target="_blank" rel="noopener">♥ Donate to CASH</a><a class="btn" data-void-donate="monthly" href="'+DONATE_MONTHLY+'" target="_blank" rel="noopener">↻ Give monthly</a><button class="btn ghost sm" onclick="state.supportOpen=!state.supportOpen;render()">'+(state.supportOpen?'Less':'More')+'</button></span></div>';
   // 4b. Trivia Night, right under the donation box
@@ -832,6 +853,8 @@ function browse(){let list=filtered();if(!state.q)list=list.filter(s=>!hidden(s)
   h+='<div class="va-slot" data-void-areas-ad></div>';
   const top=VIS().filter(s=>s.rating&&s.poster).sort((a,b)=>b.rating-a.rating||b.eps-a.eps).slice(0,30);
   h+=shelf('Top rated',top,'top');
+  // 6a. Just a taste: one or two episodes of shows people know, out of the main rows, best known first (decision H20)
+  {const l=VIS().filter(s=>s.poster&&!s.slug.startsWith('movie-')&&!ONE_PIECE.has(s.type)&&taste(s)).sort((a,b)=>(b.votes||0)-(a.votes||0));if(l.length)h+=shelf('Just a taste',l.slice(0,40),'taste')}
   for(const [kind,name] of HOME_ORDER)put(kind,name);
   for(const [tag] of counts('tags'))put('tag',tag);
   for(const t of TYPES)put('type',t);

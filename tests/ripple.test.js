@@ -44,7 +44,8 @@ test('H17: a short row is left alone, and only the kind rows ripple', () => {
   const o = order(row(13), 'x', 750001);
   assert.deepEqual(o.slice(0, 3), [0, 1, 2]);
   assert.equal(o.length, 13);
-  assert.equal((APP.match(/ripple\(/g) || []).length, 2, 'used in one place: the kind rows');
+  assert.equal((APP.match(/ripple\(/g) || []).length, 3, 'used for the kind rows and the rows of shows we hold well (H20), nowhere else');
   assert.match(APP, /if\(art\.length\)h\+=shelf\(name,ripple\(art,key\),key,rows\.length\)/);
+  assert.match(APP, /if\(l\.length>=6\)h\+=shelf\(title,ripple\(l\.sort\(byKnown\)\.slice\(0,40\),key\),key\)/);
   for (const k of ["'continue'", "'list'", "'recent'", "'top'"]) assert.match(APP, new RegExp('shelf\\([^)]*,' + k + '\\)'), k + ' keeps its own order');
 });
