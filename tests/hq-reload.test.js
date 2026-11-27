@@ -113,3 +113,16 @@ test('HQ is wired to it: the page hands over when opened, a taken port is waited
   assert.match(R.WAIT_PAGE, /HQ is loading its new code/);
   assert.doesNotMatch(R.WAIT_PAGE, /https?:\/\//, 'the wait page talks to HQ only');
 });
+
+// The test above slipped now and then in a full run (26 Nov 2026): "one" and "two" are the same length, and when the change lands in
+// the same moment the file was first read, its size and save time do not move. A file read that close to its save is compared by its
+// bytes until it is settled, so the change is seen whatever the clock does.
+test('a change of the same length, saved in the same moment the file was first read, is still seen', () => {
+  const { root, a, b } = tree();
+  const t = new Date(Date.now());
+  fs.utimesSync(b, t, t);
+  const r = R.create({ root, entry: a, nodeBin, loaded: () => [a, b] });
+  fs.writeFileSync(b, 'module.exports = "two";\n');
+  fs.utimesSync(b, t, t); // same size, same save time: only the bytes differ
+  assert.deepEqual(r.check(Date.now() + 5000), { stale: true, files: [path.relative(root, b).replace(/\\/g, '/')] });
+});

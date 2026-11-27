@@ -20,6 +20,9 @@ const { spawn, spawnSync } = require('child_process');
 
 const hashOf = (f) => { try { return crypto.createHash('sha1').update(fs.readFileSync(f)).digest('hex'); } catch (e) { return 'gone'; } };
 const statOf = (f) => { try { const s = fs.statSync(f); return s.size + ':' + Math.round(s.mtimeMs); } catch (e) { return 'gone'; } };
+// A file read within 2 s of its own save time may change again without its size or save time showing it (the same length, saved in
+// the same moment), so its size and time prove nothing yet: it is compared by its bytes until a look finds it older than that.
+const racy = (stat, at) => { const t = +String(stat).split(':')[1]; return !(t < at - 2000); };
 
 // o: root (the repo folder), entry (scripts/hq.js), args (what it was started with), nodeBin (), log (a file for the new copy's
 // first words), busy () -> true while a job HQ started still runs, loaded () -> the files to watch (default: what this process
@@ -28,7 +31,7 @@ function create(o) {
   const base = path.join(o.root, 'scripts') + path.sep;
   const loaded = o.loaded || (() => Object.keys(require.cache).filter((f) => f.startsWith(base) && !f.includes(path.sep + 'node_modules' + path.sep)));
   const seen = new Map(); // file -> { stat, hash } as it was when this process was first seen to have it
-  const look = () => { for (const f of loaded()) if (!seen.has(f)) seen.set(f, { stat: statOf(f), hash: hashOf(f) }); };
+  const look = () => { for (const f of loaded()) if (!seen.has(f)) { const st = statOf(f); seen.set(f, { stat: st, hash: hashOf(f), racy: racy(st, Date.now()) }); } };
   look();
   let last = { at: 0, out: { stale: false, files: [] } };
 
@@ -39,8 +42,8 @@ function create(o) {
     const files = [];
     for (const [f, was] of seen) {
       const st = statOf(f);
-      if (st === was.stat) continue;
-      if (hashOf(f) === was.hash) { was.stat = st; continue; }
+      if (st === was.stat && !was.racy) continue;
+      if (hashOf(f) === was.hash) { was.stat = st; was.racy = racy(st, Date.now()); continue; }
       files.push(path.relative(o.root, f).replace(/\\/g, '/'));
     }
     last = { at: now, out: { stale: files.length > 0, files: files.sort() } };
