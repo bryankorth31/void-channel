@@ -14,7 +14,7 @@
 //                                                      Whisper on the graphics card, inside a time budget; only when the card is
 //                                                      free: it is claimed with hardware-lab/gpu_modes.py and released after,
 //                                                      and skipped when another job holds it or another Whisper is running
-//   5. transcripts  node scripts/trivia/transcripts.js check
+//   5. transcripts  node scripts/trivia/transcripts.js check --retire (a transcript of a file the catalog swapped is set aside)
 //   6. moments      node scripts/trivia/moments.js     every saved moment still plays from the Archive where it says
 //   7. timed        node scripts/trivia/timed.js       the clip chat's scene-timed questions for Live TV's strip (trivia/timed/),
 //                                                      from lines a person approved; skipped until that tool exists
@@ -201,7 +201,7 @@ function main() {
         // Stopped at its time limit is a normal night: the next night carries on where this one stopped.
         if (results.whisper.status === 'time') results.whisper.status = 'ok';
       }
-      else if (k === 'transcripts') results.transcripts = run('transcripts', process.execPath, [path.join(ROOT, 'scripts/trivia/transcripts.js'), 'check'], 20);
+      else if (k === 'transcripts') results.transcripts = run('transcripts', process.execPath, [path.join(ROOT, 'scripts/trivia/transcripts.js'), 'check', '--retire'], 20);
       else if (k === 'moments') results.moments = run('moments', process.execPath, [path.join(ROOT, 'scripts/trivia/moments.js')], 20);
       // The timed questions stand apart from the bank: a timed question that fails its check is logged, and the bank still rebuilds.
       else if (k === 'timed') results.timed = run('timed', process.execPath, [path.join(ROOT, 'scripts/trivia/timed.js')], 20);

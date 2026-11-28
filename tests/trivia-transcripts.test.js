@@ -56,3 +56,44 @@ test('the check on a finished transcript', () => {
   assert.match(T.problems(good, { ...file, url: 'https://archive.org/download/other.mp4' }).join(), /different file/);
   assert.match(T.problems({ ...good, source: { kind: 'archive-subtitles' } }, file).join(), /no subtitle file/);
 });
+
+// The morning check sets aside a transcript of a file the catalog swapped (Bryan, 27 Nov 2026: "Fix morning job").
+test('stale only: a swapped or gone file is the catalog moving on; anything else is a broken transcript', () => {
+  assert.equal(T.staleOnly(['the catalog now plays a different file for it']), true);
+  assert.equal(T.staleOnly(['its episode no longer plays as a clip file on VoidTV']), true);
+  assert.equal(T.staleOnly(['the catalog now plays a different file for it', 'line 3 has a bad time']), false, 'a broken transcript still fails');
+  assert.equal(T.staleOnly([]), false);
+});
+
+test('check --retire: a swapped file\'s transcript is moved aside and the check passes; a broken one still fails', () => {
+  const fs = require('fs'), os = require('os'), path = require('path');
+  const { spawnSync } = require('child_process');
+  const { DatabaseSync } = require('node:sqlite');
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'trivia-retire-'));
+  const dbFile = path.join(tmp, 'voidtv.db'), dir = path.join(tmp, 'transcripts'), retired = path.join(tmp, 'retired');
+  const db = new DatabaseSync(dbFile);
+  db.exec("create table episodes (show_slug text, season int, number int, name text, item text, url text, seconds int, state text, playable int, format text)");
+  const ep = db.prepare("insert into episodes values (?,?,?,?,?,?,1800,'LIVE',1,'MPEG4')");
+  ep.run('alpha', 1, 1, 'Pilot', 'it', 'https://archive.org/download/it/new.mp4');
+  ep.run('alpha', 1, 2, 'Two', 'it', 'https://archive.org/download/it/two.mp4');
+  db.close();
+  const write = (f, url, lines) => { fs.mkdirSync(path.join(dir, 'alpha'), { recursive: true }); fs.writeFileSync(path.join(dir, 'alpha', f), JSON.stringify({ show: 'alpha', season: 1, number: f === 's1e1.json' ? 1 : 2, item: 'it', url, seconds: 1800, source: { kind: 'whisper', model: 'large-v3' }, made: '2026-11-20T00:00:00Z', lines })); };
+  write('s1e1.json', 'https://archive.org/download/it/old.mp4', [{ start: 1, end: 2, text: 'Hello' }]); // the catalog swapped the file
+  write('s1e2.json', 'https://archive.org/download/it/two.mp4', [{ start: 1, end: 2, text: 'Fine' }]);
+  const env = { ...process.env, TRIVIA_DB: dbFile, TRIVIA_TRANSCRIPTS_DIR: dir, TRIVIA_RETIRED_DIR: retired };
+  const run = (...a) => spawnSync(process.execPath, [path.join(__dirname, '..', 'scripts', 'trivia', 'transcripts.js'), 'check', ...a], { env, encoding: 'utf8' });
+  const plain = run();
+  assert.equal(plain.status, 1, 'without --retire the swap still fails the plain check');
+  assert.ok(fs.existsSync(path.join(dir, 'alpha', 's1e1.json')), 'and nothing is moved');
+  const r = run('--retire');
+  assert.equal(r.status, 0, r.stdout);
+  assert.match(r.stdout, /SET ASIDE alpha\/s1e1\.json: the catalog now plays a different file for it/);
+  assert.match(r.stdout, /1 transcripts checked \(1 lines\), 0 failed, 1 set aside/);
+  assert.ok(!fs.existsSync(path.join(dir, 'alpha', 's1e1.json')));
+  const kept = fs.readdirSync(retired);
+  assert.equal(kept.length, 1);
+  assert.ok(fs.existsSync(path.join(retired, kept[0], 'alpha', 's1e1.json')), 'kept, not deleted');
+  write('s1e2.json', 'https://archive.org/download/it/two.mp4', [{ start: 5, end: 2, text: 'Bad' }]);
+  assert.equal(run('--retire').status, 1, 'a broken transcript still fails the morning');
+  fs.rmSync(tmp, { recursive: true, force: true });
+});

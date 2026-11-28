@@ -14,6 +14,9 @@
 //          pick the episodes, take Archive subtitles where they fit, Whisper the rest, then check everything
 //        node scripts/trivia/transcripts.js queue [same options]   pick and take subtitles only; write the Whisper queue
 //        node scripts/trivia/transcripts.js check                  check every transcript; exit 1 on any failure
+//        node scripts/trivia/transcripts.js check --retire         the same, but a transcript whose episode the catalog now
+//          plays from another file (or no longer plays) is set aside in catalog/cache/trivia/retired-transcripts/<day>/
+//          instead of failing; the night queue makes a fresh one for the new file when it picks that episode again
 'use strict';
 const fs = require('fs');
 const path = require('path');
@@ -23,6 +26,12 @@ const M = require('./moments');
 const ROOT = path.join(__dirname, '..', '..');
 const DIR = process.env.TRIVIA_TRANSCRIPTS_DIR || path.join(ROOT, 'trivia', 'transcripts');
 const QUEUE = path.join(DIR, 'queue.json');
+// Where a transcript of a file the catalog no longer plays is kept (outside DIR, which is read as one folder per show).
+const RETIRED = process.env.TRIVIA_RETIRED_DIR || path.join(ROOT, 'catalog', 'cache', 'trivia', 'retired-transcripts');
+// The two problems that mean the catalog moved on, not that the transcript is broken (Bryan, 27 Nov 2026: "Fix morning
+// job"; before this, each file swap failed the check every morning until a person moved the transcript by hand).
+const STALE = ['the catalog now plays a different file for it', 'its episode no longer plays as a clip file on VoidTV'];
+function staleOnly(p) { return p.length > 0 && p.every((x) => STALE.includes(x)); }
 const META = path.join(ROOT, 'catalog', 'cache');
 const FILES_CACHE = path.join(ROOT, 'catalog', 'cache', 'trivia', 'item-files');
 const PYTHON = 'C:/Users/bryan/hardware-lab/Scripts/python.exe';
@@ -200,9 +209,10 @@ async function queue(opts) {
 
 // ---------- check ----------
 
-function checkAll() {
+function checkAll(retire) {
   const db = M.openDb();
-  const bad = [];
+  const bad = [], retired = [];
+  const day = new Date().toISOString().slice(0, 10);
   let n = 0, lines = 0;
   let shows = [];
   try { shows = fs.readdirSync(DIR, { withFileTypes: true }).filter((d) => d.isDirectory()).map((d) => d.name); } catch { /* none yet */ }
@@ -212,18 +222,25 @@ function checkAll() {
       n++;
       const file = t ? M.episodesOf(db, show).find((e) => e.season === t.season && e.number === t.number) || null : null;
       const p = problems(t, file);
-      if (p.length) bad.push(`${show}/${f}: ${p.slice(0, 3).join('; ')}`);
+      if (retire && staleOnly(p)) {
+        const to = path.join(RETIRED, day, show, f);
+        fs.mkdirSync(path.dirname(to), { recursive: true });
+        fs.renameSync(path.join(DIR, show, f), to);
+        retired.push(`${show}/${f}: ${p[0]}`);
+        n--;
+      } else if (p.length) bad.push(`${show}/${f}: ${p.slice(0, 3).join('; ')}`);
       else lines += t.lines.length;
     }
   }
   db.close();
-  return { n, lines, bad };
+  return { n, lines, bad, retired };
 }
 
-function check() {
-  const { n, lines, bad } = checkAll();
+function check(retire) {
+  const { n, lines, bad, retired } = checkAll(retire);
+  for (const r of retired) console.log('SET ASIDE ' + r);
   for (const b of bad) console.log('FAIL ' + b);
-  console.log(`${n} transcripts checked (${lines} lines), ${bad.length} failed`);
+  console.log(`${n} transcripts checked (${lines} lines), ${bad.length} failed` + (retired.length ? `, ${retired.length} set aside (file changed)` : ''));
   if (bad.length) process.exitCode = 1;
 }
 
@@ -237,7 +254,7 @@ function options(argv) {
 async function main() {
   const [cmd, ...rest] = process.argv.slice(2);
   const opts = options(rest);
-  if (cmd === 'check') return check();
+  if (cmd === 'check') return check(rest.includes('--retire'));
   if (cmd !== 'queue' && cmd !== 'run') { console.log('Usage: node scripts/trivia/transcripts.js run|queue|check [--shows 20] [--eps 3] [--show <slug>]'); process.exitCode = 2; return; }
   const left = await queue(opts);
   if (cmd === 'run' && left) {
@@ -248,4 +265,4 @@ async function main() {
 }
 
 if (require.main === module) main().catch((e) => { console.error(e.message); process.exit(1); });
-module.exports = { secs, parseSubs, subtitleFor, fits, spread, problems, videoName, checkAll, DIR };
+module.exports = { secs, parseSubs, subtitleFor, fits, spread, problems, staleOnly, STALE, videoName, checkAll, DIR, RETIRED };

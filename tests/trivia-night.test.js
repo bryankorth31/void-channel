@@ -54,6 +54,7 @@ test('the night runs the tools it names, in order, and claims and releases the c
   assert.deepEqual(N.JOBS, ['fame', 'pool', 'queue', 'whisper', 'transcripts', 'moments', 'timed', 'bank']);
   // The runner names each tool it runs. It does not need them all in this copy: the transcript tools are the clip chat's and
   // may not be committed yet, and a night with a tool missing logs that job as failed and goes on (a clean copy must still pass).
+  assert.ok(src.includes("'scripts/trivia/transcripts.js'), 'check', '--retire']"), 'the morning sets swapped transcripts aside');
   for (const f of ['fame.js', 'pool.js', 'transcripts.js', 'whisper_lines.py', 'moments.js', 'timed.js', 'bank.js']) assert.ok(src.includes('scripts/trivia/' + f), f);
   assert.match(src, /'--set', 'studio', '--by', TAG/);
   assert.match(src, /finally \{ log\('   release: '/);
