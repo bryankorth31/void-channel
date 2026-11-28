@@ -218,6 +218,10 @@
       return;
     }
     if (m.type === 't-end') { $('end-p').textContent = m.score.toLocaleString() + ' points. You came ' + G.ordinal(m.place) + ' of ' + m.of + '.'; only('end'); return; }
+    // The big screen stepped away (a phone that is the screen switched apps); the room waits for it, and when it is back
+    // it sends this phone where the game is (Bryan, 27 Nov 2026: "Yes, fix it").
+    if (m.type === 'host-away') { if (!$('end').hidden) return; note('One moment', 'The big screen stepped away. Stay on this page: the game comes back here by itself.', false); return; }
+    if (m.type === 'host-back') return;
     if (m.type === 'host-gone') { ended = true; note('The big screen closed', 'Scan the new code on the big screen to play again.', true); }
   }
 

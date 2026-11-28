@@ -174,38 +174,82 @@
 
   // ---------- the phone room ----------
 
-  const room = { ws: null, code: null, join: null, locked: false, players: new Map() };
+  const room = { ws: null, code: null, join: null, key: null, locked: false, players: new Map() };
   // The phone remote (remote/src/trivia.js) asks for the open room's four letters, to hand a phone to the answer page.
   window.TriviaHostRoom = () => (room.ws && room.code) || '';
   const send = (to, msg) => { if (room.ws && room.ws.readyState === 1) room.ws.send(JSON.stringify({ to, msg })); };
   const nameOf = (p) => p.name || 'Player ' + p.seat;
 
+  // A phone that is the big screen drops its line when it switches apps (to send the code in Messages), locks or goes to
+  // the home screen. The room waits for its screen a while (the relay's hold for trivia rooms); this page then takes it back
+  // with the room's key, same code, phones still in their seats (Bryan, 27 Nov 2026: "the qr code not directing towards
+  // the trivia", "Yes, fix it"). Only when the room did not wait does the game go on out loud.
+  const RECLAIM = { tries: 40, ms: 3000 };
+  let reclaiming = null;
   function openRoom() {
     if (room.ws) return Promise.resolve();
+    return dial('');
+  }
+  function dial(q) {
     return new Promise((ok, no) => {
       let ws;
-      try { ws = new WebSocket((location.protocol === 'https:' ? 'wss://' : 'ws://') + location.host + '/api/room/open?kind=trivia'); }
+      try { ws = new WebSocket((location.protocol === 'https:' ? 'wss://' : 'ws://') + location.host + '/api/room/open?kind=trivia' + q); }
       catch (e) { no(e); return; }
       room.ws = ws;
+      let opened = false;
       ws.onmessage = (e) => {
         let m; try { m = JSON.parse(e.data); } catch (x) { return; }
-        if (m.type === 'room') { room.code = m.code; room.join = m.join; drawLobby(); ok(); return; }
+        if (m.type === 'room') {
+          opened = true;
+          room.code = m.code; room.join = m.join; room.key = typeof m.key === 'string' ? m.key : null;
+          if (!m.back) drawLobby(); else showWhere();
+          ok(); return;
+        }
         if (m.type === 'join') { joined(m.from, m.back); return; }
         if (m.type === 'leave') { const p = room.players.get(m.from); if (p) { p.gone = true; drawPlayers(); } return; }
         if (m.type === 'locked') { room.locked = !!m.on; $('lock').textContent = room.locked ? 'Let phones in' : 'Lock the room'; showWhere(); return; }
         if (Number.isInteger(m.from)) fromPhone(m.from, m.msg || {});
       };
-      ws.onclose = () => {
-        const had = !!room.code;
-        room.ws = null; room.code = null; room.join = null; room.locked = false;
-        if (!had) { no(new Error('closed')); return; }
-        // The relay went away mid-game: the game goes on out loud, and the screen says so.
-        if (game) { game.opts.phones = false; $('hint').textContent = 'The phone connection dropped. Carry on out loud.'; showWhere(); }
+      ws.onclose = (ev) => {
+        if (room.ws !== ws) return;
+        room.ws = null;
+        if (!opened) { const er = new Error('closed'); er.code = ev && ev.code; no(er); return; }   // never opened (or the room would not take this page back)
+        if (room.key) { takeBack(); return; }
+        lostRoom();
       };
     });
   }
+  // Ask for the room back by its code and key, again and again while it may still be waiting.
+  function takeBack() {
+    if (reclaiming || !room.code || !room.key) return;
+    const q = '&code=' + encodeURIComponent(room.code) + '&key=' + encodeURIComponent(room.key);
+    let left = RECLAIM.tries;
+    $('hint').textContent = 'Getting the phones back';
+    reclaiming = (async () => {
+      while (left-- > 0 && room.code && !room.ws) {
+        try { await dial(q); $('hint').textContent = ''; return; } catch (e) { if (e && e.code === 4404) break; /* else not yet: the line may still be down */ }
+        if (!room.code) return;
+        await new Promise((r) => setTimeout(r, RECLAIM.ms));
+      }
+      if (!room.ws) lostRoom();
+    })().finally(() => { reclaiming = null; });
+  }
+  // The room did not wait (or the relay is gone): the game goes on out loud, and the screen says so.
+  function lostRoom() {
+    room.ws = null; room.code = null; room.join = null; room.key = null; room.locked = false;
+    if (game) { game.opts.phones = false; $('hint').textContent = 'The phone connection dropped. Carry on out loud.'; showWhere(); }
+  }
+  // Back on the page (from Messages, after unlocking): try at once rather than at the next try.
+  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible' && room.code && !room.ws && room.key && !reclaiming) takeBack(); });
 
-  function closeRoom() { if (room.ws) { const w = room.ws; room.ws = null; w.onclose = null; w.close(); } room.code = null; room.players.clear(); }
+  // Closing the room on purpose ends it at the relay first, so phones hear the screen closed at once rather than waiting
+  // out the room's hold for a screen that is not coming back (the PLAY lead's note, 27 Nov 2026).
+  function closeRoom() {
+    if (room.ws) { const w = room.ws; room.ws = null; w.onclose = null; try { if (w.readyState === 1) w.send(JSON.stringify({ relay: 'end' })); } catch (e) { /* closing anyway */ } w.close(); }
+    room.code = null; room.key = null; room.players.clear();
+  }
+  // The tab closing or leaving for another page (not an app switch, which fires no pagehide) ends the room the same way.
+  addEventListener('pagehide', (e) => { if (!e.persisted && room.ws) closeRoom(); });
 
   function joined(seat, back) {
     let p = room.players.get(seat);

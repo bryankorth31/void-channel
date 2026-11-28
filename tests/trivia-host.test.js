@@ -539,3 +539,30 @@ test('phones apart: a clip\'s or a sound\'s clock starts when it has played; a p
   assert.ok(sm.includes('setTimeout(() => { if (!started) clockNow(); }, 15000)'), 'a file that never starts');
   assert.ok(sm.includes("if (!clockWaiting && clip === m && phase === 'ask') { stopClock(); clockWaiting = true; }"), 'a late start gives the full clock after it');
 });
+
+// A phone that is the big screen survives switching apps (Bryan, 27 Nov 2026: "the qr code not directing towards the
+// trivia", "Yes, fix it"): the screen keeps the room's key and takes the room back by code and key.
+test('room back: the screen keeps the room key and rejoins by code and key; a refused room means out loud at once', () => {
+  const fs = require('fs'), path = require('path');
+  const host = fs.readFileSync(path.join(__dirname, '..', 'trivia', 'src', 'host.js'), 'utf8');
+  assert.ok(host.includes("room.key = typeof m.key === 'string' ? m.key : null;"), 'the key from the room message is kept');
+  assert.ok(host.includes("const q = '&code=' + encodeURIComponent(room.code) + '&key=' + encodeURIComponent(room.key);"), 'rejoins by code and key');
+  assert.ok(host.includes('if (e && e.code === 4404) break;'), 'a room that did not wait (4404) ends the tries at once');
+  assert.ok(host.includes("if (room.key) { takeBack(); return; }"), 'a dropped line with a key tries to take the room back');
+  assert.ok(host.includes("if (!m.back) drawLobby(); else showWhere();"), 'taking it back does not redraw the lobby mid-game');
+  assert.match(host, /addEventListener\('visibilitychange', \(\) => \{ if \(document\.visibilityState === 'visible' && room\.code && !room\.ws && room\.key && !reclaiming\) takeBack\(\); \}\)/, 'back on the page: try at once');
+  assert.ok(host.slice(host.indexOf('function closeRoom()')).includes('room.code = null; room.key = null; room.players.clear();'), 'a room closed on purpose forgets its key');
+  const phone = fs.readFileSync(path.join(__dirname, '..', 'trivia', 'src', 'phone.js'), 'utf8');
+  assert.ok(phone.includes("note('One moment', 'The big screen stepped away."), 'the phone waits, it is not sent away');
+  assert.match(phone, /if \(m\.type === 'host-back'\) return;/);
+});
+
+test('room back: a room closed on purpose, or a tab that closes, ends at the relay so phones are not left waiting', () => {
+  const fs = require('fs'), path = require('path');
+  const host = fs.readFileSync(path.join(__dirname, '..', 'trivia', 'src', 'host.js'), 'utf8');
+  const cr = host.slice(host.indexOf('function closeRoom()'), host.indexOf("addEventListener('pagehide'"));
+  assert.ok(cr.includes("w.send(JSON.stringify({ relay: 'end' }))") && cr.indexOf("relay: 'end'") < cr.indexOf('w.close()'), 'end is sent before the line closes');
+  assert.ok(host.includes("addEventListener('pagehide', (e) => { if (!e.persisted && room.ws) closeRoom(); });"));
+  const phone = fs.readFileSync(path.join(__dirname, '..', 'trivia', 'src', 'phone.js'), 'utf8');
+  assert.ok(phone.includes("if (m.type === 'host-away') { if (!$('end').hidden) return;"), 'a finished game\'s phone keeps its score');
+});
