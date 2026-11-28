@@ -1,5 +1,5 @@
 {
- "builtAt": "2026-11-20T21:37:52.632Z",
+ "builtAt": "2026-11-28T04:30:02.092Z",
  "window": {
   "start": "20251101",
   "end": "20261031"
@@ -165,8 +165,8 @@
    "voidtv": {
     "slug": "friends",
     "name": "Friends",
-    "live": 19,
-    "clipReady": 14,
+    "live": 0,
+    "clipReady": 0,
     "premiered": "1994-09-22"
    }
   },
@@ -365,8 +365,8 @@
    "voidtv": {
     "slug": "pluribus",
     "name": "Pluribus",
-    "live": 6,
-    "clipReady": 6,
+    "live": 5,
+    "clipReady": 5,
     "premiered": "2025-11-07"
    }
   },
@@ -579,8 +579,8 @@
    "voidtv": {
     "slug": "lost",
     "name": "Lost",
-    "live": 4,
-    "clipReady": 4,
+    "live": 1,
+    "clipReady": 1,
     "premiered": "2004-09-22"
    }
   },
@@ -857,7 +857,7 @@
    "title": "Ted Lasso",
    "wikidata": "Q96407897",
    "tmdb": 97546,
-   "year": 2024,
+   "year": 2020,
    "links": 34,
    "animated": false,
    "tvMovie": false,
@@ -865,11 +865,11 @@
    "views": 5583527,
    "known": 22.59,
    "voidtv": {
-    "slug": "ted",
-    "name": "ted",
-    "live": 14,
-    "clipReady": 14,
-    "premiered": "2024-01-11"
+    "slug": "ted-lasso",
+    "name": "Ted Lasso",
+    "live": 0,
+    "clipReady": 0,
+    "premiered": "2020-08-14"
    }
   },
   {
@@ -1277,7 +1277,7 @@
    "title": "Mad Men",
    "wikidata": "Q223977",
    "tmdb": 1104,
-   "year": 2010,
+   "year": 2007,
    "links": 52,
    "animated": false,
    "tvMovie": false,
@@ -1285,11 +1285,11 @@
    "views": 1832841,
    "known": 22.32,
    "voidtv": {
-    "slug": "mad",
-    "name": "MAD",
-    "live": 102,
-    "clipReady": 102,
-    "premiered": "2010-09-06"
+    "slug": "mad-men",
+    "name": "Mad Men",
+    "live": 0,
+    "clipReady": 0,
+    "premiered": "2007-07-19"
    }
   },
   {
@@ -1678,7 +1678,13 @@
    "cult": false,
    "views": 1780956,
    "known": 22.05,
-   "voidtv": null
+   "voidtv": {
+    "slug": "dark",
+    "name": "Dark",
+    "live": 0,
+    "clipReady": 0,
+    "premiered": "2017-12-01"
+   }
   },
   {
    "rank": 86,
@@ -2160,7 +2166,13 @@
    "cult": false,
    "views": 2571870,
    "known": 21.81,
-   "voidtv": null
+   "voidtv": {
+    "slug": "one-piece",
+    "name": "ONE PIECE",
+    "live": 8,
+    "clipReady": 8,
+    "premiered": "2023-08-31"
+   }
   },
   {
    "rank": 111,
@@ -2287,7 +2299,7 @@
    "title": "Widow's Bay",
    "wikidata": "Q136498700",
    "tmdb": 270476,
-   "year": 1983,
+   "year": 2026,
    "links": 20,
    "animated": false,
    "tvMovie": false,
@@ -2295,11 +2307,11 @@
    "views": 6759382,
    "known": 21.72,
    "voidtv": {
-    "slug": "widows",
-    "name": "Widows",
-    "live": 12,
-    "clipReady": 12,
-    "premiered": "1983-03-16"
+    "slug": "widows-bay",
+    "name": "Widow's Bay",
+    "live": 0,
+    "clipReady": 0,
+    "premiered": "2026-04-29"
    }
   },
   {
@@ -2919,8 +2931,8 @@
    "voidtv": {
     "slug": "spider-noir",
     "name": "Spider-Noir",
-    "live": 8,
-    "clipReady": 8,
+    "live": 0,
+    "clipReady": 0,
     "premiered": "2026-05-25"
    }
   },
@@ -3273,8 +3285,8 @@
    "voidtv": {
     "slug": "you",
     "name": "You",
-    "live": 1,
-    "clipReady": 1,
+    "live": 0,
+    "clipReady": 0,
     "premiered": "2018-09-09"
    }
   },
@@ -4151,20 +4163,14 @@
    "title": "The Loud House",
    "wikidata": "Q20642692",
    "tmdb": 68073,
-   "year": 2022,
+   "year": 2016,
    "links": 53,
    "animated": true,
    "tvMovie": false,
    "cult": false,
    "views": 513769,
    "known": 21.09,
-   "voidtv": {
-    "slug": "the-house",
-    "name": "The House",
-    "live": 0,
-    "clipReady": 0,
-    "premiered": "2022-01-14"
-   }
+   "voidtv": null
   },
   {
    "rank": 213,
@@ -4371,20 +4377,14 @@
    "title": "Skins (British TV series)",
    "wikidata": "Q326180",
    "tmdb": 900,
-   "year": 2011,
+   "year": 2007,
    "links": 44,
    "animated": false,
    "tvMovie": false,
    "cult": false,
    "views": 679987,
    "known": 21,
-   "voidtv": {
-    "slug": "skins",
-    "name": "Skins",
-    "live": 0,
-    "clipReady": 0,
-    "premiered": "2011-01-17"
-   }
+   "voidtv": null
   },
   {
    "rank": 224,
@@ -4403,7 +4403,7 @@
     "name": "Blackadder",
     "live": 12,
     "clipReady": 12,
-    "premiered": "1983-06-15"
+    "premiered": null
    }
   },
   {
@@ -5542,7 +5542,13 @@
    "cult": false,
    "views": 948149,
    "known": 20.69,
-   "voidtv": null
+   "voidtv": {
+    "slug": "girls",
+    "name": "Girls",
+    "live": 0,
+    "clipReady": 0,
+    "premiered": "2012-04-15"
+   }
   },
   {
    "rank": 284,
@@ -5758,7 +5764,13 @@
    "cult": false,
    "views": 714646,
    "known": 20.59,
-   "voidtv": null
+   "voidtv": {
+    "slug": "scandal",
+    "name": "Scandal",
+    "live": 0,
+    "clipReady": 0,
+    "premiered": "2012-04-05"
+   }
   },
   {
    "rank": 296,
@@ -5835,8 +5847,8 @@
    "voidtv": {
     "slug": "full-house",
     "name": "Full House",
-    "live": 68,
-    "clipReady": 68,
+    "live": 0,
+    "clipReady": 0,
     "premiered": "1987-09-18"
    }
   },
@@ -5855,8 +5867,8 @@
    "voidtv": {
     "slug": "cobra-kai",
     "name": "Cobra Kai",
-    "live": 56,
-    "clipReady": 56,
+    "live": 37,
+    "clipReady": 37,
     "premiered": "2018-05-02"
    }
   },
@@ -6009,8 +6021,8 @@
    "voidtv": {
     "slug": "spartacus",
     "name": "Spartacus",
-    "live": 4,
-    "clipReady": 4,
+    "live": 0,
+    "clipReady": 0,
     "premiered": "2010-01-22"
    }
   },
@@ -6139,20 +6151,14 @@
    "title": "Days of Our Lives",
    "wikidata": "Q185059",
    "tmdb": 881,
-   "year": 2017,
+   "year": 2004,
    "links": 34,
    "animated": false,
    "tvMovie": false,
    "cult": false,
    "views": 706432,
    "known": 20.52,
-   "voidtv": {
-    "slug": "our-lives",
-    "name": "Our Lives",
-    "live": 0,
-    "clipReady": 0,
-    "premiered": "2017-06-05"
-   }
+   "voidtv": null
   },
   {
    "rank": 316,
@@ -6440,7 +6446,13 @@
    "cult": false,
    "views": 1488267,
    "known": 20.48,
-   "voidtv": null
+   "voidtv": {
+    "slug": "ted",
+    "name": "ted",
+    "live": 14,
+    "clipReady": 14,
+    "premiered": "2024-01-11"
+   }
   },
   {
    "rank": 331,
@@ -6461,27 +6473,21 @@
    "title": "Killing Eve",
    "wikidata": "Q39049904",
    "tmdb": 72750,
-   "year": 2022,
+   "year": 2018,
    "links": 33,
    "animated": false,
    "tvMovie": false,
    "cult": false,
    "views": 719674,
    "known": 20.48,
-   "voidtv": {
-    "slug": "eve",
-    "name": "Eve",
-    "live": 0,
-    "clipReady": 0,
-    "premiered": "2022-06-01"
-   }
+   "voidtv": null
   },
   {
    "rank": 333,
    "title": "Bob's Burgers",
    "wikidata": "Q392396",
    "tmdb": 32726,
-   "year": 1992,
+   "year": 2011,
    "links": 33,
    "animated": true,
    "tvMovie": false,
@@ -6489,11 +6495,11 @@
    "views": 715736,
    "known": 20.47,
    "voidtv": {
-    "slug": "bob",
-    "name": "Bob",
-    "live": 3,
-    "clipReady": 3,
-    "premiered": "1992-09-18"
+    "slug": "bobs-burgers",
+    "name": "Bob's Burgers",
+    "live": 0,
+    "clipReady": 0,
+    "premiered": "2011-01-09"
    }
   },
   {
@@ -6649,7 +6655,7 @@
    "title": "Teen Titans Go!",
    "wikidata": "Q3809524",
    "tmdb": 45140,
-   "year": 2003,
+   "year": 2013,
    "links": 42,
    "animated": true,
    "tvMovie": false,
@@ -6657,11 +6663,11 @@
    "views": 433395,
    "known": 20.45,
    "voidtv": {
-    "slug": "teen-titans",
-    "name": "Teen Titans",
+    "slug": "teen-titans-go",
+    "name": "Teen Titans Go!",
     "live": 0,
     "clipReady": 0,
-    "premiered": "2003-07-19"
+    "premiered": "2013-04-23"
    }
   },
   {
@@ -6829,7 +6835,7 @@
    "title": "Fear the Walking Dead",
    "wikidata": "Q18844725",
    "tmdb": 62286,
-   "year": 2012,
+   "year": 2015,
    "links": 37,
    "animated": false,
    "tvMovie": false,
@@ -6837,11 +6843,11 @@
    "views": 534590,
    "known": 20.41,
    "voidtv": {
-    "slug": "the-fear",
-    "name": "The Fear",
+    "slug": "fear-the-walking-dead",
+    "name": "Fear the Walking Dead",
     "live": 0,
     "clipReady": 0,
-    "premiered": "2012-12-03"
+    "premiered": "2015-08-23"
    }
   },
   {
@@ -7347,7 +7353,7 @@
    "title": "The Grand Tour",
    "wikidata": "Q21980653",
    "tmdb": 67557,
-   "year": 1997,
+   "year": 2016,
    "links": 31,
    "animated": false,
    "tvMovie": false,
@@ -7355,11 +7361,11 @@
    "views": 685040,
    "known": 20.31,
    "voidtv": {
-    "slug": "the-grand",
-    "name": "The Grand",
+    "slug": "the-grand-tour",
+    "name": "The Grand Tour",
     "live": 0,
     "clipReady": 0,
-    "premiered": "1997-04-04"
+    "premiered": "2016-11-18"
    }
   },
   {
@@ -7956,7 +7962,13 @@
    "cult": false,
    "views": 213376,
    "known": 20.21,
-   "voidtv": null
+   "voidtv": {
+    "slug": "its-okay-to-not-be-okay",
+    "name": "It's Okay to Not Be Okay",
+    "live": 0,
+    "clipReady": 0,
+    "premiered": "2020-06-20"
+   }
   },
   {
    "rank": 411,
@@ -8224,7 +8236,13 @@
    "cult": false,
    "views": 441577,
    "known": 20.17,
-   "voidtv": null
+   "voidtv": {
+    "slug": "teen-titans",
+    "name": "Teen Titans",
+    "live": 0,
+    "clipReady": 0,
+    "premiered": "2003-07-19"
+   }
   },
   {
    "rank": 425,
@@ -8381,8 +8399,8 @@
    "voidtv": {
     "slug": "happy-days",
     "name": "Happy Days",
-    "live": 19,
-    "clipReady": 19,
+    "live": 0,
+    "clipReady": 0,
     "premiered": "1974-01-15"
    }
   },
@@ -8391,20 +8409,14 @@
    "title": "Little House on the Prairie (1974 TV series)",
    "wikidata": "Q839869",
    "tmdb": 1781,
-   "year": 2026,
+   "year": 1974,
    "links": 37,
    "animated": false,
    "tvMovie": false,
    "cult": false,
    "views": 402658,
    "known": 20.13,
-   "voidtv": {
-    "slug": "little-house-on-the-prairie",
-    "name": "Little House on the Prairie",
-    "live": 0,
-    "clipReady": 0,
-    "premiered": "2026-07-09"
-   }
+   "voidtv": null
   },
   {
    "rank": 434,
@@ -8481,8 +8493,8 @@
    "voidtv": {
     "slug": "batman",
     "name": "Batman",
-    "live": 18,
-    "clipReady": 18,
+    "live": 14,
+    "clipReady": 14,
     "premiered": "1966-01-12"
    }
   },
@@ -8491,20 +8503,14 @@
    "title": "The Daily Show",
    "wikidata": "Q824192",
    "tmdb": 2224,
-   "year": 2023,
+   "year": 1996,
    "links": 32,
    "animated": false,
    "tvMovie": false,
    "cult": false,
    "views": 533754,
    "known": 20.12,
-   "voidtv": {
-    "slug": "the-daily-show",
-    "name": "The Daily Show",
-    "live": 0,
-    "clipReady": 0,
-    "premiered": "2023-01-17"
-   }
+   "voidtv": null
   },
   {
    "rank": 439,
@@ -8665,20 +8671,14 @@
    "title": "Sofia the First",
    "wikidata": "Q7553692",
    "tmdb": 46928,
-   "year": 2018,
+   "year": 2012,
    "links": 38,
    "animated": true,
    "tvMovie": false,
    "cult": false,
    "views": 371995,
    "known": 20.1,
-   "voidtv": {
-    "slug": "the-first",
-    "name": "The First",
-    "live": 0,
-    "clipReady": 0,
-    "premiered": "2018-09-14"
-   }
+   "voidtv": null
   },
   {
    "rank": 448,
@@ -9099,20 +9099,14 @@
    "title": "WWE Raw",
    "wikidata": "Q18754",
    "tmdb": 4656,
-   "year": 2008,
+   "year": 1993,
    "links": 45,
    "animated": false,
    "tvMovie": false,
    "cult": false,
    "views": 249284,
    "known": 20.04,
-   "voidtv": {
-    "slug": "raw",
-    "name": "Raw",
-    "live": 0,
-    "clipReady": 0,
-    "premiered": "2008-09-08"
-   }
+   "voidtv": null
   },
   {
    "rank": 470,
@@ -9159,20 +9153,14 @@
    "title": "The Young and the Restless",
    "wikidata": "Q849627",
    "tmdb": 1054,
-   "year": 2012,
+   "year": 1973,
    "links": 30,
    "animated": false,
    "tvMovie": false,
    "cult": false,
    "views": 557498,
    "known": 20.03,
-   "voidtv": {
-    "slug": "restless",
-    "name": "Restless",
-    "live": 0,
-    "clipReady": 0,
-    "premiered": "2012-12-27"
-   }
+   "voidtv": null
   },
   {
    "rank": 473,
@@ -9531,8 +9519,8 @@
    "voidtv": {
     "slug": "young-sherlock",
     "name": "Young Sherlock",
-    "live": 1,
-    "clipReady": 1,
+    "live": 0,
+    "clipReady": 0,
     "premiered": "2026-03-04"
    }
   },
@@ -22384,7 +22372,9 @@
    "cult": false,
    "views": 164861,
    "known": 19.01,
-   "voidtv": null
+   "voidtv": {
+    "card": "contra-nes"
+   }
   },
   {
    "rank": 405,
