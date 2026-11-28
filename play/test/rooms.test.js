@@ -107,9 +107,21 @@ test('Bryan, 20 Nov 2026 ("connect the phone as the controller prior to being in
   clock += 16 * 1000; assert.equal(room.tick(), 'ended');
   assert.deepEqual(got('a').at(-1), { type: 'host-gone' }); assert.equal(closed.get('a'), R.CLOSE.hostGone);
   assert.equal(room.reclaim('late', 'k'.repeat(32)), false);
-  // A trivia room, and any room with no key, ends with its screen as before.
-  const tr = R.createRoom({ code: 'KX7Q', kind: 'trivia', key: 'k'.repeat(32), send: () => {}, close: () => {} });
-  tr.addHost('tv'); assert.equal(tr.drop('tv'), 'ended');
+  // A room with no key, and a kind that does not wait (a lesson), ends with its screen as before.
+  const ls = R.createRoom({ code: 'KX7R', kind: 'lesson', key: 'k'.repeat(32), send: () => {}, close: () => {} });
+  ls.addHost('tv'); assert.equal(ls.drop('tv'), 'ended');
+  const nk = R.createRoom({ code: 'KX7S', kind: 'pad', send: () => {}, close: () => {} });
+  nk.addHost('tv'); assert.equal(nk.drop('tv'), 'ended');
+  // A trivia room waits 5 minutes for its screen (Bryan, 27 Nov 2026: "Yes, fix it"): a phone that is the big screen and
+  // goes to Messages to send the code comes back on the same code; a friend who scans meanwhile is in, told to wait.
+  let tc = 1000000; const ts = new Map();
+  const tr = R.createRoom({ code: 'KX7Q', kind: 'trivia', key: 'k'.repeat(32), now: () => tc, send: (s, t) => { if (!ts.has(s)) ts.set(s, []); ts.get(s).push(JSON.parse(t)); }, close: () => {} });
+  tr.addHost('tv'); assert.equal(tr.drop('tv'), 'away');
+  tc += 4 * 60 * 1000; assert.equal(tr.tick(), null);
+  tr.addPhone('friend'); assert.deepEqual(ts.get('friend').at(-1), { type: 'host-away' });
+  assert.ok(tr.reclaim('tv2', 'k'.repeat(32)), 'back on the same code');
+  assert.deepEqual(ts.get('friend').at(-1), { type: 'host-back' });
+  tr.drop('tv2'); tc += 5 * 60 * 1000 + 1000; assert.equal(tr.tick(), 'ended', 'and it ends when nobody comes back');
 });
 
 test('R2: the local server runs rooms over real WebSockets: open, join, both ways, lookup, the screen leaving, and no other site', async () => {
@@ -319,7 +331,7 @@ test('Watch and Talk (Bryan, 21 Nov 2026): a talk room takes two grown-ups\' pho
   assert.ok(R.KINDS.includes('talk'));
   assert.deepEqual(R.LIMITS.talk, { phones: 2, perSecond: 5, screenHoldMs: 45 * 1000 });
   assert.deepEqual(R.LIMITS.pad, { phones: 16, perSecond: 60, screenHoldMs: 45 * 1000 });
-  assert.deepEqual(R.LIMITS.trivia, { phones: 200, perSecond: 5, screenHoldMs: 0 });
+  assert.deepEqual(R.LIMITS.trivia, { phones: 200, perSecond: 5, screenHoldMs: 5 * 60 * 1000 }, 'a phone that is the big screen may go to Messages to send the code (Bryan, 27 Nov 2026)');
   assert.deepEqual(R.LIMITS.lesson, { phones: 40, perSecond: 10, screenHoldMs: 0 });
   assert.equal(R.LIMITS.remote.phones, 16);
   assert.throws(() => R.createRoom({ code: 'KX7T', kind: 'chat', send: () => {}, close: () => {} }), /kind/);

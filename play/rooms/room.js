@@ -24,8 +24,12 @@
   // in silence, so a dropped release left the key held on the screen. The phone now sends at most 50 a second and says
   // its whole state again on a beat (src/phonepad.js), so 60 is never reached by an honest phone and a lost message heals.
   // Trivia sends an answer now and then, but a movie night can bring 200 phones.
+  // A trivia room waits 5 minutes for its screen (Bryan, 27 Nov 2026, in the Trivia Night owner chat: "phone to phone is having
+  // issus of the qr code not directing towards the trivia", then "Yes, fix it"): a phone that is the big screen drops its line
+  // when it goes to Messages to send the code, or locks; with no wait the room ended and a friend's scan found no room. The
+  // screen comes back with the room's key on the same code (trivia/src/host.js); a joining phone meanwhile hears host-away.
   const LIMITS = { bytes: 1024, idleMs: 30 * 60 * 1000, lifeMs: 4 * 60 * 60 * 1000, holdMs: 60 * 1000,
-    pad: { phones: 16, perSecond: 60, screenHoldMs: 45 * 1000 }, trivia: { phones: 200, perSecond: 5, screenHoldMs: 0 },
+    pad: { phones: 16, perSecond: 60, screenHoldMs: 45 * 1000 }, trivia: { phones: 200, perSecond: 5, screenHoldMs: 5 * 60 * 1000 },
     lesson: { phones: 40, perSecond: 10, screenHoldMs: 0 },   // a teacher's phone or a class's; notes, not button presses
     remote: { phones: 16, perSecond: 10, screenHoldMs: 45 * 1000, lifeMs: 12 * 60 * 60 * 1000 },
     talk: { phones: 2, perSecond: 5, screenHoldMs: 45 * 1000 },   // a pause or play now and then; the kids page may change, so it waits 45 s
